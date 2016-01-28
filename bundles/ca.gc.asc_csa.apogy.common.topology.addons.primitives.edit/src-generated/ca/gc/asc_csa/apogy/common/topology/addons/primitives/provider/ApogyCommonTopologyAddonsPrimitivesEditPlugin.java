@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
@@ -9,23 +9,23 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CommonTopologyAddonsPrimitives edit plugin.
+ * This is the central singleton for the ApogyCommonTopologyAddonsPrimitives edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonTopologyAddonsPrimitivesEditPlugin extends EMFPlugin {
+public final class ApogyCommonTopologyAddonsPrimitivesEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonTopologyAddonsPrimitivesEditPlugin INSTANCE = new Symphony__CommonTopologyAddonsPrimitivesEditPlugin();
+	public static final ApogyCommonTopologyAddonsPrimitivesEditPlugin INSTANCE = new ApogyCommonTopologyAddonsPrimitivesEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -41,12 +41,12 @@ public final class Symphony__CommonTopologyAddonsPrimitivesEditPlugin extends EM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesEditPlugin() {
+	public ApogyCommonTopologyAddonsPrimitivesEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

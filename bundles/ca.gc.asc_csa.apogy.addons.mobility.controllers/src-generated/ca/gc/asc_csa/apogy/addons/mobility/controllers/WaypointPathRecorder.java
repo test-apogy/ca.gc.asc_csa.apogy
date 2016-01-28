@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.controllers;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers;
 
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getWaypointPathRecorder()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#getWaypointPathRecorder()
  * @model
  * @generated
  */

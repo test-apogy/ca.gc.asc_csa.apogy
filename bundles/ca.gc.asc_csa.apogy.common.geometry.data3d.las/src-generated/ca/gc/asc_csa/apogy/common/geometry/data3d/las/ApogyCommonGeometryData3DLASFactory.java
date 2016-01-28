@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage
  * @generated
  */
-public interface Symphony__CommonGeometryData3DLASFactory extends EFactory {
+public interface ApogyCommonGeometryData3DLASFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DLASFactory eINSTANCE = org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFactoryImpl.init();
+	ApogyCommonGeometryData3DLASFactory eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>LAS Header</em>'.
@@ -65,7 +65,7 @@ public interface Symphony__CommonGeometryData3DLASFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DLASFacade createSymphony__CommonGeometryData3DLASFacade();
+	ApogyCommonGeometryData3DLASFacade createApogyCommonGeometryData3DLASFacade();
 
 	/**
 	 * Returns a new object of class '<em>LAS Writer</em>'.
@@ -83,6 +83,6 @@ public interface Symphony__CommonGeometryData3DLASFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DLASPackage getSymphony__CommonGeometryData3DLASPackage();
+	ApogyCommonGeometryData3DLASPackage getApogyCommonGeometryData3DLASPackage();
 
-} //Symphony__CommonGeometryData3DLASFactory
+} //ApogyCommonGeometryData3DLASFactory

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.converters.ui.composites;
+package ca.gc.asc_csa.apogy.common.converters.ui.composites;
 
 import java.util.Iterator;
 import java.util.List;
@@ -18,10 +18,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
-import org.eclipse.symphony.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade;
+import ca.gc.asc_csa.apogy.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
 import org.eclipse.wb.swt.TableViewerColumnSorter;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
@@ -142,7 +142,7 @@ public class ConverterGraphComposite extends  Composite
 		this.convertersGraph = convertersGraph;
 		if(this.convertersGraph != null)
 		{						
-			getTableViewer().setInput(Symphony__CommonConvertersGraphsFacade.INSTANCE.getAllNonTypeCastConverters(this.convertersGraph));
+			getTableViewer().setInput(ApogyCommonConvertersGraphsFacade.INSTANCE.getAllNonTypeCastConverters(this.convertersGraph));
 			updateColumnsWidth();
 		}
 		else

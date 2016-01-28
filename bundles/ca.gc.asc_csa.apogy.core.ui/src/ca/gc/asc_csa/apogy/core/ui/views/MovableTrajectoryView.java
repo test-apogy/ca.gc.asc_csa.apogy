@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.views;
+package ca.gc.asc_csa.apogy.core.ui.views;
 
 import java.util.List;
 
@@ -11,30 +11,30 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.ui.actions.ClearTrajectoryDataAction;
-import org.eclipse.symphony.core.ui.actions.PinTrajectoryViewAction;
-import org.eclipse.symphony.core.ui.composites.TrajectoryComposite;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.ui.actions.ClearTrajectoryDataAction;
+import ca.gc.asc_csa.apogy.core.ui.actions.PinTrajectoryViewAction;
+import ca.gc.asc_csa.apogy.core.ui.composites.TrajectoryComposite;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
 
 public class MovableTrajectoryView extends ViewPart implements ISelectionListener
 {
-	public static final String ID = "org.eclipse.symphony.core.ui.views.MovableTrajectoryView"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.core.ui.views.MovableTrajectoryView"; //$NON-NLS-1$
 	public static final String PART_NAME = "MovableTrajectoryView";
 
 	private ISelection currentSelection = null;
 	private boolean pinned = false;
 	
-	private PoseProvider movable = Symphony__CoreFactory.eINSTANCE.createPoseProvider();
+	private PoseProvider movable = ApogyCoreFactory.eINSTANCE.createPoseProvider();
 	
 	private TrajectoryComposite trajectoryComposite = null;
 	
@@ -104,7 +104,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 				currentSelection = selection;
 				
 				// Attempts to convert the selection to a Deployment.				
-				List list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, PoseProvider.class);
+				List list = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, PoseProvider.class);
 
 				if(list.size() > 0) 
 				{
@@ -116,7 +116,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 				}
 				else
 				{
-					list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractTypeImplementation.class);
+					list = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, AbstractTypeImplementation.class);
 					if(list.size() > 0)
 					{
 						AbstractTypeImplementation ati = (AbstractTypeImplementation) list.get(0);						
@@ -210,7 +210,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 						// Events from Deployment
 						if(msg.getNotifier() instanceof Named)							
 						{														
-							if(msg.getFeatureID(PoseProvider.class) == Symphony__CommonEMFPackage.NAMED__NAME)						
+							if(msg.getFeatureID(PoseProvider.class) == ApogyCommonEMFPackage.NAMED__NAME)						
 							{							
 								updatePartName(msg.getNewStringValue());
 							}														
@@ -244,7 +244,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 //					
 //					Vector3d position = new Vector3d(x,y,0);				
 //					matrix.set(position);										
-//					movable.setPoseTransform(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix));
+//					movable.setPoseTransform(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(matrix));
 //					
 //					try 
 //					{

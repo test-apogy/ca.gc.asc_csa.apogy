@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.examples.satellite;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand#getRollAngle <em>Roll Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand#getRollAngle <em>Roll Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAcquireImageSatelliteCommand()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAcquireImageSatelliteCommand()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface AcquireImageSatelliteCommand extends AbstractSatelliteCommand {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Roll Angle</em>' attribute.
 	 * @see #setRollAngle(double)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAcquireImageSatelliteCommand_RollAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAcquireImageSatelliteCommand_RollAngle()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getRollAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand#getRollAngle <em>Roll Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand#getRollAngle <em>Roll Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Roll Angle</em>' attribute.

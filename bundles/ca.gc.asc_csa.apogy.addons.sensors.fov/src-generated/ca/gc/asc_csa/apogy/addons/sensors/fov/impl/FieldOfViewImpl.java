@@ -3,12 +3,12 @@
  *
  * $Id: FieldOfViewImpl.java,v 1.2.4.2 2015/05/21 15:51:25 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class FieldOfViewImpl extends NodeImpl implements FieldOfView {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsFOVPackage.Literals.FIELD_OF_VIEW;
+		return ApogyAddonsSensorsFOVPackage.Literals.FIELD_OF_VIEW;
 	}
 
 } //FieldOfViewImpl

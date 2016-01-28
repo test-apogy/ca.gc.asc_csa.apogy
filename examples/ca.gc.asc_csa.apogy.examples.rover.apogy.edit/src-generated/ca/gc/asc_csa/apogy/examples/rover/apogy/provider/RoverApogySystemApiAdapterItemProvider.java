@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.provider;
 
 
 import java.util.Collection;
@@ -11,16 +11,16 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RoverSymphonySystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+public class RoverApogySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -28,7 +28,7 @@ public class RoverSymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public RoverSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public RoverApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -50,7 +50,7 @@ public class RoverSymphonySystemApiAdapterItemProvider
 	}
 
   /**
-	 * This returns RoverSymphonySystemApiAdapter.gif.
+	 * This returns RoverApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -58,7 +58,7 @@ public class RoverSymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/RoverSymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/RoverApogySystemApiAdapter"));
 	}
 
   /**
@@ -70,7 +70,7 @@ public class RoverSymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_RoverSymphonySystemApiAdapter_type");
+		return getString("_UI_RoverApogySystemApiAdapter_type");
 	}
 
   /**
@@ -109,7 +109,7 @@ public class RoverSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return Symphony__ExamplesRoverSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesRoverApogyEditPlugin.INSTANCE;
 	}
 
 }

@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import javax.vecmath.Color3f;
 
-import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection;
-import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection;
 
 
 /**
@@ -18,17 +18,17 @@ import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor <em>Negative Value Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval <em>Angle Interval</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontName <em>Font Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontSize <em>Font Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor <em>Negative Value Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval <em>Angle Interval</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontName <em>Font Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontSize <em>Font Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Line Width</em>' attribute.
 	 * @see #setLineWidth(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_LineWidth()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_LineWidth()
 	 * @model default="2" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES'"
 	 * @generated
@@ -53,7 +53,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	int getLineWidth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Line Width</em>' attribute.
@@ -73,15 +73,15 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Positive Values Color</em>' attribute.
 	 * @see #setPositiveValuesColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_PositiveValuesColor()
-	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_PositiveValuesColor()
+	 * @model default="0.0,1.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES'"
 	 * @generated
 	 */
 	Color3f getPositiveValuesColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Positive Values Color</em>' attribute.
@@ -101,15 +101,15 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Negative Value Color</em>' attribute.
 	 * @see #setNegativeValueColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_NegativeValueColor()
-	 * @model default="1.0,0.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_NegativeValueColor()
+	 * @model default="1.0,0.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES'"
 	 * @generated
 	 */
 	Color3f getNegativeValueColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor <em>Negative Value Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor <em>Negative Value Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Negative Value Color</em>' attribute.
@@ -128,15 +128,15 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angle Interval</em>' attribute.
 	 * @see #setAngleInterval(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_AngleInterval()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_AngleInterval()
 	 * @model default="5" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES' symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES' apogy_units='deg'"
 	 * @generated
 	 */
 	int getAngleInterval();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval <em>Angle Interval</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval <em>Angle Interval</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angle Interval</em>' attribute.
@@ -155,7 +155,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Name</em>' attribute.
 	 * @see #setFontName(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_FontName()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_FontName()
 	 * @model default="SansSerif" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -163,7 +163,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	String getFontName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontName <em>Font Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontName <em>Font Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Font Name</em>' attribute.
@@ -182,7 +182,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Size</em>' attribute.
 	 * @see #setFontSize(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_FontSize()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_FontSize()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -190,7 +190,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	int getFontSize();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontSize <em>Font Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontSize <em>Font Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Font Size</em>' attribute.
@@ -201,7 +201,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 
 	/**
 	 * Returns the value of the '<em><b>Azimuth Direction</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Azimuth Direction</em>' attribute isn't clear,
@@ -212,9 +212,9 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 *  The direction of the azimuth.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth Direction</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection
 	 * @see #setAzimuthDirection(AzimuthDirection)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_AzimuthDirection()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_AzimuthDirection()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DIRECTIONS_PROPERTIES'"
 	 * @generated
@@ -222,11 +222,11 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	AzimuthDirection getAzimuthDirection();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth Direction</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection
 	 * @see #getAzimuthDirection()
 	 * @generated
 	 */
@@ -234,7 +234,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 
 	/**
 	 * Returns the value of the '<em><b>Elevation Direction</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.imaging.ElevationDirection}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elevation Direction</em>' attribute isn't clear,
@@ -245,9 +245,9 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 *  The direction of the elevation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation Direction</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ElevationDirection
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection
 	 * @see #setElevationDirection(ElevationDirection)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_ElevationDirection()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getFOVOverlay_ElevationDirection()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DIRECTIONS_PROPERTIES'"
 	 * @generated
@@ -255,11 +255,11 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	ElevationDirection getElevationDirection();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation Direction</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ElevationDirection
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection
 	 * @see #getElevationDirection()
 	 * @generated
 	 */

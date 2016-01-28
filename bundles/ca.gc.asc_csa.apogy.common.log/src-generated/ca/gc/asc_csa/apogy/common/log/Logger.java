@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log;
+package ca.gc.asc_csa.apogy.common.log;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.osgi.framework.log.FrameworkLog;
-import org.eclipse.symphony.common.log.impl.LoggerImpl;
+import ca.gc.asc_csa.apogy.common.log.impl.LoggerImpl;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.log.impl.LoggerImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.log.Symphony__CommonLogPackage#getLogger()
+ * @see ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage#getLogger()
  * @model
  * @generated
  */
@@ -69,7 +69,7 @@ public interface Logger extends EObject {
 	 * @param t Reference to the exception context.
 	 * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
 	 * <!-- end-model-doc -->
-	 * @model bundleIdUnique="false" messageUnique="false" severityUnique="false" tDataType="org.eclipse.symphony.common.log.Throwable" tUnique="false"
+	 * @model bundleIdUnique="false" messageUnique="false" severityUnique="false" tDataType="ca.gc.asc_csa.apogy.common.log.Throwable" tUnique="false"
 	 * @generated
 	 */
 	void log(String bundleId, String message, EventSeverity severity, Throwable t);
@@ -87,7 +87,7 @@ public interface Logger extends EObject {
 	 * @param t Reference to the exception context.
 	 * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
 	 * <!-- end-model-doc -->
-	 * @model bundleIdUnique="false" objectUnique="false" messageUnique="false" severityUnique="false" tDataType="org.eclipse.symphony.common.log.Throwable" tUnique="false"
+	 * @model bundleIdUnique="false" objectUnique="false" messageUnique="false" severityUnique="false" tDataType="ca.gc.asc_csa.apogy.common.log.Throwable" tUnique="false"
 	 * @generated
 	 */
 	void log(String bundleId, Object object, String message, EventSeverity severity, Throwable t);
@@ -100,7 +100,7 @@ public interface Logger extends EObject {
 	 * Returns the OSGI Framework Log.
 	 * @return Reference to the {@link org.eclipse.osgi.framework.log.FrameworkLog}
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.common.log.FrameworkLog" unique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.log.FrameworkLog" unique="false"
 	 * @generated
 	 */
 	FrameworkLog getLog();

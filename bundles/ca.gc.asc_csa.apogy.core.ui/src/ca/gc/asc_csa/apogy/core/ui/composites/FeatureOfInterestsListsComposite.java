@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import java.util.List;
 
@@ -18,8 +18,8 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 
 public class FeatureOfInterestsListsComposite extends Composite
 {

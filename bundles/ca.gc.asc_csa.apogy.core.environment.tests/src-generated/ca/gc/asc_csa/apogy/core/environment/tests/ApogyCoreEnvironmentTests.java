@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentTests extends TestSuite {
+public class ApogyCoreEnvironmentTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class Symphony__CoreEnvironmentTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new Symphony__CoreEnvironmentTests("environment Tests");
+		TestSuite suite = new ApogyCoreEnvironmentTests("environment Tests");
 		suite.addTestSuite(EarthSurfaceWorksiteTest.class);
 		suite.addTestSuite(AtmosphereUtilsTest.class);
 		suite.addTestSuite(SkyTest.class);
@@ -40,7 +40,7 @@ public class Symphony__CoreEnvironmentTests extends TestSuite {
 		suite.addTestSuite(EarthTest.class);
 		suite.addTestSuite(MoonTest.class);
 		suite.addTestSuite(EnvironmentUtilitiesTest.class);
-		suite.addTestSuite(Symphony__CoreEnvironmentFacadeTest.class);
+		suite.addTestSuite(ApogyCoreEnvironmentFacadeTest.class);
 		suite.addTestSuite(StarFieldTest.class);
 		suite.addTestSuite(AstronomyUtilsTest.class);
 		suite.addTestSuite(MapTest.class);
@@ -81,8 +81,8 @@ public class Symphony__CoreEnvironmentTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentTests(String name) {
+	public ApogyCoreEnvironmentTests(String name) {
 		super(name);
 	}
 
-} //Symphony__CoreEnvironmentTests
+} //ApogyCoreEnvironmentTests

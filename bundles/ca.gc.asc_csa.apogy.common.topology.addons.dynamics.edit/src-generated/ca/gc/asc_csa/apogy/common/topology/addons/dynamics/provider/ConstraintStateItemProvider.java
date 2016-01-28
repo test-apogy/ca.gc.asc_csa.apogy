@@ -4,7 +4,7 @@
  *
  * $Id: ConstraintStateItemProvider.java,v 1.3.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class ConstraintStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintState_position_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintState_position_feature", "_UI_ConstraintState_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.CONSTRAINT_STATE__POSITION,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.CONSTRAINT_STATE__POSITION,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class ConstraintStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintState_velocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintState_velocity_feature", "_UI_ConstraintState_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.CONSTRAINT_STATE__VELOCITY,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.CONSTRAINT_STATE__VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class ConstraintStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintState_force_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintState_force_feature", "_UI_ConstraintState_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.CONSTRAINT_STATE__FORCE,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.CONSTRAINT_STATE__FORCE,
 				 true,
 				 false,
 				 false,
@@ -170,9 +170,9 @@ public class ConstraintStateItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstraintState.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE__POSITION:
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE__FORCE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE__POSITION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
+			case ApogyCommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE__FORCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

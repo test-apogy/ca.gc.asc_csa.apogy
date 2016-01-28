@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
-	public static final String ID = "org.eclipse.symphony.addons.sensors.range";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.range";
 	
 	private static BundleContext context;
 

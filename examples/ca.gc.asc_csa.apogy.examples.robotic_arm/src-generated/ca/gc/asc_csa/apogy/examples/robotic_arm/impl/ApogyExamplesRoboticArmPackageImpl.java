@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,12 +10,12 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmFactory;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
-import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArmStub;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmFactory;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.examples.robotic_arm.RoboticArmStub;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implements Symphony__ExamplesRoboticArmPackage
+public class ApogyExamplesRoboticArmPackageImpl extends EPackageImpl implements ApogyExamplesRoboticArmPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -64,13 +64,13 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesRoboticArmPackageImpl()
+  private ApogyExamplesRoboticArmPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesRoboticArmFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesRoboticArmFactory.eINSTANCE);
 	}
 
   /**
@@ -83,7 +83,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesRoboticArmPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesRoboticArmPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -92,12 +92,12 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesRoboticArmPackage init()
+  public static ApogyExamplesRoboticArmPackage init()
   {
-		if (isInited) return (Symphony__ExamplesRoboticArmPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesRoboticArmPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesRoboticArmPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesRoboticArmPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesRoboticArmPackageImpl theSymphony__ExamplesRoboticArmPackage = (Symphony__ExamplesRoboticArmPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesRoboticArmPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesRoboticArmPackageImpl());
+		ApogyExamplesRoboticArmPackageImpl theApogyExamplesRoboticArmPackage = (ApogyExamplesRoboticArmPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesRoboticArmPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesRoboticArmPackageImpl());
 
 		isInited = true;
 
@@ -105,18 +105,18 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesRoboticArmPackage.createPackageContents();
+		theApogyExamplesRoboticArmPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesRoboticArmPackage.initializePackageContents();
+		theApogyExamplesRoboticArmPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesRoboticArmPackage.freeze();
+		theApogyExamplesRoboticArmPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesRoboticArmPackage.eNS_URI, theSymphony__ExamplesRoboticArmPackage);
-		return theSymphony__ExamplesRoboticArmPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesRoboticArmPackage.eNS_URI, theApogyExamplesRoboticArmPackage);
+		return theApogyExamplesRoboticArmPackage;
 	}
 
   /**
@@ -265,8 +265,8 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoboticArmFactory getSymphony__ExamplesRoboticArmFactory() {
-		return (Symphony__ExamplesRoboticArmFactory)getEFactoryInstance();
+	public ApogyExamplesRoboticArmFactory getApogyExamplesRoboticArmFactory() {
+		return (ApogyExamplesRoboticArmFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -399,15 +399,15 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesRoboticArm",
+			 "prefix", "ApogyExamplesRoboticArm",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-			 "modelName", "Symphony__ExamplesRoboticArm",
+			 "modelName", "ApogyExamplesRoboticArm",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.robotic_arm/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.robotic_arm.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.robotic_arm.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
 		  (moveSpeedLevelEEnum, 
@@ -461,25 +461,25 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(3), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getRoboticArm__Stow(), 
@@ -496,7 +496,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_ShoulderAngle(), 
@@ -507,7 +507,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_ElbowAngle(), 
@@ -518,7 +518,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_WristAngle(), 
@@ -529,7 +529,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_Initialized(), 
@@ -575,4 +575,4 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 		   });
 	}
 
-} //Symphony__ExamplesRoboticArmPackageImpl
+} //ApogyExamplesRoboticArmPackageImpl

@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator 
 {
-	public final static String ID = "org.eclipse.symphony.core.invocator.tests";
+	public final static String ID = "ca.gc.asc_csa.apogy.core.invocator.tests";
 	private static BundleContext context;
 	
 	static BundleContext getContext() {

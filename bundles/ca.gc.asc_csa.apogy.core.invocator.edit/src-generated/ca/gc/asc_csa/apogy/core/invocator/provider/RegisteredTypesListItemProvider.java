@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.RegisteredTypesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -76,7 +76,7 @@ public class RegisteredTypesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.REGISTERED_TYPES_LIST__TYPES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.REGISTERED_TYPES_LIST__TYPES);
 		}
 		return childrenFeatures;
 	}

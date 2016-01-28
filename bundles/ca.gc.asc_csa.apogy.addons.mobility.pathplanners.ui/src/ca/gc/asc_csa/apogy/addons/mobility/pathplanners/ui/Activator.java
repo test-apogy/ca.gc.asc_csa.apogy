@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.mobility.pathplanners.ui;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.mobility.pathplanners.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui";
 
 	// The shared instance
 	private static Activator plugin;

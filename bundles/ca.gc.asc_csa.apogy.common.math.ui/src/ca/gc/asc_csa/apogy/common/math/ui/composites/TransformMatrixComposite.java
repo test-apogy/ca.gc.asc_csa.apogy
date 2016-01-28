@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.math.ui.composites;
+package ca.gc.asc_csa.apogy.common.math.ui.composites;
 
 import javax.vecmath.Matrix3d;
 
@@ -14,13 +14,13 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.math.provider.MathEditUtils;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.provider.MathEditUtils;
 
 public class TransformMatrixComposite extends Composite {
 
@@ -109,12 +109,12 @@ public class TransformMatrixComposite extends Composite {
 		disableEvent = true;
 		
 		/** Update Position Tuples. */
-		Tuple3d result = Symphony__CommonMathFacade.INSTANCE.extractPosition(matrix);
+		Tuple3d result = ApogyCommonMathFacade.INSTANCE.extractPosition(matrix);
 		position.setX(result.getX());
 		position.setY(result.getY());
 		position.setZ(result.getZ());
 		
-		result = Symphony__CommonMathFacade.INSTANCE.extractOrientation(matrix);
+		result = ApogyCommonMathFacade.INSTANCE.extractOrientation(matrix);
 		orientation.setX(Math.toDegrees(result.getX()));
 		orientation.setY(Math.toDegrees(result.getY()));
 		orientation.setZ(Math.toDegrees(result.getZ()));
@@ -130,7 +130,7 @@ public class TransformMatrixComposite extends Composite {
 	
 	private Tuple3d getPositionTuple3d() {
 		if (positionTuple3d == null){
-			positionTuple3d = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();			
+			positionTuple3d = ApogyCommonMathFactory.eINSTANCE.createTuple3d();			
 		}
 		return positionTuple3d;
 	}
@@ -151,30 +151,30 @@ public class TransformMatrixComposite extends Composite {
 							
 							switch (msg.getFeatureID(Tuple3d.class)){
 							
-							case Symphony__CommonMathPackage.TUPLE3D__X:
+							case ApogyCommonMathPackage.TUPLE3D__X:
 								if (editingDomain == null){
 									getMatrix().setM03(getPositionTuple3d().getX());
 								}else{
 									editingDomain.getCommandStack().execute(
-											SetCommand.create(editingDomain, getMatrix(), Symphony__CommonMathPackage.Literals.MATRIX4X4__M03, positionTuple3d.getX()));
+											SetCommand.create(editingDomain, getMatrix(), ApogyCommonMathPackage.Literals.MATRIX4X4__M03, positionTuple3d.getX()));
 								}							
 								break;
 								
-							case Symphony__CommonMathPackage.TUPLE3D__Y:
+							case ApogyCommonMathPackage.TUPLE3D__Y:
 								if (editingDomain == null){
 									getMatrix().setM13(getPositionTuple3d().getY());
 								}else{
 									editingDomain.getCommandStack().execute(
-											SetCommand.create(editingDomain, getMatrix(), Symphony__CommonMathPackage.Literals.MATRIX4X4__M13, positionTuple3d.getY()));
+											SetCommand.create(editingDomain, getMatrix(), ApogyCommonMathPackage.Literals.MATRIX4X4__M13, positionTuple3d.getY()));
 								}							
 								break;
 								
-							case Symphony__CommonMathPackage.TUPLE3D__Z:
+							case ApogyCommonMathPackage.TUPLE3D__Z:
 								if (editingDomain == null){
 									getMatrix().setM23(getPositionTuple3d().getZ());
 								}else{
 									editingDomain.getCommandStack().execute(
-											SetCommand.create(editingDomain, getMatrix(), Symphony__CommonMathPackage.Literals.MATRIX4X4__M23, positionTuple3d.getZ()));
+											SetCommand.create(editingDomain, getMatrix(), ApogyCommonMathPackage.Literals.MATRIX4X4__M23, positionTuple3d.getZ()));
 								}							
 								break;							
 							}
@@ -192,7 +192,7 @@ public class TransformMatrixComposite extends Composite {
 	
 	private Tuple3d getOrientationTuple3d() {
 		if (orientationTuple3d == null){
-			orientationTuple3d = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+			orientationTuple3d = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		}
 		return orientationTuple3d;
 	}
@@ -217,7 +217,7 @@ public class TransformMatrixComposite extends Composite {
 									Math.toRadians(getOrientationTuple3d().getY()),
 									Math.toRadians(getOrientationTuple3d().getZ()));
 										
-							MathEditUtils.updateOrientation(getMatrix(), Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(matrix3d), editingDomain);								
+							MathEditUtils.updateOrientation(getMatrix(), ApogyCommonMathFacade.INSTANCE.createMatrix3x3(matrix3d), editingDomain);								
 						}
 						
 						/** Re-enable Matrix Events. */

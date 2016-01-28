@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.TopologyRoot;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.TopologyRootImpl#getOriginNode <em>Origin Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.TopologyRootImpl#getOriginNode <em>Origin Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,7 +50,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.TOPOLOGY_ROOT;
+		return ApogyCorePackage.Literals.TOPOLOGY_ROOT;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 		Node oldOriginNode = originNode;
 		originNode = newOriginNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, oldOriginNode, newOriginNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, oldOriginNode, newOriginNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -84,14 +84,14 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 		if (newOriginNode != originNode) {
 			NotificationChain msgs = null;
 			if (originNode != null)
-				msgs = ((InternalEObject)originNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
+				msgs = ((InternalEObject)originNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
 			if (newOriginNode != null)
-				msgs = ((InternalEObject)newOriginNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
+				msgs = ((InternalEObject)newOriginNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
 			msgs = basicSetOriginNode(newOriginNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, newOriginNode, newOriginNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, newOriginNode, newOriginNode));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				return basicSetOriginNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -115,7 +115,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				return getOriginNode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -128,7 +128,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				setOriginNode((Node)newValue);
 				return;
 		}
@@ -142,7 +142,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				setOriginNode((Node)null);
 				return;
 		}
@@ -156,7 +156,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				return originNode != null;
 		}
 		return super.eIsSet(featureID);

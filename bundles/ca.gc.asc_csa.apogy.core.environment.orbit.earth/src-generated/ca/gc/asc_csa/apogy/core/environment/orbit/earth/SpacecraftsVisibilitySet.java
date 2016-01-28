@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,15 +22,15 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getStartTime <em>Start Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getEndTime <em>End Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getOrbitModels <em>Orbit Models</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStations <em>Ground Stations</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getPasses <em>Passes</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getOrbitModels <em>Orbit Models</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStations <em>Ground Stations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getPasses <em>Passes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_StartTime()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_StartTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD'"
 	 * @generated
@@ -52,7 +52,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	Date getStartTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getStartTime <em>Start Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getStartTime <em>Start Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Start Time</em>' attribute.
@@ -70,7 +70,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Time</em>' attribute.
 	 * @see #setEndTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_EndTime()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_EndTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD'"
 	 * @generated
@@ -78,7 +78,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	Date getEndTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getEndTime <em>End Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getEndTime <em>End Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>End Time</em>' attribute.
@@ -89,14 +89,14 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 
 	/**
 	 * Returns the value of the '<em><b>Orbit Models</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.OrbitModel}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The OrbitModel of the Spacecraft(s) to use for visibility calculation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Models</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_OrbitModels()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_OrbitModels()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable'"
 	 * @generated
 	 */
@@ -104,14 +104,14 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 
 	/**
 	 * Returns the value of the '<em><b>Ground Stations</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The ground station (s) for which to display Spacecraft visibility status.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ground Stations</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_GroundStations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_GroundStations()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable'"
 	 * @generated
 	 */
@@ -119,7 +119,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 
 	/**
 	 * Returns the value of the '<em><b>Passes</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Passes</em>' containment reference list isn't clear,
@@ -127,7 +127,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Passes</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_Passes()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_Passes()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly'"
 	 * @generated
@@ -143,15 +143,15 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ground Station To Visibility Map</em>' attribute.
 	 * @see #setGroundStationToVisibilityMap(Map)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_GroundStationToVisibilityMap()
-	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.orbit.earth.Map<org.eclipse.symphony.core.environment.orbit.earth.GroundStation, org.eclipse.symphony.core.environment.orbit.earth.List<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>>" transient="true"
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_GroundStationToVisibilityMap()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Map<ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation, ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>>" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='None'"
 	 * @generated
 	 */
 	Map<GroundStation, List<VisibilityPass>> getGroundStationToVisibilityMap();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ground Station To Visibility Map</em>' attribute.

@@ -1,19 +1,19 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__ExamplesMobilePlatform edit plugin.
+ * This is the central singleton for the ApogyExamplesMobilePlatform edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__ExamplesMobilePlatformEditPlugin extends EMFPlugin
+public final class ApogyExamplesMobilePlatformEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -21,7 +21,7 @@ public final class Symphony__ExamplesMobilePlatformEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final Symphony__ExamplesMobilePlatformEditPlugin INSTANCE = new Symphony__ExamplesMobilePlatformEditPlugin();
+  public static final ApogyExamplesMobilePlatformEditPlugin INSTANCE = new ApogyExamplesMobilePlatformEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -37,11 +37,11 @@ public final class Symphony__ExamplesMobilePlatformEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesMobilePlatformEditPlugin()
+  public ApogyExamplesMobilePlatformEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		   });
 	}
 

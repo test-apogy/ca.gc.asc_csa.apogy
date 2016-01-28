@@ -1,39 +1,39 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.util;
+package ca.gc.asc_csa.apogy.addons.vehicle.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.vehicle.ContactProvider;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
-import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
-import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
-import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.core.PoseCorrector;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.Simple3DTool;
+import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,10 +45,10 @@ import org.eclipse.symphony.core.PoseCorrector;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage
  * @generated
  */
-public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
+public class ApogyAddonsVehicleSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -56,7 +56,7 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsVehiclePackage modelPackage;
+  protected static ApogyAddonsVehiclePackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -64,10 +64,10 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleSwitch()
+  public ApogyAddonsVehicleSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsVehiclePackage.eINSTANCE;
+			modelPackage = ApogyAddonsVehiclePackage.eINSTANCE;
 		}
 	}
 
@@ -96,26 +96,26 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR: {
+			case ApogyAddonsVehiclePackage.VEHICLE_POSE_CORRECTOR: {
 				VehiclePoseCorrector vehiclePoseCorrector = (VehiclePoseCorrector)theEObject;
 				T result = caseVehiclePoseCorrector(vehiclePoseCorrector);
 				if (result == null) result = casePoseCorrector(vehiclePoseCorrector);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY: {
+			case ApogyAddonsVehiclePackage.MESH_NODE_ENTRY: {
 				MeshNodeEntry meshNodeEntry = (MeshNodeEntry)theEObject;
 				T result = caseMeshNodeEntry(meshNodeEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER: {
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER: {
 				ContactProvider contactProvider = (ContactProvider)theEObject;
 				T result = caseContactProvider(contactProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.WHEEL: {
+			case ApogyAddonsVehiclePackage.WHEEL: {
 				Wheel wheel = (Wheel)theEObject;
 				T result = caseWheel(wheel);
 				if (result == null) result = casePhysicalBody(wheel);
@@ -125,28 +125,28 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.THRUSTER: {
+			case ApogyAddonsVehiclePackage.THRUSTER: {
 				Thruster thruster = (Thruster)theEObject;
 				T result = caseThruster(thruster);
 				if (result == null) result = caseNode(thruster);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.THRUSTER_BINDING: {
+			case ApogyAddonsVehiclePackage.THRUSTER_BINDING: {
 				ThrusterBinding thrusterBinding = (ThrusterBinding)theEObject;
 				T result = caseThrusterBinding(thrusterBinding);
 				if (result == null) result = caseAbstractTopologyBinding(thrusterBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER: {
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_PROVIDER: {
 				WheelContactProvider wheelContactProvider = (WheelContactProvider)theEObject;
 				T result = caseWheelContactProvider(wheelContactProvider);
 				if (result == null) result = caseContactProvider(wheelContactProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT: {
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT: {
 				LanderSphericalFoot landerSphericalFoot = (LanderSphericalFoot)theEObject;
 				T result = caseLanderSphericalFoot(landerSphericalFoot);
 				if (result == null) result = casePhysicalBody(landerSphericalFoot);
@@ -156,32 +156,32 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER: {
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER: {
 				LanderSphericalFootContactProvider landerSphericalFootContactProvider = (LanderSphericalFootContactProvider)theEObject;
 				T result = caseLanderSphericalFootContactProvider(landerSphericalFootContactProvider);
 				if (result == null) result = caseContactProvider(landerSphericalFootContactProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.SYMPHONY_ADDONS_VEHICLE_FACADE: {
-				Symphony__AddonsVehicleFacade symphony__AddonsVehicleFacade = (Symphony__AddonsVehicleFacade)theEObject;
-				T result = caseSymphony__AddonsVehicleFacade(symphony__AddonsVehicleFacade);
+			case ApogyAddonsVehiclePackage.APOGY_ADDONS_VEHICLE_FACADE: {
+				ApogyAddonsVehicleFacade apogy__AddonsVehicleFacade = (ApogyAddonsVehicleFacade)theEObject;
+				T result = caseApogyAddonsVehicleFacade(apogy__AddonsVehicleFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES: {
+			case ApogyAddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES: {
 				WheelVehicleUtilities wheelVehicleUtilities = (WheelVehicleUtilities)theEObject;
 				T result = caseWheelVehicleUtilities(wheelVehicleUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D: {
+			case ApogyAddonsVehiclePackage.MESH_EXTENT2_D: {
 				MeshExtent2D meshExtent2D = (MeshExtent2D)theEObject;
 				T result = caseMeshExtent2D(meshExtent2D);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL: {
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL: {
 				PathPlannerTool pathPlannerTool = (PathPlannerTool)theEObject;
 				T result = casePathPlannerTool(pathPlannerTool);
 				if (result == null) result = caseAbstractTwoPoints3DTool(pathPlannerTool);
@@ -193,7 +193,7 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE: {
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL_NODE: {
 				PathPlannerToolNode pathPlannerToolNode = (PathPlannerToolNode)theEObject;
 				T result = casePathPlannerToolNode(pathPlannerToolNode);
 				if (result == null) result = caseAggregateGroupNode(pathPlannerToolNode);
@@ -202,7 +202,7 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL: {
+			case ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL: {
 				VehiclePathPlannerTool vehiclePathPlannerTool = (VehiclePathPlannerTool)theEObject;
 				T result = caseVehiclePathPlannerTool(vehiclePathPlannerTool);
 				if (result == null) result = casePathPlannerTool(vehiclePathPlannerTool);
@@ -373,7 +373,7 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__AddonsVehicleFacade(Symphony__AddonsVehicleFacade object) {
+	public T caseApogyAddonsVehicleFacade(ApogyAddonsVehicleFacade object) {
 		return null;
 	}
 
@@ -657,4 +657,4 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsVehicleSwitch
+} //ApogyAddonsVehicleSwitch

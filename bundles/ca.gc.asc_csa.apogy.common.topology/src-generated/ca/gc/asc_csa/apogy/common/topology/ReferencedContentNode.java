@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.common.topology;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ReferencedContentNode#getReferencedContent <em>Referenced Content</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode#getReferencedContent <em>Referenced Content</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getReferencedContentNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getReferencedContentNode()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface ReferencedContentNode<T> extends ContentNode<T> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Referenced Content</em>' reference.
 	 * @see #setReferencedContent(Object)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getReferencedContentNode_ReferencedContent()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getReferencedContentNode_ReferencedContent()
 	 * @model kind="reference"
 	 * @generated
 	 */
 	T getReferencedContent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ReferencedContentNode#getReferencedContent <em>Referenced Content</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode#getReferencedContent <em>Referenced Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Referenced Content</em>' reference.

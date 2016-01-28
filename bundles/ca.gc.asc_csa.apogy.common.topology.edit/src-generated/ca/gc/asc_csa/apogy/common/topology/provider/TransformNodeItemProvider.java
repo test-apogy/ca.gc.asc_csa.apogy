@@ -4,7 +4,7 @@
  *
  * $Id: TransformNodeItemProvider.java,v 1.12.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.TransformNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.TransformNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -101,7 +101,7 @@ public class TransformNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TransformNode.class)) {
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

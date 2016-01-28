@@ -1,34 +1,34 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
 
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
 
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsGeometryPaths edit plugin.
+ * This is the central singleton for the ApogyAddonsGeometryPaths edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsGeometryPathsEditPlugin extends EMFPlugin {
+public final class ApogyAddonsGeometryPathsEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsGeometryPathsEditPlugin INSTANCE = new Symphony__AddonsGeometryPathsEditPlugin();
+	public static final ApogyAddonsGeometryPathsEditPlugin INSTANCE = new ApogyAddonsGeometryPathsEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -44,14 +44,14 @@ public final class Symphony__AddonsGeometryPathsEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsEditPlugin() {
+	public ApogyAddonsGeometryPathsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

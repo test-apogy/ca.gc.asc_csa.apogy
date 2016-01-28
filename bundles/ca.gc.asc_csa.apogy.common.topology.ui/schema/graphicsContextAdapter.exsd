@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.symphony.common.topology.ui" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="ca.gc.asc_csa.apogy.common.topology.ui" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.eclipse.symphony.common.topology.ui" id="graphicsContextAdapter" name="Graphics Context Adapter"/>
+         <meta.schema plugin="ca.gc.asc_csa.apogy.common.topology.ui" id="graphicsContextAdapter" name="Graphics Context Adapter"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]
@@ -55,7 +55,7 @@
                   
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter"/>
+                  <meta.attribute kind="java" basedOn=":ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContextAdapter"/>
                </appInfo>
             </annotation>
          </attribute>

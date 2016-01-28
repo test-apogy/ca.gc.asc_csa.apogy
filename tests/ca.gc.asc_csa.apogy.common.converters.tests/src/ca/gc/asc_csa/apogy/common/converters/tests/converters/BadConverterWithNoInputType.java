@@ -1,8 +1,8 @@
-package org.eclipse.symphony.common.converters.tests.converters;
+package ca.gc.asc_csa.apogy.common.converters.tests.converters;
 
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.tests.types.A;
-import org.eclipse.symphony.common.converters.tests.types.B;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.A;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.B;
 
 public class BadConverterWithNoInputType implements IConverter {
 

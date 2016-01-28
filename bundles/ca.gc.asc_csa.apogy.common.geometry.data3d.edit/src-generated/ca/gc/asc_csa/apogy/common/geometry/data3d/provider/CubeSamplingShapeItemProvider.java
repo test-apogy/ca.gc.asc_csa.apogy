@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2008.
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class CubeSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CubeSamplingShape_includeJustTouching_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CubeSamplingShape_includeJustTouching_feature", "_UI_CubeSamplingShape_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING,
+				 ApogyCommonGeometryData3DPackage.Literals.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class CubeSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CubeSamplingShape_corner1_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CubeSamplingShape_corner1_feature", "_UI_CubeSamplingShape_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CUBE_SAMPLING_SHAPE__CORNER1,
+				 ApogyCommonGeometryData3DPackage.Literals.CUBE_SAMPLING_SHAPE__CORNER1,
 				 true,
 				 false,
 				 true,
@@ -123,7 +123,7 @@ public class CubeSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CubeSamplingShape_corner2_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CubeSamplingShape_corner2_feature", "_UI_CubeSamplingShape_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CUBE_SAMPLING_SHAPE__CORNER2,
+				 ApogyCommonGeometryData3DPackage.Literals.CUBE_SAMPLING_SHAPE__CORNER2,
 				 true,
 				 false,
 				 true,
@@ -168,7 +168,7 @@ public class CubeSamplingShapeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CubeSamplingShape.class)) {
-			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case ApogyCommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

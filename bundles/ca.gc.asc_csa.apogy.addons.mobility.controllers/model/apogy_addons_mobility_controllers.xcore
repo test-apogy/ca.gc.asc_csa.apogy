@@ -1,20 +1,20 @@
-@GenModel(prefix="Symphony__AddonsMobilityControllers",
+@GenModel(prefix="ApogyAddonsMobilityControllers",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)",
-		  modelName="Symphony__AddonsMobilityControllers")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.controllers/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.controllers.edit/src-generated")
+		  modelName="ApogyAddonsMobilityControllers")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.mobility.controllers/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.mobility.controllers.edit/src-generated")
 
-package org.eclipse.symphony.addons.mobility.controllers
+package ca.gc.asc_csa.apogy.addons.mobility.controllers
 
-import org.eclipse.symphony.addons.mobility.MobilePlatform
-import org.eclipse.symphony.addons.geometry.paths.Path
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
-import org.eclipse.symphony.common.geometry.data3d.Pose
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
 
 /**
  * A PathFollower is an entity that makes a MobilePlatform follow a specified Path.

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -10,13 +10,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ValuesList;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
 
 import com.google.common.base.Objects;
 
@@ -29,11 +29,11 @@ import com.google.common.base.Objects;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramImpl#getProgramsList <em>Programs List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramImpl#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramImpl#getValuesList <em>Values List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getProgramsList <em>Programs List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl#getValuesList <em>Values List</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,7 +108,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.PROGRAM;
+		return ApogyCoreInvocatorPackage.Literals.PROGRAM;
 	}
 
   /**
@@ -131,7 +131,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.PROGRAM__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__NAME, oldName, name));
 	}
 
   /**
@@ -154,7 +154,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -164,7 +164,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 	 */
   public ProgramsList getProgramsList()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST) return null;
 		return (ProgramsList)eContainer();
 	}
 
@@ -175,7 +175,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 	 */
   public ProgramsList basicGetProgramsList()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST) return null;
 		return (ProgramsList)eInternalContainer();
 	}
 
@@ -186,7 +186,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 	 */
   public NotificationChain basicSetProgramsList(ProgramsList newProgramsList, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newProgramsList, Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newProgramsList, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST, msgs);
 		return msgs;
 	}
 
@@ -197,19 +197,19 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 	 */
   public void setProgramsList(ProgramsList newProgramsList)
   {
-		if (newProgramsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST && newProgramsList != null)) {
+		if (newProgramsList != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST && newProgramsList != null)) {
 			if (EcoreUtil.isAncestor(this, newProgramsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newProgramsList != null)
-				msgs = ((InternalEObject)newProgramsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ProgramsList.class, msgs);
+				msgs = ((InternalEObject)newProgramsList).eInverseAdd(this, ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ProgramsList.class, msgs);
 			msgs = basicSetProgramsList(newProgramsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST, newProgramsList, newProgramsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST, newProgramsList, newProgramsList));
 	}
 
   /**
@@ -248,7 +248,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 		ValuesList oldValuesList = valuesList;
 		valuesList = newValuesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST, oldValuesList, newValuesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, oldValuesList, newValuesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -263,14 +263,14 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
 		if (newValuesList != valuesList) {
 			NotificationChain msgs = null;
 			if (valuesList != null)
-				msgs = ((InternalEObject)valuesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST, null, msgs);
+				msgs = ((InternalEObject)valuesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, null, msgs);
 			if (newValuesList != null)
-				msgs = ((InternalEObject)newValuesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST, null, msgs);
+				msgs = ((InternalEObject)newValuesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, null, msgs);
 			msgs = basicSetValuesList(newValuesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST, newValuesList, newValuesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST, newValuesList, newValuesList));
 	}
 
 		/**
@@ -282,7 +282,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetProgramsList((ProgramsList)otherEnd, msgs);
@@ -299,9 +299,9 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
 				return basicSetProgramsList(null, msgs);
-			case Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
 				return basicSetValuesList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -316,8 +316,8 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ProgramsList.class, msgs);
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ProgramsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -331,16 +331,16 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAM__NAME:
+			case ApogyCoreInvocatorPackage.PROGRAM__NAME:
 				return getName();
-			case Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				return getDescription();
-			case Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
 				if (resolve) return getProgramsList();
 				return basicGetProgramsList();
-			case Symphony__CoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION:
 				return getInvocatorSession();
-			case Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
 				return getValuesList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -355,16 +355,16 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAM__NAME:
+			case ApogyCoreInvocatorPackage.PROGRAM__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
 				setProgramsList((ProgramsList)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
 				setValuesList((ValuesList)newValue);
 				return;
 		}
@@ -380,16 +380,16 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAM__NAME:
+			case ApogyCoreInvocatorPackage.PROGRAM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
 				setProgramsList((ProgramsList)null);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
 				setValuesList((ValuesList)null);
 				return;
 		}
@@ -405,15 +405,15 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAM__NAME:
+			case ApogyCoreInvocatorPackage.PROGRAM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST:
 				return basicGetProgramsList() != null;
-			case Symphony__CoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAM__INVOCATOR_SESSION:
 				return getInvocatorSession() != null;
-			case Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST:
+			case ApogyCoreInvocatorPackage.PROGRAM__VALUES_LIST:
 				return valuesList != null;
 		}
 		return super.eIsSet(featureID);
@@ -429,7 +429,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -446,7 +446,7 @@ public abstract class ProgramImpl extends MinimalEObjectImpl.Container implement
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.PROGRAM__DESCRIPTION;
 				default: return -1;
 			}
 		}

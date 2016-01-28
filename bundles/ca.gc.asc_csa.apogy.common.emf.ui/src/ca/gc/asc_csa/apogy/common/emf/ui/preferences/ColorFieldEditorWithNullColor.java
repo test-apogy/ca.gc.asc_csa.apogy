@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.preferences;
+package ca.gc.asc_csa.apogy.common.emf.ui.preferences;
 
 import org.eclipse.jface.preference.ColorFieldEditor;
 import org.eclipse.jface.preference.IPreferenceStore;

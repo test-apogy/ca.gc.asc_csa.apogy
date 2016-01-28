@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data;
+package ca.gc.asc_csa.apogy.common.geometry.data;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.Mesh#getPolygons <em>Polygons</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPolygons <em>Polygons</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMesh()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getMesh()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface Mesh<CoordinatesType extends Coordinates, PolygonType extends P
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygons</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMesh_Polygons()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getMesh_Polygons()
 	 * @model containment="true"
 	 * @generated
 	 */

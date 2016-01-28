@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.invocator.impl.ArgumentImpl;
-import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.ValueSource;
+import ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentImpl;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.programs.controllers.ValueSource;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.BindedEDataTypeArgumentImpl#getValueSource <em>Value Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.BindedEDataTypeArgumentImpl#getValueSource <em>Value Source</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +56,7 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT;
+		return ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT;
 	}
 
   /**
@@ -79,7 +79,7 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
 		ValueSource oldValueSource = valueSource;
 		valueSource = newValueSource;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, oldValueSource, newValueSource);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, oldValueSource, newValueSource);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -95,14 +95,14 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
 		if (newValueSource != valueSource) {
 			NotificationChain msgs = null;
 			if (valueSource != null)
-				msgs = ((InternalEObject)valueSource).eInverseRemove(this, Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, ValueSource.class, msgs);
+				msgs = ((InternalEObject)valueSource).eInverseRemove(this, ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, ValueSource.class, msgs);
 			if (newValueSource != null)
-				msgs = ((InternalEObject)newValueSource).eInverseAdd(this, Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, ValueSource.class, msgs);
+				msgs = ((InternalEObject)newValueSource).eInverseAdd(this, ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, ValueSource.class, msgs);
 			msgs = basicSetValueSource(newValueSource, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, newValueSource, newValueSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, newValueSource, newValueSource));
 	}
 
   /**
@@ -114,9 +114,9 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				if (valueSource != null)
-					msgs = ((InternalEObject)valueSource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, null, msgs);
+					msgs = ((InternalEObject)valueSource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, null, msgs);
 				return basicSetValueSource((ValueSource)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -131,7 +131,7 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				return basicSetValueSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -146,7 +146,7 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				return getValueSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,7 +161,7 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				setValueSource((ValueSource)newValue);
 				return;
 		}
@@ -177,7 +177,7 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				setValueSource((ValueSource)null);
 				return;
 		}
@@ -193,7 +193,7 @@ public class BindedEDataTypeArgumentImpl extends ArgumentImpl implements BindedE
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				return valueSource != null;
 		}
 		return super.eIsSet(featureID);

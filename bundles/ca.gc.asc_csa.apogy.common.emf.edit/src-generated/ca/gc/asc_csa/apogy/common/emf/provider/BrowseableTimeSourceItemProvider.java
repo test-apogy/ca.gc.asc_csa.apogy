@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -11,11 +11,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.BrowseableTimeSource} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class BrowseableTimeSourceItemProvider extends TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_BrowseableTimeSource_startTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BrowseableTimeSource_startTime_feature", "_UI_BrowseableTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__START_TIME,
+				 ApogyCommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__START_TIME,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class BrowseableTimeSourceItemProvider extends TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_BrowseableTimeSource_updatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BrowseableTimeSource_updatePeriod_feature", "_UI_BrowseableTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD,
+				 ApogyCommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class BrowseableTimeSourceItemProvider extends TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_BrowseableTimeSource_timeAcceration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BrowseableTimeSource_timeAcceration_feature", "_UI_BrowseableTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION,
+				 ApogyCommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION,
 				 true,
 				 false,
 				 false,
@@ -130,7 +130,7 @@ public class BrowseableTimeSourceItemProvider extends TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_BrowseableTimeSource_timeDirection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BrowseableTimeSource_timeDirection_feature", "_UI_BrowseableTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION,
+				 ApogyCommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -175,10 +175,10 @@ public class BrowseableTimeSourceItemProvider extends TimeSourceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BrowseableTimeSource.class)) {
-			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__START_TIME:
-			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
-			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
-			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
+			case ApogyCommonEMFPackage.BROWSEABLE_TIME_SOURCE__START_TIME:
+			case ApogyCommonEMFPackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
+			case ApogyCommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
+			case ApogyCommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsVehicleUIFactoryImpl extends EFactoryImpl implements Symphony__AddonsVehicleUIFactory
+public class ApogyAddonsVehicleUIFactoryImpl extends EFactoryImpl implements ApogyAddonsVehicleUIFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -28,18 +28,18 @@ public class Symphony__AddonsVehicleUIFactoryImpl extends EFactoryImpl implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__AddonsVehicleUIFactory init()
+  public static ApogyAddonsVehicleUIFactory init()
   {
 		try {
-			Symphony__AddonsVehicleUIFactory theSymphony__AddonsVehicleUIFactory = (Symphony__AddonsVehicleUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsVehicleUIPackage.eNS_URI);
-			if (theSymphony__AddonsVehicleUIFactory != null) {
-				return theSymphony__AddonsVehicleUIFactory;
+			ApogyAddonsVehicleUIFactory theApogyAddonsVehicleUIFactory = (ApogyAddonsVehicleUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsVehicleUIPackage.eNS_URI);
+			if (theApogyAddonsVehicleUIFactory != null) {
+				return theApogyAddonsVehicleUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsVehicleUIFactoryImpl();
+		return new ApogyAddonsVehicleUIFactoryImpl();
 	}
 
   /**
@@ -48,7 +48,7 @@ public class Symphony__AddonsVehicleUIFactoryImpl extends EFactoryImpl implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleUIFactoryImpl()
+  public ApogyAddonsVehicleUIFactoryImpl()
   {
 		super();
 	}
@@ -62,9 +62,9 @@ public class Symphony__AddonsVehicleUIFactoryImpl extends EFactoryImpl implement
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsVehicleUIPackage.PHYSICAL_WHEEL_PRESENTATION: return createPhysicalWheelPresentation();
-			case Symphony__AddonsVehicleUIPackage.LANDER_SPHERICAL_FOOT_PRESENTATION: return createLanderSphericalFootPresentation();
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION: return createThrusterPresentation();
+			case ApogyAddonsVehicleUIPackage.PHYSICAL_WHEEL_PRESENTATION: return createPhysicalWheelPresentation();
+			case ApogyAddonsVehicleUIPackage.LANDER_SPHERICAL_FOOT_PRESENTATION: return createLanderSphericalFootPresentation();
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION: return createThrusterPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -108,8 +108,8 @@ public class Symphony__AddonsVehicleUIFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsVehicleUIPackage getSymphony__AddonsVehicleUIPackage() {
-		return (Symphony__AddonsVehicleUIPackage)getEPackage();
+	public ApogyAddonsVehicleUIPackage getApogyAddonsVehicleUIPackage() {
+		return (ApogyAddonsVehicleUIPackage)getEPackage();
 	}
 
 		/**
@@ -119,9 +119,9 @@ public class Symphony__AddonsVehicleUIFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__AddonsVehicleUIPackage getPackage()
+  public static ApogyAddonsVehicleUIPackage getPackage()
   {
-		return Symphony__AddonsVehicleUIPackage.eINSTANCE;
+		return ApogyAddonsVehicleUIPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsVehicleUIFactoryImpl
+} //ApogyAddonsVehicleUIFactoryImpl

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.provider;
+package ca.gc.asc_csa.apogy.common.file.csv.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.file.csv.CsvColumnsSet;
-import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
+import ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet;
+import ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.file.csv.CsvColumnsSet} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class CsvColumnsSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumnsSet_columns_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumnsSet_columns_feature", "_UI_CsvColumnsSet_type"),
-				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMNS_SET__COLUMNS,
+				 ApogyCommonFileCSVPackage.Literals.CSV_COLUMNS_SET__COLUMNS,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class CsvColumnsSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumnsSet_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumnsSet_name_feature", "_UI_CsvColumnsSet_type"),
-				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMNS_SET__NAME,
+				 ApogyCommonFileCSVPackage.Literals.CSV_COLUMNS_SET__NAME,
 				 true,
 				 false,
 				 false,
@@ -147,8 +147,8 @@ public class CsvColumnsSetItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CsvColumnsSet.class)) {
-			case Symphony__CommonFileCSVPackage.CSV_COLUMNS_SET__COLUMNS:
-			case Symphony__CommonFileCSVPackage.CSV_COLUMNS_SET__NAME:
+			case ApogyCommonFileCSVPackage.CSV_COLUMNS_SET__COLUMNS:
+			case ApogyCommonFileCSVPackage.CSV_COLUMNS_SET__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

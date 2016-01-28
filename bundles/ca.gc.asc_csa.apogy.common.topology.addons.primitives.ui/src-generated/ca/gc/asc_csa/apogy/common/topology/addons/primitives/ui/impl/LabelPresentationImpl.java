@@ -1,19 +1,19 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.impl;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.primitives.Label;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelSceneObject;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.LabelPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.LabelSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class LabelPresentationImpl extends NodePresentationImpl implements Label
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.LABEL_PRESENTATION;
+		return ApogyCommonTopologyAddonsPrimitivesUIPackage.Literals.LABEL_PRESENTATION;
 	}
 	
 	@Override
@@ -50,7 +50,7 @@ public class LabelPresentationImpl extends NodePresentationImpl implements Label
 		if (sceneObject != null) {
 			LabelSceneObject lableObject = (LabelSceneObject) sceneObject;
 
-			if (notification.getFeatureID(Label.class) == Symphony__CommonTopologyAddonsPrimitivesPackage.LABEL__DESCRIPTION) {
+			if (notification.getFeatureID(Label.class) == ApogyCommonTopologyAddonsPrimitivesPackage.LABEL__DESCRIPTION) {
 				lableObject.setText(getNode().getDescription());
 			}
 		}

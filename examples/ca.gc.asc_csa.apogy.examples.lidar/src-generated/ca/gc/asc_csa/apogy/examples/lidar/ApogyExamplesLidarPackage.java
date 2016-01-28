@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar;
+package ca.gc.asc_csa.apogy.examples.lidar;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarFactory
+ * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesLidar' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='Symphony__ExamplesLidar' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.lidar/src-generated' editDirectory='/org.eclipse.symphony.examples.lidar.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesLidar' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='ApogyExamplesLidar' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.lidar/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.lidar.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesLidarPackage extends EPackage
+public interface ApogyExamplesLidarPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -42,7 +42,7 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.lidar";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.lidar";
 
   /**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesLidarPackage eINSTANCE = org.eclipse.symphony.examples.lidar.impl.Symphony__ExamplesLidarPackageImpl.init();
+  ApogyExamplesLidarPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.lidar.impl.ApogyExamplesLidarPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lidar.impl.LidarImpl <em>Lidar</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarImpl <em>Lidar</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lidar.impl.LidarImpl
-	 * @see org.eclipse.symphony.examples.lidar.impl.Symphony__ExamplesLidarPackageImpl#getLidar()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.LidarImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.ApogyExamplesLidarPackageImpl#getLidar()
 	 * @generated
 	 */
   int LIDAR = 0;
@@ -134,11 +134,11 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
   int LIDAR_OPERATION_COUNT = 3;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lidar.impl.LidarStubImpl <em>Lidar Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarStubImpl <em>Lidar Stub</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lidar.impl.LidarStubImpl
-	 * @see org.eclipse.symphony.examples.lidar.impl.Symphony__ExamplesLidarPackageImpl#getLidarStub()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.LidarStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.ApogyExamplesLidarPackageImpl#getLidarStub()
 	 * @generated
 	 */
   int LIDAR_STUB = 1;
@@ -208,11 +208,11 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lidar.impl.LidarSimulatedImpl <em>Lidar Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarSimulatedImpl <em>Lidar Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lidar.impl.LidarSimulatedImpl
-	 * @see org.eclipse.symphony.examples.lidar.impl.Symphony__ExamplesLidarPackageImpl#getLidarSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.LidarSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.ApogyExamplesLidarPackageImpl#getLidarSimulated()
 	 * @generated
 	 */
 	int LIDAR_SIMULATED = 2;
@@ -282,83 +282,83 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lidar.Lidar <em>Lidar</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar <em>Lidar</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lidar</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.Lidar
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.Lidar
 	 * @generated
 	 */
   EClass getLidar();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.lidar.Lidar#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.Lidar#getFov()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.Lidar#getFov()
 	 * @see #getLidar()
 	 * @generated
 	 */
   EReference getLidar_Fov();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lidar.Lidar#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.Lidar#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.Lidar#isInitialized()
 	 * @see #getLidar()
 	 * @generated
 	 */
 	EAttribute getLidar_Initialized();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lidar.Lidar#init() <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#init() <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.examples.lidar.Lidar#init()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.Lidar#init()
 	 * @generated
 	 */
 	EOperation getLidar__Init();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lidar.Lidar#acquireScan(double, double) <em>Acquire Scan</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#acquireScan(double, double) <em>Acquire Scan</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Acquire Scan</em>' operation.
-	 * @see org.eclipse.symphony.examples.lidar.Lidar#acquireScan(double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.Lidar#acquireScan(double, double)
 	 * @generated
 	 */
   EOperation getLidar__AcquireScan__double_double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lidar.Lidar#acquireScanNonBlocking(double, double) <em>Acquire Scan Non Blocking</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#acquireScanNonBlocking(double, double) <em>Acquire Scan Non Blocking</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Acquire Scan Non Blocking</em>' operation.
-	 * @see org.eclipse.symphony.examples.lidar.Lidar#acquireScanNonBlocking(double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.Lidar#acquireScanNonBlocking(double, double)
 	 * @generated
 	 */
   EOperation getLidar__AcquireScanNonBlocking__double_double();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lidar.LidarStub <em>Lidar Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lidar.LidarStub <em>Lidar Stub</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lidar Stub</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.LidarStub
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.LidarStub
 	 * @generated
 	 */
   EClass getLidarStub();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lidar.LidarSimulated <em>Lidar Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lidar.LidarSimulated <em>Lidar Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lidar Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.LidarSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.LidarSimulated
 	 * @generated
 	 */
 	EClass getLidarSimulated();
@@ -370,7 +370,7 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesLidarFactory getSymphony__ExamplesLidarFactory();
+	ApogyExamplesLidarFactory getApogyExamplesLidarFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -388,11 +388,11 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lidar.impl.LidarImpl <em>Lidar</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarImpl <em>Lidar</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lidar.impl.LidarImpl
-		 * @see org.eclipse.symphony.examples.lidar.impl.Symphony__ExamplesLidarPackageImpl#getLidar()
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.LidarImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.ApogyExamplesLidarPackageImpl#getLidar()
 		 * @generated
 		 */
     EClass LIDAR = eINSTANCE.getLidar();
@@ -438,25 +438,25 @@ public interface Symphony__ExamplesLidarPackage extends EPackage
     EOperation LIDAR___ACQUIRE_SCAN_NON_BLOCKING__DOUBLE_DOUBLE = eINSTANCE.getLidar__AcquireScanNonBlocking__double_double();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lidar.impl.LidarStubImpl <em>Lidar Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarStubImpl <em>Lidar Stub</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lidar.impl.LidarStubImpl
-		 * @see org.eclipse.symphony.examples.lidar.impl.Symphony__ExamplesLidarPackageImpl#getLidarStub()
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.LidarStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.ApogyExamplesLidarPackageImpl#getLidarStub()
 		 * @generated
 		 */
     EClass LIDAR_STUB = eINSTANCE.getLidarStub();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lidar.impl.LidarSimulatedImpl <em>Lidar Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarSimulatedImpl <em>Lidar Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lidar.impl.LidarSimulatedImpl
-		 * @see org.eclipse.symphony.examples.lidar.impl.Symphony__ExamplesLidarPackageImpl#getLidarSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.LidarSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.impl.ApogyExamplesLidarPackageImpl#getLidarSimulated()
 		 * @generated
 		 */
 		EClass LIDAR_SIMULATED = eINSTANCE.getLidarSimulated();
 
   }
 
-} //Symphony__ExamplesLidarPackage
+} //ApogyExamplesLidarPackage

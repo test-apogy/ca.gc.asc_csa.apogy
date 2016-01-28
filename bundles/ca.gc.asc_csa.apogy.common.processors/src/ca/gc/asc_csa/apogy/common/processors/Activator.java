@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.processors;
+package ca.gc.asc_csa.apogy.common.processors;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -8,7 +8,7 @@ public class Activator extends Plugin {
 	// The shared instance
 	private static Activator plugin;
 
-	public static final String ID = "org.eclipse.symphony.common.processors";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.processors";
 
 	public Activator() {
 		plugin = this;

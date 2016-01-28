@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import org.orekit.orbits.KeplerianOrbit;
 
@@ -20,16 +20,16 @@ import org.orekit.orbits.KeplerianOrbit;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getSemiMajorAxis <em>Semi Major Axis</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getEccentricity <em>Eccentricity</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getInclination <em>Inclination</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getPerigeeArgument <em>Perigee Argument</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getMeanAnomaly <em>Mean Anomaly</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getTrueAnomaly <em>True Anomaly</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getSemiMajorAxis <em>Semi Major Axis</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getEccentricity <em>Eccentricity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getInclination <em>Inclination</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getPerigeeArgument <em>Perigee Argument</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getMeanAnomaly <em>Mean Anomaly</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getTrueAnomaly <em>True Anomaly</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit()
  * @model
  * @generated
  */
@@ -43,15 +43,15 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Semi Major Axis</em>' attribute.
 	 * @see #setSemiMajorAxis(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_SemiMajorAxis()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_SemiMajorAxis()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getSemiMajorAxis();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getSemiMajorAxis <em>Semi Major Axis</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getSemiMajorAxis <em>Semi Major Axis</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Semi Major Axis</em>' attribute.
@@ -69,14 +69,14 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Eccentricity</em>' attribute.
 	 * @see #setEccentricity(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Eccentricity()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Eccentricity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getEccentricity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getEccentricity <em>Eccentricity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getEccentricity <em>Eccentricity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Eccentricity</em>' attribute.
@@ -94,15 +94,15 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Inclination</em>' attribute.
 	 * @see #setInclination(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Inclination()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Inclination()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getInclination();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getInclination <em>Inclination</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getInclination <em>Inclination</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Inclination</em>' attribute.
@@ -120,15 +120,15 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Perigee Argument</em>' attribute.
 	 * @see #setPerigeeArgument(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_PerigeeArgument()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_PerigeeArgument()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getPerigeeArgument();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getPerigeeArgument <em>Perigee Argument</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getPerigeeArgument <em>Perigee Argument</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Perigee Argument</em>' attribute.
@@ -146,15 +146,15 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Right Ascention Of Ascending Node</em>' attribute.
 	 * @see #setRightAscentionOfAscendingNode(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_RightAscentionOfAscendingNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_RightAscentionOfAscendingNode()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getRightAscentionOfAscendingNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Ascention Of Ascending Node</em>' attribute.
@@ -172,14 +172,14 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Anomaly</em>' attribute.
 	 * @see #setMeanAnomaly(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_MeanAnomaly()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_MeanAnomaly()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getMeanAnomaly();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getMeanAnomaly <em>Mean Anomaly</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getMeanAnomaly <em>Mean Anomaly</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mean Anomaly</em>' attribute.
@@ -197,14 +197,14 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>True Anomaly</em>' attribute.
 	 * @see #setTrueAnomaly(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_TrueAnomaly()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_TrueAnomaly()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getTrueAnomaly();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getTrueAnomaly <em>True Anomaly</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit#getTrueAnomaly <em>True Anomaly</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>True Anomaly</em>' attribute.
@@ -219,7 +219,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- begin-model-doc -->
 	 * Returns the underlying OreKit KeplerianOrbit.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitKeplerianOrbit" unique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitKeplerianOrbit" unique="false"
 	 * @generated
 	 */
 	KeplerianOrbit getOreKitKeplerianOrbit();

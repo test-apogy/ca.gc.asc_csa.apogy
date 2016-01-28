@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2008.
  *
- * $Id: Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory.java,v 1.2.4.2 2015/05/21 15:51:33 pallard Exp $
+ * $Id: ApogyAddonsMobilityPathplannersGraphItemProviderAdapterFactory.java,v 1.2.4.2 2015/05/21 15:51:33 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,13 +29,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.util.Symphony__AddonsMobilityPathplannersGraphAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.util.ApogyAddonsMobilityPathplannersGraphAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -46,7 +46,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory extends Symphony__AddonsMobilityPathplannersGraphAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsMobilityPathplannersGraphItemProviderAdapterFactory extends ApogyAddonsMobilityPathplannersGraphAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsMobilityPathplannersGraphEditPlugin.INSTANCE, Symphony__AddonsMobilityPathplannersGraphPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsMobilityPathplannersGraphEditPlugin.INSTANCE, ApogyAddonsMobilityPathplannersGraphPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory() {
+	public ApogyAddonsMobilityPathplannersGraphItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -94,7 +94,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,7 +102,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected CostBasedMeshWayPointPathPlannerItemProvider costBasedMeshWayPointPathPlannerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected MeshDisplacementCostFunctionItemProvider meshDisplacementCostFunctionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected DistanceOnlyCostFunctionItemProvider distanceOnlyCostFunctionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,7 +163,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected DirectedGraphBasedMeshWayPointPathPlannerItemProvider directedGraphBasedMeshWayPointPathPlannerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,7 +209,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected MobilityEdgeItemProvider mobilityEdgeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,7 +232,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdgeFactory} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected MobilityEdgeFactoryItemProvider mobilityEdgeFactoryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdgeFactory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -255,7 +255,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -263,7 +263,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected DistanceAndSlopesCostFunctionItemProvider distanceAndSlopesCostFunctionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -278,7 +278,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,7 +286,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected ExclusionZonesCostFunctionItemProvider exclusionZonesCostFunctionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -301,7 +301,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -309,7 +309,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	protected DistanceAndRoverFootprintCostFunctionItemProvider distanceAndRoverFootprintCostFunctionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -462,19 +462,19 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -510,53 +510,53 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createCostBasedMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createCostBasedMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDirectedGraphBasedMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDirectedGraphBasedMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdge()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdge()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdgeFactory()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdgeFactory()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
 
 				return null;
 			}
@@ -570,53 +570,53 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createCostBasedMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createCostBasedMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDirectedGraphBasedMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDirectedGraphBasedMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdge()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdge()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdgeFactory()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdgeFactory()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
 
 				return null;
 			}
@@ -649,7 +649,7 @@ public class Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsMobilityPathplannersGraphEditPlugin.INSTANCE;
+			return ApogyAddonsMobilityPathplannersGraphEditPlugin.INSTANCE;
 		}
 	}
 

@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera;
+package ca.gc.asc_csa.apogy.examples.camera;
 
-import org.eclipse.symphony.addons.actuators.PanTiltUnit;
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,7 @@ import org.eclipse.symphony.addons.actuators.PanTiltUnit;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getPTUCamera()
+ * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage#getPTUCamera()
  * @model abstract="true"
  * @generated
  */

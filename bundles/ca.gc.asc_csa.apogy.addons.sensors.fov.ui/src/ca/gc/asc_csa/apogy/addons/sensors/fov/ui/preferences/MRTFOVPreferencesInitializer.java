@@ -1,9 +1,9 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
-import org.eclipse.symphony.addons.sensors.fov.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.Activator;
 
 public class MRTFOVPreferencesInitializer extends AbstractPreferenceInitializer {
 

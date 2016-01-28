@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getCenter <em>Center</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getCenter <em>Center</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphereSamplingShape()
  * @model
  * @generated
  */
@@ -45,15 +45,15 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_Radius()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphereSamplingShape_Radius()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getRadius();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getRadius <em>Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getRadius <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Radius</em>' attribute.
@@ -76,14 +76,14 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center</em>' reference.
 	 * @see #setCenter(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_Center()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphereSamplingShape_Center()
 	 * @model
 	 * @generated
 	 */
 	CartesianPositionCoordinates getCenter();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getCenter <em>Center</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getCenter <em>Center</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Center</em>' reference.
@@ -107,14 +107,14 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Include Just Touching</em>' attribute.
 	 * @see #setIncludeJustTouching(boolean)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_IncludeJustTouching()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphereSamplingShape_IncludeJustTouching()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isIncludeJustTouching();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Include Just Touching</em>' attribute.

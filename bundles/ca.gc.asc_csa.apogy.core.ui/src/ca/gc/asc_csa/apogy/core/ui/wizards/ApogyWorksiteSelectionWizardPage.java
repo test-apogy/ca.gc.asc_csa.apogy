@@ -1,17 +1,17 @@
-package org.eclipse.symphony.core.ui.wizards;
+package ca.gc.asc_csa.apogy.core.ui.wizards;
 
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.Activator;
-import org.eclipse.symphony.core.WorksiteContributor;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.ui.composites.WorksiteContributorsListComposite;
+import ca.gc.asc_csa.apogy.core.Activator;
+import ca.gc.asc_csa.apogy.core.WorksiteContributor;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.ui.composites.WorksiteContributorsListComposite;
 
-public class SymphonyWorksiteSelectionWizardPage extends WizardPage
+public class ApogyWorksiteSelectionWizardPage extends WizardPage
 {
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.ui.wizards.SymphonyWorksiteSelectionWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.ui.wizards.ApogyWorksiteSelectionWizardPage";
 	private WorksiteContributorsListComposite listComposite;
 	private final static String ERROR_MSG = "You must select one worksite";
 	
@@ -20,11 +20,11 @@ public class SymphonyWorksiteSelectionWizardPage extends WizardPage
 	 * 
 	 * @param pageName
 	 */
-	public SymphonyWorksiteSelectionWizardPage()
+	public ApogyWorksiteSelectionWizardPage()
 	{
 		super(WIZARD_PAGE_ID);
-		setTitle("Select Registered Symphony Worksite");
-		setDescription("This wizard allows to select a registered Symphony Worksite.");
+		setTitle("Select Registered Apogy Worksite");
+		setDescription("This wizard allows to select a registered Apogy Worksite.");
 		validate();
 	}
 
@@ -47,9 +47,9 @@ public class SymphonyWorksiteSelectionWizardPage extends WizardPage
 	protected void validate()
 	{
 		String message = null;
-		if (Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null)
+		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null)
 		{
-			message = "There is no active Symphony Session.  Activate a session first.";
+			message = "There is no active Apogy Session.  Activate a session first.";
 		}
 		else
 		{

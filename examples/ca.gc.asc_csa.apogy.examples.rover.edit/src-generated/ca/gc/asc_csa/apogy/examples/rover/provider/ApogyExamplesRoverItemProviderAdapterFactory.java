@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.provider;
+package ca.gc.asc_csa.apogy.examples.rover.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,14 +29,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverFactory;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverFactory;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
 
-import org.eclipse.symphony.examples.rover.util.Symphony__ExamplesRoverAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.rover.util.ApogyExamplesRoverAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.examples.rover.util.Symphony__ExamplesRoverAdapterFa
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony__ExamplesRoverAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyExamplesRoverItemProviderAdapterFactory extends ApogyExamplesRoverAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesRoverEditPlugin.INSTANCE, Symphony__ExamplesRoverPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesRoverEditPlugin.INSTANCE, ApogyExamplesRoverPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -86,7 +86,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoverItemProviderAdapterFactory() {
+	public ApogyExamplesRoverItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -95,7 +95,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.rover.Battery} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.rover.Battery} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -103,7 +103,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	protected BatteryItemProvider batteryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.rover.Battery}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.Battery}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -118,7 +118,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.rover.PowerSystem} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -126,7 +126,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	protected PowerSystemItemProvider powerSystemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.rover.PowerSystem}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -141,7 +141,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.rover.RoverStub} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.rover.RoverStub} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,7 +149,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	protected RoverStubItemProvider roverStubItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.rover.RoverStub}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.RoverStub}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -164,7 +164,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.rover.RoverSimulated} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.rover.RoverSimulated} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -172,7 +172,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	protected RoverSimulatedItemProvider roverSimulatedItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.rover.RoverSimulated}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.RoverSimulated}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -319,19 +319,19 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -367,23 +367,23 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createBattery()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createBattery()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createPowerSystem()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createPowerSystem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createRoverStub()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createRoverStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createRoverSimulated()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createRoverSimulated()));
 
 				return null;
 			}
@@ -397,23 +397,23 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createBattery()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createBattery()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createPowerSystem()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createPowerSystem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createRoverStub()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createRoverStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesRoverFactory.eINSTANCE.createRoverSimulated()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesRoverFactory.eINSTANCE.createRoverSimulated()));
 
 				return null;
 			}
@@ -446,7 +446,7 @@ public class Symphony__ExamplesRoverItemProviderAdapterFactory extends Symphony_
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesRoverEditPlugin.INSTANCE;
+			return ApogyExamplesRoverEditPlugin.INSTANCE;
 		}
 	}
 

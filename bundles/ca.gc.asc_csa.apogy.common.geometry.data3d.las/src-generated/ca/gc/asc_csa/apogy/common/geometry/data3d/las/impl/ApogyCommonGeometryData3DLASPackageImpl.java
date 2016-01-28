@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,16 +20,16 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade;
-import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
-import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
-import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
-import org.eclipse.symphony.common.geometry.data3d.las.LASWriter;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFactory;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
-import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
-import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl implements Symphony__CommonGeometryData3DLASPackage {
+public class ApogyCommonGeometryData3DLASPackageImpl extends EPackageImpl implements ApogyCommonGeometryData3DLASPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -71,7 +71,7 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonGeometryData3DLASFacadeEClass = null;
+	private EClass apogy__CommonGeometryData3DLASFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,12 +154,12 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonGeometryData3DLASPackageImpl() {
-		super(eNS_URI, Symphony__CommonGeometryData3DLASFactory.eINSTANCE);
+	private ApogyCommonGeometryData3DLASPackageImpl() {
+		super(eNS_URI, ApogyCommonGeometryData3DLASFactory.eINSTANCE);
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonGeometryData3DLASPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonGeometryData3DLASPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,11 +181,11 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData3DLASPackage init() {
-		if (isInited) return (Symphony__CommonGeometryData3DLASPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DLASPackage.eNS_URI);
+	public static ApogyCommonGeometryData3DLASPackage init() {
+		if (isInited) return (ApogyCommonGeometryData3DLASPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DLASPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonGeometryData3DLASPackageImpl theSymphony__CommonGeometryData3DLASPackage = (Symphony__CommonGeometryData3DLASPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonGeometryData3DLASPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonGeometryData3DLASPackageImpl());
+		ApogyCommonGeometryData3DLASPackageImpl theApogyCommonGeometryData3DLASPackage = (ApogyCommonGeometryData3DLASPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonGeometryData3DLASPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonGeometryData3DLASPackageImpl());
 
 		isInited = true;
 
@@ -193,18 +193,18 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonGeometryData3DLASPackage.createPackageContents();
+		theApogyCommonGeometryData3DLASPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonGeometryData3DLASPackage.initializePackageContents();
+		theApogyCommonGeometryData3DLASPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonGeometryData3DLASPackage.freeze();
+		theApogyCommonGeometryData3DLASPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonGeometryData3DLASPackage.eNS_URI, theSymphony__CommonGeometryData3DLASPackage);
-		return theSymphony__CommonGeometryData3DLASPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonGeometryData3DLASPackage.eNS_URI, theApogyCommonGeometryData3DLASPackage);
+		return theApogyCommonGeometryData3DLASPackage;
 	}
 
 	/**
@@ -797,8 +797,8 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonGeometryData3DLASFacade() {
-		return symphony__CommonGeometryData3DLASFacadeEClass;
+	public EClass getApogyCommonGeometryData3DLASFacade() {
+		return apogy__CommonGeometryData3DLASFacadeEClass;
 	}
 
 	/**
@@ -806,8 +806,8 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte() {
-		return symphony__CommonGeometryData3DLASFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonGeometryData3DLASFacade__CreatePoint__int_byte() {
+		return apogy__CommonGeometryData3DLASFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1013,8 +1013,8 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASFactory getSymphony__CommonGeometryData3DLASFactory() {
-		return (Symphony__CommonGeometryData3DLASFactory)getEFactoryInstance();
+	public ApogyCommonGeometryData3DLASFactory getApogyCommonGeometryData3DLASFactory() {
+		return (ApogyCommonGeometryData3DLASFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -1105,8 +1105,8 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		createEAttribute(lasPointEClass, LAS_POINT__GREEN);
 		createEAttribute(lasPointEClass, LAS_POINT__BLUE);
 
-		symphony__CommonGeometryData3DLASFacadeEClass = createEClass(SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE);
-		createEOperation(symphony__CommonGeometryData3DLASFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE);
+		apogy__CommonGeometryData3DLASFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE);
+		createEOperation(apogy__CommonGeometryData3DLASFacadeEClass, APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE);
 
 		lasWriterEClass = createEClass(LAS_WRITER);
 		createEAttribute(lasWriterEClass, LAS_WRITER__FILE_NAME);
@@ -1240,9 +1240,9 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		initEAttribute(getLASPoint_Green(), theEcorePackage.getEInt(), "green", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLASPoint_Blue(), theEcorePackage.getEInt(), "blue", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__CommonGeometryData3DLASFacadeEClass, Symphony__CommonGeometryData3DLASFacade.class, "Symphony__CommonGeometryData3DLASFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonGeometryData3DLASFacadeEClass, ApogyCommonGeometryData3DLASFacade.class, "ApogyCommonGeometryData3DLASFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte(), this.getLASPoint(), "createPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonGeometryData3DLASFacade__CreatePoint__int_byte(), this.getLASPoint(), "createPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "formatID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEByteArray(), "data", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIOException());
@@ -1301,16 +1301,16 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonGeometryData3DLAS",
+			 "prefix", "ApogyCommonGeometryData3DLAS",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonGeometryData3DLAS",
+			 "modelName", "ApogyCommonGeometryData3DLAS",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d.las/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.las.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.geometry.data3d"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.las/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.las.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry.data3d"
 		   });	
 		addAnnotation
 		  (getLASWriter_Points(), 
@@ -1320,4 +1320,4 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		   });
 	}
 
-} //Symphony__CommonGeometryData3DLASPackageImpl
+} //ApogyCommonGeometryData3DLASPackageImpl

@@ -1,30 +1,30 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.util;
+package ca.gc.asc_csa.apogy.core.programs.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.programs.*;
+import ca.gc.asc_csa.apogy.core.programs.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage
+ * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage
  * @generated
  */
-public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCoreProgramsAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreProgramsPackage modelPackage;
+	protected static ApogyCoreProgramsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -32,9 +32,9 @@ public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsAdapterFactory() {
+	public ApogyCoreProgramsAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreProgramsPackage.eINSTANCE;
+			modelPackage = ApogyCoreProgramsPackage.eINSTANCE;
 		}
 	}
 
@@ -63,15 +63,15 @@ public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreProgramsSwitch<Adapter> modelSwitch =
-		new Symphony__CoreProgramsSwitch<Adapter>() {
+	protected ApogyCoreProgramsSwitch<Adapter> modelSwitch =
+		new ApogyCoreProgramsSwitch<Adapter>() {
 			@Override
 			public Adapter caseAbstractProgramRuntime(AbstractProgramRuntime object) {
 				return createAbstractProgramRuntimeAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CoreProgramsFacade(Symphony__CoreProgramsFacade object) {
-				return createSymphony__CoreProgramsFacadeAdapter();
+			public Adapter caseApogyCoreProgramsFacade(ApogyCoreProgramsFacade object) {
+				return createApogyCoreProgramsFacadeAdapter();
 			}
 			@Override
 			public Adapter caseTimeInterval(TimeInterval object) {
@@ -98,13 +98,13 @@ public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime <em>Abstract Program Runtime</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime <em>Abstract Program Runtime</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime
 	 * @generated
 	 */
 	public Adapter createAbstractProgramRuntimeAdapter() {
@@ -112,27 +112,27 @@ public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreProgramsFacadeAdapter() {
+	public Adapter createApogyCoreProgramsFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.TimeInterval <em>Time Interval</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval <em>Time Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.TimeInterval
+	 * @see ca.gc.asc_csa.apogy.core.programs.TimeInterval
 	 * @generated
 	 */
 	public Adapter createTimeIntervalAdapter() {
@@ -151,4 +151,4 @@ public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__CoreProgramsAdapterFactory
+} //ApogyCoreProgramsAdapterFactory

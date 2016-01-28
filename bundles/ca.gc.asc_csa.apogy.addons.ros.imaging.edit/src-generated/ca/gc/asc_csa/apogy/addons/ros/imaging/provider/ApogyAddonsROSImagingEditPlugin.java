@@ -1,28 +1,28 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.provider;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
+import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsROSImaging edit plugin.
+ * This is the central singleton for the ApogyAddonsROSImaging edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsROSImagingEditPlugin extends EMFPlugin {
+public final class ApogyAddonsROSImagingEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsROSImagingEditPlugin INSTANCE = new Symphony__AddonsROSImagingEditPlugin();
+	public static final ApogyAddonsROSImagingEditPlugin INSTANCE = new ApogyAddonsROSImagingEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -38,10 +38,10 @@ public final class Symphony__AddonsROSImagingEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingEditPlugin() {
+	public ApogyAddonsROSImagingEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonImagesEditPlugin.INSTANCE,
+		     ApogyCommonImagesEditPlugin.INSTANCE,
 		   });
 	}
 

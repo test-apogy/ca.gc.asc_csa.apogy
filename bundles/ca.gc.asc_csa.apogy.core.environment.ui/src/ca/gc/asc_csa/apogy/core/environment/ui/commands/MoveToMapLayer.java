@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.commands;
+package ca.gc.asc_csa.apogy.core.environment.ui.commands;
 
 import java.util.Iterator;
 
@@ -14,36 +14,36 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.OperationCallPositionedResult;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.dialogs.MapSelectionDialog;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.dialogs.MapSelectionDialog;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
 
 public class MoveToMapLayer extends AbstractHandler implements IHandler
 {
@@ -112,10 +112,10 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		Map map = null;
 		
 		Context context  = positionedResult.getContext();
-		if(context.getEnvironment() instanceof SymphonyEnvironment)
+		if(context.getEnvironment() instanceof ApogyEnvironment)
 		{
-			SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) context.getEnvironment();
-			AbstractWorksite worksite = symphonyEnvironment.getActiveWorksite();
+			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
+			AbstractWorksite worksite = apogyEnvironment.getActiveWorksite();
 			
 			if(worksite instanceof SurfaceWorksite)
 			{
@@ -141,7 +141,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 	protected void addToMap(final PositionedResult positionedResult, final Map map, final CartesianTriangularMesh mesh)
 	{
 		// Create a CartesianTriangularMeshMapLayer
-		BasicCartesianTriangularMeshMapLayer meshLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
+		BasicCartesianTriangularMeshMapLayer meshLayer = ApogyCoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
 		
 		// Sets Name
 		meshLayer.setName(getName(positionedResult));
@@ -150,7 +150,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		meshLayer.setDescription(getDescription(positionedResult));
 		
 		// Makes a copy of the mesh.
-		CartesianTriangularMesh transformedMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh);
+		CartesianTriangularMesh transformedMesh = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh);
 		
 		// Transform the mesh coordinates.
 		Matrix4d transform = getTransformForMap(positionedResult, map);		
@@ -166,7 +166,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 	protected void addToMap(final PositionedResult positionedResult, final Map map, final CartesianCoordinatesSet coordinatesSet)
 	{
 		// Create a CartesianTriangularMeshMapLayer
-		BasicCartesianTriangularMeshMapLayer meshLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
+		BasicCartesianTriangularMeshMapLayer meshLayer = ApogyCoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
 		
 		// Sets Name
 		meshLayer.setName(getName(positionedResult));
@@ -175,12 +175,12 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		meshLayer.setDescription(getDescription(positionedResult));
 		
 		// Creates a mesh .
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		// Copies the coordinatesSet point to the mesh.
 		for(CartesianPositionCoordinates point : coordinatesSet.getPoints())
 		{
-			CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
+			CartesianPositionCoordinates pointCopy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 			mesh.getPoints().add(pointCopy);
 		}
 				
@@ -200,7 +200,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(map);
 		
 		// Creates an ADD command to add the meshLayer.
-		Command addCommand = AddCommand.create(editingDomain, map, Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS, meshLayer);
+		Command addCommand = AddCommand.create(editingDomain, map, ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS, meshLayer);
 		
 		// Executes the command.
 		editingDomain.getCommandStack().execute(addCommand);
@@ -309,23 +309,23 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		String variable_str = "?";
 		if( operationCall.getVariable() != null)
 		{
-			variable_str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall.getVariable());
+			variable_str = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(operationCall.getVariable());
 		}
 		
 		String feature_str = null;
 		if (operationCall.getFeatureRoot() != null) 
 		{
-			AbstractFeatureListNode leaf = Symphony__CommonEMFFacade.INSTANCE.getLeaf(operationCall.getFeatureRoot());
+			AbstractFeatureListNode leaf = ApogyCommonEMFFacade.INSTANCE.getLeaf(operationCall.getFeatureRoot());
 			if (leaf != null) 
 			{
-				feature_str = Symphony__CommonEMFFacade.INSTANCE.getAncestriesString(leaf);
+				feature_str = ApogyCommonEMFFacade.INSTANCE.getAncestriesString(leaf);
 			}
 		}
 		String operation_str = "?";
 		
 		if(operationCall.getEOperation() != null)
 		{
-			operation_str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall.getEOperation());
+			operation_str = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(operationCall.getEOperation());
 		}
 		
 		if (feature_str != null) 

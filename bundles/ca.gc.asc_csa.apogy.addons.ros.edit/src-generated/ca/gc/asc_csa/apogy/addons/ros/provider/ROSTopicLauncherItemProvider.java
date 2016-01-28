@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
@@ -23,11 +23,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.ROSTopicLauncher;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.ROSTopicLauncher} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -81,7 +81,7 @@ public class ROSTopicLauncherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSTopicLauncher_running_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSTopicLauncher_running_feature", "_UI_ROSTopicLauncher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__RUNNING,
+				 ApogyAddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__RUNNING,
 				 false,
 				 false,
 				 false,
@@ -102,7 +102,7 @@ public class ROSTopicLauncherItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__NODE);
+			childrenFeatures.add(ApogyAddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__NODE);
 		}
 		return childrenFeatures;
 	}
@@ -133,7 +133,7 @@ public class ROSTopicLauncherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSTopicLauncher_listenerList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSTopicLauncher_listenerList_feature", "_UI_ROSTopicLauncher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__LISTENER_LIST,
+				 ApogyAddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__LISTENER_LIST,
 				 true,
 				 false,
 				 true,
@@ -155,7 +155,7 @@ public class ROSTopicLauncherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSTopicLauncher_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSTopicLauncher_node_feature", "_UI_ROSTopicLauncher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__NODE,
+				 ApogyAddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER__NODE,
 				 false,
 				 false,
 				 true,
@@ -224,10 +224,10 @@ public class ROSTopicLauncherItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ROSTopicLauncher.class)) {
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

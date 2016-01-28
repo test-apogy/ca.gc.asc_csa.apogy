@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
-import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
-import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsRangeUIFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsRangeUIFactory {
+public class ApogyAddonsSensorsRangeUIFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsRangeUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsRangeUIFactory init() {
+	public static ApogyAddonsSensorsRangeUIFactory init() {
 		try {
-			Symphony__AddonsSensorsRangeUIFactory theSymphony__AddonsSensorsRangeUIFactory = (Symphony__AddonsSensorsRangeUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsRangeUIPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsRangeUIFactory != null) {
-				return theSymphony__AddonsSensorsRangeUIFactory;
+			ApogyAddonsSensorsRangeUIFactory theApogyAddonsSensorsRangeUIFactory = (ApogyAddonsSensorsRangeUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsRangeUIPackage.eNS_URI);
+			if (theApogyAddonsSensorsRangeUIFactory != null) {
+				return theApogyAddonsSensorsRangeUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsRangeUIFactoryImpl();
+		return new ApogyAddonsSensorsRangeUIFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__AddonsSensorsRangeUIFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeUIFactoryImpl() {
+	public ApogyAddonsSensorsRangeUIFactoryImpl() {
 		super();
 	}
 
@@ -57,8 +57,8 @@ public class Symphony__AddonsSensorsRangeUIFactoryImpl extends EFactoryImpl impl
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION: return createRasterScanDataPresentation();
-			case Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION: return createSimpleSonarPresentation();
+			case ApogyAddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION: return createRasterScanDataPresentation();
+			case ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION: return createSimpleSonarPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -89,8 +89,8 @@ public class Symphony__AddonsSensorsRangeUIFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeUIPackage getSymphony__AddonsSensorsRangeUIPackage() {
-		return (Symphony__AddonsSensorsRangeUIPackage)getEPackage();
+	public ApogyAddonsSensorsRangeUIPackage getApogyAddonsSensorsRangeUIPackage() {
+		return (ApogyAddonsSensorsRangeUIPackage)getEPackage();
 	}
 
 	/**
@@ -100,8 +100,8 @@ public class Symphony__AddonsSensorsRangeUIFactoryImpl extends EFactoryImpl impl
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsSensorsRangeUIPackage getPackage() {
-		return Symphony__AddonsSensorsRangeUIPackage.eINSTANCE;
+	public static ApogyAddonsSensorsRangeUIPackage getPackage() {
+		return ApogyAddonsSensorsRangeUIPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsRangeUIFactoryImpl
+} //ApogyAddonsSensorsRangeUIFactoryImpl

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
 
 import javax.vecmath.Point3d;
 
@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,15 +20,15 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getIntersectionDistance <em>Intersection Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getIntersectedNode <em>Intersected Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getRelativeIntersectionPosition <em>Relative Intersection Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getAbsoluteIntersectionPosition <em>Absolute Intersection Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getNodeTypesInIntersection <em>Node Types In Intersection</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getNodeTypesToExcludeFromIntersection <em>Node Types To Exclude From Intersection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getIntersectionDistance <em>Intersection Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getIntersectedNode <em>Intersected Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getRelativeIntersectionPosition <em>Relative Intersection Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getAbsoluteIntersectionPosition <em>Absolute Intersection Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getNodeTypesInIntersection <em>Node Types In Intersection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getNodeTypesToExcludeFromIntersection <em>Node Types To Exclude From Intersection</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPickVector()
  * @model
  * @generated
  */
@@ -44,15 +44,15 @@ public interface PickVector extends Vector {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Intersection Distance</em>' attribute.
 	 * @see #setIntersectionDistance(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector_IntersectionDistance()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPickVector_IntersectionDistance()
 	 * @model default="-1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getIntersectionDistance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getIntersectionDistance <em>Intersection Distance</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getIntersectionDistance <em>Intersection Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Intersection Distance</em>' attribute.
@@ -71,14 +71,14 @@ public interface PickVector extends Vector {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Intersected Node</em>' reference.
 	 * @see #setIntersectedNode(Node)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector_IntersectedNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPickVector_IntersectedNode()
 	 * @model
 	 * @generated
 	 */
 	Node getIntersectedNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getIntersectedNode <em>Intersected Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getIntersectedNode <em>Intersected Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Intersected Node</em>' reference.
@@ -97,14 +97,14 @@ public interface PickVector extends Vector {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative Intersection Position</em>' attribute.
 	 * @see #setRelativeIntersectionPosition(Point3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector_RelativeIntersectionPosition()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.addons.primitives.Point3d"
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPickVector_RelativeIntersectionPosition()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.topology.addons.primitives.Point3d"
 	 * @generated
 	 */
 	Point3d getRelativeIntersectionPosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getRelativeIntersectionPosition <em>Relative Intersection Position</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getRelativeIntersectionPosition <em>Relative Intersection Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Relative Intersection Position</em>' attribute.
@@ -123,14 +123,14 @@ public interface PickVector extends Vector {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Absolute Intersection Position</em>' attribute.
 	 * @see #setAbsoluteIntersectionPosition(Point3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector_AbsoluteIntersectionPosition()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.addons.primitives.Point3d"
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPickVector_AbsoluteIntersectionPosition()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.topology.addons.primitives.Point3d"
 	 * @generated
 	 */
 	Point3d getAbsoluteIntersectionPosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getAbsoluteIntersectionPosition <em>Absolute Intersection Position</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector#getAbsoluteIntersectionPosition <em>Absolute Intersection Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Absolute Intersection Position</em>' attribute.
@@ -149,7 +149,7 @@ public interface PickVector extends Vector {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Types In Intersection</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector_NodeTypesInIntersection()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPickVector_NodeTypesInIntersection()
 	 * @model
 	 * @generated
 	 */
@@ -165,7 +165,7 @@ public interface PickVector extends Vector {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Types To Exclude From Intersection</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector_NodeTypesToExcludeFromIntersection()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPickVector_NodeTypesToExcludeFromIntersection()
 	 * @model
 	 * @generated
 	 */

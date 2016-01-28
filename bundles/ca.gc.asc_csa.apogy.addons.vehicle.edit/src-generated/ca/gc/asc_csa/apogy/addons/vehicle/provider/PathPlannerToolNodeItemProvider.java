@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.provider;
 
 
 import java.util.Collection;
@@ -11,20 +11,20 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.Symphony__AddonsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
-import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
-import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory;
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.PathPlannerToolNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class PathPlannerToolNodeItemProvider extends AggregateGroupNodeItemProvi
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerToolNode_pathPlannerTool_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerToolNode_pathPlannerTool_feature", "_UI_PathPlannerToolNode_type"),
-				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL,
+				 ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL,
 				 true,
 				 false,
 				 true,
@@ -130,158 +130,158 @@ public class PathPlannerToolNodeItemProvider extends AggregateGroupNodeItemProvi
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsFactory.eINSTANCE.createRuler3dToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSun()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSun()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarth()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarth()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMoon()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createMoon()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createStarField()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createStarField()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createMapNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSkyNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 }

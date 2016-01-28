@@ -1,42 +1,42 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.provider;
+package ca.gc.asc_csa.apogy.examples.rover.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.actuators.provider.Symphony__AddonsActuatorsEditPlugin;
-import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
-import org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.examples.camera.provider.Symphony__ExamplesCameraEditPlugin;
+import ca.gc.asc_csa.apogy.addons.actuators.provider.ApogyAddonsActuatorsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.provider.ApogyAddonsSensorsFOVEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.provider.ApogyAddonsSensorsImagingEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.provider.ApogyAddonsSensorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.examples.camera.provider.ApogyExamplesCameraEditPlugin;
 
-import org.eclipse.symphony.examples.mobile_platform.provider.Symphony__ExamplesMobilePlatformEditPlugin;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.provider.ApogyExamplesMobilePlatformEditPlugin;
 
-import org.eclipse.symphony.examples.robotic_arm.provider.Symphony__ExamplesRoboticArmEditPlugin;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.provider.ApogyExamplesRoboticArmEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__ExamplesRover edit plugin.
+ * This is the central singleton for the ApogyExamplesRover edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__ExamplesRoverEditPlugin extends EMFPlugin {
+public final class ApogyExamplesRoverEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__ExamplesRoverEditPlugin INSTANCE = new Symphony__ExamplesRoverEditPlugin();
+	public static final ApogyExamplesRoverEditPlugin INSTANCE = new ApogyExamplesRoverEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -52,23 +52,23 @@ public final class Symphony__ExamplesRoverEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoverEditPlugin() {
+	public ApogyExamplesRoverEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     Symphony__ExamplesRoboticArmEditPlugin.INSTANCE,
-		     Symphony__ExamplesMobilePlatformEditPlugin.INSTANCE,
-		     Symphony__ExamplesCameraEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsImagingEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
-		     Symphony__AddonsActuatorsEditPlugin.INSTANCE,
-		     Symphony__CommonImagesEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyExamplesRoboticArmEditPlugin.INSTANCE,
+		     ApogyExamplesMobilePlatformEditPlugin.INSTANCE,
+		     ApogyExamplesCameraEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsImagingEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsFOVEditPlugin.INSTANCE,
+		     ApogyAddonsActuatorsEditPlugin.INSTANCE,
+		     ApogyCommonImagesEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

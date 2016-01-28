@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings.util;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
-import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +22,10 @@ import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage
  * @generated
  */
-public class Symphony__AddonsSensorsFOVBindingsSwitch<T> extends Switch<T>
+public class ApogyAddonsSensorsFOVBindingsSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -33,7 +33,7 @@ public class Symphony__AddonsSensorsFOVBindingsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsSensorsFOVBindingsPackage modelPackage;
+  protected static ApogyAddonsSensorsFOVBindingsPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -41,10 +41,10 @@ public class Symphony__AddonsSensorsFOVBindingsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsFOVBindingsSwitch()
+  public ApogyAddonsSensorsFOVBindingsSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsFOVBindingsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsFOVBindingsPackage.eINSTANCE;
 		}
 	}
 
@@ -73,21 +73,21 @@ public class Symphony__AddonsSensorsFOVBindingsSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING: {
+			case ApogyAddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING: {
 				CircularSectorFieldOfViewBinding circularSectorFieldOfViewBinding = (CircularSectorFieldOfViewBinding)theEObject;
 				T result = caseCircularSectorFieldOfViewBinding(circularSectorFieldOfViewBinding);
 				if (result == null) result = caseAbstractTopologyBinding(circularSectorFieldOfViewBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING: {
+			case ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING: {
 				ConicalFieldOfViewBinding conicalFieldOfViewBinding = (ConicalFieldOfViewBinding)theEObject;
 				T result = caseConicalFieldOfViewBinding(conicalFieldOfViewBinding);
 				if (result == null) result = caseAbstractTopologyBinding(conicalFieldOfViewBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING: {
+			case ApogyAddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING: {
 				RectangularFrustrumFieldOfViewBinding rectangularFrustrumFieldOfViewBinding = (RectangularFrustrumFieldOfViewBinding)theEObject;
 				T result = caseRectangularFrustrumFieldOfViewBinding(rectangularFrustrumFieldOfViewBinding);
 				if (result == null) result = caseAbstractTopologyBinding(rectangularFrustrumFieldOfViewBinding);
@@ -179,4 +179,4 @@ public class Symphony__AddonsSensorsFOVBindingsSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsSensorsFOVBindingsSwitch
+} //ApogyAddonsSensorsFOVBindingsSwitch

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -14,23 +14,23 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsFactory;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
+import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,13 +40,13 @@ import org.eclipse.symphony.core.invocator.Environment;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getVectorColor <em>Vector Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getVectorLength <em>Vector Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getEndPointRadius <em>End Point Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getSunIntensity <em>Sun Intensity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl#getVectorColor <em>Vector Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl#getVectorLength <em>Vector Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl#getEndPointRadius <em>End Point Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl#getSunIntensity <em>Sun Intensity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,7 +54,7 @@ import org.eclipse.symphony.core.invocator.Environment;
 										 
 public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements SunVector3DTool 
 {
-	private SymphonyEnvironment symphonyEnvironment = null;
+	private ApogyEnvironment apogyEnvironment = null;
 	private Date previousTime = null;
 	
 	/**
@@ -65,7 +65,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f VECTOR_COLOR_EDEFAULT = (Color3f)Symphony__AddonsFactory.eINSTANCE.createFromString(Symphony__AddonsPackage.eINSTANCE.getColor3f(), "1.0,1.0,0.0");
+	protected static final Color3f VECTOR_COLOR_EDEFAULT = (Color3f)ApogyAddonsFactory.eINSTANCE.createFromString(ApogyAddonsPackage.eINSTANCE.getColor3f(), "1.0,1.0,0.0");
 
 	/**
 	 * The cached value of the '{@link #getVectorColor() <em>Vector Color</em>}' attribute.
@@ -204,7 +204,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL;
+		return ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL;
 	}		
 
 	/**
@@ -225,7 +225,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		Color3f oldVectorColor = vectorColor;
 		vectorColor = newVectorColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR, oldVectorColor, vectorColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR, oldVectorColor, vectorColor));
 	}
 
 	/**
@@ -256,7 +256,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		double oldVectorLength = vectorLength;
 		vectorLength = newVectorLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH, oldVectorLength, vectorLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH, oldVectorLength, vectorLength));
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		double oldEndPointRadius = endPointRadius;
 		endPointRadius = newEndPointRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS, oldEndPointRadius, endPointRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS, oldEndPointRadius, endPointRadius));
 	}
 
 	/**
@@ -298,7 +298,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		double oldSunIntensity = sunIntensity;
 		sunIntensity = newSunIntensity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY, oldSunIntensity, sunIntensity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY, oldSunIntensity, sunIntensity));
 	}
 
 	/**
@@ -319,7 +319,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		double oldCurrentDayMaximumSunIntensity = currentDayMaximumSunIntensity;
 		currentDayMaximumSunIntensity = newCurrentDayMaximumSunIntensity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY, oldCurrentDayMaximumSunIntensity, currentDayMaximumSunIntensity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY, oldCurrentDayMaximumSunIntensity, currentDayMaximumSunIntensity));
 	}
 
 	/**
@@ -340,7 +340,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		double oldCurrentSunIntensityPercentage = currentSunIntensityPercentage;
 		currentSunIntensityPercentage = newCurrentSunIntensityPercentage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE, oldCurrentSunIntensityPercentage, currentSunIntensityPercentage));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE, oldCurrentSunIntensityPercentage, currentSunIntensityPercentage));
 	}
 
 	/**
@@ -354,7 +354,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			sunVector3DToolNode = (SunVector3DToolNode)eResolveProxy(oldSunVector3DToolNode);
 			if (sunVector3DToolNode != oldSunVector3DToolNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, oldSunVector3DToolNode, sunVector3DToolNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, oldSunVector3DToolNode, sunVector3DToolNode));
 			}
 		}
 		return sunVector3DToolNode;
@@ -378,7 +378,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		SunVector3DToolNode oldSunVector3DToolNode = sunVector3DToolNode;
 		sunVector3DToolNode = newSunVector3DToolNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, oldSunVector3DToolNode, newSunVector3DToolNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, oldSunVector3DToolNode, newSunVector3DToolNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -393,14 +393,14 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		if (newSunVector3DToolNode != sunVector3DToolNode) {
 			NotificationChain msgs = null;
 			if (sunVector3DToolNode != null)
-				msgs = ((InternalEObject)sunVector3DToolNode).eInverseRemove(this, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, SunVector3DToolNode.class, msgs);
+				msgs = ((InternalEObject)sunVector3DToolNode).eInverseRemove(this, ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, SunVector3DToolNode.class, msgs);
 			if (newSunVector3DToolNode != null)
-				msgs = ((InternalEObject)newSunVector3DToolNode).eInverseAdd(this, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, SunVector3DToolNode.class, msgs);
+				msgs = ((InternalEObject)newSunVector3DToolNode).eInverseAdd(this, ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, SunVector3DToolNode.class, msgs);
 			msgs = basicSetSunVector3DToolNode(newSunVector3DToolNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, newSunVector3DToolNode, newSunVector3DToolNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, newSunVector3DToolNode, newSunVector3DToolNode));
 	}
 
 	/**
@@ -411,9 +411,9 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				if (sunVector3DToolNode != null)
-					msgs = ((InternalEObject)sunVector3DToolNode).eInverseRemove(this, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, SunVector3DToolNode.class, msgs);
+					msgs = ((InternalEObject)sunVector3DToolNode).eInverseRemove(this, ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, SunVector3DToolNode.class, msgs);
 				return basicSetSunVector3DToolNode((SunVector3DToolNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -427,7 +427,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				return basicSetSunVector3DToolNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -441,19 +441,19 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
 				return getVectorColor();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
 				return getVectorLength();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
 				return getEndPointRadius();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
 				return getSunIntensity();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
 				return getCurrentDayMaximumSunIntensity();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
 				return getCurrentSunIntensityPercentage();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				if (resolve) return getSunVector3DToolNode();
 				return basicGetSunVector3DToolNode();
 		}
@@ -468,25 +468,25 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
 				setVectorColor((Color3f)newValue);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
 				setVectorLength((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
 				setEndPointRadius((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
 				setSunIntensity((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
 				setCurrentDayMaximumSunIntensity((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
 				setCurrentSunIntensityPercentage((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				setSunVector3DToolNode((SunVector3DToolNode)newValue);
 				return;
 		}
@@ -501,25 +501,25 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
 				setVectorColor(VECTOR_COLOR_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
 				setVectorLength(VECTOR_LENGTH_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
 				setEndPointRadius(END_POINT_RADIUS_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
 				setSunIntensity(SUN_INTENSITY_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
 				setCurrentDayMaximumSunIntensity(CURRENT_DAY_MAXIMUM_SUN_INTENSITY_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
 				setCurrentSunIntensityPercentage(CURRENT_SUN_INTENSITY_PERCENTAGE_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				setSunVector3DToolNode((SunVector3DToolNode)null);
 				return;
 		}
@@ -534,19 +534,19 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
 				return VECTOR_COLOR_EDEFAULT == null ? vectorColor != null : !VECTOR_COLOR_EDEFAULT.equals(vectorColor);
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
 				return vectorLength != VECTOR_LENGTH_EDEFAULT;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
 				return endPointRadius != END_POINT_RADIUS_EDEFAULT;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
 				return sunIntensity != SUN_INTENSITY_EDEFAULT;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
 				return currentDayMaximumSunIntensity != CURRENT_DAY_MAXIMUM_SUN_INTENSITY_EDEFAULT;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
 				return currentSunIntensityPercentage != CURRENT_SUN_INTENSITY_PERCENTAGE_EDEFAULT;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				return sunVector3DToolNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -588,7 +588,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			if(!isToNodeLock())
@@ -643,7 +643,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		{
 			if(getSunVector3DToolNode() == null)
 			{
-				setSunVector3DToolNode(Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode());
+				setSunVector3DToolNode(ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode());
 			}
 			attachSunVector3DToolNode();	
 			
@@ -657,13 +657,13 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		double sunIntensity = 0.0;		
 		double currentSunIntensityPercentage = 0.0;
 		
-		SymphonyEnvironment env = getSymphonyEnvironment();
+		ApogyEnvironment env = getApogyEnvironment();
 		
 		if(env != null)
 		{
 			 if(env.getActiveWorksite() instanceof EarthSurfaceWorksite)
 			 {
-				 EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getSymphonyEnvironment().getActiveWorksite();				 
+				 EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getApogyEnvironment().getActiveWorksite();				 
 				 Date date = earthSurfaceWorksite.getSky().getTime();					
 				 
 				 double observerLongitude = earthSurfaceWorksite.getGeographicalCoordinates().getLongitude();
@@ -758,16 +758,16 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		}
 	}
 	
-	protected SymphonyEnvironment getSymphonyEnvironment()
+	protected ApogyEnvironment getApogyEnvironment()
 	{
-		if(symphonyEnvironment == null)
+		if(apogyEnvironment == null)
 		{
 			try
 			{				
 				Environment env = getToolList().getToolsList().getInvocatorSession().getEnvironment();
-				if(env instanceof SymphonyEnvironment)
+				if(env instanceof ApogyEnvironment)
 				{
-					symphonyEnvironment = (SymphonyEnvironment) env;					
+					apogyEnvironment = (ApogyEnvironment) env;					
 				}			
 			}
 			catch(Throwable t)
@@ -775,14 +775,14 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 				t.printStackTrace();
 			}
 		}
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 	
 	protected Sun getSun()
 	{
-		 if(getSymphonyEnvironment().getActiveWorksite() instanceof SurfaceWorksite)
+		 if(getApogyEnvironment().getActiveWorksite() instanceof SurfaceWorksite)
 		 {
-			 SurfaceWorksite surfaceWorksite = (SurfaceWorksite) getSymphonyEnvironment().getActiveWorksite();
+			 SurfaceWorksite surfaceWorksite = (SurfaceWorksite) getApogyEnvironment().getActiveWorksite();
 			 return surfaceWorksite.getSky().getSun();
 		 }
 		 return null;

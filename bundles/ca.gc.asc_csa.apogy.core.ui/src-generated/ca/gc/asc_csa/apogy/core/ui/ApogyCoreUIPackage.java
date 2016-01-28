@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui;
+package ca.gc.asc_csa.apogy.core.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFactory
+ * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreUI' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CoreUI' modelDirectory='/org.eclipse.symphony.core.ui/src-generated' editDirectory='/org.eclipse.symphony.core.ui.edit/src-generated' basePackage='org.eclipse.symphony.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreUI' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCoreUI' modelDirectory='/ca.gc.asc_csa.apogy.core.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
  * @generated
  */
-public interface Symphony__CoreUIPackage extends EPackage
+public interface ApogyCoreUIPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -43,7 +43,7 @@ public interface Symphony__CoreUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.core.ui";
+  String eNS_URI = "ca.gc.asc_csa.apogy.core.ui";
 
   /**
 	 * The package namespace name.
@@ -59,53 +59,53 @@ public interface Symphony__CoreUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreUIPackage eINSTANCE = org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl.init();
+  ApogyCoreUIPackage eINSTANCE = ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphony__CoreUIFacade()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getApogyCoreUIFacade()
 	 * @generated
 	 */
-  int SYMPHONY_CORE_UI_FACADE = 0;
+  int APOGY_CORE_UI_FACADE = 0;
 
   /**
-	 * The feature id for the '<em><b>Default Symphony Project Name Prefix</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Apogy Project Name Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX = 0;
+	int APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX = 0;
 
 		/**
-	 * The feature id for the '<em><b>Default Symphony Session Filename</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Apogy Session Filename</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME = 1;
+	int APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME = 1;
 
 		/**
-	 * The feature id for the '<em><b>Default Symphony Session Filename Extension</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Apogy Session Filename Extension</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION = 2;
+	int APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION = 2;
 
 		/**
-	 * The feature id for the '<em><b>Default Symphony Session Folder Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Apogy Session Folder Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME = 3;
+	int APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME = 3;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -114,61 +114,61 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_CORE_UI_FACADE_FEATURE_COUNT = 4;
+  int APOGY_CORE_UI_FACADE_FEATURE_COUNT = 4;
 
   /**
-	 * The operation id for the '<em>Create Symphony Project</em>' operation.
+	 * The operation id for the '<em>Create Apogy Project</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = 0;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = 0;
 
 		/**
-	 * The operation id for the '<em>Create Symphony Session Folder</em>' operation.
+	 * The operation id for the '<em>Create Apogy Session Folder</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = 1;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = 1;
 
 		/**
-	 * The operation id for the '<em>Create Symphony Session</em>' operation.
+	 * The operation id for the '<em>Create Apogy Session</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS = 2;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS = 2;
 
 		/**
-	 * The operation id for the '<em>Create Symphony Session File</em>' operation.
+	 * The operation id for the '<em>Create Apogy Session File</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION = 3;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION = 3;
 
 		/**
-	 * The operation id for the '<em>Get Symphony Session File</em>' operation.
+	 * The operation id for the '<em>Get Apogy Session File</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING = 4;
+	int APOGY_CORE_UI_FACADE___GET_APOGY_SESSION_FILE__ICONTAINER_STRING = 4;
 
 		/**
-	 * The operation id for the '<em>Create Symphony System</em>' operation.
+	 * The operation id for the '<em>Create Apogy System</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = 5;
+	int APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = 5;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -177,17 +177,17 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_CORE_UI_FACADE_OPERATION_COUNT = 6;
+  int APOGY_CORE_UI_FACADE_OPERATION_COUNT = 6;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl <em>Symphony Resource Settings</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl <em>Apogy Resource Settings</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphonyResourceSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getApogyResourceSettings()
 	 * @generated
 	 */
-	int SYMPHONY_RESOURCE_SETTINGS = 1;
+	int APOGY_RESOURCE_SETTINGS = 1;
 
 		/**
 	 * The feature id for the '<em><b>Resource Project</b></em>' attribute.
@@ -196,7 +196,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT = 0;
+	int APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT = 0;
 
 		/**
 	 * The feature id for the '<em><b>Resource File</b></em>' attribute.
@@ -205,7 +205,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE = 1;
+	int APOGY_RESOURCE_SETTINGS__RESOURCE_FILE = 1;
 
 		/**
 	 * The feature id for the '<em><b>Resource Container</b></em>' attribute.
@@ -214,35 +214,35 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER = 2;
+	int APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER = 2;
 
 		/**
-	 * The number of structural features of the '<em>Symphony Resource Settings</em>' class.
+	 * The number of structural features of the '<em>Apogy Resource Settings</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_RESOURCE_SETTINGS_FEATURE_COUNT = 3;
+	int APOGY_RESOURCE_SETTINGS_FEATURE_COUNT = 3;
 
 		/**
-	 * The number of operations of the '<em>Symphony Resource Settings</em>' class.
+	 * The number of operations of the '<em>Apogy Resource Settings</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_RESOURCE_SETTINGS_OPERATION_COUNT = 0;
+	int APOGY_RESOURCE_SETTINGS_OPERATION_COUNT = 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl <em>New Symphony Project Settings</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogyProjectSettingsImpl <em>New Apogy Project Settings</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getNewSymphonyProjectSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.NewApogyProjectSettingsImpl
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getNewApogyProjectSettings()
 	 * @generated
 	 */
-	int NEW_SYMPHONY_PROJECT_SETTINGS = 2;
+	int NEW_APOGY_PROJECT_SETTINGS = 2;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -251,7 +251,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_PROJECT_SETTINGS__NAME = 0;
+	int NEW_APOGY_PROJECT_SETTINGS__NAME = 0;
 
 		/**
 	 * The feature id for the '<em><b>Import Registered Project</b></em>' attribute.
@@ -260,16 +260,16 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT = 1;
+	int NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT = 1;
 
 		/**
-	 * The number of structural features of the '<em>New Symphony Project Settings</em>' class.
+	 * The number of structural features of the '<em>New Apogy Project Settings</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_PROJECT_SETTINGS_FEATURE_COUNT = 2;
+	int NEW_APOGY_PROJECT_SETTINGS_FEATURE_COUNT = 2;
 
 		/**
 	 * The operation id for the '<em>Get Default Project Name</em>' operation.
@@ -278,7 +278,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME = 0;
+	int NEW_APOGY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME = 0;
 
 		/**
 	 * The operation id for the '<em>Set Default Values</em>' operation.
@@ -287,26 +287,26 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_PROJECT_SETTINGS___SET_DEFAULT_VALUES = 1;
+	int NEW_APOGY_PROJECT_SETTINGS___SET_DEFAULT_VALUES = 1;
 
 		/**
-	 * The number of operations of the '<em>New Symphony Project Settings</em>' class.
+	 * The number of operations of the '<em>New Apogy Project Settings</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_PROJECT_SETTINGS_OPERATION_COUNT = 2;
+	int NEW_APOGY_PROJECT_SETTINGS_OPERATION_COUNT = 2;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl <em>New Symphony Session Settings</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl <em>New Apogy Session Settings</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getNewSymphonySessionSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getNewApogySessionSettings()
 	 * @generated
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS = 3;
+  int NEW_APOGY_SESSION_SETTINGS = 3;
 
   /**
 	 * The feature id for the '<em><b>Folder</b></em>' attribute.
@@ -315,7 +315,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS__FOLDER = 0;
+  int NEW_APOGY_SESSION_SETTINGS__FOLDER = 0;
 
   /**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -324,7 +324,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS__FILENAME = 1;
+  int NEW_APOGY_SESSION_SETTINGS__FILENAME = 1;
 
   /**
 	 * The feature id for the '<em><b>Create Environment</b></em>' attribute.
@@ -333,7 +333,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT = 2;
+  int NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT = 2;
 
   /**
 	 * The feature id for the '<em><b>Create Programs</b></em>' attribute.
@@ -342,7 +342,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS = 3;
+  int NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS = 3;
 
   /**
 	 * The feature id for the '<em><b>Create Data Products</b></em>' attribute.
@@ -351,7 +351,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS = 4;
+  int NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS = 4;
 
   /**
 	 * The feature id for the '<em><b>Create Tools</b></em>' attribute.
@@ -360,16 +360,16 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS = 5;
+  int NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS = 5;
 
   /**
-	 * The number of structural features of the '<em>New Symphony Session Settings</em>' class.
+	 * The number of structural features of the '<em>New Apogy Session Settings</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS_FEATURE_COUNT = 6;
+  int NEW_APOGY_SESSION_SETTINGS_FEATURE_COUNT = 6;
 
   /**
 	 * The operation id for the '<em>Get Default Filename</em>' operation.
@@ -378,7 +378,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER = 0;
+	int NEW_APOGY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER = 0;
 
 		/**
 	 * The operation id for the '<em>Set Default Values</em>' operation.
@@ -387,26 +387,26 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER = 1;
+	int NEW_APOGY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER = 1;
 
 		/**
-	 * The number of operations of the '<em>New Symphony Session Settings</em>' class.
+	 * The number of operations of the '<em>New Apogy Session Settings</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NEW_SYMPHONY_SESSION_SETTINGS_OPERATION_COUNT = 2;
+  int NEW_APOGY_SESSION_SETTINGS_OPERATION_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl <em>New Symphony System Settings</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySystemSettingsImpl <em>New Apogy System Settings</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getNewSymphonySystemSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.NewApogySystemSettingsImpl
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getNewApogySystemSettings()
 	 * @generated
 	 */
-	int NEW_SYMPHONY_SYSTEM_SETTINGS = 4;
+	int NEW_APOGY_SYSTEM_SETTINGS = 4;
 
 		/**
 	 * The feature id for the '<em><b>Folder</b></em>' attribute.
@@ -415,7 +415,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER = 0;
+	int NEW_APOGY_SYSTEM_SETTINGS__FOLDER = 0;
 
 		/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -424,32 +424,32 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME = 1;
+	int NEW_APOGY_SYSTEM_SETTINGS__FILENAME = 1;
 
 		/**
-	 * The number of structural features of the '<em>New Symphony System Settings</em>' class.
+	 * The number of structural features of the '<em>New Apogy System Settings</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_SYSTEM_SETTINGS_FEATURE_COUNT = 2;
+	int NEW_APOGY_SYSTEM_SETTINGS_FEATURE_COUNT = 2;
 
 		/**
-	 * The number of operations of the '<em>New Symphony System Settings</em>' class.
+	 * The number of operations of the '<em>New Apogy System Settings</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NEW_SYMPHONY_SYSTEM_SETTINGS_OPERATION_COUNT = 0;
+	int NEW_APOGY_SYSTEM_SETTINGS_OPERATION_COUNT = 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl <em>Result Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.ResultNodePresentationImpl <em>Result Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getResultNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ResultNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getResultNodePresentation()
 	 * @generated
 	 */
   int RESULT_NODE_PRESENTATION = 5;
@@ -461,7 +461,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int RESULT_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -470,7 +470,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__NODE;
+  int RESULT_NODE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -479,7 +479,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__COLOR;
+  int RESULT_NODE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -488,7 +488,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__VISIBLE;
+  int RESULT_NODE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -497,7 +497,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__SHADOW_MODE;
+	int RESULT_NODE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -506,7 +506,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int RESULT_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -515,7 +515,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__CENTROID;
+  int RESULT_NODE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -524,7 +524,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__MIN;
+  int RESULT_NODE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -533,7 +533,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__MAX;
+  int RESULT_NODE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -542,7 +542,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__XRANGE;
+  int RESULT_NODE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -551,7 +551,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__YRANGE;
+  int RESULT_NODE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -560,7 +560,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__ZRANGE;
+  int RESULT_NODE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -569,7 +569,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__SCENE_OBJECT;
+  int RESULT_NODE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The feature id for the '<em><b>Axis Visible</b></em>' attribute.
@@ -578,7 +578,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE_PRESENTATION__AXIS_VISIBLE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE;
+	int RESULT_NODE_PRESENTATION__AXIS_VISIBLE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE;
 
 		/**
 	 * The feature id for the '<em><b>Axis Length</b></em>' attribute.
@@ -587,7 +587,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE_PRESENTATION__AXIS_LENGTH = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH;
+	int RESULT_NODE_PRESENTATION__AXIS_LENGTH = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH;
 
 		/**
 	 * The feature id for the '<em><b>Pole Height</b></em>' attribute.
@@ -596,7 +596,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__POLE_HEIGHT = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int RESULT_NODE_PRESENTATION__POLE_HEIGHT = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Flag Visible</b></em>' attribute.
@@ -605,7 +605,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION__FLAG_VISIBLE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_FEATURE_COUNT + 1;
+  int RESULT_NODE_PRESENTATION__FLAG_VISIBLE = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Result Node Presentation</em>' class.
@@ -614,7 +614,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_FEATURE_COUNT + 2;
+  int RESULT_NODE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Result Node Presentation</em>' class.
@@ -623,14 +623,14 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULT_NODE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int RESULT_NODE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '<em>IProject</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.resources.IProject
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIProject()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIProject()
 	 * @generated
 	 */
 	int IPROJECT = 6;
@@ -640,7 +640,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.resources.IContainer
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIContainer()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIContainer()
 	 * @generated
 	 */
 	int ICONTAINER = 7;
@@ -650,7 +650,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.resources.IFile
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIFile()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIFile()
 	 * @generated
 	 */
 	int IFILE = 8;
@@ -660,375 +660,375 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.resources.IFolder
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIFolder()
+	 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIFolder()
 	 * @generated
 	 */
 	int IFOLDER = 9;
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade
 	 * @generated
 	 */
-	EClass getSymphony__CoreUIFacade();
+	EClass getApogyCoreUIFacade();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogyProjectNamePrefix <em>Default Apogy Project Name Prefix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Symphony Project Name Prefix</em>'.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonyProjectNamePrefix()
-	 * @see #getSymphony__CoreUIFacade()
+	 * @return the meta object for the attribute '<em>Default Apogy Project Name Prefix</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogyProjectNamePrefix()
+	 * @see #getApogyCoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphony__CoreUIFacade_DefaultSymphonyProjectNamePrefix();
+	EAttribute getApogyCoreUIFacade_DefaultApogyProjectNamePrefix();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFilename <em>Default Apogy Session Filename</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Symphony Session Filename</em>'.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilename()
-	 * @see #getSymphony__CoreUIFacade()
+	 * @return the meta object for the attribute '<em>Default Apogy Session Filename</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFilename()
+	 * @see #getApogyCoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFilename();
+	EAttribute getApogyCoreUIFacade_DefaultApogySessionFilename();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFilenameExtension <em>Default Apogy Session Filename Extension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Symphony Session Filename Extension</em>'.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilenameExtension()
-	 * @see #getSymphony__CoreUIFacade()
+	 * @return the meta object for the attribute '<em>Default Apogy Session Filename Extension</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFilenameExtension()
+	 * @see #getApogyCoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFilenameExtension();
+	EAttribute getApogyCoreUIFacade_DefaultApogySessionFilenameExtension();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFolderName <em>Default Apogy Session Folder Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Symphony Session Folder Name</em>'.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFolderName()
-	 * @see #getSymphony__CoreUIFacade()
+	 * @return the meta object for the attribute '<em>Default Apogy Session Folder Name</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFolderName()
+	 * @see #getApogyCoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFolderName();
+	EAttribute getApogyCoreUIFacade_DefaultApogySessionFolderName();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonyProject(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings) <em>Create Symphony Project</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogyProject(ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings) <em>Create Apogy Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Symphony Project</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonyProject(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings)
+	 * @return the meta object for the '<em>Create Apogy Project</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogyProject(ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreUIFacade__CreateSymphonyProject__NewSymphonyProjectSettings();
+	EOperation getApogyCoreUIFacade__CreateApogyProject__NewApogyProjectSettings();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFolder(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings) <em>Create Symphony Session Folder</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySessionFolder(ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings) <em>Create Apogy Session Folder</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Symphony Session Folder</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFolder(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings)
+	 * @return the meta object for the '<em>Create Apogy Session Folder</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySessionFolder(ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreUIFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings();
+	EOperation getApogyCoreUIFacade__CreateApogySessionFolder__NewApogyProjectSettings();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySession(org.eclipse.symphony.core.ui.NewSymphonySessionSettings) <em>Create Symphony Session</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySession(ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings) <em>Create Apogy Session</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Symphony Session</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySession(org.eclipse.symphony.core.ui.NewSymphonySessionSettings)
+	 * @return the meta object for the '<em>Create Apogy Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySession(ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreUIFacade__CreateSymphonySession__NewSymphonySessionSettings();
+	EOperation getApogyCoreUIFacade__CreateApogySession__NewApogySessionSettings();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession) <em>Create Symphony Session File</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.InvocatorSession) <em>Create Apogy Session File</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Symphony Session File</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession)
+	 * @return the meta object for the '<em>Create Apogy Session File</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.InvocatorSession)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreUIFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession();
+	EOperation getApogyCoreUIFacade__CreateApogySessionFile__IContainer_String_InvocatorSession();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String) <em>Get Symphony Session File</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getApogySessionFile(org.eclipse.core.resources.IContainer, java.lang.String) <em>Get Apogy Session File</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Symphony Session File</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String)
+	 * @return the meta object for the '<em>Get Apogy Session File</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getApogySessionFile(org.eclipse.core.resources.IContainer, java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreUIFacade__GetSymphonySessionFile__IContainer_String();
+	EOperation getApogyCoreUIFacade__GetApogySessionFile__IContainer_String();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySystem(org.eclipse.symphony.core.ui.NewSymphonySystemSettings) <em>Create Symphony System</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySystem(ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings) <em>Create Apogy System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Symphony System</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySystem(org.eclipse.symphony.core.ui.NewSymphonySystemSettings)
+	 * @return the meta object for the '<em>Create Apogy System</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#createApogySystem(ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreUIFacade__CreateSymphonySystem__NewSymphonySystemSettings();
+	EOperation getApogyCoreUIFacade__CreateApogySystem__NewApogySystemSettings();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings <em>Symphony Resource Settings</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings <em>Apogy Resource Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symphony Resource Settings</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyResourceSettings
+	 * @return the meta object for class '<em>Apogy Resource Settings</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings
 	 * @generated
 	 */
-	EClass getSymphonyResourceSettings();
+	EClass getApogyResourceSettings();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceProject <em>Resource Project</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings#getResourceProject <em>Resource Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Resource Project</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceProject()
-	 * @see #getSymphonyResourceSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings#getResourceProject()
+	 * @see #getApogyResourceSettings()
 	 * @generated
 	 */
-	EAttribute getSymphonyResourceSettings_ResourceProject();
+	EAttribute getApogyResourceSettings_ResourceProject();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceFile <em>Resource File</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings#getResourceFile <em>Resource File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Resource File</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceFile()
-	 * @see #getSymphonyResourceSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings#getResourceFile()
+	 * @see #getApogyResourceSettings()
 	 * @generated
 	 */
-	EAttribute getSymphonyResourceSettings_ResourceFile();
+	EAttribute getApogyResourceSettings_ResourceFile();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceContainer <em>Resource Container</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings#getResourceContainer <em>Resource Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Resource Container</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceContainer()
-	 * @see #getSymphonyResourceSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings#getResourceContainer()
+	 * @see #getApogyResourceSettings()
 	 * @generated
 	 */
-	EAttribute getSymphonyResourceSettings_ResourceContainer();
+	EAttribute getApogyResourceSettings_ResourceContainer();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings <em>New Symphony Project Settings</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings <em>New Apogy Project Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New Symphony Project Settings</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonyProjectSettings
+	 * @return the meta object for class '<em>New Apogy Project Settings</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings
 	 * @generated
 	 */
-	EClass getNewSymphonyProjectSettings();
+	EClass getNewApogyProjectSettings();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#getName()
-	 * @see #getNewSymphonyProjectSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#getName()
+	 * @see #getNewApogyProjectSettings()
 	 * @generated
 	 */
-	EAttribute getNewSymphonyProjectSettings_Name();
+	EAttribute getNewApogyProjectSettings_Name();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#isImportRegisteredProject <em>Import Registered Project</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#isImportRegisteredProject <em>Import Registered Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Import Registered Project</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#isImportRegisteredProject()
-	 * @see #getNewSymphonyProjectSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#isImportRegisteredProject()
+	 * @see #getNewApogyProjectSettings()
 	 * @generated
 	 */
-	EAttribute getNewSymphonyProjectSettings_ImportRegisteredProject();
+	EAttribute getNewApogyProjectSettings_ImportRegisteredProject();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#getDefaultProjectName() <em>Get Default Project Name</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#getDefaultProjectName() <em>Get Default Project Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Default Project Name</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#getDefaultProjectName()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#getDefaultProjectName()
 	 * @generated
 	 */
-	EOperation getNewSymphonyProjectSettings__GetDefaultProjectName();
+	EOperation getNewApogyProjectSettings__GetDefaultProjectName();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#setDefaultValues() <em>Set Default Values</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#setDefaultValues() <em>Set Default Values</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Default Values</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#setDefaultValues()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings#setDefaultValues()
 	 * @generated
 	 */
-	EOperation getNewSymphonyProjectSettings__SetDefaultValues();
+	EOperation getNewApogyProjectSettings__SetDefaultValues();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings <em>New Symphony Session Settings</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings <em>New Apogy Session Settings</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New Symphony Session Settings</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings
+	 * @return the meta object for class '<em>New Apogy Session Settings</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings
 	 * @generated
 	 */
-  EClass getNewSymphonySessionSettings();
+  EClass getNewApogySessionSettings();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getFolder <em>Folder</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#getFolder <em>Folder</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Folder</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getFolder()
-	 * @see #getNewSymphonySessionSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#getFolder()
+	 * @see #getNewApogySessionSettings()
 	 * @generated
 	 */
-  EAttribute getNewSymphonySessionSettings_Folder();
+  EAttribute getNewApogySessionSettings_Folder();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getFilename <em>Filename</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#getFilename <em>Filename</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Filename</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getFilename()
-	 * @see #getNewSymphonySessionSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#getFilename()
+	 * @see #getNewApogySessionSettings()
 	 * @generated
 	 */
-  EAttribute getNewSymphonySessionSettings_Filename();
+  EAttribute getNewApogySessionSettings_Filename();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateEnvironment <em>Create Environment</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreateEnvironment <em>Create Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Create Environment</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateEnvironment()
-	 * @see #getNewSymphonySessionSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreateEnvironment()
+	 * @see #getNewApogySessionSettings()
 	 * @generated
 	 */
-  EAttribute getNewSymphonySessionSettings_CreateEnvironment();
+  EAttribute getNewApogySessionSettings_CreateEnvironment();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreatePrograms <em>Create Programs</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreatePrograms <em>Create Programs</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Create Programs</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreatePrograms()
-	 * @see #getNewSymphonySessionSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreatePrograms()
+	 * @see #getNewApogySessionSettings()
 	 * @generated
 	 */
-  EAttribute getNewSymphonySessionSettings_CreatePrograms();
+  EAttribute getNewApogySessionSettings_CreatePrograms();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateDataProducts <em>Create Data Products</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreateDataProducts <em>Create Data Products</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Create Data Products</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateDataProducts()
-	 * @see #getNewSymphonySessionSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreateDataProducts()
+	 * @see #getNewApogySessionSettings()
 	 * @generated
 	 */
-  EAttribute getNewSymphonySessionSettings_CreateDataProducts();
+  EAttribute getNewApogySessionSettings_CreateDataProducts();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateTools <em>Create Tools</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreateTools <em>Create Tools</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Create Tools</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateTools()
-	 * @see #getNewSymphonySessionSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#isCreateTools()
+	 * @see #getNewApogySessionSettings()
 	 * @generated
 	 */
-  EAttribute getNewSymphonySessionSettings_CreateTools();
+  EAttribute getNewApogySessionSettings_CreateTools();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getDefaultFilename(org.eclipse.core.resources.IContainer) <em>Get Default Filename</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#getDefaultFilename(org.eclipse.core.resources.IContainer) <em>Get Default Filename</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Default Filename</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getDefaultFilename(org.eclipse.core.resources.IContainer)
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#getDefaultFilename(org.eclipse.core.resources.IContainer)
 	 * @generated
 	 */
-	EOperation getNewSymphonySessionSettings__GetDefaultFilename__IContainer();
+	EOperation getNewApogySessionSettings__GetDefaultFilename__IContainer();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#setDefaultValues(org.eclipse.core.resources.IContainer) <em>Set Default Values</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#setDefaultValues(org.eclipse.core.resources.IContainer) <em>Set Default Values</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Default Values</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings#setDefaultValues(org.eclipse.core.resources.IContainer)
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings#setDefaultValues(org.eclipse.core.resources.IContainer)
 	 * @generated
 	 */
-	EOperation getNewSymphonySessionSettings__SetDefaultValues__IContainer();
+	EOperation getNewApogySessionSettings__SetDefaultValues__IContainer();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings <em>New Symphony System Settings</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings <em>New Apogy System Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New Symphony System Settings</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySystemSettings
+	 * @return the meta object for class '<em>New Apogy System Settings</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings
 	 * @generated
 	 */
-	EClass getNewSymphonySystemSettings();
+	EClass getNewApogySystemSettings();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings#getFolder <em>Folder</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings#getFolder <em>Folder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Folder</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySystemSettings#getFolder()
-	 * @see #getNewSymphonySystemSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings#getFolder()
+	 * @see #getNewApogySystemSettings()
 	 * @generated
 	 */
-	EAttribute getNewSymphonySystemSettings_Folder();
+	EAttribute getNewApogySystemSettings_Folder();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings#getFilename <em>Filename</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings#getFilename <em>Filename</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Filename</em>'.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySystemSettings#getFilename()
-	 * @see #getNewSymphonySystemSettings()
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings#getFilename()
+	 * @see #getNewApogySystemSettings()
 	 * @generated
 	 */
-	EAttribute getNewSymphonySystemSettings_Filename();
+	EAttribute getNewApogySystemSettings_Filename();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.ResultNodePresentation <em>Result Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation <em>Result Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Result Node Presentation</em>'.
-	 * @see org.eclipse.symphony.core.ui.ResultNodePresentation
+	 * @see ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation
 	 * @generated
 	 */
   EClass getResultNodePresentation();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.ResultNodePresentation#getPoleHeight <em>Pole Height</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#getPoleHeight <em>Pole Height</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Pole Height</em>'.
-	 * @see org.eclipse.symphony.core.ui.ResultNodePresentation#getPoleHeight()
+	 * @see ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#getPoleHeight()
 	 * @see #getResultNodePresentation()
 	 * @generated
 	 */
   EAttribute getResultNodePresentation_PoleHeight();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Flag Visible</em>'.
-	 * @see org.eclipse.symphony.core.ui.ResultNodePresentation#isFlagVisible()
+	 * @see ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#isFlagVisible()
 	 * @see #getResultNodePresentation()
 	 * @generated
 	 */
@@ -1085,7 +1085,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CoreUIFactory getSymphony__CoreUIFactory();
+	ApogyCoreUIFactory getApogyCoreUIFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -1103,104 +1103,104 @@ public interface Symphony__CoreUIPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphony__CoreUIFacade()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getApogyCoreUIFacade()
 		 * @generated
 		 */
-    EClass SYMPHONY_CORE_UI_FACADE = eINSTANCE.getSymphony__CoreUIFacade();
+    EClass APOGY_CORE_UI_FACADE = eINSTANCE.getApogyCoreUIFacade();
 
     /**
-		 * The meta object literal for the '<em><b>Default Symphony Project Name Prefix</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Apogy Project Name Prefix</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonyProjectNamePrefix();
+		EAttribute APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX = eINSTANCE.getApogyCoreUIFacade_DefaultApogyProjectNamePrefix();
 
 				/**
-		 * The meta object literal for the '<em><b>Default Symphony Session Filename</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Apogy Session Filename</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonySessionFilename();
+		EAttribute APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME = eINSTANCE.getApogyCoreUIFacade_DefaultApogySessionFilename();
 
 				/**
-		 * The meta object literal for the '<em><b>Default Symphony Session Filename Extension</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Apogy Session Filename Extension</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonySessionFilenameExtension();
+		EAttribute APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION = eINSTANCE.getApogyCoreUIFacade_DefaultApogySessionFilenameExtension();
 
 				/**
-		 * The meta object literal for the '<em><b>Default Symphony Session Folder Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Apogy Session Folder Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonySessionFolderName();
+		EAttribute APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME = eINSTANCE.getApogyCoreUIFacade_DefaultApogySessionFolderName();
 
 				/**
-		 * The meta object literal for the '<em><b>Create Symphony Project</b></em>' operation.
+		 * The meta object literal for the '<em><b>Create Apogy Project</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonyProject__NewSymphonyProjectSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogyProject__NewApogyProjectSettings();
 
 				/**
-		 * The meta object literal for the '<em><b>Create Symphony Session Folder</b></em>' operation.
+		 * The meta object literal for the '<em><b>Create Apogy Session Folder</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySessionFolder__NewApogyProjectSettings();
 
 				/**
-		 * The meta object literal for the '<em><b>Create Symphony Session</b></em>' operation.
+		 * The meta object literal for the '<em><b>Create Apogy Session</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySession__NewSymphonySessionSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySession__NewApogySessionSettings();
 
 				/**
-		 * The meta object literal for the '<em><b>Create Symphony Session File</b></em>' operation.
+		 * The meta object literal for the '<em><b>Create Apogy Session File</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION = eINSTANCE.getApogyCoreUIFacade__CreateApogySessionFile__IContainer_String_InvocatorSession();
 
 				/**
-		 * The meta object literal for the '<em><b>Get Symphony Session File</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Apogy Session File</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING = eINSTANCE.getSymphony__CoreUIFacade__GetSymphonySessionFile__IContainer_String();
+		EOperation APOGY_CORE_UI_FACADE___GET_APOGY_SESSION_FILE__ICONTAINER_STRING = eINSTANCE.getApogyCoreUIFacade__GetApogySessionFile__IContainer_String();
 
 				/**
-		 * The meta object literal for the '<em><b>Create Symphony System</b></em>' operation.
+		 * The meta object literal for the '<em><b>Create Apogy System</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySystem__NewSymphonySystemSettings();
+		EOperation APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = eINSTANCE.getApogyCoreUIFacade__CreateApogySystem__NewApogySystemSettings();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl <em>Symphony Resource Settings</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl <em>Apogy Resource Settings</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphonyResourceSettings()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getApogyResourceSettings()
 		 * @generated
 		 */
-		EClass SYMPHONY_RESOURCE_SETTINGS = eINSTANCE.getSymphonyResourceSettings();
+		EClass APOGY_RESOURCE_SETTINGS = eINSTANCE.getApogyResourceSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Resource Project</b></em>' attribute feature.
@@ -1208,7 +1208,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT = eINSTANCE.getSymphonyResourceSettings_ResourceProject();
+		EAttribute APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT = eINSTANCE.getApogyResourceSettings_ResourceProject();
 
 				/**
 		 * The meta object literal for the '<em><b>Resource File</b></em>' attribute feature.
@@ -1216,7 +1216,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE = eINSTANCE.getSymphonyResourceSettings_ResourceFile();
+		EAttribute APOGY_RESOURCE_SETTINGS__RESOURCE_FILE = eINSTANCE.getApogyResourceSettings_ResourceFile();
 
 				/**
 		 * The meta object literal for the '<em><b>Resource Container</b></em>' attribute feature.
@@ -1224,17 +1224,17 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER = eINSTANCE.getSymphonyResourceSettings_ResourceContainer();
+		EAttribute APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER = eINSTANCE.getApogyResourceSettings_ResourceContainer();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl <em>New Symphony Project Settings</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogyProjectSettingsImpl <em>New Apogy Project Settings</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getNewSymphonyProjectSettings()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.NewApogyProjectSettingsImpl
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getNewApogyProjectSettings()
 		 * @generated
 		 */
-		EClass NEW_SYMPHONY_PROJECT_SETTINGS = eINSTANCE.getNewSymphonyProjectSettings();
+		EClass NEW_APOGY_PROJECT_SETTINGS = eINSTANCE.getNewApogyProjectSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1242,7 +1242,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NEW_SYMPHONY_PROJECT_SETTINGS__NAME = eINSTANCE.getNewSymphonyProjectSettings_Name();
+		EAttribute NEW_APOGY_PROJECT_SETTINGS__NAME = eINSTANCE.getNewApogyProjectSettings_Name();
 
 				/**
 		 * The meta object literal for the '<em><b>Import Registered Project</b></em>' attribute feature.
@@ -1250,7 +1250,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT = eINSTANCE.getNewSymphonyProjectSettings_ImportRegisteredProject();
+		EAttribute NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT = eINSTANCE.getNewApogyProjectSettings_ImportRegisteredProject();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Default Project Name</b></em>' operation.
@@ -1258,7 +1258,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation NEW_SYMPHONY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME = eINSTANCE.getNewSymphonyProjectSettings__GetDefaultProjectName();
+		EOperation NEW_APOGY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME = eINSTANCE.getNewApogyProjectSettings__GetDefaultProjectName();
 
 				/**
 		 * The meta object literal for the '<em><b>Set Default Values</b></em>' operation.
@@ -1266,17 +1266,17 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation NEW_SYMPHONY_PROJECT_SETTINGS___SET_DEFAULT_VALUES = eINSTANCE.getNewSymphonyProjectSettings__SetDefaultValues();
+		EOperation NEW_APOGY_PROJECT_SETTINGS___SET_DEFAULT_VALUES = eINSTANCE.getNewApogyProjectSettings__SetDefaultValues();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl <em>New Symphony Session Settings</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl <em>New Apogy Session Settings</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getNewSymphonySessionSettings()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getNewApogySessionSettings()
 		 * @generated
 		 */
-    EClass NEW_SYMPHONY_SESSION_SETTINGS = eINSTANCE.getNewSymphonySessionSettings();
+    EClass NEW_APOGY_SESSION_SETTINGS = eINSTANCE.getNewApogySessionSettings();
 
     /**
 		 * The meta object literal for the '<em><b>Folder</b></em>' attribute feature.
@@ -1284,7 +1284,7 @@ public interface Symphony__CoreUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute NEW_SYMPHONY_SESSION_SETTINGS__FOLDER = eINSTANCE.getNewSymphonySessionSettings_Folder();
+    EAttribute NEW_APOGY_SESSION_SETTINGS__FOLDER = eINSTANCE.getNewApogySessionSettings_Folder();
 
     /**
 		 * The meta object literal for the '<em><b>Filename</b></em>' attribute feature.
@@ -1292,7 +1292,7 @@ public interface Symphony__CoreUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute NEW_SYMPHONY_SESSION_SETTINGS__FILENAME = eINSTANCE.getNewSymphonySessionSettings_Filename();
+    EAttribute NEW_APOGY_SESSION_SETTINGS__FILENAME = eINSTANCE.getNewApogySessionSettings_Filename();
 
     /**
 		 * The meta object literal for the '<em><b>Create Environment</b></em>' attribute feature.
@@ -1300,7 +1300,7 @@ public interface Symphony__CoreUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT = eINSTANCE.getNewSymphonySessionSettings_CreateEnvironment();
+    EAttribute NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT = eINSTANCE.getNewApogySessionSettings_CreateEnvironment();
 
     /**
 		 * The meta object literal for the '<em><b>Create Programs</b></em>' attribute feature.
@@ -1308,7 +1308,7 @@ public interface Symphony__CoreUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS = eINSTANCE.getNewSymphonySessionSettings_CreatePrograms();
+    EAttribute NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS = eINSTANCE.getNewApogySessionSettings_CreatePrograms();
 
     /**
 		 * The meta object literal for the '<em><b>Create Data Products</b></em>' attribute feature.
@@ -1316,7 +1316,7 @@ public interface Symphony__CoreUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS = eINSTANCE.getNewSymphonySessionSettings_CreateDataProducts();
+    EAttribute NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS = eINSTANCE.getNewApogySessionSettings_CreateDataProducts();
 
     /**
 		 * The meta object literal for the '<em><b>Create Tools</b></em>' attribute feature.
@@ -1324,7 +1324,7 @@ public interface Symphony__CoreUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS = eINSTANCE.getNewSymphonySessionSettings_CreateTools();
+    EAttribute NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS = eINSTANCE.getNewApogySessionSettings_CreateTools();
 
     /**
 		 * The meta object literal for the '<em><b>Get Default Filename</b></em>' operation.
@@ -1332,7 +1332,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation NEW_SYMPHONY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER = eINSTANCE.getNewSymphonySessionSettings__GetDefaultFilename__IContainer();
+		EOperation NEW_APOGY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER = eINSTANCE.getNewApogySessionSettings__GetDefaultFilename__IContainer();
 
 				/**
 		 * The meta object literal for the '<em><b>Set Default Values</b></em>' operation.
@@ -1340,17 +1340,17 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation NEW_SYMPHONY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER = eINSTANCE.getNewSymphonySessionSettings__SetDefaultValues__IContainer();
+		EOperation NEW_APOGY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER = eINSTANCE.getNewApogySessionSettings__SetDefaultValues__IContainer();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl <em>New Symphony System Settings</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySystemSettingsImpl <em>New Apogy System Settings</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getNewSymphonySystemSettings()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.NewApogySystemSettingsImpl
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getNewApogySystemSettings()
 		 * @generated
 		 */
-		EClass NEW_SYMPHONY_SYSTEM_SETTINGS = eINSTANCE.getNewSymphonySystemSettings();
+		EClass NEW_APOGY_SYSTEM_SETTINGS = eINSTANCE.getNewApogySystemSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Folder</b></em>' attribute feature.
@@ -1358,7 +1358,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER = eINSTANCE.getNewSymphonySystemSettings_Folder();
+		EAttribute NEW_APOGY_SYSTEM_SETTINGS__FOLDER = eINSTANCE.getNewApogySystemSettings_Folder();
 
 				/**
 		 * The meta object literal for the '<em><b>Filename</b></em>' attribute feature.
@@ -1366,14 +1366,14 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME = eINSTANCE.getNewSymphonySystemSettings_Filename();
+		EAttribute NEW_APOGY_SYSTEM_SETTINGS__FILENAME = eINSTANCE.getNewApogySystemSettings_Filename();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl <em>Result Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.ui.impl.ResultNodePresentationImpl <em>Result Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getResultNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ResultNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getResultNodePresentation()
 		 * @generated
 		 */
     EClass RESULT_NODE_PRESENTATION = eINSTANCE.getResultNodePresentation();
@@ -1399,7 +1399,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.resources.IProject
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIProject()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIProject()
 		 * @generated
 		 */
 		EDataType IPROJECT = eINSTANCE.getIProject();
@@ -1409,7 +1409,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.resources.IContainer
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIContainer()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIContainer()
 		 * @generated
 		 */
 		EDataType ICONTAINER = eINSTANCE.getIContainer();
@@ -1419,7 +1419,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.resources.IFile
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIFile()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIFile()
 		 * @generated
 		 */
 		EDataType IFILE = eINSTANCE.getIFile();
@@ -1429,11 +1429,11 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.resources.IFolder
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getIFolder()
+		 * @see ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIPackageImpl#getIFolder()
 		 * @generated
 		 */
 		EDataType IFOLDER = eINSTANCE.getIFolder();
 
   }
 
-} //Symphony__CoreUIPackage
+} //ApogyCoreUIPackage

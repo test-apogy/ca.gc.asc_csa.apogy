@@ -4,7 +4,7 @@
  *
  * $Id: ReferencedContentNodeItemProvider.java,v 1.7.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.ReferencedContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ReferencedContentNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class ReferencedContentNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ReferencedContentNode_referencedContent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ReferencedContentNode_referencedContent_feature", "_UI_ReferencedContentNode_type"),
-				 Symphony__CommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT,
+				 ApogyCommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT,
 				 true,
 				 false,
 				 true,

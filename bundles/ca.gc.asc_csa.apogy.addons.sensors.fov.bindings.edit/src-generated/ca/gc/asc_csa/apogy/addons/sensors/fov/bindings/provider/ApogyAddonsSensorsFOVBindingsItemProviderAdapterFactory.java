@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,16 +27,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsFactory;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
-import org.eclipse.symphony.addons.sensors.fov.bindings.util.Symphony__AddonsSensorsFOVBindingsAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.util.ApogyAddonsSensorsFOVBindingsAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extends Symphony__AddonsSensorsFOVBindingsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsSensorsFOVBindingsItemProviderAdapterFactory extends ApogyAddonsSensorsFOVBindingsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -71,7 +71,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsSensorsFOVBindingsEditPlugin.INSTANCE, Symphony__AddonsSensorsFOVBindingsPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsSensorsFOVBindingsEditPlugin.INSTANCE, ApogyAddonsSensorsFOVBindingsPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -87,7 +87,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory()
+  public ApogyAddonsSensorsFOVBindingsItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -97,7 +97,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
   protected CircularSectorFieldOfViewBindingItemProvider circularSectorFieldOfViewBindingItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
   protected ConicalFieldOfViewBindingItemProvider conicalFieldOfViewBindingItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -145,7 +145,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -153,7 +153,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
   protected RectangularFrustrumFieldOfViewBindingItemProvider rectangularFrustrumFieldOfViewBindingItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -312,19 +312,19 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 	}
 
   /**
-	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -360,18 +360,18 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 			public Object caseBindingsList(BindingsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createCircularSectorFieldOfViewBinding()));
+						(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createCircularSectorFieldOfViewBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createConicalFieldOfViewBinding()));
+						(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createConicalFieldOfViewBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createRectangularFrustrumFieldOfViewBinding()));
+						(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createRectangularFrustrumFieldOfViewBinding()));
 
 				return null;
 			}
@@ -404,24 +404,24 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsFOVBindingsEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsFOVBindingsEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -457,18 +457,18 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createCircularSectorFieldOfViewBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createCircularSectorFieldOfViewBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createConicalFieldOfViewBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createConicalFieldOfViewBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createRectangularFrustrumFieldOfViewBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createRectangularFrustrumFieldOfViewBinding()));
 
 				return null;
 			}
@@ -482,18 +482,18 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createCircularSectorFieldOfViewBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createCircularSectorFieldOfViewBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createConicalFieldOfViewBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createConicalFieldOfViewBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE.createRectangularFrustrumFieldOfViewBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE.createRectangularFrustrumFieldOfViewBinding()));
 
 				return null;
 			}
@@ -526,7 +526,7 @@ public class Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory extend
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsFOVBindingsEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsFOVBindingsEditPlugin.INSTANCE;
 		}
 	}
 

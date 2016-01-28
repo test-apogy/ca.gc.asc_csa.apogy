@@ -1,17 +1,17 @@
-@GenModel(prefix="Symphony__AddonsMobilityPathplannersUI",
+@GenModel(prefix="ApogyAddonsMobilityPathplannersUI",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__AddonsMobilityPathplannersUI",
+		  modelName="ApogyAddonsMobilityPathplannersUI",
 		  complianceLevel="6.0")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.ui.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.edit/src-generated")
 
-package org.eclipse.symphony.addons.mobility.pathplanners.ui
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
 
 class CircularExclusionZonePresentation extends NodePresentation
 {

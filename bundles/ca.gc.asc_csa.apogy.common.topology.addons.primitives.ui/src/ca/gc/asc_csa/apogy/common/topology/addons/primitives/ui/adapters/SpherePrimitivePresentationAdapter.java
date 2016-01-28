@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class SpherePrimitivePresentationAdapter implements NodePresentationAdapter
 {
@@ -30,7 +30,7 @@ public class SpherePrimitivePresentationAdapter implements NodePresentationAdapt
 
 		SpherePrimitive sphere = (SpherePrimitive) obj;
 		
-		SpherePrimitivePresentation presentationNode = Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createSpherePrimitivePresentation();
+		SpherePrimitivePresentation presentationNode = ApogyCommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createSpherePrimitivePresentation();
 		presentationNode.setNode(sphere);			
 						
 		return presentationNode;

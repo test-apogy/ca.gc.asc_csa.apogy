@@ -1,13 +1,13 @@
-@GenModel(prefix="Symphony__CommonMathStatistics",
+@GenModel(prefix="ApogyCommonMathStatistics",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__CommonMathStatistics",
+	      modelName="ApogyCommonMathStatistics",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.math.statistics/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.math.statistics/src-generated")
 
-package org.eclipse.symphony.common.math.statistics
+package ca.gc.asc_csa.apogy.common.math.statistics
 
 class Population
 {

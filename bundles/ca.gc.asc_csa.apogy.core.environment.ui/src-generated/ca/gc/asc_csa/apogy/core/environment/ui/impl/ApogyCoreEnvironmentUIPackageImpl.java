@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.util.List;
 
@@ -18,39 +18,39 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
-import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
-import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapRuler;
-import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.MoonPresentation;
-import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.SunPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.plot.XYPlot;
@@ -64,7 +64,7 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl implements Symphony__CoreEnvironmentUIPackage
+public class ApogyCoreEnvironmentUIPackageImpl extends EPackageImpl implements ApogyCoreEnvironmentUIPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -120,7 +120,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CoreEnvironmentUIFacadeEClass = null;
+	private EClass apogy__CoreEnvironmentUIFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -315,13 +315,13 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__CoreEnvironmentUIPackageImpl()
+  private ApogyCoreEnvironmentUIPackageImpl()
   {
-		super(eNS_URI, Symphony__CoreEnvironmentUIFactory.eINSTANCE);
+		super(eNS_URI, ApogyCoreEnvironmentUIFactory.eINSTANCE);
 	}
 
   /**
@@ -334,7 +334,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CoreEnvironmentUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCoreEnvironmentUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -343,32 +343,32 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__CoreEnvironmentUIPackage init()
+  public static ApogyCoreEnvironmentUIPackage init()
   {
-		if (isInited) return (Symphony__CoreEnvironmentUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentUIPackage.eNS_URI);
+		if (isInited) return (ApogyCoreEnvironmentUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CoreEnvironmentUIPackageImpl theSymphony__CoreEnvironmentUIPackage = (Symphony__CoreEnvironmentUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CoreEnvironmentUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CoreEnvironmentUIPackageImpl());
+		ApogyCoreEnvironmentUIPackageImpl theApogyCoreEnvironmentUIPackage = (ApogyCoreEnvironmentUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCoreEnvironmentUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCoreEnvironmentUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
-		Symphony__CoreEnvironmentPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CoreEnvironmentUIPackage.createPackageContents();
+		theApogyCoreEnvironmentUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CoreEnvironmentUIPackage.initializePackageContents();
+		theApogyCoreEnvironmentUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CoreEnvironmentUIPackage.freeze();
+		theApogyCoreEnvironmentUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CoreEnvironmentUIPackage.eNS_URI, theSymphony__CoreEnvironmentUIPackage);
-		return theSymphony__CoreEnvironmentUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCoreEnvironmentUIPackage.eNS_URI, theApogyCoreEnvironmentUIPackage);
+		return theApogyCoreEnvironmentUIPackage;
 	}
 
   /**
@@ -597,8 +597,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CoreEnvironmentUIFacade() {
-		return symphony__CoreEnvironmentUIFacadeEClass;
+	public EClass getApogyCoreEnvironmentUIFacade() {
+		return apogy__CoreEnvironmentUIFacadeEClass;
 	}
 
 		/**
@@ -606,8 +606,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration() {
-		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration() {
+		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -615,8 +615,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int() {
-		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int() {
+		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -624,8 +624,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries() {
-		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries() {
+		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -633,8 +633,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration() {
-		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyCoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration() {
+		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -642,8 +642,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String() {
-		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(4);
+	public EOperation getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String() {
+		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -651,8 +651,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList() {
-		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(5);
+	public EOperation getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfigurationList() {
+		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -660,8 +660,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession() {
-		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(6);
+	public EOperation getApogyCoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession() {
+		return apogy__CoreEnvironmentUIFacadeEClass.getEOperations().get(6);
 	}
 
 		/**
@@ -1011,7 +1011,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getAbstractVariableAnnotation_SymphonySystemApiAdapter()
+  public EReference getAbstractVariableAnnotation_ApogySystemApiAdapter()
   {
 		return (EReference)abstractVariableAnnotationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1339,8 +1339,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentUIFactory getSymphony__CoreEnvironmentUIFactory() {
-		return (Symphony__CoreEnvironmentUIFactory)getEFactoryInstance();
+	public ApogyCoreEnvironmentUIFactory getApogyCoreEnvironmentUIFactory() {
+		return (ApogyCoreEnvironmentUIFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -1393,14 +1393,14 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
 		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE);
 
-		symphony__CoreEnvironmentUIFacadeEClass = createEClass(SYMPHONY_CORE_ENVIRONMENT_UI_FACADE);
-		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION);
-		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT);
-		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES);
-		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION);
-		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING);
-		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST);
-		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION);
+		apogy__CoreEnvironmentUIFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_UI_FACADE);
+		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION);
+		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT);
+		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES);
+		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION);
+		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING);
+		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST);
+		createEOperation(apogy__CoreEnvironmentUIFacadeEClass, APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION);
 
 		mapViewConfigurationListEClass = createEClass(MAP_VIEW_CONFIGURATION_LIST);
 		createEReference(mapViewConfigurationListEClass, MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
@@ -1460,7 +1460,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		abstractVariableAnnotationEClass = createEClass(ABSTRACT_VARIABLE_ANNOTATION);
 		createEReference(abstractVariableAnnotationEClass, ABSTRACT_VARIABLE_ANNOTATION__VARIABLE);
 		createEReference(abstractVariableAnnotationEClass, ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE);
-		createEReference(abstractVariableAnnotationEClass, ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER);
+		createEReference(abstractVariableAnnotationEClass, ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER);
 		createEOperation(abstractVariableAnnotationEClass, ABSTRACT_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4);
 
 		poseVariableAnnotationEClass = createEClass(POSE_VARIABLE_ANNOTATION);
@@ -1514,14 +1514,14 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CoreEnvironmentPackage theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
-		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -1529,20 +1529,20 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		starFieldPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		sunPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		earthSurfaceWorksitePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		earthSkyPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		moonPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		featureOfInterestNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		mapViewConfigurationListEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getAbstractToolsListContainer());
-		mapViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		mapViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		starFieldPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		sunPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		earthSurfaceWorksitePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		earthSkyPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		moonPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		featureOfInterestNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		mapViewConfigurationListEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getAbstractToolsListContainer());
+		mapViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		mapViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		mapAnnotationEClass.getESuperTypes().add(this.getMapViewItemPresentation());
 		mapToolEClass.getESuperTypes().add(this.getMapAnnotation());
 		mapRulerEClass.getESuperTypes().add(this.getMapTool());
 		featuresOfInterestMapLayerPresentationEClass.getESuperTypes().add(this.getMapAnnotation());
-		featuresOfInterestMapLayerPresentationEClass.getESuperTypes().add(theSymphony__CoreEnvironmentPackage.getRectangularRegionProvider());
+		featuresOfInterestMapLayerPresentationEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getRectangularRegionProvider());
 		abstractTrajectoryToolEClass.getESuperTypes().add(this.getTrajectoryProvider());
 		abstractTrajectoryToolEClass.getESuperTypes().add(this.getMapTool());
 		trajectoryPickingToolEClass.getESuperTypes().add(this.getAbstractTrajectoryTool());
@@ -1581,7 +1581,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		initEClass(environmentUIUtilitiesEClass, EnvironmentUIUtilities.class, "EnvironmentUIUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getEnvironmentUIUtilities__ToPoint3f__Star(), this.getPoint3f(), "toPoint3f", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreEnvironmentPackage.getStar(), "star", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentPackage.getStar(), "star", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float(), theEcorePackage.getEFloat(), "getPointSizeForMagnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1599,35 +1599,35 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		op = initEOperation(getEnvironmentUIUtilities__GetSkyColor__double(), this.getColor3f(), "getSkyColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(symphony__CoreEnvironmentUIFacadeEClass, Symphony__CoreEnvironmentUIFacade.class, "Symphony__CoreEnvironmentUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CoreEnvironmentUIFacadeEClass, ApogyCoreEnvironmentUIFacade.class, "ApogyCoreEnvironmentUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), null, "getVisibleRectangularRegionProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), null, "getVisibleRectangularRegionProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
-		EGenericType g2 = createEGenericType(theSymphony__CoreEnvironmentPackage.getRectangularRegionProvider());
+		EGenericType g2 = createEGenericType(theApogyCoreEnvironmentPackage.getRectangularRegionProvider());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), theApogyCommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreEnvironmentPackage.getRectangularRegion(), "mapViewExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentPackage.getRectangularRegion(), "mapViewExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "maximumImageSizePixels", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries(), theEcorePackage.getEDouble(), "getTrajectoryLength", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries(), theEcorePackage.getEDouble(), "getTrajectoryLength", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getXYSeries(), "xySeries", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), theEcorePackage.getEString(), "getMapViewConfigurationIdentifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), theEcorePackage.getEString(), "getMapViewConfigurationIdentifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String(), this.getMapViewConfiguration(), "getActiveMapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String(), this.getMapViewConfiguration(), "getActiveMapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "identifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList(), this.getMapViewConfigurationList(), "getActiveMapViewConfigurationList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfigurationList(), this.getMapViewConfigurationList(), "getActiveMapViewConfigurationList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession(), null, "getFeatureOfInterestLists", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession(), null, "getFeatureOfInterestLists", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(theSymphony__CorePackage.getFeatureOfInterestList());
+		g2 = createEGenericType(theApogyCorePackage.getFeatureOfInterestList());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
@@ -1635,13 +1635,13 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		initEReference(getMapViewConfigurationList_MapViewConfigurations(), this.getMapViewConfiguration(), null, "mapViewConfigurations", null, 0, -1, MapViewConfigurationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapViewConfigurationEClass, MapViewConfiguration.class, "MapViewConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMapViewConfiguration_MapLayers(), theSymphony__CoreEnvironmentPackage.getImageMapLayerPresentation(), null, "mapLayers", null, 0, -1, MapViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMapViewConfiguration_MapLayers(), theApogyCoreEnvironmentPackage.getImageMapLayerPresentation(), null, "mapLayers", null, 0, -1, MapViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMapViewConfiguration_BackgroundColor(), this.getColor3f(), "backgroundColor", "1.0,1.0,1.0", 0, 1, MapViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMapViewConfiguration_MapAnnotations(), this.getMapAnnotation(), null, "mapAnnotations", null, 0, -1, MapViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMapViewConfiguration_DefaultRectangularRegion(), theSymphony__CoreEnvironmentPackage.getRectangularRegion(), null, "defaultRectangularRegion", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMapViewConfiguration_MapImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "mapImage", null, 0, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getMapViewConfiguration_MapImageRectangularRegion(), theSymphony__CoreEnvironmentPackage.getRectangularRegion(), null, "mapImageRectangularRegion", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getMapViewConfiguration_Extent(), theSymphony__CoreEnvironmentPackage.getRectangularRegion(), null, "extent", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getMapViewConfiguration_DefaultRectangularRegion(), theApogyCoreEnvironmentPackage.getRectangularRegion(), null, "defaultRectangularRegion", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMapViewConfiguration_MapImage(), theApogyCommonImagesPackage.getAbstractEImage(), null, "mapImage", null, 0, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getMapViewConfiguration_MapImageRectangularRegion(), theApogyCoreEnvironmentPackage.getRectangularRegion(), null, "mapImageRectangularRegion", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getMapViewConfiguration_Extent(), theApogyCoreEnvironmentPackage.getRectangularRegion(), null, "extent", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getMapViewConfiguration__ForceUpdate(), null, "forceUpdate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1674,7 +1674,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		initEAttribute(getMapRuler_RulerColor(), this.getColor3f(), "rulerColor", "0.0,1.0,0.0", 0, 1, MapRuler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featuresOfInterestMapLayerPresentationEClass, FeaturesOfInterestMapLayerPresentation.class, "FeaturesOfInterestMapLayerPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeaturesOfInterestMapLayerPresentation_FeaturesOfInterestMapLayer(), theSymphony__CoreEnvironmentPackage.getFeaturesOfInterestMapLayer(), null, "featuresOfInterestMapLayer", null, 0, 1, FeaturesOfInterestMapLayerPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeaturesOfInterestMapLayerPresentation_FeaturesOfInterestMapLayer(), theApogyCoreEnvironmentPackage.getFeaturesOfInterestMapLayer(), null, "featuresOfInterestMapLayer", null, 0, 1, FeaturesOfInterestMapLayerPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestRadius(), theEcorePackage.getEDouble(), "featureOfInterestRadius", "0.25", 0, 1, FeaturesOfInterestMapLayerPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor(), this.getColor3f(), "featureOfInterestColor", "0.0,0.0,1.0", 0, 1, FeaturesOfInterestMapLayerPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1702,19 +1702,19 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 
 		initEClass(variableTrajectoryProviderEClass, VariableTrajectoryProvider.class, "VariableTrajectoryProvider", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableTrajectoryProvider_VariableAnnotation(), this.getVariableTrajectoryAnnotation(), this.getVariableTrajectoryAnnotation_TrajectoryProvider(), "variableAnnotation", null, 0, 1, VariableTrajectoryProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariableTrajectoryProvider_PoseProvider(), theSymphony__CorePackage.getPoseProvider(), null, "poseProvider", null, 1, 1, VariableTrajectoryProvider.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariableTrajectoryProvider_PoseProvider(), theApogyCorePackage.getPoseProvider(), null, "poseProvider", null, 1, 1, VariableTrajectoryProvider.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(defaultVariableTrajectoryProviderEClass, DefaultVariableTrajectoryProvider.class, "DefaultVariableTrajectoryProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDefaultVariableTrajectoryProvider_DistanceThreshold(), theEcorePackage.getEDouble(), "distanceThreshold", "0.5", 0, 1, DefaultVariableTrajectoryProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDefaultVariableTrajectoryProvider_AzimuthThreshold(), theEcorePackage.getEDouble(), "azimuthThreshold", "0.017", 0, 1, DefaultVariableTrajectoryProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractVariableAnnotationEClass, AbstractVariableAnnotation.class, "AbstractVariableAnnotation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractVariableAnnotation_Variable(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, AbstractVariableAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractVariableAnnotation_Variable(), theApogyCoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, AbstractVariableAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractVariableAnnotation_VariableInstance(), theEcorePackage.getEObject(), null, "variableInstance", null, 0, 1, AbstractVariableAnnotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractVariableAnnotation_SymphonySystemApiAdapter(), theSymphony__CorePackage.getSymphonySystemApiAdapter(), null, "symphonySystemApiAdapter", null, 0, 1, AbstractVariableAnnotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractVariableAnnotation_ApogySystemApiAdapter(), theApogyCorePackage.getApogySystemApiAdapter(), null, "apogySystemApiAdapter", null, 0, 1, AbstractVariableAnnotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAbstractVariableAnnotation__UpdatePose__Matrix4x4(), null, "updatePose", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getMatrix4x4(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(poseVariableAnnotationEClass, PoseVariableAnnotation.class, "PoseVariableAnnotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPoseVariableAnnotation_Vectorlength(), theEcorePackage.getEDouble(), "vectorlength", "10.0", 0, 1, PoseVariableAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1766,17 +1766,17 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CoreEnvironmentUI",
+			 "prefix", "ApogyCoreEnvironmentUI",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__CoreEnvironmentUI",
+			 "modelName", "ApogyCoreEnvironmentUI",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.core.environment.ui/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.core.environment.ui.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.core.environment"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.ui/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.ui.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.core.environment"
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksitePresentation_AxisVisible(), 
@@ -1789,7 +1789,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "propertyCategory", "AXIS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksitePresentation_AzimuthVisible(), 
@@ -1820,14 +1820,14 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "propertyCategory", "PLANE",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksitePresentation_PlaneSize(), 
 		   source, 
 		   new String[] {
 			 "propertyCategory", "PLANE",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getEnvironmentUIUtilities__GetSunLightColor__double(), 
@@ -1839,7 +1839,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getEnvironmentUIUtilities__GetSunLightColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUIUtilities__GetSkyTransparency__double(), 
@@ -1851,7 +1851,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getEnvironmentUIUtilities__GetSkyTransparency__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUIUtilities__GetSkyColor__double(), 
@@ -1863,40 +1863,40 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getEnvironmentUIUtilities__GetSkyColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), 
+		  (getApogyCoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns an image representing the assembly of the specified list of ImageMapLayerPresentation.\n@param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.\n@return The image representing the specified list of ImageMapLayerPresentation."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), 
+		  (getApogyCoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns an image representing the specified MapViewExtent using a specified MapViewConfiguration.\nIf the MapViewExtent is larger than the area covered by the MapViewConfiguration, transparent pixels will be added.\n@param mapViewConfiguration The specified MapViewConfiguration.\n@param mapViewExtent The specified ground area to be covered.\n@param maximumImageSizePixels The maximum size, in pixel, of the generated image.\n@return The image representing the specified MapViewExtent."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries(), 
+		  (getApogyCoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Computes the length of a 2D trajectory.\n@param The XYSeries.\n@return The length of the trajectory represented in the XYSerie."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), 
+		  (getApogyCoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the identifier associated with a given MapViewConfiguration.\n@param mapViewConfiguration The given MapViewConfiguration.\n@return The identifier, null if none is found."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String(), 
+		  (getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the MapViewConfiguration (in the Active Session) with the specified identifier.\n@param identifier The MapViewConfiguration identifier.\n@return The MapViewConfiguration with the specified identifier, null if non is found."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList(), 
+		  (getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfigurationList(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the MapViewConfigurationList in the Active Session.\n@return The MapViewConfigurationList in the Active Session, null if none is found."
@@ -1932,7 +1932,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  (getMapViewConfiguration_MapAnnotations(), 
 		   source, 
 		   new String[] {
-			 "documentation", "List of Symphony System instances being tracked.",
+			 "documentation", "List of Apogy System instances being tracked.",
 			 "children", "true",
 			 "notify", "true",
 			 "property", "None"
@@ -2055,7 +2055,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "notify", "true",
 			 "propertyCategory", "FOI_PROPERTIES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor(), 
@@ -2106,14 +2106,14 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "documentation", "The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getTrajectoryProvider_TrajectoryLength(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The current length of the trajectory.",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectoryProvider_TrajectoryColor(), 
@@ -2149,7 +2149,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  (getVariableTrajectoryProvider_PoseProvider(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The Symphony System being displayed. This is automatically updated."
+			 "documentation", " The Apogy System being displayed. This is automatically updated."
 		   });	
 		addAnnotation
 		  (defaultVariableTrajectoryProviderEClass, 
@@ -2163,7 +2163,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", " Minimum distance to keep between points added to the XYSeries.",
 			 "propertyCategory", "THRESHOLDS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getDefaultVariableTrajectoryProvider_AzimuthThreshold(), 
@@ -2171,7 +2171,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", " Minimum azimuth change that will trigger an azimuthAngle change.",
 			 "propertyCategory", "THRESHOLDS",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (abstractVariableAnnotationEClass, 
@@ -2189,19 +2189,19 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  (getAbstractVariableAnnotation_Variable(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The Symphony System being displayed."
+			 "documentation", "The Apogy System being displayed."
 		   });	
 		addAnnotation
 		  (getAbstractVariableAnnotation_VariableInstance(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The instance of the object adapted by the Symphony System."
+			 "documentation", "The instance of the object adapted by the Apogy System."
 		   });	
 		addAnnotation
-		  (getAbstractVariableAnnotation_SymphonySystemApiAdapter(), 
+		  (getAbstractVariableAnnotation_ApogySystemApiAdapter(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The current instance of  SymphonySystemApiAdapter handling the variable."
+			 "documentation", "The current instance of  ApogySystemApiAdapter handling the variable."
 		   });	
 		addAnnotation
 		  (poseVariableAnnotationEClass, 
@@ -2219,19 +2219,19 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getPoseVariableAnnotation__UpdatePose__double_double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  ((getPoseVariableAnnotation__UpdatePose__double_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  ((getPoseVariableAnnotation__UpdatePose__double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPoseVariableAnnotation_Vectorlength(), 
@@ -2239,7 +2239,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "The length of the vector.",
 			 "propertyCategory", "VECTOR_PROPERTIES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPoseVariableAnnotation_VectorColor(), 
@@ -2278,7 +2278,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "The length of the vehicle.",
 			 "propertyCategory", "VEHICLE_DIMENSIONS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getVehicleVariableAnnotation_VehicleWidth(), 
@@ -2286,8 +2286,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "The width of the vehicle.",
 			 "propertyCategory", "VEHICLE_DIMENSIONS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });
 	}
 
-} //Symphony__CoreEnvironmentUIPackageImpl
+} //ApogyCoreEnvironmentUIPackageImpl

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -9,8 +9,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,20 +19,20 @@ import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
  *
  * @generated
  */
-public class Symphony__AddonsROSFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__AddonsROSFacade
+public class ApogyAddonsROSFacadeImpl extends MinimalEObjectImpl.Container implements ApogyAddonsROSFacade
 {
 	public static final String ROS_MASTER_URI_ENV_VAR = "ROS_MASTER_URI";
 	public static final String ROS_HOSTNAME_ENV_VAR = "ROS_HOSTNAME";
 	public static final String ROS_IP_ENV_VAR = "ROS_IP";
 	
 	
-	private static Symphony__AddonsROSFacade instance;
+	private static ApogyAddonsROSFacade instance;
 	
-	public static Symphony__AddonsROSFacade getInstance()
+	public static ApogyAddonsROSFacade getInstance()
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__AddonsROSFacadeImpl();
+			instance = new ApogyAddonsROSFacadeImpl();
 		}
 
 		return instance;
@@ -44,7 +44,7 @@ public class Symphony__AddonsROSFacadeImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsROSFacadeImpl() {
+	protected ApogyAddonsROSFacadeImpl() {
 		super();
 	}
 
@@ -55,7 +55,7 @@ public class Symphony__AddonsROSFacadeImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsROSPackage.Literals.SYMPHONY_ADDONS_ROS_FACADE;
+		return ApogyAddonsROSPackage.Literals.APOGY_ADDONS_ROS_FACADE;
 	}
 
 	/**
@@ -173,16 +173,16 @@ public class Symphony__AddonsROSFacadeImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsROSPackage.SYMPHONY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX:
+			case ApogyAddonsROSPackage.APOGY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX:
 				return getNodeNamePrefix();
-			case Symphony__AddonsROSPackage.SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI:
+			case ApogyAddonsROSPackage.APOGY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI:
 				return getROSMasterURI();
-			case Symphony__AddonsROSPackage.SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME:
+			case ApogyAddonsROSPackage.APOGY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME:
 				return getROSHostname();
-			case Symphony__AddonsROSPackage.SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_IP:
+			case ApogyAddonsROSPackage.APOGY_ADDONS_ROS_FACADE___GET_ROS_IP:
 				return getROSIp();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__AddonsROSFacadeImpl
+} //ApogyAddonsROSFacadeImpl

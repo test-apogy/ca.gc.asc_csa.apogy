@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,7 +16,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.ArgumentsList#getArgumentValues() <em>Get Argument Values</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArgumentValues() <em>Get Argument Values</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -78,7 +78,7 @@ public class ArgumentsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createArgumentsList());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createArgumentsList());
 	}
 
 	/**
@@ -93,10 +93,10 @@ public class ArgumentsListTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.ArgumentsList#getArgumentValues() <em>Get Argument Values</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArgumentValues() <em>Get Argument Values</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.ArgumentsList#getArgumentValues()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArgumentValues()
 	 * @generated
 	 */
 	public void testGetArgumentValues() {

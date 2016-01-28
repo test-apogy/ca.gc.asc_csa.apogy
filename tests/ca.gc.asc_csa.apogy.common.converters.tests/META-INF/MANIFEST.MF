@@ -1,19 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.converters.tests;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.converters.tests;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.common.converters.tests.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.common.converters.tests.Activator
 Bundle-Vendor: %pluginProvider
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit,
- org.eclipse.symphony.common.converters,
+ ca.gc.asc_csa.apogy.common.converters,
  org.jgrapht;bundle-version="0.8.2",
- org.eclipse.symphony.common.converters.ui
+ ca.gc.asc_csa.apogy.common.converters.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.symphony.common.converters.tests,
- org.eclipse.symphony.common.converters.tests.converters,
- org.eclipse.symphony.common.converters.tests.types
+Export-Package: ca.gc.asc_csa.apogy.common.converters.tests,
+ ca.gc.asc_csa.apogy.common.converters.tests.converters,
+ ca.gc.asc_csa.apogy.common.converters.tests.types

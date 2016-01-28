@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui.composites;
+package ca.gc.asc_csa.apogy.common.images.ui.composites;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -20,7 +20,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.MessageBox;
-import org.eclipse.symphony.common.images.ui.Activator;
+import ca.gc.asc_csa.apogy.common.images.ui.Activator;
 import org.eclipse.ui.progress.UIJob;
 
 public class ImageDisplayComposite extends Composite 

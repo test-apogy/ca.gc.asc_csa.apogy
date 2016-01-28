@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -18,17 +18,17 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer#getSlopeRanges <em>Slope Ranges</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer#getSlopeRanges <em>Slope Ranges</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer()
  * @model
  * @generated
  */
 public interface CartesianTriangularMeshDiscreteSlopeImageMapLayer extends CartesianTriangularMeshSlopeImageMapLayer {
 	/**
 	 * Returns the value of the '<em><b>Slope Ranges</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.SlopeRange}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.SlopeRange}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Slope Ranges</em>' containment reference list isn't clear,
@@ -39,7 +39,7 @@ public interface CartesianTriangularMeshDiscreteSlopeImageMapLayer extends Carte
 	 * The range of slope for which to generate colors.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Slope Ranges</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer_SlopeRanges()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer_SlopeRanges()
 	 * @model containment="true"
 	 * @generated
 	 */

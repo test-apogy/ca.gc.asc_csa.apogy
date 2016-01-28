@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.impl;
+package ca.gc.asc_csa.apogy.common.images.impl;
 
 import java.awt.image.BufferedImage;
 import java.lang.reflect.InvocationTargetException;
@@ -10,8 +10,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +21,9 @@ import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.images.impl.EImageImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.impl.EImageImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.impl.EImageImpl#getImageContent <em>Image Content</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.EImageImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.EImageImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.EImageImpl#getImageContent <em>Image Content</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,7 +105,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonImagesPackage.Literals.EIMAGE;
+		return ApogyCommonImagesPackage.Literals.EIMAGE;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.EIMAGE__WIDTH, oldWidth, width));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.EIMAGE__WIDTH, oldWidth, width));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 		int oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.EIMAGE__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.EIMAGE__HEIGHT, oldHeight, height));
 	}
 
 	/**
@@ -189,7 +189,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 		BufferedImage oldImageContent = imageContent;
 		imageContent = newImageContent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT, oldImageContent, imageContent));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT, oldImageContent, imageContent));
 	}	
 	
 	/**
@@ -210,11 +210,11 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
+			case ApogyCommonImagesPackage.EIMAGE__WIDTH:
 				return getWidth();
-			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.EIMAGE__HEIGHT:
 				return getHeight();
-			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
+			case ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				return getImageContent();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -228,13 +228,13 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
+			case ApogyCommonImagesPackage.EIMAGE__WIDTH:
 				setWidth((Integer)newValue);
 				return;
-			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.EIMAGE__HEIGHT:
 				setHeight((Integer)newValue);
 				return;
-			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
+			case ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				setImageContent((BufferedImage)newValue);
 				return;
 		}
@@ -249,13 +249,13 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
+			case ApogyCommonImagesPackage.EIMAGE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
-			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.EIMAGE__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
-			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
+			case ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				setImageContent(IMAGE_CONTENT_EDEFAULT);
 				return;
 		}
@@ -270,11 +270,11 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
+			case ApogyCommonImagesPackage.EIMAGE__WIDTH:
 				return width != WIDTH_EDEFAULT;
-			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.EIMAGE__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
-			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
+			case ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				return IMAGE_CONTENT_EDEFAULT == null ? imageContent != null : !IMAGE_CONTENT_EDEFAULT.equals(imageContent);
 		}
 		return super.eIsSet(featureID);
@@ -288,7 +288,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonImagesPackage.EIMAGE___AS_BUFFERED_IMAGE:
+			case ApogyCommonImagesPackage.EIMAGE___AS_BUFFERED_IMAGE:
 				return asBufferedImage();
 		}
 		return super.eInvoke(operationID, arguments);

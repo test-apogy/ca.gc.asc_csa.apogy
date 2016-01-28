@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.ui.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
-import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class AbstractAntennaRadiationPatternPresentationImpl extends NodePresent
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsUIPackage.Literals.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION;
+		return ApogyAddonsTelecomsUIPackage.Literals.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION;
 	}
 
 } //AbstractAntennaRadiationPatternPresentationImpl

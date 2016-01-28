@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.provider;
+package ca.gc.asc_csa.apogy.common.images.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.images.util.Symphony__CommonImagesAdapterFactory;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.util.ApogyCommonImagesAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.images.util.Symphony__CommonImagesAdapterFact
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__CommonImagesAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonImagesItemProviderAdapterFactory extends ApogyCommonImagesAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonImagesEditPlugin.INSTANCE, Symphony__CommonImagesPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonImagesEditPlugin.INSTANCE, ApogyCommonImagesPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonImagesItemProviderAdapterFactory() {
+	public ApogyCommonImagesItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.images.ImagesAlbum} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.images.ImagesAlbum} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	protected ImagesAlbumItemProvider imagesAlbumItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.images.ImagesAlbum}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.images.ImagesAlbum}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,7 +108,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.images.URLEImage} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.images.URLEImage} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	protected URLEImageItemProvider urleImageItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.images.URLEImage}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.images.URLEImage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.images.EImage} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.images.EImage} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	protected EImageItemProvider eImageItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.images.EImage}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.images.EImage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,7 +154,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.images.EImagesUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.images.EImagesUtilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	protected EImagesUtilitiesItemProvider eImagesUtilitiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.images.EImagesUtilities}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.images.EImagesUtilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,7 +177,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.images.ImageSize} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.images.ImageSize} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -185,7 +185,7 @@ public class Symphony__CommonImagesItemProviderAdapterFactory extends Symphony__
 	protected ImageSizeItemProvider imageSizeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.images.ImageSize}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.images.ImageSize}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.Collection;
 
@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.AbstractPlayer;
-import org.eclipse.symphony.core.invocator.AbstractRecorder;
-import org.eclipse.symphony.core.invocator.ChannelsList;
-import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
+import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,9 +27,9 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl#getRecorder <em>Recorder</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl#getPlayer <em>Player</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl#getChannelsLists <em>Channels Lists</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl#getRecorder <em>Recorder</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl#getPlayer <em>Player</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl#getChannelsLists <em>Channels Lists</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER;
+		return ApogyCoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 		AbstractRecorder oldRecorder = recorder;
 		recorder = newRecorder;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER, oldRecorder, newRecorder);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER, oldRecorder, newRecorder);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -117,14 +117,14 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 		if (newRecorder != recorder) {
 			NotificationChain msgs = null;
 			if (recorder != null)
-				msgs = ((InternalEObject)recorder).eInverseRemove(this, Symphony__CoreInvocatorPackage.ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER, AbstractRecorder.class, msgs);
+				msgs = ((InternalEObject)recorder).eInverseRemove(this, ApogyCoreInvocatorPackage.ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER, AbstractRecorder.class, msgs);
 			if (newRecorder != null)
-				msgs = ((InternalEObject)newRecorder).eInverseAdd(this, Symphony__CoreInvocatorPackage.ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER, AbstractRecorder.class, msgs);
+				msgs = ((InternalEObject)newRecorder).eInverseAdd(this, ApogyCoreInvocatorPackage.ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER, AbstractRecorder.class, msgs);
 			msgs = basicSetRecorder(newRecorder, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER, newRecorder, newRecorder));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER, newRecorder, newRecorder));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 		AbstractPlayer oldPlayer = player;
 		player = newPlayer;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, oldPlayer, newPlayer);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, oldPlayer, newPlayer);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -160,14 +160,14 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 		if (newPlayer != player) {
 			NotificationChain msgs = null;
 			if (player != null)
-				msgs = ((InternalEObject)player).eInverseRemove(this, Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, AbstractPlayer.class, msgs);
+				msgs = ((InternalEObject)player).eInverseRemove(this, ApogyCoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, AbstractPlayer.class, msgs);
 			if (newPlayer != null)
-				msgs = ((InternalEObject)newPlayer).eInverseAdd(this, Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, AbstractPlayer.class, msgs);
+				msgs = ((InternalEObject)newPlayer).eInverseAdd(this, ApogyCoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, AbstractPlayer.class, msgs);
 			msgs = basicSetPlayer(newPlayer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, newPlayer, newPlayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, newPlayer, newPlayer));
 	}
 
 	/**
@@ -177,7 +177,7 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	 */
 	public EList<ChannelsList> getChannelsLists() {
 		if (channelsLists == null) {
-			channelsLists = new EObjectContainmentWithInverseEList<ChannelsList>(ChannelsList.class, this, Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS, Symphony__CoreInvocatorPackage.CHANNELS_LIST__RECORDING_TOOLS_CONTAINER);
+			channelsLists = new EObjectContainmentWithInverseEList<ChannelsList>(ChannelsList.class, this, ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS, ApogyCoreInvocatorPackage.CHANNELS_LIST__RECORDING_TOOLS_CONTAINER);
 		}
 		return channelsLists;
 	}
@@ -191,15 +191,15 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
 				if (recorder != null)
-					msgs = ((InternalEObject)recorder).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER, null, msgs);
+					msgs = ((InternalEObject)recorder).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER, null, msgs);
 				return basicSetRecorder((AbstractRecorder)otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
 				if (player != null)
-					msgs = ((InternalEObject)player).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, null, msgs);
+					msgs = ((InternalEObject)player).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, null, msgs);
 				return basicSetPlayer((AbstractPlayer)otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChannelsLists()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -213,11 +213,11 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
 				return basicSetRecorder(null, msgs);
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
 				return basicSetPlayer(null, msgs);
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				return ((InternalEList<?>)getChannelsLists()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -231,11 +231,11 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
 				return getRecorder();
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
 				return getPlayer();
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				return getChannelsLists();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -250,13 +250,13 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
 				setRecorder((AbstractRecorder)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
 				setPlayer((AbstractPlayer)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				getChannelsLists().clear();
 				getChannelsLists().addAll((Collection<? extends ChannelsList>)newValue);
 				return;
@@ -272,13 +272,13 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
 				setRecorder((AbstractRecorder)null);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
 				setPlayer((AbstractPlayer)null);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				getChannelsLists().clear();
 				return;
 		}
@@ -293,11 +293,11 @@ public class RecordingToolsContainerImpl extends AbstractToolsListContainerImpl 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
 				return recorder != null;
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
 				return player != null;
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				return channelsLists != null && !channelsLists.isEmpty();
 		}
 		return super.eIsSet(featureID);

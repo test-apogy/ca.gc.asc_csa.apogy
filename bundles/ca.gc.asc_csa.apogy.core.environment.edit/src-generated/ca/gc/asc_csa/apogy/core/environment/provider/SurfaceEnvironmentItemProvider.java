@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.environment.SurfaceEnvironment;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.SurfaceEnvironment} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,8 +66,8 @@ public class SurfaceEnvironmentItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY);
 		}
 		return childrenFeatures;
 	}
@@ -126,8 +126,8 @@ public class SurfaceEnvironmentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SurfaceEnvironment.class)) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -148,13 +148,13 @@ public class SurfaceEnvironmentItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createAtmosphere()));
+				(ApogyCoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createAtmosphere()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 }

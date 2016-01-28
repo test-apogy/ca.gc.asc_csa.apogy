@@ -4,9 +4,9 @@
  *
  * $Id: INodeVisitor.java,v 1.4.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * 
@@ -46,14 +46,14 @@ public interface INodeVisitor
 	 * 
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(Class)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNodeVisitor_Type()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNodeVisitor_Type()
 	 * @model dataType="ca.gc.space.java.emf.Class<T>"
 	 * @generated
 	 */
 	Class<? extends Node> getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.INodeVisitor#getType
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.INodeVisitor#getType
 	 * <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @param value

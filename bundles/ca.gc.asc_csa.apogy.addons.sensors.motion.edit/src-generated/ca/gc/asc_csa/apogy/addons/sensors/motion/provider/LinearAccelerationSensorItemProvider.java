@@ -4,7 +4,7 @@
  *
  * $Id: LinearAccelerationSensorItemProvider.java,v 1.4.4.2 2015/05/21 15:50:04 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.motion.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class LinearAccelerationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearAccelerationSensor_xAcceleration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearAccelerationSensor_xAcceleration_feature", "_UI_LinearAccelerationSensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR__XACCELERATION,
+				 ApogyAddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR__XACCELERATION,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class LinearAccelerationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearAccelerationSensor_yAcceleration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearAccelerationSensor_yAcceleration_feature", "_UI_LinearAccelerationSensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR__YACCELERATION,
+				 ApogyAddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR__YACCELERATION,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class LinearAccelerationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearAccelerationSensor_zAcceleration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearAccelerationSensor_zAcceleration_feature", "_UI_LinearAccelerationSensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR__ZACCELERATION,
+				 ApogyAddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR__ZACCELERATION,
 				 true,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class LinearAccelerationSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LinearAccelerationSensor.class)) {
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

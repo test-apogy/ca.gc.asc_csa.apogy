@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -7,7 +7,7 @@ public class Activator extends AbstractUIPlugin
 {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.sensors.fov.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.fov.ui";
 	
 	// The shared instance
 	private static Activator plugin;

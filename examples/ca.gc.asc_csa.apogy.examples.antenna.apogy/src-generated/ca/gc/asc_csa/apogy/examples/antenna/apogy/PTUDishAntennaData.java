@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy;
 
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.core.SymphonyInitializationData;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,28 +12,28 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class specifies the initialization data that Symphony
+ * This class specifies the initialization data that Apogy
  * should be interested in when (re)initializing the PTU dish
  * antenna with the API Adapter (which in this case is
- * {org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter})
+ * {ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter})
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getPanAngle <em>Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getTiltAngle <em>Tilt Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isTrackingSun <em>Tracking Sun</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getPanAngle <em>Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getTiltAngle <em>Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isTrackingSun <em>Tracking Sun</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData()
+ * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage#getPTUDishAntennaData()
  * @model
  * @generated
  */
-public interface PTUDishAntennaData extends SymphonyInitializationData
+public interface PTUDishAntennaData extends ApogyInitializationData
 {
   /**
 	 * Returns the value of the '<em><b>Fov</b></em>' containment reference.
@@ -44,7 +44,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(ConicalFieldOfView)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_Fov()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage#getPTUDishAntennaData_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Field Of View'"
 	 * @generated
@@ -52,7 +52,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	ConicalFieldOfView getFov();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getFov <em>Fov</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getFov <em>Fov</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov</em>' containment reference.
@@ -71,15 +71,15 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pan Angle</em>' attribute.
 	 * @see #setPanAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_PanAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage#getPTUDishAntennaData_PanAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
 	 * @generated
 	 */
   double getPanAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getPanAngle <em>Pan Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getPanAngle <em>Pan Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pan Angle</em>' attribute.
@@ -98,15 +98,15 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tilt Angle</em>' attribute.
 	 * @see #setTiltAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_TiltAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage#getPTUDishAntennaData_TiltAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
 	 * @generated
 	 */
   double getTiltAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getTiltAngle <em>Tilt Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getTiltAngle <em>Tilt Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tilt Angle</em>' attribute.
@@ -126,7 +126,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tracking Sun</em>' attribute.
 	 * @see #setTrackingSun(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_TrackingSun()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage#getPTUDishAntennaData_TrackingSun()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -134,7 +134,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	boolean isTrackingSun();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isTrackingSun <em>Tracking Sun</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isTrackingSun <em>Tracking Sun</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tracking Sun</em>' attribute.
@@ -153,7 +153,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage#getPTUDishAntennaData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -161,7 +161,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	boolean isInitialized();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.

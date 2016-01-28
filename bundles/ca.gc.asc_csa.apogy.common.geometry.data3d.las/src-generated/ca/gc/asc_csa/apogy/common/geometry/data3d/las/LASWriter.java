@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -21,20 +21,20 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getFileName <em>File Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getProgressMonitor <em>Progress Monitor</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getPoints <em>Points</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleX <em>Scale X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleY <em>Scale Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleZ <em>Scale Z</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getHeader <em>Header</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getXOffset <em>XOffset</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getYOffset <em>YOffset</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getZOffset <em>ZOffset</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getFileName <em>File Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getProgressMonitor <em>Progress Monitor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getPoints <em>Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleX <em>Scale X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleY <em>Scale Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleZ <em>Scale Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getHeader <em>Header</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getXOffset <em>XOffset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getYOffset <em>YOffset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getZOffset <em>ZOffset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>File Name</em>' attribute.
 	 * @see #setFileName(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_FileName()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_FileName()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getFileName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getFileName <em>File Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getFileName <em>File Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>File Name</em>' attribute.
@@ -75,14 +75,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Progress Monitor</em>' attribute.
 	 * @see #setProgressMonitor(IProgressMonitor)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ProgressMonitor()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.IProgressMonitor" transient="true"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_ProgressMonitor()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.las.IProgressMonitor" transient="true"
 	 * @generated
 	 */
 	IProgressMonitor getProgressMonitor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getProgressMonitor <em>Progress Monitor</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getProgressMonitor <em>Progress Monitor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Progress Monitor</em>' attribute.
@@ -93,7 +93,7 @@ public interface LASWriter extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Points</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -101,7 +101,7 @@ public interface LASWriter extends EObject {
 	 * applied to the x, y, z values to obtain the right values.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Points</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_Points()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_Points()
 	 * @model transient="true" ordered="false"
 	 * @generated
 	 */
@@ -118,14 +118,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scale X</em>' attribute.
 	 * @see #setScaleX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ScaleX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_ScaleX()
 	 * @model default="0.01" unique="false"
 	 * @generated
 	 */
 	double getScaleX();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleX <em>Scale X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleX <em>Scale X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Scale X</em>' attribute.
@@ -145,14 +145,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scale Y</em>' attribute.
 	 * @see #setScaleY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ScaleY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_ScaleY()
 	 * @model default="0.01" unique="false"
 	 * @generated
 	 */
 	double getScaleY();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleY <em>Scale Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleY <em>Scale Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Scale Y</em>' attribute.
@@ -172,14 +172,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scale Z</em>' attribute.
 	 * @see #setScaleZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ScaleZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_ScaleZ()
 	 * @model default="0.01" unique="false"
 	 * @generated
 	 */
 	double getScaleZ();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleZ <em>Scale Z</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleZ <em>Scale Z</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Scale Z</em>' attribute.
@@ -197,7 +197,7 @@ public interface LASWriter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Header</em>' reference.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_Header()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_Header()
 	 * @model transient="true" changeable="false"
 	 * @generated
 	 */
@@ -214,14 +214,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XOffset</em>' attribute.
 	 * @see #setXOffset(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_XOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_XOffset()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getXOffset();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getXOffset <em>XOffset</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getXOffset <em>XOffset</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XOffset</em>' attribute.
@@ -241,14 +241,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YOffset</em>' attribute.
 	 * @see #setYOffset(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_YOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_YOffset()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getYOffset();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getYOffset <em>YOffset</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getYOffset <em>YOffset</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YOffset</em>' attribute.
@@ -268,14 +268,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZOffset</em>' attribute.
 	 * @see #setZOffset(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ZOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_ZOffset()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getZOffset();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getZOffset <em>ZOffset</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getZOffset <em>ZOffset</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZOffset</em>' attribute.
@@ -294,14 +294,14 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Stream</em>' attribute.
 	 * @see #setOutputStream(OutputStream)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_OutputStream()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.OutputStream"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASWriter_OutputStream()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.las.OutputStream"
 	 * @generated
 	 */
 	OutputStream getOutputStream();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Output Stream</em>' attribute.
@@ -313,7 +313,7 @@ public interface LASWriter extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.las.IOException"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.las.IOException"
 	 * @generated
 	 */
 	void write() throws IOException;

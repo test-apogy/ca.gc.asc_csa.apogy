@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 /**
@@ -24,13 +24,13 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.InvocatorSession#getProgramsList <em>Programs List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramsList <em>Programs List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getInvocatorSession()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface InvocatorSession extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Environment</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Environment</em>' containment reference isn't clear,
@@ -47,15 +47,15 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' containment reference.
 	 * @see #setEnvironment(Environment)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_Environment()
-	 * @see org.eclipse.symphony.core.invocator.Environment#getInvocatorSession
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getInvocatorSession_Environment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated
 	 */
   Environment getEnvironment();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Environment</em>' containment reference.
@@ -66,7 +66,7 @@ public interface InvocatorSession extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Programs List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.ProgramsList#getInvocatorSession <em>Invocator Session</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Programs List</em>' containment reference isn't clear,
@@ -75,15 +75,15 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Programs List</em>' containment reference.
 	 * @see #setProgramsList(ProgramsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_ProgramsList()
-	 * @see org.eclipse.symphony.core.invocator.ProgramsList#getInvocatorSession
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getInvocatorSession_ProgramsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated
 	 */
   ProgramsList getProgramsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getProgramsList <em>Programs List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramsList <em>Programs List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Programs List</em>' containment reference.
@@ -94,7 +94,7 @@ public interface InvocatorSession extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Data Products List Container</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.DataProductsListsContainer#getInvocatorSession <em>Invocator Session</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Data Products List Container</em>' containment reference isn't clear,
@@ -103,15 +103,15 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Products List Container</em>' containment reference.
 	 * @see #setDataProductsListContainer(DataProductsListsContainer)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_DataProductsListContainer()
-	 * @see org.eclipse.symphony.core.invocator.DataProductsListsContainer#getInvocatorSession
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getInvocatorSession_DataProductsListContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated
 	 */
   DataProductsListsContainer getDataProductsListContainer();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Data Products List Container</em>' containment reference.
@@ -122,7 +122,7 @@ public interface InvocatorSession extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Tools List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.ToolsList#getInvocatorSession <em>Invocator Session</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ToolsList#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Tools List</em>' containment reference isn't clear,
@@ -131,15 +131,15 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tools List</em>' containment reference.
 	 * @see #setToolsList(ToolsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_ToolsList()
-	 * @see org.eclipse.symphony.core.invocator.ToolsList#getInvocatorSession
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getInvocatorSession_ToolsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ToolsList#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated
 	 */
   ToolsList getToolsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tools List</em>' containment reference.

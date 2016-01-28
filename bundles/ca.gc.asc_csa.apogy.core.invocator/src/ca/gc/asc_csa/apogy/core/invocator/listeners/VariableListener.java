@@ -1,8 +1,8 @@
-package org.eclipse.symphony.core.invocator.listeners;
+package ca.gc.asc_csa.apogy.core.invocator.listeners;
 
-import org.eclipse.symphony.core.invocator.IVariableListener;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableListenerEventType;
+import ca.gc.asc_csa.apogy.core.invocator.IVariableListener;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
 
 /*
  * Default Implementation of {@link IVariableListener}.

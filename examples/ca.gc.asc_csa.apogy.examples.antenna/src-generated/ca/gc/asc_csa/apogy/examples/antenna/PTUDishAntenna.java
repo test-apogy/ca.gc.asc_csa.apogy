@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna;
+package ca.gc.asc_csa.apogy.examples.antenna;
 
 
 /**
@@ -21,12 +21,12 @@ package org.eclipse.symphony.examples.antenna;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getPanAngle <em>Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getTiltAngle <em>Tilt Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getPanAngle <em>Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getTiltAngle <em>Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna()
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getPTUDishAntenna()
  * @model abstract="true"
  * @generated
  */
@@ -42,15 +42,15 @@ public interface PTUDishAntenna extends DishAntenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pan Angle</em>' attribute.
 	 * @see #setPanAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_PanAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getPTUDishAntenna_PanAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad' property='Readonly' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='rad' property='Readonly' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
   double getPanAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getPanAngle <em>Pan Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getPanAngle <em>Pan Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pan Angle</em>' attribute.
@@ -69,15 +69,15 @@ public interface PTUDishAntenna extends DishAntenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tilt Angle</em>' attribute.
 	 * @see #setTiltAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_TiltAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getPTUDishAntenna_TiltAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad' property='Readonly' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='rad' property='Readonly' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
   double getTiltAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getTiltAngle <em>Tilt Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getTiltAngle <em>Tilt Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tilt Angle</em>' attribute.
@@ -97,7 +97,7 @@ public interface PTUDishAntenna extends DishAntenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tracking Sun</em>' attribute.
 	 * @see #setTrackingSun(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_TrackingSun()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getPTUDishAntenna_TrackingSun()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Tracking'"
 	 * @generated
@@ -105,7 +105,7 @@ public interface PTUDishAntenna extends DishAntenna
 	boolean isTrackingSun();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tracking Sun</em>' attribute.
@@ -125,8 +125,8 @@ public interface PTUDishAntenna extends DishAntenna
 	 * @param tiltAngle The target tilt angle for the PTU (given in radians.)
 	 * <!-- end-model-doc -->
 	 * @model panAngleUnique="false"
-	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" tiltAngleUnique="false"
-	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" tiltAngleUnique="false"
+	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   void moveTo(double panAngle, double tiltAngle);

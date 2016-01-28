@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.Mesh;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalTriangularMesh()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphericalTriangularMesh()
  * @model
  * @generated
  */

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -10,7 +10,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator implements BundleActivator
 {
-	public static final String ID = "org.eclipse.symphony.examples.mobile_platform";
+	public static final String ID = "ca.gc.asc_csa.apogy.examples.mobile_platform";
 	
 	/**
 	 * This is a single activator instance which is shared

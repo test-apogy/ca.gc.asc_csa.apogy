@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 
 /**
@@ -13,12 +13,12 @@ package org.eclipse.symphony.addons;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.SimpleTool#getToolList <em>Tool List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SimpleTool#isActive <em>Active</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SimpleTool#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SimpleTool#getToolList <em>Tool List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SimpleTool#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SimpleTool#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool()
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleTool()
  * @model abstract="true"
  * @generated
  */
@@ -26,7 +26,7 @@ public interface SimpleTool extends AbstractTool {
 
 	/**
 	 * Returns the value of the '<em><b>Tool List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tool List</em>' container reference isn't clear,
@@ -35,15 +35,15 @@ public interface SimpleTool extends AbstractTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tool List</em>' container reference.
 	 * @see #setToolList(SimpleToolList)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool_ToolList()
-	 * @see org.eclipse.symphony.addons.SimpleToolList#getSimpleTools
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleTool_ToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleToolList#getSimpleTools
 	 * @model opposite="simpleTools" transient="false"
 	 * @generated
 	 */
 	SimpleToolList getToolList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SimpleTool#getToolList <em>Tool List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#getToolList <em>Tool List</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tool List</em>' container reference.
@@ -63,14 +63,14 @@ public interface SimpleTool extends AbstractTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool_Active()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleTool_Active()
 	 * @model default="false" unique="false" transient="true"
 	 * @generated
 	 */
 	boolean isActive();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SimpleTool#isActive <em>Active</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#isActive <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active</em>' attribute.
@@ -90,7 +90,7 @@ public interface SimpleTool extends AbstractTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool_Disposed()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleTool_Disposed()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -98,7 +98,7 @@ public interface SimpleTool extends AbstractTool {
 	boolean isDisposed();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SimpleTool#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.

@@ -4,7 +4,7 @@
  *
  * $Id: GPSReadingImpl.java,v 1.2.4.2 2015/05/21 15:49:51 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.gps.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.impl;
 
 import java.util.Date;
 
@@ -12,9 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.GPSQuality;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSQuality;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,15 +24,15 @@ import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getLatitude <em>Latitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getLongitude <em>Longitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getElevation <em>Elevation</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getQuality <em>Quality</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getTimeStamp <em>Time Stamp</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getNumberOfSatellites <em>Number Of Satellites</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getHorizontalDilutionPos <em>Horizontal Dilution Pos</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getMeanSeaLevel <em>Mean Sea Level</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getCheckSum <em>Check Sum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getLongitude <em>Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getElevation <em>Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getQuality <em>Quality</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getTimeStamp <em>Time Stamp</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getNumberOfSatellites <em>Number Of Satellites</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getHorizontalDilutionPos <em>Horizontal Dilution Pos</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getMeanSeaLevel <em>Mean Sea Level</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSReadingImpl#getCheckSum <em>Check Sum</em>}</li>
  * </ul>
  *
  * @generated
@@ -234,7 +234,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING;
+		return ApogyAddonsSensorsGPSPackage.Literals.GPS_READING;
 	}
 
 	/**
@@ -255,7 +255,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		double oldLatitude = latitude;
 		latitude = newLatitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__LATITUDE, oldLatitude, latitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__LATITUDE, oldLatitude, latitude));
 	}
 
 	/**
@@ -276,7 +276,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		double oldLongitude = longitude;
 		longitude = newLongitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__LONGITUDE, oldLongitude, longitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__LONGITUDE, oldLongitude, longitude));
 	}
 
 	/**
@@ -297,7 +297,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		double oldElevation = elevation;
 		elevation = newElevation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__ELEVATION, oldElevation, elevation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__ELEVATION, oldElevation, elevation));
 	}
 
 	/**
@@ -318,7 +318,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		GPSQuality oldQuality = quality;
 		quality = newQuality == null ? QUALITY_EDEFAULT : newQuality;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__QUALITY, oldQuality, quality));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__QUALITY, oldQuality, quality));
 	}
 
 	/**
@@ -339,7 +339,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		Date oldTimeStamp = timeStamp;
 		timeStamp = newTimeStamp;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__TIME_STAMP, oldTimeStamp, timeStamp));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__TIME_STAMP, oldTimeStamp, timeStamp));
 	}
 
 	/**
@@ -360,7 +360,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		int oldNumberOfSatellites = numberOfSatellites;
 		numberOfSatellites = newNumberOfSatellites;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES, oldNumberOfSatellites, numberOfSatellites));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES, oldNumberOfSatellites, numberOfSatellites));
 	}
 
 	/**
@@ -381,7 +381,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		double oldHorizontalDilutionPos = horizontalDilutionPos;
 		horizontalDilutionPos = newHorizontalDilutionPos;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS, oldHorizontalDilutionPos, horizontalDilutionPos));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS, oldHorizontalDilutionPos, horizontalDilutionPos));
 	}
 
 	/**
@@ -402,7 +402,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		double oldMeanSeaLevel = meanSeaLevel;
 		meanSeaLevel = newMeanSeaLevel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL, oldMeanSeaLevel, meanSeaLevel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL, oldMeanSeaLevel, meanSeaLevel));
 	}
 
 	/**
@@ -423,7 +423,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 		int oldCheckSum = checkSum;
 		checkSum = newCheckSum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_READING__CHECK_SUM, oldCheckSum, checkSum));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS_READING__CHECK_SUM, oldCheckSum, checkSum));
 	}
 
 	/**
@@ -434,23 +434,23 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LATITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LATITUDE:
 				return getLatitude();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
 				return getLongitude();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__ELEVATION:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__ELEVATION:
 				return getElevation();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__QUALITY:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__QUALITY:
 				return getQuality();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
 				return getTimeStamp();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
 				return getNumberOfSatellites();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
 				return getHorizontalDilutionPos();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
 				return getMeanSeaLevel();
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
 				return getCheckSum();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -464,31 +464,31 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LATITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LATITUDE:
 				setLatitude((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
 				setLongitude((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__ELEVATION:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__ELEVATION:
 				setElevation((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__QUALITY:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__QUALITY:
 				setQuality((GPSQuality)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
 				setTimeStamp((Date)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
 				setNumberOfSatellites((Integer)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
 				setHorizontalDilutionPos((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
 				setMeanSeaLevel((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
 				setCheckSum((Integer)newValue);
 				return;
 		}
@@ -503,31 +503,31 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LATITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LATITUDE:
 				setLatitude(LATITUDE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
 				setLongitude(LONGITUDE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__ELEVATION:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__ELEVATION:
 				setElevation(ELEVATION_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__QUALITY:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__QUALITY:
 				setQuality(QUALITY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
 				setTimeStamp(TIME_STAMP_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
 				setNumberOfSatellites(NUMBER_OF_SATELLITES_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
 				setHorizontalDilutionPos(HORIZONTAL_DILUTION_POS_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
 				setMeanSeaLevel(MEAN_SEA_LEVEL_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
 				setCheckSum(CHECK_SUM_EDEFAULT);
 				return;
 		}
@@ -542,23 +542,23 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LATITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LATITUDE:
 				return latitude != LATITUDE_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
 				return longitude != LONGITUDE_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__ELEVATION:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__ELEVATION:
 				return elevation != ELEVATION_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__QUALITY:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__QUALITY:
 				return quality != QUALITY_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
 				return TIME_STAMP_EDEFAULT == null ? timeStamp != null : !TIME_STAMP_EDEFAULT.equals(timeStamp);
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
 				return numberOfSatellites != NUMBER_OF_SATELLITES_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
 				return horizontalDilutionPos != HORIZONTAL_DILUTION_POS_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
 				return meanSeaLevel != MEAN_SEA_LEVEL_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
 				return checkSum != CHECK_SUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

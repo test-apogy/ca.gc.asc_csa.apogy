@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.util;
+package ca.gc.asc_csa.apogy.addons.actuators.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.actuators.*;
+import ca.gc.asc_csa.apogy.addons.actuators.*;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,17 +22,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage
+ * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage
  * @generated
  */
-public class Symphony__AddonsActuatorsSwitch<T> extends Switch<T> {
+public class ApogyAddonsActuatorsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsActuatorsPackage modelPackage;
+	protected static ApogyAddonsActuatorsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -40,9 +40,9 @@ public class Symphony__AddonsActuatorsSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsActuatorsSwitch() {
+	public ApogyAddonsActuatorsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsActuatorsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsActuatorsPackage.eINSTANCE;
 		}
 	}
 
@@ -69,14 +69,14 @@ public class Symphony__AddonsActuatorsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR: {
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR: {
 				AbstractActuator abstractActuator = (AbstractActuator)theEObject;
 				T result = caseAbstractActuator(abstractActuator);
 				if (result == null) result = caseNode(abstractActuator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT: {
+			case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT: {
 				PanTiltUnit panTiltUnit = (PanTiltUnit)theEObject;
 				T result = casePanTiltUnit(panTiltUnit);
 				if (result == null) result = caseAbstractActuator(panTiltUnit);
@@ -149,4 +149,4 @@ public class Symphony__AddonsActuatorsSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsActuatorsSwitch
+} //ApogyAddonsActuatorsSwitch

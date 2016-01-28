@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.adapters;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIFactory;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class CartesianCoordinatMeshNodePresentationAdapter implements
 		NodePresentationAdapter {
@@ -23,7 +23,7 @@ public class CartesianCoordinatMeshNodePresentationAdapter implements
 
 		ContentNode<CartesianCoordinatesSet> cNode = (ContentNode<CartesianCoordinatesSet>) node;
 
-		CartesianCoordinatesSetPresentation presentationNode = Symphony__CommonGeometryData3DUIFactory.eINSTANCE
+		CartesianCoordinatesSetPresentation presentationNode = ApogyCommonGeometryData3DUIFactory.eINSTANCE
 				.createCartesianCoordinatesSetPresentation();
 		presentationNode.setNode(cNode);
 

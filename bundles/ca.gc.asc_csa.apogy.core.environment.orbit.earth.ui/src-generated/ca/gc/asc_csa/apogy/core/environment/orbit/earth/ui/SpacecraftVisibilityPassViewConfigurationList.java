@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,18 +21,18 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations <em>Configurations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations <em>Configurations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfigurationList()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfigurationList()
  * @model
  * @generated
  */
 public interface SpacecraftVisibilityPassViewConfigurationList extends AbstractToolsListContainer {
 	/**
 	 * Returns the value of the '<em><b>Configurations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Configurations</em>' containment reference list isn't clear,
@@ -40,8 +40,8 @@ public interface SpacecraftVisibilityPassViewConfigurationList extends AbstractT
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Configurations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfigurationList_Configurations()
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfigurationList_Configurations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList
 	 * @model opposite="configurationsList" containment="true"
 	 * @generated
 	 */

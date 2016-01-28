@@ -1,30 +1,30 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.util;
+package ca.gc.asc_csa.apogy.addons.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.Simple3DTool;
+import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.SimpleToolList;
+import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
+import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,10 +36,10 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.Symphony__AddonsPackage
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage
  * @generated
  */
-public class Symphony__AddonsSwitch<T> extends Switch<T>
+public class ApogyAddonsSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -47,7 +47,7 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsPackage modelPackage;
+  protected static ApogyAddonsPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -55,10 +55,10 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSwitch()
+  public ApogyAddonsSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsPackage.eINSTANCE;
 		}
 	}
 
@@ -87,7 +87,7 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__AddonsPackage.ABSTRACT_TOOL: {
+			case ApogyAddonsPackage.ABSTRACT_TOOL: {
 				AbstractTool abstractTool = (AbstractTool)theEObject;
 				T result = caseAbstractTool(abstractTool);
 				if (result == null) result = caseNamed(abstractTool);
@@ -95,14 +95,14 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST: {
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST: {
 				SimpleToolList simpleToolList = (SimpleToolList)theEObject;
 				T result = caseSimpleToolList(simpleToolList);
 				if (result == null) result = caseAbstractToolsListContainer(simpleToolList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.SIMPLE_TOOL: {
+			case ApogyAddonsPackage.SIMPLE_TOOL: {
 				SimpleTool simpleTool = (SimpleTool)theEObject;
 				T result = caseSimpleTool(simpleTool);
 				if (result == null) result = caseAbstractTool(simpleTool);
@@ -111,7 +111,7 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL: {
+			case ApogyAddonsPackage.SIMPLE3_DTOOL: {
 				Simple3DTool simple3DTool = (Simple3DTool)theEObject;
 				T result = caseSimple3DTool(simple3DTool);
 				if (result == null) result = caseSimpleTool(simple3DTool);
@@ -121,7 +121,7 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL: {
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL: {
 				AbstractTwoPoints3DTool abstractTwoPoints3DTool = (AbstractTwoPoints3DTool)theEObject;
 				T result = caseAbstractTwoPoints3DTool(abstractTwoPoints3DTool);
 				if (result == null) result = caseSimple3DTool(abstractTwoPoints3DTool);
@@ -132,7 +132,7 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.RULER3_DTOOL: {
+			case ApogyAddonsPackage.RULER3_DTOOL: {
 				Ruler3DTool ruler3DTool = (Ruler3DTool)theEObject;
 				T result = caseRuler3DTool(ruler3DTool);
 				if (result == null) result = caseAbstractTwoPoints3DTool(ruler3DTool);
@@ -144,14 +144,14 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE: {
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE: {
 				Ruler3dToolNode ruler3dToolNode = (Ruler3dToolNode)theEObject;
 				T result = caseRuler3dToolNode(ruler3dToolNode);
 				if (result == null) result = caseNode(ruler3dToolNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL: {
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL: {
 				FeatureOfInterestPickingTool featureOfInterestPickingTool = (FeatureOfInterestPickingTool)theEObject;
 				T result = caseFeatureOfInterestPickingTool(featureOfInterestPickingTool);
 				if (result == null) result = caseSimple3DTool(featureOfInterestPickingTool);
@@ -162,7 +162,7 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL: {
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL: {
 				SunVector3DTool sunVector3DTool = (SunVector3DTool)theEObject;
 				T result = caseSunVector3DTool(sunVector3DTool);
 				if (result == null) result = caseAbstractTwoPoints3DTool(sunVector3DTool);
@@ -174,14 +174,14 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE: {
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE: {
 				SunVector3DToolNode sunVector3DToolNode = (SunVector3DToolNode)theEObject;
 				T result = caseSunVector3DToolNode(sunVector3DToolNode);
 				if (result == null) result = caseNode(sunVector3DToolNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL: {
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL: {
 				Trajectory3DTool trajectory3DTool = (Trajectory3DTool)theEObject;
 				T result = caseTrajectory3DTool(trajectory3DTool);
 				if (result == null) result = caseSimple3DTool(trajectory3DTool);
@@ -192,7 +192,7 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE: {
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE: {
 				Trajectory3DToolNode trajectory3DToolNode = (Trajectory3DToolNode)theEObject;
 				T result = caseTrajectory3DToolNode(trajectory3DToolNode);
 				if (result == null) result = caseAggregateGroupNode(trajectory3DToolNode);
@@ -493,4 +493,4 @@ public class Symphony__AddonsSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsSwitch
+} //ApogyAddonsSwitch

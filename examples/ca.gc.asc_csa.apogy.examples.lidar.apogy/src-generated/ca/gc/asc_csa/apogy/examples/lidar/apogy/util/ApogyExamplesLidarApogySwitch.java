@@ -1,20 +1,20 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony.util;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.lidar.symphony.LidarData;
-import org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +26,10 @@ import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymph
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage
  * @generated
  */
-public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
+public class ApogyExamplesLidarApogySwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -37,7 +37,7 @@ public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesLidarSymphonyPackage modelPackage;
+  protected static ApogyExamplesLidarApogyPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -45,10 +45,10 @@ public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLidarSymphonySwitch()
+  public ApogyExamplesLidarApogySwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesLidarSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesLidarApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -77,19 +77,19 @@ public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_SYMPHONY_SYSTEM_API_ADAPTER: {
-				LidarSymphonySystemApiAdapter lidarSymphonySystemApiAdapter = (LidarSymphonySystemApiAdapter)theEObject;
-				T result = caseLidarSymphonySystemApiAdapter(lidarSymphonySystemApiAdapter);
-				if (result == null) result = caseSymphonySystemApiAdapter(lidarSymphonySystemApiAdapter);
-				if (result == null) result = caseTypeApiAdapter(lidarSymphonySystemApiAdapter);
-				if (result == null) result = casePoseProvider(lidarSymphonySystemApiAdapter);
+			case ApogyExamplesLidarApogyPackage.LIDAR_APOGY_SYSTEM_API_ADAPTER: {
+				LidarApogySystemApiAdapter lidarApogySystemApiAdapter = (LidarApogySystemApiAdapter)theEObject;
+				T result = caseLidarApogySystemApiAdapter(lidarApogySystemApiAdapter);
+				if (result == null) result = caseApogySystemApiAdapter(lidarApogySystemApiAdapter);
+				if (result == null) result = caseTypeApiAdapter(lidarApogySystemApiAdapter);
+				if (result == null) result = casePoseProvider(lidarApogySystemApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA: {
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA: {
 				LidarData lidarData = (LidarData)theEObject;
 				T result = caseLidarData(lidarData);
-				if (result == null) result = caseSymphonyInitializationData(lidarData);
+				if (result == null) result = caseApogyInitializationData(lidarData);
 				if (result == null) result = caseInitializationData(lidarData);
 				if (result == null) result = caseAbstractInitializationData(lidarData);
 				if (result == null) result = defaultCase(theEObject);
@@ -100,17 +100,17 @@ public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Lidar Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Lidar Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Lidar Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Lidar Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLidarSymphonySystemApiAdapter(LidarSymphonySystemApiAdapter object) {
+	public T caseLidarApogySystemApiAdapter(LidarApogySystemApiAdapter object) {
 		return null;
 	}
 
@@ -161,17 +161,17 @@ public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object)
+  public T caseApogySystemApiAdapter(ApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -207,17 +207,17 @@ public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyInitializationData(SymphonyInitializationData object) {
+	public T caseApogyInitializationData(ApogyInitializationData object) {
 		return null;
 	}
 
@@ -238,4 +238,4 @@ public class Symphony__ExamplesLidarSymphonySwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesLidarSymphonySwitch
+} //ApogyExamplesLidarApogySwitch

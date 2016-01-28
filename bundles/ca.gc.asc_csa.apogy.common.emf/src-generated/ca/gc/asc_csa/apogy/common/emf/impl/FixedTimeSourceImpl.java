@@ -1,12 +1,12 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FixedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class FixedTimeSourceImpl extends TimeSourceImpl implements FixedTimeSour
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.FIXED_TIME_SOURCE;
+		return ApogyCommonEMFPackage.Literals.FIXED_TIME_SOURCE;
 	}
 
 	@Override

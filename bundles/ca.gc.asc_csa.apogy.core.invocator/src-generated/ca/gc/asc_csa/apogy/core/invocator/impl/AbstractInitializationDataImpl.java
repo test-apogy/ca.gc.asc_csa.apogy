@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class AbstractInitializationDataImpl extends MinimalEObjectImpl.
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_INITIALIZATION_DATA;
+		return ApogyCoreInvocatorPackage.Literals.ABSTRACT_INITIALIZATION_DATA;
 	}
 
 } //AbstractInitializationDataImpl

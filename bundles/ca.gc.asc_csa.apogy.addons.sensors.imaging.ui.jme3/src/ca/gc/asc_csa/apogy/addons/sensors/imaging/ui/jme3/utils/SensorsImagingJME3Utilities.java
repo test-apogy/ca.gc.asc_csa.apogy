@@ -1,12 +1,12 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui.jme3.utils;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.jme3.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Vector2f;
 import com.jme3.math.Vector3f;

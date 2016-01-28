@@ -4,7 +4,7 @@
  *
  * $Id: SimpleRangeSensorItemProvider.java,v 1.3.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRangeSensor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRangeSensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class SimpleRangeSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRangeSensor_distanceMeasured_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRangeSensor_distanceMeasured_feature", "_UI_SimpleRangeSensor_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED,
+				 ApogyAddonsSensorsRangePackage.Literals.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class SimpleRangeSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleRangeSensor.class)) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

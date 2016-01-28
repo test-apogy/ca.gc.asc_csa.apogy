@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.sensors.*;
+import ca.gc.asc_csa.apogy.addons.sensors.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,24 +20,24 @@ import org.eclipse.symphony.addons.sensors.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsFactory {
+public class ApogyAddonsSensorsFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsFactory init() {
+	public static ApogyAddonsSensorsFactory init() {
 		try {
-			Symphony__AddonsSensorsFactory theSymphony__AddonsSensorsFactory = (Symphony__AddonsSensorsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsFactory != null) {
-				return theSymphony__AddonsSensorsFactory;
+			ApogyAddonsSensorsFactory theApogyAddonsSensorsFactory = (ApogyAddonsSensorsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsPackage.eNS_URI);
+			if (theApogyAddonsSensorsFactory != null) {
+				return theApogyAddonsSensorsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsFactoryImpl();
+		return new ApogyAddonsSensorsFactoryImpl();
 	}
 
 	/**
@@ -46,7 +46,7 @@ public class Symphony__AddonsSensorsFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFactoryImpl() {
+	public ApogyAddonsSensorsFactoryImpl() {
 		super();
 	}
 
@@ -58,8 +58,8 @@ public class Symphony__AddonsSensorsFactoryImpl extends EFactoryImpl implements 
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsPackage.SENSOR: return createSensor();
-			case Symphony__AddonsSensorsPackage.REFERENCEABLE: return createReferenceable();
+			case ApogyAddonsSensorsPackage.SENSOR: return createSensor();
+			case ApogyAddonsSensorsPackage.REFERENCEABLE: return createReferenceable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -73,7 +73,7 @@ public class Symphony__AddonsSensorsFactoryImpl extends EFactoryImpl implements 
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsPackage.SENSOR_STATUS:
+			case ApogyAddonsSensorsPackage.SENSOR_STATUS:
 				return createSensorStatusFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -88,7 +88,7 @@ public class Symphony__AddonsSensorsFactoryImpl extends EFactoryImpl implements 
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsPackage.SENSOR_STATUS:
+			case ApogyAddonsSensorsPackage.SENSOR_STATUS:
 				return convertSensorStatusToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -140,8 +140,8 @@ public class Symphony__AddonsSensorsFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPackage getSymphony__AddonsSensorsPackage() {
-		return (Symphony__AddonsSensorsPackage)getEPackage();
+	public ApogyAddonsSensorsPackage getApogyAddonsSensorsPackage() {
+		return (ApogyAddonsSensorsPackage)getEPackage();
 	}
 
 	/**
@@ -151,8 +151,8 @@ public class Symphony__AddonsSensorsFactoryImpl extends EFactoryImpl implements 
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsSensorsPackage getPackage() {
-		return Symphony__AddonsSensorsPackage.eINSTANCE;
+	public static ApogyAddonsSensorsPackage getPackage() {
+		return ApogyAddonsSensorsPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsFactoryImpl
+} //ApogyAddonsSensorsFactoryImpl

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.Updatable;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.Updatable;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.Updatable} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.Updatable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class UpdatableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_updating_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_updating_feature", "_UI_Updatable_type"),
-				 Symphony__CorePackage.Literals.UPDATABLE__UPDATING,
+				 ApogyCorePackage.Literals.UPDATABLE__UPDATING,
 				 false,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class UpdatableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_autoUpdateEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_autoUpdateEnabled_feature", "_UI_Updatable_type"),
-				 Symphony__CorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
+				 ApogyCorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -134,8 +134,8 @@ public class UpdatableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Updatable.class)) {
-			case Symphony__CorePackage.UPDATABLE__UPDATING:
-			case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
+			case ApogyCorePackage.UPDATABLE__UPDATING:
+			case ApogyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

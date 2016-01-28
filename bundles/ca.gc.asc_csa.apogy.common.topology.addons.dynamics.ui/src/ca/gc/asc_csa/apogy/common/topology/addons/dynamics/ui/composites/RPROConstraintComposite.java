@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -12,13 +12,13 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage.Literals;
+import ca.gc.asc_csa.apogy.common.math.ui.composites.Tuple3dComposite;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage.Literals;
 
 public class RPROConstraintComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint rPROConstraint;
+	private ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint rPROConstraint;
 	private Button enabledButton;
 	
 	private Tuple3dComposite linearStrengthComposite;
@@ -27,7 +27,7 @@ public class RPROConstraintComposite extends Composite {
 	private Adapter constraintStatesAdapter;
 
 	public RPROConstraintComposite(Composite parent, int style,
-			org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint newRPROConstraint) 
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint newRPROConstraint) 
 	{
 		this(parent, style);
 		setRPROConstraint(newRPROConstraint);
@@ -73,11 +73,11 @@ public class RPROConstraintComposite extends Composite {
 		return bindingContext;
 	}
 
-	public org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint getRPROConstraint() {
+	public ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint getRPROConstraint() {
 		return rPROConstraint;
 	}
 
-	public void setRPROConstraint(org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint newRPROConstraint) 
+	public void setRPROConstraint(ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint newRPROConstraint) 
 	{
 		// Unregister listener from previous CylindricalConstraint
 		if(getRPROConstraint() != null)
@@ -103,7 +103,7 @@ public class RPROConstraintComposite extends Composite {
 	}
 
 	public void setRPROConstraint(
-			org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint newRPROConstraint,
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint newRPROConstraint,
 			boolean update) {
 		rPROConstraint = newRPROConstraint;
 		if (update) {
@@ -133,12 +133,12 @@ public class RPROConstraintComposite extends Composite {
 					// If the angular current state has been changed.
 					if(msg.getFeature() == Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH)
 					{														
-						angularStrengthComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());					
+						angularStrengthComposite.setTuple3d((ca.gc.asc_csa.apogy.common.math.Tuple3d) msg.getNewValue());					
 					}
 					// If the linear current state has been changed.
 					else if(msg.getFeature() == Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH)
 					{
-						linearStrengthComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());	
+						linearStrengthComposite.setTuple3d((ca.gc.asc_csa.apogy.common.math.Tuple3d) msg.getNewValue());	
 					}										
 				};
 			};

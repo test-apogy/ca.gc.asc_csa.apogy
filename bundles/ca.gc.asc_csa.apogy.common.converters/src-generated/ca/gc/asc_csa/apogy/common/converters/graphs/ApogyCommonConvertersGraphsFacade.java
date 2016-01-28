@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.graphs;
+package ca.gc.asc_csa.apogy.common.converters.graphs;
 
 import java.util.Comparator;
 import java.util.List;
@@ -10,9 +10,9 @@ import java.util.Set;
 import java.util.SortedSet;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.converters.ChainedConverter;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.graphs.impl.Symphony__CommonConvertersGraphsFacadeImpl;
+import ca.gc.asc_csa.apogy.common.converters.ChainedConverter;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.graphs.impl.ApogyCommonConvertersGraphsFacadeImpl;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 /**
@@ -25,13 +25,13 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsPackage#getSymphony__CommonConvertersGraphsFacade()
+ * @see ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage#getApogyCommonConvertersGraphsFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonConvertersGraphsFacade extends EObject {
+public interface ApogyCommonConvertersGraphsFacade extends EObject {
 	
-	public static Symphony__CommonConvertersGraphsFacade INSTANCE = Symphony__CommonConvertersGraphsFacadeImpl.getInstance();
+	public static ApogyCommonConvertersGraphsFacade INSTANCE = ApogyCommonConvertersGraphsFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param converters The list of converter to include in the graph.
 	 * @return The converter graph.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" unique="false" convertersDataType="org.eclipse.symphony.common.converters.List<org.eclipse.symphony.common.converters.IConverter>" convertersUnique="false" convertersMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" unique="false" convertersDataType="ca.gc.asc_csa.apogy.common.converters.List<ca.gc.asc_csa.apogy.common.converters.IConverter>" convertersUnique="false" convertersMany="false"
 	 * @generated
 	 */
 	SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> createGraph(List<IConverter> converters);
@@ -54,7 +54,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param graph The graph to which converters will be added.
 	 * @param converters The list of IConverter to be added to the graph.
 	 * <!-- end-model-doc -->
-	 * @model graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false" convertersDataType="org.eclipse.symphony.common.converters.List<org.eclipse.symphony.common.converters.IConverter>" convertersUnique="false" convertersMany="false"
+	 * @model graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false" convertersDataType="ca.gc.asc_csa.apogy.common.converters.List<ca.gc.asc_csa.apogy.common.converters.IConverter>" convertersUnique="false" convertersMany="false"
 	 * @generated
 	 */
 	void addConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, List<IConverter> converters);
@@ -67,7 +67,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param graph The graph of the conversion.
 	 * @return A list of IConverter that converts types that are compatible.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.List<org.eclipse.symphony.common.converters.IConverter>" unique="false" many="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.List<ca.gc.asc_csa.apogy.common.converters.IConverter>" unique="false" many="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false"
 	 * @generated
 	 */
 	List<IConverter> generateTypeCastConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph);
@@ -82,7 +82,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param outputType The output type.
 	 * @return The result of the conversion, null if no conversion was found.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false" inputUnique="false" outputTypeUnique="false"
+	 * @model unique="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false" inputUnique="false" outputTypeUnique="false"
 	 * @generated
 	 */
 	Object convert(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Object input, Class<?> outputType);
@@ -97,7 +97,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param outputType The output type.
 	 * @return The list of ChainedConverter. Never null, but can be empty.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.graphs.SortedSet<org.eclipse.symphony.common.converters.graphs.ChainedConverter>" unique="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false" inputTypeUnique="false" outputTypeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.graphs.SortedSet<ca.gc.asc_csa.apogy.common.converters.graphs.ChainedConverter>" unique="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false" inputTypeUnique="false" outputTypeUnique="false"
 	 * @generated
 	 */
 	SortedSet<ChainedConverter> findAllConvertersBetweenVertices(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Class<?> inputType, Class<?> outputType);
@@ -112,7 +112,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param outputType The output type.
 	 * @return The Chained converter that convert inputType to outputType, null if none was found.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.graphs.ChainedConverter" unique="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false" inputTypeUnique="false" outputTypeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.graphs.ChainedConverter" unique="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false" inputTypeUnique="false" outputTypeUnique="false"
 	 * @generated
 	 */
 	ChainedConverter findConverter(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Class<?> inputType, Class<?> outputType);
@@ -125,7 +125,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param graph The provided graph.
 	 * @return The list of all input types.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.graphs.Set<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.graphs.Set<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false"
 	 * @generated
 	 */
 	Set<Class<?>> getAllInputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph);
@@ -138,7 +138,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param graph The provided graph.
 	 * @return The list of all output types.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.graphs.Set<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.graphs.Set<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false"
 	 * @generated
 	 */
 	Set<Class<?>> getAllOutputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph);
@@ -152,7 +152,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param inputType The input type.
 	 * @return A sorted set of vertex.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" many="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false" inputTypeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" many="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false" inputTypeUnique="false"
 	 * @generated
 	 */
 	List<Class<?>> getSourceVertex(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Class<?> inputType);
@@ -166,7 +166,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param inputType The output type.
 	 * @return A sorted set of vertex.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" many="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false" outputTypeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" unique="false" many="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false" outputTypeUnique="false"
 	 * @generated
 	 */
 	List<Class<?>> getDestinationVertex(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Class<?> outputType);
@@ -180,7 +180,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param targetType The specified type.
 	 * @return The closest type, null if none was found.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" classesDataType="org.eclipse.symphony.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" classesUnique="false" classesMany="false" targetTypeUnique="false"
+	 * @model unique="false" classesDataType="ca.gc.asc_csa.apogy.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" classesUnique="false" classesMany="false" targetTypeUnique="false"
 	 * @generated
 	 */
 	Class<?> findClosestSuperType(List<Class<?>> classes, Class<?> targetType);
@@ -194,7 +194,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param targetType The specified type.
 	 * @return The closest type, null if none was found.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" classesDataType="org.eclipse.symphony.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" classesUnique="false" classesMany="false" targetTypeUnique="false"
+	 * @model unique="false" classesDataType="ca.gc.asc_csa.apogy.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>" classesUnique="false" classesMany="false" targetTypeUnique="false"
 	 * @generated
 	 */
 	Class<?> findClosestSubType(List<Class<?>> classes, Class<?> targetType);
@@ -207,7 +207,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param graph The graph.
 	 * @return The list of converters.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.List<org.eclipse.symphony.common.converters.IConverter>" unique="false" many="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.List<ca.gc.asc_csa.apogy.common.converters.IConverter>" unique="false" many="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false"
 	 * @generated
 	 */
 	List<IConverter> getAllConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph);
@@ -220,7 +220,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param graph The graph.
 	 * @return The list of converters.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.List<org.eclipse.symphony.common.converters.IConverter>" unique="false" many="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.List<ca.gc.asc_csa.apogy.common.converters.IConverter>" unique="false" many="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false"
 	 * @generated
 	 */
 	List<IConverter> getAllNonTypeCastConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph);
@@ -233,7 +233,7 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * @param graph The specified graph.
 	 * @return A map mapping input types to available destination types.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.graphs.Map<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>>" unique="false" graphDataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" graphUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.graphs.Map<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.List<org.eclipse.emf.ecore.EJavaClass<?>>>" unique="false" graphDataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" graphUnique="false"
 	 * @generated
 	 */
 	Map<Class<?>, List<Class<?>>> getAvailableDestinationTypeMap(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph);
@@ -245,9 +245,9 @@ public interface Symphony__CommonConvertersGraphsFacade extends EObject {
 	 * Creates a Comparator of ChainedConverter.
 	 * @return The Comparator.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.converters.graphs.Comparator<org.eclipse.symphony.common.converters.graphs.ChainedConverter>" unique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.converters.graphs.Comparator<ca.gc.asc_csa.apogy.common.converters.graphs.ChainedConverter>" unique="false"
 	 * @generated
 	 */
 	Comparator<ChainedConverter> createComparator();
 
-} // Symphony__CommonConvertersGraphsFacade
+} // ApogyCommonConvertersGraphsFacade

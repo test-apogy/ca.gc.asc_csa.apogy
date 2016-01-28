@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui.util;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.examples.satellite.ui.*;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.examples.satellite.ui.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiPackage
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage
  * @generated
  */
-public class Symphony__ExamplesSatelliteUiSwitch<T> extends Switch<T> {
+public class ApogyExamplesSatelliteUiSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__ExamplesSatelliteUiPackage modelPackage;
+	protected static ApogyExamplesSatelliteUiPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__ExamplesSatelliteUiSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiSwitch() {
+	public ApogyExamplesSatelliteUiSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesSatelliteUiPackage.eINSTANCE;
+			modelPackage = ApogyExamplesSatelliteUiPackage.eINSTANCE;
 		}
 	}
 
@@ -67,9 +67,9 @@ public class Symphony__ExamplesSatelliteUiSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__ExamplesSatelliteUiPackage.SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE: {
-				Symphony__ExamplesSatelliteUiFacade symphony__ExamplesSatelliteUiFacade = (Symphony__ExamplesSatelliteUiFacade)theEObject;
-				T result = caseSymphony__ExamplesSatelliteUiFacade(symphony__ExamplesSatelliteUiFacade);
+			case ApogyExamplesSatelliteUiPackage.APOGY_EXAMPLES_SATELLITE_UI_FACADE: {
+				ApogyExamplesSatelliteUiFacade apogy__ExamplesSatelliteUiFacade = (ApogyExamplesSatelliteUiFacade)theEObject;
+				T result = caseApogyExamplesSatelliteUiFacade(apogy__ExamplesSatelliteUiFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,7 +88,7 @@ public class Symphony__ExamplesSatelliteUiSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__ExamplesSatelliteUiFacade(Symphony__ExamplesSatelliteUiFacade object) {
+	public T caseApogyExamplesSatelliteUiFacade(ApogyExamplesSatelliteUiFacade object) {
 		return null;
 	}
 
@@ -108,4 +108,4 @@ public class Symphony__ExamplesSatelliteUiSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__ExamplesSatelliteUiSwitch
+} //ApogyExamplesSatelliteUiSwitch

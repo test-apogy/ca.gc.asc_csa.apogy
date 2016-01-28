@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class GrayScaleFilterImpl extends ImageFilterImpl implements GrayScaleFil
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.GRAY_SCALE_FILTER;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.GRAY_SCALE_FILTER;
 	}
 
   @Override

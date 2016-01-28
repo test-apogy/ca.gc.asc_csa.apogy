@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.ContactProvider} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class ContactProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ContactProvider_vehiclePoseCorrector_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContactProvider_vehiclePoseCorrector_feature", "_UI_ContactProvider_type"),
-				 Symphony__AddonsVehiclePackage.Literals.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR,
+				 ApogyAddonsVehiclePackage.Literals.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR,
 				 true,
 				 false,
 				 true,

@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.telecoms.IsotropicAntenna;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class IsotropicAntennaImpl extends AbstractAntennaRadiationPatternImpl im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsPackage.Literals.ISOTROPIC_ANTENNA;
+		return ApogyAddonsTelecomsPackage.Literals.ISOTROPIC_ANTENNA;
 	}
 	
 	@Override

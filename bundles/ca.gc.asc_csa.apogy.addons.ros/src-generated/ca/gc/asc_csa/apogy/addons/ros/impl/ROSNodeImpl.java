@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -15,24 +15,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.ros.node.ConnectedNode;
 import org.ros.node.topic.Publisher;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFactory;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.utilities.AsynchronousShutdowner;
-import org.eclipse.symphony.addons.ros.utilities.NullRequestHandler;
-import org.eclipse.symphony.addons.ros.utilities.NullResponseHandler;
-import org.eclipse.symphony.addons.ros.utilities.ResponseLogger;
-import org.eclipse.symphony.addons.ros.utilities.ROSNodeMain;
-import org.eclipse.symphony.addons.ros.utilities.ROSNodeMain.NodeStartedListener;
-import org.eclipse.symphony.addons.ros.Activator;
-import org.eclipse.symphony.addons.ros.ROSInterface;
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.addons.ros.ROSPublisherManager;
-import org.eclipse.symphony.addons.ros.ROSServiceManager;
-import org.eclipse.symphony.addons.ros.ROSTopicLauncher;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.AsynchronousShutdowner;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.ROSNodeMain;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.ROSNodeMain.NodeStartedListener;
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.ROSInterface;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager;
+import ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager;
+import ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher;
 
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,19 +42,19 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getConnectedNode <em>Connected Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getModules <em>Modules</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getServiceManagers <em>Service Managers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getTopicLaunchers <em>Topic Launchers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getPublisherManagers <em>Publisher Managers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#isConnected <em>Connected</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#isRestarting <em>Restarting</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getNodeName <em>Node Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getResponseLogger <em>Response Logger</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getNullResponseHandler <em>Null Response Handler</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl#getNullRequestHandler <em>Null Request Handler</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getConnectedNode <em>Connected Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getModules <em>Modules</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getServiceManagers <em>Service Managers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getTopicLaunchers <em>Topic Launchers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getPublisherManagers <em>Publisher Managers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#isConnected <em>Connected</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#isRestarting <em>Restarting</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getNodeName <em>Node Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getResponseLogger <em>Response Logger</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getNullResponseHandler <em>Null Response Handler</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl#getNullRequestHandler <em>Null Request Handler</em>}</li>
  * </ul>
  *
  * @generated
@@ -301,9 +301,9 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
    */
   public void initialize () throws Exception
   {
-	  String rosMasterURI = Symphony__AddonsROSFacade.INSTANCE.getROSMasterURI();
-	  String rosHostName = Symphony__AddonsROSFacade.INSTANCE.getROSHostname();
-	  String rosIP = Symphony__AddonsROSFacade.INSTANCE.getROSIp();
+	  String rosMasterURI = ApogyAddonsROSFacade.INSTANCE.getROSMasterURI();
+	  String rosHostName = ApogyAddonsROSFacade.INSTANCE.getROSHostname();
+	  String rosIP = ApogyAddonsROSFacade.INSTANCE.getROSIp();
 	  
 	  Logger.INSTANCE.log(Activator.ID, this, "initialize() : ROS_MASTER_URI = <" + rosMasterURI + ">, ROS_HOSTNAME=<" + rosHostName + ">, ROS_IP=<" + rosIP + ">." , EventSeverity.INFO);
 
@@ -342,7 +342,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsROSPackage.Literals.ROS_NODE;
+		return ApogyAddonsROSPackage.Literals.ROS_NODE;
 	}
 
   /**
@@ -365,7 +365,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		ConnectedNode oldConnectedNode = connectedNode;
 		connectedNode = newConnectedNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__CONNECTED_NODE, oldConnectedNode, connectedNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__CONNECTED_NODE, oldConnectedNode, connectedNode));
 	}
 
   /**
@@ -376,7 +376,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public EList<ROSInterface> getModules()
   {
 		if (modules == null) {
-			modules = new EObjectResolvingEList<ROSInterface>(ROSInterface.class, this, Symphony__AddonsROSPackage.ROS_NODE__MODULES);
+			modules = new EObjectResolvingEList<ROSInterface>(ROSInterface.class, this, ApogyAddonsROSPackage.ROS_NODE__MODULES);
 		}
 		return modules;
 	}
@@ -389,7 +389,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public EList<ROSServiceManager> getServiceManagers()
   {
 		if (serviceManagers == null) {
-			serviceManagers = new EObjectResolvingEList<ROSServiceManager>(ROSServiceManager.class, this, Symphony__AddonsROSPackage.ROS_NODE__SERVICE_MANAGERS);
+			serviceManagers = new EObjectResolvingEList<ROSServiceManager>(ROSServiceManager.class, this, ApogyAddonsROSPackage.ROS_NODE__SERVICE_MANAGERS);
 		}
 		return serviceManagers;
 	}
@@ -402,7 +402,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public EList<ROSTopicLauncher> getTopicLaunchers()
   {
 		if (topicLaunchers == null) {
-			topicLaunchers = new EObjectResolvingEList<ROSTopicLauncher>(ROSTopicLauncher.class, this, Symphony__AddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS);
+			topicLaunchers = new EObjectResolvingEList<ROSTopicLauncher>(ROSTopicLauncher.class, this, ApogyAddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS);
 		}
 		return topicLaunchers;
 	}
@@ -415,7 +415,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public EList<ROSPublisherManager> getPublisherManagers()
   {
 		if (publisherManagers == null) {
-			publisherManagers = new EObjectResolvingEList<ROSPublisherManager>(ROSPublisherManager.class, this, Symphony__AddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS);
+			publisherManagers = new EObjectResolvingEList<ROSPublisherManager>(ROSPublisherManager.class, this, ApogyAddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS);
 		}
 		return publisherManagers;
 	}
@@ -440,7 +440,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__INITIALIZED, oldInitialized, initialized));
 	}
 
   /**
@@ -463,7 +463,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		boolean oldConnected = connected;
 		connected = newConnected;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__CONNECTED, oldConnected, connected));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__CONNECTED, oldConnected, connected));
 	}
 
   /**
@@ -486,7 +486,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		boolean oldRestarting = restarting;
 		restarting = newRestarting;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__RESTARTING, oldRestarting, restarting));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__RESTARTING, oldRestarting, restarting));
 	}
 
   /**
@@ -507,7 +507,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		boolean oldEnableAutoRestartOnConnectionLost = enableAutoRestartOnConnectionLost;
 		enableAutoRestartOnConnectionLost = newEnableAutoRestartOnConnectionLost;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST, oldEnableAutoRestartOnConnectionLost, enableAutoRestartOnConnectionLost));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST, oldEnableAutoRestartOnConnectionLost, enableAutoRestartOnConnectionLost));
 	}
 
 		/**
@@ -530,7 +530,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		String oldNodeName = nodeName;
 		nodeName = newNodeName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__NODE_NAME, oldNodeName, nodeName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__NODE_NAME, oldNodeName, nodeName));
 	}
 
   /**
@@ -553,7 +553,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		ResponseLogger oldResponseLogger = responseLogger;
 		responseLogger = newResponseLogger;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__RESPONSE_LOGGER, oldResponseLogger, responseLogger));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__RESPONSE_LOGGER, oldResponseLogger, responseLogger));
 	}
 
   /**
@@ -576,7 +576,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		NullResponseHandler oldNullResponseHandler = nullResponseHandler;
 		nullResponseHandler = newNullResponseHandler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER, oldNullResponseHandler, nullResponseHandler));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER, oldNullResponseHandler, nullResponseHandler));
 	}
 
   /**
@@ -599,7 +599,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 		NullRequestHandler oldNullRequestHandler = nullRequestHandler;
 		nullRequestHandler = newNullRequestHandler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER, oldNullRequestHandler, nullRequestHandler));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER, oldNullRequestHandler, nullRequestHandler));
 	}
 
   /**
@@ -724,7 +724,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
    */
   public ROSServiceManager createServiceManager()
   {
-	  ROSServiceManager mgr = Symphony__AddonsROSFactory.eINSTANCE.createROSServiceManager();
+	  ROSServiceManager mgr = ApogyAddonsROSFactory.eINSTANCE.createROSServiceManager();
 	  mgr.setNode(this);
 
 	  getServiceManagers().add(mgr);
@@ -739,7 +739,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
    */
   public ROSTopicLauncher createTopicLauncher()
   {
-	  ROSTopicLauncher launcher = Symphony__AddonsROSFactory.eINSTANCE.createROSTopicLauncher();
+	  ROSTopicLauncher launcher = ApogyAddonsROSFactory.eINSTANCE.createROSTopicLauncher();
 	  launcher.setNode(this);
 	  
 	  getTopicLaunchers().add(launcher);
@@ -754,7 +754,7 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
    */
   public ROSPublisherManager createPublisherManager()
   {
-	  ROSPublisherManager manager = Symphony__AddonsROSFactory.eINSTANCE.createROSPublisherManager();
+	  ROSPublisherManager manager = ApogyAddonsROSFactory.eINSTANCE.createROSPublisherManager();
 	  manager.setNode(this);
 	  getPublisherManagers().add(manager);
 	  return manager;
@@ -769,31 +769,31 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED_NODE:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED_NODE:
 				return getConnectedNode();
-			case Symphony__AddonsROSPackage.ROS_NODE__MODULES:
+			case ApogyAddonsROSPackage.ROS_NODE__MODULES:
 				return getModules();
-			case Symphony__AddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
 				return getServiceManagers();
-			case Symphony__AddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
+			case ApogyAddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
 				return getTopicLaunchers();
-			case Symphony__AddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
 				return getPublisherManagers();
-			case Symphony__AddonsROSPackage.ROS_NODE__INITIALIZED:
+			case ApogyAddonsROSPackage.ROS_NODE__INITIALIZED:
 				return isInitialized();
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED:
 				return isConnected();
-			case Symphony__AddonsROSPackage.ROS_NODE__RESTARTING:
+			case ApogyAddonsROSPackage.ROS_NODE__RESTARTING:
 				return isRestarting();
-			case Symphony__AddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
+			case ApogyAddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
 				return isEnableAutoRestartOnConnectionLost();
-			case Symphony__AddonsROSPackage.ROS_NODE__NODE_NAME:
+			case ApogyAddonsROSPackage.ROS_NODE__NODE_NAME:
 				return getNodeName();
-			case Symphony__AddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
+			case ApogyAddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
 				return getResponseLogger();
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
 				return getNullResponseHandler();
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
 				return getNullRequestHandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -809,47 +809,47 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED_NODE:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED_NODE:
 				setConnectedNode((ConnectedNode)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__MODULES:
+			case ApogyAddonsROSPackage.ROS_NODE__MODULES:
 				getModules().clear();
 				getModules().addAll((Collection<? extends ROSInterface>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
 				getServiceManagers().clear();
 				getServiceManagers().addAll((Collection<? extends ROSServiceManager>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
+			case ApogyAddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
 				getTopicLaunchers().clear();
 				getTopicLaunchers().addAll((Collection<? extends ROSTopicLauncher>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
 				getPublisherManagers().clear();
 				getPublisherManagers().addAll((Collection<? extends ROSPublisherManager>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__INITIALIZED:
+			case ApogyAddonsROSPackage.ROS_NODE__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED:
 				setConnected((Boolean)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__RESTARTING:
+			case ApogyAddonsROSPackage.ROS_NODE__RESTARTING:
 				setRestarting((Boolean)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
+			case ApogyAddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
 				setEnableAutoRestartOnConnectionLost((Boolean)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__NODE_NAME:
+			case ApogyAddonsROSPackage.ROS_NODE__NODE_NAME:
 				setNodeName((String)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
+			case ApogyAddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
 				setResponseLogger((ResponseLogger)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
 				setNullResponseHandler((NullResponseHandler)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
 				setNullRequestHandler((NullRequestHandler)newValue);
 				return;
 		}
@@ -865,43 +865,43 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED_NODE:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED_NODE:
 				setConnectedNode(CONNECTED_NODE_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__MODULES:
+			case ApogyAddonsROSPackage.ROS_NODE__MODULES:
 				getModules().clear();
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
 				getServiceManagers().clear();
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
+			case ApogyAddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
 				getTopicLaunchers().clear();
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
 				getPublisherManagers().clear();
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__INITIALIZED:
+			case ApogyAddonsROSPackage.ROS_NODE__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED:
 				setConnected(CONNECTED_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__RESTARTING:
+			case ApogyAddonsROSPackage.ROS_NODE__RESTARTING:
 				setRestarting(RESTARTING_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
+			case ApogyAddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
 				setEnableAutoRestartOnConnectionLost(ENABLE_AUTO_RESTART_ON_CONNECTION_LOST_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__NODE_NAME:
+			case ApogyAddonsROSPackage.ROS_NODE__NODE_NAME:
 				setNodeName(NODE_NAME_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
+			case ApogyAddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
 				setResponseLogger(RESPONSE_LOGGER_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
 				setNullResponseHandler(NULL_RESPONSE_HANDLER_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
 				setNullRequestHandler(NULL_REQUEST_HANDLER_EDEFAULT);
 				return;
 		}
@@ -917,31 +917,31 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED_NODE:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED_NODE:
 				return CONNECTED_NODE_EDEFAULT == null ? connectedNode != null : !CONNECTED_NODE_EDEFAULT.equals(connectedNode);
-			case Symphony__AddonsROSPackage.ROS_NODE__MODULES:
+			case ApogyAddonsROSPackage.ROS_NODE__MODULES:
 				return modules != null && !modules.isEmpty();
-			case Symphony__AddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__SERVICE_MANAGERS:
 				return serviceManagers != null && !serviceManagers.isEmpty();
-			case Symphony__AddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
+			case ApogyAddonsROSPackage.ROS_NODE__TOPIC_LAUNCHERS:
 				return topicLaunchers != null && !topicLaunchers.isEmpty();
-			case Symphony__AddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
+			case ApogyAddonsROSPackage.ROS_NODE__PUBLISHER_MANAGERS:
 				return publisherManagers != null && !publisherManagers.isEmpty();
-			case Symphony__AddonsROSPackage.ROS_NODE__INITIALIZED:
+			case ApogyAddonsROSPackage.ROS_NODE__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED:
 				return connected != CONNECTED_EDEFAULT;
-			case Symphony__AddonsROSPackage.ROS_NODE__RESTARTING:
+			case ApogyAddonsROSPackage.ROS_NODE__RESTARTING:
 				return restarting != RESTARTING_EDEFAULT;
-			case Symphony__AddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
+			case ApogyAddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
 				return enableAutoRestartOnConnectionLost != ENABLE_AUTO_RESTART_ON_CONNECTION_LOST_EDEFAULT;
-			case Symphony__AddonsROSPackage.ROS_NODE__NODE_NAME:
+			case ApogyAddonsROSPackage.ROS_NODE__NODE_NAME:
 				return NODE_NAME_EDEFAULT == null ? nodeName != null : !NODE_NAME_EDEFAULT.equals(nodeName);
-			case Symphony__AddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
+			case ApogyAddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
 				return RESPONSE_LOGGER_EDEFAULT == null ? responseLogger != null : !RESPONSE_LOGGER_EDEFAULT.equals(responseLogger);
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
 				return NULL_RESPONSE_HANDLER_EDEFAULT == null ? nullResponseHandler != null : !NULL_RESPONSE_HANDLER_EDEFAULT.equals(nullResponseHandler);
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
 				return NULL_REQUEST_HANDLER_EDEFAULT == null ? nullRequestHandler != null : !NULL_REQUEST_HANDLER_EDEFAULT.equals(nullRequestHandler);
 		}
 		return super.eIsSet(featureID);
@@ -956,10 +956,10 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__AddonsROSPackage.ROS_NODE___START:
+			case ApogyAddonsROSPackage.ROS_NODE___START:
 				start();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_NODE___INITIALIZE:
+			case ApogyAddonsROSPackage.ROS_NODE___INITIALIZE:
 				try {
 					initialize();
 					return null;
@@ -967,30 +967,30 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__AddonsROSPackage.ROS_NODE___ON_START__CONNECTEDNODE:
+			case ApogyAddonsROSPackage.ROS_NODE___ON_START__CONNECTEDNODE:
 				onStart((ConnectedNode)arguments.get(0));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_NODE___RESTART:
+			case ApogyAddonsROSPackage.ROS_NODE___RESTART:
 				restart();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_NODE___REGISTER__ROSINTERFACE_BOOLEAN:
+			case ApogyAddonsROSPackage.ROS_NODE___REGISTER__ROSINTERFACE_BOOLEAN:
 				register((ROSInterface)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_NODE___REGISTER__ROSINTERFACE:
+			case ApogyAddonsROSPackage.ROS_NODE___REGISTER__ROSINTERFACE:
 				register((ROSInterface)arguments.get(0));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_NODE___NEW_FROM_TYPE__STRING:
+			case ApogyAddonsROSPackage.ROS_NODE___NEW_FROM_TYPE__STRING:
 				return newFromType((String)arguments.get(0));
-			case Symphony__AddonsROSPackage.ROS_NODE___SHUTDOWN:
+			case ApogyAddonsROSPackage.ROS_NODE___SHUTDOWN:
 				shutdown();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_NODE___CREATE_PUBLISHER__STRING_STRING:
+			case ApogyAddonsROSPackage.ROS_NODE___CREATE_PUBLISHER__STRING_STRING:
 				return createPublisher((String)arguments.get(0), (String)arguments.get(1));
-			case Symphony__AddonsROSPackage.ROS_NODE___CREATE_SERVICE_MANAGER:
+			case ApogyAddonsROSPackage.ROS_NODE___CREATE_SERVICE_MANAGER:
 				return createServiceManager();
-			case Symphony__AddonsROSPackage.ROS_NODE___CREATE_TOPIC_LAUNCHER:
+			case ApogyAddonsROSPackage.ROS_NODE___CREATE_TOPIC_LAUNCHER:
 				return createTopicLauncher();
-			case Symphony__AddonsROSPackage.ROS_NODE___CREATE_PUBLISHER_MANAGER:
+			case ApogyAddonsROSPackage.ROS_NODE___CREATE_PUBLISHER_MANAGER:
 				return createPublisherManager();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -1036,9 +1036,9 @@ public class ROSNodeImpl extends MinimalEObjectImpl.Container implements ROSNode
    */
   private void initializeModule ( ROSInterface module )
   {	 	  	  
-	  String rosMasterURI = Symphony__AddonsROSFacade.INSTANCE.getROSMasterURI();
-	  String rosHostName = Symphony__AddonsROSFacade.INSTANCE.getROSHostname();
-	  String rosIP = Symphony__AddonsROSFacade.INSTANCE.getROSIp();
+	  String rosMasterURI = ApogyAddonsROSFacade.INSTANCE.getROSMasterURI();
+	  String rosHostName = ApogyAddonsROSFacade.INSTANCE.getROSHostname();
+	  String rosIP = ApogyAddonsROSFacade.INSTANCE.getROSIp();
 	  
 	  Logger.INSTANCE.log(Activator.ID, this, "initializeModule : ROS_MASTER_URI = <" + rosMasterURI + ">, ROS_HOSTNAME=<" + rosHostName + ">, ROS_IP=<" + rosIP + ">." , EventSeverity.INFO);
 	  

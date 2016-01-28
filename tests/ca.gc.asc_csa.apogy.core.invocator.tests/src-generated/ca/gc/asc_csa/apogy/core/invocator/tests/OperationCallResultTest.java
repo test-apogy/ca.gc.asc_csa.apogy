@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 
 import junit.textui.TestRunner;
 
@@ -15,7 +15,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResult#getOperationCall() <em>Operation Call</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getOperationCall() <em>Operation Call</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -60,7 +60,7 @@ public class OperationCallResultTest extends AbstractResultTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallResult());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallResult());
 	}
 
 	/**
@@ -75,10 +75,10 @@ public class OperationCallResultTest extends AbstractResultTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.OperationCallResult#getOperationCall() <em>Operation Call</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getOperationCall() <em>Operation Call</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResult#getOperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getOperationCall()
 	 * @generated
 	 */
 	public void testGetOperationCall() {

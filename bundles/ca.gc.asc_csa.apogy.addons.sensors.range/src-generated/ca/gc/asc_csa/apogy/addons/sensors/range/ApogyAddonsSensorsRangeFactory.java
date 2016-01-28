@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage
  * @generated
  */
-public interface Symphony__AddonsSensorsRangeFactory extends EFactory {
+public interface ApogyAddonsSensorsRangeFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsRangeFactory eINSTANCE = org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangeFactoryImpl.init();
+	ApogyAddonsSensorsRangeFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.range.impl.ApogyAddonsSensorsRangeFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Ray Data</em>'.
@@ -146,7 +146,7 @@ public interface Symphony__AddonsSensorsRangeFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsRangeFacade createSymphony__AddonsSensorsRangeFacade();
+	ApogyAddonsSensorsRangeFacade createApogyAddonsSensorsRangeFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -155,6 +155,6 @@ public interface Symphony__AddonsSensorsRangeFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsRangePackage getSymphony__AddonsSensorsRangePackage();
+	ApogyAddonsSensorsRangePackage getApogyAddonsSensorsRangePackage();
 
-} //Symphony__AddonsSensorsRangeFactory
+} //ApogyAddonsSensorsRangeFactory

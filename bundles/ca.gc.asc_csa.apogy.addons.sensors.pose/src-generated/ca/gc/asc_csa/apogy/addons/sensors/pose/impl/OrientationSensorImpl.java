@@ -3,7 +3,7 @@
  *
  * $Id: OrientationSensorImpl.java,v 1.5.4.2 2015/05/21 15:51:31 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import javax.vecmath.Vector3d;
@@ -13,20 +13,20 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
-import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.SensorStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.RotationNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,8 +36,8 @@ import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getStatus <em>Status</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.OrientationSensorImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.OrientationSensorImpl#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
  * </ul>
  *
  * @generated
@@ -93,7 +93,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPosePackage.Literals.ORIENTATION_SENSOR;
+		return ApogyAddonsSensorsPosePackage.Literals.ORIENTATION_SENSOR;
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	{
 		if(orientationCoordinates == null)
 		{
-			orientationCoordinates =  Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates();				
+			orientationCoordinates =  ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates();				
 		}
 		return orientationCoordinates;
 	}
@@ -162,7 +162,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public CartesianOrientationCoordinates extractOrientationFromMatrix(Matrix3x3 matrix)
 	{		
 		Vector3d rotation = GeometricUtils.extractRotationFromXYZRotMatrix(matrix.asMatrix3d());		
-		CartesianOrientationCoordinates orientation = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(rotation.x, rotation.y, rotation.z);
+		CartesianOrientationCoordinates orientation = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(rotation.x, rotation.y, rotation.z);
 		return orientation;
 	}
 
@@ -175,9 +175,9 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				return getStatus();
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
 				if (resolve) return getOrientationCoordinates();
 				return basicGetOrientationCoordinates();
 		}
@@ -193,7 +193,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
 		}
@@ -209,7 +209,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -225,9 +225,9 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
 				return orientationCoordinates != null;
 		}
 		return super.eIsSet(featureID);
@@ -243,7 +243,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	{
 		if (baseClass == Sensor.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS: return Symphony__AddonsSensorsPackage.SENSOR__STATUS;
+				case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS: return ApogyAddonsSensorsPackage.SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -265,7 +265,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	{
 		if (baseClass == Sensor.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsSensorsPackage.SENSOR__STATUS: return Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS;
+				case ApogyAddonsSensorsPackage.SENSOR__STATUS: return ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -285,7 +285,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
 				try {
 					resetOrientation((CartesianOrientationCoordinates)arguments.get(0));
 					return null;
@@ -293,7 +293,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
 				return extractOrientationFromMatrix((Matrix3x3)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -329,7 +329,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 				@Override
 				public void notifyChanged(Notification msg)
 				{				
-					if(msg.getFeatureID(RotationNode.class) == Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
+					if(msg.getFeatureID(RotationNode.class) == ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
 					{
 						// Extracts the rotation from the rotation matrix.
 						CartesianOrientationCoordinates newOrientation = extractOrientationFromMatrix((Matrix3x3) msg.getNewValue());

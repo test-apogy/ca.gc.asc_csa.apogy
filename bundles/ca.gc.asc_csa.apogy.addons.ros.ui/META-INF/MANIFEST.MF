@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %bundleName
-Bundle-SymbolicName: org.eclipse.symphony.addons.ros.ui;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.ros.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.addons.ros.ui.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.ros.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.symphony.addons.ros
+ ca.gc.asc_csa.apogy.addons.ros
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: bundle
-Export-Package: org.eclipse.symphony.addons.ros.ui,
- org.eclipse.symphony.addons.ros.ui.wizards
+Export-Package: ca.gc.asc_csa.apogy.addons.ros.ui,
+ ca.gc.asc_csa.apogy.addons.ros.ui.wizards

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.ui.composites;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
@@ -7,9 +7,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 
 public class EditOrientationComposite extends Composite
 {
@@ -69,7 +69,7 @@ public class EditOrientationComposite extends Composite
 	
 	public CartesianOrientationCoordinates getNewValues()
 	{		
-		CartesianOrientationCoordinates orientation = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(orientationSensor.getOrientationCoordinates());
+		CartesianOrientationCoordinates orientation = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(orientationSensor.getOrientationCoordinates());
 		
 		try
 		{
@@ -77,7 +77,7 @@ public class EditOrientationComposite extends Composite
 			double yRotation = Math.toRadians(Double.parseDouble(yValueText.getText()));
 			double zRotation = Math.toRadians(Double.parseDouble(zValueText.getText()));
 			
-			orientation = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(xRotation, yRotation, zRotation);
+			orientation = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(xRotation, yRotation, zRotation);
 		}
 		catch(Exception e)
 		{

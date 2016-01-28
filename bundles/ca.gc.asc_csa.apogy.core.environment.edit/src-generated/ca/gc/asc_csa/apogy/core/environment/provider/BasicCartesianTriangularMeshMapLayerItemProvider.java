@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class BasicCartesianTriangularMeshMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_BasicCartesianTriangularMeshMapLayer_mesh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BasicCartesianTriangularMeshMapLayer_mesh_feature", "_UI_BasicCartesianTriangularMeshMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH,
+				 ApogyCoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH,
 				 false,
 				 false,
 				 false,
@@ -85,7 +85,7 @@ public class BasicCartesianTriangularMeshMapLayerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH);
 		}
 		return childrenFeatures;
 	}
@@ -141,7 +141,7 @@ public class BasicCartesianTriangularMeshMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BasicCartesianTriangularMeshMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
+			case ApogyCoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -161,8 +161,8 @@ public class BasicCartesianTriangularMeshMapLayerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh()));
+				(ApogyCoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH,
+				 ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh()));
 	}
 
 }

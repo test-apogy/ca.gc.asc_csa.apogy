@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.sensors.range.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.adapters;
 
-import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory;
-import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class SimpleSonarPresentationAdapter implements NodePresentationAdapter
 {
@@ -31,7 +31,7 @@ public class SimpleSonarPresentationAdapter implements NodePresentationAdapter
 		}
 		
 		SimpleSonar simpleSonar = (SimpleSonar) obj;
-		SimpleSonarPresentation presentationNode = Symphony__AddonsSensorsRangeUIFactory.eINSTANCE.createSimpleSonarPresentation();
+		SimpleSonarPresentation presentationNode = ApogyAddonsSensorsRangeUIFactory.eINSTANCE.createSimpleSonarPresentation();
 		presentationNode.setNode(simpleSonar);		
 		return presentationNode;
 	}

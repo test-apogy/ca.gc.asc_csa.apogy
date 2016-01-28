@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__CommonGeometryData25DFacadeItemProvider.java,v 1.3.4.2 2015/05/21 15:50:03 pallard Exp $
+ * $Id: ApogyCommonGeometryData25DFacadeItemProvider.java,v 1.3.4.2 2015/05/21 15:50:03 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData25DFacadeItemProvider
+public class ApogyCommonGeometryData25DFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -42,7 +42,7 @@ public class Symphony__CommonGeometryData25DFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DFacadeItemProvider(AdapterFactory adapterFactory)
+	public ApogyCommonGeometryData25DFacadeItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -64,7 +64,7 @@ public class Symphony__CommonGeometryData25DFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonGeometryData25DFacade.gif.
+	 * This returns ApogyCommonGeometryData25DFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,7 +72,7 @@ public class Symphony__CommonGeometryData25DFacadeItemProvider
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonGeometryData25DFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonGeometryData25DFacade"));
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class Symphony__CommonGeometryData25DFacadeItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Symphony__CommonGeometryData25DFacade_type");
+		return getString("_UI_ApogyCommonGeometryData25DFacade_type");
 	}
 
 	/**

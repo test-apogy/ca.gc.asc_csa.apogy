@@ -8,8 +8,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.addons.sensors.gps"
-            class="org.eclipse.symphony.addons.sensors.gps.provider.Symphony__AddonsSensorsGPSItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.sensors.gps"
+            class="ca.gc.asc_csa.apogy.addons.sensors.gps.provider.ApogyAddonsSensorsGPSItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -19,10 +19,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_sensors_gps -->
+      <!-- @generated apogy_addons_sensors_gps -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.gps.provider.Symphony__AddonsSensorsGPSItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.sensors.gps.provider.ApogyAddonsSensorsGPSItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

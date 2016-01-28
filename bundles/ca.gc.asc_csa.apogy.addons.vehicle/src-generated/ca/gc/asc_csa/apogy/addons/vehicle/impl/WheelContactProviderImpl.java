@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,18 +14,18 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.addons.vehicle.WheelContactMode;
-import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactMode;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelContactProviderImpl#getContactMode <em>Contact Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.WheelContactProviderImpl#getContactMode <em>Contact Mode</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,7 +80,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehiclePackage.Literals.WHEEL_CONTACT_PROVIDER;
+		return ApogyAddonsVehiclePackage.Literals.WHEEL_CONTACT_PROVIDER;
 	}
 
   /**
@@ -103,7 +103,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
 		WheelContactMode oldContactMode = contactMode;
 		contactMode = newContactMode == null ? CONTACT_MODE_EDEFAULT : newContactMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE, oldContactMode, contactMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE, oldContactMode, contactMode));
 	}
 
   /**
@@ -115,7 +115,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				return getContactMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				setContactMode((WheelContactMode)newValue);
 				return;
 		}
@@ -146,7 +146,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				setContactMode(CONTACT_MODE_EDEFAULT);
 				return;
 		}
@@ -162,7 +162,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				return contactMode != CONTACT_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -192,8 +192,8 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
 		 
 	  try
 	  {
-		  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.WHEEL, root);
+		  Node root = getVehiclePoseCorrector().getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();
+		  List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyAddonsVehiclePackage.Literals.WHEEL, root);
 		  
 		  for(Node node : nodes)
 		  {
@@ -239,17 +239,17 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
 	  for(MeshNodeEntry meshNodeEntry : meshes)
 	  {		  		  		  		  
 		  // Gets the mesh to world matrix
-		  Matrix4d meshToWorld = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(meshNodeEntry.getNode());		    
+		  Matrix4d meshToWorld = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(meshNodeEntry.getNode());		    
 		  
 		  // Finds the position of all the wheels relative to the mesh				  
 		  List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();		  		  
 		  for(PhysicalBody wheel : getVehiclePoseCorrector().getContactBodies())
 		  {
-			  Matrix4d wheelTransform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(wheel, meshNodeEntry.getNode());
+			  Matrix4d wheelTransform = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(wheel, meshNodeEntry.getNode());
 			  Vector3d wheelPosition = new Vector3d();			  			  			  
 			  wheelTransform.get(wheelPosition);	
 			 	  
-			  points.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(wheelPosition.x, wheelPosition.y, wheelPosition.z));  
+			  points.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(wheelPosition.x, wheelPosition.y, wheelPosition.z));  
 		  }
 		  
 		  // Finds the intersection of the vector along Z going through the center of wheels with the mesh.		 

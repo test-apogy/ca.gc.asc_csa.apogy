@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -14,37 +14,37 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.OperationCallPositionedResult;
-import org.eclipse.symphony.core.PoseCorrector;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Symphony System Api Adapter</b></em>'. <!-- end-user-doc -->
+ * <em><b>Apogy System Api Adapter</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl#getPoseTransform <em>Pose Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl#getPoseCorrector <em>Pose Corrector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl#getSymphonySystem <em>Symphony System</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl#getPoseTransform <em>Pose Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl#getPoseCorrector <em>Pose Corrector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl#getApogySystem <em>Apogy System</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	SymphonySystemApiAdapter 
+public class ApogySystemApiAdapterImpl extends TypeApiAdapterImpl implements	ApogySystemApiAdapter 
 {
     private Matrix4x4 lastRawPose = null;
 	
@@ -67,20 +67,20 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	 */
   protected PoseCorrector poseCorrector;
   /**
-	 * The cached value of the '{@link #getSymphonySystem() <em>Symphony System</em>}' reference.
+	 * The cached value of the '{@link #getApogySystem() <em>Apogy System</em>}' reference.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @see #getSymphonySystem()
+	 * @see #getApogySystem()
 	 * @generated
 	 * @ordered
 	 */
-	protected SymphonySystem symphonySystem;
+	protected ApogySystem apogySystem;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonySystemApiAdapterImpl() {
+	protected ApogySystemApiAdapterImpl() {
 		super();
 	}
 
@@ -90,7 +90,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		Matrix4x4 oldPoseTransform = poseTransform;
 		poseTransform = newPoseTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -146,14 +146,14 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		if (newPoseTransform != poseTransform) {
 			NotificationChain msgs = null;
 			if (poseTransform != null)
-				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
 			if (newPoseTransform != null)
-				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
 			msgs = basicSetPoseTransform(newPoseTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
 	}
 
 	/**
@@ -176,7 +176,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		PoseCorrector oldPoseCorrector = poseCorrector;
 		poseCorrector = newPoseCorrector;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, oldPoseCorrector, newPoseCorrector);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, oldPoseCorrector, newPoseCorrector);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -205,54 +205,54 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		if (newPoseCorrector != poseCorrector) {
 			NotificationChain msgs = null;
 			if (poseCorrector != null)
-				msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
+				msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
 			if (newPoseCorrector != null)
-				msgs = ((InternalEObject)newPoseCorrector).eInverseAdd(this, Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
+				msgs = ((InternalEObject)newPoseCorrector).eInverseAdd(this, ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
 			msgs = basicSetPoseCorrector(newPoseCorrector, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, newPoseCorrector, newPoseCorrector));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, newPoseCorrector, newPoseCorrector));
 	}
 
   @Override
 	public OperationCallResult createResult(OperationCall operationCall) {
-		return Symphony__CoreFactory.eINSTANCE.createOperationCallPositionedResult();
+		return ApogyCoreFactory.eINSTANCE.createOperationCallPositionedResult();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonySystem getSymphonySystem() {
-		if (symphonySystem != null && symphonySystem.eIsProxy()) {
-			InternalEObject oldSymphonySystem = (InternalEObject)symphonySystem;
-			symphonySystem = (SymphonySystem)eResolveProxy(oldSymphonySystem);
-			if (symphonySystem != oldSymphonySystem) {
+	public ApogySystem getApogySystem() {
+		if (apogySystem != null && apogySystem.eIsProxy()) {
+			InternalEObject oldApogySystem = (InternalEObject)apogySystem;
+			apogySystem = (ApogySystem)eResolveProxy(oldApogySystem);
+			if (apogySystem != oldApogySystem) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM, oldSymphonySystem, symphonySystem));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM, oldApogySystem, apogySystem));
 			}
 		}
-		return symphonySystem;
+		return apogySystem;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonySystem basicGetSymphonySystem() {
-		return symphonySystem;
+	public ApogySystem basicGetApogySystem() {
+		return apogySystem;
 	}
 	
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSymphonySystem(SymphonySystem newSymphonySystem) {
-		SymphonySystem oldSymphonySystem = symphonySystem;
-		symphonySystem = newSymphonySystem;
+	public void setApogySystem(ApogySystem newApogySystem) {
+		ApogySystem oldApogySystem = apogySystem;
+		apogySystem = newApogySystem;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM, oldSymphonySystem, symphonySystem));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM, oldApogySystem, apogySystem));
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public Matrix4x4 createResultMatrix(OperationCall operationCall) {
 		Matrix4d m = new Matrix4d();
 		m.setIdentity();
-		return Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
+		return ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m);
 	}
 
 	/**
@@ -275,9 +275,9 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				if (poseCorrector != null)
-					msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, null, msgs);
+					msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, null, msgs);
 				return basicSetPoseCorrector((PoseCorrector)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -292,9 +292,9 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				return basicSetPoseTransform(null, msgs);
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				return basicSetPoseCorrector(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -307,13 +307,13 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				return getPoseTransform();
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				return getPoseCorrector();
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
-				if (resolve) return getSymphonySystem();
-				return basicGetSymphonySystem();
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM:
+				if (resolve) return getApogySystem();
+				return basicGetApogySystem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -325,14 +325,14 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)newValue);
 				return;
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				setPoseCorrector((PoseCorrector)newValue);
 				return;
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
-				setSymphonySystem((SymphonySystem)newValue);
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM:
+				setApogySystem((ApogySystem)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -345,14 +345,14 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)null);
 				return;
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				setPoseCorrector((PoseCorrector)null);
 				return;
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
-				setSymphonySystem((SymphonySystem)null);
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM:
+				setApogySystem((ApogySystem)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -365,12 +365,12 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				return poseTransform != null;
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				return poseCorrector != null;
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
-				return symphonySystem != null;
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM:
+				return apogySystem != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -383,7 +383,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == PoseProvider.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM: return Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM;
+				case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM: return ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -398,7 +398,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == PoseProvider.class) {
 			switch (baseFeatureID) {
-				case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM: return Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
+				case ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM: return ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -413,7 +413,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL:
 				return createResultMatrix((OperationCall)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -426,7 +426,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 
 		// Computes the absolute pose of the result.
 		Matrix4x4 relativePose = createResultMatrix(operationCall);
-		Matrix4x4 absolutePose = Symphony__CoreFacade.INSTANCE.computeAbsolutePoseMatrix(getSymphonySystem(), relativePose);
+		Matrix4x4 absolutePose = ApogyCoreFacade.INSTANCE.computeAbsolutePoseMatrix(getApogySystem(), relativePose);
 
 		result.setRelativePose(relativePose);
 		result.setPose(absolutePose);
@@ -437,22 +437,22 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public void apply(AbstractInitializationData initializationData) {
 		super.apply(initializationData);
-		if (initializationData instanceof SymphonyInitializationData) {
-			SymphonyInitializationData data = (SymphonyInitializationData) initializationData;
+		if (initializationData instanceof ApogyInitializationData) {
+			ApogyInitializationData data = (ApogyInitializationData) initializationData;
 			setPoseTransform(EcoreUtil.copy(data.getInitialPoseTransform()));
 		}
 	}
 
 	@Override
 	public AbstractInitializationData createInitializationData() {
-		return Symphony__CoreFactory.eINSTANCE.createSymphonyInitializationData();
+		return ApogyCoreFactory.eINSTANCE.createApogyInitializationData();
 	}
 
 	@Override
 	public void collect(AbstractInitializationData data) {
 		super.collect(data);
-		SymphonyInitializationData symphonyInitializationData = (SymphonyInitializationData) data;
-		symphonyInitializationData.setInitialPoseTransform(EcoreUtil.copy(getPoseTransform()));
+		ApogyInitializationData apogyInitializationData = (ApogyInitializationData) data;
+		apogyInitializationData.setInitialPoseTransform(EcoreUtil.copy(getPoseTransform()));
 	}
 		
-} // SymphonySystemApiAdapterImpl
+} // ApogySystemApiAdapterImpl

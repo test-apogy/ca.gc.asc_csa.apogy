@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.images;
+package ca.gc.asc_csa.apogy.common.images;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getAbstractEImageProvider()
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getAbstractEImageProvider()
  * @model interface="true" abstract="true"
  * @generated
  */

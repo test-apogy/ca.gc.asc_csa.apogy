@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.symphony.examples.feature"
+      id="ca.gc.asc_csa.apogy.examples.feature"
       label="%featureName"
       version="0.5.0.qualifier"
       provider-name="%providerName">
@@ -18,245 +18,245 @@
    </license>
 
    <plugin
-         id="org.eclipse.symphony.examples.antenna"
+         id="ca.gc.asc_csa.apogy.examples.antenna"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.antenna.edit"
+         id="ca.gc.asc_csa.apogy.examples.antenna.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.antenna.symphony"
+         id="ca.gc.asc_csa.apogy.examples.antenna.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.antenna.symphony.edit"
+         id="ca.gc.asc_csa.apogy.examples.antenna.apogy.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.camera"
+         id="ca.gc.asc_csa.apogy.examples.camera"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.camera.edit"
+         id="ca.gc.asc_csa.apogy.examples.camera.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.camera.symphony"
+         id="ca.gc.asc_csa.apogy.examples.camera.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.camera.symphony.edit"
+         id="ca.gc.asc_csa.apogy.examples.camera.apogy.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lander"
+         id="ca.gc.asc_csa.apogy.examples.lander"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lander.edit"
+         id="ca.gc.asc_csa.apogy.examples.lander.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lander.symphony"
+         id="ca.gc.asc_csa.apogy.examples.lander.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lander.symphony.edit"
+         id="ca.gc.asc_csa.apogy.examples.lander.apogy.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lidar"
+         id="ca.gc.asc_csa.apogy.examples.lidar"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lidar.edit"
+         id="ca.gc.asc_csa.apogy.examples.lidar.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lidar.symphony"
+         id="ca.gc.asc_csa.apogy.examples.lidar.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.lidar.symphony.edit"
+         id="ca.gc.asc_csa.apogy.examples.lidar.apogy.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.mobile_platform"
+         id="ca.gc.asc_csa.apogy.examples.mobile_platform"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.mobile_platform.edit"
+         id="ca.gc.asc_csa.apogy.examples.mobile_platform.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.mobile_platform.symphony"
+         id="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.mobile_platform.symphony.edit"
+         id="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.robotic_arm"
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.robotic_arm.edit"
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.robotic_arm.symphony"
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.robotic_arm.symphony.edit"
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.robotic_arm.ui"
+         id="ca.gc.asc_csa.apogy.examples.robotic_arm.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.rover"
+         id="ca.gc.asc_csa.apogy.examples.rover"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.rover.edit"
+         id="ca.gc.asc_csa.apogy.examples.rover.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.rover.symphony"
+         id="ca.gc.asc_csa.apogy.examples.rover.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.rover.symphony.edit"
+         id="ca.gc.asc_csa.apogy.examples.rover.apogy.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.satellite"
+         id="ca.gc.asc_csa.apogy.examples.satellite"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.satellite.edit"
+         id="ca.gc.asc_csa.apogy.examples.satellite.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.satellite.symphony"
+         id="ca.gc.asc_csa.apogy.examples.satellite.apogy"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.satellite.ui"
+         id="ca.gc.asc_csa.apogy.examples.satellite.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.ui"
+         id="ca.gc.asc_csa.apogy.examples.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.symphony.examples.worksites.surface"
+         id="ca.gc.asc_csa.apogy.examples.worksites.surface"
          download-size="0"
          install-size="0"
          version="0.0.0"

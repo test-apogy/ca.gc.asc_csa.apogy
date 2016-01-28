@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class CartesianTriangularMeshMapLayerNodeImpl extends AbstractMapLayerNod
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class CartesianTriangularMeshMapLayerNodeImpl extends AbstractMapLayerNod
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE___GET_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE___GET_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
 				return getCartesianTriangularMeshMapLayer();
 		}
 		return super.eInvoke(operationID, arguments);

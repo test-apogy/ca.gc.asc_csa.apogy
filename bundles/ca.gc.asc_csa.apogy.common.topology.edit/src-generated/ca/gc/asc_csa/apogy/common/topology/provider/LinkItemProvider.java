@@ -4,7 +4,7 @@
  *
  * $Id: LinkItemProvider.java,v 1.4.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.Link;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.Link;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.Link} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.Link} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class LinkItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Link_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Link_node_feature", "_UI_Link_type"),
-				 Symphony__CommonTopologyPackage.Literals.LINK__NODE,
+				 ApogyCommonTopologyPackage.Literals.LINK__NODE,
 				 true,
 				 false,
 				 true,

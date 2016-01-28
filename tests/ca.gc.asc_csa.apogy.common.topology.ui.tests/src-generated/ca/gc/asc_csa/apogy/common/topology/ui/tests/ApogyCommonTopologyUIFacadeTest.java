@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.tests;
+package ca.gc.asc_csa.apogy.common.topology.ui.tests;
 
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,15 +16,15 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node) <em>Create Graphics Context</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Find Extent</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createGraphicsContext(ca.gc.asc_csa.apogy.common.topology.Node) <em>Create Graphics Context</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#findExtent(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Find Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
+public class ApogyCommonTopologyUIFacadeTest extends TestCase {
 
 	/**
 	 * The fixture for this Facade test case.
@@ -32,7 +32,7 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyUIFacade fixture = null;
+	protected ApogyCommonTopologyUIFacade fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(Symphony__CommonTopologyUIFacadeTest.class);
+		TestRunner.run(ApogyCommonTopologyUIFacadeTest.class);
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIFacadeTest(String name) {
+	public ApogyCommonTopologyUIFacadeTest(String name) {
 		super(name);
 	}
 
@@ -59,7 +59,7 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(Symphony__CommonTopologyUIFacade fixture) {
+	protected void setFixture(ApogyCommonTopologyUIFacade fixture) {
 		this.fixture = fixture;
 	}
 
@@ -69,7 +69,7 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyUIFacade getFixture() {
+	protected ApogyCommonTopologyUIFacade getFixture() {
 		return fixture;
 	}
 
@@ -81,7 +81,7 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createSymphony__CommonTopologyUIFacade());
+		setFixture(ApogyCommonTopologyUIFactory.eINSTANCE.createApogyCommonTopologyUIFacade());
 	}
 
 	/**
@@ -96,10 +96,10 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node) <em>Create Graphics Context</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createGraphicsContext(ca.gc.asc_csa.apogy.common.topology.Node) <em>Create Graphics Context</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createGraphicsContext(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
 	public void testCreateGraphicsContext__Node() {
@@ -109,10 +109,10 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Find Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#findExtent(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Find Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#findExtent(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
 	public void testFindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d() {
@@ -122,10 +122,10 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation, javax.vecmath.Point3d)
 	 * @generated
 	 */
 	public void testCreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d() {
@@ -135,10 +135,10 @@ public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f)
 	 * @generated
 	 */
 	public void testCreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f() {

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.provider;
+package ca.gc.asc_csa.apogy.addons.actuators.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.actuators.PanTiltUnit} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -73,7 +73,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_currentPanAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentPanAngle_feature", "_UI_PanTiltUnit_type"),
-		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
+		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -96,7 +96,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentTiltAngle_feature", "_UI_PanTiltUnit_type"),
-		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
+		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -119,7 +119,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedPanAngle_feature", "_UI_PanTiltUnit_type"),
-		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
+		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -142,7 +142,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedTiltAngle_feature", "_UI_PanTiltUnit_type"),
-		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
+		         ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -186,10 +186,10 @@ public class PanTiltUnitItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PanTiltUnit.class)) {
-			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
-			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
-			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
-			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
+			case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
+			case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
+			case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
+			case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -21,13 +21,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Context} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Context} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class ContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class ContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Context_dataProductsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Context_dataProductsList_feature", "_UI_Context_type"),
-				 Symphony__CoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST,
+				 ApogyCoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST,
 				 true,
 				 false,
 				 true,
@@ -132,7 +132,7 @@ public class ContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Context_instancesCreationDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Context_instancesCreationDate_feature", "_UI_Context_type"),
-				 Symphony__CoreInvocatorPackage.Literals.CONTEXT__INSTANCES_CREATION_DATE,
+				 ApogyCoreInvocatorPackage.Literals.CONTEXT__INSTANCES_CREATION_DATE,
 				 false,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class ContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Context_instancesDisposalDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Context_instancesDisposalDate_feature", "_UI_Context_type"),
-				 Symphony__CoreInvocatorPackage.Literals.CONTEXT__INSTANCES_DISPOSAL_DATE,
+				 ApogyCoreInvocatorPackage.Literals.CONTEXT__INSTANCES_DISPOSAL_DATE,
 				 false,
 				 false,
 				 false,
@@ -177,8 +177,8 @@ public class ContextItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -225,12 +225,12 @@ public class ContextItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Context.class)) {
-			case Symphony__CoreInvocatorPackage.CONTEXT__NAME:
-			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
-			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
+			case ApogyCoreInvocatorPackage.CONTEXT__NAME:
+			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
+			case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
+			case ApogyCoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -251,8 +251,8 @@ public class ContextItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementationsList()));
+				(ApogyCoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createVariableImplementationsList()));
 	}
 
   /**

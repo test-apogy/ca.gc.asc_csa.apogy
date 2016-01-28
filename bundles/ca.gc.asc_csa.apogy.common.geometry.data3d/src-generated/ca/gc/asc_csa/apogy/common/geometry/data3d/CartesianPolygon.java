@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +21,12 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getSurface <em>Surface</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getNormal <em>Normal</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid <em>Centroid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getSurface <em>Surface</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getNormal <em>Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getCentroid <em>Centroid</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPolygon()
  * @model
  * @generated
  */
@@ -44,9 +44,9 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * The surface of the polygon.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Surface</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Surface()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPolygon_Surface()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m\262'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m\262'"
 	 * @generated
 	 */
 	double getSurface();
@@ -64,8 +64,8 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * The normal of the polygon.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Normal</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Normal()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" transient="true" changeable="false" volatile="true" derived="true"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPolygon_Normal()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	Vector3d getNormal();
@@ -83,7 +83,7 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * The centroid of the polygon.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Centroid</em>' reference.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Centroid()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPolygon_Centroid()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

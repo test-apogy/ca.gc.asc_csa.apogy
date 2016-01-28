@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.controllers;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersFactory
+ * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsMobilityControllers' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)' modelName='Symphony__AddonsMobilityControllers' modelDirectory='/org.eclipse.symphony.addons.mobility.controllers/src-generated' editDirectory='/org.eclipse.symphony.addons.mobility.controllers.edit/src-generated' basePackage='org.eclipse.symphony.addons.mobility'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsMobilityControllers' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)' modelName='ApogyAddonsMobilityControllers' modelDirectory='/ca.gc.asc_csa.apogy.addons.mobility.controllers/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.mobility.controllers.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.mobility'"
  * @generated
  */
-public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
+public interface ApogyAddonsMobilityControllersPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.mobility.controllers";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.mobility.controllers";
 
 	/**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsMobilityControllersPackage eINSTANCE = org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl.init();
+	ApogyAddonsMobilityControllersPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl <em>Path Follower</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl <em>Path Follower</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathFollower()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathFollower()
 	 * @generated
 	 */
 	int PATH_FOLLOWER = 0;
@@ -179,11 +179,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	int PATH_FOLLOWER_OPERATION_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl <em>Skid Steered Platform Path Follower</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl <em>Skid Steered Platform Path Follower</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getSkidSteeredPlatformPathFollower()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getSkidSteeredPlatformPathFollower()
 	 * @generated
 	 */
 	int SKID_STEERED_PLATFORM_PATH_FOLLOWER = 1;
@@ -315,11 +315,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	int SKID_STEERED_PLATFORM_PATH_FOLLOWER_OPERATION_COUNT = PATH_FOLLOWER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl <em>Path Recorder</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathRecorderImpl <em>Path Recorder</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathRecorder()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathRecorderImpl
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathRecorder()
 	 * @generated
 	 */
 	int PATH_RECORDER = 2;
@@ -388,11 +388,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	int PATH_RECORDER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.WaypointPathRecorderImpl <em>Waypoint Path Recorder</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.WaypointPathRecorderImpl <em>Waypoint Path Recorder</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.WaypointPathRecorderImpl
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getWaypointPathRecorder()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.WaypointPathRecorderImpl
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getWaypointPathRecorder()
 	 * @generated
 	 */
 	int WAYPOINT_PATH_RECORDER = 3;
@@ -461,11 +461,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	int WAYPOINT_PATH_RECORDER_OPERATION_COUNT = PATH_RECORDER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl <em>Skid Steered Way Point Path Follower</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl <em>Skid Steered Way Point Path Follower</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getSkidSteeredWayPointPathFollower()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getSkidSteeredWayPointPathFollower()
 	 * @generated
 	 */
 	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER = 4;
@@ -597,11 +597,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER_OPERATION_COUNT = SKID_STEERED_PLATFORM_PATH_FOLLOWER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl <em>Astolfi Guidance Controller</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl <em>Astolfi Guidance Controller</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getAstolfiGuidanceController()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getAstolfiGuidanceController()
 	 * @generated
 	 */
 	int ASTOLFI_GUIDANCE_CONTROLLER = 5;
@@ -904,493 +904,493 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	int ASTOLFI_GUIDANCE_CONTROLLER_OPERATION_COUNT = SKID_STEERED_PLATFORM_PATH_FOLLOWER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollowerState <em>Path Follower State</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState <em>Path Follower State</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollowerState
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathFollowerState()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathFollowerState()
 	 * @generated
 	 */
 	int PATH_FOLLOWER_STATE = 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode <em>Path Recorder Sampling Mode</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode <em>Path Recorder Sampling Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode
-	 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathRecorderSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathRecorderSamplingMode()
 	 * @generated
 	 */
 	int PATH_RECORDER_SAMPLING_MODE = 7;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower <em>Path Follower</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower <em>Path Follower</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Path Follower</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower
 	 * @generated
 	 */
 	EClass getPathFollower();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPath <em>Path</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPath <em>Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Path</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPath()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPath()
 	 * @see #getPathFollower()
 	 * @generated
 	 */
 	EReference getPathFollower_Path();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPlatform <em>Platform</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPlatform <em>Platform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Platform</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPlatform()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPlatform()
 	 * @see #getPathFollower()
 	 * @generated
 	 */
 	EReference getPathFollower_Platform();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPoseSensor <em>Pose Sensor</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPoseSensor <em>Pose Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pose Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPoseSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPoseSensor()
 	 * @see #getPathFollower()
 	 * @generated
 	 */
 	EReference getPathFollower_PoseSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#isDestinationReached <em>Destination Reached</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#isDestinationReached <em>Destination Reached</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Destination Reached</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#isDestinationReached()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#isDestinationReached()
 	 * @see #getPathFollower()
 	 * @generated
 	 */
 	EAttribute getPathFollower_DestinationReached();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Path Follower State</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPathFollowerState()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPathFollowerState()
 	 * @see #getPathFollower()
 	 * @generated
 	 */
 	EAttribute getPathFollower_PathFollowerState();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#start() <em>Start</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#start() <em>Start</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start</em>' operation.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#start()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#start()
 	 * @generated
 	 */
 	EOperation getPathFollower__Start();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#pause() <em>Pause</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#pause() <em>Pause</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pause</em>' operation.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#pause()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#pause()
 	 * @generated
 	 */
 	EOperation getPathFollower__Pause();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#resume() <em>Resume</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#resume() <em>Resume</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resume</em>' operation.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#resume()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#resume()
 	 * @generated
 	 */
 	EOperation getPathFollower__Resume();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#stop()
 	 * @generated
 	 */
 	EOperation getPathFollower__Stop();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#isTransitionValid(org.eclipse.symphony.addons.mobility.controllers.PathFollowerState) <em>Is Transition Valid</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#isTransitionValid(ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState) <em>Is Transition Valid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Transition Valid</em>' operation.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower#isTransitionValid(org.eclipse.symphony.addons.mobility.controllers.PathFollowerState)
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#isTransitionValid(ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState)
 	 * @generated
 	 */
 	EOperation getPathFollower__IsTransitionValid__PathFollowerState();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower <em>Skid Steered Platform Path Follower</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower <em>Skid Steered Platform Path Follower</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Skid Steered Platform Path Follower</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower
 	 * @generated
 	 */
 	EClass getSkidSteeredPlatformPathFollower();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumAngularVelocity <em>Maximum Angular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumAngularVelocity <em>Maximum Angular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Angular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumAngularVelocity()
 	 * @see #getSkidSteeredPlatformPathFollower()
 	 * @generated
 	 */
 	EAttribute getSkidSteeredPlatformPathFollower_MaximumAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumLinearVelocity <em>Maximum Linear Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumLinearVelocity <em>Maximum Linear Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Linear Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumLinearVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumLinearVelocity()
 	 * @see #getSkidSteeredPlatformPathFollower()
 	 * @generated
 	 */
 	EAttribute getSkidSteeredPlatformPathFollower_MaximumLinearVelocity();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder <em>Path Recorder</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder <em>Path Recorder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Path Recorder</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorder
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder
 	 * @generated
 	 */
 	EClass getPathRecorder();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getPositionSensor <em>Position Sensor</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getPositionSensor <em>Position Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Position Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getPositionSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getPositionSensor()
 	 * @see #getPathRecorder()
 	 * @generated
 	 */
 	EReference getPathRecorder_PositionSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getMinimumDistanceDelta <em>Minimum Distance Delta</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getMinimumDistanceDelta <em>Minimum Distance Delta</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minimum Distance Delta</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getMinimumDistanceDelta()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getMinimumDistanceDelta()
 	 * @see #getPathRecorder()
 	 * @generated
 	 */
 	EAttribute getPathRecorder_MinimumDistanceDelta();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getMinimumTimeDelta <em>Minimum Time Delta</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getMinimumTimeDelta <em>Minimum Time Delta</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minimum Time Delta</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getMinimumTimeDelta()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getMinimumTimeDelta()
 	 * @see #getPathRecorder()
 	 * @generated
 	 */
 	EAttribute getPathRecorder_MinimumTimeDelta();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getSamplingMode <em>Sampling Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getSamplingMode <em>Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getSamplingMode()
 	 * @see #getPathRecorder()
 	 * @generated
 	 */
 	EAttribute getPathRecorder_SamplingMode();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getRecordedPath <em>Recorded Path</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getRecordedPath <em>Recorded Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Recorded Path</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getRecordedPath()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder#getRecordedPath()
 	 * @see #getPathRecorder()
 	 * @generated
 	 */
 	EReference getPathRecorder_RecordedPath();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder <em>Waypoint Path Recorder</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder <em>Waypoint Path Recorder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Waypoint Path Recorder</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder
 	 * @generated
 	 */
 	EClass getWaypointPathRecorder();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower <em>Skid Steered Way Point Path Follower</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower <em>Skid Steered Way Point Path Follower</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Skid Steered Way Point Path Follower</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower
 	 * @generated
 	 */
 	EClass getSkidSteeredWayPointPathFollower();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController <em>Astolfi Guidance Controller</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController <em>Astolfi Guidance Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Astolfi Guidance Controller</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController
 	 * @generated
 	 */
 	EClass getAstolfiGuidanceController();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getCurrentWayPoint <em>Current Way Point</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getCurrentWayPoint <em>Current Way Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Current Way Point</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getCurrentWayPoint()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getCurrentWayPoint()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EReference getAstolfiGuidanceController_CurrentWayPoint();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getPreviousWayPoint <em>Previous Way Point</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getPreviousWayPoint <em>Previous Way Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Previous Way Point</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getPreviousWayPoint()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getPreviousWayPoint()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EReference getAstolfiGuidanceController_PreviousWayPoint();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getCurrentPoseInGuidanceReferenceFrame <em>Current Pose In Guidance Reference Frame</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getCurrentPoseInGuidanceReferenceFrame <em>Current Pose In Guidance Reference Frame</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Current Pose In Guidance Reference Frame</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getCurrentPoseInGuidanceReferenceFrame()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getCurrentPoseInGuidanceReferenceFrame()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EReference getAstolfiGuidanceController_CurrentPoseInGuidanceReferenceFrame();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getRho <em>Rho</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getRho <em>Rho</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Rho</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getRho()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getRho()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Rho();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getPhi <em>Phi</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getPhi <em>Phi</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Phi</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getPhi()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getPhi()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Phi();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getAlpha <em>Alpha</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getAlpha <em>Alpha</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Alpha</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getAlpha()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getAlpha()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Alpha();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getYaw <em>Yaw</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getYaw <em>Yaw</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Yaw</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getYaw()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getYaw()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Yaw();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getNu <em>Nu</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getNu <em>Nu</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nu</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getNu()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getNu()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Nu();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getOmega <em>Omega</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getOmega <em>Omega</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Omega</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getOmega()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getOmega()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Omega();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKrho <em>Krho</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKrho <em>Krho</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Krho</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKrho()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKrho()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Krho();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKphi <em>Kphi</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKphi <em>Kphi</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Kphi</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKphi()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKphi()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Kphi();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKalpha <em>Kalpha</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKalpha <em>Kalpha</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Kalpha</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKalpha()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKalpha()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_Kalpha();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getDestinationDistanceThreshold <em>Destination Distance Threshold</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getDestinationDistanceThreshold <em>Destination Distance Threshold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Destination Distance Threshold</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getDestinationDistanceThreshold()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getDestinationDistanceThreshold()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_DestinationDistanceThreshold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getWayPointDistanceThreshold <em>Way Point Distance Threshold</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getWayPointDistanceThreshold <em>Way Point Distance Threshold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Way Point Distance Threshold</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getWayPointDistanceThreshold()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getWayPointDistanceThreshold()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_WayPointDistanceThreshold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKHill <em>KHill</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKHill <em>KHill</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>KHill</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getKHill()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getKHill()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_KHill();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getHillThreshold <em>Hill Threshold</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getHillThreshold <em>Hill Threshold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Hill Threshold</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getHillThreshold()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getHillThreshold()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_HillThreshold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getPhiThresholdForReducedVelocity <em>Phi Threshold For Reduced Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getPhiThresholdForReducedVelocity <em>Phi Threshold For Reduced Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Phi Threshold For Reduced Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getPhiThresholdForReducedVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getPhiThresholdForReducedVelocity()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_PhiThresholdForReducedVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getAlphaThresholdForReducedVelocity <em>Alpha Threshold For Reduced Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getAlphaThresholdForReducedVelocity <em>Alpha Threshold For Reduced Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Alpha Threshold For Reduced Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getAlphaThresholdForReducedVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#getAlphaThresholdForReducedVelocity()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_AlphaThresholdForReducedVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#isSmoothPathEnabled <em>Smooth Path Enabled</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#isSmoothPathEnabled <em>Smooth Path Enabled</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Smooth Path Enabled</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#isSmoothPathEnabled()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController#isSmoothPathEnabled()
 	 * @see #getAstolfiGuidanceController()
 	 * @generated
 	 */
 	EAttribute getAstolfiGuidanceController_SmoothPathEnabled();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollowerState <em>Path Follower State</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState <em>Path Follower State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Path Follower State</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollowerState
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState
 	 * @generated
 	 */
 	EEnum getPathFollowerState();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode <em>Path Recorder Sampling Mode</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode <em>Path Recorder Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Path Recorder Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode
 	 * @generated
 	 */
 	EEnum getPathRecorderSamplingMode();
@@ -1402,7 +1402,7 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsMobilityControllersFactory getSymphony__AddonsMobilityControllersFactory();
+	ApogyAddonsMobilityControllersFactory getApogyAddonsMobilityControllersFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1419,11 +1419,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl <em>Path Follower</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl <em>Path Follower</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathFollower()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathFollower()
 		 * @generated
 		 */
 		EClass PATH_FOLLOWER = eINSTANCE.getPathFollower();
@@ -1509,11 +1509,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 		EOperation PATH_FOLLOWER___IS_TRANSITION_VALID__PATHFOLLOWERSTATE = eINSTANCE.getPathFollower__IsTransitionValid__PathFollowerState();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl <em>Skid Steered Platform Path Follower</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl <em>Skid Steered Platform Path Follower</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getSkidSteeredPlatformPathFollower()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getSkidSteeredPlatformPathFollower()
 		 * @generated
 		 */
 		EClass SKID_STEERED_PLATFORM_PATH_FOLLOWER = eINSTANCE.getSkidSteeredPlatformPathFollower();
@@ -1535,11 +1535,11 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 		EAttribute SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY = eINSTANCE.getSkidSteeredPlatformPathFollower_MaximumLinearVelocity();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl <em>Path Recorder</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathRecorderImpl <em>Path Recorder</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathRecorder()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathRecorderImpl
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathRecorder()
 		 * @generated
 		 */
 		EClass PATH_RECORDER = eINSTANCE.getPathRecorder();
@@ -1585,31 +1585,31 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 		EReference PATH_RECORDER__RECORDED_PATH = eINSTANCE.getPathRecorder_RecordedPath();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.WaypointPathRecorderImpl <em>Waypoint Path Recorder</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.WaypointPathRecorderImpl <em>Waypoint Path Recorder</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.WaypointPathRecorderImpl
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getWaypointPathRecorder()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.WaypointPathRecorderImpl
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getWaypointPathRecorder()
 		 * @generated
 		 */
 		EClass WAYPOINT_PATH_RECORDER = eINSTANCE.getWaypointPathRecorder();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl <em>Skid Steered Way Point Path Follower</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl <em>Skid Steered Way Point Path Follower</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getSkidSteeredWayPointPathFollower()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredWayPointPathFollowerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getSkidSteeredWayPointPathFollower()
 		 * @generated
 		 */
 		EClass SKID_STEERED_WAY_POINT_PATH_FOLLOWER = eINSTANCE.getSkidSteeredWayPointPathFollower();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl <em>Astolfi Guidance Controller</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl <em>Astolfi Guidance Controller</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getAstolfiGuidanceController()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getAstolfiGuidanceController()
 		 * @generated
 		 */
 		EClass ASTOLFI_GUIDANCE_CONTROLLER = eINSTANCE.getAstolfiGuidanceController();
@@ -1767,25 +1767,25 @@ public interface Symphony__AddonsMobilityControllersPackage extends EPackage {
 		EAttribute ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED = eINSTANCE.getAstolfiGuidanceController_SmoothPathEnabled();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollowerState <em>Path Follower State</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState <em>Path Follower State</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollowerState
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathFollowerState()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathFollowerState()
 		 * @generated
 		 */
 		EEnum PATH_FOLLOWER_STATE = eINSTANCE.getPathFollowerState();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode <em>Path Recorder Sampling Mode</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode <em>Path Recorder Sampling Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode
-		 * @see org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersPackageImpl#getPathRecorderSamplingMode()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersPackageImpl#getPathRecorderSamplingMode()
 		 * @generated
 		 */
 		EEnum PATH_RECORDER_SAMPLING_MODE = eINSTANCE.getPathRecorderSamplingMode();
 
 	}
 
-} //Symphony__AddonsMobilityControllersPackage
+} //ApogyAddonsMobilityControllersPackage

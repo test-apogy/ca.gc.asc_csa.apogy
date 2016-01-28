@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.adapters;
 
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIFactory;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class CircularExclusionZonePresentationAdapter implements NodePresentationAdapter
 {
@@ -25,7 +25,7 @@ public class CircularExclusionZonePresentationAdapter implements NodePresentatio
 
 		CircularExclusionZone circularExclusionZone = (CircularExclusionZone) obj;
 		
-		CircularExclusionZonePresentation presentationNode = Symphony__AddonsMobilityPathplannersUIFactory.eINSTANCE
+		CircularExclusionZonePresentation presentationNode = ApogyAddonsMobilityPathplannersUIFactory.eINSTANCE
 				.createCircularExclusionZonePresentation();
 		presentationNode.setNode(circularExclusionZone);			
 						

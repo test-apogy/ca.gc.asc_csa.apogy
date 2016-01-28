@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.tests;
+package ca.gc.asc_csa.apogy.common.topology.ui.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -40,7 +40,7 @@ public class TopologyUITests extends TestSuite {
 		suite.addTestSuite(RotationNodePresentationTest.class);
 		suite.addTestSuite(PositionNodePresentationTest.class);
 		suite.addTestSuite(URLNodePresentationTest.class);
-		suite.addTestSuite(Symphony__CommonTopologyUIFacadeTest.class);
+		suite.addTestSuite(ApogyCommonTopologyUIFacadeTest.class);
 		return suite;
 	}
 

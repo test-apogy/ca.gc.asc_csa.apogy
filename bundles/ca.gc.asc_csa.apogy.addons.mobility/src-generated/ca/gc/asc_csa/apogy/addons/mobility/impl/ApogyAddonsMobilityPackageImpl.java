@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPackageImpl.java,v 1.4.4.2 2015/05/21 15:51:27 pallard Exp $
+ * $Id: ApogyAddonsMobilityPackageImpl.java,v 1.4.4.2 2015/05/21 15:51:27 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.MobilePlatformStatus;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityFactory;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatformStatus;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements Symphony__AddonsMobilityPackage {
+public class ApogyAddonsMobilityPackageImpl extends EPackageImpl implements ApogyAddonsMobilityPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,12 +57,12 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsMobilityPackageImpl() {
-		super(eNS_URI, Symphony__AddonsMobilityFactory.eINSTANCE);
+	private ApogyAddonsMobilityPackageImpl() {
+		super(eNS_URI, ApogyAddonsMobilityFactory.eINSTANCE);
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsMobilityPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsMobilityPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,30 +84,30 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityPackage init() {
-		if (isInited) return (Symphony__AddonsMobilityPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPackage.eNS_URI);
+	public static ApogyAddonsMobilityPackage init() {
+		if (isInited) return (ApogyAddonsMobilityPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsMobilityPackageImpl theSymphony__AddonsMobilityPackage = (Symphony__AddonsMobilityPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsMobilityPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsMobilityPackageImpl());
+		ApogyAddonsMobilityPackageImpl theApogyAddonsMobilityPackage = (ApogyAddonsMobilityPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsMobilityPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsMobilityPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsMobilityPackage.createPackageContents();
+		theApogyAddonsMobilityPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsMobilityPackage.initializePackageContents();
+		theApogyAddonsMobilityPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsMobilityPackage.freeze();
+		theApogyAddonsMobilityPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsMobilityPackage.eNS_URI, theSymphony__AddonsMobilityPackage);
-		return theSymphony__AddonsMobilityPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsMobilityPackage.eNS_URI, theApogyAddonsMobilityPackage);
+		return theApogyAddonsMobilityPackage;
 	}
 
 	/**
@@ -241,8 +241,8 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityFactory getSymphony__AddonsMobilityFactory() {
-		return (Symphony__AddonsMobilityFactory)getEFactoryInstance();
+	public ApogyAddonsMobilityFactory getApogyAddonsMobilityFactory() {
+		return (ApogyAddonsMobilityFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -307,7 +307,7 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -315,7 +315,7 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		mobilePlatformEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		mobilePlatformEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		skidSteeredMobilePlatformEClass.getESuperTypes().add(this.getMobilePlatform());
 
 		// Initialize classes, features, and operations; add parameters
@@ -345,4 +345,4 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsMobilityPackageImpl
+} //ApogyAddonsMobilityPackageImpl

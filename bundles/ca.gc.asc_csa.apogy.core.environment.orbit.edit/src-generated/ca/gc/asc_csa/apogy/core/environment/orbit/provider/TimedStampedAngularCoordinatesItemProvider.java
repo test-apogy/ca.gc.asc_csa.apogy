@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class TimedStampedAngularCoordinatesItemProvider extends AngularCoordinat
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class TimedStampedAngularCoordinatesItemProvider extends AngularCoordinat
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimedStampedAngularCoordinates.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
+			case ApogyCoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -143,8 +143,8 @@ public class TimedStampedAngularCoordinatesItemProvider extends AngularCoordinat
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
 
 		if (qualify) {
 			return getString

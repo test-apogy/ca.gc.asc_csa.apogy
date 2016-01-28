@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui.impl;
+package ca.gc.asc_csa.apogy.common.emf.ui.impl;
 
 import javax.measure.unit.Unit;
 import org.eclipse.emf.ecore.EClass;
@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.swt.graphics.Color;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFactory;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFactory;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Symphony__CommonEMFUIFactory
+public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCommonEMFUIFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -28,18 +28,18 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CommonEMFUIFactory init()
+  public static ApogyCommonEMFUIFactory init()
   {
 		try {
-			Symphony__CommonEMFUIFactory theSymphony__CommonEMFUIFactory = (Symphony__CommonEMFUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonEMFUIPackage.eNS_URI);
-			if (theSymphony__CommonEMFUIFactory != null) {
-				return theSymphony__CommonEMFUIFactory;
+			ApogyCommonEMFUIFactory theApogyCommonEMFUIFactory = (ApogyCommonEMFUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonEMFUIPackage.eNS_URI);
+			if (theApogyCommonEMFUIFactory != null) {
+				return theApogyCommonEMFUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonEMFUIFactoryImpl();
+		return new ApogyCommonEMFUIFactoryImpl();
 	}
 
   /**
@@ -48,7 +48,7 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFUIFactoryImpl()
+  public ApogyCommonEMFUIFactoryImpl()
   {
 		super();
 	}
@@ -62,7 +62,7 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonEMFUIPackage.SYMPHONY_COMMON_EMFUI_FACADE: return createSymphony__CommonEMFUIFacade();
+			case ApogyCommonEMFUIPackage.APOGY_COMMON_EMFUI_FACADE: return createApogyCommonEMFUIFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,9 +77,9 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonEMFUIPackage.COLOR:
+			case ApogyCommonEMFUIPackage.COLOR:
 				return createColorFromString(eDataType, initialValue);
-			case Symphony__CommonEMFUIPackage.UNIT:
+			case ApogyCommonEMFUIPackage.UNIT:
 				return createUnitFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -95,9 +95,9 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonEMFUIPackage.COLOR:
+			case ApogyCommonEMFUIPackage.COLOR:
 				return convertColorToString(eDataType, instanceValue);
-			case Symphony__CommonEMFUIPackage.UNIT:
+			case ApogyCommonEMFUIPackage.UNIT:
 				return convertUnitToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -109,9 +109,9 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFUIFacade createSymphony__CommonEMFUIFacade() {
-		Symphony__CommonEMFUIFacadeImpl symphony__CommonEMFUIFacade = new Symphony__CommonEMFUIFacadeImpl();
-		return symphony__CommonEMFUIFacade;
+	public ApogyCommonEMFUIFacade createApogyCommonEMFUIFacade() {
+		ApogyCommonEMFUIFacadeImpl apogy__CommonEMFUIFacade = new ApogyCommonEMFUIFacadeImpl();
+		return apogy__CommonEMFUIFacade;
 	}
 
 		/**
@@ -160,8 +160,8 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFUIPackage getSymphony__CommonEMFUIPackage() {
-		return (Symphony__CommonEMFUIPackage)getEPackage();
+	public ApogyCommonEMFUIPackage getApogyCommonEMFUIPackage() {
+		return (ApogyCommonEMFUIPackage)getEPackage();
 	}
 
 		/**
@@ -171,9 +171,9 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CommonEMFUIPackage getPackage()
+  public static ApogyCommonEMFUIPackage getPackage()
   {
-		return Symphony__CommonEMFUIPackage.eINSTANCE;
+		return ApogyCommonEMFUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonEMFUIFactoryImpl
+} //ApogyCommonEMFUIFactoryImpl

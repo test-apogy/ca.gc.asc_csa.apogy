@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonTopologyUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonTopologyUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.ui/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.edit/src-generated' basePackage='org.eclipse.symphony.common.topology'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonTopologyUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonTopologyUI' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.common.topology.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.topology.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.topology'"
  * @generated
  */
-public interface Symphony__CommonTopologyUIPackage extends EPackage {
+public interface ApogyCommonTopologyUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.topology.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.topology.ui";
 
 	/**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIPackage eINSTANCE = org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl.init();
+	ApogyCommonTopologyUIPackage eINSTANCE = ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl <em>Topology Presentation Registry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationRegistryImpl <em>Topology Presentation Registry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTopologyPresentationRegistry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationRegistryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getTopologyPresentationRegistry()
 	 * @generated
 	 */
 	int TOPOLOGY_PRESENTATION_REGISTRY = 0;
@@ -135,11 +135,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int TOPOLOGY_PRESENTATION_REGISTRY_OPERATION_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl <em>Graphics Context</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.GraphicsContextImpl <em>Graphics Context</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getGraphicsContext()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.GraphicsContextImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getGraphicsContext()
 	 * @generated
 	 */
 	int GRAPHICS_CONTEXT = 1;
@@ -190,11 +190,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int GRAPHICS_CONTEXT_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl <em>Node Selection</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.NodeSelectionImpl <em>Node Selection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getNodeSelection()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.NodeSelectionImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getNodeSelection()
 	 * @generated
 	 */
 	int NODE_SELECTION = 2;
@@ -281,11 +281,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int NODE_SELECTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationSetImpl <em>Topology Presentation Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationSetImpl <em>Topology Presentation Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationSetImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTopologyPresentationSet()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getTopologyPresentationSet()
 	 * @generated
 	 */
 	int TOPOLOGY_PRESENTATION_SET = 3;
@@ -354,11 +354,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int TOPOLOGY_PRESENTATION_SET_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl <em>Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl <em>Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getNodePresentation()
 	 * @generated
 	 */
 	int NODE_PRESENTATION = 4;
@@ -499,11 +499,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int NODE_PRESENTATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.TransformNodePresentationImpl <em>Transform Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.TransformNodePresentationImpl <em>Transform Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.TransformNodePresentationImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTransformNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.TransformNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getTransformNodePresentation()
 	 * @generated
 	 */
 	int TRANSFORM_NODE_PRESENTATION = 5;
@@ -662,11 +662,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int TRANSFORM_NODE_PRESENTATION_OPERATION_COUNT = NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.RotationNodePresentationImpl <em>Rotation Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.RotationNodePresentationImpl <em>Rotation Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.RotationNodePresentationImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getRotationNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.RotationNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getRotationNodePresentation()
 	 * @generated
 	 */
 	int ROTATION_NODE_PRESENTATION = 6;
@@ -825,11 +825,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int ROTATION_NODE_PRESENTATION_OPERATION_COUNT = NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl <em>Position Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.PositionNodePresentationImpl <em>Position Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getPositionNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.PositionNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getPositionNodePresentation()
 	 * @generated
 	 */
 	int POSITION_NODE_PRESENTATION = 7;
@@ -988,11 +988,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int POSITION_NODE_PRESENTATION_OPERATION_COUNT = NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl <em>URL Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.URLNodePresentationImpl <em>URL Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getURLNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.URLNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getURLNodePresentation()
 	 * @generated
 	 */
 	int URL_NODE_PRESENTATION = 8;
@@ -1160,14 +1160,14 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int URL_NODE_PRESENTATION_OPERATION_COUNT = NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getSymphony__CommonTopologyUIFacade()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getApogyCommonTopologyUIFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE = 9;
+	int APOGY_COMMON_TOPOLOGY_UI_FACADE = 9;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -1176,7 +1176,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_TOPOLOGY_UI_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Graphics Context</em>' operation.
@@ -1185,7 +1185,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = 0;
+	int APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = 0;
 
 	/**
 	 * The operation id for the '<em>Find Extent</em>' operation.
@@ -1194,7 +1194,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = 1;
+	int APOGY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = 1;
 
 	/**
 	 * The operation id for the '<em>Create Node Selection</em>' operation.
@@ -1203,7 +1203,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = 2;
+	int APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = 2;
 
 	/**
 	 * The operation id for the '<em>Create Node Selection</em>' operation.
@@ -1212,7 +1212,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = 3;
+	int APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = 3;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1221,24 +1221,24 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE_OPERATION_COUNT = 4;
+	int APOGY_COMMON_TOPOLOGY_UI_FACADE_OPERATION_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.ShadowMode <em>Shadow Mode</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode <em>Shadow Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.ShadowMode
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getShadowMode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getShadowMode()
 	 * @generated
 	 */
 	int SHADOW_MODE = 10;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.MeshPresentationMode <em>Mesh Presentation Mode</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode <em>Mesh Presentation Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getMeshPresentationMode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getMeshPresentationMode()
 	 * @generated
 	 */
 	int MESH_PRESENTATION_MODE = 11;
@@ -1248,7 +1248,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getList()
 	 * @generated
 	 */
 	int LIST = 12;
@@ -1258,7 +1258,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.swt.graphics.RGB
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getRGB()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getRGB()
 	 * @generated
 	 */
 	int RGB = 13;
@@ -1268,7 +1268,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Point3d
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getPoint3d()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getPoint3d()
 	 * @generated
 	 */
 	int POINT3D = 14;
@@ -1278,7 +1278,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Vector3f
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getVector3f()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getVector3f()
 	 * @generated
 	 */
 	int VECTOR3F = 15;
@@ -1287,8 +1287,8 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * The meta object id for the '<em>Scene Object</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.SceneObject
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getSceneObject()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.SceneObject
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getSceneObject()
 	 * @generated
 	 */
 	int SCENE_OBJECT = 16;
@@ -1299,624 +1299,624 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.notify.Notification
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getNotification()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getNotification()
 	 * @generated
 	 */
 	int NOTIFICATION = 17;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Topology Presentation Registry</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry
 	 * @generated
 	 */
 	EClass getTopologyPresentationRegistry();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Topology Presentation Set List</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList()
 	 * @see #getTopologyPresentationRegistry()
 	 * @generated
 	 */
 	EReference getTopologyPresentationRegistry_TopologyPresentationSetList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList <em>Node Presentation List</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList <em>Node Presentation List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Node Presentation List</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList()
 	 * @see #getTopologyPresentationRegistry()
 	 * @generated
 	 */
 	EReference getTopologyPresentationRegistry_NodePresentationList();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#createTopologyPresentationSet(org.eclipse.symphony.common.topology.Node) <em>Create Topology Presentation Set</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#createTopologyPresentationSet(ca.gc.asc_csa.apogy.common.topology.Node) <em>Create Topology Presentation Set</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Topology Presentation Set</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#createTopologyPresentationSet(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#createTopologyPresentationSet(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
 	EOperation getTopologyPresentationRegistry__CreateTopologyPresentationSet__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#release(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet) <em>Release</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#release(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet) <em>Release</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Release</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#release(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#release(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet)
 	 * @generated
 	 */
 	EOperation getTopologyPresentationRegistry__Release__TopologyPresentationSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getPresentationNode(org.eclipse.symphony.common.topology.Node) <em>Get Presentation Node</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getPresentationNode(ca.gc.asc_csa.apogy.common.topology.Node) <em>Get Presentation Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Presentation Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getPresentationNode(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getPresentationNode(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
 	EOperation getTopologyPresentationRegistry__GetPresentationNode__Node();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.GraphicsContext <em>Graphics Context</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext <em>Graphics Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Graphics Context</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext
 	 * @generated
 	 */
 	EClass getGraphicsContext();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopology <em>Topology</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#getTopology <em>Topology</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Topology</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopology()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#getTopology()
 	 * @see #getGraphicsContext()
 	 * @generated
 	 */
 	EReference getGraphicsContext_Topology();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Topology Presentation Set</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopologyPresentationSet()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#getTopologyPresentationSet()
 	 * @see #getGraphicsContext()
 	 * @generated
 	 */
 	EReference getGraphicsContext_TopologyPresentationSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.GraphicsContext#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext#dispose()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#dispose()
 	 * @generated
 	 */
 	EOperation getGraphicsContext__Dispose();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.NodeSelection <em>Node Selection</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection <em>Node Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Node Selection</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection
 	 * @generated
 	 */
 	EClass getNodeSelection();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Topology Presentation Set</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection#getTopologyPresentationSet()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getTopologyPresentationSet()
 	 * @see #getNodeSelection()
 	 * @generated
 	 */
 	EReference getNodeSelection_TopologyPresentationSet();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getSelectedNode <em>Selected Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getSelectedNode <em>Selected Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Selected Node</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection#getSelectedNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getSelectedNode()
 	 * @see #getNodeSelection()
 	 * @generated
 	 */
 	EReference getNodeSelection_SelectedNode();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getNodePresentation <em>Node Presentation</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getNodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node Presentation</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection#getNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getNodePresentation()
 	 * @see #getNodeSelection()
 	 * @generated
 	 */
 	EReference getNodeSelection_NodePresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionPoint <em>Relative Intersection Point</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionPoint <em>Relative Intersection Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Relative Intersection Point</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionPoint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionPoint()
 	 * @see #getNodeSelection()
 	 * @generated
 	 */
 	EAttribute getNodeSelection_RelativeIntersectionPoint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint <em>Absolute Intersection Point</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint <em>Absolute Intersection Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Absolute Intersection Point</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint()
 	 * @see #getNodeSelection()
 	 * @generated
 	 */
 	EAttribute getNodeSelection_AbsoluteIntersectionPoint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Relative Intersection Normal</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionNormal()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionNormal()
 	 * @see #getNodeSelection()
 	 * @generated
 	 */
 	EAttribute getNodeSelection_RelativeIntersectionNormal();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Absolute Intersection Normal</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal()
 	 * @see #getNodeSelection()
 	 * @generated
 	 */
 	EAttribute getNodeSelection_AbsoluteIntersectionNormal();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet <em>Topology Presentation Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet <em>Topology Presentation Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Topology Presentation Set</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet
 	 * @generated
 	 */
 	EClass getTopologyPresentationSet();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Topology Presentation Registry</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry()
 	 * @see #getTopologyPresentationSet()
 	 * @generated
 	 */
 	EReference getTopologyPresentationSet_TopologyPresentationRegistry();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getGraphicsContext <em>Graphics Context</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getGraphicsContext <em>Graphics Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Graphics Context</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getGraphicsContext()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getGraphicsContext()
 	 * @see #getTopologyPresentationSet()
 	 * @generated
 	 */
 	EReference getTopologyPresentationSet_GraphicsContext();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodePresentationList <em>Node Presentation List</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodePresentationList <em>Node Presentation List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Node Presentation List</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodePresentationList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodePresentationList()
 	 * @see #getTopologyPresentationSet()
 	 * @generated
 	 */
 	EReference getTopologyPresentationSet_NodePresentationList();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getPresentationNode(org.eclipse.symphony.common.topology.Node) <em>Get Presentation Node</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getPresentationNode(ca.gc.asc_csa.apogy.common.topology.Node) <em>Get Presentation Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Presentation Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getPresentationNode(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getPresentationNode(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
 	EOperation getTopologyPresentationSet__GetPresentationNode__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodes() <em>Get Nodes</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodes() <em>Get Nodes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Nodes</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodes()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodes()
 	 * @generated
 	 */
 	EOperation getTopologyPresentationSet__GetNodes();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Node Presentation</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	EClass getNodePresentation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Topology Presentation Set</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getTopologyPresentationSet()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getTopologyPresentationSet()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EReference getNodePresentation_TopologyPresentationSet();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getNode()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EReference getNodePresentation_Node();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getColor <em>Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getColor <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Color</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getColor()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getColor()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_Color();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#isVisible <em>Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#isVisible <em>Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#isVisible()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#isVisible()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_Visible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#isUseInBoundingCalculation <em>Use In Bounding Calculation</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#isUseInBoundingCalculation <em>Use In Bounding Calculation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Use In Bounding Calculation</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#isUseInBoundingCalculation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#isUseInBoundingCalculation()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_UseInBoundingCalculation();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getCentroid <em>Centroid</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getCentroid <em>Centroid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Centroid</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getCentroid()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getCentroid()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EReference getNodePresentation_Centroid();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getMin <em>Min</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMin <em>Min</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Min</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getMin()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMin()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EReference getNodePresentation_Min();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getMax <em>Max</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMax <em>Max</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Max</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getMax()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMax()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EReference getNodePresentation_Max();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getXRange <em>XRange</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getXRange <em>XRange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XRange</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getXRange()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getXRange()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_XRange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getYRange <em>YRange</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getYRange <em>YRange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YRange</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getYRange()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getYRange()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_YRange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getZRange <em>ZRange</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getZRange <em>ZRange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZRange</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getZRange()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getZRange()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_ZRange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getSceneObject <em>Scene Object</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getSceneObject <em>Scene Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Scene Object</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getSceneObject()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getSceneObject()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_SceneObject();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getShadowMode <em>Shadow Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getShadowMode <em>Shadow Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Shadow Mode</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getShadowMode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getShadowMode()
 	 * @see #getNodePresentation()
 	 * @generated
 	 */
 	EAttribute getNodePresentation_ShadowMode();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation <em>Transform Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation <em>Transform Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Transform Node Presentation</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TransformNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
 	 * @generated
 	 */
 	EClass getTransformNodePresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Visible</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TransformNodePresentation#isAxisVisible()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation#isAxisVisible()
 	 * @see #getTransformNodePresentation()
 	 * @generated
 	 */
 	EAttribute getTransformNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation#getAxisLength <em>Axis Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Length</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TransformNodePresentation#getAxisLength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation#getAxisLength()
 	 * @see #getTransformNodePresentation()
 	 * @generated
 	 */
 	EAttribute getTransformNodePresentation_AxisLength();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation <em>Rotation Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation <em>Rotation Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rotation Node Presentation</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.RotationNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation
 	 * @generated
 	 */
 	EClass getRotationNodePresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Visible</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.RotationNodePresentation#isAxisVisible()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#isAxisVisible()
 	 * @see #getRotationNodePresentation()
 	 * @generated
 	 */
 	EAttribute getRotationNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLength <em>Axis Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Length</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#getAxisLength()
 	 * @see #getRotationNodePresentation()
 	 * @generated
 	 */
 	EAttribute getRotationNodePresentation_AxisLength();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation <em>Position Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation <em>Position Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Position Node Presentation</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.PositionNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation
 	 * @generated
 	 */
 	EClass getPositionNodePresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Visible</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.PositionNodePresentation#isAxisVisible()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation#isAxisVisible()
 	 * @see #getPositionNodePresentation()
 	 * @generated
 	 */
 	EAttribute getPositionNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLength <em>Axis Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Length</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation#getAxisLength()
 	 * @see #getPositionNodePresentation()
 	 * @generated
 	 */
 	EAttribute getPositionNodePresentation_AxisLength();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation <em>URL Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation <em>URL Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>URL Node Presentation</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.URLNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation
 	 * @generated
 	 */
 	EClass getURLNodePresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation#isAxisVisible <em>Axis Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Visible</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.URLNodePresentation#isAxisVisible()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation#isAxisVisible()
 	 * @see #getURLNodePresentation()
 	 * @generated
 	 */
 	EAttribute getURLNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation#getAxisLength <em>Axis Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Length</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.URLNodePresentation#getAxisLength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation#getAxisLength()
 	 * @see #getURLNodePresentation()
 	 * @generated
 	 */
 	EAttribute getURLNodePresentation_AxisLength();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation#getPresentationMode <em>Presentation Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation#getPresentationMode <em>Presentation Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Presentation Mode</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.URLNodePresentation#getPresentationMode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation#getPresentationMode()
 	 * @see #getURLNodePresentation()
 	 * @generated
 	 */
 	EAttribute getURLNodePresentation_PresentationMode();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonTopologyUIFacade();
+	EClass getApogyCommonTopologyUIFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node) <em>Create Graphics Context</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#createGraphicsContext(ca.gc.asc_csa.apogy.common.topology.Node) <em>Create Graphics Context</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Graphics Context</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#createGraphicsContext(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node();
+	EOperation getApogyCommonTopologyUIFacade__CreateGraphicsContext__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Find Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#findExtent(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Find Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Extent</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#findExtent(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
+	EOperation getApogyCommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Node Selection</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation, javax.vecmath.Point3d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
+	EOperation getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Node Selection</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade#createNodeSelection(ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet, ca.gc.asc_csa.apogy.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
+	EOperation getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.topology.ui.ShadowMode <em>Shadow Mode</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode <em>Shadow Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Shadow Mode</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.ShadowMode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode
 	 * @generated
 	 */
 	EEnum getShadowMode();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.topology.ui.MeshPresentationMode <em>Mesh Presentation Mode</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode <em>Mesh Presentation Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Mesh Presentation Mode</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
 	 * @generated
 	 */
 	EEnum getMeshPresentationMode();
@@ -1966,12 +1966,12 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	EDataType getVector3f();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.common.topology.ui.SceneObject <em>Scene Object</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.common.topology.ui.SceneObject <em>Scene Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Scene Object</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.SceneObject
-	 * @model instanceClass="org.eclipse.symphony.common.topology.ui.SceneObject"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.SceneObject
+	 * @model instanceClass="ca.gc.asc_csa.apogy.common.topology.ui.SceneObject"
 	 * @generated
 	 */
 	EDataType getSceneObject();
@@ -1994,7 +1994,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIFactory getSymphony__CommonTopologyUIFactory();
+	ApogyCommonTopologyUIFactory getApogyCommonTopologyUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2011,11 +2011,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl <em>Topology Presentation Registry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationRegistryImpl <em>Topology Presentation Registry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTopologyPresentationRegistry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationRegistryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getTopologyPresentationRegistry()
 		 * @generated
 		 */
 		EClass TOPOLOGY_PRESENTATION_REGISTRY = eINSTANCE.getTopologyPresentationRegistry();
@@ -2061,11 +2061,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EOperation TOPOLOGY_PRESENTATION_REGISTRY___GET_PRESENTATION_NODE__NODE = eINSTANCE.getTopologyPresentationRegistry__GetPresentationNode__Node();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl <em>Graphics Context</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.GraphicsContextImpl <em>Graphics Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getGraphicsContext()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.GraphicsContextImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getGraphicsContext()
 		 * @generated
 		 */
 		EClass GRAPHICS_CONTEXT = eINSTANCE.getGraphicsContext();
@@ -2095,11 +2095,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EOperation GRAPHICS_CONTEXT___DISPOSE = eINSTANCE.getGraphicsContext__Dispose();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl <em>Node Selection</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.NodeSelectionImpl <em>Node Selection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getNodeSelection()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.NodeSelectionImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getNodeSelection()
 		 * @generated
 		 */
 		EClass NODE_SELECTION = eINSTANCE.getNodeSelection();
@@ -2161,11 +2161,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL = eINSTANCE.getNodeSelection_AbsoluteIntersectionNormal();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationSetImpl <em>Topology Presentation Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationSetImpl <em>Topology Presentation Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationSetImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTopologyPresentationSet()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.TopologyPresentationSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getTopologyPresentationSet()
 		 * @generated
 		 */
 		EClass TOPOLOGY_PRESENTATION_SET = eINSTANCE.getTopologyPresentationSet();
@@ -2211,11 +2211,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EOperation TOPOLOGY_PRESENTATION_SET___GET_NODES = eINSTANCE.getTopologyPresentationSet__GetNodes();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl <em>Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl <em>Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getNodePresentation()
 		 * @generated
 		 */
 		EClass NODE_PRESENTATION = eINSTANCE.getNodePresentation();
@@ -2325,11 +2325,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute NODE_PRESENTATION__SHADOW_MODE = eINSTANCE.getNodePresentation_ShadowMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.TransformNodePresentationImpl <em>Transform Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.TransformNodePresentationImpl <em>Transform Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.TransformNodePresentationImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTransformNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.TransformNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getTransformNodePresentation()
 		 * @generated
 		 */
 		EClass TRANSFORM_NODE_PRESENTATION = eINSTANCE.getTransformNodePresentation();
@@ -2351,11 +2351,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH = eINSTANCE.getTransformNodePresentation_AxisLength();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.RotationNodePresentationImpl <em>Rotation Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.RotationNodePresentationImpl <em>Rotation Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.RotationNodePresentationImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getRotationNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.RotationNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getRotationNodePresentation()
 		 * @generated
 		 */
 		EClass ROTATION_NODE_PRESENTATION = eINSTANCE.getRotationNodePresentation();
@@ -2377,11 +2377,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute ROTATION_NODE_PRESENTATION__AXIS_LENGTH = eINSTANCE.getRotationNodePresentation_AxisLength();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl <em>Position Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.PositionNodePresentationImpl <em>Position Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getPositionNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.PositionNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getPositionNodePresentation()
 		 * @generated
 		 */
 		EClass POSITION_NODE_PRESENTATION = eINSTANCE.getPositionNodePresentation();
@@ -2403,11 +2403,11 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute POSITION_NODE_PRESENTATION__AXIS_LENGTH = eINSTANCE.getPositionNodePresentation_AxisLength();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl <em>URL Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.URLNodePresentationImpl <em>URL Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getURLNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.URLNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getURLNodePresentation()
 		 * @generated
 		 */
 		EClass URL_NODE_PRESENTATION = eINSTANCE.getURLNodePresentation();
@@ -2437,14 +2437,14 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute URL_NODE_PRESENTATION__PRESENTATION_MODE = eINSTANCE.getURLNodePresentation_PresentationMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getSymphony__CommonTopologyUIFacade()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getApogyCommonTopologyUIFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_TOPOLOGY_UI_FACADE = eINSTANCE.getSymphony__CommonTopologyUIFacade();
+		EClass APOGY_COMMON_TOPOLOGY_UI_FACADE = eINSTANCE.getApogyCommonTopologyUIFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Graphics Context</b></em>' operation.
@@ -2452,7 +2452,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = eINSTANCE.getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node();
+		EOperation APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = eINSTANCE.getApogyCommonTopologyUIFacade__CreateGraphicsContext__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Extent</b></em>' operation.
@@ -2460,7 +2460,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
+		EOperation APOGY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = eINSTANCE.getApogyCommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Node Selection</b></em>' operation.
@@ -2468,7 +2468,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = eINSTANCE.getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
+		EOperation APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = eINSTANCE.getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Node Selection</b></em>' operation.
@@ -2476,24 +2476,24 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = eINSTANCE.getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
+		EOperation APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = eINSTANCE.getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.ShadowMode <em>Shadow Mode</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode <em>Shadow Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.ShadowMode
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getShadowMode()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getShadowMode()
 		 * @generated
 		 */
 		EEnum SHADOW_MODE = eINSTANCE.getShadowMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.MeshPresentationMode <em>Mesh Presentation Mode</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode <em>Mesh Presentation Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getMeshPresentationMode()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getMeshPresentationMode()
 		 * @generated
 		 */
 		EEnum MESH_PRESENTATION_MODE = eINSTANCE.getMeshPresentationMode();
@@ -2503,7 +2503,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getList()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getList()
 		 * @generated
 		 */
 		EDataType LIST = eINSTANCE.getList();
@@ -2513,7 +2513,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.swt.graphics.RGB
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getRGB()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getRGB()
 		 * @generated
 		 */
 		EDataType RGB = eINSTANCE.getRGB();
@@ -2523,7 +2523,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Point3d
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getPoint3d()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getPoint3d()
 		 * @generated
 		 */
 		EDataType POINT3D = eINSTANCE.getPoint3d();
@@ -2533,7 +2533,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Vector3f
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getVector3f()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getVector3f()
 		 * @generated
 		 */
 		EDataType VECTOR3F = eINSTANCE.getVector3f();
@@ -2542,8 +2542,8 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * The meta object literal for the '<em>Scene Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.SceneObject
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getSceneObject()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.SceneObject
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getSceneObject()
 		 * @generated
 		 */
 		EDataType SCENE_OBJECT = eINSTANCE.getSceneObject();
@@ -2553,7 +2553,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.notify.Notification
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getNotification()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIPackageImpl#getNotification()
 		 * @generated
 		 */
 		EDataType NOTIFICATION = eINSTANCE.getNotification();

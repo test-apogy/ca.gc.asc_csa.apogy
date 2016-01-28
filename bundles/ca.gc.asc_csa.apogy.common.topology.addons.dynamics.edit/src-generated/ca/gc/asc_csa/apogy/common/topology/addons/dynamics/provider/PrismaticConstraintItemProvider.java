@@ -4,7 +4,7 @@
  *
  * $Id: PrismaticConstraintItemProvider.java,v 1.3.2.2 2015/02/03 20:01:27 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class PrismaticConstraintItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE);
+			childrenFeatures.add(ApogyCommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +119,7 @@ public class PrismaticConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PrismaticConstraint.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,8 +139,8 @@ public class PrismaticConstraintItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
 	}
 
 }

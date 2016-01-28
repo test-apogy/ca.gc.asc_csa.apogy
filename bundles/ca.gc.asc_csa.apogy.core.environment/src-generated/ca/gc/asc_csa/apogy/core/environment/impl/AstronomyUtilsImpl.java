@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.DecimalFormat;
@@ -15,13 +15,13 @@ import javax.vecmath.Point3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.ASTRONOMY_UTILS;
+		return ApogyCoreEnvironmentPackage.Literals.ASTRONOMY_UTILS;
 	}
 
   /**
@@ -132,7 +132,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
 		
 		double delta = Math.asin(Math.sin(Math.toRadians(epsilon)) * Math.sin(Math.toRadians(lambda)));												
 
-		EquatorialCoordinates coordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates coordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 		coordinates.setRightAscension(alpha);
 		coordinates.setDeclination(delta); 
 		coordinates.setRadius(r);		
@@ -402,7 +402,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
 	    double correctedDeclination = geocentricCoords.getDeclination() + declinationCorrection;
 	    
 	    // Uses corrected values.	
-		EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates equatorialCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 	    equatorialCoordinates.setRightAscension(correctedRightAscension);
 	    equatorialCoordinates.setDeclination(correctedDeclination);
 	    equatorialCoordinates.setRadius(rho * geocentricCoords.getRadius() * EARTH_EQUATORIAL_RADIUS);
@@ -502,7 +502,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
    */
   public HorizontalCoordinates convertToHorizontalCoordinates(EquatorialCoordinates equatorialCoordinates, double observerLongitude, double observerLatitude, Date date)
   {
-		HorizontalCoordinates result = Symphony__CoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
+		HorizontalCoordinates result = ApogyCoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
 		
 		double localSideralTime = getLocalSideralTime(date, observerLongitude);		
 		
@@ -580,7 +580,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
    */
   public EquatorialCoordinates convertToEquatorialCoordinates(EclipticCoordinates eclipticCoordinates)
   {
-		EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates equatorialCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 		
 		double eradius = eclipticCoordinates.getRadius();
 		double elongitude = eclipticCoordinates.getLongitude();
@@ -612,7 +612,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
    */
   public EclipticCoordinates convertToEclipticCoordinates(EquatorialCoordinates equatorialCoordinates)
   {
-		EclipticCoordinates eclipticCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEclipticCoordinates();
+		EclipticCoordinates eclipticCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEclipticCoordinates();
 		
 		double rightAscension = equatorialCoordinates.getRightAscension();
 		double declination = equatorialCoordinates.getDeclination();
@@ -674,7 +674,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
    */
   public EclipticCoordinates convertFromEclipticRectangularToEclipticCoordinates(Point3d eclipticCoordinates)
   {
-		EclipticCoordinates eclipticCoord = Symphony__CoreEnvironmentFactory.eINSTANCE.createEclipticCoordinates();
+		EclipticCoordinates eclipticCoord = ApogyCoreEnvironmentFactory.eINSTANCE.createEclipticCoordinates();
 		
 		double radius = Math.sqrt(eclipticCoordinates.x * eclipticCoordinates.x  + eclipticCoordinates.y * eclipticCoordinates.y + eclipticCoordinates.z * eclipticCoordinates.z);
 	    double latitude = Math.asin(eclipticCoordinates.z /radius);
@@ -694,7 +694,7 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
    */
   public EquatorialCoordinates convertFromEquatorialRectangularToEquatorialCoordinates(Point3d equatorialCoordinates)
   {
-		EquatorialCoordinates equatorialCoord = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates equatorialCoord = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 		
 		double radius = Math.sqrt(equatorialCoordinates.x * equatorialCoordinates.x  + equatorialCoordinates.y * equatorialCoordinates.y + equatorialCoordinates.z * equatorialCoordinates.z);
 	    double declination = Math.asin(equatorialCoordinates.z /radius);
@@ -969,55 +969,55 @@ public class AstronomyUtilsImpl extends MinimalEObjectImpl.Container implements 
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_EQUATORIAL_POSITION__DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_EQUATORIAL_POSITION__DOUBLE:
 				return getSunEquatorialPosition((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_HORIZONTAL_SUN_POSITION__DATE_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_HORIZONTAL_SUN_POSITION__DATE_DOUBLE_DOUBLE:
 				return getHorizontalSunPosition((Date)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_MOON_EQUATORIAL_POSITION__DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_MOON_EQUATORIAL_POSITION__DOUBLE:
 				return getMoonEquatorialPosition((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_MOON_TOPOCENTRIC_EQUATORIAL_POSITION__DATE_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_MOON_TOPOCENTRIC_EQUATORIAL_POSITION__DATE_DOUBLE_DOUBLE:
 				return getMoonTopocentricEquatorialPosition((Date)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_HORIZONTAL_MOON_POSITION__DATE_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_HORIZONTAL_MOON_POSITION__DATE_DOUBLE_DOUBLE:
 				return getHorizontalMoonPosition((Date)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_TIME_SINCE_J2000__DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_TIME_SINCE_J2000__DOUBLE:
 				return getTimeSinceJ2000((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_LOCAL_SIDERAL_TIME__DATE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_LOCAL_SIDERAL_TIME__DATE_DOUBLE:
 				return getLocalSideralTime((Date)arguments.get(0), (Double)arguments.get(1));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_UTC_DECIMAL_HOURS__DATE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_UTC_DECIMAL_HOURS__DATE:
 				return getUTCDecimalHours((Date)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_HORIZONTAL_COORDINATES__EQUATORIALCOORDINATES_DOUBLE_DOUBLE_DATE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_HORIZONTAL_COORDINATES__EQUATORIALCOORDINATES_DOUBLE_DOUBLE_DATE:
 				return convertToHorizontalCoordinates((EquatorialCoordinates)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Date)arguments.get(3));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TIME_TO_ANGLE__INT_INT_INT:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TIME_TO_ANGLE__INT_INT_INT:
 				return convertTimeToAngle((Integer)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CLAMP_ANGLE_TO_ZERO2_PI__DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CLAMP_ANGLE_TO_ZERO2_PI__DOUBLE:
 				return clampAngleToZero2PI((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_EQUATORIAL_COORDINATES__ECLIPTICCOORDINATES:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_EQUATORIAL_COORDINATES__ECLIPTICCOORDINATES:
 				return convertToEquatorialCoordinates((EclipticCoordinates)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_ECLIPTIC_COORDINATES__EQUATORIALCOORDINATES:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_ECLIPTIC_COORDINATES__EQUATORIALCOORDINATES:
 				return convertToEclipticCoordinates((EquatorialCoordinates)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_EQUATORIAL_RECTANGULAR_TO_ECLIPTIC_RECTANGULAR__POINT3D:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_EQUATORIAL_RECTANGULAR_TO_ECLIPTIC_RECTANGULAR__POINT3D:
 				return convertFromEquatorialRectangularToEclipticRectangular((Point3d)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_ECLIPTIC_RECTANGULAR_TO_EQUATORIAL_RECTANGULAR__POINT3D:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_ECLIPTIC_RECTANGULAR_TO_EQUATORIAL_RECTANGULAR__POINT3D:
 				return convertFromEclipticRectangularToEquatorialRectangular((Point3d)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_ECLIPTIC_RECTANGULAR_TO_ECLIPTIC_COORDINATES__POINT3D:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_ECLIPTIC_RECTANGULAR_TO_ECLIPTIC_COORDINATES__POINT3D:
 				return convertFromEclipticRectangularToEclipticCoordinates((Point3d)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_EQUATORIAL_RECTANGULAR_TO_EQUATORIAL_COORDINATES__POINT3D:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_EQUATORIAL_RECTANGULAR_TO_EQUATORIAL_COORDINATES__POINT3D:
 				return convertFromEquatorialRectangularToEquatorialCoordinates((Point3d)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_HORIZONTAL_COORDINATES_TO_HORIZONTAL_RECTANGULAR__HORIZONTALCOORDINATES:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_HORIZONTAL_COORDINATES_TO_HORIZONTAL_RECTANGULAR__HORIZONTALCOORDINATES:
 				return convertFromHorizontalCoordinatesToHorizontalRectangular((HorizontalCoordinates)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_EQUATORIAL_COORDINATES_TO_EQUATORIAL_RECTANGULAR__EQUATORIALCOORDINATES:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_FROM_EQUATORIAL_COORDINATES_TO_EQUATORIAL_RECTANGULAR__EQUATORIALCOORDINATES:
 				return convertFromEquatorialCoordinatesToEquatorialRectangular((EquatorialCoordinates)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_AUTO_METERS__DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_AUTO_METERS__DOUBLE:
 				return convertAUtoMeters((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_MAXIMUM_SUN_ALTITUDE__DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_MAXIMUM_SUN_ALTITUDE__DOUBLE:
 				return getMaximumSunAltitude((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_HHMMSS_STRING__DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___CONVERT_TO_HHMMSS_STRING__DOUBLE:
 				return convertToHHmmssString((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_RISE_TIME__DATE_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_RISE_TIME__DATE_DOUBLE_DOUBLE:
 				return getSunRiseTime((Date)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_SET_TIME__DATE_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_SET_TIME__DATE_DOUBLE_DOUBLE:
 				return getSunSetTime((Date)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_HIGHEST_ELEVATION_TIME__DATE_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS___GET_SUN_HIGHEST_ELEVATION_TIME__DATE_DOUBLE_DOUBLE:
 				return getSunHighestElevationTime((Date)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);

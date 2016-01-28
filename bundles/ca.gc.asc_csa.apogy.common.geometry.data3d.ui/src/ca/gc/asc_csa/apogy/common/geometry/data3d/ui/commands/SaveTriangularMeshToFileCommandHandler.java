@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.commands;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands;
 
 import java.util.Iterator;
 
@@ -11,11 +11,11 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.geometry.data3d.ui.Activator;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;

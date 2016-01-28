@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class ImageMapLayerPresentationItemProvider extends MapLayerPresentationI
 				 getResourceLocator(),
 				 getString("_UI_ImageMapLayerPresentation_alpha_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageMapLayerPresentation_alpha_feature", "_UI_ImageMapLayerPresentation_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION__ALPHA,
+				 ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION__ALPHA,
 				 true,
 				 false,
 				 false,
@@ -139,7 +139,7 @@ public class ImageMapLayerPresentationItemProvider extends MapLayerPresentationI
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageMapLayerPresentation.class)) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider;
 
 
 import java.util.Collection;
@@ -10,22 +10,22 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobilePlatformSymphonySystemApiAdapterItemProvider extends SymphonySystemApiAdapterItemProvider {
+public class MobilePlatformApogySystemApiAdapterItemProvider extends ApogySystemApiAdapterItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobilePlatformSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory) {
+	public MobilePlatformApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,14 +45,14 @@ public class MobilePlatformSymphonySystemApiAdapterItemProvider extends Symphony
 	}
 
 	/**
-	 * This returns MobilePlatformSymphonySystemApiAdapter.gif.
+	 * This returns MobilePlatformApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobilePlatformSymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobilePlatformApogySystemApiAdapter"));
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class MobilePlatformSymphonySystemApiAdapterItemProvider extends Symphony
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MobilePlatformSymphonySystemApiAdapter_type");
+		return getString("_UI_MobilePlatformApogySystemApiAdapter_type");
 	}
 	
 

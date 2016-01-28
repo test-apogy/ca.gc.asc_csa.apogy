@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import java.util.List;
 import org.eclipse.emf.ecore.EObject;
@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointLocator()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getPointLocator()
  * @model abstract="true"
  * @generated
  */
@@ -31,7 +31,7 @@ public interface PointLocator extends EObject {
 	 * *
 	 * Returns a list of the points currently available for search.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates>" unique="false" many="false"
 	 * @generated
 	 */
 	List<CartesianPositionCoordinates> getPoints();
@@ -55,7 +55,7 @@ public interface PointLocator extends EObject {
 	 * *
 	 * Adds a list of points to the list of point to search.
 	 * <!-- end-model-doc -->
-	 * @model pointsDataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" pointsUnique="false" pointsMany="false"
+	 * @model pointsDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates>" pointsUnique="false" pointsMany="false"
 	 * @generated
 	 */
 	void addPoints(List<CartesianPositionCoordinates> points);
@@ -79,7 +79,7 @@ public interface PointLocator extends EObject {
 	 * *
 	 * Removes a list of points from the list of point to search.
 	 * <!-- end-model-doc -->
-	 * @model pointsDataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" pointsUnique="false" pointsMany="false"
+	 * @model pointsDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates>" pointsUnique="false" pointsMany="false"
 	 * @generated
 	 */
 	void removePoints(List<CartesianPositionCoordinates> points);
@@ -120,7 +120,7 @@ public interface PointLocator extends EObject {
 	 * @param maximumNumberOfNeighbors The maximum number of neighbors to return.
 	 * @return The closest neighbor, null if the PointLocator has no points.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" unique="false" many="false" pointUnique="false" maximumNumberOfNeighborsUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates>" unique="false" many="false" pointUnique="false" maximumNumberOfNeighborsUnique="false"
 	 * @generated
 	 */
 	List<CartesianPositionCoordinates> findClosestPoints(CartesianPositionCoordinates point, int maximumNumberOfNeighbors);
@@ -135,7 +135,7 @@ public interface PointLocator extends EObject {
 	 * @param radius The maximum radius from the point.
 	 * @return The list of neighbor within the radius. Never null, but can be empty.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" unique="false" many="false" pointUnique="false" radiusUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates>" unique="false" many="false" pointUnique="false" radiusUnique="false"
 	 * @generated
 	 */
 	List<CartesianPositionCoordinates> findPointsWithinRadius(CartesianPositionCoordinates point, double radius);

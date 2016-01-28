@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.geometry.data3d.las.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -12,13 +12,13 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade;
-import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFactory;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
-import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
-import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection;
+import ca.gc.asc_csa.apogy.common.lang.java.io.LittleEndianDataInputStream;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -26,15 +26,15 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
  *
  * @generated
  */
-public class Symphony__CommonGeometryData3DLASFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonGeometryData3DLASFacade
+public class ApogyCommonGeometryData3DLASFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonGeometryData3DLASFacade
 {
-	private static Symphony__CommonGeometryData3DLASFacade instance = null;
+	private static ApogyCommonGeometryData3DLASFacade instance = null;
 	
-	public static Symphony__CommonGeometryData3DLASFacade getInstance()
+	public static ApogyCommonGeometryData3DLASFacade getInstance()
 	{
 		if (instance == null)
 		{
-			instance = new Symphony__CommonGeometryData3DLASFacadeImpl();
+			instance = new ApogyCommonGeometryData3DLASFacadeImpl();
 		}
 		
 		return instance;
@@ -44,7 +44,7 @@ public class Symphony__CommonGeometryData3DLASFacadeImpl extends MinimalEObjectI
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DLASFacadeImpl() {
+	protected ApogyCommonGeometryData3DLASFacadeImpl() {
 		super();
 	}
 
@@ -54,7 +54,7 @@ public class Symphony__CommonGeometryData3DLASFacadeImpl extends MinimalEObjectI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DLASPackage.Literals.SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE;
+		return ApogyCommonGeometryData3DLASPackage.Literals.APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class Symphony__CommonGeometryData3DLASFacadeImpl extends MinimalEObjectI
 			throw new IllegalArgumentException("Invalid point format");
 		}
 
-		LASPoint point = Symphony__CommonGeometryData3DLASFactory.eINSTANCE.createLASPoint();
+		LASPoint point = ApogyCommonGeometryData3DLASFactory.eINSTANCE.createLASPoint();
 
 		// Every point format has at least the 0 format
 		ByteArrayInputStream bai = new ByteArrayInputStream(data);		
@@ -167,7 +167,7 @@ public class Symphony__CommonGeometryData3DLASFacadeImpl extends MinimalEObjectI
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DLASPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE:
+			case ApogyCommonGeometryData3DLASPackage.APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE:
 				try {
 					return createPoint((Integer)arguments.get(0), (byte[])arguments.get(1));
 				}
@@ -178,4 +178,4 @@ public class Symphony__CommonGeometryData3DLASFacadeImpl extends MinimalEObjectI
 		return super.eInvoke(operationID, arguments);
 	}
 
-} // Symphony__CommonGeometryData3DLASFacadeImpl
+} // ApogyCommonGeometryData3DLASFacadeImpl

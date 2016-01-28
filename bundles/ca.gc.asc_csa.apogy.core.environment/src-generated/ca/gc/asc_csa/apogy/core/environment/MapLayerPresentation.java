@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,11 +19,11 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.MapLayerPresentation#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.MapLayerPresentation#getMapLayer <em>Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation#getMapLayer <em>Map Layer</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapLayerPresentation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapLayerPresentation()
  * @model abstract="true"
  * @generated
  */
@@ -38,7 +38,7 @@ public interface MapLayerPresentation extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapLayerPresentation_Visible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapLayerPresentation_Visible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='PRESENTATION_SETTINGS'"
 	 * @generated
@@ -46,7 +46,7 @@ public interface MapLayerPresentation extends Named, Described {
 	boolean isVisible();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.MapLayerPresentation#isVisible <em>Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation#isVisible <em>Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Visible</em>' attribute.
@@ -65,14 +65,14 @@ public interface MapLayerPresentation extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map Layer</em>' reference.
 	 * @see #setMapLayer(AbstractMapLayer)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapLayerPresentation_MapLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapLayerPresentation_MapLayer()
 	 * @model
 	 * @generated
 	 */
 	AbstractMapLayer getMapLayer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.MapLayerPresentation#getMapLayer <em>Map Layer</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation#getMapLayer <em>Map Layer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Map Layer</em>' reference.

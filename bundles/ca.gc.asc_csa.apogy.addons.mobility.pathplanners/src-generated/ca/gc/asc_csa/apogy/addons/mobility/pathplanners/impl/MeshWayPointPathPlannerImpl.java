@@ -3,17 +3,17 @@
  *
  * $Id: MeshWayPointPathPlannerImpl.java,v 1.2.4.2 2015/05/21 15:50:52 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.MeshWayPointPathPlannerImpl#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl.MeshWayPointPathPlannerImpl#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends Way
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityPathplannersPackage.Literals.MESH_WAY_POINT_PATH_PLANNER;
+		return ApogyAddonsMobilityPathplannersPackage.Literals.MESH_WAY_POINT_PATH_PLANNER;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends Way
 			mesh = (Mesh<CartesianPositionCoordinates, CartesianPolygon>)eResolveProxy(oldMesh);
 			if (mesh != oldMesh) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH, oldMesh, mesh));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH, oldMesh, mesh));
 			}
 		}
 		return mesh;
@@ -95,7 +95,7 @@ public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends Way
 		Mesh<CartesianPositionCoordinates, CartesianPolygon> oldMesh = mesh;
 		mesh = newMesh;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH, oldMesh, mesh));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH, oldMesh, mesh));
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends Way
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
+			case ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
 				if (resolve) return getMesh();
 				return basicGetMesh();
 		}
@@ -122,7 +122,7 @@ public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends Way
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
+			case ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
 				setMesh((Mesh<CartesianPositionCoordinates, CartesianPolygon>)newValue);
 				return;
 		}
@@ -137,7 +137,7 @@ public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends Way
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
+			case ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
 				setMesh((Mesh<CartesianPositionCoordinates, CartesianPolygon>)null);
 				return;
 		}
@@ -152,7 +152,7 @@ public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends Way
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
+			case ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__MESH:
 				return mesh != null;
 		}
 		return super.eIsSet(featureID);

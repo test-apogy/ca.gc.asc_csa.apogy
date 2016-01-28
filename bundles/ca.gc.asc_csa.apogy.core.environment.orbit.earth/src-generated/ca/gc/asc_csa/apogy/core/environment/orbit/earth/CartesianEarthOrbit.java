@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
 import org.orekit.orbits.CartesianOrbit;
 
 /**
@@ -15,10 +15,10 @@ import org.orekit.orbits.CartesianOrbit;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit#getPvaCoordinates <em>Pva Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit#getPvaCoordinates <em>Pva Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCartesianEarthOrbit()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getCartesianEarthOrbit()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface CartesianEarthOrbit extends EarthOrbit {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pva Coordinates</em>' containment reference.
 	 * @see #setPvaCoordinates(TimedStampedPVACoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCartesianEarthOrbit_PvaCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getCartesianEarthOrbit_PvaCoordinates()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	TimedStampedPVACoordinates getPvaCoordinates();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit#getPvaCoordinates <em>Pva Coordinates</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit#getPvaCoordinates <em>Pva Coordinates</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pva Coordinates</em>' containment reference.
@@ -52,7 +52,7 @@ public interface CartesianEarthOrbit extends EarthOrbit {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitCartesianOrbit" unique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitCartesianOrbit" unique="false"
 	 * @generated
 	 */
 	CartesianOrbit getOreKitCartesianOrbit();

@@ -1,33 +1,33 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.imaging;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.sensors.imaging;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.symphony.addons.sensors.imaging,
- org.eclipse.symphony.addons.sensors.imaging.converters,
- org.eclipse.symphony.addons.sensors.imaging.impl,
- org.eclipse.symphony.addons.sensors.imaging.util
+Export-Package: ca.gc.asc_csa.apogy.addons.sensors.imaging,
+ ca.gc.asc_csa.apogy.addons.sensors.imaging.converters,
+ ca.gc.asc_csa.apogy.addons.sensors.imaging.impl,
+ ca.gc.asc_csa.apogy.addons.sensors.imaging.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
- org.eclipse.symphony.common.images;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
- org.eclipse.symphony.addons.sensors.fov;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.addons.sensors;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors.fov;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
  org.eclipse.swt;bundle-version="3.4.0";visibility:=reexport,
  org.eclipse.ui;bundle-version="3.4.2",
- org.eclipse.symphony.common.converters,
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ ca.gc.asc_csa.apogy.common.converters,
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-Activator: org.eclipse.symphony.addons.sensors.imaging.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.sensors.imaging.Activator

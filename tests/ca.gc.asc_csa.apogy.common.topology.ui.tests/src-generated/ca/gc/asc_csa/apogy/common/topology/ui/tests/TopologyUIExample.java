@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.tests;
+package ca.gc.asc_csa.apogy.common.topology.ui.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,8 +46,8 @@ public class TopologyUIExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(Symphony__CommonTopologyUIPackage.eNS_URI, 
-			 Symphony__CommonTopologyUIPackage.eINSTANCE);
+			(ApogyCommonTopologyUIPackage.eNS_URI, 
+			 ApogyCommonTopologyUIPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
@@ -55,7 +55,7 @@ public class TopologyUIExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.topologyui"));
-				TopologyPresentationRegistry root = Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
+				TopologyPresentationRegistry root = ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

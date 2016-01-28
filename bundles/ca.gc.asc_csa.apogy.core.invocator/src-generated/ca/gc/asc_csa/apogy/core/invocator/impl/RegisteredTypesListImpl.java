@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.core.invocator.RegisteredTypesList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeContributorsRegistry;
+import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeContributorsRegistry;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -30,7 +30,7 @@ import org.eclipse.symphony.core.invocator.TypeContributorsRegistry;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RegisteredTypesListImpl#getTypes <em>Types</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl#getTypes <em>Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +61,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorPackage.Literals.REGISTERED_TYPES_LIST;
+		return ApogyCoreInvocatorPackage.Literals.REGISTERED_TYPES_LIST;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 						System.err
 								.println("TypeContributorsRegistry.newInstance(): "
 										+ typeURI.toString()
-										+ " does not contain SymphonySystem instance.");
+										+ " does not contain ApogySystem instance.");
 					}
 
 				} catch (Throwable t) {
@@ -116,7 +116,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 			}
 			
 			types = new EObjectResolvingEList<Type>(Type.class, this,
-					Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES);			
+					ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES);			
 			types.addAll(list);
 		}
 		return types;
@@ -129,7 +129,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
+			case ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
 				return getTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -142,7 +142,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
+			case ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
 				return types != null && !types.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight <em>Pole Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight <em>Pole Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface FeatureOfInterestNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pole Height</em>' attribute.
 	 * @see #setPoleHeight(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_PoleHeight()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_PoleHeight()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getPoleHeight();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight <em>Pole Height</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight <em>Pole Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pole Height</em>' attribute.
@@ -60,14 +60,14 @@ public interface FeatureOfInterestNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Flag Visible</em>' attribute.
 	 * @see #setFlagVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_FlagVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_FlagVisible()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
 	boolean isFlagVisible();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Flag Visible</em>' attribute.

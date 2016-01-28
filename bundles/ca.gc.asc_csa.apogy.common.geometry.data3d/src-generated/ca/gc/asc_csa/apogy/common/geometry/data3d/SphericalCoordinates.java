@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getPhi <em>Phi</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getTheta <em>Theta</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getPhi <em>Phi</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getTheta <em>Theta</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphericalCoordinates()
  * @model
  * @generated
  */
@@ -44,15 +44,15 @@ public interface SphericalCoordinates extends Coordinates {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Phi</em>' attribute.
 	 * @see #setPhi(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_Phi()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphericalCoordinates_Phi()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getPhi();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getPhi <em>Phi</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getPhi <em>Phi</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Phi</em>' attribute.
@@ -75,15 +75,15 @@ public interface SphericalCoordinates extends Coordinates {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Theta</em>' attribute.
 	 * @see #setTheta(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_Theta()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphericalCoordinates_Theta()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getTheta();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getTheta <em>Theta</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getTheta <em>Theta</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Theta</em>' attribute.
@@ -106,15 +106,15 @@ public interface SphericalCoordinates extends Coordinates {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>R</em>' attribute.
 	 * @see #setR(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_R()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getSphericalCoordinates_R()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getR();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>R</em>' attribute.

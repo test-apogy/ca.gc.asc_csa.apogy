@@ -3,7 +3,7 @@
  *
  * $Id: ExclusionZonesCostFunctionImpl.java,v 1.2.4.2 2015/05/21 15:50:20 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -11,11 +11,11 @@ import java.util.Iterator;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.ExclusionZonesCostFunctionImpl#getExclusionZones <em>Exclusion Zones</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.ExclusionZonesCostFunctionImpl#getExclusionZones <em>Exclusion Zones</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +56,7 @@ public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.EXCLUSION_ZONES_COST_FUNCTION;
+		return ApogyAddonsMobilityPathplannersGraphPackage.Literals.EXCLUSION_ZONES_COST_FUNCTION;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl
 	 */
 	public EList<ExclusionZone> getExclusionZones() {
 		if (exclusionZones == null) {
-			exclusionZones = new EObjectResolvingEList<ExclusionZone>(ExclusionZone.class, this, Symphony__AddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES);
+			exclusionZones = new EObjectResolvingEList<ExclusionZone>(ExclusionZone.class, this, ApogyAddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES);
 		}
 		return exclusionZones;
 	}
@@ -79,7 +79,7 @@ public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
+			case ApogyAddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
 				return getExclusionZones();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -94,7 +94,7 @@ public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
+			case ApogyAddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
 				getExclusionZones().clear();
 				getExclusionZones().addAll((Collection<? extends ExclusionZone>)newValue);
 				return;
@@ -110,7 +110,7 @@ public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
+			case ApogyAddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
 				getExclusionZones().clear();
 				return;
 		}
@@ -125,7 +125,7 @@ public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
+			case ApogyAddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES:
 				return exclusionZones != null && !exclusionZones.isEmpty();
 		}
 		return super.eIsSet(featureID);

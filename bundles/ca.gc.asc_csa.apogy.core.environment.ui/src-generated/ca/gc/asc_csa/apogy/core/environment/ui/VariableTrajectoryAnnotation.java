@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.core.environment.ui;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryAnnotation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVariableTrajectoryAnnotation()
  * @model
  * @generated
  */
@@ -28,7 +28,7 @@ public interface VariableTrajectoryAnnotation extends AbstractVariableAnnotation
 {
   /**
 	 * Returns the value of the '<em><b>Trajectory Provider</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -36,15 +36,15 @@ public interface VariableTrajectoryAnnotation extends AbstractVariableAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trajectory Provider</em>' containment reference.
 	 * @see #setTrajectoryProvider(VariableTrajectoryProvider)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryAnnotation_TrajectoryProvider()
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVariableTrajectoryAnnotation_TrajectoryProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation
 	 * @model opposite="variableAnnotation" containment="true" required="true"
 	 * @generated
 	 */
   VariableTrajectoryProvider getTrajectoryProvider();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Trajectory Provider</em>' containment reference.

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegionImage()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegionImage()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface RectangularRegionImage extends RectangularRegionProvider
 	 * @return The resolution, in meters / pixel, or -1 if not defined.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/pixel'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m/pixel'"
 	 * @generated
 	 */
   double getResolution();

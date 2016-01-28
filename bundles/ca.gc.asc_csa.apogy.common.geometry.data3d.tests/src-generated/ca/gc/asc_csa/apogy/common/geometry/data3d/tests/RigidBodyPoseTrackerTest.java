@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.vecmath.Matrix4d;
 
-import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
-import org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -22,16 +22,16 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin() <em>Position Markers At Origin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin() <em>Position Markers At Origin</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List) <em>Add Position Markers</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List) <em>Remove Position Markers</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList) <em>Compute Transformation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List) <em>Compute Transformation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List) <em>Add Position Markers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List) <em>Remove Position Markers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList) <em>Compute Transformation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List) <em>Compute Transformation</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -93,7 +93,7 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createRigidBodyPoseTracker());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createRigidBodyPoseTracker());
 	}
 
 	/**
@@ -108,10 +108,10 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin() <em>Position Markers At Origin</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin() <em>Position Markers At Origin</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin()
 	 * @generated_NOT
 	 */
 	public void testGetPositionMarkersAtOrigin() 
@@ -120,10 +120,10 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List) <em>Add Position Markers</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List) <em>Add Position Markers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List)
 	 * @generated_NOT
 	 */
 	public void testAddPositionMarkers__List() 
@@ -132,10 +132,10 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List) <em>Remove Position Markers</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List) <em>Remove Position Markers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List)
 	 * @generated_NOT
 	 */
 	public void testRemovePositionMarkers__List() 
@@ -144,10 +144,10 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList) <em>Compute Transformation</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList) <em>Compute Transformation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
 	public void testComputeTransformation__EList() 
@@ -158,10 +158,10 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List) <em>Compute Transformation</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List) <em>Compute Transformation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List)
 	 * @generated
 	 */
 	public void testComputeTransformation__List() {
@@ -175,19 +175,19 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 		
 		// Marker positions w.r.t. fixed frame while body is at origin
 		List<PositionMarker> listPositionMarkerAtOrigin = new ArrayList<PositionMarker>();
-		PositionMarker markerA_0 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
+		PositionMarker markerA_0 = ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
 		markerA_0.setIdentifier("Marker A");
 		markerA_0.setX(-1.5);
 		markerA_0.setY(1.0);
 		markerA_0.setZ(0.5);
 		listPositionMarkerAtOrigin.add(markerA_0);
-		PositionMarker markerB_0 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
+		PositionMarker markerB_0 = ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
 		markerB_0.setIdentifier("Marker B");
 		markerB_0.setX(-1.5);
 		markerB_0.setY(-1.0);
 		markerB_0.setZ(0.5);
 		listPositionMarkerAtOrigin.add(markerB_0);
-		PositionMarker markerC_0 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
+		PositionMarker markerC_0 = ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
 		markerC_0.setIdentifier("Marker C");
 		markerC_0.setX(1.5);
 		markerC_0.setY(-1.0);
@@ -196,19 +196,19 @@ public class RigidBodyPoseTrackerTest extends TestCase {
 		
 		// Marker positions of moving rover w.r.t. fixed frame		
 		List<PositionMarker> listPositionMarker = new ArrayList<PositionMarker>();
-		PositionMarker markerA = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
+		PositionMarker markerA = ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
 		markerA.setIdentifier("Marker A");
 		markerA.setX(8.6216);
 		markerA.setY(6.0855);
 		markerA.setZ(1.6463);
 		listPositionMarker.add(markerA);
-		PositionMarker markerB = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
+		PositionMarker markerB = ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
 		markerB.setIdentifier("Marker B");
 		markerB.setX(9.0909);
 		markerB.setY(4.3387);
 		markerB.setZ(2.4920);
 		listPositionMarker.add(markerB);
-		PositionMarker markerC = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
+		PositionMarker markerC = ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker();
 		markerC.setIdentifier("Marker C");
 		markerC.setX(11.7539);
 		markerC.setY(4.3994);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.util.Collection;
 
@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.symphony.examples.satellite.Satellite;
-import org.eclipse.symphony.examples.satellite.SatellitesList;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl#getSatellites <em>Satellites</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatellitesListImpl#getSatellites <em>Satellites</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +61,7 @@ public class SatellitesListImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.SATELLITES_LIST;
+		return ApogyExamplesSatellitePackage.Literals.SATELLITES_LIST;
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class SatellitesListImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<Satellite> getSatellites() {
 		if (satellites == null) {
-			satellites = new EObjectContainmentEList<Satellite>(Satellite.class, this, Symphony__ExamplesSatellitePackage.SATELLITES_LIST__SATELLITES);
+			satellites = new EObjectContainmentEList<Satellite>(Satellite.class, this, ApogyExamplesSatellitePackage.SATELLITES_LIST__SATELLITES);
 		}
 		return satellites;
 	}
@@ -84,7 +84,7 @@ public class SatellitesListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
+			case ApogyExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
 				return ((InternalEList<?>)getSatellites()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -98,7 +98,7 @@ public class SatellitesListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
+			case ApogyExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
 				return getSatellites();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class SatellitesListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
+			case ApogyExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
 				getSatellites().clear();
 				getSatellites().addAll((Collection<? extends Satellite>)newValue);
 				return;
@@ -129,7 +129,7 @@ public class SatellitesListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
+			case ApogyExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
 				getSatellites().clear();
 				return;
 		}
@@ -144,7 +144,7 @@ public class SatellitesListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
+			case ApogyExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
 				return satellites != null && !satellites.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.mobile_platform.*;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.symphony.examples.mobile_platform.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformFactoryImpl extends EFactoryImpl implements Symphony__ExamplesMobilePlatformFactory
+public class ApogyExamplesMobilePlatformFactoryImpl extends EFactoryImpl implements ApogyExamplesMobilePlatformFactory
 {
 	/**
 	 * Creates the default factory implementation.
@@ -24,18 +24,18 @@ public class Symphony__ExamplesMobilePlatformFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesMobilePlatformFactory init()
+	public static ApogyExamplesMobilePlatformFactory init()
 	{
 		try {
-			Symphony__ExamplesMobilePlatformFactory theSymphony__ExamplesMobilePlatformFactory = (Symphony__ExamplesMobilePlatformFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesMobilePlatformPackage.eNS_URI);
-			if (theSymphony__ExamplesMobilePlatformFactory != null) {
-				return theSymphony__ExamplesMobilePlatformFactory;
+			ApogyExamplesMobilePlatformFactory theApogyExamplesMobilePlatformFactory = (ApogyExamplesMobilePlatformFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesMobilePlatformPackage.eNS_URI);
+			if (theApogyExamplesMobilePlatformFactory != null) {
+				return theApogyExamplesMobilePlatformFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesMobilePlatformFactoryImpl();
+		return new ApogyExamplesMobilePlatformFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Symphony__ExamplesMobilePlatformFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesMobilePlatformFactoryImpl()
+	public ApogyExamplesMobilePlatformFactoryImpl()
 	{
 		super();
 	}
@@ -58,10 +58,10 @@ public class Symphony__ExamplesMobilePlatformFactoryImpl extends EFactoryImpl im
 	public EObject create(EClass eClass)
 	{
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesMobilePlatformPackage.POSITION: return createPosition();
-			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION: return createNamedPosition();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM_STUB: return createMobilePlatformStub();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM_SIMULATED: return createMobilePlatformSimulated();
+			case ApogyExamplesMobilePlatformPackage.POSITION: return createPosition();
+			case ApogyExamplesMobilePlatformPackage.NAMED_POSITION: return createNamedPosition();
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM_STUB: return createMobilePlatformStub();
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM_SIMULATED: return createMobilePlatformSimulated();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -177,8 +177,8 @@ public class Symphony__ExamplesMobilePlatformFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesMobilePlatformPackage getSymphony__ExamplesMobilePlatformPackage() {
-		return (Symphony__ExamplesMobilePlatformPackage)getEPackage();
+	public ApogyExamplesMobilePlatformPackage getApogyExamplesMobilePlatformPackage() {
+		return (ApogyExamplesMobilePlatformPackage)getEPackage();
 	}
 
 	/**
@@ -188,9 +188,9 @@ public class Symphony__ExamplesMobilePlatformFactoryImpl extends EFactoryImpl im
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesMobilePlatformPackage getPackage()
+	public static ApogyExamplesMobilePlatformPackage getPackage()
 	{
-		return Symphony__ExamplesMobilePlatformPackage.eINSTANCE;
+		return ApogyExamplesMobilePlatformPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesMobilePlatformFactoryImpl
+} //ApogyExamplesMobilePlatformFactoryImpl

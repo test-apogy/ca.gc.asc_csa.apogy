@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyFactory
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesRoboticArmSymphony' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='Symphony__ExamplesRoboticArmSymphony' modelDirectory='/org.eclipse.symphony.examples.robotic_arm.symphony/src-generated' editDirectory='/org.eclipse.symphony.examples.robotic_arm.symphony.edit/src-generated' basePackage='org.eclipse.symphony.examples.robotic_arm'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRoboticArmApogy' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='ApogyExamplesRoboticArmApogy' modelDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.robotic_arm'"
  * @generated
  */
-public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
+public interface ApogyExamplesRoboticArmApogyPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -33,7 +33,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNAME = "symphony";
+  String eNAME = "apogy";
 
   /**
 	 * The package namespace URI.
@@ -41,7 +41,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.robotic_arm.symphony";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.robotic_arm.apogy";
 
   /**
 	 * The package namespace name.
@@ -49,7 +49,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_PREFIX = "symphony";
+  String eNS_PREFIX = "apogy";
 
   /**
 	 * The singleton instance of the package.
@@ -57,17 +57,17 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesRoboticArmSymphonyPackage eINSTANCE = org.eclipse.symphony.examples.robotic_arm.symphony.impl.Symphony__ExamplesRoboticArmSymphonyPackageImpl.init();
+  ApogyExamplesRoboticArmApogyPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.ApogyExamplesRoboticArmApogyPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmSymphonySystemApiAdapterImpl <em>Robotic Arm Symphony System Api Adapter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmApogySystemApiAdapterImpl <em>Robotic Arm Apogy System Api Adapter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmSymphonySystemApiAdapterImpl
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.Symphony__ExamplesRoboticArmSymphonyPackageImpl#getRoboticArmSymphonySystemApiAdapter()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmApogySystemApiAdapterImpl
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.ApogyExamplesRoboticArmApogyPackageImpl#getRoboticArmApogySystemApiAdapter()
 	 * @generated
 	 */
-  int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER = 0;
+  int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER = 0;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -76,7 +76,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT;
 
 		/**
 	 * The feature id for the '<em><b>Instance</b></em>' reference.
@@ -85,7 +85,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER__INSTANCE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__INSTANCE;
 
 		/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -94,7 +94,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
 
 		/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -103,7 +103,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
+  int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
 
   /**
 	 * The feature id for the '<em><b>Pose Corrector</b></em>' containment reference.
@@ -112,25 +112,25 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
 
 		/**
-	 * The feature id for the '<em><b>Symphony System</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM;
+  int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM;
 
   /**
-	 * The number of structural features of the '<em>Robotic Arm Symphony System Api Adapter</em>' class.
+	 * The number of structural features of the '<em>Robotic Arm Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
+  int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -139,7 +139,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
 
 		/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -148,7 +148,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
 
 		/**
 	 * The operation id for the '<em>Create Initialization Data</em>' operation.
@@ -157,7 +157,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
 
 		/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -166,7 +166,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
 
 		/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -175,7 +175,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
 
 		/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -184,7 +184,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
 
 		/**
 	 * The operation id for the '<em>Invoke</em>' operation.
@@ -193,7 +193,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -202,7 +202,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___DISPOSE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Create Result Matrix</em>' operation.
@@ -211,24 +211,24 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
+	int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
 
 		/**
-	 * The number of operations of the '<em>Robotic Arm Symphony System Api Adapter</em>' class.
+	 * The number of operations of the '<em>Robotic Arm Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
+  int ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl <em>Robotic Arm Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl <em>Robotic Arm Data</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.Symphony__ExamplesRoboticArmSymphonyPackageImpl#getRoboticArmData()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.ApogyExamplesRoboticArmApogyPackageImpl#getRoboticArmData()
 	 * @generated
 	 */
   int ROBOTIC_ARM_DATA = 1;
@@ -240,7 +240,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_DATA__INITIAL_POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
+  int ROBOTIC_ARM_DATA__INITIAL_POSE_TRANSFORM = ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
 
   /**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -249,7 +249,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_DATA__INITIALIZED = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
+	int ROBOTIC_ARM_DATA__INITIALIZED = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Speed</b></em>' attribute.
@@ -258,7 +258,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_DATA__SPEED = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
+	int ROBOTIC_ARM_DATA__SPEED = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Turret Angle</b></em>' attribute.
@@ -267,7 +267,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROBOTIC_ARM_DATA__TURRET_ANGLE = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
+	int ROBOTIC_ARM_DATA__TURRET_ANGLE = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Shoulder Angle</b></em>' attribute.
@@ -276,7 +276,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_DATA__SHOULDER_ANGLE = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
+  int ROBOTIC_ARM_DATA__SHOULDER_ANGLE = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Elbow Angle</b></em>' attribute.
@@ -285,7 +285,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_DATA__ELBOW_ANGLE = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
+  int ROBOTIC_ARM_DATA__ELBOW_ANGLE = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Wrist Angle</b></em>' attribute.
@@ -294,7 +294,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_DATA__WRIST_ANGLE = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 5;
+  int ROBOTIC_ARM_DATA__WRIST_ANGLE = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 5;
 
   /**
 	 * The number of structural features of the '<em>Robotic Arm Data</em>' class.
@@ -303,7 +303,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_DATA_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 6;
+  int ROBOTIC_ARM_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 6;
 
   /**
 	 * The number of operations of the '<em>Robotic Arm Data</em>' class.
@@ -312,90 +312,90 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROBOTIC_ARM_DATA_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+  int ROBOTIC_ARM_DATA_OPERATION_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter <em>Robotic Arm Symphony System Api Adapter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter <em>Robotic Arm Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Robotic Arm Symphony System Api Adapter</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter
+	 * @return the meta object for class '<em>Robotic Arm Apogy System Api Adapter</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter
 	 * @generated
 	 */
-  EClass getRoboticArmSymphonySystemApiAdapter();
+  EClass getRoboticArmApogySystemApiAdapter();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData <em>Robotic Arm Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData <em>Robotic Arm Data</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Robotic Arm Data</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData
 	 * @generated
 	 */
   EClass getRoboticArmData();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#isInitialized()
 	 * @see #getRoboticArmData()
 	 * @generated
 	 */
 	EAttribute getRoboticArmData_Initialized();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getSpeed <em>Speed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getSpeed <em>Speed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Speed</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getSpeed()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getSpeed()
 	 * @see #getRoboticArmData()
 	 * @generated
 	 */
 	EAttribute getRoboticArmData_Speed();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getTurretAngle <em>Turret Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getTurretAngle <em>Turret Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Turret Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getTurretAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getTurretAngle()
 	 * @see #getRoboticArmData()
 	 * @generated
 	 */
 	EAttribute getRoboticArmData_TurretAngle();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getShoulderAngle <em>Shoulder Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getShoulderAngle <em>Shoulder Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Shoulder Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getShoulderAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getShoulderAngle()
 	 * @see #getRoboticArmData()
 	 * @generated
 	 */
   EAttribute getRoboticArmData_ShoulderAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getElbowAngle <em>Elbow Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getElbowAngle <em>Elbow Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Elbow Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getElbowAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getElbowAngle()
 	 * @see #getRoboticArmData()
 	 * @generated
 	 */
   EAttribute getRoboticArmData_ElbowAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getWristAngle <em>Wrist Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getWristAngle <em>Wrist Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Wrist Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getWristAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData#getWristAngle()
 	 * @see #getRoboticArmData()
 	 * @generated
 	 */
@@ -408,7 +408,7 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesRoboticArmSymphonyFactory getSymphony__ExamplesRoboticArmSymphonyFactory();
+	ApogyExamplesRoboticArmApogyFactory getApogyExamplesRoboticArmApogyFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -426,20 +426,20 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmSymphonySystemApiAdapterImpl <em>Robotic Arm Symphony System Api Adapter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmApogySystemApiAdapterImpl <em>Robotic Arm Apogy System Api Adapter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmSymphonySystemApiAdapterImpl
-		 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.Symphony__ExamplesRoboticArmSymphonyPackageImpl#getRoboticArmSymphonySystemApiAdapter()
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmApogySystemApiAdapterImpl
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.ApogyExamplesRoboticArmApogyPackageImpl#getRoboticArmApogySystemApiAdapter()
 		 * @generated
 		 */
-    EClass ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER = eINSTANCE.getRoboticArmSymphonySystemApiAdapter();
+    EClass ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER = eINSTANCE.getRoboticArmApogySystemApiAdapter();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl <em>Robotic Arm Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl <em>Robotic Arm Data</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl
-		 * @see org.eclipse.symphony.examples.robotic_arm.symphony.impl.Symphony__ExamplesRoboticArmSymphonyPackageImpl#getRoboticArmData()
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.ApogyExamplesRoboticArmApogyPackageImpl#getRoboticArmData()
 		 * @generated
 		 */
     EClass ROBOTIC_ARM_DATA = eINSTANCE.getRoboticArmData();
@@ -488,4 +488,4 @@ public interface Symphony__ExamplesRoboticArmSymphonyPackage extends EPackage
 
   }
 
-} //Symphony__ExamplesRoboticArmSymphonyPackage
+} //ApogyExamplesRoboticArmApogyPackage

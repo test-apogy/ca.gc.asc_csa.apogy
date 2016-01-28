@@ -8,8 +8,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.common.emf"
-            class="org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.common.emf"
+            class="ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

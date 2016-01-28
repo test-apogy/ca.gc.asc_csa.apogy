@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.ui.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIFactory;
-import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage;
-import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl implements Symphony__CommonGeometryData25DUIPackage {
+public class ApogyCommonGeometryData25DUIPackageImpl extends EPackageImpl implements ApogyCommonGeometryData25DUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,12 +38,12 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonGeometryData25DUIPackageImpl() {
-		super(eNS_URI, Symphony__CommonGeometryData25DUIFactory.eINSTANCE);
+	private ApogyCommonGeometryData25DUIPackageImpl() {
+		super(eNS_URI, ApogyCommonGeometryData25DUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonGeometryData25DUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonGeometryData25DUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,31 +65,31 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData25DUIPackage init() {
-		if (isInited) return (Symphony__CommonGeometryData25DUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData25DUIPackage.eNS_URI);
+	public static ApogyCommonGeometryData25DUIPackage init() {
+		if (isInited) return (ApogyCommonGeometryData25DUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData25DUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonGeometryData25DUIPackageImpl theSymphony__CommonGeometryData25DUIPackage = (Symphony__CommonGeometryData25DUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonGeometryData25DUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonGeometryData25DUIPackageImpl());
+		ApogyCommonGeometryData25DUIPackageImpl theApogyCommonGeometryData25DUIPackage = (ApogyCommonGeometryData25DUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonGeometryData25DUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonGeometryData25DUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
-		Symphony__CommonGeometryData25DPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData25DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonGeometryData25DUIPackage.createPackageContents();
+		theApogyCommonGeometryData25DUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonGeometryData25DUIPackage.initializePackageContents();
+		theApogyCommonGeometryData25DUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonGeometryData25DUIPackage.freeze();
+		theApogyCommonGeometryData25DUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonGeometryData25DUIPackage.eNS_URI, theSymphony__CommonGeometryData25DUIPackage);
-		return theSymphony__CommonGeometryData25DUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonGeometryData25DUIPackage.eNS_URI, theApogyCommonGeometryData25DUIPackage);
+		return theApogyCommonGeometryData25DUIPackage;
 	}
 
 	/**
@@ -115,8 +115,8 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DUIFactory getSymphony__CommonGeometryData25DUIFactory() {
-		return (Symphony__CommonGeometryData25DUIFactory)getEFactoryInstance();
+	public ApogyCommonGeometryData25DUIFactory getApogyCommonGeometryData25DUIFactory() {
+		return (ApogyCommonGeometryData25DUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -166,22 +166,22 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
-		Symphony__CommonGeometryData25DPackage theSymphony__CommonGeometryData25DPackage = (Symphony__CommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData25DPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
+		ApogyCommonGeometryData25DPackage theApogyCommonGeometryData25DPackage = (ApogyCommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData25DPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		volumetricCoordinatesSet25DPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		volumetricCoordinatesSet25DPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(volumetricCoordinatesSet25DPresentationEClass, VolumetricCoordinatesSet25DPresentation.class, "VolumetricCoordinatesSet25DPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVolumetricCoordinatesSet25DPresentation_PointsCloud(), theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D(), null, "pointsCloud", null, 0, 1, VolumetricCoordinatesSet25DPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVolumetricCoordinatesSet25DPresentation_PointsCloud(), theApogyCommonGeometryData25DPackage.getVolumetricCoordinatesSet25D(), null, "pointsCloud", null, 0, 1, VolumetricCoordinatesSet25DPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonGeometryData25DUIPackageImpl
+} //ApogyCommonGeometryData25DUIPackageImpl

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.robotic_arm;
+package ca.gc.asc_csa.apogy.examples.robotic_arm;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -10,7 +10,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator implements BundleActivator
 {
-	public static final String ID = "org.eclipse.symphony.examples.robotic_arm";
+	public static final String ID = "ca.gc.asc_csa.apogy.examples.robotic_arm";
 	
 	/**
 	 * This is a single activator instance which is shared

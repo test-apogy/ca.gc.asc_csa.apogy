@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +18,9 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.GeographicCoordinatesImpl#getLongitude <em>Longitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.GeographicCoordinatesImpl#getLatitude <em>Latitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.GeographicCoordinatesImpl#getElevation <em>Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.GeographicCoordinatesImpl#getLongitude <em>Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.GeographicCoordinatesImpl#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.GeographicCoordinatesImpl#getElevation <em>Elevation</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,7 +100,7 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES;
+		return ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES;
 	}
 
   /**
@@ -123,7 +123,7 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldLongitude = longitude;
 		longitude = newLongitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE, oldLongitude, longitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE, oldLongitude, longitude));
 	}
 
   /**
@@ -146,7 +146,7 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldLatitude = latitude;
 		latitude = newLatitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE, oldLatitude, latitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE, oldLatitude, latitude));
 	}
 
   /**
@@ -169,7 +169,7 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldElevation = elevation;
 		elevation = newElevation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION, oldElevation, elevation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION, oldElevation, elevation));
 	}
 
   /**
@@ -181,11 +181,11 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
 				return getLongitude();
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
 				return getLatitude();
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
 				return getElevation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
 				setLongitude((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
 				setLatitude((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
 				setElevation((Double)newValue);
 				return;
 		}
@@ -222,13 +222,13 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
 				setLongitude(LONGITUDE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
 				setLatitude(LATITUDE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
 				setElevation(ELEVATION_EDEFAULT);
 				return;
 		}
@@ -244,11 +244,11 @@ public class GeographicCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
 				return longitude != LONGITUDE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
 				return latitude != LATITUDE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
 				return elevation != ELEVATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

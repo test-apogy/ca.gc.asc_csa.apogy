@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -18,21 +18,21 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage.Literals;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage.Literals;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-public class NewSymphonySystemComposite extends Composite {
+public class NewApogySystemComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 	private Text textFolder;
 	private Text textFilename;
-	private NewSymphonySystemSettings systemSettings;
+	private NewApogySystemSettings systemSettings;
 	
 	
-	public NewSymphonySystemComposite(Composite parent, int style, NewSymphonySystemSettings systemSettings) {
+	public NewApogySystemComposite(Composite parent, int style, NewApogySystemSettings systemSettings) {
 		this(parent, style);
 		this.systemSettings = systemSettings;
 	}
@@ -42,7 +42,7 @@ public class NewSymphonySystemComposite extends Composite {
 	 * @param parent
 	 * @param style
 	 */
-	public NewSymphonySystemComposite(Composite parent, int style) {
+	public NewApogySystemComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -95,15 +95,15 @@ public class NewSymphonySystemComposite extends Composite {
 		}
 	}
 	
-	public NewSymphonySystemSettings getNewSymphonySystemSettings() {
+	public NewApogySystemSettings getNewApogySystemSettings() {
 		return systemSettings;
 	}
 
-	public void setNewSymphonySystemSettings(NewSymphonySystemSettings systemSettings) {
-		setNewSymphonySystemSettings(systemSettings, true);
+	public void setNewApogySystemSettings(NewApogySystemSettings systemSettings) {
+		setNewApogySystemSettings(systemSettings, true);
 	}
 
-	public void setNewSymphonySystemSettings(NewSymphonySystemSettings systemSettings,
+	public void setNewApogySystemSettings(NewApogySystemSettings systemSettings,
 			boolean update) {
 		this.systemSettings = systemSettings;
 		if (update) {
@@ -120,11 +120,11 @@ public class NewSymphonySystemComposite extends Composite {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
 		IObservableValue observeTextTextFilenameObserveWidget = WidgetProperties.text(SWT.Modify).observe(textFilename);
-		IObservableValue systemSettingsFilenameObserveValue = EMFObservables.observeValue(systemSettings, Literals.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME);
+		IObservableValue systemSettingsFilenameObserveValue = EMFObservables.observeValue(systemSettings, Literals.NEW_APOGY_SYSTEM_SETTINGS__FILENAME);
 		bindingContext.bindValue(observeTextTextFilenameObserveWidget, systemSettingsFilenameObserveValue, null, null);
 		//
 		IObservableValue observeTextTextFolderObserveWidget = WidgetProperties.text(SWT.NONE).observe(textFolder);
-		IObservableValue systemSettingsFolderObserveValue = EMFObservables.observeValue(systemSettings, Literals.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER);
+		IObservableValue systemSettingsFolderObserveValue = EMFObservables.observeValue(systemSettings, Literals.NEW_APOGY_SYSTEM_SETTINGS__FOLDER);
 		bindingContext.bindValue(observeTextTextFolderObserveWidget, systemSettingsFolderObserveValue, null, null);
 		//
 		return bindingContext;

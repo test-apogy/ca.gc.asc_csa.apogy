@@ -1,9 +1,9 @@
-package org.eclipse.symphony.addons.ros.messages;
+package ca.gc.asc_csa.apogy.addons.ros.messages;
 
 public interface ROSFrameworkLogEntry extends org.ros.internal.message.Message
 {
-	static final java.lang.String _TYPE = "org.eclipse.symphony.addons.ros.messages/ROSFrameworkLogEntry";
-	static final java.lang.String _DEFINITION = "# ROS message\t: org.eclipse.symphony.addons.ros.messages/ROSFrameworkLogEntry\n" +
+	static final java.lang.String _TYPE = "ca.gc.asc_csa.apogy.addons.ros.messages/ROSFrameworkLogEntry";
+	static final java.lang.String _DEFINITION = "# ROS message\t: ca.gc.asc_csa.apogy.addons.ros.messages/ROSFrameworkLogEntry\n" +
 												"# File name\t\t: ROSFrameworkLogEntry.msg\n" +
 												"# Created on\t: 14 feb 2013\n" +
 												"# Last edit\t\t: 14 feb 2013\n" +

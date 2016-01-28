@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.impl;
+package ca.gc.asc_csa.apogy.addons.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -9,11 +9,11 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.ui.Activator;
-import org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation;
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage;
-import org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesConstants;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage;
+import ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public class SunVector3DToolNodePresentationImpl extends NodePresentationImpl im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsUIPackage.Literals.SUN_VECTOR3_DTOOL_NODE_PRESENTATION;
+		return ApogyAddonsUIPackage.Literals.SUN_VECTOR3_DTOOL_NODE_PRESENTATION;
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class SunVector3DToolNodePresentationImpl extends NodePresentationImpl im
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 			
 		// Change color.
-		RGB rgb = PreferenceConverter.getColor(store, SymphonyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID);
+		RGB rgb = PreferenceConverter.getColor(store, ApogyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID);
 		if(rgb != null) setColor(rgb);
 		
 		super.applyPreferences();

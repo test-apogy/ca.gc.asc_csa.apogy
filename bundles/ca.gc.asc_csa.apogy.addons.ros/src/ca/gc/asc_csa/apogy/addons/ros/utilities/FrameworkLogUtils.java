@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ros.utilities;
+package ca.gc.asc_csa.apogy.addons.ros.utilities;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.osgi.framework.log.FrameworkLogEntry;
@@ -6,9 +6,9 @@ import org.ros.node.ConnectedNode;
 
 public class FrameworkLogUtils 
 {
-	public static org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry convertToROSFrameworkLogEntry(IStatus status, final ConnectedNode connectedNode)
+	public static ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry convertToROSFrameworkLogEntry(IStatus status, final ConnectedNode connectedNode)
 	{
-		org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry entry = connectedNode.getTopicMessageFactory().newFromType(org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry._TYPE);		
+		ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry entry = connectedNode.getTopicMessageFactory().newFromType(ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry._TYPE);		
 		
 		entry.setBundleName(status.getPlugin());
 		entry.setMessage(status.getMessage());
@@ -24,9 +24,9 @@ public class FrameworkLogUtils
 		return entry;
 	}	
 	
-	public static org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry convertToROSFrameworkLogEntry(FrameworkLogEntry frameworkLogEntry, final ConnectedNode connectedNode)
+	public static ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry convertToROSFrameworkLogEntry(FrameworkLogEntry frameworkLogEntry, final ConnectedNode connectedNode)
 	{
-		org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry entry = connectedNode.getTopicMessageFactory().newFromType(org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry._TYPE);		
+		ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry entry = connectedNode.getTopicMessageFactory().newFromType(ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry._TYPE);		
 		
 		entry.setBundleName(frameworkLogEntry.getEntry());
 		entry.setMessage(frameworkLogEntry.getMessage());
@@ -42,7 +42,7 @@ public class FrameworkLogUtils
 		return entry;
 	}	
 
-	public static FrameworkLogEntry convertToFrameworkLogEntry(String messagePrefix, org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry rosFrameworkLogEntry)
+	public static FrameworkLogEntry convertToFrameworkLogEntry(String messagePrefix, ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry rosFrameworkLogEntry)
 	{
 		String bundleName = rosFrameworkLogEntry.getBundleName();
 		int severity = rosFrameworkLogEntry.getSeverity();

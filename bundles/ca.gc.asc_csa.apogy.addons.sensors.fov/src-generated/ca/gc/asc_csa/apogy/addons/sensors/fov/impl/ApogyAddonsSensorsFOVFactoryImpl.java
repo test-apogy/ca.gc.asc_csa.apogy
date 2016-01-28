@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -11,9 +11,9 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.sensors.fov.*;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.*;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +21,24 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsFOVFactory {
+public class ApogyAddonsSensorsFOVFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsFOVFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsFOVFactory init() {
+	public static ApogyAddonsSensorsFOVFactory init() {
 		try {
-			Symphony__AddonsSensorsFOVFactory theSymphony__AddonsSensorsFOVFactory = (Symphony__AddonsSensorsFOVFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsFOVPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsFOVFactory != null) {
-				return theSymphony__AddonsSensorsFOVFactory;
+			ApogyAddonsSensorsFOVFactory theApogyAddonsSensorsFOVFactory = (ApogyAddonsSensorsFOVFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsFOVPackage.eNS_URI);
+			if (theApogyAddonsSensorsFOVFactory != null) {
+				return theApogyAddonsSensorsFOVFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsFOVFactoryImpl();
+		return new ApogyAddonsSensorsFOVFactoryImpl();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVFactoryImpl() {
+	public ApogyAddonsSensorsFOVFactoryImpl() {
 		super();
 	}
 
@@ -59,14 +59,14 @@ public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsFOVPackage.FIELD_OF_VIEW: return createFieldOfView();
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE: return createDistanceRange();
-			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN: return createAngularSpan();
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW: return createRectangularFrustrumFieldOfView();
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW: return createConicalFieldOfView();
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW: return createCircularSectorFieldOfView();
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE: return createRectangularFrustrumFieldOfViewSamplingShape();
-			case Symphony__AddonsSensorsFOVPackage.SYMPHONY_ADDONS_SENSORS_FOV_FACADE: return createSymphony__AddonsSensorsFOVFacade();
+			case ApogyAddonsSensorsFOVPackage.FIELD_OF_VIEW: return createFieldOfView();
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE: return createDistanceRange();
+			case ApogyAddonsSensorsFOVPackage.ANGULAR_SPAN: return createAngularSpan();
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW: return createRectangularFrustrumFieldOfView();
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW: return createConicalFieldOfView();
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW: return createCircularSectorFieldOfView();
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE: return createRectangularFrustrumFieldOfViewSamplingShape();
+			case ApogyAddonsSensorsFOVPackage.APOGY_ADDONS_SENSORS_FOV_FACADE: return createApogyAddonsSensorsFOVFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -147,9 +147,9 @@ public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVFacade createSymphony__AddonsSensorsFOVFacade() {
-		Symphony__AddonsSensorsFOVFacadeImpl symphony__AddonsSensorsFOVFacade = new Symphony__AddonsSensorsFOVFacadeImpl();
-		return symphony__AddonsSensorsFOVFacade;
+	public ApogyAddonsSensorsFOVFacade createApogyAddonsSensorsFOVFacade() {
+		ApogyAddonsSensorsFOVFacadeImpl apogy__AddonsSensorsFOVFacade = new ApogyAddonsSensorsFOVFacadeImpl();
+		return apogy__AddonsSensorsFOVFacade;
 	}
 
 	/**
@@ -157,8 +157,8 @@ public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVPackage getSymphony__AddonsSensorsFOVPackage() {
-		return (Symphony__AddonsSensorsFOVPackage)getEPackage();
+	public ApogyAddonsSensorsFOVPackage getApogyAddonsSensorsFOVPackage() {
+		return (ApogyAddonsSensorsFOVPackage)getEPackage();
 	}
 
 	/**
@@ -168,8 +168,8 @@ public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsSensorsFOVPackage getPackage() {
-		return Symphony__AddonsSensorsFOVPackage.eINSTANCE;
+	public static ApogyAddonsSensorsFOVPackage getPackage() {
+		return ApogyAddonsSensorsFOVPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsFOVFactoryImpl
+} //ApogyAddonsSensorsFOVFactoryImpl

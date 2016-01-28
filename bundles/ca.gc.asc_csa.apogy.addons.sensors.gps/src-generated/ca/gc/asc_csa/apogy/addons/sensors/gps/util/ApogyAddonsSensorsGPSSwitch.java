@@ -1,25 +1,25 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps.util;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.gps.*;
-import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
-import org.eclipse.symphony.common.emf.Server;
-import org.eclipse.symphony.common.emf.Startable;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.*;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor;
+import ca.gc.asc_csa.apogy.common.emf.Server;
+import ca.gc.asc_csa.apogy.common.emf.Startable;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,17 +31,17 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage
  * @generated
  */
-public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsGPSSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsGPSPackage modelPackage;
+	protected static ApogyAddonsSensorsGPSPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -49,9 +49,9 @@ public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsGPSSwitch() {
+	public ApogyAddonsSensorsGPSSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsGPSPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsGPSPackage.eINSTANCE;
 		}
 	}
 
@@ -78,25 +78,25 @@ public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_CONNECTION: {
+			case ApogyAddonsSensorsGPSPackage.GPS_CONNECTION: {
 				GPSConnection gpsConnection = (GPSConnection)theEObject;
 				T result = caseGPSConnection(gpsConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.GPS_DATA_INTERPRETER: {
+			case ApogyAddonsSensorsGPSPackage.GPS_DATA_INTERPRETER: {
 				GPSDataInterpreter gpsDataInterpreter = (GPSDataInterpreter)theEObject;
 				T result = caseGPSDataInterpreter(gpsDataInterpreter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING: {
+			case ApogyAddonsSensorsGPSPackage.GPS_READING: {
 				GPSReading gpsReading = (GPSReading)theEObject;
 				T result = caseGPSReading(gpsReading);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR: {
+			case ApogyAddonsSensorsGPSPackage.GPS_POSE_SENSOR: {
 				GPSPoseSensor gpsPoseSensor = (GPSPoseSensor)theEObject;
 				T result = caseGPSPoseSensor(gpsPoseSensor);
 				if (result == null) result = casePoseSensor(gpsPoseSensor);
@@ -115,28 +115,28 @@ public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.GPS: {
+			case ApogyAddonsSensorsGPSPackage.GPS: {
 				GPS gps = (GPS)theEObject;
 				T result = caseGPS(gps);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS: {
+			case ApogyAddonsSensorsGPSPackage.MARKED_GPS: {
 				MarkedGPS markedGPS = (MarkedGPS)theEObject;
 				T result = caseMarkedGPS(markedGPS);
 				if (result == null) result = caseGPS(markedGPS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.GPS_REPOSITORY: {
+			case ApogyAddonsSensorsGPSPackage.GPS_REPOSITORY: {
 				GPSRepository gpsRepository = (GPSRepository)theEObject;
 				T result = caseGPSRepository(gpsRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.SYMPHONY_ADDONS_SENSORS_GPS_FACADE: {
-				Symphony__AddonsSensorsGPSFacade symphony__AddonsSensorsGPSFacade = (Symphony__AddonsSensorsGPSFacade)theEObject;
-				T result = caseSymphony__AddonsSensorsGPSFacade(symphony__AddonsSensorsGPSFacade);
+			case ApogyAddonsSensorsGPSPackage.APOGY_ADDONS_SENSORS_GPS_FACADE: {
+				ApogyAddonsSensorsGPSFacade apogy__AddonsSensorsGPSFacade = (ApogyAddonsSensorsGPSFacade)theEObject;
+				T result = caseApogyAddonsSensorsGPSFacade(apogy__AddonsSensorsGPSFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -260,7 +260,7 @@ public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__AddonsSensorsGPSFacade(Symphony__AddonsSensorsGPSFacade object) {
+	public T caseApogyAddonsSensorsGPSFacade(ApogyAddonsSensorsGPSFacade object) {
 		return null;
 	}
 
@@ -475,4 +475,4 @@ public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsGPSSwitch
+} //ApogyAddonsSensorsGPSSwitch

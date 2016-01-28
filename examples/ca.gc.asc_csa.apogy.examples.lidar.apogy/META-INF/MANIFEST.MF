@@ -1,30 +1,30 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.examples.lidar.symphony;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.examples.lidar.apogy;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.common.topology.bindings;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.core;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.core.invocator;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.addons.sensors.fov;visibility:=reexport,
- org.eclipse.symphony.addons.sensors.fov.bindings;visibility:=reexport,
- org.eclipse.symphony.examples.lidar;visibility:=reexport
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors.fov;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors.fov.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.examples.lidar;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.examples.lidar.symphony,
- org.eclipse.symphony.examples.lidar.symphony.impl,
- org.eclipse.symphony.examples.lidar.symphony.util
-Bundle-Activator: org.eclipse.symphony.examples.lidar.symphony.Activator
+Export-Package: ca.gc.asc_csa.apogy.examples.lidar.apogy,
+ ca.gc.asc_csa.apogy.examples.lidar.apogy.impl,
+ ca.gc.asc_csa.apogy.examples.lidar.apogy.util
+Bundle-Activator: ca.gc.asc_csa.apogy.examples.lidar.apogy.Activator

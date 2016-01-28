@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.jme3;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +6,12 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Vector2f;
 import com.jme3.math.Vector3f;

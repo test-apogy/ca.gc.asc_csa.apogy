@@ -4,29 +4,29 @@
    <extension
          point="org.eclipse.ui.views">
       <category
-            id="org.eclipse.symphony.core.ui.category"
-            name="Symphony Core">
+            id="ca.gc.asc_csa.apogy.core.ui.category"
+            name="Apogy Core">
       </category>
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.ui.views.MovableTrajectoryView"
-            id="org.eclipse.symphony.core.ui.views.MovableTrajectoryView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.ui.views.MovableTrajectoryView"
+            id="ca.gc.asc_csa.apogy.core.ui.views.MovableTrajectoryView"
             name="Movable Trajectory View"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.ui.views.SymphonyEnvironmentTimeSourcesView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.ui.views.ApogyEnvironmentTimeSourcesView"
             icon="icons/eview16/time_sources_view.gif"
-            id="org.eclipse.symphony.core.ui.view1"
+            id="ca.gc.asc_csa.apogy.core.ui.view1"
             name="Time Source"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.ui.views.DataProductsListsContainerView"
-            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/DataProductsListsContainer.gif"
-            id="org.eclipse.symphony.core.ui.views.DataProductsListsContainerView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.ui.views.DataProductsListsContainerView"
+            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/DataProductsListsContainer.gif"
+            id="ca.gc.asc_csa.apogy.core.ui.views.DataProductsListsContainerView"
             name="Data Products"
             restorable="true">
       </view>      
@@ -35,10 +35,10 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.core.ui.property.category.Default"
-               id="org.eclipse.symphony.core.ui.property.tab.SymphonySystem3dViewer"
+               category="ca.gc.asc_csa.apogy.core.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.core.ui.property.tab.ApogySystem3dViewer"
                label="3D">
          </propertyTab>
       </propertyTabs>
@@ -47,10 +47,10 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.core.ui.property.category.Default"
-               id="org.eclipse.symphony.core.ui.property.tabs.TimeSourcesList"
+               category="ca.gc.asc_csa.apogy.core.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.core.ui.property.tabs.TimeSourcesList"
                label="Time Sources">
          </propertyTab>
       </propertyTabs>
@@ -59,12 +59,12 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
           <propertySection
-               class="org.eclipse.symphony.core.ui.properties.sections.TimeSourcesListSection"
-               filter="org.eclipse.symphony.core.ui.properties.sections.TimeSourcesListSection"
-               id="org.eclipse.symphony.core.ui.properties.sections.TimeSourcesListSection"
-               tab="org.eclipse.symphony.core.ui.property.tabs.TimeSourcesList">
+               class="ca.gc.asc_csa.apogy.core.ui.properties.sections.TimeSourcesListSection"
+               filter="ca.gc.asc_csa.apogy.core.ui.properties.sections.TimeSourcesListSection"
+               id="ca.gc.asc_csa.apogy.core.ui.properties.sections.TimeSourcesListSection"
+               tab="ca.gc.asc_csa.apogy.core.ui.property.tabs.TimeSourcesList">
          </propertySection>
       </propertySections>
    </extension>
@@ -72,83 +72,83 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="org.eclipse.symphony.core.ui.property.category.Default">
+               category="ca.gc.asc_csa.apogy.core.ui.property.category.Default">
          </propertyCategory>
       </propertyContributor>
    </extension>
    <extension
          point="org.eclipse.ui.newWizards">
       <wizard
-            category="org.eclipse.symphony.core.ui"
-            class="org.eclipse.symphony.core.ui.wizards.NewSymphonyProjectWizard"
+            category="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogyProjectWizard"
             icon="icons/sample.gif"
-            id="org.eclipse.symphony.core.ui.wizards.NewSymphonyProjectWizard"
-            name="New Symphony Project"
+            id="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogyProjectWizard"
+            name="New Apogy Project"
             project="true">
       </wizard>
       <wizard
-            category="org.eclipse.symphony.core.ui"
-            class="org.eclipse.symphony.core.ui.wizards.NewSymphonySessionWizard"
+            category="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySessionWizard"
             icon="icons/sample.gif"
-            id="org.eclipse.symphony.core.ui.wizards.NewSymphonySessionWizard"
-            name="New Symphony Session">
+            id="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySessionWizard"
+            name="New Apogy Session">
       </wizard>
       <wizard
-            category="org.eclipse.symphony.core.ui"
-            class="org.eclipse.symphony.core.ui.wizards.NewSymphonySystemWizard"
+            category="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySystemWizard"
             icon="icons/sample.gif"
-            id="org.eclipse.symphony.core.ui.wizards.NewSymphonySystemWizard"
-            name="New Symphony System">
+            id="ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySystemWizard"
+            name="New Apogy System">
       </wizard>      
    </extension>
    
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_core_ui -->
+      <!-- @generated apogy_core_ui -->
       <package
-            uri="org.eclipse.symphony.core.ui"
-            class="org.eclipse.symphony.core.ui.Symphony__CoreUIPackage"
-            genModel="model/symphony_core_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage"
+            genModel="model/apogy_core_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.core.ui.ResultNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.core.ui.ResultNodePresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
             description="Toggles the enabled flag of a PoseCorrector."
-            id="org.eclipse.symphony.core.ui.commands.TogglePoseCorrectorEnabledCommand"
+            id="ca.gc.asc_csa.apogy.core.ui.commands.TogglePoseCorrectorEnabledCommand"
             name="TogglePoseCorrectorEnabledCommand">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.ui.commands.LoadFeatureOfInterestFromFile"
-            id="org.eclipse.symphony.core.ui.commands.LoadFeatureOfInterestFromFile"
+            defaultHandler="ca.gc.asc_csa.apogy.core.ui.commands.LoadFeatureOfInterestFromFile"
+            id="ca.gc.asc_csa.apogy.core.ui.commands.LoadFeatureOfInterestFromFile"
             name="Load Feature Of Interest From File">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.ui.commands.SaveFeatureOfInterestToFile"
-            id="org.eclipse.symphony.core.ui.commands.SaveFeatureOfInterestToFile"
+            defaultHandler="ca.gc.asc_csa.apogy.core.ui.commands.SaveFeatureOfInterestToFile"
+            id="ca.gc.asc_csa.apogy.core.ui.commands.SaveFeatureOfInterestToFile"
             name="Save Feature Of Interest To File">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.ui.commands.CreateUserDefinedResult"
-            id="org.eclipse.symphony.core.ui.commands.CreateUserDefinedResult"
+            defaultHandler="ca.gc.asc_csa.apogy.core.ui.commands.CreateUserDefinedResult"
+            id="ca.gc.asc_csa.apogy.core.ui.commands.CreateUserDefinedResult"
             name="Create User Defined Result">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.ui.commands.UpdatableUpdateCommandHandler"
+            defaultHandler="ca.gc.asc_csa.apogy.core.ui.commands.UpdatableUpdateCommandHandler"
             description="Commands the Update of an Updatable."
-            id="org.eclipse.symphony.core.ui.commands.UpdatableUpdate"
+            id="ca.gc.asc_csa.apogy.core.ui.commands.UpdatableUpdate"
             name="Update">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.ui.commands.ToggleUpdatableAutoUpdateEnableCommandHandler"
+            defaultHandler="ca.gc.asc_csa.apogy.core.ui.commands.ToggleUpdatableAutoUpdateEnableCommandHandler"
             description="Toggles the Update AutoUpdate setting."
-            id="org.eclipse.symphony.core.ui.commands.UpdatableToggleAutoUpdate"
+            id="ca.gc.asc_csa.apogy.core.ui.commands.UpdatableToggleAutoUpdate"
             name="Toggle Auto Update">
       </command>
    </extension>
@@ -157,8 +157,8 @@
       <menuContribution
            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
            <menu
-              id="org.eclipse.symphony.core.ui.menu"
-              label="Symphony">
+              id="ca.gc.asc_csa.apogy.core.ui.menu"
+              label="Apogy">
            </menu>
       </menuContribution>
    </extension>
@@ -166,9 +166,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.core.ui.commands.TogglePoseCorrectorEnabledCommand"
+               commandId="ca.gc.asc_csa.apogy.core.ui.commands.TogglePoseCorrectorEnabledCommand"
                label="Enable / Disable Pose Corrector"
                style="push">
             <visibleWhen
@@ -180,11 +180,11 @@
                      operator="or">
                        <and>
                            <instanceof
-                                 value="org.eclipse.symphony.core.invocator.Variable">
+                                 value="ca.gc.asc_csa.apogy.core.invocator.Variable">
                            </instanceof>
                            <test
                                  forcePluginActivation="true"
-                                 property="org.eclipse.symphony.core.ui.instanceOfSymphonySystem">
+                                 property="ca.gc.asc_csa.apogy.core.ui.instanceOfApogySystem">
                            </test>
                        </and>
                   </iterate>
@@ -192,7 +192,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.ui.commands.LoadFeatureOfInterestFromFile"
+               commandId="ca.gc.asc_csa.apogy.core.ui.commands.LoadFeatureOfInterestFromFile"
                label="Load Feature Of Interest From File"
                style="push">
             <visibleWhen
@@ -203,14 +203,14 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                             value="org.eclipse.symphony.core.FeatureOfInterestList">
+                             value="ca.gc.asc_csa.apogy.core.FeatureOfInterestList">
                        </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.ui.commands.SaveFeatureOfInterestToFile"
+               commandId="ca.gc.asc_csa.apogy.core.ui.commands.SaveFeatureOfInterestToFile"
                label="Save Feature Of Interest To File"
                style="push">
             <visibleWhen
@@ -221,14 +221,14 @@
                      ifEmpty="false"
                      operator="or">
                         <instanceof
-                            value="org.eclipse.symphony.core.FeatureOfInterestList">
+                            value="ca.gc.asc_csa.apogy.core.FeatureOfInterestList">
                         </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.ui.commands.CreateUserDefinedResult"
+               commandId="ca.gc.asc_csa.apogy.core.ui.commands.CreateUserDefinedResult"
                label="Create User-Defined Result"
                style="push">
             <visibleWhen
@@ -239,14 +239,14 @@
                       ifEmpty="false"
                       operator="or">
                         <instanceof
-                             value="org.eclipse.symphony.core.invocator.DataProductsList">
+                             value="ca.gc.asc_csa.apogy.core.invocator.DataProductsList">
                         </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.ui.commands.UpdatableUpdate"
+               commandId="ca.gc.asc_csa.apogy.core.ui.commands.UpdatableUpdate"
                label="Update"
                style="push">
             <visibleWhen
@@ -257,14 +257,14 @@
                       ifEmpty="false"
                       operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.core.Updatable">
+                           value="ca.gc.asc_csa.apogy.core.Updatable">
                        </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.ui.commands.UpdatableToggleAutoUpdate"
+               commandId="ca.gc.asc_csa.apogy.core.ui.commands.UpdatableToggleAutoUpdate"
                label="Toggle Auto Update"
                style="push">
             <visibleWhen
@@ -275,7 +275,7 @@
                       ifEmpty="false"
                       operator="or">
                      <instanceof
-                           value="org.eclipse.symphony.core.Updatable">
+                           value="ca.gc.asc_csa.apogy.core.Updatable">
                      </instanceof>
                   </iterate>
                </with>
@@ -286,38 +286,38 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
-            id="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
-            name="Symphony">
+            class="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesPage"
+            name="Apogy">
       </page>
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.core.ui.preferences.SymphonyCoreNodesPreferencesPage"
-            id="org.eclipse.symphony.core.ui.preferences.SymphonyCoreNodesPreferencesPage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCoreNodesPreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCoreNodesPreferencesPage"
             name="Results">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="org.eclipse.symphony.core.ui.commands.SymphonySystemVariableInstancePropertyTester"
-            id="org.eclipse.symphony.core.ui.commands.SymphonySystemVariableInstancePropertyTester"
-            namespace="org.eclipse.symphony.core.ui"
-            properties="instanceOfSymphonySystem"
-            type="org.eclipse.symphony.core.invocator.Variable">
+            class="ca.gc.asc_csa.apogy.core.ui.commands.ApogySystemVariableInstancePropertyTester"
+            id="ca.gc.asc_csa.apogy.core.ui.commands.ApogySystemVariableInstancePropertyTester"
+            namespace="ca.gc.asc_csa.apogy.core.ui"
+            properties="instanceOfApogySystem"
+            type="ca.gc.asc_csa.apogy.core.invocator.Variable">
       </propertyTester>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.symphony.core.ui.commands.TogglePoseCorrectorEnabledCommandHandler"
-            commandId="org.eclipse.symphony.core.ui.commands.TogglePoseCorrectorEnabledCommand">
+            class="ca.gc.asc_csa.apogy.core.ui.commands.TogglePoseCorrectorEnabledCommandHandler"
+            commandId="ca.gc.asc_csa.apogy.core.ui.commands.TogglePoseCorrectorEnabledCommand">
          <enabledWhen>
             <with
                  variable="activeMenuSelection">
@@ -326,7 +326,7 @@
                   operator="or">
                    <test
                         forcePluginActivation="true"
-                        property="org.eclipse.symphony.core.ui.instanceOfSymphonySystem">
+                        property="ca.gc.asc_csa.apogy.core.ui.instanceOfApogySystem">
                    </test>
                </iterate>
             </with>
@@ -336,18 +336,18 @@
    <extension
          point="org.eclipse.ui.ide.projectNatureImages">
       <image
-            icon="icons/ovr/symphony_7x8.gif"
-            id="org.eclipse.symphony.core.ui.projectNatureImages"
-            natureId="org.eclipse.symphony.core.ui.natures.SymphonyNature">
+            icon="icons/ovr/apogy_7x8.gif"
+            id="ca.gc.asc_csa.apogy.core.ui.projectNatureImages"
+            natureId="ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature">
       </image>
    </extension>
    <extension
-         id="org.eclipse.symphony.core.ui.natures.SymphonyNature"
-         name="Symphony"
+         id="ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature"
+         name="Apogy"
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="org.eclipse.symphony.core.ui.natures.SymphonyProjectNature">
+               class="ca.gc.asc_csa.apogy.core.ui.natures.ApogyProjectNature">
          </run>
       </runtime>
    </extension>
@@ -355,14 +355,14 @@
          point="org.eclipse.ui.decorators">
       <decorator
             adaptable="true"
-            class="org.eclipse.symphony.core.ui.decorators.UpdatableDecorator"
-            id="org.eclipse.symphony.core.ui.decorator1"
+            class="ca.gc.asc_csa.apogy.core.ui.decorators.UpdatableDecorator"
+            id="ca.gc.asc_csa.apogy.core.ui.decorator1"
             label="Updatable"
             lightweight="true"
             state="true">
          <enablement>
             <objectClass
-                  name="org.eclipse.symphony.core.Updatable">
+                  name="ca.gc.asc_csa.apogy.core.Updatable">
             </objectClass>
          </enablement>
       </decorator>
@@ -370,20 +370,20 @@
    <extension
          point="org.eclipse.ui.importWizards">
       <wizard
-            category="org.eclipse.symphony.core.ui"
-            class="org.eclipse.symphony.core.ui.wizards.ImportSymphonyWorksiteWizard"
-            icon="icons/symphony_logo_16x16.gif"
-            id="org.eclipse.symphony.core.ui.wizards.ImportWorksiteWizard"
-            name="Symphony Worksite">
+            category="ca.gc.asc_csa.apogy.core.ui"
+            class="ca.gc.asc_csa.apogy.core.ui.wizards.ImportApogyWorksiteWizard"
+            icon="icons/apogy_logo_16x16.gif"
+            id="ca.gc.asc_csa.apogy.core.ui.wizards.ImportWorksiteWizard"
+            name="Apogy Worksite">
          <description>
-            This wizard allows to import a registered worksite into the active Symphony session.
+            This wizard allows to import a registered worksite into the active Apogy session.
          </description>
       </wizard>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.converters">
+         point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-            Class="org.eclipse.symphony.core.ui.converters.PositionedResultToNodeConverter">
+            Class="ca.gc.asc_csa.apogy.core.ui.converters.PositionedResultToNodeConverter">
       </new_element>
    </extension>   
 </plugin>

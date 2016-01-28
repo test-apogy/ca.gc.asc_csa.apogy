@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui.provider;
+package ca.gc.asc_csa.apogy.core.invocator.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.core.invocator.ui.util.Symphony__CoreInvocatorUIAdapterFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ui.util.ApogyCoreInvocatorUIAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -30,7 +30,7 @@ import org.eclipse.symphony.core.invocator.ui.util.Symphony__CoreInvocatorUIAdap
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorUIItemProviderAdapterFactory extends Symphony__CoreInvocatorUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class ApogyCoreInvocatorUIItemProviderAdapterFactory extends ApogyCoreInvocatorUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public class Symphony__CoreInvocatorUIItemProviderAdapterFactory extends Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUIItemProviderAdapterFactory() {
+	public ApogyCoreInvocatorUIItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -70,26 +70,26 @@ public class Symphony__CoreInvocatorUIItemProviderAdapterFactory extends Symphon
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreInvocatorUIFacadeItemProvider symphony__CoreInvocatorUIFacadeItemProvider;
+	protected ApogyCoreInvocatorUIFacadeItemProvider apogy__CoreInvocatorUIFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreInvocatorUIFacadeAdapter() {
-		if (symphony__CoreInvocatorUIFacadeItemProvider == null) {
-			symphony__CoreInvocatorUIFacadeItemProvider = new Symphony__CoreInvocatorUIFacadeItemProvider(this);
+	public Adapter createApogyCoreInvocatorUIFacadeAdapter() {
+		if (apogy__CoreInvocatorUIFacadeItemProvider == null) {
+			apogy__CoreInvocatorUIFacadeItemProvider = new ApogyCoreInvocatorUIFacadeItemProvider(this);
 		}
 
-		return symphony__CoreInvocatorUIFacadeItemProvider;
+		return apogy__CoreInvocatorUIFacadeItemProvider;
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class Symphony__CoreInvocatorUIItemProviderAdapterFactory extends Symphon
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphony__CoreInvocatorUIFacadeItemProvider != null) symphony__CoreInvocatorUIFacadeItemProvider.dispose();
+		if (apogy__CoreInvocatorUIFacadeItemProvider != null) apogy__CoreInvocatorUIFacadeItemProvider.dispose();
 	}
 
 }

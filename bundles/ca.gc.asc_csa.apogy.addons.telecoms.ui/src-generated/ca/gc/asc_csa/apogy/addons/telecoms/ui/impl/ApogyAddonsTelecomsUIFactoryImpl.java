@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.ui.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.telecoms.ui.*;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,24 +16,24 @@ import org.eclipse.symphony.addons.telecoms.ui.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsTelecomsUIFactoryImpl extends EFactoryImpl implements Symphony__AddonsTelecomsUIFactory {
+public class ApogyAddonsTelecomsUIFactoryImpl extends EFactoryImpl implements ApogyAddonsTelecomsUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsTelecomsUIFactory init() {
+	public static ApogyAddonsTelecomsUIFactory init() {
 		try {
-			Symphony__AddonsTelecomsUIFactory theSymphony__AddonsTelecomsUIFactory = (Symphony__AddonsTelecomsUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsTelecomsUIPackage.eNS_URI);
-			if (theSymphony__AddonsTelecomsUIFactory != null) {
-				return theSymphony__AddonsTelecomsUIFactory;
+			ApogyAddonsTelecomsUIFactory theApogyAddonsTelecomsUIFactory = (ApogyAddonsTelecomsUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsTelecomsUIPackage.eNS_URI);
+			if (theApogyAddonsTelecomsUIFactory != null) {
+				return theApogyAddonsTelecomsUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsTelecomsUIFactoryImpl();
+		return new ApogyAddonsTelecomsUIFactoryImpl();
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class Symphony__AddonsTelecomsUIFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsUIFactoryImpl() {
+	public ApogyAddonsTelecomsUIFactoryImpl() {
 		super();
 	}
 
@@ -54,7 +54,7 @@ public class Symphony__AddonsTelecomsUIFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsTelecomsUIPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION: return createAbstractAntennaRadiationPatternPresentation();
+			case ApogyAddonsTelecomsUIPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION: return createAbstractAntennaRadiationPatternPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -75,8 +75,8 @@ public class Symphony__AddonsTelecomsUIFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsUIPackage getSymphony__AddonsTelecomsUIPackage() {
-		return (Symphony__AddonsTelecomsUIPackage)getEPackage();
+	public ApogyAddonsTelecomsUIPackage getApogyAddonsTelecomsUIPackage() {
+		return (ApogyAddonsTelecomsUIPackage)getEPackage();
 	}
 
 	/**
@@ -86,8 +86,8 @@ public class Symphony__AddonsTelecomsUIFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsTelecomsUIPackage getPackage() {
-		return Symphony__AddonsTelecomsUIPackage.eINSTANCE;
+	public static ApogyAddonsTelecomsUIPackage getPackage() {
+		return ApogyAddonsTelecomsUIPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsTelecomsUIFactoryImpl
+} //ApogyAddonsTelecomsUIFactoryImpl

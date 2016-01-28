@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -20,21 +20,21 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getTelecomNodes <em>Telecom Nodes</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList <em>Status Monitor Tool List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isRunning <em>Running</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#getTelecomNodes <em>Telecom Nodes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList <em>Status Monitor Tool List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool()
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getTelecomStatusMonitorTool()
  * @model
  * @generated
  */
 public interface TelecomStatusMonitorTool extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Telecom Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.telecoms.TelecomNode}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getStatusMonitorTool <em>Status Monitor Tool</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getStatusMonitorTool <em>Status Monitor Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Telecom Nodes</em>' containment reference list isn't clear,
@@ -46,8 +46,8 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * associated with this status monitor tool
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Telecom Nodes</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_TelecomNodes()
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getStatusMonitorTool
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getTelecomStatusMonitorTool_TelecomNodes()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getStatusMonitorTool
 	 * @model opposite="statusMonitorTool" containment="true"
 	 * @generated
 	 */
@@ -55,7 +55,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Status Monitor Tool List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -63,15 +63,15 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Status Monitor Tool List</em>' container reference.
 	 * @see #setStatusMonitorToolList(TelecomStatusMonitorToolList)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_StatusMonitorToolList()
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getTelecomStatusMonitorTool_StatusMonitorToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors
 	 * @model opposite="telecomStatusMonitors" transient="false"
 	 * @generated
 	 */
 	TelecomStatusMonitorToolList getStatusMonitorToolList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList <em>Status Monitor Tool List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList <em>Status Monitor Tool List</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Status Monitor Tool List</em>' container reference.
@@ -94,7 +94,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Running</em>' attribute.
 	 * @see #setRunning(boolean)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_Running()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getTelecomStatusMonitorTool_Running()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' children='false'"
 	 * @generated
@@ -102,7 +102,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	boolean isRunning();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isRunning <em>Running</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isRunning <em>Running</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Running</em>' attribute.
@@ -121,7 +121,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_Disposed()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getTelecomStatusMonitorTool_Disposed()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' children='false'"
 	 * @generated
@@ -129,7 +129,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	boolean isDisposed();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.

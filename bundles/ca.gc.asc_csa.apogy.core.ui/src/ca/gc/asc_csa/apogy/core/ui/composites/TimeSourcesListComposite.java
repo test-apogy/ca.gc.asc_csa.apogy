@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,11 +10,11 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.ui.Activator;
-import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
-import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
-import org.eclipse.symphony.core.TimeSourcesList;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
+import ca.gc.asc_csa.apogy.common.emf.ui.TimeSourceCompositeProvider;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.AbstractTimeSourceComposite;
+import ca.gc.asc_csa.apogy.core.TimeSourcesList;
 
 public class TimeSourcesListComposite extends Composite 
 {

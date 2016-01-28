@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui;
+package ca.gc.asc_csa.apogy.addons.ui;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory
+ * @see ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.ui/src-generated' editDirectory='/org.eclipse.symphony.addons.ui.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsUI' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.addons.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
  * @generated
  */
-public interface Symphony__AddonsUIPackage extends EPackage {
+public interface ApogyAddonsUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.ui";
 
 	/**
 	 * The package namespace name.
@@ -55,14 +55,14 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsUIPackage eINSTANCE = org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIPackageImpl.init();
+	ApogyAddonsUIPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ui.impl.Ruler3dToolNodePresentationImpl <em>Ruler3d Tool Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.Ruler3dToolNodePresentationImpl <em>Ruler3d Tool Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ui.impl.Ruler3dToolNodePresentationImpl
-	 * @see org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIPackageImpl#getRuler3dToolNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.Ruler3dToolNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getRuler3dToolNodePresentation()
 	 * @generated
 	 */
 	int RULER3D_TOOL_NODE_PRESENTATION = 0;
@@ -74,7 +74,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int RULER3D_TOOL_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -83,7 +83,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int RULER3D_TOOL_NODE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -92,7 +92,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int RULER3D_TOOL_NODE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -101,7 +101,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int RULER3D_TOOL_NODE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -110,7 +110,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int RULER3D_TOOL_NODE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -119,7 +119,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int RULER3D_TOOL_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -128,7 +128,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int RULER3D_TOOL_NODE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -137,7 +137,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int RULER3D_TOOL_NODE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -146,7 +146,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int RULER3D_TOOL_NODE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -155,7 +155,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int RULER3D_TOOL_NODE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -164,7 +164,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int RULER3D_TOOL_NODE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -173,7 +173,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int RULER3D_TOOL_NODE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -182,7 +182,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int RULER3D_TOOL_NODE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Ruler3d Tool Node Presentation</em>' class.
@@ -191,7 +191,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int RULER3D_TOOL_NODE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Ruler3d Tool Node Presentation</em>' class.
@@ -200,15 +200,15 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int RULER3D_TOOL_NODE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ui.impl.SunVector3DToolNodePresentationImpl <em>Sun Vector3 DTool Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl <em>Sun Vector3 DTool Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ui.impl.SunVector3DToolNodePresentationImpl
-	 * @see org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIPackageImpl#getSunVector3DToolNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getSunVector3DToolNodePresentation()
 	 * @generated
 	 */
 	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION = 1;
@@ -220,7 +220,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -229,7 +229,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -238,7 +238,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -247,7 +247,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -256,7 +256,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -265,7 +265,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -274,7 +274,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -283,7 +283,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -292,7 +292,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -301,7 +301,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -310,7 +310,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -319,7 +319,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -328,7 +328,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Sun Vector3 DTool Node Presentation</em>' class.
@@ -337,7 +337,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Sun Vector3 DTool Node Presentation</em>' class.
@@ -346,15 +346,15 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ui.impl.Trajectory3DToolNodePresentationImpl <em>Trajectory3 DTool Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.Trajectory3DToolNodePresentationImpl <em>Trajectory3 DTool Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ui.impl.Trajectory3DToolNodePresentationImpl
-	 * @see org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIPackageImpl#getTrajectory3DToolNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.Trajectory3DToolNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getTrajectory3DToolNodePresentation()
 	 * @generated
 	 */
 	int TRAJECTORY3_DTOOL_NODE_PRESENTATION = 2;
@@ -366,7 +366,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -375,7 +375,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -384,7 +384,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -393,7 +393,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -402,7 +402,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -411,7 +411,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -420,7 +420,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -429,7 +429,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -438,7 +438,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -447,7 +447,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -456,7 +456,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -465,7 +465,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -474,7 +474,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Trajectory3 DTool Node Presentation</em>' class.
@@ -483,7 +483,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Trajectory3 DTool Node Presentation</em>' class.
@@ -492,35 +492,35 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation <em>Ruler3d Tool Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation <em>Ruler3d Tool Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Ruler3d Tool Node Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation
 	 * @generated
 	 */
 	EClass getRuler3dToolNodePresentation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation <em>Sun Vector3 DTool Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation <em>Sun Vector3 DTool Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sun Vector3 DTool Node Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation
 	 * @generated
 	 */
 	EClass getSunVector3DToolNodePresentation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation <em>Trajectory3 DTool Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation <em>Trajectory3 DTool Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Trajectory3 DTool Node Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation
 	 * @generated
 	 */
 	EClass getTrajectory3DToolNodePresentation();
@@ -532,7 +532,7 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsUIFactory getSymphony__AddonsUIFactory();
+	ApogyAddonsUIFactory getApogyAddonsUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -549,33 +549,33 @@ public interface Symphony__AddonsUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ui.impl.Ruler3dToolNodePresentationImpl <em>Ruler3d Tool Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.Ruler3dToolNodePresentationImpl <em>Ruler3d Tool Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ui.impl.Ruler3dToolNodePresentationImpl
-		 * @see org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIPackageImpl#getRuler3dToolNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.Ruler3dToolNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getRuler3dToolNodePresentation()
 		 * @generated
 		 */
 		EClass RULER3D_TOOL_NODE_PRESENTATION = eINSTANCE.getRuler3dToolNodePresentation();
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ui.impl.SunVector3DToolNodePresentationImpl <em>Sun Vector3 DTool Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl <em>Sun Vector3 DTool Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ui.impl.SunVector3DToolNodePresentationImpl
-		 * @see org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIPackageImpl#getSunVector3DToolNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getSunVector3DToolNodePresentation()
 		 * @generated
 		 */
 		EClass SUN_VECTOR3_DTOOL_NODE_PRESENTATION = eINSTANCE.getSunVector3DToolNodePresentation();
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ui.impl.Trajectory3DToolNodePresentationImpl <em>Trajectory3 DTool Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.Trajectory3DToolNodePresentationImpl <em>Trajectory3 DTool Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ui.impl.Trajectory3DToolNodePresentationImpl
-		 * @see org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIPackageImpl#getTrajectory3DToolNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.Trajectory3DToolNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getTrajectory3DToolNodePresentation()
 		 * @generated
 		 */
 		EClass TRAJECTORY3_DTOOL_NODE_PRESENTATION = eINSTANCE.getTrajectory3DToolNodePresentation();
 
 	}
 
-} //Symphony__AddonsUIPackage
+} //ApogyAddonsUIPackage

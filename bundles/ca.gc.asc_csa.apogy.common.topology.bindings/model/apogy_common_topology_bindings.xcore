@@ -1,27 +1,27 @@
-@GenModel(prefix="Symphony__CommonTopologyBindings",
+@GenModel(prefix="ApogyCommonTopologyBindings",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CommonTopologyBindings",
+		  modelName="ApogyCommonTopologyBindings",
 		  complianceLevel="6.0")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.bindings/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.topology.bindings.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.bindings/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.bindings.edit/src-generated")
 
-package org.eclipse.symphony.common.topology.bindings
+package ca.gc.asc_csa.apogy.common.topology.bindings
 
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EEnumLiteral
 
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.common.topology.GroupNode
-import org.eclipse.symphony.common.topology.RotationNode
-import org.eclipse.symphony.common.topology.PositionNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.GroupNode
+import ca.gc.asc_csa.apogy.common.topology.RotationNode
+import ca.gc.asc_csa.apogy.common.topology.PositionNode
 
-import org.eclipse.symphony.common.emf.AbstractFeatureNode
-import org.eclipse.symphony.common.emf.TreeRootNode
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter
-import org.eclipse.symphony.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
 
 type Map<K,V> wraps java.util.Map
 
@@ -252,7 +252,7 @@ class BindingsSet
 /*
  * Utility Binding Facade.
  */
-class Symphony__CommonTopologyBindingsFacade
+class ApogyCommonTopologyBindingsFacade
 {	
 	/*
 	 * Convenience method that copies a Binding.

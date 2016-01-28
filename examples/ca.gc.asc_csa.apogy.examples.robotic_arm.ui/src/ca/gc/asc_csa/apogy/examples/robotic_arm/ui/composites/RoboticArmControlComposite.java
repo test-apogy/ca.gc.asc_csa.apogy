@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.robotic_arm.ui.composites;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
@@ -28,9 +28,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage.Literals;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage.Literals;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;

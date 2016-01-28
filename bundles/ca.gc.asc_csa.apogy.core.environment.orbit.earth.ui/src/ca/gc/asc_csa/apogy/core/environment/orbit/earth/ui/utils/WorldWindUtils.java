@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.utils;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.utils;
 
 import gov.nasa.worldwind.geom.Angle;
 import gov.nasa.worldwind.geom.Position;
@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
-import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 
 public class WorldWindUtils 
 {
@@ -87,7 +87,7 @@ public class WorldWindUtils
 			if(ss instanceof OreKitBackedSpacecraftState)
 			{
 				// Gets the geographical coordinates of the spacecraft state.
-				GeographicCoordinates coord = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
+				GeographicCoordinates coord = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 					            
 	            // Creates and adds a position in the linked list.
 	            Position position = convertToPosition(coord);
@@ -115,7 +115,7 @@ public class WorldWindUtils
 			if(ss instanceof OreKitBackedSpacecraftState)
 			{
 				// Gets the geographical coordinates of the spacecraft state.
-				GeographicCoordinates coord = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
+				GeographicCoordinates coord = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 
 	            // Creates and adds a position in the linked list.
 	            Position position = convertToPosition(coord);

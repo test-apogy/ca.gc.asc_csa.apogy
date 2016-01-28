@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.topology.ui.preferences;
+package ca.gc.asc_csa.apogy.core.topology.ui.preferences;
 
 import org.eclipse.jface.preference.ColorFieldEditor;
 import org.eclipse.jface.preference.PreferencePage;
@@ -8,19 +8,19 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.core.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 
-public class SymphonySystem3DViewerUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogySystem3DViewerUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
-	private ColorFieldEditor symphonySystem3DViewBackgroundColorColorFieldEditor;
+	private ColorFieldEditor apogySystem3DViewBackgroundColorColorFieldEditor;
 	
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonySystem3DViewerUIPreferencesPage() {
+	public ApogySystem3DViewerUIPreferencesPage() {
 	}
 
 	/**
@@ -34,12 +34,12 @@ public class SymphonySystem3DViewerUIPreferencesPage extends PreferencePage impl
 		container.setLayout(new GridLayout(1, true));
 		
 		// Circular Sector FOV
-		Group symphonySystem3DViewGroup = new Group(container, SWT.NONE);
-		symphonySystem3DViewGroup.setLayout(new GridLayout(2, true));
-		symphonySystem3DViewGroup.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		symphonySystem3DViewGroup.setText("Symphony System 3D View");	
+		Group apogySystem3DViewGroup = new Group(container, SWT.NONE);
+		apogySystem3DViewGroup.setLayout(new GridLayout(2, true));
+		apogySystem3DViewGroup.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+		apogySystem3DViewGroup.setText("Apogy System 3D View");	
 		
-		symphonySystem3DViewBackgroundColorColorFieldEditor = createColorFieldEditor(symphonySystem3DViewGroup, SymphonyTopologyUIPreferencesConstants.DEFAULT_SYMPHONY_SYSTEM_VIEW_BACKGROUND_COLOR_ID, "Background Color:");
+		apogySystem3DViewBackgroundColorColorFieldEditor = createColorFieldEditor(apogySystem3DViewGroup, ApogyTopologyUIPreferencesConstants.DEFAULT_APOGY_SYSTEM_VIEW_BACKGROUND_COLOR_ID, "Background Color:");
 		
 		return container;
 	}
@@ -69,13 +69,13 @@ public class SymphonySystem3DViewerUIPreferencesPage extends PreferencePage impl
 	@Override
 	protected void performDefaults() 
 	{	
-		symphonySystem3DViewBackgroundColorColorFieldEditor.loadDefault();
+		apogySystem3DViewBackgroundColorColorFieldEditor.loadDefault();
 		super.performDefaults();
 	}
 	
 	private void storePreferences()
 	{
-		symphonySystem3DViewBackgroundColorColorFieldEditor.store();
+		apogySystem3DViewBackgroundColorColorFieldEditor.store();
 	}
 	
 	private ColorFieldEditor createColorFieldEditor(final Composite container, final String preferenceID, final String preferenceLabel)

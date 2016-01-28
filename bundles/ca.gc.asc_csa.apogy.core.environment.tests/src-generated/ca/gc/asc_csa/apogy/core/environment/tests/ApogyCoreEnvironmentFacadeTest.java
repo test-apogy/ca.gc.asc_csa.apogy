@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,43 +17,43 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeStars() <em>Create And Initialize Stars</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeSkyNode(org.eclipse.symphony.core.environment.Sky, org.eclipse.symphony.core.environment.SkyNode) <em>Initialize Sky Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeEarthSkyNode(org.eclipse.symphony.core.environment.EarthSky, org.eclipse.symphony.core.environment.EarthSkyNode) <em>Initialize Earth Sky Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardGeographicalCoordinates() <em>Get Mars Yard Geographical Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardTransformNode() <em>Get Mars Yard Transform Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment() <em>Create And Initialize Earth Surface Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthAtmosphere() <em>Create And Initialize Earth Atmosphere</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, java.lang.String, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createEImage(java.util.List) <em>Create EImage</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(org.eclipse.symphony.core.environment.RectangularRegion) <em>Get Absolute Rectangular Region Corners</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List) <em>Get Best Resolution Rectangular Region Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(org.eclipse.symphony.core.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(org.eclipse.symphony.core.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#fitsInside(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion) <em>Fits Inside</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#intersects(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4) <em>Intersects</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(org.eclipse.symphony.core.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List) <em>Get Image Map Layer Presentation Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List) <em>Get Best Resolution Map Layer</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List) <em>Get Visible Image Map Layer Presentation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeStars() <em>Create And Initialize Stars</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeSkyNode(ca.gc.asc_csa.apogy.core.environment.Sky, ca.gc.asc_csa.apogy.core.environment.SkyNode) <em>Initialize Sky Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeEarthSkyNode(ca.gc.asc_csa.apogy.core.environment.EarthSky, ca.gc.asc_csa.apogy.core.environment.EarthSkyNode) <em>Initialize Earth Sky Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMarsYardGeographicalCoordinates() <em>Get Mars Yard Geographical Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMarsYardTransformNode() <em>Get Mars Yard Transform Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment() <em>Create And Initialize Earth Surface Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeEarthAtmosphere() <em>Create And Initialize Earth Atmosphere</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Sun Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Sun Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMoonVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Moon Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMoonVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Moon Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.core.ConnectionPoint, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.core.ConnectionPoint, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, java.lang.String, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createEImage(java.util.List) <em>Create EImage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(ca.gc.asc_csa.apogy.core.environment.RectangularRegion) <em>Get Absolute Rectangular Region Corners</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List) <em>Get Best Resolution Rectangular Region Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionExtent(ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionImageExtent(ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#fitsInside(ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.core.environment.RectangularRegion) <em>Fits Inside</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#intersects(ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.common.math.Matrix4x4) <em>Intersects</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationExtent(ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List) <em>Get Image Map Layer Presentation Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List) <em>Get Best Resolution Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List) <em>Get Visible Image Map Layer Presentation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularVolumeRegion(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
+public class ApogyCoreEnvironmentFacadeTest extends TestCase {
 
 	/**
 	 * The fixture for this Facade test case.
@@ -61,7 +61,7 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentFacade fixture = null;
+	protected ApogyCoreEnvironmentFacade fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(Symphony__CoreEnvironmentFacadeTest.class);
+		TestRunner.run(ApogyCoreEnvironmentFacadeTest.class);
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentFacadeTest(String name) {
+	public ApogyCoreEnvironmentFacadeTest(String name) {
 		super(name);
 	}
 
@@ -88,7 +88,7 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(Symphony__CoreEnvironmentFacade fixture) {
+	protected void setFixture(ApogyCoreEnvironmentFacade fixture) {
 		this.fixture = fixture;
 	}
 
@@ -98,7 +98,7 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentFacade getFixture() {
+	protected ApogyCoreEnvironmentFacade getFixture() {
 		return fixture;
 	}
 
@@ -110,7 +110,7 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createSymphony__CoreEnvironmentFacade());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createApogyCoreEnvironmentFacade());
 	}
 
 	/**
@@ -125,10 +125,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeStars() <em>Create And Initialize Stars</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeStars() <em>Create And Initialize Stars</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeStars()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeStars()
 	 * @generated
 	 */
 	public void testCreateAndInitializeStars() {
@@ -138,10 +138,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite()
 	 * @generated
 	 */
 	public void testCreateAndInitializeDefaultCSAWorksite() {
@@ -151,10 +151,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeSkyNode(org.eclipse.symphony.core.environment.Sky, org.eclipse.symphony.core.environment.SkyNode) <em>Initialize Sky Node</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeSkyNode(ca.gc.asc_csa.apogy.core.environment.Sky, ca.gc.asc_csa.apogy.core.environment.SkyNode) <em>Initialize Sky Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeSkyNode(org.eclipse.symphony.core.environment.Sky, org.eclipse.symphony.core.environment.SkyNode)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeSkyNode(ca.gc.asc_csa.apogy.core.environment.Sky, ca.gc.asc_csa.apogy.core.environment.SkyNode)
 	 * @generated
 	 */
 	public void testInitializeSkyNode__Sky_SkyNode() {
@@ -164,10 +164,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeEarthSkyNode(org.eclipse.symphony.core.environment.EarthSky, org.eclipse.symphony.core.environment.EarthSkyNode) <em>Initialize Earth Sky Node</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeEarthSkyNode(ca.gc.asc_csa.apogy.core.environment.EarthSky, ca.gc.asc_csa.apogy.core.environment.EarthSkyNode) <em>Initialize Earth Sky Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeEarthSkyNode(org.eclipse.symphony.core.environment.EarthSky, org.eclipse.symphony.core.environment.EarthSkyNode)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeEarthSkyNode(ca.gc.asc_csa.apogy.core.environment.EarthSky, ca.gc.asc_csa.apogy.core.environment.EarthSkyNode)
 	 * @generated
 	 */
 	public void testInitializeEarthSkyNode__EarthSky_EarthSkyNode() {
@@ -177,10 +177,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardGeographicalCoordinates() <em>Get Mars Yard Geographical Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMarsYardGeographicalCoordinates() <em>Get Mars Yard Geographical Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardGeographicalCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMarsYardGeographicalCoordinates()
 	 * @generated
 	 */
 	public void testGetMarsYardGeographicalCoordinates() {
@@ -190,10 +190,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createStar(float, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createStar(float, double, double)
 	 * @generated
 	 */
 	public void testCreateStar__float_double_double() {
@@ -203,10 +203,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardTransformNode() <em>Get Mars Yard Transform Node</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMarsYardTransformNode() <em>Get Mars Yard Transform Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardTransformNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMarsYardTransformNode()
 	 * @generated
 	 */
 	public void testGetMarsYardTransformNode() {
@@ -216,10 +216,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment() <em>Create And Initialize Earth Surface Environment</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment() <em>Create And Initialize Earth Surface Environment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment()
 	 * @generated
 	 */
 	public void testCreateAndInitializeEarthSurfaceEnvironment() {
@@ -229,10 +229,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthAtmosphere() <em>Create And Initialize Earth Atmosphere</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeEarthAtmosphere() <em>Create And Initialize Earth Atmosphere</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthAtmosphere()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createAndInitializeEarthAtmosphere()
 	 * @generated
 	 */
 	public void testCreateAndInitializeEarthAtmosphere() {
@@ -242,23 +242,23 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	public void testGetSunVector__SymphonySystem_String_Environment() {
+	public void testGetSunVector__ApogySystem_String_Environment() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
 	public void testGetSunVector__Node_Environment() {
@@ -268,23 +268,23 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMoonVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMoonVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	public void testGetMoonVector__SymphonySystem_String_Environment() {
+	public void testGetMoonVector__ApogySystem_String_Environment() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMoonVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getMoonVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
 	public void testGetMoonVector__Node_Environment() {
@@ -294,62 +294,62 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.core.ConnectionPoint, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.core.ConnectionPoint, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	public void testGetVector__Node_SymphonySystem_ConnectionPoint_Environment() {
+	public void testGetVector__Node_ApogySystem_ConnectionPoint_Environment() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.core.ConnectionPoint, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.core.ConnectionPoint, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	public void testGetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment() {
+	public void testGetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	public void testGetVector__SymphonySystem_String_SymphonySystem_String_Environment() {
+	public void testGetVector__ApogySystem_String_ApogySystem_String_Environment() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, java.lang.String, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, java.lang.String, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, java.lang.String, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, java.lang.String, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	public void testGetVector__SymphonySystem_String_String_String_Environment() {
+	public void testGetVector__ApogySystem_String_String_String_Environment() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createEImage(java.util.List) <em>Create EImage</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createEImage(java.util.List) <em>Create EImage</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createEImage(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createEImage(java.util.List)
 	 * @generated
 	 */
 	public void testCreateEImage__List() {
@@ -359,10 +359,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(org.eclipse.symphony.core.environment.RectangularRegion) <em>Get Absolute Rectangular Region Corners</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(ca.gc.asc_csa.apogy.core.environment.RectangularRegion) <em>Get Absolute Rectangular Region Corners</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(org.eclipse.symphony.core.environment.RectangularRegion)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(ca.gc.asc_csa.apogy.core.environment.RectangularRegion)
 	 * @generated
 	 */
 	public void testGetAbsoluteRectangularRegionCorners__RectangularRegion() {
@@ -372,10 +372,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List) <em>Get Best Resolution Rectangular Region Image</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List) <em>Get Best Resolution Rectangular Region Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List)
 	 * @generated
 	 */
 	public void testGetBestResolutionRectangularRegionImage__List() {
@@ -385,10 +385,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(org.eclipse.symphony.core.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionExtent(ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(org.eclipse.symphony.core.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionExtent(ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
 	public void testGetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d() {
@@ -398,10 +398,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(org.eclipse.symphony.core.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionImageExtent(ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(org.eclipse.symphony.core.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionImageExtent(ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
 	public void testGetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d() {
@@ -411,10 +411,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
 	public void testGetRectangularRegionExtent__List_Tuple3d_Tuple3d() {
@@ -424,10 +424,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
 	public void testGetRectangularRegionImageExtent__List_Tuple3d_Tuple3d() {
@@ -437,10 +437,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#fitsInside(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion) <em>Fits Inside</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#fitsInside(ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.core.environment.RectangularRegion) <em>Fits Inside</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#fitsInside(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#fitsInside(ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.core.environment.RectangularRegion)
 	 * @generated
 	 */
 	public void testFitsInside__RectangularRegion_RectangularRegion() {
@@ -450,10 +450,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#intersects(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4) <em>Intersects</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#intersects(ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.common.math.Matrix4x4) <em>Intersects</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#intersects(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#intersects(ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.core.environment.RectangularRegion, ca.gc.asc_csa.apogy.common.math.Matrix4x4)
 	 * @generated
 	 */
 	public void testIntersects__RectangularRegion_RectangularRegion_Matrix4x4() {
@@ -463,10 +463,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(org.eclipse.symphony.core.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationExtent(ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(org.eclipse.symphony.core.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationExtent(ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
 	public void testGetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d() {
@@ -476,10 +476,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, ca.gc.asc_csa.apogy.common.math.Tuple3d, ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated
 	 */
 	public void testGetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d() {
@@ -489,10 +489,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List) <em>Get Image Map Layer Presentation Image</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List) <em>Get Image Map Layer Presentation Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List)
 	 * @generated
 	 */
 	public void testGetImageMapLayerPresentationImage__List() {
@@ -502,10 +502,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List) <em>Get Best Resolution Map Layer</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List) <em>Get Best Resolution Map Layer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List)
 	 * @generated
 	 */
 	public void testGetBestResolutionMapLayer__List() {
@@ -515,10 +515,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List) <em>Get Visible Image Map Layer Presentation</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List) <em>Get Visible Image Map Layer Presentation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List)
 	 * @generated
 	 */
 	public void testGetVisibleImageMapLayerPresentation__List() {
@@ -528,10 +528,10 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularVolumeRegion(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getRectangularVolumeRegion(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
 	public void testGetRectangularVolumeRegion__CartesianTriangularMesh() {
@@ -540,4 +540,4 @@ public class Symphony__CoreEnvironmentFacadeTest extends TestCase {
 		fail();
 	}
 
-} //Symphony__CoreEnvironmentFacadeTest
+} //ApogyCoreEnvironmentFacadeTest

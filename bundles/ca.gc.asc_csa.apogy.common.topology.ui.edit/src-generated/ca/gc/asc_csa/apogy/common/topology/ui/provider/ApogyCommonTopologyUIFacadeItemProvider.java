@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIFacadeItemProvider 
+public class ApogyCommonTopologyUIFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -39,7 +39,7 @@ public class Symphony__CommonTopologyUIFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCommonTopologyUIFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,14 +59,14 @@ public class Symphony__CommonTopologyUIFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonTopologyUIFacade.gif.
+	 * This returns ApogyCommonTopologyUIFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonTopologyUIFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonTopologyUIFacade"));
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class Symphony__CommonTopologyUIFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CommonTopologyUIFacade_type");
+		return getString("_UI_ApogyCommonTopologyUIFacade_type");
 	}
 	
 

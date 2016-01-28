@@ -1,8 +1,8 @@
-package org.eclipse.symphony.addons.sensors.imaging.converters;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.converters;
 
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 public class ImageSnapshotToAbstractEImageConverter implements IConverter {
 

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony;
+package ca.gc.asc_csa.apogy.examples.camera.apogy;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage
  * @generated
  */
-public interface Symphony__ExamplesCameraSymphonyFactory extends EFactory
+public interface ApogyExamplesCameraApogyFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,16 +21,16 @@ public interface Symphony__ExamplesCameraSymphonyFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesCameraSymphonyFactory eINSTANCE = org.eclipse.symphony.examples.camera.symphony.impl.Symphony__ExamplesCameraSymphonyFactoryImpl.init();
+  ApogyExamplesCameraApogyFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.camera.apogy.impl.ApogyExamplesCameraApogyFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Camera Symphony System Api Adapter</em>'.
+	 * Returns a new object of class '<em>Camera Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Camera Symphony System Api Adapter</em>'.
+	 * @return a new object of class '<em>Camera Apogy System Api Adapter</em>'.
 	 * @generated
 	 */
-  CameraSymphonySystemApiAdapter createCameraSymphonySystemApiAdapter();
+  CameraApogySystemApiAdapter createCameraApogySystemApiAdapter();
 
   /**
 	 * Returns a new object of class '<em>Camera Data</em>'.
@@ -42,13 +42,13 @@ public interface Symphony__ExamplesCameraSymphonyFactory extends EFactory
   CameraData createCameraData();
 
   /**
-	 * Returns a new object of class '<em>PTU Camera Symphony System Api Adapter</em>'.
+	 * Returns a new object of class '<em>PTU Camera Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>PTU Camera Symphony System Api Adapter</em>'.
+	 * @return a new object of class '<em>PTU Camera Apogy System Api Adapter</em>'.
 	 * @generated
 	 */
-  PTUCameraSymphonySystemApiAdapter createPTUCameraSymphonySystemApiAdapter();
+  PTUCameraApogySystemApiAdapter createPTUCameraApogySystemApiAdapter();
 
   /**
 	 * Returns a new object of class '<em>PTU Camera Data</em>'.
@@ -66,6 +66,6 @@ public interface Symphony__ExamplesCameraSymphonyFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesCameraSymphonyPackage getSymphony__ExamplesCameraSymphonyPackage();
+	ApogyExamplesCameraApogyPackage getApogyExamplesCameraApogyPackage();
 
-} //Symphony__ExamplesCameraSymphonyFactory
+} //ApogyExamplesCameraApogyFactory

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 
 /**
@@ -13,11 +13,11 @@ package org.eclipse.symphony.core.programs.controllers;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning#getMinimum <em>Minimum</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning#getMaximum <em>Maximum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning#getMinimum <em>Minimum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning#getMaximum <em>Maximum</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getLinearInputConditioning()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getLinearInputConditioning()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface LinearInputConditioning extends AbstractInputConditioning {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum</em>' attribute.
 	 * @see #setMinimum(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getLinearInputConditioning_Minimum()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getLinearInputConditioning_Minimum()
 	 * @model default="-1.0" unique="false"
 	 * @generated
 	 */
 	float getMinimum();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning#getMinimum <em>Minimum</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning#getMinimum <em>Minimum</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum</em>' attribute.
@@ -60,14 +60,14 @@ public interface LinearInputConditioning extends AbstractInputConditioning {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum</em>' attribute.
 	 * @see #setMaximum(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getLinearInputConditioning_Maximum()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getLinearInputConditioning_Maximum()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	float getMaximum();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning#getMaximum <em>Maximum</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning#getMaximum <em>Maximum</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum</em>' attribute.

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.Symphony__CoreFacade} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class Symphony__CoreFacadeItemProvider extends ItemProviderAdapter
+public class ApogyCoreFacadeItemProvider extends ItemProviderAdapter
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -34,7 +34,7 @@ public class Symphony__CoreFacadeItemProvider extends ItemProviderAdapter
 	 * 
 	 * @generated
 	 */
-	public Symphony__CoreFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCoreFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,14 +54,14 @@ public class Symphony__CoreFacadeItemProvider extends ItemProviderAdapter
 	}
 
 	/**
-	 * This returns Symphony__CoreFacade.gif.
+	 * This returns ApogyCoreFacade.gif.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreFacade"));
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Symphony__CoreFacadeItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CoreFacade_type");
+		return getString("_UI_ApogyCoreFacade_type");
 	}
 
 	/**

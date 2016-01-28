@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
@@ -10,15 +10,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.invocator.VariableImplementation;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePathPlannerToolImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.VehiclePathPlannerToolImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,7 +60,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL;
+		return ApogyAddonsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -98,7 +98,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
 		}
@@ -124,7 +124,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
 		}
@@ -139,7 +139,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				setVariable((Variable)null);
 				return;
 		}
@@ -154,7 +154,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				return variable != null;
 		}
 		return super.eIsSet(featureID);
@@ -175,13 +175,13 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			Tuple3d normal = null;
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				normal = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
+				normal = ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
 			}
 			
 			// Always update to Node. From node is the vehicle.
@@ -198,14 +198,14 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 			{
 				// Resolve the variable so as to get is pose provider.
 				VariableImplementation variableImplementation = getVariable().getEnvironment().getActiveContext().getVariableImplementationsList().getVariableImplementation(getVariable());
-				if(variableImplementation.getAdapterInstance() instanceof SymphonySystemApiAdapter)
+				if(variableImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
 				{
-					SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) variableImplementation.getAdapterInstance();
+					ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) variableImplementation.getAdapterInstance();
 					
 					Matrix4d m = null;				
-					if(symphonySystemApiAdapter.getPoseTransform() != null)
+					if(apogySystemApiAdapter.getPoseTransform() != null)
 					{					
-						m = symphonySystemApiAdapter.getPoseTransform().asMatrix4d();
+						m = apogySystemApiAdapter.getPoseTransform().asMatrix4d();
 					}
 					else
 					{
@@ -215,7 +215,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 					Vector3d v = new Vector3d();
 					m.get(v);
 					
-					return Symphony__CommonMathFacade.INSTANCE.createTuple3d(v);
+					return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
 				}
 			}
 			catch(Throwable t)

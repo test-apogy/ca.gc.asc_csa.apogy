@@ -1,28 +1,28 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.common.topology.ui.provider.Symphony__CommonTopologyUIEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.ApogyCommonTopologyUIEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsGeometryPathsUI edit plugin.
+ * This is the central singleton for the ApogyAddonsGeometryPathsUI edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsGeometryPathsUIEditPlugin extends EMFPlugin {
+public final class ApogyAddonsGeometryPathsUIEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsGeometryPathsUIEditPlugin INSTANCE = new Symphony__AddonsGeometryPathsUIEditPlugin();
+	public static final ApogyAddonsGeometryPathsUIEditPlugin INSTANCE = new ApogyAddonsGeometryPathsUIEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -38,12 +38,12 @@ public final class Symphony__AddonsGeometryPathsUIEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsUIEditPlugin() {
+	public ApogyAddonsGeometryPathsUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyUIEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonTopologyUIEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

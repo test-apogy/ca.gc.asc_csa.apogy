@@ -4,7 +4,7 @@
  *
  * $Id: ReferencedGroupNodeItemProvider.java,v 1.10.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ReferencedGroupNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class ReferencedGroupNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ReferencedGroupNode_referencedChildren_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ReferencedGroupNode_referencedChildren_feature", "_UI_ReferencedGroupNode_type"),
-				 Symphony__CommonTopologyPackage.Literals.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN,
+				 ApogyCommonTopologyPackage.Literals.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN,
 				 true,
 				 false,
 				 true,

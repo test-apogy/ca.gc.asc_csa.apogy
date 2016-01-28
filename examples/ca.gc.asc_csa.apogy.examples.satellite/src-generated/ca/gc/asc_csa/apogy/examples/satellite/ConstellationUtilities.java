@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import java.util.List;
 import java.util.SortedSet;
@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationUtilities()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationUtilities()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface ConstellationUtilities extends EObject {
 	 * Sorts the list of {@link AbstractConstellationRequest} based on {@link AbstractConstellationRequest#priority}.
 	 * @param requests Specifies the list of {@link AbstractConstellationRequest} to sort.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.examples.satellite.SortedSet<org.eclipse.symphony.examples.satellite.AbstractConstellationRequest>" unique="false" requestsDataType="org.eclipse.symphony.examples.satellite.List<org.eclipse.symphony.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.examples.satellite.SortedSet<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
 	 * @generated
 	 */
 	SortedSet<AbstractConstellationRequest> sortByPriority(List<AbstractConstellationRequest> requests);

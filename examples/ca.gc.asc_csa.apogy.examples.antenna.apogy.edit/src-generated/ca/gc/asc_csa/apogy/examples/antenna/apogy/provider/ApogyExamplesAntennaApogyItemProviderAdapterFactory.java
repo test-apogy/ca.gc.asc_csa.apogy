@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,16 +27,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyFactory;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
-import org.eclipse.symphony.examples.antenna.symphony.util.Symphony__ExamplesAntennaSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyFactory;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.util.ApogyExamplesAntennaApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.examples.antenna.symphony.util.Symphony__ExamplesAnt
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends Symphony__ExamplesAntennaSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyExamplesAntennaApogyItemProviderAdapterFactory extends ApogyExamplesAntennaApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -71,7 +71,7 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesAntennaSymphonyEditPlugin.INSTANCE, Symphony__ExamplesAntennaSymphonyPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesAntennaApogyEditPlugin.INSTANCE, ApogyExamplesAntennaApogyPackage.eNS_URI);
 
 		/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -87,7 +87,7 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory()
+  public ApogyExamplesAntennaApogyItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -97,31 +97,31 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected PTUDishAntennaSymphonySystemApiAdapterItemProvider ptuDishAntennaSymphonySystemApiAdapterItemProvider;
+  protected PTUDishAntennaApogySystemApiAdapterItemProvider ptuDishAntennaApogySystemApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createPTUDishAntennaSymphonySystemApiAdapterAdapter()
+  public Adapter createPTUDishAntennaApogySystemApiAdapterAdapter()
   {
-		if (ptuDishAntennaSymphonySystemApiAdapterItemProvider == null) {
-			ptuDishAntennaSymphonySystemApiAdapterItemProvider = new PTUDishAntennaSymphonySystemApiAdapterItemProvider(this);
+		if (ptuDishAntennaApogySystemApiAdapterItemProvider == null) {
+			ptuDishAntennaApogySystemApiAdapterItemProvider = new PTUDishAntennaApogySystemApiAdapterItemProvider(this);
 		}
 
-		return ptuDishAntennaSymphonySystemApiAdapterItemProvider;
+		return ptuDishAntennaApogySystemApiAdapterItemProvider;
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
   protected PTUDishAntennaDataItemProvider ptuDishAntennaDataItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -279,24 +279,24 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 	 */
   public void dispose()
   {
-		if (ptuDishAntennaSymphonySystemApiAdapterItemProvider != null) ptuDishAntennaSymphonySystemApiAdapterItemProvider.dispose();
+		if (ptuDishAntennaApogySystemApiAdapterItemProvider != null) ptuDishAntennaApogySystemApiAdapterItemProvider.dispose();
 		if (ptuDishAntennaDataItemProvider != null) ptuDishAntennaDataItemProvider.dispose();
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -332,8 +332,8 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 			public Object caseAbstractTypeImplementation(AbstractTypeImplementation object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
-						 Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE.createPTUDishAntennaData()));
+						(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
+						 ApogyExamplesAntennaApogyFactory.eINSTANCE.createPTUDishAntennaData()));
 
 				return null;
 			}
@@ -366,24 +366,24 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesAntennaSymphonyEditPlugin.INSTANCE;
+			return ApogyExamplesAntennaApogyEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -419,13 +419,13 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE.createPTUDishAntennaSymphonySystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesAntennaApogyFactory.eINSTANCE.createPTUDishAntennaApogySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE.createPTUDishAntennaData()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesAntennaApogyFactory.eINSTANCE.createPTUDishAntennaData()));
 
 				return null;
 			}
@@ -439,13 +439,13 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE.createPTUDishAntennaSymphonySystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesAntennaApogyFactory.eINSTANCE.createPTUDishAntennaApogySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE.createPTUDishAntennaData()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesAntennaApogyFactory.eINSTANCE.createPTUDishAntennaData()));
 
 				return null;
 			}
@@ -478,7 +478,7 @@ public class Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory extends
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesAntennaSymphonyEditPlugin.INSTANCE;
+			return ApogyExamplesAntennaApogyEditPlugin.INSTANCE;
 		}
 	}
 

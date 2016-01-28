@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.util;
+package ca.gc.asc_csa.apogy.addons.ros.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.addons.ros.*;
+import ca.gc.asc_csa.apogy.addons.ros.*;
 
 import org.ros.internal.message.Message;
 
@@ -19,17 +19,17 @@ import org.ros.internal.message.Message;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage
  * @generated
  */
-public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsROSAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsROSPackage modelPackage;
+	protected static ApogyAddonsROSPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -37,9 +37,9 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSAdapterFactory() {
+	public ApogyAddonsROSAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsROSPackage.eINSTANCE;
+			modelPackage = ApogyAddonsROSPackage.eINSTANCE;
 		}
 	}
 
@@ -68,8 +68,8 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsROSSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsROSSwitch<Adapter>() {
+	protected ApogyAddonsROSSwitch<Adapter> modelSwitch =
+		new ApogyAddonsROSSwitch<Adapter>() {
 			@Override
 			public Adapter caseROSNode(ROSNode object) {
 				return createROSNodeAdapter();
@@ -103,8 +103,8 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 				return createROSListenerAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__AddonsROSFacade(Symphony__AddonsROSFacade object) {
-				return createSymphony__AddonsROSFacadeAdapter();
+			public Adapter caseApogyAddonsROSFacade(ApogyAddonsROSFacade object) {
+				return createApogyAddonsROSFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -127,13 +127,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSNode <em>ROS Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode <em>ROS Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode
 	 * @generated
 	 */
 	public Adapter createROSNodeAdapter() {
@@ -141,13 +141,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSInterface <em>ROS Interface</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface <em>ROS Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface
 	 * @generated
 	 */
 	public Adapter createROSInterfaceAdapter() {
@@ -155,13 +155,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager <em>ROS Publisher Manager</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager <em>ROS Publisher Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager
 	 * @generated
 	 */
 	public Adapter createROSPublisherManagerAdapter() {
@@ -169,13 +169,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSPublisher <em>ROS Publisher</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher <em>ROS Publisher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher
 	 * @generated
 	 */
 	public Adapter createROSPublisherAdapter() {
@@ -183,13 +183,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSServiceManager <em>ROS Service Manager</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager <em>ROS Service Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager
 	 * @generated
 	 */
 	public Adapter createROSServiceManagerAdapter() {
@@ -197,13 +197,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSService <em>ROS Service</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService <em>ROS Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSService
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService
 	 * @generated
 	 */
 	public Adapter createROSServiceAdapter() {
@@ -211,13 +211,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher <em>ROS Topic Launcher</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher <em>ROS Topic Launcher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher
 	 * @generated
 	 */
 	public Adapter createROSTopicLauncherAdapter() {
@@ -225,13 +225,13 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.ROSListener <em>ROS Listener</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener <em>ROS Listener</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener
 	 * @generated
 	 */
 	public Adapter createROSListenerAdapter() {
@@ -239,16 +239,16 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__AddonsROSFacadeAdapter() {
+	public Adapter createApogyAddonsROSFacadeAdapter() {
 		return null;
 	}
 
@@ -264,4 +264,4 @@ public class Symphony__AddonsROSAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__AddonsROSAdapterFactory
+} //ApogyAddonsROSAdapterFactory

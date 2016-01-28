@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -62,7 +62,7 @@ public class ImageCountOverlayItemProvider extends AbstractTextOverlayItemProvid
 				 getResourceLocator(),
 				 getString("_UI_ImageCountOverlay_indicatorVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageCountOverlay_indicatorVisible_feature", "_UI_ImageCountOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class ImageCountOverlayItemProvider extends AbstractTextOverlayItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageCountOverlay.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

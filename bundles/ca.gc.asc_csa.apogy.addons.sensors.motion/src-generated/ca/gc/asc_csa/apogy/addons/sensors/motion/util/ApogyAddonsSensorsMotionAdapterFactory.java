@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion.util;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,30 +10,30 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
 
-import org.eclipse.symphony.addons.sensors.motion.*;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.*;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage
  * @generated
  */
-public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsSensorsMotionAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsMotionPackage modelPackage;
+	protected static ApogyAddonsSensorsMotionPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -41,9 +41,9 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsMotionAdapterFactory() {
+	public ApogyAddonsSensorsMotionAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsMotionPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsMotionPackage.eINSTANCE;
 		}
 	}
 
@@ -72,8 +72,8 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsMotionSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsSensorsMotionSwitch<Adapter>() {
+	protected ApogyAddonsSensorsMotionSwitch<Adapter> modelSwitch =
+		new ApogyAddonsSensorsMotionSwitch<Adapter>() {
 			@Override
 			public Adapter caseSelfMotionSensor(SelfMotionSensor object) {
 				return createSelfMotionSensorAdapter();
@@ -127,13 +127,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor
 	 * @generated
 	 */
 	public Adapter createSelfMotionSensorAdapter() {
@@ -141,13 +141,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor
 	 * @generated
 	 */
 	public Adapter createAngularVelocitySensorAdapter() {
@@ -155,13 +155,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor
 	 * @generated
 	 */
 	public Adapter createLinearAccelerationSensorAdapter() {
@@ -169,13 +169,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor
 	 * @generated
 	 */
 	public Adapter createLinearVelocitySensorAdapter() {
@@ -183,13 +183,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -197,13 +197,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter() {
@@ -211,13 +211,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -225,13 +225,13 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.Sensor <em>Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.Sensor <em>Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.Sensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Sensor
 	 * @generated
 	 */
 	public Adapter createSensorAdapter() {
@@ -250,4 +250,4 @@ public class Symphony__AddonsSensorsMotionAdapterFactory extends AdapterFactoryI
 		return null;
 	}
 
-} //Symphony__AddonsSensorsMotionAdapterFactory
+} //ApogyAddonsSensorsMotionAdapterFactory

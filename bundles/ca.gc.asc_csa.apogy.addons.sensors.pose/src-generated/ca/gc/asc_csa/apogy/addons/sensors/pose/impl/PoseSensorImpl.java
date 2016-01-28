@@ -3,7 +3,7 @@
  *
  * $Id: PoseSensorImpl.java,v 1.5.4.3 2015/09/22 20:02:14 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -18,29 +18,29 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
-import org.eclipse.symphony.addons.sensors.pose.Activator;
-import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.PoseDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Pose;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.SensorStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.impl.TransformNodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -49,11 +49,11 @@ import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getStatus <em>Status</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getPose <em>Pose</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getDataLogger <em>Data Logger</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl#getPose <em>Pose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl#getDataLogger <em>Data Logger</em>}</li>
  * </ul>
  *
  * @generated
@@ -128,7 +128,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPosePackage.Literals.POSE_SENSOR;
+		return ApogyAddonsSensorsPosePackage.Literals.POSE_SENSOR;
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	public CartesianPositionCoordinates getPositionCoordinates() {
 		if (positionCoordinates == null) {
-			positionCoordinates = Symphony__CommonGeometryData3DFactory.eINSTANCE
+			positionCoordinates = ApogyCommonGeometryData3DFactory.eINSTANCE
 					.createCartesianPositionCoordinates();
 		}
 		return positionCoordinates;
@@ -179,7 +179,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	public CartesianOrientationCoordinates getOrientationCoordinates() {
 		if (orientationCoordinates == null) {
-			orientationCoordinates = Symphony__CommonGeometryData3DFactory.eINSTANCE
+			orientationCoordinates = ApogyCommonGeometryData3DFactory.eINSTANCE
 					.createCartesianOrientationCoordinates();
 		}
 		return orientationCoordinates;
@@ -201,7 +201,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	public Pose getPose() {
 		if (pose == null) {
-			pose = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
+			pose = ApogyCommonGeometryData3DFactory.eINSTANCE.createPose();
 
 			// Adds adapter for position and orienatation if not already there.
 			if (!eAdapters().contains(getPositionAdapter()))
@@ -256,7 +256,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		PoseDataLogger oldDataLogger = dataLogger;
 		dataLogger = newDataLogger;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, oldDataLogger, newDataLogger);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, oldDataLogger, newDataLogger);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -270,14 +270,14 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		if (newDataLogger != dataLogger) {
 			NotificationChain msgs = null;
 			if (dataLogger != null)
-				msgs = ((InternalEObject)dataLogger).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
+				msgs = ((InternalEObject)dataLogger).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
 			if (newDataLogger != null)
-				msgs = ((InternalEObject)newDataLogger).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
+				msgs = ((InternalEObject)newDataLogger).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
 			msgs = basicSetDataLogger(newDataLogger, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, newDataLogger, newDataLogger));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, newDataLogger, newDataLogger));
 	}
 
 	/**
@@ -310,7 +310,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 			Matrix3x3 matrix) {
 		Vector3d rotation = GeometricUtils
 				.extractRotationFromXYZRotMatrix(matrix.asMatrix3d());
-		CartesianOrientationCoordinates orientation = Symphony__CommonGeometryData3DFacade.INSTANCE
+		CartesianOrientationCoordinates orientation = ApogyCommonGeometryData3DFacade.INSTANCE
 				.createCartesianOrientationCoordinates(rotation.x, rotation.y,
 						rotation.z);
 		return orientation;
@@ -335,7 +335,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				return basicSetDataLogger(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -348,18 +348,18 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				return getStatus();
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES:
 				if (resolve) return getPositionCoordinates();
 				return basicGetPositionCoordinates();
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
 				if (resolve) return getOrientationCoordinates();
 				return basicGetOrientationCoordinates();
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSE:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSE:
 				if (resolve) return getPose();
 				return basicGetPose();
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				return getDataLogger();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -372,10 +372,10 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				setDataLogger((PoseDataLogger)newValue);
 				return;
 		}
@@ -389,10 +389,10 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				setDataLogger((PoseDataLogger)null);
 				return;
 		}
@@ -406,15 +406,15 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES:
 				return positionCoordinates != null;
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
 				return orientationCoordinates != null;
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSE:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSE:
 				return pose != null;
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				return dataLogger != null;
 		}
 		return super.eIsSet(featureID);
@@ -428,7 +428,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Sensor.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS: return Symphony__AddonsSensorsPackage.SENSOR__STATUS;
+				case ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS: return ApogyAddonsSensorsPackage.SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -439,13 +439,13 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		}
 		if (baseClass == PositionSensor.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES: return Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES;
+				case ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES: return ApogyAddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == OrientationSensor.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES: return Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES;
+				case ApogyAddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES: return ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES;
 				default: return -1;
 			}
 		}
@@ -460,7 +460,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Sensor.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsSensorsPackage.SENSOR__STATUS: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS;
+				case ApogyAddonsSensorsPackage.SENSOR__STATUS: return ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -471,13 +471,13 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		}
 		if (baseClass == PositionSensor.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES;
+				case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES: return ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == OrientationSensor.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES;
+				case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES: return ApogyAddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES;
 				default: return -1;
 			}
 		}
@@ -503,14 +503,14 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		}
 		if (baseClass == PositionSensor.class) {
 			switch (baseOperationID) {
-				case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES;
+				case ApogyAddonsSensorsPosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES: return ApogyAddonsSensorsPosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == OrientationSensor.class) {
 			switch (baseOperationID) {
-				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES;
-				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3;
+				case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES: return ApogyAddonsSensorsPosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES;
+				case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3: return ApogyAddonsSensorsPosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3;
 				default: return -1;
 			}
 		}
@@ -525,7 +525,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_POSE__POSE:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR___RESET_POSE__POSE:
 				try {
 					resetPose((Pose)arguments.get(0));
 					return null;
@@ -533,7 +533,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
 				try {
 					resetOrientation((CartesianOrientationCoordinates)arguments.get(0));
 					return null;
@@ -541,9 +541,9 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
 				return extractOrientationFromMatrix((Matrix3x3)arguments.get(0));
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
 				try {
 					resetPosition((CartesianPositionCoordinates)arguments.get(0));
 					return null;
@@ -575,7 +575,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 			positionAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(TransformNode.class) == Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION) {
+					if (msg.getFeatureID(TransformNode.class) == ApogyCommonTopologyPackage.TRANSFORM_NODE__POSITION) {
 						// Updates the current Orientation data with the new
 						// values.
 						Tuple3d newPose = (Tuple3d) msg.getNewValue();
@@ -601,7 +601,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 			orientationAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(TransformNode.class) == Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX) {
+					if (msg.getFeatureID(TransformNode.class) == ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX) {
 						// Extracts the rotation from the rotation matrix.
 						CartesianOrientationCoordinates newOrientation = extractOrientationFromMatrix((Matrix3x3) msg
 								.getNewValue());

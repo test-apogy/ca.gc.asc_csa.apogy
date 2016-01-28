@@ -3,19 +3,19 @@
  *
  * $Id: DelaunayMesherImpl.java,v 1.3.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import javax.vecmath.Vector3d;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
-import org.eclipse.symphony.common.math.quickhull3d.QuickHull3D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher;
+import ca.gc.asc_csa.apogy.common.math.quickhull3d.QuickHull3D;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -39,7 +39,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER;
+		return ApogyCommonGeometryData3DPackage.Literals.DELAUNAY_MESHER;
 	}
 
 	@Override
@@ -74,14 +74,14 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 						+ (t1 - t0));
 
 		// We only keep the faces facing down.
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 
 		for (CartesianPositionCoordinates point : input.getPoints()) {
 			double x = point.getX();
 			double y = point.getY();
 			double z = point.getZ();
 
-			CartesianPositionCoordinates copy = Symphony__CommonGeometryData3DFacade.INSTANCE
+			CartesianPositionCoordinates copy = ApogyCommonGeometryData3DFacade.INSTANCE
 					.createCartesianPositionCoordinates(x, y, z);
 
 			mesh.getPoints().add(copy);
@@ -97,7 +97,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 					CartesianPositionCoordinates p1 = mesh.getPoints().get(faces[i][1]);
 					CartesianPositionCoordinates p2 = mesh.getPoints().get(faces[i][2]);
 
-					CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p2, p1, p0);
+					CartesianTriangle triangle = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p2, p1, p0);
 
 					mesh.getPolygons().add(triangle);
 				}

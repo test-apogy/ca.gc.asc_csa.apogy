@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_environment_ui -->
+      <!-- @generated apogy_environment_ui -->
       <factory
-            uri="org.eclipse.symphony.core.environment.ui"
-            class="org.eclipse.symphony.core.environment.ui.provider.Symphony__CoreEnvironmentUIItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.core.environment.ui"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,16 +21,16 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_core_environment_ui -->
+      <!-- @generated apogy_core_environment_ui -->
       <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.core.environment.ui.provider.Symphony__CoreEnvironmentUIItemProviderAdapterFactory$Symphony__CommonTopologyUIChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.ui"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyUIChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.core.environment.ui.provider.Symphony__CoreEnvironmentUIItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.environment.ui.provider.Symphony__CoreEnvironmentUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

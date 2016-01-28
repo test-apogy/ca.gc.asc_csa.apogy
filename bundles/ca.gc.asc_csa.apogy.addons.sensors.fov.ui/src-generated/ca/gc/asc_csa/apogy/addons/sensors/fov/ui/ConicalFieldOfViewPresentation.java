@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.fov.ui;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getConicalFieldOfViewPresentation()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage#getConicalFieldOfViewPresentation()
  * @model
  * @generated
  */

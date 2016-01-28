@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.symphony.common.emf.*;
+import ca.gc.asc_csa.apogy.common.emf.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symphony__CommonEMFFactory
+public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyCommonEMFFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -33,18 +33,18 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CommonEMFFactory init()
+  public static ApogyCommonEMFFactory init()
   {
 		try {
-			Symphony__CommonEMFFactory theSymphony__CommonEMFFactory = (Symphony__CommonEMFFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonEMFPackage.eNS_URI);
-			if (theSymphony__CommonEMFFactory != null) {
-				return theSymphony__CommonEMFFactory;
+			ApogyCommonEMFFactory theApogyCommonEMFFactory = (ApogyCommonEMFFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonEMFPackage.eNS_URI);
+			if (theApogyCommonEMFFactory != null) {
+				return theApogyCommonEMFFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonEMFFactoryImpl();
+		return new ApogyCommonEMFFactoryImpl();
 	}
 
   /**
@@ -53,7 +53,7 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFFactoryImpl()
+  public ApogyCommonEMFFactoryImpl()
   {
 		super();
 	}
@@ -67,20 +67,20 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE: return createSymphony__CommonEMFFacade();
-			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE: return createEObjectReference();
-			case Symphony__CommonEMFPackage.SERVER: return createServer();
-			case Symphony__CommonEMFPackage.STARTABLE: return createStartable();
-			case Symphony__CommonEMFPackage.FIXED_TIME_SOURCE: return createFixedTimeSource();
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE: return createCurrentTimeSource();
-			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE: return createBrowseableTimeSource();
-			case Symphony__CommonEMFPackage.SELECTION_BASED_TIME_SOURCE: return createSelectionBasedTimeSource();
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE: return createCollectionTimedTimeSource();
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER: return createFeatureNodeAdapter();
-			case Symphony__CommonEMFPackage.TREE_ROOT_NODE: return createTreeRootNode();
-			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE: return createTreeFeatureNode();
-			case Symphony__CommonEMFPackage.LIST_ROOT_NODE: return createListRootNode();
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE: return createListFeatureNode();
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE: return createApogyCommonEMFFacade();
+			case ApogyCommonEMFPackage.EOBJECT_REFERENCE: return createEObjectReference();
+			case ApogyCommonEMFPackage.SERVER: return createServer();
+			case ApogyCommonEMFPackage.STARTABLE: return createStartable();
+			case ApogyCommonEMFPackage.FIXED_TIME_SOURCE: return createFixedTimeSource();
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE: return createCurrentTimeSource();
+			case ApogyCommonEMFPackage.BROWSEABLE_TIME_SOURCE: return createBrowseableTimeSource();
+			case ApogyCommonEMFPackage.SELECTION_BASED_TIME_SOURCE: return createSelectionBasedTimeSource();
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE: return createCollectionTimedTimeSource();
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER: return createFeatureNodeAdapter();
+			case ApogyCommonEMFPackage.TREE_ROOT_NODE: return createTreeRootNode();
+			case ApogyCommonEMFPackage.TREE_FEATURE_NODE: return createTreeFeatureNode();
+			case ApogyCommonEMFPackage.LIST_ROOT_NODE: return createListRootNode();
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE: return createListFeatureNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,33 +95,33 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonEMFPackage.TIME_DIRECTION:
+			case ApogyCommonEMFPackage.TIME_DIRECTION:
 				return createTimeDirectionFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.RANGES:
+			case ApogyCommonEMFPackage.RANGES:
 				return createRangesFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.EXCEPTION:
+			case ApogyCommonEMFPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.LIST:
+			case ApogyCommonEMFPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.SORTED_SET:
+			case ApogyCommonEMFPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.ECLASS_FILTER:
+			case ApogyCommonEMFPackage.ECLASS_FILTER:
 				return createEClassFilterFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.NUMBER:
+			case ApogyCommonEMFPackage.NUMBER:
 				return createNumberFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.IFILE:
+			case ApogyCommonEMFPackage.IFILE:
 				return createIFileFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.RESOURCE:
+			case ApogyCommonEMFPackage.RESOURCE:
 				return createResourceFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.UNIT:
+			case ApogyCommonEMFPackage.UNIT:
 				return createUnitFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.COLLECTION:
+			case ApogyCommonEMFPackage.COLLECTION:
 				return createCollectionFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.ELIST:
+			case ApogyCommonEMFPackage.ELIST:
 				return createEListFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.URI:
+			case ApogyCommonEMFPackage.URI:
 				return createURIFromString(eDataType, initialValue);
-			case Symphony__CommonEMFPackage.JOB:
+			case ApogyCommonEMFPackage.JOB:
 				return createJobFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -137,33 +137,33 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonEMFPackage.TIME_DIRECTION:
+			case ApogyCommonEMFPackage.TIME_DIRECTION:
 				return convertTimeDirectionToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.RANGES:
+			case ApogyCommonEMFPackage.RANGES:
 				return convertRangesToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.EXCEPTION:
+			case ApogyCommonEMFPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.LIST:
+			case ApogyCommonEMFPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.SORTED_SET:
+			case ApogyCommonEMFPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.ECLASS_FILTER:
+			case ApogyCommonEMFPackage.ECLASS_FILTER:
 				return convertEClassFilterToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.NUMBER:
+			case ApogyCommonEMFPackage.NUMBER:
 				return convertNumberToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.IFILE:
+			case ApogyCommonEMFPackage.IFILE:
 				return convertIFileToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.RESOURCE:
+			case ApogyCommonEMFPackage.RESOURCE:
 				return convertResourceToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.UNIT:
+			case ApogyCommonEMFPackage.UNIT:
 				return convertUnitToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.COLLECTION:
+			case ApogyCommonEMFPackage.COLLECTION:
 				return convertCollectionToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.ELIST:
+			case ApogyCommonEMFPackage.ELIST:
 				return convertEListToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.URI:
+			case ApogyCommonEMFPackage.URI:
 				return convertURIToString(eDataType, instanceValue);
-			case Symphony__CommonEMFPackage.JOB:
+			case ApogyCommonEMFPackage.JOB:
 				return convertJobToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -175,9 +175,9 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFFacade createSymphony__CommonEMFFacade() {
-		Symphony__CommonEMFFacadeImpl symphony__CommonEMFFacade = new Symphony__CommonEMFFacadeImpl();
-		return symphony__CommonEMFFacade;
+	public ApogyCommonEMFFacade createApogyCommonEMFFacade() {
+		ApogyCommonEMFFacadeImpl apogy__CommonEMFFacade = new ApogyCommonEMFFacadeImpl();
+		return apogy__CommonEMFFacade;
 	}
 
 		/**
@@ -605,8 +605,8 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFPackage getSymphony__CommonEMFPackage() {
-		return (Symphony__CommonEMFPackage)getEPackage();
+	public ApogyCommonEMFPackage getApogyCommonEMFPackage() {
+		return (ApogyCommonEMFPackage)getEPackage();
 	}
 
 		/**
@@ -616,9 +616,9 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CommonEMFPackage getPackage()
+  public static ApogyCommonEMFPackage getPackage()
   {
-		return Symphony__CommonEMFPackage.eINSTANCE;
+		return ApogyCommonEMFPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonEMFFactoryImpl
+} //ApogyCommonEMFFactoryImpl

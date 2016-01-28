@@ -3,7 +3,7 @@
  *
  * $Id: PointLocatorImpl.java,v 1.3.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.PointLocator;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -38,7 +38,7 @@ public abstract class PointLocatorImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.POINT_LOCATOR;
+		return ApogyCommonGeometryData3DPackage.Literals.POINT_LOCATOR;
 	}
 
 	/**
@@ -150,28 +150,28 @@ public abstract class PointLocatorImpl extends MinimalEObjectImpl.Container impl
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___GET_POINTS:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___GET_POINTS:
 				return getPoints();
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___ADD_POINT__CARTESIANPOSITIONCOORDINATES:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___ADD_POINT__CARTESIANPOSITIONCOORDINATES:
 				addPoint((CartesianPositionCoordinates)arguments.get(0));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___ADD_POINTS__LIST:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___ADD_POINTS__LIST:
 				addPoints((List<CartesianPositionCoordinates>)arguments.get(0));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___REMOVE_POINT__CARTESIANPOSITIONCOORDINATES:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___REMOVE_POINT__CARTESIANPOSITIONCOORDINATES:
 				removePoint((CartesianPositionCoordinates)arguments.get(0));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___REMOVE_POINTS__LIST:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___REMOVE_POINTS__LIST:
 				removePoints((List<CartesianPositionCoordinates>)arguments.get(0));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___CLEAR_POINTS:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___CLEAR_POINTS:
 				clearPoints();
 				return null;
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES:
 				return findClosestPoint((CartesianPositionCoordinates)arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___FIND_CLOSEST_POINTS__CARTESIANPOSITIONCOORDINATES_INT:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___FIND_CLOSEST_POINTS__CARTESIANPOSITIONCOORDINATES_INT:
 				return findClosestPoints((CartesianPositionCoordinates)arguments.get(0), (Integer)arguments.get(1));
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE:
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE:
 				return findPointsWithinRadius((CartesianPositionCoordinates)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

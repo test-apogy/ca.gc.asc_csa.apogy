@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ValuesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ValuesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ValuesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class ValuesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.VALUES_LIST__VALUES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.VALUES_LIST__VALUES);
 		}
 		return childrenFeatures;
 	}
@@ -143,7 +143,7 @@ public class ValuesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ValuesList.class)) {
-			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
+			case ApogyCoreInvocatorPackage.VALUES_LIST__VALUES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -164,8 +164,8 @@ public class ValuesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.VALUES_LIST__VALUES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createValue()));
+				(ApogyCoreInvocatorPackage.Literals.VALUES_LIST__VALUES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createValue()));
 	}
 
   /**

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.util;
+package ca.gc.asc_csa.apogy.common.topology.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,12 +8,12 @@ import javax.vecmath.Matrix4d;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 public class NodeRelativePoseListener 
 {
@@ -139,12 +139,12 @@ public class NodeRelativePoseListener
 					if(msg.getNotifier() instanceof TransformNode)
 					{			
 						int featureId = msg.getFeatureID(TransformNode.class);
-						if(featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION ||
-						   featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
+						if(featureId == ApogyCommonTopologyPackage.TRANSFORM_NODE__POSITION ||
+						   featureId == ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
 						{
 							relativePoseChanged(computeNewPose());
 						}
-						else if(featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__PARENT)
+						else if(featureId == ApogyCommonTopologyPackage.TRANSFORM_NODE__PARENT)
 						{
 							updateNodeList();
 							relativePoseChanged(computeNewPose());
@@ -153,11 +153,11 @@ public class NodeRelativePoseListener
 					else if(msg.getNotifier() instanceof PositionNode)
 					{			
 						int featureId = msg.getFeatureID(PositionNode.class);
-						if(featureId == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION)
+						if(featureId == ApogyCommonTopologyPackage.POSITION_NODE__POSITION)
 						{
 							relativePoseChanged(computeNewPose());
 						}
-						else if(featureId == Symphony__CommonTopologyPackage.POSITION_NODE__PARENT)
+						else if(featureId == ApogyCommonTopologyPackage.POSITION_NODE__PARENT)
 						{
 							updateNodeList();
 							relativePoseChanged(computeNewPose());
@@ -166,11 +166,11 @@ public class NodeRelativePoseListener
 					else if(msg.getNotifier() instanceof RotationNode)
 					{			
 						int featureId = msg.getFeatureID(RotationNode.class);
-						if(featureId == Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
+						if(featureId == ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
 						{
 							relativePoseChanged(computeNewPose());
 						}
-						else if(featureId == Symphony__CommonTopologyPackage.ROTATION_NODE__PARENT)
+						else if(featureId == ApogyCommonTopologyPackage.ROTATION_NODE__PARENT)
 						{
 							updateNodeList();
 							relativePoseChanged(computeNewPose());
@@ -186,7 +186,7 @@ public class NodeRelativePoseListener
 	{
 		if(fromNode != null && toNode != null)
 		{
-			return Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(fromNode, toNode);
+			return ApogyCommonTopologyFacade.INSTANCE.expressInFrame(fromNode, toNode);
 		}
 		else
 		{

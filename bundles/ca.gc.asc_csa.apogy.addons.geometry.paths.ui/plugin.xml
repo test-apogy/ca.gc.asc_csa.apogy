@@ -11,35 +11,35 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.geometry.paths.ui.adapters.WayPointPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.addons.geometry.paths.ui.preferences.MRTPathsPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
-            id="org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.addons.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
+            id="ca.gc.asc_csa.apogy.addons.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
             name="Paths">
       </page>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.addons.geometry.paths.ui"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage"
-            genModel="model/symphony_addons_geometry_paths_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.geometry.paths.ui"
+            class="ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage"
+            genModel="model/apogy_addons_geometry_paths_ui.xcore"/>
    </extension>
 
 </plugin>

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -10,15 +10,15 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.core.invocator.RecordingResultsList;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import com.google.common.base.Objects;
 
 /**
@@ -29,12 +29,12 @@ import com.google.common.base.Objects;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl#getDataProductsListsContainer <em>Data Products Lists Container</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl#getOperationCallResultsList <em>Operation Call Results List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl#getRecordingResultsList <em>Recording Results List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl#getDataProductsListsContainer <em>Data Products Lists Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl#getOperationCallResultsList <em>Operation Call Results List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl#getRecordingResultsList <em>Recording Results List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
  *
  * @generated
@@ -119,7 +119,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST;
+		return ApogyCoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST;
 	}
 
   /**
@@ -142,7 +142,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME, oldName, name));
 	}
 
   /**
@@ -165,7 +165,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -175,7 +175,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 	 */
   public DataProductsListsContainer getDataProductsListsContainer()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER) return null;
 		return (DataProductsListsContainer)eContainer();
 	}
 
@@ -186,7 +186,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 	 */
   public DataProductsListsContainer basicGetDataProductsListsContainer()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER) return null;
 		return (DataProductsListsContainer)eInternalContainer();
 	}
 
@@ -197,7 +197,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 	 */
   public NotificationChain basicSetDataProductsListsContainer(DataProductsListsContainer newDataProductsListsContainer, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newDataProductsListsContainer, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newDataProductsListsContainer, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER, msgs);
 		return msgs;
 	}
 
@@ -208,19 +208,19 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 	 */
   public void setDataProductsListsContainer(DataProductsListsContainer newDataProductsListsContainer)
   {
-		if (newDataProductsListsContainer != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER && newDataProductsListsContainer != null)) {
+		if (newDataProductsListsContainer != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER && newDataProductsListsContainer != null)) {
 			if (EcoreUtil.isAncestor(this, newDataProductsListsContainer))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDataProductsListsContainer != null)
-				msgs = ((InternalEObject)newDataProductsListsContainer).eInverseAdd(this, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, DataProductsListsContainer.class, msgs);
+				msgs = ((InternalEObject)newDataProductsListsContainer).eInverseAdd(this, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, DataProductsListsContainer.class, msgs);
 			msgs = basicSetDataProductsListsContainer(newDataProductsListsContainer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER, newDataProductsListsContainer, newDataProductsListsContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER, newDataProductsListsContainer, newDataProductsListsContainer));
 	}
 
   /**
@@ -243,7 +243,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 		OperationCallResultsList oldOperationCallResultsList = operationCallResultsList;
 		operationCallResultsList = newOperationCallResultsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST, oldOperationCallResultsList, newOperationCallResultsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST, oldOperationCallResultsList, newOperationCallResultsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -259,14 +259,14 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 		if (newOperationCallResultsList != operationCallResultsList) {
 			NotificationChain msgs = null;
 			if (operationCallResultsList != null)
-				msgs = ((InternalEObject)operationCallResultsList).eInverseRemove(this, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST__DATA_PRODUCTS_LIST, OperationCallResultsList.class, msgs);
+				msgs = ((InternalEObject)operationCallResultsList).eInverseRemove(this, ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST__DATA_PRODUCTS_LIST, OperationCallResultsList.class, msgs);
 			if (newOperationCallResultsList != null)
-				msgs = ((InternalEObject)newOperationCallResultsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST__DATA_PRODUCTS_LIST, OperationCallResultsList.class, msgs);
+				msgs = ((InternalEObject)newOperationCallResultsList).eInverseAdd(this, ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST__DATA_PRODUCTS_LIST, OperationCallResultsList.class, msgs);
 			msgs = basicSetOperationCallResultsList(newOperationCallResultsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST, newOperationCallResultsList, newOperationCallResultsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST, newOperationCallResultsList, newOperationCallResultsList));
 	}
 
   /**
@@ -289,7 +289,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 		RecordingResultsList oldRecordingResultsList = recordingResultsList;
 		recordingResultsList = newRecordingResultsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, oldRecordingResultsList, newRecordingResultsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, oldRecordingResultsList, newRecordingResultsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -305,14 +305,14 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
 		if (newRecordingResultsList != recordingResultsList) {
 			NotificationChain msgs = null;
 			if (recordingResultsList != null)
-				msgs = ((InternalEObject)recordingResultsList).eInverseRemove(this, Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, RecordingResultsList.class, msgs);
+				msgs = ((InternalEObject)recordingResultsList).eInverseRemove(this, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, RecordingResultsList.class, msgs);
 			if (newRecordingResultsList != null)
-				msgs = ((InternalEObject)newRecordingResultsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, RecordingResultsList.class, msgs);
+				msgs = ((InternalEObject)newRecordingResultsList).eInverseAdd(this, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, RecordingResultsList.class, msgs);
 			msgs = basicSetRecordingResultsList(newRecordingResultsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, newRecordingResultsList, newRecordingResultsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, newRecordingResultsList, newRecordingResultsList));
 	}
 
   /**
@@ -341,17 +341,17 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetDataProductsListsContainer((DataProductsListsContainer)otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
 				if (operationCallResultsList != null)
-					msgs = ((InternalEObject)operationCallResultsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST, null, msgs);
+					msgs = ((InternalEObject)operationCallResultsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST, null, msgs);
 				return basicSetOperationCallResultsList((OperationCallResultsList)otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
 				if (recordingResultsList != null)
-					msgs = ((InternalEObject)recordingResultsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, null, msgs);
+					msgs = ((InternalEObject)recordingResultsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, null, msgs);
 				return basicSetRecordingResultsList((RecordingResultsList)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -366,11 +366,11 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
 				return basicSetDataProductsListsContainer(null, msgs);
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
 				return basicSetOperationCallResultsList(null, msgs);
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
 				return basicSetRecordingResultsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -385,8 +385,8 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, DataProductsListsContainer.class, msgs);
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, DataProductsListsContainer.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -400,18 +400,18 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
 				return getName();
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
 				if (resolve) return getDataProductsListsContainer();
 				return basicGetDataProductsListsContainer();
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
 				return getOperationCallResultsList();
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
 				return getRecordingResultsList();
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__INVOCATOR_SESSION:
 				return getInvocatorSession();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -426,19 +426,19 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
 				setDataProductsListsContainer((DataProductsListsContainer)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
 				setOperationCallResultsList((OperationCallResultsList)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
 				setRecordingResultsList((RecordingResultsList)newValue);
 				return;
 		}
@@ -454,19 +454,19 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
 				setDataProductsListsContainer((DataProductsListsContainer)null);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
 				setOperationCallResultsList((OperationCallResultsList)null);
 				return;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
 				setRecordingResultsList((RecordingResultsList)null);
 				return;
 		}
@@ -482,17 +482,17 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER:
 				return basicGetDataProductsListsContainer() != null;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
 				return operationCallResultsList != null;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
 				return recordingResultsList != null;
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__INVOCATOR_SESSION:
 				return getInvocatorSession() != null;
 		}
 		return super.eIsSet(featureID);
@@ -508,7 +508,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -525,7 +525,7 @@ public class DataProductsListImpl extends MinimalEObjectImpl.Container implement
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

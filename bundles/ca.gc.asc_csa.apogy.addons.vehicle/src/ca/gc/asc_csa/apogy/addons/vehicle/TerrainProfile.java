@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import java.util.List;
 import java.util.SortedSet;

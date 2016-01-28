@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -10,22 +10,22 @@ import java.awt.geom.Ellipse2D;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
-import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation;
-import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.impl.PoseVariableAnnotationImpl;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Mobile Platform Symphony System Annotation</b></em>'.
+ * An implementation of the model object '<em><b>Mobile Platform Apogy System Annotation</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class MobilePlatformSymphonySystemAnnotationImpl extends PoseVariableAnnotationImpl
-														implements MobilePlatformSymphonySystemAnnotation
+public class MobilePlatformApogySystemAnnotationImpl extends PoseVariableAnnotationImpl
+														implements MobilePlatformApogySystemAnnotation
 {
 	/**
 	 * This is the stroke which should be used when
@@ -57,7 +57,7 @@ public class MobilePlatformSymphonySystemAnnotationImpl extends PoseVariableAnno
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobilePlatformSymphonySystemAnnotationImpl() {
+	protected MobilePlatformApogySystemAnnotationImpl() {
 		super();
 	}
 
@@ -68,7 +68,7 @@ public class MobilePlatformSymphonySystemAnnotationImpl extends PoseVariableAnno
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_SYMPHONY_SYSTEM_ANNOTATION;
+		return ApogyExamplesMobilePlatformApogyPackage.Literals.MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION;
 	}
 
 	/**
@@ -156,4 +156,4 @@ public class MobilePlatformSymphonySystemAnnotationImpl extends PoseVariableAnno
 		return list;
 	}
 
-} //MobilePlatformSymphonySystemAnnotationImpl
+} //MobilePlatformApogySystemAnnotationImpl

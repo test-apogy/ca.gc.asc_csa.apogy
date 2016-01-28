@@ -12,24 +12,24 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorModelWizardID"
-            name="%_UI_Symphony__CoreInvocatorModelWizard_label"
-            class="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorModelWizard"
+            id="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorModelWizardID"
+            name="%_UI_ApogyCoreInvocatorModelWizard_label"
+            class="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/Symphony__CoreInvocatorModelFile.gif">
-         <description>%_UI_Symphony__CoreInvocatorModelWizard_description</description>
+            icon="icons/full/obj16/ApogyCoreInvocatorModelFile.gif">
+         <description>%_UI_ApogyCoreInvocatorModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorEditorID"
-            name="%_UI_Symphony__CoreInvocatorEditor_label"
-            icon="platform:/plugin/org.eclipse.symphony.core.ui/icons/symphony_logo_16x16.gif"
+            id="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorEditorID"
+            name="%_UI_ApogyCoreInvocatorEditor_label"
+            icon="platform:/plugin/ca.gc.asc_csa.apogy.core.ui/icons/apogy_logo_16x16.gif"
             extensions="ei, ss, sym"
-            class="org.eclipse.symphony.core.invocator.presentation.CustomSymphony__CoreInvocatorEditor"
-            contributorClass="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorActionBarContributor">
+            class="ca.gc.asc_csa.apogy.core.invocator.presentation.CustomApogyCoreInvocatorEditor"
+            contributorClass="ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorActionBarContributor">
       </editor>
    </extension>
 

@@ -4,22 +4,22 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerPreferences">
+            class="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyViewerPreferences">
       </initializer>
       <initializer
-            class="org.eclipse.symphony.common.topology.ui.preferences.PreferenceInitializer">
+            class="ca.gc.asc_csa.apogy.common.topology.ui.preferences.PreferenceInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerPreferencesPage"
-            id="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyViewerPreferencesPage"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyViewerPreferencesPage"
             name="3D Topology Viewer">
       </page>
       <page
-            category="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerLightingPreferencePage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyViewerLightingPreferencePage"
             id="ca.gc.space.topology.ui.preferences.TopologyViewerLightingPreferencePage"
             name="Lighting">
       </page>

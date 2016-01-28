@@ -3,17 +3,17 @@
  *
  * $Id: CartesianTriangularMeshPolygonSamplerImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshPolygonShapesSamplerImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,25 +42,25 @@ public class CartesianTriangularMeshPolygonSamplerImpl extends MeshPolygonShapes
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER;
 	}
 
 	@Override
 	protected CartesianPositionCoordinates copyCoordinates(CartesianPositionCoordinates point)
 	{
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 	}
 
 	@Override
 	protected Mesh<CartesianPositionCoordinates, CartesianTriangle> createMesh()
 	{		
-		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		return ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 	}
 
 	@Override
 	protected CartesianTriangle createPolygon()
 	{
-		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
+		return ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 	}
 
 } //CartesianTriangularMeshPolygonSamplerImpl

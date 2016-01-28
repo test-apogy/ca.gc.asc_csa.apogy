@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.core;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.core;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -10,18 +10,18 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
- org.eclipse.symphony.core.invocator;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
  org.eclipse.core.runtime;bundle-version="3.9.0",
- org.eclipse.symphony.common.geometry.data3d,
- org.eclipse.symphony.common.log;bundle-version="0.3.0",
- org.eclipse.symphony.common.converters;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.common.geometry.data3d,
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
+ ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.symphony.core,
- org.eclipse.symphony.core.impl,
- org.eclipse.symphony.core.invocator,
- org.eclipse.symphony.core.util
-Bundle-Activator: org.eclipse.symphony.core.Activator
+Export-Package: ca.gc.asc_csa.apogy.core,
+ ca.gc.asc_csa.apogy.core.impl,
+ ca.gc.asc_csa.apogy.core.invocator,
+ ca.gc.asc_csa.apogy.core.util
+Bundle-Activator: ca.gc.asc_csa.apogy.core.Activator

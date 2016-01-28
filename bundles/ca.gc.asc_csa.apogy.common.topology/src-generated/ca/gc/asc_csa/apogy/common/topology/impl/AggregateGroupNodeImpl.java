@@ -4,7 +4,7 @@
  *
  * $Id: AggregateGroupNodeImpl.java,v 1.13.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import java.util.Collection;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl#getAggregatedChildren <em>Aggregated Children</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl#getAggregatedChildren <em>Aggregated Children</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,7 +58,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE;
+		return ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	public EList<Node> getAggregatedChildren() {
 		if (aggregatedChildren == null) {
 			aggregatedChildren = new EObjectContainmentEList<Node>(Node.class,
-					this, Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN) {
+					this, ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN) {
 				/**
 				 * 
 				 */
@@ -153,7 +153,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				return ((InternalEList<?>)getAggregatedChildren()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -166,7 +166,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				return getAggregatedChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -180,7 +180,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				getAggregatedChildren().clear();
 				getAggregatedChildren().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -195,7 +195,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				getAggregatedChildren().clear();
 				return;
 		}
@@ -209,7 +209,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				return aggregatedChildren != null && !aggregatedChildren.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui.provider;
+package ca.gc.asc_csa.apogy.common.emf.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.emf.ui.util.Symphony__CommonEMFUIAdapterFactory;
+import ca.gc.asc_csa.apogy.common.emf.ui.util.ApogyCommonEMFUIAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.emf.ui.util.Symphony__CommonEMFUIAdapterFacto
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFUIItemProviderAdapterFactory extends Symphony__CommonEMFUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+public class ApogyCommonEMFUIItemProviderAdapterFactory extends ApogyCommonEMFUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -62,7 +62,7 @@ public class Symphony__CommonEMFUIItemProviderAdapterFactory extends Symphony__C
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFUIItemProviderAdapterFactory()
+  public ApogyCommonEMFUIItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -72,26 +72,26 @@ public class Symphony__CommonEMFUIItemProviderAdapterFactory extends Symphony__C
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonEMFUIFacadeItemProvider symphony__CommonEMFUIFacadeItemProvider;
+	protected ApogyCommonEMFUIFacadeItemProvider apogy__CommonEMFUIFacadeItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonEMFUIFacadeAdapter() {
-		if (symphony__CommonEMFUIFacadeItemProvider == null) {
-			symphony__CommonEMFUIFacadeItemProvider = new Symphony__CommonEMFUIFacadeItemProvider(this);
+	public Adapter createApogyCommonEMFUIFacadeAdapter() {
+		if (apogy__CommonEMFUIFacadeItemProvider == null) {
+			apogy__CommonEMFUIFacadeItemProvider = new ApogyCommonEMFUIFacadeItemProvider(this);
 		}
 
-		return symphony__CommonEMFUIFacadeItemProvider;
+		return apogy__CommonEMFUIFacadeItemProvider;
 	}
 
 		/**
@@ -202,7 +202,7 @@ public class Symphony__CommonEMFUIItemProviderAdapterFactory extends Symphony__C
 	 */
   public void dispose()
   {
-		if (symphony__CommonEMFUIFacadeItemProvider != null) symphony__CommonEMFUIFacadeItemProvider.dispose();
+		if (apogy__CommonEMFUIFacadeItemProvider != null) apogy__CommonEMFUIFacadeItemProvider.dispose();
 	}
 
 }

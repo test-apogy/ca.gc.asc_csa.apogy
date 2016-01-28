@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider;
 
 
 import java.util.Collection;
@@ -13,18 +13,18 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
-import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData;
-import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobilePlatformDataItemProvider extends SymphonyInitializationDataItemProvider {
+public class MobilePlatformDataItemProvider extends ApogyInitializationDataItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_initialized_feature", "_UI_MobilePlatformData_type"),
-				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__INITIALIZED,
+				 ApogyExamplesMobilePlatformApogyPackage.Literals.MOBILE_PLATFORM_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_disposed_feature", "_UI_MobilePlatformData_type"),
-				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__DISPOSED,
+				 ApogyExamplesMobilePlatformApogyPackage.Literals.MOBILE_PLATFORM_DATA__DISPOSED,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_linearVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_linearVelocity_feature", "_UI_MobilePlatformData_type"),
-				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY,
+				 ApogyExamplesMobilePlatformApogyPackage.Literals.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_angularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_angularVelocity_feature", "_UI_MobilePlatformData_type"),
-				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY,
+				 ApogyExamplesMobilePlatformApogyPackage.Literals.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -178,10 +178,10 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobilePlatformData.class)) {
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

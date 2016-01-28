@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 				 getResourceLocator(),
 				 getString("_UI_ColoredCartesianPositionCoordinates_red_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_red_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__RED,
+				 ApogyCommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__RED,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 				 getResourceLocator(),
 				 getString("_UI_ColoredCartesianPositionCoordinates_green_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_green_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN,
+				 ApogyCommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 				 getResourceLocator(),
 				 getString("_UI_ColoredCartesianPositionCoordinates_blue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_blue_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE,
+				 ApogyCommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE,
 				 true,
 				 false,
 				 false,
@@ -155,9 +155,9 @@ public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPo
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ColoredCartesianPositionCoordinates.class)) {
-			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
-			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN:
-			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE:
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN:
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

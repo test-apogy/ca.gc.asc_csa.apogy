@@ -4,14 +4,14 @@
  *
  * $Id: SimpleLineRangeScannerImpl.java,v 1.4.4.2 2015/05/21 15:50:22 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.SimpleLineRangeScanner;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleLineRangeScanner;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public class SimpleLineRangeScannerImpl extends LineRangeScannerImpl implements 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_LINE_RANGE_SCANNER;
+		return ApogyAddonsSensorsRangePackage.Literals.SIMPLE_LINE_RANGE_SCANNER;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class SimpleLineRangeScannerImpl extends LineRangeScannerImpl implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_LINE_RANGE_SCANNER___ACQUIRE_SCAN:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_LINE_RANGE_SCANNER___ACQUIRE_SCAN:
 				return acquireScan();
 		}
 		return super.eInvoke(operationID, arguments);

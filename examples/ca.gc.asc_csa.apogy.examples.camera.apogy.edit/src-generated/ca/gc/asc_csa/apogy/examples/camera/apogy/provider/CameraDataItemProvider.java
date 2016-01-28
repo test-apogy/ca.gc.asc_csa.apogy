@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.camera.apogy.provider;
 
 
 import java.util.Collection;
@@ -15,19 +15,19 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
-import org.eclipse.symphony.examples.camera.symphony.CameraData;
-import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.symphony.CameraData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
 public class CameraDataItemProvider
-  extends SymphonyInitializationDataItemProvider
+  extends ApogyInitializationDataItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -72,7 +72,7 @@ public class CameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraData_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraData_fov_feature", "_UI_CameraData_type"),
-				 Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__FOV,
+				 ApogyExamplesCameraApogyPackage.Literals.CAMERA_DATA__FOV,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class CameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraData_zoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraData_zoom_feature", "_UI_CameraData_type"),
-				 Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__ZOOM,
+				 ApogyExamplesCameraApogyPackage.Literals.CAMERA_DATA__ZOOM,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class CameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraData_initialized_feature", "_UI_CameraData_type"),
-				 Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__INITIALIZED,
+				 ApogyExamplesCameraApogyPackage.Literals.CAMERA_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -138,7 +138,7 @@ public class CameraDataItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__FOV);
+			childrenFeatures.add(ApogyExamplesCameraApogyPackage.Literals.CAMERA_DATA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -194,11 +194,11 @@ public class CameraDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraData.class)) {
-			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__ZOOM:
-			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__INITIALIZED:
+			case ApogyExamplesCameraApogyPackage.CAMERA_DATA__ZOOM:
+			case ApogyExamplesCameraApogyPackage.CAMERA_DATA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV:
+			case ApogyExamplesCameraApogyPackage.CAMERA_DATA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -219,8 +219,8 @@ public class CameraDataItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__FOV,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				(ApogyExamplesCameraApogyPackage.Literals.CAMERA_DATA__FOV,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
   /**
@@ -232,7 +232,7 @@ public class CameraDataItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return Symphony__ExamplesCameraSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesCameraApogyEditPlugin.INSTANCE;
 	}
 
 }

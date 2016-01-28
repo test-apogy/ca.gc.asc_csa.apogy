@@ -3,7 +3,7 @@
  *
  * $Id: WayPointPathInterpolatorItemProvider.java,v 1.3.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPathInterpolator;
-import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.common.processors.provider.ProcessorItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.WayPointPathInterpolator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathInterpolator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

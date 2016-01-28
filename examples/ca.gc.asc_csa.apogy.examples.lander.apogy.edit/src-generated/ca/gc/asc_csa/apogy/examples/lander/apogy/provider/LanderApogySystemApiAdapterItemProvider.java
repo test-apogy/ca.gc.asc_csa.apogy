@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.lander.apogy.provider;
 
 
 import java.util.Collection;
@@ -11,18 +11,18 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LanderSymphonySystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+public class LanderApogySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -30,7 +30,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public LanderSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public LanderApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -52,7 +52,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
 	}
 
   /**
-	 * This returns LanderSymphonySystemApiAdapter.gif.
+	 * This returns LanderApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -60,7 +60,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LanderSymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/LanderApogySystemApiAdapter"));
 	}
 
   /**
@@ -72,7 +72,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_LanderSymphonySystemApiAdapter_type");
+		return getString("_UI_LanderApogySystemApiAdapter_type");
 	}
 
   /**
@@ -103,8 +103,8 @@ public class LanderSymphonySystemApiAdapterItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
-				 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+				(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
+				 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 	}
 
   /**
@@ -116,7 +116,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return Symphony__ExamplesLanderSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesLanderApogyEditPlugin.INSTANCE;
 	}
 
 }

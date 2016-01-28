@@ -1,22 +1,22 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPathplannersFactoryImpl.java,v 1.4.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityPathplannersFactoryImpl.java,v 1.4.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,24 +24,24 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImpl implements Symphony__AddonsMobilityPathplannersFactory {
+public class ApogyAddonsMobilityPathplannersFactoryImpl extends EFactoryImpl implements ApogyAddonsMobilityPathplannersFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityPathplannersFactory init() {
+	public static ApogyAddonsMobilityPathplannersFactory init() {
 		try {
-			Symphony__AddonsMobilityPathplannersFactory theSymphony__AddonsMobilityPathplannersFactory = (Symphony__AddonsMobilityPathplannersFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsMobilityPathplannersPackage.eNS_URI);
-			if (theSymphony__AddonsMobilityPathplannersFactory != null) {
-				return theSymphony__AddonsMobilityPathplannersFactory;
+			ApogyAddonsMobilityPathplannersFactory theApogyAddonsMobilityPathplannersFactory = (ApogyAddonsMobilityPathplannersFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsMobilityPathplannersPackage.eNS_URI);
+			if (theApogyAddonsMobilityPathplannersFactory != null) {
+				return theApogyAddonsMobilityPathplannersFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsMobilityPathplannersFactoryImpl();
+		return new ApogyAddonsMobilityPathplannersFactoryImpl();
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersFactoryImpl() {
+	public ApogyAddonsMobilityPathplannersFactoryImpl() {
 		super();
 	}
 
@@ -62,10 +62,10 @@ public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImp
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsMobilityPathplannersPackage.WAY_POINT_PATH_PLANNER: return createWayPointPathPlanner();
-			case Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER: return createMeshWayPointPathPlanner();
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE: return createCircularExclusionZone();
-			case Symphony__AddonsMobilityPathplannersPackage.SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE: return createSymphony__AddonsMobilityPathplannersFacade();
+			case ApogyAddonsMobilityPathplannersPackage.WAY_POINT_PATH_PLANNER: return createWayPointPathPlanner();
+			case ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER: return createMeshWayPointPathPlanner();
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE: return createCircularExclusionZone();
+			case ApogyAddonsMobilityPathplannersPackage.APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE: return createApogyAddonsMobilityPathplannersFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -106,9 +106,9 @@ public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersFacade createSymphony__AddonsMobilityPathplannersFacade() {
-		Symphony__AddonsMobilityPathplannersFacadeImpl symphony__AddonsMobilityPathplannersFacade = new Symphony__AddonsMobilityPathplannersFacadeImpl();
-		return symphony__AddonsMobilityPathplannersFacade;
+	public ApogyAddonsMobilityPathplannersFacade createApogyAddonsMobilityPathplannersFacade() {
+		ApogyAddonsMobilityPathplannersFacadeImpl apogy__AddonsMobilityPathplannersFacade = new ApogyAddonsMobilityPathplannersFacadeImpl();
+		return apogy__AddonsMobilityPathplannersFacade;
 	}
 
 	/**
@@ -116,8 +116,8 @@ public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersPackage getSymphony__AddonsMobilityPathplannersPackage() {
-		return (Symphony__AddonsMobilityPathplannersPackage)getEPackage();
+	public ApogyAddonsMobilityPathplannersPackage getApogyAddonsMobilityPathplannersPackage() {
+		return (ApogyAddonsMobilityPathplannersPackage)getEPackage();
 	}
 
 	/**
@@ -127,8 +127,8 @@ public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImp
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsMobilityPathplannersPackage getPackage() {
-		return Symphony__AddonsMobilityPathplannersPackage.eINSTANCE;
+	public static ApogyAddonsMobilityPathplannersPackage getPackage() {
+		return ApogyAddonsMobilityPathplannersPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsMobilityPathplannersFactoryImpl
+} //ApogyAddonsMobilityPathplannersFactoryImpl

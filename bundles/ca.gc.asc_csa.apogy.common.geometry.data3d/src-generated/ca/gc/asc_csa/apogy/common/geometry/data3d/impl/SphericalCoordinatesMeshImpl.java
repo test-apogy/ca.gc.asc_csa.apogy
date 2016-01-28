@@ -3,16 +3,16 @@
  *
  * $Id: SphericalCoordinatesMeshImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesMesh;
-import org.eclipse.symphony.common.geometry.data3d.SphericalPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class SphericalCoordinatesMeshImpl extends MeshImpl<SphericalCoordinates,
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_COORDINATES_MESH;
+		return ApogyCommonGeometryData3DPackage.Literals.SPHERICAL_COORDINATES_MESH;
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class SphericalCoordinatesMeshImpl extends MeshImpl<SphericalCoordinates,
 	@Override
 	public EList<SphericalPolygon> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<SphericalPolygon>(SphericalPolygon.class, this, Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES_MESH__POLYGONS);
+			polygons = new EObjectContainmentEList<SphericalPolygon>(SphericalPolygon.class, this, ApogyCommonGeometryData3DPackage.SPHERICAL_COORDINATES_MESH__POLYGONS);
 		}
 		return polygons;
 	}

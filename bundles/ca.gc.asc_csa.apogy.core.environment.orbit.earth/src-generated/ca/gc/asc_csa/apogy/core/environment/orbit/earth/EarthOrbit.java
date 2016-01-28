@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import org.eclipse.symphony.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,7 @@ import org.eclipse.symphony.core.environment.orbit.Orbit;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbit()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbit()
  * @model abstract="true"
  * @generated
  */
@@ -27,7 +27,7 @@ public interface EarthOrbit extends Orbit {
 	 * <!-- begin-model-doc -->
 	 * Returns the underlying OreKit Orbit.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitOrbit" unique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitOrbit" unique="false"
 	 * @generated
 	 */
 	org.orekit.orbits.Orbit getOreKitOrbit();

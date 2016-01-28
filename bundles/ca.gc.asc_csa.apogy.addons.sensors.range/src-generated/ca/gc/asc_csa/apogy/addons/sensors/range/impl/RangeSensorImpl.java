@@ -4,12 +4,12 @@
  *
  * $Id: RangeSensorImpl.java,v 1.3.4.2 2015/05/21 15:50:21 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RangeSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RangeSensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class RangeSensorImpl extends SensorImpl implements RangeSensor
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.RANGE_SENSOR;
+		return ApogyAddonsSensorsRangePackage.Literals.RANGE_SENSOR;
 	}
 
 } //RangeSensorImpl

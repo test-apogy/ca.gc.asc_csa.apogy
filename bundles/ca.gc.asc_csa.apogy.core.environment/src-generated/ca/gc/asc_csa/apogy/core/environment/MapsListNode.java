@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.MapsListNode#getMapsList <em>Maps List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.MapsListNode#getMapsList <em>Maps List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsListNode()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapsListNode()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface MapsListNode extends AggregateGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maps List</em>' reference.
 	 * @see #setMapsList(MapsList)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsListNode_MapsList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapsListNode_MapsList()
 	 * @model transient="true"
 	 * @generated
 	 */
   MapsList getMapsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.MapsListNode#getMapsList <em>Maps List</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.MapsListNode#getMapsList <em>Maps List</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maps List</em>' reference.

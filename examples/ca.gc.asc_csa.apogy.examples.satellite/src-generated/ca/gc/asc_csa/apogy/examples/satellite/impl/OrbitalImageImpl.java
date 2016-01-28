@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.images.impl.EImageImpl;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.common.images.impl.EImageImpl;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
-import org.eclipse.symphony.examples.satellite.OrbitalImage;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,8 +23,8 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl#getCoordinates <em>Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl#getRollAngle <em>Roll Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl#getCoordinates <em>Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl#getRollAngle <em>Roll Angle</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,7 +76,7 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE;
+		return ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 		GeographicCoordinates oldCoordinates = coordinates;
 		coordinates = newCoordinates;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, oldCoordinates, newCoordinates);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, oldCoordinates, newCoordinates);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -112,14 +112,14 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 		if (newCoordinates != coordinates) {
 			NotificationChain msgs = null;
 			if (coordinates != null)
-				msgs = ((InternalEObject)coordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, null, msgs);
+				msgs = ((InternalEObject)coordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, null, msgs);
 			if (newCoordinates != null)
-				msgs = ((InternalEObject)newCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, null, msgs);
+				msgs = ((InternalEObject)newCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, null, msgs);
 			msgs = basicSetCoordinates(newCoordinates, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, newCoordinates, newCoordinates));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES, newCoordinates, newCoordinates));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 		double oldRollAngle = rollAngle;
 		rollAngle = newRollAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE, oldRollAngle, rollAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE, oldRollAngle, rollAngle));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
 				return basicSetCoordinates(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -165,9 +165,9 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
 				return getCoordinates();
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				return getRollAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -181,10 +181,10 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
 				setCoordinates((GeographicCoordinates)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				setRollAngle((Double)newValue);
 				return;
 		}
@@ -199,10 +199,10 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
 				setCoordinates((GeographicCoordinates)null);
 				return;
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				setRollAngle(ROLL_ANGLE_EDEFAULT);
 				return;
 		}
@@ -217,9 +217,9 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
 				return coordinates != null;
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				return rollAngle != ROLL_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.FeatureOfInterestListNode#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestListNode()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getFeatureOfInterestListNode()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface FeatureOfInterestListNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Of Interest List</em>' reference.
 	 * @see #setFeatureOfInterestList(FeatureOfInterestList)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestListNode_FeatureOfInterestList()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getFeatureOfInterestListNode_FeatureOfInterestList()
 	 * @model transient="true"
 	 * @generated
 	 */
 	FeatureOfInterestList getFeatureOfInterestList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.FeatureOfInterestListNode#getFeatureOfInterestList <em>Feature Of Interest List</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode#getFeatureOfInterestList <em>Feature Of Interest List</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Of Interest List</em>' reference.

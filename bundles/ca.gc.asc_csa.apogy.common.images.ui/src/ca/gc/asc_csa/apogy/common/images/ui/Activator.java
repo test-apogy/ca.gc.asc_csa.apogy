@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui;
+package ca.gc.asc_csa.apogy.common.images.ui;
 
 import java.net.URL;
 
@@ -14,9 +14,9 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.symphony.common.images.ui"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common.images.ui"; //$NON-NLS-1$
 	
-	public static final String IMAGE_TABBED_PROPERTIES_SECTION_ID = "org.eclipse.symphony.common.images.ui.properties.sections.ImageSection";
+	public static final String IMAGE_TABBED_PROPERTIES_SECTION_ID = "ca.gc.asc_csa.apogy.common.images.ui.properties.sections.ImageSection";
 
 	// The shared instance
 	private static Activator plugin;

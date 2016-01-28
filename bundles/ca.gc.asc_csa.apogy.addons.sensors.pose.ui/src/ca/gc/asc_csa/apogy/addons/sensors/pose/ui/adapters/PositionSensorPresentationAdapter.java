@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.sensors.pose.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.adapters;
 
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIFactory;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class PositionSensorPresentationAdapter implements NodePresentationAdapter
 {
@@ -38,7 +38,7 @@ public class PositionSensorPresentationAdapter implements NodePresentationAdapte
 
 		PositionSensor vector = (PositionSensor) obj;
 		
-		PositionSensorPresentation presentationNode = Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation();
+		PositionSensorPresentation presentationNode = ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation();
 		presentationNode.setNode(vector);			
 						
 		return presentationNode;

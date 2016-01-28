@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.provider;
 
 
 import java.util.Collection;
@@ -11,16 +11,16 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RoboticArmSymphonySystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+public class RoboticArmApogySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -28,7 +28,7 @@ public class RoboticArmSymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public RoboticArmSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public RoboticArmApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -50,7 +50,7 @@ public class RoboticArmSymphonySystemApiAdapterItemProvider
 	}
 
   /**
-	 * This returns RoboticArmSymphonySystemApiAdapter.gif.
+	 * This returns RoboticArmApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -58,7 +58,7 @@ public class RoboticArmSymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/RoboticArmSymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/RoboticArmApogySystemApiAdapter"));
 	}
 
   /**
@@ -70,7 +70,7 @@ public class RoboticArmSymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_RoboticArmSymphonySystemApiAdapter_type");
+		return getString("_UI_RoboticArmApogySystemApiAdapter_type");
 	}
 
   /**
@@ -109,7 +109,7 @@ public class RoboticArmSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return Symphony__ExamplesRoboticArmSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesRoboticArmApogyEditPlugin.INSTANCE;
 	}
 
 }

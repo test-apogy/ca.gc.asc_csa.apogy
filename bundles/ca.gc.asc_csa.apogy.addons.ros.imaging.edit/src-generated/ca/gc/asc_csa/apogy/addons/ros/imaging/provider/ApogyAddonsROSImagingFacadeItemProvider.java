@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.provider;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSImagingFacadeItemProvider 
+public class ApogyAddonsROSImagingFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class Symphony__AddonsROSImagingFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyAddonsROSImagingFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,14 +61,14 @@ public class Symphony__AddonsROSImagingFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsROSImagingFacade.gif.
+	 * This returns ApogyAddonsROSImagingFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsROSImagingFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsROSImagingFacade"));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Symphony__AddonsROSImagingFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__AddonsROSImagingFacade_type");
+		return getString("_UI_ApogyAddonsROSImagingFacade_type");
 	}
 	
 

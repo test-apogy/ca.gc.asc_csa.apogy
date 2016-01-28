@@ -4,7 +4,7 @@
  *
  * $Id: CylinderGeometryItemProvider.java,v 1.5.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class CylinderGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CylinderGeometry_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CylinderGeometry_radius_feature", "_UI_CylinderGeometry_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.CYLINDER_GEOMETRY__RADIUS,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.CYLINDER_GEOMETRY__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class CylinderGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CylinderGeometry_length_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CylinderGeometry_length_feature", "_UI_CylinderGeometry_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.CYLINDER_GEOMETRY__LENGTH,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.CYLINDER_GEOMETRY__LENGTH,
 				 true,
 				 false,
 				 false,
@@ -133,8 +133,8 @@ public class CylinderGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CylinderGeometry.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

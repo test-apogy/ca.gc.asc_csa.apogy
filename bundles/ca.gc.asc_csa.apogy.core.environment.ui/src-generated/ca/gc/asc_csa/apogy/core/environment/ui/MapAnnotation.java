@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import org.jfree.chart.annotations.AbstractXYAnnotation;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapAnnotation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapAnnotation()
  * @model abstract="true"
  * @generated
  */
@@ -31,7 +31,7 @@ public interface MapAnnotation extends MapViewItemPresentation
 	 * <!-- begin-model-doc -->
 	 *  TheXYPlot being used by MapView.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.ui.List<org.eclipse.symphony.core.environment.ui.AbstractXYAnnotation>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.ui.List<ca.gc.asc_csa.apogy.core.environment.ui.AbstractXYAnnotation>" unique="false" many="false"
 	 * @generated
 	 */
   List<AbstractXYAnnotation> getXYShapeAnnotation();

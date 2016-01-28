@@ -3,7 +3,7 @@
  *
  * $Id: WaypointPathRecorderImpl.java,v 1.2.4.3 2015/09/22 19:39:39 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.impl;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -13,17 +13,17 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.mobility.controllers.Activator;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode;
-import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.Activator;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsMobilityControllersPackage.Literals.WAYPOINT_PATH_RECORDER;
+		return ApogyAddonsMobilityControllersPackage.Literals.WAYPOINT_PATH_RECORDER;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 				@Override
 				public void notifyChanged(Notification msg)
 				{
-					if(msg.getFeatureID(PathRecorder.class) == Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR)
+					if(msg.getFeatureID(PathRecorder.class) == ApogyAddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR)
 					{												
 						// Unregister from the old sensor.
 						PoseSensor oldPoseSensor = (PoseSensor) msg.getOldValue();
@@ -131,14 +131,14 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 				@Override
 				public void notifyChanged(Notification msg)
 				{
-					if(msg.getFeatureID(PositionSensor.class) == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION)
+					if(msg.getFeatureID(PositionSensor.class) == ApogyCommonTopologyPackage.POSITION_NODE__POSITION)
 					{
 						CartesianPositionCoordinates newPoint = getPositionSensor().getPositionCoordinates();
 						if(isSampleOnDistanceDeltaRequired(newPoint))
 						{
 							if(getRecordedPath() != null)
 							{
-								getRecordedPath().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint));							
+								getRecordedPath().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint));							
 							}							
 						}												
 					}
@@ -166,13 +166,13 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 				if(newPoint.asPoint3d().distance(previousPosition.asPoint3d()) >= getMinimumDistanceDelta())
 				{									
 					sampleRequired =  true;
-					previousPosition = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
+					previousPosition = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
 				}			
 			}
 			else
 			{								
 				sampleRequired =  true;
-				previousPosition = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
+				previousPosition = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
 			}			
 		}
 		
@@ -207,7 +207,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 					{				
 						if(getRecordedPath() != null)
 						{
-							getRecordedPath().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(getPositionSensor().getPositionCoordinates()));							
+							getRecordedPath().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(getPositionSensor().getPositionCoordinates()));							
 						}
 					}
 					long delay = Math.round(getMinimumTimeDelta() * 1000);									

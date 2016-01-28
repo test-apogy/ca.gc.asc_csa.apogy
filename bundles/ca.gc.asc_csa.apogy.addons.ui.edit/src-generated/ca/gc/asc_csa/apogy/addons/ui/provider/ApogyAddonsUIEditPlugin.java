@@ -1,28 +1,28 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.provider;
+package ca.gc.asc_csa.apogy.addons.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.common.topology.ui.provider.Symphony__CommonTopologyUIEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.ApogyCommonTopologyUIEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsUI edit plugin.
+ * This is the central singleton for the ApogyAddonsUI edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsUIEditPlugin extends EMFPlugin {
+public final class ApogyAddonsUIEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsUIEditPlugin INSTANCE = new Symphony__AddonsUIEditPlugin();
+	public static final ApogyAddonsUIEditPlugin INSTANCE = new ApogyAddonsUIEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -38,12 +38,12 @@ public final class Symphony__AddonsUIEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsUIEditPlugin() {
+	public ApogyAddonsUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyUIEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonTopologyUIEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

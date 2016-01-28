@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage
  * @generated
  */
-public interface Symphony__CommonGeometryData3DUIFactory extends EFactory {
+public interface ApogyCommonGeometryData3DUIFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DUIFactory eINSTANCE = org.eclipse.symphony.common.geometry.data3d.ui.impl.Symphony__CommonGeometryData3DUIFactoryImpl.init();
+	ApogyCommonGeometryData3DUIFactory eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.ApogyCommonGeometryData3DUIFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Cartesian Coordinates Set Presentation</em>'.
@@ -47,6 +47,6 @@ public interface Symphony__CommonGeometryData3DUIFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DUIPackage getSymphony__CommonGeometryData3DUIPackage();
+	ApogyCommonGeometryData3DUIPackage getApogyCommonGeometryData3DUIPackage();
 
-} //Symphony__CommonGeometryData3DUIFactory
+} //ApogyCommonGeometryData3DUIFactory

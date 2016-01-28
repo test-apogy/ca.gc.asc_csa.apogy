@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_sourceObject_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_sourceObject_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT,
+				 ApogyCoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT,
 				 true,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_featureNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_featureNode_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE,
+				 ApogyCoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE,
 				 true,
 				 false,
 				 true,
@@ -130,7 +130,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_currentValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_currentValue_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE,
+				 ApogyCoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -153,7 +153,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_resolved_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_resolved_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__RESOLVED,
+				 ApogyCoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__RESOLVED,
 				 true,
 				 false,
 				 false,
@@ -203,8 +203,8 @@ public class WatchFeatureNodeAdapterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WatchFeatureNodeAdapter.class)) {
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

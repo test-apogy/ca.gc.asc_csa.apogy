@@ -4,15 +4,15 @@
  *
  * $Id: SkidSteeredPlatformPathFollowerImpl.java,v 1.3.4.2 2015/05/21 15:50:44 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +22,8 @@ import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathF
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl#getMaximumAngularVelocity <em>Maximum Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl#getMaximumLinearVelocity <em>Maximum Linear Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl#getMaximumAngularVelocity <em>Maximum Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl#getMaximumLinearVelocity <em>Maximum Linear Velocity</em>}</li>
  * </ul>
  *
  * @generated
@@ -88,7 +88,7 @@ public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteer
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER;
+		return ApogyAddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER;
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteer
 		double oldMaximumAngularVelocity = maximumAngularVelocity;
 		maximumAngularVelocity = newMaximumAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY, oldMaximumAngularVelocity, maximumAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY, oldMaximumAngularVelocity, maximumAngularVelocity));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteer
 		double oldMaximumLinearVelocity = maximumLinearVelocity;
 		maximumLinearVelocity = newMaximumLinearVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY, oldMaximumLinearVelocity, maximumLinearVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY, oldMaximumLinearVelocity, maximumLinearVelocity));
 	}
 
 	/**
@@ -157,9 +157,9 @@ public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteer
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
 				return getMaximumAngularVelocity();
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
 				return getMaximumLinearVelocity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -174,10 +174,10 @@ public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteer
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
 				setMaximumAngularVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
 				setMaximumLinearVelocity((Double)newValue);
 				return;
 		}
@@ -193,10 +193,10 @@ public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteer
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
 				setMaximumAngularVelocity(MAXIMUM_ANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
 				setMaximumLinearVelocity(MAXIMUM_LINEAR_VELOCITY_EDEFAULT);
 				return;
 		}
@@ -212,9 +212,9 @@ public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteer
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
 				return maximumAngularVelocity != MAXIMUM_ANGULAR_VELOCITY_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
 				return maximumLinearVelocity != MAXIMUM_LINEAR_VELOCITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.impl;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -10,11 +10,11 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade;
-import org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFactory;
-import org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFactory;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage;
 
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
 import org.ros.node.ConnectedNode;
 
@@ -27,13 +27,13 @@ import sensor_msgs.Image;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implements Symphony__AddonsROSImagingPackage {
+public class ApogyAddonsROSImagingPackageImpl extends EPackageImpl implements ApogyAddonsROSImagingPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsROSImagingFacadeEClass = null;
+	private EClass apogy__AddonsROSImagingFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,12 +67,12 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsROSImagingPackageImpl() {
-		super(eNS_URI, Symphony__AddonsROSImagingFactory.eINSTANCE);
+	private ApogyAddonsROSImagingPackageImpl() {
+		super(eNS_URI, ApogyAddonsROSImagingFactory.eINSTANCE);
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsROSImagingPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsROSImagingPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,30 +94,30 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsROSImagingPackage init() {
-		if (isInited) return (Symphony__AddonsROSImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsROSImagingPackage.eNS_URI);
+	public static ApogyAddonsROSImagingPackage init() {
+		if (isInited) return (ApogyAddonsROSImagingPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsROSImagingPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsROSImagingPackageImpl theSymphony__AddonsROSImagingPackage = (Symphony__AddonsROSImagingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsROSImagingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsROSImagingPackageImpl());
+		ApogyAddonsROSImagingPackageImpl theApogyAddonsROSImagingPackage = (ApogyAddonsROSImagingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsROSImagingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsROSImagingPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonImagesPackage.eINSTANCE.eClass();
+		ApogyCommonImagesPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsROSImagingPackage.createPackageContents();
+		theApogyAddonsROSImagingPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsROSImagingPackage.initializePackageContents();
+		theApogyAddonsROSImagingPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsROSImagingPackage.freeze();
+		theApogyAddonsROSImagingPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsROSImagingPackage.eNS_URI, theSymphony__AddonsROSImagingPackage);
-		return theSymphony__AddonsROSImagingPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsROSImagingPackage.eNS_URI, theApogyAddonsROSImagingPackage);
+		return theApogyAddonsROSImagingPackage;
 	}
 
 	/**
@@ -125,8 +125,8 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsROSImagingFacade() {
-		return symphony__AddonsROSImagingFacadeEClass;
+	public EClass getApogyAddonsROSImagingFacade() {
+		return apogy__AddonsROSImagingFacadeEClass;
 	}
 
 	/**
@@ -134,8 +134,8 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSImagingFacade__ConvertToEImage__Image() {
-		return symphony__AddonsROSImagingFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsROSImagingFacade__ConvertToEImage__Image() {
+		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -143,8 +143,8 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSImagingFacade__ConvertToEImage__CompressedImage() {
-		return symphony__AddonsROSImagingFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyAddonsROSImagingFacade__ConvertToEImage__CompressedImage() {
+		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -152,8 +152,8 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode() {
-		return symphony__AddonsROSImagingFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyAddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode() {
+		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -161,8 +161,8 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode() {
-		return symphony__AddonsROSImagingFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyAddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode() {
+		return apogy__AddonsROSImagingFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -197,8 +197,8 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingFactory getSymphony__AddonsROSImagingFactory() {
-		return (Symphony__AddonsROSImagingFactory)getEFactoryInstance();
+	public ApogyAddonsROSImagingFactory getApogyAddonsROSImagingFactory() {
+		return (ApogyAddonsROSImagingFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -220,11 +220,11 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 		isCreated = true;
 
 		// Create classes and their features
-		symphony__AddonsROSImagingFacadeEClass = createEClass(SYMPHONY_ADDONS_ROS_IMAGING_FACADE);
-		createEOperation(symphony__AddonsROSImagingFacadeEClass, SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE);
-		createEOperation(symphony__AddonsROSImagingFacadeEClass, SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE);
-		createEOperation(symphony__AddonsROSImagingFacadeEClass, SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE);
-		createEOperation(symphony__AddonsROSImagingFacadeEClass, SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE);
+		apogy__AddonsROSImagingFacadeEClass = createEClass(APOGY_ADDONS_ROS_IMAGING_FACADE);
+		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE);
+		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE);
+		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE);
+		createEOperation(apogy__AddonsROSImagingFacadeEClass, APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE);
 
 		// Create data types
 		imageEDataType = createEDataType(IMAGE);
@@ -256,7 +256,7 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
+		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -265,20 +265,20 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(symphony__AddonsROSImagingFacadeEClass, Symphony__AddonsROSImagingFacade.class, "Symphony__AddonsROSImagingFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsROSImagingFacadeEClass, ApogyAddonsROSImagingFacade.class, "ApogyAddonsROSImagingFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__AddonsROSImagingFacade__ConvertToEImage__Image(), theSymphony__CommonImagesPackage.getEImage(), "convertToEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyAddonsROSImagingFacade__ConvertToEImage__Image(), theApogyCommonImagesPackage.getEImage(), "convertToEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getImage(), "rosImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsROSImagingFacade__ConvertToEImage__CompressedImage(), theSymphony__CommonImagesPackage.getEImage(), "convertToEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsROSImagingFacade__ConvertToEImage__CompressedImage(), theApogyCommonImagesPackage.getEImage(), "convertToEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCompressedImage(), "compressedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode(), this.getCompressedImage(), "convertToCompressedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonImagesPackage.getEImage(), "eImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode(), this.getCompressedImage(), "convertToCompressedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonImagesPackage.getEImage(), "eImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConnectedNode(), "connectedNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode(), this.getCompressedImage(), "convertToCompressedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonImagesPackage.getImageData(), "imageData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode(), this.getCompressedImage(), "convertToCompressedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonImagesPackage.getImageData(), "imageData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConnectedNode(), "connectedNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -290,4 +290,4 @@ public class Symphony__AddonsROSImagingPackageImpl extends EPackageImpl implemen
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsROSImagingPackageImpl
+} //ApogyAddonsROSImagingPackageImpl

@@ -1,16 +1,16 @@
-package org.eclipse.symphony.common.converters.tests;
+package ca.gc.asc_csa.apogy.common.converters.tests;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.TestCase;
 
-import org.eclipse.symphony.common.converters.ChainedConverter;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterAtoB;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterBtoC;
-import org.eclipse.symphony.common.converters.tests.types.A;
-import org.eclipse.symphony.common.converters.tests.types.C;
+import ca.gc.asc_csa.apogy.common.converters.ChainedConverter;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAtoB;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterBtoC;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.A;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.C;
 import org.junit.Test;
 
 public class ChainedConverterTest extends TestCase {

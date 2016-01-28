@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class WorksiteNodeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createWorksiteNode());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createWorksiteNode());
 	}
 
 	/**

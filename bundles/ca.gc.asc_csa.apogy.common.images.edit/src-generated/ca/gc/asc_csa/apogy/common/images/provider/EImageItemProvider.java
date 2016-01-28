@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.provider;
+package ca.gc.asc_csa.apogy.common.images.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.EImage} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.images.EImage} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class EImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_width_feature", "_UI_AbstractEImage_type"),
-				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__WIDTH,
+				 ApogyCommonImagesPackage.Literals.ABSTRACT_EIMAGE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class EImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_height_feature", "_UI_AbstractEImage_type"),
-				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
+				 ApogyCommonImagesPackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class EImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EImage_imageContent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EImage_imageContent_feature", "_UI_EImage_type"),
-				 Symphony__CommonImagesPackage.Literals.EIMAGE__IMAGE_CONTENT,
+				 ApogyCommonImagesPackage.Literals.EIMAGE__IMAGE_CONTENT,
 				 true,
 				 false,
 				 false,
@@ -172,9 +172,9 @@ public class EImageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EImage.class)) {
-			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
-			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
-			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
+			case ApogyCommonImagesPackage.EIMAGE__WIDTH:
+			case ApogyCommonImagesPackage.EIMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,26 +27,26 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.util.Symphony__AddonsSwitch;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.util.Symphony__AddonsVehicleAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
+import ca.gc.asc_csa.apogy.addons.SimpleToolList;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.util.ApogyAddonsSwitch;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.util.ApogyAddonsVehicleAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -57,7 +57,7 @@ import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony__AddonsVehicleAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsVehicleItemProviderAdapterFactory extends ApogyAddonsVehicleAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -81,7 +81,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsVehicleEditPlugin.INSTANCE, Symphony__AddonsVehiclePackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsVehicleEditPlugin.INSTANCE, ApogyAddonsVehiclePackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -97,7 +97,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleItemProviderAdapterFactory()
+  public ApogyAddonsVehicleItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -107,7 +107,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -115,7 +115,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected VehiclePoseCorrectorItemProvider vehiclePoseCorrectorItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	protected MeshNodeEntryItemProvider meshNodeEntryItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,7 +154,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.Wheel} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected WheelItemProvider wheelItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.Wheel}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -178,7 +178,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.Thruster} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected ThrusterItemProvider thrusterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.Thruster}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -202,7 +202,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.ThrusterBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -210,7 +210,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected ThrusterBindingItemProvider thrusterBindingItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.ThrusterBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -226,7 +226,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.WheelContactProvider} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -234,7 +234,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected WheelContactProviderItemProvider wheelContactProviderItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.WheelContactProvider}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -250,7 +250,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.LanderSphericalFoot} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -258,7 +258,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected LanderSphericalFootItemProvider landerSphericalFootItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.LanderSphericalFoot}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -274,7 +274,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -282,7 +282,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected LanderSphericalFootContactProviderItemProvider landerSphericalFootContactProviderItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -298,30 +298,30 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsVehicleFacadeItemProvider symphony__AddonsVehicleFacadeItemProvider;
+	protected ApogyAddonsVehicleFacadeItemProvider apogy__AddonsVehicleFacadeItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__AddonsVehicleFacadeAdapter() {
-		if (symphony__AddonsVehicleFacadeItemProvider == null) {
-			symphony__AddonsVehicleFacadeItemProvider = new Symphony__AddonsVehicleFacadeItemProvider(this);
+	public Adapter createApogyAddonsVehicleFacadeAdapter() {
+		if (apogy__AddonsVehicleFacadeItemProvider == null) {
+			apogy__AddonsVehicleFacadeItemProvider = new ApogyAddonsVehicleFacadeItemProvider(this);
 		}
 
-		return symphony__AddonsVehicleFacadeItemProvider;
+		return apogy__AddonsVehicleFacadeItemProvider;
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -329,7 +329,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected WheelVehicleUtilitiesItemProvider wheelVehicleUtilitiesItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -345,7 +345,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.MeshExtent2D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -353,7 +353,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   protected MeshExtent2DItemProvider meshExtent2DItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.MeshExtent2D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -369,7 +369,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.PathPlannerTool} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -377,7 +377,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	protected PathPlannerToolItemProvider pathPlannerToolItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.PathPlannerTool}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -392,7 +392,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.PathPlannerToolNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -400,7 +400,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	protected PathPlannerToolNodeItemProvider pathPlannerToolNodeItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.PathPlannerToolNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -415,7 +415,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -423,7 +423,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	protected VehiclePathPlannerToolItemProvider vehiclePathPlannerToolItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -583,7 +583,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 		if (wheelContactProviderItemProvider != null) wheelContactProviderItemProvider.dispose();
 		if (landerSphericalFootItemProvider != null) landerSphericalFootItemProvider.dispose();
 		if (landerSphericalFootContactProviderItemProvider != null) landerSphericalFootContactProviderItemProvider.dispose();
-		if (symphony__AddonsVehicleFacadeItemProvider != null) symphony__AddonsVehicleFacadeItemProvider.dispose();
+		if (apogy__AddonsVehicleFacadeItemProvider != null) apogy__AddonsVehicleFacadeItemProvider.dispose();
 		if (wheelVehicleUtilitiesItemProvider != null) wheelVehicleUtilitiesItemProvider.dispose();
 		if (meshExtent2DItemProvider != null) meshExtent2DItemProvider.dispose();
 		if (pathPlannerToolItemProvider != null) pathPlannerToolItemProvider.dispose();
@@ -592,19 +592,19 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * A child creation extender for the {@link Symphony__CorePackage}.
+	 * A child creation extender for the {@link ApogyCorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -637,11 +637,11 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			 * @generated
 			 */
 			@Override
-			public Object caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object) {
+			public Object caseApogySystemApiAdapter(ApogySystemApiAdapter object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+						(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 
 				return null;
 			}
@@ -655,23 +655,23 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
 			}
@@ -685,23 +685,23 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseTopologyRoot(TopologyRoot object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
 			}
@@ -734,24 +734,24 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
+			return ApogyAddonsVehicleEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -787,73 +787,73 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createSymphony__AddonsVehicleFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createApogyAddonsVehicleFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
 
 				return null;
 			}
@@ -867,73 +867,73 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createSymphony__AddonsVehicleFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createApogyAddonsVehicleFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
 
 				return null;
 			}
@@ -947,23 +947,23 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
 			}
@@ -996,24 +996,24 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
+			return ApogyAddonsVehicleEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1049,23 +1049,23 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
 			}
@@ -1079,8 +1079,8 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseBindingsList(BindingsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
+						(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
 
 				return null;
 			}
@@ -1113,24 +1113,24 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
+			return ApogyAddonsVehicleEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__AddonsPackage}.
+	 * A child creation extender for the {@link ApogyAddonsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__AddonsChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyAddonsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__AddonsSwitch<Object> {
+		protected static class CreationSwitch extends ApogyAddonsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1166,13 +1166,13 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseSimpleToolList(SimpleToolList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
+						(ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
+						(ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+						 ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
 
 				return null;
 			}
@@ -1205,7 +1205,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
+			return ApogyAddonsVehicleEditPlugin.INSTANCE;
 		}
 	}
 

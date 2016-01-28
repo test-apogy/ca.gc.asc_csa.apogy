@@ -3,15 +3,15 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.impl;
+package ca.gc.asc_csa.apogy.common.math.impl;
 
 import java.util.Arrays;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Polynomial;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Polynomial;
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
 
@@ -22,10 +22,10 @@ import Jama.Matrix;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getDegree <em>Degree</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getCoeffs <em>Coeffs</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getRealRoots <em>Real Roots</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getImaginaryRoots <em>Imaginary Roots</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl#getDegree <em>Degree</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl#getCoeffs <em>Coeffs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl#getRealRoots <em>Real Roots</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl#getImaginaryRoots <em>Imaginary Roots</em>}</li>
  * </ul>
  *
  * @generated
@@ -112,7 +112,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonMathPackage.Literals.POLYNOMIAL;
+		return ApogyCommonMathPackage.Literals.POLYNOMIAL;
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 		coeffs = newCoeffs;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Symphony__CommonMathPackage.POLYNOMIAL__COEFFS, oldCoeffs, coeffs));
+					ApogyCommonMathPackage.POLYNOMIAL__COEFFS, oldCoeffs, coeffs));
 		isDirty = true;
 	}
 
@@ -185,13 +185,13 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.POLYNOMIAL__DEGREE:
+			case ApogyCommonMathPackage.POLYNOMIAL__DEGREE:
 				return getDegree();
-			case Symphony__CommonMathPackage.POLYNOMIAL__COEFFS:
+			case ApogyCommonMathPackage.POLYNOMIAL__COEFFS:
 				return getCoeffs();
-			case Symphony__CommonMathPackage.POLYNOMIAL__REAL_ROOTS:
+			case ApogyCommonMathPackage.POLYNOMIAL__REAL_ROOTS:
 				return getRealRoots();
-			case Symphony__CommonMathPackage.POLYNOMIAL__IMAGINARY_ROOTS:
+			case ApogyCommonMathPackage.POLYNOMIAL__IMAGINARY_ROOTS:
 				return getImaginaryRoots();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -204,7 +204,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.POLYNOMIAL__COEFFS:
+			case ApogyCommonMathPackage.POLYNOMIAL__COEFFS:
 				setCoeffs((double[])newValue);
 				return;
 		}
@@ -218,7 +218,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.POLYNOMIAL__COEFFS:
+			case ApogyCommonMathPackage.POLYNOMIAL__COEFFS:
 				setCoeffs(COEFFS_EDEFAULT);
 				return;
 		}
@@ -232,13 +232,13 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.POLYNOMIAL__DEGREE:
+			case ApogyCommonMathPackage.POLYNOMIAL__DEGREE:
 				return getDegree() != DEGREE_EDEFAULT;
-			case Symphony__CommonMathPackage.POLYNOMIAL__COEFFS:
+			case ApogyCommonMathPackage.POLYNOMIAL__COEFFS:
 				return COEFFS_EDEFAULT == null ? coeffs != null : !COEFFS_EDEFAULT.equals(coeffs);
-			case Symphony__CommonMathPackage.POLYNOMIAL__REAL_ROOTS:
+			case ApogyCommonMathPackage.POLYNOMIAL__REAL_ROOTS:
 				return REAL_ROOTS_EDEFAULT == null ? realRoots != null : !REAL_ROOTS_EDEFAULT.equals(realRoots);
-			case Symphony__CommonMathPackage.POLYNOMIAL__IMAGINARY_ROOTS:
+			case ApogyCommonMathPackage.POLYNOMIAL__IMAGINARY_ROOTS:
 				return IMAGINARY_ROOTS_EDEFAULT == null ? imaginaryRoots != null : !IMAGINARY_ROOTS_EDEFAULT.equals(imaginaryRoots);
 		}
 		return super.eIsSet(featureID);

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.FeatureOfInterestList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer#getFeatures <em>Features</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer#getFeatures <em>Features</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getFeaturesOfInterestMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getFeaturesOfInterestMapLayer()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface FeaturesOfInterestMapLayer extends AbstractMapLayer, Rectangula
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features</em>' containment reference.
 	 * @see #setFeatures(FeatureOfInterestList)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getFeaturesOfInterestMapLayer_Features()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getFeaturesOfInterestMapLayer_Features()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	FeatureOfInterestList getFeatures();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer#getFeatures <em>Features</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer#getFeatures <em>Features</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Features</em>' containment reference.

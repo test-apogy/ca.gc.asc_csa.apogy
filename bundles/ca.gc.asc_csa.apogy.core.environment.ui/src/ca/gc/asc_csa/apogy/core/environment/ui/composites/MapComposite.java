@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.ui.composites;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -27,22 +27,22 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.MapViewExtent;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 import org.eclipse.ui.progress.UIJob;
 import org.jfree.chart.ChartMouseEvent;
 import org.jfree.chart.ChartMouseListener;
@@ -612,7 +612,7 @@ public class MapComposite extends Composite
 				@Override
 				public void notifyChanged(Notification msg) 
 				{
-					if(msg.getFeatureID(MapViewConfiguration.class) == Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE)
+					if(msg.getFeatureID(MapViewConfiguration.class) == ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE)
 					{
 						// Image Map has changed.
 						if(msg.getNewValue() instanceof EImage)
@@ -635,7 +635,7 @@ public class MapComposite extends Composite
 							setBackgroundMapImage(null);
 						}
 					}
-					else if(msg.getFeatureID(MapViewConfiguration.class) == Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION)
+					else if(msg.getFeatureID(MapViewConfiguration.class) == ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION)
 					{									
 						if(msg.getNewValue() instanceof MapViewExtent)
 						{
@@ -654,7 +654,7 @@ public class MapComposite extends Composite
 	
 	protected void resizeBackgroundImage()
 	{
-		RectangularRegion mapExtent = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		RectangularRegion mapExtent = ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 		mapExtent.setXMin(getPlot().getDomainAxis().getLowerBound());
 		mapExtent.setXMax(getPlot().getDomainAxis().getUpperBound());
 		mapExtent.setYMin(getPlot().getRangeAxis().getLowerBound());
@@ -665,7 +665,7 @@ public class MapComposite extends Composite
 			try
 			{		
 				// Gets the sub image that falls within the zoom rectangle.
-				AbstractEImage zoomedImage = Symphony__CoreEnvironmentUIFacade.INSTANCE.getImageMapLayerPresentationImage(getMapViewConfiguration(), mapExtent, (int) getMaximumImageSize());
+				AbstractEImage zoomedImage = ApogyCoreEnvironmentUIFacade.INSTANCE.getImageMapLayerPresentationImage(getMapViewConfiguration(), mapExtent, (int) getMaximumImageSize());
 								
 				// Update tick size.				
 				double tickSize = getTickSize(mapExtent.getXDimension());				
@@ -784,7 +784,7 @@ public class MapComposite extends Composite
 	{		
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 					
-		return store.getLong(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_UPDATE_PERIOD_MILLISECONDS_ID);
+		return store.getLong(ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_UPDATE_PERIOD_MILLISECONDS_ID);
 	}
 	
 	/**
@@ -795,6 +795,6 @@ public class MapComposite extends Composite
 	{
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		
-		return store.getInt(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_IMAGE_MAXIMUM_NUMBER_OF_PIXELS_ID);
+		return store.getInt(ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_IMAGE_MAXIMUM_NUMBER_OF_PIXELS_ID);
 	}
 }

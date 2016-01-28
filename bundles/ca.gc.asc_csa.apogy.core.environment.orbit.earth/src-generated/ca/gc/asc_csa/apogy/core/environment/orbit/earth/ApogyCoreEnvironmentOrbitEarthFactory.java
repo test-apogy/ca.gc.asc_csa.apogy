@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage
  * @generated
  */
-public interface Symphony__CoreEnvironmentOrbitEarthFactory extends EFactory {
+public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitEarthFactory eINSTANCE = org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthFactoryImpl.init();
+	ApogyCoreEnvironmentOrbitEarthFactory eINSTANCE = ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Ore Kit Backed Spacecraft State</em>'.
@@ -245,7 +245,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitEarthFacade createSymphony__CoreEnvironmentOrbitEarthFacade();
+	ApogyCoreEnvironmentOrbitEarthFacade createApogyCoreEnvironmentOrbitEarthFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -254,6 +254,6 @@ public interface Symphony__CoreEnvironmentOrbitEarthFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitEarthPackage getSymphony__CoreEnvironmentOrbitEarthPackage();
+	ApogyCoreEnvironmentOrbitEarthPackage getApogyCoreEnvironmentOrbitEarthPackage();
 
-} //Symphony__CoreEnvironmentOrbitEarthFactory
+} //ApogyCoreEnvironmentOrbitEarthFactory

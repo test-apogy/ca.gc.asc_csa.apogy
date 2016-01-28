@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.GeographicCoordinates#getLongitude <em>Longitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.GeographicCoordinates#getLatitude <em>Latitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.GeographicCoordinates#getElevation <em>Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates#getLongitude <em>Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates#getElevation <em>Elevation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinates()
  * @model
  * @generated
  */
@@ -40,15 +40,15 @@ public interface GeographicCoordinates extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Longitude</em>' attribute.
 	 * @see #setLongitude(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates_Longitude()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinates_Longitude()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getLongitude();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.GeographicCoordinates#getLongitude <em>Longitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates#getLongitude <em>Longitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Longitude</em>' attribute.
@@ -67,15 +67,15 @@ public interface GeographicCoordinates extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latitude</em>' attribute.
 	 * @see #setLatitude(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates_Latitude()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinates_Latitude()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getLatitude();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.GeographicCoordinates#getLatitude <em>Latitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates#getLatitude <em>Latitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Latitude</em>' attribute.
@@ -93,15 +93,15 @@ public interface GeographicCoordinates extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
 	 * @see #setElevation(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates_Elevation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinates_Elevation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
   double getElevation();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.GeographicCoordinates#getElevation <em>Elevation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates#getElevation <em>Elevation</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation</em>' attribute.

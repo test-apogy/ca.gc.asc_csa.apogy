@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -18,17 +18,17 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer#getPolygonVerticesGeographicCoordinates <em>Polygon Vertices Geographic Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer#getPolygonVerticesGeographicCoordinates <em>Polygon Vertices Geographic Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer()
  * @model
  * @generated
  */
 public interface GeographicCoordinatesPolygonShapeImageMapLayer extends PolygonShapeImageMapLayer {
 	/**
 	 * Returns the value of the '<em><b>Polygon Vertices Geographic Coordinates</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.GeographicCoordinates}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Polygon Vertices Geographic Coordinates</em>' containment reference list isn't clear,
@@ -36,7 +36,7 @@ public interface GeographicCoordinatesPolygonShapeImageMapLayer extends PolygonS
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygon Vertices Geographic Coordinates</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer_PolygonVerticesGeographicCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer_PolygonVerticesGeographicCoordinates()
 	 * @model containment="true"
 	 * @generated
 	 */

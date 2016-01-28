@@ -1,13 +1,13 @@
-@GenModel(prefix="Symphony__ExamplesRoboticArm",
+@GenModel(prefix="ApogyExamplesRoboticArm",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="Symphony__ExamplesRoboticArm",
+		  modelName="ApogyExamplesRoboticArm",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.robotic_arm/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.robotic_arm.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm.edit/src-generated")
 
-package org.eclipse.symphony.examples.robotic_arm
+package ca.gc.asc_csa.apogy.examples.robotic_arm
 
 /*
  * This enumeration is used to indicate the overall possible
@@ -47,21 +47,21 @@ abstract class RoboticArm
 	// -----------------------------------------------------
 	// The following joint angles are in degrees (°) while 
 	// moveTo() expects the angles in radians (rad); this is
-	// indicated by the "symphony_units" field in the below
+	// indicated by the "apogy_units" field in the below
 	// @GenModel tags.
 	// <p>
-	// While this might seem like a problem, Symphony has
+	// While this might seem like a problem, Apogy has
 	// mechanisms to facilitate the automated conversion
 	// between the two. In the general Eclipse settings
 	// (Window > Preferences), there should be a menu
 	// called "Invocator Preferences"; it is here where
 	// one can choose which conversions (e.g. rad -> °,
-	// m/s -> km/h, etc.) they would like to have Symphony
+	// m/s -> km/h, etc.) they would like to have Apogy
 	// perform.  This makes it simple to work with different
 	// units.   
 	// <p>
 	// Note that for the conversion to be correctly supported
-	// (and show up as expected) in Symphony, the property
+	// (and show up as expected) in Apogy, the property
 	// descriptor for each of them needs to be changed slightly.
 	// This requires an update to the generated *ItemProvider file
 	// in the .edit project; you only need to change it for the
@@ -84,7 +84,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  symphony_units="deg")	
+			  apogy_units="deg")	
 	double turretAngle = "0.0"
 	
 	/* 
@@ -95,7 +95,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  symphony_units="deg")	
+			  apogy_units="deg")	
 	double shoulderAngle = "90.0"
 	
 	/* 
@@ -106,7 +106,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  symphony_units="deg")	
+			  apogy_units="deg")	
 	double elbowAngle = "-180.0"
 	
 	/* 
@@ -117,7 +117,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  symphony_units="deg")	
+			  apogy_units="deg")	
 	double wristAngle = "0.0"
 
 	/*
@@ -176,10 +176,10 @@ abstract class RoboticArm
 	 * @param elbowAngle The expected angle (in radians) of the elbow joint (joint 3) after moving.
 	 * @param wristAngle The expected angle (in radians) of the wrist joint (joint 4) after moving.
 	 */
-	op void moveTo(@GenModel(symphony_units="rad") double turretAngle,
-				   @GenModel(symphony_units="rad") double shoulderAngle,
-				   @GenModel(symphony_units="rad") double elbowAngle,
-				   @GenModel(symphony_units="rad") double wristAngle)
+	op void moveTo(@GenModel(apogy_units="rad") double turretAngle,
+				   @GenModel(apogy_units="rad") double shoulderAngle,
+				   @GenModel(apogy_units="rad") double elbowAngle,
+				   @GenModel(apogy_units="rad") double wristAngle)
 	
 	/*
 	 * Initiates the motion of the arm and moves the arm to the stow configuration.
@@ -196,7 +196,7 @@ class RoboticArmStub extends RoboticArm
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmStubImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmStubImpl}
 	 */
 }
 
@@ -210,6 +210,6 @@ class RoboticArmSimulated extends RoboticArm
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmSimulatedImpl} 
+	 * see {@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmSimulatedImpl} 
 	 */
 }

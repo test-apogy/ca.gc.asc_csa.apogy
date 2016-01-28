@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.invocator.provider.InitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.provider.InitializationDataItemProvider;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.SymphonyInitializationData} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ApogyInitializationData} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class SymphonyInitializationDataItemProvider extends
+public class ApogyInitializationDataItemProvider extends
 		InitializationDataItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier. <!--
@@ -31,7 +31,7 @@ public class SymphonyInitializationDataItemProvider extends
 	 * 
 	 * @generated
 	 */
-	public SymphonyInitializationDataItemProvider(AdapterFactory adapterFactory) {
+	public ApogyInitializationDataItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,7 +62,7 @@ public class SymphonyInitializationDataItemProvider extends
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -80,14 +80,14 @@ public class SymphonyInitializationDataItemProvider extends
 	}
 
 	/**
-	 * This returns SymphonyInitializationData.gif.
+	 * This returns ApogyInitializationData.gif.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonyInitializationData"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyInitializationData"));
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class SymphonyInitializationDataItemProvider extends
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_SymphonyInitializationData_type");
+		return getString("_UI_ApogyInitializationData_type");
 	}
 
 	/**
@@ -112,8 +112,8 @@ public class SymphonyInitializationDataItemProvider extends
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SymphonyInitializationData.class)) {
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+		switch (notification.getFeatureID(ApogyInitializationData.class)) {
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -134,8 +134,8 @@ public class SymphonyInitializationDataItemProvider extends
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCorePackage.Literals.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 }

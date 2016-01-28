@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.provider;
+package ca.gc.asc_csa.apogy.examples.camera.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,14 +27,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraFactory;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.util.Symphony__ExamplesCameraAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraFactory;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.util.ApogyExamplesCameraAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -45,7 +45,7 @@ import org.eclipse.symphony.examples.camera.util.Symphony__ExamplesCameraAdapter
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony__ExamplesCameraAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyExamplesCameraItemProviderAdapterFactory extends ApogyExamplesCameraAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -69,7 +69,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesCameraEditPlugin.INSTANCE, Symphony__ExamplesCameraPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesCameraEditPlugin.INSTANCE, ApogyExamplesCameraPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesCameraItemProviderAdapterFactory()
+  public ApogyExamplesCameraItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -95,7 +95,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.CameraStub} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.CameraStub} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -103,7 +103,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	protected CameraStubItemProvider cameraStubItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.CameraStub}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.CameraStub}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -118,7 +118,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.CameraSimulated} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.CameraSimulated} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -126,7 +126,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	protected CameraSimulatedItemProvider cameraSimulatedItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.CameraSimulated}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.CameraSimulated}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -141,7 +141,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.PTUCameraStub} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,7 +149,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	protected PTUCameraStubItemProvider ptuCameraStubItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.PTUCameraStub}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -164,7 +164,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.PTUCameraSimulated} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -172,7 +172,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	protected PTUCameraSimulatedItemProvider ptuCameraSimulatedItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.PTUCameraSimulated}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -331,19 +331,19 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -379,23 +379,23 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createCameraStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
 
 				return null;
 			}
@@ -409,23 +409,23 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createCameraStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
 
 				return null;
 			}
@@ -439,23 +439,23 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyExamplesCameraFactory.eINSTANCE.createCameraStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
 
 				return null;
 			}
@@ -488,7 +488,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesCameraEditPlugin.INSTANCE;
+			return ApogyExamplesCameraEditPlugin.INSTANCE;
 		}
 	}
 

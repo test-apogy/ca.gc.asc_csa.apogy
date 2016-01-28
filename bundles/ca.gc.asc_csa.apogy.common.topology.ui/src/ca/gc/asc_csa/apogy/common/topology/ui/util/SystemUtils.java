@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.util;
 
 public final class SystemUtils {
 

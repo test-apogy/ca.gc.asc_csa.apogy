@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
 import java.util.Date;
 
@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVCoordinatesProviderProvider()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getPVCoordinatesProviderProvider()
  * @model interface="true" abstract="true"
  * @generated
  */

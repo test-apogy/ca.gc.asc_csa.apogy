@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging;
 
 import java.awt.Color;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.imaging.impl.ImagingUtilitiesImpl;
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.impl.ImagingUtilitiesImpl;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getImagingUtilities()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#getImagingUtilities()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ImagingUtilities extends EObject
 	 * @return The horizontal angle, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" imageSnapshotUnique="false" horizontalPixelPositionUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double linearConvertToHorizontalAngle(ImageSnapshot imageSnapshot, int horizontalPixelPosition);
@@ -52,7 +52,7 @@ public interface ImagingUtilities extends EObject
 	 * @return The horizontal angle, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" imageSnapshotUnique="false" verticalPixelPositionUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double linearConvertToVerticalAngle(ImageSnapshot imageSnapshot, int verticalPixelPosition);
@@ -80,13 +80,13 @@ public interface ImagingUtilities extends EObject
 	 * @return The image.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" imageWidthUnique="false"
-	 *        imageWidthAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='pixel'" imageHeightUnique="false"
-	 *        imageHeightAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='pixel'" panAngleUnique="false"
-	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'" tiltAngleUnique="false"
-	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'" horizontalFOVAngleUnique="false"
-	 *        horizontalFOVAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'" verticalFOVAngleUnique="false"
-	 *        verticalFOVAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'" azimuthDirectionUnique="false" elevationDirectionUnique="false" angleIntervalUnique="false"
-	 *        angleIntervalAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'" fontNameUnique="false" fontSizeUnique="false" positiveColorDataType="org.eclipse.symphony.addons.sensors.imaging.Color" positiveColorUnique="false" negativeColorDataType="org.eclipse.symphony.addons.sensors.imaging.Color" negativeColorUnique="false" lineWidthUnique="false"
+	 *        imageWidthAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='pixel'" imageHeightUnique="false"
+	 *        imageHeightAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='pixel'" panAngleUnique="false"
+	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'" tiltAngleUnique="false"
+	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'" horizontalFOVAngleUnique="false"
+	 *        horizontalFOVAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'" verticalFOVAngleUnique="false"
+	 *        verticalFOVAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'" azimuthDirectionUnique="false" elevationDirectionUnique="false" angleIntervalUnique="false"
+	 *        angleIntervalAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'" fontNameUnique="false" fontSizeUnique="false" positiveColorDataType="ca.gc.asc_csa.apogy.addons.sensors.imaging.Color" positiveColorUnique="false" negativeColorDataType="ca.gc.asc_csa.apogy.addons.sensors.imaging.Color" negativeColorUnique="false" lineWidthUnique="false"
 	 * @generated
 	 */
 	AbstractEImage getAzimuthElevationOverlay(int imageWidth, int imageHeight, double panAngle, double tiltAngle, double horizontalFOVAngle, double verticalFOVAngle, AzimuthDirection azimuthDirection, ElevationDirection elevationDirection, int angleInterval, String fontName, int fontSize, Color positiveColor, Color negativeColor, int lineWidth);

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.environment.Region;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.environment.Region;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Region} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.Region} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class RegionItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.REGION__TRANSFORMATION);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.REGION__TRANSFORMATION);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +123,7 @@ public class RegionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Region.class)) {
-			case Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION:
+			case ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -144,8 +144,8 @@ public class RegionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.REGION__TRANSFORMATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCoreEnvironmentPackage.Literals.REGION__TRANSFORMATION,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
   /**

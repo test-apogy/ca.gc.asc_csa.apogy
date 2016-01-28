@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated images_core_ros -->
       <package
-            uri="org.eclipse.symphony.addons.ros.imaging"
-            class="org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage"
-            genModel="model/symphony_addons_ros_imaging.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.ros.imaging"
+            class="ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage"
+            genModel="model/apogy_addons_ros_imaging.xcore"/>
    </extension>
 
 </plugin>

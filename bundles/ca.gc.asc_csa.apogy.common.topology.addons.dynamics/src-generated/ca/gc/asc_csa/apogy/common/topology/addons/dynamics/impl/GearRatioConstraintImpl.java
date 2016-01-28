@@ -4,13 +4,13 @@
  *
  * $Id: GearRatioConstraintImpl.java,v 1.3.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.GearRatioConstraintImpl#getForce <em>Force</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GearRatioConstraintImpl#getForce <em>Force</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,7 +62,7 @@ public class GearRatioConstraintImpl extends AbstractConstraintImpl implements G
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.GEAR_RATIO_CONSTRAINT;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.GEAR_RATIO_CONSTRAINT;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class GearRatioConstraintImpl extends AbstractConstraintImpl implements G
 		double oldForce = force;
 		force = newForce;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE, oldForce, force));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE, oldForce, force));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class GearRatioConstraintImpl extends AbstractConstraintImpl implements G
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
 				return getForce();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class GearRatioConstraintImpl extends AbstractConstraintImpl implements G
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
 				setForce((Double)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class GearRatioConstraintImpl extends AbstractConstraintImpl implements G
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
 				setForce(FORCE_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class GearRatioConstraintImpl extends AbstractConstraintImpl implements G
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
 				return force != FORCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

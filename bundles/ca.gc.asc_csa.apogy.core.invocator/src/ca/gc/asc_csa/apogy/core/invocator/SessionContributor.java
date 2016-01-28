@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.URI;
 

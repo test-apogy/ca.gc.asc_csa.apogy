@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.provider;
 
 
 import java.util.Collection;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -95,7 +95,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_x_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_x_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__X,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__X,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_y_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_y_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__Y,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__Y,
 				 true,
 				 false,
 				 false,
@@ -139,7 +139,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_z_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_z_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__Z,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__Z,
 				 true,
 				 false,
 				 false,
@@ -161,7 +161,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_intensity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_intensity_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__INTENSITY,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__INTENSITY,
 				 true,
 				 false,
 				 false,
@@ -183,7 +183,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_returnNumber_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_returnNumber_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__RETURN_NUMBER,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__RETURN_NUMBER,
 				 true,
 				 false,
 				 false,
@@ -205,7 +205,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_numberOfReturns_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_numberOfReturns_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__NUMBER_OF_RETURNS,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__NUMBER_OF_RETURNS,
 				 true,
 				 false,
 				 false,
@@ -227,7 +227,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_scanDirection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_scanDirection_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__SCAN_DIRECTION,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__SCAN_DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -249,7 +249,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_edgeOfFlightLine_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_edgeOfFlightLine_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__EDGE_OF_FLIGHT_LINE,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__EDGE_OF_FLIGHT_LINE,
 				 true,
 				 false,
 				 false,
@@ -271,7 +271,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_classification_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_classification_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__CLASSIFICATION,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__CLASSIFICATION,
 				 true,
 				 false,
 				 false,
@@ -293,7 +293,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_scanAngleRank_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_scanAngleRank_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__SCAN_ANGLE_RANK,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__SCAN_ANGLE_RANK,
 				 true,
 				 false,
 				 false,
@@ -315,7 +315,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_userData_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_userData_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__USER_DATA,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__USER_DATA,
 				 true,
 				 false,
 				 false,
@@ -337,7 +337,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_pointSourceId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_pointSourceId_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__POINT_SOURCE_ID,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__POINT_SOURCE_ID,
 				 true,
 				 false,
 				 false,
@@ -359,7 +359,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_gpsTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_gpsTime_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__GPS_TIME,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__GPS_TIME,
 				 true,
 				 false,
 				 false,
@@ -381,7 +381,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_red_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_red_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__RED,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__RED,
 				 true,
 				 false,
 				 false,
@@ -403,7 +403,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_green_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_green_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__GREEN,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__GREEN,
 				 true,
 				 false,
 				 false,
@@ -425,7 +425,7 @@ public class LASPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASPoint_blue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASPoint_blue_feature", "_UI_LASPoint_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT__BLUE,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_POINT__BLUE,
 				 true,
 				 false,
 				 false,
@@ -470,22 +470,22 @@ public class LASPointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LASPoint.class)) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__X:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Y:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Z:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__INTENSITY:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RETURN_NUMBER:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__NUMBER_OF_RETURNS:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_DIRECTION:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__CLASSIFICATION:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_ANGLE_RANK:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__USER_DATA:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__POINT_SOURCE_ID:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GPS_TIME:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RED:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GREEN:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__BLUE:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__X:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__Y:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__Z:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__INTENSITY:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__RETURN_NUMBER:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__NUMBER_OF_RETURNS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__SCAN_DIRECTION:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__CLASSIFICATION:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__SCAN_ANGLE_RANK:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__USER_DATA:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__POINT_SOURCE_ID:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__GPS_TIME:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__RED:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__GREEN:
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT__BLUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

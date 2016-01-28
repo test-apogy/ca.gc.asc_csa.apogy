@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.GroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getParentNode <em>Parent Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getCases <em>Cases</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getParentNode <em>Parent Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getCases <em>Cases</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding()
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getEnumerationSwitchBinding()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Parent Node</em>' reference.
 	 * @see #setParentNode(GroupNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding_ParentNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getEnumerationSwitchBinding_ParentNode()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
@@ -48,7 +48,7 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
   GroupNode getParentNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getParentNode <em>Parent Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getParentNode <em>Parent Node</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parent Node</em>' reference.
@@ -59,14 +59,14 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
 
   /**
 	 * Returns the value of the '<em><b>Cases</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.bindings.EnumerationCase}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of cases defined for the switch.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Cases</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding_Cases()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getEnumerationSwitchBinding_Cases()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='ENUMERATION'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Case</em>' reference.
 	 * @see #setActiveCase(EnumerationCase)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding_ActiveCase()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getEnumerationSwitchBinding_ActiveCase()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='ENUMERATION'"
 	 * @generated
@@ -90,7 +90,7 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
   EnumerationCase getActiveCase();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active Case</em>' reference.

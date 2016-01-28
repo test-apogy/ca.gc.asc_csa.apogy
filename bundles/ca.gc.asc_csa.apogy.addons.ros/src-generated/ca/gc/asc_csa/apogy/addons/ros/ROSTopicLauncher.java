@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -20,26 +20,26 @@ import org.ros.message.MessageListener;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#getListenerList <em>Listener List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#getListenerList <em>Listener List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#isRunning <em>Running</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSTopicLauncher()
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSTopicLauncher()
  * @model
  * @generated
  */
 public interface ROSTopicLauncher extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Listener List</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.ros.ROSListener}&lt;?>.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.ros.ROSListener}&lt;?>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The internal list of associated listeners
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Listener List</em>' reference list.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSTopicLauncher_ListenerList()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSTopicLauncher_ListenerList()
 	 * @model
 	 * @generated
 	 */
@@ -54,14 +54,14 @@ public interface ROSTopicLauncher extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(ROSNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSTopicLauncher_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSTopicLauncher_Node()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' notify='true' propertyCategory='ROS_TOPIC_LAUNCHER'"
 	 * @generated
 	 */
 	ROSNode getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.
@@ -79,7 +79,7 @@ public interface ROSTopicLauncher extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Running</em>' attribute.
 	 * @see #setRunning(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSTopicLauncher_Running()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSTopicLauncher_Running()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_TOPIC_LAUNCHER'"
 	 * @generated
@@ -87,7 +87,7 @@ public interface ROSTopicLauncher extends EObject {
 	boolean isRunning();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#isRunning <em>Running</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#isRunning <em>Running</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Running</em>' attribute.
@@ -107,7 +107,7 @@ public interface ROSTopicLauncher extends EObject {
 	 * @param messageType The type of the messages for the specified topic
 	 * @param messageListener The underlying ROS message listener for that topic
 	 * <!-- end-model-doc -->
-	 * @model topicNameUnique="false" messageTypeUnique="false" messageListenerDataType="org.eclipse.symphony.addons.ros.MessageListener<M>" messageListenerUnique="false" MBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model topicNameUnique="false" messageTypeUnique="false" messageListenerDataType="ca.gc.asc_csa.apogy.addons.ros.MessageListener<M>" messageListenerUnique="false" MBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<M extends Message> void createListener(String topicName, String messageType, MessageListener<M> messageListener);

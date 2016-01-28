@@ -3,15 +3,15 @@
  *
  * $Id: Polygon25DImpl.java,v 1.4.4.3 2015/09/22 19:39:38 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectEList;
-import org.eclipse.symphony.common.geometry.data.impl.PolygonImpl;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.PolygonImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class Polygon25DImpl extends PolygonImpl<Coordinates25D> implements Polyg
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData25DPackage.Literals.POLYGON25_D;
+		return ApogyCommonGeometryData25DPackage.Literals.POLYGON25_D;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Polygon25DImpl extends PolygonImpl<Coordinates25D> implements Polyg
 	@Override
 	public EList<Coordinates25D> getVertices() {
 		if (vertices == null) {
-			vertices = new EObjectEList<Coordinates25D>(Coordinates25D.class, this, Symphony__CommonGeometryData25DPackage.POLYGON25_D__VERTICES);
+			vertices = new EObjectEList<Coordinates25D>(Coordinates25D.class, this, ApogyCommonGeometryData25DPackage.POLYGON25_D__VERTICES);
 		}
 		return vertices;
 	}

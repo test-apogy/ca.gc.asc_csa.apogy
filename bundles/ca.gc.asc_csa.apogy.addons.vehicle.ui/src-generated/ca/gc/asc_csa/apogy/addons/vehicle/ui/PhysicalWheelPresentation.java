@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getPhysicalWheelPresentation()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage#getPhysicalWheelPresentation()
  * @model
  * @generated
  */

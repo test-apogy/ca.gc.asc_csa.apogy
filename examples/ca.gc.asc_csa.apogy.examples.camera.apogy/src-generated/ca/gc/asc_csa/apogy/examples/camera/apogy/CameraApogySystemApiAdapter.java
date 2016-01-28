@@ -1,27 +1,27 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony;
+package ca.gc.asc_csa.apogy.examples.camera.apogy;
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Camera Symphony System Api Adapter</b></em>'.
+ * A representation of the model object '<em><b>Camera Apogy System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class is the Symphony API adapter that is used to
+ * This class is the Apogy API adapter that is used to
  * interface the existing basic camera implementations with
- * Symphony; this provides a series of callback methods that
+ * Apogy; this provides a series of callback methods that
  * can be overridden to implement a variety of useful features.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraSymphonySystemApiAdapter()
+ * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getCameraApogySystemApiAdapter()
  * @model
  * @generated
  */
-public interface CameraSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+public interface CameraApogySystemApiAdapter extends ApogySystemApiAdapter
 {
-} // CameraSymphonySystemApiAdapter
+} // CameraApogySystemApiAdapter

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,16 +26,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.util.Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ToolsList;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.util.ApogyCoreEnvironmentOrbitEarthUIAdapterFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -46,7 +46,7 @@ import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory extends Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCoreEnvironmentOrbitEarthUIItemProviderAdapterFactory extends ApogyCoreEnvironmentOrbitEarthUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreEnvironmentOrbitEarthUIEditPlugin.INSTANCE, Symphony__CoreEnvironmentOrbitEarthUIPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreEnvironmentOrbitEarthUIEditPlugin.INSTANCE, ApogyCoreEnvironmentOrbitEarthUIPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory() {
+	public ApogyCoreEnvironmentOrbitEarthUIItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -94,7 +94,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,7 +102,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected EarthViewConfigurationListItemProvider earthViewConfigurationListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected EarthViewConfigurationItemProvider earthViewConfigurationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected SpacecraftLocationWorldWindLayerItemProvider spacecraftLocationWorldWindLayerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,7 +163,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected OrbitModelWorldWindLayerItemProvider orbitModelWorldWindLayerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected SpacecraftSwathWorldWindLayerItemProvider spacecraftSwathWorldWindLayerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,7 +209,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected EarthSurfaceLocationWorldWindLayerItemProvider earthSurfaceLocationWorldWindLayerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,7 +232,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected GroundStationWorldWindLayerItemProvider groundStationWorldWindLayerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -255,7 +255,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -263,7 +263,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected SpacecraftVisibilityPassViewConfigurationListItemProvider spacecraftVisibilityPassViewConfigurationListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -278,7 +278,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,7 +286,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	protected SpacecraftVisibilityPassViewConfigurationItemProvider spacecraftVisibilityPassViewConfigurationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -438,19 +438,19 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -486,13 +486,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 			public Object caseToolsList(ToolsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfigurationList()));
+						(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
+						(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
 
 				return null;
 			}
@@ -525,24 +525,24 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEnvironmentOrbitEarthUIEditPlugin.INSTANCE;
+			return ApogyCoreEnvironmentOrbitEarthUIEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -578,48 +578,48 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
 
 				return null;
 			}
@@ -633,48 +633,48 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
 
 				return null;
 			}
@@ -707,7 +707,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIItemProviderAdapterFactory ext
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEnvironmentOrbitEarthUIEditPlugin.INSTANCE;
+			return ApogyCoreEnvironmentOrbitEarthUIEditPlugin.INSTANCE;
 		}
 	}
 

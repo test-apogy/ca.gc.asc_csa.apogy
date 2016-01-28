@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.addons.sensors.fov.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.sensors.fov.bindings"
+            class="ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.provider.ApogyAddonsSensorsFOVBindingsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,13 +20,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_sensors_fov_bindings -->
+      <!-- @generated apogy_addons_sensors_fov_bindings -->
       <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.bindings"
+            class="ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.provider.ApogyAddonsSensorsFOVBindingsItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.provider.ApogyAddonsSensorsFOVBindingsItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

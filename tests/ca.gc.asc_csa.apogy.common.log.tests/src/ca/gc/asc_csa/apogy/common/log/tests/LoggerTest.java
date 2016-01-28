@@ -1,8 +1,8 @@
-package org.eclipse.symphony.common.log.tests;
+package ca.gc.asc_csa.apogy.common.log.tests;
 
-import org.eclipse.symphony.common.log.Activator;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

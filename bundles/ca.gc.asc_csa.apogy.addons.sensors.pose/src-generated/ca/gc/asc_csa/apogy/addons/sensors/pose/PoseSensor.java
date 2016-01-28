@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
-import org.eclipse.symphony.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getPose <em>Pose</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#getPose <em>Pose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getPoseSensor()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface PoseSensor extends TransformNode, PositionSensor, OrientationSe
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose</em>' reference.
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseSensor_Pose()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getPoseSensor_Pose()
 	 * @model transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -50,14 +50,14 @@ public interface PoseSensor extends TransformNode, PositionSensor, OrientationSe
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Logger</em>' containment reference.
 	 * @see #setDataLogger(PoseDataLogger)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseSensor_DataLogger()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getPoseSensor_DataLogger()
 	 * @model containment="true"
 	 * @generated
 	 */
 	PoseDataLogger getDataLogger();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Data Logger</em>' containment reference.
@@ -69,7 +69,7 @@ public interface PoseSensor extends TransformNode, PositionSensor, OrientationSe
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.sensors.pose.Exception" newPoseUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.sensors.pose.Exception" newPoseUnique="false"
 	 * @generated
 	 */
 	void resetPose(Pose newPose) throws Exception;

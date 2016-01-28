@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,14 +10,14 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformFactory;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub;
-import org.eclipse.symphony.examples.mobile_platform.NamedPosition;
-import org.eclipse.symphony.examples.mobile_platform.Position;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.examples.mobile_platform.Position;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl implements Symphony__ExamplesMobilePlatformPackage
+public class ApogyExamplesMobilePlatformPackageImpl extends EPackageImpl implements ApogyExamplesMobilePlatformPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -73,13 +73,13 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesMobilePlatformPackageImpl()
+  private ApogyExamplesMobilePlatformPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesMobilePlatformFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesMobilePlatformFactory.eINSTANCE);
 	}
 
   /**
@@ -92,7 +92,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesMobilePlatformPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesMobilePlatformPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -101,31 +101,31 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesMobilePlatformPackage init()
+  public static ApogyExamplesMobilePlatformPackage init()
   {
-		if (isInited) return (Symphony__ExamplesMobilePlatformPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesMobilePlatformPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesMobilePlatformPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesMobilePlatformPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesMobilePlatformPackageImpl theSymphony__ExamplesMobilePlatformPackage = (Symphony__ExamplesMobilePlatformPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesMobilePlatformPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesMobilePlatformPackageImpl());
+		ApogyExamplesMobilePlatformPackageImpl theApogyExamplesMobilePlatformPackage = (ApogyExamplesMobilePlatformPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesMobilePlatformPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesMobilePlatformPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonEMFPackage.eINSTANCE.eClass();
+		ApogyCommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesMobilePlatformPackage.createPackageContents();
+		theApogyExamplesMobilePlatformPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesMobilePlatformPackage.initializePackageContents();
+		theApogyExamplesMobilePlatformPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesMobilePlatformPackage.freeze();
+		theApogyExamplesMobilePlatformPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesMobilePlatformPackage.eNS_URI, theSymphony__ExamplesMobilePlatformPackage);
-		return theSymphony__ExamplesMobilePlatformPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesMobilePlatformPackage.eNS_URI, theApogyExamplesMobilePlatformPackage);
+		return theApogyExamplesMobilePlatformPackage;
 	}
 
   /**
@@ -372,8 +372,8 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesMobilePlatformFactory getSymphony__ExamplesMobilePlatformFactory() {
-		return (Symphony__ExamplesMobilePlatformFactory)getEFactoryInstance();
+	public ApogyExamplesMobilePlatformFactory getApogyExamplesMobilePlatformFactory() {
+		return (ApogyExamplesMobilePlatformFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -453,7 +453,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -461,7 +461,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 
 		// Add supertypes to classes
 		namedPositionEClass.getESuperTypes().add(this.getPosition());
-		mobilePlatformEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDisposable());
+		mobilePlatformEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDisposable());
 		mobilePlatformStubEClass.getESuperTypes().add(this.getMobilePlatform());
 		mobilePlatformSimulatedEClass.getESuperTypes().add(this.getMobilePlatform());
 
@@ -532,15 +532,15 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesMobilePlatform",
+			 "prefix", "ApogyExamplesMobilePlatform",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-			 "modelName", "Symphony__ExamplesMobilePlatform",
+			 "modelName", "ApogyExamplesMobilePlatform",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.mobile_platform/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.mobile_platform.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.mobile_platform/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.mobile_platform.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
 		  (positionEClass, 
@@ -555,7 +555,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "documentation", "This is the position\'s X coordinate (given in metres)",
 			 "children", "false",
 			 "notify", "true",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Y(), 
@@ -564,7 +564,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "documentation", "This is the position\'s Y coordinate (given in metres)",
 			 "children", "false",
 			 "notify", "true",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Theta(), 
@@ -573,7 +573,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "documentation", "This is the pose angle (in radians) of an object, which\nspecifies a rotation around the Z axis.",
 			 "children", "false",
 			 "notify", "true",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (namedPositionEClass, 
@@ -630,13 +630,13 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__MoveTo__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  ((getMobilePlatform__MoveTo__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getMobilePlatform__CmdLinearVelocity__double(), 
@@ -648,7 +648,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__CmdLinearVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m/s"
+			 "apogy_units", "m/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform__CmdAngularVelocity__double(), 
@@ -660,7 +660,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__CmdAngularVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform__CmdVelocities__double_double(), 
@@ -672,13 +672,13 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__CmdVelocities__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m/s"
+			 "apogy_units", "m/s"
 		   });	
 		addAnnotation
 		  ((getMobilePlatform__CmdVelocities__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_Initialized(), 
@@ -707,7 +707,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Position",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_LinearVelocity(), 
@@ -718,7 +718,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "symphony_units", "m/s"
+			 "apogy_units", "m/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_AngularVelocity(), 
@@ -729,7 +729,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_LeftWheelPosition(), 
@@ -740,7 +740,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Position",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_RightWheelPosition(), 
@@ -751,7 +751,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Position",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_Position(), 
@@ -775,4 +775,4 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		   });
 	}
 
-} //Symphony__ExamplesMobilePlatformPackageImpl
+} //ApogyExamplesMobilePlatformPackageImpl

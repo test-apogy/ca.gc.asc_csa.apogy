@@ -3,7 +3,7 @@
  *
  * $Id: DirectedGraphBasedMeshWayPointPathPlannerItemProvider.java,v 1.2.4.2 2015/05/21 15:51:33 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DirectedGraphBasedMeshWayPointPathPlanner_directedGraph_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DirectedGraphBasedMeshWayPointPathPlanner_directedGraph_feature", "_UI_DirectedGraphBasedMeshWayPointPathPlanner_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DirectedGraphBasedMeshWayPointPathPlanner.class)) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

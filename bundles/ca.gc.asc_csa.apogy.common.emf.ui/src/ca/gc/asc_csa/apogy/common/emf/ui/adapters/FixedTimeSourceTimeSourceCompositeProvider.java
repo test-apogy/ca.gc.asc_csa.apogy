@@ -1,10 +1,10 @@
-package org.eclipse.symphony.common.emf.ui.adapters;
+package ca.gc.asc_csa.apogy.common.emf.ui.adapters;
 
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.emf.FixedTimeSource;
-import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
-import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
-import org.eclipse.symphony.common.emf.ui.composites.FixedTimeSourceComposite;
+import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ui.TimeSourceCompositeProvider;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.AbstractTimeSourceComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.FixedTimeSourceComposite;
 
 public class FixedTimeSourceTimeSourceCompositeProvider implements TimeSourceCompositeProvider<FixedTimeSource> 
 {

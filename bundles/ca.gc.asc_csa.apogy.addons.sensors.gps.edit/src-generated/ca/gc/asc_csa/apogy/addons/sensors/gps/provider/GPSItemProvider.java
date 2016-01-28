@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.addons.sensors.gps.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.provider;
 
 
 import java.util.Collection;
@@ -21,13 +21,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFactory;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPS;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.GPS} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPS} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_status_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_status_feature", "_UI_GPS_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__STATUS,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS__STATUS,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_updateRate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_updateRate_feature", "_UI_GPS_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__UPDATE_RATE,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS__UPDATE_RATE,
 				 true,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_lastFailure_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_lastFailure_feature", "_UI_GPS_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__LAST_FAILURE,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS__LAST_FAILURE,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_maxReconnectTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_maxReconnectTime_feature", "_UI_GPS_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__MAX_RECONNECT_TIME,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS__MAX_RECONNECT_TIME,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_speedKnots_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_speedKnots_feature", "_UI_GPS_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__SPEED_KNOTS,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS__SPEED_KNOTS,
 				 true,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_speedKmh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_speedKmh_feature", "_UI_GPS_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__SPEED_KMH,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS__SPEED_KMH,
 				 true,
 				 false,
 				 false,
@@ -215,9 +215,9 @@ public class GPSItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.GPS__CONNECTION);
-			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.GPS__DATA_INTERPRETER);
-			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.GPS__READING);
+			childrenFeatures.add(ApogyAddonsSensorsGPSPackage.Literals.GPS__CONNECTION);
+			childrenFeatures.add(ApogyAddonsSensorsGPSPackage.Literals.GPS__DATA_INTERPRETER);
+			childrenFeatures.add(ApogyAddonsSensorsGPSPackage.Literals.GPS__READING);
 		}
 		return childrenFeatures;
 	}
@@ -273,17 +273,17 @@ public class GPSItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GPS.class)) {
-			case Symphony__AddonsSensorsGPSPackage.GPS__STATUS:
-			case Symphony__AddonsSensorsGPSPackage.GPS__UPDATE_RATE:
-			case Symphony__AddonsSensorsGPSPackage.GPS__LAST_FAILURE:
-			case Symphony__AddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KMH:
+			case ApogyAddonsSensorsGPSPackage.GPS__STATUS:
+			case ApogyAddonsSensorsGPSPackage.GPS__UPDATE_RATE:
+			case ApogyAddonsSensorsGPSPackage.GPS__LAST_FAILURE:
+			case ApogyAddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KMH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION:
-			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
-			case Symphony__AddonsSensorsGPSPackage.GPS__READING:
+			case ApogyAddonsSensorsGPSPackage.GPS__CONNECTION:
+			case ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case ApogyAddonsSensorsGPSPackage.GPS__READING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -303,8 +303,8 @@ public class GPSItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsGPSPackage.Literals.GPS__READING,
-				 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSReading()));
+				(ApogyAddonsSensorsGPSPackage.Literals.GPS__READING,
+				 ApogyAddonsSensorsGPSFactory.eINSTANCE.createGPSReading()));
 	}
 
 	/**

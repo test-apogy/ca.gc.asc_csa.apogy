@@ -1,26 +1,26 @@
-@GenModel(prefix="Symphony__AddonsSensorsRange",
+@GenModel(prefix="ApogyAddonsSensorsRange",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsSensorsRange",
+	      modelName="ApogyAddonsSensorsRange",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.range/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.range.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.range.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.range
+package ca.gc.asc_csa.apogy.addons.sensors.range
 
-import org.eclipse.symphony.addons.sensors.Sensor
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
-import org.eclipse.symphony.common.emf.Timed
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
-import org.eclipse.symphony.common.processors.Processor
-import org.eclipse.symphony.common.topology.AggregateGroupNode
-import org.eclipse.symphony.common.topology.ContentNode
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.common.processors.Processor
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.ContentNode
 
 type List<T> wraps java.util.List
 type Point3d wraps javax.vecmath.Point3d
@@ -195,7 +195,7 @@ class RasterScanData extends AggregateGroupNode, Timed
 	contains VolumetricCoordinatesSet25D scanData
 }
 
-class Symphony__AddonsSensorsRangeFacade
+class ApogyAddonsSensorsRangeFacade
 {
 	op RasterScanSettings createRasterScanSettings(double minimumDistance, double maximumDistance,
 		                                           double horizontalFieldOfViewAngle, double verticalFieldOfViewAngle,

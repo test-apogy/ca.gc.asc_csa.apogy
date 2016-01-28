@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna;
+package ca.gc.asc_csa.apogy.examples.antenna;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage
  * @generated
  */
-public interface Symphony__ExamplesAntennaFactory extends EFactory
+public interface ApogyExamplesAntennaFactory extends EFactory
 {
 	/**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__ExamplesAntennaFactory extends EFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesAntennaFactory eINSTANCE = org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaFactoryImpl.init();
+	ApogyExamplesAntennaFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaFactoryImpl.init();
 
 	/**
 	 * Returns a new PTUDishAntenna object, which has the same type as
@@ -58,6 +58,6 @@ public interface Symphony__ExamplesAntennaFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesAntennaPackage getSymphony__ExamplesAntennaPackage();
+	ApogyExamplesAntennaPackage getApogyExamplesAntennaPackage();
 
-} //Symphony__ExamplesAntennaFactory
+} //ApogyExamplesAntennaFactory

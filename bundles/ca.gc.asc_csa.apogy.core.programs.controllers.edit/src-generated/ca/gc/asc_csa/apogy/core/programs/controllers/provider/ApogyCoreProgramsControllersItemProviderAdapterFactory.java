@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,14 +27,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.util.Symphony__CoreProgramsControllersAdapterFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.util.ApogyCoreProgramsControllersAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -45,7 +45,7 @@ import org.eclipse.symphony.core.programs.controllers.util.Symphony__CoreProgram
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends Symphony__CoreProgramsControllersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyCoreProgramsControllersItemProviderAdapterFactory extends ApogyCoreProgramsControllersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -69,7 +69,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreProgramsControllersEditPlugin.INSTANCE, Symphony__CoreProgramsControllersPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreProgramsControllersEditPlugin.INSTANCE, ApogyCoreProgramsControllersPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreProgramsControllersItemProviderAdapterFactory()
+  public ApogyCoreProgramsControllersItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -95,7 +95,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -103,7 +103,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected ControllersConfigurationItemProvider controllersConfigurationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -119,7 +119,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -127,7 +127,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected OperationCallControllerBindingItemProvider operationCallControllerBindingItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -143,7 +143,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.TimeTrigger} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -151,7 +151,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected TimeTriggerItemProvider timeTriggerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.TimeTrigger}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -167,7 +167,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -175,7 +175,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected ControllerEdgeTriggerItemProvider controllerEdgeTriggerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -191,7 +191,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -199,7 +199,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected ControllerStateTriggerItemProvider controllerStateTriggerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -215,7 +215,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -223,7 +223,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected BindedEDataTypeArgumentItemProvider bindedEDataTypeArgumentItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -239,7 +239,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.FixedValueSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -247,7 +247,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected FixedValueSourceItemProvider fixedValueSourceItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.FixedValueSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -263,7 +263,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -271,7 +271,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected ControllerValueSourceItemProvider controllerValueSourceItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -287,7 +287,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -295,7 +295,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	protected LinearInputConditioningItemProvider linearInputConditioningItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -310,7 +310,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -318,7 +318,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	protected CenteredLinearInputConditioningItemProvider centeredLinearInputConditioningItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -333,7 +333,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ParabolicInputConditioning} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -341,7 +341,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	protected ParabolicInputConditioningItemProvider parabolicInputConditioningItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ParabolicInputConditioning}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -356,7 +356,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -364,7 +364,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	protected CenteredParabolicInputConditioningItemProvider centeredParabolicInputConditioningItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -379,7 +379,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -387,7 +387,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
   protected ToggleValueSourceItemProvider toggleValueSourceItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -403,7 +403,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -411,7 +411,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	protected UserDefinedInputConditioningItemProvider userDefinedInputConditioningItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -426,7 +426,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -434,7 +434,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	protected CustomInputConditioningPointItemProvider customInputConditioningPointItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -449,26 +449,26 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreProgramsControllersFacadeItemProvider symphony__CoreProgramsControllersFacadeItemProvider;
+  protected ApogyCoreProgramsControllersFacadeItemProvider apogy__CoreProgramsControllersFacadeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreProgramsControllersFacadeAdapter() {
-		if (symphony__CoreProgramsControllersFacadeItemProvider == null) {
-			symphony__CoreProgramsControllersFacadeItemProvider = new Symphony__CoreProgramsControllersFacadeItemProvider(this);
+	public Adapter createApogyCoreProgramsControllersFacadeAdapter() {
+		if (apogy__CoreProgramsControllersFacadeItemProvider == null) {
+			apogy__CoreProgramsControllersFacadeItemProvider = new ApogyCoreProgramsControllersFacadeItemProvider(this);
 		}
 
-		return symphony__CoreProgramsControllersFacadeItemProvider;
+		return apogy__CoreProgramsControllersFacadeItemProvider;
 	}
 
 		/**
@@ -609,7 +609,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	 */
   public void dispose()
   {
-		if (symphony__CoreProgramsControllersFacadeItemProvider != null) symphony__CoreProgramsControllersFacadeItemProvider.dispose();
+		if (apogy__CoreProgramsControllersFacadeItemProvider != null) apogy__CoreProgramsControllersFacadeItemProvider.dispose();
 		if (controllersConfigurationItemProvider != null) controllersConfigurationItemProvider.dispose();
 		if (operationCallControllerBindingItemProvider != null) operationCallControllerBindingItemProvider.dispose();
 		if (timeTriggerItemProvider != null) timeTriggerItemProvider.dispose();
@@ -628,19 +628,19 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
   /**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -676,8 +676,8 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 			public Object caseProgramsList(ProgramsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
-						 Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllersConfiguration()));
+						(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
+						 ApogyCoreProgramsControllersFactory.eINSTANCE.createControllersConfiguration()));
 
 				return null;
 			}
@@ -691,8 +691,8 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 			public Object caseOperationCallContainer(OperationCallContainer object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-						 Symphony__CoreProgramsControllersFactory.eINSTANCE.createOperationCallControllerBinding()));
+						(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+						 ApogyCoreProgramsControllersFactory.eINSTANCE.createOperationCallControllerBinding()));
 
 				return null;
 			}
@@ -706,13 +706,13 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 			public Object caseArgumentsList(ArgumentsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-						 Symphony__CoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument()));
+						(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+						 ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-						 Symphony__CoreProgramsControllersFactory.eINSTANCE.createFixedValueSource()));
+						(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+						 ApogyCoreProgramsControllersFactory.eINSTANCE.createFixedValueSource()));
 
 				return null;
 			}
@@ -745,7 +745,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreProgramsControllersEditPlugin.INSTANCE;
+			return ApogyCoreProgramsControllersEditPlugin.INSTANCE;
 		}
 	}
 

@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getAbstractAntennaRadiationPattern()
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getAbstractAntennaRadiationPattern()
  * @model abstract="true"
  * @generated
  */
@@ -32,9 +32,9 @@ public interface AbstractAntennaRadiationPattern extends Node, Named {
 	 * @return The gain, in dBi (decibels isotropic or dBi) associated with the radiation pattern in the specified direction.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" thetaUnique="false"
-	 *        thetaAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" phiUnique="false"
-	 *        phiAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='dB'"
+	 *        thetaAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" phiUnique="false"
+	 *        phiAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='dB'"
 	 * @generated
 	 */
 	double computeGain(double theta, double phi);

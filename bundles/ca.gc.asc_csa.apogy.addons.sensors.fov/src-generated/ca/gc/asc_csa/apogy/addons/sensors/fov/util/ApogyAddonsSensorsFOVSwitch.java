@@ -1,24 +1,24 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.util;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.sensors.fov.*;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.*;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,17 +30,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage
  * @generated
  */
-public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
+public class ApogyAddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsFOVPackage modelPackage;
+	protected static ApogyAddonsSensorsFOVPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -48,9 +48,9 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVSwitch() {
+	public ApogyAddonsSensorsFOVSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsFOVPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsFOVPackage.eINSTANCE;
 		}
 	}
 
@@ -77,26 +77,26 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsFOVPackage.FIELD_OF_VIEW: {
+			case ApogyAddonsSensorsFOVPackage.FIELD_OF_VIEW: {
 				FieldOfView fieldOfView = (FieldOfView)theEObject;
 				T1 result = caseFieldOfView(fieldOfView);
 				if (result == null) result = caseNode(fieldOfView);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE: {
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE: {
 				DistanceRange distanceRange = (DistanceRange)theEObject;
 				T1 result = caseDistanceRange(distanceRange);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN: {
+			case ApogyAddonsSensorsFOVPackage.ANGULAR_SPAN: {
 				AngularSpan angularSpan = (AngularSpan)theEObject;
 				T1 result = caseAngularSpan(angularSpan);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW: {
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW: {
 				RectangularFrustrumFieldOfView rectangularFrustrumFieldOfView = (RectangularFrustrumFieldOfView)theEObject;
 				T1 result = caseRectangularFrustrumFieldOfView(rectangularFrustrumFieldOfView);
 				if (result == null) result = caseFieldOfView(rectangularFrustrumFieldOfView);
@@ -104,7 +104,7 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW: {
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW: {
 				ConicalFieldOfView conicalFieldOfView = (ConicalFieldOfView)theEObject;
 				T1 result = caseConicalFieldOfView(conicalFieldOfView);
 				if (result == null) result = caseFieldOfView(conicalFieldOfView);
@@ -112,7 +112,7 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW: {
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW: {
 				CircularSectorFieldOfView circularSectorFieldOfView = (CircularSectorFieldOfView)theEObject;
 				T1 result = caseCircularSectorFieldOfView(circularSectorFieldOfView);
 				if (result == null) result = caseFieldOfView(circularSectorFieldOfView);
@@ -120,7 +120,7 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE: {
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE: {
 				RectangularFrustrumFieldOfViewSamplingShape<?> rectangularFrustrumFieldOfViewSamplingShape = (RectangularFrustrumFieldOfViewSamplingShape<?>)theEObject;
 				T1 result = caseRectangularFrustrumFieldOfViewSamplingShape(rectangularFrustrumFieldOfViewSamplingShape);
 				if (result == null) result = caseCoordinatesSamplingShape(rectangularFrustrumFieldOfViewSamplingShape);
@@ -129,9 +129,9 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.SYMPHONY_ADDONS_SENSORS_FOV_FACADE: {
-				Symphony__AddonsSensorsFOVFacade symphony__AddonsSensorsFOVFacade = (Symphony__AddonsSensorsFOVFacade)theEObject;
-				T1 result = caseSymphony__AddonsSensorsFOVFacade(symphony__AddonsSensorsFOVFacade);
+			case ApogyAddonsSensorsFOVPackage.APOGY_ADDONS_SENSORS_FOV_FACADE: {
+				ApogyAddonsSensorsFOVFacade apogy__AddonsSensorsFOVFacade = (ApogyAddonsSensorsFOVFacade)theEObject;
+				T1 result = caseApogyAddonsSensorsFOVFacade(apogy__AddonsSensorsFOVFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -255,7 +255,7 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSymphony__AddonsSensorsFOVFacade(Symphony__AddonsSensorsFOVFacade object) {
+	public T1 caseApogyAddonsSensorsFOVFacade(ApogyAddonsSensorsFOVFacade object) {
 		return null;
 	}
 
@@ -335,4 +335,4 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsFOVSwitch
+} //ApogyAddonsSensorsFOVSwitch

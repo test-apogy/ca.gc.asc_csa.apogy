@@ -1,13 +1,13 @@
-@GenModel(prefix="Symphony__CommonEMFEditUtils",
+@GenModel(prefix="ApogyCommonEMFEditUtils",
 	      childCreationExtenders="true",
-	      modelName="Symphony__CommonEMFEditUtils")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.emf.edit.utils/src-generated")
+	      modelName="ApogyCommonEMFEditUtils")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.emf.edit.utils/src-generated")
 
-package org.eclipse.symphony.common.emf.edit.utils
+package ca.gc.asc_csa.apogy.common.emf.edit.utils
 
 type CollectionObject wraps java.util.Collection<Object>
 
-class Symphony__CommonEMFEditUtilsFacade
+class ApogyCommonEMFEditUtilsFacade
 {
 	op String getText(Object object)
 	op void removeChildDescriptor(CollectionObject newChildDescriptors, Object feature)

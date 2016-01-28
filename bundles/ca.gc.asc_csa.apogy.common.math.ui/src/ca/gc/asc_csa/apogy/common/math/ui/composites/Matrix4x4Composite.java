@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.math.ui.composites;
+package ca.gc.asc_csa.apogy.common.math.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
@@ -12,14 +12,14 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
-import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage.Literals;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
+import ca.gc.asc_csa.apogy.common.databinding.converters.StringToDoubleConverter;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage.Literals;
 
 public class Matrix4x4Composite extends Composite
 {
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.math.Matrix4x4 matrix4x4;
+	private ca.gc.asc_csa.apogy.common.math.Matrix4x4 matrix4x4;
 	private Text m00Text;
 	private Text m01Text;
 	private Text m02Text;
@@ -110,17 +110,17 @@ public class Matrix4x4Composite extends Composite
 		// Disable the check that prevents subclassing of SWT components
 	}
 
-	public org.eclipse.symphony.common.math.Matrix4x4 getMatrix4x4()
+	public ca.gc.asc_csa.apogy.common.math.Matrix4x4 getMatrix4x4()
 	{
 		return matrix4x4;
 	}
 
-	public void setMatrix4x4(org.eclipse.symphony.common.math.Matrix4x4 newMatrix4x4)
+	public void setMatrix4x4(ca.gc.asc_csa.apogy.common.math.Matrix4x4 newMatrix4x4)
 	{
 		setMatrix4x4(newMatrix4x4, true);
 	}
 
-	public void setMatrix4x4(org.eclipse.symphony.common.math.Matrix4x4 newMatrix4x4, boolean update)
+	public void setMatrix4x4(ca.gc.asc_csa.apogy.common.math.Matrix4x4 newMatrix4x4, boolean update)
 	{
 		matrix4x4 = newMatrix4x4;
 		

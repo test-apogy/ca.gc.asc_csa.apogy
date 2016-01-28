@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.core.PoseCorrector;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,17 +18,17 @@ import org.eclipse.symphony.core.PoseCorrector;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#isInitializing <em>Initializing</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getMeshes <em>Meshes</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactBodies <em>Contact Bodies</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getZCorrectionMode <em>ZCorrection Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getZCorrection <em>ZCorrection</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getOrientationCorrectionMode <em>Orientation Correction Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getOrientationCorrection <em>Orientation Correction</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#isInitializing <em>Initializing</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getMeshes <em>Meshes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getContactBodies <em>Contact Bodies</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getZCorrectionMode <em>ZCorrection Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getZCorrection <em>ZCorrection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getOrientationCorrectionMode <em>Orientation Correction Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getOrientationCorrection <em>Orientation Correction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initializing</em>' attribute.
 	 * @see #setInitializing(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_Initializing()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_Initializing()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='INTERNAL_INFO'"
 	 * @generated
@@ -52,7 +52,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
   boolean isInitializing();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#isInitializing <em>Initializing</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#isInitializing <em>Initializing</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initializing</em>' attribute.
@@ -63,14 +63,14 @@ public interface VehiclePoseCorrector extends PoseCorrector
 
   /**
 	 * Returns the value of the '<em><b>Meshes</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of ContentNode containing the meshes being processed to find contact points.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Meshes</em>' reference list.
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_Meshes()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_Meshes()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' propertyCategory='INTERNAL_INFO'"
 	 * @generated
 	 */
@@ -78,14 +78,14 @@ public interface VehiclePoseCorrector extends PoseCorrector
 
   /**
 	 * Returns the value of the '<em><b>Contact Bodies</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of physical bodies being processed to find contact points.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Bodies</em>' reference list.
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ContactBodies()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_ContactBodies()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='INTERNAL_INFO'"
 	 * @generated
 	 */
@@ -93,16 +93,16 @@ public interface VehiclePoseCorrector extends PoseCorrector
 
   /**
 	 * Returns the value of the '<em><b>ZCorrection Mode</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.vehicle.ZCorrectionMode}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.vehicle.ZCorrectionMode}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The method used to compute the correction along the Z axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZCorrection Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.vehicle.ZCorrectionMode
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ZCorrectionMode
 	 * @see #setZCorrectionMode(ZCorrectionMode)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ZCorrectionMode()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_ZCorrectionMode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='SETTINGS_INFO'"
 	 * @generated
@@ -110,11 +110,11 @@ public interface VehiclePoseCorrector extends PoseCorrector
   ZCorrectionMode getZCorrectionMode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getZCorrectionMode <em>ZCorrection Mode</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getZCorrectionMode <em>ZCorrection Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZCorrection Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.vehicle.ZCorrectionMode
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ZCorrectionMode
 	 * @see #getZCorrectionMode()
 	 * @generated
 	 */
@@ -130,15 +130,15 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZCorrection</em>' attribute.
 	 * @see #setZCorrection(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ZCorrection()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_ZCorrection()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='CORRECTION_INFO' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='CORRECTION_INFO' apogy_units='m'"
 	 * @generated
 	 */
   double getZCorrection();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getZCorrection <em>ZCorrection</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getZCorrection <em>ZCorrection</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZCorrection</em>' attribute.
@@ -149,16 +149,16 @@ public interface VehiclePoseCorrector extends PoseCorrector
 
   /**
 	 * Returns the value of the '<em><b>Orientation Correction Mode</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.vehicle.OrientationCorrectionMode}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 *  The method used to correct orientation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orientation Correction Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.OrientationCorrectionMode
 	 * @see #setOrientationCorrectionMode(OrientationCorrectionMode)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_OrientationCorrectionMode()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_OrientationCorrectionMode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='SETTINGS_INFO'"
 	 * @generated
@@ -166,11 +166,11 @@ public interface VehiclePoseCorrector extends PoseCorrector
   OrientationCorrectionMode getOrientationCorrectionMode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getOrientationCorrectionMode <em>Orientation Correction Mode</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getOrientationCorrectionMode <em>Orientation Correction Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Orientation Correction Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.OrientationCorrectionMode
 	 * @see #getOrientationCorrectionMode()
 	 * @generated
 	 */
@@ -185,7 +185,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orientation Correction</em>' reference.
 	 * @see #setOrientationCorrection(Matrix3x3)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_OrientationCorrection()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_OrientationCorrection()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='true' property='Readonly' propertyCategory='CORRECTION_INFO'"
 	 * @generated
@@ -193,7 +193,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
   Matrix3x3 getOrientationCorrection();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getOrientationCorrection <em>Orientation Correction</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getOrientationCorrection <em>Orientation Correction</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Orientation Correction</em>' reference.
@@ -204,7 +204,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 
   /**
 	 * Returns the value of the '<em><b>Contact Provider</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -212,15 +212,15 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Provider</em>' containment reference.
 	 * @see #setContactProvider(ContactProvider)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ContactProvider()
-	 * @see org.eclipse.symphony.addons.vehicle.ContactProvider#getVehiclePoseCorrector
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePoseCorrector_ContactProvider()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider#getVehiclePoseCorrector
 	 * @model opposite="vehiclePoseCorrector" containment="true" required="true"
 	 * @generated
 	 */
   ContactProvider getContactProvider();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Contact Provider</em>' containment reference.
@@ -261,7 +261,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * @param mesh The specified mesh.
 	 * @return The ClosestNeighbourIteratorProvider associated with the mesh or null if none is found.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider" unique="false" meshUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider" unique="false" meshUnique="false"
 	 * @generated
 	 */
   ClosestNeighbourIteratorProvider getClosestNeighbourIteratorProvider(CartesianTriangularMesh mesh);

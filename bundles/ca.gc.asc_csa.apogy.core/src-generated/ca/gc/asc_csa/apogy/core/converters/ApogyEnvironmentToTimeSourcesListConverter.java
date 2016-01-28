@@ -1,12 +1,12 @@
-package org.eclipse.symphony.core.converters;
+package ca.gc.asc_csa.apogy.core.converters;
 
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.TimeSourcesList;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.TimeSourcesList;
 
-public class SymphonyEnvironmentToTimeSourcesListConverter implements IConverter {
+public class ApogyEnvironmentToTimeSourcesListConverter implements IConverter {
 
-	public SymphonyEnvironmentToTimeSourcesListConverter() {
+	public ApogyEnvironmentToTimeSourcesListConverter() {
 	}
 
 	@Override
@@ -16,16 +16,16 @@ public class SymphonyEnvironmentToTimeSourcesListConverter implements IConverter
 
 	@Override
 	public Class<?> getInputType() {
-		return SymphonyEnvironment.class;
+		return ApogyEnvironment.class;
 	}
 
 	@Override
 	public boolean canConvert(Object input) {
-		return input instanceof SymphonyEnvironment;
+		return input instanceof ApogyEnvironment;
 	}
 
 	@Override
 	public Object convert(Object input) throws Exception {
-		return ((SymphonyEnvironment)input).getTimeSourcesList() ;
+		return ((ApogyEnvironment)input).getTimeSourcesList() ;
 	}
 }

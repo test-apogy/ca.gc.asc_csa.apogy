@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui.provider;
+package ca.gc.asc_csa.apogy.common.emf.ui.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFUIFacadeItemProvider
+public class ApogyCommonEMFUIFacadeItemProvider
   extends ItemProviderAdapter
   implements
     IEditingDomainItemProvider,
@@ -40,7 +40,7 @@ public class Symphony__CommonEMFUIFacadeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFUIFacadeItemProvider(AdapterFactory adapterFactory)
+  public ApogyCommonEMFUIFacadeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -62,7 +62,7 @@ public class Symphony__CommonEMFUIFacadeItemProvider
 	}
 
   /**
-	 * This returns Symphony__CommonEMFUIFacade.gif.
+	 * This returns ApogyCommonEMFUIFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -70,7 +70,7 @@ public class Symphony__CommonEMFUIFacadeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonEMFUIFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonEMFUIFacade"));
 	}
 
   /**
@@ -82,7 +82,7 @@ public class Symphony__CommonEMFUIFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_Symphony__CommonEMFUIFacade_type");
+		return getString("_UI_ApogyCommonEMFUIFacade_type");
 	}
 
   /**
@@ -121,7 +121,7 @@ public class Symphony__CommonEMFUIFacadeItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return Symphony__CommonEMFUIEditPlugin.INSTANCE;
+		return ApogyCommonEMFUIEditPlugin.INSTANCE;
 	}
 
 }

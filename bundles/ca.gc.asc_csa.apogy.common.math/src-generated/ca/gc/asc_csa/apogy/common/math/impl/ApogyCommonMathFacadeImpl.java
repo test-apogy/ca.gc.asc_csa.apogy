@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.impl;
+package ca.gc.asc_csa.apogy.common.math.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import javax.vecmath.Matrix3d;
@@ -12,14 +12,14 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Polynomial;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Polynomial;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -27,13 +27,13 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * @generated
  */
-public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonMathFacade {
+public class ApogyCommonMathFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonMathFacade {
 
-	private static Symphony__CommonMathFacade instance;
+	private static ApogyCommonMathFacade instance;
 
-	public static Symphony__CommonMathFacade getInstance() {
+	public static ApogyCommonMathFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CommonMathFacadeImpl();
+			instance = new ApogyCommonMathFacadeImpl();
 		}
 		return instance;
 	}
@@ -42,7 +42,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonMathFacadeImpl() {
+	protected ApogyCommonMathFacadeImpl() {
 		super();
 	}
 
@@ -52,7 +52,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonMathPackage.Literals.SYMPHONY_COMMON_MATH_FACADE;
+		return ApogyCommonMathPackage.Literals.APOGY_COMMON_MATH_FACADE;
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public Matrix4x4 createMatrix4x4(Matrix4d matrix) {
 
-		Matrix4x4 result = Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4();
+		Matrix4x4 result = ApogyCommonMathFactory.eINSTANCE.createMatrix4x4();
 
 		// Row 0
 		result.setM00(matrix.m00);
@@ -98,7 +98,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public Matrix3x3 createMatrix3x3(Matrix3d matrix) {
 
-		Matrix3x3 result = Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3();
+		Matrix3x3 result = ApogyCommonMathFactory.eINSTANCE.createMatrix3x3();
 		// Row 0
 		result.setM00(matrix.m00);
 		result.setM01(matrix.m01);
@@ -123,7 +123,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public Tuple3d createTuple3d(javax.vecmath.Tuple3d tuple) 
 	{
-		org.eclipse.symphony.common.math.Tuple3d result = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		ca.gc.asc_csa.apogy.common.math.Tuple3d result = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 
 		result.setX(tuple.x);
 		result.setY(tuple.y);
@@ -137,8 +137,8 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public org.eclipse.symphony.common.math.Tuple3d createTuple3d(double x, double y, double z) {
-		org.eclipse.symphony.common.math.Tuple3d result = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+	public ca.gc.asc_csa.apogy.common.math.Tuple3d createTuple3d(double x, double y, double z) {
+		ca.gc.asc_csa.apogy.common.math.Tuple3d result = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 
 		result.setX(x);
 		result.setY(y);
@@ -153,7 +153,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated_NOT
 	 */
 	public Polynomial createPolynomial(double[] coeffs) {
-		Polynomial poly = Symphony__CommonMathFactory.eINSTANCE.createPolynomial();
+		Polynomial poly = ApogyCommonMathFactory.eINSTANCE.createPolynomial();
 
 		poly.setCoeffs(coeffs);
 
@@ -190,7 +190,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated_NOT
 	 */
 	public Tuple3d extractPosition(Matrix4x4 matrix) {
-		Tuple3d position = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		Tuple3d position = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		Vector3d v = new Vector3d();
 		matrix.asMatrix4d().get(v);
 		position.setX(v.x);
@@ -206,7 +206,7 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public Tuple3d extractOrientation(Matrix4x4 matrix) 
 	{
-		Tuple3d orientation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		Tuple3d orientation = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		Matrix3d rotation = new Matrix3d();
 		rotation.setIdentity();
 		matrix.asMatrix4d().get(rotation);
@@ -227,26 +227,26 @@ public class Symphony__CommonMathFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D:
 				return createMatrix4x4((Matrix4d)arguments.get(0));
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D:
 				return createMatrix3x3((Matrix3d)arguments.get(0));
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D:
 				return createTuple3d((javax.vecmath.Tuple3d)arguments.get(0));
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE:
 				return createTuple3d((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE:
 				return createPolynomial((double[])arguments.get(0));
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4:
 				return createIdentityMatrix4x4();
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3:
 				return createIdentityMatrix3x3();
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4:
 				return extractPosition((Matrix4x4)arguments.get(0));
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4:
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4:
 				return extractOrientation((Matrix4x4)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} // Symphony__CommonMathFacadeImpl
+} // ApogyCommonMathFacadeImpl

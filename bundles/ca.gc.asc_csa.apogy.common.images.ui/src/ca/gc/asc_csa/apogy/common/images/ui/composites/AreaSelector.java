@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui.composites;
+package ca.gc.asc_csa.apogy.common.images.ui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;

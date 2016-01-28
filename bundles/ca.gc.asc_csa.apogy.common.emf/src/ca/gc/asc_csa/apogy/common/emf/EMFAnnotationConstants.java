@@ -1,13 +1,13 @@
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 public class EMFAnnotationConstants 
 {
 	// Basic Annotation Elements
 	
 	/**
-	 * This is the prefix that all Symphony annotations start with
+	 * This is the prefix that all Apogy annotations start with
 	 */
-	public static final String ANNOTATION_ELEMENT_PREFIX = "symphony";
+	public static final String ANNOTATION_ELEMENT_PREFIX = "apogy";
 	
 	/**
 	 * This is the separator between the various annotation components

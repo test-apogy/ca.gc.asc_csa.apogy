@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 public abstract class AbstractNodeVisitor implements INodeVisitor
 {

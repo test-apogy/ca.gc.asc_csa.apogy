@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.ui.properties.sections;
+package ca.gc.asc_csa.apogy.common.ui.properties.sections;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.ui.EclipseUiUtilities;
-import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
+import ca.gc.asc_csa.apogy.common.ui.EclipseUiUtilities;
+import ca.gc.asc_csa.apogy.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
@@ -90,7 +90,7 @@ public abstract class AbstractExtendedPropertySection extends AbstractPropertySe
 		IEvaluationService evaluationService = (IEvaluationService) window
 				.getService(IEvaluationService.class);
 		evaluationService
-				.requestEvaluation("org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection");
+				.requestEvaluation("ca.gc.asc_csa.apogy.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection");
 		getPropertySheetPage().refresh();
 
 		PropertySheet propertySheet = (PropertySheet) EclipseUiUtilities

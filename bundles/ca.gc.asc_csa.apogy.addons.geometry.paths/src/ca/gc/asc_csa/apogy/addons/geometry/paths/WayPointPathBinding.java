@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 
 /**
  * Class that maintains a target WayPointPath in sync with a source WayPointPath.
@@ -84,7 +84,7 @@ public class WayPointPathBinding
 		if(getTargetWayPointPath() != null)
 		{
 			// First, copy the original point
-			CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
+			CartesianPositionCoordinates pointCopy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 			
 			// Adds the point to the target path.
 			getTargetWayPointPath().getPoints().add(pointCopy);
@@ -103,7 +103,7 @@ public class WayPointPathBinding
 			for(CartesianPositionCoordinates point : points)
 			{						
 				// First, copy the original point
-				CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
+				CartesianPositionCoordinates pointCopy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 				
 				// Adds point to temporary list.
 				pointsCopy.add(pointCopy);
@@ -161,7 +161,7 @@ public class WayPointPathBinding
 						int featureId = msg.getFeatureID(WayPointPath.class);
 						switch (featureId) 
 						{
-							case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__POINTS:
+							case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__POINTS:
 								
 								int eventType = msg.getEventType();
 								switch (eventType) 

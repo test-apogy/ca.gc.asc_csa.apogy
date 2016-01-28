@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators;
+package ca.gc.asc_csa.apogy.addons.actuators;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsFactory
+ * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsActuators' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='Symphony__AddonsActuators' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.actuators/src-generated' editDirectory='/org.eclipse.symphony.addons.actuators.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsActuators' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='ApogyAddonsActuators' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.actuators/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.actuators.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
  * @generated
  */
-public interface Symphony__AddonsActuatorsPackage extends EPackage
+public interface ApogyAddonsActuatorsPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -43,7 +43,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.addons.actuators";
+  String eNS_URI = "ca.gc.asc_csa.apogy.addons.actuators";
 
   /**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsActuatorsPackage eINSTANCE = org.eclipse.symphony.addons.actuators.impl.Symphony__AddonsActuatorsPackageImpl.init();
+  ApogyAddonsActuatorsPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.actuators.impl.ApogyAddonsActuatorsPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl <em>Abstract Actuator</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.actuators.impl.AbstractActuatorImpl <em>Abstract Actuator</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl
-	 * @see org.eclipse.symphony.addons.actuators.impl.Symphony__AddonsActuatorsPackageImpl#getAbstractActuator()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.AbstractActuatorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.ApogyAddonsActuatorsPackageImpl#getAbstractActuator()
 	 * @generated
 	 */
   int ABSTRACT_ACTUATOR = 0;
@@ -78,7 +78,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
+  int ABSTRACT_ACTUATOR__PARENT = ApogyCommonTopologyPackage.NODE__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
+  int ABSTRACT_ACTUATOR__DESCRIPTION = ApogyCommonTopologyPackage.NODE__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
+  int ABSTRACT_ACTUATOR__NODE_ID = ApogyCommonTopologyPackage.NODE__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Moving</b></em>' attribute.
@@ -105,7 +105,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__MOVING = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
+  int ABSTRACT_ACTUATOR__MOVING = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Actuator Status</b></em>' attribute.
@@ -114,7 +114,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__ACTUATOR_STATUS = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
+  int ABSTRACT_ACTUATOR__ACTUATOR_STATUS = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Abstract Actuator</em>' class.
@@ -123,7 +123,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 2;
+  int ABSTRACT_ACTUATOR_FEATURE_COUNT = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -132,7 +132,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Abstract Actuator</em>' class.
@@ -141,14 +141,14 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
+  int ABSTRACT_ACTUATOR_OPERATION_COUNT = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl <em>Pan Tilt Unit</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.actuators.impl.PanTiltUnitImpl <em>Pan Tilt Unit</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl
-	 * @see org.eclipse.symphony.addons.actuators.impl.Symphony__AddonsActuatorsPackageImpl#getPanTiltUnit()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.PanTiltUnitImpl
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.ApogyAddonsActuatorsPackageImpl#getPanTiltUnit()
 	 * @generated
 	 */
   int PAN_TILT_UNIT = 1;
@@ -362,218 +362,218 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.actuators.ActuatorStatus <em>Actuator Status</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus <em>Actuator Status</em>}' enum.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.actuators.ActuatorStatus
-	 * @see org.eclipse.symphony.addons.actuators.impl.Symphony__AddonsActuatorsPackageImpl#getActuatorStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.ApogyAddonsActuatorsPackageImpl#getActuatorStatus()
 	 * @generated
 	 */
   int ACTUATOR_STATUS = 2;
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Actuator</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.AbstractActuator
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator
 	 * @generated
 	 */
   EClass getAbstractActuator();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.actuators.AbstractActuator#isMoving <em>Moving</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#isMoving <em>Moving</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Moving</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.AbstractActuator#isMoving()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#isMoving()
 	 * @see #getAbstractActuator()
 	 * @generated
 	 */
   EAttribute getAbstractActuator_Moving();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.actuators.AbstractActuator#getActuatorStatus <em>Actuator Status</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#getActuatorStatus <em>Actuator Status</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Actuator Status</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.AbstractActuator#getActuatorStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#getActuatorStatus()
 	 * @see #getAbstractActuator()
 	 * @generated
 	 */
   EAttribute getAbstractActuator_ActuatorStatus();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pan Tilt Unit</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit
 	 * @generated
 	 */
   EClass getPanTiltUnit();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentPanAngle <em>Current Pan Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentPanAngle <em>Current Pan Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Pan Angle</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentPanAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentPanAngle()
 	 * @see #getPanTiltUnit()
 	 * @generated
 	 */
   EAttribute getPanTiltUnit_CurrentPanAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentTiltAngle <em>Current Tilt Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentTiltAngle <em>Current Tilt Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Tilt Angle</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentTiltAngle()
 	 * @see #getPanTiltUnit()
 	 * @generated
 	 */
   EAttribute getPanTiltUnit_CurrentTiltAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedPanAngle <em>Commanded Pan Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedPanAngle <em>Commanded Pan Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Commanded Pan Angle</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedPanAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedPanAngle()
 	 * @see #getPanTiltUnit()
 	 * @generated
 	 */
   EAttribute getPanTiltUnit_CommandedPanAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Commanded Tilt Angle</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedTiltAngle()
 	 * @see #getPanTiltUnit()
 	 * @generated
 	 */
   EAttribute getPanTiltUnit_CommandedTiltAngle();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getMaximumPanAngle() <em>Get Maximum Pan Angle</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMaximumPanAngle() <em>Get Maximum Pan Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Maximum Pan Angle</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getMaximumPanAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMaximumPanAngle()
 	 * @generated
 	 */
   EOperation getPanTiltUnit__GetMaximumPanAngle();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getMinimumPanAngle() <em>Get Minimum Pan Angle</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMinimumPanAngle() <em>Get Minimum Pan Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Minimum Pan Angle</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getMinimumPanAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMinimumPanAngle()
 	 * @generated
 	 */
   EOperation getPanTiltUnit__GetMinimumPanAngle();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getMaximumTiltAngle() <em>Get Maximum Tilt Angle</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMaximumTiltAngle() <em>Get Maximum Tilt Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Maximum Tilt Angle</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getMaximumTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMaximumTiltAngle()
 	 * @generated
 	 */
   EOperation getPanTiltUnit__GetMaximumTiltAngle();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getMinimumTiltAngle() <em>Get Minimum Tilt Angle</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMinimumTiltAngle() <em>Get Minimum Tilt Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Minimum Tilt Angle</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#getMinimumTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getMinimumTiltAngle()
 	 * @generated
 	 */
   EOperation getPanTiltUnit__GetMinimumTiltAngle();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#moveToPanTilt(double, double) <em>Move To Pan Tilt</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveToPanTilt(double, double) <em>Move To Pan Tilt</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move To Pan Tilt</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#moveToPanTilt(double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveToPanTilt(double, double)
 	 * @generated
 	 */
   EOperation getPanTiltUnit__MoveToPanTilt__double_double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#moveToPan(double) <em>Move To Pan</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveToPan(double) <em>Move To Pan</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move To Pan</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#moveToPan(double)
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveToPan(double)
 	 * @generated
 	 */
   EOperation getPanTiltUnit__MoveToPan__double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#moveToTilt(double) <em>Move To Tilt</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveToTilt(double) <em>Move To Tilt</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move To Tilt</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#moveToTilt(double)
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveToTilt(double)
 	 * @generated
 	 */
   EOperation getPanTiltUnit__MoveToTilt__double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#moveByPanTilt(double, double) <em>Move By Pan Tilt</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveByPanTilt(double, double) <em>Move By Pan Tilt</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move By Pan Tilt</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#moveByPanTilt(double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveByPanTilt(double, double)
 	 * @generated
 	 */
   EOperation getPanTiltUnit__MoveByPanTilt__double_double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#moveByPan(double) <em>Move By Pan</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveByPan(double) <em>Move By Pan</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move By Pan</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#moveByPan(double)
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveByPan(double)
 	 * @generated
 	 */
   EOperation getPanTiltUnit__MoveByPan__double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#moveByTilt(double) <em>Move By Tilt</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveByTilt(double) <em>Move By Tilt</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move By Tilt</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#moveByTilt(double)
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#moveByTilt(double)
 	 * @generated
 	 */
   EOperation getPanTiltUnit__MoveByTilt__double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#stopMotion() <em>Stop Motion</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#stopMotion() <em>Stop Motion</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop Motion</em>' operation.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit#stopMotion()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#stopMotion()
 	 * @generated
 	 */
   EOperation getPanTiltUnit__StopMotion();
 
   /**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.actuators.ActuatorStatus <em>Actuator Status</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus <em>Actuator Status</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Actuator Status</em>'.
-	 * @see org.eclipse.symphony.addons.actuators.ActuatorStatus
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus
 	 * @generated
 	 */
   EEnum getActuatorStatus();
@@ -585,7 +585,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsActuatorsFactory getSymphony__AddonsActuatorsFactory();
+	ApogyAddonsActuatorsFactory getApogyAddonsActuatorsFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -603,11 +603,11 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl <em>Abstract Actuator</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.actuators.impl.AbstractActuatorImpl <em>Abstract Actuator</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl
-		 * @see org.eclipse.symphony.addons.actuators.impl.Symphony__AddonsActuatorsPackageImpl#getAbstractActuator()
+		 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.AbstractActuatorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.ApogyAddonsActuatorsPackageImpl#getAbstractActuator()
 		 * @generated
 		 */
     EClass ABSTRACT_ACTUATOR = eINSTANCE.getAbstractActuator();
@@ -629,11 +629,11 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
     EAttribute ABSTRACT_ACTUATOR__ACTUATOR_STATUS = eINSTANCE.getAbstractActuator_ActuatorStatus();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl <em>Pan Tilt Unit</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.actuators.impl.PanTiltUnitImpl <em>Pan Tilt Unit</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl
-		 * @see org.eclipse.symphony.addons.actuators.impl.Symphony__AddonsActuatorsPackageImpl#getPanTiltUnit()
+		 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.PanTiltUnitImpl
+		 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.ApogyAddonsActuatorsPackageImpl#getPanTiltUnit()
 		 * @generated
 		 */
     EClass PAN_TILT_UNIT = eINSTANCE.getPanTiltUnit();
@@ -759,15 +759,15 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
     EOperation PAN_TILT_UNIT___STOP_MOTION = eINSTANCE.getPanTiltUnit__StopMotion();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.actuators.ActuatorStatus <em>Actuator Status</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus <em>Actuator Status</em>}' enum.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.actuators.ActuatorStatus
-		 * @see org.eclipse.symphony.addons.actuators.impl.Symphony__AddonsActuatorsPackageImpl#getActuatorStatus()
+		 * @see ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus
+		 * @see ca.gc.asc_csa.apogy.addons.actuators.impl.ApogyAddonsActuatorsPackageImpl#getActuatorStatus()
 		 * @generated
 		 */
     EEnum ACTUATOR_STATUS = eINSTANCE.getActuatorStatus();
 
   }
 
-} //Symphony__AddonsActuatorsPackage
+} //ApogyAddonsActuatorsPackage

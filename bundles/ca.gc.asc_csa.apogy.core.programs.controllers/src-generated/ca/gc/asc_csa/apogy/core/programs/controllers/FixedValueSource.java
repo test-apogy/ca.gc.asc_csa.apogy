@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +11,7 @@ import org.eclipse.symphony.core.invocator.EDataTypeArgument;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getFixedValueSource()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getFixedValueSource()
  * @model
  * @generated
  */

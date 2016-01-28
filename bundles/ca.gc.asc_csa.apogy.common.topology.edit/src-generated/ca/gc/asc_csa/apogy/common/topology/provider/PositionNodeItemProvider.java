@@ -4,7 +4,7 @@
  *
  * $Id: PositionNodeItemProvider.java,v 1.15.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.PositionNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.PositionNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -101,7 +101,7 @@ public class PositionNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositionNode.class)) {
-			case Symphony__CommonTopologyPackage.POSITION_NODE__POSITION:
+			case ApogyCommonTopologyPackage.POSITION_NODE__POSITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

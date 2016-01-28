@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.converters.ui.composites;
+package ca.gc.asc_csa.apogy.common.converters.ui.composites;
 
 
 import java.util.ArrayList;
@@ -14,11 +14,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
-import org.eclipse.symphony.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
-import org.eclipse.symphony.common.converters.ui.utils.FullyQualifiedTypesNameComparator;
-import org.eclipse.symphony.common.converters.ui.utils.ShortTypesNameComparator;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade;
+import ca.gc.asc_csa.apogy.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
+import ca.gc.asc_csa.apogy.common.converters.ui.utils.FullyQualifiedTypesNameComparator;
+import ca.gc.asc_csa.apogy.common.converters.ui.utils.ShortTypesNameComparator;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 public class AvailableConversionComposite extends Composite 
@@ -67,7 +67,7 @@ public class AvailableConversionComposite extends Composite
 	{
 		this.convertersGraph = convertersGraph;		
 	
-		conversionsMap = Symphony__CommonConvertersGraphsFacade.INSTANCE.getAvailableDestinationTypeMap(convertersGraph);
+		conversionsMap = ApogyCommonConvertersGraphsFacade.INSTANCE.getAvailableDestinationTypeMap(convertersGraph);
 		populateInputTypesList();		
 	}
 	
@@ -118,7 +118,7 @@ public class AvailableConversionComposite extends Composite
 			break;					
 		}
 		
-		sortedSet.addAll(Symphony__CommonConvertersGraphsFacade.INSTANCE.getAllInputTypes(convertersGraph));
+		sortedSet.addAll(ApogyCommonConvertersGraphsFacade.INSTANCE.getAllInputTypes(convertersGraph));
 		
 		inputTypesClassList = new ArrayList<Class<?>>();
 		inputTypesClassList.addAll(sortedSet);

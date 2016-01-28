@@ -3,7 +3,7 @@
  *
  * $Id: MobilityEdgeFactoryItemProvider.java,v 1.2.4.2 2015/05/21 15:51:33 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.provider;
 
 
 import java.util.Collection;
@@ -12,10 +12,10 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdgeFactory} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -61,7 +61,7 @@ public class MobilityEdgeFactoryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MobilityEdgeFactory_costFunctions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilityEdgeFactory_costFunctions_feature", "_UI_MobilityEdgeFactory_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS,
 				 true,
 				 false,
 				 true,

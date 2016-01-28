@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DTests extends TestSuite {
+public class ApogyCommonGeometryData3DTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class Symphony__CommonGeometryData3DTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new Symphony__CommonGeometryData3DTests("data3d Tests");
+		TestSuite suite = new ApogyCommonGeometryData3DTests("data3d Tests");
 		suite.addTestSuite(CartesianPolygonTest.class);
 		suite.addTestSuite(CartesianTriangleTest.class);
 		suite.addTestSuite(CartesianPositionCoordinatesTest.class);
@@ -68,7 +68,7 @@ public class Symphony__CommonGeometryData3DTests extends TestSuite {
 		suite.addTestSuite(VoxelBased3DPointCloudResamplerTest.class);
 		suite.addTestSuite(PositionMarkerTest.class);
 		suite.addTestSuite(RigidBodyPoseTrackerTest.class);
-		suite.addTestSuite(Symphony__CommonGeometryData3DFacadeTest.class);
+		suite.addTestSuite(ApogyCommonGeometryData3DFacadeTest.class);
 		suite.addTestSuite(Data3DIOTest.class);
 		suite.addTestSuite(Data3DUtilsTest.class);
 		return suite;
@@ -79,8 +79,8 @@ public class Symphony__CommonGeometryData3DTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DTests(String name) {
+	public ApogyCommonGeometryData3DTests(String name) {
 		super(name);
 	}
 
-} //Symphony__CommonGeometryData3DTests
+} //ApogyCommonGeometryData3DTests

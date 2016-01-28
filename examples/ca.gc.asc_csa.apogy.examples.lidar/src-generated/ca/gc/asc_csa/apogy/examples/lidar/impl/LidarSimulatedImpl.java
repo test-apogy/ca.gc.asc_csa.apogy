@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.impl;
+package ca.gc.asc_csa.apogy.examples.lidar.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,17 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.lidar.Activator;
-import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
-import org.eclipse.symphony.examples.lidar.LidarSimulated;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.lidar.Activator;
+import ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage;
+import ca.gc.asc_csa.apogy.examples.lidar.LidarSimulated;
 
 /**
  * <!-- begin-user-doc -->
@@ -125,7 +125,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesLidarPackage.Literals.LIDAR_SIMULATED;
+		return ApogyExamplesLidarPackage.Literals.LIDAR_SIMULATED;
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 		if(tmp == null)
 		{
 			// Create a rectangular field of view with some default values
-			tmp = Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
+			tmp = ApogyAddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
 																		  FOV_DEF_MAXIMUM_RANGE,
 																		  FOV_DEF_HORIZONTAL_SPAN,
 																		  FOV_DEF_VERTICAL_SPAN);
@@ -227,14 +227,14 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 								"Rejected; the Lidar unit is not initialized (with init())";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, it was initialized
 		else
 		{
 			// Create a coordinate set to store the results of the scan
-			CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+			CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 			// Log the start of the scan
 			String message = LOG_PREFIX +
@@ -284,14 +284,14 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 								"Rejected; the Lidar unit is not initialized (with init())";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and handled by Symphony
+			// be caught and handled by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the Lidar was initialized successfully
 		else
 		{
 			// Create a coordinate set to store the results of the scan
-			final CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+			final CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 			// Create a custom job which will spawn a thread and run the scan asynchronously
 			Job job = new Job(LOG_PREFIX.substring(0, LOG_PREFIX.length()-2))
@@ -389,7 +389,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 				double z = range * Math.cos(elevationAngle) * Math.cos(azimuthAngle);
 
 				// Create a Cartesian coordinate with the calculated X, Y and Z.
-				CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);
+				CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);
 				
 				// Add the point to the list of scan line points
 				scanLine.add(point);

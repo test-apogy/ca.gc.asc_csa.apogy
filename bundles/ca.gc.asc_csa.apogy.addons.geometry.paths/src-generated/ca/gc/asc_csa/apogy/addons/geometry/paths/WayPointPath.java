@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,10 +15,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.WayPointPath#getLength <em>Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath#getLength <em>Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPointPath()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getWayPointPath()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface WayPointPath extends CartesianCoordinatesSet, Path {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Length</em>' attribute.
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPointPath_Length()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getWayPointPath_Length()
 	 * @model default="0.0" unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

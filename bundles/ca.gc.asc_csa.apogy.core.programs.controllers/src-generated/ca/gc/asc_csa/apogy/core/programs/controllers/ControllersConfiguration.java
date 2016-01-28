@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
-import org.eclipse.symphony.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.symphony.core.invocator.Program;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration#isActive <em>Active</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllersConfiguration()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllersConfiguration()
  * @model
  * @generated
  */
@@ -43,14 +43,14 @@ public interface ControllersConfiguration extends Program, OperationCallContaine
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllersConfiguration_Active()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllersConfiguration_Active()
 	 * @model default="false" unique="false" transient="true"
 	 * @generated
 	 */
   boolean isActive();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration#isActive <em>Active</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration#isActive <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active</em>' attribute.

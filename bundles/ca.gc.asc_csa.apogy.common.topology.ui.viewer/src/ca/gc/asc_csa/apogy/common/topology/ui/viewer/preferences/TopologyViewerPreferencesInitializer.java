@@ -1,8 +1,8 @@
-package org.eclipse.symphony.common.topology.ui.viewer.preferences;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.symphony.common.topology.ui.viewer.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator;
 
 public class TopologyViewerPreferencesInitializer extends AbstractPreferenceInitializer {
 

@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import java.io.File;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.images.URLEImage;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.URLEImage;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -22,16 +22,16 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#getResolution() <em>Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#getResolution() <em>Resolution</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#updateImage(org.eclipse.core.runtime.IProgressMonitor) <em>Update Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#getImageMapLayerRegion() <em>Get Image Map Layer Region</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#updateImage(org.eclipse.core.runtime.IProgressMonitor) <em>Update Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#getImageMapLayerRegion() <em>Get Image Map Layer Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -76,7 +76,7 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createImageMapLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createImageMapLayer());
 	}
 
 	/**
@@ -91,10 +91,10 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.ImageMapLayer#getResolution() <em>Resolution</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#getResolution() <em>Resolution</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ImageMapLayer#getResolution()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#getResolution()
 	 * @generated_NOT
 	 */
 	public void testGetResolution() 
@@ -102,7 +102,7 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 		  getFixture().setWidth(400);
 		  getFixture().setHeight(200);
 		  
-		  URLEImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
+		  URLEImage eImage = ApogyCommonImagesFactory.eINSTANCE.createURLEImage();
 		  eImage.setUrl("platform:/plugin/" + Activator.PLUGIN_ID +"/data/imageA.gif");
 		  getFixture().setImage(eImage);
 		  
@@ -110,10 +110,10 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.ImageMapLayer#updateImage(org.eclipse.core.runtime.IProgressMonitor) <em>Update Image</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#updateImage(org.eclipse.core.runtime.IProgressMonitor) <em>Update Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ImageMapLayer#updateImage(org.eclipse.core.runtime.IProgressMonitor)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#updateImage(org.eclipse.core.runtime.IProgressMonitor)
 	 * @generated_NOT
 	 */
 	public void testUpdateImage__IProgressMonitor() 
@@ -121,10 +121,10 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.ImageMapLayer#getImageMapLayerRegion() <em>Get Image Map Layer Region</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#getImageMapLayerRegion() <em>Get Image Map Layer Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ImageMapLayer#getImageMapLayerRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ImageMapLayer#getImageMapLayerRegion()
 	 * @generated_NOT
 	 */
 	public void testGetImageMapLayerRegion() 
@@ -132,10 +132,10 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionImage#getRegionImage()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getRegionImage()
 	 * @generated_NOT
 	 */
 	public void testGetRegionImage() 
@@ -143,7 +143,7 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 		  getFixture().setWidth(400);
 		  getFixture().setHeight(200);
 		  
-		  URLEImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
+		  URLEImage eImage = ApogyCommonImagesFactory.eINSTANCE.createURLEImage();
 		  eImage.setUrl("platform:/plugin/" + Activator.PLUGIN_ID + "/data/imageA.gif");
 		  getFixture().setImage(eImage);
 		  
@@ -151,10 +151,10 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion()
 	 * @generated_NOT
 	 */
 	public void testGetRegion() 
@@ -162,7 +162,7 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 		  getFixture().setWidth(400.0);
 		  getFixture().setHeight(200.0);
 		  
-		  URLEImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
+		  URLEImage eImage = ApogyCommonImagesFactory.eINSTANCE.createURLEImage();
 		  eImage.setUrl("platform:/plugin/" + Activator.PLUGIN_ID + "/data/imageA.gif");
 		  getFixture().setImage(eImage);
 		  		  

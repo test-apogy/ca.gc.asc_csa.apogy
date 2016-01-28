@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy;
 
-import org.eclipse.symphony.core.SymphonyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,27 +11,27 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class specifies the initialization data that Symphony
+ * This class specifies the initialization data that Apogy
  * should be interested in when (re)initializing the Mobile
  * platform with the API Adapter (which in this case is
- * {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter})
+ * {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemApiAdapter})
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#isDisposed <em>Disposed</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#getLinearVelocity <em>Linear Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#getAngularVelocity <em>Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#getLinearVelocity <em>Linear Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData()
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage#getMobilePlatformData()
  * @model
  * @generated
  */
-public interface MobilePlatformData extends SymphonyInitializationData {
+public interface MobilePlatformData extends ApogyInitializationData {
 	/**
 	 * Returns the value of the '<em><b>Initialized</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
@@ -43,7 +43,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage#getMobilePlatformData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -51,7 +51,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	boolean isInitialized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -71,7 +71,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_Disposed()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage#getMobilePlatformData_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -79,7 +79,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	boolean isDisposed();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.
@@ -99,15 +99,15 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Linear Velocity</em>' attribute.
 	 * @see #setLinearVelocity(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_LinearVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage#getMobilePlatformData_LinearVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getLinearVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#getLinearVelocity <em>Linear Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#getLinearVelocity <em>Linear Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Linear Velocity</em>' attribute.
@@ -127,15 +127,15 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' attribute.
 	 * @see #setAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_AngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage#getMobilePlatformData_AngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#getAngularVelocity <em>Angular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData#getAngularVelocity <em>Angular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angular Velocity</em>' attribute.

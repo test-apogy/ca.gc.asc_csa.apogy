@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -18,11 +18,11 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSky#getMoon <em>Moon</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSky#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoon <em>Moon</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSky()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSky()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface EarthSky extends Sky
 	 * The Moon in the sky.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Moon</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSky_Moon()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSky_Moon()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON'"
 	 * @generated
@@ -57,7 +57,7 @@ public interface EarthSky extends Sky
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Moon Horizontal Coordinates</em>' reference.
 	 * @see #setMoonHorizontalCoordinates(HorizontalCoordinates)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSky_MoonHorizontalCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSky_MoonHorizontalCoordinates()
 	 * @model transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON'"
 	 * @generated
@@ -65,7 +65,7 @@ public interface EarthSky extends Sky
   HorizontalCoordinates getMoonHorizontalCoordinates();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EarthSky#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Moon Horizontal Coordinates</em>' reference.
@@ -81,7 +81,7 @@ public interface EarthSky extends Sky
 	 * Returns the Moon angular diameter, in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON' apogy_units='rad'"
 	 * @generated
 	 */
   double getMoonAngularDiameter();

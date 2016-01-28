@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,8 +66,8 @@ public class TypeMemberReferenceTreeElementItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -134,12 +134,12 @@ public class TypeMemberReferenceTreeElementItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMemberReferenceTreeElement.class)) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__ROOT:
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__LEAF:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__ROOT:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__LEAF:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD:
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -160,13 +160,13 @@ public class TypeMemberReferenceTreeElementItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement()));
+				(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE,
-				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
+				(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE,
+				 ApogyCommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 
 }

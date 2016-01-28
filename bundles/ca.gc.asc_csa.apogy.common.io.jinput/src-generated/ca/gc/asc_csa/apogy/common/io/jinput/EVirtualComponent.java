@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.io.jinput;
+package ca.gc.asc_csa.apogy.common.io.jinput;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.common.io.jinput;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEVirtualComponent()
+ * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEVirtualComponent()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface EVirtualComponent extends EComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(float)
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEVirtualComponent_CurrentValue()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEVirtualComponent_CurrentValue()
 	 * @model unique="false"
 	 * @generated
 	 */
 	float getCurrentValue();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Value</em>' attribute.

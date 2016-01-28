@@ -3,14 +3,14 @@
  *
  * $Id: PolygonSamplingShapeImpl.java,v 1.2.4.2 2015/05/21 15:50:05 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public abstract class PolygonSamplingShapeImpl<CoordinatesType extends Coordinat
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryDataPackage.Literals.POLYGON_SAMPLING_SHAPE;
+		return ApogyCommonGeometryDataPackage.Literals.POLYGON_SAMPLING_SHAPE;
 	}
 
 	/**

@@ -1,38 +1,38 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.core.environment.orbit.earth.provider.Symphony__CoreEnvironmentOrbitEarthEditPlugin;
-import org.eclipse.symphony.core.environment.orbit.provider.Symphony__CoreEnvironmentOrbitEditPlugin;
-import org.eclipse.symphony.core.environment.provider.Symphony__CoreEnvironmentEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
-import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider.ApogyCoreEnvironmentOrbitEarthEditPlugin;
+import ca.gc.asc_csa.apogy.core.environment.orbit.provider.ApogyCoreEnvironmentOrbitEditPlugin;
+import ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.core.provider.ApogyCoreEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CoreEnvironmentOrbitEarthUI edit plugin.
+ * This is the central singleton for the ApogyCoreEnvironmentOrbitEarthUI edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CoreEnvironmentOrbitEarthUIEditPlugin extends EMFPlugin {
+public final class ApogyCoreEnvironmentOrbitEarthUIEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CoreEnvironmentOrbitEarthUIEditPlugin INSTANCE = new Symphony__CoreEnvironmentOrbitEarthUIEditPlugin();
+	public static final ApogyCoreEnvironmentOrbitEarthUIEditPlugin INSTANCE = new ApogyCoreEnvironmentOrbitEarthUIEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -48,22 +48,22 @@ public final class Symphony__CoreEnvironmentOrbitEarthUIEditPlugin extends EMFPl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthUIEditPlugin() {
+	public ApogyCoreEnvironmentOrbitEarthUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     Symphony__CoreEditPlugin.INSTANCE,
-		     Symphony__CoreEnvironmentOrbitEditPlugin.INSTANCE,
-		     Symphony__CoreEnvironmentOrbitEarthEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
-		     Symphony__CoreEnvironmentEditPlugin.INSTANCE,
-		     Symphony__CommonImagesEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCoreEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentOrbitEarthEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
+		     ApogyCommonImagesEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

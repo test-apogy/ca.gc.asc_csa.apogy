@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.examples.lidar.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy.provider;
 
 
 import java.util.Collection;
@@ -11,16 +11,16 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lidar.symphony.LidarSystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarSystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
 public class LidarSystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -109,7 +109,7 @@ public class LidarSystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return Symphony__ExamplesLidarSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesLidarApogyEditPlugin.INSTANCE;
 	}
 
 }

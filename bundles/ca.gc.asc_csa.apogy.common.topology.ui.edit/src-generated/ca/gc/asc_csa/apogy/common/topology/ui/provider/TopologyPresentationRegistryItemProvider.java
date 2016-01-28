@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -75,8 +75,8 @@ public class TopologyPresentationRegistryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST);
-			childrenFeatures.add(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST);
+			childrenFeatures.add(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST);
+			childrenFeatures.add(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -129,8 +129,8 @@ public class TopologyPresentationRegistryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyPresentationRegistry.class)) {
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
+			case ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,33 +150,33 @@ public class TopologyPresentationRegistryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST,
-				 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
+				(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST,
+				 ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 Symphony__CommonTopologyUIFactory.eINSTANCE.createNodePresentation()));
+				(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 ApogyCommonTopologyUIFactory.eINSTANCE.createNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 Symphony__CommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
+				(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 ApogyCommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 Symphony__CommonTopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
+				(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 ApogyCommonTopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 Symphony__CommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
+				(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 ApogyCommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 Symphony__CommonTopologyUIFactory.eINSTANCE.createURLNodePresentation()));
+				(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 ApogyCommonTopologyUIFactory.eINSTANCE.createURLNodePresentation()));
 	}
 
 	/**

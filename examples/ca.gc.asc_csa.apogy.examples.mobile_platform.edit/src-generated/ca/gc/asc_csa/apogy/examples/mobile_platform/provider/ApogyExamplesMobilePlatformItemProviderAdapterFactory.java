@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.util.Symphony__ExamplesMobilePlatformAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.util.ApogyExamplesMobilePlatformAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.examples.mobile_platform.util.Symphony__ExamplesMobi
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends Symphony__ExamplesMobilePlatformAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyExamplesMobilePlatformItemProviderAdapterFactory extends ApogyExamplesMobilePlatformAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -61,7 +61,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesMobilePlatformEditPlugin.INSTANCE, Symphony__ExamplesMobilePlatformPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesMobilePlatformEditPlugin.INSTANCE, ApogyExamplesMobilePlatformPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -77,7 +77,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesMobilePlatformItemProviderAdapterFactory()
+  public ApogyExamplesMobilePlatformItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -87,7 +87,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.mobile_platform.Position} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -95,7 +95,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
   protected PositionItemProvider positionItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.mobile_platform.Position}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -111,7 +111,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.mobile_platform.NamedPosition} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -119,7 +119,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
   protected NamedPositionItemProvider namedPositionItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.mobile_platform.NamedPosition}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -135,7 +135,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -143,7 +143,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
   protected MobilePlatformStubItemProvider mobilePlatformStubItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -159,7 +159,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -167,7 +167,7 @@ public class Symphony__ExamplesMobilePlatformItemProviderAdapterFactory extends 
 	protected MobilePlatformSimulatedItemProvider mobilePlatformSimulatedItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

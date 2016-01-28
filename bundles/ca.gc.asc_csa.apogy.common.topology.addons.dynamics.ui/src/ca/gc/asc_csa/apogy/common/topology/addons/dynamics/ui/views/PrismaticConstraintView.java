@@ -1,18 +1,18 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.views;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.Activator;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.composites.PrismaticConstraintComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites.PrismaticConstraintComposite;
 
 public class PrismaticConstraintView extends AbstractPinableView<PrismaticConstraint>
 {
 	private PrismaticConstraint prismaticConstraint;
-	public static final String ID = "org.eclipse.symphony.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"; //$NON-NLS-1$
 
 	private PrismaticConstraintComposite prismaticConstraintCompositeComposite = null;
 	

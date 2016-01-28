@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.scene_objects;
 
 import java.util.concurrent.Callable;
 
@@ -9,16 +9,16 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.light.PointLight;
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 
-public class PointLightJME3SceneObject extends DefaultJME3SceneObject<org.eclipse.symphony.common.topology.addons.primitives.PointLight> 
+public class PointLightJME3SceneObject extends DefaultJME3SceneObject<ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight> 
 {
 	public static float DEFAULT_POINT_LIGHT_RADIUS = 1000.0f;
 		
@@ -27,7 +27,7 @@ public class PointLightJME3SceneObject extends DefaultJME3SceneObject<org.eclips
 	
 	private PointLight pointLight;
 	
-	public PointLightJME3SceneObject(org.eclipse.symphony.common.topology.addons.primitives.PointLight topologyNode, JME3RenderEngineDelegate jme3RenderEngineDelegate) 
+	public PointLightJME3SceneObject(ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight topologyNode, JME3RenderEngineDelegate jme3RenderEngineDelegate) 
 	{
 		super(topologyNode, jme3RenderEngineDelegate);
 														
@@ -73,7 +73,7 @@ public class PointLightJME3SceneObject extends DefaultJME3SceneObject<org.eclips
 			Vector3f lightPosition = new Vector3f();
 			if(getTopologyNode() != null)
 			{
-				Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode());
+				Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode());
 				Vector3d position = new Vector3d();
 				m.get(position);
 								

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
@@ -9,10 +9,10 @@ import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,13 +21,13 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  *
  * @generated
  */
-public class Symphony__CommonTopologyBindingsFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonTopologyBindingsFacade
+public class ApogyCommonTopologyBindingsFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonTopologyBindingsFacade
 {
-	private static Symphony__CommonTopologyBindingsFacade instance;
+	private static ApogyCommonTopologyBindingsFacade instance;
 
-	public static Symphony__CommonTopologyBindingsFacade getInstance() {
+	public static ApogyCommonTopologyBindingsFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CommonTopologyBindingsFacadeImpl();
+			instance = new ApogyCommonTopologyBindingsFacadeImpl();
 		}
 
 		return instance;
@@ -38,7 +38,7 @@ public class Symphony__CommonTopologyBindingsFacadeImpl extends MinimalEObjectIm
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CommonTopologyBindingsFacadeImpl()
+  protected ApogyCommonTopologyBindingsFacadeImpl()
   {
 		super();
 	}
@@ -51,7 +51,7 @@ public class Symphony__CommonTopologyBindingsFacadeImpl extends MinimalEObjectIm
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE;
+		return ApogyCommonTopologyBindingsPackage.Literals.APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE;
 	}
 
   /**
@@ -74,10 +74,10 @@ public class Symphony__CommonTopologyBindingsFacadeImpl extends MinimalEObjectIm
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CommonTopologyBindingsPackage.SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP:
+			case ApogyCommonTopologyBindingsPackage.APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP:
 				return copy((AbstractTopologyBinding)arguments.get(0), (Map<Node, Node>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CommonTopologyBindingsFacadeImpl
+} //ApogyCommonTopologyBindingsFacadeImpl

@@ -3,7 +3,7 @@
  *
  * $Id: Geometry3DUtilities.java,v 1.8.4.4 2015/08/14 20:51:55 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,10 +25,10 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
 
 /**
  * Utilities Class providing basic 3D data manipulations.
@@ -119,7 +119,7 @@ public class Geometry3DUtilities
 
 		double theta = Math.atan2(cartesianCoordinates.getY(), cartesianCoordinates.getX());
 
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createSphericalCoordinates(phi, theta, r);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createSphericalCoordinates(phi, theta, r);
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class Geometry3DUtilities
 		double y = sphericalCoordinates.getR() * Math.sin(sphericalCoordinates.getPhi()) * Math.sin(sphericalCoordinates.getTheta());
 		double z = sphericalCoordinates.getR() * Math.cos(sphericalCoordinates.getPhi());
 
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class Geometry3DUtilities
 	public static CartesianPositionCoordinates getFlattenCoordinate(final CartesianPlane plane, final CartesianPositionCoordinates point)
 	{
 		Point3d flattenPoint = getFlattenCoordinate(plane, point.asPoint3d());
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(flattenPoint.x, flattenPoint.y, flattenPoint.z);		
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(flattenPoint.x, flattenPoint.y, flattenPoint.z);		
 	}
 	
 	/**
@@ -301,7 +301,7 @@ public class Geometry3DUtilities
 			internalMonitor.done();
 		}
 
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
 	}
 
 	/**
@@ -408,7 +408,7 @@ public class Geometry3DUtilities
 			N.scale(r);
 			Qprime.sub(Q, N);
 
-			CartesianPositionCoordinates projection = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(Qprime.x, Qprime.y, Qprime.z);
+			CartesianPositionCoordinates projection = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(Qprime.x, Qprime.y, Qprime.z);
 
 			return projection;
 		} 
@@ -528,12 +528,12 @@ public class Geometry3DUtilities
 			
 			List<CartesianPositionCoordinates> flattenedVertices = getFlattenCoordinates(getPerpendicularPlane(axis), polygon.getVertices());						
 			
-			CartesianPolygon flattenPolygon = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
+			CartesianPolygon flattenPolygon = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
 			flattenPolygon.getVertices().addAll(flattenedVertices);
 			
 			if(isInsidePolygon(flattenedPoint, flattenPolygon))
 			{			
-				return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(lineOrigin.x, lineOrigin.y, lineOrigin.z);
+				return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(lineOrigin.x, lineOrigin.y, lineOrigin.z);
 			}
 			else
 			{
@@ -618,12 +618,12 @@ public class Geometry3DUtilities
 			CartesianPositionCoordinates flattenedPoint = getFlattenCoordinate(getPerpendicularPlane(axis), point);
 			List<CartesianPositionCoordinates> flattenedVertices = getFlattenCoordinates(getPerpendicularPlane(axis), polygon.getVertices());						
 			
-			CartesianPolygon flattenPolygon = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
+			CartesianPolygon flattenPolygon = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
 			flattenPolygon.getVertices().addAll(flattenedVertices);
 			
 			if(isInsidePolygon(flattenedPoint, flattenPolygon))
 			{			
-				return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(lineOrigin.x, lineOrigin.y, lineOrigin.z);
+				return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(lineOrigin.x, lineOrigin.y, lineOrigin.z);
 			}
 			else
 			{
@@ -685,7 +685,7 @@ public class Geometry3DUtilities
 	 */
 	public static CartesianCoordinatesMesh getProjectedCartesianCoordinatesMeshOnPlane(CartesianCoordinatesMesh mesh, CartesianPolygon projectionPlanePolygon)
 	{
-		CartesianCoordinatesMesh newMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianCoordinatesMesh(mesh);
+		CartesianCoordinatesMesh newMesh = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianCoordinatesMesh(mesh);
 		Iterator<CartesianPositionCoordinates> iterator = newMesh.getPoints().iterator();
 		/* Project each points on the plane */
 		while(iterator.hasNext())
@@ -708,7 +708,7 @@ public class Geometry3DUtilities
 	 */
 	public static CartesianTriangularMesh getProjectedCartesianTriangularMeshOnPlane(CartesianTriangularMesh mesh, CartesianPolygon projectionPlanePolygon)
 	{
-		CartesianTriangularMesh newMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh.getPolygons());
+		CartesianTriangularMesh newMesh = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh.getPolygons());
 		
 		Iterator<CartesianPositionCoordinates> iterator = newMesh.getPoints().iterator();
 		/* Project each points on the plane */
@@ -905,7 +905,7 @@ public class Geometry3DUtilities
 	public static CartesianPositionCoordinates getProjectionOfPointOntoLine(final CartesianPositionCoordinates point, final CartesianPositionCoordinates p1, final CartesianPositionCoordinates p2 )
 	{
 		Vector3d q = getProjectionOfPointOntoLine(new Vector3d(point.asPoint3d()), new Vector3d(p1.asPoint3d()), new Vector3d(p2.asPoint3d()));
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(q.x, q.y, q.z);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(q.x, q.y, q.z);
 	}
 	
 	/**
@@ -946,7 +946,7 @@ public class Geometry3DUtilities
 	public static CartesianPositionCoordinates getProjectionOfPointOntoLineSegment(final CartesianPositionCoordinates point, final CartesianPositionCoordinates p1, final CartesianPositionCoordinates p2 )
 	{
 		Vector3d q = getProjectionOfPointOntoLine(new Vector3d(point.asPoint3d()), new Vector3d(p1.asPoint3d()), new Vector3d(p2.asPoint3d()));
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(q.x, q.y, q.z);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(q.x, q.y, q.z);
 	}
 	
 	/**
@@ -1181,7 +1181,7 @@ public class Geometry3DUtilities
 			Point3d intersection = new Point3d(line);
 					
 			// Checks that the line projection falls within the polygon.
-			CartesianPositionCoordinates p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(intersection.x, intersection.y, intersection.z);
+			CartesianPositionCoordinates p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(intersection.x, intersection.y, intersection.z);
 			if(isInsidePolygon(p, polygon))
 			{
 				return intersection;
@@ -1421,7 +1421,7 @@ public class Geometry3DUtilities
 		Vector3d u1Vector = new Vector3d(u1.getX(), u1.getY(), u1.getZ());
 		projOnu1u2.add(u1Vector);
 
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(projOnu1u2.x, projOnu1u2.y, projOnu1u2.z);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(projOnu1u2.x, projOnu1u2.y, projOnu1u2.z);
 	}
 
 	/**
@@ -1461,7 +1461,7 @@ public class Geometry3DUtilities
 		if (internalMonitor == null)
 			internalMonitor = new NullProgressMonitor();
 
-		CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates coord = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
 		double max = Double.NEGATIVE_INFINITY;
 
 		try
@@ -1540,7 +1540,7 @@ public class Geometry3DUtilities
 		if (internalMonitor == null)
 			internalMonitor = new NullProgressMonitor();
 
-		CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates coord = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
 		double min = Double.POSITIVE_INFINITY;
 
 		try
@@ -1691,7 +1691,7 @@ public class Geometry3DUtilities
 
 			// Finds where a point exactly at r from the center would be
 			// inserted.
-			CartesianPositionCoordinates pointOnSurface = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centerPoint.getX() + radius, centerPoint.getY(), centerPoint.getZ());
+			CartesianPositionCoordinates pointOnSurface = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centerPoint.getX() + radius, centerPoint.getY(), centerPoint.getZ());
 			pointsWithinRadius.addAll(sortedPoints.headSet(pointOnSurface));
 
 			// If pointOnSurface is already in the list of point, we need to add
@@ -2042,7 +2042,7 @@ public class Geometry3DUtilities
 	 */
 	public static CartesianCoordinatesMesh removeDuplicateVertex(final CartesianCoordinatesMesh mesh)
 	{
-		CartesianCoordinatesMesh newMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianCoordinatesMesh(mesh);
+		CartesianCoordinatesMesh newMesh = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianCoordinatesMesh(mesh);
 
 		Map<CartesianPositionCoordinates, List<CartesianPolygon>> vertexToPolygonMap = Geometry3DUtilities.getVertexToPolygonMapping(newMesh.getPolygons(), null);
 		
@@ -2055,7 +2055,7 @@ public class Geometry3DUtilities
 			List<CartesianPositionCoordinates> duplicates = itDuplicateLists.next();
 
 			// For each of the duplicate, keep only the first "incarnation".
-			CartesianPositionCoordinates goodIncarnation = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(duplicates.get(0));
+			CartesianPositionCoordinates goodIncarnation = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(duplicates.get(0));
 			newMesh.getPoints().add(goodIncarnation);
 
 			// Updates all polygon reference to point to the good incarnation.
@@ -2439,7 +2439,7 @@ public class Geometry3DUtilities
 		while (it.hasNext())
 		{
 			Point3d p = it.next();
-			CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p.x, p.y, p.z);
+			CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p.x, p.y, p.z);
 			pointList.add(point);
 		}
 
@@ -2455,7 +2455,7 @@ public class Geometry3DUtilities
     public static CartesianPolygon createTransformedPolygon(Matrix4d transformationMatrix, CartesianPolygon polygon)
     {
     	/* Create an empty polygon */
-    	CartesianPolygon transformedData = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
+    	CartesianPolygon transformedData = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
     	
     	/* Create a copy of the CartesianPositionCoordinates as a Point3d list */
     	List<Point3d> points = getPoint3dList(polygon.getVertices());
@@ -2478,7 +2478,7 @@ public class Geometry3DUtilities
     public static CartesianCoordinatesMesh createTransformedCartesianCoordinateMesh(Matrix4d transformationMatrix, CartesianCoordinatesMesh mesh)
     {
     	/* Create a copy of the mesh */
-    	CartesianCoordinatesMesh transformedMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianCoordinatesMesh(mesh);
+    	CartesianCoordinatesMesh transformedMesh = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianCoordinatesMesh(mesh);
     	
     	/* Create a copy of the CartesianPositionCoordinates as a Point3d list */
     	List<Point3d> points = getPoint3dList(mesh.getPoints());
@@ -2504,7 +2504,7 @@ public class Geometry3DUtilities
     
     public static CartesianCoordinatesSet createTransformedCartesianCoordinatesSet(Matrix4d transformationMatrix, CartesianCoordinatesSet cartesianCoordinatesSet)
     {
-    	CartesianCoordinatesSet result = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+    	CartesianCoordinatesSet result = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
     	
     	// Creates a list of point on which the transformation will be applied.
 		List<Point3d> points = Geometry3DUtilities.getPoint3dList(cartesianCoordinatesSet.getPoints());
@@ -2515,7 +2515,7 @@ public class Geometry3DUtilities
 		// Filld the result with the transformed points.
 		for(Point3d point : points)
 		{
-			CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
+			CartesianPositionCoordinates coord = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
 			result.getPoints().add(coord);
 		}			
 		
@@ -2531,7 +2531,7 @@ public class Geometry3DUtilities
     public static CartesianTriangularMesh createTransformedCartesianTriangularMesh(Matrix4d transformationMatrix, CartesianTriangularMesh mesh)
     {
     	/* Create a copy of the mesh */
-    	CartesianTriangularMesh transformedMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh);
+    	CartesianTriangularMesh transformedMesh = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh);
     	
     	/* Create a copy of the CartesianPositionCoordinates as a Point3d list */
     	List<Point3d> points = getPoint3dList(mesh.getPoints());
@@ -2565,7 +2565,7 @@ public class Geometry3DUtilities
     {	
     	Point3d point = new Point3d(coord.getX(), coord.getY(), coord.getZ()); 
     	transformationMatrix.transform(point);
-    	return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
+    	return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
     }
     
     /**
@@ -2595,18 +2595,18 @@ public class Geometry3DUtilities
     {
 		CartesianAxis axis = Geometry3DUtilities.getPerpendicularAxis(plane);
 		
-		CartesianPositionCoordinates vO = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates vX = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
-		CartesianPositionCoordinates vY = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
-		CartesianPositionCoordinates vZ = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 1);
+		CartesianPositionCoordinates vO = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates vX = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
+		CartesianPositionCoordinates vY = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
+		CartesianPositionCoordinates vZ = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 1);
 		
 		CartesianPolygon polygon = null;
 		
 		switch (axis) 
 		{
-			case X: polygon=Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPolygon(vO, vY, vZ); break;
-			case Y: polygon=Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPolygon(vO, vZ, vX); break;	
-			case Z: polygon=Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPolygon(vO, vX, vY); break;
+			case X: polygon=ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPolygon(vO, vY, vZ); break;
+			case Y: polygon=ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPolygon(vO, vZ, vX); break;	
+			case Z: polygon=ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPolygon(vO, vX, vY); break;
 			default: break;
 		}
 		
@@ -2639,7 +2639,7 @@ public class Geometry3DUtilities
 			if(p.getZ() > zMax) zMax = p.getZ();
 		}
 		
-		CartesianCoordinatesSetExtent extent = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSetExtent();
+		CartesianCoordinatesSetExtent extent = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSetExtent();
 		extent.setXMin(xMin);
 		extent.setXMax(xMax);
 		extent.setYMin(yMin);
@@ -2696,7 +2696,7 @@ public class Geometry3DUtilities
 
 		public CartesianPositionCoordinatesDistanceComparator()
 		{
-			this(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates());
+			this(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates());
 		}
 		
 		public CartesianPositionCoordinatesDistanceComparator(CartesianPositionCoordinates centerPoint)

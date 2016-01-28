@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.io.jinput;
+package ca.gc.asc_csa.apogy.common.io.jinput;
 
 import org.eclipse.core.runtime.jobs.Job;
 
@@ -18,15 +18,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isSupported <em>Supported</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getControllers <em>Controllers</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isRefreshRequested <em>Refresh Requested</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingCount <em>Polling Count</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingJob <em>Polling Job</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isSupported <em>Supported</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getControllers <em>Controllers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isRefreshRequested <em>Refresh Requested</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getPollingCount <em>Polling Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getPollingJob <em>Polling Job</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment()
+ * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEControllerEnvironment()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface EControllerEnvironment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Supported</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_Supported()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEControllerEnvironment_Supported()
 	 * @model unique="false" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -48,7 +48,7 @@ public interface EControllerEnvironment extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Controllers</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.io.jinput.EController}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.io.jinput.EController}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Controllers</em>' containment reference list isn't clear,
@@ -56,7 +56,7 @@ public interface EControllerEnvironment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Controllers</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_Controllers()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEControllerEnvironment_Controllers()
 	 * @model containment="true" transient="true" changeable="false"
 	 * @generated
 	 */
@@ -73,14 +73,14 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Refresh Requested</em>' attribute.
 	 * @see #setRefreshRequested(boolean)
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_RefreshRequested()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEControllerEnvironment_RefreshRequested()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isRefreshRequested();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isRefreshRequested <em>Refresh Requested</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isRefreshRequested <em>Refresh Requested</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Refresh Requested</em>' attribute.
@@ -99,14 +99,14 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polling Count</em>' attribute.
 	 * @see #setPollingCount(long)
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_PollingCount()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEControllerEnvironment_PollingCount()
 	 * @model unique="false"
 	 * @generated
 	 */
 	long getPollingCount();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingCount <em>Polling Count</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getPollingCount <em>Polling Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Polling Count</em>' attribute.
@@ -124,8 +124,8 @@ public interface EControllerEnvironment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polling Job</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_PollingJob()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.io.jinput.Job" changeable="false"
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEControllerEnvironment_PollingJob()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.io.jinput.Job" changeable="false"
 	 * @generated
 	 */
 	Job getPollingJob();
@@ -140,14 +140,14 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polling Problem</em>' attribute.
 	 * @see #setPollingProblem(boolean)
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_PollingProblem()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEControllerEnvironment_PollingProblem()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isPollingProblem();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Polling Problem</em>' attribute.

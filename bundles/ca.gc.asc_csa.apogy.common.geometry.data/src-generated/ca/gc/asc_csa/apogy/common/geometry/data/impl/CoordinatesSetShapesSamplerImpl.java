@@ -3,7 +3,7 @@
  *
  * $Id: CoordinatesSetShapesSamplerImpl.java,v 1.5.4.2 2015/05/21 15:50:05 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data.impl;
 
 import java.util.Collection;
 
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,8 +28,8 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,7 +84,7 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER;
+		return ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public EList<CoordinatesSamplingShape<T>> getCoordinatesSamplingShapes()
 	{
 		if (coordinatesSamplingShapes == null) {
-			coordinatesSamplingShapes = new EObjectResolvingEList<CoordinatesSamplingShape<T>>(CoordinatesSamplingShape.class, this, Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES);
+			coordinatesSamplingShapes = new EObjectResolvingEList<CoordinatesSamplingShape<T>>(CoordinatesSamplingShape.class, this, ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES);
 		}
 		return coordinatesSamplingShapes;
 	}
@@ -142,7 +142,7 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 		ShapeSamplingMode oldShapeSamplingMode = shapeSamplingMode;
 		shapeSamplingMode = newShapeSamplingMode == null ? SHAPE_SAMPLING_MODE_EDEFAULT : newShapeSamplingMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
 	}
 
 	/**
@@ -154,9 +154,9 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				return getCoordinatesSamplingShapes();
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return getShapeSamplingMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -172,11 +172,11 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				getCoordinatesSamplingShapes().clear();
 				getCoordinatesSamplingShapes().addAll((Collection<? extends CoordinatesSamplingShape<T>>)newValue);
 				return;
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode((ShapeSamplingMode)newValue);
 				return;
 		}
@@ -192,10 +192,10 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				getCoordinatesSamplingShapes().clear();
 				return;
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode(SHAPE_SAMPLING_MODE_EDEFAULT);
 				return;
 		}
@@ -211,9 +211,9 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				return coordinatesSamplingShapes != null && !coordinatesSamplingShapes.isEmpty();
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return shapeSamplingMode != SHAPE_SAMPLING_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -17,13 +17,13 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.DefaultSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.DefaultApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DefaultSymphonySystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+public class DefaultApogySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
   implements
     IEditingDomainItemProvider,
     IStructuredItemContentProvider,
@@ -37,7 +37,7 @@ public class DefaultSymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
    * @generated
    */
-  public DefaultSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public DefaultApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
     super(adapterFactory);
   }
@@ -60,7 +60,7 @@ public class DefaultSymphonySystemApiAdapterItemProvider
   }
 
   /**
-   * This returns DefaultSymphonySystemApiAdapter.gif.
+   * This returns DefaultApogySystemApiAdapter.gif.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -68,7 +68,7 @@ public class DefaultSymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-    return overlayImage(object, getResourceLocator().getImage("full/obj16/DefaultSymphonySystemApiAdapter"));
+    return overlayImage(object, getResourceLocator().getImage("full/obj16/DefaultApogySystemApiAdapter"));
   }
 
   /**
@@ -80,7 +80,7 @@ public class DefaultSymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-    return getString("_UI_DefaultSymphonySystemApiAdapter_type");
+    return getString("_UI_DefaultApogySystemApiAdapter_type");
   }
 
   /**

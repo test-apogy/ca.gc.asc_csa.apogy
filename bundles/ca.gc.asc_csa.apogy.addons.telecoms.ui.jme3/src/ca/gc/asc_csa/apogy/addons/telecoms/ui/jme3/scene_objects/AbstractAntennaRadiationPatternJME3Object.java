@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.telecoms.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,11 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternSceneObject;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -207,7 +207,7 @@ public class AbstractAntennaRadiationPatternJME3Object extends DefaultJME3SceneO
 	{
 //		ColorRGBA rgba = null;
 //		
-//		IPreferenceStore store = org.eclipse.symphony.common.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
+//		IPreferenceStore store = ca.gc.asc_csa.apogy.common.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
 //		
 //		// Change color.
 //		RGB rgb = PreferenceConverter.getColor(store, MRTData3DUIPreferencesConstants.DEFAULT_TRIANGULAR_MESH_COLOR_ID);

@@ -1,19 +1,19 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.provider;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__ExamplesRoboticArm edit plugin.
+ * This is the central singleton for the ApogyExamplesRoboticArm edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__ExamplesRoboticArmEditPlugin extends EMFPlugin
+public final class ApogyExamplesRoboticArmEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -21,7 +21,7 @@ public final class Symphony__ExamplesRoboticArmEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final Symphony__ExamplesRoboticArmEditPlugin INSTANCE = new Symphony__ExamplesRoboticArmEditPlugin();
+  public static final ApogyExamplesRoboticArmEditPlugin INSTANCE = new ApogyExamplesRoboticArmEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -37,7 +37,7 @@ public final class Symphony__ExamplesRoboticArmEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoboticArmEditPlugin()
+  public ApogyExamplesRoboticArmEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {

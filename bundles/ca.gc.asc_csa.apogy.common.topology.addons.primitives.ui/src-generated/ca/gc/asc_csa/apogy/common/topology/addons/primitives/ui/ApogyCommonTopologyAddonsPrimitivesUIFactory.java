@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.ui;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage
  * @generated
  */
-public interface Symphony__CommonTopologyAddonsPrimitivesUIFactory extends EFactory {
+public interface ApogyCommonTopologyAddonsPrimitivesUIFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonTopologyAddonsPrimitivesUIFactory eINSTANCE = org.eclipse.symphony.common.topology.addons.primitives.ui.impl.Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl.init();
+	ApogyCommonTopologyAddonsPrimitivesUIFactory eINSTANCE = ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.impl.ApogyCommonTopologyAddonsPrimitivesUIFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Vector Presentation</em>'.
@@ -65,6 +65,6 @@ public interface Symphony__CommonTopologyAddonsPrimitivesUIFactory extends EFact
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonTopologyAddonsPrimitivesUIPackage getSymphony__CommonTopologyAddonsPrimitivesUIPackage();
+	ApogyCommonTopologyAddonsPrimitivesUIPackage getApogyCommonTopologyAddonsPrimitivesUIPackage();
 
-} //Symphony__CommonTopologyAddonsPrimitivesUIFactory
+} //ApogyCommonTopologyAddonsPrimitivesUIFactory

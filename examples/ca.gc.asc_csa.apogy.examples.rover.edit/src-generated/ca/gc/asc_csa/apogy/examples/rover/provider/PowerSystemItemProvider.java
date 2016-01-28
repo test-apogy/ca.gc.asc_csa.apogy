@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.provider;
+package ca.gc.asc_csa.apogy.examples.rover.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
-import org.eclipse.symphony.examples.rover.PowerSystem;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.examples.rover.PowerSystem;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.rover.PowerSystem} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class PowerSystemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_activeBattery_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PowerSystem_activeBattery_feature", "_UI_PowerSystem_type"),
-				 Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__ACTIVE_BATTERY,
+				 ApogyExamplesRoverPackage.Literals.POWER_SYSTEM__ACTIVE_BATTERY,
 				 true,
 				 false,
 				 true,
@@ -102,7 +102,7 @@ public class PowerSystemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_currentVoltage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PowerSystem_currentVoltage_feature", "_UI_PowerSystem_type"),
-				 Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__CURRENT_VOLTAGE,
+				 ApogyExamplesRoverPackage.Literals.POWER_SYSTEM__CURRENT_VOLTAGE,
 				 false,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class PowerSystemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_currentCurrent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PowerSystem_currentCurrent_feature", "_UI_PowerSystem_type"),
-				 Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__CURRENT_CURRENT,
+				 ApogyExamplesRoverPackage.Literals.POWER_SYSTEM__CURRENT_CURRENT,
 				 false,
 				 false,
 				 false,
@@ -145,7 +145,7 @@ public class PowerSystemItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__BATTERIES);
+			childrenFeatures.add(ApogyExamplesRoverPackage.Literals.POWER_SYSTEM__BATTERIES);
 		}
 		return childrenFeatures;
 	}
@@ -199,12 +199,12 @@ public class PowerSystemItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PowerSystem.class)) {
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

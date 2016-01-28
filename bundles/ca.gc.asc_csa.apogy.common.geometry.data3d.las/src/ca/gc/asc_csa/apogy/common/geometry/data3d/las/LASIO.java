@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.geometry.data3d.las;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASIO()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASIO()
  * @model
  * @generated
  */

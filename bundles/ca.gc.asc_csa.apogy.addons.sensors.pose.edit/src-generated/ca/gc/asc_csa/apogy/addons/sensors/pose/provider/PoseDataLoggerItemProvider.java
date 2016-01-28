@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.provider;
 
 
 import java.util.Collection;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.addons.sensors.pose.PoseDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class PoseDataLoggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseDataLogger_outputFile_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseDataLogger_outputFile_feature", "_UI_PoseDataLogger_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.POSE_DATA_LOGGER__OUTPUT_FILE,
+				 ApogyAddonsSensorsPosePackage.Literals.POSE_DATA_LOGGER__OUTPUT_FILE,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class PoseDataLoggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PoseDataLogger.class)) {
-			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
+			case ApogyAddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

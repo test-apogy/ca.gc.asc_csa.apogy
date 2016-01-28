@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.edit.descriptors;
+package ca.gc.asc_csa.apogy.core.invocator.edit.descriptors;
 
 import javax.measure.unit.Unit;
 
@@ -7,12 +7,12 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 
 public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 		ItemPropertyDescriptor {
@@ -55,7 +55,7 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 			} catch (Throwable t) {
 				String featureID = feature.getEContainingClass()
 						.getInstanceClassName() + "." + feature.getName();
-				Logger.INSTANCE.log(Symphony__CoreInvocatorEditPlugin.ID, 
+				Logger.INSTANCE.log(ApogyCoreInvocatorEditPlugin.ID, 
 								this,
 								featureID
 										+ " : Failed to convert from display units to native units !",
@@ -98,7 +98,7 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 			} catch (Throwable t) {
 				String featureID = feature.getEContainingClass()
 						.getInstanceClassName() + "." + feature.getName();
-				Logger.INSTANCE.log(Symphony__CoreInvocatorEditPlugin.ID, 
+				Logger.INSTANCE.log(ApogyCoreInvocatorEditPlugin.ID, 
 								this,
 								featureID
 										+ " : Failed to convert from native units to display units !",
@@ -124,12 +124,12 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 	}
 
 	protected Unit<?> getDisplayUnit(EDataTypeArgument argument) {
-		return Symphony__CommonEMFUIFacade.INSTANCE.getDisplayUnits(argument
+		return ApogyCommonEMFUIFacade.INSTANCE.getDisplayUnits(argument
 				.getEParameter());
 	}
 
 	protected Unit<?> getNativeUnit(EDataTypeArgument argument) {
-		return Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(argument
+		return ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(argument
 				.getEParameter());
 	}
 
@@ -153,7 +153,7 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 						+ "> is not compatible with Native Unit <"
 						+ getNativeUnit(argument).toString() + "> !";
 
-				Logger.INSTANCE.log(Symphony__CoreInvocatorEditPlugin.ID, featureID
+				Logger.INSTANCE.log(ApogyCoreInvocatorEditPlugin.ID, featureID
 						+ message, EventSeverity.ERROR, e);
 			}
 		}

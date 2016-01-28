@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.lang.java.io;
+package ca.gc.asc_csa.apogy.common.lang.java.io;
 
 import java.io.DataInput;
 import java.io.DataInputStream;

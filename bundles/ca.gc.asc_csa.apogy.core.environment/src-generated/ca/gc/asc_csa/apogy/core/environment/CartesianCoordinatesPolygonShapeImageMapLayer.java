@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer#getPolygonVertices <em>Polygon Vertices</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer#getPolygonVertices <em>Polygon Vertices</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer()
  * @model
  * @generated
  */
 public interface CartesianCoordinatesPolygonShapeImageMapLayer extends PolygonShapeImageMapLayer {
 	/**
 	 * Returns the value of the '<em><b>Polygon Vertices</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.math.Tuple3d}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.math.Tuple3d}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Polygon Vertices</em>' containment reference list isn't clear,
@@ -37,7 +37,7 @@ public interface CartesianCoordinatesPolygonShapeImageMapLayer extends PolygonSh
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygon Vertices</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices()
 	 * @model containment="true"
 	 * @generated
 	 */

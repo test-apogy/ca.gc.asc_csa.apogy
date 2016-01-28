@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 /**
@@ -25,10 +25,10 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.Trigger#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.Trigger#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTrigger()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getTrigger()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Trigger extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Operation Call Controller Binding</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding#getTrigger <em>Trigger</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding#getTrigger <em>Trigger</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operation Call Controller Binding</em>' container reference isn't clear,
@@ -45,8 +45,8 @@ public interface Trigger extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call Controller Binding</em>' container reference.
 	 * @see #setOperationCallControllerBinding(OperationCallControllerBinding)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTrigger_OperationCallControllerBinding()
-	 * @see org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding#getTrigger
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getTrigger_OperationCallControllerBinding()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding#getTrigger
 	 * @model opposite="trigger" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -54,7 +54,7 @@ public interface Trigger extends Named, Described
   OperationCallControllerBinding getOperationCallControllerBinding();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.Trigger#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.Trigger#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operation Call Controller Binding</em>' container reference.

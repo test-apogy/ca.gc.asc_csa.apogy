@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomNode;
-import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,19 +23,19 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getStatusMonitorTool <em>Status Monitor Tool</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#isEnabled <em>Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getAddress <em>Address</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getPacketsToSend <em>Packets To Send</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getConnectionTimeout <em>Connection Timeout</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getLatencyWarning <em>Latency Warning</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getLatencyAlarm <em>Latency Alarm</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getPacketLossWarning <em>Packet Loss Warning</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getPacketLossAlarm <em>Packet Loss Alarm</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getLatency <em>Latency</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getPacketLoss <em>Packet Loss</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getStatusMonitorTool <em>Status Monitor Tool</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#isEnabled <em>Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getAddress <em>Address</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getPacketsToSend <em>Packets To Send</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getConnectionTimeout <em>Connection Timeout</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getLatencyWarning <em>Latency Warning</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getLatencyAlarm <em>Latency Alarm</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getPacketLossWarning <em>Packet Loss Warning</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getPacketLossAlarm <em>Packet Loss Alarm</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getLatency <em>Latency</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getPacketLoss <em>Packet Loss</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -287,7 +287,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE;
+		return ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE;
 	}
 
 	/**
@@ -296,7 +296,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	 * @generated
 	 */
 	public TelecomStatusMonitorTool getStatusMonitorTool() {
-		if (eContainerFeatureID() != Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL) return null;
+		if (eContainerFeatureID() != ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL) return null;
 		return (TelecomStatusMonitorTool)eContainer();
 	}
 
@@ -306,7 +306,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	 * @generated
 	 */
 	public TelecomStatusMonitorTool basicGetStatusMonitorTool() {
-		if (eContainerFeatureID() != Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL) return null;
+		if (eContainerFeatureID() != ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL) return null;
 		return (TelecomStatusMonitorTool)eInternalContainer();
 	}
 
@@ -316,7 +316,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	 * @generated
 	 */
 	public NotificationChain basicSetStatusMonitorTool(TelecomStatusMonitorTool newStatusMonitorTool, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newStatusMonitorTool, Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newStatusMonitorTool, ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL, msgs);
 		return msgs;
 	}
 
@@ -326,19 +326,19 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	 * @generated
 	 */
 	public void setStatusMonitorTool(TelecomStatusMonitorTool newStatusMonitorTool) {
-		if (newStatusMonitorTool != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL && newStatusMonitorTool != null)) {
+		if (newStatusMonitorTool != eInternalContainer() || (eContainerFeatureID() != ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL && newStatusMonitorTool != null)) {
 			if (EcoreUtil.isAncestor(this, newStatusMonitorTool))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newStatusMonitorTool != null)
-				msgs = ((InternalEObject)newStatusMonitorTool).eInverseAdd(this, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES, TelecomStatusMonitorTool.class, msgs);
+				msgs = ((InternalEObject)newStatusMonitorTool).eInverseAdd(this, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES, TelecomStatusMonitorTool.class, msgs);
 			msgs = basicSetStatusMonitorTool(newStatusMonitorTool, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL, newStatusMonitorTool, newStatusMonitorTool));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL, newStatusMonitorTool, newStatusMonitorTool));
 	}
 
 	/**
@@ -359,7 +359,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		boolean oldEnabled = enabled;
 		enabled = newEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__ENABLED, oldEnabled, enabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__ENABLED, oldEnabled, enabled));
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__NAME, oldName, name));
 	}
 
 	/**
@@ -401,7 +401,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		String oldAddress = address;
 		address = newAddress;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__ADDRESS, oldAddress, address));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__ADDRESS, oldAddress, address));
 	}
 
 	/**
@@ -428,7 +428,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		int oldPacketsToSend = packetsToSend;
 		packetsToSend = newPacketsToSend;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND, oldPacketsToSend, packetsToSend));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND, oldPacketsToSend, packetsToSend));
 	}
 
 	/**
@@ -455,7 +455,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		int oldConnectionTimeout = connectionTimeout;
 		connectionTimeout = newConnectionTimeout;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT, oldConnectionTimeout, connectionTimeout));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT, oldConnectionTimeout, connectionTimeout));
 	}
 
 	/**
@@ -483,7 +483,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		double oldLatencyWarning = latencyWarning;
 		latencyWarning = newLatencyWarning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING, oldLatencyWarning, latencyWarning));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING, oldLatencyWarning, latencyWarning));
 	}
 
 	/**
@@ -511,7 +511,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		double oldLatencyAlarm = latencyAlarm;
 		latencyAlarm = newLatencyAlarm;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM, oldLatencyAlarm, latencyAlarm));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM, oldLatencyAlarm, latencyAlarm));
 	}
 
 	/**
@@ -539,7 +539,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		double oldPacketLossWarning = packetLossWarning;
 		packetLossWarning = newPacketLossWarning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING, oldPacketLossWarning, packetLossWarning));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING, oldPacketLossWarning, packetLossWarning));
 	}
 
 	/**
@@ -567,7 +567,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		double oldPacketLossAlarm = packetLossAlarm;
 		packetLossAlarm = newPacketLossAlarm;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM, oldPacketLossAlarm, packetLossAlarm));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM, oldPacketLossAlarm, packetLossAlarm));
 	}
 
 	/**
@@ -588,7 +588,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		double oldLatency = latency;
 		latency = newLatency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY, oldLatency, latency));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY, oldLatency, latency));
 	}
 
 	/**
@@ -609,7 +609,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 		double oldPacketLoss = packetLoss;
 		packetLoss = newPacketLoss;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS, oldPacketLoss, packetLoss));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS, oldPacketLoss, packetLoss));
 	}
 
 	/**
@@ -759,7 +759,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetStatusMonitorTool((TelecomStatusMonitorTool)otherEnd, msgs);
@@ -775,7 +775,7 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
 				return basicSetStatusMonitorTool(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -789,8 +789,8 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
-				return eInternalContainer().eInverseRemove(this, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES, TelecomStatusMonitorTool.class, msgs);
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
+				return eInternalContainer().eInverseRemove(this, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES, TelecomStatusMonitorTool.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -803,32 +803,32 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
 				if (resolve) return getStatusMonitorTool();
 				return basicGetStatusMonitorTool();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ENABLED:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ENABLED:
 				return isEnabled();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__NAME:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__NAME:
 				return getName();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
 				return getAddress();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
 				return getPacketsToSend();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
 				return getConnectionTimeout();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
 				return getLatencyWarning();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
 				return getLatencyAlarm();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
 				return getPacketLossWarning();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
 				return getPacketLossAlarm();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY:
 				return getLatency();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
 				return getPacketLoss();
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS:
 				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -842,40 +842,40 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
 				setStatusMonitorTool((TelecomStatusMonitorTool)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ENABLED:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ENABLED:
 				setEnabled((Boolean)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__NAME:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
 				setAddress((String)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
 				setPacketsToSend((Integer)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
 				setConnectionTimeout((Integer)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
 				setLatencyWarning((Double)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
 				setLatencyAlarm((Double)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
 				setPacketLossWarning((Double)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
 				setPacketLossAlarm((Double)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY:
 				setLatency((Double)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
 				setPacketLoss((Double)newValue);
 				return;
 		}
@@ -890,40 +890,40 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
 				setStatusMonitorTool((TelecomStatusMonitorTool)null);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ENABLED:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ENABLED:
 				setEnabled(ENABLED_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__NAME:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
 				setAddress(ADDRESS_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
 				setPacketsToSend(PACKETS_TO_SEND_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
 				setConnectionTimeout(CONNECTION_TIMEOUT_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
 				setLatencyWarning(LATENCY_WARNING_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
 				setLatencyAlarm(LATENCY_ALARM_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
 				setPacketLossWarning(PACKET_LOSS_WARNING_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
 				setPacketLossAlarm(PACKET_LOSS_ALARM_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY:
 				setLatency(LATENCY_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
 				setPacketLoss(PACKET_LOSS_EDEFAULT);
 				return;
 		}
@@ -938,31 +938,31 @@ public class TelecomNodeImpl extends MinimalEObjectImpl.Container implements Tel
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL:
 				return basicGetStatusMonitorTool() != null;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ENABLED:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ENABLED:
 				return enabled != ENABLED_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__NAME:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
 				return ADDRESS_EDEFAULT == null ? address != null : !ADDRESS_EDEFAULT.equals(address);
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
 				return packetsToSend != PACKETS_TO_SEND_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
 				return connectionTimeout != CONNECTION_TIMEOUT_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
 				return latencyWarning != LATENCY_WARNING_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
 				return latencyAlarm != LATENCY_ALARM_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
 				return packetLossWarning != PACKET_LOSS_WARNING_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
 				return packetLossAlarm != PACKET_LOSS_ALARM_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY:
 				return latency != LATENCY_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
 				return packetLoss != PACKET_LOSS_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS:
 				return getStatus() != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -88,7 +88,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_initialized_feature", "_UI_MobilePlatform_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__INITIALIZED,
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_disposed_feature", "_UI_MobilePlatform_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__DISPOSED,
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__DISPOSED,
 				 false,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ IItemPropertySource
 				getResourceLocator(),
 				getString("_UI_MobilePlatform_positionError_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_positionError_feature", "_UI_MobilePlatform_type"),
-				Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION_ERROR,
+				ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION_ERROR,
 				false,
 				false,
 				false,
@@ -155,7 +155,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_linearVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_linearVelocity_feature", "_UI_MobilePlatform_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__LINEAR_VELOCITY,
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__LINEAR_VELOCITY,
 				 false,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_angularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_angularVelocity_feature", "_UI_MobilePlatform_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__ANGULAR_VELOCITY,
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__ANGULAR_VELOCITY,
 				 false,
 				 false,
 				 false,
@@ -200,7 +200,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_leftWheelPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_leftWheelPosition_feature", "_UI_MobilePlatform_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__LEFT_WHEEL_POSITION,
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__LEFT_WHEEL_POSITION,
 				 false,
 				 false,
 				 false,
@@ -223,7 +223,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_rightWheelPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_rightWheelPosition_feature", "_UI_MobilePlatform_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION,
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION,
 				 false,
 				 false,
 				 false,
@@ -245,7 +245,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_position_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_position_feature", "_UI_MobilePlatform_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION,
+				 ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION,
 				 true,
 				 false,
 				 true,
@@ -301,14 +301,14 @@ IItemPropertySource
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobilePlatform.class)) {
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

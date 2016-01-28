@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsCont
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.CenteredParabolicInputConditioningImpl#getDeadBand <em>Dead Band</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.CenteredParabolicInputConditioningImpl#getDeadBand <em>Dead Band</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,7 +60,7 @@ public class CenteredParabolicInputConditioningImpl extends ParabolicInputCondit
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreProgramsControllersPackage.Literals.CENTERED_PARABOLIC_INPUT_CONDITIONING;
+		return ApogyCoreProgramsControllersPackage.Literals.CENTERED_PARABOLIC_INPUT_CONDITIONING;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class CenteredParabolicInputConditioningImpl extends ParabolicInputCondit
 		float oldDeadBand = deadBand;
 		deadBand = newDeadBand;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND, oldDeadBand, deadBand));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND, oldDeadBand, deadBand));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class CenteredParabolicInputConditioningImpl extends ParabolicInputCondit
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
+			case ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
 				return getDeadBand();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class CenteredParabolicInputConditioningImpl extends ParabolicInputCondit
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
+			case ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
 				setDeadBand((Float)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class CenteredParabolicInputConditioningImpl extends ParabolicInputCondit
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
+			case ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
 				setDeadBand(DEAD_BAND_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class CenteredParabolicInputConditioningImpl extends ParabolicInputCondit
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
+			case ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
 				return deadBand != DEAD_BAND_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

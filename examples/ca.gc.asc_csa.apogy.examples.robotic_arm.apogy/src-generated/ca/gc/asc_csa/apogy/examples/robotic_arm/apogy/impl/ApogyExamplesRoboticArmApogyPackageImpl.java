@@ -1,19 +1,19 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyFactory;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyFactory;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,14 +21,14 @@ import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRobo
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImpl implements Symphony__ExamplesRoboticArmSymphonyPackage
+public class ApogyExamplesRoboticArmApogyPackageImpl extends EPackageImpl implements ApogyExamplesRoboticArmApogyPackage
 {
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass roboticArmSymphonySystemApiAdapterEClass = null;
+  private EClass roboticArmApogySystemApiAdapterEClass = null;
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -46,13 +46,13 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesRoboticArmSymphonyPackageImpl()
+  private ApogyExamplesRoboticArmApogyPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesRoboticArmSymphonyFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesRoboticArmApogyFactory.eINSTANCE);
 	}
 
   /**
@@ -65,7 +65,7 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesRoboticArmSymphonyPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesRoboticArmApogyPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -74,32 +74,32 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesRoboticArmSymphonyPackage init()
+  public static ApogyExamplesRoboticArmApogyPackage init()
   {
-		if (isInited) return (Symphony__ExamplesRoboticArmSymphonyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesRoboticArmSymphonyPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesRoboticArmApogyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesRoboticArmApogyPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesRoboticArmSymphonyPackageImpl theSymphony__ExamplesRoboticArmSymphonyPackage = (Symphony__ExamplesRoboticArmSymphonyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesRoboticArmSymphonyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesRoboticArmSymphonyPackageImpl());
+		ApogyExamplesRoboticArmApogyPackageImpl theApogyExamplesRoboticArmApogyPackage = (ApogyExamplesRoboticArmApogyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesRoboticArmApogyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesRoboticArmApogyPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CorePackage.eINSTANCE.eClass();
-		Symphony__ExamplesRoboticArmPackage.eINSTANCE.eClass();
+		ApogyCorePackage.eINSTANCE.eClass();
+		ApogyExamplesRoboticArmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesRoboticArmSymphonyPackage.createPackageContents();
+		theApogyExamplesRoboticArmApogyPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesRoboticArmSymphonyPackage.initializePackageContents();
+		theApogyExamplesRoboticArmApogyPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesRoboticArmSymphonyPackage.freeze();
+		theApogyExamplesRoboticArmApogyPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesRoboticArmSymphonyPackage.eNS_URI, theSymphony__ExamplesRoboticArmSymphonyPackage);
-		return theSymphony__ExamplesRoboticArmSymphonyPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesRoboticArmApogyPackage.eNS_URI, theApogyExamplesRoboticArmApogyPackage);
+		return theApogyExamplesRoboticArmApogyPackage;
 	}
 
   /**
@@ -107,9 +107,9 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getRoboticArmSymphonySystemApiAdapter()
+  public EClass getRoboticArmApogySystemApiAdapter()
   {
-		return roboticArmSymphonySystemApiAdapterEClass;
+		return roboticArmApogySystemApiAdapterEClass;
 	}
 
   /**
@@ -184,8 +184,8 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoboticArmSymphonyFactory getSymphony__ExamplesRoboticArmSymphonyFactory() {
-		return (Symphony__ExamplesRoboticArmSymphonyFactory)getEFactoryInstance();
+	public ApogyExamplesRoboticArmApogyFactory getApogyExamplesRoboticArmApogyFactory() {
+		return (ApogyExamplesRoboticArmApogyFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -208,7 +208,7 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
 		isCreated = true;
 
 		// Create classes and their features
-		roboticArmSymphonySystemApiAdapterEClass = createEClass(ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER);
+		roboticArmApogySystemApiAdapterEClass = createEClass(ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER);
 
 		roboticArmDataEClass = createEClass(ROBOTIC_ARM_DATA);
 		createEAttribute(roboticArmDataEClass, ROBOTIC_ARM_DATA__INITIALIZED);
@@ -244,24 +244,24 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__ExamplesRoboticArmPackage theSymphony__ExamplesRoboticArmPackage = (Symphony__ExamplesRoboticArmPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesRoboticArmPackage.eNS_URI);
+		ApogyExamplesRoboticArmPackage theApogyExamplesRoboticArmPackage = (ApogyExamplesRoboticArmPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesRoboticArmPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		roboticArmSymphonySystemApiAdapterEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonySystemApiAdapter());
-		roboticArmDataEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonyInitializationData());
+		roboticArmApogySystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
+		roboticArmDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(roboticArmSymphonySystemApiAdapterEClass, RoboticArmSymphonySystemApiAdapter.class, "RoboticArmSymphonySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(roboticArmApogySystemApiAdapterEClass, RoboticArmApogySystemApiAdapter.class, "RoboticArmApogySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(roboticArmDataEClass, RoboticArmData.class, "RoboticArmData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoboticArmData_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, RoboticArmData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoboticArmData_Speed(), theSymphony__ExamplesRoboticArmPackage.getMoveSpeedLevel(), "speed", null, 0, 1, RoboticArmData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoboticArmData_Speed(), theApogyExamplesRoboticArmPackage.getMoveSpeedLevel(), "speed", null, 0, 1, RoboticArmData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoboticArmData_TurretAngle(), theEcorePackage.getEDouble(), "turretAngle", null, 0, 1, RoboticArmData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoboticArmData_ShoulderAngle(), theEcorePackage.getEDouble(), "shoulderAngle", null, 0, 1, RoboticArmData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoboticArmData_ElbowAngle(), theEcorePackage.getEDouble(), "elbowAngle", null, 0, 1, RoboticArmData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -271,4 +271,4 @@ public class Symphony__ExamplesRoboticArmSymphonyPackageImpl extends EPackageImp
 		createResource(eNS_URI);
 	}
 
-} //Symphony__ExamplesRoboticArmSymphonyPackageImpl
+} //ApogyExamplesRoboticArmApogyPackageImpl

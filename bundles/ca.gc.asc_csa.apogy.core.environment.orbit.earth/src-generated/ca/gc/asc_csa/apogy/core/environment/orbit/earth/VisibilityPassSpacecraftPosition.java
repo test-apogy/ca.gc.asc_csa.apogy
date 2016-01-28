@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 
 /**
@@ -15,14 +15,14 @@ import org.eclipse.symphony.common.emf.Timed;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getAzimuth <em>Azimuth</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getElevation <em>Elevation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRange <em>Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRangeRate <em>Range Rate</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getAzimuth <em>Azimuth</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getElevation <em>Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRange <em>Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRangeRate <em>Range Rate</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition()
  * @model
  * @generated
  */
@@ -37,15 +37,15 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth</em>' attribute.
 	 * @see #setAzimuth(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Azimuth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Azimuth()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='rad'"
 	 * @generated
 	 */
 	double getAzimuth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getAzimuth <em>Azimuth</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getAzimuth <em>Azimuth</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth</em>' attribute.
@@ -64,15 +64,15 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
 	 * @see #setElevation(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Elevation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Elevation()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='rad'"
 	 * @generated
 	 */
 	double getElevation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getElevation <em>Elevation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getElevation <em>Elevation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation</em>' attribute.
@@ -91,15 +91,15 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Range</em>' attribute.
 	 * @see #setRange(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Range()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Range()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='m'"
 	 * @generated
 	 */
 	double getRange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRange <em>Range</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRange <em>Range</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Range</em>' attribute.
@@ -118,15 +118,15 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Range Rate</em>' attribute.
 	 * @see #setRangeRate(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_RangeRate()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_RangeRate()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='m/s'"
 	 * @generated
 	 */
 	double getRangeRate();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRangeRate <em>Range Rate</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRangeRate <em>Range Rate</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Range Rate</em>' attribute.
@@ -145,15 +145,15 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Spacecraft Cross Track Angle</em>' attribute.
 	 * @see #setSpacecraftCrossTrackAngle(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='rad'"
 	 * @generated
 	 */
 	double getSpacecraftCrossTrackAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Spacecraft Cross Track Angle</em>' attribute.

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,14 +13,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
@@ -66,7 +66,7 @@ public class TypeMemberReferenceListElementItemProvider extends
 				 getResourceLocator(),
 				 getString("_UI_TypeMemberReferenceListElement_subSegmentsCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberReferenceListElement_subSegmentsCount_feature", "_UI_TypeMemberReferenceListElement_type"),
-				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT,
+				 ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT,
 				 false,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class TypeMemberReferenceListElementItemProvider extends
          getResourceLocator(),
          getString("_UI_TypeMemberReference_typeMember_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberReference_typeMember_feature", "_UI_TypeMemberReference_type"),
-         Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
+         ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
          true,
          false,
          true,
@@ -144,7 +144,7 @@ public class TypeMemberReferenceListElementItemProvider extends
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
 		}
 		return childrenFeatures;
 	}
@@ -195,12 +195,12 @@ public class TypeMemberReferenceListElementItemProvider extends
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMemberReferenceListElement.class)) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -220,8 +220,8 @@ public class TypeMemberReferenceListElementItemProvider extends
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement()));
+				(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement()));
 	}
 	
 	/** 
@@ -234,10 +234,10 @@ public class TypeMemberReferenceListElementItemProvider extends
 		TypeMemberReferenceListElement typeMemberReferenceListElement = (TypeMemberReferenceListElement) object;
 				
 		if (typeMemberReferenceListElement.getTypeMember() == null || typeMemberReferenceListElement.getTypeMember().getMemberType().getMembers().isEmpty()) {
-			Symphony__CommonEMFEditUtilsFacade.INSTANCE
+			ApogyCommonEMFEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
-							Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
+							ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
 		}
 	}
 }

@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
 import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +22,14 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame <em>Reference Frame</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getAttitudeProvider <em>Attitude Provider</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getInitialOrbit <em>Initial Orbit</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame <em>Reference Frame</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getAttitudeProvider <em>Attitude Provider</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getInitialOrbit <em>Initial Orbit</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator()
  * @model abstract="true"
  * @generated
  */
@@ -43,14 +43,14 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Reference Frame</em>' containment reference.
 	 * @see #setReferenceFrame(AbstractFrame)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ReferenceFrame()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ReferenceFrame()
 	 * @model containment="true"
 	 * @generated
 	 */
 	AbstractFrame getReferenceFrame();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame <em>Reference Frame</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame <em>Reference Frame</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Reference Frame</em>' containment reference.
@@ -61,14 +61,14 @@ public interface AbstractOrbitPropagator extends Named, Described {
 
 	/**
 	 * Returns the value of the '<em><b>Attitude Provider</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.AttitudeProvider}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The attitude provider. Can be used to specify an attitude control law.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attitude Provider</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_AttitudeProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_AttitudeProvider()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -83,14 +83,14 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initial Orbit</em>' reference.
 	 * @see #setInitialOrbit(Orbit)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_InitialOrbit()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_InitialOrbit()
 	 * @model required="true"
 	 * @generated
 	 */
 	Orbit getInitialOrbit();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getInitialOrbit <em>Initial Orbit</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getInitialOrbit <em>Initial Orbit</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initial Orbit</em>' reference.
@@ -108,14 +108,14 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Valid From Date</em>' attribute.
 	 * @see #setValidFromDate(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidFromDate()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidFromDate()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */
 	Date getValidFromDate();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getValidFromDate <em>Valid From Date</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidFromDate <em>Valid From Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Valid From Date</em>' attribute.
@@ -133,14 +133,14 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Valid To Date</em>' attribute.
 	 * @see #setValidToDate(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidToDate()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidToDate()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */
 	Date getValidToDate();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Valid To Date</em>' attribute.
@@ -155,7 +155,7 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-model-doc -->
 	 * Propagate the current orbit to a specified time to get a Spacecraft state.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.Exception" targetDateUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.Exception" targetDateUnique="false"
 	 * @generated
 	 */
 	SpacecraftState propagate(Date targetDate) throws Exception;
@@ -167,8 +167,8 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
 	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.orbit.List<org.eclipse.symphony.core.environment.orbit.SpacecraftState>" unique="false" many="false" exceptions="org.eclipse.symphony.core.environment.orbit.Exception" startDateUnique="false" endDateUnique="false" timeIntervalUnique="false"
-	 *        timeIntervalAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='s'"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.List<ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.Exception" startDateUnique="false" endDateUnique="false" timeIntervalUnique="false"
+	 *        timeIntervalAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='s'"
 	 * @generated
 	 */
 	List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception;

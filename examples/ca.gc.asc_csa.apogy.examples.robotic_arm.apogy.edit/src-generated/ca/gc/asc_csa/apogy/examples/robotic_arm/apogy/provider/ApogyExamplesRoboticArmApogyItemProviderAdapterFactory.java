@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.examples.robotic_arm.symphony.util.Symphony__ExamplesRoboticArmSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.util.ApogyExamplesRoboticArmApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -31,7 +31,7 @@ import org.eclipse.symphony.examples.robotic_arm.symphony.util.Symphony__Example
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoboticArmSymphonyItemProviderAdapterFactory extends Symphony__ExamplesRoboticArmSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+public class ApogyExamplesRoboticArmApogyItemProviderAdapterFactory extends ApogyExamplesRoboticArmApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -63,7 +63,7 @@ public class Symphony__ExamplesRoboticArmSymphonyItemProviderAdapterFactory exte
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoboticArmSymphonyItemProviderAdapterFactory()
+  public ApogyExamplesRoboticArmApogyItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -73,31 +73,31 @@ public class Symphony__ExamplesRoboticArmSymphonyItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected RoboticArmSymphonySystemApiAdapterItemProvider roboticArmSymphonySystemApiAdapterItemProvider;
+  protected RoboticArmApogySystemApiAdapterItemProvider roboticArmApogySystemApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createRoboticArmSymphonySystemApiAdapterAdapter()
+  public Adapter createRoboticArmApogySystemApiAdapterAdapter()
   {
-		if (roboticArmSymphonySystemApiAdapterItemProvider == null) {
-			roboticArmSymphonySystemApiAdapterItemProvider = new RoboticArmSymphonySystemApiAdapterItemProvider(this);
+		if (roboticArmApogySystemApiAdapterItemProvider == null) {
+			roboticArmApogySystemApiAdapterItemProvider = new RoboticArmApogySystemApiAdapterItemProvider(this);
 		}
 
-		return roboticArmSymphonySystemApiAdapterItemProvider;
+		return roboticArmApogySystemApiAdapterItemProvider;
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__ExamplesRoboticArmSymphonyItemProviderAdapterFactory exte
   protected RoboticArmDataItemProvider roboticArmDataItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -228,7 +228,7 @@ public class Symphony__ExamplesRoboticArmSymphonyItemProviderAdapterFactory exte
 	 */
   public void dispose()
   {
-		if (roboticArmSymphonySystemApiAdapterItemProvider != null) roboticArmSymphonySystemApiAdapterItemProvider.dispose();
+		if (roboticArmApogySystemApiAdapterItemProvider != null) roboticArmApogySystemApiAdapterItemProvider.dispose();
 		if (roboticArmDataItemProvider != null) roboticArmDataItemProvider.dispose();
 	}
 

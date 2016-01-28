@@ -1,14 +1,14 @@
-package org.eclipse.symphony.common.topology.ui.properties.sections;
+package ca.gc.asc_csa.apogy.common.topology.ui.properties.sections;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.Activator;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 

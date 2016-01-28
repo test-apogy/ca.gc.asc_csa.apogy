@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.topology.ui.jme3.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal;
 
 import java.lang.ref.WeakReference;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject;
 
 import com.jme3.scene.Geometry;
 

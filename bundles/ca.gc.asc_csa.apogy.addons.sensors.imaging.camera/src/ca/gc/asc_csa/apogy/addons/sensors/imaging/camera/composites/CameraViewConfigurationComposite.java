@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.camera.composites;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.composites;
 
 import java.io.File;
 import java.util.List;
@@ -23,27 +23,27 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
-import org.eclipse.symphony.addons.sensors.imaging.camera.listeners.CameraViewConfigurationListener;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImageAlignment;
-import org.eclipse.symphony.common.images.ui.composites.ImageDisplayComposite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.listeners.CameraViewConfigurationListener;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ImageAlignment;
+import ca.gc.asc_csa.apogy.common.images.ui.composites.ImageDisplayComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class CameraViewConfigurationComposite extends Composite 
 {
@@ -510,7 +510,7 @@ public class CameraViewConfigurationComposite extends Composite
 				@Override
 				public void notifyChanged(Notification msg) 
 				{				
-					if(msg.getFeatureID(AbstractCamera.class) == Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT)
+					if(msg.getFeatureID(AbstractCamera.class) == ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT)
 					{															
 						ImageSnapshot newImageSnapshot = (ImageSnapshot) msg.getNewValue();
 						updateImageSnapshot(newImageSnapshot);												

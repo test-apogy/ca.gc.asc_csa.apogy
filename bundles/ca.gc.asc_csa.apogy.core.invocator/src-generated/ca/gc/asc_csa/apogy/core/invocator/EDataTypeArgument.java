@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.core.invocator;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.EDataTypeArgument#getValue <em>Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEDataTypeArgument()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEDataTypeArgument()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface EDataTypeArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEDataTypeArgument_Value()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEDataTypeArgument_Value()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -40,7 +40,7 @@ public interface EDataTypeArgument extends Argument
   String getValue();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.EDataTypeArgument#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.

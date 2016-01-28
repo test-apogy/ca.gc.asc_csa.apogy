@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryD
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DASCExample {
+public class ApogyCommonGeometryData3DASCExample {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Load all the argument file paths or URIs as instances of the model.
@@ -52,16 +52,16 @@ public class Symphony__CommonGeometryData3DASCExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(Symphony__CommonGeometryData3DASCPackage.eNS_URI, 
-			 Symphony__CommonGeometryData3DASCPackage.eINSTANCE);
+			(ApogyCommonGeometryData3DASCPackage.eNS_URI, 
+			 ApogyCommonGeometryData3DASCPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.symphony__commongeometrydata3dasc"));
-				ASC3DIO root = Symphony__CommonGeometryData3DASCFactory.eINSTANCE.createASC3DIO();
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogy__commongeometrydata3dasc"));
+				ASC3DIO root = ApogyCommonGeometryData3DASCFactory.eINSTANCE.createASC3DIO();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}
@@ -119,4 +119,4 @@ public class Symphony__CommonGeometryData3DASCExample {
 		}
 	}
 
-} //Symphony__CommonGeometryData3DASCExample
+} //ApogyCommonGeometryData3DASCExample

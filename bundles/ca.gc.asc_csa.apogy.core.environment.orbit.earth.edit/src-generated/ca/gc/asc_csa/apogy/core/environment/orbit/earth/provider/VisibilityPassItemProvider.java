@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -27,12 +27,12 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -89,7 +89,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_orbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_orbitModel_feature", "_UI_VisibilityPass_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__ORBIT_MODEL,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__ORBIT_MODEL,
 				 false,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_surfaceLocation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_surfaceLocation_feature", "_UI_VisibilityPass_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__SURFACE_LOCATION,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__SURFACE_LOCATION,
 				 false,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_startTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_startTime_feature", "_UI_VisibilityPass_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__START_TIME,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__START_TIME,
 				 false,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_endTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_endTime_feature", "_UI_VisibilityPass_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__END_TIME,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__END_TIME,
 				 false,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_positionHistory_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_positionHistory_feature", "_UI_VisibilityPass_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
 				 false,
 				 false,
 				 false,
@@ -199,7 +199,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_duration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_duration_feature", "_UI_VisibilityPass_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__DURATION,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__DURATION,
 				 true,
 				 false,
 				 false,
@@ -220,7 +220,7 @@ public class VisibilityPassItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY);
 		}
 		return childrenFeatures;
 	}
@@ -277,14 +277,14 @@ public class VisibilityPassItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VisibilityPass.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -304,8 +304,8 @@ public class VisibilityPassItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPositionHistory()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPositionHistory()));
 	}
 
 	/**

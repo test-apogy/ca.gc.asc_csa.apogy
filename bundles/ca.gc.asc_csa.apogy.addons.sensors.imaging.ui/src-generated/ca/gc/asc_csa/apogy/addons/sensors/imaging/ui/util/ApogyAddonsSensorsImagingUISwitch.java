@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.ui.util;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,10 +20,10 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage
  * @generated
  */
-public class Symphony__AddonsSensorsImagingUISwitch<T> extends Switch<T>
+public class ApogyAddonsSensorsImagingUISwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -31,7 +31,7 @@ public class Symphony__AddonsSensorsImagingUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsSensorsImagingUIPackage modelPackage;
+  protected static ApogyAddonsSensorsImagingUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -39,10 +39,10 @@ public class Symphony__AddonsSensorsImagingUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingUISwitch()
+  public ApogyAddonsSensorsImagingUISwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsImagingUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsImagingUIPackage.eINSTANCE;
 		}
 	}
 
@@ -71,7 +71,7 @@ public class Symphony__AddonsSensorsImagingUISwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION: {
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION: {
 				ImageSnapshotPresentation imageSnapshotPresentation = (ImageSnapshotPresentation)theEObject;
 				T result = caseImageSnapshotPresentation(imageSnapshotPresentation);
 				if (result == null) result = caseNodePresentation(imageSnapshotPresentation);
@@ -131,4 +131,4 @@ public class Symphony__AddonsSensorsImagingUISwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsSensorsImagingUISwitch
+} //ApogyAddonsSensorsImagingUISwitch

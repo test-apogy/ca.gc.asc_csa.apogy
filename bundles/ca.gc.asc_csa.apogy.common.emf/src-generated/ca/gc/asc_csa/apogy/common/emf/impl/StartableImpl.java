@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Startable;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Startable;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.emf.Startable;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.StartableImpl#isStarted <em>Started</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.StartableImpl#isStarted <em>Started</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,7 +62,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.STARTABLE;
+		return ApogyCommonEMFPackage.Literals.STARTABLE;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 		boolean oldStarted = started;
 		started = newStarted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.STARTABLE__STARTED, oldStarted, started));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.STARTABLE__STARTED, oldStarted, started));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.STARTABLE__STARTED:
+			case ApogyCommonEMFPackage.STARTABLE__STARTED:
 				return isStarted();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.STARTABLE__STARTED:
+			case ApogyCommonEMFPackage.STARTABLE__STARTED:
 				setStarted((Boolean)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.STARTABLE__STARTED:
+			case ApogyCommonEMFPackage.STARTABLE__STARTED:
 				setStarted(STARTED_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.STARTABLE__STARTED:
+			case ApogyCommonEMFPackage.STARTABLE__STARTED:
 				return started != STARTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

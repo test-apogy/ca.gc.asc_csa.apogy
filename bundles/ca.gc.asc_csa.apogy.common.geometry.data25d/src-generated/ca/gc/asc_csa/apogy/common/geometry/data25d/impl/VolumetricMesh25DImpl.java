@@ -3,11 +3,11 @@
  *
  * $Id: VolumetricMesh25DImpl.java,v 1.4.4.2 2015/05/21 15:51:20 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public class VolumetricMesh25DImpl extends Mesh25DImpl implements VolumetricMesh
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryData25DPackage.Literals.VOLUMETRIC_MESH25_D;
+		return ApogyCommonGeometryData25DPackage.Literals.VOLUMETRIC_MESH25_D;
 	}
 
 } //VolumetricMesh25DImpl

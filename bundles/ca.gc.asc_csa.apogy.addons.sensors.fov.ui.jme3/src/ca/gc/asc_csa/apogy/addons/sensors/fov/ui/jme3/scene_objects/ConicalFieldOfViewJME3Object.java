@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,19 +12,19 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.ConicalFieldOfViewImageProjectorControl;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
-import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.ConicalFieldOfViewSceneObject;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.ConicalFieldOfViewImageProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.scene_objects.ConicalFieldOfViewSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -348,7 +348,7 @@ public class ConicalFieldOfViewJME3Object extends AbstractFieldOfViewJME3Object<
 							
 							switch (featureId) 
 							{
-								case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+								case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
 									updateGeometry();
 									
 									// Updates the FOV Settings of the projector.
@@ -356,7 +356,7 @@ public class ConicalFieldOfViewJME3Object extends AbstractFieldOfViewJME3Object<
 									
 								break;
 
-								case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+								case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 									
 									if(notification.getOldValue() instanceof DistanceRange)
 									{
@@ -385,8 +385,8 @@ public class ConicalFieldOfViewJME3Object extends AbstractFieldOfViewJME3Object<
 							
 							switch (featureId) 
 							{
-								case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
-								case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+								case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+								case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
 									
 									// Updates the geometry.
 									updateGeometry();

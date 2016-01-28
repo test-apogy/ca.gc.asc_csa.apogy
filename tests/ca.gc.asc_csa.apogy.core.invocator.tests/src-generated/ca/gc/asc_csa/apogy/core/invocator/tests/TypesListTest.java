@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.TypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.TypesList;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -72,7 +72,7 @@ public class TypesListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createTypesList());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createTypesList());
 	}
 
 	/**

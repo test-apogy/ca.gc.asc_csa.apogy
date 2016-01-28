@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class FilterListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS);
+			childrenFeatures.add(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class FilterListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FilterList.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.FILTER_LIST__IMAGE_FILTERS:
+			case ApogyAddonsSensorsImagingCameraPackage.FILTER_LIST__IMAGE_FILTERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,38 +156,38 @@ public class FilterListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
 	}
 
   /**

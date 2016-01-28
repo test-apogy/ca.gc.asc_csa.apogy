@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.topology.ui.viewer.actions;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.actions;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerProvider;
-import org.eclipse.symphony.common.topology.ui.viewer.internal.IConstants;
-import org.eclipse.symphony.common.topology.ui.viewer.internal.PluginImages;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerProvider;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.internal.IConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.internal.PluginImages;
 
 
 public class EnableHighSpeedMotionAction extends Action 

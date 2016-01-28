@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.processors.Processor;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother#getNumberOfIterations <em>Number Of Iterations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother#getNumberOfIterations <em>Number Of Iterations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getMeshSmoother()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getMeshSmoother()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface MeshSmoother extends Processor<CartesianCoordinatesSet, Cartesi
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Number Of Iterations</em>' attribute.
 	 * @see #setNumberOfIterations(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getMeshSmoother_NumberOfIterations()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getMeshSmoother_NumberOfIterations()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
 	int getNumberOfIterations();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother#getNumberOfIterations <em>Number Of Iterations</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother#getNumberOfIterations <em>Number Of Iterations</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Number Of Iterations</em>' attribute.

@@ -4,7 +4,7 @@
  *
  * $Id: PlaneItemProvider.java,v 1.7.2.3 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 
 import java.util.Collection;
@@ -17,13 +17,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.Plane;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Plane} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class PlaneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Plane_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Plane_width_feature", "_UI_Plane_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__WIDTH,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class PlaneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Plane_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Plane_height_feature", "_UI_Plane_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__HEIGHT,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -113,8 +113,8 @@ public class PlaneItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1);
+			childrenFeatures.add(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0);
+			childrenFeatures.add(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1);
 		}
 		return childrenFeatures;
 	}
@@ -169,12 +169,12 @@ public class PlaneItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Plane.class)) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PLANE__V0:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PLANE__V1:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -194,13 +194,13 @@ public class PlaneItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**
@@ -215,8 +215,8 @@ public class PlaneItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0 ||
-			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1;
+			childFeature == ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0 ||
+			childFeature == ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1;
 
 		if (qualify) {
 			return getString

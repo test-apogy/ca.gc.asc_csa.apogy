@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
 
 public class TopologyViewerListenerManager
 {			
@@ -106,7 +106,7 @@ public class TopologyViewerListenerManager
 						
 						switch (featureId) 
 						{
-							case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
+							case ApogyCommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
 								
 								if(msg.getNewValue() instanceof NodeSelection)
 								{

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2008.
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class TriangleEdgeLengthTriangularMeshFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TriangleEdgeLengthTriangularMeshFilter_minimumRange_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangleEdgeLengthTriangularMeshFilter_minimumRange_feature", "_UI_TriangleEdgeLengthTriangularMeshFilter_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE,
+				 ApogyCommonGeometryData3DPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class TriangleEdgeLengthTriangularMeshFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TriangleEdgeLengthTriangularMeshFilter_maximumRange_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangleEdgeLengthTriangularMeshFilter_maximumRange_feature", "_UI_TriangleEdgeLengthTriangularMeshFilter_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE,
+				 ApogyCommonGeometryData3DPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class TriangleEdgeLengthTriangularMeshFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TriangleEdgeLengthTriangularMeshFilter_maximumEdgeLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangleEdgeLengthTriangularMeshFilter_maximumEdgeLength_feature", "_UI_TriangleEdgeLengthTriangularMeshFilter_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH,
+				 ApogyCommonGeometryData3DPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class TriangleEdgeLengthTriangularMeshFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TriangleEdgeLengthTriangularMeshFilter.class)) {
-			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
-			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
-			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
+			case ApogyCommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
+			case ApogyCommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
+			case ApogyCommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

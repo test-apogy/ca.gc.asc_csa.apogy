@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.MapLayerPresentation;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.MapLayerPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -81,7 +81,7 @@ public class MapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -103,7 +103,7 @@ public class MapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class MapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapLayerPresentation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapLayerPresentation_visible_feature", "_UI_MapLayerPresentation_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__VISIBLE,
+				 ApogyCoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -147,7 +147,7 @@ public class MapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapLayerPresentation_mapLayer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapLayerPresentation_mapLayer_feature", "_UI_MapLayerPresentation_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__MAP_LAYER,
+				 ApogyCoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__MAP_LAYER,
 				 true,
 				 false,
 				 true,
@@ -206,9 +206,9 @@ public class MapLayerPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapLayerPresentation.class)) {
-			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
-			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
-			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
+			case ApogyCoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
+			case ApogyCoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
+			case ApogyCoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,17 +16,17 @@ import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction#getExclusionZones <em>Exclusion Zones</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction#getExclusionZones <em>Exclusion Zones</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getExclusionZonesCostFunction()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getExclusionZonesCostFunction()
  * @model
  * @generated
  */
 public interface ExclusionZonesCostFunction extends DisplacementCostFunction {
 	/**
 	 * Returns the value of the '<em><b>Exclusion Zones</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Exclusion Zones</em>' reference list isn't clear,
@@ -34,7 +34,7 @@ public interface ExclusionZonesCostFunction extends DisplacementCostFunction {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exclusion Zones</em>' reference list.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getExclusionZonesCostFunction_ExclusionZones()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getExclusionZonesCostFunction_ExclusionZones()
 	 * @model
 	 * @generated
 	 */

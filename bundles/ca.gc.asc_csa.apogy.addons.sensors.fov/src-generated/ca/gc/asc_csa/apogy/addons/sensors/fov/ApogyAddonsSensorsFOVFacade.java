@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov;
+package ca.gc.asc_csa.apogy.addons.sensors.fov;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,13 +12,13 @@ import org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFa
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getSymphony__AddonsSensorsFOVFacade()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getApogyAddonsSensorsFOVFacade()
  * @model
  * @generated
  */
-public interface Symphony__AddonsSensorsFOVFacade extends EObject {
+public interface ApogyAddonsSensorsFOVFacade extends EObject {
 	
-	public static final Symphony__AddonsSensorsFOVFacade INSTANCE = Symphony__AddonsSensorsFOVFacadeImpl.getInstance();
+	public static final ApogyAddonsSensorsFOVFacade INSTANCE = ApogyAddonsSensorsFOVFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,4 +100,4 @@ public interface Symphony__AddonsSensorsFOVFacade extends EObject {
 	 */
 	CircularSectorFieldOfView createCircularSectorFieldOfView(CircularSectorFieldOfView circularSectorFieldOfView);
 
-} // Symphony__AddonsSensorsFOVFacade
+} // ApogyAddonsSensorsFOVFacade

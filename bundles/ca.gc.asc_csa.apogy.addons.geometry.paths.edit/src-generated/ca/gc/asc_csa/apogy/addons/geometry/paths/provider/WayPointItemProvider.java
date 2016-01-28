@@ -3,7 +3,7 @@
  *
  * $Id: WayPointItemProvider.java,v 1.5.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 
 import java.util.Collection;
@@ -15,13 +15,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.WayPoint;
-import org.eclipse.symphony.common.geometry.data3d.provider.CartesianPositionCoordinatesItemProvider;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.CartesianPositionCoordinatesItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.WayPoint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -73,7 +73,7 @@ public class WayPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_parent_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__PARENT,
+				 ApogyCommonTopologyPackage.Literals.NODE__PARENT,
 				 true,
 				 false,
 				 true,
@@ -96,7 +96,7 @@ public class WayPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_description_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__DESCRIPTION,
+				 ApogyCommonTopologyPackage.Literals.NODE__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class WayPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_nodeId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_nodeId_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__NODE_ID,
+				 ApogyCommonTopologyPackage.Literals.NODE__NODE_ID,
 				 true,
 				 false,
 				 false,
@@ -165,9 +165,9 @@ public class WayPointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPoint.class)) {
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION:
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID:
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION:
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT__NODE_ID:
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

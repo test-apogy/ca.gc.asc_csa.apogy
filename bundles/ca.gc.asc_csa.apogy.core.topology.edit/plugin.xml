@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.core.topology"
-            class="org.eclipse.symphony.core.topology.provider.Symphony__CoreTopologyItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.core.topology"
+            class="ca.gc.asc_csa.apogy.core.topology.provider.ApogyCoreTopologyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,16 +20,16 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_core_topology -->
+      <!-- @generated apogy_core_topology -->
       <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.core.topology.provider.Symphony__CoreTopologyItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.core.topology.provider.ApogyCoreTopologyItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.topology.provider.Symphony__CoreTopologyItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.core.topology.provider.ApogyCoreTopologyItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.core.topology.provider.Symphony__CoreTopologyItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.bindings"
+            class="ca.gc.asc_csa.apogy.core.topology.provider.ApogyCoreTopologyItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

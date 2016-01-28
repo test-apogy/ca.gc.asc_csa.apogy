@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package
  * @generated
  */
-public interface Symphony__CommonTopologyUIJME3Factory extends EFactory {
+public interface ApogyCommonTopologyUIJME3Factory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIJME3Factory eINSTANCE = org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3FactoryImpl.init();
+	ApogyCommonTopologyUIJME3Factory eINSTANCE = ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3FactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>JME3 Type Factory</em>'.
@@ -38,6 +38,6 @@ public interface Symphony__CommonTopologyUIJME3Factory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIJME3Package getSymphony__CommonTopologyUIJME3Package();
+	ApogyCommonTopologyUIJME3Package getApogyCommonTopologyUIJME3Package();
 
-} //Symphony__CommonTopologyUIJME3Factory
+} //ApogyCommonTopologyUIJME3Factory

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.converters.tests;
+package ca.gc.asc_csa.apogy.common.converters.tests;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,31 +6,31 @@ import java.util.SortedSet;
 
 import junit.framework.TestCase;
 
-import org.eclipse.symphony.common.converters.ChainedConverter;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterAAtoA;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterAAtoC;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterAtoB;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterAtoBB;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterAtoC;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterAtoF;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterBtoA;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterBtoC;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterBtoD;
-import org.eclipse.symphony.common.converters.tests.converters.ConverterDtoB;
-import org.eclipse.symphony.common.converters.tests.types.A;
-import org.eclipse.symphony.common.converters.tests.types.AA;
-import org.eclipse.symphony.common.converters.tests.types.AAA;
-import org.eclipse.symphony.common.converters.tests.types.B;
-import org.eclipse.symphony.common.converters.tests.types.BB;
-import org.eclipse.symphony.common.converters.tests.types.C;
-import org.eclipse.symphony.common.converters.tests.types.D;
+import ca.gc.asc_csa.apogy.common.converters.ChainedConverter;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAAtoA;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAAtoC;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAtoB;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAtoBB;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAtoC;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAtoF;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterBtoA;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterBtoC;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterBtoD;
+import ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterDtoB;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.A;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.AA;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.AAA;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.B;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.BB;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.C;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.D;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import org.junit.Test;
 
-public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase 
+public class ApogyCommonConvertersGraphsFacadeTest extends TestCase 
 {
 	@Test
 	public void testCreateGraph() 
@@ -38,7 +38,7 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		List<IConverter> converters = new ArrayList<IConverter>();
 		converters.add(new ConverterAtoB());
 		converters.add(new ConverterBtoC());
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		assertEquals(2, graph.edgeSet().size());
 		assertEquals(3, graph.vertexSet().size());	
 	}
@@ -50,10 +50,10 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterBtoD());
 		converters.add(new ConverterAtoB());
 		converters.add(new ConverterBtoC());		
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
 		// Test a simple case where no chaining is required.
-		IConverter converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, B.class);
+		IConverter converter = ApogyCommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, B.class);
 		assertNotNull(converter);
 		A a = new A();
 		a.setDescription("A");
@@ -71,7 +71,7 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		assertEquals("A->AtoB", b.getDescription());	
 		
 		// Test a case where chaining is required.
-		converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, C.class);
+		converter = ApogyCommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, C.class);
 		C c = null;
 		try 
 		{
@@ -86,7 +86,7 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		assertEquals("A->AtoB->BtoC", c.getDescription());
 		
 		// Test a case where chaining is required.
-		converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, D.class);
+		converter = ApogyCommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, D.class);
 		D d = null;
 		try 
 		{
@@ -117,12 +117,12 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterBtoD());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 			
 		A a = new A();
 						
 		//IConverter converter = ConverterGraphUtilities.findConverterNEW(graph, A.class, C.class, a);
-		IConverter converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, C.class);
+		IConverter converter = ApogyCommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, C.class);
 		assertNotNull(converter);
 		System.out.println("Converter : " + converter.toString());
 						
@@ -147,9 +147,9 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterBtoC());	
 
 		// Creates a graph that requires one typeCastConverter from AA to A
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
-		List<IConverter> typeCastConverters = Symphony__CommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
+		List<IConverter> typeCastConverters = ApogyCommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
 		assertEquals(1, typeCastConverters.size());
 		IConverter converter = typeCastConverters.get(0);
 		assertNotNull(converter);
@@ -158,9 +158,9 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		
 		// Redo the test, but add a converter between A and AA. This should produce NO typeCastConverter.
 		converters.add(new ConverterAAtoA());	
-		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
-		typeCastConverters = Symphony__CommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
+		typeCastConverters = ApogyCommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
 		assertEquals(0, typeCastConverters.size());
 	}
 	
@@ -172,25 +172,25 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterAtoB());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 			
 		AA aa = new AA();
 		aa.setDescription("AA");
-		B b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
+		B b = (B) ApogyCommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);
 		assertEquals("AA->AtoB", b.getDescription());
 						
 		// Adds another converter to the list and do the same test. This converter should not change anything
 		converters.add(new ConverterAAtoC());
-		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
-		b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
+		graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		b = (B) ApogyCommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);
 		assertEquals("AA->AtoB", b.getDescription());
 			
 		// Adds a converter from AA to A. This converter should be used instead of the TypeCast one.
 		converters.add(new ConverterAAtoA());
-		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
-		b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
+		graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		b = (B) ApogyCommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);	
 		assertNotNull(b.getDescription());				
 		assertEquals("AA->AAtoA->AtoB", b.getDescription());
@@ -205,12 +205,12 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterDtoB());
 		
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
 		AA aa = new AA();
 		aa.setDescription("AA");
 				
-		B b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
+		B b = (B) ApogyCommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);
 		String description = b.getDescription();
 		
@@ -228,12 +228,12 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterAtoB());
 		
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 
 		AA aa = new AA();
 		aa.setDescription("AA");
 				
-		C c = (C) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, C.class);
+		C c = (C) ApogyCommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, C.class);
 		assertNotNull(c);
 		assertNotNull(c.getDescription());		
 		assertEquals("AA->AAtoC", c.getDescription());
@@ -244,12 +244,12 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterAAtoC());
 		converters.add(new ConverterAtoC());
 		
-		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 
 		aa = new AA();
 		aa.setDescription("AA");
 				
-		c = (C) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, C.class);
+		c = (C) ApogyCommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, C.class);
 		assertNotNull(c);
 		assertNotNull(c.getDescription());		
 		assertEquals("AA->AAtoC", c.getDescription());
@@ -265,20 +265,20 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		classes.add(B.class);
 		
 		// This should return A.class
-		Class<?> result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, AA.class);
+		Class<?> result = ApogyCommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, AA.class);
 		assertEquals(A.class, result);
 		
 		// This should return B
-		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, B.class);
+		result = ApogyCommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, B.class);
 		assertEquals(B.class, result);
 		
 		// This should return null
-		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, D.class);
+		result = ApogyCommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, D.class);
 		assertNull(result);
 				
 		// Adds AA to the list.
 		classes.add(AA.class);
-		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, AA.class);
+		result = ApogyCommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, AA.class);
 		assertEquals(AA.class, result);
 	}
 	
@@ -292,13 +292,13 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		classes.add(B.class);
 		
 		// This should return BB.class
-		Class<?> result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, BB.class);
+		Class<?> result = ApogyCommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, BB.class);
 		assertEquals(BB.class, result);	
 		
-		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, B.class);
+		result = ApogyCommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, B.class);
 		assertEquals(B.class, result);
 
-		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, AA.class);
+		result = ApogyCommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, AA.class);
 		assertEquals(null, result);
 	}
 	
@@ -312,24 +312,24 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterAtoB());
 		
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 
-		List<Class<?>> results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, AA.class);
+		List<Class<?>> results = ApogyCommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, AA.class);
 		assertEquals(2, results.size());
 		assertEquals(AA.class, results.get(0));
 		assertEquals(A.class, results.get(1));
 		
-		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, A.class);
+		results = ApogyCommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, A.class);
 		assertEquals(1, results.size());		
 		assertEquals(A.class, results.get(0));
 		
-		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, AAA.class);
+		results = ApogyCommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, AAA.class);
 		assertEquals(2, results.size());
 		assertEquals(AA.class, results.get(0));
 		assertEquals(A.class, results.get(1));
 				
 		// No C as input, thus should return an empty list.
-		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, C.class);		
+		results = ApogyCommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, C.class);		
 		assertEquals(0, results.size());
 	}
 	
@@ -344,23 +344,23 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterAtoBB());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 	
-		List<Class<?>> results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, C.class);
+		List<Class<?>> results = ApogyCommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, C.class);
 		assertEquals(1, results.size());
 		assertEquals(C.class, results.get(0));		
 			
-		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, BB.class);
+		results = ApogyCommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, BB.class);
 		assertEquals(1, results.size());		
 		assertEquals(BB.class, results.get(0));
 			
-		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, B.class);
+		results = ApogyCommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, B.class);
 		assertEquals(2, results.size());
 		assertEquals(B.class, results.get(0));
 		assertEquals(BB.class, results.get(1));
 					
 		// No A as output, thus should return an empty list.
-		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph,A.class);		
+		results = ApogyCommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph,A.class);		
 		assertEquals(0, results.size());
 	}
 	
@@ -378,9 +378,9 @@ public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase
 		converters.add(new ConverterBtoD());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 	
-		SortedSet<ChainedConverter> converterSet = Symphony__CommonConvertersGraphsFacade.INSTANCE.findAllConvertersBetweenVertices(graph, A.class, C.class);			
+		SortedSet<ChainedConverter> converterSet = ApogyCommonConvertersGraphsFacade.INSTANCE.findAllConvertersBetweenVertices(graph, A.class, C.class);			
 		assertNotNull(converterSet);
 		assertEquals(2, converterSet.size());
 			

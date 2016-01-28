@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.pif.ui.adapters;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.pif.ui.adapters;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,18 +7,18 @@ import java.util.List;
 import javax.vecmath.Point3f;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.pif.PifReader;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.pif.PifReader;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContextAdapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 /**
  * 
@@ -92,14 +92,14 @@ public class GraphicsContextPifAdapter implements GraphicsContextAdapter {
 				List<Point3f> points = reader.getPoints();
 
 				// We convert the points into a cartesian coordinates set
-				CartesianCoordinatesSet pts = Symphony__CommonGeometryData3DFactory.eINSTANCE
+				CartesianCoordinatesSet pts = ApogyCommonGeometryData3DFactory.eINSTANCE
 						.createCartesianCoordinatesSet();
 
 				List<CartesianPositionCoordinates> pointList = new ArrayList<CartesianPositionCoordinates>(
 						points.size());
 
 				for (Point3f p : points) {
-					CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE
+					CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE
 							.createCartesianPositionCoordinates(p.getX(),
 									p.getY(), p.getZ());
 					pointList.add(point);
@@ -108,15 +108,15 @@ public class GraphicsContextPifAdapter implements GraphicsContextAdapter {
 				pts.getPoints().addAll(pointList);
 
 				// We create a topology
-				GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode();
+				GroupNode root = ApogyCommonTopologyFactory.eINSTANCE.createGroupNode();
 
-				ContentNode<CartesianCoordinatesSet> pointNode = Symphony__CommonTopologyFacade.INSTANCE
+				ContentNode<CartesianCoordinatesSet> pointNode = ApogyCommonTopologyFacade.INSTANCE
 						.createContentNode(pts);
 
 				root.getChildren().add(pointNode);
 
 				// We create a graphics context
-				grContext = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
+				grContext = ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 				grContext.setTopology(root);
 
 			} catch (IOException e) {

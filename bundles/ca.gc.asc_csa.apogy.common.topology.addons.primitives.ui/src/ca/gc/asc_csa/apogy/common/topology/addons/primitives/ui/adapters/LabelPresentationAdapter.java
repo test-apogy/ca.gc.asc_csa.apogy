@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.primitives.Label;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.LabelPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class LabelPresentationAdapter implements NodePresentationAdapter
 {
@@ -30,7 +30,7 @@ public class LabelPresentationAdapter implements NodePresentationAdapter
 
 		Label Label = (Label) obj;
 		
-		LabelPresentation presentationNode = Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createLabelPresentation();
+		LabelPresentation presentationNode = ApogyCommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createLabelPresentation();
 		presentationNode.setNode(Label);			
 						
 		return presentationNode;

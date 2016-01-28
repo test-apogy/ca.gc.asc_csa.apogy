@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.io.jinput;
+package ca.gc.asc_csa.apogy.common.io.jinput;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory
+ * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonIOJInput' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonIOJInput' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.io.jinput/src-generated' editDirectory='/org.eclipse.symphony.common.io.jinput.edit/src-generated' basePackage='org.eclipse.symphony.common.io'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonIOJInput' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonIOJInput' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.io.jinput/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.io.jinput.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.io'"
  * @generated
  */
-public interface Symphony__CommonIOJInputPackage extends EPackage {
+public interface ApogyCommonIOJInputPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.io.jinput";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.io.jinput";
 
 	/**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonIOJInputPackage eINSTANCE = org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl.init();
+	ApogyCommonIOJInputPackage eINSTANCE = ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl <em>EController</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl <em>EController</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EControllerImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEController()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEController()
 	 * @generated
 	 */
 	int ECONTROLLER = 0;
@@ -170,11 +170,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int ECONTROLLER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl <em>EController Environment</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl <em>EController Environment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEControllerEnvironment()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEControllerEnvironment()
 	 * @generated
 	 */
 	int ECONTROLLER_ENVIRONMENT = 1;
@@ -306,11 +306,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int ECONTROLLER_ENVIRONMENT_OPERATION_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EComponentImpl <em>EComponent</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentImpl <em>EComponent</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EComponentImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEComponent()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponent()
 	 * @generated
 	 */
 	int ECOMPONENT = 2;
@@ -406,11 +406,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int ECOMPONENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EComponentsImpl <em>EComponents</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentsImpl <em>EComponents</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EComponentsImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEComponents()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentsImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponents()
 	 * @generated
 	 */
 	int ECOMPONENTS = 3;
@@ -461,11 +461,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int ECOMPONENTS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EButtonImpl <em>EButton</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EButtonImpl <em>EButton</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EButtonImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEButton()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EButtonImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEButton()
 	 * @generated
 	 */
 	int EBUTTON = 4;
@@ -561,11 +561,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int EBUTTON_OPERATION_COUNT = ECOMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EAxisImpl <em>EAxis</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EAxisImpl <em>EAxis</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EAxisImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEAxis()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EAxisImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEAxis()
 	 * @generated
 	 */
 	int EAXIS = 5;
@@ -661,11 +661,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int EAXIS_OPERATION_COUNT = ECOMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EKeyImpl <em>EKey</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EKeyImpl <em>EKey</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EKeyImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEKey()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EKeyImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEKey()
 	 * @generated
 	 */
 	int EKEY = 6;
@@ -761,11 +761,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int EKEY_OPERATION_COUNT = ECOMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl <em>EComponent Qualifier</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentQualifierImpl <em>EComponent Qualifier</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEComponentQualifier()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentQualifierImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponentQualifier()
 	 * @generated
 	 */
 	int ECOMPONENT_QUALIFIER = 7;
@@ -807,11 +807,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	int ECOMPONENT_QUALIFIER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.io.jinput.impl.EVirtualComponentImpl <em>EVirtual Component</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EVirtualComponentImpl <em>EVirtual Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.io.jinput.impl.EVirtualComponentImpl
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEVirtualComponent()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EVirtualComponentImpl
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEVirtualComponent()
 	 * @generated
 	 */
 	int EVIRTUAL_COMPONENT = 8;
@@ -920,7 +920,7 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.runtime.jobs.Job
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getJob()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getJob()
 	 * @generated
 	 */
 	int JOB = 9;
@@ -930,7 +930,7 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see net.java.games.input.Component
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getComponent()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getComponent()
 	 * @generated
 	 */
 	int COMPONENT = 10;
@@ -940,475 +940,475 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see net.java.games.input.Controller
-	 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getController()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getController()
 	 * @generated
 	 */
 	int CONTROLLER = 11;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EController <em>EController</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController <em>EController</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EController</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController
 	 * @generated
 	 */
 	EClass getEController();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EController#isLastPollResult <em>Last Poll Result</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#isLastPollResult <em>Last Poll Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Last Poll Result</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#isLastPollResult()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#isLastPollResult()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EAttribute getEController_LastPollResult();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EController#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#getName()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#getName()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EAttribute getEController_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EController#getPortNumber <em>Port Number</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#getPortNumber <em>Port Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Port Number</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#getPortNumber()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#getPortNumber()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EAttribute getEController_PortNumber();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EController#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#getType()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#getType()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EAttribute getEController_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EController#getPortType <em>Port Type</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#getPortType <em>Port Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Port Type</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#getPortType()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#getPortType()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EAttribute getEController_PortType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EController#getPojoController <em>Pojo Controller</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#getPojoController <em>Pojo Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Pojo Controller</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#getPojoController()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#getPojoController()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EAttribute getEController_PojoController();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.io.jinput.EController#getEComponents <em>EComponents</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#getEComponents <em>EComponents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>EComponents</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#getEComponents()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#getEComponents()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EReference getEController_EComponents();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EController#getControllerCount <em>Controller Count</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#getControllerCount <em>Controller Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Controller Count</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#getControllerCount()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#getControllerCount()
 	 * @see #getEController()
 	 * @generated
 	 */
 	EAttribute getEController_ControllerCount();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.io.jinput.EController#poll() <em>Poll</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController#poll() <em>Poll</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Poll</em>' operation.
-	 * @see org.eclipse.symphony.common.io.jinput.EController#poll()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController#poll()
 	 * @generated
 	 */
 	EOperation getEController__Poll();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment <em>EController Environment</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment <em>EController Environment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EController Environment</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment
 	 * @generated
 	 */
 	EClass getEControllerEnvironment();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isSupported <em>Supported</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isSupported <em>Supported</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Supported</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isSupported()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isSupported()
 	 * @see #getEControllerEnvironment()
 	 * @generated
 	 */
 	EAttribute getEControllerEnvironment_Supported();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getControllers <em>Controllers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getControllers <em>Controllers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Controllers</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getControllers()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getControllers()
 	 * @see #getEControllerEnvironment()
 	 * @generated
 	 */
 	EReference getEControllerEnvironment_Controllers();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isRefreshRequested <em>Refresh Requested</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isRefreshRequested <em>Refresh Requested</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Refresh Requested</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isRefreshRequested()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isRefreshRequested()
 	 * @see #getEControllerEnvironment()
 	 * @generated
 	 */
 	EAttribute getEControllerEnvironment_RefreshRequested();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingCount <em>Polling Count</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getPollingCount <em>Polling Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Polling Count</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingCount()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getPollingCount()
 	 * @see #getEControllerEnvironment()
 	 * @generated
 	 */
 	EAttribute getEControllerEnvironment_PollingCount();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingJob <em>Polling Job</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getPollingJob <em>Polling Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Polling Job</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingJob()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#getPollingJob()
 	 * @see #getEControllerEnvironment()
 	 * @generated
 	 */
 	EAttribute getEControllerEnvironment_PollingJob();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Polling Problem</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isPollingProblem()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#isPollingProblem()
 	 * @see #getEControllerEnvironment()
 	 * @generated
 	 */
 	EAttribute getEControllerEnvironment_PollingProblem();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#refresh() <em>Refresh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#refresh() <em>Refresh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Refresh</em>' operation.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#refresh()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#refresh()
 	 * @generated
 	 */
 	EOperation getEControllerEnvironment__Refresh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#startPolling() <em>Start Polling</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#startPolling() <em>Start Polling</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start Polling</em>' operation.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#startPolling()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#startPolling()
 	 * @generated
 	 */
 	EOperation getEControllerEnvironment__StartPolling();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#stopPolling() <em>Stop Polling</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#stopPolling() <em>Stop Polling</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop Polling</em>' operation.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#stopPolling()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#stopPolling()
 	 * @generated
 	 */
 	EOperation getEControllerEnvironment__StopPolling();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#resolveController(java.lang.String) <em>Resolve Controller</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#resolveController(java.lang.String) <em>Resolve Controller</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve Controller</em>' operation.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#resolveController(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#resolveController(java.lang.String)
 	 * @generated
 	 */
 	EOperation getEControllerEnvironment__ResolveController__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#resolveEComponent(java.lang.String, org.eclipse.symphony.common.io.jinput.EController) <em>Resolve EComponent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#resolveEComponent(java.lang.String, ca.gc.asc_csa.apogy.common.io.jinput.EController) <em>Resolve EComponent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve EComponent</em>' operation.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#resolveEComponent(java.lang.String, org.eclipse.symphony.common.io.jinput.EController)
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#resolveEComponent(java.lang.String, ca.gc.asc_csa.apogy.common.io.jinput.EController)
 	 * @generated
 	 */
 	EOperation getEControllerEnvironment__ResolveEComponent__String_EController();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#resolveEComponent(org.eclipse.symphony.common.io.jinput.EComponentQualifier) <em>Resolve EComponent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#resolveEComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier) <em>Resolve EComponent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve EComponent</em>' operation.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment#resolveEComponent(org.eclipse.symphony.common.io.jinput.EComponentQualifier)
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment#resolveEComponent(ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier)
 	 * @generated
 	 */
 	EOperation getEControllerEnvironment__ResolveEComponent__EComponentQualifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EComponent <em>EComponent</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent <em>EComponent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EComponent</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent
 	 * @generated
 	 */
 	EClass getEComponent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponent#getDeadZone <em>Dead Zone</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getDeadZone <em>Dead Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Dead Zone</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#getDeadZone()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getDeadZone()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EAttribute getEComponent_DeadZone();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponent#getIdentifier <em>Identifier</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getIdentifier <em>Identifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Identifier</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#getIdentifier()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getIdentifier()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EAttribute getEComponent_Identifier();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponent#isRelative <em>Relative</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#isRelative <em>Relative</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Relative</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#isRelative()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#isRelative()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EAttribute getEComponent_Relative();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponent#isAnalog <em>Analog</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#isAnalog <em>Analog</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Analog</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#isAnalog()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#isAnalog()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EAttribute getEComponent_Analog();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponent#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#getName()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getName()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EAttribute getEComponent_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponent#getPojoComponent <em>Pojo Component</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getPojoComponent <em>Pojo Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Pojo Component</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#getPojoComponent()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getPojoComponent()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EAttribute getEComponent_PojoComponent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponent#getPollData <em>Poll Data</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getPollData <em>Poll Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Poll Data</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#getPollData()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getPollData()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EAttribute getEComponent_PollData();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.common.io.jinput.EComponent#getEComponents <em>EComponents</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getEComponents <em>EComponents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>EComponents</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent#getEComponents()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent#getEComponents()
 	 * @see #getEComponent()
 	 * @generated
 	 */
 	EReference getEComponent_EComponents();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EComponents <em>EComponents</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponents <em>EComponents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EComponents</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponents
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponents
 	 * @generated
 	 */
 	EClass getEComponents();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.io.jinput.EComponents#getComponents <em>Components</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponents#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Components</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponents#getComponents()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponents#getComponents()
 	 * @see #getEComponents()
 	 * @generated
 	 */
 	EReference getEComponents_Components();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponents#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponents#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponents#getName()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponents#getName()
 	 * @see #getEComponents()
 	 * @generated
 	 */
 	EAttribute getEComponents_Name();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.common.io.jinput.EComponents#getEController <em>EController</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponents#getEController <em>EController</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>EController</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponents#getEController()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponents#getEController()
 	 * @see #getEComponents()
 	 * @generated
 	 */
 	EReference getEComponents_EController();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EButton <em>EButton</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EButton <em>EButton</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EButton</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EButton
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EButton
 	 * @generated
 	 */
 	EClass getEButton();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EAxis <em>EAxis</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EAxis <em>EAxis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EAxis</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EAxis
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EAxis
 	 * @generated
 	 */
 	EClass getEAxis();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EKey <em>EKey</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EKey <em>EKey</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EKey</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EKey
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EKey
 	 * @generated
 	 */
 	EClass getEKey();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EComponentQualifier <em>EComponent Qualifier</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier <em>EComponent Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EComponent Qualifier</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponentQualifier
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier
 	 * @generated
 	 */
 	EClass getEComponentQualifier();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponentQualifier#getEComponentName <em>EComponent Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier#getEComponentName <em>EComponent Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>EComponent Name</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponentQualifier#getEComponentName()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier#getEComponentName()
 	 * @see #getEComponentQualifier()
 	 * @generated
 	 */
 	EAttribute getEComponentQualifier_EComponentName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EComponentQualifier#getEControllerName <em>EController Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier#getEControllerName <em>EController Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>EController Name</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponentQualifier#getEControllerName()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier#getEControllerName()
 	 * @see #getEComponentQualifier()
 	 * @generated
 	 */
 	EAttribute getEComponentQualifier_EControllerName();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.io.jinput.EVirtualComponent <em>EVirtual Component</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent <em>EVirtual Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EVirtual Component</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EVirtualComponent
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent
 	 * @generated
 	 */
 	EClass getEVirtualComponent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Value</em>'.
-	 * @see org.eclipse.symphony.common.io.jinput.EVirtualComponent#getCurrentValue()
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent#getCurrentValue()
 	 * @see #getEVirtualComponent()
 	 * @generated
 	 */
@@ -1454,7 +1454,7 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonIOJInputFactory getSymphony__CommonIOJInputFactory();
+	ApogyCommonIOJInputFactory getApogyCommonIOJInputFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1471,11 +1471,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl <em>EController</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl <em>EController</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EControllerImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEController()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEController()
 		 * @generated
 		 */
 		EClass ECONTROLLER = eINSTANCE.getEController();
@@ -1553,11 +1553,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		EOperation ECONTROLLER___POLL = eINSTANCE.getEController__Poll();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl <em>EController Environment</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl <em>EController Environment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEControllerEnvironment()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEControllerEnvironment()
 		 * @generated
 		 */
 		EClass ECONTROLLER_ENVIRONMENT = eINSTANCE.getEControllerEnvironment();
@@ -1659,11 +1659,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		EOperation ECONTROLLER_ENVIRONMENT___RESOLVE_ECOMPONENT__ECOMPONENTQUALIFIER = eINSTANCE.getEControllerEnvironment__ResolveEComponent__EComponentQualifier();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EComponentImpl <em>EComponent</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentImpl <em>EComponent</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EComponentImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEComponent()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponent()
 		 * @generated
 		 */
 		EClass ECOMPONENT = eINSTANCE.getEComponent();
@@ -1733,11 +1733,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		EReference ECOMPONENT__ECOMPONENTS = eINSTANCE.getEComponent_EComponents();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EComponentsImpl <em>EComponents</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentsImpl <em>EComponents</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EComponentsImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEComponents()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentsImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponents()
 		 * @generated
 		 */
 		EClass ECOMPONENTS = eINSTANCE.getEComponents();
@@ -1767,41 +1767,41 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		EReference ECOMPONENTS__ECONTROLLER = eINSTANCE.getEComponents_EController();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EButtonImpl <em>EButton</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EButtonImpl <em>EButton</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EButtonImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEButton()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EButtonImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEButton()
 		 * @generated
 		 */
 		EClass EBUTTON = eINSTANCE.getEButton();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EAxisImpl <em>EAxis</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EAxisImpl <em>EAxis</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EAxisImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEAxis()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EAxisImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEAxis()
 		 * @generated
 		 */
 		EClass EAXIS = eINSTANCE.getEAxis();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EKeyImpl <em>EKey</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EKeyImpl <em>EKey</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EKeyImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEKey()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EKeyImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEKey()
 		 * @generated
 		 */
 		EClass EKEY = eINSTANCE.getEKey();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl <em>EComponent Qualifier</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentQualifierImpl <em>EComponent Qualifier</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEComponentQualifier()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentQualifierImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEComponentQualifier()
 		 * @generated
 		 */
 		EClass ECOMPONENT_QUALIFIER = eINSTANCE.getEComponentQualifier();
@@ -1823,11 +1823,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		EAttribute ECOMPONENT_QUALIFIER__ECONTROLLER_NAME = eINSTANCE.getEComponentQualifier_EControllerName();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.io.jinput.impl.EVirtualComponentImpl <em>EVirtual Component</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EVirtualComponentImpl <em>EVirtual Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.io.jinput.impl.EVirtualComponentImpl
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getEVirtualComponent()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.EVirtualComponentImpl
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getEVirtualComponent()
 		 * @generated
 		 */
 		EClass EVIRTUAL_COMPONENT = eINSTANCE.getEVirtualComponent();
@@ -1845,7 +1845,7 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.runtime.jobs.Job
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getJob()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getJob()
 		 * @generated
 		 */
 		EDataType JOB = eINSTANCE.getJob();
@@ -1855,7 +1855,7 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see net.java.games.input.Component
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getComponent()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getComponent()
 		 * @generated
 		 */
 		EDataType COMPONENT = eINSTANCE.getComponent();
@@ -1865,11 +1865,11 @@ public interface Symphony__CommonIOJInputPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see net.java.games.input.Controller
-		 * @see org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputPackageImpl#getController()
+		 * @see ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputPackageImpl#getController()
 		 * @generated
 		 */
 		EDataType CONTROLLER = eINSTANCE.getController();
 
 	}
 
-} //Symphony__CommonIOJInputPackage
+} //ApogyCommonIOJInputPackage

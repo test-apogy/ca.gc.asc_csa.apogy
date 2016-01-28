@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity <em>Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration <em>Linear Acceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity <em>Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration <em>Linear Acceleration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getInertialMeasurementUnit()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getInertialMeasurementUnit()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface InertialMeasurementUnit extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' containment reference.
 	 * @see #setAngularVelocity(Tuple3d)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getInertialMeasurementUnit_AngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getInertialMeasurementUnit_AngularVelocity()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity <em>Angular Velocity</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity <em>Angular Velocity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angular Velocity</em>' containment reference.
@@ -59,14 +59,14 @@ public interface InertialMeasurementUnit extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Acceleration</em>' containment reference.
 	 * @see #setLinearAcceleration(Tuple3d)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getInertialMeasurementUnit_LinearAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getInertialMeasurementUnit_LinearAcceleration()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getLinearAcceleration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration <em>Linear Acceleration</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration <em>Linear Acceleration</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Linear Acceleration</em>' containment reference.

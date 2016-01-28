@@ -1,14 +1,14 @@
-@GenModel(prefix="Symphony__AddonsMobility",
+@GenModel(prefix="ApogyAddonsMobility",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)",
-	      modelName="Symphony__AddonsMobility")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.edit/src-generated")
+	      modelName="ApogyAddonsMobility")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.mobility/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.mobility.edit/src-generated")
 
-package org.eclipse.symphony.addons.mobility
+package ca.gc.asc_csa.apogy.addons.mobility
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 
 class MobilePlatform extends AggregateGroupNode
 {

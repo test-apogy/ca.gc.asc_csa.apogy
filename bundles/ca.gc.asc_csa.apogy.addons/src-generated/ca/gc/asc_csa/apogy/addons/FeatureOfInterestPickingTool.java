@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,15 +20,15 @@ import org.eclipse.symphony.core.FeatureOfInterestList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition <em>Pick Absolute Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativePosition <em>Pick Relative Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickedNode <em>Picked Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition <em>Pick Absolute Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativePosition <em>Pick Relative Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickedNode <em>Picked Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool()
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getFeatureOfInterestPickingTool()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Of Interest List</em>' reference.
 	 * @see #setFeatureOfInterestList(FeatureOfInterestList)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_FeatureOfInterestList()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getFeatureOfInterestPickingTool_FeatureOfInterestList()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false'"
 	 * @generated
 	 */
 	FeatureOfInterestList getFeatureOfInterestList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList <em>Feature Of Interest List</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList <em>Feature Of Interest List</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Of Interest List</em>' reference.
@@ -68,7 +68,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Absolute Position</em>' reference.
 	 * @see #setPickAbsolutePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickAbsolutePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getFeatureOfInterestPickingTool_PickAbsolutePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -76,7 +76,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	Tuple3d getPickAbsolutePosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition <em>Pick Absolute Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition <em>Pick Absolute Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pick Absolute Position</em>' reference.
@@ -95,7 +95,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Relative Position</em>' reference.
 	 * @see #setPickRelativePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickRelativePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getFeatureOfInterestPickingTool_PickRelativePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -103,7 +103,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	Tuple3d getPickRelativePosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativePosition <em>Pick Relative Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativePosition <em>Pick Relative Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pick Relative Position</em>' reference.
@@ -122,7 +122,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Picked Node</em>' reference.
 	 * @see #setPickedNode(Node)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickedNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getFeatureOfInterestPickingTool_PickedNode()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -130,7 +130,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	Node getPickedNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickedNode <em>Picked Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickedNode <em>Picked Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Picked Node</em>' reference.
@@ -149,7 +149,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Absolute Normal</em>' reference.
 	 * @see #setPickAbsoluteNormal(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickAbsoluteNormal()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getFeatureOfInterestPickingTool_PickAbsoluteNormal()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -157,7 +157,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	Tuple3d getPickAbsoluteNormal();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pick Absolute Normal</em>' reference.
@@ -176,7 +176,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Relative Normal</em>' reference.
 	 * @see #setPickRelativeNormal(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickRelativeNormal()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getFeatureOfInterestPickingTool_PickRelativeNormal()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -184,7 +184,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	Tuple3d getPickRelativeNormal();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pick Relative Normal</em>' reference.

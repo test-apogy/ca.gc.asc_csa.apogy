@@ -26,22 +26,22 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage"
-            genModel="model/symphony_core_invocator.xcore"/>
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage"
+            genModel="model/apogy_core_invocator.xcore"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated eclipse_emf_ecore_invocator -->
       <parser
             type="sym"
-            class="org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceFactoryImpl"/>
+            class="ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl"/>
    </extension>
 
    <extension
-   		point="org.eclipse.symphony.core.invocator.invocatorDelegate">
+   		point="ca.gc.asc_csa.apogy.core.invocator.invocatorDelegate">
    		<element
-   			invocatorDelegateClass="org.eclipse.symphony.core.invocator.delegates.DefaultInvocatorDelegate">
+   			invocatorDelegateClass="ca.gc.asc_csa.apogy.core.invocator.delegates.DefaultInvocatorDelegate">
    		</element>
    	</extension>
    

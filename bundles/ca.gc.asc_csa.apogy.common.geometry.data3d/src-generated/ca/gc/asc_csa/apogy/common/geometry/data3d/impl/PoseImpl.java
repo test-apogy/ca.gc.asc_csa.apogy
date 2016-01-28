@@ -3,14 +3,14 @@
  *
  * $Id: PoseImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl#getXRotation <em>XRotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl#getYRotation <em>YRotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl#getZRotation <em>ZRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PoseImpl#getXRotation <em>XRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PoseImpl#getYRotation <em>YRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PoseImpl#getZRotation <em>ZRotation</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,7 +99,7 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.POSE;
+		return ApogyCommonGeometryData3DPackage.Literals.POSE;
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 		double oldXRotation = xRotation;
 		xRotation = newXRotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POSE__XROTATION, oldXRotation, xRotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.POSE__XROTATION, oldXRotation, xRotation));
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 		double oldYRotation = yRotation;
 		yRotation = newYRotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POSE__YROTATION, oldYRotation, yRotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.POSE__YROTATION, oldYRotation, yRotation));
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 		double oldZRotation = zRotation;
 		zRotation = newZRotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POSE__ZROTATION, oldZRotation, zRotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.POSE__ZROTATION, oldZRotation, zRotation));
 	}
 
 	/**
@@ -173,11 +173,11 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSE__XROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__XROTATION:
 				return getXRotation();
-			case Symphony__CommonGeometryData3DPackage.POSE__YROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__YROTATION:
 				return getYRotation();
-			case Symphony__CommonGeometryData3DPackage.POSE__ZROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__ZROTATION:
 				return getZRotation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -191,13 +191,13 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSE__XROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__XROTATION:
 				setXRotation((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.POSE__YROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__YROTATION:
 				setYRotation((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.POSE__ZROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__ZROTATION:
 				setZRotation((Double)newValue);
 				return;
 		}
@@ -212,13 +212,13 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSE__XROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__XROTATION:
 				setXRotation(XROTATION_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.POSE__YROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__YROTATION:
 				setYRotation(YROTATION_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.POSE__ZROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__ZROTATION:
 				setZRotation(ZROTATION_EDEFAULT);
 				return;
 		}
@@ -233,11 +233,11 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSE__XROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__XROTATION:
 				return xRotation != XROTATION_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.POSE__YROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__YROTATION:
 				return yRotation != YROTATION_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.POSE__ZROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__ZROTATION:
 				return zRotation != ZROTATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -252,9 +252,9 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == CartesianOrientationCoordinates.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CommonGeometryData3DPackage.POSE__XROTATION: return Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__XROTATION;
-				case Symphony__CommonGeometryData3DPackage.POSE__YROTATION: return Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__YROTATION;
-				case Symphony__CommonGeometryData3DPackage.POSE__ZROTATION: return Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION;
+				case ApogyCommonGeometryData3DPackage.POSE__XROTATION: return ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__XROTATION;
+				case ApogyCommonGeometryData3DPackage.POSE__YROTATION: return ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__YROTATION;
+				case ApogyCommonGeometryData3DPackage.POSE__ZROTATION: return ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION;
 				default: return -1;
 			}
 		}
@@ -270,9 +270,9 @@ public class PoseImpl extends CartesianPositionCoordinatesImpl implements Pose {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == CartesianOrientationCoordinates.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__XROTATION: return Symphony__CommonGeometryData3DPackage.POSE__XROTATION;
-				case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__YROTATION: return Symphony__CommonGeometryData3DPackage.POSE__YROTATION;
-				case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION: return Symphony__CommonGeometryData3DPackage.POSE__ZROTATION;
+				case ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__XROTATION: return ApogyCommonGeometryData3DPackage.POSE__XROTATION;
+				case ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__YROTATION: return ApogyCommonGeometryData3DPackage.POSE__YROTATION;
+				case ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION: return ApogyCommonGeometryData3DPackage.POSE__ZROTATION;
 				default: return -1;
 			}
 		}

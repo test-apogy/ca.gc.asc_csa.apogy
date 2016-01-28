@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EquatorialCoordinates#getRightAscension <em>Right Ascension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EquatorialCoordinates#getDeclination <em>Declination</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EquatorialCoordinates#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getRightAscension <em>Right Ascension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getDeclination <em>Declination</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEquatorialCoordinates()
  * @model
  * @generated
  */
@@ -43,14 +43,14 @@ public interface EquatorialCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Ascension</em>' attribute.
 	 * @see #setRightAscension(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates_RightAscension()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEquatorialCoordinates_RightAscension()
 	 * @model unique="false"
 	 * @generated
 	 */
   double getRightAscension();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EquatorialCoordinates#getRightAscension <em>Right Ascension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getRightAscension <em>Right Ascension</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Ascension</em>' attribute.
@@ -69,14 +69,14 @@ public interface EquatorialCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Declination</em>' attribute.
 	 * @see #setDeclination(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates_Declination()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEquatorialCoordinates_Declination()
 	 * @model unique="false"
 	 * @generated
 	 */
   double getDeclination();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EquatorialCoordinates#getDeclination <em>Declination</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getDeclination <em>Declination</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Declination</em>' attribute.
@@ -95,14 +95,14 @@ public interface EquatorialCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates_Radius()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEquatorialCoordinates_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */
   double getRadius();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EquatorialCoordinates#getRadius <em>Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates#getRadius <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Radius</em>' attribute.

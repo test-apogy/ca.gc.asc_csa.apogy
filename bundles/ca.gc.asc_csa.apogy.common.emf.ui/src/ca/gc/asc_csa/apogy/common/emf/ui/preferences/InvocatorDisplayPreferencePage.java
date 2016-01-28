@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.preferences;
+package ca.gc.asc_csa.apogy.common.emf.ui.preferences;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,8 +14,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.common.emf.Ranges;
-import org.eclipse.symphony.common.emf.ui.Activator;
+import ca.gc.asc_csa.apogy.common.emf.Ranges;
+import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
@@ -57,7 +57,7 @@ public class InvocatorDisplayPreferencePage extends PreferencePage implements IW
 //			instanceTypecombo = new CCombo(filterGroup, SWT.BORDER);
 //			instanceTypecombo.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
 //			
-//			List<EClass> classes = org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade.INSTANCE.getAllAvailableEClasses();
+//			List<EClass> classes = ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade.INSTANCE.getAllAvailableEClasses();
 //						
 //			updateInstanceTypeCombo(classes);		
 //			selectInstanceType(getPreferenceStore().getString(PreferencesConstants.INSTANCE_TYPE_CLASS_FILTER_ID));

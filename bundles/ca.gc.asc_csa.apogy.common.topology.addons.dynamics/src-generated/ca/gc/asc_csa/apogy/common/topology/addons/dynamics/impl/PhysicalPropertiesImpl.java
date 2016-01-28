@@ -4,7 +4,7 @@
  *
  * $Id: PhysicalPropertiesImpl.java,v 1.9.2.2 2015/02/03 20:01:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,9 +25,9 @@ import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getMass <em>Mass</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getInertiaMatrix <em>Inertia Matrix</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getCenterOfMassLocation <em>Center Of Mass Location</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getMass <em>Mass</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getInertiaMatrix <em>Inertia Matrix</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getCenterOfMassLocation <em>Center Of Mass Location</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,7 +89,7 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.PHYSICAL_PROPERTIES;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.PHYSICAL_PROPERTIES;
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 		double oldMass = mass;
 		mass = newMass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS, oldMass, mass));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS, oldMass, mass));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 		Matrix3x3 oldInertiaMatrix = inertiaMatrix;
 		inertiaMatrix = newInertiaMatrix;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, oldInertiaMatrix, newInertiaMatrix);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, oldInertiaMatrix, newInertiaMatrix);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -155,14 +155,14 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 		if (newInertiaMatrix != inertiaMatrix) {
 			NotificationChain msgs = null;
 			if (inertiaMatrix != null)
-				msgs = ((InternalEObject)inertiaMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, null, msgs);
+				msgs = ((InternalEObject)inertiaMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, null, msgs);
 			if (newInertiaMatrix != null)
-				msgs = ((InternalEObject)newInertiaMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, null, msgs);
+				msgs = ((InternalEObject)newInertiaMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, null, msgs);
 			msgs = basicSetInertiaMatrix(newInertiaMatrix, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, newInertiaMatrix, newInertiaMatrix));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX, newInertiaMatrix, newInertiaMatrix));
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 		Tuple3d oldCenterOfMassLocation = centerOfMassLocation;
 		centerOfMassLocation = newCenterOfMassLocation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, oldCenterOfMassLocation, newCenterOfMassLocation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, oldCenterOfMassLocation, newCenterOfMassLocation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -198,14 +198,14 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 		if (newCenterOfMassLocation != centerOfMassLocation) {
 			NotificationChain msgs = null;
 			if (centerOfMassLocation != null)
-				msgs = ((InternalEObject)centerOfMassLocation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, null, msgs);
+				msgs = ((InternalEObject)centerOfMassLocation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, null, msgs);
 			if (newCenterOfMassLocation != null)
-				msgs = ((InternalEObject)newCenterOfMassLocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, null, msgs);
+				msgs = ((InternalEObject)newCenterOfMassLocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, null, msgs);
 			msgs = basicSetCenterOfMassLocation(newCenterOfMassLocation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, newCenterOfMassLocation, newCenterOfMassLocation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION, newCenterOfMassLocation, newCenterOfMassLocation));
 	}
 
 	/**
@@ -216,9 +216,9 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
 				return basicSetInertiaMatrix(null, msgs);
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
 				return basicSetCenterOfMassLocation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -232,11 +232,11 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
 				return getMass();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
 				return getInertiaMatrix();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
 				return getCenterOfMassLocation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -250,13 +250,13 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
 				setMass((Double)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
 				setInertiaMatrix((Matrix3x3)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
 				setCenterOfMassLocation((Tuple3d)newValue);
 				return;
 		}
@@ -271,13 +271,13 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
 				setMass(MASS_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
 				setInertiaMatrix((Matrix3x3)null);
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
 				setCenterOfMassLocation((Tuple3d)null);
 				return;
 		}
@@ -292,11 +292,11 @@ public class PhysicalPropertiesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
 				return mass != MASS_EDEFAULT;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
 				return inertiaMatrix != null;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
 				return centerOfMassLocation != null;
 		}
 		return super.eIsSet(featureID);

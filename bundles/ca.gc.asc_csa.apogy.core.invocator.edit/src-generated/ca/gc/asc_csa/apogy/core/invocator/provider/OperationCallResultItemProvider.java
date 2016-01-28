@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.text.SimpleDateFormat;
@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResult} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class OperationCallResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallResult_exceptionContainer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallResult_exceptionContainer_feature", "_UI_OperationCallResult_type"),
-				 Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER,
+				 ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER,
 				 false,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class OperationCallResultItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
 		}
 		return childrenFeatures;
 	}
@@ -146,13 +146,13 @@ public class OperationCallResultItemProvider
 	  String operation_call_str = "";
 	  if(result.getOperationCall() != null)
 	  {
-		  operation_call_str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(result.getOperationCall());
+		  operation_call_str = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(result.getOperationCall());
 		  label += " : " + operation_call_str;
 	  }
 	  
 	  if(result.getResultValue() != null)
 	  {
-		  label += " -> " + Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(result.getResultValue());		  
+		  label += " -> " + ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(result.getResultValue());		  
 	  }
 	  	  	  
 	  return label;
@@ -171,11 +171,11 @@ public class OperationCallResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallResult.class)) {
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -196,8 +196,8 @@ public class OperationCallResultItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall()));
+				(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall()));
 	}
 
 }

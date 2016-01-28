@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.TopologyTreeMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -60,7 +60,7 @@ public class TopologyTreeMapLayerItemProvider extends AbstractMapLayerItemProvid
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT);
 		}
 		return childrenFeatures;
 	}
@@ -116,7 +116,7 @@ public class TopologyTreeMapLayerItemProvider extends AbstractMapLayerItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyTreeMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -136,8 +136,8 @@ public class TopologyTreeMapLayerItemProvider extends AbstractMapLayerItemProvid
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+				(ApogyCoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 	}
 
 }

@@ -2,34 +2,34 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsMobilityControllersAdapterFactory.java,v 1.5.4.3 2015/09/22 19:39:40 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityControllersAdapterFactory.java,v 1.5.4.3 2015/09/22 19:39:40 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.util;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage
  * @generated
  */
-public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFactoryImpl
+public class ApogyAddonsMobilityControllersAdapterFactory extends AdapterFactoryImpl
 {
 	/**
 	 * The cached model package.
@@ -37,7 +37,7 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityControllersPackage modelPackage;
+	protected static ApogyAddonsMobilityControllersPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -45,10 +45,10 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityControllersAdapterFactory()
+	public ApogyAddonsMobilityControllersAdapterFactory()
 	{
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityControllersPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityControllersPackage.eINSTANCE;
 		}
 	}
 
@@ -78,8 +78,8 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsMobilityControllersSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsMobilityControllersSwitch<Adapter>() {
+	protected ApogyAddonsMobilityControllersSwitch<Adapter> modelSwitch =
+		new ApogyAddonsMobilityControllersSwitch<Adapter>() {
 			@Override
 			public <PlatformType extends MobilePlatform, PathType extends Path> Adapter casePathFollower(PathFollower<PlatformType, PathType> object) {
 				return createPathFollowerAdapter();
@@ -126,13 +126,13 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower <em>Path Follower</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower <em>Path Follower</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollower
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower
 	 * @generated
 	 */
 	public Adapter createPathFollowerAdapter()
@@ -141,13 +141,13 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower <em>Skid Steered Platform Path Follower</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower <em>Skid Steered Platform Path Follower</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower
 	 * @generated
 	 */
 	public Adapter createSkidSteeredPlatformPathFollowerAdapter()
@@ -156,13 +156,13 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder <em>Path Recorder</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder <em>Path Recorder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorder
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder
 	 * @generated
 	 */
 	public Adapter createPathRecorderAdapter()
@@ -171,13 +171,13 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder <em>Waypoint Path Recorder</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder <em>Waypoint Path Recorder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder
 	 * @generated
 	 */
 	public Adapter createWaypointPathRecorderAdapter()
@@ -186,13 +186,13 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower <em>Skid Steered Way Point Path Follower</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower <em>Skid Steered Way Point Path Follower</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower
 	 * @generated
 	 */
 	public Adapter createSkidSteeredWayPointPathFollowerAdapter() {
@@ -200,13 +200,13 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController <em>Astolfi Guidance Controller</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController <em>Astolfi Guidance Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController
 	 * @generated
 	 */
 	public Adapter createAstolfiGuidanceControllerAdapter() {
@@ -226,4 +226,4 @@ public class Symphony__AddonsMobilityControllersAdapterFactory extends AdapterFa
 		return null;
 	}
 
-} //Symphony__AddonsMobilityControllersAdapterFactory
+} //ApogyAddonsMobilityControllersAdapterFactory

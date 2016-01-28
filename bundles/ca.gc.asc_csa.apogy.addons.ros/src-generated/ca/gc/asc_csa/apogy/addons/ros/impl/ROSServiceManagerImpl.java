@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -15,15 +15,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.ros.exception.ServiceNotFoundException;
 import org.ros.internal.message.Message;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFactory;
-import org.eclipse.symphony.addons.ros.Activator;
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.addons.ros.ROSService;
-import org.eclipse.symphony.addons.ros.ROSServiceManager;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ROSService;
+import ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager;
 
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,9 +33,9 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceManagerImpl#getServices <em>Services</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceManagerImpl#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceManagerImpl#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceManagerImpl#getServices <em>Services</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceManagerImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceManagerImpl#isRunning <em>Running</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,7 +100,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsROSPackage.Literals.ROS_SERVICE_MANAGER;
+		return ApogyAddonsROSPackage.Literals.ROS_SERVICE_MANAGER;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 		HashMap<String, ROSService<?, ?>> oldServices = services;
 		services = newServices;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES, oldServices, services));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES, oldServices, services));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 			node = (ROSNode)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -166,7 +166,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 		ROSNode oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__NODE, oldNode, node));
 	}
 
 	/**
@@ -189,7 +189,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldRunning = running;
 		running = newRunning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING, oldRunning, running));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING, oldRunning, running));
 	}
 
 	/**
@@ -209,7 +209,7 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public void createService(String serviceName, String serviceType, boolean disconnectOnTimeout)
 	{
-		ROSService<Message, Message> service = Symphony__AddonsROSFactory.eINSTANCE.createROSService();
+		ROSService<Message, Message> service = ApogyAddonsROSFactory.eINSTANCE.createROSService();
 		service.setServiceName(serviceName);
 		service.setServiceType(serviceType);
 		service.setDisconnectOnTimeout(disconnectOnTimeout);
@@ -368,12 +368,12 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
 				return getServices();
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
 				return isRunning();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -389,13 +389,13 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
 				setServices((HashMap<String, ROSService<?, ?>>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
 				setNode((ROSNode)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
 				setRunning((Boolean)newValue);
 				return;
 		}
@@ -411,13 +411,13 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
 				setServices((HashMap<String, ROSService<?, ?>>)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
 				setNode((ROSNode)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
 				setRunning(RUNNING_EDEFAULT);
 				return;
 		}
@@ -433,11 +433,11 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
 				return services != null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
 				return node != null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
 				return running != RUNNING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -453,28 +453,28 @@ public class ROSServiceManagerImpl extends MinimalEObjectImpl.Container implemen
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___CREATE_SERVICE__STRING_STRING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CREATE_SERVICE__STRING_STRING:
 				createService((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___CREATE_SERVICE__STRING_STRING_BOOLEAN:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CREATE_SERVICE__STRING_STRING_BOOLEAN:
 				createService((String)arguments.get(0), (String)arguments.get(1), (Boolean)arguments.get(2));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___GET_SERVICE__STRING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___GET_SERVICE__STRING:
 				return getService((String)arguments.get(0));
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___CREATE_REQUEST_MESSAGE__STRING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CREATE_REQUEST_MESSAGE__STRING:
 				return createRequestMessage((String)arguments.get(0));
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE:
 				return callService((String)arguments.get(0), (Message)arguments.get(1));
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING:
 				return callService((String)arguments.get(0));
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_MESSAGE_BOOLEAN:
 				return callService((String)arguments.get(0), (Message)arguments.get(1), (Boolean)arguments.get(2));
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_BOOLEAN:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___CALL_SERVICE__STRING_BOOLEAN:
 				return callService((String)arguments.get(0), (Boolean)arguments.get(1));
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___LAUNCH:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___LAUNCH:
 				launch();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER___STOP:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER___STOP:
 				stop();
 				return null;
 		}

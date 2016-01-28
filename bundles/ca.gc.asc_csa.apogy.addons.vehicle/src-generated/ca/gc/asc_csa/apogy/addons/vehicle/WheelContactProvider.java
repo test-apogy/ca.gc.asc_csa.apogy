@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.addons.vehicle;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.WheelContactProvider#getContactMode <em>Contact Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider#getContactMode <em>Contact Mode</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheelContactProvider()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getWheelContactProvider()
  * @model
  * @generated
  */
@@ -24,16 +24,16 @@ public interface WheelContactProvider extends ContactProvider
 {
   /**
 	 * Returns the value of the '<em><b>Contact Mode</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.vehicle.WheelContactMode}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.vehicle.WheelContactMode}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The type of wheel to Mesh contact to use.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.vehicle.WheelContactMode
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.WheelContactMode
 	 * @see #setContactMode(WheelContactMode)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheelContactProvider_ContactMode()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getWheelContactProvider_ContactMode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='SETTINGS_INFO'"
 	 * @generated
@@ -41,11 +41,11 @@ public interface WheelContactProvider extends ContactProvider
   WheelContactMode getContactMode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.WheelContactProvider#getContactMode <em>Contact Mode</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider#getContactMode <em>Contact Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Contact Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.vehicle.WheelContactMode
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.WheelContactMode
 	 * @see #getContactMode()
 	 * @generated
 	 */

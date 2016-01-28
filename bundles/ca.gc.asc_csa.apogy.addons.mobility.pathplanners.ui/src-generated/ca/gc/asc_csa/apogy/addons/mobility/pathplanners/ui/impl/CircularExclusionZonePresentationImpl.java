@@ -3,20 +3,20 @@
  *
  * $Id: CircularExclusionZonePresentationImpl.java,v 1.1.4.2 2015/05/21 15:50:33 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl;
 
 import javax.vecmath.Point3d;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,9 +26,9 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getTransparency <em>Transparency</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getHeight <em>Height</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,7 +108,7 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION;
+		return ApogyAddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION;
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 		float oldTransparency = transparency;
 		transparency = newTransparency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 		MeshPresentationMode oldPresentationMode = presentationMode;
 		presentationMode = newPresentationMode == null ? PRESENTATION_MODE_EDEFAULT : newPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
 	}
 
 	/**
@@ -177,7 +177,7 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 		double oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT, oldHeight, height));
 	}
 
 	/**
@@ -189,11 +189,11 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
 				return getTransparency();
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
 				return getHeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -208,13 +208,13 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
 				setTransparency((Float)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((MeshPresentationMode)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
 				setHeight((Double)newValue);
 				return;
 		}
@@ -230,13 +230,13 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
 				setTransparency(TRANSPARENCY_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
 		}
@@ -252,11 +252,11 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
 				return transparency != TRANSPARENCY_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -290,15 +290,15 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 		{			
 			CircularExclusionZoneSceneObject j3dObject = (CircularExclusionZoneSceneObject) sceneObject;				
 			
-			if (notification.getFeatureID(CircularExclusionZonePresentation.class) == Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY) 
+			if (notification.getFeatureID(CircularExclusionZonePresentation.class) == ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY) 
 			{
 				j3dObject.setTransparency(getTransparency());				
 			}
-			else if(notification.getFeatureID(CircularExclusionZonePresentation.class) == Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE)
+			else if(notification.getFeatureID(CircularExclusionZonePresentation.class) == ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE)
 			{			
 				j3dObject.setPresentationMode(this.getPresentationMode());
 			}
-			else if(notification.getFeatureID(CircularExclusionZonePresentation.class) == Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT)
+			else if(notification.getFeatureID(CircularExclusionZonePresentation.class) == ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT)
 			{			
 				j3dObject.setHeight(this.getHeight());
 			}
@@ -326,6 +326,6 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 			point3d = sceneObject.getCentroid();
 		}
 		
-		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
+		return ApogyCommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}	
 } //CircularExclusionZonePresentationImpl

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSFactory
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsROS' modelName='Symphony__AddonsROS' operationReflection='true' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.ros/src-generated' editDirectory='/org.eclipse.symphony.addons.ros.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsROS' modelName='ApogyAddonsROS' operationReflection='true' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.ros/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.ros.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
  * @generated
  */
-public interface Symphony__AddonsROSPackage extends EPackage {
+public interface ApogyAddonsROSPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.ros";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.ros";
 
 	/**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsROSPackage eINSTANCE = org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl.init();
+	ApogyAddonsROSPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl <em>ROS Node</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl <em>ROS Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.ROSNodeImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSNode()
 	 * @generated
 	 */
 	int ROS_NODE = 0;
@@ -314,11 +314,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_NODE_OPERATION_COUNT = 12;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.ROSInterface <em>ROS Interface</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface <em>ROS Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSInterface()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSInterface()
 	 * @generated
 	 */
 	int ROS_INTERFACE = 1;
@@ -387,11 +387,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_INTERFACE_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.ROSPublisherManagerImpl <em>ROS Publisher Manager</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherManagerImpl <em>ROS Publisher Manager</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.ROSPublisherManagerImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSPublisherManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherManagerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSPublisherManager()
 	 * @generated
 	 */
 	int ROS_PUBLISHER_MANAGER = 2;
@@ -496,11 +496,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_PUBLISHER_MANAGER_OPERATION_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.ROSPublisherImpl <em>ROS Publisher</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherImpl <em>ROS Publisher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.ROSPublisherImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSPublisher()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSPublisher()
 	 * @generated
 	 */
 	int ROS_PUBLISHER = 3;
@@ -605,11 +605,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_PUBLISHER_OPERATION_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.ROSServiceManagerImpl <em>ROS Service Manager</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceManagerImpl <em>ROS Service Manager</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.ROSServiceManagerImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSServiceManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceManagerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSServiceManager()
 	 * @generated
 	 */
 	int ROS_SERVICE_MANAGER = 4;
@@ -750,11 +750,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_SERVICE_MANAGER_OPERATION_COUNT = 10;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl <em>ROS Service</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl <em>ROS Service</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.ROSServiceImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSService()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSService()
 	 * @generated
 	 */
 	int ROS_SERVICE = 5;
@@ -877,11 +877,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_SERVICE_OPERATION_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.ROSTopicLauncherImpl <em>ROS Topic Launcher</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl <em>ROS Topic Launcher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.ROSTopicLauncherImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSTopicLauncher()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSTopicLauncher()
 	 * @generated
 	 */
 	int ROS_TOPIC_LAUNCHER = 6;
@@ -968,11 +968,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_TOPIC_LAUNCHER_OPERATION_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl <em>ROS Listener</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl <em>ROS Listener</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.ROSListenerImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSListener()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSListener()
 	 * @generated
 	 */
 	int ROS_LISTENER = 7;
@@ -1086,14 +1086,14 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	int ROS_LISTENER_OPERATION_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSFacadeImpl
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getSymphony__AddonsROSFacade()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getApogyAddonsROSFacade()
 	 * @generated
 	 */
-	int SYMPHONY_ADDONS_ROS_FACADE = 8;
+	int APOGY_ADDONS_ROS_FACADE = 8;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -1102,7 +1102,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_FACADE_FEATURE_COUNT = 0;
+	int APOGY_ADDONS_ROS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Get Node Name Prefix</em>' operation.
@@ -1111,7 +1111,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX = 0;
+	int APOGY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX = 0;
 
 	/**
 	 * The operation id for the '<em>Get ROS Master URI</em>' operation.
@@ -1120,7 +1120,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI = 1;
+	int APOGY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI = 1;
 
 	/**
 	 * The operation id for the '<em>Get ROS Hostname</em>' operation.
@@ -1129,7 +1129,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME = 2;
+	int APOGY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME = 2;
 
 	/**
 	 * The operation id for the '<em>Get ROS Ip</em>' operation.
@@ -1138,7 +1138,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_IP = 3;
+	int APOGY_ADDONS_ROS_FACADE___GET_ROS_IP = 3;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1147,14 +1147,14 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_FACADE_OPERATION_COUNT = 4;
+	int APOGY_ADDONS_ROS_FACADE_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '<em>Response Logger</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.utilities.ResponseLogger
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getResponseLogger()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getResponseLogger()
 	 * @generated
 	 */
 	int RESPONSE_LOGGER = 9;
@@ -1163,8 +1163,8 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * The meta object id for the '<em>Null Response Handler</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.utilities.NullResponseHandler
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getNullResponseHandler()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getNullResponseHandler()
 	 * @generated
 	 */
 	int NULL_RESPONSE_HANDLER = 10;
@@ -1173,8 +1173,8 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * The meta object id for the '<em>Null Request Handler</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.utilities.NullRequestHandler
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getNullRequestHandler()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getNullRequestHandler()
 	 * @generated
 	 */
 	int NULL_REQUEST_HANDLER = 11;
@@ -1184,7 +1184,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.node.ConnectedNode
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getConnectedNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getConnectedNode()
 	 * @generated
 	 */
 	int CONNECTED_NODE = 12;
@@ -1194,7 +1194,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.exception.ServiceNotFoundException
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getServiceNotFoundException()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getServiceNotFoundException()
 	 * @generated
 	 */
 	int SERVICE_NOT_FOUND_EXCEPTION = 13;
@@ -1204,7 +1204,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.internal.message.Message
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getMessage()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getMessage()
 	 * @generated
 	 */
 	int MESSAGE = 14;
@@ -1214,7 +1214,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.message.MessageListener
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getMessageListener()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getMessageListener()
 	 * @generated
 	 */
 	int MESSAGE_LISTENER = 15;
@@ -1224,7 +1224,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.node.AbstractNodeMain
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getAbstractNodeMain()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getAbstractNodeMain()
 	 * @generated
 	 */
 	int ABSTRACT_NODE_MAIN = 16;
@@ -1234,7 +1234,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.node.service.ServiceClient
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getServiceClient()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getServiceClient()
 	 * @generated
 	 */
 	int SERVICE_CLIENT = 17;
@@ -1244,7 +1244,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.node.topic.Publisher
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getPublisher()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getPublisher()
 	 * @generated
 	 */
 	int PUBLISHER = 18;
@@ -1254,7 +1254,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.node.topic.Subscriber
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getSubscriber()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getSubscriber()
 	 * @generated
 	 */
 	int SUBSCRIBER = 19;
@@ -1264,7 +1264,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 20;
@@ -1274,1104 +1274,1104 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.HashMap
-	 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getHashMap()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getHashMap()
 	 * @generated
 	 */
 	int HASH_MAP = 21;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSNode <em>ROS Node</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode <em>ROS Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode
 	 * @generated
 	 */
 	EClass getROSNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#getConnectedNode <em>Connected Node</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getConnectedNode <em>Connected Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Connected Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getConnectedNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getConnectedNode()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_ConnectedNode();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.addons.ros.ROSNode#getModules <em>Modules</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getModules <em>Modules</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Modules</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getModules()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getModules()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EReference getROSNode_Modules();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.addons.ros.ROSNode#getServiceManagers <em>Service Managers</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getServiceManagers <em>Service Managers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Service Managers</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getServiceManagers()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getServiceManagers()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EReference getROSNode_ServiceManagers();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.addons.ros.ROSNode#getTopicLaunchers <em>Topic Launchers</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getTopicLaunchers <em>Topic Launchers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Topic Launchers</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getTopicLaunchers()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getTopicLaunchers()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EReference getROSNode_TopicLaunchers();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.addons.ros.ROSNode#getPublisherManagers <em>Publisher Managers</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getPublisherManagers <em>Publisher Managers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Publisher Managers</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getPublisherManagers()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getPublisherManagers()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EReference getROSNode_PublisherManagers();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#isInitialized()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_Initialized();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#isConnected <em>Connected</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isConnected <em>Connected</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Connected</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#isConnected()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#isConnected()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_Connected();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#isRestarting <em>Restarting</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isRestarting <em>Restarting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Restarting</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#isRestarting()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#isRestarting()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_Restarting();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Enable Auto Restart On Connection Lost</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_EnableAutoRestartOnConnectionLost();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#getNodeName <em>Node Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNodeName <em>Node Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Node Name</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getNodeName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNodeName()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_NodeName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#getResponseLogger <em>Response Logger</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getResponseLogger <em>Response Logger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Response Logger</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getResponseLogger()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getResponseLogger()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_ResponseLogger();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#getNullResponseHandler <em>Null Response Handler</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullResponseHandler <em>Null Response Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Null Response Handler</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getNullResponseHandler()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullResponseHandler()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_NullResponseHandler();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSNode#getNullRequestHandler <em>Null Request Handler</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullRequestHandler <em>Null Request Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Null Request Handler</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#getNullRequestHandler()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullRequestHandler()
 	 * @see #getROSNode()
 	 * @generated
 	 */
 	EAttribute getROSNode_NullRequestHandler();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#start() <em>Start</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#start() <em>Start</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#start()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#start()
 	 * @generated
 	 */
 	EOperation getROSNode__Start();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#initialize() <em>Initialize</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#initialize() <em>Initialize</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#initialize()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#initialize()
 	 * @generated
 	 */
 	EOperation getROSNode__Initialize();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#onStart(org.ros.node.ConnectedNode) <em>On Start</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#onStart(org.ros.node.ConnectedNode) <em>On Start</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>On Start</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#onStart(org.ros.node.ConnectedNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#onStart(org.ros.node.ConnectedNode)
 	 * @generated
 	 */
 	EOperation getROSNode__OnStart__ConnectedNode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#restart() <em>Restart</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#restart() <em>Restart</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Restart</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#restart()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#restart()
 	 * @generated
 	 */
 	EOperation getROSNode__Restart();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#register(org.eclipse.symphony.addons.ros.ROSInterface, boolean) <em>Register</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#register(ca.gc.asc_csa.apogy.addons.ros.ROSInterface, boolean) <em>Register</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#register(org.eclipse.symphony.addons.ros.ROSInterface, boolean)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#register(ca.gc.asc_csa.apogy.addons.ros.ROSInterface, boolean)
 	 * @generated
 	 */
 	EOperation getROSNode__Register__ROSInterface_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#register(org.eclipse.symphony.addons.ros.ROSInterface) <em>Register</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#register(ca.gc.asc_csa.apogy.addons.ros.ROSInterface) <em>Register</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#register(org.eclipse.symphony.addons.ros.ROSInterface)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#register(ca.gc.asc_csa.apogy.addons.ros.ROSInterface)
 	 * @generated
 	 */
 	EOperation getROSNode__Register__ROSInterface();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#newFromType(java.lang.String) <em>New From Type</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#newFromType(java.lang.String) <em>New From Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>New From Type</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#newFromType(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#newFromType(java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSNode__NewFromType__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#shutdown() <em>Shutdown</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#shutdown() <em>Shutdown</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Shutdown</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#shutdown()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#shutdown()
 	 * @generated
 	 */
 	EOperation getROSNode__Shutdown();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#createPublisher(java.lang.String, java.lang.String) <em>Create Publisher</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#createPublisher(java.lang.String, java.lang.String) <em>Create Publisher</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Publisher</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#createPublisher(java.lang.String, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#createPublisher(java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSNode__CreatePublisher__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#createServiceManager() <em>Create Service Manager</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#createServiceManager() <em>Create Service Manager</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Service Manager</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#createServiceManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#createServiceManager()
 	 * @generated
 	 */
 	EOperation getROSNode__CreateServiceManager();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#createTopicLauncher() <em>Create Topic Launcher</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#createTopicLauncher() <em>Create Topic Launcher</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Topic Launcher</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#createTopicLauncher()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#createTopicLauncher()
 	 * @generated
 	 */
 	EOperation getROSNode__CreateTopicLauncher();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSNode#createPublisherManager() <em>Create Publisher Manager</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#createPublisherManager() <em>Create Publisher Manager</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Publisher Manager</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSNode#createPublisherManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSNode#createPublisherManager()
 	 * @generated
 	 */
 	EOperation getROSNode__CreatePublisherManager();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSInterface <em>ROS Interface</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface <em>ROS Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Interface</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface
 	 * @generated
 	 */
 	EClass getROSInterface();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSInterface#getServiceManager <em>Service Manager</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getServiceManager <em>Service Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Service Manager</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface#getServiceManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getServiceManager()
 	 * @see #getROSInterface()
 	 * @generated
 	 */
 	EReference getROSInterface_ServiceManager();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSInterface#getTopicLauncher <em>Topic Launcher</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getTopicLauncher <em>Topic Launcher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Topic Launcher</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface#getTopicLauncher()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getTopicLauncher()
 	 * @see #getROSInterface()
 	 * @generated
 	 */
 	EReference getROSInterface_TopicLauncher();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSInterface#getPublisherManager <em>Publisher Manager</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getPublisherManager <em>Publisher Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Publisher Manager</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface#getPublisherManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getPublisherManager()
 	 * @see #getROSInterface()
 	 * @generated
 	 */
 	EReference getROSInterface_PublisherManager();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSInterface#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface#getNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getNode()
 	 * @see #getROSInterface()
 	 * @generated
 	 */
 	EReference getROSInterface_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSInterface#rosInit() <em>Ros Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#rosInit() <em>Ros Init</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Ros Init</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSInterface#rosInit()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface#rosInit()
 	 * @generated
 	 */
 	EOperation getROSInterface__RosInit();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager <em>ROS Publisher Manager</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager <em>ROS Publisher Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Publisher Manager</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager
 	 * @generated
 	 */
 	EClass getROSPublisherManager();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#getPublishers <em>Publishers</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getPublishers <em>Publishers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Publishers</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#getPublishers()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getPublishers()
 	 * @see #getROSPublisherManager()
 	 * @generated
 	 */
 	EAttribute getROSPublisherManager_Publishers();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#getNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getNode()
 	 * @see #getROSPublisherManager()
 	 * @generated
 	 */
 	EReference getROSPublisherManager_Node();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#isRunning <em>Running</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#isRunning <em>Running</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Running</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#isRunning()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#isRunning()
 	 * @see #getROSPublisherManager()
 	 * @generated
 	 */
 	EAttribute getROSPublisherManager_Running();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#createPublisher(java.lang.String, java.lang.String) <em>Create Publisher</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#createPublisher(java.lang.String, java.lang.String) <em>Create Publisher</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Publisher</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#createPublisher(java.lang.String, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#createPublisher(java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSPublisherManager__CreatePublisher__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#launch() <em>Launch</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#launch() <em>Launch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Launch</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#launch()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#launch()
 	 * @generated
 	 */
 	EOperation getROSPublisherManager__Launch();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#stop()
 	 * @generated
 	 */
 	EOperation getROSPublisherManager__Stop();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#createMessage(java.lang.String) <em>Create Message</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#createMessage(java.lang.String) <em>Create Message</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Message</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#createMessage(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#createMessage(java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSPublisherManager__CreateMessage__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#publish(java.lang.String, org.ros.internal.message.Message) <em>Publish</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#publish(java.lang.String, org.ros.internal.message.Message) <em>Publish</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Publish</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#publish(java.lang.String, org.ros.internal.message.Message)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#publish(java.lang.String, org.ros.internal.message.Message)
 	 * @generated
 	 */
 	EOperation getROSPublisherManager__Publish__String_Message();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#getPublisher(java.lang.String) <em>Get Publisher</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getPublisher(java.lang.String) <em>Get Publisher</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Publisher</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisherManager#getPublisher(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getPublisher(java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSPublisherManager__GetPublisher__String();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSPublisher <em>ROS Publisher</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher <em>ROS Publisher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Publisher</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher
 	 * @generated
 	 */
 	EClass getROSPublisher();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSPublisher#isLaunched <em>Launched</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#isLaunched <em>Launched</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Launched</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#isLaunched()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#isLaunched()
 	 * @see #getROSPublisher()
 	 * @generated
 	 */
 	EAttribute getROSPublisher_Launched();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getTopicName <em>Topic Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getTopicName <em>Topic Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Topic Name</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#getTopicName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getTopicName()
 	 * @see #getROSPublisher()
 	 * @generated
 	 */
 	EAttribute getROSPublisher_TopicName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getMessageType <em>Message Type</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getMessageType <em>Message Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Message Type</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#getMessageType()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getMessageType()
 	 * @see #getROSPublisher()
 	 * @generated
 	 */
 	EAttribute getROSPublisher_MessageType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getPublisher <em>Publisher</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getPublisher <em>Publisher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Publisher</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#getPublisher()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getPublisher()
 	 * @see #getROSPublisher()
 	 * @generated
 	 */
 	EAttribute getROSPublisher_Publisher();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#getNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getNode()
 	 * @see #getROSPublisher()
 	 * @generated
 	 */
 	EReference getROSPublisher_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#launch(org.eclipse.symphony.addons.ros.ROSNode) <em>Launch</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#launch(ca.gc.asc_csa.apogy.addons.ros.ROSNode) <em>Launch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Launch</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#launch(org.eclipse.symphony.addons.ros.ROSNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#launch(ca.gc.asc_csa.apogy.addons.ros.ROSNode)
 	 * @generated
 	 */
 	EOperation getROSPublisher__Launch__ROSNode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#publish(org.ros.internal.message.Message) <em>Publish</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#publish(org.ros.internal.message.Message) <em>Publish</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Publish</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#publish(org.ros.internal.message.Message)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#publish(org.ros.internal.message.Message)
 	 * @generated
 	 */
 	EOperation getROSPublisher__Publish__Message();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#newMessage() <em>New Message</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#newMessage() <em>New Message</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>New Message</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#newMessage()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#newMessage()
 	 * @generated
 	 */
 	EOperation getROSPublisher__NewMessage();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSPublisher#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#stop()
 	 * @generated
 	 */
 	EOperation getROSPublisher__Stop();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSServiceManager <em>ROS Service Manager</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager <em>ROS Service Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Service Manager</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager
 	 * @generated
 	 */
 	EClass getROSServiceManager();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#getServices <em>Services</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getServices <em>Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Services</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#getServices()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getServices()
 	 * @see #getROSServiceManager()
 	 * @generated
 	 */
 	EAttribute getROSServiceManager_Services();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#getNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getNode()
 	 * @see #getROSServiceManager()
 	 * @generated
 	 */
 	EReference getROSServiceManager_Node();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#isRunning <em>Running</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#isRunning <em>Running</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Running</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#isRunning()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#isRunning()
 	 * @see #getROSServiceManager()
 	 * @generated
 	 */
 	EAttribute getROSServiceManager_Running();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String) <em>Create Service</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String) <em>Create Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Service</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CreateService__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String, boolean) <em>Create Service</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String, boolean) <em>Create Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Service</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String, boolean)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#createService(java.lang.String, java.lang.String, boolean)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CreateService__String_String_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#getService(java.lang.String) <em>Get Service</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getService(java.lang.String) <em>Get Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Service</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#getService(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getService(java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__GetService__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#createRequestMessage(java.lang.String) <em>Create Request Message</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#createRequestMessage(java.lang.String) <em>Create Request Message</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Request Message</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#createRequestMessage(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#createRequestMessage(java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CreateRequestMessage__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message) <em>Call Service</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message) <em>Call Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Call Service</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CallService__String_Message();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String) <em>Call Service</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String) <em>Call Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Call Service</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CallService__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, boolean) <em>Call Service</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, boolean) <em>Call Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Call Service</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, boolean)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, org.ros.internal.message.Message, boolean)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CallService__String_Message_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String, boolean) <em>Call Service</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, boolean) <em>Call Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Call Service</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#callService(java.lang.String, boolean)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#callService(java.lang.String, boolean)
 	 * @generated
 	 */
 	EOperation getROSServiceManager__CallService__String_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#launch() <em>Launch</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#launch() <em>Launch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Launch</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#launch()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#launch()
 	 * @generated
 	 */
 	EOperation getROSServiceManager__Launch();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSServiceManager#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#stop()
 	 * @generated
 	 */
 	EOperation getROSServiceManager__Stop();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSService <em>ROS Service</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService <em>ROS Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Service</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSService
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService
 	 * @generated
 	 */
 	EClass getROSService();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSService#getServiceName <em>Service Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceName <em>Service Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Service Name</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#getServiceName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceName()
 	 * @see #getROSService()
 	 * @generated
 	 */
 	EAttribute getROSService_ServiceName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSService#getServiceType <em>Service Type</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceType <em>Service Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Service Type</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#getServiceType()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceType()
 	 * @see #getROSService()
 	 * @generated
 	 */
 	EAttribute getROSService_ServiceType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSService#isLaunched <em>Launched</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#isLaunched <em>Launched</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Launched</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#isLaunched()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#isLaunched()
 	 * @see #getROSService()
 	 * @generated
 	 */
 	EAttribute getROSService_Launched();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSService#getServiceClient <em>Service Client</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceClient <em>Service Client</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Service Client</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#getServiceClient()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceClient()
 	 * @see #getROSService()
 	 * @generated
 	 */
 	EAttribute getROSService_ServiceClient();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSService#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#getNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#getNode()
 	 * @see #getROSService()
 	 * @generated
 	 */
 	EReference getROSService_Node();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSService#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Disconnect On Timeout</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#isDisconnectOnTimeout()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#isDisconnectOnTimeout()
 	 * @see #getROSService()
 	 * @generated
 	 */
 	EAttribute getROSService_DisconnectOnTimeout();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSService#launch(org.eclipse.symphony.addons.ros.ROSNode) <em>Launch</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#launch(ca.gc.asc_csa.apogy.addons.ros.ROSNode) <em>Launch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Launch</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#launch(org.eclipse.symphony.addons.ros.ROSNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#launch(ca.gc.asc_csa.apogy.addons.ros.ROSNode)
 	 * @generated
 	 */
 	EOperation getROSService__Launch__ROSNode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSService#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#stop()
 	 * @generated
 	 */
 	EOperation getROSService__Stop();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSService#newRequestMessage() <em>New Request Message</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#newRequestMessage() <em>New Request Message</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>New Request Message</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#newRequestMessage()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#newRequestMessage()
 	 * @generated
 	 */
 	EOperation getROSService__NewRequestMessage();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSService#call(org.ros.internal.message.Message) <em>Call</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#call(org.ros.internal.message.Message) <em>Call</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Call</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#call(org.ros.internal.message.Message)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#call(org.ros.internal.message.Message)
 	 * @generated
 	 */
 	EOperation getROSService__Call__Message();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSService#call(org.ros.internal.message.Message, boolean) <em>Call</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#call(org.ros.internal.message.Message, boolean) <em>Call</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Call</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSService#call(org.ros.internal.message.Message, boolean)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSService#call(org.ros.internal.message.Message, boolean)
 	 * @generated
 	 */
 	EOperation getROSService__Call__Message_boolean();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher <em>ROS Topic Launcher</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher <em>ROS Topic Launcher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Topic Launcher</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher
 	 * @generated
 	 */
 	EClass getROSTopicLauncher();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#getListenerList <em>Listener List</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#getListenerList <em>Listener List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Listener List</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher#getListenerList()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#getListenerList()
 	 * @see #getROSTopicLauncher()
 	 * @generated
 	 */
 	EReference getROSTopicLauncher_ListenerList();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher#getNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#getNode()
 	 * @see #getROSTopicLauncher()
 	 * @generated
 	 */
 	EReference getROSTopicLauncher_Node();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#isRunning <em>Running</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#isRunning <em>Running</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Running</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher#isRunning()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#isRunning()
 	 * @see #getROSTopicLauncher()
 	 * @generated
 	 */
 	EAttribute getROSTopicLauncher_Running();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#createListener(java.lang.String, java.lang.String, org.ros.message.MessageListener) <em>Create Listener</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#createListener(java.lang.String, java.lang.String, org.ros.message.MessageListener) <em>Create Listener</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Listener</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher#createListener(java.lang.String, java.lang.String, org.ros.message.MessageListener)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#createListener(java.lang.String, java.lang.String, org.ros.message.MessageListener)
 	 * @generated
 	 */
 	EOperation getROSTopicLauncher__CreateListener__String_String_MessageListener();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#launch() <em>Launch</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#launch() <em>Launch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Launch</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher#launch()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#launch()
 	 * @generated
 	 */
 	EOperation getROSTopicLauncher__Launch();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#stop()
 	 * @generated
 	 */
 	EOperation getROSTopicLauncher__Stop();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSTopicLauncher#reset() <em>Reset</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#reset() <em>Reset</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSTopicLauncher#reset()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher#reset()
 	 * @generated
 	 */
 	EOperation getROSTopicLauncher__Reset();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.ROSListener <em>ROS Listener</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener <em>ROS Listener</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Listener</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener
 	 * @generated
 	 */
 	EClass getROSListener();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSListener#isRunning <em>Running</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#isRunning <em>Running</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Running</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#isRunning()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#isRunning()
 	 * @see #getROSListener()
 	 * @generated
 	 */
 	EAttribute getROSListener_Running();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.ros.ROSListener#getNode <em>Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Node</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#getNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#getNode()
 	 * @see #getROSListener()
 	 * @generated
 	 */
 	EReference getROSListener_Node();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSListener#getRosSubscriber <em>Ros Subscriber</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getRosSubscriber <em>Ros Subscriber</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ros Subscriber</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#getRosSubscriber()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#getRosSubscriber()
 	 * @see #getROSListener()
 	 * @generated
 	 */
 	EAttribute getROSListener_RosSubscriber();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSListener#getTopicName <em>Topic Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getTopicName <em>Topic Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Topic Name</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#getTopicName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#getTopicName()
 	 * @see #getROSListener()
 	 * @generated
 	 */
 	EAttribute getROSListener_TopicName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSListener#getMessageType <em>Message Type</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageType <em>Message Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Message Type</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#getMessageType()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageType()
 	 * @see #getROSListener()
 	 * @generated
 	 */
 	EAttribute getROSListener_MessageType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.ros.ROSListener#getMessageListener <em>Message Listener</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageListener <em>Message Listener</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Message Listener</em>'.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#getMessageListener()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageListener()
 	 * @see #getROSListener()
 	 * @generated
 	 */
 	EAttribute getROSListener_MessageListener();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSListener#startWithLocks(org.eclipse.symphony.addons.ros.ROSNode) <em>Start With Locks</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#startWithLocks(ca.gc.asc_csa.apogy.addons.ros.ROSNode) <em>Start With Locks</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start With Locks</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#startWithLocks(org.eclipse.symphony.addons.ros.ROSNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#startWithLocks(ca.gc.asc_csa.apogy.addons.ros.ROSNode)
 	 * @generated
 	 */
 	EOperation getROSListener__StartWithLocks__ROSNode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSListener#start(org.eclipse.symphony.addons.ros.ROSNode) <em>Start</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#start(ca.gc.asc_csa.apogy.addons.ros.ROSNode) <em>Start</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#start(org.eclipse.symphony.addons.ros.ROSNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#start(ca.gc.asc_csa.apogy.addons.ros.ROSNode)
 	 * @generated
 	 */
 	EOperation getROSListener__Start__ROSNode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSListener#connectSubscriber(org.ros.node.ConnectedNode) <em>Connect Subscriber</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#connectSubscriber(org.ros.node.ConnectedNode) <em>Connect Subscriber</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Connect Subscriber</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#connectSubscriber(org.ros.node.ConnectedNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#connectSubscriber(org.ros.node.ConnectedNode)
 	 * @generated
 	 */
 	EOperation getROSListener__ConnectSubscriber__ConnectedNode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.ROSListener#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.ROSListener#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ROSListener#stop()
 	 * @generated
 	 */
 	EOperation getROSListener__Stop();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade
 	 * @generated
 	 */
-	EClass getSymphony__AddonsROSFacade();
+	EClass getApogyAddonsROSFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getNodeNamePrefix() <em>Get Node Name Prefix</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getNodeNamePrefix() <em>Get Node Name Prefix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Node Name Prefix</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getNodeNamePrefix()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getNodeNamePrefix()
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSFacade__GetNodeNamePrefix();
+	EOperation getApogyAddonsROSFacade__GetNodeNamePrefix();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getROSMasterURI() <em>Get ROS Master URI</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getROSMasterURI() <em>Get ROS Master URI</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get ROS Master URI</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getROSMasterURI()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getROSMasterURI()
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSFacade__GetROSMasterURI();
+	EOperation getApogyAddonsROSFacade__GetROSMasterURI();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getROSHostname() <em>Get ROS Hostname</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getROSHostname() <em>Get ROS Hostname</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get ROS Hostname</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getROSHostname()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getROSHostname()
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSFacade__GetROSHostname();
+	EOperation getApogyAddonsROSFacade__GetROSHostname();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getROSIp() <em>Get ROS Ip</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getROSIp() <em>Get ROS Ip</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get ROS Ip</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade#getROSIp()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade#getROSIp()
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSFacade__GetROSIp();
+	EOperation getApogyAddonsROSFacade__GetROSIp();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.addons.ros.utilities.ResponseLogger <em>Response Logger</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger <em>Response Logger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Response Logger</em>'.
-	 * @see org.eclipse.symphony.addons.ros.utilities.ResponseLogger
-	 * @model instanceClass="org.eclipse.symphony.addons.ros.utilities.ResponseLogger"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger
+	 * @model instanceClass="ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger"
 	 * @generated
 	 */
 	EDataType getResponseLogger();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.addons.ros.utilities.NullResponseHandler <em>Null Response Handler</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler <em>Null Response Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Null Response Handler</em>'.
-	 * @see org.eclipse.symphony.addons.ros.utilities.NullResponseHandler
-	 * @model instanceClass="org.eclipse.symphony.addons.ros.utilities.NullResponseHandler"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler
+	 * @model instanceClass="ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler"
 	 * @generated
 	 */
 	EDataType getNullResponseHandler();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.addons.ros.utilities.NullRequestHandler <em>Null Request Handler</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler <em>Null Request Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Null Request Handler</em>'.
-	 * @see org.eclipse.symphony.addons.ros.utilities.NullRequestHandler
-	 * @model instanceClass="org.eclipse.symphony.addons.ros.utilities.NullRequestHandler"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler
+	 * @model instanceClass="ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler"
 	 * @generated
 	 */
 	EDataType getNullRequestHandler();
@@ -2493,7 +2493,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsROSFactory getSymphony__AddonsROSFactory();
+	ApogyAddonsROSFactory getApogyAddonsROSFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2510,11 +2510,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.ROSNodeImpl <em>ROS Node</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl <em>ROS Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.ROSNodeImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSNode()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSNodeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSNode()
 		 * @generated
 		 */
 		EClass ROS_NODE = eINSTANCE.getROSNode();
@@ -2720,11 +2720,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_NODE___CREATE_PUBLISHER_MANAGER = eINSTANCE.getROSNode__CreatePublisherManager();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.ROSInterface <em>ROS Interface</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface <em>ROS Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.ROSInterface
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSInterface()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.ROSInterface
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSInterface()
 		 * @generated
 		 */
 		EClass ROS_INTERFACE = eINSTANCE.getROSInterface();
@@ -2770,11 +2770,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_INTERFACE___ROS_INIT = eINSTANCE.getROSInterface__RosInit();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.ROSPublisherManagerImpl <em>ROS Publisher Manager</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherManagerImpl <em>ROS Publisher Manager</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.ROSPublisherManagerImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSPublisherManager()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherManagerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSPublisherManager()
 		 * @generated
 		 */
 		EClass ROS_PUBLISHER_MANAGER = eINSTANCE.getROSPublisherManager();
@@ -2852,11 +2852,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_PUBLISHER_MANAGER___GET_PUBLISHER__STRING = eINSTANCE.getROSPublisherManager__GetPublisher__String();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.ROSPublisherImpl <em>ROS Publisher</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherImpl <em>ROS Publisher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.ROSPublisherImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSPublisher()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSPublisher()
 		 * @generated
 		 */
 		EClass ROS_PUBLISHER = eINSTANCE.getROSPublisher();
@@ -2934,11 +2934,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_PUBLISHER___STOP = eINSTANCE.getROSPublisher__Stop();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.ROSServiceManagerImpl <em>ROS Service Manager</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceManagerImpl <em>ROS Service Manager</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.ROSServiceManagerImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSServiceManager()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceManagerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSServiceManager()
 		 * @generated
 		 */
 		EClass ROS_SERVICE_MANAGER = eINSTANCE.getROSServiceManager();
@@ -3048,11 +3048,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_SERVICE_MANAGER___STOP = eINSTANCE.getROSServiceManager__Stop();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl <em>ROS Service</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl <em>ROS Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.ROSServiceImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSService()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSService()
 		 * @generated
 		 */
 		EClass ROS_SERVICE = eINSTANCE.getROSService();
@@ -3146,11 +3146,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_SERVICE___CALL__MESSAGE_BOOLEAN = eINSTANCE.getROSService__Call__Message_boolean();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.ROSTopicLauncherImpl <em>ROS Topic Launcher</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl <em>ROS Topic Launcher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.ROSTopicLauncherImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSTopicLauncher()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSTopicLauncher()
 		 * @generated
 		 */
 		EClass ROS_TOPIC_LAUNCHER = eINSTANCE.getROSTopicLauncher();
@@ -3212,11 +3212,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_TOPIC_LAUNCHER___RESET = eINSTANCE.getROSTopicLauncher__Reset();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl <em>ROS Listener</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl <em>ROS Listener</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.ROSListenerImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getROSListener()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getROSListener()
 		 * @generated
 		 */
 		EClass ROS_LISTENER = eINSTANCE.getROSListener();
@@ -3302,14 +3302,14 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		EOperation ROS_LISTENER___STOP = eINSTANCE.getROSListener__Stop();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSFacadeImpl
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getSymphony__AddonsROSFacade()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getApogyAddonsROSFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_ADDONS_ROS_FACADE = eINSTANCE.getSymphony__AddonsROSFacade();
+		EClass APOGY_ADDONS_ROS_FACADE = eINSTANCE.getApogyAddonsROSFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Node Name Prefix</b></em>' operation.
@@ -3317,7 +3317,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX = eINSTANCE.getSymphony__AddonsROSFacade__GetNodeNamePrefix();
+		EOperation APOGY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX = eINSTANCE.getApogyAddonsROSFacade__GetNodeNamePrefix();
 
 		/**
 		 * The meta object literal for the '<em><b>Get ROS Master URI</b></em>' operation.
@@ -3325,7 +3325,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI = eINSTANCE.getSymphony__AddonsROSFacade__GetROSMasterURI();
+		EOperation APOGY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI = eINSTANCE.getApogyAddonsROSFacade__GetROSMasterURI();
 
 		/**
 		 * The meta object literal for the '<em><b>Get ROS Hostname</b></em>' operation.
@@ -3333,7 +3333,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME = eINSTANCE.getSymphony__AddonsROSFacade__GetROSHostname();
+		EOperation APOGY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME = eINSTANCE.getApogyAddonsROSFacade__GetROSHostname();
 
 		/**
 		 * The meta object literal for the '<em><b>Get ROS Ip</b></em>' operation.
@@ -3341,14 +3341,14 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_IP = eINSTANCE.getSymphony__AddonsROSFacade__GetROSIp();
+		EOperation APOGY_ADDONS_ROS_FACADE___GET_ROS_IP = eINSTANCE.getApogyAddonsROSFacade__GetROSIp();
 
 		/**
 		 * The meta object literal for the '<em>Response Logger</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.utilities.ResponseLogger
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getResponseLogger()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getResponseLogger()
 		 * @generated
 		 */
 		EDataType RESPONSE_LOGGER = eINSTANCE.getResponseLogger();
@@ -3357,8 +3357,8 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * The meta object literal for the '<em>Null Response Handler</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.utilities.NullResponseHandler
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getNullResponseHandler()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getNullResponseHandler()
 		 * @generated
 		 */
 		EDataType NULL_RESPONSE_HANDLER = eINSTANCE.getNullResponseHandler();
@@ -3367,8 +3367,8 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * The meta object literal for the '<em>Null Request Handler</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.utilities.NullRequestHandler
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getNullRequestHandler()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getNullRequestHandler()
 		 * @generated
 		 */
 		EDataType NULL_REQUEST_HANDLER = eINSTANCE.getNullRequestHandler();
@@ -3378,7 +3378,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.node.ConnectedNode
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getConnectedNode()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getConnectedNode()
 		 * @generated
 		 */
 		EDataType CONNECTED_NODE = eINSTANCE.getConnectedNode();
@@ -3388,7 +3388,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.exception.ServiceNotFoundException
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getServiceNotFoundException()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getServiceNotFoundException()
 		 * @generated
 		 */
 		EDataType SERVICE_NOT_FOUND_EXCEPTION = eINSTANCE.getServiceNotFoundException();
@@ -3398,7 +3398,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.internal.message.Message
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getMessage()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getMessage()
 		 * @generated
 		 */
 		EDataType MESSAGE = eINSTANCE.getMessage();
@@ -3408,7 +3408,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.message.MessageListener
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getMessageListener()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getMessageListener()
 		 * @generated
 		 */
 		EDataType MESSAGE_LISTENER = eINSTANCE.getMessageListener();
@@ -3418,7 +3418,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.node.AbstractNodeMain
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getAbstractNodeMain()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getAbstractNodeMain()
 		 * @generated
 		 */
 		EDataType ABSTRACT_NODE_MAIN = eINSTANCE.getAbstractNodeMain();
@@ -3428,7 +3428,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.node.service.ServiceClient
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getServiceClient()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getServiceClient()
 		 * @generated
 		 */
 		EDataType SERVICE_CLIENT = eINSTANCE.getServiceClient();
@@ -3438,7 +3438,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.node.topic.Publisher
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getPublisher()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getPublisher()
 		 * @generated
 		 */
 		EDataType PUBLISHER = eINSTANCE.getPublisher();
@@ -3448,7 +3448,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.node.topic.Subscriber
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getSubscriber()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getSubscriber()
 		 * @generated
 		 */
 		EDataType SUBSCRIBER = eINSTANCE.getSubscriber();
@@ -3458,7 +3458,7 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
@@ -3468,11 +3468,11 @@ public interface Symphony__AddonsROSPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.HashMap
-		 * @see org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSPackageImpl#getHashMap()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSPackageImpl#getHashMap()
 		 * @generated
 		 */
 		EDataType HASH_MAP = eINSTANCE.getHashMap();
 
 	}
 
-} //Symphony__AddonsROSPackage
+} //ApogyAddonsROSPackage

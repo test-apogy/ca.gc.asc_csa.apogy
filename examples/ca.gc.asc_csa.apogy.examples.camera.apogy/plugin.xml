@@ -8,27 +8,27 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_examples_camera -->
+      <!-- @generated apogy_examples_camera -->
       <package
-            uri="org.eclipse.symphony.examples.camera.symphony"
-            class="org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage"
-            genModel="model/symphony_examples_camera_symphony.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.camera.apogy"
+            class="ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage"
+            genModel="model/apogy_examples_camera_apogy.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.typeContributor">
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
       <Type
-            URI="model/CameraSymphonySystem.ss">
+            URI="model/CameraApogySystem.ss">
       </Type>
    </extension>
    
    <extension
-         point="org.eclipse.symphony.core.invocator.typeContributor">
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
       <Type
-            URI="model/PTUCameraSymphonySystem.ss">
+            URI="model/PTUCameraApogySystem.ss">
       </Type>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.sessionProvider">
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
       <SessionProvider
             Description="Session showing the use of the Camera example system."
             Name="Camera Example"
@@ -36,7 +36,7 @@
       </SessionProvider>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.sessionProvider">
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
       <SessionProvider
             Description="Session showing the use of the PTU Camera example system."
             Name="PTU Camera Example"

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,16 +13,16 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-import org.eclipse.symphony.core.Activator;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.FeatureOfInterestListNode;
-import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.Activator;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestListNodeImpl#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestListNodeImpl#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,7 +68,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST_NODE;
+		return ApogyCorePackage.Literals.FEATURE_OF_INTEREST_LIST_NODE;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 			featureOfInterestList = (FeatureOfInterestList)eResolveProxy(oldFeatureOfInterestList);
 			if (featureOfInterestList != oldFeatureOfInterestList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 			}
 		}
 		return featureOfInterestList;
@@ -120,7 +120,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 		FeatureOfInterestList oldFeatureOfInterestList = featureOfInterestList;
 		featureOfInterestList = newFeatureOfInterestList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				if (resolve) return getFeatureOfInterestList();
 				return basicGetFeatureOfInterestList();
 		}
@@ -146,7 +146,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)newValue);
 				return;
 		}
@@ -161,7 +161,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)null);
 				return;
 		}
@@ -176,7 +176,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				return featureOfInterestList != null;
 		}
 		return super.eIsSet(featureID);
@@ -185,7 +185,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	protected void addFeatureOfInterest(FeatureOfInterest foi)
 	{				
 		// Created FeatureOfInterestNode.
-		FeatureOfInterestNode featureOfInterestNode = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode(); 
+		FeatureOfInterestNode featureOfInterestNode = ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode(); 
 		featureOfInterestNode.setFeatureOfInterest(foi);
 			
 		// Adds node to the map.
@@ -252,7 +252,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 				{
 					if (msg.getNotifier() instanceof FeatureOfInterestList) 
 					{
-						if (msg.getFeatureID(FeatureOfInterestList.class) == Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST) 
+						if (msg.getFeatureID(FeatureOfInterestList.class) == ApogyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST) 
 						{
 							switch (msg.getEventType()) 
 							{

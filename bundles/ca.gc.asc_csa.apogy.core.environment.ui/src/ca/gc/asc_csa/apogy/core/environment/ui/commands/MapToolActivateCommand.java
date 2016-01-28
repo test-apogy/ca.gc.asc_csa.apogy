@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.commands;
+package ca.gc.asc_csa.apogy.core.environment.ui.commands;
 
 import java.util.Iterator;
 
@@ -7,7 +7,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class MapToolActivateCommand extends AbstractHandler implements

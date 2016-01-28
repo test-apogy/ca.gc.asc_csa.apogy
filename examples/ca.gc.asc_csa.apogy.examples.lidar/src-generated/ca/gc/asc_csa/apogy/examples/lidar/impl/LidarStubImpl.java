@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.impl;
+package ca.gc.asc_csa.apogy.examples.lidar.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.lidar.Activator;
-import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
-import org.eclipse.symphony.examples.lidar.LidarStub;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.lidar.Activator;
+import ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage;
+import ca.gc.asc_csa.apogy.examples.lidar.LidarStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public class LidarStubImpl extends LidarImpl implements LidarStub
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesLidarPackage.Literals.LIDAR_STUB;
+		return ApogyExamplesLidarPackage.Literals.LIDAR_STUB;
 	}
 
 	/*

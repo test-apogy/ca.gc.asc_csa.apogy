@@ -1,23 +1,23 @@
-@GenModel(prefix="Symphony__CoreTopology",
+@GenModel(prefix="ApogyCoreTopology",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CoreTopology")
-@GenModel(modelDirectory="/org.eclipse.symphony.core.topology/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.core.topology.edit/src-generated")
+		  modelName="ApogyCoreTopology")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.topology/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.topology.edit/src-generated")
 
-package org.eclipse.symphony.core.topology
+package ca.gc.asc_csa.apogy.core.topology
 
-import org.eclipse.symphony.core.invocator.Variable
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
 
-import org.eclipse.symphony.core.SymphonyEnvironment
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment
 
-import org.eclipse.symphony.core.ResultsListNode
-import org.eclipse.symphony.core.environment.WorksiteNode
-import org.eclipse.symphony.common.topology.ReferencedGroupNode
-import org.eclipse.symphony.common.topology.Node
+import ca.gc.asc_csa.apogy.core.ResultsListNode
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode
+import ca.gc.asc_csa.apogy.common.topology.Node
 
 type SortedSet<T> wraps java.util.SortedSet 
 
@@ -26,7 +26,7 @@ class SystemsTopologyAdapter
 	/*
 	 * The Deployment to monitor.
 	 */
-	refers transient SymphonyEnvironment deployment	
+	refers transient ApogyEnvironment deployment	
 	
 	/*
 	 * The topology representing the Systems found in the Deployment.
@@ -42,32 +42,32 @@ class SystemsTopologyAdapter
 /*
  * A specialized Topology node representing a Deployment.
  */
-class SymphonyEnvironmentNode extends ReferencedGroupNode
+class ApogyEnvironmentNode extends ReferencedGroupNode
 {
-	refers transient SymphonyEnvironment symphonyEnvironment
+	refers transient ApogyEnvironment apogyEnvironment
 		
 	refers derived transient WorksiteNode[1] worksiteNode
 	
 	refers derived transient readonly ResultsListNode[1] resultsListNode
 		
-	refers derived transient readonly SymphonySystemAPIsNode[1] symphonySystemAPIsNode
+	refers derived transient readonly ApogySystemAPIsNode[1] apogySystemAPIsNode
 	
 	op void dispose()
 }
 
-class SymphonySystemAPIsNode extends ReferencedGroupNode
+class ApogySystemAPIsNode extends ReferencedGroupNode
 {
-	refers transient SymphonyEnvironment symphonyEnvironment
+	refers transient ApogyEnvironment apogyEnvironment
 }
 
 /* -------------------------------------------------------------------------
- * Symphony__CoreTopologyFacade
+ * ApogyCoreTopologyFacade
  * ------------------------------------------------------------------------- */ 
-class Symphony__CoreTopologyFacade
+class ApogyCoreTopologyFacade
 {
 	op Node getVariableOriginNode(Variable variable) 
 		
 	op Node getAbstractTypeImplementationOriginNode(AbstractTypeImplementation abstractTypeImplementation)
 	
-	op SymphonyEnvironmentNode createSymphonyEnvironmentNode(SymphonyEnvironment symphonyEnvironment) 
+	op ApogyEnvironmentNode createApogyEnvironmentNode(ApogyEnvironment apogyEnvironment) 
 }

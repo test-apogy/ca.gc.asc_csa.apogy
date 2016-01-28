@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.topology.ui.views;
+package ca.gc.asc_csa.apogy.core.topology.ui.views;
 
 import java.util.List;
 
@@ -14,18 +14,18 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPartReference;
@@ -35,14 +35,14 @@ import com.jme3.light.DirectionalLight;
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 
-public class SymphonySystem3DView extends AbstractSymphony3DView implements IPropertyChangeListener
+public class ApogySystem3DView extends AbstractApogy3DView implements IPropertyChangeListener
 {
-	public static final String PART_NAME = "Symphony System 3D Viewer";
+	public static final String PART_NAME = "Apogy System 3D Viewer";
 	
-	private SymphonySystem ss = null;
-	private Adapter symphonySystemAdapter = null;
+	private ApogySystem ss = null;
+	private Adapter apogySystemAdapter = null;
 	
-	public SymphonySystem3DView() 
+	public ApogySystem3DView() 
 	{		
 		Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);	
 	}
@@ -50,14 +50,14 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 	@Override
 	public String getViewID() 
 	{		
-		return "org.eclipse.symphony.core.topology.ui.views.SymphonySystem3DView";
+		return "ca.gc.asc_csa.apogy.core.topology.ui.views.ApogySystem3DView";
 	}
 	
 	
 	@Override
 	public void dispose() 
 	{
-		setSymphonySystem(null);	
+		setApogySystem(null);	
 		Activator.getDefault().getPreferenceStore().removePropertyChangeListener(this);	
 		super.dispose();
 	}
@@ -71,30 +71,30 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 		}
 	}
 	
-	private void registerAdapter(final SymphonySystem newSS)
+	private void registerAdapter(final ApogySystem newSS)
 	{
 		if(ss != null)
 		{			
-			ss.eAdapters().remove(getSymphonySystemAdapter());
+			ss.eAdapters().remove(getApogySystemAdapter());
 			
 			if(ss.getTopologyRoot() != null)
 			{
-				ss.getTopologyRoot().eAdapters().remove(getSymphonySystemAdapter());
+				ss.getTopologyRoot().eAdapters().remove(getApogySystemAdapter());
 			}
 		}
 		
 		if(newSS != null) 
 		{
-			newSS.eAdapters().add(getSymphonySystemAdapter());
+			newSS.eAdapters().add(getApogySystemAdapter());
 			
 			if(newSS.getTopologyRoot() != null)
 			{
-				newSS.getTopologyRoot().eAdapters().add(getSymphonySystemAdapter());
+				newSS.getTopologyRoot().eAdapters().add(getApogySystemAdapter());
 			}
 		}
 	}
 	
-	private void setSymphonySystem(final SymphonySystem newSS)
+	private void setApogySystem(final ApogySystem newSS)
 	{
 		this.showBusy(true);
 				
@@ -105,7 +105,7 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 		
 		if(topologyViewer != null)
 		{
-			Job job = new Job("Update SymphonySystem Topology")
+			Job job = new Job("Update ApogySystem Topology")
 			{
 				@Override
 				protected IStatus run(IProgressMonitor monitor) 
@@ -114,17 +114,17 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 					{
 						if(newSS != null)
 						{
-							// If the SymphonyEnvironment topology has not been initialize, initialize it and attach
-							// SymphonyEnvironmentNode to keep the topology updated.
+							// If the ApogyEnvironment topology has not been initialize, initialize it and attach
+							// ApogyEnvironmentNode to keep the topology updated.
 							if(newSS.getTopologyRoot() != null && newSS.getTopologyRoot().getOriginNode() != null)
 							{													
-								GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(newSS.getTopologyRoot().getOriginNode());								
+								GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(newSS.getTopologyRoot().getOriginNode());								
 								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 							}							
 							else
 							{
-								TransformNode root = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
-								GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);								
+								TransformNode root = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
+								GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);								
 								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 							}
 							
@@ -142,7 +142,7 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 						topologyViewer.zoomToFit();						
 					}
 					
-					SymphonySystem3DView.this.showBusy(false);
+					ApogySystem3DView.this.showBusy(false);
 					
 					return Status.OK_STATUS;
 				}	
@@ -196,7 +196,7 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 					public void simpleInitApp() 
 					{
 						super.simpleInitApp();				
-						RGB backgroundRGB = Activator.getSymphonySystem3DViewBackgroundColor();
+						RGB backgroundRGB = Activator.getApogySystem3DViewBackgroundColor();
 						if(backgroundRGB == null) backgroundRGB = new RGB(0, 0, 0);								
 						viewPort.setBackgroundColor(JME3Utilities.convertToColorRGBA(backgroundRGB));
 					}
@@ -271,13 +271,13 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 	@Override
 	public void updateSelection(ISelection selection) 
 	{	
-		List systems = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SymphonySystem.class);
+		List systems = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, ApogySystem.class);
 		if(systems.size() > 0)
 		{
-			SymphonySystem newSS = (SymphonySystem) systems.get(0);
+			ApogySystem newSS = (ApogySystem) systems.get(0);
 			if(newSS != ss)
 			{
-				setSymphonySystem(newSS);
+				setApogySystem(newSS);
 			}
 		}
 	}
@@ -285,25 +285,25 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 	/*
 	 * Return the Adapter listening to the selected environment.
 	 */
-	private Adapter getSymphonySystemAdapter()
+	private Adapter getApogySystemAdapter()
 	{
-		  if(symphonySystemAdapter == null)
+		  if(apogySystemAdapter == null)
 		  {
-			  	symphonySystemAdapter = new AdapterImpl()
+			  	apogySystemAdapter = new AdapterImpl()
 				{				
 					@Override
 					public void notifyChanged(Notification msg) 
 					{				
 						// Events from Deployment
-						if(msg.getNotifier() instanceof SymphonySystem)							
+						if(msg.getNotifier() instanceof ApogySystem)							
 						{			
-							int featureId = msg.getFeatureID(SymphonySystem.class);
+							int featureId = msg.getFeatureID(ApogySystem.class);
 							
 							switch (featureId) 
 							{
-								case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+								case ApogyCorePackage.APOGY_SYSTEM__TOPOLOGY_ROOT:
 									// Force the System to be displayed.
-									setSymphonySystem(ss);
+									setApogySystem(ss);
 									
 									// Update the part name.
 									updatePartName();
@@ -319,9 +319,9 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 							
 							switch (featureId) 
 							{
-								case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+								case ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 									// Force the System to be displayed.
-									setSymphonySystem(ss);
+									setApogySystem(ss);
 									
 									// Update the part name.
 									updatePartName();
@@ -335,6 +335,6 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 				};
 		  }
 		  
-		  return symphonySystemAdapter;
+		  return apogySystemAdapter;
 	}
 }

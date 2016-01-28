@@ -1,22 +1,22 @@
 /**
  * Canadian Space Agency 2008.
  *
- * $Id: Symphony__AddonsMobilityPathplannersGraphSwitch.java,v 1.3.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityPathplannersGraphSwitch.java,v 1.3.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.util;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.*;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.VerboseProvider;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.*;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.VerboseProvider;
 import org.jgrapht.EdgeFactory;
 
 /**
@@ -29,17 +29,17 @@ import org.jgrapht.EdgeFactory;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<T1> {
+public class ApogyAddonsMobilityPathplannersGraphSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPathplannersGraphPackage modelPackage;
+	protected static ApogyAddonsMobilityPathplannersGraphPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -47,9 +47,9 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersGraphSwitch() {
+	public ApogyAddonsMobilityPathplannersGraphSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPathplannersGraphPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPathplannersGraphPackage.eINSTANCE;
 		}
 	}
 
@@ -76,7 +76,7 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER: {
 				CostBasedMeshWayPointPathPlanner<?> costBasedMeshWayPointPathPlanner = (CostBasedMeshWayPointPathPlanner<?>)theEObject;
 				T1 result = caseCostBasedMeshWayPointPathPlanner(costBasedMeshWayPointPathPlanner);
 				if (result == null) result = caseMeshWayPointPathPlanner(costBasedMeshWayPointPathPlanner);
@@ -86,20 +86,20 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISPLACEMENT_COST_FUNCTION: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISPLACEMENT_COST_FUNCTION: {
 				DisplacementCostFunction displacementCostFunction = (DisplacementCostFunction)theEObject;
 				T1 result = caseDisplacementCostFunction(displacementCostFunction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION: {
 				MeshDisplacementCostFunction meshDisplacementCostFunction = (MeshDisplacementCostFunction)theEObject;
 				T1 result = caseMeshDisplacementCostFunction(meshDisplacementCostFunction);
 				if (result == null) result = caseDisplacementCostFunction(meshDisplacementCostFunction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_ONLY_COST_FUNCTION: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_ONLY_COST_FUNCTION: {
 				DistanceOnlyCostFunction distanceOnlyCostFunction = (DistanceOnlyCostFunction)theEObject;
 				T1 result = caseDistanceOnlyCostFunction(distanceOnlyCostFunction);
 				if (result == null) result = caseMeshDisplacementCostFunction(distanceOnlyCostFunction);
@@ -107,7 +107,7 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: {
 				SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<?> simpleDirectedWeightedGraphBasedMeshWayPointPathPlanner = (SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<?>)theEObject;
 				T1 result = caseSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner(simpleDirectedWeightedGraphBasedMeshWayPointPathPlanner);
 				if (result == null) result = caseCostBasedMeshWayPointPathPlanner(simpleDirectedWeightedGraphBasedMeshWayPointPathPlanner);
@@ -119,7 +119,7 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: {
 				DirectedGraphBasedMeshWayPointPathPlanner<?> directedGraphBasedMeshWayPointPathPlanner = (DirectedGraphBasedMeshWayPointPathPlanner<?>)theEObject;
 				T1 result = caseDirectedGraphBasedMeshWayPointPathPlanner(directedGraphBasedMeshWayPointPathPlanner);
 				if (result == null) result = caseCostBasedMeshWayPointPathPlanner(directedGraphBasedMeshWayPointPathPlanner);
@@ -130,26 +130,26 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.EDGE_FACTORY: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.EDGE_FACTORY: {
 				EdgeFactory<?, ?> edgeFactory = (EdgeFactory<?, ?>)theEObject;
 				T1 result = caseEdgeFactory(edgeFactory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE: {
 				MobilityEdge mobilityEdge = (MobilityEdge)theEObject;
 				T1 result = caseMobilityEdge(mobilityEdge);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY: {
 				MobilityEdgeFactory mobilityEdgeFactory = (MobilityEdgeFactory)theEObject;
 				T1 result = caseMobilityEdgeFactory(mobilityEdgeFactory);
 				if (result == null) result = caseEdgeFactory(mobilityEdgeFactory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION: {
 				DistanceAndSlopesCostFunction distanceAndSlopesCostFunction = (DistanceAndSlopesCostFunction)theEObject;
 				T1 result = caseDistanceAndSlopesCostFunction(distanceAndSlopesCostFunction);
 				if (result == null) result = caseMeshDisplacementCostFunction(distanceAndSlopesCostFunction);
@@ -157,14 +157,14 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION: {
 				ExclusionZonesCostFunction exclusionZonesCostFunction = (ExclusionZonesCostFunction)theEObject;
 				T1 result = caseExclusionZonesCostFunction(exclusionZonesCostFunction);
 				if (result == null) result = caseDisplacementCostFunction(exclusionZonesCostFunction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION: {
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION: {
 				DistanceAndRoverFootprintCostFunction distanceAndRoverFootprintCostFunction = (DistanceAndRoverFootprintCostFunction)theEObject;
 				T1 result = caseDistanceAndRoverFootprintCostFunction(distanceAndRoverFootprintCostFunction);
 				if (result == null) result = caseDistanceAndSlopesCostFunction(distanceAndRoverFootprintCostFunction);
@@ -448,4 +448,4 @@ public class Symphony__AddonsMobilityPathplannersGraphSwitch<T1> extends Switch<
 		return null;
 	}
 
-} //Symphony__AddonsMobilityPathplannersGraphSwitch
+} //ApogyAddonsMobilityPathplannersGraphSwitch

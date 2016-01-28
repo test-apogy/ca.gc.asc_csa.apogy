@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.ui.util;
+package ca.gc.asc_csa.apogy.common.converters.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,24 +10,24 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.converters.ui.*;
+import ca.gc.asc_csa.apogy.common.converters.ui.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIPackage
+ * @see ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIPackage
  * @generated
  */
-public class Symphony__CommonConvertersUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonConvertersUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonConvertersUIPackage modelPackage;
+	protected static ApogyCommonConvertersUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__CommonConvertersUIAdapterFactory extends AdapterFactoryIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersUIAdapterFactory() {
+	public ApogyCommonConvertersUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonConvertersUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonConvertersUIPackage.eINSTANCE;
 		}
 	}
 
@@ -66,11 +66,11 @@ public class Symphony__CommonConvertersUIAdapterFactory extends AdapterFactoryIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonConvertersUISwitch<Adapter> modelSwitch =
-		new Symphony__CommonConvertersUISwitch<Adapter>() {
+	protected ApogyCommonConvertersUISwitch<Adapter> modelSwitch =
+		new ApogyCommonConvertersUISwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__CommonConvertersUIFacade(Symphony__CommonConvertersUIFacade object) {
-				return createSymphony__CommonConvertersUIFacadeAdapter();
+			public Adapter caseApogyCommonConvertersUIFacade(ApogyCommonConvertersUIFacade object) {
+				return createApogyCommonConvertersUIFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -93,16 +93,16 @@ public class Symphony__CommonConvertersUIAdapterFactory extends AdapterFactoryIm
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade
+	 * @see ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonConvertersUIFacadeAdapter() {
+	public Adapter createApogyCommonConvertersUIFacadeAdapter() {
 		return null;
 	}
 
@@ -118,4 +118,4 @@ public class Symphony__CommonConvertersUIAdapterFactory extends AdapterFactoryIm
 		return null;
 	}
 
-} //Symphony__CommonConvertersUIAdapterFactory
+} //ApogyCommonConvertersUIAdapterFactory

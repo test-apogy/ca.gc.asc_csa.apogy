@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -17,7 +17,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Sun#getIrradiance(double) <em>Get Irradiance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sun#getIrradiance(double) <em>Get Irradiance</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -79,7 +79,7 @@ public class SunTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createSun());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createSun());
 	}
 
 	/**
@@ -94,10 +94,10 @@ public class SunTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Sun#getIrradiance(double) <em>Get Irradiance</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Sun#getIrradiance(double) <em>Get Irradiance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Sun#getIrradiance(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sun#getIrradiance(double)
 	 * @generated_NOT
 	 */
 	public void testGetIrradiance__double() 

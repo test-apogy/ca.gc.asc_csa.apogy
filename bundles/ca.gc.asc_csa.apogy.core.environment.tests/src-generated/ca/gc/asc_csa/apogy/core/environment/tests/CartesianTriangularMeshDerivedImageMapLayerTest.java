@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,11 +54,11 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerTest extends Im
 	
 	protected CartesianTriangularMeshMapLayer createCartesianTriangularMeshMapLayer()
 	{
-		CartesianTriangularMeshURLMapLayer layer = Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer();
-		layer.setUrl("platform:/plugin/org.eclipse.symphony.core.environment.tests/data/CSAMarsYardDEM100cm.tri");
+		CartesianTriangularMeshURLMapLayer layer = ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer();
+		layer.setUrl("platform:/plugin/ca.gc.asc_csa.apogy.core.environment.tests/data/CSAMarsYardDEM100cm.tri");
 		
-		Map map = Symphony__CoreEnvironmentFactory.eINSTANCE.createMap();
-		map.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
+		Map map = ApogyCoreEnvironmentFactory.eINSTANCE.createMap();
+		map.setTransformation(ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4());
 		map.getLayers().add(layer);
 		
 		return layer;

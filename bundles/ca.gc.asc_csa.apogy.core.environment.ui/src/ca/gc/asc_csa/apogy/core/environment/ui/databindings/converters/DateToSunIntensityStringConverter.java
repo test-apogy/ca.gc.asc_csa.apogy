@@ -1,13 +1,13 @@
-package org.eclipse.symphony.core.environment.ui.databindings.converters;
+package ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters;
 
 import java.text.NumberFormat;
 import java.util.Date;
 
 import org.eclipse.core.databinding.conversion.Converter;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
 
 public class DateToSunIntensityStringConverter extends Converter 
 {

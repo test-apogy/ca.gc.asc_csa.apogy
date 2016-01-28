@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.lang.java;
+package ca.gc.asc_csa.apogy.common.lang.java;
 
 /**
  * A time class.

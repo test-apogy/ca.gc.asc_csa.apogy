@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.mobile_platform.symphony.*;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.symphony.examples.mobile_platform.symphony.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactoryImpl implements Symphony__ExamplesMobilePlatformSymphonyFactory
+public class ApogyExamplesMobilePlatformApogyFactoryImpl extends EFactoryImpl implements ApogyExamplesMobilePlatformApogyFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -24,18 +24,18 @@ public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactor
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__ExamplesMobilePlatformSymphonyFactory init()
+  public static ApogyExamplesMobilePlatformApogyFactory init()
   {
 		try {
-			Symphony__ExamplesMobilePlatformSymphonyFactory theSymphony__ExamplesMobilePlatformSymphonyFactory = (Symphony__ExamplesMobilePlatformSymphonyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesMobilePlatformSymphonyPackage.eNS_URI);
-			if (theSymphony__ExamplesMobilePlatformSymphonyFactory != null) {
-				return theSymphony__ExamplesMobilePlatformSymphonyFactory;
+			ApogyExamplesMobilePlatformApogyFactory theApogyExamplesMobilePlatformApogyFactory = (ApogyExamplesMobilePlatformApogyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesMobilePlatformApogyPackage.eNS_URI);
+			if (theApogyExamplesMobilePlatformApogyFactory != null) {
+				return theApogyExamplesMobilePlatformApogyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesMobilePlatformSymphonyFactoryImpl();
+		return new ApogyExamplesMobilePlatformApogyFactoryImpl();
 	}
 
   /**
@@ -44,7 +44,7 @@ public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactor
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesMobilePlatformSymphonyFactoryImpl()
+  public ApogyExamplesMobilePlatformApogyFactoryImpl()
   {
 		super();
 	}
@@ -58,9 +58,9 @@ public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactor
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_SYMPHONY_SYSTEM_API_ADAPTER: return createMobilePlatformSymphonySystemApiAdapter();
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA: return createMobilePlatformData();
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_SYMPHONY_SYSTEM_ANNOTATION: return createMobilePlatformSymphonySystemAnnotation();
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_APOGY_SYSTEM_API_ADAPTER: return createMobilePlatformApogySystemApiAdapter();
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA: return createMobilePlatformData();
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION: return createMobilePlatformApogySystemAnnotation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,9 +71,9 @@ public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobilePlatformSymphonySystemApiAdapter createMobilePlatformSymphonySystemApiAdapter() {
-		MobilePlatformSymphonySystemApiAdapterImpl mobilePlatformSymphonySystemApiAdapter = new MobilePlatformSymphonySystemApiAdapterImpl();
-		return mobilePlatformSymphonySystemApiAdapter;
+	public MobilePlatformApogySystemApiAdapter createMobilePlatformApogySystemApiAdapter() {
+		MobilePlatformApogySystemApiAdapterImpl mobilePlatformApogySystemApiAdapter = new MobilePlatformApogySystemApiAdapterImpl();
+		return mobilePlatformApogySystemApiAdapter;
 	}
 
 		/**
@@ -91,9 +91,9 @@ public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobilePlatformSymphonySystemAnnotation createMobilePlatformSymphonySystemAnnotation() {
-		MobilePlatformSymphonySystemAnnotationImpl mobilePlatformSymphonySystemAnnotation = new MobilePlatformSymphonySystemAnnotationImpl();
-		return mobilePlatformSymphonySystemAnnotation;
+	public MobilePlatformApogySystemAnnotation createMobilePlatformApogySystemAnnotation() {
+		MobilePlatformApogySystemAnnotationImpl mobilePlatformApogySystemAnnotation = new MobilePlatformApogySystemAnnotationImpl();
+		return mobilePlatformApogySystemAnnotation;
 	}
 
 		/**
@@ -101,8 +101,8 @@ public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesMobilePlatformSymphonyPackage getSymphony__ExamplesMobilePlatformSymphonyPackage() {
-		return (Symphony__ExamplesMobilePlatformSymphonyPackage)getEPackage();
+	public ApogyExamplesMobilePlatformApogyPackage getApogyExamplesMobilePlatformApogyPackage() {
+		return (ApogyExamplesMobilePlatformApogyPackage)getEPackage();
 	}
 
 		/**
@@ -112,9 +112,9 @@ public class Symphony__ExamplesMobilePlatformSymphonyFactoryImpl extends EFactor
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__ExamplesMobilePlatformSymphonyPackage getPackage()
+  public static ApogyExamplesMobilePlatformApogyPackage getPackage()
   {
-		return Symphony__ExamplesMobilePlatformSymphonyPackage.eINSTANCE;
+		return ApogyExamplesMobilePlatformApogyPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesMobilePlatformSymphonyFactoryImpl
+} //ApogyExamplesMobilePlatformApogyFactoryImpl

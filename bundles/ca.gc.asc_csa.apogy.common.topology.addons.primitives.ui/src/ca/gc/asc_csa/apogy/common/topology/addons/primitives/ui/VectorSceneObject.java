@@ -1,6 +1,6 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui;
 
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface VectorSceneObject extends SceneObject {
 	public int getLineWidth();

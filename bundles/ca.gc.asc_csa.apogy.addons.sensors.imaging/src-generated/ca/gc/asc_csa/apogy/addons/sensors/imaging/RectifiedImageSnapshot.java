@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getRectifiedImageSnapshot()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#getRectifiedImageSnapshot()
  * @model
  * @generated
  */

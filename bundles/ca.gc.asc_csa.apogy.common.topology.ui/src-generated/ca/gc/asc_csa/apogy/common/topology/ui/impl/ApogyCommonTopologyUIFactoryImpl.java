@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.ui.impl;
 
 import java.util.List;
 import javax.vecmath.Point3d;
@@ -14,21 +14,21 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.PositionNodePresentation;
-import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
-import org.eclipse.symphony.common.topology.ui.ShadowMode;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
-import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,24 +36,24 @@ import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implements Symphony__CommonTopologyUIFactory {
+public class ApogyCommonTopologyUIFactoryImpl extends EFactoryImpl implements ApogyCommonTopologyUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyUIFactory init() {
+	public static ApogyCommonTopologyUIFactory init() {
 		try {
-			Symphony__CommonTopologyUIFactory theSymphony__CommonTopologyUIFactory = (Symphony__CommonTopologyUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonTopologyUIPackage.eNS_URI);
-			if (theSymphony__CommonTopologyUIFactory != null) {
-				return theSymphony__CommonTopologyUIFactory;
+			ApogyCommonTopologyUIFactory theApogyCommonTopologyUIFactory = (ApogyCommonTopologyUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonTopologyUIPackage.eNS_URI);
+			if (theApogyCommonTopologyUIFactory != null) {
+				return theApogyCommonTopologyUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonTopologyUIFactoryImpl();
+		return new ApogyCommonTopologyUIFactoryImpl();
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIFactoryImpl() {
+	public ApogyCommonTopologyUIFactoryImpl() {
 		super();
 	}
 
@@ -74,16 +74,16 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY: return createTopologyPresentationRegistry();
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT: return createGraphicsContext();
-			case Symphony__CommonTopologyUIPackage.NODE_SELECTION: return createNodeSelection();
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET: return createTopologyPresentationSet();
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION: return createNodePresentation();
-			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION: return createTransformNodePresentation();
-			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION: return createRotationNodePresentation();
-			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION: return createPositionNodePresentation();
-			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION: return createURLNodePresentation();
-			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE: return createSymphony__CommonTopologyUIFacade();
+			case ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY: return createTopologyPresentationRegistry();
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT: return createGraphicsContext();
+			case ApogyCommonTopologyUIPackage.NODE_SELECTION: return createNodeSelection();
+			case ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET: return createTopologyPresentationSet();
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION: return createNodePresentation();
+			case ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION: return createTransformNodePresentation();
+			case ApogyCommonTopologyUIPackage.ROTATION_NODE_PRESENTATION: return createRotationNodePresentation();
+			case ApogyCommonTopologyUIPackage.POSITION_NODE_PRESENTATION: return createPositionNodePresentation();
+			case ApogyCommonTopologyUIPackage.URL_NODE_PRESENTATION: return createURLNodePresentation();
+			case ApogyCommonTopologyUIPackage.APOGY_COMMON_TOPOLOGY_UI_FACADE: return createApogyCommonTopologyUIFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,21 +97,21 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyUIPackage.SHADOW_MODE:
+			case ApogyCommonTopologyUIPackage.SHADOW_MODE:
 				return createShadowModeFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyUIPackage.MESH_PRESENTATION_MODE:
+			case ApogyCommonTopologyUIPackage.MESH_PRESENTATION_MODE:
 				return createMeshPresentationModeFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyUIPackage.LIST:
+			case ApogyCommonTopologyUIPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyUIPackage.RGB:
+			case ApogyCommonTopologyUIPackage.RGB:
 				return createRGBFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyUIPackage.POINT3D:
+			case ApogyCommonTopologyUIPackage.POINT3D:
 				return createPoint3dFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyUIPackage.VECTOR3F:
+			case ApogyCommonTopologyUIPackage.VECTOR3F:
 				return createVector3fFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyUIPackage.SCENE_OBJECT:
+			case ApogyCommonTopologyUIPackage.SCENE_OBJECT:
 				return createSceneObjectFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyUIPackage.NOTIFICATION:
+			case ApogyCommonTopologyUIPackage.NOTIFICATION:
 				return createNotificationFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -126,21 +126,21 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyUIPackage.SHADOW_MODE:
+			case ApogyCommonTopologyUIPackage.SHADOW_MODE:
 				return convertShadowModeToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyUIPackage.MESH_PRESENTATION_MODE:
+			case ApogyCommonTopologyUIPackage.MESH_PRESENTATION_MODE:
 				return convertMeshPresentationModeToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyUIPackage.LIST:
+			case ApogyCommonTopologyUIPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyUIPackage.RGB:
+			case ApogyCommonTopologyUIPackage.RGB:
 				return convertRGBToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyUIPackage.POINT3D:
+			case ApogyCommonTopologyUIPackage.POINT3D:
 				return convertPoint3dToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyUIPackage.VECTOR3F:
+			case ApogyCommonTopologyUIPackage.VECTOR3F:
 				return convertVector3fToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyUIPackage.SCENE_OBJECT:
+			case ApogyCommonTopologyUIPackage.SCENE_OBJECT:
 				return convertSceneObjectToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyUIPackage.NOTIFICATION:
+			case ApogyCommonTopologyUIPackage.NOTIFICATION:
 				return convertNotificationToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -242,9 +242,9 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIFacade createSymphony__CommonTopologyUIFacade() {
-		Symphony__CommonTopologyUIFacadeImpl symphony__CommonTopologyUIFacade = new Symphony__CommonTopologyUIFacadeImpl();
-		return symphony__CommonTopologyUIFacade;
+	public ApogyCommonTopologyUIFacade createApogyCommonTopologyUIFacade() {
+		ApogyCommonTopologyUIFacadeImpl apogy__CommonTopologyUIFacade = new ApogyCommonTopologyUIFacadeImpl();
+		return apogy__CommonTopologyUIFacade;
 	}
 
 	/**
@@ -402,8 +402,8 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIPackage getSymphony__CommonTopologyUIPackage() {
-		return (Symphony__CommonTopologyUIPackage)getEPackage();
+	public ApogyCommonTopologyUIPackage getApogyCommonTopologyUIPackage() {
+		return (ApogyCommonTopologyUIPackage)getEPackage();
 	}
 
 	/**
@@ -413,8 +413,8 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonTopologyUIPackage getPackage() {
-		return Symphony__CommonTopologyUIPackage.eINSTANCE;
+	public static ApogyCommonTopologyUIPackage getPackage() {
+		return ApogyCommonTopologyUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonTopologyUIFactoryImpl
+} //ApogyCommonTopologyUIFactoryImpl

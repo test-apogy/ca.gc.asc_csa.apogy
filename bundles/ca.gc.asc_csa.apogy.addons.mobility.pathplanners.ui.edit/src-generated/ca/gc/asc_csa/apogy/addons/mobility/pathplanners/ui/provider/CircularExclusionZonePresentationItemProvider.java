@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class CircularExclusionZonePresentationItemProvider extends NodePresentat
 				 getResourceLocator(),
 				 getString("_UI_CircularExclusionZonePresentation_transparency_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularExclusionZonePresentation_transparency_feature", "_UI_CircularExclusionZonePresentation_type"),
-				 Symphony__AddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY,
+				 ApogyAddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class CircularExclusionZonePresentationItemProvider extends NodePresentat
 				 getResourceLocator(),
 				 getString("_UI_CircularExclusionZonePresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularExclusionZonePresentation_presentationMode_feature", "_UI_CircularExclusionZonePresentation_type"),
-				 Symphony__AddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE,
+				 ApogyAddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class CircularExclusionZonePresentationItemProvider extends NodePresentat
 				 getResourceLocator(),
 				 getString("_UI_CircularExclusionZonePresentation_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularExclusionZonePresentation_height_feature", "_UI_CircularExclusionZonePresentation_type"),
-				 Symphony__AddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT,
+				 ApogyAddonsMobilityPathplannersUIPackage.Literals.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -157,9 +157,9 @@ public class CircularExclusionZonePresentationItemProvider extends NodePresentat
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CircularExclusionZonePresentation.class)) {
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

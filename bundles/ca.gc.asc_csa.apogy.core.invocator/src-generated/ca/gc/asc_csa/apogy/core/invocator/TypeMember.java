@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.TreeRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
 
 
 /**
@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMember#getMemberType <em>Member Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMember#getMemberType <em>Member Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMember()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMember()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface TypeMember extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Member Type</em>' reference.
 	 * @see #setMemberType(Type)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMember_MemberType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMember_MemberType()
 	 * @model
 	 * @generated
 	 */
   Type getMemberType();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMember#getMemberType <em>Member Type</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMember#getMemberType <em>Member Type</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Member Type</em>' reference.
@@ -62,14 +62,14 @@ public interface TypeMember extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Feature Root Node</em>' containment reference.
 	 * @see #setTypeFeatureRootNode(TreeRootNode)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMember_TypeFeatureRootNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMember_TypeFeatureRootNode()
 	 * @model containment="true"
 	 * @generated
 	 */
   TreeRootNode getTypeFeatureRootNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type Feature Root Node</em>' containment reference.

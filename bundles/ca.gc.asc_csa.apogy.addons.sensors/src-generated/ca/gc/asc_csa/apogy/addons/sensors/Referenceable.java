@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors;
+package ca.gc.asc_csa.apogy.addons.sensors;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.Referenceable#getReferenceFrame <em>Reference Frame</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.Referenceable#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getReferenceable()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage#getReferenceable()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface Referenceable extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reference Frame</em>' reference.
 	 * @see #setReferenceFrame(Node)
-	 * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getReferenceable_ReferenceFrame()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage#getReferenceable_ReferenceFrame()
 	 * @model
 	 * @generated
 	 */
 	Node getReferenceFrame();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.Referenceable#getReferenceFrame <em>Reference Frame</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.Referenceable#getReferenceFrame <em>Reference Frame</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Reference Frame</em>' reference.

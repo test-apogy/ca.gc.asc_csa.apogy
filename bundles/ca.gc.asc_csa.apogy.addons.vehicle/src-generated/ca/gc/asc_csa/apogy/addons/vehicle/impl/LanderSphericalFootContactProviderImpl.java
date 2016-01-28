@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,17 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
-import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER;
+		return ApogyAddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER;
 	}
 
   @Override
@@ -61,8 +61,8 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 		 
 	  try
 	  {
-		  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT, root);
+		  Node root = getVehiclePoseCorrector().getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();
+		  List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyAddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT, root);
 		  
 		  for(Node node : nodes)
 		  {
@@ -98,7 +98,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 			  Vector3d footPosition = new Vector3d();			  			  			  
 			  footTransform.get(footPosition);				 	
 			  
-			  points.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(footPosition.x, footPosition.y, footPosition.z));  
+			  points.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(footPosition.x, footPosition.y, footPosition.z));  
 		  }
 		  
 		  // Finds the intersection of the vector along Z going through the center of foot with the mesh.		 
@@ -148,7 +148,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 //	  bodyToWorldTransform.mul(bodyToSystemTransform);
 //	  
 //	  // Gets the mesh to world transform.
-//	  Matrix4d meshToWorldTransform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(contentNode);
+//	  Matrix4d meshToWorldTransform = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(contentNode);
 //	  
 //	  // Gets the bodyToMeshTransform
 //	  meshToWorldTransform.invert();
@@ -160,8 +160,8 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 //  protected Matrix4d getFootToSystemTransform(PhysicalBody body)
 //  {
 //
-//	  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();	  
-//	  Matrix4d transform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
+//	  Node root = getVehiclePoseCorrector().getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();	  
+//	  Matrix4d transform = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
 //	  return transform;
 //  }
 } //LanderSphericalFootContactProviderImpl

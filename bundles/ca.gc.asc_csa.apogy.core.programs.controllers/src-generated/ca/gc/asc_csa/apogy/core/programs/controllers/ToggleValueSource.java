@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 
 /**
@@ -13,11 +13,11 @@ package org.eclipse.symphony.core.programs.controllers;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource#isInitialValue <em>Initial Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource#isCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource#isInitialValue <em>Initial Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource#isCurrentValue <em>Current Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getToggleValueSource()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getToggleValueSource()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ToggleValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Value</em>' attribute.
 	 * @see #setInitialValue(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getToggleValueSource_InitialValue()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getToggleValueSource_InitialValue()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore notify='true'"
 	 * @generated
@@ -42,7 +42,7 @@ public interface ToggleValueSource extends ValueSource
   boolean isInitialValue();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource#isInitialValue <em>Initial Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource#isInitialValue <em>Initial Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initial Value</em>' attribute.
@@ -61,7 +61,7 @@ public interface ToggleValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getToggleValueSource_CurrentValue()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getToggleValueSource_CurrentValue()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface ToggleValueSource extends ValueSource
   boolean isCurrentValue();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource#isCurrentValue <em>Current Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource#isCurrentValue <em>Current Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Value</em>' attribute.

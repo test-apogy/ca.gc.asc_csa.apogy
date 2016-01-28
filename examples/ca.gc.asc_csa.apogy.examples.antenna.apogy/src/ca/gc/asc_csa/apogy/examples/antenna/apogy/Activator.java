@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.antenna.symphony;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.environment.orbit.PVACoordinates;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.PVACoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.PVACoordinates} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.PVACoordinates} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -74,10 +74,10 @@ public class PVACoordinatesItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY);
 		}
 		return childrenFeatures;
 	}
@@ -130,10 +130,10 @@ public class PVACoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PVACoordinates.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__POSITION:
-			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__VELOCITY:
-			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__ACCELERATION:
-			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__ANGULAR_VELOCITY:
+			case ApogyCoreEnvironmentOrbitPackage.PVA_COORDINATES__POSITION:
+			case ApogyCoreEnvironmentOrbitPackage.PVA_COORDINATES__VELOCITY:
+			case ApogyCoreEnvironmentOrbitPackage.PVA_COORDINATES__ACCELERATION:
+			case ApogyCoreEnvironmentOrbitPackage.PVA_COORDINATES__ANGULAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,23 +153,23 @@ public class PVACoordinatesItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**
@@ -184,10 +184,10 @@ public class PVACoordinatesItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION ||
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY ||
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION ||
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY;
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION ||
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY ||
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION ||
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY;
 
 		if (qualify) {
 			return getString

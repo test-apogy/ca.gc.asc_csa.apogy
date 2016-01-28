@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__CommonTopologyFacadeItemProvider.java,v 1.6.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
+ * $Id: ApogyCommonTopologyFacadeItemProvider.java,v 1.6.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -23,12 +23,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyFacadeItemProvider
+public class ApogyCommonTopologyFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -42,7 +42,7 @@ public class Symphony__CommonTopologyFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCommonTopologyFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,14 +62,14 @@ public class Symphony__CommonTopologyFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonTopologyFacade.gif.
+	 * This returns ApogyCommonTopologyFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonTopologyFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonTopologyFacade"));
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class Symphony__CommonTopologyFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CommonTopologyFacade_type");
+		return getString("_UI_ApogyCommonTopologyFacade_type");
 	}
 
 	/**

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -22,13 +22,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ToolsList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ToolsList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class ToolsListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class ToolsListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -130,7 +130,7 @@ public class ToolsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS);
 		}
 		return childrenFeatures;
 	}
@@ -189,11 +189,11 @@ public class ToolsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToolsList.class)) {
-			case Symphony__CoreInvocatorPackage.TOOLS_LIST__NAME:
-			case Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.TOOLS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case ApogyCoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -214,18 +214,18 @@ public class ToolsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createWatchesListsContainer()));
+				(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createWatchesListsContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createDisplaysListsContainer()));
+				(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createDisplaysListsContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer()));
+				(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer()));
 	}
 
   /**

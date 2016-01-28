@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import javax.vecmath.Color3f;
 import javax.vecmath.Matrix4d;
@@ -13,16 +13,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsFactory;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,15 +32,15 @@ import org.eclipse.symphony.common.topology.ui.NodeSelection;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getRulerColor <em>Ruler Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getExtremitiesRadius <em>Extremities Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMinorTickColor <em>Minor Tick Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMinorTickSpacing <em>Minor Tick Spacing</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMinorTickLength <em>Minor Tick Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickColor <em>Major Tick Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickSpacing <em>Major Tick Spacing</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickLength <em>Major Tick Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getRuler3dToolNode <em>Ruler3d Tool Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getRulerColor <em>Ruler Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getExtremitiesRadius <em>Extremities Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getMinorTickColor <em>Minor Tick Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getMinorTickSpacing <em>Minor Tick Spacing</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getMinorTickLength <em>Minor Tick Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getMajorTickColor <em>Major Tick Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getMajorTickSpacing <em>Major Tick Spacing</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getMajorTickLength <em>Major Tick Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl#getRuler3dToolNode <em>Ruler3d Tool Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,7 +59,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f RULER_COLOR_EDEFAULT = (Color3f)Symphony__AddonsFactory.eINSTANCE.createFromString(Symphony__AddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f RULER_COLOR_EDEFAULT = (Color3f)ApogyAddonsFactory.eINSTANCE.createFromString(ApogyAddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 	/**
 	 * The cached value of the '{@link #getRulerColor() <em>Ruler Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -95,7 +95,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f MINOR_TICK_COLOR_EDEFAULT = (Color3f)Symphony__AddonsFactory.eINSTANCE.createFromString(Symphony__AddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f MINOR_TICK_COLOR_EDEFAULT = (Color3f)ApogyAddonsFactory.eINSTANCE.createFromString(ApogyAddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 	/**
 	 * The cached value of the '{@link #getMinorTickColor() <em>Minor Tick Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -149,7 +149,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f MAJOR_TICK_COLOR_EDEFAULT = (Color3f)Symphony__AddonsFactory.eINSTANCE.createFromString(Symphony__AddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f MAJOR_TICK_COLOR_EDEFAULT = (Color3f)ApogyAddonsFactory.eINSTANCE.createFromString(ApogyAddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 	/**
 	 * The cached value of the '{@link #getMajorTickColor() <em>Major Tick Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -221,7 +221,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.RULER3_DTOOL;
+		return ApogyAddonsPackage.Literals.RULER3_DTOOL;
 	}
 
 	/**
@@ -235,7 +235,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			ruler3dToolNode = (Ruler3dToolNode)eResolveProxy(oldRuler3dToolNode);
 			if (ruler3dToolNode != oldRuler3dToolNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, ruler3dToolNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, ruler3dToolNode));
 			}
 		}
 		return ruler3dToolNode;
@@ -259,7 +259,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Ruler3dToolNode oldRuler3dToolNode = ruler3dToolNode;
 		ruler3dToolNode = newRuler3dToolNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, newRuler3dToolNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, newRuler3dToolNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -274,14 +274,14 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		if (newRuler3dToolNode != ruler3dToolNode) {
 			NotificationChain msgs = null;
 			if (ruler3dToolNode != null)
-				msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
+				msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
 			if (newRuler3dToolNode != null)
-				msgs = ((InternalEObject)newRuler3dToolNode).eInverseAdd(this, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
+				msgs = ((InternalEObject)newRuler3dToolNode).eInverseAdd(this, ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
 			msgs = basicSetRuler3dToolNode(newRuler3dToolNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, newRuler3dToolNode, newRuler3dToolNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, newRuler3dToolNode, newRuler3dToolNode));
 	}
 
 	/**
@@ -292,9 +292,9 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				if (ruler3dToolNode != null)
-					msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
+					msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
 				return basicSetRuler3dToolNode((Ruler3dToolNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -308,7 +308,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				return basicSetRuler3dToolNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -332,7 +332,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Color3f oldRulerColor = rulerColor;
 		rulerColor = newRulerColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR, oldRulerColor, rulerColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__RULER_COLOR, oldRulerColor, rulerColor));
 	}
 
 	/**
@@ -353,7 +353,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldExtremitiesRadius = extremitiesRadius;
 		extremitiesRadius = newExtremitiesRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS, oldExtremitiesRadius, extremitiesRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS, oldExtremitiesRadius, extremitiesRadius));
 	}
 
 	/**
@@ -374,7 +374,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Color3f oldMinorTickColor = minorTickColor;
 		minorTickColor = newMinorTickColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR, oldMinorTickColor, minorTickColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR, oldMinorTickColor, minorTickColor));
 	}
 
 	/**
@@ -395,7 +395,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMinorTickSpacing = minorTickSpacing;
 		minorTickSpacing = newMinorTickSpacing;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING, oldMinorTickSpacing, minorTickSpacing));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING, oldMinorTickSpacing, minorTickSpacing));
 	}
 
 	/**
@@ -416,7 +416,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMinorTickLength = minorTickLength;
 		minorTickLength = newMinorTickLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH, oldMinorTickLength, minorTickLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH, oldMinorTickLength, minorTickLength));
 	}
 
 	/**
@@ -437,7 +437,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Color3f oldMajorTickColor = majorTickColor;
 		majorTickColor = newMajorTickColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR, oldMajorTickColor, majorTickColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR, oldMajorTickColor, majorTickColor));
 	}
 
 	/**
@@ -458,7 +458,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMajorTickSpacing = majorTickSpacing;
 		majorTickSpacing = newMajorTickSpacing;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING, oldMajorTickSpacing, majorTickSpacing));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING, oldMajorTickSpacing, majorTickSpacing));
 	}
 
 	/**
@@ -479,7 +479,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMajorTickLength = majorTickLength;
 		majorTickLength = newMajorTickLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH, oldMajorTickLength, majorTickLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH, oldMajorTickLength, majorTickLength));
 	}
 
 	/**
@@ -490,23 +490,23 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				return getRulerColor();
-			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case ApogyAddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				return getExtremitiesRadius();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				return getMinorTickColor();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				return getMinorTickSpacing();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
 				return getMinorTickLength();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				return getMajorTickColor();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				return getMajorTickSpacing();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 				return getMajorTickLength();
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				if (resolve) return getRuler3dToolNode();
 				return basicGetRuler3dToolNode();
 		}
@@ -521,31 +521,31 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				setRulerColor((Color3f)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case ApogyAddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				setExtremitiesRadius((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				setMinorTickColor((Color3f)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				setMinorTickSpacing((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
 				setMinorTickLength((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				setMajorTickColor((Color3f)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				setMajorTickSpacing((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 				setMajorTickLength((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				setRuler3dToolNode((Ruler3dToolNode)newValue);
 				return;
 		}
@@ -560,31 +560,31 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				setRulerColor(RULER_COLOR_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case ApogyAddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				setExtremitiesRadius(EXTREMITIES_RADIUS_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				setMinorTickColor(MINOR_TICK_COLOR_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				setMinorTickSpacing(MINOR_TICK_SPACING_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
 				setMinorTickLength(MINOR_TICK_LENGTH_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				setMajorTickColor(MAJOR_TICK_COLOR_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				setMajorTickSpacing(MAJOR_TICK_SPACING_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 				setMajorTickLength(MAJOR_TICK_LENGTH_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				setRuler3dToolNode((Ruler3dToolNode)null);
 				return;
 		}
@@ -599,23 +599,23 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				return RULER_COLOR_EDEFAULT == null ? rulerColor != null : !RULER_COLOR_EDEFAULT.equals(rulerColor);
-			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case ApogyAddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				return extremitiesRadius != EXTREMITIES_RADIUS_EDEFAULT;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				return MINOR_TICK_COLOR_EDEFAULT == null ? minorTickColor != null : !MINOR_TICK_COLOR_EDEFAULT.equals(minorTickColor);
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				return minorTickSpacing != MINOR_TICK_SPACING_EDEFAULT;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
 				return minorTickLength != MINOR_TICK_LENGTH_EDEFAULT;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				return MAJOR_TICK_COLOR_EDEFAULT == null ? majorTickColor != null : !MAJOR_TICK_COLOR_EDEFAULT.equals(majorTickColor);
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				return majorTickSpacing != MAJOR_TICK_SPACING_EDEFAULT;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 				return majorTickLength != MAJOR_TICK_LENGTH_EDEFAULT;
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				return ruler3dToolNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -661,13 +661,13 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			Tuple3d normal = null;
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				normal = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
+				normal = ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
 			}
 			
 			if(nextNode == TO_NODE_INDEX)
@@ -745,7 +745,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		// Creates Ruler3dToolNode if no yet initialized.
 		if(getRuler3dToolNode() == null) 
 		{
-			setRuler3dToolNode(Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode());
+			setRuler3dToolNode(ApogyAddonsFactory.eINSTANCE.createRuler3dToolNode());
 		}		
 		attachRuler3dToolNode();
 		
@@ -772,7 +772,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		GroupNode root = null;
 		if(getFromNode() != null)
 		{
-			Node node = Symphony__CommonTopologyFacade.INSTANCE.findRoot(getFromNode());
+			Node node = ApogyCommonTopologyFacade.INSTANCE.findRoot(getFromNode());
 			
 			if(node instanceof GroupNode)
 			{
@@ -782,7 +782,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		
 		if(root == null && getToNode() != null)
 		{
-			Node node = Symphony__CommonTopologyFacade.INSTANCE.findRoot(getToNode());
+			Node node = ApogyCommonTopologyFacade.INSTANCE.findRoot(getToNode());
 			
 			if(node instanceof GroupNode)
 			{

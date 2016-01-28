@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui.views;
+package ca.gc.asc_csa.apogy.common.images.ui.views;
 
 import java.util.List;
 
@@ -9,16 +9,16 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ui.composites.SWTImageCanvas;
-import org.eclipse.symphony.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ui.composites.SWTImageCanvas;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 import org.eclipse.ui.progress.UIJob;
 
 public class ImageView extends AbstractView {
 
-	public final static String ID = "org.eclipse.symphony.common.images.ui.ImageView";
+	public final static String ID = "ca.gc.asc_csa.apogy.common.images.ui.ImageView";
 	public final static String NAME = "Image View"; 
 	private SWTImageCanvas imageCanvas;
 	private AbstractEImage abstractEImage;
@@ -54,7 +54,7 @@ public class ImageView extends AbstractView {
 	@Override
 	public void updateSelection(ISelection selection) {
 
-		List<?> images = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractEImage.class);
+		List<?> images = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, AbstractEImage.class);
 		
 		if(!images.isEmpty())
 		{

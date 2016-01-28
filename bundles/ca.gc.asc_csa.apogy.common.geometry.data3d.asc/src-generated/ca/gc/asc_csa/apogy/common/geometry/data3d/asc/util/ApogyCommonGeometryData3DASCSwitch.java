@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,17 +21,17 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryD
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DASCSwitch<T> extends Switch<T> {
+public class ApogyCommonGeometryData3DASCSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DASCPackage modelPackage;
+	protected static ApogyCommonGeometryData3DASCPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -39,9 +39,9 @@ public class Symphony__CommonGeometryData3DASCSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DASCSwitch() {
+	public ApogyCommonGeometryData3DASCSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DASCPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DASCPackage.eINSTANCE;
 		}
 	}
 
@@ -68,19 +68,19 @@ public class Symphony__CommonGeometryData3DASCSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO: {
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO: {
 				ASC3DIO asc3DIO = (ASC3DIO)theEObject;
 				T result = caseASC3DIO(asc3DIO);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA: {
+			case ApogyCommonGeometryData3DASCPackage.ASC_HEADER_DATA: {
 				ASCHeaderData ascHeaderData = (ASCHeaderData)theEObject;
 				T result = caseASCHeaderData(ascHeaderData);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D: {
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D: {
 				Coordinates2D coordinates2D = (Coordinates2D)theEObject;
 				T result = caseCoordinates2D(coordinates2D);
 				if (result == null) result = defaultCase(theEObject);
@@ -151,4 +151,4 @@ public class Symphony__CommonGeometryData3DASCSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DASCSwitch
+} //ApogyCommonGeometryData3DASCSwitch

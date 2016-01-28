@@ -1,27 +1,27 @@
-@GenModel(prefix="Symphony__ExamplesCameraSymphony",
+@GenModel(prefix="ApogyExamplesCameraApogy",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
-		  modelName="Symphony__ExamplesCameraSymphony")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.camera.symphony/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.camera.symphony.edit/src-generated")
+		  modelName="ApogyExamplesCameraApogy")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.camera.apogy/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.camera.apogy.edit/src-generated")
 
-package org.eclipse.symphony.examples.camera.symphony
+package ca.gc.asc_csa.apogy.examples.camera.apogy
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter
-import org.eclipse.symphony.core.SymphonyInitializationData
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
 /*
- * This class is the Symphony API adapter that is used to
+ * This class is the Apogy API adapter that is used to
  * interface the existing basic camera implementations with
- * Symphony; this provides a series of callback methods that
+ * Apogy; this provides a series of callback methods that
  * can be overridden to implement a variety of useful features.
  */
-class CameraSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+class CameraApogySystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*
 	 * For specific implementation details,
-	 * please see {@link org.eclipse.symphony.examples.camera.symphony.impl.CameraSymphonySystemApiAdapterImpl}
+	 * please see {@link ca.gc.asc_csa.apogy.examples.camera.apogy.impl.CameraApogySystemApiAdapterImpl}
 	 */
 }
 
@@ -29,10 +29,10 @@ class CameraSymphonySystemApiAdapter extends SymphonySystemApiAdapter
  * This class is the data required in order to initialize (or
  * reinitialize) the basic camera implementations.  This will
  * be used by the relevant API adapter, which in this case
- * is {@link CameraSymphonySystemApiAdapter}. 
- * @see #CameraSymphonySystemApiAdapter
+ * is {@link CameraApogySystemApiAdapter}. 
+ * @see #CameraApogySystemApiAdapter
  */
-class CameraData extends SymphonyInitializationData
+class CameraData extends ApogyInitializationData
 {
 	/*
 	 * This is the current field of view (FOV) of the camera.
@@ -60,16 +60,16 @@ class CameraData extends SymphonyInitializationData
 }
 
 /*
- * This class is the Symphony API adapter that is used to
+ * This class is the Apogy API adapter that is used to
  * interface the existing PTU camera implementations with
- * Symphony; this provides a series of callback methods that
+ * Apogy; this provides a series of callback methods that
  * can be overridden to implement a variety of useful features.
  */
-class PTUCameraSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+class PTUCameraApogySystemApiAdapter extends ApogySystemApiAdapter
 {	
 	/*
 	 * For specific implementation details,
-	 * please see {@link org.eclipse.symphony.examples.camera.symphony.impl.PTUCameraSymphonySystemApiAdapterImpl}
+	 * please see {@link ca.gc.asc_csa.apogy.examples.camera.apogy.impl.PTUCameraApogySystemApiAdapterImpl}
 	 */
 }
 
@@ -77,8 +77,8 @@ class PTUCameraSymphonySystemApiAdapter extends SymphonySystemApiAdapter
  * This class is the data required in order to initialize (or
  * reinitialized) the basic camera implementations.  This will
  * be used by the relevant API adapter, which in this case
- * is {@link PTUCameraSymphonySystenApiAdapter}.
- * @see #PTUCameraSymphonySystemApiAdapter
+ * is {@link PTUCameraApogySystenApiAdapter}.
+ * @see #PTUCameraApogySystemApiAdapter
  */
 class PTUCameraData extends CameraData
 {
@@ -86,7 +86,7 @@ class PTUCameraData extends CameraData
 	 * This is the current pan angle of the Pan-Tilt Unit (PTU)
 	 * that the camera is mounted on.
 	 */
-	@GenModel(symphony_units="deg",
+	@GenModel(apogy_units="deg",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="PTU Angles")
@@ -96,7 +96,7 @@ class PTUCameraData extends CameraData
 	 * This is the current tilt angle of the Pan-Tilt Unit (PTU)
 	 * that the camera is mounted on.
 	 */
-	@GenModel(symphony_units="deg",
+	@GenModel(apogy_units="deg",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="PTU Angles")

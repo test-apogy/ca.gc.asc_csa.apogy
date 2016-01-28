@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsMobilityControllersFactoryImpl.java,v 1.5.4.3 2015/09/22 19:39:39 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityControllersFactoryImpl.java,v 1.5.4.3 2015/09/22 19:39:39 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -12,19 +12,19 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersFactory;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl implements Symphony__AddonsMobilityControllersFactory
+public class ApogyAddonsMobilityControllersFactoryImpl extends EFactoryImpl implements ApogyAddonsMobilityControllersFactory
 {
 	/**
 	 * Creates the default factory implementation.
@@ -40,18 +40,18 @@ public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityControllersFactory init()
+	public static ApogyAddonsMobilityControllersFactory init()
 	{
 		try {
-			Symphony__AddonsMobilityControllersFactory theSymphony__AddonsMobilityControllersFactory = (Symphony__AddonsMobilityControllersFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsMobilityControllersPackage.eNS_URI);
-			if (theSymphony__AddonsMobilityControllersFactory != null) {
-				return theSymphony__AddonsMobilityControllersFactory;
+			ApogyAddonsMobilityControllersFactory theApogyAddonsMobilityControllersFactory = (ApogyAddonsMobilityControllersFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsMobilityControllersPackage.eNS_URI);
+			if (theApogyAddonsMobilityControllersFactory != null) {
+				return theApogyAddonsMobilityControllersFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsMobilityControllersFactoryImpl();
+		return new ApogyAddonsMobilityControllersFactoryImpl();
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityControllersFactoryImpl()
+	public ApogyAddonsMobilityControllersFactoryImpl()
 	{
 		super();
 	}
@@ -74,12 +74,12 @@ public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl
 	public EObject create(EClass eClass)
 	{
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER: return createPathFollower();
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER: return createSkidSteeredPlatformPathFollower();
-			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER: return createPathRecorder();
-			case Symphony__AddonsMobilityControllersPackage.WAYPOINT_PATH_RECORDER: return createWaypointPathRecorder();
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_WAY_POINT_PATH_FOLLOWER: return createSkidSteeredWayPointPathFollower();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER: return createAstolfiGuidanceController();
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER: return createPathFollower();
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER: return createSkidSteeredPlatformPathFollower();
+			case ApogyAddonsMobilityControllersPackage.PATH_RECORDER: return createPathRecorder();
+			case ApogyAddonsMobilityControllersPackage.WAYPOINT_PATH_RECORDER: return createWaypointPathRecorder();
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_WAY_POINT_PATH_FOLLOWER: return createSkidSteeredWayPointPathFollower();
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER: return createAstolfiGuidanceController();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -94,9 +94,9 @@ public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl
 	public Object createFromString(EDataType eDataType, String initialValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER_STATE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER_STATE:
 				return createPathFollowerStateFromString(eDataType, initialValue);
-			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER_SAMPLING_MODE:
+			case ApogyAddonsMobilityControllersPackage.PATH_RECORDER_SAMPLING_MODE:
 				return createPathRecorderSamplingModeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -112,9 +112,9 @@ public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl
 	public String convertToString(EDataType eDataType, Object instanceValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER_STATE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER_STATE:
 				return convertPathFollowerStateToString(eDataType, instanceValue);
-			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER_SAMPLING_MODE:
+			case ApogyAddonsMobilityControllersPackage.PATH_RECORDER_SAMPLING_MODE:
 				return convertPathRecorderSamplingModeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -234,8 +234,8 @@ public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityControllersPackage getSymphony__AddonsMobilityControllersPackage() {
-		return (Symphony__AddonsMobilityControllersPackage)getEPackage();
+	public ApogyAddonsMobilityControllersPackage getApogyAddonsMobilityControllersPackage() {
+		return (ApogyAddonsMobilityControllersPackage)getEPackage();
 	}
 
 	/**
@@ -245,9 +245,9 @@ public class Symphony__AddonsMobilityControllersFactoryImpl extends EFactoryImpl
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsMobilityControllersPackage getPackage()
+	public static ApogyAddonsMobilityControllersPackage getPackage()
 	{
-		return Symphony__AddonsMobilityControllersPackage.eINSTANCE;
+		return ApogyAddonsMobilityControllersPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsMobilityControllersFactoryImpl
+} //ApogyAddonsMobilityControllersFactoryImpl

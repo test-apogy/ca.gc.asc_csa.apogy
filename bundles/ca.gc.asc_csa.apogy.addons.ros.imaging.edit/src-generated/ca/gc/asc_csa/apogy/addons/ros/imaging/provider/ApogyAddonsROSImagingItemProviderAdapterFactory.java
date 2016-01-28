@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.provider;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,9 +29,9 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage;
 
-import org.eclipse.symphony.addons.ros.imaging.util.Symphony__AddonsROSImagingAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.util.ApogyAddonsROSImagingAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -42,7 +42,7 @@ import org.eclipse.symphony.addons.ros.imaging.util.Symphony__AddonsROSImagingAd
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSImagingItemProviderAdapterFactory extends Symphony__AddonsROSImagingAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsROSImagingItemProviderAdapterFactory extends ApogyAddonsROSImagingAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class Symphony__AddonsROSImagingItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsROSImagingEditPlugin.INSTANCE, Symphony__AddonsROSImagingPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsROSImagingEditPlugin.INSTANCE, ApogyAddonsROSImagingPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -81,7 +81,7 @@ public class Symphony__AddonsROSImagingItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingItemProviderAdapterFactory() {
+	public ApogyAddonsROSImagingItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -90,26 +90,26 @@ public class Symphony__AddonsROSImagingItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsROSImagingFacadeItemProvider symphony__AddonsROSImagingFacadeItemProvider;
+	protected ApogyAddonsROSImagingFacadeItemProvider apogy__AddonsROSImagingFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__AddonsROSImagingFacadeAdapter() {
-		if (symphony__AddonsROSImagingFacadeItemProvider == null) {
-			symphony__AddonsROSImagingFacadeItemProvider = new Symphony__AddonsROSImagingFacadeItemProvider(this);
+	public Adapter createApogyAddonsROSImagingFacadeAdapter() {
+		if (apogy__AddonsROSImagingFacadeItemProvider == null) {
+			apogy__AddonsROSImagingFacadeItemProvider = new ApogyAddonsROSImagingFacadeItemProvider(this);
 		}
 
-		return symphony__AddonsROSImagingFacadeItemProvider;
+		return apogy__AddonsROSImagingFacadeItemProvider;
 	}
 
 	/**
@@ -238,7 +238,7 @@ public class Symphony__AddonsROSImagingItemProviderAdapterFactory extends Sympho
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphony__AddonsROSImagingFacadeItemProvider != null) symphony__AddonsROSImagingFacadeItemProvider.dispose();
+		if (apogy__AddonsROSImagingFacadeItemProvider != null) apogy__AddonsROSImagingFacadeItemProvider.dispose();
 	}
 
 }

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -13,11 +13,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.Activator;
-import org.eclipse.symphony.common.emf.CurrentTimeSource;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.emf.Activator;
+import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,8 +27,8 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.CurrentTimeSourceImpl#getUpdatePeriod <em>Update Period</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.CurrentTimeSourceImpl#isPaused <em>Paused</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.CurrentTimeSourceImpl#getUpdatePeriod <em>Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.CurrentTimeSourceImpl#isPaused <em>Paused</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.CURRENT_TIME_SOURCE;
+		return ApogyCommonEMFPackage.Literals.CURRENT_TIME_SOURCE;
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 		int oldUpdatePeriod = updatePeriod;
 		updatePeriod = newUpdatePeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 		boolean oldPaused = paused;
 		paused = newPaused;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED, oldPaused, paused));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED, oldPaused, paused));
 	}
 
 	/**
@@ -182,9 +182,9 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				return getUpdatePeriod();
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				return isPaused();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -198,10 +198,10 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				setUpdatePeriod((Integer)newValue);
 				return;
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				setPaused((Boolean)newValue);
 				return;
 		}
@@ -216,10 +216,10 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				setUpdatePeriod(UPDATE_PERIOD_EDEFAULT);
 				return;
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				setPaused(PAUSED_EDEFAULT);
 				return;
 		}
@@ -234,9 +234,9 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				return updatePeriod != UPDATE_PERIOD_EDEFAULT;
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				return paused != PAUSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -250,10 +250,10 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE___PAUSE:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE___PAUSE:
 				pause();
 				return null;
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE___RESUME:
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE___RESUME:
 				resume();
 				return null;
 		}

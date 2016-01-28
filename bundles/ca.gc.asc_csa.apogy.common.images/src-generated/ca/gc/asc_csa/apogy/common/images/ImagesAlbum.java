@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.images;
+package ca.gc.asc_csa.apogy.common.images;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.images.ImagesAlbum#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.ImagesAlbum#getImages <em>Images</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.ImagesAlbum#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.ImagesAlbum#getImages <em>Images</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImagesAlbum()
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getImagesAlbum()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface ImagesAlbum extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImagesAlbum_Name()
+	 * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getImagesAlbum_Name()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.images.ImagesAlbum#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.images.ImagesAlbum#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -53,7 +53,7 @@ public interface ImagesAlbum extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Images</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.images.AbstractEImage}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.images.AbstractEImage}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Images</em>' containment reference list isn't clear,
@@ -61,7 +61,7 @@ public interface ImagesAlbum extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Images</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImagesAlbum_Images()
+	 * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getImagesAlbum_Images()
 	 * @model containment="true"
 	 * @generated
 	 */

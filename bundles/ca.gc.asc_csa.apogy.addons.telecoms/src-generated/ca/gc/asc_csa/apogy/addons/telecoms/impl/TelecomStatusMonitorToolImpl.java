@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,10 +29,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomNode;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,10 +42,10 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#getTelecomNodes <em>Telecom Nodes</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#getStatusMonitorToolList <em>Status Monitor Tool List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#isRunning <em>Running</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl#getTelecomNodes <em>Telecom Nodes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl#getStatusMonitorToolList <em>Status Monitor Tool List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
  * @generated
@@ -144,7 +144,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL;
+		return ApogyAddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL;
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<TelecomNode> getTelecomNodes() {
 		if (telecomNodes == null) {
-			telecomNodes = new EObjectContainmentWithInverseEList<TelecomNode>(TelecomNode.class, this, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES, Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL);
+			telecomNodes = new EObjectContainmentWithInverseEList<TelecomNode>(TelecomNode.class, this, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES, ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS_MONITOR_TOOL);
 		}
 		return telecomNodes;
 	}
@@ -165,7 +165,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public TelecomStatusMonitorToolList getStatusMonitorToolList() {
-		if (eContainerFeatureID() != Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST) return null;
+		if (eContainerFeatureID() != ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST) return null;
 		return (TelecomStatusMonitorToolList)eContainer();
 	}
 
@@ -175,7 +175,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public TelecomStatusMonitorToolList basicGetStatusMonitorToolList() {
-		if (eContainerFeatureID() != Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST) return null;
+		if (eContainerFeatureID() != ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST) return null;
 		return (TelecomStatusMonitorToolList)eInternalContainer();
 	}
 
@@ -185,7 +185,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public NotificationChain basicSetStatusMonitorToolList(TelecomStatusMonitorToolList newStatusMonitorToolList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newStatusMonitorToolList, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newStatusMonitorToolList, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST, msgs);
 		return msgs;
 	}
 
@@ -195,19 +195,19 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void setStatusMonitorToolList(TelecomStatusMonitorToolList newStatusMonitorToolList) {
-		if (newStatusMonitorToolList != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST && newStatusMonitorToolList != null)) {
+		if (newStatusMonitorToolList != eInternalContainer() || (eContainerFeatureID() != ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST && newStatusMonitorToolList != null)) {
 			if (EcoreUtil.isAncestor(this, newStatusMonitorToolList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newStatusMonitorToolList != null)
-				msgs = ((InternalEObject)newStatusMonitorToolList).eInverseAdd(this, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, TelecomStatusMonitorToolList.class, msgs);
+				msgs = ((InternalEObject)newStatusMonitorToolList).eInverseAdd(this, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, TelecomStatusMonitorToolList.class, msgs);
 			msgs = basicSetStatusMonitorToolList(newStatusMonitorToolList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST, newStatusMonitorToolList, newStatusMonitorToolList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST, newStatusMonitorToolList, newStatusMonitorToolList));
 	}
 
 	/**
@@ -228,7 +228,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 		boolean oldRunning = running;
 		running = newRunning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING, oldRunning, running));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING, oldRunning, running));
 	}
 
 
@@ -250,7 +250,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -342,9 +342,9 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTelecomNodes()).basicAdd(otherEnd, msgs);
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetStatusMonitorToolList((TelecomStatusMonitorToolList)otherEnd, msgs);
@@ -360,9 +360,9 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
 				return ((InternalEList<?>)getTelecomNodes()).basicRemove(otherEnd, msgs);
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
 				return basicSetStatusMonitorToolList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -376,8 +376,8 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
-				return eInternalContainer().eInverseRemove(this, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, TelecomStatusMonitorToolList.class, msgs);
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, TelecomStatusMonitorToolList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -390,14 +390,14 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
 				return getTelecomNodes();
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
 				if (resolve) return getStatusMonitorToolList();
 				return basicGetStatusMonitorToolList();
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
 				return isRunning();
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
 				return isDisposed();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -412,17 +412,17 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
 				getTelecomNodes().clear();
 				getTelecomNodes().addAll((Collection<? extends TelecomNode>)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
 				setStatusMonitorToolList((TelecomStatusMonitorToolList)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
 				setRunning((Boolean)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
 		}
@@ -437,16 +437,16 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
 				getTelecomNodes().clear();
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
 				setStatusMonitorToolList((TelecomStatusMonitorToolList)null);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
 				setRunning(RUNNING_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
 		}
@@ -461,13 +461,13 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES:
 				return telecomNodes != null && !telecomNodes.isEmpty();
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST:
 				return basicGetStatusMonitorToolList() != null;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__RUNNING:
 				return running != RUNNING_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -481,13 +481,13 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL___START:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL___START:
 				start();
 				return null;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL___STOP:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL___STOP:
 				stop();
 				return null;
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL___DISPOSE:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL___DISPOSE:
 				dispose();
 				return null;
 		}
@@ -517,7 +517,7 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 		@Override
 		public void notifyChanged(Notification notification)
 		{
-			if (notification.getFeatureID(TelecomStatusMonitorTool.class) == Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES)
+			if (notification.getFeatureID(TelecomStatusMonitorTool.class) == ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES)
 			{
 				// If this hasn't been disposed and it's currently running
 				if (isDisposed() == false && isRunning() == true)

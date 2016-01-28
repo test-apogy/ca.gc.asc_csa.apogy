@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.topology.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.ui.adapters;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.URLNode;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.URLNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContextAdapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 public class VRMLGraphicsContextAdapter implements GraphicsContextAdapter {
 
@@ -38,15 +38,15 @@ public class VRMLGraphicsContextAdapter implements GraphicsContextAdapter {
 		{
 			IFile file = (IFile) obj;
 			
-			URLNode node = Symphony__CommonTopologyFactory.eINSTANCE.createURLNode();
+			URLNode node = ApogyCommonTopologyFactory.eINSTANCE.createURLNode();
 			node.setDescription(file.getName());
 			
 			node.setUrl("file://" + file.getLocation().toOSString());
 			
-			GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode();
+			GroupNode root = ApogyCommonTopologyFactory.eINSTANCE.createGroupNode();
 			root.getChildren().add(node);
 			
-			grContext = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
+			grContext = ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 			grContext.setTopology(root);			
 		}
 		

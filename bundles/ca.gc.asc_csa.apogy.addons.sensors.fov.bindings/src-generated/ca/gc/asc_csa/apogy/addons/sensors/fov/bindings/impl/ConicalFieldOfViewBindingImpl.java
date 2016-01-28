@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl;
 
 import java.util.Map;
 
@@ -12,16 +12,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindin
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl#getFov <em>Fov</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsFOVBindingsPackage.Literals.CONICAL_FIELD_OF_VIEW_BINDING;
+		return ApogyAddonsSensorsFOVBindingsPackage.Literals.CONICAL_FIELD_OF_VIEW_BINDING;
 	}
 
   /**
@@ -81,7 +81,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 			fov = (ConicalFieldOfView)eResolveProxy(oldFov);
 			if (fov != oldFov) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 			}
 		}
 		return fov;
@@ -107,7 +107,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 		ConicalFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 	}
 
   /**
@@ -119,7 +119,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				if (resolve) return getFov();
 				return basicGetFov();
 		}
@@ -135,7 +135,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((ConicalFieldOfView)newValue);
 				return;
 		}
@@ -151,7 +151,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((ConicalFieldOfView)null);
 				return;
 		}
@@ -167,7 +167,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				return fov != null;
 		}
 		return super.eIsSet(featureID);
@@ -191,7 +191,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 			  @Override
 			  public void notifyChanged(Notification notification) 
 			  {
-				  if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+				  if(notification.getFeatureID(FeatureNodeAdapter.class) == ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 				  {		
 						if(notification.getOldValue() instanceof ConicalFieldOfView)
 					  	{
@@ -231,7 +231,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 		  // Updates Range.
 		  if(sourceFOV.getRange() != null)
 		  {
-			  DistanceRange newRange = Symphony__AddonsSensorsFOVFacade.INSTANCE.createDistanceRange(sourceFOV.getRange());
+			  DistanceRange newRange = ApogyAddonsSensorsFOVFacade.INSTANCE.createDistanceRange(sourceFOV.getRange());
 			  getFov().setRange(newRange);
 		  }
 		  else

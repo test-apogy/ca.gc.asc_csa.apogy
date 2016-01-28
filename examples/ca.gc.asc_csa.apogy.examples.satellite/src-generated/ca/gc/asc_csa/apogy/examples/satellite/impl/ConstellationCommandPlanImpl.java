@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.util.Collection;
 
@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.symphony.examples.satellite.ConstellationCommandPlan;
-import org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl#getConstellationCommandPlanItems <em>Constellation Command Plan Items</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanImpl#getConstellationCommandPlanItems <em>Constellation Command Plan Items</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +61,7 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN;
+		return ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN;
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<ConstellationCommandPlanItem> getConstellationCommandPlanItems() {
 		if (constellationCommandPlanItems == null) {
-			constellationCommandPlanItems = new EObjectContainmentEList<ConstellationCommandPlanItem>(ConstellationCommandPlanItem.class, this, Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS);
+			constellationCommandPlanItems = new EObjectContainmentEList<ConstellationCommandPlanItem>(ConstellationCommandPlanItem.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS);
 		}
 		return constellationCommandPlanItems;
 	}
@@ -84,7 +84,7 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
 				return ((InternalEList<?>)getConstellationCommandPlanItems()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -98,7 +98,7 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
 				return getConstellationCommandPlanItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
 				getConstellationCommandPlanItems().clear();
 				getConstellationCommandPlanItems().addAll((Collection<? extends ConstellationCommandPlanItem>)newValue);
 				return;
@@ -129,7 +129,7 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
 				getConstellationCommandPlanItems().clear();
 				return;
 		}
@@ -144,7 +144,7 @@ public class ConstellationCommandPlanImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS:
 				return constellationCommandPlanItems != null && !constellationCommandPlanItems.isEmpty();
 		}
 		return super.eIsSet(featureID);

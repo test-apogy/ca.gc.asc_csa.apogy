@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class FieldOfViewPresentationItemProvider extends NodePresentationItemPro
 				 getResourceLocator(),
 				 getString("_UI_FieldOfViewPresentation_transparency_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FieldOfViewPresentation_transparency_feature", "_UI_FieldOfViewPresentation_type"),
-				 Symphony__AddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY,
+				 ApogyAddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class FieldOfViewPresentationItemProvider extends NodePresentationItemPro
 				 getResourceLocator(),
 				 getString("_UI_FieldOfViewPresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FieldOfViewPresentation_presentationMode_feature", "_UI_FieldOfViewPresentation_type"),
-				 Symphony__AddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE,
+				 ApogyAddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class FieldOfViewPresentationItemProvider extends NodePresentationItemPro
 				 getResourceLocator(),
 				 getString("_UI_FieldOfViewPresentation_showOutlineOnly_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FieldOfViewPresentation_showOutlineOnly_feature", "_UI_FieldOfViewPresentation_type"),
-				 Symphony__AddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY,
+				 ApogyAddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class FieldOfViewPresentationItemProvider extends NodePresentationItemPro
 				 getResourceLocator(),
 				 getString("_UI_FieldOfViewPresentation_showProjection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FieldOfViewPresentation_showProjection_feature", "_UI_FieldOfViewPresentation_type"),
-				 Symphony__AddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION,
+				 ApogyAddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION,
 				 true,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class FieldOfViewPresentationItemProvider extends NodePresentationItemPro
 				 getResourceLocator(),
 				 getString("_UI_FieldOfViewPresentation_projectionColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FieldOfViewPresentation_projectionColor_feature", "_UI_FieldOfViewPresentation_type"),
-				 Symphony__AddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR,
+				 ApogyAddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR,
 				 true,
 				 false,
 				 false,
@@ -203,11 +203,11 @@ public class FieldOfViewPresentationItemProvider extends NodePresentationItemPro
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FieldOfViewPresentation.class)) {
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

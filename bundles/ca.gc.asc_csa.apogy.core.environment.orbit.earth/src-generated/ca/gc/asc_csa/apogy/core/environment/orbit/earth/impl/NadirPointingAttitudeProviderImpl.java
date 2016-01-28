@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class NadirPointingAttitudeProviderImpl extends OreKitBackedAttitudeProvi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.NADIR_POINTING_ATTITUDE_PROVIDER;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.NADIR_POINTING_ATTITUDE_PROVIDER;
 	}
 
 } //NadirPointingAttitudeProviderImpl

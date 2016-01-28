@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.math.statistics;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.math.statistics;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -12,8 +12,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.common.math.statistics.Activator
-Export-Package: org.eclipse.symphony.common.math.statistics,
- org.eclipse.symphony.common.math.statistics.impl,
- org.eclipse.symphony.common.math.statistics.util
+Bundle-Activator: ca.gc.asc_csa.apogy.common.math.statistics.Activator
+Export-Package: ca.gc.asc_csa.apogy.common.math.statistics,
+ ca.gc.asc_csa.apogy.common.math.statistics.impl,
+ ca.gc.asc_csa.apogy.common.math.statistics.util
 

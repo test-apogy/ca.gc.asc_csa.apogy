@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
@@ -15,16 +15,16 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.Activator;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Activator;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,12 +34,12 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#isBinded <em>Binded</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getSource <em>Source</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNode <em>Feature Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl#isBinded <em>Binded</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNode <em>Feature Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
  * </ul>
  *
  * @generated
@@ -156,7 +156,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING;
+		return ApogyCommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING;
 	}
 
   /**
@@ -179,7 +179,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 		boolean oldBinded = binded;
 		binded = newBinded;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED, oldBinded, binded));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED, oldBinded, binded));
 	}
 
   /**
@@ -202,7 +202,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -225,7 +225,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME, oldName, name));
 	}
 
   /**
@@ -240,7 +240,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 			source = eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE, oldSource, source));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE, oldSource, source));
 			}
 		}
 		return source;
@@ -296,7 +296,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 		EObject oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE, oldSource, source));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE, oldSource, source));
 	}
 
   /**
@@ -311,7 +311,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 			featureNode = (AbstractFeatureNode)eResolveProxy(oldFeatureNode);
 			if (featureNode != oldFeatureNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE, oldFeatureNode, featureNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE, oldFeatureNode, featureNode));
 			}
 		}
 		return featureNode;
@@ -336,7 +336,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 		AbstractFeatureNode oldFeatureNode = featureNode;
 		featureNode = newFeatureNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE, oldFeatureNode, featureNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE, oldFeatureNode, featureNode));
 	}
 
 		/**
@@ -348,7 +348,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
   {
 	  if(getFeatureNodeAdapterGen() == null)
 	  {
-		  featureNodeAdapter = Symphony__CommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();
+		  featureNodeAdapter = ApogyCommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();
 		  featureNodeAdapter.eAdapters().add(getAdapter());
 	  }
 	  
@@ -367,7 +367,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 			featureNodeAdapter = (FeatureNodeAdapter)eResolveProxy(oldFeatureNodeAdapter);
 			if (featureNodeAdapter != oldFeatureNodeAdapter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER, oldFeatureNodeAdapter, featureNodeAdapter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER, oldFeatureNodeAdapter, featureNodeAdapter));
 			}
 		}
 		return featureNodeAdapter;
@@ -457,19 +457,19 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
 				return isBinded();
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
 				return getDescription();
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
 				return getName();
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
 				if (resolve) return getFeatureNode();
 				return basicGetFeatureNode();
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER:
 				if (resolve) return getFeatureNodeAdapter();
 				return basicGetFeatureNodeAdapter();
 		}
@@ -485,19 +485,19 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
 				setBinded((Boolean)newValue);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
 				setSource((EObject)newValue);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)newValue);
 				return;
 		}
@@ -513,19 +513,19 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
 				setBinded(BINDED_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
 				setSource((EObject)null);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)null);
 				return;
 		}
@@ -541,17 +541,17 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
 				return binded != BINDED_EDEFAULT;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE:
 				return source != null;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE:
 				return featureNode != null;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER:
 				return featureNodeAdapter != null;
 		}
 		return super.eIsSet(featureID);
@@ -567,13 +567,13 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND:
 				bind();
 				return null;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND:
 				unbind();
 				return null;
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP:
 				return clone((Map<Node, Node>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -615,7 +615,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 				@Override
 				public void notifyChanged(Notification notification) 
 				{
-					if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+					if(notification.getFeatureID(FeatureNodeAdapter.class) == ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 					{						
 						valueChanged(notification.getNewValue());
 					}

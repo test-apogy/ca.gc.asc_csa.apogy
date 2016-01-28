@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -10,14 +10,14 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.ResultNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ResultNode} object.
  * <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * @generated
@@ -62,7 +62,7 @@ public class ResultNodeItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ResultNode_result_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ResultNode_result_feature", "_UI_ResultNode_type"),
-				 Symphony__CorePackage.Literals.RESULT_NODE__RESULT,
+				 ApogyCorePackage.Literals.RESULT_NODE__RESULT,
 				 true,
 				 false,
 				 true,
@@ -123,23 +123,23 @@ public class ResultNodeItemProvider extends AggregateGroupNodeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 	}
 
 }

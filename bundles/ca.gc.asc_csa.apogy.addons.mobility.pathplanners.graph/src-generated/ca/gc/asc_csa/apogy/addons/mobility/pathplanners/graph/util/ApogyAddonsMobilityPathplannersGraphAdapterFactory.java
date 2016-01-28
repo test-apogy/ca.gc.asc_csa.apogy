@@ -1,23 +1,23 @@
 /**
  * Canadian Space Agency 2008.
  *
- * $Id: Symphony__AddonsMobilityPathplannersGraphAdapterFactory.java,v 1.2.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityPathplannersGraphAdapterFactory.java,v 1.2.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.util;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.*;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.VerboseProvider;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.*;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.VerboseProvider;
 import org.jgrapht.EdgeFactory;
 
 /**
@@ -25,17 +25,17 @@ import org.jgrapht.EdgeFactory;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsMobilityPathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPathplannersGraphPackage modelPackage;
+	protected static ApogyAddonsMobilityPathplannersGraphPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -43,9 +43,9 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersGraphAdapterFactory() {
+	public ApogyAddonsMobilityPathplannersGraphAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPathplannersGraphPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPathplannersGraphPackage.eINSTANCE;
 		}
 	}
 
@@ -74,8 +74,8 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsMobilityPathplannersGraphSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsMobilityPathplannersGraphSwitch<Adapter>() {
+	protected ApogyAddonsMobilityPathplannersGraphSwitch<Adapter> modelSwitch =
+		new ApogyAddonsMobilityPathplannersGraphSwitch<Adapter>() {
 			@Override
 			public <PolygonType extends CartesianPolygon> Adapter caseCostBasedMeshWayPointPathPlanner(CostBasedMeshWayPointPathPlanner<PolygonType> object) {
 				return createCostBasedMeshWayPointPathPlannerAdapter();
@@ -165,13 +165,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner <em>Cost Based Mesh Way Point Path Planner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner <em>Cost Based Mesh Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner
 	 * @generated
 	 */
 	public Adapter createCostBasedMeshWayPointPathPlannerAdapter() {
@@ -179,13 +179,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction <em>Displacement Cost Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DisplacementCostFunction <em>Displacement Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DisplacementCostFunction
 	 * @generated
 	 */
 	public Adapter createDisplacementCostFunctionAdapter() {
@@ -193,13 +193,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction <em>Mesh Displacement Cost Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction <em>Mesh Displacement Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction
 	 * @generated
 	 */
 	public Adapter createMeshDisplacementCostFunctionAdapter() {
@@ -207,13 +207,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction <em>Distance Only Cost Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction <em>Distance Only Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction
 	 * @generated
 	 */
 	public Adapter createDistanceOnlyCostFunctionAdapter() {
@@ -221,13 +221,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner <em>Simple Directed Weighted Graph Based Mesh Way Point Path Planner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner <em>Simple Directed Weighted Graph Based Mesh Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner
 	 * @generated
 	 */
 	public Adapter createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerAdapter() {
@@ -235,13 +235,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner <em>Directed Graph Based Mesh Way Point Path Planner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner <em>Directed Graph Based Mesh Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner
 	 * @generated
 	 */
 	public Adapter createDirectedGraphBasedMeshWayPointPathPlannerAdapter() {
@@ -263,13 +263,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge <em>Mobility Edge</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge <em>Mobility Edge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge
 	 * @generated
 	 */
 	public Adapter createMobilityEdgeAdapter() {
@@ -277,13 +277,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory <em>Mobility Edge Factory</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdgeFactory <em>Mobility Edge Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdgeFactory
 	 * @generated
 	 */
 	public Adapter createMobilityEdgeFactoryAdapter() {
@@ -291,13 +291,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction <em>Distance And Slopes Cost Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction <em>Distance And Slopes Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction
 	 * @generated
 	 */
 	public Adapter createDistanceAndSlopesCostFunctionAdapter() {
@@ -305,13 +305,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction <em>Exclusion Zones Cost Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction <em>Exclusion Zones Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction
 	 * @generated
 	 */
 	public Adapter createExclusionZonesCostFunctionAdapter() {
@@ -319,13 +319,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction <em>Distance And Rover Footprint Cost Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction <em>Distance And Rover Footprint Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction
 	 * @generated
 	 */
 	public Adapter createDistanceAndRoverFootprintCostFunctionAdapter() {
@@ -333,13 +333,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -347,13 +347,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -361,13 +361,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner <em>Way Point Path Planner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner <em>Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner
 	 * @generated
 	 */
 	public Adapter createWayPointPathPlannerAdapter() {
@@ -375,13 +375,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner <em>Mesh Way Point Path Planner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner <em>Mesh Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner
 	 * @generated
 	 */
 	public Adapter createMeshWayPointPathPlannerAdapter() {
@@ -389,13 +389,13 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.VerboseProvider
+	 * @see ca.gc.asc_csa.apogy.common.processors.VerboseProvider
 	 * @generated
 	 */
 	public Adapter createVerboseProviderAdapter() {
@@ -414,4 +414,4 @@ public class Symphony__AddonsMobilityPathplannersGraphAdapterFactory extends Ada
 		return null;
 	}
 
-} //Symphony__AddonsMobilityPathplannersGraphAdapterFactory
+} //ApogyAddonsMobilityPathplannersGraphAdapterFactory

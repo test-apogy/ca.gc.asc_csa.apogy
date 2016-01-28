@@ -1,19 +1,19 @@
-@GenModel(prefix="Symphony__ExamplesCamera",
+@GenModel(prefix="ApogyExamplesCamera",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="Symphony__ExamplesCamera",
+		  modelName="ApogyExamplesCamera",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.camera/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.camera.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.camera/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.camera.edit/src-generated")
 
-package org.eclipse.symphony.examples.camera
+package ca.gc.asc_csa.apogy.examples.camera
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
-import org.eclipse.symphony.addons.actuators.PanTiltUnit
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera
 
 type Throwable wraps java.lang.Throwable
 
@@ -76,7 +76,7 @@ class CameraStub extends Camera
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.camera.impl.CameraStubImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraStubImpl}
 	 */
 }
 
@@ -91,7 +91,7 @@ class CameraSimulated extends Camera
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.camera.impl.CameraSimulatedImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraSimulatedImpl}
 	 */
 }
 
@@ -113,7 +113,7 @@ class PTUCameraStub extends CameraStub, PTUCamera
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraStubImpl}
 	 */
 }
 
@@ -128,6 +128,6 @@ class PTUCameraSimulated extends CameraSimulated, PTUCamera
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl}
 	 */
 }

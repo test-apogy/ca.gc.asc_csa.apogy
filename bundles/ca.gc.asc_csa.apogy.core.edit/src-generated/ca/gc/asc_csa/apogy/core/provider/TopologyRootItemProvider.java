@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -19,13 +19,13 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.TopologyRoot} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.TopologyRoot} object.
  * <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE);
+			childrenFeatures.add(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +121,7 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyRoot.class)) {
-			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case ApogyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,93 +142,93 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
+				(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
 	/**

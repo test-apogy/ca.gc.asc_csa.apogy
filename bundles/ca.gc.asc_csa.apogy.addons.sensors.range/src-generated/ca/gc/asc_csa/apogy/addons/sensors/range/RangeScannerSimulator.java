@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
 import java.util.List;
 
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 
-import org.eclipse.symphony.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,14 +20,14 @@ import org.eclipse.symphony.common.topology.ContentNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getMeshNode <em>Mesh Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#isNoiseEnabled <em>Noise Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeCroppingMesh <em>Time Cropping Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeFindingIntersections <em>Time Finding Intersections</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getMeshNode <em>Mesh Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#isNoiseEnabled <em>Noise Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getTimeCroppingMesh <em>Time Cropping Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getTimeFindingIntersections <em>Time Finding Intersections</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRangeScannerSimulator()
  * @model abstract="true"
  * @generated
  */
@@ -44,14 +44,14 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mesh Node</em>' reference.
 	 * @see #setMeshNode(ContentNode)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_MeshNode()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRangeScannerSimulator_MeshNode()
 	 * @model
 	 * @generated
 	 */
 	ContentNode<CartesianTriangularMesh> getMeshNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getMeshNode <em>Mesh Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getMeshNode <em>Mesh Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mesh Node</em>' reference.
@@ -71,14 +71,14 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Noise Enabled</em>' attribute.
 	 * @see #setNoiseEnabled(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_NoiseEnabled()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRangeScannerSimulator_NoiseEnabled()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isNoiseEnabled();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#isNoiseEnabled <em>Noise Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#isNoiseEnabled <em>Noise Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Noise Enabled</em>' attribute.
@@ -96,14 +96,14 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Cropping Mesh</em>' attribute.
 	 * @see #setTimeCroppingMesh(long)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_TimeCroppingMesh()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRangeScannerSimulator_TimeCroppingMesh()
 	 * @model unique="false"
 	 * @generated
 	 */
 	long getTimeCroppingMesh();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeCroppingMesh <em>Time Cropping Mesh</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getTimeCroppingMesh <em>Time Cropping Mesh</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Cropping Mesh</em>' attribute.
@@ -122,14 +122,14 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Finding Intersections</em>' attribute.
 	 * @see #setTimeFindingIntersections(long)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_TimeFindingIntersections()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRangeScannerSimulator_TimeFindingIntersections()
 	 * @model unique="false"
 	 * @generated
 	 */
 	long getTimeFindingIntersections();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeFindingIntersections <em>Time Finding Intersections</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getTimeFindingIntersections <em>Time Finding Intersections</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Finding Intersections</em>' attribute.
@@ -147,14 +147,14 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Getting Simulated Rays</em>' attribute.
 	 * @see #setTimeGettingSimulatedRays(long)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_TimeGettingSimulatedRays()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRangeScannerSimulator_TimeGettingSimulatedRays()
 	 * @model unique="false"
 	 * @generated
 	 */
 	long getTimeGettingSimulatedRays();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Getting Simulated Rays</em>' attribute.
@@ -184,7 +184,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * the position and direction of the simulated laser rays. This method is
 	 * abstract and must be overridden.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.addons.sensors.range.List<org.eclipse.symphony.addons.sensors.range.RayData>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.addons.sensors.range.List<ca.gc.asc_csa.apogy.addons.sensors.range.RayData>" unique="false" many="false"
 	 * @generated
 	 */
 	List<RayData> getSimulatedRays();
@@ -192,7 +192,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.sensors.range.Exception"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.sensors.range.Exception"
 	 * @generated
 	 */
 	void acquireData() throws Exception;

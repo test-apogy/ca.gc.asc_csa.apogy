@@ -1,31 +1,31 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyTopology;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Symphony Topology</b></em>'. <!-- end-user-doc -->
+ * <em><b>Apogy Topology</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyTopologyImpl#getRootNode <em>Root Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyTopologyImpl#getRootNode <em>Root Node</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
-		implements SymphonyTopology {
+public class ApogyTopologyImpl extends MinimalEObjectImpl.Container
+		implements ApogyTopology {
 
 	/**
 	 * The cached value of the '{@link #getRootNode() <em>Root Node</em>}' reference.
@@ -40,7 +40,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyTopologyImpl() {
+	protected ApogyTopologyImpl() {
 		super();
 	}
 
@@ -50,7 +50,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.SYMPHONY_TOPOLOGY;
+		return ApogyCorePackage.Literals.APOGY_TOPOLOGY;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 			rootNode = (GroupNode)eResolveProxy(oldRootNode);
 			if (rootNode != oldRootNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
 			}
 		}
 		return rootNode;
@@ -85,7 +85,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 		GroupNode oldRootNode = rootNode;
 		rootNode = newRootNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE:
 				if (resolve) return getRootNode();
 				return basicGetRootNode();
 		}
@@ -109,7 +109,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE:
 				setRootNode((GroupNode)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE:
 				setRootNode((GroupNode)null);
 				return;
 		}
@@ -137,10 +137,10 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE:
 				return rootNode != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} // SymphonyTopologyImpl
+} // ApogyTopologyImpl

@@ -1,38 +1,38 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.util;
+package ca.gc.asc_csa.apogy.examples.camera.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.examples.camera.Camera;
-import org.eclipse.symphony.examples.camera.CameraSimulated;
-import org.eclipse.symphony.examples.camera.CameraStub;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.PTUCamera;
-import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
-import org.eclipse.symphony.examples.camera.PTUCameraStub;
+import ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator;
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.examples.camera.Camera;
+import ca.gc.asc_csa.apogy.examples.camera.CameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.CameraStub;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage
+ * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage
  * @generated
  */
-public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesCameraAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -40,7 +40,7 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesCameraPackage modelPackage;
+  protected static ApogyExamplesCameraPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -48,10 +48,10 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesCameraAdapterFactory()
+  public ApogyExamplesCameraAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesCameraPackage.eINSTANCE;
+			modelPackage = ApogyExamplesCameraPackage.eINSTANCE;
 		}
 	}
 
@@ -81,8 +81,8 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesCameraSwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesCameraSwitch<Adapter>() {
+  protected ApogyExamplesCameraSwitch<Adapter> modelSwitch =
+    new ApogyExamplesCameraSwitch<Adapter>() {
 			@Override
 			public Adapter caseCamera(Camera object) {
 				return createCameraAdapter();
@@ -165,13 +165,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.Camera <em>Camera</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.Camera <em>Camera</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.Camera
+	 * @see ca.gc.asc_csa.apogy.examples.camera.Camera
 	 * @generated
 	 */
   public Adapter createCameraAdapter()
@@ -180,13 +180,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.CameraStub <em>Camera Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.CameraStub <em>Camera Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.CameraStub
+	 * @see ca.gc.asc_csa.apogy.examples.camera.CameraStub
 	 * @generated
 	 */
 	public Adapter createCameraStubAdapter() {
@@ -194,13 +194,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.CameraSimulated <em>Camera Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.CameraSimulated <em>Camera Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.CameraSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.camera.CameraSimulated
 	 * @generated
 	 */
 	public Adapter createCameraSimulatedAdapter() {
@@ -208,13 +208,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera <em>Abstract Camera</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera <em>Abstract Camera</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera
 	 * @generated
 	 */
   public Adapter createAbstractCameraAdapter()
@@ -223,13 +223,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable <em>Zoomable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable <em>Zoomable</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.Zoomable
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable
 	 * @generated
 	 */
   public Adapter createZoomableAdapter()
@@ -238,13 +238,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.actuators.AbstractActuator
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator
 	 * @generated
 	 */
   public Adapter createAbstractActuatorAdapter()
@@ -253,13 +253,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit
 	 * @generated
 	 */
   public Adapter createPanTiltUnitAdapter()
@@ -268,13 +268,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.PTUCamera <em>PTU Camera</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.PTUCamera <em>PTU Camera</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.PTUCamera
+	 * @see ca.gc.asc_csa.apogy.examples.camera.PTUCamera
 	 * @generated
 	 */
   public Adapter createPTUCameraAdapter()
@@ -283,13 +283,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.PTUCameraStub <em>PTU Camera Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub <em>PTU Camera Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.PTUCameraStub
+	 * @see ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub
 	 * @generated
 	 */
 	public Adapter createPTUCameraStubAdapter() {
@@ -297,13 +297,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.PTUCameraSimulated <em>PTU Camera Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated <em>PTU Camera Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.PTUCameraSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated
 	 * @generated
 	 */
 	public Adapter createPTUCameraSimulatedAdapter() {
@@ -311,13 +311,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -325,13 +325,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter() {
@@ -339,13 +339,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -353,13 +353,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.Sensor <em>Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.Sensor <em>Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.Sensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Sensor
 	 * @generated
 	 */
 	public Adapter createSensorAdapter() {
@@ -367,13 +367,13 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {
@@ -393,4 +393,4 @@ public class Symphony__ExamplesCameraAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__ExamplesCameraAdapterFactory
+} //ApogyExamplesCameraAdapterFactory

@@ -1,10 +1,10 @@
-package org.eclipse.symphony.core.environment.ui.actions;
+package ca.gc.asc_csa.apogy.core.environment.ui.actions;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.views.MapView;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.views.MapView;
 
 public class UpdateMapAction extends Action 
 {

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.SurfaceWorksite} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,8 +65,8 @@ public class SurfaceWorksiteItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -113,8 +113,8 @@ public class SurfaceWorksiteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SurfaceWorksite.class)) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -135,18 +135,18 @@ public class SurfaceWorksiteItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSky()));
+				(ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSky()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSky()));
+				(ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSky()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsList()));
+				(ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createMapsList()));
 	}
 
 }

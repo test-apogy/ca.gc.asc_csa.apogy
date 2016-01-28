@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.topology.ui.views;
+package ca.gc.asc_csa.apogy.core.topology.ui.views;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,37 +13,37 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
-import org.eclipse.symphony.core.topology.ui.Activator;
-import org.eclipse.symphony.core.ui.ResultNodePresentation;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
+import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
 
-public class SymphonyEnvironment3DView extends AbstractSymphony3DView 
+public class ApogyEnvironment3DView extends AbstractApogy3DView 
 {	
-	public static final String PART_NAME = "Symphony 3D Viewer";	
+	public static final String PART_NAME = "Apogy 3D Viewer";	
 	
 	private Adapter activeSessionAdapter = null;
-	private SymphonyEnvironment symphonyEnvironment = null;		
-	private Adapter symphonyEnvironmentAdapter = null;
+	private ApogyEnvironment apogyEnvironment = null;		
+	private Adapter apogyEnvironmentAdapter = null;
 		
 	
 	@Override
@@ -52,16 +52,16 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 		super.createPartControl(parent);
 		
 		// Gets the current Active Session if one exists.
-		setSymphonyEnvironment(getActiveSymphonyEnvironment());
+		setApogyEnvironment(getActiveApogyEnvironment());
 				
 		// Register to the active session.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
 	public String getViewID() 
 	{		
-		return "org.eclipse.symphony.core.topology.ui.views.SymphonyEnvironment3DView";
+		return "ca.gc.asc_csa.apogy.core.topology.ui.views.ApogyEnvironment3DView";
 	}
 	
 	public void show(List<AbstractResult> results)
@@ -110,19 +110,19 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 		if(!isBusy())
 		{		
 			// Attempts to convert the selection to a Deployment.
-			List<Object> list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SymphonyEnvironment.class);
+			List<Object> list = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, ApogyEnvironment.class);
 	
 			if(list.size() > 0) 
 			{
-				SymphonyEnvironment newDeployment = (SymphonyEnvironment) list.get(0);
-				if(newDeployment != symphonyEnvironment)
+				ApogyEnvironment newDeployment = (ApogyEnvironment) list.get(0);
+				if(newDeployment != apogyEnvironment)
 				{
-					setSymphonyEnvironment(newDeployment);
+					setApogyEnvironment(newDeployment);
 				}
 			}
 			
 			// Tries to see if the selection contains AbstractResult.
-			List results = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractResult.class);
+			List results = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, AbstractResult.class);
 			show(results);
 		}
 		else
@@ -135,13 +135,13 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 	public void dispose() 
 	{
 		// Un-Register to the active session.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 		
-		if(symphonyEnvironment != null)
+		if(apogyEnvironment != null)
 		{
-			symphonyEnvironment.eAdapters().remove(getEnvironmentAdapter());
+			apogyEnvironment.eAdapters().remove(getEnvironmentAdapter());
 		}
-		setSymphonyEnvironment(null);							
+		setApogyEnvironment(null);							
 		
 		super.dispose();
 	}	
@@ -179,9 +179,9 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 	@Override
 	protected String getPartNameSuffix() 
 	{
-		if(symphonyEnvironment != null)
+		if(apogyEnvironment != null)
 		{	
-			String sessionName = symphonyEnvironment.getInvocatorSession().getName();
+			String sessionName = apogyEnvironment.getInvocatorSession().getName();
 			if(sessionName != null && sessionName.length() > 0)
 			{
 				return sessionName;
@@ -195,83 +195,83 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 		return "?";
 	}
 	
-	protected SymphonyEnvironment getActiveSymphonyEnvironment()
+	protected ApogyEnvironment getActiveApogyEnvironment()
 	{
-		SymphonyEnvironment symphonyEnvironment = null;
+		ApogyEnvironment apogyEnvironment = null;
 		
-		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null)
 		{
-			if(session.getEnvironment() instanceof SymphonyEnvironment)
+			if(session.getEnvironment() instanceof ApogyEnvironment)
 			{
-				symphonyEnvironment = (SymphonyEnvironment) session.getEnvironment();
+				apogyEnvironment = (ApogyEnvironment) session.getEnvironment();
 			}
 		}
 		
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 	
-	private void setSymphonyEnvironment(final SymphonyEnvironment newSymphonyEnvironment)
+	private void setApogyEnvironment(final ApogyEnvironment newApogyEnvironment)
 	{	
 		// Check if we need to update the environment.
-		if(newSymphonyEnvironment != this.symphonyEnvironment)
+		if(newApogyEnvironment != this.apogyEnvironment)
 		{		
 			this.showBusy(true);
 			
-			if(this.symphonyEnvironment != null)
+			if(this.apogyEnvironment != null)
 			{
-				this.symphonyEnvironment.eAdapters().remove(getEnvironmentAdapter());
+				this.apogyEnvironment.eAdapters().remove(getEnvironmentAdapter());
 			}
 					
-			if(newSymphonyEnvironment != null) 
+			if(newApogyEnvironment != null) 
 			{
-				newSymphonyEnvironment.eAdapters().add(getEnvironmentAdapter());
+				newApogyEnvironment.eAdapters().add(getEnvironmentAdapter());
 			}
 			
-			this.symphonyEnvironment = newSymphonyEnvironment;
+			this.apogyEnvironment = newApogyEnvironment;
 			updatePartName();
 			
 			if(topologyViewer != null)
 			{
-				Job job = new Job("Update SymphonyEnvironment Topology")
+				Job job = new Job("Update ApogyEnvironment Topology")
 				{
 					@Override
 					protected IStatus run(IProgressMonitor monitor) 
 					{
 						try
 						{					
-							if(newSymphonyEnvironment != null)
+							if(newApogyEnvironment != null)
 							{
-								// If the SymphonyEnvironment topology has not been initialize, initialize it and attach
-								// SymphonyEnvironmentNode to keep the topology updated.
-								if(newSymphonyEnvironment.getSymphonyTopology().getRootNode() == null)
+								// If the ApogyEnvironment topology has not been initialize, initialize it and attach
+								// ApogyEnvironmentNode to keep the topology updated.
+								if(newApogyEnvironment.getApogyTopology().getRootNode() == null)
 								{
 									// Updates the deployment of the deployment node to get the topology to update.
-									TransformNode root = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
+									TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
 									root.setNodeId("UNIVERSE_ROOT");
-									root.setDescription("Root Node of the Symphony Environment");
+									root.setDescription("Root Node of the Apogy Environment");
 									
-									// Creates the SymphonyEnvironmentNode that represent the topology associated with the SymphonyEnvironment.
-									SymphonyEnvironmentNode symphonyEnvironmentNode = Symphony__CoreTopologyFacade.INSTANCE.createSymphonyEnvironmentNode(newSymphonyEnvironment);									
-									root.getChildren().add(symphonyEnvironmentNode);
+									// Creates the ApogyEnvironmentNode that represent the topology associated with the ApogyEnvironment.
+									ApogyEnvironmentNode apogyEnvironmentNode = ApogyCoreTopologyFacade.INSTANCE.createApogyEnvironmentNode(newApogyEnvironment);									
+									root.getChildren().add(apogyEnvironmentNode);
 																		
-									newSymphonyEnvironment.getSymphonyTopology().setRootNode(root);				
+									newApogyEnvironment.getApogyTopology().setRootNode(root);				
 									
-									GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(newSymphonyEnvironment.getSymphonyTopology().getRootNode());
+									GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(newApogyEnvironment.getApogyTopology().getRootNode());
 									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 								}
 								else
 								{																
-									GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(newSymphonyEnvironment.getSymphonyTopology().getRootNode());
+									GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(newApogyEnvironment.getApogyTopology().getRootNode());
 									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 								}														
 							}
 							else
 							{
-								TransformNode root = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
+								TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
 								root.setNodeId("UNIVERSE_ROOT");
-								root.setDescription("Root Node of the Symphony Environment");
-								GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);
+								root.setDescription("Root Node of the Apogy Environment");
+								GraphicsContext graphicsContext = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);
 								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 							}
 						}
@@ -286,7 +286,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 							topologyViewer.zoomToFit();						
 						}
 						
-						SymphonyEnvironment3DView.this.showBusy(false);
+						ApogyEnvironment3DView.this.showBusy(false);
 						
 						return Status.OK_STATUS;
 					}	
@@ -301,17 +301,17 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 	 */
 	private Adapter getEnvironmentAdapter()
 	{
-		  if(symphonyEnvironmentAdapter == null)
+		  if(apogyEnvironmentAdapter == null)
 		  {
-			  	symphonyEnvironmentAdapter = new AdapterImpl()
+			  	apogyEnvironmentAdapter = new AdapterImpl()
 				{				
 					@Override
 					public void notifyChanged(Notification msg) 
 					{				
 						// Events from Deployment
-						if(msg.getNotifier() instanceof SymphonyEnvironment)							
+						if(msg.getNotifier() instanceof ApogyEnvironment)							
 						{							
-							if(msg.getFeatureID(SymphonyEnvironment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__NAME)						
+							if(msg.getFeatureID(ApogyEnvironment.class) == ApogyCorePackage.APOGY_ENVIRONMENT__NAME)						
 							{	
 								// Update the part name.
 								updatePartName();
@@ -321,7 +321,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 				};
 		  }
 		  
-		  return symphonyEnvironmentAdapter;
+		  return apogyEnvironmentAdapter;
 	}
 
 	private Adapter getActiveSessionAdapter() 
@@ -333,16 +333,16 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 				@Override
 				public void notifyChanged(Notification msg) 
 				{
-					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
+					if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
 						switch (featureId) 
 						{
-							case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+							case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 								if(msg.getNewValue() instanceof InvocatorSession)
 								{
 									// Gets the current Active Session if one exists.
-									setSymphonyEnvironment(getActiveSymphonyEnvironment());
+									setApogyEnvironment(getActiveApogyEnvironment());
 								}
 								
 							break;

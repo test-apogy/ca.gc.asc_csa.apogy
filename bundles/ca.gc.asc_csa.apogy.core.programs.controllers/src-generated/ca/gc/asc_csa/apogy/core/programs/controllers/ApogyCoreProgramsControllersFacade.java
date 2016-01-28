@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 import java.util.List;
 import java.util.TreeSet;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EParameter;
-import org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersFacadeImpl;
+import ca.gc.asc_csa.apogy.core.programs.controllers.impl.ApogyCoreProgramsControllersFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,13 +24,13 @@ import org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgram
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getSymphony__CoreProgramsControllersFacade()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getApogyCoreProgramsControllersFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreProgramsControllersFacade extends EObject
+public interface ApogyCoreProgramsControllersFacade extends EObject
 {
-  public static Symphony__CoreProgramsControllersFacade INSTANCE = Symphony__CoreProgramsControllersFacadeImpl.getInstance();
+  public static ApogyCoreProgramsControllersFacade INSTANCE = ApogyCoreProgramsControllersFacadeImpl.getInstance();
 	
   /**
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public interface Symphony__CoreProgramsControllersFacade extends EObject
 		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.programs.controllers.TreeSet<org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint>" unique="false" pointsDataType="org.eclipse.symphony.core.programs.controllers.List<org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint>" pointsUnique="false" pointsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.programs.controllers.TreeSet<ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint>" unique="false" pointsDataType="ca.gc.asc_csa.apogy.core.programs.controllers.List<ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint>" pointsUnique="false" pointsMany="false"
 	 * @generated
 	 */
 	TreeSet<CustomInputConditioningPoint> sortCustomInputConditioningPoint(List<CustomInputConditioningPoint> points);
@@ -56,4 +56,4 @@ public interface Symphony__CoreProgramsControllersFacade extends EObject
 	 */
 	CustomInputConditioningPoint createCustomInputConditioningPoint(double inputValue, double outputValue);
 
-} // Symphony__CoreProgramsControllersFacade
+} // ApogyCoreProgramsControllersFacade

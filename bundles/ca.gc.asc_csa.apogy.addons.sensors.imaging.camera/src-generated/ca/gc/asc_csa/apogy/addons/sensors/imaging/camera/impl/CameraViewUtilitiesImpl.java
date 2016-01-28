@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
@@ -9,15 +9,15 @@ import java.util.Iterator;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_UTILITIES;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_UTILITIES;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	{
 		if(cameraViewConfiguration != null)
 		{
-			return Symphony__CommonEMFFacade.INSTANCE.getID(cameraViewConfiguration);
+			return ApogyCommonEMFFacade.INSTANCE.getID(cameraViewConfiguration);
 		}
 		else
 		{
@@ -113,7 +113,7 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	{
 		CameraViewConfigurationList cameraViewConfigurationList = null;
 		
-		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null)
 		{
 			ToolsList toolsList = session.getToolsList();
@@ -142,11 +142,11 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__CAMERAVIEWCONFIGURATION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__CAMERAVIEWCONFIGURATION:
 				return getCameraViewConfigurationIdentifier((CameraViewConfiguration)arguments.get(0));
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION__STRING:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION__STRING:
 				return getActiveCameraViewConfiguration((String)arguments.get(0));
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION_LIST:
 				return getActiveCameraViewConfigurationList();
 		}
 		return super.eInvoke(operationID, arguments);

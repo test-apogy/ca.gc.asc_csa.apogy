@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import java.util.Date;
 
@@ -21,26 +21,26 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getLine1 <em>Line1</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getLine2 <em>Line2</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getBStar <em>BStar</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getEpoch <em>Epoch</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getEccentricity <em>Eccentricity</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getElementNumber <em>Element Number</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getEphemerisType <em>Ephemeris Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getInclination <em>Inclination</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanAnomaly <em>Mean Anomaly</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanMotion <em>Mean Motion</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getRevolutionPerDay <em>Revolution Per Day</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanMotionFirstDerivative <em>Mean Motion First Derivative</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanMotionSecondDerivative <em>Mean Motion Second Derivative</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getArgumentOfPerigee <em>Argument Of Perigee</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getSatelliteNumber <em>Satellite Number</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine1 <em>Line1</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine2 <em>Line2</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getBStar <em>BStar</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEpoch <em>Epoch</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEccentricity <em>Eccentricity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getElementNumber <em>Element Number</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEphemerisType <em>Ephemeris Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getInclination <em>Inclination</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanAnomaly <em>Mean Anomaly</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotion <em>Mean Motion</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionPerDay <em>Revolution Per Day</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionFirstDerivative <em>Mean Motion First Derivative</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionSecondDerivative <em>Mean Motion Second Derivative</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getArgumentOfPerigee <em>Argument Of Perigee</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getSatelliteNumber <em>Satellite Number</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE()
  * @model
  * @generated
  */
@@ -59,7 +59,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Line1</em>' attribute.
 	 * @see #setLine1(String)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Line1()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_Line1()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='TLE_RAW_DATA' notify='true'"
 	 * @generated
@@ -67,7 +67,7 @@ public interface TLE extends EObject {
 	String getLine1();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getLine1 <em>Line1</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine1 <em>Line1</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Line1</em>' attribute.
@@ -89,7 +89,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Line2</em>' attribute.
 	 * @see #setLine2(String)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Line2()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_Line2()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='TLE_RAW_DATA' notify='true'"
 	 * @generated
@@ -97,7 +97,7 @@ public interface TLE extends EObject {
 	String getLine2();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getLine2 <em>Line2</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getLine2 <em>Line2</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Line2</em>' attribute.
@@ -108,16 +108,16 @@ public interface TLE extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Ephemeris Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.core.environment.orbit.earth.EphemerisType}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The Ephemeris type.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ephemeris Type</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EphemerisType
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType
 	 * @see #setEphemerisType(EphemerisType)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_EphemerisType()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_EphemerisType()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true'"
 	 * @generated
@@ -125,11 +125,11 @@ public interface TLE extends EObject {
 	EphemerisType getEphemerisType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getEphemerisType <em>Ephemeris Type</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEphemerisType <em>Ephemeris Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ephemeris Type</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EphemerisType
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType
 	 * @see #getEphemerisType()
 	 * @generated
 	 */
@@ -144,15 +144,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Inclination</em>' attribute.
 	 * @see #setInclination(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Inclination()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_Inclination()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' apogy_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getInclination();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getInclination <em>Inclination</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getInclination <em>Inclination</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Inclination</em>' attribute.
@@ -170,15 +170,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Anomaly</em>' attribute.
 	 * @see #setMeanAnomaly(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanAnomaly()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_MeanAnomaly()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' apogy_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanAnomaly();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanAnomaly <em>Mean Anomaly</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanAnomaly <em>Mean Anomaly</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mean Anomaly</em>' attribute.
@@ -196,15 +196,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Motion</em>' attribute.
 	 * @see #setMeanMotion(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_MeanMotion()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad/s' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' apogy_units='rad/s' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanMotion();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanMotion <em>Mean Motion</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotion <em>Mean Motion</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mean Motion</em>' attribute.
@@ -222,15 +222,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Revolution Per Day</em>' attribute.
 	 * @see #setRevolutionPerDay(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RevolutionPerDay()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_RevolutionPerDay()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rev/day' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' apogy_units='rev/day' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getRevolutionPerDay();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getRevolutionPerDay <em>Revolution Per Day</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionPerDay <em>Revolution Per Day</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Revolution Per Day</em>' attribute.
@@ -248,15 +248,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Motion First Derivative</em>' attribute.
 	 * @see #setMeanMotionFirstDerivative(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionFirstDerivative()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionFirstDerivative()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad/s\262' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' apogy_units='rad/s\262' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanMotionFirstDerivative();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanMotionFirstDerivative <em>Mean Motion First Derivative</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionFirstDerivative <em>Mean Motion First Derivative</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mean Motion First Derivative</em>' attribute.
@@ -274,15 +274,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Motion Second Derivative</em>' attribute.
 	 * @see #setMeanMotionSecondDerivative(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionSecondDerivative()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionSecondDerivative()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad/s\263' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' apogy_units='rad/s\263' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanMotionSecondDerivative();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getMeanMotionSecondDerivative <em>Mean Motion Second Derivative</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getMeanMotionSecondDerivative <em>Mean Motion Second Derivative</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mean Motion Second Derivative</em>' attribute.
@@ -300,15 +300,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Argument Of Perigee</em>' attribute.
 	 * @see #setArgumentOfPerigee(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_ArgumentOfPerigee()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_ArgumentOfPerigee()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' apogy_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getArgumentOfPerigee();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getArgumentOfPerigee <em>Argument Of Perigee</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getArgumentOfPerigee <em>Argument Of Perigee</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Argument Of Perigee</em>' attribute.
@@ -326,15 +326,15 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Right Ascention Of Ascending Node</em>' attribute.
 	 * @see #setRightAscentionOfAscendingNode(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RightAscentionOfAscendingNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_RightAscentionOfAscendingNode()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' apogy_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getRightAscentionOfAscendingNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRightAscentionOfAscendingNode <em>Right Ascention Of Ascending Node</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Ascention Of Ascending Node</em>' attribute.
@@ -352,7 +352,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Revolution Number At Epoch</em>' attribute.
 	 * @see #setRevolutionNumberAtEpoch(int)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RevolutionNumberAtEpoch()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_RevolutionNumberAtEpoch()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -360,7 +360,7 @@ public interface TLE extends EObject {
 	int getRevolutionNumberAtEpoch();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Revolution Number At Epoch</em>' attribute.
@@ -378,7 +378,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Satellite Number</em>' attribute.
 	 * @see #setSatelliteNumber(int)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_SatelliteNumber()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_SatelliteNumber()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -386,7 +386,7 @@ public interface TLE extends EObject {
 	int getSatelliteNumber();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getSatelliteNumber <em>Satellite Number</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getSatelliteNumber <em>Satellite Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Satellite Number</em>' attribute.
@@ -404,7 +404,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>BStar</em>' attribute.
 	 * @see #setBStar(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_BStar()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_BStar()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -412,7 +412,7 @@ public interface TLE extends EObject {
 	double getBStar();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getBStar <em>BStar</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getBStar <em>BStar</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>BStar</em>' attribute.
@@ -434,7 +434,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Epoch</em>' attribute.
 	 * @see #setEpoch(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Epoch()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_Epoch()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true'"
 	 * @generated
@@ -442,7 +442,7 @@ public interface TLE extends EObject {
 	Date getEpoch();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getEpoch <em>Epoch</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEpoch <em>Epoch</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Epoch</em>' attribute.
@@ -464,7 +464,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Eccentricity</em>' attribute.
 	 * @see #setEccentricity(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Eccentricity()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_Eccentricity()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -472,7 +472,7 @@ public interface TLE extends EObject {
 	double getEccentricity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getEccentricity <em>Eccentricity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getEccentricity <em>Eccentricity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Eccentricity</em>' attribute.
@@ -490,7 +490,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Element Number</em>' attribute.
 	 * @see #setElementNumber(int)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_ElementNumber()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getTLE_ElementNumber()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true'"
 	 * @generated
@@ -498,7 +498,7 @@ public interface TLE extends EObject {
 	int getElementNumber();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getElementNumber <em>Element Number</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE#getElementNumber <em>Element Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Element Number</em>' attribute.
@@ -513,7 +513,7 @@ public interface TLE extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Return the OreKit implementation backing this TLE.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitTLE" unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitTLE" unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception"
 	 * @generated
 	 */
 	org.orekit.propagation.analytical.tle.TLE getOreKitTLE() throws Exception;

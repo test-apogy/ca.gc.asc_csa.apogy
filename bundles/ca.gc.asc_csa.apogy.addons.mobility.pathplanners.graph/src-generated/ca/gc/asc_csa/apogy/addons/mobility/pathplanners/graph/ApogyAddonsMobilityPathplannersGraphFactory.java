@@ -1,28 +1,28 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
 import org.eclipse.emf.ecore.EFactory;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage
  * @generated
  */
-public interface Symphony__AddonsMobilityPathplannersGraphFactory extends EFactory {
+public interface ApogyAddonsMobilityPathplannersGraphFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsMobilityPathplannersGraphFactory eINSTANCE = org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.Symphony__AddonsMobilityPathplannersGraphFactoryImpl.init();
+	ApogyAddonsMobilityPathplannersGraphFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.ApogyAddonsMobilityPathplannersGraphFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Cost Based Mesh Way Point Path Planner</em>'.
@@ -121,6 +121,6 @@ public interface Symphony__AddonsMobilityPathplannersGraphFactory extends EFacto
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsMobilityPathplannersGraphPackage getSymphony__AddonsMobilityPathplannersGraphPackage();
+	ApogyAddonsMobilityPathplannersGraphPackage getApogyAddonsMobilityPathplannersGraphPackage();
 
-} //Symphony__AddonsMobilityPathplannersGraphFactory
+} //ApogyAddonsMobilityPathplannersGraphFactory

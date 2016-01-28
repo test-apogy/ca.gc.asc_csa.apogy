@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import javax.vecmath.Color3f;
 
@@ -18,12 +18,12 @@ import javax.vecmath.Color3f;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorlength <em>Vectorlength</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorColor <em>Vector Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorlength <em>Vectorlength</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorColor <em>Vector Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getPoseVariableAnnotation()
  * @model
  * @generated
  */
@@ -39,15 +39,15 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vectorlength</em>' attribute.
 	 * @see #setVectorlength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation_Vectorlength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getPoseVariableAnnotation_Vectorlength()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VECTOR_PROPERTIES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VECTOR_PROPERTIES' apogy_units='m'"
 	 * @generated
 	 */
   double getVectorlength();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorlength <em>Vectorlength</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorlength <em>Vectorlength</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vectorlength</em>' attribute.
@@ -66,15 +66,15 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vector Color</em>' attribute.
 	 * @see #setVectorColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation_VectorColor()
-	 * @model default="0.0,0.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getPoseVariableAnnotation_VectorColor()
+	 * @model default="0.0,0.0,1.0" unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.ui.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VECTOR_PROPERTIES'"
 	 * @generated
 	 */
   Color3f getVectorColor();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorColor <em>Vector Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorColor <em>Vector Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vector Color</em>' attribute.
@@ -93,14 +93,14 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Pose</em>' attribute.
 	 * @see #setShowPose(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation_ShowPose()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getPoseVariableAnnotation_ShowPose()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
   boolean isShowPose();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Show Pose</em>' attribute.
@@ -119,9 +119,9 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * @param zRotation The azimuth, in radians.
 	 * <!-- end-model-doc -->
 	 * @model xUnique="false"
-	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'" yUnique="false"
-	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'" zRotationUnique="false"
-	 *        zRotationAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'" yUnique="false"
+	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'" zRotationUnique="false"
+	 *        zRotationAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	void updatePose(double x, double y, double zRotation);

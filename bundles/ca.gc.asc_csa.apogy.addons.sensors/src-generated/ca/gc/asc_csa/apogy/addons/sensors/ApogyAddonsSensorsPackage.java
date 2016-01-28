@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors;
+package ca.gc.asc_csa.apogy.addons.sensors;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,12 +23,12 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory
+ * @see ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsSensors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__AddonsSensors' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyAddonsSensors' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
  * @generated
  */
-public interface Symphony__AddonsSensorsPackage extends EPackage {
+public interface ApogyAddonsSensorsPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.sensors";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.sensors";
 
 	/**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsPackage eINSTANCE = org.eclipse.symphony.addons.sensors.impl.Symphony__AddonsSensorsPackageImpl.init();
+	ApogyAddonsSensorsPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.impl.ApogyAddonsSensorsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.impl.SensorImpl <em>Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl <em>Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.impl.SensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.impl.Symphony__AddonsSensorsPackageImpl#getSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ApogyAddonsSensorsPackageImpl#getSensor()
 	 * @generated
 	 */
 	int SENSOR = 0;
@@ -78,7 +78,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int SENSOR__PARENT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int SENSOR__DESCRIPTION = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int SENSOR__NODE_ID = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -105,7 +105,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int SENSOR__CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -114,7 +114,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int SENSOR__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -123,7 +123,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__STATUS = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int SENSOR__STATUS = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Sensor</em>' class.
@@ -132,7 +132,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int SENSOR_FEATURE_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -141,7 +141,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int SENSOR___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Sensor</em>' class.
@@ -150,14 +150,14 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int SENSOR_OPERATION_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.impl.ReferenceableImpl <em>Referenceable</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.impl.ReferenceableImpl <em>Referenceable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.impl.ReferenceableImpl
-	 * @see org.eclipse.symphony.addons.sensors.impl.Symphony__AddonsSensorsPackageImpl#getReferenceable()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ReferenceableImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ApogyAddonsSensorsPackageImpl#getReferenceable()
 	 * @generated
 	 */
 	int REFERENCEABLE = 1;
@@ -190,64 +190,64 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	int REFERENCEABLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.SensorStatus <em>Sensor Status</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.SensorStatus <em>Sensor Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.SensorStatus
-	 * @see org.eclipse.symphony.addons.sensors.impl.Symphony__AddonsSensorsPackageImpl#getSensorStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.SensorStatus
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ApogyAddonsSensorsPackageImpl#getSensorStatus()
 	 * @generated
 	 */
 	int SENSOR_STATUS = 2;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.Sensor <em>Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.Sensor <em>Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.Sensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Sensor
 	 * @generated
 	 */
 	EClass getSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.Sensor#getStatus <em>Status</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.Sensor#getStatus <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Status</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.Sensor#getStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Sensor#getStatus()
 	 * @see #getSensor()
 	 * @generated
 	 */
 	EAttribute getSensor_Status();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.Referenceable <em>Referenceable</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.Referenceable <em>Referenceable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Referenceable</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.Referenceable
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Referenceable
 	 * @generated
 	 */
 	EClass getReferenceable();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.Referenceable#getReferenceFrame <em>Reference Frame</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.Referenceable#getReferenceFrame <em>Reference Frame</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Reference Frame</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.Referenceable#getReferenceFrame()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Referenceable#getReferenceFrame()
 	 * @see #getReferenceable()
 	 * @generated
 	 */
 	EReference getReferenceable_ReferenceFrame();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.SensorStatus <em>Sensor Status</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.addons.sensors.SensorStatus <em>Sensor Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Sensor Status</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.SensorStatus
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.SensorStatus
 	 * @generated
 	 */
 	EEnum getSensorStatus();
@@ -259,7 +259,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFactory getSymphony__AddonsSensorsFactory();
+	ApogyAddonsSensorsFactory getApogyAddonsSensorsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -276,11 +276,11 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.impl.SensorImpl <em>Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl <em>Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.impl.SensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.impl.Symphony__AddonsSensorsPackageImpl#getSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ApogyAddonsSensorsPackageImpl#getSensor()
 		 * @generated
 		 */
 		EClass SENSOR = eINSTANCE.getSensor();
@@ -294,11 +294,11 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 		EAttribute SENSOR__STATUS = eINSTANCE.getSensor_Status();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.impl.ReferenceableImpl <em>Referenceable</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.impl.ReferenceableImpl <em>Referenceable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.impl.ReferenceableImpl
-		 * @see org.eclipse.symphony.addons.sensors.impl.Symphony__AddonsSensorsPackageImpl#getReferenceable()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ReferenceableImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ApogyAddonsSensorsPackageImpl#getReferenceable()
 		 * @generated
 		 */
 		EClass REFERENCEABLE = eINSTANCE.getReferenceable();
@@ -312,11 +312,11 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 		EReference REFERENCEABLE__REFERENCE_FRAME = eINSTANCE.getReferenceable_ReferenceFrame();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.SensorStatus <em>Sensor Status</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.SensorStatus <em>Sensor Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.SensorStatus
-		 * @see org.eclipse.symphony.addons.sensors.impl.Symphony__AddonsSensorsPackageImpl#getSensorStatus()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.SensorStatus
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.impl.ApogyAddonsSensorsPackageImpl#getSensorStatus()
 		 * @generated
 		 */
 		EEnum SENSOR_STATUS = eINSTANCE.getSensorStatus();

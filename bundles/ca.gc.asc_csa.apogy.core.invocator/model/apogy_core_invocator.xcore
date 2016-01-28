@@ -1,26 +1,26 @@
-@GenModel(prefix="Symphony__CoreInvocator",
+@GenModel(prefix="ApogyCoreInvocator",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)",
-		  modelName="Symphony__CoreInvocator",
+		  modelName="ApogyCoreInvocator",
 		  fileExtensions="sym",
 		  resource="XMI")
-@GenModel(modelDirectory="/org.eclipse.symphony.core.invocator/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.core.invocator.edit/src-generated")
-@GenModel(editorDirectory="/org.eclipse.symphony.core.invocator.editor/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.invocator/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.invocator.edit/src-generated")
+@GenModel(editorDirectory="/ca.gc.asc_csa.apogy.core.invocator.editor/src-generated")
 
-package org.eclipse.symphony.core.invocator
+package ca.gc.asc_csa.apogy.core.invocator
 
-import org.eclipse.symphony.common.emf.AbstractFeatureNode
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource
-import org.eclipse.symphony.common.emf.Described
-import org.eclipse.symphony.common.emf.Exception
-import org.eclipse.symphony.common.emf.List
-import org.eclipse.symphony.common.emf.ListRootNode
-import org.eclipse.symphony.common.emf.Named
-import org.eclipse.symphony.common.emf.Timed
-import org.eclipse.symphony.common.emf.TreeRootNode
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Exception
+import ca.gc.asc_csa.apogy.common.emf.List
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EEnum
@@ -47,7 +47,7 @@ type IVariableListener wraps IVariableListener
  * 
  * ------------------------------------------------------------------------- */
 
-class Symphony__CoreInvocatorFacade
+class ApogyCoreInvocatorFacade
 {
 	op void exec(OperationCall operationCall)
 	op void exec(OperationCall operationCall, boolean saveResult)

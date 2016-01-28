@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
-	public static String ID = "org.eclipse.symphony.addons.vehicle";
+	public static String ID = "ca.gc.asc_csa.apogy.addons.vehicle";
 
 	// The shared instance
 	private static Activator plugin;

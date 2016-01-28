@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.ui.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -63,7 +63,7 @@ public class PositionSensorPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_PositionSensorPresentation_frameVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PositionSensorPresentation_frameVisible_feature", "_UI_PositionSensorPresentation_type"),
-				 Symphony__AddonsSensorsPoseUIPackage.Literals.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE,
+				 ApogyAddonsSensorsPoseUIPackage.Literals.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class PositionSensorPresentationItemProvider extends NodePresentationItem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositionSensorPresentation.class)) {
-			case Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case ApogyAddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

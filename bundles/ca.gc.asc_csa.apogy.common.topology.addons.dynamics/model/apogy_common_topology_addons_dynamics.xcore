@@ -1,20 +1,20 @@
-@GenModel(prefix="Symphony__CommonTopologyAddonsDynamics",
+@GenModel(prefix="ApogyCommonTopologyAddonsDynamics",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__CommonTopologyAddonsDynamics",
+	      modelName="ApogyCommonTopologyAddonsDynamics",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.addons.dynamics/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.topology.addons.dynamics.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.dynamics/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.dynamics.edit/src-generated")
 
-package org.eclipse.symphony.common.topology.addons.dynamics
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics
 
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.common.topology.AggregateGroupNode
-import org.eclipse.symphony.common.math.Tuple3d
-import org.eclipse.symphony.common.math.Matrix3x3
-import org.eclipse.symphony.common.math.Matrix4x4
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4
 
 type Set<T> wraps java.util.Set
 
@@ -96,7 +96,7 @@ class PhysicalProperties
 	/*
 	 * Defines the mass of the physical body, in kilograms.
 	 */
-	@GenModel(symphony_units="kg")
+	@GenModel(apogy_units="kg")
 	double mass
 	
 	/*
@@ -388,7 +388,7 @@ class SphereGeometry extends Geometry
 /*
  * Helper class containing a variety of dynamic topology utilities methods.
  */
-class Symphony__CommonTopologyAddonsDynamicsFacade
+class ApogyCommonTopologyAddonsDynamicsFacade
 {
 	/*
 	 * Given a node in a topology, traverse the tree and computes the location of the center of mass of the tree.

@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators;
+package ca.gc.asc_csa.apogy.addons.actuators;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.actuators.AbstractActuator#isMoving <em>Moving</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.actuators.AbstractActuator#getActuatorStatus <em>Actuator Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#isMoving <em>Moving</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#getActuatorStatus <em>Actuator Status</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getAbstractActuator()
+ * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getAbstractActuator()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface AbstractActuator extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Moving</em>' attribute.
 	 * @see #setMoving(boolean)
-	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getAbstractActuator_Moving()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getAbstractActuator_Moving()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION'"
 	 * @generated
@@ -43,7 +43,7 @@ public interface AbstractActuator extends Node
   boolean isMoving();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.actuators.AbstractActuator#isMoving <em>Moving</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#isMoving <em>Moving</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Moving</em>' attribute.
@@ -54,7 +54,7 @@ public interface AbstractActuator extends Node
 
   /**
 	 * Returns the value of the '<em><b>Actuator Status</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.actuators.ActuatorStatus}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -62,9 +62,9 @@ public interface AbstractActuator extends Node
 	 * Current state of the actuator.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Actuator Status</em>' attribute.
-	 * @see org.eclipse.symphony.addons.actuators.ActuatorStatus
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus
 	 * @see #setActuatorStatus(ActuatorStatus)
-	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getAbstractActuator_ActuatorStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getAbstractActuator_ActuatorStatus()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION'"
 	 * @generated
@@ -72,11 +72,11 @@ public interface AbstractActuator extends Node
   ActuatorStatus getActuatorStatus();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.actuators.AbstractActuator#getActuatorStatus <em>Actuator Status</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator#getActuatorStatus <em>Actuator Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Actuator Status</em>' attribute.
-	 * @see org.eclipse.symphony.addons.actuators.ActuatorStatus
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus
 	 * @see #getActuatorStatus()
 	 * @generated
 	 */

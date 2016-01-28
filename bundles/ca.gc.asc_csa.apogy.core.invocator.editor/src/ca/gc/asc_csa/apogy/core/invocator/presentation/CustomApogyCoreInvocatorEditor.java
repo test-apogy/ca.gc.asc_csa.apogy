@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.presentation;
+package ca.gc.asc_csa.apogy.core.invocator.presentation;
 
 import java.util.ArrayList;
 import java.util.EventObject;
@@ -31,10 +31,10 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.ui.properties.ExtendedTabbedPropertySheetPage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -49,15 +49,15 @@ import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributo
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
 /**
- * This is an example of a Symphony__CoreInvocator model editor. <!-- begin-user-doc
+ * This is an example of a ApogyCoreInvocator model editor. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * 
  * @generated_NOT
  */
-public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocatorEditor
+public class CustomApogyCoreInvocatorEditor extends ApogyCoreInvocatorEditor
 		implements ITabbedPropertySheetPageContributor {
 
-	public static String ID = "org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorEditorID";
+	public static String ID = "ca.gc.asc_csa.apogy.core.invocator.presentation.ApogyCoreInvocatorEditorID";
 	private Map<Object, Diagnostic> diagnosticErrorsMap;
 	private Image errorOverlayImage;
 	protected TabbedPropertySheetPage propertySheetPage;
@@ -73,7 +73,7 @@ public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocator
 	 * 
 	 * @generated
 	 */
-	public CustomSymphony__CoreInvocatorEditor() {
+	public CustomApogyCoreInvocatorEditor() {
 		super();
 	}
 
@@ -95,9 +95,9 @@ public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocator
 
 				@Override
 				public void partClosed(IWorkbenchPart part) {				
-					if (part == CustomSymphony__CoreInvocatorEditor.this){
-						if (activeSession == Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()){
-							Symphony__CoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
+					if (part == CustomApogyCoreInvocatorEditor.this){
+						if (activeSession == ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()){
+							ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
 							activeSession = null;							
 						}											
 					}									
@@ -141,10 +141,10 @@ public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocator
 			activeSession = (InvocatorSession) content;			
 						
 			/** Load registered types. */
-			Symphony__CoreInvocatorFacade.INSTANCE.loadRegisteredTypes(activeSession);
+			ApogyCoreInvocatorFacade.INSTANCE.loadRegisteredTypes(activeSession);
 			
 			/** Set the active session. */
-			Symphony__CoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(activeSession);
+			ApogyCoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(activeSession);
 			
 			// Register this listener to set the session to null when the editor is closed.
 			getSite().getPage().addPartListener(getEditorListener());  
@@ -246,7 +246,7 @@ public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocator
 					/** Create a marker. */
 					try
 					{
-						IMarker marker = Symphony__CommonEMFFacade.INSTANCE.getFile(eObject.eResource()).createMarker(IMarker.PROBLEM);
+						IMarker marker = ApogyCommonEMFFacade.INSTANCE.getFile(eObject.eResource()).createMarker(IMarker.PROBLEM);
 
 						marker.setAttribute(IMarker.MESSAGE, processMessage(currentDiagnostic.getMessage(),	eObject));
 						marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
@@ -384,7 +384,7 @@ public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocator
 		} catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+			ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();

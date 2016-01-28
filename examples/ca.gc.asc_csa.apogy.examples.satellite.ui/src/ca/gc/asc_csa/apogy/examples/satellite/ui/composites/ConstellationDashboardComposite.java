@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.satellite.ui.composites;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -26,9 +26,9 @@ import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.examples.satellite.AbstractConstellation;
-import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 

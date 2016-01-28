@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.util;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,37 +10,37 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.addons.geometry.paths.*;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.*;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
 
-import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage
  * @generated
  */
-public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsGeometryPathsAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsGeometryPathsPackage modelPackage;
+	protected static ApogyAddonsGeometryPathsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -48,9 +48,9 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsAdapterFactory() {
+	public ApogyAddonsGeometryPathsAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsGeometryPathsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsGeometryPathsPackage.eINSTANCE;
 		}
 	}
 
@@ -79,8 +79,8 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsGeometryPathsSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsGeometryPathsSwitch<Adapter>() {
+	protected ApogyAddonsGeometryPathsSwitch<Adapter> modelSwitch =
+		new ApogyAddonsGeometryPathsSwitch<Adapter>() {
 			@Override
 			public Adapter caseWayPoint(WayPoint object) {
 				return createWayPointAdapter();
@@ -118,8 +118,8 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 				return createUniformDistanceWayPointPathInterpolatorAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__AddonsGeometryPathsFacade(Symphony__AddonsGeometryPathsFacade object) {
-				return createSymphony__AddonsGeometryPathsFacadeAdapter();
+			public Adapter caseApogyAddonsGeometryPathsFacade(ApogyAddonsGeometryPathsFacade object) {
+				return createApogyAddonsGeometryPathsFacadeAdapter();
 			}
 			@Override
 			public Adapter caseCoordinates(Coordinates object) {
@@ -178,13 +178,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.WayPoint <em>Way Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint <em>Way Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.WayPoint
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint
 	 * @generated
 	 */
 	public Adapter createWayPointAdapter() {
@@ -192,13 +192,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.Path <em>Path</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.Path <em>Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.Path
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.Path
 	 * @generated
 	 */
 	public Adapter createPathAdapter() {
@@ -206,13 +206,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.WayPointPath <em>Way Point Path</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath <em>Way Point Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.WayPointPath
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
 	 * @generated
 	 */
 	public Adapter createWayPointPathAdapter() {
@@ -220,13 +220,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.WayPointPathInterpolator <em>Way Point Path Interpolator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathInterpolator <em>Way Point Path Interpolator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.WayPointPathInterpolator
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathInterpolator
 	 * @generated
 	 */
 	public Adapter createWayPointPathInterpolatorAdapter() {
@@ -234,13 +234,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator <em>Catmull Rom Way Point Path Interpolator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator <em>Catmull Rom Way Point Path Interpolator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator
 	 * @generated
 	 */
 	public Adapter createCatmullRomWayPointPathInterpolatorAdapter() {
@@ -248,13 +248,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator <em>Segment Way Point Path Interpolator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator <em>Segment Way Point Path Interpolator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator
 	 * @generated
 	 */
 	public Adapter createSegmentWayPointPathInterpolatorAdapter() {
@@ -262,13 +262,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.WayPointPathFilter <em>Way Point Path Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathFilter <em>Way Point Path Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.WayPointPathFilter
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathFilter
 	 * @generated
 	 */
 	public Adapter createWayPointPathFilterAdapter() {
@@ -276,13 +276,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter <em>Minimum Distance Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter <em>Minimum Distance Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter
 	 * @generated
 	 */
 	public Adapter createMinimumDistanceFilterAdapter() {
@@ -290,13 +290,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator <em>Uniform Distance Way Point Path Interpolator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator <em>Uniform Distance Way Point Path Interpolator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator
 	 * @generated
 	 */
 	public Adapter createUniformDistanceWayPointPathInterpolatorAdapter() {
@@ -304,27 +304,27 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__AddonsGeometryPathsFacadeAdapter() {
+	public Adapter createApogyAddonsGeometryPathsFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Coordinates <em>Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Coordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.Coordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Coordinates
 	 * @generated
 	 */
 	public Adapter createCoordinatesAdapter() {
@@ -332,13 +332,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates <em>Cartesian Position Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates <em>Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
 	 * @generated
 	 */
 	public Adapter createCartesianPositionCoordinatesAdapter() {
@@ -346,13 +346,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -360,13 +360,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter() {
@@ -374,13 +374,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetAdapter() {
@@ -388,13 +388,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet
 	 * @generated
 	 */
 	public Adapter createAbstractCartesianCoordinatesSetAdapter() {
@@ -402,13 +402,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesSetAdapter() {
@@ -416,13 +416,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -430,13 +430,13 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -455,4 +455,4 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 		return null;
 	}
 
-} //Symphony__AddonsGeometryPathsAdapterFactory
+} //ApogyAddonsGeometryPathsAdapterFactory

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.gps.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.ui;
 
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -9,11 +9,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +22,14 @@ import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbi
  *
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CoreEnvironmentOrbitFacade 
+public class ApogyCoreEnvironmentOrbitFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreEnvironmentOrbitFacade 
 {
-	private static Symphony__CoreEnvironmentOrbitFacade instance = null;
-	public static Symphony__CoreEnvironmentOrbitFacade getInstance() 
+	private static ApogyCoreEnvironmentOrbitFacade instance = null;
+	public static ApogyCoreEnvironmentOrbitFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CoreEnvironmentOrbitFacadeImpl();
+			instance = new ApogyCoreEnvironmentOrbitFacadeImpl();
 		}
 		return instance;
 	}
@@ -39,7 +39,7 @@ public class Symphony__CoreEnvironmentOrbitFacadeImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentOrbitFacadeImpl() {
+	protected ApogyCoreEnvironmentOrbitFacadeImpl() {
 		super();
 	}
 
@@ -50,7 +50,7 @@ public class Symphony__CoreEnvironmentOrbitFacadeImpl extends MinimalEObjectImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitPackage.Literals.SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE;
+		return ApogyCoreEnvironmentOrbitPackage.Literals.APOGY_CORE_ENVIRONMENT_ORBIT_FACADE;
 	}
 
 	/**
@@ -93,10 +93,10 @@ public class Symphony__CoreEnvironmentOrbitFacadeImpl extends MinimalEObjectImpl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL:
+			case ApogyCoreEnvironmentOrbitPackage.APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL:
 				return createOrbitModelCopy((OrbitModel)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CoreEnvironmentOrbitFacadeImpl
+} //ApogyCoreEnvironmentOrbitFacadeImpl

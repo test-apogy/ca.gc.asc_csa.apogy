@@ -1,54 +1,54 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.util;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
-import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.*;
-import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
-import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationList;
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.TLE;
-import org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,17 +60,17 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraf
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
+public class ApogyCoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreEnvironmentOrbitEarthPackage modelPackage;
+	protected static ApogyCoreEnvironmentOrbitEarthPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -78,9 +78,9 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthSwitch() {
+	public ApogyCoreEnvironmentOrbitEarthSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentOrbitEarthPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentOrbitEarthPackage.eINSTANCE;
 		}
 	}
 
@@ -107,7 +107,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE: {
 				OreKitBackedSpacecraftState oreKitBackedSpacecraftState = (OreKitBackedSpacecraftState)theEObject;
 				T result = caseOreKitBackedSpacecraftState(oreKitBackedSpacecraftState);
 				if (result == null) result = caseSpacecraftState(oreKitBackedSpacecraftState);
@@ -115,7 +115,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_FRAME: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_FRAME: {
 				OreKitBackedFrame oreKitBackedFrame = (OreKitBackedFrame)theEObject;
 				T result = caseOreKitBackedFrame(oreKitBackedFrame);
 				if (result == null) result = caseAbstractFrame(oreKitBackedFrame);
@@ -124,14 +124,14 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER: {
 				OreKitBackedAttitudeProvider oreKitBackedAttitudeProvider = (OreKitBackedAttitudeProvider)theEObject;
 				T result = caseOreKitBackedAttitudeProvider(oreKitBackedAttitudeProvider);
 				if (result == null) result = caseAttitudeProvider(oreKitBackedAttitudeProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.NADIR_POINTING_ATTITUDE_PROVIDER: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.NADIR_POINTING_ATTITUDE_PROVIDER: {
 				NadirPointingAttitudeProvider nadirPointingAttitudeProvider = (NadirPointingAttitudeProvider)theEObject;
 				T result = caseNadirPointingAttitudeProvider(nadirPointingAttitudeProvider);
 				if (result == null) result = caseOreKitBackedAttitudeProvider(nadirPointingAttitudeProvider);
@@ -139,7 +139,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE: {
 				EarthOrbitWorksite earthOrbitWorksite = (EarthOrbitWorksite)theEObject;
 				T result = caseEarthOrbitWorksite(earthOrbitWorksite);
 				if (result == null) result = caseOrbitWorksite(earthOrbitWorksite);
@@ -151,7 +151,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY: {
 				EarthOrbitSky earthOrbitSky = (EarthOrbitSky)theEObject;
 				T result = caseEarthOrbitSky(earthOrbitSky);
 				if (result == null) result = caseSky(earthOrbitSky);
@@ -159,7 +159,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT: {
 				EarthOrbit earthOrbit = (EarthOrbit)theEObject;
 				T result = caseEarthOrbit(earthOrbit);
 				if (result == null) result = caseOrbit(earthOrbit);
@@ -169,7 +169,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT: {
 				KeplerianEarthOrbit keplerianEarthOrbit = (KeplerianEarthOrbit)theEObject;
 				T result = caseKeplerianEarthOrbit(keplerianEarthOrbit);
 				if (result == null) result = caseEarthOrbit(keplerianEarthOrbit);
@@ -180,7 +180,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT: {
 				CartesianEarthOrbit cartesianEarthOrbit = (CartesianEarthOrbit)theEObject;
 				T result = caseCartesianEarthOrbit(cartesianEarthOrbit);
 				if (result == null) result = caseEarthOrbit(cartesianEarthOrbit);
@@ -191,20 +191,20 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ELEVATION_MASK: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.ELEVATION_MASK: {
 				ElevationMask elevationMask = (ElevationMask)theEObject;
 				T result = caseElevationMask(elevationMask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK: {
 				ConstantElevationMask constantElevationMask = (ConstantElevationMask)theEObject;
 				T result = caseConstantElevationMask(constantElevationMask);
 				if (result == null) result = caseElevationMask(constantElevationMask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR: {
 				EarthOrbitPropagator earthOrbitPropagator = (EarthOrbitPropagator)theEObject;
 				T result = caseEarthOrbitPropagator(earthOrbitPropagator);
 				if (result == null) result = caseAbstractOrbitPropagator(earthOrbitPropagator);
@@ -213,7 +213,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT_PROPAGATOR: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT_PROPAGATOR: {
 				KeplerianEarthOrbitPropagator keplerianEarthOrbitPropagator = (KeplerianEarthOrbitPropagator)theEObject;
 				T result = caseKeplerianEarthOrbitPropagator(keplerianEarthOrbitPropagator);
 				if (result == null) result = caseEarthOrbitPropagator(keplerianEarthOrbitPropagator);
@@ -223,7 +223,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR: {
 				TLEEarthOrbitPropagator tleEarthOrbitPropagator = (TLEEarthOrbitPropagator)theEObject;
 				T result = caseTLEEarthOrbitPropagator(tleEarthOrbitPropagator);
 				if (result == null) result = caseEarthOrbitPropagator(tleEarthOrbitPropagator);
@@ -233,7 +233,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: {
 				URLBasedTLEEarthOrbitPropagator urlBasedTLEEarthOrbitPropagator = (URLBasedTLEEarthOrbitPropagator)theEObject;
 				T result = caseURLBasedTLEEarthOrbitPropagator(urlBasedTLEEarthOrbitPropagator);
 				if (result == null) result = caseTLEEarthOrbitPropagator(urlBasedTLEEarthOrbitPropagator);
@@ -244,13 +244,13 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: {
 				TLE tle = (TLE)theEObject;
 				T result = caseTLE(tle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: {
 				EarthSurfaceLocation earthSurfaceLocation = (EarthSurfaceLocation)theEObject;
 				T result = caseEarthSurfaceLocation(earthSurfaceLocation);
 				if (result == null) result = caseNamed(earthSurfaceLocation);
@@ -258,7 +258,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: {
 				EarthSurfaceLocationList earthSurfaceLocationList = (EarthSurfaceLocationList)theEObject;
 				T result = caseEarthSurfaceLocationList(earthSurfaceLocationList);
 				if (result == null) result = caseNamed(earthSurfaceLocationList);
@@ -266,13 +266,13 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: {
 				GroundStationReferencesList groundStationReferencesList = (GroundStationReferencesList)theEObject;
 				T result = caseGroundStationReferencesList(groundStationReferencesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION: {
 				GroundStation groundStation = (GroundStation)theEObject;
 				T result = caseGroundStation(groundStation);
 				if (result == null) result = caseEarthSurfaceLocation(groundStation);
@@ -281,7 +281,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: {
 				GroundStationList groundStationList = (GroundStationList)theEObject;
 				T result = caseGroundStationList(groundStationList);
 				if (result == null) result = caseNamed(groundStationList);
@@ -289,26 +289,26 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS: {
 				VisibilityPass visibilityPass = (VisibilityPass)theEObject;
 				T result = caseVisibilityPass(visibilityPass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY: {
 				VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory = (VisibilityPassSpacecraftPositionHistory)theEObject;
 				T result = caseVisibilityPassSpacecraftPositionHistory(visibilityPassSpacecraftPositionHistory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION: {
 				VisibilityPassSpacecraftPosition visibilityPassSpacecraftPosition = (VisibilityPassSpacecraftPosition)theEObject;
 				T result = caseVisibilityPassSpacecraftPosition(visibilityPassSpacecraftPosition);
 				if (result == null) result = caseTimed(visibilityPassSpacecraftPosition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET: {
 				SpacecraftsVisibilitySet spacecraftsVisibilitySet = (SpacecraftsVisibilitySet)theEObject;
 				T result = caseSpacecraftsVisibilitySet(spacecraftsVisibilitySet);
 				if (result == null) result = caseNamed(spacecraftsVisibilitySet);
@@ -317,14 +317,14 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT: {
 				CorridorPoint corridorPoint = (CorridorPoint)theEObject;
 				T result = caseCorridorPoint(corridorPoint);
 				if (result == null) result = caseTimed(corridorPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR: {
 				Corridor corridor = (Corridor)theEObject;
 				T result = caseCorridor(corridor);
 				if (result == null) result = caseNamed(corridor);
@@ -332,7 +332,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR: {
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR: {
 				SpacecraftSwathCorridor spacecraftSwathCorridor = (SpacecraftSwathCorridor)theEObject;
 				T result = caseSpacecraftSwathCorridor(spacecraftSwathCorridor);
 				if (result == null) result = caseNamed(spacecraftSwathCorridor);
@@ -341,9 +341,9 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: {
-				Symphony__CoreEnvironmentOrbitEarthFacade symphony__CoreEnvironmentOrbitEarthFacade = (Symphony__CoreEnvironmentOrbitEarthFacade)theEObject;
-				T result = caseSymphony__CoreEnvironmentOrbitEarthFacade(symphony__CoreEnvironmentOrbitEarthFacade);
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: {
+				ApogyCoreEnvironmentOrbitEarthFacade apogy__CoreEnvironmentOrbitEarthFacade = (ApogyCoreEnvironmentOrbitEarthFacade)theEObject;
+				T result = caseApogyCoreEnvironmentOrbitEarthFacade(apogy__CoreEnvironmentOrbitEarthFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -782,7 +782,7 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreEnvironmentOrbitEarthFacade(Symphony__CoreEnvironmentOrbitEarthFacade object) {
+	public T caseApogyCoreEnvironmentOrbitEarthFacade(ApogyCoreEnvironmentOrbitEarthFacade object) {
 		return null;
 	}
 
@@ -997,4 +997,4 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentOrbitEarthSwitch
+} //ApogyCoreEnvironmentOrbitEarthSwitch

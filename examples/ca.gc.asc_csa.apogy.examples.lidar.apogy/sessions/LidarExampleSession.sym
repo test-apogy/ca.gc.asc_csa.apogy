@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="__IW1MArOEeW4-_ONWXXiAw" name="">
-  <environment xsi:type="core:SymphonyEnvironment" xmi:id="__IW1MQrOEeW4-_ONWXXiAw" name="Lidar Example" description="This is an example session, illustrating how to use the lidar example" activeContext="__IXcQQrOEeW4-_ONWXXiAw" time="2015-04-13T10:09:19.465-0400" activeWorksite="__IXcSArOEeW4-_ONWXXiAw" activeTimeSource="__Idi4wrOEeW4-_ONWXXiAw">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmi:id="__IW1MArOEeW4-_ONWXXiAw" name="">
+  <environment xsi:type="core:ApogyEnvironment" xmi:id="__IW1MQrOEeW4-_ONWXXiAw" name="Lidar Example" description="This is an example session, illustrating how to use the lidar example" activeContext="__IXcQQrOEeW4-_ONWXXiAw" time="2015-04-13T10:09:19.465-0400" activeWorksite="__IXcSArOEeW4-_ONWXXiAw" activeTimeSource="__Idi4wrOEeW4-_ONWXXiAw">
     <typesList xmi:id="__IW1MgrOEeW4-_ONWXXiAw">
       <localTypes xmi:id="__IW1MwrOEeW4-_ONWXXiAw"/>
       <registeredTypes xmi:id="__IW1NArOEeW4-_ONWXXiAw"/>
     </typesList>
     <variablesList xmi:id="__IW1NQrOEeW4-_ONWXXiAw">
       <variables xmi:id="__IW1NgrOEeW4-_ONWXXiAw" name="lidar">
-        <variableType href="platform:/plugin/org.eclipse.symphony.examples.lidar.symphony/model/LidarSymphonySystem.ss#_9z1SQArOEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.lidar.apogy/model/LidarApogySystem.ss#_9z1SQArOEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="__IXcQArOEeW4-_ONWXXiAw">
       <contexts xsi:type="invocator:BasicContext" xmi:id="__IXcQQrOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="__Idi8ArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="__IXcQgrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="__IXcQwrOEeW4-_ONWXXiAw" variable="__IW1NgrOEeW4-_ONWXXiAw">
-            <implementationClass href="org.eclipse.symphony.examples.lidar#//LidarSimulated"/>
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.lidar#//LidarSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="__IXcRArOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="__Idi8grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="__IXcRQrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="__IXcRgrOEeW4-_ONWXXiAw" variable="__IW1NgrOEeW4-_ONWXXiAw">
-            <implementationClass href="org.eclipse.symphony.examples.lidar#//LidarStub"/>
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.lidar#//LidarStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -32,7 +32,7 @@
         <mapsList xmi:id="__IYDUArOEeW4-_ONWXXiAw">
           <maps xmi:id="__IYDUQrOEeW4-_ONWXXiAw" name="MarsYard" description="Simple Mars Yard Map.">
             <transformation xmi:id="__IYDUgrOEeW4-_ONWXXiAw"/>
-            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="__IYDUwrOEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="__IYDUwrOEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
           </maps>
         </mapsList>
         <geographicalCoordinates xmi:id="__Idi4ArOEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
@@ -46,17 +46,17 @@
   <programsList xmi:id="__Idi5ArOEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="__Idi5QrOEeW4-_ONWXXiAw" name="">
       <operationCalls xmi:id="__Idi5grOEeW4-_ONWXXiAw" name="Init" variable="__IW1NgrOEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.lidar#//Lidar/init"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.lidar#//Lidar/init"/>
       </operationCalls>
       <operationCalls xmi:id="__Idi5wrOEeW4-_ONWXXiAw" name="Acquire Scan (Blocking)" variable="__IW1NgrOEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.lidar#//Lidar/acquireScan"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.lidar#//Lidar/acquireScan"/>
         <argumentsList xmi:id="__Idi6ArOEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi6QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi6grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="__Idi6wrOEeW4-_ONWXXiAw" name="Acquire Scan (Non-Blocking)" variable="__IW1NgrOEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.lidar#//Lidar/acquireScanNonBlocking"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.lidar#//Lidar/acquireScanNonBlocking"/>
         <argumentsList xmi:id="__Idi7ArOEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi7QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi7grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>

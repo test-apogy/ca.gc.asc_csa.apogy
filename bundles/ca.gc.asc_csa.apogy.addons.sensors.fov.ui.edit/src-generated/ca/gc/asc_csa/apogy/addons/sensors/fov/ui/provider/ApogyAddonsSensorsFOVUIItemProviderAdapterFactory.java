@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,16 +27,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.util.Symphony__AddonsSensorsFOVUIAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.util.Symphony__CommonTopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.util.ApogyAddonsSensorsFOVUIAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.util.ApogyCommonTopologyUISwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symphony__AddonsSensorsFOVUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsSensorsFOVUIItemProviderAdapterFactory extends ApogyAddonsSensorsFOVUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsSensorsFOVUIEditPlugin.INSTANCE, Symphony__AddonsSensorsFOVUIPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsSensorsFOVUIEditPlugin.INSTANCE, ApogyAddonsSensorsFOVUIPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -86,7 +86,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory() {
+	public ApogyAddonsSensorsFOVUIItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -95,7 +95,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -103,7 +103,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	protected FieldOfViewPresentationItemProvider fieldOfViewPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -118,7 +118,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -126,7 +126,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	protected CircularSectorFieldOfViewPresentationItemProvider circularSectorFieldOfViewPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -141,7 +141,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,7 +149,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	protected ConicalFieldOfViewPresentationItemProvider conicalFieldOfViewPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -164,7 +164,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -172,7 +172,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	protected RectangularFrustrumFieldOfViewPresentationItemProvider rectangularFrustrumFieldOfViewPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -319,19 +319,19 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyUIPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyUIChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyUISwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -367,23 +367,23 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 			public Object caseTopologyPresentationRegistry(TopologyPresentationRegistry object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createFieldOfViewPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createConicalFieldOfViewPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createConicalFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createRectangularFrustrumFieldOfViewPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createRectangularFrustrumFieldOfViewPresentation()));
 
 				return null;
 			}
@@ -416,24 +416,24 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsFOVUIEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsFOVUIEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -469,23 +469,23 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createConicalFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createConicalFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createRectangularFrustrumFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createRectangularFrustrumFieldOfViewPresentation()));
 
 				return null;
 			}
@@ -499,23 +499,23 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createConicalFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createConicalFieldOfViewPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createRectangularFrustrumFieldOfViewPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createRectangularFrustrumFieldOfViewPresentation()));
 
 				return null;
 			}
@@ -548,7 +548,7 @@ public class Symphony__AddonsSensorsFOVUIItemProviderAdapterFactory extends Symp
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsFOVUIEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsFOVUIEditPlugin.INSTANCE;
 		}
 	}
 

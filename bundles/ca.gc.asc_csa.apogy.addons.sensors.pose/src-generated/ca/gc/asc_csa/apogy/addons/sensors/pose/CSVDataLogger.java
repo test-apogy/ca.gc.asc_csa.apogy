@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.pose;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getCSVDataLogger()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getCSVDataLogger()
  * @model
  * @generated
  */

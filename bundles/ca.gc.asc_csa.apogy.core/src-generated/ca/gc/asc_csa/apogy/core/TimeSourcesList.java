@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,18 +18,18 @@ import org.eclipse.symphony.common.emf.TimeSource;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.TimeSourcesList#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.TimeSourcesList#getTimeSources <em>Time Sources</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.TimeSourcesList#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.TimeSourcesList#getTimeSources <em>Time Sources</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getTimeSourcesList()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getTimeSourcesList()
  * @model
  * @generated
  */
 public interface TimeSourcesList extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Environment</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.SymphonyEnvironment#getTimeSourcesList <em>Time Sources List</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.ApogyEnvironment#getTimeSourcesList <em>Time Sources List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Environment</em>' container reference isn't clear,
@@ -37,28 +37,28 @@ public interface TimeSourcesList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' container reference.
-	 * @see #setEnvironment(SymphonyEnvironment)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getTimeSourcesList_Environment()
-	 * @see org.eclipse.symphony.core.SymphonyEnvironment#getTimeSourcesList
+	 * @see #setEnvironment(ApogyEnvironment)
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getTimeSourcesList_Environment()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyEnvironment#getTimeSourcesList
 	 * @model opposite="timeSourcesList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
-	SymphonyEnvironment getEnvironment();
+	ApogyEnvironment getEnvironment();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.TimeSourcesList#getEnvironment <em>Environment</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.TimeSourcesList#getEnvironment <em>Environment</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Environment</em>' container reference.
 	 * @see #getEnvironment()
 	 * @generated
 	 */
-	void setEnvironment(SymphonyEnvironment value);
+	void setEnvironment(ApogyEnvironment value);
 
 	/**
 	 * Returns the value of the '<em><b>Time Sources</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.emf.TimeSource}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.emf.TimeSource}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Time Sources</em>' containment reference list isn't clear,
@@ -66,7 +66,7 @@ public interface TimeSourcesList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Sources</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getTimeSourcesList_TimeSources()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getTimeSourcesList_TimeSources()
 	 * @model containment="true"
 	 * @generated
 	 */

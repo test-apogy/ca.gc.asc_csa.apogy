@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.RotationBinding} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class RotationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RotationBinding_rotationNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationBinding_rotationNode_feature", "_UI_RotationBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_NODE,
+				 ApogyCommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_NODE,
 				 true,
 				 false,
 				 true,
@@ -89,7 +89,7 @@ public class RotationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RotationBinding_rotationAxis_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationBinding_rotationAxis_feature", "_UI_RotationBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_AXIS,
+				 ApogyCommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_AXIS,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class RotationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RotationBinding_rotationUnits_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationBinding_rotationUnits_feature", "_UI_RotationBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_UNITS,
+				 ApogyCommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_UNITS,
 				 true,
 				 false,
 				 false,
@@ -187,8 +187,8 @@ public class RotationBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RotationBinding.class)) {
-			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
-			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
+			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
+			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

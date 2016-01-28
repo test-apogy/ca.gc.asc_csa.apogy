@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.awt.Graphics2D;
 import java.awt.geom.AffineTransform;
@@ -18,56 +18,56 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.ConnectionPointsList;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceEnvironment;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionImage;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.URLImageMapLayer;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.Atmosphere;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,15 +76,15 @@ import org.eclipse.symphony.core.invocator.Environment;
  *
  * @generated
  */
-public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CoreEnvironmentFacade
+public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreEnvironmentFacade
 {
-	private static Symphony__CoreEnvironmentFacade instance = null;
+	private static ApogyCoreEnvironmentFacade instance = null;
 	
-	public static Symphony__CoreEnvironmentFacade getInstance() 
+	public static ApogyCoreEnvironmentFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CoreEnvironmentFacadeImpl();
+			instance = new ApogyCoreEnvironmentFacadeImpl();
 		}
 		return instance;
 	}
@@ -94,7 +94,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreEnvironmentFacadeImpl()
+  protected ApogyCoreEnvironmentFacadeImpl()
   {
 		super();
 	}
@@ -107,7 +107,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.SYMPHONY_CORE_ENVIRONMENT_FACADE;
+		return ApogyCoreEnvironmentPackage.Literals.APOGY_CORE_ENVIRONMENT_FACADE;
 	}
   
   /**
@@ -117,7 +117,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public StarField createAndInitializeStars()
   {
-		StarField starField = Symphony__CoreEnvironmentFactory.eINSTANCE.createStarField();
+		StarField starField = ApogyCoreEnvironmentFactory.eINSTANCE.createStarField();
 		starField.setDescription("Star Field.");
 		starField.setStarFieldFileName("bright_star_catalog_5.txt");
 		starField.setNodeId("STAR FIELD");
@@ -134,7 +134,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		Date now = new Date();
 		
 		// Initialise the worksite.
-		EarthSurfaceWorksite worksite = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
+		EarthSurfaceWorksite worksite = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
 		worksite.setName("CSA AT");
 		worksite.setDescription("The CSA Default Worksite.");
 		
@@ -143,11 +143,11 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		worksite.setXAxisAzimuth(Math.toRadians(179.4));
 		
 		// Creates and initialise the Earth Sky.
-		EarthSky earthSky = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSky();
+		EarthSky earthSky = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSky();
 		worksite.setSky(earthSky);
 		
 		// Create and initialise the EarthSkyNode.
-		EarthSkyNode earthSkyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();		
+		EarthSkyNode earthSkyNode = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();		
 		initializeEarthSkyNode(earthSky, earthSkyNode);
 		
 		// Attaches the sky to the worksite.
@@ -180,14 +180,14 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		skyNode.setNodeId("SKY");
 	  
 		// Creates the Sun
-		Sun sun = Symphony__CoreEnvironmentFactory.eINSTANCE.createSun();
+		Sun sun = ApogyCoreEnvironmentFactory.eINSTANCE.createSun();
 		sun.setDescription("The Sun.");
 		sun.setNodeId("SUN");
 		
 		// Creates the Sun transform that attaches it to the sky.		
 		HorizontalCoordinates sunHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(now, 0.0, 0.0);				
 		Point3d sunPosition = AstronomyUtils.INSTANCE.convertFromHorizontalCoordinatesToHorizontalRectangular(sunHorizontalCoordinates);						
-		TransformNode sunTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(sunPosition.x, sunPosition.y, sunPosition.z, 0, 0, 0);
+		TransformNode sunTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(sunPosition.x, sunPosition.y, sunPosition.z, 0, 0, 0);
 		sunTransformNode.setDescription("Transform attaching the Sun to the Sky.");
 		sunTransformNode.setNodeId("SUN_TRANSFORM");
 		
@@ -204,7 +204,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 			
 			// Creates the StarField transform that attaches it to the sky.
 			// TODO : Initialise this correctly !
-			TransformNode starFieldTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
+			TransformNode starFieldTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
 			starFieldTransformNode.setDescription("Transform attaching the Star Field to the Sky.");	
 			starFieldTransformNode.setNodeId("STAR_FIELD_TRANSFORM");
 			
@@ -244,7 +244,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		GeographicCoordinates coord = worksite.getGeographicalCoordinates();
 		
 		// Creates the Moon.
-		Moon moon = Symphony__CoreEnvironmentFactory.eINSTANCE.createMoon();
+		Moon moon = ApogyCoreEnvironmentFactory.eINSTANCE.createMoon();
 		moon.setDescription("The Moon.");
 		moon.setNodeId("MOON");
 		
@@ -252,7 +252,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(now, coord.getLongitude(), coord.getLatitude());		
 		
 		Point3d moonPosition = AstronomyUtils.INSTANCE.convertFromHorizontalCoordinatesToHorizontalRectangular(moonHorizontalCoordinates);
-		TransformNode moonTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(moonPosition.x, moonPosition.y, moonPosition.z, 0, 0, 0);
+		TransformNode moonTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(moonPosition.x, moonPosition.y, moonPosition.z, 0, 0, 0);
 		moonTransformNode.setDescription("Transform attaching the Moon to the Sky.");	
 		moonTransformNode.setNodeId("MOON_TRANSFORM");
 		
@@ -275,7 +275,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public GeographicCoordinates getMarsYardGeographicalCoordinates()
   {
-		GeographicCoordinates coordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+		GeographicCoordinates coordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 		
 		coordinates.setElevation(30.0);
 		coordinates.setLongitude(Math.toRadians(-73.393904468182));
@@ -291,10 +291,10 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public Star createStar(float magnitude, double rightAscension, double declination)
   {
-		Star star = Symphony__CoreEnvironmentFactory.eINSTANCE.createStar();
+		Star star = ApogyCoreEnvironmentFactory.eINSTANCE.createStar();
 		star.setMagnitude((float) magnitude);
 		
-		EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates equatorialCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 		equatorialCoordinates.setRightAscension(rightAscension);
 		equatorialCoordinates.setDeclination(declination);
 		equatorialCoordinates.setRadius(Double.MAX_VALUE);
@@ -312,7 +312,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
   public TransformNode getMarsYardTransformNode()
   {
 		// Creates the default Mars Yard transform.
-		TransformNode marsYardTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
+		TransformNode marsYardTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
 		marsYardTransformNode.setDescription("Mars Yard Transform that orients the terrain coordinate system to north.");
 		
 		return marsYardTransformNode;
@@ -325,12 +325,12 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public EarthSurfaceEnvironment createAndInitializeEarthSurfaceEnvironment()
   {
-		EarthSurfaceEnvironment earthSurfaceEnvironment = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment();
+		EarthSurfaceEnvironment earthSurfaceEnvironment = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment();
 		earthSurfaceEnvironment.setName("Earth Surface Environment");
 		earthSurfaceEnvironment.setDescription("Default Earth Surface Environment");
 		
 		// Sets the gravity
-		earthSurfaceEnvironment.setGravity(Symphony__CommonMathFacade.INSTANCE.createTuple3d(0.0, 0.0, -9.81));
+		earthSurfaceEnvironment.setGravity(ApogyCommonMathFacade.INSTANCE.createTuple3d(0.0, 0.0, -9.81));
 		earthSurfaceEnvironment.setAtmosphere(createAndInitializeEarthAtmosphere());
 				
 		return earthSurfaceEnvironment;
@@ -343,7 +343,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public Atmosphere createAndInitializeEarthAtmosphere()
   {
-		Atmosphere atmosphere = Symphony__CoreEnvironmentFactory.eINSTANCE.createAtmosphere();
+		Atmosphere atmosphere = ApogyCoreEnvironmentFactory.eINSTANCE.createAtmosphere();
 		
 		// @see http://en.wikipedia.org/wiki/International_Standard_Atmosphere
 		atmosphere.setSurfacePressure(101325.0);
@@ -360,9 +360,9 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getMoonVector(SymphonySystem symphonySystem, String nodeID, Environment environment)
+  public Tuple3d getMoonVector(ApogySystem apogySystem, String nodeID, Environment environment)
   {
-	  EList<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID(nodeID, symphonySystem.getTopologyRoot().getOriginNode());
+	  EList<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByID(nodeID, apogySystem.getTopologyRoot().getOriginNode());
 	  if(!nodes.isEmpty())
 	  {
 		  Node node = nodes.get(0);
@@ -381,22 +381,22 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public Tuple3d getMoonVector(Node node, Environment environment)
   {
-	  if(environment instanceof SymphonyEnvironment)
+	  if(environment instanceof ApogyEnvironment)
 	  {
-		  SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) environment;
-		  if(symphonyEnvironment.getActiveWorksite() instanceof EarthSurfaceWorksite)
+		  ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;
+		  if(apogyEnvironment.getActiveWorksite() instanceof EarthSurfaceWorksite)
 		  {
-			  EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) symphonyEnvironment.getActiveWorksite();
+			  EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) apogyEnvironment.getActiveWorksite();
 			  
 			  Node moon = earthSurfaceWorksite.getEarthSky().getMoon();
 			  
-			  Matrix4d matrix = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(moon, node);
+			  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(moon, node);
 			  Vector3d v = new Vector3d();
 			  
 			  matrix.get(v);
 			  v.normalize();
 			  
-			  return Symphony__CommonMathFacade.INSTANCE.createTuple3d(v);
+			  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
 		  }
 	  }
 	  
@@ -408,20 +408,20 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getVector(Node node, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint, Environment environment)
+  public Tuple3d getVector(Node node, ApogySystem targetApogySystem, ConnectionPoint connectionPoint, Environment environment)
   {
-	  if(environment instanceof SymphonyEnvironment)
+	  if(environment instanceof ApogyEnvironment)
 	  {
-		  SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) environment;
-		  if(symphonyEnvironment.getActiveWorksite() instanceof Worksite)
+		  ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;
+		  if(apogyEnvironment.getActiveWorksite() instanceof Worksite)
 		  {
-			  Matrix4d matrix = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(connectionPoint.getNode(), node);
+			  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(connectionPoint.getNode(), node);
 			  
 			  Vector3d v = new Vector3d();
 			  matrix.get(v);
 			  v.normalize();
 			  
-			  return Symphony__CommonMathFacade.INSTANCE.createTuple3d(v);
+			  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
 		  }
 	  }
 	  
@@ -433,14 +433,14 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint, Environment environment)
+  public Tuple3d getVector(ApogySystem sourceApogySystem, String nodeID, ApogySystem targetApogySystem, ConnectionPoint connectionPoint, Environment environment)
   {
-	  EList<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID(nodeID, sourceSymphonySystem.getTopologyRoot().getOriginNode());
+	  EList<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByID(nodeID, sourceApogySystem.getTopologyRoot().getOriginNode());
 	  if(!nodes.isEmpty())
 	  {
 		  Node node = nodes.get(0);
 		  
-		  return getVector(node, targetSymphonySystem, connectionPoint, environment);
+		  return getVector(node, targetApogySystem, connectionPoint, environment);
 	  }
 	  else
 	  {
@@ -453,18 +453,18 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, String connectionPointName, Environment environment)
+  public Tuple3d getVector(ApogySystem sourceApogySystem, String nodeID, ApogySystem targetApogySystem, String connectionPointName, Environment environment)
   {
-	  EList<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID(nodeID, sourceSymphonySystem.getTopologyRoot().getOriginNode());
+	  EList<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByID(nodeID, sourceApogySystem.getTopologyRoot().getOriginNode());
 	  if(!nodes.isEmpty())
 	  {
 		  Node node = nodes.get(0);
 		  
-		  ConnectionPoint connectionPoint = getConnectionPointByName(targetSymphonySystem.getConnectionPointsList(), connectionPointName);
+		  ConnectionPoint connectionPoint = getConnectionPointByName(targetApogySystem.getConnectionPointsList(), connectionPointName);
 		  		 
 		  if(connectionPoint != null)
 		  {
-			  return getVector(node, targetSymphonySystem, connectionPoint, environment);
+			  return getVector(node, targetApogySystem, connectionPoint, environment);
 		  }
 		  else
 		  {
@@ -482,11 +482,11 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, String targetSystemfullyQualifiedName, String connectionPointName, Environment environment)
+  public Tuple3d getVector(ApogySystem sourceApogySystem, String nodeID, String targetSystemfullyQualifiedName, String connectionPointName, Environment environment)
   {
-	  SymphonySystem targetSystem = Symphony__CoreFacade.INSTANCE.getSymphonySystem(environment, targetSystemfullyQualifiedName);
+	  ApogySystem targetSystem = ApogyCoreFacade.INSTANCE.getApogySystem(environment, targetSystemfullyQualifiedName);
 
-	  return getVector(sourceSymphonySystem, nodeID, targetSystem, connectionPointName, environment);
+	  return getVector(sourceApogySystem, nodeID, targetSystem, connectionPointName, environment);
   }
 
 
@@ -502,10 +502,10 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 	  if(!rectangularRegionImages.isEmpty())
 	  {
 		  // Gets the extend of the terrain covered.
-		  Tuple3d lowerLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0); 
-		  Tuple3d upperRightCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);	  		  		  		  
+		  Tuple3d lowerLeftCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0); 
+		  Tuple3d upperRightCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);	  		  		  		  
 		  getRectangularRegionImageExtent(rectangularRegionImages, lowerLeftCorner, upperRightCorner);		  
-		  Tuple3d upperLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(lowerLeftCorner.getX(), upperRightCorner.getY(), 0);		  
+		  Tuple3d upperLeftCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(lowerLeftCorner.getX(), upperRightCorner.getY(), 0);		  
 		
 		  // Computes the dimensions of the terrain covered by the layers.
 		  double terrainWidth = upperRightCorner.getX() - lowerLeftCorner.getX();
@@ -546,7 +546,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 				  double zRotation = 0;
 				  if(regionImage.getRegion().getTransformation() != null)
 				  {
-					  Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(regionImage.getRegion().getTransformation());					  
+					  Tuple3d orientation = ApogyCommonMathFacade.INSTANCE.extractOrientation(regionImage.getRegion().getTransformation());					  
 					  zRotation = orientation.getZ();
 				  }				  				 
 				  AffineTransform affineTransform = new AffineTransform();
@@ -609,7 +609,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 	  List<Tuple3d> results = new ArrayList<Tuple3d>();	  
 	  for(int i = 0; i < corners.length; i++)
 	  {
-		 Tuple3d p = Symphony__CommonMathFacade.INSTANCE.createTuple3d(corners[i]);
+		 Tuple3d p = ApogyCommonMathFacade.INSTANCE.createTuple3d(corners[i]);
 		 results.add(p);
 	  }
 	  
@@ -722,8 +722,8 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 			  		  
 			  for(RectangularRegionProvider provider : rectangularRegionProviders)
 			  {
-				  Tuple3d tmpLowerLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0); 
-				  Tuple3d tmpUpperRightCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);
+				  Tuple3d tmpLowerLeftCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0); 
+				  Tuple3d tmpUpperRightCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);
 				  
 				  getRectangularRegionExtent(provider, tmpLowerLeftCorner, tmpUpperRightCorner);
 				  
@@ -767,8 +767,8 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		  		  
 		  for(RectangularRegionImage layer : rectangularRegionImages)
 		  {
-			  Tuple3d tmpLowerLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0); 
-			  Tuple3d tmpUpperRightCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);
+			  Tuple3d tmpLowerLeftCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0); 
+			  Tuple3d tmpUpperRightCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);
 			  
 			  getRectangularRegionImageExtent(layer, tmpLowerLeftCorner, tmpUpperRightCorner);
 			  
@@ -860,7 +860,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 	 */
 	public void getImageMapLayerPresentationExtent(ImageMapLayerPresentation imageMapLayerPresentation, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner) 
 	{
-		Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(imageMapLayerPresentation.getImageMapLayer(), lowerLeftCorner, upperRightCorner);
+		ApogyCoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(imageMapLayerPresentation.getImageMapLayer(), lowerLeftCorner, upperRightCorner);
 	}
 
 	/**
@@ -871,7 +871,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 	public void getImageMapLayerPresentationExtent(List<ImageMapLayerPresentation> imageMapLayerPresentations, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner) 
 	{
 		  List<ImageMapLayerPresentation> visiblePresentations = getVisibleImageMapLayerPresentation(imageMapLayerPresentations);
-		  Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(visiblePresentations, lowerLeftCorner, upperRightCorner);
+		  ApogyCoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(visiblePresentations, lowerLeftCorner, upperRightCorner);
 	}
 
 	/**
@@ -887,7 +887,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		  if(!imageMapLayerPresentations.isEmpty())
 		  {
 			  List<ImageMapLayerPresentation> visiblePresentations = getVisibleImageMapLayerPresentation(imageMapLayerPresentations);		  		  
-			  result =  Symphony__CoreEnvironmentFacade.INSTANCE.createEImage(visiblePresentations);
+			  result =  ApogyCoreEnvironmentFacade.INSTANCE.createEImage(visiblePresentations);
 		  }
 		  	  
 		  return result;
@@ -945,7 +945,7 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 	 */
 	public RectangularVolumeRegion getRectangularVolumeRegion(CartesianTriangularMesh mesh) 
 	{
-		RectangularVolumeRegion rectangularVolumeRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
+		RectangularVolumeRegion rectangularVolumeRegion = ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
 		
 		if(mesh != null)
 		{
@@ -959,10 +959,10 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		}
 		else
 		{
-			rectangularVolumeRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
+			rectangularVolumeRegion = ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
 		}	
 		
-		rectangularVolumeRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
+		rectangularVolumeRegion.setTransformation(ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4());
 		
 		return rectangularVolumeRegion;
 	}
@@ -994,9 +994,9 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getSunVector(SymphonySystem symphonySystem, String nodeID, Environment environment)
+  public Tuple3d getSunVector(ApogySystem apogySystem, String nodeID, Environment environment)
   {	  	 
-	  EList<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID(nodeID, symphonySystem.getTopologyRoot().getOriginNode());
+	  EList<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByID(nodeID, apogySystem.getTopologyRoot().getOriginNode());
 	  if(!nodes.isEmpty())
 	  {
 		  Node node = nodes.get(0);
@@ -1015,22 +1015,22 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public Tuple3d getSunVector(Node node, Environment environment)
   {	  	    
-	  if(environment instanceof SymphonyEnvironment)
+	  if(environment instanceof ApogyEnvironment)
 	  {
-		  SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) environment;
+		  ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;
 		  
-		  if(symphonyEnvironment.getActiveWorksite() instanceof SurfaceWorksite)
+		  if(apogyEnvironment.getActiveWorksite() instanceof SurfaceWorksite)
 		  {
-			  SurfaceWorksite surfaceWorksite = (SurfaceWorksite) symphonyEnvironment.getActiveWorksite();						  					  			  			  
+			  SurfaceWorksite surfaceWorksite = (SurfaceWorksite) apogyEnvironment.getActiveWorksite();						  					  			  			  
 			  Node sun = surfaceWorksite.getSky().getSun();
 			  			  
-			  Matrix4d matrix = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(sun, node);
+			  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(sun, node);
 			  Vector3d v = new Vector3d();
 			  
 			  matrix.get(v);
 			  v.normalize();
 			  
-			  return Symphony__CommonMathFacade.INSTANCE.createTuple3d(v);
+			  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
 		  }
 	  }
 	  
@@ -1044,21 +1044,21 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
    */
   public Tuple3d getMoonVector(String nodeID, EarthSurfaceWorksite earthSurfaceWorksite)
   {
-	  Node root = Symphony__CommonTopologyFacade.INSTANCE.findRoot(earthSurfaceWorksite.getWorksiteNode());	
-	  EList<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID(nodeID, root);
+	  Node root = ApogyCommonTopologyFacade.INSTANCE.findRoot(earthSurfaceWorksite.getWorksiteNode());	
+	  EList<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByID(nodeID, root);
 	  	  
 	  if(!nodes.isEmpty())
 	  {
 		  Node node = nodes.get(0);		  		
 		  Node moon = earthSurfaceWorksite.getEarthSky().getMoon();
 		  
-		  Matrix4d matrix = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(moon, node);
+		  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(moon, node);
 		  Vector3d v = new Vector3d();
 		  
 		  matrix.get(v);
 		  v.normalize();
 		  
-		  return Symphony__CommonMathFacade.INSTANCE.createTuple3d(v);
+		  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
 	  }
 	  else
 	  {	  
@@ -1076,77 +1076,77 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS:
 				return createAndInitializeStars();
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
 				return createAndInitializeDefaultCSAWorksite();
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE:
 				initializeSkyNode((Sky)arguments.get(0), (SkyNode)arguments.get(1));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:
 				initializeEarthSkyNode((EarthSky)arguments.get(0), (EarthSkyNode)arguments.get(1));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES:
 				return getMarsYardGeographicalCoordinates();
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE:
 				return createStar((Float)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE:
 				return getMarsYardTransformNode();
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT:
 				return createAndInitializeEarthSurfaceEnvironment();
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE:
 				return createAndInitializeEarthAtmosphere();
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
-				return getSunVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
+				return getSunVector((ApogySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT:
 				return getSunVector((Node)arguments.get(0), (Environment)arguments.get(1));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
-				return getMoonVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
+				return getMoonVector((ApogySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT:
 				return getMoonVector((Node)arguments.get(0), (Environment)arguments.get(1));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
-				return getVector((Node)arguments.get(0), (SymphonySystem)arguments.get(1), (ConnectionPoint)arguments.get(2), (Environment)arguments.get(3));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
-				return getVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (SymphonySystem)arguments.get(2), (ConnectionPoint)arguments.get(3), (Environment)arguments.get(4));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT:
-				return getVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (SymphonySystem)arguments.get(2), (String)arguments.get(3), (Environment)arguments.get(4));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT:
-				return getVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Environment)arguments.get(4));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
+				return getVector((Node)arguments.get(0), (ApogySystem)arguments.get(1), (ConnectionPoint)arguments.get(2), (Environment)arguments.get(3));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
+				return getVector((ApogySystem)arguments.get(0), (String)arguments.get(1), (ApogySystem)arguments.get(2), (ConnectionPoint)arguments.get(3), (Environment)arguments.get(4));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT:
+				return getVector((ApogySystem)arguments.get(0), (String)arguments.get(1), (ApogySystem)arguments.get(2), (String)arguments.get(3), (Environment)arguments.get(4));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT:
+				return getVector((ApogySystem)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Environment)arguments.get(4));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST:
 				return createEImage((List<? extends RectangularRegionImage>)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION:
 				return getAbsoluteRectangularRegionCorners((RectangularRegion)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST:
 				return getBestResolutionRectangularRegionImage((List<? extends RectangularRegionImage>)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D:
 				getRectangularRegionExtent((RectangularRegionProvider)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D:
 				getRectangularRegionImageExtent((RectangularRegionImage)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D:
 				getRectangularRegionExtent((List<? extends RectangularRegionProvider>)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D:
 				getRectangularRegionImageExtent((List<? extends RectangularRegionImage>)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION:
 				return fitsInside((RectangularRegion)arguments.get(0), (RectangularRegion)arguments.get(1));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4:
 				return intersects((RectangularRegion)arguments.get(0), (RectangularRegion)arguments.get(1), (Matrix4x4)arguments.get(2));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D:
 				getImageMapLayerPresentationExtent((ImageMapLayerPresentation)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D:
 				getImageMapLayerPresentationExtent((List<ImageMapLayerPresentation>)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST:
 				return getImageMapLayerPresentationImage((List<ImageMapLayerPresentation>)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST:
 				return getBestResolutionMapLayer((List<ImageMapLayerPresentation>)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST:
 				return getVisibleImageMapLayerPresentation((List<ImageMapLayerPresentation>)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH:
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH:
 				return getRectangularVolumeRegion((CartesianTriangularMesh)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -1154,26 +1154,26 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 
 	private Map getDefaultMarsTerrainMap()
 	{
-		Map map = Symphony__CoreEnvironmentFactory.eINSTANCE.createMap();
+		Map map = ApogyCoreEnvironmentFactory.eINSTANCE.createMap();
 		map.setName("MarsYard");
 		map.setDescription("Simple Mars Yard Map.");
 		
 		// Creates a matrix
 		Matrix4d matrix = getMarsYardTransformNode().asMatrix4d();		
-		map.setTransformation(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix));		
+		map.setTransformation(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(matrix));		
 		
 		// Creates a MeshMapLayer.
 		
-		CartesianTriangularMeshURLMapLayer meshLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer();
-		meshLayer.setUrl("platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri");
+		CartesianTriangularMeshURLMapLayer meshLayer = ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer();
+		meshLayer.setUrl("platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri");
 		meshLayer.setName("MarsYardDEM 1.0 meters resolution");
 		meshLayer.setDescription("MarsYard DEM at 1.0 meters resolution");
 		
 		map.getLayers().add(meshLayer);		
 	
 		// Create Aerial Image map.
-		URLImageMapLayer imageLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer();
-		imageLayer.setUrl("platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg");
+		URLImageMapLayer imageLayer = ApogyCoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer();
+		imageLayer.setUrl("platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg");
 		imageLayer.setName("Mars Yard Aerial Image.");
 		imageLayer.setDescription("Mars Yard seen from above.");
 		imageLayer.setWidth(60.0);
@@ -1182,15 +1182,15 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		map.getLayers().add(imageLayer);	
 		
 		// Creates the default Feature Of Interest List.
-		FeaturesOfInterestMapLayer foiLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer();
-		foiLayer.setFeatures(Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestList());
+		FeaturesOfInterestMapLayer foiLayer = ApogyCoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer();
+		foiLayer.setFeatures(ApogyCoreFactory.eINSTANCE.createFeatureOfInterestList());
 		foiLayer.setName("CSA AT Features");
 		foiLayer.setDescription("CSA AT Features Of Interest.");
-		String foiURL = "platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-FOI.csv";
+		String foiURL = "platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSA-AT-FOI.csv";
 		
 		try
 		{
-			List<FeatureOfInterest> features = Symphony__CoreFacade.INSTANCE.loadFeatureOfInterestFromFile(foiURL);
+			List<FeatureOfInterest> features = ApogyCoreFacade.INSTANCE.loadFeatureOfInterestFromFile(foiURL);
 			foiLayer.getFeatures().getFeaturesOfInterest().addAll(features);
 		}
 		catch(Throwable t)
@@ -1202,4 +1202,4 @@ public class Symphony__CoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Cont
 		
 		return map;
 	}	
-} //Symphony__CoreEnvironmentFacadeImpl
+} //ApogyCoreEnvironmentFacadeImpl

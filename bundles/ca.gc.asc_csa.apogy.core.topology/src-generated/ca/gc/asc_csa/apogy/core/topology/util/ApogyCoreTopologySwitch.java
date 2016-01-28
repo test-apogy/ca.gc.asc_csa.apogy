@@ -1,19 +1,19 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.util;
+package ca.gc.asc_csa.apogy.core.topology.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
-import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
-import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,10 +25,10 @@ import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage
+ * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage
  * @generated
  */
-public class Symphony__CoreTopologySwitch<T> extends Switch<T>
+public class ApogyCoreTopologySwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -36,7 +36,7 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreTopologyPackage modelPackage;
+  protected static ApogyCoreTopologyPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -44,10 +44,10 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreTopologySwitch()
+  public ApogyCoreTopologySwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreTopologyPackage.eINSTANCE;
+			modelPackage = ApogyCoreTopologyPackage.eINSTANCE;
 		}
 	}
 
@@ -76,33 +76,33 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: {
+			case ApogyCoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: {
 				SystemsTopologyAdapter systemsTopologyAdapter = (SystemsTopologyAdapter)theEObject;
 				T result = caseSystemsTopologyAdapter(systemsTopologyAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE: {
-				SymphonyEnvironmentNode symphonyEnvironmentNode = (SymphonyEnvironmentNode)theEObject;
-				T result = caseSymphonyEnvironmentNode(symphonyEnvironmentNode);
-				if (result == null) result = caseReferencedGroupNode(symphonyEnvironmentNode);
-				if (result == null) result = caseGroupNode(symphonyEnvironmentNode);
-				if (result == null) result = caseNode(symphonyEnvironmentNode);
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE: {
+				ApogyEnvironmentNode apogyEnvironmentNode = (ApogyEnvironmentNode)theEObject;
+				T result = caseApogyEnvironmentNode(apogyEnvironmentNode);
+				if (result == null) result = caseReferencedGroupNode(apogyEnvironmentNode);
+				if (result == null) result = caseGroupNode(apogyEnvironmentNode);
+				if (result == null) result = caseNode(apogyEnvironmentNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE: {
-				SymphonySystemAPIsNode symphonySystemAPIsNode = (SymphonySystemAPIsNode)theEObject;
-				T result = caseSymphonySystemAPIsNode(symphonySystemAPIsNode);
-				if (result == null) result = caseReferencedGroupNode(symphonySystemAPIsNode);
-				if (result == null) result = caseGroupNode(symphonySystemAPIsNode);
-				if (result == null) result = caseNode(symphonySystemAPIsNode);
+			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE: {
+				ApogySystemAPIsNode apogySystemAPIsNode = (ApogySystemAPIsNode)theEObject;
+				T result = caseApogySystemAPIsNode(apogySystemAPIsNode);
+				if (result == null) result = caseReferencedGroupNode(apogySystemAPIsNode);
+				if (result == null) result = caseGroupNode(apogySystemAPIsNode);
+				if (result == null) result = caseNode(apogySystemAPIsNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreTopologyPackage.SYMPHONY_CORE_TOPOLOGY_FACADE: {
-				Symphony__CoreTopologyFacade symphony__CoreTopologyFacade = (Symphony__CoreTopologyFacade)theEObject;
-				T result = caseSymphony__CoreTopologyFacade(symphony__CoreTopologyFacade);
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: {
+				ApogyCoreTopologyFacade apogy__CoreTopologyFacade = (ApogyCoreTopologyFacade)theEObject;
+				T result = caseApogyCoreTopologyFacade(apogy__CoreTopologyFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -127,33 +127,33 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Environment Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Environment Node</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Environment Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Environment Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonyEnvironmentNode(SymphonyEnvironmentNode object)
+  public T caseApogyEnvironmentNode(ApogyEnvironmentNode object)
   {
 		return null;
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System AP Is Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System AP Is Node</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System AP Is Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System AP Is Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonySystemAPIsNode(SymphonySystemAPIsNode object)
+  public T caseApogySystemAPIsNode(ApogySystemAPIsNode object)
   {
 		return null;
 	}
@@ -169,7 +169,7 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreTopologyFacade(Symphony__CoreTopologyFacade object) {
+	public T caseApogyCoreTopologyFacade(ApogyCoreTopologyFacade object) {
 		return null;
 	}
 
@@ -238,4 +238,4 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CoreTopologySwitch
+} //ApogyCoreTopologySwitch

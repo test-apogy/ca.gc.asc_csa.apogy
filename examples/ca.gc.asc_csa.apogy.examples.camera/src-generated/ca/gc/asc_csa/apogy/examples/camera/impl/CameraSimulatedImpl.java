@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.impl;
+package ca.gc.asc_csa.apogy.examples.camera.impl;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -15,18 +15,18 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.camera.Activator;
-import org.eclipse.symphony.examples.camera.CameraSimulated;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.SensorStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingFactory;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.camera.Activator;
+import ca.gc.asc_csa.apogy.examples.camera.CameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -193,7 +193,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesCameraPackage.Literals.CAMERA_SIMULATED;
+		return ApogyExamplesCameraPackage.Literals.CAMERA_SIMULATED;
 	}
 	
 	/**
@@ -226,7 +226,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 		if(tmp == null)
 		{
 			// Create one with certain default parameters
-			tmp = Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
+			tmp = ApogyAddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
 																		  FOV_DEF_MAXIMUM_RANGE,
 																		  calculateHorizontalFOVAngle(),
 																		  calculateVerticalFOVAngle());
@@ -482,7 +482,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 			String message = logPrefix + "Rejected; the camera is not initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		
@@ -499,7 +499,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 					" most likely, the image file could not be located.";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}		
 		// Otherwise, there actually was image content
@@ -512,13 +512,13 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.INFO);
 
 			// Create an image snapshot
-			ImageSnapshot imageSnapshot = Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot();
+			ImageSnapshot imageSnapshot = ApogyAddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot();
 			
 			// Set the time of the snapshot to the current date and time
 			imageSnapshot.setTime(new Date());
 					
 			// Save a copy of the current field of view
-			imageSnapshot.setFieldOfView(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
+			imageSnapshot.setFieldOfView(ApogyAddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
 						
 			// Save the image in the snapshot
 			imageSnapshot.setImage(image);
@@ -597,7 +597,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 		}
 		
 		// Create an EImage and use the extracted BufferedImage (if the read was successful)
-		EImage image = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+		EImage image = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 		image.setImageContent(bufferedImage);
 		
 		// Return the new EImage

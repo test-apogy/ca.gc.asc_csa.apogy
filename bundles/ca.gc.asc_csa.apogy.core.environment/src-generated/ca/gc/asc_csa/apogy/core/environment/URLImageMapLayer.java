@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.URLImageMapLayer#getLegendURL <em>Legend URL</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer#getLegendURL <em>Legend URL</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLImageMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getURLImageMapLayer()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface URLImageMapLayer extends ImageMapLayer, URLMapLayer
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Legend URL</em>' attribute.
 	 * @see #setLegendURL(String)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLImageMapLayer_LegendURL()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getURLImageMapLayer_LegendURL()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='URL'"
 	 * @generated
@@ -44,7 +44,7 @@ public interface URLImageMapLayer extends ImageMapLayer, URLMapLayer
   String getLegendURL();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.URLImageMapLayer#getLegendURL <em>Legend URL</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer#getLegendURL <em>Legend URL</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Legend URL</em>' attribute.

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -8,11 +8,11 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.jme3.Activator;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.input.InputManager;
 import com.jme3.input.KeyInput;

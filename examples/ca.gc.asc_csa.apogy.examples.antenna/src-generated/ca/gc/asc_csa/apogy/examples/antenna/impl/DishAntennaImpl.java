@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.examples.antenna.DishAntenna;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.examples.antenna.DishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.antenna.impl.DishAntennaImpl#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.impl.DishAntennaImpl#getFov <em>Fov</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA;
+		return ApogyExamplesAntennaPackage.Literals.DISH_ANTENNA;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 		ConicalFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, oldFov, newFov);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV, oldFov, newFov);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -94,14 +94,14 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 		if (newFov != fov) {
 			NotificationChain msgs = null;
 			if (fov != null)
-				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
+				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
 			if (newFov != null)
-				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
+				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
 			msgs = basicSetFov(newFov, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, newFov, newFov));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV, newFov, newFov));
 	}
 
 	/**
@@ -113,7 +113,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
+			case ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				return basicSetFov(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -128,7 +128,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
+			case ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				return getFov();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -143,7 +143,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
+			case ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				setFov((ConicalFieldOfView)newValue);
 				return;
 		}
@@ -159,7 +159,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
+			case ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				setFov((ConicalFieldOfView)null);
 				return;
 		}
@@ -175,7 +175,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
+			case ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				return fov != null;
 		}
 		return super.eIsSet(featureID);

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.Date;
 
@@ -19,14 +19,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#isLoopEnable <em>Loop Enable</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getTimedsList <em>Timeds List</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getCurrentTimedElement <em>Current Timed Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getEarliestDate <em>Earliest Date</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getLatestDate <em>Latest Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#isLoopEnable <em>Loop Enable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#getTimedsList <em>Timeds List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#getCurrentTimedElement <em>Current Timed Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#getEarliestDate <em>Earliest Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#getLatestDate <em>Latest Date</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCollectionTimedTimeSource()
  * @model
  * @generated
  */
@@ -41,14 +41,14 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Loop Enable</em>' attribute.
 	 * @see #setLoopEnable(boolean)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_LoopEnable()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCollectionTimedTimeSource_LoopEnable()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
 	boolean isLoopEnable();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#isLoopEnable <em>Loop Enable</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#isLoopEnable <em>Loop Enable</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Loop Enable</em>' attribute.
@@ -59,14 +59,14 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 
 	/**
 	 * Returns the value of the '<em><b>Timeds List</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.emf.Timed}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.emf.Timed}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The collection of Timed elements.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Timeds List</em>' reference list.
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_TimedsList()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCollectionTimedTimeSource_TimedsList()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Timed Element</em>' reference.
 	 * @see #setCurrentTimedElement(Timed)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_CurrentTimedElement()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCollectionTimedTimeSource_CurrentTimedElement()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -90,7 +90,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	Timed getCurrentTimedElement();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getCurrentTimedElement <em>Current Timed Element</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#getCurrentTimedElement <em>Current Timed Element</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Timed Element</em>' reference.
@@ -108,7 +108,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Earliest Date</em>' attribute.
 	 * @see #setEarliestDate(Date)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_EarliestDate()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCollectionTimedTimeSource_EarliestDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -116,7 +116,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	Date getEarliestDate();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getEarliestDate <em>Earliest Date</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#getEarliestDate <em>Earliest Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Earliest Date</em>' attribute.
@@ -134,7 +134,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latest Date</em>' attribute.
 	 * @see #setLatestDate(Date)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_LatestDate()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCollectionTimedTimeSource_LatestDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -142,7 +142,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	Date getLatestDate();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getLatestDate <em>Latest Date</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource#getLatestDate <em>Latest Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Latest Date</em>' attribute.

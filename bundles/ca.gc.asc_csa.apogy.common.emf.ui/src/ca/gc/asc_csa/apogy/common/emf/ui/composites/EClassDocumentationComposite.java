@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.ecore.EClass;

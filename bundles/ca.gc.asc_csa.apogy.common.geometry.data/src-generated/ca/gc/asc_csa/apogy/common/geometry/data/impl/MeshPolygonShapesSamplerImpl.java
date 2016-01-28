@@ -3,7 +3,7 @@
  *
  * $Id: MeshPolygonShapesSamplerImpl.java,v 1.5.4.2 2015/05/21 15:50:05 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,14 +16,14 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,8 +33,8 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerImpl#getPolygonSamplingShapes <em>Polygon Sampling Shapes</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerImpl#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshPolygonShapesSamplerImpl#getPolygonSamplingShapes <em>Polygon Sampling Shapes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshPolygonShapesSamplerImpl#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,7 +89,7 @@ public abstract class MeshPolygonShapesSamplerImpl<CoordinatesType extends Coord
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryDataPackage.Literals.MESH_POLYGON_SHAPES_SAMPLER;
+		return ApogyCommonGeometryDataPackage.Literals.MESH_POLYGON_SHAPES_SAMPLER;
 	}
 
 	/**
@@ -122,7 +122,7 @@ public abstract class MeshPolygonShapesSamplerImpl<CoordinatesType extends Coord
 	public EList<PolygonSamplingShape<CoordinatesType, PolygonType>> getPolygonSamplingShapes()
 	{
 		if (polygonSamplingShapes == null) {
-			polygonSamplingShapes = new EObjectResolvingEList<PolygonSamplingShape<CoordinatesType, PolygonType>>(PolygonSamplingShape.class, this, Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES);
+			polygonSamplingShapes = new EObjectResolvingEList<PolygonSamplingShape<CoordinatesType, PolygonType>>(PolygonSamplingShape.class, this, ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES);
 		}
 		return polygonSamplingShapes;
 	}
@@ -147,7 +147,7 @@ public abstract class MeshPolygonShapesSamplerImpl<CoordinatesType extends Coord
 		ShapeSamplingMode oldShapeSamplingMode = shapeSamplingMode;
 		shapeSamplingMode = newShapeSamplingMode == null ? SHAPE_SAMPLING_MODE_EDEFAULT : newShapeSamplingMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
 	}
 
 	/**
@@ -159,9 +159,9 @@ public abstract class MeshPolygonShapesSamplerImpl<CoordinatesType extends Coord
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
 				return getPolygonSamplingShapes();
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return getShapeSamplingMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -177,11 +177,11 @@ public abstract class MeshPolygonShapesSamplerImpl<CoordinatesType extends Coord
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
 				getPolygonSamplingShapes().clear();
 				getPolygonSamplingShapes().addAll((Collection<? extends PolygonSamplingShape<CoordinatesType, PolygonType>>)newValue);
 				return;
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode((ShapeSamplingMode)newValue);
 				return;
 		}
@@ -197,10 +197,10 @@ public abstract class MeshPolygonShapesSamplerImpl<CoordinatesType extends Coord
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
 				getPolygonSamplingShapes().clear();
 				return;
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode(SHAPE_SAMPLING_MODE_EDEFAULT);
 				return;
 		}
@@ -216,9 +216,9 @@ public abstract class MeshPolygonShapesSamplerImpl<CoordinatesType extends Coord
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES:
 				return polygonSamplingShapes != null && !polygonSamplingShapes.isEmpty();
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return shapeSamplingMode != SHAPE_SAMPLING_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

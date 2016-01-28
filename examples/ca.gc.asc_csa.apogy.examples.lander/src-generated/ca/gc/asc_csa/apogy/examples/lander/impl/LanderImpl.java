@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.impl;
+package ca.gc.asc_csa.apogy.examples.lander.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Lander;
-import org.eclipse.symphony.examples.lander.LanderLegExtension;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Lander;
+import ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,24 +26,24 @@ import org.eclipse.symphony.examples.lander.Position;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getThruster <em>Thruster</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getLegAExtension <em>Leg AExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getLegBExtension <em>Leg BExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getLegCExtension <em>Leg CExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getLegAPosition <em>Leg APosition</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getLegBPosition <em>Leg BPosition</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getLegCPosition <em>Leg CPosition</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getMass <em>Mass</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getGravitationalPull <em>Gravitational Pull</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isChangingLegs <em>Changing Legs</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isChangingAttitude <em>Changing Attitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isChangingLocation <em>Changing Location</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isFlyingEnabled <em>Flying Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getThruster <em>Thruster</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getLegAExtension <em>Leg AExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getLegBExtension <em>Leg BExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getLegCExtension <em>Leg CExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getLegAPosition <em>Leg APosition</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getLegBPosition <em>Leg BPosition</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getLegCPosition <em>Leg CPosition</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getMass <em>Mass</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#getGravitationalPull <em>Gravitational Pull</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isChangingLegs <em>Changing Legs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isChangingAttitude <em>Changing Attitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isChangingLocation <em>Changing Location</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isFlyingEnabled <em>Flying Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
  * @generated
@@ -383,7 +383,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesLanderPackage.Literals.LANDER;
+		return ApogyExamplesLanderPackage.Literals.LANDER;
 	}
 
 	/**
@@ -406,7 +406,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		Position oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__POSITION, oldPosition, newPosition);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__POSITION, oldPosition, newPosition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -422,14 +422,14 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		if (newPosition != position) {
 			NotificationChain msgs = null;
 			if (position != null)
-				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLanderPackage.LANDER__POSITION, null, msgs);
+				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesLanderPackage.LANDER__POSITION, null, msgs);
 			if (newPosition != null)
-				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLanderPackage.LANDER__POSITION, null, msgs);
+				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesLanderPackage.LANDER__POSITION, null, msgs);
 			msgs = basicSetPosition(newPosition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__POSITION, newPosition, newPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__POSITION, newPosition, newPosition));
 	}
 
 	/**
@@ -450,7 +450,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		Thruster oldThruster = thruster;
 		thruster = newThruster;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__THRUSTER, oldThruster, newThruster);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__THRUSTER, oldThruster, newThruster);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -465,14 +465,14 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		if (newThruster != thruster) {
 			NotificationChain msgs = null;
 			if (thruster != null)
-				msgs = ((InternalEObject)thruster).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLanderPackage.LANDER__THRUSTER, null, msgs);
+				msgs = ((InternalEObject)thruster).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesLanderPackage.LANDER__THRUSTER, null, msgs);
 			if (newThruster != null)
-				msgs = ((InternalEObject)newThruster).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLanderPackage.LANDER__THRUSTER, null, msgs);
+				msgs = ((InternalEObject)newThruster).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesLanderPackage.LANDER__THRUSTER, null, msgs);
 			msgs = basicSetThruster(newThruster, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__THRUSTER, newThruster, newThruster));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__THRUSTER, newThruster, newThruster));
 	}
 
 	/**
@@ -495,7 +495,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		double oldLegAPosition = legAPosition;
 		legAPosition = newLegAPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__LEG_APOSITION, oldLegAPosition, legAPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__LEG_APOSITION, oldLegAPosition, legAPosition));
 	}
 
 	/**
@@ -518,7 +518,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		LanderLegExtension oldLegAExtension = legAExtension;
 		legAExtension = newLegAExtension == null ? LEG_AEXTENSION_EDEFAULT : newLegAExtension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__LEG_AEXTENSION, oldLegAExtension, legAExtension));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__LEG_AEXTENSION, oldLegAExtension, legAExtension));
 	}
 
 	/**
@@ -541,7 +541,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		double oldLegBPosition = legBPosition;
 		legBPosition = newLegBPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__LEG_BPOSITION, oldLegBPosition, legBPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__LEG_BPOSITION, oldLegBPosition, legBPosition));
 	}
 
 	/**
@@ -564,7 +564,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		LanderLegExtension oldLegBExtension = legBExtension;
 		legBExtension = newLegBExtension == null ? LEG_BEXTENSION_EDEFAULT : newLegBExtension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__LEG_BEXTENSION, oldLegBExtension, legBExtension));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__LEG_BEXTENSION, oldLegBExtension, legBExtension));
 	}
 
 	/**
@@ -587,7 +587,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		double oldLegCPosition = legCPosition;
 		legCPosition = newLegCPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__LEG_CPOSITION, oldLegCPosition, legCPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__LEG_CPOSITION, oldLegCPosition, legCPosition));
 	}
 
 	/**
@@ -610,7 +610,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		LanderLegExtension oldLegCExtension = legCExtension;
 		legCExtension = newLegCExtension == null ? LEG_CEXTENSION_EDEFAULT : newLegCExtension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__LEG_CEXTENSION, oldLegCExtension, legCExtension));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__LEG_CEXTENSION, oldLegCExtension, legCExtension));
 	}
 
 	/**
@@ -633,7 +633,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		double oldXAngularVelocity = xAngularVelocity;
 		xAngularVelocity = newXAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
 	}
 
 	/**
@@ -656,7 +656,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		double oldYAngularVelocity = yAngularVelocity;
 		yAngularVelocity = newYAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
 	}
 
 	/**
@@ -677,7 +677,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		boolean oldFlyingEnabled = flyingEnabled;
 		flyingEnabled = newFlyingEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__FLYING_ENABLED, oldFlyingEnabled, flyingEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__FLYING_ENABLED, oldFlyingEnabled, flyingEnabled));
 	}
 
 	/**
@@ -698,7 +698,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -719,7 +719,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -740,7 +740,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		boolean oldChangingLegs = changingLegs;
 		changingLegs = newChangingLegs;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__CHANGING_LEGS, oldChangingLegs, changingLegs));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS, oldChangingLegs, changingLegs));
 	}
 
 	/**
@@ -761,7 +761,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		boolean oldChangingAttitude = changingAttitude;
 		changingAttitude = newChangingAttitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__CHANGING_ATTITUDE, oldChangingAttitude, changingAttitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__CHANGING_ATTITUDE, oldChangingAttitude, changingAttitude));
 	}
 
 	/**
@@ -782,7 +782,7 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 		boolean oldChangingLocation = changingLocation;
 		changingLocation = newChangingLocation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.LANDER__CHANGING_LOCATION, oldChangingLocation, changingLocation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.LANDER__CHANGING_LOCATION, oldChangingLocation, changingLocation));
 	}
 
 	/**
@@ -945,9 +945,9 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.LANDER__POSITION:
+			case ApogyExamplesLanderPackage.LANDER__POSITION:
 				return basicSetPosition(null, msgs);
-			case Symphony__ExamplesLanderPackage.LANDER__THRUSTER:
+			case ApogyExamplesLanderPackage.LANDER__THRUSTER:
 				return basicSetThruster(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -962,41 +962,41 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.LANDER__POSITION:
+			case ApogyExamplesLanderPackage.LANDER__POSITION:
 				return getPosition();
-			case Symphony__ExamplesLanderPackage.LANDER__THRUSTER:
+			case ApogyExamplesLanderPackage.LANDER__THRUSTER:
 				return getThruster();
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_AEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_AEXTENSION:
 				return getLegAExtension();
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BEXTENSION:
 				return getLegBExtension();
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CEXTENSION:
 				return getLegCExtension();
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_APOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_APOSITION:
 				return getLegAPosition();
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BPOSITION:
 				return getLegBPosition();
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CPOSITION:
 				return getLegCPosition();
-			case Symphony__ExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
 				return getXAngularVelocity();
-			case Symphony__ExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
 				return getYAngularVelocity();
-			case Symphony__ExamplesLanderPackage.LANDER__MASS:
+			case ApogyExamplesLanderPackage.LANDER__MASS:
 				return getMass();
-			case Symphony__ExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
+			case ApogyExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
 				return getGravitationalPull();
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LEGS:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
 				return isChangingLegs();
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
 				return isChangingAttitude();
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LOCATION:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LOCATION:
 				return isChangingLocation();
-			case Symphony__ExamplesLanderPackage.LANDER__FLYING_ENABLED:
+			case ApogyExamplesLanderPackage.LANDER__FLYING_ENABLED:
 				return isFlyingEnabled();
-			case Symphony__ExamplesLanderPackage.LANDER__INITIALIZED:
+			case ApogyExamplesLanderPackage.LANDER__INITIALIZED:
 				return isInitialized();
-			case Symphony__ExamplesLanderPackage.LANDER__DISPOSED:
+			case ApogyExamplesLanderPackage.LANDER__DISPOSED:
 				return isDisposed();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -1011,52 +1011,52 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.LANDER__POSITION:
+			case ApogyExamplesLanderPackage.LANDER__POSITION:
 				setPosition((Position)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__THRUSTER:
+			case ApogyExamplesLanderPackage.LANDER__THRUSTER:
 				setThruster((Thruster)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_AEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_AEXTENSION:
 				setLegAExtension((LanderLegExtension)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BEXTENSION:
 				setLegBExtension((LanderLegExtension)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CEXTENSION:
 				setLegCExtension((LanderLegExtension)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_APOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_APOSITION:
 				setLegAPosition((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BPOSITION:
 				setLegBPosition((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CPOSITION:
 				setLegCPosition((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
 				setXAngularVelocity((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
 				setYAngularVelocity((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LEGS:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
 				setChangingLegs((Boolean)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
 				setChangingAttitude((Boolean)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LOCATION:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LOCATION:
 				setChangingLocation((Boolean)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__FLYING_ENABLED:
+			case ApogyExamplesLanderPackage.LANDER__FLYING_ENABLED:
 				setFlyingEnabled((Boolean)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__INITIALIZED:
+			case ApogyExamplesLanderPackage.LANDER__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__DISPOSED:
+			case ApogyExamplesLanderPackage.LANDER__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
 		}
@@ -1072,52 +1072,52 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.LANDER__POSITION:
+			case ApogyExamplesLanderPackage.LANDER__POSITION:
 				setPosition((Position)null);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__THRUSTER:
+			case ApogyExamplesLanderPackage.LANDER__THRUSTER:
 				setThruster((Thruster)null);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_AEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_AEXTENSION:
 				setLegAExtension(LEG_AEXTENSION_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BEXTENSION:
 				setLegBExtension(LEG_BEXTENSION_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CEXTENSION:
 				setLegCExtension(LEG_CEXTENSION_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_APOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_APOSITION:
 				setLegAPosition(LEG_APOSITION_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BPOSITION:
 				setLegBPosition(LEG_BPOSITION_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CPOSITION:
 				setLegCPosition(LEG_CPOSITION_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
 				setXAngularVelocity(XANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
 				setYAngularVelocity(YANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LEGS:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
 				setChangingLegs(CHANGING_LEGS_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
 				setChangingAttitude(CHANGING_ATTITUDE_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LOCATION:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LOCATION:
 				setChangingLocation(CHANGING_LOCATION_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__FLYING_ENABLED:
+			case ApogyExamplesLanderPackage.LANDER__FLYING_ENABLED:
 				setFlyingEnabled(FLYING_ENABLED_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__INITIALIZED:
+			case ApogyExamplesLanderPackage.LANDER__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.LANDER__DISPOSED:
+			case ApogyExamplesLanderPackage.LANDER__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
 		}
@@ -1133,41 +1133,41 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.LANDER__POSITION:
+			case ApogyExamplesLanderPackage.LANDER__POSITION:
 				return position != null;
-			case Symphony__ExamplesLanderPackage.LANDER__THRUSTER:
+			case ApogyExamplesLanderPackage.LANDER__THRUSTER:
 				return thruster != null;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_AEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_AEXTENSION:
 				return legAExtension != LEG_AEXTENSION_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BEXTENSION:
 				return legBExtension != LEG_BEXTENSION_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CEXTENSION:
 				return legCExtension != LEG_CEXTENSION_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_APOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_APOSITION:
 				return legAPosition != LEG_APOSITION_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_BPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_BPOSITION:
 				return legBPosition != LEG_BPOSITION_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__LEG_CPOSITION:
+			case ApogyExamplesLanderPackage.LANDER__LEG_CPOSITION:
 				return legCPosition != LEG_CPOSITION_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
 				return xAngularVelocity != XANGULAR_VELOCITY_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
+			case ApogyExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
 				return yAngularVelocity != YANGULAR_VELOCITY_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__MASS:
+			case ApogyExamplesLanderPackage.LANDER__MASS:
 				return getMass() != MASS_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
+			case ApogyExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
 				return getGravitationalPull() != GRAVITATIONAL_PULL_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LEGS:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LEGS:
 				return changingLegs != CHANGING_LEGS_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
 				return changingAttitude != CHANGING_ATTITUDE_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LOCATION:
+			case ApogyExamplesLanderPackage.LANDER__CHANGING_LOCATION:
 				return changingLocation != CHANGING_LOCATION_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__FLYING_ENABLED:
+			case ApogyExamplesLanderPackage.LANDER__FLYING_ENABLED:
 				return flyingEnabled != FLYING_ENABLED_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__INITIALIZED:
+			case ApogyExamplesLanderPackage.LANDER__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.LANDER__DISPOSED:
+			case ApogyExamplesLanderPackage.LANDER__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -1182,36 +1182,36 @@ public abstract class LanderImpl extends MinimalEObjectImpl.Container implements
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__ExamplesLanderPackage.LANDER___INIT:
+			case ApogyExamplesLanderPackage.LANDER___INIT:
 				return init();
-			case Symphony__ExamplesLanderPackage.LANDER___COMMAND_LEG_POSITION__LANDERLEGEXTENSION_LANDERLEGEXTENSION_LANDERLEGEXTENSION:
+			case ApogyExamplesLanderPackage.LANDER___COMMAND_LEG_POSITION__LANDERLEGEXTENSION_LANDERLEGEXTENSION_LANDERLEGEXTENSION:
 				commandLegPosition((LanderLegExtension)arguments.get(0), (LanderLegExtension)arguments.get(1), (LanderLegExtension)arguments.get(2));
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___MOVE_TO__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyExamplesLanderPackage.LANDER___MOVE_TO__DOUBLE_DOUBLE_DOUBLE:
 				moveTo((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___CHANGE_ATTITUDE__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyExamplesLanderPackage.LANDER___CHANGE_ATTITUDE__DOUBLE_DOUBLE_DOUBLE:
 				changeAttitude((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___RESET_ATTITUDE:
+			case ApogyExamplesLanderPackage.LANDER___RESET_ATTITUDE:
 				resetAttitude();
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___COMMAND_ANGULAR_VELOCITIES__DOUBLE_DOUBLE:
+			case ApogyExamplesLanderPackage.LANDER___COMMAND_ANGULAR_VELOCITIES__DOUBLE_DOUBLE:
 				commandAngularVelocities((Double)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___COMMAND_THRUST__DOUBLE:
+			case ApogyExamplesLanderPackage.LANDER___COMMAND_THRUST__DOUBLE:
 				commandThrust((Double)arguments.get(0));
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___CHANGE_THRUST_BY__DOUBLE:
+			case ApogyExamplesLanderPackage.LANDER___CHANGE_THRUST_BY__DOUBLE:
 				changeThrustBy((Double)arguments.get(0));
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___START_FLYING__BOOLEAN:
+			case ApogyExamplesLanderPackage.LANDER___START_FLYING__BOOLEAN:
 				startFlying((Boolean)arguments.get(0));
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___STOP_FLYING:
+			case ApogyExamplesLanderPackage.LANDER___STOP_FLYING:
 				stopFlying();
 				return null;
-			case Symphony__ExamplesLanderPackage.LANDER___DISPOSE:
+			case ApogyExamplesLanderPackage.LANDER___DISPOSE:
 				dispose();
 				return null;
 		}

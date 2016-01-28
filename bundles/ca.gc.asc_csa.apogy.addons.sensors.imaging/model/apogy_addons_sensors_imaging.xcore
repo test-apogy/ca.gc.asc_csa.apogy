@@ -1,21 +1,21 @@
-@GenModel(prefix="Symphony__AddonsSensorsImaging",
+@GenModel(prefix="ApogyAddonsSensorsImaging",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)",
-		  modelName="Symphony__AddonsSensorsImaging")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.imaging/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.imaging.edit/src-generated")
+		  modelName="ApogyAddonsSensorsImaging")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.imaging
+package ca.gc.asc_csa.apogy.addons.sensors.imaging
 
-import org.eclipse.symphony.addons.sensors.Sensor
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
-import org.eclipse.symphony.common.images.AbstractEImage
-import org.eclipse.symphony.common.topology.GroupNode
-import org.eclipse.symphony.common.emf.Named
-import org.eclipse.symphony.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage
+import ca.gc.asc_csa.apogy.common.topology.GroupNode
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Timed
 
 type Color wraps java.awt.Color
 
@@ -46,7 +46,7 @@ class ImageSnapshot extends GroupNode, Timed
 	 * @param horizontalPixelPosition The horizontal pixel position (positive toward the right).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(symphony_units = "rad")
+	@GenModel(apogy_units = "rad")
 	op double convertToHorizontalAngle(int horizontalPixelPosition)
 	
 	/*
@@ -55,7 +55,7 @@ class ImageSnapshot extends GroupNode, Timed
 	 * @param verticalPixelPosition The vertical pixel position (positive toward the bottom of the image).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(symphony_units = "rad")
+	@GenModel(apogy_units = "rad")
 	op double convertToVerticalAngle(int verticalPixelPosition)
 }
 
@@ -115,7 +115,7 @@ class ImagingUtilities
 	 * @param horizontalPixelPosition The horizontal pixel position (positive toward the right).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(symphony_units = "rad")
+	@GenModel(apogy_units = "rad")
 	op double linearConvertToHorizontalAngle(ImageSnapshot imageSnapshot, int horizontalPixelPosition)
 	
 	/*
@@ -124,7 +124,7 @@ class ImagingUtilities
 	 * @param verticalPixelPosition The vertical pixel position (positive toward the bottom of the image).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(symphony_units = "rad")
+	@GenModel(apogy_units = "rad")
 	op double linearConvertToVerticalAngle(ImageSnapshot imageSnapshot, int verticalPixelPosition)
 		
 		
@@ -146,6 +146,6 @@ class ImagingUtilities
 	 * @param lineWidth The width of the line, in pixels.
 	 * @return The image.
 	 */
-	op AbstractEImage getAzimuthElevationOverlay(@GenModel(symphony_units = "pixel") int imageWidth, @GenModel(symphony_units = "pixel") int imageHeight, @GenModel(symphony_units = "deg") double panAngle, @GenModel(symphony_units = "deg") double tiltAngle, @GenModel(symphony_units = "deg") double horizontalFOVAngle, @GenModel(symphony_units = "deg") double verticalFOVAngle, AzimuthDirection azimuthDirection, ElevationDirection elevationDirection, @GenModel(symphony_units = "deg") int angleInterval, String fontName, int fontSize, Color positiveColor, Color negativeColor, int lineWidth)
+	op AbstractEImage getAzimuthElevationOverlay(@GenModel(apogy_units = "pixel") int imageWidth, @GenModel(apogy_units = "pixel") int imageHeight, @GenModel(apogy_units = "deg") double panAngle, @GenModel(apogy_units = "deg") double tiltAngle, @GenModel(apogy_units = "deg") double horizontalFOVAngle, @GenModel(apogy_units = "deg") double verticalFOVAngle, AzimuthDirection azimuthDirection, ElevationDirection elevationDirection, @GenModel(apogy_units = "deg") int angleInterval, String fontName, int fontSize, Color positiveColor, Color negativeColor, int lineWidth)
 }
 

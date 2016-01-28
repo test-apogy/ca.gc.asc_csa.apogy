@@ -1,28 +1,28 @@
-@GenModel(prefix="Symphony__CommonConvertersGraphs",
+@GenModel(prefix="ApogyCommonConvertersGraphs",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  operationReflection="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CommonConvertersGraphs") 
-@GenModel(modelDirectory="/org.eclipse.symphony.common.converters/src-generated")
+		  modelName="ApogyCommonConvertersGraphs") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.converters/src-generated")
 
-package org.eclipse.symphony.common.converters.graphs
+package ca.gc.asc_csa.apogy.common.converters.graphs
 
-import org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph
-import org.eclipse.symphony.common.converters.IConverter
-import org.eclipse.symphony.common.converters.List
+import ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph
+import ca.gc.asc_csa.apogy.common.converters.IConverter
+import ca.gc.asc_csa.apogy.common.converters.List
 
 type SortedSet<E> wraps java.util.SortedSet
 type Set<E> wraps java.util.Set
 type Comparator<E> wraps java.util.Comparator
 type Map<K, V> wraps java.util.Map
-type ConverterEdge wraps org.eclipse.symphony.common.converters.graphs.ConverterEdge
-type ChainedConverter wraps org.eclipse.symphony.common.converters.ChainedConverter
+type ConverterEdge wraps ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge
+type ChainedConverter wraps ca.gc.asc_csa.apogy.common.converters.ChainedConverter
 
 /*
  * A utility class used to perform a variety of functions
  */
-class Symphony__CommonConvertersGraphsFacade
+class ApogyCommonConvertersGraphsFacade
 {
 	/*
 	 * Creates a converter graph where the vertex are the input and output types and the edges contains the converters.

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius.util;
+package ca.gc.asc_csa.apogy.core.ui.sirius.util;
 
 import org.eclipse.jface.wizard.Wizard;
 

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.sensors.range.*;
+import ca.gc.asc_csa.apogy.addons.sensors.range.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,24 +25,24 @@ import org.eclipse.symphony.addons.sensors.range.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsRangeFactory {
+public class ApogyAddonsSensorsRangeFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsRangeFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsRangeFactory init() {
+	public static ApogyAddonsSensorsRangeFactory init() {
 		try {
-			Symphony__AddonsSensorsRangeFactory theSymphony__AddonsSensorsRangeFactory = (Symphony__AddonsSensorsRangeFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsRangePackage.eNS_URI);
-			if (theSymphony__AddonsSensorsRangeFactory != null) {
-				return theSymphony__AddonsSensorsRangeFactory;
+			ApogyAddonsSensorsRangeFactory theApogyAddonsSensorsRangeFactory = (ApogyAddonsSensorsRangeFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsRangePackage.eNS_URI);
+			if (theApogyAddonsSensorsRangeFactory != null) {
+				return theApogyAddonsSensorsRangeFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsRangeFactoryImpl();
+		return new ApogyAddonsSensorsRangeFactoryImpl();
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeFactoryImpl() {
+	public ApogyAddonsSensorsRangeFactoryImpl() {
 		super();
 	}
 
@@ -63,20 +63,20 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsRangePackage.RAY_DATA: return createRayData();
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS: return createRasterScanSettings();
-			case Symphony__AddonsSensorsRangePackage.RANGE_SENSOR: return createRangeSensor();
-			case Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR: return createContactSensor();
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR: return createSimpleRangeSensor();
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR: return createSimpleSonar();
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER: return createLineRangeScanner();
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_LINE_RANGE_SCANNER: return createSimpleLineRangeScanner();
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER: return createRangeScanner();
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_RANGE_SENSOR: return createRasterScanRangeSensor();
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER: return createSimpleRasterScanRangeScanner();
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR: return createSimpleRasterScanRangeScannerSimulator();
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA: return createRasterScanData();
-			case Symphony__AddonsSensorsRangePackage.SYMPHONY_ADDONS_SENSORS_RANGE_FACADE: return createSymphony__AddonsSensorsRangeFacade();
+			case ApogyAddonsSensorsRangePackage.RAY_DATA: return createRayData();
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS: return createRasterScanSettings();
+			case ApogyAddonsSensorsRangePackage.RANGE_SENSOR: return createRangeSensor();
+			case ApogyAddonsSensorsRangePackage.CONTACT_SENSOR: return createContactSensor();
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR: return createSimpleRangeSensor();
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR: return createSimpleSonar();
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER: return createLineRangeScanner();
+			case ApogyAddonsSensorsRangePackage.SIMPLE_LINE_RANGE_SCANNER: return createSimpleLineRangeScanner();
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER: return createRangeScanner();
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_RANGE_SENSOR: return createRasterScanRangeSensor();
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER: return createSimpleRasterScanRangeScanner();
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR: return createSimpleRasterScanRangeScannerSimulator();
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA: return createRasterScanData();
+			case ApogyAddonsSensorsRangePackage.APOGY_ADDONS_SENSORS_RANGE_FACADE: return createApogyAddonsSensorsRangeFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -90,13 +90,13 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsRangePackage.LIST:
+			case ApogyAddonsSensorsRangePackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsRangePackage.POINT3D:
+			case ApogyAddonsSensorsRangePackage.POINT3D:
 				return createPoint3dFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsRangePackage.VECTOR3D:
+			case ApogyAddonsSensorsRangePackage.VECTOR3D:
 				return createVector3dFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsRangePackage.EXCEPTION:
+			case ApogyAddonsSensorsRangePackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -111,13 +111,13 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsRangePackage.LIST:
+			case ApogyAddonsSensorsRangePackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsRangePackage.POINT3D:
+			case ApogyAddonsSensorsRangePackage.POINT3D:
 				return convertPoint3dToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsRangePackage.VECTOR3D:
+			case ApogyAddonsSensorsRangePackage.VECTOR3D:
 				return convertVector3dToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsRangePackage.EXCEPTION:
+			case ApogyAddonsSensorsRangePackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -259,9 +259,9 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeFacade createSymphony__AddonsSensorsRangeFacade() {
-		Symphony__AddonsSensorsRangeFacadeImpl symphony__AddonsSensorsRangeFacade = new Symphony__AddonsSensorsRangeFacadeImpl();
-		return symphony__AddonsSensorsRangeFacade;
+	public ApogyAddonsSensorsRangeFacade createApogyAddonsSensorsRangeFacade() {
+		ApogyAddonsSensorsRangeFacadeImpl apogy__AddonsSensorsRangeFacade = new ApogyAddonsSensorsRangeFacadeImpl();
+		return apogy__AddonsSensorsRangeFacade;
 	}
 
 	/**
@@ -341,8 +341,8 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangePackage getSymphony__AddonsSensorsRangePackage() {
-		return (Symphony__AddonsSensorsRangePackage)getEPackage();
+	public ApogyAddonsSensorsRangePackage getApogyAddonsSensorsRangePackage() {
+		return (ApogyAddonsSensorsRangePackage)getEPackage();
 	}
 
 	/**
@@ -352,8 +352,8 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsSensorsRangePackage getPackage() {
-		return Symphony__AddonsSensorsRangePackage.eINSTANCE;
+	public static ApogyAddonsSensorsRangePackage getPackage() {
+		return ApogyAddonsSensorsRangePackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsRangeFactoryImpl
+} //ApogyAddonsSensorsRangeFactoryImpl

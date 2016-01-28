@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.util.List;
 
@@ -17,50 +17,50 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy;
-import org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
-import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsImagingCameraPackage
+public class ApogyAddonsSensorsImagingCameraPackageImpl extends EPackageImpl implements ApogyAddonsSensorsImagingCameraPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -215,7 +215,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass symphonyLogoOverlayEClass = null;
+  private EClass apogyLogoOverlayEClass = null;
   /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -307,13 +307,13 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__AddonsSensorsImagingCameraPackageImpl()
+  private ApogyAddonsSensorsImagingCameraPackageImpl()
   {
-		super(eNS_URI, Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsSensorsImagingCameraFactory.eINSTANCE);
 	}
 
   /**
@@ -326,7 +326,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsImagingCameraPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsImagingCameraPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -335,32 +335,32 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__AddonsSensorsImagingCameraPackage init()
+  public static ApogyAddonsSensorsImagingCameraPackage init()
   {
-		if (isInited) return (Symphony__AddonsSensorsImagingCameraPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingCameraPackage.eNS_URI);
+		if (isInited) return (ApogyAddonsSensorsImagingCameraPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsImagingCameraPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsImagingCameraPackageImpl theSymphony__AddonsSensorsImagingCameraPackage = (Symphony__AddonsSensorsImagingCameraPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsImagingCameraPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsImagingCameraPackageImpl());
+		ApogyAddonsSensorsImagingCameraPackageImpl theApogyAddonsSensorsImagingCameraPackage = (ApogyAddonsSensorsImagingCameraPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsImagingCameraPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsImagingCameraPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsPackage.eINSTANCE.eClass();
-		Symphony__AddonsSensorsImagingPackage.eINSTANCE.eClass();
+		ApogyAddonsPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsImagingPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsImagingCameraPackage.createPackageContents();
+		theApogyAddonsSensorsImagingCameraPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsImagingCameraPackage.initializePackageContents();
+		theApogyAddonsSensorsImagingCameraPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsImagingCameraPackage.freeze();
+		theApogyAddonsSensorsImagingCameraPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsImagingCameraPackage.eNS_URI, theSymphony__AddonsSensorsImagingCameraPackage);
-		return theSymphony__AddonsSensorsImagingCameraPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsImagingCameraPackage.eNS_URI, theApogyAddonsSensorsImagingCameraPackage);
+		return theApogyAddonsSensorsImagingCameraPackage;
 	}
 
   /**
@@ -1089,9 +1089,9 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getSymphonyLogoOverlay()
+  public EClass getApogyLogoOverlay()
   {
-		return symphonyLogoOverlayEClass;
+		return apogyLogoOverlayEClass;
 	}
 
   /**
@@ -1434,8 +1434,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsImagingCameraFactory getSymphony__AddonsSensorsImagingCameraFactory() {
-		return (Symphony__AddonsSensorsImagingCameraFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsImagingCameraFactory getApogyAddonsSensorsImagingCameraFactory() {
+		return (ApogyAddonsSensorsImagingCameraFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -1556,7 +1556,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		createEAttribute(urlImageOverlayEClass, URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY);
 		createEReference(urlImageOverlayEClass, URL_IMAGE_OVERLAY__IMAGE);
 
-		symphonyLogoOverlayEClass = createEClass(SYMPHONY_LOGO_OVERLAY);
+		apogyLogoOverlayEClass = createEClass(APOGY_LOGO_OVERLAY);
 
 		fovOverlayEClass = createEClass(FOV_OVERLAY);
 		createEAttribute(fovOverlayEClass, FOV_OVERLAY__LINE_WIDTH);
@@ -1635,13 +1635,13 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
-		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
-		Symphony__AddonsSensorsImagingPackage theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
-		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
+		ApogyAddonsPackage theApogyAddonsPackage = (ApogyAddonsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsPackage.eNS_URI);
+		ApogyAddonsSensorsImagingPackage theApogyAddonsSensorsImagingPackage = (ApogyAddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsImagingPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyAddonsSensorsFOVPackage theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -1649,11 +1649,11 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		cameraViewConfigurationListEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getAbstractToolsListContainer());
-		cameraViewConfigurationEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getVariableFeatureReference());
-		cameraViewConfigurationEClass.getESuperTypes().add(theSymphony__AddonsPackage.getAbstractTool());
-		imageFilterEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		imageFilterEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		cameraViewConfigurationListEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getAbstractToolsListContainer());
+		cameraViewConfigurationEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getVariableFeatureReference());
+		cameraViewConfigurationEClass.getESuperTypes().add(theApogyAddonsPackage.getAbstractTool());
+		imageFilterEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		imageFilterEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		grayScaleFilterEClass.getESuperTypes().add(this.getImageFilter());
 		edgeFilterEClass.getESuperTypes().add(this.getImageFilter());
 		contrastAndBrightnessFilterEClass.getESuperTypes().add(this.getImageFilter());
@@ -1661,8 +1661,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		gainFilterEClass.getESuperTypes().add(this.getImageFilter());
 		invertFilterEClass.getESuperTypes().add(this.getImageFilter());
 		rescaleFilterEClass.getESuperTypes().add(this.getImageFilter());
-		cameraImageAnnotationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		cameraImageAnnotationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		cameraImageAnnotationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		cameraImageAnnotationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		cameraOverlayEClass.getESuperTypes().add(this.getCameraImageAnnotation());
 		drawnCameraOverlayEClass.getESuperTypes().add(this.getCameraOverlay());
 		abstractTextOverlayEClass.getESuperTypes().add(this.getDrawnCameraOverlay());
@@ -1672,17 +1672,17 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		imageFrozenOverlayEClass.getESuperTypes().add(this.getAbstractTextOverlay());
 		imageCameraOverlayEClass.getESuperTypes().add(this.getCameraOverlay());
 		urlImageOverlayEClass.getESuperTypes().add(this.getImageCameraOverlay());
-		symphonyLogoOverlayEClass.getESuperTypes().add(this.getImageCameraOverlay());
+		apogyLogoOverlayEClass.getESuperTypes().add(this.getImageCameraOverlay());
 		fovOverlayEClass.getESuperTypes().add(this.getDrawnCameraOverlay());
 		fovOverlayEClass.getESuperTypes().add(this.getToolTipTextProvider());
 		azimuthElevationFOVOverlayEClass.getESuperTypes().add(this.getFOVOverlay());
 		emfFeatureAzimuthElevationFOVOverlayEClass.getESuperTypes().add(this.getAzimuthElevationFOVOverlay());
-		azimuthFeatureReferenceEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getVariableFeatureReference());
-		elevationFeatureReferenceEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getVariableFeatureReference());
+		azimuthFeatureReferenceEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getVariableFeatureReference());
+		elevationFeatureReferenceEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getVariableFeatureReference());
 		cameraToolEClass.getESuperTypes().add(this.getCameraImageAnnotation());
 		pointerCameraToolEClass.getESuperTypes().add(this.getCameraTool());
 		pointerCameraToolEClass.getESuperTypes().add(this.getToolTipTextProvider());
-		pointerCameraToolEClass.getESuperTypes().add(theSymphony__CorePackage.getAbsolutePoseProvider());
+		pointerCameraToolEClass.getESuperTypes().add(theApogyCorePackage.getAbsolutePoseProvider());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cameraViewUtilitiesEClass, CameraViewUtilities.class, "CameraViewUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1700,7 +1700,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 
 		initEClass(cameraViewConfigurationEClass, CameraViewConfiguration.class, "CameraViewConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCameraViewConfiguration_CameraViewConfigurationList(), this.getCameraViewConfigurationList(), this.getCameraViewConfigurationList_CameraViewConfigurations(), "cameraViewConfigurationList", null, 0, 1, CameraViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCameraViewConfiguration_Camera(), theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), null, "camera", null, 0, 1, CameraViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCameraViewConfiguration_Camera(), theApogyAddonsSensorsImagingPackage.getAbstractCamera(), null, "camera", null, 0, 1, CameraViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCameraViewConfiguration_ImageWidth(), theEcorePackage.getEInt(), "imageWidth", "640", 0, 1, CameraViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCameraViewConfiguration_ImageHeight(), theEcorePackage.getEInt(), "imageHeight", "480", 0, 1, CameraViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCameraViewConfiguration_ImageCount(), theEcorePackage.getEInt(), "imageCount", "0", 0, 1, CameraViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1725,9 +1725,9 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEClass(imageFilterEClass, ImageFilter.class, "ImageFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImageFilter_Enabled(), theEcorePackage.getEBoolean(), "enabled", "true", 0, 1, ImageFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getImageFilter__Filter__AbstractCamera_AbstractEImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getImageFilter__Filter__AbstractCamera_AbstractEImage(), theApogyCommonImagesPackage.getAbstractEImage(), "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyAddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getImageFilter__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1766,9 +1766,9 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 
 		initEClass(drawnCameraOverlayEClass, DrawnCameraOverlay.class, "DrawnCameraOverlay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "applyOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int(), theApogyCommonImagesPackage.getAbstractEImage(), "applyOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyAddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOverlayAlignment(), "overlayAlignment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "overlayWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "overlayHeight", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1783,7 +1783,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEOperation(getAbstractTextOverlay__GetDisplayedString(), theEcorePackage.getEString(), "getDisplayedString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(emfFeatureOverlayEClass, EMFFeatureOverlay.class, "EMFFeatureOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEMFFeatureOverlay_VariableFeatureReference(), theSymphony__CoreInvocatorPackage.getVariableFeatureReference(), null, "variableFeatureReference", null, 1, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEMFFeatureOverlay_VariableFeatureReference(), theApogyCoreInvocatorPackage.getVariableFeatureReference(), null, "variableFeatureReference", null, 1, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEMFFeatureOverlay_NumberFormat(), theEcorePackage.getEString(), "numberFormat", "0.00", 0, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEMFFeatureOverlay_VariableFeatureReferenceChangeCount(), theEcorePackage.getELong(), "variableFeatureReferenceChangeCount", "0", 0, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1799,8 +1799,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 
 		initEClass(imageCameraOverlayEClass, ImageCameraOverlay.class, "ImageCameraOverlay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getImageCameraOverlay__GetOverlay__AbstractCamera_OverlayAlignment_int_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getImageCameraOverlay__GetOverlay__AbstractCamera_OverlayAlignment_int_int(), theApogyCommonImagesPackage.getAbstractEImage(), "getOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyAddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOverlayAlignment(), "overlayAlignment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "overlayWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "overlayHeight", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1808,9 +1808,9 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEClass(urlImageOverlayEClass, URLImageOverlay.class, "URLImageOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getURLImageOverlay_Url(), theEcorePackage.getEString(), "url", null, 0, 1, URLImageOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURLImageOverlay_ImageSizePolicy(), this.getImageSizePolicy(), "imageSizePolicy", null, 0, 1, URLImageOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getURLImageOverlay_Image(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "image", null, 0, 1, URLImageOverlay.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getURLImageOverlay_Image(), theApogyCommonImagesPackage.getAbstractEImage(), null, "image", null, 0, 1, URLImageOverlay.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphonyLogoOverlayEClass, SymphonyLogoOverlay.class, "SymphonyLogoOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogyLogoOverlayEClass, ApogyLogoOverlay.class, "ApogyLogoOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(fovOverlayEClass, FOVOverlay.class, "FOVOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFOVOverlay_LineWidth(), theEcorePackage.getEInt(), "lineWidth", "2", 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1819,8 +1819,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEAttribute(getFOVOverlay_AngleInterval(), theEcorePackage.getEInt(), "angleInterval", "5", 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFOVOverlay_FontName(), theEcorePackage.getEString(), "fontName", "SansSerif", 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFOVOverlay_FontSize(), theEcorePackage.getEInt(), "fontSize", "10", 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFOVOverlay_AzimuthDirection(), theSymphony__AddonsSensorsImagingPackage.getAzimuthDirection(), "azimuthDirection", null, 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFOVOverlay_ElevationDirection(), theSymphony__AddonsSensorsImagingPackage.getElevationDirection(), "elevationDirection", null, 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFOVOverlay_AzimuthDirection(), theApogyAddonsSensorsImagingPackage.getAzimuthDirection(), "azimuthDirection", null, 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFOVOverlay_ElevationDirection(), theApogyAddonsSensorsImagingPackage.getElevationDirection(), "elevationDirection", null, 0, 1, FOVOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(azimuthElevationFOVOverlayEClass, AzimuthElevationFOVOverlay.class, "AzimuthElevationFOVOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1841,8 +1841,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEClass(toolTipTextProviderEClass, ToolTipTextProvider.class, "ToolTipTextProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getToolTipTextProvider__GetToolTipText__AbstractCamera_ImageSnapshot_int_int_int(), theEcorePackage.getEString(), "getToolTipText", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getImageSnapshot(), "imageSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyAddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyAddonsSensorsImagingPackage.getImageSnapshot(), "imageSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "mouseButton", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1851,21 +1851,21 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEReference(getCameraTool_CameraToolList(), this.getCameraToolList(), this.getCameraToolList_Tools(), "cameraToolList", null, 0, 1, CameraTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getCameraTool__InitializeCamera__AbstractCamera(), null, "initializeCamera", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyAddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getCameraTool__UpdateImageSnapshot__ImageSnapshot(), null, "updateImageSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getImageSnapshot(), "imageSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyAddonsSensorsImagingPackage.getImageSnapshot(), "imageSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCameraTool__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getCameraTool__MouseMoved__AbstractEImage_int_int_int(), null, "mouseMoved", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "mouseButton", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getCameraTool__PositionSelected__AbstractEImage_int_int_int(), null, "positionSelected", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "mouseButton", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1875,7 +1875,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEReference(getCameraToolList_Tools(), this.getCameraTool(), this.getCameraTool_CameraToolList(), "tools", null, 0, -1, CameraToolList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointerCameraToolEClass, PointerCameraTool.class, "PointerCameraTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPointerCameraTool_Fov(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 0, 1, PointerCameraTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointerCameraTool_Fov(), theApogyAddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 0, 1, PointerCameraTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPointerCameraTool_VectorColor(), this.getColor3f(), "vectorColor", "0.0,1.0,0.0", 0, 1, PointerCameraTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPointerCameraTool_IntersectionDistance(), theEcorePackage.getEDouble(), "intersectionDistance", "0.0", 0, 1, PointerCameraTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1901,4 +1901,4 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsSensorsImagingCameraPackageImpl
+} //ApogyAddonsSensorsImagingCameraPackageImpl

@@ -1,8 +1,8 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui.converters;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.converters;
 
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 
 public class ReferenceResultValueToImageSnapshotConverter implements IConverter {
 

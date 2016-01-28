@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_azimuth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_azimuth_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH,
 				 false,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_elevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_elevation_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION,
 				 false,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_range_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_range_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE,
 				 false,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_rangeRate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_rangeRate_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE,
 				 false,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_spacecraftCrossTrackAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_spacecraftCrossTrackAngle_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE,
 				 false,
 				 false,
 				 false,
@@ -242,12 +242,12 @@ public class VisibilityPassSpacecraftPositionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VisibilityPassSpacecraftPosition.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__TIME:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__TIME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

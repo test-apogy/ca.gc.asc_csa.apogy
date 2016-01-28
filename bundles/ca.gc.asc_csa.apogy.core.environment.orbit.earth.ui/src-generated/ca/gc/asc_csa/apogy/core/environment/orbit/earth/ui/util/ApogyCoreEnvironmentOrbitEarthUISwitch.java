@@ -1,26 +1,26 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.util;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,17 +32,17 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
+public class ApogyCoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreEnvironmentOrbitEarthUIPackage modelPackage;
+	protected static ApogyCoreEnvironmentOrbitEarthUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -50,9 +50,9 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthUISwitch() {
+	public ApogyCoreEnvironmentOrbitEarthUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentOrbitEarthUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentOrbitEarthUIPackage.eINSTANCE;
 		}
 	}
 
@@ -79,14 +79,14 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST: {
 				EarthViewConfigurationList earthViewConfigurationList = (EarthViewConfigurationList)theEObject;
 				T result = caseEarthViewConfigurationList(earthViewConfigurationList);
 				if (result == null) result = caseAbstractToolsListContainer(earthViewConfigurationList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION: {
 				EarthViewConfiguration earthViewConfiguration = (EarthViewConfiguration)theEObject;
 				T result = caseEarthViewConfiguration(earthViewConfiguration);
 				if (result == null) result = caseNamed(earthViewConfiguration);
@@ -94,14 +94,14 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER: {
 				AbstractWorldWindLayer abstractWorldWindLayer = (AbstractWorldWindLayer)theEObject;
 				T result = caseAbstractWorldWindLayer(abstractWorldWindLayer);
 				if (result == null) result = caseUpdatable(abstractWorldWindLayer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER: {
 				SpacecraftLocationWorldWindLayer spacecraftLocationWorldWindLayer = (SpacecraftLocationWorldWindLayer)theEObject;
 				T result = caseSpacecraftLocationWorldWindLayer(spacecraftLocationWorldWindLayer);
 				if (result == null) result = caseAbstractWorldWindLayer(spacecraftLocationWorldWindLayer);
@@ -110,7 +110,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER: {
 				OrbitModelWorldWindLayer orbitModelWorldWindLayer = (OrbitModelWorldWindLayer)theEObject;
 				T result = caseOrbitModelWorldWindLayer(orbitModelWorldWindLayer);
 				if (result == null) result = caseAbstractWorldWindLayer(orbitModelWorldWindLayer);
@@ -118,7 +118,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER: {
 				SpacecraftSwathWorldWindLayer spacecraftSwathWorldWindLayer = (SpacecraftSwathWorldWindLayer)theEObject;
 				T result = caseSpacecraftSwathWorldWindLayer(spacecraftSwathWorldWindLayer);
 				if (result == null) result = caseAbstractWorldWindLayer(spacecraftSwathWorldWindLayer);
@@ -126,7 +126,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER: {
 				EarthSurfaceLocationWorldWindLayer earthSurfaceLocationWorldWindLayer = (EarthSurfaceLocationWorldWindLayer)theEObject;
 				T result = caseEarthSurfaceLocationWorldWindLayer(earthSurfaceLocationWorldWindLayer);
 				if (result == null) result = caseAbstractWorldWindLayer(earthSurfaceLocationWorldWindLayer);
@@ -134,7 +134,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER: {
 				GroundStationWorldWindLayer groundStationWorldWindLayer = (GroundStationWorldWindLayer)theEObject;
 				T result = caseGroundStationWorldWindLayer(groundStationWorldWindLayer);
 				if (result == null) result = caseEarthSurfaceLocationWorldWindLayer(groundStationWorldWindLayer);
@@ -143,14 +143,14 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST: {
 				SpacecraftVisibilityPassViewConfigurationList spacecraftVisibilityPassViewConfigurationList = (SpacecraftVisibilityPassViewConfigurationList)theEObject;
 				T result = caseSpacecraftVisibilityPassViewConfigurationList(spacecraftVisibilityPassViewConfigurationList);
 				if (result == null) result = caseAbstractToolsListContainer(spacecraftVisibilityPassViewConfigurationList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION: {
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION: {
 				SpacecraftVisibilityPassViewConfiguration spacecraftVisibilityPassViewConfiguration = (SpacecraftVisibilityPassViewConfiguration)theEObject;
 				T result = caseSpacecraftVisibilityPassViewConfiguration(spacecraftVisibilityPassViewConfiguration);
 				if (result == null) result = caseNamed(spacecraftVisibilityPassViewConfiguration);
@@ -388,4 +388,4 @@ public class Symphony__CoreEnvironmentOrbitEarthUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentOrbitEarthUISwitch
+} //ApogyCoreEnvironmentOrbitEarthUISwitch

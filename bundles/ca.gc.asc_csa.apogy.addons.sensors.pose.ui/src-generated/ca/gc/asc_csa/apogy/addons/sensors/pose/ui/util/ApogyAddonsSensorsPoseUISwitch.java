@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.ui.util;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.OrientationSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,17 +22,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage
  * @generated
  */
-public class Symphony__AddonsSensorsPoseUISwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsPoseUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsPoseUIPackage modelPackage;
+	protected static ApogyAddonsSensorsPoseUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -40,9 +40,9 @@ public class Symphony__AddonsSensorsPoseUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPoseUISwitch() {
+	public ApogyAddonsSensorsPoseUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsPoseUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsPoseUIPackage.eINSTANCE;
 		}
 	}
 
@@ -69,21 +69,21 @@ public class Symphony__AddonsSensorsPoseUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION: {
+			case ApogyAddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION: {
 				PositionSensorPresentation positionSensorPresentation = (PositionSensorPresentation)theEObject;
 				T result = casePositionSensorPresentation(positionSensorPresentation);
 				if (result == null) result = caseNodePresentation(positionSensorPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPoseUIPackage.ORIENTATION_SENSOR_PRESENTATION: {
+			case ApogyAddonsSensorsPoseUIPackage.ORIENTATION_SENSOR_PRESENTATION: {
 				OrientationSensorPresentation orientationSensorPresentation = (OrientationSensorPresentation)theEObject;
 				T result = caseOrientationSensorPresentation(orientationSensorPresentation);
 				if (result == null) result = caseNodePresentation(orientationSensorPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION: {
+			case ApogyAddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION: {
 				PoseSensorPresentation poseSensorPresentation = (PoseSensorPresentation)theEObject;
 				T result = casePoseSensorPresentation(poseSensorPresentation);
 				if (result == null) result = caseNodePresentation(poseSensorPresentation);
@@ -170,4 +170,4 @@ public class Symphony__AddonsSensorsPoseUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsPoseUISwitch
+} //ApogyAddonsSensorsPoseUISwitch

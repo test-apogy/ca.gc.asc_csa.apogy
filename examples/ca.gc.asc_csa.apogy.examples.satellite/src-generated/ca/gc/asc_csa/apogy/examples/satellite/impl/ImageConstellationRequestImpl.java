@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
-import org.eclipse.symphony.examples.satellite.ImageConstellationRequest;
-import org.eclipse.symphony.examples.satellite.OrbitalImage;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +26,10 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl#getLongitude <em>Longitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl#getLatitude <em>Latitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl#getElevation <em>Elevation</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl#getLongitude <em>Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl#getElevation <em>Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl#getImage <em>Image</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,7 +121,7 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST;
+		return ApogyExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST;
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 		double oldLongitude = longitude;
 		longitude = newLongitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE, oldLongitude, longitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE, oldLongitude, longitude));
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 		double oldLatitude = latitude;
 		latitude = newLatitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE, oldLatitude, latitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE, oldLatitude, latitude));
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 		double oldElevation = elevation;
 		elevation = newElevation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION, oldElevation, elevation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION, oldElevation, elevation));
 	}
 
 	/**
@@ -205,7 +205,7 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 		OrbitalImage oldImage = image;
 		image = newImage;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, oldImage, newImage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, oldImage, newImage);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -220,14 +220,14 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 		if (newImage != image) {
 			NotificationChain msgs = null;
 			if (image != null)
-				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, null, msgs);
+				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, null, msgs);
 			if (newImage != null)
-				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, null, msgs);
+				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, null, msgs);
 			msgs = basicSetImage(newImage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, newImage, newImage));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE, newImage, newImage));
 	}
 
 	/**
@@ -238,7 +238,7 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
 				return basicSetImage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -252,13 +252,13 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
 				return getLongitude();
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
 				return getLatitude();
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
 				return getElevation();
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
 				return getImage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -272,16 +272,16 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
 				setLongitude((Double)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
 				setLatitude((Double)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
 				setElevation((Double)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
 				setImage((OrbitalImage)newValue);
 				return;
 		}
@@ -296,16 +296,16 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
 				setLongitude(LONGITUDE_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
 				setLatitude(LATITUDE_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
 				setElevation(ELEVATION_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
 				setImage((OrbitalImage)null);
 				return;
 		}
@@ -320,13 +320,13 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
 				return longitude != LONGITUDE_EDEFAULT;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
 				return latitude != LATITUDE_EDEFAULT;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
 				return elevation != ELEVATION_EDEFAULT;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
 				return image != null;
 		}
 		return super.eIsSet(featureID);
@@ -341,9 +341,9 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == GeographicCoordinates.class) {
 			switch (derivedFeatureID) {
-				case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE: return Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
-				case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE: return Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
-				case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION: return Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
+				case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
+				case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
+				case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
 				default: return -1;
 			}
 		}
@@ -359,9 +359,9 @@ public class ImageConstellationRequestImpl extends AbstractConstellationRequestI
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == GeographicCoordinates.class) {
 			switch (baseFeatureID) {
-				case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE;
-				case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE;
-				case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION;
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE;
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE;
+				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION;
 				default: return -1;
 			}
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna;
+package ca.gc.asc_csa.apogy.examples.antenna;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.antenna.Antenna#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.Antenna#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getAntenna()
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getAntenna()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface Antenna extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getAntenna_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getAntenna_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -48,7 +48,7 @@ public interface Antenna extends EObject
 	boolean isInitialized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.Antenna#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.Antenna#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.

@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.math.ui.properties.sections;
+package ca.gc.asc_csa.apogy.common.math.ui.properties.sections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.ui.composites.Matrix4x4Composite;
-import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.ui.composites.Matrix4x4Composite;
+import ca.gc.asc_csa.apogy.common.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class Matrix4x4PropertySection extends AbstractExtendedPropertySection {
 		

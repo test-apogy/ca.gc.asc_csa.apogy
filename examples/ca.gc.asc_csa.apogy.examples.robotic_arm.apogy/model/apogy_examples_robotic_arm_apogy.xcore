@@ -1,30 +1,30 @@
-@GenModel(prefix="Symphony__ExamplesRoboticArmSymphony",
+@GenModel(prefix="ApogyExamplesRoboticArmApogy",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
-		  modelName="Symphony__ExamplesRoboticArmSymphony")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.robotic_arm.symphony/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.robotic_arm.symphony.edit/src-generated")
+		  modelName="ApogyExamplesRoboticArmApogy")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.edit/src-generated")
 
-package org.eclipse.symphony.examples.robotic_arm.symphony
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter
-import org.eclipse.symphony.core.SymphonyInitializationData
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
-import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
+import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel
 
 /*
- * This class is the specialized Symphony API adapter, used for connecting
+ * This class is the specialized Apogy API adapter, used for connecting
  * the existing robotic arm example, located at
- * {@link org.eclipse.symphony.examples.robotic_arm.RoboticArm},
- * to Symphony; one can override the well-known callback functions to make
- * Symphony perform a variety of useful functions, including initialization,
+ * {@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
  * disposal and other features. 
  */
-class RoboticArmSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+class RoboticArmApogySystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*
 	 * For specific implementation details,
 	 * please see
-	 * {@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmSymphonySystemApiAdapterImpl}
+	 * {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmApogySystemApiAdapterImpl}
 	 */
 }
 
@@ -33,9 +33,9 @@ class RoboticArmSymphonySystemApiAdapter extends SymphonySystemApiAdapter
  * save and later restore the state of the component; this functionality is
  * implemented by the apply() (load) and collect() (save) methods of the robotic
  * arm's API adapter,
- * which is {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter}.
+ * which is {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter}.
  */
-class RoboticArmData extends SymphonyInitializationData
+class RoboticArmData extends ApogyInitializationData
 {
 	/*
 	 * This is whether or not the robotic arm should be initialized.
@@ -59,7 +59,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's turret joint should be at.
 	 */
-	@GenModel(symphony_units="deg",
+	@GenModel(apogy_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -69,7 +69,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's shoulder joint should be at.
 	 */
-	@GenModel(symphony_units="deg",
+	@GenModel(apogy_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -79,7 +79,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's elbow joint should be at.
 	 */
-	@GenModel(symphony_units="deg",
+	@GenModel(apogy_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -89,7 +89,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's wrist joint should be at.
 	 */
-	@GenModel(symphony_units="deg",
+	@GenModel(apogy_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",

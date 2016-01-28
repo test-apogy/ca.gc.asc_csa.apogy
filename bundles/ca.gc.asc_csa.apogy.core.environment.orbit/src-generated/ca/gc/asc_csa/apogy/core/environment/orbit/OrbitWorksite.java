@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
-import org.eclipse.symphony.core.AbstractOrbitModel;
-import org.eclipse.symphony.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,10 +15,10 @@ import org.eclipse.symphony.core.environment.Worksite;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitWorksite()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitWorksite()
  * @model abstract="true"
  * @generated
  */
@@ -37,14 +37,14 @@ public interface OrbitWorksite extends Worksite {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Orbit Model</em>' reference.
 	 * @see #setActiveOrbitModel(AbstractOrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitWorksite_ActiveOrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitWorksite_ActiveOrbitModel()
 	 * @model
 	 * @generated
 	 */
 	AbstractOrbitModel getActiveOrbitModel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active Orbit Model</em>' reference.

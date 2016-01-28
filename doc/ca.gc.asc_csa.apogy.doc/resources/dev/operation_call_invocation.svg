@@ -706,7 +706,7 @@
                y="558.68921"
                x="103.22848"
                id="tspan3469"
-               sodipodi:role="line">SymphonyInvocatorDelegate</tspan></text>
+               sodipodi:role="line">ApogyInvocatorDelegate</tspan></text>
         </g>
         <rect
            style="opacity:1;fill:#ffffff;stroke:#000000;stroke-width:0.55630893;stroke-opacity:1"
@@ -786,7 +786,7 @@
                y="558.68921"
                x="502.01584"
                id="tspan3477"
-               sodipodi:role="line">SymphonySystemApiAdapter</tspan></text>
+               sodipodi:role="line">ApogySystemApiAdapter</tspan></text>
         </g>
         <rect
            style="opacity:1;fill:#ffffff;stroke:#000000;stroke-width:0.47038707;stroke-opacity:1"

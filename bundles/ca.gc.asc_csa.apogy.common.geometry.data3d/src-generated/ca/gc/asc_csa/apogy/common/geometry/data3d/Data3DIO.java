@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getData3DIO()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getData3DIO()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Data3DIO extends EObject {
 	 * @param file The file path to the resource.
 	 * @return The loaded CartesianTriangularMesh.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" fileUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" fileUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMesh(String file) throws IOException;
@@ -52,7 +52,7 @@ public interface Data3DIO extends EObject {
 	 * @param input The input stream to read the content from.
 	 * @return The loaded CartesianTriangularMesh.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" inputDataType="org.eclipse.symphony.common.geometry.data3d.InputStream" inputUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" inputDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.InputStream" inputUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMesh(InputStream input) throws IOException;
@@ -66,7 +66,7 @@ public interface Data3DIO extends EObject {
 	 * @param mesh The CartesianTriangularMesh to save.
 	 * @param file The destination file path for the resource.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" meshUnique="false" fileUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" meshUnique="false" fileUnique="false"
 	 * @generated
 	 */
 	void saveTriangularMesh(CartesianTriangularMesh mesh, String file) throws IOException;
@@ -80,7 +80,7 @@ public interface Data3DIO extends EObject {
 	 * @param mesh The CartesianTriangularMesh to save.
 	 * @param output The output stream to write the content.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" meshUnique="false" outputDataType="org.eclipse.symphony.common.geometry.data3d.OutputStream" outputUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" meshUnique="false" outputDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.OutputStream" outputUnique="false"
 	 * @generated
 	 */
 	void saveTriangularMesh(CartesianTriangularMesh mesh, OutputStream output) throws IOException;
@@ -95,7 +95,7 @@ public interface Data3DIO extends EObject {
 	 * @param filePrefix The file prefix defining both the points and triangles files.
 	 * @return The loaded NormalPointCloud.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" filePrefixUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" filePrefixUnique="false"
 	 * @generated
 	 */
 	NormalPointCloud loadTriangularMeshFromASCIIAsNormalPointCloud(String filePrefix) throws IOException;
@@ -110,7 +110,7 @@ public interface Data3DIO extends EObject {
 	 * @param filePrefix The file prefix defining both the points and triangles files.
 	 * @return The loaded CartesianTriangularMesh.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" filePrefixUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" filePrefixUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMeshFromASCII(String filePrefix) throws IOException;
@@ -125,7 +125,7 @@ public interface Data3DIO extends EObject {
 	 * @param mesh The CartesianTriangularMesh to save.
 	 * @param filePrefix The file prefix defining both the points and triangles files.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" meshUnique="false" filePrefixUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" meshUnique="false" filePrefixUnique="false"
 	 * @generated
 	 */
 	void saveTriangularMeshAsASCII(CartesianTriangularMesh mesh, String filePrefix) throws IOException;
@@ -140,7 +140,7 @@ public interface Data3DIO extends EObject {
 	 * @param fileName The file path to the file.
 	 * @return The CartesianCoordinatesSet loaded from the file.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" fileNameUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" fileNameUnique="false"
 	 * @generated
 	 */
 	CartesianCoordinatesSet loadXYZ(String fileName) throws IOException;
@@ -156,7 +156,7 @@ public interface Data3DIO extends EObject {
 	 * @param xyzFileName The file path to the file containing the points.
 	 * @return The loaded CartesianTriangularMesh.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" triFileNameUnique="false" xyzFileNameUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" triFileNameUnique="false" xyzFileNameUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMeshFromTriXYZ(String triFileName, String xyzFileName) throws IOException;
@@ -170,7 +170,7 @@ public interface Data3DIO extends EObject {
 	 * @param coordinatesSet The CartesianCoordinatesSet to save.
 	 * @param file The file path of the destination.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileUnique="false"
 	 * @generated
 	 */
 	void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, String file) throws IOException;
@@ -184,7 +184,7 @@ public interface Data3DIO extends EObject {
 	 * @param coordinatesSet The CartesianCoordinatesSet to save.
 	 * @param file The output stream to write the content..
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileDataType="org.eclipse.symphony.common.geometry.data3d.OutputStream" fileUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.OutputStream" fileUnique="false"
 	 * @generated
 	 */
 	void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException;
@@ -198,7 +198,7 @@ public interface Data3DIO extends EObject {
 	 * @param coordinatesSet The CartesianCoordinatesSet to save.
 	 * @param file The file path of the destination.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileUnique="false"
 	 * @generated
 	 */
 	void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, String file) throws IOException;
@@ -212,7 +212,7 @@ public interface Data3DIO extends EObject {
 	 * @param coordinatesSet The CartesianCoordinatesSet to save.
 	 * @param file The file path of the destination.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileDataType="org.eclipse.symphony.common.geometry.data3d.OutputStream" fileUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.OutputStream" fileUnique="false"
 	 * @generated
 	 */
 	void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException;

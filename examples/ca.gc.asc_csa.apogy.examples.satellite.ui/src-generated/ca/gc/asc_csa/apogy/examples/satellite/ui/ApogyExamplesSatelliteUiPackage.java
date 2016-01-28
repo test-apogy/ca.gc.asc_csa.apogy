@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui;
+package ca.gc.asc_csa.apogy.examples.satellite.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFactory
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesSatelliteUi' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)' modelName='Symphony__ExamplesSatelliteUi' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.satellite.ui/src-generated' editDirectory='/org.eclipse.symphony.examples.satellite.ui.edit/src-generated' basePackage='org.eclipse.symphony.examples.satellite'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesSatelliteUi' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)' modelName='ApogyExamplesSatelliteUi' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.satellite.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.satellite.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.satellite'"
  * @generated
  */
-public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
+public interface ApogyExamplesSatelliteUiPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.examples.satellite.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.examples.satellite.ui";
 
 	/**
 	 * The package namespace name.
@@ -56,17 +56,17 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesSatelliteUiPackage eINSTANCE = org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiPackageImpl.init();
+	ApogyExamplesSatelliteUiPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiFacadeImpl
-	 * @see org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiPackageImpl#getSymphony__ExamplesSatelliteUiFacade()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiPackageImpl#getApogyExamplesSatelliteUiFacade()
 	 * @generated
 	 */
-	int SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE = 0;
+	int APOGY_EXAMPLES_SATELLITE_UI_FACADE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Constellation Variable Name</b></em>' attribute.
@@ -75,7 +75,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME = 0;
+	int APOGY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -84,7 +84,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE_FEATURE_COUNT = 1;
+	int APOGY_EXAMPLES_SATELLITE_UI_FACADE_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>Get Constellation Variable</em>' operation.
@@ -93,7 +93,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE___GET_CONSTELLATION_VARIABLE = 0;
+	int APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_CONSTELLATION_VARIABLE = 0;
 
 	/**
 	 * The operation id for the '<em>Get Operation Call Results List</em>' operation.
@@ -102,7 +102,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE___GET_OPERATION_CALL_RESULTS_LIST = 1;
+	int APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_OPERATION_CALL_RESULTS_LIST = 1;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -111,49 +111,49 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE_OPERATION_COUNT = 2;
+	int APOGY_EXAMPLES_SATELLITE_UI_FACADE_OPERATION_COUNT = 2;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade
 	 * @generated
 	 */
-	EClass getSymphony__ExamplesSatelliteUiFacade();
+	EClass getApogyExamplesSatelliteUiFacade();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade#getConstellationVariableName <em>Constellation Variable Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade#getConstellationVariableName <em>Constellation Variable Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Constellation Variable Name</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade#getConstellationVariableName()
-	 * @see #getSymphony__ExamplesSatelliteUiFacade()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade#getConstellationVariableName()
+	 * @see #getApogyExamplesSatelliteUiFacade()
 	 * @generated
 	 */
-	EAttribute getSymphony__ExamplesSatelliteUiFacade_ConstellationVariableName();
+	EAttribute getApogyExamplesSatelliteUiFacade_ConstellationVariableName();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade#getConstellationVariable() <em>Get Constellation Variable</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade#getConstellationVariable() <em>Get Constellation Variable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Constellation Variable</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade#getConstellationVariable()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade#getConstellationVariable()
 	 * @generated
 	 */
-	EOperation getSymphony__ExamplesSatelliteUiFacade__GetConstellationVariable();
+	EOperation getApogyExamplesSatelliteUiFacade__GetConstellationVariable();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade#getOperationCallResultsList() <em>Get Operation Call Results List</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade#getOperationCallResultsList() <em>Get Operation Call Results List</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Operation Call Results List</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade#getOperationCallResultsList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade#getOperationCallResultsList()
 	 * @generated
 	 */
-	EOperation getSymphony__ExamplesSatelliteUiFacade__GetOperationCallResultsList();
+	EOperation getApogyExamplesSatelliteUiFacade__GetOperationCallResultsList();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -162,7 +162,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesSatelliteUiFactory getSymphony__ExamplesSatelliteUiFactory();
+	ApogyExamplesSatelliteUiFactory getApogyExamplesSatelliteUiFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,14 +179,14 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiFacadeImpl
-		 * @see org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiPackageImpl#getSymphony__ExamplesSatelliteUiFacade()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiPackageImpl#getApogyExamplesSatelliteUiFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE = eINSTANCE.getSymphony__ExamplesSatelliteUiFacade();
+		EClass APOGY_EXAMPLES_SATELLITE_UI_FACADE = eINSTANCE.getApogyExamplesSatelliteUiFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Constellation Variable Name</b></em>' attribute feature.
@@ -194,7 +194,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME = eINSTANCE.getSymphony__ExamplesSatelliteUiFacade_ConstellationVariableName();
+		EAttribute APOGY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME = eINSTANCE.getApogyExamplesSatelliteUiFacade_ConstellationVariableName();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Constellation Variable</b></em>' operation.
@@ -202,7 +202,7 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE___GET_CONSTELLATION_VARIABLE = eINSTANCE.getSymphony__ExamplesSatelliteUiFacade__GetConstellationVariable();
+		EOperation APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_CONSTELLATION_VARIABLE = eINSTANCE.getApogyExamplesSatelliteUiFacade__GetConstellationVariable();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Operation Call Results List</b></em>' operation.
@@ -210,8 +210,8 @@ public interface Symphony__ExamplesSatelliteUiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE___GET_OPERATION_CALL_RESULTS_LIST = eINSTANCE.getSymphony__ExamplesSatelliteUiFacade__GetOperationCallResultsList();
+		EOperation APOGY_EXAMPLES_SATELLITE_UI_FACADE___GET_OPERATION_CALL_RESULTS_LIST = eINSTANCE.getApogyExamplesSatelliteUiFacade__GetOperationCallResultsList();
 
 	}
 
-} //Symphony__ExamplesSatelliteUiPackage
+} //ApogyExamplesSatelliteUiPackage

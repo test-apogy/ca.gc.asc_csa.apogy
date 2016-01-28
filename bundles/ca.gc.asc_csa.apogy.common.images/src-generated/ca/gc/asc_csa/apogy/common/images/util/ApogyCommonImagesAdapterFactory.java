@@ -1,30 +1,30 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.util;
+package ca.gc.asc_csa.apogy.common.images.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.images.*;
+import ca.gc.asc_csa.apogy.common.images.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage
  * @generated
  */
-public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonImagesAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonImagesPackage modelPackage;
+	protected static ApogyCommonImagesPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -32,9 +32,9 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonImagesAdapterFactory() {
+	public ApogyCommonImagesAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonImagesPackage.eINSTANCE;
+			modelPackage = ApogyCommonImagesPackage.eINSTANCE;
 		}
 	}
 
@@ -63,8 +63,8 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonImagesSwitch<Adapter> modelSwitch =
-		new Symphony__CommonImagesSwitch<Adapter>() {
+	protected ApogyCommonImagesSwitch<Adapter> modelSwitch =
+		new ApogyCommonImagesSwitch<Adapter>() {
 			@Override
 			public Adapter caseEImage(EImage object) {
 				return createEImageAdapter();
@@ -114,13 +114,13 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.ImagesAlbum <em>Images Album</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.ImagesAlbum <em>Images Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.ImagesAlbum
+	 * @see ca.gc.asc_csa.apogy.common.images.ImagesAlbum
 	 * @generated
 	 */
 	public Adapter createImagesAlbumAdapter() {
@@ -128,13 +128,13 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.EImage <em>EImage</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.EImage <em>EImage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.EImage
+	 * @see ca.gc.asc_csa.apogy.common.images.EImage
 	 * @generated
 	 */
 	public Adapter createEImageAdapter() {
@@ -142,13 +142,13 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.AbstractEImage <em>Abstract EImage</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.AbstractEImage <em>Abstract EImage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.AbstractEImage
+	 * @see ca.gc.asc_csa.apogy.common.images.AbstractEImage
 	 * @generated
 	 */
 	public Adapter createAbstractEImageAdapter() {
@@ -156,13 +156,13 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.URLEImage <em>URLE Image</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.URLEImage <em>URLE Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.URLEImage
+	 * @see ca.gc.asc_csa.apogy.common.images.URLEImage
 	 * @generated
 	 */
 	public Adapter createURLEImageAdapter() {
@@ -170,13 +170,13 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.EImagesUtilities <em>EImages Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.EImagesUtilities <em>EImages Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.EImagesUtilities
+	 * @see ca.gc.asc_csa.apogy.common.images.EImagesUtilities
 	 * @generated
 	 */
 	public Adapter createEImagesUtilitiesAdapter() {
@@ -184,13 +184,13 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.ImageSize <em>Image Size</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.ImageSize <em>Image Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.ImageSize
+	 * @see ca.gc.asc_csa.apogy.common.images.ImageSize
 	 * @generated
 	 */
 	public Adapter createImageSizeAdapter() {
@@ -198,13 +198,13 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.AbstractEImageProvider <em>Abstract EImage Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.AbstractEImageProvider <em>Abstract EImage Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.AbstractEImageProvider
+	 * @see ca.gc.asc_csa.apogy.common.images.AbstractEImageProvider
 	 * @generated
 	 */
 	public Adapter createAbstractEImageProviderAdapter() {
@@ -223,4 +223,4 @@ public class Symphony__CommonImagesAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__CommonImagesAdapterFactory
+} //ApogyCommonImagesAdapterFactory

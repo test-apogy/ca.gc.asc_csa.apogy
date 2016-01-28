@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.jme3.scene_objects;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -9,24 +9,24 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotSceneObject;
-import org.eclipse.symphony.addons.sensors.imaging.ui.jme3.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.ui.jme3.utils.ImageSnapshotProjectorControl;
-import org.eclipse.symphony.addons.sensors.imaging.ui.jme3.utils.SensorsImagingJME3Utilities;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotSceneObject;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.jme3.utils.ImageSnapshotProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.jme3.utils.SensorsImagingJME3Utilities;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -485,14 +485,14 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 						
 						switch (featureId) 
 						{
-							case Symphony__AddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT___GET_RECTIFIED_IMAGE:
+							case ApogyAddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT___GET_RECTIFIED_IMAGE:
 								// Force image to be updated.
 								bufferedImage = null;
 								
 								updateGeometry();
 							break;
 							
-							case Symphony__AddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+							case ApogyAddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 								if(msg.getOldValue() instanceof RectangularFrustrumFieldOfView)
 								{
 									RectangularFrustrumFieldOfView oldValue = (RectangularFrustrumFieldOfView) msg.getOldValue();
@@ -518,14 +518,14 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 						
 						switch (featureId) 
 						{
-							case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+							case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 								// Force image to be updated.
 								bufferedImage = null;
 								
 								updateGeometry();
 							break;
 
-							case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+							case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 								if(msg.getOldValue() instanceof RectangularFrustrumFieldOfView)
 								{
 									RectangularFrustrumFieldOfView oldValue = (RectangularFrustrumFieldOfView) msg.getOldValue();
@@ -550,7 +550,7 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 						int featureId = msg.getFeatureID(RectangularFrustrumFieldOfView.class);
 						switch (featureId) 
 						{
-							case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+							case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 								
 								if(msg.getOldValue() instanceof DistanceRange)
 								{
@@ -567,8 +567,8 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 								updateGeometry();
 							break;
 
-							case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
-							case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+							case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+							case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
 								updateGeometry();
 							break;
 							

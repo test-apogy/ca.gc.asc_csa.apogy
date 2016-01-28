@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -7,7 +7,7 @@ public class Activator extends Plugin
 {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.sensors.pose.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.pose.ui";
 	
 	// The shared instance
 	private static Activator plugin;

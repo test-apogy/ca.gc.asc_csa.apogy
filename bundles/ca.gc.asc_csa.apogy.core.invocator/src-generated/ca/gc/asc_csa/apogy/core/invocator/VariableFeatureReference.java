@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 /**
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariableFeatureReference()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface VariableFeatureReference extends Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference_Variable()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariableFeatureReference_Variable()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -48,7 +48,7 @@ public interface VariableFeatureReference extends Named
   Variable getVariable();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getVariable <em>Variable</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getVariable <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable</em>' reference.
@@ -66,7 +66,7 @@ public interface VariableFeatureReference extends Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Type Member Reference List Element</em>' containment reference.
 	 * @see #setTypeMemberReferenceListElement(TypeMemberReferenceListElement)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference_TypeMemberReferenceListElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariableFeatureReference_TypeMemberReferenceListElement()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -74,7 +74,7 @@ public interface VariableFeatureReference extends Named
   TypeMemberReferenceListElement getTypeMemberReferenceListElement();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type Member Reference List Element</em>' containment reference.
@@ -92,14 +92,14 @@ public interface VariableFeatureReference extends Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Root</em>' containment reference.
 	 * @see #setFeatureRoot(ListRootNode)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference_FeatureRoot()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariableFeatureReference_FeatureRoot()
 	 * @model containment="true"
 	 * @generated
 	 */
   ListRootNode getFeatureRoot();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Root</em>' containment reference.

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -19,22 +19,22 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
-import org.eclipse.symphony.addons.vehicle.ContactProvider;
-import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
 
@@ -46,7 +46,7 @@ import org.jgrapht.traverse.BreadthFirstIterator;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ContactProviderImpl#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.ContactProviderImpl#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,7 +76,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehiclePackage.Literals.CONTACT_PROVIDER;
+		return ApogyAddonsVehiclePackage.Literals.CONTACT_PROVIDER;
 	}
 
   /**
@@ -86,7 +86,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public VehiclePoseCorrector getVehiclePoseCorrector()
   {
-		if (eContainerFeatureID() != Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
+		if (eContainerFeatureID() != ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
 		return (VehiclePoseCorrector)eContainer();
 	}
 
@@ -97,7 +97,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public VehiclePoseCorrector basicGetVehiclePoseCorrector()
   {
-		if (eContainerFeatureID() != Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
+		if (eContainerFeatureID() != ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
 		return (VehiclePoseCorrector)eInternalContainer();
 	}
 
@@ -108,7 +108,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public NotificationChain basicSetVehiclePoseCorrector(VehiclePoseCorrector newVehiclePoseCorrector, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newVehiclePoseCorrector, Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newVehiclePoseCorrector, ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, msgs);
 		return msgs;
 	}
 
@@ -119,19 +119,19 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public void setVehiclePoseCorrector(VehiclePoseCorrector newVehiclePoseCorrector)
   {
-		if (newVehiclePoseCorrector != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR && newVehiclePoseCorrector != null)) {
+		if (newVehiclePoseCorrector != eInternalContainer() || (eContainerFeatureID() != ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR && newVehiclePoseCorrector != null)) {
 			if (EcoreUtil.isAncestor(this, newVehiclePoseCorrector))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newVehiclePoseCorrector != null)
-				msgs = ((InternalEObject)newVehiclePoseCorrector).eInverseAdd(this, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
+				msgs = ((InternalEObject)newVehiclePoseCorrector).eInverseAdd(this, ApogyAddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
 			msgs = basicSetVehiclePoseCorrector(newVehiclePoseCorrector, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, newVehiclePoseCorrector, newVehiclePoseCorrector));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, newVehiclePoseCorrector, newVehiclePoseCorrector));
 	}
 
   /**
@@ -167,7 +167,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetVehiclePoseCorrector((VehiclePoseCorrector)otherEnd, msgs);
@@ -184,7 +184,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				return basicSetVehiclePoseCorrector(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -199,8 +199,8 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
-				return eInternalContainer().eInverseRemove(this, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+				return eInternalContainer().eInverseRemove(this, ApogyAddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -214,7 +214,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				if (resolve) return getVehiclePoseCorrector();
 				return basicGetVehiclePoseCorrector();
 		}
@@ -230,7 +230,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				setVehiclePoseCorrector((VehiclePoseCorrector)newValue);
 				return;
 		}
@@ -246,7 +246,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				setVehiclePoseCorrector((VehiclePoseCorrector)null);
 				return;
 		}
@@ -262,7 +262,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				return basicGetVehiclePoseCorrector() != null;
 		}
 		return super.eIsSet(featureID);
@@ -278,9 +278,9 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER___EXTRACT_CONTACT_BODIES:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER___EXTRACT_CONTACT_BODIES:
 				return extractContactBodies();
-			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER___UPDATE_CONTACT_POINTS__MATRIX4X4_MAP:
+			case ApogyAddonsVehiclePackage.CONTACT_PROVIDER___UPDATE_CONTACT_POINTS__MATRIX4X4_MAP:
 				updateContactPoints((Matrix4x4)arguments.get(0), (Map<PhysicalBody, Point3d>)arguments.get(1));
 				return null;
 		}
@@ -348,7 +348,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	  bodyToWorldTransform.mul(bodyToSystemTransform);
 	  
 	  // Gets the mesh to world transform.
-	  Matrix4d meshToWorldTransform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
+	  Matrix4d meshToWorldTransform = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
 	  
 	  // Gets the bodyToMeshTransform
 	  meshToWorldTransform.invert();
@@ -365,8 +365,8 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   protected Matrix4d getFootToSystemTransform(PhysicalBody body)
   {
 
-	  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();	  
-	  Matrix4d transform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
+	  Node root = getVehiclePoseCorrector().getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();	  
+	  Matrix4d transform = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
 	  return transform;
   }
 } //ContactProviderImpl

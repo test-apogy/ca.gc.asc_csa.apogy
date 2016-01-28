@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +13,7 @@ import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer#getVertices() <em>Get Vertices</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer#getVertices() <em>Get Vertices</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -42,10 +42,10 @@ public abstract class PolygonShapeImageMapLayerTest extends AbstractShapeImageLa
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer#getVertices() <em>Get Vertices</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer#getVertices() <em>Get Vertices</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer#getVertices()
+	 * @see ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer#getVertices()
 	 * @generated_NOT
 	 */
 	public void testGetVertices() {

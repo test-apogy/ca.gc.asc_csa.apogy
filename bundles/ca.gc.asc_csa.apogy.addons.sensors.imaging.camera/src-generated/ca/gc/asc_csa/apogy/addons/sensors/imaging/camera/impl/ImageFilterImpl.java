@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,12 +10,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,9 +25,9 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl#isEnabled <em>Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFilterImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFilterImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFilterImpl#isEnabled <em>Enabled</em>}</li>
  * </ul>
  *
  * @generated
@@ -106,7 +106,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FILTER;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.IMAGE_FILTER;
 	}
 
   /**
@@ -129,7 +129,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME, oldName, name));
 	}
 
   /**
@@ -152,7 +152,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -175,7 +175,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
 		boolean oldEnabled = enabled;
 		enabled = newEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED, oldEnabled, enabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED, oldEnabled, enabled));
 	}
 
   /**
@@ -208,11 +208,11 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
 				return getName();
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
 				return getDescription();
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
 				return isEnabled();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -227,13 +227,13 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
 				setEnabled((Boolean)newValue);
 				return;
 		}
@@ -249,13 +249,13 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
 				setEnabled(ENABLED_EDEFAULT);
 				return;
 		}
@@ -271,11 +271,11 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
 				return enabled != ENABLED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -291,7 +291,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -308,7 +308,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -324,9 +324,9 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER___FILTER__ABSTRACTCAMERA_ABSTRACTEIMAGE:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER___FILTER__ABSTRACTCAMERA_ABSTRACTEIMAGE:
 				return filter((AbstractCamera)arguments.get(0), (AbstractEImage)arguments.get(1));
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER___DISPOSE:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER___DISPOSE:
 				dispose();
 				return null;
 		}

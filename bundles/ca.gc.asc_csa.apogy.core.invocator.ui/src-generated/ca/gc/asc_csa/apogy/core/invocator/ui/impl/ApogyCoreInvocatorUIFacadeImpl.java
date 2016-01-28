@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui.impl;
+package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade;
-import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,15 +28,15 @@ import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIPackage;
  *
  * @generated
  */
-public class Symphony__CoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CoreInvocatorUIFacade {
+public class ApogyCoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreInvocatorUIFacade {
 
-	private static Symphony__CoreInvocatorUIFacade instance = null;
+	private static ApogyCoreInvocatorUIFacade instance = null;
 	
-	public static Symphony__CoreInvocatorUIFacade getInstance() 
+	public static ApogyCoreInvocatorUIFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CoreInvocatorUIFacadeImpl();
+			instance = new ApogyCoreInvocatorUIFacadeImpl();
 		}
 		return instance;
 	}
@@ -46,7 +46,7 @@ public class Symphony__CoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreInvocatorUIFacadeImpl() {
+	protected ApogyCoreInvocatorUIFacadeImpl() {
 		super();
 	}
 
@@ -57,7 +57,7 @@ public class Symphony__CoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Cont
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorUIPackage.Literals.SYMPHONY_CORE_INVOCATOR_UI_FACADE;
+		return ApogyCoreInvocatorUIPackage.Literals.APOGY_CORE_INVOCATOR_UI_FACADE;
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class Symphony__CoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Cont
 		command.append(new SetCommand(
 				AdapterFactoryEditingDomain.getEditingDomainFor(source), 
 				destination, 
-				Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, 
+				ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, 
 				EcoreUtil.copy(source.getAbstractInitializationData())));		
 				
 		Iterator<TypeMemberImplementation> sourceImplementations = source.getTypeMemberImplementations().iterator();
@@ -124,7 +124,7 @@ public class Symphony__CoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreInvocatorUIPackage.SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT:
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT:
 				try {
 					copyInitializationData((Context)arguments.get(0), (Context)arguments.get(1));
 					return null;
@@ -132,7 +132,7 @@ public class Symphony__CoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Cont
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreInvocatorUIPackage.SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND:
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND:
 				try {
 					copyInitializationData((AbstractTypeImplementation)arguments.get(0), (AbstractTypeImplementation)arguments.get(1), (CompoundCommand)arguments.get(2));
 					return null;
@@ -144,4 +144,4 @@ public class Symphony__CoreInvocatorUIFacadeImpl extends MinimalEObjectImpl.Cont
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CoreInvocatorUIFacadeImpl
+} //ApogyCoreInvocatorUIFacadeImpl

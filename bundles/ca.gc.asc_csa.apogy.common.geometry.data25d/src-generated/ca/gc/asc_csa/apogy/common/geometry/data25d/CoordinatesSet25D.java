@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d;
+package ca.gc.asc_csa.apogy.common.geometry.data25d;
 
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness <em>Enforce Uniqueness</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness <em>Enforce Uniqueness</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinatesSet25D()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getCoordinatesSet25D()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface CoordinatesSet25D extends CoordinatesSet<Coordinates25D> {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enforce Uniqueness</em>' attribute.
 	 * @see #setEnforceUniqueness(boolean)
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinatesSet25D_EnforceUniqueness()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getCoordinatesSet25D_EnforceUniqueness()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isEnforceUniqueness();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness <em>Enforce Uniqueness</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness <em>Enforce Uniqueness</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Enforce Uniqueness</em>' attribute.

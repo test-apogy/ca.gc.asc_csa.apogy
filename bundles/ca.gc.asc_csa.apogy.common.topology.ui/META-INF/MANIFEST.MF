@@ -1,41 +1,41 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.topology.ui;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.topology.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.common.topology.ui.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.common.topology.ui.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
  org.eclipse.ui.ide;bundle-version="3.4.0";visibility:=reexport,
  org.eclipse.core.resources;bundle-version="3.4.0",
  org.eclipse.emf.edit.ui;bundle-version="2.4.0",
  org.eclipse.emf.ecore.xmi;bundle-version="2.4.0",
- org.eclipse.symphony.common.topology.edit,
+ ca.gc.asc_csa.apogy.common.topology.edit,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
- org.eclipse.symphony.common.ui,
- org.eclipse.symphony.common.math.ui,
- org.eclipse.symphony.common.converters,
+ ca.gc.asc_csa.apogy.common.ui,
+ ca.gc.asc_csa.apogy.common.math.ui,
+ ca.gc.asc_csa.apogy.common.converters,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib,
- org.eclipse.symphony.common.images;bundle-version="0.2.0",
- org.eclipse.symphony.common.log;bundle-version="0.3.0",
- org.eclipse.symphony.common.converters.ui
+ ca.gc.asc_csa.apogy.common.images;bundle-version="0.2.0",
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
+ ca.gc.asc_csa.apogy.common.converters.ui
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.symphony.common.topology.ui,
- org.eclipse.symphony.common.topology.ui.adapters,
- org.eclipse.symphony.common.topology.ui.commands,
- org.eclipse.symphony.common.topology.ui.composites,
- org.eclipse.symphony.common.topology.ui.converters,
- org.eclipse.symphony.common.topology.ui.dialogs,
- org.eclipse.symphony.common.topology.ui.impl,
- org.eclipse.symphony.common.topology.ui.preferences,
- org.eclipse.symphony.common.topology.ui.properties.sections,
- org.eclipse.symphony.common.topology.ui.util,
- org.eclipse.symphony.common.topology.ui.views,
- org.eclipse.symphony.common.topology.ui.wizards
+Export-Package: ca.gc.asc_csa.apogy.common.topology.ui,
+ ca.gc.asc_csa.apogy.common.topology.ui.adapters,
+ ca.gc.asc_csa.apogy.common.topology.ui.commands,
+ ca.gc.asc_csa.apogy.common.topology.ui.composites,
+ ca.gc.asc_csa.apogy.common.topology.ui.converters,
+ ca.gc.asc_csa.apogy.common.topology.ui.dialogs,
+ ca.gc.asc_csa.apogy.common.topology.ui.impl,
+ ca.gc.asc_csa.apogy.common.topology.ui.preferences,
+ ca.gc.asc_csa.apogy.common.topology.ui.properties.sections,
+ ca.gc.asc_csa.apogy.common.topology.ui.util,
+ ca.gc.asc_csa.apogy.common.topology.ui.views,
+ ca.gc.asc_csa.apogy.common.topology.ui.wizards
 Eclipse-BuddyPolicy: dependent
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.impl;
+package ca.gc.asc_csa.apogy.examples.lander.impl;
 
 import javax.vecmath.Matrix3d;
 
@@ -14,15 +14,15 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderFactory;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Lander;
-import org.eclipse.symphony.examples.lander.LanderLegExtension;
-import org.eclipse.symphony.examples.lander.LanderSimulated;
-import org.eclipse.symphony.examples.lander.LanderStub;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderFactory;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Lander;
+import ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension;
+import ca.gc.asc_csa.apogy.examples.lander.LanderSimulated;
+import ca.gc.asc_csa.apogy.examples.lander.LanderStub;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import org.eclipse.symphony.examples.lander.Position;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements Symphony__ExamplesLanderPackage
+public class ApogyExamplesLanderPackageImpl extends EPackageImpl implements ApogyExamplesLanderPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -85,13 +85,13 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesLanderPackageImpl()
+  private ApogyExamplesLanderPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesLanderFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesLanderFactory.eINSTANCE);
 	}
 
   /**
@@ -104,7 +104,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesLanderPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesLanderPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -113,31 +113,31 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesLanderPackage init()
+  public static ApogyExamplesLanderPackage init()
   {
-		if (isInited) return (Symphony__ExamplesLanderPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesLanderPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesLanderPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesLanderPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesLanderPackageImpl theSymphony__ExamplesLanderPackage = (Symphony__ExamplesLanderPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesLanderPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesLanderPackageImpl());
+		ApogyExamplesLanderPackageImpl theApogyExamplesLanderPackage = (ApogyExamplesLanderPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesLanderPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesLanderPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsVehiclePackage.eINSTANCE.eClass();
+		ApogyAddonsVehiclePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesLanderPackage.createPackageContents();
+		theApogyExamplesLanderPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesLanderPackage.initializePackageContents();
+		theApogyExamplesLanderPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesLanderPackage.freeze();
+		theApogyExamplesLanderPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesLanderPackage.eNS_URI, theSymphony__ExamplesLanderPackage);
-		return theSymphony__ExamplesLanderPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesLanderPackage.eNS_URI, theApogyExamplesLanderPackage);
+		return theApogyExamplesLanderPackage;
 	}
 
   /**
@@ -505,8 +505,8 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLanderFactory getSymphony__ExamplesLanderFactory() {
-		return (Symphony__ExamplesLanderFactory)getEFactoryInstance();
+	public ApogyExamplesLanderFactory getApogyExamplesLanderFactory() {
+		return (ApogyExamplesLanderFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -602,15 +602,15 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__AddonsVehiclePackage theSymphony__AddonsVehiclePackage = (Symphony__AddonsVehiclePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsVehiclePackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyAddonsVehiclePackage theApogyAddonsVehiclePackage = (ApogyAddonsVehiclePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsVehiclePackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		landerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDisposable());
+		landerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDisposable());
 		landerStubEClass.getESuperTypes().add(this.getLander());
 		landerSimulatedEClass.getESuperTypes().add(this.getLander());
 
@@ -623,7 +623,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 
 		initEClass(landerEClass, Lander.class, "Lander", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLander_Position(), this.getPosition(), null, "position", null, 1, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLander_Thruster(), theSymphony__AddonsVehiclePackage.getThruster(), null, "thruster", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLander_Thruster(), theApogyAddonsVehiclePackage.getThruster(), null, "thruster", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_LegAExtension(), this.getLanderLegExtension(), "legAExtension", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_LegBExtension(), this.getLanderLegExtension(), "legBExtension", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_LegCExtension(), this.getLanderLegExtension(), "legCExtension", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -710,15 +710,15 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesLander",
+			 "prefix", "ApogyExamplesLander",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-			 "modelName", "Symphony__ExamplesLander",
+			 "modelName", "ApogyExamplesLander",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.lander/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.lander.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.lander/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.lander.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
 		  (matrix3dEDataType, 
@@ -741,7 +741,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Location",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Y(), 
@@ -752,7 +752,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Location",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Z(), 
@@ -763,7 +763,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Location",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Attitude(), 
@@ -839,19 +839,19 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__ChangeAttitude__double_double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLander__ChangeAttitude__double_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLander__ChangeAttitude__double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getLander__ResetAttitude(), 
@@ -869,13 +869,13 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__CommandAngularVelocities__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  ((getLander__CommandAngularVelocities__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getLander__CommandThrust__double(), 
@@ -887,7 +887,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__CommandThrust__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "N"
+			 "apogy_units", "N"
 		   });	
 		addAnnotation
 		  (getLander__ChangeThrustBy__double(), 
@@ -899,7 +899,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__ChangeThrustBy__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "N"
+			 "apogy_units", "N"
 		   });	
 		addAnnotation
 		  (getLander__StartFlying__boolean(), 
@@ -964,7 +964,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "children", "false",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "Leg Positions"
 		   });	
 		addAnnotation
@@ -975,7 +975,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "children", "false",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "Leg Positions"
 		   });	
 		addAnnotation
@@ -986,7 +986,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "children", "false",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "Leg Positions"
 		   });	
 		addAnnotation
@@ -996,7 +996,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "documentation", "This represents the current angular velocity\n(in radians per second) of the lander in the X\ndirection.\n<p>\nNote: Unlike the traditional definition of angular\nvelocity as a vector, this is simply a signed scalar;\na positive value is the rotation in the counter-\nclockwise direction while a negative value implies the\nrotation is in the clockwise direction.  Zero means\nthere is no rotation.\n@see #commandAngularVelocities(double, double)",
 			 "children", "false",
 			 "notify", "true",
-			 "symphony_units", "rad/s",
+			 "apogy_units", "rad/s",
 			 "propertyCategory", "Velocities"
 		   });	
 		addAnnotation
@@ -1006,7 +1006,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "documentation", "This represents the current angular velocity\n(in radians per second) of the lander in the Y\ndirection.\n<p>\nNote: Unlike the traditional definition of angular\nvelocity as a vector, this is simply a signed scalar;\na positive value is the rotation in the counter-\nclockwise direction while a negative value implies the\nrotation is in the clockwise direction.  Zero means\nthere is no rotation.\n@see #commandAngularVelocities(double, double)",
 			 "children", "false",
 			 "notify", "true",
-			 "symphony_units", "rad/s",
+			 "apogy_units", "rad/s",
 			 "propertyCategory", "Velocities"
 		   });	
 		addAnnotation
@@ -1015,7 +1015,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		   new String[] {
 			 "documentation", "This represents the mass of the lander (in kg).",
 			 "children", "false",
-			 "symphony_units", "kg",
+			 "apogy_units", "kg",
 			 "property", "Readonly",
 			 "propertyCategory", "Flight"
 		   });	
@@ -1025,7 +1025,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		   new String[] {
 			 "documentation", "This is the amount of force (in N) of gravity that is being\nimposed upon the lander.\n<p>\nRecall that that the gravitational force impose on an object\n(like a lander) in relation to a celestial body is affected by:\n<ul>\n\t <li>the mass of the lander</li>\n  <li>the mass of the celestial body the lander is on / above</li>\n  <li>the distance between the lander and the body</li>\n</ul>\n@return The amount of gravitational force (in N) imposed upon the lander",
 			 "children", "false",
-			 "symphony_units", "N",
+			 "apogy_units", "N",
 			 "property", "Readonly",
 			 "propertyCategory", "Flight"
 		   });	
@@ -1104,4 +1104,4 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		   });
 	}
 
-} //Symphony__ExamplesLanderPackageImpl
+} //ApogyExamplesLanderPackageImpl

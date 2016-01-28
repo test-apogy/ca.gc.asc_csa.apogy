@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getToolTipTextProvider()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getToolTipTextProvider()
  * @model
  * @generated
  */

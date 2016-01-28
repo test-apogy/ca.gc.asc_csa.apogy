@@ -1,6 +1,6 @@
-package org.eclipse.symphony.common.converters.graphs;
+package ca.gc.asc_csa.apogy.common.converters.graphs;
 
-import org.eclipse.symphony.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
 
 public class ConverterEdge 
 {

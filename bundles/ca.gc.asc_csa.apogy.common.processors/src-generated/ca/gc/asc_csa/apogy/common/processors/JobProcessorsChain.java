@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors;
+package ca.gc.asc_csa.apogy.common.processors;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.processors;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getJobProcessorsChain()
+ * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getJobProcessorsChain()
  * @model
  * @generated
  */

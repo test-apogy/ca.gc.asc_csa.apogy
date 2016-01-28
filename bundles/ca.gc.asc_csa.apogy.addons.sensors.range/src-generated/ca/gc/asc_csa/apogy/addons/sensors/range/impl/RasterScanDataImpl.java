@@ -4,7 +4,7 @@
  *
  * $Id: RasterScanDataImpl.java,v 1.4.4.2 2015/05/21 15:50:22 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RasterScanData;
-import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -27,9 +27,9 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanDataImpl#getTime <em>Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanDataImpl#getRasterScanSettings <em>Raster Scan Settings</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanDataImpl#getScanData <em>Scan Data</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RasterScanDataImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RasterScanDataImpl#getRasterScanSettings <em>Raster Scan Settings</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RasterScanDataImpl#getScanData <em>Scan Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -88,7 +88,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA;
+		return ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA;
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME, oldTime, time));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 		RasterScanSettings oldRasterScanSettings = rasterScanSettings;
 		rasterScanSettings = newRasterScanSettings;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, oldRasterScanSettings, newRasterScanSettings);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, oldRasterScanSettings, newRasterScanSettings);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -141,14 +141,14 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 		if (newRasterScanSettings != rasterScanSettings) {
 			NotificationChain msgs = null;
 			if (rasterScanSettings != null)
-				msgs = ((InternalEObject)rasterScanSettings).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, null, msgs);
+				msgs = ((InternalEObject)rasterScanSettings).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, null, msgs);
 			if (newRasterScanSettings != null)
-				msgs = ((InternalEObject)newRasterScanSettings).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, null, msgs);
+				msgs = ((InternalEObject)newRasterScanSettings).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, null, msgs);
 			msgs = basicSetRasterScanSettings(newRasterScanSettings, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, newRasterScanSettings, newRasterScanSettings));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS, newRasterScanSettings, newRasterScanSettings));
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 		VolumetricCoordinatesSet25D oldScanData = scanData;
 		scanData = newScanData;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, oldScanData, newScanData);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, oldScanData, newScanData);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -182,14 +182,14 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 		if (newScanData != scanData) {
 			NotificationChain msgs = null;
 			if (scanData != null)
-				msgs = ((InternalEObject)scanData).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, null, msgs);
+				msgs = ((InternalEObject)scanData).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, null, msgs);
 			if (newScanData != null)
-				msgs = ((InternalEObject)newScanData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, null, msgs);
+				msgs = ((InternalEObject)newScanData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, null, msgs);
 			msgs = basicSetScanData(newScanData, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, newScanData, newScanData));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA, newScanData, newScanData));
 	}
 
 	/**
@@ -200,9 +200,9 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
 				return basicSetRasterScanSettings(null, msgs);
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
 				return basicSetScanData(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -215,11 +215,11 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
 				return getTime();
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
 				return getRasterScanSettings();
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
 				return getScanData();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -232,13 +232,13 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
 				setTime((Date)newValue);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
 				setRasterScanSettings((RasterScanSettings)newValue);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
 				setScanData((VolumetricCoordinatesSet25D)newValue);
 				return;
 		}
@@ -252,13 +252,13 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
 				setRasterScanSettings((RasterScanSettings)null);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
 				setScanData((VolumetricCoordinatesSet25D)null);
 				return;
 		}
@@ -272,11 +272,11 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
 				return rasterScanSettings != null;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
 				return scanData != null;
 		}
 		return super.eIsSet(featureID);
@@ -290,7 +290,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME: return ApogyCommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -305,7 +305,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME;
+				case ApogyCommonEMFPackage.TIMED__TIME: return ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME;
 				default: return -1;
 			}
 		}

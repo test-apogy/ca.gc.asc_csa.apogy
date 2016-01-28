@@ -3,7 +3,7 @@
  *
  * $Id: Data3DIOImpl.java,v 1.5.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -31,15 +31,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -75,7 +75,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.DATA3_DIO;
+		return ApogyCommonGeometryData3DPackage.Literals.DATA3_DIO;
 	}
 
 	/**
@@ -136,7 +136,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 */
 	public NormalPointCloud loadTriangularMeshFromASCIIAsNormalPointCloud(String filePrefix) throws IOException 
 	{
-		NormalPointCloud normalPointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE.createNormalPointCloud();
+		NormalPointCloud normalPointCloud = ApogyCommonGeometryData3DFactory.eINSTANCE.createNormalPointCloud();
 
 		List<Point3d> points = new ArrayList<Point3d>();
 		List<Vector3d> normals = new ArrayList<Vector3d>();
@@ -156,7 +156,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 */
 	public CartesianTriangularMesh loadTriangularMeshFromASCII(String filePrefix) throws IOException 
 	{
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 
 		List<Point3d> points = new ArrayList<Point3d>();
 		List<IndexedTriangle> triangles = new ArrayList<IndexedTriangle>();
@@ -170,7 +170,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 
 		for (Point3d point : points) 
 		{
-			CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
+			CartesianPositionCoordinates coord = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
 			coordinates.add(coord);
 		}
 
@@ -182,7 +182,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 			CartesianPositionCoordinates v1 = mesh.getPoints().get(tri.getV1());
 			CartesianPositionCoordinates v2 = mesh.getPoints().get(tri.getV2());
 
-			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
+			CartesianTriangle triangle = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
 
 			cartTriangles.add(triangle);
 		}
@@ -286,7 +286,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	public CartesianCoordinatesSet loadXYZ(String fileName) throws IOException 
 	{
 
-		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet points = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 		// We load the file.
 		FileInputStream fis = new FileInputStream(new File(fileName));
@@ -327,7 +327,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 						double y = Double.parseDouble(cols[1]);
 						double z = Double.parseDouble(cols[2]);
 
-						CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE
+						CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE
 								.createCartesianPositionCoordinates(x, y, z);
 
 						points.getPoints().add(point);
@@ -360,7 +360,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 */
 	public CartesianTriangularMesh loadTriangularMeshFromTriXYZ(String triFileName, String xyzFileName) throws IOException
 	{
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 
 		List<Point3d> points = new ArrayList<Point3d>();
 		List<IndexedTriangle> triangles = new ArrayList<IndexedTriangle>();
@@ -374,7 +374,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 
 		for (Point3d point : points) 
 		{
-			CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
+			CartesianPositionCoordinates coord = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
 			coordinates.add(coord);
 		}
 
@@ -386,7 +386,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 			CartesianPositionCoordinates v1 = mesh.getPoints().get(tri.getV1());
 			CartesianPositionCoordinates v2 = mesh.getPoints().get(tri.getV2());
 
-			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
+			CartesianTriangle triangle = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
 
 			cartTriangles.add(triangle);
 		}
@@ -513,29 +513,29 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 		try {
 			switch (operationID) {
 
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___SAVE_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH_STRING:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___SAVE_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH_STRING:
 				saveTriangularMesh((CartesianTriangularMesh) arguments.get(0),
 						(String) arguments.get(1));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH__STRING:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH__STRING:
 				return loadTriangularMesh((String) arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___SAVE_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH_OUTPUTSTREAM:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___SAVE_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH_OUTPUTSTREAM:
 				saveTriangularMesh((CartesianTriangularMesh) arguments.get(0),
 						(OutputStream) arguments.get(1));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH__INPUTSTREAM:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH__INPUTSTREAM:
 				return loadTriangularMesh((InputStream) arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH_FROM_ASCII_AS_NORMAL_POINT_CLOUD__STRING:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH_FROM_ASCII_AS_NORMAL_POINT_CLOUD__STRING:
 				return loadTriangularMeshFromASCIIAsNormalPointCloud((String) arguments
 						.get(0));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH_FROM_ASCII__STRING:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___LOAD_TRIANGULAR_MESH_FROM_ASCII__STRING:
 				return loadTriangularMeshFromASCII((String) arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___SAVE_TRIANGULAR_MESH_AS_ASCII__CARTESIANTRIANGULARMESH_STRING:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___SAVE_TRIANGULAR_MESH_AS_ASCII__CARTESIANTRIANGULARMESH_STRING:
 				saveTriangularMeshAsASCII(
 						(CartesianTriangularMesh) arguments.get(0),
 						(String) arguments.get(1));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO___LOAD_XYZ__STRING:
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO___LOAD_XYZ__STRING:
 				return loadXYZ((String) arguments.get(0));
 			}
 		} catch (Exception e) {

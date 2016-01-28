@@ -3,7 +3,7 @@
  *
  * $Id: VoxelBased3DPointCloudResamplerImpl.java,v 1.2.4.3 2015/09/22 19:39:41 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.Vector;
 
@@ -13,18 +13,18 @@ import javax.vecmath.Point4d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.Activator;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,11 +34,11 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionX <em>Resolution X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionY <em>Resolution Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionZ <em>Resolution Z</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getTileResolution <em>Tile Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionX <em>Resolution X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionY <em>Resolution Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionZ <em>Resolution Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getTileResolution <em>Tile Resolution</em>}</li>
  * </ul>
  *
  * @generated
@@ -160,7 +160,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER;
+		return ApogyCommonGeometryData3DPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER;
 	}
 
 	/**
@@ -203,7 +203,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 		double oldResolutionX = resolutionX;
 		resolutionX = newResolutionX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X, oldResolutionX, resolutionX));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X, oldResolutionX, resolutionX));
 	}
 
 	/**
@@ -224,7 +224,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 		double oldResolutionY = resolutionY;
 		resolutionY = newResolutionY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y, oldResolutionY, resolutionY));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y, oldResolutionY, resolutionY));
 	}
 
 	/**
@@ -245,7 +245,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 		double oldResolutionZ = resolutionZ;
 		resolutionZ = newResolutionZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z, oldResolutionZ, resolutionZ));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z, oldResolutionZ, resolutionZ));
 	}
 
 	/**
@@ -266,7 +266,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 		int oldMinimumNumberOfPointPerVoxel = minimumNumberOfPointPerVoxel;
 		minimumNumberOfPointPerVoxel = newMinimumNumberOfPointPerVoxel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL, oldMinimumNumberOfPointPerVoxel, minimumNumberOfPointPerVoxel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL, oldMinimumNumberOfPointPerVoxel, minimumNumberOfPointPerVoxel));
 	}
 
 	/**
@@ -287,7 +287,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 		double oldTileResolution = tileResolution;
 		tileResolution = newTileResolution;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION, oldTileResolution, tileResolution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION, oldTileResolution, tileResolution));
 	}
 
 	/**
@@ -298,15 +298,15 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
 				return getResolutionX();
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
 				return getResolutionY();
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
 				return getResolutionZ();
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
 				return getMinimumNumberOfPointPerVoxel();
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
 				return getTileResolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -320,19 +320,19 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
 				setResolutionX((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
 				setResolutionY((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
 				setResolutionZ((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
 				setMinimumNumberOfPointPerVoxel((Integer)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
 				setTileResolution((Double)newValue);
 				return;
 		}
@@ -347,19 +347,19 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
 				setResolutionX(RESOLUTION_X_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
 				setResolutionY(RESOLUTION_Y_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
 				setResolutionZ(RESOLUTION_Z_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
 				setMinimumNumberOfPointPerVoxel(MINIMUM_NUMBER_OF_POINT_PER_VOXEL_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
 				setTileResolution(TILE_RESOLUTION_EDEFAULT);
 				return;
 		}
@@ -374,15 +374,15 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
 				return resolutionX != RESOLUTION_X_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
 				return resolutionY != RESOLUTION_Y_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
 				return resolutionZ != RESOLUTION_Z_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
 				return minimumNumberOfPointPerVoxel != MINIMUM_NUMBER_OF_POINT_PER_VOXEL_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
 				return tileResolution != TILE_RESOLUTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -455,7 +455,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 			double resolutiony, double resolutionz, int minpoints,
 			double coarseresolution, CartesianCoordinatesSet inputPointCloud) {
 
-		CartesianCoordinatesSet outputPointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE
+		CartesianCoordinatesSet outputPointCloud = ApogyCommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesSet();
 
 		double bounds[] = null;
@@ -515,7 +515,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 
 			for (j = 0; j < outputPatch.size(); j++) 
 			{
-				CartesianPositionCoordinates newPoint = Symphony__CommonGeometryData3DFacade.INSTANCE
+				CartesianPositionCoordinates newPoint = ApogyCommonGeometryData3DFacade.INSTANCE
 						.createCartesianPositionCoordinates(
 								outputPatch.get(j).x, outputPatch.get(j).y,
 								outputPatch.get(j).z);

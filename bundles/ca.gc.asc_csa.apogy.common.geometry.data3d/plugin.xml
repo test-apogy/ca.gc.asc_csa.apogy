@@ -10,23 +10,23 @@
 <plugin>
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "org.eclipse.symphony.common.geometry.data3d" 
-       class = "org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage"
-       genModel = "model/symphony_common_geometry_data3d.xcore" /> 
+       uri = "ca.gc.asc_csa.apogy.common.geometry.data3d" 
+       class = "ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage"
+       genModel = "model/apogy_common_geometry_data3d.xcore" /> 
   </extension>
   <extension
-        point="org.eclipse.symphony.common.converters">
+        point="ca.gc.asc_csa.apogy.common.converters">
      <new_element
-           Class="org.eclipse.symphony.common.geometry.data3d.converters.TopoFileToCartesianTriangularMeshConverter">
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.TopoFileToCartesianTriangularMeshConverter">
      </new_element>
      <new_element
-           Class="org.eclipse.symphony.common.geometry.data3d.converters.TopoIFileToCartesianTriangularMeshConverter">
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.TopoIFileToCartesianTriangularMeshConverter">
      </new_element>
      <new_element
-           Class="org.eclipse.symphony.common.geometry.data3d.converters.URLTRIToCartesianTriangularMeshConverter">
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.URLTRIToCartesianTriangularMeshConverter">
      </new_element>
      <new_element
-           Class="org.eclipse.symphony.common.geometry.data3d.converters.URLTopoToCartesianTriangularMeshConverter">
+           Class="ca.gc.asc_csa.apogy.common.geometry.data3d.converters.URLTopoToCartesianTriangularMeshConverter">
      </new_element>
   </extension>
   

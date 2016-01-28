@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.views;
+package ca.gc.asc_csa.apogy.core.invocator.ui.views;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -8,11 +8,11 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.emf.ui.composites.EObjectComposite;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectComposite;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 public class InstanceView extends AbstractView implements IEditingDomainProvider {
 	private EObjectComposite eObjectComposite;
@@ -41,7 +41,7 @@ public class InstanceView extends AbstractView implements IEditingDomainProvider
 			Object obj = ss.getFirstElement();
 			if (obj instanceof Variable){
 				Variable variable = (Variable) obj;				
-				selectedEObject = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(variable);				
+				selectedEObject = ApogyCoreInvocatorFacade.INSTANCE.getInstance(variable);				
 			}
 			if (obj instanceof AbstractTypeImplementation){
 				AbstractTypeImplementation abstractTypeImplementation = (AbstractTypeImplementation) obj;
@@ -56,6 +56,6 @@ public class InstanceView extends AbstractView implements IEditingDomainProvider
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

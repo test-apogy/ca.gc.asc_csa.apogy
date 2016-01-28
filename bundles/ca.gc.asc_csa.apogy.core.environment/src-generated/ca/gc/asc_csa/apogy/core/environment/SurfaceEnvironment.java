@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.SurfaceEnvironment#getAtmosphere <em>Atmosphere</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.SurfaceEnvironment#getGravity <em>Gravity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment#getAtmosphere <em>Atmosphere</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment#getGravity <em>Gravity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceEnvironment()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSurfaceEnvironment()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface SurfaceEnvironment extends Environment
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Atmosphere</em>' containment reference.
 	 * @see #setAtmosphere(Atmosphere)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceEnvironment_Atmosphere()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSurfaceEnvironment_Atmosphere()
 	 * @model containment="true"
 	 * @generated
 	 */
   Atmosphere getAtmosphere();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.SurfaceEnvironment#getAtmosphere <em>Atmosphere</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment#getAtmosphere <em>Atmosphere</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Atmosphere</em>' containment reference.
@@ -61,14 +61,14 @@ public interface SurfaceEnvironment extends Environment
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gravity</em>' containment reference.
 	 * @see #setGravity(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceEnvironment_Gravity()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSurfaceEnvironment_Gravity()
 	 * @model containment="true"
 	 * @generated
 	 */
   Tuple3d getGravity();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.SurfaceEnvironment#getGravity <em>Gravity</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment#getGravity <em>Gravity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Gravity</em>' containment reference.

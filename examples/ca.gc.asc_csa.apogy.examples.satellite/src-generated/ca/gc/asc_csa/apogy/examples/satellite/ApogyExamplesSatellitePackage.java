@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,12 +29,12 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesSatellite' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__ExamplesSatellite' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.satellite/src-generated' editDirectory='/org.eclipse.symphony.examples.satellite.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesSatellite' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyExamplesSatellite' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.satellite/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesSatellitePackage extends EPackage {
+public interface ApogyExamplesSatellitePackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -49,7 +49,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.examples.satellite";
+	String eNS_URI = "ca.gc.asc_csa.apogy.examples.satellite";
 
 	/**
 	 * The package namespace name.
@@ -65,14 +65,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesSatellitePackage eINSTANCE = org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl.init();
+	ApogyExamplesSatellitePackage eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellation()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellation()
 	 * @generated
 	 */
 	int ABSTRACT_CONSTELLATION = 0;
@@ -204,11 +204,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_OPERATION_COUNT = 8;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl <em>Constellation Command Plan</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanImpl <em>Constellation Command Plan</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlan()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationCommandPlan()
 	 * @generated
 	 */
 	int CONSTELLATION_COMMAND_PLAN = 1;
@@ -241,11 +241,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_COMMAND_PLAN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl <em>Constellation Command Plan Item</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanItemImpl <em>Constellation Command Plan Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlanItem()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanItemImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationCommandPlanItem()
 	 * @generated
 	 */
 	int CONSTELLATION_COMMAND_PLAN_ITEM = 2;
@@ -287,11 +287,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_COMMAND_PLAN_ITEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl <em>Default Constellation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationImpl <em>Default Constellation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getDefaultConstellation()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getDefaultConstellation()
 	 * @generated
 	 */
 	int DEFAULT_CONSTELLATION = 3;
@@ -423,11 +423,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int DEFAULT_CONSTELLATION_OPERATION_COUNT = ABSTRACT_CONSTELLATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl <em>Constellation Requests List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl <em>Constellation Requests List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestsList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestsList()
 	 * @generated
 	 */
 	int CONSTELLATION_REQUESTS_LIST = 4;
@@ -460,11 +460,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_REQUESTS_LIST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl <em>Abstract Constellation Request</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl <em>Abstract Constellation Request</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationRequest()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationRequest()
 	 * @generated
 	 */
 	int ABSTRACT_CONSTELLATION_REQUEST = 5;
@@ -524,11 +524,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_REQUEST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl <em>Image Constellation Request</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl <em>Image Constellation Request</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getImageConstellationRequest()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getImageConstellationRequest()
 	 * @generated
 	 */
 	int IMAGE_CONSTELLATION_REQUEST = 6;
@@ -624,11 +624,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int IMAGE_CONSTELLATION_REQUEST_OPERATION_COUNT = ABSTRACT_CONSTELLATION_REQUEST_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl <em>Satellites List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatellitesListImpl <em>Satellites List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatellitesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.SatellitesListImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSatellitesList()
 	 * @generated
 	 */
 	int SATELLITES_LIST = 7;
@@ -661,11 +661,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int SATELLITES_LIST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl <em>Satellite</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl <em>Satellite</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatellite()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSatellite()
 	 * @generated
 	 */
 	int SATELLITE = 8;
@@ -677,7 +677,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int SATELLITE__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Model</b></em>' reference.
@@ -686,7 +686,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__ORBIT_MODEL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int SATELLITE__ORBIT_MODEL = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Roll Rate</b></em>' attribute.
@@ -695,7 +695,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__MAXIMUM_ROLL_RATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int SATELLITE__MAXIMUM_ROLL_RATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Roll</b></em>' attribute.
@@ -704,7 +704,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__MAXIMUM_ROLL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int SATELLITE__MAXIMUM_ROLL = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Satellite</em>' class.
@@ -713,7 +713,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int SATELLITE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Satellite</em>' class.
@@ -722,14 +722,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int SATELLITE_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl <em>Abstract Satellite Command</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl <em>Abstract Satellite Command</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractSatelliteCommand()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractSatelliteCommand()
 	 * @generated
 	 */
 	int ABSTRACT_SATELLITE_COMMAND = 9;
@@ -741,7 +741,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND__LONGITUDE = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
+	int ABSTRACT_SATELLITE_COMMAND__LONGITUDE = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
 
 	/**
 	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
@@ -750,7 +750,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND__LATITUDE = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
+	int ABSTRACT_SATELLITE_COMMAND__LATITUDE = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
 
 	/**
 	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
@@ -759,7 +759,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND__ELEVATION = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
+	int ABSTRACT_SATELLITE_COMMAND__ELEVATION = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -768,7 +768,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND__TIME = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 0;
+	int ABSTRACT_SATELLITE_COMMAND__TIME = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
@@ -777,7 +777,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND__SATELLITE = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 1;
+	int ABSTRACT_SATELLITE_COMMAND__SATELLITE = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Constellation Request</b></em>' container reference.
@@ -786,7 +786,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 2;
+	int ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Satellite Command</em>' class.
@@ -795,7 +795,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND_FEATURE_COUNT = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 3;
+	int ABSTRACT_SATELLITE_COMMAND_FEATURE_COUNT = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Abstract Satellite Command</em>' class.
@@ -804,14 +804,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SATELLITE_COMMAND_OPERATION_COUNT = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_OPERATION_COUNT + 0;
+	int ABSTRACT_SATELLITE_COMMAND_OPERATION_COUNT = ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AcquireImageSatelliteCommandImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
 	 * @generated
 	 */
 	int ACQUIRE_IMAGE_SATELLITE_COMMAND = 10;
@@ -898,11 +898,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int ACQUIRE_IMAGE_SATELLITE_COMMAND_OPERATION_COUNT = ABSTRACT_SATELLITE_COMMAND_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getOrbitalImage()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImage()
 	 * @generated
 	 */
 	int ORBITAL_IMAGE = 11;
@@ -914,7 +914,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__WIDTH = Symphony__CommonImagesPackage.EIMAGE__WIDTH;
+	int ORBITAL_IMAGE__WIDTH = ApogyCommonImagesPackage.EIMAGE__WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -923,7 +923,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__HEIGHT = Symphony__CommonImagesPackage.EIMAGE__HEIGHT;
+	int ORBITAL_IMAGE__HEIGHT = ApogyCommonImagesPackage.EIMAGE__HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Image Content</b></em>' attribute.
@@ -932,7 +932,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__IMAGE_CONTENT = Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT;
+	int ORBITAL_IMAGE__IMAGE_CONTENT = ApogyCommonImagesPackage.EIMAGE__IMAGE_CONTENT;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
@@ -941,7 +941,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__COORDINATES = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 0;
+	int ORBITAL_IMAGE__COORDINATES = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Roll Angle</b></em>' attribute.
@@ -950,7 +950,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__ROLL_ANGLE = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 1;
+	int ORBITAL_IMAGE__ROLL_ANGLE = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Orbital Image</em>' class.
@@ -959,7 +959,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_FEATURE_COUNT = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 2;
+	int ORBITAL_IMAGE_FEATURE_COUNT = ApogyCommonImagesPackage.EIMAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>As Buffered Image</em>' operation.
@@ -968,7 +968,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = Symphony__CommonImagesPackage.EIMAGE___AS_BUFFERED_IMAGE;
+	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = ApogyCommonImagesPackage.EIMAGE___AS_BUFFERED_IMAGE;
 
 	/**
 	 * The number of operations of the '<em>Orbital Image</em>' class.
@@ -977,14 +977,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_OPERATION_COUNT = Symphony__CommonImagesPackage.EIMAGE_OPERATION_COUNT + 0;
+	int ORBITAL_IMAGE_OPERATION_COUNT = ApogyCommonImagesPackage.EIMAGE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl <em>Constellation Downlinks List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl <em>Constellation Downlinks List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlinksList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlinksList()
 	 * @generated
 	 */
 	int CONSTELLATION_DOWNLINKS_LIST = 12;
@@ -996,7 +996,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int CONSTELLATION_DOWNLINKS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1005,7 +1005,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Downlinks</b></em>' containment reference list.
@@ -1014,7 +1014,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Constellation Downlinks List</em>' class.
@@ -1023,7 +1023,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int CONSTELLATION_DOWNLINKS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Constellation Downlinks List</em>' class.
@@ -1032,14 +1032,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DOWNLINKS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int CONSTELLATION_DOWNLINKS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl <em>Constellation Downlink</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinkImpl <em>Constellation Downlink</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlink()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinkImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlink()
 	 * @generated
 	 */
 	int CONSTELLATION_DOWNLINK = 13;
@@ -1072,11 +1072,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_DOWNLINK_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl <em>Abstract Constellation Downlink Item</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationDownlinkItemImpl <em>Abstract Constellation Downlink Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationDownlinkItemImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
 	 * @generated
 	 */
 	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = 14;
@@ -1109,11 +1109,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl <em>Orbital Image Constellation Downlink Item</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl <em>Orbital Image Constellation Downlink Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
 	 * @generated
 	 */
 	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = 15;
@@ -1155,11 +1155,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM_OPERATION_COUNT = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl <em>Constellation Utilities</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl <em>Constellation Utilities</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationUtilities()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationUtilities()
 	 * @generated
 	 */
 	int CONSTELLATION_UTILITIES = 16;
@@ -1192,21 +1192,21 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int CONSTELLATION_UTILITIES_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestPriority
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestPriority()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestPriority()
 	 * @generated
 	 */
 	int CONSTELLATION_REQUEST_PRIORITY = 17;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestStatus
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestStatus()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestStatus()
 	 * @generated
 	 */
 	int CONSTELLATION_REQUEST_STATUS = 18;
@@ -1216,7 +1216,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getList()
 	 * @generated
 	 */
 	int LIST = 19;
@@ -1226,574 +1226,574 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.SortedSet
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSortedSet()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSortedSet()
 	 * @generated
 	 */
 	int SORTED_SET = 20;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Constellation</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation
 	 * @generated
 	 */
 	EClass getAbstractConstellation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Satellites List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getSatellitesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList()
 	 * @see #getAbstractConstellation()
 	 * @generated
 	 */
 	EReference getAbstractConstellation_SatellitesList();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Ground Stations References List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getGroundStationsReferencesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList()
 	 * @see #getAbstractConstellation()
 	 * @generated
 	 */
 	EReference getAbstractConstellation_GroundStationsReferencesList();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Downlinks Lists</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getDownlinksLists()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists()
 	 * @see #getAbstractConstellation()
 	 * @generated
 	 */
 	EReference getAbstractConstellation_DownlinksLists();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Constellation Requests List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getConstellationRequestsList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList()
 	 * @see #getAbstractConstellation()
 	 * @generated
 	 */
 	EReference getAbstractConstellation_ConstellationRequestsList();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date) <em>Plan</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date) <em>Plan</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__Plan__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.List, java.util.Date, java.util.Date) <em>Plan</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#plan(java.util.List, java.util.Date, java.util.Date) <em>Plan</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.List, java.util.Date, java.util.Date)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#plan(java.util.List, java.util.Date, java.util.Date)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__Plan__List_Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#commit(java.util.List) <em>Commit</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#commit(java.util.List) <em>Commit</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Commit</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#commit(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#commit(java.util.List)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__Commit__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#apply(org.eclipse.symphony.examples.satellite.ConstellationDownlink) <em>Apply</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#apply(ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink) <em>Apply</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#apply(org.eclipse.symphony.examples.satellite.ConstellationDownlink)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#apply(ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__Apply__ConstellationDownlink();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#add(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest) <em>Add</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#add(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest) <em>Add</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#add(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#add(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__Add__AbstractConstellationRequest();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#addAll(java.util.List) <em>Add All</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#addAll(java.util.List) <em>Add All</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add All</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#addAll(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#addAll(java.util.List)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__AddAll__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#remove(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest) <em>Remove</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#remove(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest) <em>Remove</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#remove(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#remove(ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__Remove__AbstractConstellationRequest();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#removeAll(java.util.List) <em>Remove All</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#removeAll(java.util.List) <em>Remove All</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove All</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#removeAll(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#removeAll(java.util.List)
 	 * @generated
 	 */
 	EOperation getAbstractConstellation__RemoveAll__List();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan <em>Constellation Command Plan</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan <em>Constellation Command Plan</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation Command Plan</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlan
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan
 	 * @generated
 	 */
 	EClass getConstellationCommandPlan();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan#getConstellationCommandPlanItems <em>Constellation Command Plan Items</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan#getConstellationCommandPlanItems <em>Constellation Command Plan Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Constellation Command Plan Items</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlan#getConstellationCommandPlanItems()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan#getConstellationCommandPlanItems()
 	 * @see #getConstellationCommandPlan()
 	 * @generated
 	 */
 	EReference getConstellationCommandPlan_ConstellationCommandPlanItems();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem <em>Constellation Command Plan Item</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem <em>Constellation Command Plan Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation Command Plan Item</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem
 	 * @generated
 	 */
 	EClass getConstellationCommandPlanItem();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getRequest <em>Request</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getRequest <em>Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Request</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getRequest()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getRequest()
 	 * @see #getConstellationCommandPlanItem()
 	 * @generated
 	 */
 	EReference getConstellationCommandPlanItem_Request();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand <em>Satellite Command</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand <em>Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Satellite Command</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand()
 	 * @see #getConstellationCommandPlanItem()
 	 * @generated
 	 */
 	EReference getConstellationCommandPlanItem_SatelliteCommand();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.DefaultConstellation <em>Default Constellation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation <em>Default Constellation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Default Constellation</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.DefaultConstellation
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation
 	 * @generated
 	 */
 	EClass getDefaultConstellation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList <em>Constellation Requests List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation Requests List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestsList
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList
 	 * @generated
 	 */
 	EClass getConstellationRequestsList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList#getConstellationRequests <em>Constellation Requests</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList#getConstellationRequests <em>Constellation Requests</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Constellation Requests</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestsList#getConstellationRequests()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList#getConstellationRequests()
 	 * @see #getConstellationRequestsList()
 	 * @generated
 	 */
 	EReference getConstellationRequestsList_ConstellationRequests();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest <em>Abstract Constellation Request</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest <em>Abstract Constellation Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Constellation Request</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest
 	 * @generated
 	 */
 	EClass getAbstractConstellationRequest();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getUid <em>Uid</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getUid <em>Uid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Uid</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getUid()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getUid()
 	 * @see #getAbstractConstellationRequest()
 	 * @generated
 	 */
 	EAttribute getAbstractConstellationRequest_Uid();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderPriority <em>Order Priority</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getOrderPriority <em>Order Priority</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Order Priority</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderPriority()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getOrderPriority()
 	 * @see #getAbstractConstellationRequest()
 	 * @generated
 	 */
 	EAttribute getAbstractConstellationRequest_OrderPriority();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderStatus <em>Order Status</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getOrderStatus <em>Order Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Order Status</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderStatus()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getOrderStatus()
 	 * @see #getAbstractConstellationRequest()
 	 * @generated
 	 */
 	EAttribute getAbstractConstellationRequest_OrderStatus();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Satellite Command</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getSatelliteCommand()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand()
 	 * @see #getAbstractConstellationRequest()
 	 * @generated
 	 */
 	EReference getAbstractConstellationRequest_SatelliteCommand();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest <em>Image Constellation Request</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest <em>Image Constellation Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Image Constellation Request</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ImageConstellationRequest
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest
 	 * @generated
 	 */
 	EClass getImageConstellationRequest();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest#getImage <em>Image</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest#getImage <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Image</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ImageConstellationRequest#getImage()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest#getImage()
 	 * @see #getImageConstellationRequest()
 	 * @generated
 	 */
 	EReference getImageConstellationRequest_Image();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatellitesList <em>Satellites List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.SatellitesList <em>Satellites List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Satellites List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatellitesList
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.SatellitesList
 	 * @generated
 	 */
 	EClass getSatellitesList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.SatellitesList#getSatellites <em>Satellites</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.satellite.SatellitesList#getSatellites <em>Satellites</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Satellites</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatellitesList#getSatellites()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.SatellitesList#getSatellites()
 	 * @see #getSatellitesList()
 	 * @generated
 	 */
 	EReference getSatellitesList_Satellites();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.Satellite <em>Satellite</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite <em>Satellite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Satellite</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.Satellite
 	 * @generated
 	 */
 	EClass getSatellite();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Orbit Model</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#getOrbitModel()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.Satellite#getOrbitModel()
 	 * @see #getSatellite()
 	 * @generated
 	 */
 	EReference getSatellite_OrbitModel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.Satellite#getMaximumRollRate <em>Maximum Roll Rate</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRollRate <em>Maximum Roll Rate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Roll Rate</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#getMaximumRollRate()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRollRate()
 	 * @see #getSatellite()
 	 * @generated
 	 */
 	EAttribute getSatellite_MaximumRollRate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.Satellite#getMaximumRoll <em>Maximum Roll</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRoll <em>Maximum Roll</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Roll</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#getMaximumRoll()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.Satellite#getMaximumRoll()
 	 * @see #getSatellite()
 	 * @generated
 	 */
 	EAttribute getSatellite_MaximumRoll();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand <em>Abstract Satellite Command</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand <em>Abstract Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Satellite Command</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand
 	 * @generated
 	 */
 	EClass getAbstractSatelliteCommand();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Satellite</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getSatellite()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getSatellite()
 	 * @see #getAbstractSatelliteCommand()
 	 * @generated
 	 */
 	EReference getAbstractSatelliteCommand_Satellite();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Constellation Request</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getConstellationRequest()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest()
 	 * @see #getAbstractSatelliteCommand()
 	 * @generated
 	 */
 	EReference getAbstractSatelliteCommand_ConstellationRequest();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Acquire Image Satellite Command</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand
 	 * @generated
 	 */
 	EClass getAcquireImageSatelliteCommand();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand#getRollAngle <em>Roll Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand#getRollAngle <em>Roll Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Roll Angle</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand#getRollAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand#getRollAngle()
 	 * @see #getAcquireImageSatelliteCommand()
 	 * @generated
 	 */
 	EAttribute getAcquireImageSatelliteCommand_RollAngle();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.OrbitalImage <em>Orbital Image</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage <em>Orbital Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Orbital Image</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage
 	 * @generated
 	 */
 	EClass getOrbitalImage();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Coordinates</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates()
 	 * @see #getOrbitalImage()
 	 * @generated
 	 */
 	EReference getOrbitalImage_Coordinates();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Roll Angle</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getRollAngle()
 	 * @see #getOrbitalImage()
 	 * @generated
 	 */
 	EAttribute getOrbitalImage_RollAngle();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation Downlinks List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlinksList
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList
 	 * @generated
 	 */
 	EClass getConstellationDownlinksList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList#getDownlinks <em>Downlinks</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getDownlinks <em>Downlinks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Downlinks</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlinksList#getDownlinks()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList#getDownlinks()
 	 * @see #getConstellationDownlinksList()
 	 * @generated
 	 */
 	EReference getConstellationDownlinksList_Downlinks();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlink <em>Constellation Downlink</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink <em>Constellation Downlink</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation Downlink</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlink
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink
 	 * @generated
 	 */
 	EClass getConstellationDownlink();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlink#getDownlinkItems <em>Downlink Items</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getDownlinkItems <em>Downlink Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Downlink Items</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlink#getDownlinkItems()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getDownlinkItems()
 	 * @see #getConstellationDownlink()
 	 * @generated
 	 */
 	EReference getConstellationDownlink_DownlinkItems();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem <em>Abstract Constellation Downlink Item</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem <em>Abstract Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Constellation Downlink Item</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem
 	 * @generated
 	 */
 	EClass getAbstractConstellationDownlinkItem();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Request UID</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID()
 	 * @see #getAbstractConstellationDownlinkItem()
 	 * @generated
 	 */
 	EAttribute getAbstractConstellationDownlinkItem_RequestUID();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem <em>Orbital Image Constellation Downlink Item</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem <em>Orbital Image Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Orbital Image Constellation Downlink Item</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem
 	 * @generated
 	 */
 	EClass getOrbitalImageConstellationDownlinkItem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Image</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage()
 	 * @see #getOrbitalImageConstellationDownlinkItem()
 	 * @generated
 	 */
 	EReference getOrbitalImageConstellationDownlinkItem_Image();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationUtilities <em>Constellation Utilities</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities <em>Constellation Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation Utilities</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationUtilities
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities
 	 * @generated
 	 */
 	EClass getConstellationUtilities();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.ConstellationUtilities#sortByPriority(java.util.List) <em>Sort By Priority</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities#sortByPriority(java.util.List) <em>Sort By Priority</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Sort By Priority</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationUtilities#sortByPriority(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities#sortByPriority(java.util.List)
 	 * @generated
 	 */
 	EOperation getConstellationUtilities__SortByPriority__List();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Constellation Request Priority</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestPriority
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority
 	 * @generated
 	 */
 	EEnum getConstellationRequestPriority();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Constellation Request Status</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestStatus
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus
 	 * @generated
 	 */
 	EEnum getConstellationRequestStatus();
@@ -1827,7 +1827,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesSatelliteFactory getSymphony__ExamplesSatelliteFactory();
+	ApogyExamplesSatelliteFactory getApogyExamplesSatelliteFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1844,11 +1844,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellation()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellation()
 		 * @generated
 		 */
 		EClass ABSTRACT_CONSTELLATION = eINSTANCE.getAbstractConstellation();
@@ -1950,11 +1950,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EOperation ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST = eINSTANCE.getAbstractConstellation__RemoveAll__List();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl <em>Constellation Command Plan</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanImpl <em>Constellation Command Plan</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlan()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationCommandPlan()
 		 * @generated
 		 */
 		EClass CONSTELLATION_COMMAND_PLAN = eINSTANCE.getConstellationCommandPlan();
@@ -1968,11 +1968,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS = eINSTANCE.getConstellationCommandPlan_ConstellationCommandPlanItems();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl <em>Constellation Command Plan Item</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanItemImpl <em>Constellation Command Plan Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlanItem()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanItemImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationCommandPlanItem()
 		 * @generated
 		 */
 		EClass CONSTELLATION_COMMAND_PLAN_ITEM = eINSTANCE.getConstellationCommandPlanItem();
@@ -1994,21 +1994,21 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND = eINSTANCE.getConstellationCommandPlanItem_SatelliteCommand();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl <em>Default Constellation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationImpl <em>Default Constellation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getDefaultConstellation()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.DefaultConstellationImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getDefaultConstellation()
 		 * @generated
 		 */
 		EClass DEFAULT_CONSTELLATION = eINSTANCE.getDefaultConstellation();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl <em>Constellation Requests List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl <em>Constellation Requests List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestsList()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationRequestsListImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestsList()
 		 * @generated
 		 */
 		EClass CONSTELLATION_REQUESTS_LIST = eINSTANCE.getConstellationRequestsList();
@@ -2022,11 +2022,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS = eINSTANCE.getConstellationRequestsList_ConstellationRequests();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl <em>Abstract Constellation Request</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl <em>Abstract Constellation Request</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationRequest()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationRequest()
 		 * @generated
 		 */
 		EClass ABSTRACT_CONSTELLATION_REQUEST = eINSTANCE.getAbstractConstellationRequest();
@@ -2064,11 +2064,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND = eINSTANCE.getAbstractConstellationRequest_SatelliteCommand();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl <em>Image Constellation Request</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl <em>Image Constellation Request</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getImageConstellationRequest()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ImageConstellationRequestImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getImageConstellationRequest()
 		 * @generated
 		 */
 		EClass IMAGE_CONSTELLATION_REQUEST = eINSTANCE.getImageConstellationRequest();
@@ -2082,11 +2082,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference IMAGE_CONSTELLATION_REQUEST__IMAGE = eINSTANCE.getImageConstellationRequest_Image();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl <em>Satellites List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatellitesListImpl <em>Satellites List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatellitesList()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.SatellitesListImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSatellitesList()
 		 * @generated
 		 */
 		EClass SATELLITES_LIST = eINSTANCE.getSatellitesList();
@@ -2100,11 +2100,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference SATELLITES_LIST__SATELLITES = eINSTANCE.getSatellitesList_Satellites();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl <em>Satellite</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl <em>Satellite</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatellite()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSatellite()
 		 * @generated
 		 */
 		EClass SATELLITE = eINSTANCE.getSatellite();
@@ -2134,11 +2134,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EAttribute SATELLITE__MAXIMUM_ROLL = eINSTANCE.getSatellite_MaximumRoll();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl <em>Abstract Satellite Command</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl <em>Abstract Satellite Command</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractSatelliteCommand()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractSatelliteCommandImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractSatelliteCommand()
 		 * @generated
 		 */
 		EClass ABSTRACT_SATELLITE_COMMAND = eINSTANCE.getAbstractSatelliteCommand();
@@ -2160,11 +2160,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST = eINSTANCE.getAbstractSatelliteCommand_ConstellationRequest();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AcquireImageSatelliteCommandImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
 		 * @generated
 		 */
 		EClass ACQUIRE_IMAGE_SATELLITE_COMMAND = eINSTANCE.getAcquireImageSatelliteCommand();
@@ -2178,11 +2178,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EAttribute ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE = eINSTANCE.getAcquireImageSatelliteCommand_RollAngle();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getOrbitalImage()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImage()
 		 * @generated
 		 */
 		EClass ORBITAL_IMAGE = eINSTANCE.getOrbitalImage();
@@ -2204,11 +2204,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EAttribute ORBITAL_IMAGE__ROLL_ANGLE = eINSTANCE.getOrbitalImage_RollAngle();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl <em>Constellation Downlinks List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl <em>Constellation Downlinks List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlinksList()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlinksList()
 		 * @generated
 		 */
 		EClass CONSTELLATION_DOWNLINKS_LIST = eINSTANCE.getConstellationDownlinksList();
@@ -2222,11 +2222,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS = eINSTANCE.getConstellationDownlinksList_Downlinks();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl <em>Constellation Downlink</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinkImpl <em>Constellation Downlink</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlink()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinkImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationDownlink()
 		 * @generated
 		 */
 		EClass CONSTELLATION_DOWNLINK = eINSTANCE.getConstellationDownlink();
@@ -2240,11 +2240,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference CONSTELLATION_DOWNLINK__DOWNLINK_ITEMS = eINSTANCE.getConstellationDownlink_DownlinkItems();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl <em>Abstract Constellation Downlink Item</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationDownlinkItemImpl <em>Abstract Constellation Downlink Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationDownlinkItemImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
 		 * @generated
 		 */
 		EClass ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = eINSTANCE.getAbstractConstellationDownlinkItem();
@@ -2258,11 +2258,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EAttribute ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID = eINSTANCE.getAbstractConstellationDownlinkItem_RequestUID();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl <em>Orbital Image Constellation Downlink Item</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl <em>Orbital Image Constellation Downlink Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
 		 * @generated
 		 */
 		EClass ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = eINSTANCE.getOrbitalImageConstellationDownlinkItem();
@@ -2276,11 +2276,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EReference ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE = eINSTANCE.getOrbitalImageConstellationDownlinkItem_Image();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl <em>Constellation Utilities</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl <em>Constellation Utilities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationUtilities()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationUtilitiesImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationUtilities()
 		 * @generated
 		 */
 		EClass CONSTELLATION_UTILITIES = eINSTANCE.getConstellationUtilities();
@@ -2294,21 +2294,21 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EOperation CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST = eINSTANCE.getConstellationUtilities__SortByPriority__List();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestPriority
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestPriority()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestPriority()
 		 * @generated
 		 */
 		EEnum CONSTELLATION_REQUEST_PRIORITY = eINSTANCE.getConstellationRequestPriority();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestStatus
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestStatus()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getConstellationRequestStatus()
 		 * @generated
 		 */
 		EEnum CONSTELLATION_REQUEST_STATUS = eINSTANCE.getConstellationRequestStatus();
@@ -2318,7 +2318,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getList()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getList()
 		 * @generated
 		 */
 		EDataType LIST = eINSTANCE.getList();
@@ -2328,11 +2328,11 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.SortedSet
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSortedSet()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatellitePackageImpl#getSortedSet()
 		 * @generated
 		 */
 		EDataType SORTED_SET = eINSTANCE.getSortedSet();
 
 	}
 
-} //Symphony__ExamplesSatellitePackage
+} //ApogyExamplesSatellitePackage

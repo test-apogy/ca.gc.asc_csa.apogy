@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ public class Activator implements BundleActivator
 	
 	private static BundleContext context;
 	
-	public static final String ID = "org.eclipse.symphony.addons";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons";
 	
 	// The shared instance
 	private static Activator plugin;	
@@ -51,7 +51,7 @@ public class Activator implements BundleActivator
 	 */
 	public void stop(BundleContext bundleContext) throws Exception 
 	{
-		// org.eclipse.symphony.core.topology.ui.Activator.unregisterActiveViewerListener(getActiveViewerListener() );
+		// ca.gc.asc_csa.apogy.core.topology.ui.Activator.unregisterActiveViewerListener(getActiveViewerListener() );
 		Activator.context = null;
 	}
 	public static void registerSimple3DTool(Simple3DTool tool)
@@ -69,7 +69,7 @@ public class Activator implements BundleActivator
 	{
 		if(topologyViewerSelectionListenerManager == null)
 		{
-			topologyViewerSelectionListenerManager = new TopologyViewerListenerManager(org.eclipse.symphony.common.topology.ui.viewer.Activator.getTopologyViewerRegistry());			
+			topologyViewerSelectionListenerManager = new TopologyViewerListenerManager(ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getTopologyViewerRegistry());			
 		}
 		return topologyViewerSelectionListenerManager;
 	}

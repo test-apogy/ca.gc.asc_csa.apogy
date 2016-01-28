@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.addons.ros.ROSService;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ROSService;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.ROSService} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSService} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -83,7 +83,7 @@ public class ROSServiceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSService_serviceName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSService_serviceName_feature", "_UI_ROSService_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE__SERVICE_NAME,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE__SERVICE_NAME,
 				 true,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class ROSServiceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSService_serviceType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSService_serviceType_feature", "_UI_ROSService_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE__SERVICE_TYPE,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE__SERVICE_TYPE,
 				 true,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class ROSServiceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSService_launched_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSService_launched_feature", "_UI_ROSService_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE__LAUNCHED,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE__LAUNCHED,
 				 true,
 				 false,
 				 false,
@@ -149,7 +149,7 @@ public class ROSServiceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSService_serviceClient_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSService_serviceClient_feature", "_UI_ROSService_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE__SERVICE_CLIENT,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE__SERVICE_CLIENT,
 				 true,
 				 false,
 				 false,
@@ -171,7 +171,7 @@ public class ROSServiceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSService_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSService_node_feature", "_UI_ROSService_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE__NODE,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE__NODE,
 				 true,
 				 false,
 				 true,
@@ -193,7 +193,7 @@ public class ROSServiceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSService_disconnectOnTimeout_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSService_disconnectOnTimeout_feature", "_UI_ROSService_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE__DISCONNECT_ON_TIMEOUT,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE__DISCONNECT_ON_TIMEOUT,
 				 true,
 				 false,
 				 false,
@@ -262,11 +262,11 @@ public class ROSServiceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ROSService.class)) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
-			case Symphony__AddonsROSPackage.ROS_SERVICE__LAUNCHED:
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
-			case Symphony__AddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__LAUNCHED:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

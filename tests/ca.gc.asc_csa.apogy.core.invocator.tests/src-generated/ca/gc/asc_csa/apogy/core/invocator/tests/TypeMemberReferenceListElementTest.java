@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
 
 import junit.textui.TestRunner;
 
@@ -15,11 +15,11 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isRoot() <em>Root</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getRootElement() <em>Root Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getLeafElement() <em>Leaf Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isLeaf() <em>Leaf</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount() <em>Sub Segments Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isRoot() <em>Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getRootElement() <em>Root Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getLeafElement() <em>Leaf Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isLeaf() <em>Leaf</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount() <em>Sub Segments Count</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -64,7 +64,7 @@ public class TypeMemberReferenceListElementTest extends TypeMemberReferenceTest 
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement());
 	}
 
 	/**
@@ -79,10 +79,10 @@ public class TypeMemberReferenceListElementTest extends TypeMemberReferenceTest 
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isRoot() <em>Root</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isRoot() <em>Root</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isRoot()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isRoot()
 	 * @generated
 	 */
 	public void testIsRoot() {
@@ -92,10 +92,10 @@ public class TypeMemberReferenceListElementTest extends TypeMemberReferenceTest 
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getRootElement() <em>Root Element</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getRootElement() <em>Root Element</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getRootElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getRootElement()
 	 * @generated
 	 */
 	public void testGetRootElement() {
@@ -105,10 +105,10 @@ public class TypeMemberReferenceListElementTest extends TypeMemberReferenceTest 
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getLeafElement() <em>Leaf Element</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getLeafElement() <em>Leaf Element</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getLeafElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getLeafElement()
 	 * @generated
 	 */
 	public void testGetLeafElement() {
@@ -118,10 +118,10 @@ public class TypeMemberReferenceListElementTest extends TypeMemberReferenceTest 
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isLeaf() <em>Leaf</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isLeaf() <em>Leaf</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isLeaf()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isLeaf()
 	 * @generated
 	 */
 	public void testIsLeaf() {
@@ -131,10 +131,10 @@ public class TypeMemberReferenceListElementTest extends TypeMemberReferenceTest 
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount() <em>Sub Segments Count</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount() <em>Sub Segments Count</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount()
 	 * @generated
 	 */
 	public void testGetSubSegmentsCount() {

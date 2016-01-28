@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,27 +21,27 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList <em>Node Presentation List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationRegistry()
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getTopologyPresentationRegistry()
  * @model
  * @generated
  */
 public interface TopologyPresentationRegistry extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Topology Presentation Set List</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of TopologyPresentationSet managed by the TopologyPresentationRegistry.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Presentation Set List</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationRegistry_TopologyPresentationSetList()
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getTopologyPresentationRegistry_TopologyPresentationSetList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry
 	 * @model opposite="topologyPresentationRegistry" containment="true"
 	 * @generated
 	 */
@@ -49,14 +49,14 @@ public interface TopologyPresentationRegistry extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Node Presentation List</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.ui.NodePresentation}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of NodePresentation managed by this PresentationTopology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node Presentation List</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationRegistry_NodePresentationList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getTopologyPresentationRegistry_NodePresentationList()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -4,7 +4,7 @@
  *
  * $Id: RangeScannerImpl.java,v 1.4.4.2 2015/05/21 15:50:21 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,12 +13,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RangeScanner;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RangeScanner;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +28,9 @@ import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerImpl#getInput <em>Input</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RangeScannerImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RangeScannerImpl#getInput <em>Input</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RangeScannerImpl#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,7 +89,7 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER;
+		return ApogyAddonsSensorsRangePackage.Literals.RANGE_SCANNER;
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 		IProgressMonitor oldProgressMonitor = progressMonitor;
 		progressMonitor = newProgressMonitor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 		InputType oldInput = input;
 		input = newInput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT, oldInput, input));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT, oldInput, input));
 	}
 
 	/**
@@ -152,7 +152,7 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 		VolumetricCoordinatesSet25D oldOutput = output;
 		output = newOutput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT, oldOutput, output));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT, oldOutput, output));
 	}
 
 	/**
@@ -174,11 +174,11 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
 				return getProgressMonitor();
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
 				return getInput();
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
 				return getOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -193,13 +193,13 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
 				setProgressMonitor((IProgressMonitor)newValue);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
 				setInput((InputType)newValue);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
 				setOutput((VolumetricCoordinatesSet25D)newValue);
 				return;
 		}
@@ -214,13 +214,13 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
 				setProgressMonitor(PROGRESS_MONITOR_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
 				setInput((InputType)null);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
 				setOutput((VolumetricCoordinatesSet25D)null);
 				return;
 		}
@@ -235,11 +235,11 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
 				return PROGRESS_MONITOR_EDEFAULT == null ? progressMonitor != null : !PROGRESS_MONITOR_EDEFAULT.equals(progressMonitor);
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
 				return input != null;
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
 				return output != null;
 		}
 		return super.eIsSet(featureID);
@@ -254,14 +254,14 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Monitorable.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR: return Symphony__CommonProcessorsPackage.MONITORABLE__PROGRESS_MONITOR;
+				case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR: return ApogyCommonProcessorsPackage.MONITORABLE__PROGRESS_MONITOR;
 				default: return -1;
 			}
 		}
 		if (baseClass == Processor.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT: return Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
-				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT: return Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+				case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT: return ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
+				case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT: return ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 				default: return -1;
 			}
 		}
@@ -277,14 +277,14 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Monitorable.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonProcessorsPackage.MONITORABLE__PROGRESS_MONITOR: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR;
+				case ApogyCommonProcessorsPackage.MONITORABLE__PROGRESS_MONITOR: return ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR;
 				default: return -1;
 			}
 		}
 		if (baseClass == Processor.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT;
-				case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT;
+				case ApogyCommonProcessorsPackage.PROCESSOR__INPUT: return ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT;
+				case ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT: return ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT;
 				default: return -1;
 			}
 		}
@@ -305,7 +305,7 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 		}
 		if (baseClass == Processor.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER___PROCESS__OBJECT;
+				case ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT: return ApogyAddonsSensorsRangePackage.RANGE_SCANNER___PROCESS__OBJECT;
 				default: return -1;
 			}
 		}
@@ -321,7 +321,7 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER___PROCESS__OBJECT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER___PROCESS__OBJECT:
 				try {
 					return process((InputType)arguments.get(0));
 				}

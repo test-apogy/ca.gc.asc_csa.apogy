@@ -4,13 +4,13 @@
  *
  * $Id: CADNodeImpl.java,v 1.3.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.CADNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.CADNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.CADNodeImpl#getNodeName <em>Node Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.CADNodeImpl#getNodeName <em>Node Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,7 +62,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.CAD_NODE;
+		return ApogyCommonTopologyPackage.Literals.CAD_NODE;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 		String oldNodeName = nodeName;
 		nodeName = newNodeName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME, oldNodeName, nodeName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.CAD_NODE__NODE_NAME, oldNodeName, nodeName));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
+			case ApogyCommonTopologyPackage.CAD_NODE__NODE_NAME:
 				return getNodeName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
+			case ApogyCommonTopologyPackage.CAD_NODE__NODE_NAME:
 				setNodeName((String)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
+			case ApogyCommonTopologyPackage.CAD_NODE__NODE_NAME:
 				setNodeName(NODE_NAME_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
+			case ApogyCommonTopologyPackage.CAD_NODE__NODE_NAME:
 				return NODE_NAME_EDEFAULT == null ? nodeName != null : !NODE_NAME_EDEFAULT.equals(nodeName);
 		}
 		return super.eIsSet(featureID);

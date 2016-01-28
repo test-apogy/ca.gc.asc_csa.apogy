@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.impl;
+package ca.gc.asc_csa.apogy.core.ui.impl;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFactory;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,39 +33,39 @@ import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphony__CoreUIPackage
+public class ApogyCoreUIPackageImpl extends EPackageImpl implements ApogyCoreUIPackage
 {
   /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CoreUIFacadeEClass = null;
+	private EClass apogy__CoreUIFacadeEClass = null;
 		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphonyResourceSettingsEClass = null;
+	private EClass apogyResourceSettingsEClass = null;
 		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass newSymphonyProjectSettingsEClass = null;
+	private EClass newApogyProjectSettingsEClass = null;
 		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass newSymphonySessionSettingsEClass = null;
+  private EClass newApogySessionSettingsEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass newSymphonySystemSettingsEClass = null;
+	private EClass newApogySystemSettingsEClass = null;
 		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -109,13 +109,13 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__CoreUIPackageImpl()
+  private ApogyCoreUIPackageImpl()
   {
-		super(eNS_URI, Symphony__CoreUIFactory.eINSTANCE);
+		super(eNS_URI, ApogyCoreUIFactory.eINSTANCE);
 	}
 
   /**
@@ -128,7 +128,7 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CoreUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCoreUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -137,32 +137,32 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__CoreUIPackage init()
+  public static ApogyCoreUIPackage init()
   {
-		if (isInited) return (Symphony__CoreUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreUIPackage.eNS_URI);
+		if (isInited) return (ApogyCoreUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CoreUIPackageImpl theSymphony__CoreUIPackage = (Symphony__CoreUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CoreUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CoreUIPackageImpl());
+		ApogyCoreUIPackageImpl theApogyCoreUIPackage = (ApogyCoreUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCoreUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCoreUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CorePackage.eINSTANCE.eClass();
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCorePackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CoreUIPackage.createPackageContents();
+		theApogyCoreUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CoreUIPackage.initializePackageContents();
+		theApogyCoreUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CoreUIPackage.freeze();
+		theApogyCoreUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CoreUIPackage.eNS_URI, theSymphony__CoreUIPackage);
-		return theSymphony__CoreUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCoreUIPackage.eNS_URI, theApogyCoreUIPackage);
+		return theApogyCoreUIPackage;
 	}
 
   /**
@@ -170,8 +170,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CoreUIFacade() {
-		return symphony__CoreUIFacadeEClass;
+	public EClass getApogyCoreUIFacade() {
+		return apogy__CoreUIFacadeEClass;
 	}
 
 		/**
@@ -179,8 +179,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSymphony__CoreUIFacade_DefaultSymphonyProjectNamePrefix() {
-		return (EAttribute)symphony__CoreUIFacadeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getApogyCoreUIFacade_DefaultApogyProjectNamePrefix() {
+		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -188,8 +188,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFilename() {
-		return (EAttribute)symphony__CoreUIFacadeEClass.getEStructuralFeatures().get(1);
+	public EAttribute getApogyCoreUIFacade_DefaultApogySessionFilename() {
+		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
 		/**
@@ -197,8 +197,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFilenameExtension() {
-		return (EAttribute)symphony__CoreUIFacadeEClass.getEStructuralFeatures().get(2);
+	public EAttribute getApogyCoreUIFacade_DefaultApogySessionFilenameExtension() {
+		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(2);
 	}
 
 		/**
@@ -206,8 +206,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFolderName() {
-		return (EAttribute)symphony__CoreUIFacadeEClass.getEStructuralFeatures().get(3);
+	public EAttribute getApogyCoreUIFacade_DefaultApogySessionFolderName() {
+		return (EAttribute)apogy__CoreUIFacadeEClass.getEStructuralFeatures().get(3);
 	}
 
 		/**
@@ -215,8 +215,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreUIFacade__CreateSymphonyProject__NewSymphonyProjectSettings() {
-		return symphony__CoreUIFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCoreUIFacade__CreateApogyProject__NewApogyProjectSettings() {
+		return apogy__CoreUIFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -224,8 +224,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreUIFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings() {
-		return symphony__CoreUIFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCoreUIFacade__CreateApogySessionFolder__NewApogyProjectSettings() {
+		return apogy__CoreUIFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -233,8 +233,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreUIFacade__CreateSymphonySession__NewSymphonySessionSettings() {
-		return symphony__CoreUIFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCoreUIFacade__CreateApogySession__NewApogySessionSettings() {
+		return apogy__CoreUIFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -242,8 +242,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreUIFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession() {
-		return symphony__CoreUIFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyCoreUIFacade__CreateApogySessionFile__IContainer_String_InvocatorSession() {
+		return apogy__CoreUIFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -251,8 +251,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreUIFacade__GetSymphonySessionFile__IContainer_String() {
-		return symphony__CoreUIFacadeEClass.getEOperations().get(4);
+	public EOperation getApogyCoreUIFacade__GetApogySessionFile__IContainer_String() {
+		return apogy__CoreUIFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -260,8 +260,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreUIFacade__CreateSymphonySystem__NewSymphonySystemSettings() {
-		return symphony__CoreUIFacadeEClass.getEOperations().get(5);
+	public EOperation getApogyCoreUIFacade__CreateApogySystem__NewApogySystemSettings() {
+		return apogy__CoreUIFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -269,8 +269,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphonyResourceSettings() {
-		return symphonyResourceSettingsEClass;
+	public EClass getApogyResourceSettings() {
+		return apogyResourceSettingsEClass;
 	}
 
 		/**
@@ -278,8 +278,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSymphonyResourceSettings_ResourceProject() {
-		return (EAttribute)symphonyResourceSettingsEClass.getEStructuralFeatures().get(0);
+	public EAttribute getApogyResourceSettings_ResourceProject() {
+		return (EAttribute)apogyResourceSettingsEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -287,8 +287,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSymphonyResourceSettings_ResourceFile() {
-		return (EAttribute)symphonyResourceSettingsEClass.getEStructuralFeatures().get(1);
+	public EAttribute getApogyResourceSettings_ResourceFile() {
+		return (EAttribute)apogyResourceSettingsEClass.getEStructuralFeatures().get(1);
 	}
 
 		/**
@@ -296,8 +296,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSymphonyResourceSettings_ResourceContainer() {
-		return (EAttribute)symphonyResourceSettingsEClass.getEStructuralFeatures().get(2);
+	public EAttribute getApogyResourceSettings_ResourceContainer() {
+		return (EAttribute)apogyResourceSettingsEClass.getEStructuralFeatures().get(2);
 	}
 
 		/**
@@ -305,8 +305,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNewSymphonyProjectSettings() {
-		return newSymphonyProjectSettingsEClass;
+	public EClass getNewApogyProjectSettings() {
+		return newApogyProjectSettingsEClass;
 	}
 
 		/**
@@ -314,8 +314,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNewSymphonyProjectSettings_Name() {
-		return (EAttribute)newSymphonyProjectSettingsEClass.getEStructuralFeatures().get(0);
+	public EAttribute getNewApogyProjectSettings_Name() {
+		return (EAttribute)newApogyProjectSettingsEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -323,8 +323,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNewSymphonyProjectSettings_ImportRegisteredProject() {
-		return (EAttribute)newSymphonyProjectSettingsEClass.getEStructuralFeatures().get(1);
+	public EAttribute getNewApogyProjectSettings_ImportRegisteredProject() {
+		return (EAttribute)newApogyProjectSettingsEClass.getEStructuralFeatures().get(1);
 	}
 
 		/**
@@ -332,8 +332,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getNewSymphonyProjectSettings__GetDefaultProjectName() {
-		return newSymphonyProjectSettingsEClass.getEOperations().get(0);
+	public EOperation getNewApogyProjectSettings__GetDefaultProjectName() {
+		return newApogyProjectSettingsEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -341,8 +341,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getNewSymphonyProjectSettings__SetDefaultValues() {
-		return newSymphonyProjectSettingsEClass.getEOperations().get(1);
+	public EOperation getNewApogyProjectSettings__SetDefaultValues() {
+		return newApogyProjectSettingsEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -350,9 +350,9 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getNewSymphonySessionSettings()
+  public EClass getNewApogySessionSettings()
   {
-		return newSymphonySessionSettingsEClass;
+		return newApogySessionSettingsEClass;
 	}
 
   /**
@@ -360,9 +360,9 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNewSymphonySessionSettings_Folder()
+  public EAttribute getNewApogySessionSettings_Folder()
   {
-		return (EAttribute)newSymphonySessionSettingsEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)newApogySessionSettingsEClass.getEStructuralFeatures().get(0);
 	}
 
   /**
@@ -370,9 +370,9 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNewSymphonySessionSettings_Filename()
+  public EAttribute getNewApogySessionSettings_Filename()
   {
-		return (EAttribute)newSymphonySessionSettingsEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)newApogySessionSettingsEClass.getEStructuralFeatures().get(1);
 	}
 
   /**
@@ -380,9 +380,9 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNewSymphonySessionSettings_CreateEnvironment()
+  public EAttribute getNewApogySessionSettings_CreateEnvironment()
   {
-		return (EAttribute)newSymphonySessionSettingsEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)newApogySessionSettingsEClass.getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -390,9 +390,9 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNewSymphonySessionSettings_CreatePrograms()
+  public EAttribute getNewApogySessionSettings_CreatePrograms()
   {
-		return (EAttribute)newSymphonySessionSettingsEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)newApogySessionSettingsEClass.getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -400,9 +400,9 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNewSymphonySessionSettings_CreateDataProducts()
+  public EAttribute getNewApogySessionSettings_CreateDataProducts()
   {
-		return (EAttribute)newSymphonySessionSettingsEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)newApogySessionSettingsEClass.getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -410,9 +410,9 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNewSymphonySessionSettings_CreateTools()
+  public EAttribute getNewApogySessionSettings_CreateTools()
   {
-		return (EAttribute)newSymphonySessionSettingsEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)newApogySessionSettingsEClass.getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -420,8 +420,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getNewSymphonySessionSettings__GetDefaultFilename__IContainer() {
-		return newSymphonySessionSettingsEClass.getEOperations().get(0);
+	public EOperation getNewApogySessionSettings__GetDefaultFilename__IContainer() {
+		return newApogySessionSettingsEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -429,8 +429,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getNewSymphonySessionSettings__SetDefaultValues__IContainer() {
-		return newSymphonySessionSettingsEClass.getEOperations().get(1);
+	public EOperation getNewApogySessionSettings__SetDefaultValues__IContainer() {
+		return newApogySessionSettingsEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -438,8 +438,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNewSymphonySystemSettings() {
-		return newSymphonySystemSettingsEClass;
+	public EClass getNewApogySystemSettings() {
+		return newApogySystemSettingsEClass;
 	}
 
 		/**
@@ -447,8 +447,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNewSymphonySystemSettings_Folder() {
-		return (EAttribute)newSymphonySystemSettingsEClass.getEStructuralFeatures().get(0);
+	public EAttribute getNewApogySystemSettings_Folder() {
+		return (EAttribute)newApogySystemSettingsEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -456,8 +456,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNewSymphonySystemSettings_Filename() {
-		return (EAttribute)newSymphonySystemSettingsEClass.getEStructuralFeatures().get(1);
+	public EAttribute getNewApogySystemSettings_Filename() {
+		return (EAttribute)newApogySystemSettingsEClass.getEStructuralFeatures().get(1);
 	}
 
 		/**
@@ -531,8 +531,8 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreUIFactory getSymphony__CoreUIFactory() {
-		return (Symphony__CoreUIFactory)getEFactoryInstance();
+	public ApogyCoreUIFactory getApogyCoreUIFactory() {
+		return (ApogyCoreUIFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -555,42 +555,42 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 		isCreated = true;
 
 		// Create classes and their features
-		symphony__CoreUIFacadeEClass = createEClass(SYMPHONY_CORE_UI_FACADE);
-		createEAttribute(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX);
-		createEAttribute(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME);
-		createEAttribute(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION);
-		createEAttribute(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME);
-		createEOperation(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS);
-		createEOperation(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS);
-		createEOperation(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS);
-		createEOperation(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION);
-		createEOperation(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING);
-		createEOperation(symphony__CoreUIFacadeEClass, SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS);
+		apogy__CoreUIFacadeEClass = createEClass(APOGY_CORE_UI_FACADE);
+		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX);
+		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME);
+		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION);
+		createEAttribute(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME);
+		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS);
+		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS);
+		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS);
+		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION);
+		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___GET_APOGY_SESSION_FILE__ICONTAINER_STRING);
+		createEOperation(apogy__CoreUIFacadeEClass, APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS);
 
-		symphonyResourceSettingsEClass = createEClass(SYMPHONY_RESOURCE_SETTINGS);
-		createEAttribute(symphonyResourceSettingsEClass, SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT);
-		createEAttribute(symphonyResourceSettingsEClass, SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE);
-		createEAttribute(symphonyResourceSettingsEClass, SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER);
+		apogyResourceSettingsEClass = createEClass(APOGY_RESOURCE_SETTINGS);
+		createEAttribute(apogyResourceSettingsEClass, APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT);
+		createEAttribute(apogyResourceSettingsEClass, APOGY_RESOURCE_SETTINGS__RESOURCE_FILE);
+		createEAttribute(apogyResourceSettingsEClass, APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER);
 
-		newSymphonyProjectSettingsEClass = createEClass(NEW_SYMPHONY_PROJECT_SETTINGS);
-		createEAttribute(newSymphonyProjectSettingsEClass, NEW_SYMPHONY_PROJECT_SETTINGS__NAME);
-		createEAttribute(newSymphonyProjectSettingsEClass, NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT);
-		createEOperation(newSymphonyProjectSettingsEClass, NEW_SYMPHONY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME);
-		createEOperation(newSymphonyProjectSettingsEClass, NEW_SYMPHONY_PROJECT_SETTINGS___SET_DEFAULT_VALUES);
+		newApogyProjectSettingsEClass = createEClass(NEW_APOGY_PROJECT_SETTINGS);
+		createEAttribute(newApogyProjectSettingsEClass, NEW_APOGY_PROJECT_SETTINGS__NAME);
+		createEAttribute(newApogyProjectSettingsEClass, NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT);
+		createEOperation(newApogyProjectSettingsEClass, NEW_APOGY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME);
+		createEOperation(newApogyProjectSettingsEClass, NEW_APOGY_PROJECT_SETTINGS___SET_DEFAULT_VALUES);
 
-		newSymphonySessionSettingsEClass = createEClass(NEW_SYMPHONY_SESSION_SETTINGS);
-		createEAttribute(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS__FOLDER);
-		createEAttribute(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS__FILENAME);
-		createEAttribute(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT);
-		createEAttribute(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS);
-		createEAttribute(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS);
-		createEAttribute(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS);
-		createEOperation(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER);
-		createEOperation(newSymphonySessionSettingsEClass, NEW_SYMPHONY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER);
+		newApogySessionSettingsEClass = createEClass(NEW_APOGY_SESSION_SETTINGS);
+		createEAttribute(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS__FOLDER);
+		createEAttribute(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS__FILENAME);
+		createEAttribute(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT);
+		createEAttribute(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS);
+		createEAttribute(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS);
+		createEAttribute(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS);
+		createEOperation(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER);
+		createEOperation(newApogySessionSettingsEClass, NEW_APOGY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER);
 
-		newSymphonySystemSettingsEClass = createEClass(NEW_SYMPHONY_SYSTEM_SETTINGS);
-		createEAttribute(newSymphonySystemSettingsEClass, NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER);
-		createEAttribute(newSymphonySystemSettingsEClass, NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME);
+		newApogySystemSettingsEClass = createEClass(NEW_APOGY_SYSTEM_SETTINGS);
+		createEAttribute(newApogySystemSettingsEClass, NEW_APOGY_SYSTEM_SETTINGS__FOLDER);
+		createEAttribute(newApogySystemSettingsEClass, NEW_APOGY_SYSTEM_SETTINGS__FILENAME);
 
 		resultNodePresentationEClass = createEClass(RESULT_NODE_PRESENTATION);
 		createEAttribute(resultNodePresentationEClass, RESULT_NODE_PRESENTATION__POLE_HEIGHT);
@@ -629,77 +629,77 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		resultNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getTransformNodePresentation());
+		resultNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getTransformNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(symphony__CoreUIFacadeEClass, Symphony__CoreUIFacade.class, "Symphony__CoreUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSymphony__CoreUIFacade_DefaultSymphonyProjectNamePrefix(), theEcorePackage.getEString(), "defaultSymphonyProjectNamePrefix", "Project", 0, 1, Symphony__CoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSymphony__CoreUIFacade_DefaultSymphonySessionFilename(), theEcorePackage.getEString(), "defaultSymphonySessionFilename", "session", 0, 1, Symphony__CoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSymphony__CoreUIFacade_DefaultSymphonySessionFilenameExtension(), theEcorePackage.getEString(), "defaultSymphonySessionFilenameExtension", "sym", 0, 1, Symphony__CoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSymphony__CoreUIFacade_DefaultSymphonySessionFolderName(), theEcorePackage.getEString(), "defaultSymphonySessionFolderName", "Sessions", 0, 1, Symphony__CoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(apogy__CoreUIFacadeEClass, ApogyCoreUIFacade.class, "ApogyCoreUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getApogyCoreUIFacade_DefaultApogyProjectNamePrefix(), theEcorePackage.getEString(), "defaultApogyProjectNamePrefix", "Project", 0, 1, ApogyCoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyCoreUIFacade_DefaultApogySessionFilename(), theEcorePackage.getEString(), "defaultApogySessionFilename", "session", 0, 1, ApogyCoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyCoreUIFacade_DefaultApogySessionFilenameExtension(), theEcorePackage.getEString(), "defaultApogySessionFilenameExtension", "sym", 0, 1, ApogyCoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyCoreUIFacade_DefaultApogySessionFolderName(), theEcorePackage.getEString(), "defaultApogySessionFolderName", "Sessions", 0, 1, ApogyCoreUIFacade.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getSymphony__CoreUIFacade__CreateSymphonyProject__NewSymphonyProjectSettings(), this.getIProject(), "createSymphonyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNewSymphonyProjectSettings(), "settings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCoreUIFacade__CreateApogyProject__NewApogyProjectSettings(), this.getIProject(), "createApogyProject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNewApogyProjectSettings(), "settings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreUIFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings(), this.getIFolder(), "createSymphonySessionFolder", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNewSymphonyProjectSettings(), "settings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreUIFacade__CreateApogySessionFolder__NewApogyProjectSettings(), this.getIFolder(), "createApogySessionFolder", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNewApogyProjectSettings(), "settings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreUIFacade__CreateSymphonySession__NewSymphonySessionSettings(), theSymphony__CoreInvocatorPackage.getInvocatorSession(), "createSymphonySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNewSymphonySessionSettings(), "sessionSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreUIFacade__CreateApogySession__NewApogySessionSettings(), theApogyCoreInvocatorPackage.getInvocatorSession(), "createApogySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNewApogySessionSettings(), "sessionSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreUIFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession(), this.getIFile(), "createSymphonySessionFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreUIFacade__CreateApogySessionFile__IContainer_String_InvocatorSession(), this.getIFile(), "createApogySessionFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getIContainer(), "resourceContainer", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "filename", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theSymphony__CommonEMFPackage.getException());
+		addEParameter(op, theApogyCoreInvocatorPackage.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCommonEMFPackage.getException());
 
-		op = initEOperation(getSymphony__CoreUIFacade__GetSymphonySessionFile__IContainer_String(), this.getIFile(), "getSymphonySessionFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreUIFacade__GetApogySessionFile__IContainer_String(), this.getIFile(), "getApogySessionFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getIContainer(), "resourceContainer", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "filename", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreUIFacade__CreateSymphonySystem__NewSymphonySystemSettings(), theSymphony__CorePackage.getSymphonySystem(), "createSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNewSymphonySystemSettings(), "systemSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreUIFacade__CreateApogySystem__NewApogySystemSettings(), theApogyCorePackage.getApogySystem(), "createApogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNewApogySystemSettings(), "systemSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(symphonyResourceSettingsEClass, SymphonyResourceSettings.class, "SymphonyResourceSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSymphonyResourceSettings_ResourceProject(), this.getIProject(), "resourceProject", null, 0, 1, SymphonyResourceSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSymphonyResourceSettings_ResourceFile(), this.getIFile(), "resourceFile", null, 0, 1, SymphonyResourceSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSymphonyResourceSettings_ResourceContainer(), this.getIContainer(), "resourceContainer", null, 0, 1, SymphonyResourceSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(apogyResourceSettingsEClass, ApogyResourceSettings.class, "ApogyResourceSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getApogyResourceSettings_ResourceProject(), this.getIProject(), "resourceProject", null, 0, 1, ApogyResourceSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyResourceSettings_ResourceFile(), this.getIFile(), "resourceFile", null, 0, 1, ApogyResourceSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyResourceSettings_ResourceContainer(), this.getIContainer(), "resourceContainer", null, 0, 1, ApogyResourceSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(newSymphonyProjectSettingsEClass, NewSymphonyProjectSettings.class, "NewSymphonyProjectSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNewSymphonyProjectSettings_Name(), theEcorePackage.getEString(), "name", null, 0, 1, NewSymphonyProjectSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNewSymphonyProjectSettings_ImportRegisteredProject(), theEcorePackage.getEBoolean(), "importRegisteredProject", "false", 0, 1, NewSymphonyProjectSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(newApogyProjectSettingsEClass, NewApogyProjectSettings.class, "NewApogyProjectSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNewApogyProjectSettings_Name(), theEcorePackage.getEString(), "name", null, 0, 1, NewApogyProjectSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNewApogyProjectSettings_ImportRegisteredProject(), theEcorePackage.getEBoolean(), "importRegisteredProject", "false", 0, 1, NewApogyProjectSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getNewSymphonyProjectSettings__GetDefaultProjectName(), theEcorePackage.getEString(), "getDefaultProjectName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getNewApogyProjectSettings__GetDefaultProjectName(), theEcorePackage.getEString(), "getDefaultProjectName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getNewSymphonyProjectSettings__SetDefaultValues(), null, "setDefaultValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getNewApogyProjectSettings__SetDefaultValues(), null, "setDefaultValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(newSymphonySessionSettingsEClass, NewSymphonySessionSettings.class, "NewSymphonySessionSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNewSymphonySessionSettings_Folder(), theEcorePackage.getEString(), "folder", null, 0, 1, NewSymphonySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNewSymphonySessionSettings_Filename(), theEcorePackage.getEString(), "filename", null, 0, 1, NewSymphonySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNewSymphonySessionSettings_CreateEnvironment(), theEcorePackage.getEBoolean(), "createEnvironment", "true", 0, 1, NewSymphonySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNewSymphonySessionSettings_CreatePrograms(), theEcorePackage.getEBoolean(), "createPrograms", "true", 0, 1, NewSymphonySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNewSymphonySessionSettings_CreateDataProducts(), theEcorePackage.getEBoolean(), "createDataProducts", "true", 0, 1, NewSymphonySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNewSymphonySessionSettings_CreateTools(), theEcorePackage.getEBoolean(), "createTools", "true", 0, 1, NewSymphonySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(newApogySessionSettingsEClass, NewApogySessionSettings.class, "NewApogySessionSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNewApogySessionSettings_Folder(), theEcorePackage.getEString(), "folder", null, 0, 1, NewApogySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNewApogySessionSettings_Filename(), theEcorePackage.getEString(), "filename", null, 0, 1, NewApogySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNewApogySessionSettings_CreateEnvironment(), theEcorePackage.getEBoolean(), "createEnvironment", "true", 0, 1, NewApogySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNewApogySessionSettings_CreatePrograms(), theEcorePackage.getEBoolean(), "createPrograms", "true", 0, 1, NewApogySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNewApogySessionSettings_CreateDataProducts(), theEcorePackage.getEBoolean(), "createDataProducts", "true", 0, 1, NewApogySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNewApogySessionSettings_CreateTools(), theEcorePackage.getEBoolean(), "createTools", "true", 0, 1, NewApogySessionSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getNewSymphonySessionSettings__GetDefaultFilename__IContainer(), theEcorePackage.getEString(), "getDefaultFilename", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getNewApogySessionSettings__GetDefaultFilename__IContainer(), theEcorePackage.getEString(), "getDefaultFilename", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getIContainer(), "resourceContainer", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getNewSymphonySessionSettings__SetDefaultValues__IContainer(), null, "setDefaultValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getNewApogySessionSettings__SetDefaultValues__IContainer(), null, "setDefaultValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getIContainer(), "resourceContainer", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(newSymphonySystemSettingsEClass, NewSymphonySystemSettings.class, "NewSymphonySystemSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNewSymphonySystemSettings_Folder(), theEcorePackage.getEString(), "folder", null, 0, 1, NewSymphonySystemSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNewSymphonySystemSettings_Filename(), theEcorePackage.getEString(), "filename", null, 0, 1, NewSymphonySystemSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(newApogySystemSettingsEClass, NewApogySystemSettings.class, "NewApogySystemSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNewApogySystemSettings_Folder(), theEcorePackage.getEString(), "folder", null, 0, 1, NewApogySystemSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNewApogySystemSettings_Filename(), theEcorePackage.getEString(), "filename", null, 0, 1, NewApogySystemSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultNodePresentationEClass, ResultNodePresentation.class, "ResultNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResultNodePresentation_PoleHeight(), theEcorePackage.getEFloat(), "poleHeight", "1.0f", 0, 1, ResultNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -715,4 +715,4 @@ public class Symphony__CoreUIPackageImpl extends EPackageImpl implements Symphon
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CoreUIPackageImpl
+} //ApogyCoreUIPackageImpl

@@ -3,15 +3,15 @@
  *
  * $Id: SimulatedPositionSensorImpl.java,v 1.2.4.2 2015/05/21 15:51:31 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import org.eclipse.ui.progress.UIJob;
 
 /**
@@ -22,10 +22,10 @@ import org.eclipse.ui.progress.UIJob;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getXVelocity <em>XVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getYVelocity <em>YVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getZVelocity <em>ZVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getUpdatePeriod <em>Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getXVelocity <em>XVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getYVelocity <em>YVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getZVelocity <em>ZVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
  *
  * @generated
@@ -128,7 +128,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 	
 	private void initialize()
 	{
-		if(getPosition() == null) setPosition(Symphony__CommonMathFactory.eINSTANCE.createTuple3d());
+		if(getPosition() == null) setPosition(ApogyCommonMathFactory.eINSTANCE.createTuple3d());
 		
 		Thread t = new Thread()
     	{			
@@ -140,7 +140,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 					try
 					{	
 						Tuple3d oldPosition = getPosition();
-						Tuple3d newPosition = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+						Tuple3d newPosition = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 											
 						newPosition.setX(oldPosition.getX() + getXVelocity() * getUpdatePeriod());
 						newPosition.setY(oldPosition.getY() + getYVelocity() * getUpdatePeriod());
@@ -169,7 +169,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR;
+		return ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR;
 	}
 
 	/**
@@ -192,7 +192,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 		double oldXVelocity = xVelocity;
 		xVelocity = newXVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY, oldXVelocity, xVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY, oldXVelocity, xVelocity));
 	}
 
 	/**
@@ -215,7 +215,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 		double oldYVelocity = yVelocity;
 		yVelocity = newYVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY, oldYVelocity, yVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY, oldYVelocity, yVelocity));
 	}
 
 	/**
@@ -238,7 +238,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 		double oldZVelocity = zVelocity;
 		zVelocity = newZVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY, oldZVelocity, zVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY, oldZVelocity, zVelocity));
 	}
 
 	/**
@@ -261,7 +261,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 		double oldUpdatePeriod = updatePeriod;
 		updatePeriod = newUpdatePeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
 	}
 
 	/**
@@ -273,13 +273,13 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
 				return getXVelocity();
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
 				return getYVelocity();
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
 				return getZVelocity();
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
 				return getUpdatePeriod();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -294,16 +294,16 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
 				setXVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
 				setYVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
 				setZVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
 				setUpdatePeriod((Double)newValue);
 				return;
 		}
@@ -319,16 +319,16 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
 				setXVelocity(XVELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
 				setYVelocity(YVELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
 				setZVelocity(ZVELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
 				setUpdatePeriod(UPDATE_PERIOD_EDEFAULT);
 				return;
 		}
@@ -344,13 +344,13 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
 				return xVelocity != XVELOCITY_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
 				return yVelocity != YVELOCITY_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
 				return zVelocity != ZVELOCITY_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
 				return updatePeriod != UPDATE_PERIOD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

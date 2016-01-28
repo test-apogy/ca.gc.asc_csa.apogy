@@ -1,27 +1,27 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.controllers.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.ApogyAddonsGeometryPathsEditPlugin;
 
-import org.eclipse.symphony.addons.mobility.provider.Symphony__AddonsMobilityEditPlugin;
+import ca.gc.asc_csa.apogy.addons.mobility.provider.ApogyAddonsMobilityEditPlugin;
 
-import org.eclipse.symphony.addons.sensors.pose.provider.Symphony__AddonsSensorsPoseEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.provider.ApogyAddonsSensorsPoseEditPlugin;
 
-import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.provider.ApogyAddonsSensorsEditPlugin;
 
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
 
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
 
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
 
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the MobilityControllers edit plugin.
@@ -55,14 +55,14 @@ public final class MobilityControllersEditPlugin extends EMFPlugin {
 	public MobilityControllersEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__AddonsSensorsPoseEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__AddonsMobilityEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsPoseEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsEditPlugin.INSTANCE,
+		     ApogyAddonsGeometryPathsEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyAddonsMobilityEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
 		   });
 	}
 

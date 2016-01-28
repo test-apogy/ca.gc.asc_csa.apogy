@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation#isVisible <em>Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewItemPresentation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewItemPresentation()
  * @model abstract="true"
  * @generated
  */
@@ -38,14 +38,14 @@ public interface MapViewItemPresentation extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewItemPresentation_Visible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewItemPresentation_Visible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
   boolean isVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation#isVisible <em>Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation#isVisible <em>Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Visible</em>' attribute.

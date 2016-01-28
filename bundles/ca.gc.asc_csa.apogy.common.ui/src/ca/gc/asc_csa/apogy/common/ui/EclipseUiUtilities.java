@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.ui;
+package ca.gc.asc_csa.apogy.common.ui;
 
 import java.util.Iterator;
 

@@ -4,13 +4,13 @@
  *
  * $Id: URLNodeImpl.java,v 1.7.2.3 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.URLNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.URLNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import org.eclipse.symphony.common.topology.URLNode;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.URLNodeImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.URLNodeImpl#getPolygonCount <em>Polygon Count</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.URLNodeImpl#getVertexCount <em>Vertex Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.URLNodeImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.URLNodeImpl#getPolygonCount <em>Polygon Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.URLNodeImpl#getVertexCount <em>Vertex Count</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,7 +104,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.URL_NODE;
+		return ApogyCommonTopologyPackage.Literals.URL_NODE;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.URL_NODE__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.URL_NODE__URL, oldUrl, url));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 		int oldPolygonCount = polygonCount;
 		polygonCount = newPolygonCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT, oldPolygonCount, polygonCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.URL_NODE__POLYGON_COUNT, oldPolygonCount, polygonCount));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 		int oldVertexCount = vertexCount;
 		vertexCount = newVertexCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT, oldVertexCount, vertexCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.URL_NODE__VERTEX_COUNT, oldVertexCount, vertexCount));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.URL_NODE__URL:
+			case ApogyCommonTopologyPackage.URL_NODE__URL:
 				return getUrl();
-			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				return getPolygonCount();
-			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				return getVertexCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.URL_NODE__URL:
+			case ApogyCommonTopologyPackage.URL_NODE__URL:
 				setUrl((String)newValue);
 				return;
-			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				setPolygonCount((Integer)newValue);
 				return;
-			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				setVertexCount((Integer)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.URL_NODE__URL:
+			case ApogyCommonTopologyPackage.URL_NODE__URL:
 				setUrl(URL_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				setPolygonCount(POLYGON_COUNT_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				setVertexCount(VERTEX_COUNT_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.URL_NODE__URL:
+			case ApogyCommonTopologyPackage.URL_NODE__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				return polygonCount != POLYGON_COUNT_EDEFAULT;
-			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
+			case ApogyCommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				return vertexCount != VERTEX_COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

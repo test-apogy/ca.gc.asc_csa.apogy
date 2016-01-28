@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.util;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,26 +10,26 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.addons.geometry.paths.ui.*;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.*;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage
  * @generated
  */
-public class Symphony__AddonsGeometryPathsUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsGeometryPathsUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsGeometryPathsUIPackage modelPackage;
+	protected static ApogyAddonsGeometryPathsUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -37,9 +37,9 @@ public class Symphony__AddonsGeometryPathsUIAdapterFactory extends AdapterFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsUIAdapterFactory() {
+	public ApogyAddonsGeometryPathsUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsGeometryPathsUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsGeometryPathsUIPackage.eINSTANCE;
 		}
 	}
 
@@ -68,8 +68,8 @@ public class Symphony__AddonsGeometryPathsUIAdapterFactory extends AdapterFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsGeometryPathsUISwitch<Adapter> modelSwitch =
-		new Symphony__AddonsGeometryPathsUISwitch<Adapter>() {
+	protected ApogyAddonsGeometryPathsUISwitch<Adapter> modelSwitch =
+		new ApogyAddonsGeometryPathsUISwitch<Adapter>() {
 			@Override
 			public Adapter caseWayPointPathPresentation(WayPointPathPresentation object) {
 				return createWayPointPathPresentationAdapter();
@@ -103,13 +103,13 @@ public class Symphony__AddonsGeometryPathsUIAdapterFactory extends AdapterFactor
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation <em>Way Point Path Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation <em>Way Point Path Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation
 	 * @generated
 	 */
 	public Adapter createWayPointPathPresentationAdapter() {
@@ -117,13 +117,13 @@ public class Symphony__AddonsGeometryPathsUIAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation <em>Way Point Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPresentation <em>Way Point Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPresentation
 	 * @generated
 	 */
 	public Adapter createWayPointPresentationAdapter() {
@@ -131,13 +131,13 @@ public class Symphony__AddonsGeometryPathsUIAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -156,4 +156,4 @@ public class Symphony__AddonsGeometryPathsUIAdapterFactory extends AdapterFactor
 		return null;
 	}
 
-} //Symphony__AddonsGeometryPathsUIAdapterFactory
+} //ApogyAddonsGeometryPathsUIAdapterFactory

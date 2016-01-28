@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui;
+package ca.gc.asc_csa.apogy.core.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage
+ * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage
  * @generated
  */
-public interface Symphony__CoreUIFactory extends EFactory
+public interface ApogyCoreUIFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__CoreUIFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreUIFactory eINSTANCE = org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFactoryImpl.init();
+  ApogyCoreUIFactory eINSTANCE = ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Facade</em>'.
@@ -30,43 +30,43 @@ public interface Symphony__CoreUIFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreUIFacade createSymphony__CoreUIFacade();
+	ApogyCoreUIFacade createApogyCoreUIFacade();
 
 		/**
-	 * Returns a new object of class '<em>Symphony Resource Settings</em>'.
+	 * Returns a new object of class '<em>Apogy Resource Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony Resource Settings</em>'.
+	 * @return a new object of class '<em>Apogy Resource Settings</em>'.
 	 * @generated
 	 */
-	SymphonyResourceSettings createSymphonyResourceSettings();
+	ApogyResourceSettings createApogyResourceSettings();
 
 		/**
-	 * Returns a new object of class '<em>New Symphony Project Settings</em>'.
+	 * Returns a new object of class '<em>New Apogy Project Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>New Symphony Project Settings</em>'.
+	 * @return a new object of class '<em>New Apogy Project Settings</em>'.
 	 * @generated
 	 */
-	NewSymphonyProjectSettings createNewSymphonyProjectSettings();
+	NewApogyProjectSettings createNewApogyProjectSettings();
 
 		/**
-	 * Returns a new object of class '<em>New Symphony Session Settings</em>'.
+	 * Returns a new object of class '<em>New Apogy Session Settings</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>New Symphony Session Settings</em>'.
+	 * @return a new object of class '<em>New Apogy Session Settings</em>'.
 	 * @generated
 	 */
-  NewSymphonySessionSettings createNewSymphonySessionSettings();
+  NewApogySessionSettings createNewApogySessionSettings();
 
   /**
-	 * Returns a new object of class '<em>New Symphony System Settings</em>'.
+	 * Returns a new object of class '<em>New Apogy System Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>New Symphony System Settings</em>'.
+	 * @return a new object of class '<em>New Apogy System Settings</em>'.
 	 * @generated
 	 */
-	NewSymphonySystemSettings createNewSymphonySystemSettings();
+	NewApogySystemSettings createNewApogySystemSettings();
 
 		/**
 	 * Returns a new object of class '<em>Result Node Presentation</em>'.
@@ -84,6 +84,6 @@ public interface Symphony__CoreUIFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreUIPackage getSymphony__CoreUIPackage();
+	ApogyCoreUIPackage getApogyCoreUIPackage();
 
-} //Symphony__CoreUIFactory
+} //ApogyCoreUIFactory

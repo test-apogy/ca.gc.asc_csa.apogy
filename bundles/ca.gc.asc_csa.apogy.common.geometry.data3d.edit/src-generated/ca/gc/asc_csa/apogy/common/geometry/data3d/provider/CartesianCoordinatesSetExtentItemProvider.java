@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2008.
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_xMin_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_xMin_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__XMIN,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__XMIN,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_xMax_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_xMax_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__XMAX,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__XMAX,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_yMin_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_yMin_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__YMIN,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__YMIN,
 				 true,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_yMax_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_yMax_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__YMAX,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__YMAX,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_zMin_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_zMin_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN,
 				 true,
 				 false,
 				 false,
@@ -195,7 +195,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_zMax_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_zMax_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX,
 				 true,
 				 false,
 				 false,
@@ -217,7 +217,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_xDimension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_xDimension_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION,
 				 false,
 				 false,
 				 false,
@@ -239,7 +239,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_yDimension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_yDimension_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION,
 				 false,
 				 false,
 				 false,
@@ -261,7 +261,7 @@ public class CartesianCoordinatesSetExtentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetExtent_zDimension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetExtent_zDimension_feature", "_UI_CartesianCoordinatesSetExtent_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION,
 				 false,
 				 false,
 				 false,
@@ -306,15 +306,15 @@ public class CartesianCoordinatesSetExtentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianCoordinatesSetExtent.class)) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

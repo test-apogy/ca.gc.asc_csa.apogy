@@ -2,23 +2,23 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsMobilityControllersSwitch.java,v 1.5.4.3 2015/09/22 19:39:39 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityControllersSwitch.java,v 1.5.4.3 2015/09/22 19:39:39 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.util;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,10 +30,10 @@ import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage
  * @generated
  */
-public class Symphony__AddonsMobilityControllersSwitch<T> extends Switch<T>
+public class ApogyAddonsMobilityControllersSwitch<T> extends Switch<T>
 {
 	/**
 	 * The cached model package
@@ -41,7 +41,7 @@ public class Symphony__AddonsMobilityControllersSwitch<T> extends Switch<T>
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityControllersPackage modelPackage;
+	protected static ApogyAddonsMobilityControllersPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -49,10 +49,10 @@ public class Symphony__AddonsMobilityControllersSwitch<T> extends Switch<T>
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityControllersSwitch()
+	public ApogyAddonsMobilityControllersSwitch()
 	{
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityControllersPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityControllersPackage.eINSTANCE;
 		}
 	}
 
@@ -80,33 +80,33 @@ public class Symphony__AddonsMobilityControllersSwitch<T> extends Switch<T>
 	protected T doSwitch(int classifierID, EObject theEObject)
 	{
 		switch (classifierID) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER: {
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER: {
 				PathFollower<?, ?> pathFollower = (PathFollower<?, ?>)theEObject;
 				T result = casePathFollower(pathFollower);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER: {
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER: {
 				SkidSteeredPlatformPathFollower<?, ?> skidSteeredPlatformPathFollower = (SkidSteeredPlatformPathFollower<?, ?>)theEObject;
 				T result = caseSkidSteeredPlatformPathFollower(skidSteeredPlatformPathFollower);
 				if (result == null) result = casePathFollower(skidSteeredPlatformPathFollower);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER: {
+			case ApogyAddonsMobilityControllersPackage.PATH_RECORDER: {
 				PathRecorder<?> pathRecorder = (PathRecorder<?>)theEObject;
 				T result = casePathRecorder(pathRecorder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityControllersPackage.WAYPOINT_PATH_RECORDER: {
+			case ApogyAddonsMobilityControllersPackage.WAYPOINT_PATH_RECORDER: {
 				WaypointPathRecorder waypointPathRecorder = (WaypointPathRecorder)theEObject;
 				T result = caseWaypointPathRecorder(waypointPathRecorder);
 				if (result == null) result = casePathRecorder(waypointPathRecorder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_WAY_POINT_PATH_FOLLOWER: {
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_WAY_POINT_PATH_FOLLOWER: {
 				SkidSteeredWayPointPathFollower skidSteeredWayPointPathFollower = (SkidSteeredWayPointPathFollower)theEObject;
 				T result = caseSkidSteeredWayPointPathFollower(skidSteeredWayPointPathFollower);
 				if (result == null) result = caseSkidSteeredPlatformPathFollower(skidSteeredWayPointPathFollower);
@@ -114,7 +114,7 @@ public class Symphony__AddonsMobilityControllersSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER: {
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER: {
 				AstolfiGuidanceController astolfiGuidanceController = (AstolfiGuidanceController)theEObject;
 				T result = caseAstolfiGuidanceController(astolfiGuidanceController);
 				if (result == null) result = caseSkidSteeredPlatformPathFollower(astolfiGuidanceController);
@@ -237,4 +237,4 @@ public class Symphony__AddonsMobilityControllersSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsMobilityControllersSwitch
+} //ApogyAddonsMobilityControllersSwitch

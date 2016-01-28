@@ -8,11 +8,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_addons_mobility_pathplanners -->
+      <!-- @generated apogy_addons_mobility_pathplanners -->
       <package
-            uri="org.eclipse.symphony.addons.mobility.pathplanners"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage"
-            genModel="model/symphony_addons_mobility_pathplanners.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.mobility.pathplanners"
+            class="ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage"
+            genModel="model/apogy_addons_mobility_pathplanners.xcore"/>
    </extension>
 
 </plugin>

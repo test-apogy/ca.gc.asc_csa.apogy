@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIFactory;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DUIFactoryImpl extends EFactoryImpl implements Symphony__CommonGeometryData3DUIFactory {
+public class ApogyCommonGeometryData3DUIFactoryImpl extends EFactoryImpl implements ApogyCommonGeometryData3DUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData3DUIFactory init() {
+	public static ApogyCommonGeometryData3DUIFactory init() {
 		try {
-			Symphony__CommonGeometryData3DUIFactory theSymphony__CommonGeometryData3DUIFactory = (Symphony__CommonGeometryData3DUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonGeometryData3DUIPackage.eNS_URI);
-			if (theSymphony__CommonGeometryData3DUIFactory != null) {
-				return theSymphony__CommonGeometryData3DUIFactory;
+			ApogyCommonGeometryData3DUIFactory theApogyCommonGeometryData3DUIFactory = (ApogyCommonGeometryData3DUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonGeometryData3DUIPackage.eNS_URI);
+			if (theApogyCommonGeometryData3DUIFactory != null) {
+				return theApogyCommonGeometryData3DUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonGeometryData3DUIFactoryImpl();
+		return new ApogyCommonGeometryData3DUIFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__CommonGeometryData3DUIFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DUIFactoryImpl() {
+	public ApogyCommonGeometryData3DUIFactoryImpl() {
 		super();
 	}
 
@@ -57,8 +57,8 @@ public class Symphony__CommonGeometryData3DUIFactoryImpl extends EFactoryImpl im
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION: return createCartesianCoordinatesSetPresentation();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION: return createTriangularMeshPresentation();
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION: return createCartesianCoordinatesSetPresentation();
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION: return createTriangularMeshPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -89,8 +89,8 @@ public class Symphony__CommonGeometryData3DUIFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DUIPackage getSymphony__CommonGeometryData3DUIPackage() {
-		return (Symphony__CommonGeometryData3DUIPackage)getEPackage();
+	public ApogyCommonGeometryData3DUIPackage getApogyCommonGeometryData3DUIPackage() {
+		return (ApogyCommonGeometryData3DUIPackage)getEPackage();
 	}
 
 	/**
@@ -100,8 +100,8 @@ public class Symphony__CommonGeometryData3DUIFactoryImpl extends EFactoryImpl im
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonGeometryData3DUIPackage getPackage() {
-		return Symphony__CommonGeometryData3DUIPackage.eINSTANCE;
+	public static ApogyCommonGeometryData3DUIPackage getPackage() {
+		return ApogyCommonGeometryData3DUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonGeometryData3DUIFactoryImpl
+} //ApogyCommonGeometryData3DUIFactoryImpl

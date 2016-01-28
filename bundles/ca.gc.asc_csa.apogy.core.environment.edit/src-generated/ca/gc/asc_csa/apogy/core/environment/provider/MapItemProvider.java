@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -22,14 +22,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Map} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.Map} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -87,7 +87,7 @@ public class MapItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class MapItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class MapItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Map_mapNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Map_mapNode_feature", "_UI_Map_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.MAP__MAP_NODE,
+				 ApogyCoreEnvironmentPackage.Literals.MAP__MAP_NODE,
 				 false,
 				 false,
 				 false,
@@ -155,8 +155,8 @@ public class MapItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.MAP__TRANSFORMATION);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.MAP__TRANSFORMATION);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS);
 		}
 		return childrenFeatures;
 	}
@@ -229,12 +229,12 @@ public class MapItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Map.class)) {
-			case Symphony__CoreEnvironmentPackage.MAP__NAME:
-			case Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION:
+			case ApogyCoreEnvironmentPackage.MAP__NAME:
+			case ApogyCoreEnvironmentPackage.MAP__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION:
-			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
+			case ApogyCoreEnvironmentPackage.MAP__TRANSFORMATION:
+			case ApogyCoreEnvironmentPackage.MAP__LAYERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -255,83 +255,83 @@ public class MapItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__TRANSFORMATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__TRANSFORMATION,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
+				(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
 	}
 
   /**

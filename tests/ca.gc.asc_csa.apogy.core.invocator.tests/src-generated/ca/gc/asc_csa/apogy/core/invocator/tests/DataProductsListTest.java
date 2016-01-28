@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,7 +16,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.DataProductsList#getInvocatorSession() <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getInvocatorSession() <em>Invocator Session</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -78,7 +78,7 @@ public class DataProductsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createDataProductsList());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createDataProductsList());
 	}
 
 	/**
@@ -93,10 +93,10 @@ public class DataProductsListTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.DataProductsList#getInvocatorSession() <em>Invocator Session</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getInvocatorSession() <em>Invocator Session</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getInvocatorSession()
 	 * @generated
 	 */
 	public void testGetInvocatorSession() {

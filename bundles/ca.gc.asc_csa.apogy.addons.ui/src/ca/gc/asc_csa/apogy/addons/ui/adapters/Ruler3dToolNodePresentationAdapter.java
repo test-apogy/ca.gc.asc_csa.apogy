@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.ui.adapters;
 
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation;
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class Ruler3dToolNodePresentationAdapter implements NodePresentationAdapter
 {
@@ -36,7 +36,7 @@ public class Ruler3dToolNodePresentationAdapter implements NodePresentationAdapt
 
 		Ruler3dToolNode ruler3dToolNode = (Ruler3dToolNode) obj;
 		
-		Ruler3dToolNodePresentation presentationNode = Symphony__AddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation();
+		Ruler3dToolNodePresentation presentationNode = ApogyAddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation();
 		presentationNode.setNode(ruler3dToolNode);			
 						
 		return presentationNode;

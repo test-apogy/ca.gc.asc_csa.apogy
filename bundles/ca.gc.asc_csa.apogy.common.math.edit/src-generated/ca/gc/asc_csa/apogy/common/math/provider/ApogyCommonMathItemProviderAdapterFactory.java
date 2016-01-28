@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.provider;
+package ca.gc.asc_csa.apogy.common.math.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,8 +27,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.util.Symphony__CommonMathAdapterFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.util.ApogyCommonMathAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -39,7 +39,7 @@ import org.eclipse.symphony.common.math.util.Symphony__CommonMathAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__CommonMathAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonMathItemProviderAdapterFactory extends ApogyCommonMathAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonMathEditPlugin.INSTANCE, Symphony__CommonMathPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonMathEditPlugin.INSTANCE, ApogyCommonMathPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -78,7 +78,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathItemProviderAdapterFactory() {
+	public ApogyCommonMathItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -87,7 +87,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.Matrix4x4} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.Matrix4x4} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -95,7 +95,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	protected Matrix4x4ItemProvider matrix4x4ItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.Matrix4x4}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.math.Matrix4x4}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -110,30 +110,30 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonMathFacadeItemProvider symphony__CommonMathFacadeItemProvider;
+	protected ApogyCommonMathFacadeItemProvider apogy__CommonMathFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonMathFacadeAdapter() {
-		if (symphony__CommonMathFacadeItemProvider == null) {
-			symphony__CommonMathFacadeItemProvider = new Symphony__CommonMathFacadeItemProvider(this);
+	public Adapter createApogyCommonMathFacadeAdapter() {
+		if (apogy__CommonMathFacadeItemProvider == null) {
+			apogy__CommonMathFacadeItemProvider = new ApogyCommonMathFacadeItemProvider(this);
 		}
 
-		return symphony__CommonMathFacadeItemProvider;
+		return apogy__CommonMathFacadeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.Matrix3x3} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.Matrix3x3} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -141,7 +141,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	protected Matrix3x3ItemProvider matrix3x3ItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.Matrix3x3}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.math.Matrix3x3}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -156,7 +156,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.Tuple3d} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.Tuple3d} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -164,7 +164,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	protected Tuple3dItemProvider tuple3dItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.Tuple3d}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.math.Tuple3d}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,7 +179,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.Polynomial} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.Polynomial} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -187,7 +187,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	protected PolynomialItemProvider polynomialItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.Polynomial}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.math.Polynomial}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -202,7 +202,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.MathIO} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.math.MathIO} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -210,7 +210,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	protected MathIOItemProvider mathIOItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.MathIO}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.math.MathIO}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -354,7 +354,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 		if (matrix3x3ItemProvider != null) matrix3x3ItemProvider.dispose();
 		if (matrix4x4ItemProvider != null) matrix4x4ItemProvider.dispose();
 		if (polynomialItemProvider != null) polynomialItemProvider.dispose();
-		if (symphony__CommonMathFacadeItemProvider != null) symphony__CommonMathFacadeItemProvider.dispose();
+		if (apogy__CommonMathFacadeItemProvider != null) apogy__CommonMathFacadeItemProvider.dispose();
 		if (mathIOItemProvider != null) mathIOItemProvider.dispose();
 	}
 

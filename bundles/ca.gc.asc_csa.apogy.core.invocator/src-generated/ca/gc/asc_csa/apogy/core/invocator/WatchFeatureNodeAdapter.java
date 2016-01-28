@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,13 +21,13 @@ import org.eclipse.symphony.common.emf.AbstractFeatureNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchFeatureNodeAdapter()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source Object</em>' reference.
 	 * @see #setSourceObject(EObject)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_SourceObject()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchFeatureNodeAdapter_SourceObject()
 	 * @model
 	 * @generated
 	 */
   EObject getSourceObject();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source Object</em>' reference.
@@ -67,14 +67,14 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node</em>' reference.
 	 * @see #setFeatureNode(AbstractFeatureNode)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_FeatureNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchFeatureNodeAdapter_FeatureNode()
 	 * @model
 	 * @generated
 	 */
   AbstractFeatureNode getFeatureNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Node</em>' reference.
@@ -92,14 +92,14 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(Object)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_CurrentValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchFeatureNodeAdapter_CurrentValue()
 	 * @model unique="false"
 	 * @generated
 	 */
   Object getCurrentValue();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Value</em>' attribute.
@@ -118,14 +118,14 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolved</em>' attribute.
 	 * @see #setResolved(boolean)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_Resolved()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchFeatureNodeAdapter_Resolved()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
   boolean isResolved();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Resolved</em>' attribute.

@@ -1,14 +1,14 @@
-package org.eclipse.symphony.common.images.ui.expressions;
+package ca.gc.asc_csa.apogy.common.images.ui.expressions;
 
 import java.util.List;
 
 import org.eclipse.core.expressions.PropertyTester;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 public class ImagePropertyTester extends PropertyTester
 {
-	public static final String PROPERTY_NAMESPACE = "org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester";
+	public static final String PROPERTY_NAMESPACE = "ca.gc.asc_csa.apogy.common.images.ui.expressions.ImagePropertyTester";
 	public static final String PROPERTY_CAN_CONVERT_TO_ABSTRACT_EIMAGE = "canConvertToAbstractEImage";
 	
 	@Override
@@ -24,7 +24,7 @@ public class ImagePropertyTester extends PropertyTester
 				
 				if (!list.isEmpty())
 				{
-					result = (Symphony__CommonConvertersFacade.INSTANCE.convert(list.get(0), AbstractEImage.class) != null);		
+					result = (ApogyCommonConvertersFacade.INSTANCE.convert(list.get(0), AbstractEImage.class) != null);		
 				}
 			}
 		}

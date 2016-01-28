@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.RegisteredTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,7 +16,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.RegisteredTypesList#getTypes() <em>Types</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList#getTypes() <em>Types</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -78,7 +78,7 @@ public class RegisteredTypesListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createRegisteredTypesList());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createRegisteredTypesList());
 	}
 
 	/**
@@ -93,10 +93,10 @@ public class RegisteredTypesListTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.RegisteredTypesList#getTypes() <em>Types</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList#getTypes() <em>Types</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.RegisteredTypesList#getTypes()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList#getTypes()
 	 * @generated
 	 */
 	public void testGetTypes() {

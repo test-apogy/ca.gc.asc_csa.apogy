@@ -1,28 +1,28 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPathplannersSwitch.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityPathplannersSwitch.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.util;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,17 +34,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
+public class ApogyAddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPathplannersPackage modelPackage;
+	protected static ApogyAddonsMobilityPathplannersPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -52,9 +52,9 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersSwitch() {
+	public ApogyAddonsMobilityPathplannersSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPathplannersPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPathplannersPackage.eINSTANCE;
 		}
 	}
 
@@ -81,7 +81,7 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsMobilityPathplannersPackage.WAY_POINT_PATH_PLANNER: {
+			case ApogyAddonsMobilityPathplannersPackage.WAY_POINT_PATH_PLANNER: {
 				WayPointPathPlanner wayPointPathPlanner = (WayPointPathPlanner)theEObject;
 				T1 result = caseWayPointPathPlanner(wayPointPathPlanner);
 				if (result == null) result = caseProcessor(wayPointPathPlanner);
@@ -89,7 +89,7 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER: {
+			case ApogyAddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER: {
 				MeshWayPointPathPlanner<?> meshWayPointPathPlanner = (MeshWayPointPathPlanner<?>)theEObject;
 				T1 result = caseMeshWayPointPathPlanner(meshWayPointPathPlanner);
 				if (result == null) result = caseWayPointPathPlanner(meshWayPointPathPlanner);
@@ -98,14 +98,14 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersPackage.EXCLUSION_ZONE: {
+			case ApogyAddonsMobilityPathplannersPackage.EXCLUSION_ZONE: {
 				ExclusionZone exclusionZone = (ExclusionZone)theEObject;
 				T1 result = caseExclusionZone(exclusionZone);
 				if (result == null) result = caseNode(exclusionZone);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE: {
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE: {
 				CircularExclusionZone circularExclusionZone = (CircularExclusionZone)theEObject;
 				T1 result = caseCircularExclusionZone(circularExclusionZone);
 				if (result == null) result = caseExclusionZone(circularExclusionZone);
@@ -116,9 +116,9 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersPackage.SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE: {
-				Symphony__AddonsMobilityPathplannersFacade symphony__AddonsMobilityPathplannersFacade = (Symphony__AddonsMobilityPathplannersFacade)theEObject;
-				T1 result = caseSymphony__AddonsMobilityPathplannersFacade(symphony__AddonsMobilityPathplannersFacade);
+			case ApogyAddonsMobilityPathplannersPackage.APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE: {
+				ApogyAddonsMobilityPathplannersFacade apogy__AddonsMobilityPathplannersFacade = (ApogyAddonsMobilityPathplannersFacade)theEObject;
+				T1 result = caseApogyAddonsMobilityPathplannersFacade(apogy__AddonsMobilityPathplannersFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -197,7 +197,7 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSymphony__AddonsMobilityPathplannersFacade(Symphony__AddonsMobilityPathplannersFacade object) {
+	public T1 caseApogyAddonsMobilityPathplannersFacade(ApogyAddonsMobilityPathplannersFacade object) {
 		return null;
 	}
 
@@ -308,4 +308,4 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__AddonsMobilityPathplannersSwitch
+} //ApogyAddonsMobilityPathplannersSwitch

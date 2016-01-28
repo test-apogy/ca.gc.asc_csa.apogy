@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -17,12 +17,12 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#getEllipseWidth <em>Ellipse Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#getEllipseHeight <em>Ellipse Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer#getEllipseWidth <em>Ellipse Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer#getEllipseHeight <em>Ellipse Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEllipseShapeImageLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEllipseShapeImageLayer()
  * @model
  * @generated
  */
@@ -38,15 +38,15 @@ public interface EllipseShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ellipse Width</em>' attribute.
 	 * @see #setEllipseWidth(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEllipseShapeImageLayer_EllipseWidth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEllipseShapeImageLayer_EllipseWidth()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' apogy_units='m'"
 	 * @generated
 	 */
 	double getEllipseWidth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#getEllipseWidth <em>Ellipse Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer#getEllipseWidth <em>Ellipse Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ellipse Width</em>' attribute.
@@ -66,15 +66,15 @@ public interface EllipseShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ellipse Height</em>' attribute.
 	 * @see #setEllipseHeight(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEllipseShapeImageLayer_EllipseHeight()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEllipseShapeImageLayer_EllipseHeight()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' apogy_units='m'"
 	 * @generated
 	 */
 	double getEllipseHeight();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#getEllipseHeight <em>Ellipse Height</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer#getEllipseHeight <em>Ellipse Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ellipse Height</em>' attribute.
@@ -94,7 +94,7 @@ public interface EllipseShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Show Center Lines</em>' attribute.
 	 * @see #setShowCenterLines(boolean)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEllipseShapeImageLayer_ShowCenterLines()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEllipseShapeImageLayer_ShowCenterLines()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS'"
 	 * @generated
@@ -102,7 +102,7 @@ public interface EllipseShapeImageLayer extends AbstractShapeImageLayer {
 	boolean isShowCenterLines();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Show Center Lines</em>' attribute.

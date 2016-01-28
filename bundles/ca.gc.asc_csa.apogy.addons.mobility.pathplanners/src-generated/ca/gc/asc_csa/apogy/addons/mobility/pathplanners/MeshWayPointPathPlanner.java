@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners;
 
-import org.eclipse.symphony.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +22,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getMeshWayPointPathPlanner()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage#getMeshWayPointPathPlanner()
  * @model
  * @generated
  */
@@ -40,14 +40,14 @@ public interface MeshWayPointPathPlanner<T extends CartesianPolygon> extends Way
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
 	 * @see #setMesh(Mesh)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getMeshWayPointPathPlanner_Mesh()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage#getMeshWayPointPathPlanner_Mesh()
 	 * @model transient="true"
 	 * @generated
 	 */
 	Mesh<CartesianPositionCoordinates, CartesianPolygon> getMesh();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner#getMesh <em>Mesh</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner#getMesh <em>Mesh</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mesh</em>' reference.

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,18 +16,18 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.jme3.Activator;
-import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
-import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -299,7 +299,7 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 
 					switch (featureId) 
 					{
-						case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET__POINTS:
+						case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET__POINTS:
 							int eventType = notification.getEventType() ;
 							switch(eventType)
 							{

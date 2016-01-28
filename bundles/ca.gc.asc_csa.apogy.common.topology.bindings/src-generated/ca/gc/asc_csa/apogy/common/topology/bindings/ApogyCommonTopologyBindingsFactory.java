@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage
  * @generated
  */
-public interface Symphony__CommonTopologyBindingsFactory extends EFactory
+public interface ApogyCommonTopologyBindingsFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__CommonTopologyBindingsFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CommonTopologyBindingsFactory eINSTANCE = org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFactoryImpl.init();
+  ApogyCommonTopologyBindingsFactory eINSTANCE = ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Rotation Binding</em>'.
@@ -102,7 +102,7 @@ public interface Symphony__CommonTopologyBindingsFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CommonTopologyBindingsFacade createSymphony__CommonTopologyBindingsFacade();
+	ApogyCommonTopologyBindingsFacade createApogyCommonTopologyBindingsFacade();
 
 		/**
 	 * Returns the package supported by this factory.
@@ -111,6 +111,6 @@ public interface Symphony__CommonTopologyBindingsFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonTopologyBindingsPackage getSymphony__CommonTopologyBindingsPackage();
+	ApogyCommonTopologyBindingsPackage getApogyCommonTopologyBindingsPackage();
 
-} //Symphony__CommonTopologyBindingsFactory
+} //ApogyCommonTopologyBindingsFactory

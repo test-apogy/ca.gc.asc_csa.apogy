@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologyAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologyAdapter
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony__CommonTopologyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonTopologyItemProviderAdapterFactory extends ApogyCommonTopologyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonTopologyEditPlugin.INSTANCE, Symphony__CommonTopologyPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonTopologyEditPlugin.INSTANCE, ApogyCommonTopologyPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyItemProviderAdapterFactory() {
+	public ApogyCommonTopologyItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.Link} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.Link} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected LinkItemProvider linkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.Link}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.Link}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,7 +108,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.Leaf} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.Leaf} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected LeafItemProvider leafItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.Leaf}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.Leaf}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.URLNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.URLNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected URLNodeItemProvider urlNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.URLNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.URLNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,7 +154,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.CADNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.CADNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected CADNodeItemProvider cadNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.CADNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.CADNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,7 +177,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ContentNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ContentNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -185,7 +185,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected ContentNodeItemProvider contentNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ContentNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ContentNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -200,7 +200,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ReferencedContentNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -208,7 +208,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected ReferencedContentNodeItemProvider referencedContentNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ReferencedContentNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -223,7 +223,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.AggregateContentNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.AggregateContentNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -231,7 +231,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected AggregateContentNodeItemProvider aggregateContentNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.AggregateContentNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.AggregateContentNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -246,7 +246,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.GroupNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.GroupNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -254,7 +254,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected GroupNodeItemProvider groupNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.GroupNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.GroupNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -269,7 +269,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ReferencedGroupNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -277,7 +277,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected ReferencedGroupNodeItemProvider referencedGroupNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ReferencedGroupNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -292,7 +292,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.AggregateGroupNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -300,7 +300,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected AggregateGroupNodeItemProvider aggregateGroupNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.AggregateGroupNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -315,7 +315,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.PositionNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.PositionNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -323,7 +323,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected PositionNodeItemProvider positionNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.PositionNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.PositionNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -338,7 +338,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.RotationNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.RotationNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -346,7 +346,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected RotationNodeItemProvider rotationNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.RotationNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.RotationNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -361,7 +361,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.TransformNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.TransformNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -369,7 +369,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected TransformNodeItemProvider transformNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.TransformNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.TransformNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -384,7 +384,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.PickAndPlaceNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.PickAndPlaceNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -392,7 +392,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	protected PickAndPlaceNodeItemProvider pickAndPlaceNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.PickAndPlaceNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.PickAndPlaceNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -407,26 +407,26 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyFacadeItemProvider symphony__CommonTopologyFacadeItemProvider;
+	protected ApogyCommonTopologyFacadeItemProvider apogy__CommonTopologyFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonTopologyFacadeAdapter() {
-		if (symphony__CommonTopologyFacadeItemProvider == null) {
-			symphony__CommonTopologyFacadeItemProvider = new Symphony__CommonTopologyFacadeItemProvider(this);
+	public Adapter createApogyCommonTopologyFacadeAdapter() {
+		if (apogy__CommonTopologyFacadeItemProvider == null) {
+			apogy__CommonTopologyFacadeItemProvider = new ApogyCommonTopologyFacadeItemProvider(this);
 		}
 
-		return symphony__CommonTopologyFacadeItemProvider;
+		return apogy__CommonTopologyFacadeItemProvider;
 	}
 
 	/**
@@ -569,7 +569,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 		if (rotationNodeItemProvider != null) rotationNodeItemProvider.dispose();
 		if (transformNodeItemProvider != null) transformNodeItemProvider.dispose();
 		if (pickAndPlaceNodeItemProvider != null) pickAndPlaceNodeItemProvider.dispose();
-		if (symphony__CommonTopologyFacadeItemProvider != null) symphony__CommonTopologyFacadeItemProvider.dispose();
+		if (apogy__CommonTopologyFacadeItemProvider != null) apogy__CommonTopologyFacadeItemProvider.dispose();
 	}
 
 }

@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.ros.utilities;
+package ca.gc.asc_csa.apogy.addons.ros.utilities;
 
 import org.eclipse.osgi.framework.log.FrameworkLogEntry;
 import org.ros.message.MessageListener;
-import org.eclipse.symphony.addons.ros.Activator;
-import org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class FrameworkLogTopicListener implements MessageListener<ROSFrameworkLogEntry>
 {
@@ -17,7 +17,7 @@ public class FrameworkLogTopicListener implements MessageListener<ROSFrameworkLo
 	}
 	
 	@Override
-	public void onNewMessage(org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry message) 
+	public void onNewMessage(ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry message) 
 	{
 		try
 		{

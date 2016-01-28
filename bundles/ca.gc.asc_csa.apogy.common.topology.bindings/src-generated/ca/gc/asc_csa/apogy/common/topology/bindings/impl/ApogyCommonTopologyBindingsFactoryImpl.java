@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
@@ -10,19 +10,19 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.topology.bindings.AngleUnits;
-import org.eclipse.symphony.common.topology.bindings.Axis;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
-import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
-import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl implements Symphony__CommonTopologyBindingsFactory
+public class ApogyCommonTopologyBindingsFactoryImpl extends EFactoryImpl implements ApogyCommonTopologyBindingsFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -38,18 +38,18 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CommonTopologyBindingsFactory init()
+  public static ApogyCommonTopologyBindingsFactory init()
   {
 		try {
-			Symphony__CommonTopologyBindingsFactory theSymphony__CommonTopologyBindingsFactory = (Symphony__CommonTopologyBindingsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonTopologyBindingsPackage.eNS_URI);
-			if (theSymphony__CommonTopologyBindingsFactory != null) {
-				return theSymphony__CommonTopologyBindingsFactory;
+			ApogyCommonTopologyBindingsFactory theApogyCommonTopologyBindingsFactory = (ApogyCommonTopologyBindingsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonTopologyBindingsPackage.eNS_URI);
+			if (theApogyCommonTopologyBindingsFactory != null) {
+				return theApogyCommonTopologyBindingsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonTopologyBindingsFactoryImpl();
+		return new ApogyCommonTopologyBindingsFactoryImpl();
 	}
 
   /**
@@ -58,7 +58,7 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonTopologyBindingsFactoryImpl()
+  public ApogyCommonTopologyBindingsFactoryImpl()
   {
 		super();
 	}
@@ -72,15 +72,15 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING: return createRotationBinding();
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING: return createTranslationBinding();
-			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING: return createTransformMatrixBinding();
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING: return createEnumerationSwitchBinding();
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE: return createEnumerationCase();
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST: return createBindingsList();
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST: return createFeatureRootsList();
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET: return createBindingsSet();
-			case Symphony__CommonTopologyBindingsPackage.SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE: return createSymphony__CommonTopologyBindingsFacade();
+			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING: return createRotationBinding();
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING: return createTranslationBinding();
+			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING: return createTransformMatrixBinding();
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING: return createEnumerationSwitchBinding();
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE: return createEnumerationCase();
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST: return createBindingsList();
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST: return createFeatureRootsList();
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET: return createBindingsSet();
+			case ApogyCommonTopologyBindingsPackage.APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE: return createApogyCommonTopologyBindingsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,11 +95,11 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyBindingsPackage.AXIS:
+			case ApogyCommonTopologyBindingsPackage.AXIS:
 				return createAxisFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyBindingsPackage.ANGLE_UNITS:
+			case ApogyCommonTopologyBindingsPackage.ANGLE_UNITS:
 				return createAngleUnitsFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyBindingsPackage.MAP:
+			case ApogyCommonTopologyBindingsPackage.MAP:
 				return createMapFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -115,11 +115,11 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyBindingsPackage.AXIS:
+			case ApogyCommonTopologyBindingsPackage.AXIS:
 				return convertAxisToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyBindingsPackage.ANGLE_UNITS:
+			case ApogyCommonTopologyBindingsPackage.ANGLE_UNITS:
 				return convertAngleUnitsToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyBindingsPackage.MAP:
+			case ApogyCommonTopologyBindingsPackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -219,9 +219,9 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyBindingsFacade createSymphony__CommonTopologyBindingsFacade() {
-		Symphony__CommonTopologyBindingsFacadeImpl symphony__CommonTopologyBindingsFacade = new Symphony__CommonTopologyBindingsFacadeImpl();
-		return symphony__CommonTopologyBindingsFacade;
+	public ApogyCommonTopologyBindingsFacade createApogyCommonTopologyBindingsFacade() {
+		ApogyCommonTopologyBindingsFacadeImpl apogy__CommonTopologyBindingsFacade = new ApogyCommonTopologyBindingsFacadeImpl();
+		return apogy__CommonTopologyBindingsFacade;
 	}
 
 		/**
@@ -289,8 +289,8 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyBindingsPackage getSymphony__CommonTopologyBindingsPackage() {
-		return (Symphony__CommonTopologyBindingsPackage)getEPackage();
+	public ApogyCommonTopologyBindingsPackage getApogyCommonTopologyBindingsPackage() {
+		return (ApogyCommonTopologyBindingsPackage)getEPackage();
 	}
 
 		/**
@@ -300,9 +300,9 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CommonTopologyBindingsPackage getPackage()
+  public static ApogyCommonTopologyBindingsPackage getPackage()
   {
-		return Symphony__CommonTopologyBindingsPackage.eINSTANCE;
+		return ApogyCommonTopologyBindingsPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonTopologyBindingsFactoryImpl
+} //ApogyCommonTopologyBindingsFactoryImpl

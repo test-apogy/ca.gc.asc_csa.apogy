@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.geometry.data3d.converters;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.converters;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
 
-import org.eclipse.symphony.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
 
 public abstract class URLToCartesianTriangularMeshConverter implements IConverter 
 {			

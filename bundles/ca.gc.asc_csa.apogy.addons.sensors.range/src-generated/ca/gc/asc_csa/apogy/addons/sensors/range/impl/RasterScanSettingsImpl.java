@@ -4,14 +4,14 @@
  *
  * $Id: RasterScanSettingsImpl.java,v 1.3.4.2 2015/05/21 15:50:21 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +21,9 @@ import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanSettingsImpl#getVerticalResolution <em>Vertical Resolution</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanSettingsImpl#getHorizontalResolution <em>Horizontal Resolution</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanSettingsImpl#getNumberOfPoints <em>Number Of Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RasterScanSettingsImpl#getVerticalResolution <em>Vertical Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RasterScanSettingsImpl#getHorizontalResolution <em>Horizontal Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.RasterScanSettingsImpl#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class RasterScanSettingsImpl extends RectangularFrustrumFieldOfViewImpl i
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS;
+		return ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS;
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class RasterScanSettingsImpl extends RectangularFrustrumFieldOfViewImpl i
 		int oldVerticalResolution = verticalResolution;
 		verticalResolution = newVerticalResolution;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION, oldVerticalResolution, verticalResolution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION, oldVerticalResolution, verticalResolution));
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class RasterScanSettingsImpl extends RectangularFrustrumFieldOfViewImpl i
 		int oldHorizontalResolution = horizontalResolution;
 		horizontalResolution = newHorizontalResolution;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION, oldHorizontalResolution, horizontalResolution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION, oldHorizontalResolution, horizontalResolution));
 	}
 
 	/**
@@ -166,11 +166,11 @@ public class RasterScanSettingsImpl extends RectangularFrustrumFieldOfViewImpl i
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
 				return getVerticalResolution();
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
 				return getHorizontalResolution();
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
 				return getNumberOfPoints();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -185,10 +185,10 @@ public class RasterScanSettingsImpl extends RectangularFrustrumFieldOfViewImpl i
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
 				setVerticalResolution((Integer)newValue);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
 				setHorizontalResolution((Integer)newValue);
 				return;
 		}
@@ -204,10 +204,10 @@ public class RasterScanSettingsImpl extends RectangularFrustrumFieldOfViewImpl i
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
 				setVerticalResolution(VERTICAL_RESOLUTION_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
 				setHorizontalResolution(HORIZONTAL_RESOLUTION_EDEFAULT);
 				return;
 		}
@@ -223,11 +223,11 @@ public class RasterScanSettingsImpl extends RectangularFrustrumFieldOfViewImpl i
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
 				return verticalResolution != VERTICAL_RESOLUTION_EDEFAULT;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
 				return horizontalResolution != HORIZONTAL_RESOLUTION_EDEFAULT;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
 				return getNumberOfPoints() != NUMBER_OF_POINTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

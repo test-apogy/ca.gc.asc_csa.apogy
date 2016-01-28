@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,11 +10,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.SymphonyEnvironment;
+import ca.gc.asc_csa.apogy.addons.Simple3DTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +24,8 @@ import org.eclipse.symphony.core.SymphonyEnvironment;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.Simple3DToolImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Simple3DToolImpl#getRootNode <em>Root Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl#getRootNode <em>Root Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,7 +77,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.SIMPLE3_DTOOL;
+		return ApogyAddonsPackage.Literals.SIMPLE3_DTOOL;
 	}
 		
 	/**
@@ -98,7 +98,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE, oldVisible, visible));
 	}
 
 	/**
@@ -112,7 +112,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 			rootNode = (Node)eResolveProxy(oldRootNode);
 			if (rootNode != oldRootNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
 			}
 		}
 		return rootNode;
@@ -136,7 +136,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 		Node oldRootNode = rootNode;
 		rootNode = newRootNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
 	}
 
 	/**
@@ -158,9 +158,9 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				return isVisible();
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				if (resolve) return getRootNode();
 				return basicGetRootNode();
 		}
@@ -175,10 +175,10 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				setRootNode((Node)newValue);
 				return;
 		}
@@ -193,10 +193,10 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				setRootNode((Node)null);
 				return;
 		}
@@ -211,9 +211,9 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				return rootNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -227,7 +227,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL___SELECTION_CHANGED__NODESELECTION:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL___SELECTION_CHANGED__NODESELECTION:
 				selectionChanged((NodeSelection)arguments.get(0));
 				return null;
 		}
@@ -255,14 +255,14 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	{
 		if(newActive)
 		{
-			org.eclipse.symphony.addons.Activator.registerSimple3DTool(this);
+			ca.gc.asc_csa.apogy.addons.Activator.registerSimple3DTool(this);
 			
 			// Attempts to find the root node of the UNIVERSE for the tool.
 			setRootNode(resolveRootNode());
 		}
 		else
 		{
-			org.eclipse.symphony.addons.Activator.unregisterSimple3DTool(this);
+			ca.gc.asc_csa.apogy.addons.Activator.unregisterSimple3DTool(this);
 		}
 		super.setActive(newActive);
 	}
@@ -273,12 +273,12 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 		
 		try
 		{
-			if(getToolList().getToolsList().getInvocatorSession().getEnvironment() instanceof SymphonyEnvironment)
+			if(getToolList().getToolsList().getInvocatorSession().getEnvironment() instanceof ApogyEnvironment)
 			{
-				SymphonyEnvironment se = (SymphonyEnvironment) getToolList().getToolsList().getInvocatorSession().getEnvironment();
-				if(se.getSymphonyTopology() != null)
+				ApogyEnvironment se = (ApogyEnvironment) getToolList().getToolsList().getInvocatorSession().getEnvironment();
+				if(se.getApogyTopology() != null)
 				{
-					root = se.getSymphonyTopology().getRootNode();
+					root = se.getApogyTopology().getRootNode();
 				}
 			}
 		}

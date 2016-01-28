@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
 import javax.media.j3d.Transform3D;
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Pose;
-import org.eclipse.symphony.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
 
 public class PoseUtils
 {
@@ -64,7 +64,7 @@ public class PoseUtils
 		Vector3d position = new Vector3d();
 		t.get(position);
 		
-		Pose pose = Symphony__CommonGeometryData3DFacade.INSTANCE.createPose(position.x, position.y, position.z, rotation.x, rotation.y, rotation.z);
+		Pose pose = ApogyCommonGeometryData3DFacade.INSTANCE.createPose(position.x, position.y, position.z, rotation.x, rotation.y, rotation.z);
 		
 		return pose;
 	}	

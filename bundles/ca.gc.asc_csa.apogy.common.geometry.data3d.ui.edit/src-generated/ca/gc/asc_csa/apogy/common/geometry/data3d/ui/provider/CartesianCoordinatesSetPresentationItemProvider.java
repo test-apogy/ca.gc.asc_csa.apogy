@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetPresentation_pointCloud_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetPresentation_pointCloud_feature", "_UI_CartesianCoordinatesSetPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD,
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD,
 				 true,
 				 false,
 				 true,
@@ -88,7 +88,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetPresentation_pointSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetPresentation_pointSize_feature", "_UI_CartesianCoordinatesSetPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE,
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetPresentation_numberOfPoints_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetPresentation_numberOfPoints_feature", "_UI_CartesianCoordinatesSetPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS,
+				 ApogyCommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS,
 				 false,
 				 false,
 				 false,
@@ -158,8 +158,8 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianCoordinatesSetPresentation.class)) {
-			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
-			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

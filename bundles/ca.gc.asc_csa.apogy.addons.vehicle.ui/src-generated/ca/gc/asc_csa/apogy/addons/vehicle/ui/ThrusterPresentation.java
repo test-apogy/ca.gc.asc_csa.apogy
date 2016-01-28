@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage#getThrusterPresentation()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface ThrusterPresentation extends NodePresentation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plume Envelope Visible</em>' attribute.
 	 * @see #setPlumeEnvelopeVisible(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeVisible()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='false' propertyCategory='PLUME_INFO'"
 	 * @generated
@@ -48,7 +48,7 @@ public interface ThrusterPresentation extends NodePresentation
 	boolean isPlumeEnvelopeVisible();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Plume Envelope Visible</em>' attribute.
@@ -68,7 +68,7 @@ public interface ThrusterPresentation extends NodePresentation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plume Envelope Length</em>' attribute.
 	 * @see #setPlumeEnvelopeLength(double)
-	 * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeLength()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeLength()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='false' propertyCategory='PLUME_INFO'"
 	 * @generated
@@ -76,7 +76,7 @@ public interface ThrusterPresentation extends NodePresentation
 	double getPlumeEnvelopeLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Plume Envelope Length</em>' attribute.

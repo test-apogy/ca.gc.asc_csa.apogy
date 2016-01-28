@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import javax.vecmath.Color3f;
 
@@ -9,11 +9,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.SlopeRange;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,11 +23,11 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getSlopeLowerBound <em>Slope Lower Bound</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getSlopeUpperBound <em>Slope Upper Bound</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getColor <em>Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SlopeRangeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SlopeRangeImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SlopeRangeImpl#getSlopeLowerBound <em>Slope Lower Bound</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SlopeRangeImpl#getSlopeUpperBound <em>Slope Upper Bound</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SlopeRangeImpl#getColor <em>Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,7 +121,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentPackage.eINSTANCE.getColor3f(), "1.0,1.0,1.0");
+	protected static final Color3f COLOR_EDEFAULT = (Color3f)ApogyCoreEnvironmentFactory.eINSTANCE.createFromString(ApogyCoreEnvironmentPackage.eINSTANCE.getColor3f(), "1.0,1.0,1.0");
 
 	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
@@ -149,7 +149,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE;
+		return ApogyCoreEnvironmentPackage.Literals.SLOPE_RANGE;
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SLOPE_RANGE__NAME, oldName, name));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -212,7 +212,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		double oldSlopeLowerBound = slopeLowerBound;
 		slopeLowerBound = newSlopeLowerBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND, oldSlopeLowerBound, slopeLowerBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND, oldSlopeLowerBound, slopeLowerBound));
 	}
 
 	/**
@@ -233,7 +233,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		double oldSlopeUpperBound = slopeUpperBound;
 		slopeUpperBound = newSlopeUpperBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND, oldSlopeUpperBound, slopeUpperBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND, oldSlopeUpperBound, slopeUpperBound));
 	}
 
 	/**
@@ -254,7 +254,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		Color3f oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SLOPE_RANGE__COLOR, oldColor, color));
 	}
 
 	/**
@@ -265,15 +265,15 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				return getName();
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				return getDescription();
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				return getSlopeLowerBound();
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				return getSlopeUpperBound();
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				return getColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -287,19 +287,19 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				setSlopeLowerBound((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				setSlopeUpperBound((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				setColor((Color3f)newValue);
 				return;
 		}
@@ -314,19 +314,19 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				setSlopeLowerBound(SLOPE_LOWER_BOUND_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				setSlopeUpperBound(SLOPE_UPPER_BOUND_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
 		}
@@ -341,15 +341,15 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				return slopeLowerBound != SLOPE_LOWER_BOUND_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				return slopeUpperBound != SLOPE_UPPER_BOUND_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
 		}
 		return super.eIsSet(featureID);
@@ -364,7 +364,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -380,7 +380,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION;
 				default: return -1;
 			}
 		}

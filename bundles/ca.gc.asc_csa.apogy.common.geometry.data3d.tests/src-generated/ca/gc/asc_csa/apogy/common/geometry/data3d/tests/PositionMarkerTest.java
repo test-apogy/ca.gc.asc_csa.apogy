@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class PositionMarkerTest extends CartesianPositionCoordinatesTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker());
 	}
 
 	/**

@@ -1,18 +1,18 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.views;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.Activator;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.composites.UniversalConstraintComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites.UniversalConstraintComposite;
 
 public class UniversalConstraintView extends AbstractPinableView<UniversalConstraint>
 {
 	private UniversalConstraint prismaticConstraint;
-	public static final String ID = "org.eclipse.symphony.common.topology.addons.dynamics.ui.views.UniversalConstraint"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.UniversalConstraint"; //$NON-NLS-1$
 
 	private UniversalConstraintComposite universalConstraintComposite = null;
 	

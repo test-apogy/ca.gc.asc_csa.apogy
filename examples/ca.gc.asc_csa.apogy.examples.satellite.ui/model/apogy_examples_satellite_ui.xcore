@@ -1,21 +1,21 @@
-@GenModel(prefix="Symphony__ExamplesSatelliteUi",
+@GenModel(prefix="ApogyExamplesSatelliteUi",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)",
-		  modelName="Symphony__ExamplesSatelliteUi",
+		  modelName="ApogyExamplesSatelliteUi",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.satellite.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.satellite.ui.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.satellite.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.satellite.ui.edit/src-generated")
 
-package org.eclipse.symphony.examples.satellite.ui
+package ca.gc.asc_csa.apogy.examples.satellite.ui
 
-import org.eclipse.symphony.core.invocator.OperationCallResultsList
-import org.eclipse.symphony.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList
+import ca.gc.asc_csa.apogy.core.invocator.Variable
 
 /*
  * Constellation Facade.  This class provides utility methods.  
  */
- class Symphony__ExamplesSatelliteUiFacade{
+ class ApogyExamplesSatelliteUiFacade{
  	
  	/*
  	 * Returns the name of the constellation {@link Variable}.

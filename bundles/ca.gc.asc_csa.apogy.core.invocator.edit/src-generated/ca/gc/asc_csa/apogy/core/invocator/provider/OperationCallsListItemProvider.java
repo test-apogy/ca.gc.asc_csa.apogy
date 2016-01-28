@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -11,12 +11,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.OperationCallsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallsList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class OperationCallsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +123,7 @@ public class OperationCallsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallsList.class)) {
-			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -144,8 +144,8 @@ public class OperationCallsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall()));
+				(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall()));
 	}
 
 }

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -11,7 +11,7 @@ public class Activator extends Plugin {
 	private GPSRepository gpsRepository;
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.sensors.gps";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.gps";
 
 	// The shared instance
 	private static Activator plugin;

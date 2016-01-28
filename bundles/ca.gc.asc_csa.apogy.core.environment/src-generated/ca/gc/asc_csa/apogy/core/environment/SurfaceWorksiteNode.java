@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceWorksiteNode()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSurfaceWorksiteNode()
  * @model
  * @generated
  */

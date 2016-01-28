@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode;
 
 /**
  * <!-- begin-user-doc -->

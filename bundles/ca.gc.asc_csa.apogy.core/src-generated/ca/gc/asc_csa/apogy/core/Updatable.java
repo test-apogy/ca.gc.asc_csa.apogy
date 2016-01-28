@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.Updatable#isUpdating <em>Updating</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.Updatable#isAutoUpdateEnabled <em>Auto Update Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.Updatable#isUpdating <em>Updating</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.Updatable#isAutoUpdateEnabled <em>Auto Update Enabled</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getUpdatable()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getUpdatable()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface Updatable extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Updating</em>' attribute.
 	 * @see #setUpdating(boolean)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getUpdatable_Updating()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getUpdatable_Updating()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='UPDATABLE'"
 	 * @generated
@@ -49,7 +49,7 @@ public interface Updatable extends EObject {
 	boolean isUpdating();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.Updatable#isUpdating <em>Updating</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.Updatable#isUpdating <em>Updating</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Updating</em>' attribute.
@@ -67,7 +67,7 @@ public interface Updatable extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auto Update Enabled</em>' attribute.
 	 * @see #setAutoUpdateEnabled(boolean)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getUpdatable_AutoUpdateEnabled()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getUpdatable_AutoUpdateEnabled()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='UPDATABLE'"
 	 * @generated
@@ -75,7 +75,7 @@ public interface Updatable extends EObject {
 	boolean isAutoUpdateEnabled();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.Updatable#isAutoUpdateEnabled <em>Auto Update Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.Updatable#isAutoUpdateEnabled <em>Auto Update Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Auto Update Enabled</em>' attribute.
@@ -101,7 +101,7 @@ public interface Updatable extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Update method.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.core.Exception"
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception"
 	 * @generated
 	 */
 	void update() throws Exception;

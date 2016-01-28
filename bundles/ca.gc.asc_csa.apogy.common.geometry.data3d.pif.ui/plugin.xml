@@ -2,17 +2,17 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.graphicsContextAdapter">
       <Class
-            Class="org.eclipse.symphony.common.geometry.data3d.pif.ui.adapters.GraphicsContextPifAdapter">
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.pif.ui.adapters.GraphicsContextPifAdapter">
       </Class>
    </extension>
    
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.common.geometry.data3d.pif.ui.handlers.PIFToXYZExportCommandHandler"
-            id="org.eclipse.symphony.common.geometry.data3d.pif.ui.commands.PIFToXYZExportCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.common.geometry.data3d.pif.ui.handlers.PIFToXYZExportCommandHandler"
+            id="ca.gc.asc_csa.apogy.common.geometry.data3d.pif.ui.commands.PIFToXYZExportCommand"
             name="Export PIF To XYZ">
       </command>
    </extension>
@@ -21,9 +21,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.common.geometry.data3d.pif.ui.commands.PIFToXYZExportCommand"
+               commandId="ca.gc.asc_csa.apogy.common.geometry.data3d.pif.ui.commands.PIFToXYZExportCommand"
                label="Export PIF To XYZ"
                style="push">
             <visibleWhen

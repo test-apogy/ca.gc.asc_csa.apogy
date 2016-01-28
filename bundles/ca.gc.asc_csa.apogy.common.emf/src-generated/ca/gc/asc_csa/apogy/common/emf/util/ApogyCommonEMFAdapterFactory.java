@@ -1,22 +1,22 @@
 /**
  */
-package org.eclipse.symphony.common.emf.util;
+package ca.gc.asc_csa.apogy.common.emf.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.*;
+import ca.gc.asc_csa.apogy.common.emf.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage
  * @generated
  */
-public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
+public class ApogyCommonEMFAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -24,7 +24,7 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CommonEMFPackage modelPackage;
+  protected static ApogyCommonEMFPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -32,10 +32,10 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFAdapterFactory()
+  public ApogyCommonEMFAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonEMFPackage.eINSTANCE;
+			modelPackage = ApogyCommonEMFPackage.eINSTANCE;
 		}
 	}
 
@@ -65,11 +65,11 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CommonEMFSwitch<Adapter> modelSwitch =
-    new Symphony__CommonEMFSwitch<Adapter>() {
+  protected ApogyCommonEMFSwitch<Adapter> modelSwitch =
+    new ApogyCommonEMFSwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__CommonEMFFacade(Symphony__CommonEMFFacade object) {
-				return createSymphony__CommonEMFFacadeAdapter();
+			public Adapter caseApogyCommonEMFFacade(ApogyCommonEMFFacade object) {
+				return createApogyCommonEMFFacadeAdapter();
 			}
 			@Override
 			public Adapter caseEObjectReference(EObjectReference object) {
@@ -185,27 +185,27 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonEMFFacadeAdapter() {
+	public Adapter createApogyCommonEMFFacadeAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.EObjectReference <em>EObject Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.EObjectReference
+	 * @see ca.gc.asc_csa.apogy.common.emf.EObjectReference
 	 * @generated
 	 */
 	public Adapter createEObjectReferenceAdapter() {
@@ -213,13 +213,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
   public Adapter createNamedAdapter()
@@ -228,13 +228,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
   public Adapter createDescribedAdapter()
@@ -243,13 +243,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Timed
+	 * @see ca.gc.asc_csa.apogy.common.emf.Timed
 	 * @generated
 	 */
   public Adapter createTimedAdapter()
@@ -258,13 +258,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Server <em>Server</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Server <em>Server</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Server
+	 * @see ca.gc.asc_csa.apogy.common.emf.Server
 	 * @generated
 	 */
 	public Adapter createServerAdapter() {
@@ -272,13 +272,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Startable <em>Startable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Startable <em>Startable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Startable
+	 * @see ca.gc.asc_csa.apogy.common.emf.Startable
 	 * @generated
 	 */
 	public Adapter createStartableAdapter() {
@@ -286,13 +286,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.TimeSource <em>Time Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.TimeSource <em>Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.TimeSource
+	 * @see ca.gc.asc_csa.apogy.common.emf.TimeSource
 	 * @generated
 	 */
 	public Adapter createTimeSourceAdapter() {
@@ -300,13 +300,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.FixedTimeSource <em>Fixed Time Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.FixedTimeSource <em>Fixed Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.FixedTimeSource
+	 * @see ca.gc.asc_csa.apogy.common.emf.FixedTimeSource
 	 * @generated
 	 */
 	public Adapter createFixedTimeSourceAdapter() {
@@ -314,13 +314,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.CurrentTimeSource <em>Current Time Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource <em>Current Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.CurrentTimeSource
+	 * @see ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource
 	 * @generated
 	 */
 	public Adapter createCurrentTimeSourceAdapter() {
@@ -328,13 +328,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.BrowseableTimeSource <em>Browseable Time Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource <em>Browseable Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.BrowseableTimeSource
+	 * @see ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource
 	 * @generated
 	 */
 	public Adapter createBrowseableTimeSourceAdapter() {
@@ -342,13 +342,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.SelectionBasedTimeSource <em>Selection Based Time Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.SelectionBasedTimeSource <em>Selection Based Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.SelectionBasedTimeSource
+	 * @see ca.gc.asc_csa.apogy.common.emf.SelectionBasedTimeSource
 	 * @generated
 	 */
 	public Adapter createSelectionBasedTimeSourceAdapter() {
@@ -356,13 +356,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource <em>Collection Timed Time Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource <em>Collection Timed Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.CollectionTimedTimeSource
+	 * @see ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource
 	 * @generated
 	 */
 	public Adapter createCollectionTimedTimeSourceAdapter() {
@@ -370,13 +370,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Disposable <em>Disposable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Disposable <em>Disposable</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Disposable
+	 * @see ca.gc.asc_csa.apogy.common.emf.Disposable
 	 * @generated
 	 */
   public Adapter createDisposableAdapter()
@@ -385,13 +385,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.AbstractFeatureNode <em>Abstract Feature Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode <em>Abstract Feature Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.AbstractFeatureNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode
 	 * @generated
 	 */
   public Adapter createAbstractFeatureNodeAdapter()
@@ -400,13 +400,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter <em>Feature Node Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter <em>Feature Node Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.FeatureNodeAdapter
+	 * @see ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter
 	 * @generated
 	 */
   public Adapter createFeatureNodeAdapterAdapter()
@@ -415,13 +415,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.AbstractFeatureListNode <em>Abstract Feature List Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode <em>Abstract Feature List Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.AbstractFeatureListNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode
 	 * @generated
 	 */
   public Adapter createAbstractFeatureListNodeAdapter()
@@ -430,13 +430,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.AbstractFeatureTreeNode <em>Abstract Feature Tree Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeatureTreeNode <em>Abstract Feature Tree Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.AbstractFeatureTreeNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.AbstractFeatureTreeNode
 	 * @generated
 	 */
   public Adapter createAbstractFeatureTreeNodeAdapter()
@@ -445,13 +445,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.AbstractRootNode <em>Abstract Root Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.AbstractRootNode <em>Abstract Root Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.AbstractRootNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.AbstractRootNode
 	 * @generated
 	 */
   public Adapter createAbstractRootNodeAdapter()
@@ -460,13 +460,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.TreeRootNode <em>Tree Root Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.TreeRootNode <em>Tree Root Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.TreeRootNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.TreeRootNode
 	 * @generated
 	 */
   public Adapter createTreeRootNodeAdapter()
@@ -475,13 +475,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.TreeFeatureNode <em>Tree Feature Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode <em>Tree Feature Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.TreeFeatureNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode
 	 * @generated
 	 */
   public Adapter createTreeFeatureNodeAdapter()
@@ -490,13 +490,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.ListRootNode <em>List Root Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.ListRootNode <em>List Root Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.ListRootNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.ListRootNode
 	 * @generated
 	 */
   public Adapter createListRootNodeAdapter()
@@ -505,13 +505,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.ListFeatureNode <em>List Feature Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.ListFeatureNode <em>List Feature Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.ListFeatureNode
+	 * @see ca.gc.asc_csa.apogy.common.emf.ListFeatureNode
 	 * @generated
 	 */
   public Adapter createListFeatureNodeAdapter()
@@ -520,13 +520,13 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.AbstractFeatureSpecifier <em>Abstract Feature Specifier</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier <em>Abstract Feature Specifier</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.AbstractFeatureSpecifier
+	 * @see ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier
 	 * @generated
 	 */
   public Adapter createAbstractFeatureSpecifierAdapter()
@@ -547,4 +547,4 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__CommonEMFAdapterFactory
+} //ApogyCommonEMFAdapterFactory

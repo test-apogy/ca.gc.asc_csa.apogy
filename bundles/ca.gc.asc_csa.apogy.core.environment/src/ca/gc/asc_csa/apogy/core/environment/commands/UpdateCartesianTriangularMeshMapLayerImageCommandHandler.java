@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.commands;
+package ca.gc.asc_csa.apogy.core.environment.commands;
 
 import java.util.Iterator;
 
@@ -7,7 +7,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class UpdateCartesianTriangularMeshMapLayerImageCommandHandler extends AbstractHandler implements

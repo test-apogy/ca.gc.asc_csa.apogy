@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.ui.properties.sections;
+package ca.gc.asc_csa.apogy.common.ui.properties.sections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecp.ui.view.ECPRendererException;

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.PowerSystem#getCurrentCurrent <em>Current Current</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.PowerSystem#getCurrentCurrent <em>Current Current</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem()
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getPowerSystem()
  * @model
  * @generated
  */
@@ -37,15 +37,15 @@ public interface PowerSystem extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Current Voltage</em>' attribute.
    * @see #setCurrentVoltage(double)
-   * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem_CurrentVoltage()
+   * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getPowerSystem_CurrentVoltage()
    * @model unique="false"
-   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='V'"
+   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' apogy_units='V'"
    * @generated
    */
   double getCurrentVoltage();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Current Voltage</em>' attribute.
@@ -67,15 +67,15 @@ public interface PowerSystem extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Current Current</em>' attribute.
    * @see #setCurrentCurrent(double)
-   * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem_CurrentCurrent()
+   * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getPowerSystem_CurrentCurrent()
    * @model unique="false"
-   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='V'"
+   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' apogy_units='V'"
    * @generated
    */
   double getCurrentCurrent();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.PowerSystem#getCurrentCurrent <em>Current Current</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.PowerSystem#getCurrentCurrent <em>Current Current</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Current Current</em>' attribute.

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.impl;
+package ca.gc.asc_csa.apogy.examples.camera.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,17 +11,17 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.examples.camera.Camera;
-import org.eclipse.symphony.examples.camera.CameraSimulated;
-import org.eclipse.symphony.examples.camera.CameraStub;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraFactory;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.PTUCamera;
-import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
-import org.eclipse.symphony.examples.camera.PTUCameraStub;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.examples.camera.Camera;
+import ca.gc.asc_csa.apogy.examples.camera.CameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.CameraStub;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraFactory;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import org.eclipse.symphony.examples.camera.PTUCameraStub;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements Symphony__ExamplesCameraPackage
+public class ApogyExamplesCameraPackageImpl extends EPackageImpl implements ApogyExamplesCameraPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -91,13 +91,13 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesCameraPackageImpl()
+  private ApogyExamplesCameraPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesCameraFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesCameraFactory.eINSTANCE);
 	}
 
   /**
@@ -110,7 +110,7 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesCameraPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesCameraPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -119,32 +119,32 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesCameraPackage init()
+  public static ApogyExamplesCameraPackage init()
   {
-		if (isInited) return (Symphony__ExamplesCameraPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesCameraPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesCameraPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesCameraPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesCameraPackageImpl theSymphony__ExamplesCameraPackage = (Symphony__ExamplesCameraPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesCameraPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesCameraPackageImpl());
+		ApogyExamplesCameraPackageImpl theApogyExamplesCameraPackage = (ApogyExamplesCameraPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesCameraPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesCameraPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsSensorsImagingPackage.eINSTANCE.eClass();
-		Symphony__AddonsActuatorsPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsImagingPackage.eINSTANCE.eClass();
+		ApogyAddonsActuatorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesCameraPackage.createPackageContents();
+		theApogyExamplesCameraPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesCameraPackage.initializePackageContents();
+		theApogyExamplesCameraPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesCameraPackage.freeze();
+		theApogyExamplesCameraPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesCameraPackage.eNS_URI, theSymphony__ExamplesCameraPackage);
-		return theSymphony__ExamplesCameraPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesCameraPackage.eNS_URI, theApogyExamplesCameraPackage);
+		return theApogyExamplesCameraPackage;
 	}
 
   /**
@@ -264,8 +264,8 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesCameraFactory getSymphony__ExamplesCameraFactory() {
-		return (Symphony__ExamplesCameraFactory)getEFactoryInstance();
+	public ApogyExamplesCameraFactory getApogyExamplesCameraFactory() {
+		return (ApogyExamplesCameraFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -334,22 +334,22 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__AddonsSensorsImagingPackage theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
-		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
+		ApogyAddonsSensorsImagingPackage theApogyAddonsSensorsImagingPackage = (ApogyAddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsImagingPackage.eNS_URI);
+		ApogyAddonsSensorsFOVPackage theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__AddonsActuatorsPackage theSymphony__AddonsActuatorsPackage = (Symphony__AddonsActuatorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsActuatorsPackage.eNS_URI);
+		ApogyAddonsActuatorsPackage theApogyAddonsActuatorsPackage = (ApogyAddonsActuatorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsActuatorsPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		cameraEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getAbstractCamera());
-		cameraEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getZoomable());
+		cameraEClass.getESuperTypes().add(theApogyAddonsSensorsImagingPackage.getAbstractCamera());
+		cameraEClass.getESuperTypes().add(theApogyAddonsSensorsImagingPackage.getZoomable());
 		cameraStubEClass.getESuperTypes().add(this.getCamera());
 		cameraSimulatedEClass.getESuperTypes().add(this.getCamera());
 		ptuCameraEClass.getESuperTypes().add(this.getCamera());
-		ptuCameraEClass.getESuperTypes().add(theSymphony__AddonsActuatorsPackage.getPanTiltUnit());
+		ptuCameraEClass.getESuperTypes().add(theApogyAddonsActuatorsPackage.getPanTiltUnit());
 		ptuCameraStubEClass.getESuperTypes().add(this.getCameraStub());
 		ptuCameraStubEClass.getESuperTypes().add(this.getPTUCamera());
 		ptuCameraSimulatedEClass.getESuperTypes().add(this.getCameraSimulated());
@@ -357,7 +357,7 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cameraEClass, Camera.class, "Camera", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCamera_Fov(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCamera_Fov(), theApogyAddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCamera_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCamera_StreamingEnabled(), theEcorePackage.getEBoolean(), "streamingEnabled", "false", 0, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -400,15 +400,15 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesCamera",
+			 "prefix", "ApogyExamplesCamera",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-			 "modelName", "Symphony__ExamplesCamera",
+			 "modelName", "ApogyExamplesCamera",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.camera/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.camera.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.camera/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.camera.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
 		  (cameraEClass, 
@@ -488,4 +488,4 @@ public class Symphony__ExamplesCameraPackageImpl extends EPackageImpl implements
 		   });
 	}
 
-} //Symphony__ExamplesCameraPackageImpl
+} //ApogyExamplesCameraPackageImpl

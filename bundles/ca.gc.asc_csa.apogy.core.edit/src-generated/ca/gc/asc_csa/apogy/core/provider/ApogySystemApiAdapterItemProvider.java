@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -13,18 +13,18 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.provider.TypeApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.provider.TypeApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.SymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SymphonySystemApiAdapterItemProvider
+public class ApogySystemApiAdapterItemProvider
   extends TypeApiAdapterItemProvider
 {
   /**
@@ -33,7 +33,7 @@ public class SymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public ApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -50,26 +50,26 @@ public class SymphonySystemApiAdapterItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSymphonySystemPropertyDescriptor(object);
+			addApogySystemPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
-	 * This adds a property descriptor for the Symphony System feature.
+	 * This adds a property descriptor for the Apogy System feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addSymphonySystemPropertyDescriptor(Object object)
+  protected void addApogySystemPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonySystemApiAdapter_symphonySystem_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonySystemApiAdapter_symphonySystem_feature", "_UI_SymphonySystemApiAdapter_type"),
-				 Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM,
+				 getString("_UI_ApogySystemApiAdapter_apogySystem_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogySystemApiAdapter_apogySystem_feature", "_UI_ApogySystemApiAdapter_type"),
+				 ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM,
 				 true,
 				 false,
 				 true,
@@ -91,9 +91,9 @@ public class SymphonySystemApiAdapterItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM);
+			childrenFeatures.add(ApogyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM);
 		}
 		return childrenFeatures;
 	}
@@ -113,7 +113,7 @@ public class SymphonySystemApiAdapterItemProvider
 	}
 
   /**
-	 * This returns SymphonySystemApiAdapter.gif.
+	 * This returns ApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class SymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogySystemApiAdapter"));
 	}
 
   /**
@@ -133,7 +133,7 @@ public class SymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_SymphonySystemApiAdapter_type");
+		return getString("_UI_ApogySystemApiAdapter_type");
 	}
 
   /**
@@ -148,9 +148,9 @@ public class SymphonySystemApiAdapterItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SymphonySystemApiAdapter.class)) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+		switch (notification.getFeatureID(ApogySystemApiAdapter.class)) {
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -171,8 +171,8 @@ public class SymphonySystemApiAdapterItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 }

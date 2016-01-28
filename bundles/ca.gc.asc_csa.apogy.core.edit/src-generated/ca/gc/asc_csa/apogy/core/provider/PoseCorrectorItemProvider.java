@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.PoseCorrector;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.PoseCorrector} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.PoseCorrector} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -62,27 +62,27 @@ public class PoseCorrectorItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSymphonySystemApiAdapterPropertyDescriptor(object);
+			addApogySystemApiAdapterPropertyDescriptor(object);
 			addEnabledPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
-	 * This adds a property descriptor for the Symphony System Api Adapter feature.
+	 * This adds a property descriptor for the Apogy System Api Adapter feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addSymphonySystemApiAdapterPropertyDescriptor(Object object)
+  protected void addApogySystemApiAdapterPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PoseCorrector_symphonySystemApiAdapter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PoseCorrector_symphonySystemApiAdapter_feature", "_UI_PoseCorrector_type"),
-				 Symphony__CorePackage.Literals.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER,
+				 getString("_UI_PoseCorrector_apogySystemApiAdapter_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PoseCorrector_apogySystemApiAdapter_feature", "_UI_PoseCorrector_type"),
+				 ApogyCorePackage.Literals.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER,
 				 true,
 				 false,
 				 true,
@@ -105,7 +105,7 @@ public class PoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseCorrector_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseCorrector_enabled_feature", "_UI_PoseCorrector_type"),
-				 Symphony__CorePackage.Literals.POSE_CORRECTOR__ENABLED,
+				 ApogyCorePackage.Literals.POSE_CORRECTOR__ENABLED,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class PoseCorrectorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PoseCorrector.class)) {
-			case Symphony__CorePackage.POSE_CORRECTOR__ENABLED:
+			case ApogyCorePackage.POSE_CORRECTOR__ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

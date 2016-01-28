@@ -1,38 +1,38 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.addons,
- org.eclipse.symphony.addons.impl,
- org.eclipse.symphony.addons.util
+Export-Package: ca.gc.asc_csa.apogy.addons,
+ ca.gc.asc_csa.apogy.addons.impl,
+ ca.gc.asc_csa.apogy.addons.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.common.topology.bindings;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
  org.eclipse.core.runtime,
- org.eclipse.symphony.core.invocator;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.topology.ui.viewer,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.ui.viewer,
  org.eclipse.ui.workbench,
  org.eclipse.jface,
- org.eclipse.symphony.core;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
  org.eclipse.emf.edit,
- org.eclipse.symphony.core.environment,
- org.eclipse.symphony.common.topology.addons.primitives,
- org.eclipse.symphony.addons.geometry.paths;visibility:=reexport,
- org.eclipse.symphony.core.topology.ui;visibility:=reexport,
- org.eclipse.symphony.core.environment.ui
+ ca.gc.asc_csa.apogy.core.environment,
+ ca.gc.asc_csa.apogy.common.topology.addons.primitives,
+ ca.gc.asc_csa.apogy.addons.geometry.paths;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.topology.ui;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment.ui
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.addons.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.Activator

@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.io.jinput.EComponent;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getAbstractInputConditioning()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getAbstractInputConditioning()
  * @model abstract="true"
  * @generated
  */

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.impl;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.impl;
 
 import java.awt.Point;
 import java.awt.Transparency;
@@ -27,9 +27,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.graphics.ImageLoader;
-import org.eclipse.symphony.addons.ros.imaging.Activator;
-import org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade;
-import org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.buffer.ChannelBuffers;
 import org.ros.node.ConnectedNode;
@@ -37,12 +37,12 @@ import org.ros.node.ConnectedNode;
 import sensor_msgs.CompressedImage;
 import sensor_msgs.Image;
 
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
 
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,15 +51,15 @@ import org.eclipse.symphony.common.log.Logger;
  *
  * @generated
  */
-public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__AddonsROSImagingFacade
+public class ApogyAddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Container implements ApogyAddonsROSImagingFacade
 {
-	private static Symphony__AddonsROSImagingFacade instance;
+	private static ApogyAddonsROSImagingFacade instance;
 
-	public static Symphony__AddonsROSImagingFacade getInstance()
+	public static ApogyAddonsROSImagingFacade getInstance()
 	{
 		if(instance == null)
 		{
-			instance = new Symphony__AddonsROSImagingFacadeImpl();
+			instance = new ApogyAddonsROSImagingFacadeImpl();
 		}
 
 		return instance;
@@ -70,7 +70,7 @@ public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsROSImagingFacadeImpl()
+	protected ApogyAddonsROSImagingFacadeImpl()
 	{
 		super();
 	}
@@ -83,7 +83,7 @@ public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Con
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsROSImagingPackage.Literals.SYMPHONY_ADDONS_ROS_IMAGING_FACADE;
+		return ApogyAddonsROSImagingPackage.Literals.APOGY_ADDONS_ROS_IMAGING_FACADE;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Con
 			WritableRaster raster = Raster.createWritableRaster(sampleModel, dataBuffer, new Point(0,0));
 			BufferedImage bufferedImage = new BufferedImage(colourModel, raster, false, null);
 
-			eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+			eImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 			eImage.setImageContent(bufferedImage);
 			return eImage;
 		}
@@ -176,7 +176,7 @@ public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Con
 				WritableRaster raster = WritableRaster.createWritableRaster(csm, db, null);
 
 				BufferedImage image = new BufferedImage(model, raster, false, null);
-				eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+				eImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 				eImage.setImageContent(image);
 			} 
 			catch (Throwable t) 
@@ -195,7 +195,7 @@ public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Con
 			WritableRaster raster = Raster.createWritableRaster(sampleModel, dataBuffer, new Point(0,0));
 			BufferedImage bufferedImage = new BufferedImage(colourModel, raster, false, null);
 
-			eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+			eImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 			eImage.setImageContent(bufferedImage);
 
 		}
@@ -211,7 +211,7 @@ public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Con
 	@Override
 	public EImage convertToEImage(CompressedImage compressedImage)
 	{
-		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+		EImage eImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 
 		int offset = compressedImage.getData().arrayOffset();
 		byte[] buffer = compressedImage.getData().array();
@@ -276,16 +276,16 @@ public class Symphony__AddonsROSImagingFacadeImpl extends MinimalEObjectImpl.Con
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__AddonsROSImagingPackage.SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE:
+			case ApogyAddonsROSImagingPackage.APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE:
 				return convertToEImage((Image)arguments.get(0));
-			case Symphony__AddonsROSImagingPackage.SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE:
+			case ApogyAddonsROSImagingPackage.APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE:
 				return convertToEImage((CompressedImage)arguments.get(0));
-			case Symphony__AddonsROSImagingPackage.SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE:
+			case ApogyAddonsROSImagingPackage.APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE:
 				return convertToCompressedImage((EImage)arguments.get(0), (ConnectedNode)arguments.get(1));
-			case Symphony__AddonsROSImagingPackage.SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE:
+			case ApogyAddonsROSImagingPackage.APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE:
 				return convertToCompressedImage((ImageData)arguments.get(0), (ConnectedNode)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__AddonsROSImagingFacadeImpl
+} //ApogyAddonsROSImagingFacadeImpl

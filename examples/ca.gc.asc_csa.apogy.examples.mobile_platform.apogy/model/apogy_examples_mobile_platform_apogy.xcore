@@ -1,42 +1,42 @@
-@GenModel(prefix="Symphony__ExamplesMobilePlatformSymphony",
+@GenModel(prefix="ApogyExamplesMobilePlatformApogy",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
-		  modelName="Symphony__ExamplesMobilePlatformSymphony")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.mobile_platform.symphony/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.mobile_platform.symphony.edit/src-generated")
+		  modelName="ApogyExamplesMobilePlatformApogy")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.edit/src-generated")
 
-package org.eclipse.symphony.examples.mobile_platform.symphony
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter
-import org.eclipse.symphony.core.SymphonyInitializationData
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
-import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation
+import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation
 
 /*
- * This class is the specialized Symphony API adapter, used for connecting
+ * This class is the specialized Apogy API adapter, used for connecting
  * the existing Lidar unit example, located at
- * {@link org.eclipse.symphony.common.emf.examples.lidar.Lidar},
- * to Symphony; one can override the well-known callback functions to make
- * Symphony perform a variety of useful functions, including initialization,
+ * {@link ca.gc.asc_csa.apogy.common.emf.examples.lidar.Lidar},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
  * disposal and other features. 
  */
-class MobilePlatformSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+class MobilePlatformApogySystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*
 	 * For specific implementation details,
-	 * please see {@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformSymphonySystemApiAdapterImpl}
+	 * please see {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl.MobilePlatformApogySystemApiAdapterImpl}
 	 */
 }
 
 /*
- * This class specifies the initialization data that Symphony
+ * This class specifies the initialization data that Apogy
  * should be interested in when (re)initializing the Mobile
  * platform with the API Adapter (which in this case is
- * {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter})
+ * {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemApiAdapter})
  */
-class MobilePlatformData extends SymphonyInitializationData
+class MobilePlatformData extends ApogyInitializationData
 {
 	/*
 	 * This is whether or not the mobile platform should be
@@ -62,7 +62,7 @@ class MobilePlatformData extends SymphonyInitializationData
 	 * This is the linear velocity that the mobile platform
 	 * should have. 
 	 */
-	@GenModel(symphony_units="m/s",
+	@GenModel(apogy_units="m/s",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -73,7 +73,7 @@ class MobilePlatformData extends SymphonyInitializationData
 	 * This is the angular velocity that the mobile platform
 	 * should have.
 	 */
-	@GenModel(symphony_units="rad/s",
+	@GenModel(apogy_units="rad/s",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -83,14 +83,14 @@ class MobilePlatformData extends SymphonyInitializationData
 
 /*
  * This class is used to specify an annotation on the
- * Map View of Symphony, corresponding to the position of 
+ * Map View of Apogy, corresponding to the position of 
  * the mobile platform; in addition, the annotation is
  * capable of representing the platform's pose on the map. 
  */
-class MobilePlatformSymphonySystemAnnotation extends PoseVariableAnnotation
+class MobilePlatformApogySystemAnnotation extends PoseVariableAnnotation
 {
 	/*
 	 * For specific implementation details,
-	 * please see {@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformSymphonySystemAnnotationImpl}
+	 * please see {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl.MobilePlatformApogySystemAnnotationImpl}
 	 */
 }

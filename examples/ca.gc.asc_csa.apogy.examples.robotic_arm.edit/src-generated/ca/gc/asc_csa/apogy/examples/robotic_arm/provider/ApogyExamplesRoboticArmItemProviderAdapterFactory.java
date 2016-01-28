@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.provider;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,9 +29,9 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
 
-import org.eclipse.symphony.examples.robotic_arm.util.Symphony__ExamplesRoboticArmAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.util.ApogyExamplesRoboticArmAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -42,7 +42,7 @@ import org.eclipse.symphony.examples.robotic_arm.util.Symphony__ExamplesRoboticA
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoboticArmItemProviderAdapterFactory extends Symphony__ExamplesRoboticArmAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyExamplesRoboticArmItemProviderAdapterFactory extends ApogyExamplesRoboticArmAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class Symphony__ExamplesRoboticArmItemProviderAdapterFactory extends Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesRoboticArmEditPlugin.INSTANCE, Symphony__ExamplesRoboticArmPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesRoboticArmEditPlugin.INSTANCE, ApogyExamplesRoboticArmPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -81,7 +81,7 @@ public class Symphony__ExamplesRoboticArmItemProviderAdapterFactory extends Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoboticArmItemProviderAdapterFactory() {
+	public ApogyExamplesRoboticArmItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -90,7 +90,7 @@ public class Symphony__ExamplesRoboticArmItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.robotic_arm.RoboticArmStub} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -98,7 +98,7 @@ public class Symphony__ExamplesRoboticArmItemProviderAdapterFactory extends Symp
 	protected RoboticArmStubItemProvider roboticArmStubItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.robotic_arm.RoboticArmStub}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -113,7 +113,7 @@ public class Symphony__ExamplesRoboticArmItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__ExamplesRoboticArmItemProviderAdapterFactory extends Symp
 	protected RoboticArmSimulatedItemProvider roboticArmSimulatedItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,19 +21,19 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyFactory
+ * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesAntennaSymphony' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='Symphony__ExamplesAntennaSymphony' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.antenna.symphony/src-generated' editDirectory='/org.eclipse.symphony.examples.antenna.symphony.edit/src-generated' basePackage='org.eclipse.symphony.examples.antenna'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesAntennaApogy' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='ApogyExamplesAntennaApogy' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.antenna.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.antenna.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.antenna'"
  * @generated
  */
-public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
+public interface ApogyExamplesAntennaApogyPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "symphony";
+	String eNAME = "apogy";
 
 	/**
 	 * The package namespace URI.
@@ -41,7 +41,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.examples.antenna.symphony";
+	String eNS_URI = "ca.gc.asc_csa.apogy.examples.antenna.apogy";
 
 	/**
 	 * The package namespace name.
@@ -49,7 +49,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "symphony";
+	String eNS_PREFIX = "apogy";
 
 	/**
 	 * The singleton instance of the package.
@@ -57,17 +57,17 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesAntennaSymphonyPackage eINSTANCE = org.eclipse.symphony.examples.antenna.symphony.impl.Symphony__ExamplesAntennaSymphonyPackageImpl.init();
+	ApogyExamplesAntennaApogyPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.ApogyExamplesAntennaApogyPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaSymphonySystemApiAdapterImpl <em>PTU Dish Antenna Symphony System Api Adapter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaApogySystemApiAdapterImpl <em>PTU Dish Antenna Apogy System Api Adapter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaSymphonySystemApiAdapterImpl
-	 * @see org.eclipse.symphony.examples.antenna.symphony.impl.Symphony__ExamplesAntennaSymphonyPackageImpl#getPTUDishAntennaSymphonySystemApiAdapter()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaApogySystemApiAdapterImpl
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.ApogyExamplesAntennaApogyPackageImpl#getPTUDishAntennaApogySystemApiAdapter()
 	 * @generated
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER = 0;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -76,7 +76,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' reference.
@@ -85,7 +85,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER__INSTANCE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -94,7 +94,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -103,7 +103,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
 
 	/**
 	 * The feature id for the '<em><b>Pose Corrector</b></em>' containment reference.
@@ -112,25 +112,25 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
 
 	/**
-	 * The feature id for the '<em><b>Symphony System</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM;
 
 	/**
-	 * The number of structural features of the '<em>PTU Dish Antenna Symphony System Api Adapter</em>' class.
+	 * The number of structural features of the '<em>PTU Dish Antenna Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -139,7 +139,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -148,7 +148,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
 
 	/**
 	 * The operation id for the '<em>Create Initialization Data</em>' operation.
@@ -157,7 +157,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -166,7 +166,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
 
 	/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -175,7 +175,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
 
 	/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -184,7 +184,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
 
 	/**
 	 * The operation id for the '<em>Invoke</em>' operation.
@@ -193,7 +193,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -202,7 +202,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___DISPOSE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___DISPOSE;
 
 	/**
 	 * The operation id for the '<em>Create Result Matrix</em>' operation.
@@ -211,23 +211,23 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
 
 	/**
-	 * The number of operations of the '<em>PTU Dish Antenna Symphony System Api Adapter</em>' class.
+	 * The number of operations of the '<em>PTU Dish Antenna Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
+	int PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl <em>PTU Dish Antenna Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaDataImpl <em>PTU Dish Antenna Data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl
-	 * @see org.eclipse.symphony.examples.antenna.symphony.impl.Symphony__ExamplesAntennaSymphonyPackageImpl#getPTUDishAntennaData()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaDataImpl
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.ApogyExamplesAntennaApogyPackageImpl#getPTUDishAntennaData()
 	 * @generated
 	 */
 	int PTU_DISH_ANTENNA_DATA = 1;
@@ -239,7 +239,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA__INITIAL_POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
+	int PTU_DISH_ANTENNA_DATA__INITIAL_POSE_TRANSFORM = ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
 
 	/**
 	 * The feature id for the '<em><b>Fov</b></em>' containment reference.
@@ -248,7 +248,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA__FOV = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
+	int PTU_DISH_ANTENNA_DATA__FOV = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Pan Angle</b></em>' attribute.
@@ -257,7 +257,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA__PAN_ANGLE = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
+	int PTU_DISH_ANTENNA_DATA__PAN_ANGLE = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tilt Angle</b></em>' attribute.
@@ -266,7 +266,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA__TILT_ANGLE = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
+	int PTU_DISH_ANTENNA_DATA__TILT_ANGLE = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Tracking Sun</b></em>' attribute.
@@ -275,7 +275,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA__TRACKING_SUN = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
+	int PTU_DISH_ANTENNA_DATA__TRACKING_SUN = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -284,7 +284,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA__INITIALIZED = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
+	int PTU_DISH_ANTENNA_DATA__INITIALIZED = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>PTU Dish Antenna Data</em>' class.
@@ -293,7 +293,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 5;
+	int PTU_DISH_ANTENNA_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>PTU Dish Antenna Data</em>' class.
@@ -302,79 +302,79 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_DISH_ANTENNA_DATA_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+	int PTU_DISH_ANTENNA_DATA_OPERATION_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter <em>PTU Dish Antenna Symphony System Api Adapter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter <em>PTU Dish Antenna Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>PTU Dish Antenna Symphony System Api Adapter</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter
+	 * @return the meta object for class '<em>PTU Dish Antenna Apogy System Api Adapter</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter
 	 * @generated
 	 */
-	EClass getPTUDishAntennaSymphonySystemApiAdapter();
+	EClass getPTUDishAntennaApogySystemApiAdapter();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData <em>PTU Dish Antenna Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData <em>PTU Dish Antenna Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>PTU Dish Antenna Data</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData
 	 * @generated
 	 */
 	EClass getPTUDishAntennaData();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getFov()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getFov()
 	 * @see #getPTUDishAntennaData()
 	 * @generated
 	 */
 	EReference getPTUDishAntennaData_Fov();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getPanAngle <em>Pan Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getPanAngle <em>Pan Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Pan Angle</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getPanAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getPanAngle()
 	 * @see #getPTUDishAntennaData()
 	 * @generated
 	 */
 	EAttribute getPTUDishAntennaData_PanAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getTiltAngle <em>Tilt Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getTiltAngle <em>Tilt Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tilt Angle</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#getTiltAngle()
 	 * @see #getPTUDishAntennaData()
 	 * @generated
 	 */
 	EAttribute getPTUDishAntennaData_TiltAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isTrackingSun <em>Tracking Sun</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isTrackingSun <em>Tracking Sun</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tracking Sun</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isTrackingSun()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isTrackingSun()
 	 * @see #getPTUDishAntennaData()
 	 * @generated
 	 */
 	EAttribute getPTUDishAntennaData_TrackingSun();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData#isInitialized()
 	 * @see #getPTUDishAntennaData()
 	 * @generated
 	 */
@@ -387,7 +387,7 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesAntennaSymphonyFactory getSymphony__ExamplesAntennaSymphonyFactory();
+	ApogyExamplesAntennaApogyFactory getApogyExamplesAntennaApogyFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -404,21 +404,21 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaSymphonySystemApiAdapterImpl <em>PTU Dish Antenna Symphony System Api Adapter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaApogySystemApiAdapterImpl <em>PTU Dish Antenna Apogy System Api Adapter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaSymphonySystemApiAdapterImpl
-		 * @see org.eclipse.symphony.examples.antenna.symphony.impl.Symphony__ExamplesAntennaSymphonyPackageImpl#getPTUDishAntennaSymphonySystemApiAdapter()
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaApogySystemApiAdapterImpl
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.ApogyExamplesAntennaApogyPackageImpl#getPTUDishAntennaApogySystemApiAdapter()
 		 * @generated
 		 */
-		EClass PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER = eINSTANCE.getPTUDishAntennaSymphonySystemApiAdapter();
+		EClass PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER = eINSTANCE.getPTUDishAntennaApogySystemApiAdapter();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl <em>PTU Dish Antenna Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaDataImpl <em>PTU Dish Antenna Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl
-		 * @see org.eclipse.symphony.examples.antenna.symphony.impl.Symphony__ExamplesAntennaSymphonyPackageImpl#getPTUDishAntennaData()
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaDataImpl
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.ApogyExamplesAntennaApogyPackageImpl#getPTUDishAntennaData()
 		 * @generated
 		 */
 		EClass PTU_DISH_ANTENNA_DATA = eINSTANCE.getPTUDishAntennaData();
@@ -465,4 +465,4 @@ public interface Symphony__ExamplesAntennaSymphonyPackage extends EPackage {
 
 	}
 
-} //Symphony__ExamplesAntennaSymphonyPackage
+} //ApogyExamplesAntennaApogyPackage

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -11,58 +11,58 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.invocator.*;
-import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.AttributeResultValue;
-import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.BasicContext;
-import org.eclipse.symphony.core.invocator.ChannelsList;
-import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.DisplaysList;
-import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
-import org.eclipse.symphony.core.invocator.EClassArgument;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.ExceptionContainer;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.LocalTypesList;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
-import org.eclipse.symphony.core.invocator.OperationCallsList;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.RecordingResultsList;
-import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
-import org.eclipse.symphony.core.invocator.RegisteredTypesList;
-import org.eclipse.symphony.core.invocator.ToolsList;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.TypeMember;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.TypeMemberReference;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
-import org.eclipse.symphony.core.invocator.TypesList;
-import org.eclipse.symphony.core.invocator.Value;
-import org.eclipse.symphony.core.invocator.ValuesList;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementationsList;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.Watch;
-import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
-import org.eclipse.symphony.core.invocator.WatchesList;
-import org.eclipse.symphony.core.invocator.WatchesListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.*;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
+import ca.gc.asc_csa.apogy.core.invocator.BasicContext;
+import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
+import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.DisplaysList;
+import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
+import ca.gc.asc_csa.apogy.core.invocator.TypesList;
+import ca.gc.asc_csa.apogy.core.invocator.Value;
+import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.Watch;
+import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ import org.eclipse.symphony.core.invocator.WatchesListsContainer;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements Symphony__CoreInvocatorFactory
+public class ApogyCoreInvocatorFactoryImpl extends EFactoryImpl implements ApogyCoreInvocatorFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -78,18 +78,18 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CoreInvocatorFactory init()
+  public static ApogyCoreInvocatorFactory init()
   {
 		try {
-			Symphony__CoreInvocatorFactory theSymphony__CoreInvocatorFactory = (Symphony__CoreInvocatorFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreInvocatorPackage.eNS_URI);
-			if (theSymphony__CoreInvocatorFactory != null) {
-				return theSymphony__CoreInvocatorFactory;
+			ApogyCoreInvocatorFactory theApogyCoreInvocatorFactory = (ApogyCoreInvocatorFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreInvocatorPackage.eNS_URI);
+			if (theApogyCoreInvocatorFactory != null) {
+				return theApogyCoreInvocatorFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreInvocatorFactoryImpl();
+		return new ApogyCoreInvocatorFactoryImpl();
 	}
 
   /**
@@ -98,7 +98,7 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreInvocatorFactoryImpl()
+  public ApogyCoreInvocatorFactoryImpl()
   {
 		super();
 	}
@@ -112,55 +112,55 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE: return createSymphony__CoreInvocatorFacade();
-			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION: return createInvocatorSession();
-			case Symphony__CoreInvocatorPackage.ENVIRONMENT: return createEnvironment();
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER: return createDataProductsListsContainer();
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST: return createDataProductsList();
-			case Symphony__CoreInvocatorPackage.TOOLS_LIST: return createToolsList();
-			case Symphony__CoreInvocatorPackage.TYPES_LIST: return createTypesList();
-			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST: return createLocalTypesList();
-			case Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST: return createRegisteredTypesList();
-			case Symphony__CoreInvocatorPackage.TYPE: return createType();
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER: return createTypeApiAdapter();
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER: return createTypeMember();
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE: return createTypeMemberReference();
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT: return createTypeMemberReferenceListElement();
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT: return createTypeMemberReferenceTreeElement();
-			case Symphony__CoreInvocatorPackage.VARIABLES_LIST: return createVariablesList();
-			case Symphony__CoreInvocatorPackage.VARIABLE: return createVariable();
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST: return createContextsList();
-			case Symphony__CoreInvocatorPackage.BASIC_CONTEXT: return createBasicContext();
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST: return createVariableImplementationsList();
-			case Symphony__CoreInvocatorPackage.INITIALIZATION_DATA: return createInitializationData();
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION: return createVariableImplementation();
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION: return createTypeMemberImplementation();
-			case Symphony__CoreInvocatorPackage.VALUES_LIST: return createValuesList();
-			case Symphony__CoreInvocatorPackage.VALUE: return createValue();
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST: return createProgramsList();
-			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST: return createOperationCallsList();
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE: return createVariableFeatureReference();
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL: return createOperationCall();
-			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST: return createArgumentsList();
-			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT: return createEDataTypeArgument();
-			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT: return createEEnumArgument();
-			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT: return createEClassArgument();
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: return createOperationCallResultsList();
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST: return createRecordingResultsList();
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT: return createOperationCallResult();
-			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER: return createExceptionContainer();
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE: return createAttributeResultValue();
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE: return createAttributeValue();
-			case Symphony__CoreInvocatorPackage.REFERENCE_RESULT_VALUE: return createReferenceResultValue();
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER: return createWatchesListsContainer();
-			case Symphony__CoreInvocatorPackage.WATCHES_LIST: return createWatchesList();
-			case Symphony__CoreInvocatorPackage.WATCH: return createWatch();
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER: return createWatchFeatureNodeAdapter();
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER: return createDisplaysListsContainer();
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST: return createDisplaysList();
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER: return createRecordingToolsContainer();
-			case Symphony__CoreInvocatorPackage.CHANNELS_LIST: return createChannelsList();
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE: return createOperationCallResultsListTimeSource();
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE: return createApogyCoreInvocatorFacade();
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION: return createInvocatorSession();
+			case ApogyCoreInvocatorPackage.ENVIRONMENT: return createEnvironment();
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER: return createDataProductsListsContainer();
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST: return createDataProductsList();
+			case ApogyCoreInvocatorPackage.TOOLS_LIST: return createToolsList();
+			case ApogyCoreInvocatorPackage.TYPES_LIST: return createTypesList();
+			case ApogyCoreInvocatorPackage.LOCAL_TYPES_LIST: return createLocalTypesList();
+			case ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST: return createRegisteredTypesList();
+			case ApogyCoreInvocatorPackage.TYPE: return createType();
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER: return createTypeApiAdapter();
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER: return createTypeMember();
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE: return createTypeMemberReference();
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT: return createTypeMemberReferenceListElement();
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT: return createTypeMemberReferenceTreeElement();
+			case ApogyCoreInvocatorPackage.VARIABLES_LIST: return createVariablesList();
+			case ApogyCoreInvocatorPackage.VARIABLE: return createVariable();
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST: return createContextsList();
+			case ApogyCoreInvocatorPackage.BASIC_CONTEXT: return createBasicContext();
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST: return createVariableImplementationsList();
+			case ApogyCoreInvocatorPackage.INITIALIZATION_DATA: return createInitializationData();
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATION: return createVariableImplementation();
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION: return createTypeMemberImplementation();
+			case ApogyCoreInvocatorPackage.VALUES_LIST: return createValuesList();
+			case ApogyCoreInvocatorPackage.VALUE: return createValue();
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST: return createProgramsList();
+			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST: return createOperationCallsList();
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE: return createVariableFeatureReference();
+			case ApogyCoreInvocatorPackage.OPERATION_CALL: return createOperationCall();
+			case ApogyCoreInvocatorPackage.ARGUMENTS_LIST: return createArgumentsList();
+			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT: return createEDataTypeArgument();
+			case ApogyCoreInvocatorPackage.EENUM_ARGUMENT: return createEEnumArgument();
+			case ApogyCoreInvocatorPackage.ECLASS_ARGUMENT: return createEClassArgument();
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: return createOperationCallResultsList();
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST: return createRecordingResultsList();
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT: return createOperationCallResult();
+			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER: return createExceptionContainer();
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE: return createAttributeResultValue();
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE: return createAttributeValue();
+			case ApogyCoreInvocatorPackage.REFERENCE_RESULT_VALUE: return createReferenceResultValue();
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER: return createWatchesListsContainer();
+			case ApogyCoreInvocatorPackage.WATCHES_LIST: return createWatchesList();
+			case ApogyCoreInvocatorPackage.WATCH: return createWatch();
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER: return createWatchFeatureNodeAdapter();
+			case ApogyCoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER: return createDisplaysListsContainer();
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST: return createDisplaysList();
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER: return createRecordingToolsContainer();
+			case ApogyCoreInvocatorPackage.CHANNELS_LIST: return createChannelsList();
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE: return createOperationCallResultsListTimeSource();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -175,17 +175,17 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
+			case ApogyCoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
 				return createVariableListenerEventTypeFromString(eDataType, initialValue);
-			case Symphony__CoreInvocatorPackage.THROWABLE:
+			case ApogyCoreInvocatorPackage.THROWABLE:
 				return createThrowableFromString(eDataType, initialValue);
-			case Symphony__CoreInvocatorPackage.NOTIFICATION:
+			case ApogyCoreInvocatorPackage.NOTIFICATION:
 				return createNotificationFromString(eDataType, initialValue);
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATIONS_ELIST:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATIONS_ELIST:
 				return createTypeMemberImplementationsEListFromString(eDataType, initialValue);
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBERS_ARRAY:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBERS_ARRAY:
 				return createTypeMembersArrayFromString(eDataType, initialValue);
-			case Symphony__CoreInvocatorPackage.IVARIABLE_LISTENER:
+			case ApogyCoreInvocatorPackage.IVARIABLE_LISTENER:
 				return createIVariableListenerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -201,17 +201,17 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
+			case ApogyCoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
 				return convertVariableListenerEventTypeToString(eDataType, instanceValue);
-			case Symphony__CoreInvocatorPackage.THROWABLE:
+			case ApogyCoreInvocatorPackage.THROWABLE:
 				return convertThrowableToString(eDataType, instanceValue);
-			case Symphony__CoreInvocatorPackage.NOTIFICATION:
+			case ApogyCoreInvocatorPackage.NOTIFICATION:
 				return convertNotificationToString(eDataType, instanceValue);
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATIONS_ELIST:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATIONS_ELIST:
 				return convertTypeMemberImplementationsEListToString(eDataType, instanceValue);
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBERS_ARRAY:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBERS_ARRAY:
 				return convertTypeMembersArrayToString(eDataType, instanceValue);
-			case Symphony__CoreInvocatorPackage.IVARIABLE_LISTENER:
+			case ApogyCoreInvocatorPackage.IVARIABLE_LISTENER:
 				return convertIVariableListenerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -223,9 +223,9 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorFacade createSymphony__CoreInvocatorFacade() {
-		Symphony__CoreInvocatorFacadeImpl symphony__CoreInvocatorFacade = new Symphony__CoreInvocatorFacadeImpl();
-		return symphony__CoreInvocatorFacade;
+	public ApogyCoreInvocatorFacade createApogyCoreInvocatorFacade() {
+		ApogyCoreInvocatorFacadeImpl apogy__CoreInvocatorFacade = new ApogyCoreInvocatorFacadeImpl();
+		return apogy__CoreInvocatorFacade;
 	}
 
 		/**
@@ -875,8 +875,8 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorPackage getSymphony__CoreInvocatorPackage() {
-		return (Symphony__CoreInvocatorPackage)getEPackage();
+	public ApogyCoreInvocatorPackage getApogyCoreInvocatorPackage() {
+		return (ApogyCoreInvocatorPackage)getEPackage();
 	}
 
 		/**
@@ -886,9 +886,9 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CoreInvocatorPackage getPackage()
+  public static ApogyCoreInvocatorPackage getPackage()
   {
-		return Symphony__CoreInvocatorPackage.eINSTANCE;
+		return ApogyCoreInvocatorPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreInvocatorFactoryImpl
+} //ApogyCoreInvocatorFactoryImpl

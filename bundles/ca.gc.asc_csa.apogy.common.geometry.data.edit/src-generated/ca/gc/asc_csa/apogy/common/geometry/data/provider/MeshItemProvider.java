@@ -3,7 +3,7 @@
  *
  * $Id: MeshItemProvider.java,v 1.3.4.2 2015/05/21 15:49:35 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataFactory;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data.Mesh} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class MeshItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS);
+			childrenFeatures.add(ApogyCommonGeometryDataPackage.Literals.MESH__POLYGONS);
 		}
 		return childrenFeatures;
 	}
@@ -128,7 +128,7 @@ public class MeshItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Mesh.class)) {
-			case Symphony__CommonGeometryDataPackage.MESH__POLYGONS:
+			case ApogyCommonGeometryDataPackage.MESH__POLYGONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -149,8 +149,8 @@ public class MeshItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-				 Symphony__CommonGeometryDataFactory.eINSTANCE.createPolygon()));
+				(ApogyCommonGeometryDataPackage.Literals.MESH__POLYGONS,
+				 ApogyCommonGeometryDataFactory.eINSTANCE.createPolygon()));
 	}
 
 }

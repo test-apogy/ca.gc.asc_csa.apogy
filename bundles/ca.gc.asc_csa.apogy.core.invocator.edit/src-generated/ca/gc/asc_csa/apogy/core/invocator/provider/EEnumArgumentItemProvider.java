@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,12 +12,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.invocator.EEnumArgument} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
@@ -63,7 +63,7 @@ public class EEnumArgumentItemProvider extends ArgumentItemProvider {
          getResourceLocator(),
          getString("_UI_EEnumArgument_eEnumLiteral_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_EEnumArgument_eEnumLiteral_feature", "_UI_EEnumArgument_type"),
-         Symphony__CoreInvocatorPackage.Literals.EENUM_ARGUMENT__EENUM_LITERAL,
+         ApogyCoreInvocatorPackage.Literals.EENUM_ARGUMENT__EENUM_LITERAL,
          true,
          false,
          true,
@@ -125,7 +125,7 @@ public class EEnumArgumentItemProvider extends ArgumentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EEnumArgument.class)) {
-			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
+			case ApogyCoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

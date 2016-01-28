@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.provider;
+package ca.gc.asc_csa.apogy.examples.camera.provider;
 
 
 import java.util.Collection;
@@ -13,14 +13,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.PTUCamera} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.PTUCamera} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -74,7 +74,7 @@ public class PTUCameraItemProvider extends CameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_moving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_moving_feature", "_UI_AbstractActuator_type"),
-				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
+				 ApogyAddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
 				 false,
 				 false,
 				 false,
@@ -97,7 +97,7 @@ public class PTUCameraItemProvider extends CameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_actuatorStatus_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_actuatorStatus_feature", "_UI_AbstractActuator_type"),
-				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
+				 ApogyAddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
 				 false,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class PTUCameraItemProvider extends CameraItemProvider
 						getResourceLocator(),
 						getString("_UI_PanTiltUnit_currentPanAngle_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentPanAngle_feature", "_UI_PanTiltUnit_type"),
-						Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
+						ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
 						false,
 						false,
 						false,
@@ -143,7 +143,7 @@ public class PTUCameraItemProvider extends CameraItemProvider
 						getResourceLocator(),
 						getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentTiltAngle_feature", "_UI_PanTiltUnit_type"),
-						Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
+						ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
 						false,
 						false,
 						false,
@@ -166,7 +166,7 @@ public class PTUCameraItemProvider extends CameraItemProvider
 						getResourceLocator(),
 						getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedPanAngle_feature", "_UI_PanTiltUnit_type"),
-						Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
+						ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
 						false,
 						false,
 						false,
@@ -189,7 +189,7 @@ public class PTUCameraItemProvider extends CameraItemProvider
 						getResourceLocator(),
 						getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedTiltAngle_feature", "_UI_PanTiltUnit_type"),
-						Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
+						ApogyAddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
 						false,
 						false,
 						false,
@@ -245,12 +245,12 @@ public class PTUCameraItemProvider extends CameraItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PTUCamera.class)) {
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA__MOVING:
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA__ACTUATOR_STATUS:
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA__CURRENT_PAN_ANGLE:
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA__CURRENT_TILT_ANGLE:
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA__COMMANDED_PAN_ANGLE:
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA__COMMANDED_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA__MOVING:
+			case ApogyExamplesCameraPackage.PTU_CAMERA__ACTUATOR_STATUS:
+			case ApogyExamplesCameraPackage.PTU_CAMERA__CURRENT_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA__CURRENT_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA__COMMANDED_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA__COMMANDED_TILT_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -282,8 +282,8 @@ public class PTUCameraItemProvider extends CameraItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
+			childFeature == ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
+			childFeature == ApogyExamplesCameraPackage.Literals.CAMERA__FOV;
 
 		if (qualify) {
 			return getString

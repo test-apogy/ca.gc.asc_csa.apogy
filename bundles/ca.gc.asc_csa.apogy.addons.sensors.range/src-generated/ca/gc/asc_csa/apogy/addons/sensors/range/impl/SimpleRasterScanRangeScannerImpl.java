@@ -4,18 +4,18 @@
  *
  * $Id: SimpleRasterScanRangeScannerImpl.java,v 1.3.4.2 2015/05/21 15:50:21 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade;
-import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScanner;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class SimpleRasterScanRangeScannerImpl extends RasterScanRangeSensorImpl 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER;
+		return ApogyAddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER;
 	}
 
 	@Override
@@ -79,12 +79,12 @@ public class SimpleRasterScanRangeScannerImpl extends RasterScanRangeSensorImpl 
 	    	if(rasterScanSettings == null)
 	    	{
 	    		// Creates a transform node to position and orient the fov.
-	    		TransformNode transformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, Math.toRadians(90), 0);
+	    		TransformNode transformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, Math.toRadians(90), 0);
 	    		transformNode.setDescription("Field Of View Transform");
 	    		getChildren().add(transformNode);
 	    		
 	    		// Adds the rasterscan to the transform.
-	    		rasterScanSettings = Symphony__AddonsSensorsRangeFacade.INSTANCE.createRasterScanSettings(0, 100.0, Math.toRadians(90), Math.toRadians(90), 100, 100);
+	    		rasterScanSettings = ApogyAddonsSensorsRangeFacade.INSTANCE.createRasterScanSettings(0, 100.0, Math.toRadians(90), Math.toRadians(90), 100, 100);
 	    		transformNode.getChildren().add(rasterScanSettings);
 	    	}
 		}

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -9,11 +9,11 @@ import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
-import org.eclipse.symphony.core.environment.orbit.PVCoordinatesProviderProvider;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.PVCoordinatesProviderProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import org.orekit.attitudes.AttitudeProvider;
 
 /**
@@ -40,7 +40,7 @@ public abstract class OreKitBackedAttitudeProviderImpl extends MinimalEObjectImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_ATTITUDE_PROVIDER;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_ATTITUDE_PROVIDER;
 	}
 
 	/**
@@ -73,9 +73,9 @@ public abstract class OreKitBackedAttitudeProviderImpl extends MinimalEObjectImp
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ORE_KIT_ATTITUDE_PROVIDER:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ORE_KIT_ATTITUDE_PROVIDER:
 				return getOreKitAttitudeProvider();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ATTITUDE__PVCOORDINATESPROVIDERPROVIDER_DATE_ABSTRACTFRAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ATTITUDE__PVCOORDINATESPROVIDERPROVIDER_DATE_ABSTRACTFRAME:
 				return getAttitude((PVCoordinatesProviderProvider)arguments.get(0), (Date)arguments.get(1), (AbstractFrame)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);

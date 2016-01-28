@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology;
+package ca.gc.asc_csa.apogy.core.topology;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage
+ * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage
  * @generated
  */
-public interface Symphony__CoreTopologyFactory extends EFactory
+public interface ApogyCoreTopologyFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__CoreTopologyFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreTopologyFactory eINSTANCE = org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyFactoryImpl.init();
+  ApogyCoreTopologyFactory eINSTANCE = ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Systems Topology Adapter</em>'.
@@ -33,22 +33,22 @@ public interface Symphony__CoreTopologyFactory extends EFactory
   SystemsTopologyAdapter createSystemsTopologyAdapter();
 
   /**
-	 * Returns a new object of class '<em>Symphony Environment Node</em>'.
+	 * Returns a new object of class '<em>Apogy Environment Node</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony Environment Node</em>'.
+	 * @return a new object of class '<em>Apogy Environment Node</em>'.
 	 * @generated
 	 */
-  SymphonyEnvironmentNode createSymphonyEnvironmentNode();
+  ApogyEnvironmentNode createApogyEnvironmentNode();
 
   /**
-	 * Returns a new object of class '<em>Symphony System AP Is Node</em>'.
+	 * Returns a new object of class '<em>Apogy System AP Is Node</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony System AP Is Node</em>'.
+	 * @return a new object of class '<em>Apogy System AP Is Node</em>'.
 	 * @generated
 	 */
-  SymphonySystemAPIsNode createSymphonySystemAPIsNode();
+  ApogySystemAPIsNode createApogySystemAPIsNode();
 
   /**
 	 * Returns a new object of class '<em>Facade</em>'.
@@ -57,7 +57,7 @@ public interface Symphony__CoreTopologyFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreTopologyFacade createSymphony__CoreTopologyFacade();
+	ApogyCoreTopologyFacade createApogyCoreTopologyFacade();
 
 		/**
 	 * Returns the package supported by this factory.
@@ -66,6 +66,6 @@ public interface Symphony__CoreTopologyFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreTopologyPackage getSymphony__CoreTopologyPackage();
+	ApogyCoreTopologyPackage getApogyCoreTopologyPackage();
 
-} //Symphony__CoreTopologyFactory
+} //ApogyCoreTopologyFactory

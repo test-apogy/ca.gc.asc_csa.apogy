@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,9 +7,9 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
 
 /**
  * Utilities class for Graphics File Format.

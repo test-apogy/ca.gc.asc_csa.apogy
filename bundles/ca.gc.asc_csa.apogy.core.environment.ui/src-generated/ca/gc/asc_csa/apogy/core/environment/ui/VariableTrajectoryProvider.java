@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
-import org.eclipse.symphony.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
 
 
 /**
@@ -19,11 +19,11 @@ import org.eclipse.symphony.core.PoseProvider;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryProvider()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVariableTrajectoryProvider()
  * @model abstract="true"
  * @generated
  */
@@ -31,7 +31,7 @@ public interface VariableTrajectoryProvider extends TrajectoryProvider
 {
   /**
 	 * Returns the value of the '<em><b>Variable Annotation</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Variable Annotation</em>' container reference isn't clear,
@@ -40,8 +40,8 @@ public interface VariableTrajectoryProvider extends TrajectoryProvider
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Annotation</em>' container reference.
 	 * @see #setVariableAnnotation(VariableTrajectoryAnnotation)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryProvider_VariableAnnotation()
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVariableTrajectoryProvider_VariableAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider
 	 * @model opposite="trajectoryProvider" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -49,7 +49,7 @@ public interface VariableTrajectoryProvider extends TrajectoryProvider
   VariableTrajectoryAnnotation getVariableAnnotation();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable Annotation</em>' container reference.
@@ -63,18 +63,18 @@ public interface VariableTrajectoryProvider extends TrajectoryProvider
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The Symphony System being displayed. This is automatically updated.
+	 *  The Apogy System being displayed. This is automatically updated.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pose Provider</em>' reference.
 	 * @see #setPoseProvider(PoseProvider)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryProvider_PoseProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVariableTrajectoryProvider_PoseProvider()
 	 * @model required="true" transient="true"
 	 * @generated
 	 */
   PoseProvider getPoseProvider();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pose Provider</em>' reference.

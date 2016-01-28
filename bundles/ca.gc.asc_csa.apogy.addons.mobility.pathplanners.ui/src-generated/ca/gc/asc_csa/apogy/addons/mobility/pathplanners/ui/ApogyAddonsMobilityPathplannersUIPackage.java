@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.ui;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIFactory
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsMobilityPathplannersUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsMobilityPathplannersUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.mobility.pathplanners.ui/src-generated' editDirectory='/org.eclipse.symphony.addons.mobility.pathplanners.ui.edit/src-generated' basePackage='org.eclipse.symphony.addons.mobility.pathplanners'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsMobilityPathplannersUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsMobilityPathplannersUI' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.mobility.pathplanners'"
  * @generated
  */
-public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage {
+public interface ApogyAddonsMobilityPathplannersUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.mobility.pathplanners.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui";
 
 	/**
 	 * The package namespace name.
@@ -56,14 +56,14 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsMobilityPathplannersUIPackage eINSTANCE = org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.Symphony__AddonsMobilityPathplannersUIPackageImpl.init();
+	ApogyAddonsMobilityPathplannersUIPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.ApogyAddonsMobilityPathplannersUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl <em>Circular Exclusion Zone Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl <em>Circular Exclusion Zone Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.Symphony__AddonsMobilityPathplannersUIPackageImpl#getCircularExclusionZonePresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.ApogyAddonsMobilityPathplannersUIPackageImpl#getCircularExclusionZonePresentation()
 	 * @generated
 	 */
 	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION = 0;
@@ -75,7 +75,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -84,7 +84,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -93,7 +93,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -120,7 +120,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -129,7 +129,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -138,7 +138,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -147,7 +147,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -165,7 +165,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -174,7 +174,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -183,7 +183,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Transparency</b></em>' attribute.
@@ -192,7 +192,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__TRANSPARENCY = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Presentation Mode</b></em>' attribute.
@@ -201,7 +201,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__PRESENTATION_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -210,7 +210,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION__HEIGHT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Circular Exclusion Zone Presentation</em>' class.
@@ -219,7 +219,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Circular Exclusion Zone Presentation</em>' class.
@@ -228,47 +228,47 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int CIRCULAR_EXCLUSION_ZONE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation <em>Circular Exclusion Zone Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation <em>Circular Exclusion Zone Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Circular Exclusion Zone Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation
 	 * @generated
 	 */
 	EClass getCircularExclusionZonePresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getTransparency <em>Transparency</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getTransparency <em>Transparency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Transparency</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getTransparency()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getTransparency()
 	 * @see #getCircularExclusionZonePresentation()
 	 * @generated
 	 */
 	EAttribute getCircularExclusionZonePresentation_Transparency();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getPresentationMode <em>Presentation Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getPresentationMode <em>Presentation Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Presentation Mode</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getPresentationMode()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getPresentationMode()
 	 * @see #getCircularExclusionZonePresentation()
 	 * @generated
 	 */
 	EAttribute getCircularExclusionZonePresentation_PresentationMode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getHeight <em>Height</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getHeight <em>Height</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Height</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getHeight()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getHeight()
 	 * @see #getCircularExclusionZonePresentation()
 	 * @generated
 	 */
@@ -281,7 +281,7 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsMobilityPathplannersUIFactory getSymphony__AddonsMobilityPathplannersUIFactory();
+	ApogyAddonsMobilityPathplannersUIFactory getApogyAddonsMobilityPathplannersUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -298,11 +298,11 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl <em>Circular Exclusion Zone Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl <em>Circular Exclusion Zone Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.Symphony__AddonsMobilityPathplannersUIPackageImpl#getCircularExclusionZonePresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl.ApogyAddonsMobilityPathplannersUIPackageImpl#getCircularExclusionZonePresentation()
 		 * @generated
 		 */
 		EClass CIRCULAR_EXCLUSION_ZONE_PRESENTATION = eINSTANCE.getCircularExclusionZonePresentation();
@@ -333,4 +333,4 @@ public interface Symphony__AddonsMobilityPathplannersUIPackage extends EPackage 
 
 	}
 
-} //Symphony__AddonsMobilityPathplannersUIPackage
+} //ApogyAddonsMobilityPathplannersUIPackage

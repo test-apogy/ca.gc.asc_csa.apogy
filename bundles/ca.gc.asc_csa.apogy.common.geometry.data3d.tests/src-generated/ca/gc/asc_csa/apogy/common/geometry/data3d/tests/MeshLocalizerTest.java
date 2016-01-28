@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.geometry.data3d.MeshLocalizer;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer#localize(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Localize</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer#localize(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Localize</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -79,7 +79,7 @@ public class MeshLocalizerTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createMeshLocalizer());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createMeshLocalizer());
 	}
 
 	/**
@@ -94,10 +94,10 @@ public class MeshLocalizerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer#localize(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Localize</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer#localize(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Localize</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.MeshLocalizer#localize(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer#localize(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
 	public void testLocalize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d() {

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage
  * @generated
  */
-public interface Symphony__CoreInvocatorFactory extends EFactory
+public interface ApogyCoreInvocatorFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__CoreInvocatorFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreInvocatorFactory eINSTANCE = org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFactoryImpl.init();
+  ApogyCoreInvocatorFactory eINSTANCE = ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Facade</em>'.
@@ -30,7 +30,7 @@ public interface Symphony__CoreInvocatorFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreInvocatorFacade createSymphony__CoreInvocatorFacade();
+	ApogyCoreInvocatorFacade createApogyCoreInvocatorFacade();
 
 		/**
 	 * Returns a new object of class '<em>Invocator Session</em>'.
@@ -471,6 +471,6 @@ public interface Symphony__CoreInvocatorFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreInvocatorPackage getSymphony__CoreInvocatorPackage();
+	ApogyCoreInvocatorPackage getApogyCoreInvocatorPackage();
 
-} //Symphony__CoreInvocatorFactory
+} //ApogyCoreInvocatorFactory

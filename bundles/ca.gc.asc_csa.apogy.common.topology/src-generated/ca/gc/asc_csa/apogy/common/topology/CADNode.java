@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.common.topology;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.CADNode#getNodeName <em>Node Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.CADNode#getNodeName <em>Node Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getCADNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getCADNode()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface CADNode extends URLNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Name</em>' attribute.
 	 * @see #setNodeName(String)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getCADNode_NodeName()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getCADNode_NodeName()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getNodeName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.CADNode#getNodeName <em>Node Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.CADNode#getNodeName <em>Node Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node Name</em>' attribute.

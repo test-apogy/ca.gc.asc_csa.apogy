@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover;
+package ca.gc.asc_csa.apogy.examples.rover;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage
  * @generated
  */
-public interface Symphony__ExamplesRoverFactory extends EFactory
+public interface ApogyExamplesRoverFactory extends EFactory
 {
 	/**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__ExamplesRoverFactory extends EFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesRoverFactory eINSTANCE = org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverFactoryImpl.init();
+	ApogyExamplesRoverFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Battery</em>'.
@@ -76,6 +76,6 @@ public interface Symphony__ExamplesRoverFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesRoverPackage getSymphony__ExamplesRoverPackage();
+	ApogyExamplesRoverPackage getApogyExamplesRoverPackage();
 
-} //Symphony__ExamplesRoverFactory
+} //ApogyExamplesRoverFactory

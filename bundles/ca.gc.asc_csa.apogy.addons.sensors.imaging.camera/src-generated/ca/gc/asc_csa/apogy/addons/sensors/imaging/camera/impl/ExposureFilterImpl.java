@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ExposureFilterImpl#getExposure <em>Exposure</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ExposureFilterImpl#getExposure <em>Exposure</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.EXPOSURE_FILTER;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.EXPOSURE_FILTER;
 	}
 
   /**
@@ -88,7 +88,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
 		double oldExposure = exposure;
 		exposure = newExposure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE, oldExposure, exposure));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE, oldExposure, exposure));
 	}
 
   /**
@@ -100,7 +100,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
+			case ApogyAddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				return getExposure();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
+			case ApogyAddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				setExposure((Double)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
+			case ApogyAddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				setExposure(EXPOSURE_EDEFAULT);
 				return;
 		}
@@ -147,7 +147,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
+			case ApogyAddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				return exposure != EXPOSURE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

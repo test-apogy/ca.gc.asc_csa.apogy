@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.ui.preferences;
 
 import org.eclipse.jface.preference.ColorFieldEditor;
 import org.eclipse.jface.preference.PreferencePage;
@@ -8,18 +8,18 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.addons.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-public class SymphonyToolsUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyToolsUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private ColorFieldEditor sunVectorColorFieldEditor;
 	
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonyToolsUIPreferencesPage() {
+	public ApogyToolsUIPreferencesPage() {
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class SymphonyToolsUIPreferencesPage extends PreferencePage implements IW
 		
 			
 		// FOV Color
-		sunVectorColorFieldEditor = createColorFieldEditor(grpSunvectorTool, SymphonyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID, "Default Vector Color:");		
+		sunVectorColorFieldEditor = createColorFieldEditor(grpSunvectorTool, ApogyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID, "Default Vector Color:");		
 
 			
 		return container;

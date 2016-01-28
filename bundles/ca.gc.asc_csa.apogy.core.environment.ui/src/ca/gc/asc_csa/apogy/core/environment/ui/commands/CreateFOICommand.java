@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.commands;
+package ca.gc.asc_csa.apogy.core.environment.ui.commands;
 
 import java.util.Iterator;
 
@@ -14,14 +14,14 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.AbsolutePoseProvider;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class CreateFOICommand extends AbstractHandler implements IHandler 
@@ -44,7 +44,7 @@ public class CreateFOICommand extends AbstractHandler implements IHandler
 				Matrix4x4 pose = absolutePoseProvider.getPoseTransform();
 				if(pose == null)
 				{		
-					pose = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
+					pose = ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 				}
 				
 				final Shell shell = Display.getCurrent().getActiveShell();
@@ -64,7 +64,7 @@ public class CreateFOICommand extends AbstractHandler implements IHandler
 							EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(featuresOfInterestMapLayer.getFeatures());
 							
 							// Creates an ADD command to add the FeatureOfInterest.
-							Command addCommand = AddCommand.create(editingDomain, featuresOfInterestMapLayer.getFeatures(), Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
+							Command addCommand = AddCommand.create(editingDomain, featuresOfInterestMapLayer.getFeatures(), ApogyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
 							
 							// Executes the command.
 							editingDomain.getCommandStack().execute(addCommand);

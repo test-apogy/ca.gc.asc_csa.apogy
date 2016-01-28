@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.impl;
+package ca.gc.asc_csa.apogy.addons.actuators.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.ActuatorStatus;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
+import ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator;
+import ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,8 +19,8 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl#isMoving <em>Moving</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl#getActuatorStatus <em>Actuator Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.impl.AbstractActuatorImpl#isMoving <em>Moving</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.impl.AbstractActuatorImpl#getActuatorStatus <em>Actuator Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -85,7 +85,7 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR;
+		return ApogyAddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR;
 	}
 
   /**
@@ -108,7 +108,7 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
 		boolean oldMoving = moving;
 		moving = newMoving;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING, oldMoving, moving));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING, oldMoving, moving));
 	}
 
   /**
@@ -131,7 +131,7 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
 		ActuatorStatus oldActuatorStatus = actuatorStatus;
 		actuatorStatus = newActuatorStatus == null ? ACTUATOR_STATUS_EDEFAULT : newActuatorStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS, oldActuatorStatus, actuatorStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS, oldActuatorStatus, actuatorStatus));
 	}
 
   /**
@@ -143,9 +143,9 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				return isMoving();
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				return getActuatorStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -160,10 +160,10 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				setMoving((Boolean)newValue);
 				return;
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				setActuatorStatus((ActuatorStatus)newValue);
 				return;
 		}
@@ -179,10 +179,10 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				setMoving(MOVING_EDEFAULT);
 				return;
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				setActuatorStatus(ACTUATOR_STATUS_EDEFAULT);
 				return;
 		}
@@ -198,9 +198,9 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				return moving != MOVING_EDEFAULT;
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				return actuatorStatus != ACTUATOR_STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

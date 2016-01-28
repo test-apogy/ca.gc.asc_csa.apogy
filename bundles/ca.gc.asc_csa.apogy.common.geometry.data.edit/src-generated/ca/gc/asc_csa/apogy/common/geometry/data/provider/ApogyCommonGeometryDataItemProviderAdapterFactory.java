@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.util.Symphony__CommonGeometryDataAdapterFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.util.ApogyCommonGeometryDataAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.geometry.data.util.Symphony__CommonGeometryDa
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symphony__CommonGeometryDataAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonGeometryDataItemProviderAdapterFactory extends ApogyCommonGeometryDataAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonGeometryDataEditPlugin.INSTANCE, Symphony__CommonGeometryDataPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonGeometryDataEditPlugin.INSTANCE, ApogyCommonGeometryDataPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryDataItemProviderAdapterFactory() {
+	public ApogyCommonGeometryDataItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data.Coordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data.Coordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	protected CoordinatesItemProvider coordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data.Coordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.Coordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,7 +108,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data.CoordinatesSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	protected CoordinatesSetItemProvider coordinatesSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data.CoordinatesSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data.Polygon} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	protected PolygonItemProvider polygonItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data.Polygon}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,7 +154,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data.Mesh} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	protected MeshItemProvider meshItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data.Mesh}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,7 +177,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -185,7 +185,7 @@ public class Symphony__CommonGeometryDataItemProviderAdapterFactory extends Symp
 	protected CoordinatesSetShapesSamplerItemProvider coordinatesSetShapesSamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

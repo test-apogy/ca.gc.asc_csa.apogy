@@ -1,32 +1,32 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.invocator.impl.InitializationDataImpl;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.impl.InitializationDataImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Symphony Initialization Data</b></em>'. <!-- end-user-doc -->
+ * <em><b>Apogy Initialization Data</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl#getInitialPoseTransform <em>Initial Pose Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyInitializationDataImpl#getInitialPoseTransform <em>Initial Pose Transform</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SymphonyInitializationDataImpl extends
-		InitializationDataImpl implements SymphonyInitializationData {
+public class ApogyInitializationDataImpl extends
+		InitializationDataImpl implements ApogyInitializationData {
 	/**
 	 * The cached value of the '{@link #getInitialPoseTransform()
 	 * <em>Initial Pose Transform</em>}' containment reference. <!--
@@ -42,7 +42,7 @@ public class SymphonyInitializationDataImpl extends
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyInitializationDataImpl() {
+	protected ApogyInitializationDataImpl() {
 		super();
 	}
 
@@ -52,7 +52,7 @@ public class SymphonyInitializationDataImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.SYMPHONY_INITIALIZATION_DATA;
+		return ApogyCorePackage.Literals.APOGY_INITIALIZATION_DATA;
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class SymphonyInitializationDataImpl extends
 		Matrix4x4 oldInitialPoseTransform = initialPoseTransform;
 		initialPoseTransform = newInitialPoseTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, oldInitialPoseTransform, newInitialPoseTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, oldInitialPoseTransform, newInitialPoseTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -86,14 +86,14 @@ public class SymphonyInitializationDataImpl extends
 		if (newInitialPoseTransform != initialPoseTransform) {
 			NotificationChain msgs = null;
 			if (initialPoseTransform != null)
-				msgs = ((InternalEObject)initialPoseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)initialPoseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
 			if (newInitialPoseTransform != null)
-				msgs = ((InternalEObject)newInitialPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newInitialPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
 			msgs = basicSetInitialPoseTransform(newInitialPoseTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, newInitialPoseTransform, newInitialPoseTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, newInitialPoseTransform, newInitialPoseTransform));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class SymphonyInitializationDataImpl extends
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				return basicSetInitialPoseTransform(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -117,7 +117,7 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				return getInitialPoseTransform();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				setInitialPoseTransform((Matrix4x4)newValue);
 				return;
 		}
@@ -144,7 +144,7 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				setInitialPoseTransform((Matrix4x4)null);
 				return;
 		}
@@ -158,10 +158,10 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				return initialPoseTransform != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} // SymphonyInitializationDataImpl
+} // ApogyInitializationDataImpl

@@ -1,23 +1,23 @@
 /**
  */
-package org.eclipse.symphony.common.emf.edit.utils.util;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage
+ * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage
  * @generated
  */
-public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryImpl
+public class ApogyCommonEMFEditUtilsAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -25,7 +25,7 @@ public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryIm
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CommonEMFEditUtilsPackage modelPackage;
+  protected static ApogyCommonEMFEditUtilsPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -33,10 +33,10 @@ public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryIm
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFEditUtilsAdapterFactory()
+  public ApogyCommonEMFEditUtilsAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonEMFEditUtilsPackage.eINSTANCE;
+			modelPackage = ApogyCommonEMFEditUtilsPackage.eINSTANCE;
 		}
 	}
 
@@ -66,11 +66,11 @@ public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryIm
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CommonEMFEditUtilsSwitch<Adapter> modelSwitch =
-    new Symphony__CommonEMFEditUtilsSwitch<Adapter>() {
+  protected ApogyCommonEMFEditUtilsSwitch<Adapter> modelSwitch =
+    new ApogyCommonEMFEditUtilsSwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__CommonEMFEditUtilsFacade(Symphony__CommonEMFEditUtilsFacade object) {
-				return createSymphony__CommonEMFEditUtilsFacadeAdapter();
+			public Adapter caseApogyCommonEMFEditUtilsFacade(ApogyCommonEMFEditUtilsFacade object) {
+				return createApogyCommonEMFEditUtilsFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -94,16 +94,16 @@ public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryIm
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonEMFEditUtilsFacadeAdapter() {
+	public Adapter createApogyCommonEMFEditUtilsFacadeAdapter() {
 		return null;
 	}
 
@@ -120,4 +120,4 @@ public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryIm
 		return null;
 	}
 
-} //Symphony__CommonEMFEditUtilsAdapterFactory
+} //ApogyCommonEMFEditUtilsAdapterFactory

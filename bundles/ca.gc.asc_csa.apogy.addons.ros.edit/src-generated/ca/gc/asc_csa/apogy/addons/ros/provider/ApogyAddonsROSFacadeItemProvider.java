@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSFacadeItemProvider 
+public class ApogyAddonsROSFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class Symphony__AddonsROSFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyAddonsROSFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,14 +61,14 @@ public class Symphony__AddonsROSFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsROSFacade.gif.
+	 * This returns ApogyAddonsROSFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsROSFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsROSFacade"));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Symphony__AddonsROSFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__AddonsROSFacade_type");
+		return getString("_UI_ApogyAddonsROSFacade_type");
 	}
 	
 

@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,15 +22,15 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getOrbitModel <em>Orbit Model</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getSurfaceLocation <em>Surface Location</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getStartTime <em>Start Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getEndTime <em>End Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getPositionHistory <em>Position History</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getDuration <em>Duration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getOrbitModel <em>Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getSurfaceLocation <em>Surface Location</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getPositionHistory <em>Position History</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getDuration <em>Duration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass()
  * @model
  * @generated
  */
@@ -44,14 +44,14 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_OrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass_OrbitModel()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
 	 */
 	OrbitModel getOrbitModel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getOrbitModel <em>Orbit Model</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getOrbitModel <em>Orbit Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Orbit Model</em>' reference.
@@ -73,14 +73,14 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Surface Location</em>' reference.
 	 * @see #setSurfaceLocation(EarthSurfaceLocation)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_SurfaceLocation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass_SurfaceLocation()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
 	 */
 	EarthSurfaceLocation getSurfaceLocation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getSurfaceLocation <em>Surface Location</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getSurfaceLocation <em>Surface Location</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Surface Location</em>' reference.
@@ -98,7 +98,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_StartTime()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass_StartTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -106,7 +106,7 @@ public interface VisibilityPass extends EObject {
 	Date getStartTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getStartTime <em>Start Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getStartTime <em>Start Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Start Time</em>' attribute.
@@ -124,7 +124,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Time</em>' attribute.
 	 * @see #setEndTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_EndTime()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass_EndTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -132,7 +132,7 @@ public interface VisibilityPass extends EObject {
 	Date getEndTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getEndTime <em>End Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getEndTime <em>End Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>End Time</em>' attribute.
@@ -143,7 +143,7 @@ public interface VisibilityPass extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Position History</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getVisibilityPass <em>Visibility Pass</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getVisibilityPass <em>Visibility Pass</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Position History</em>' containment reference isn't clear,
@@ -155,8 +155,8 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position History</em>' containment reference.
 	 * @see #setPositionHistory(VisibilityPassSpacecraftPositionHistory)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_PositionHistory()
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getVisibilityPass
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass_PositionHistory()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getVisibilityPass
 	 * @model opposite="visibilityPass" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' children='true'"
 	 * @generated
@@ -164,7 +164,7 @@ public interface VisibilityPass extends EObject {
 	VisibilityPassSpacecraftPositionHistory getPositionHistory();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getPositionHistory <em>Position History</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getPositionHistory <em>Position History</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Position History</em>' containment reference.
@@ -182,15 +182,15 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Duration</em>' attribute.
 	 * @see #setDuration(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_Duration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPass_Duration()
 	 * @model unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='s'"
 	 * @generated
 	 */
 	double getDuration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getDuration <em>Duration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass#getDuration <em>Duration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Duration</em>' attribute.

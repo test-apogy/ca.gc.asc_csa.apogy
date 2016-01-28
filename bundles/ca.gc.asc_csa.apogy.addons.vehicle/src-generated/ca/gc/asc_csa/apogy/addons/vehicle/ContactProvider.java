@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import java.util.List;
 import java.util.Map;
@@ -9,8 +9,8 @@ import java.util.Map;
 import javax.vecmath.Point3d;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getContactProvider()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getContactProvider()
  * @model abstract="true"
  * @generated
  */
@@ -32,7 +32,7 @@ public interface ContactProvider extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Vehicle Pose Corrector</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Vehicle Pose Corrector</em>' container reference isn't clear,
@@ -41,15 +41,15 @@ public interface ContactProvider extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vehicle Pose Corrector</em>' container reference.
 	 * @see #setVehiclePoseCorrector(VehiclePoseCorrector)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getContactProvider_VehiclePoseCorrector()
-	 * @see org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactProvider
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getContactProvider_VehiclePoseCorrector()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector#getContactProvider
 	 * @model opposite="contactProvider" transient="false"
 	 * @generated
 	 */
   VehiclePoseCorrector getVehiclePoseCorrector();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vehicle Pose Corrector</em>' container reference.
@@ -61,7 +61,7 @@ public interface ContactProvider extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.List<org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody>" unique="false" many="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.vehicle.List<ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody>" unique="false" many="false"
 	 * @generated
 	 */
   List<PhysicalBody> extractContactBodies();
@@ -69,7 +69,7 @@ public interface ContactProvider extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model originalPoseUnique="false" bodyToContactsMapDataType="org.eclipse.symphony.addons.vehicle.Map<org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, org.eclipse.symphony.addons.vehicle.Point3d>" bodyToContactsMapUnique="false"
+	 * @model originalPoseUnique="false" bodyToContactsMapDataType="ca.gc.asc_csa.apogy.addons.vehicle.Map<ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody, ca.gc.asc_csa.apogy.addons.vehicle.Point3d>" bodyToContactsMapUnique="false"
 	 * @generated
 	 */
   void updateContactPoints(Matrix4x4 originalPose, Map<PhysicalBody, Point3d> bodyToContactsMap);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange <em>Minimum Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange <em>Maximum Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength <em>Maximum Edge Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange <em>Minimum Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange <em>Maximum Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength <em>Maximum Edge Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter()
  * @model
  * @generated
  */
@@ -45,15 +45,15 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Range</em>' attribute.
 	 * @see #setMinimumRange(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MinimumRange()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MinimumRange()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getMinimumRange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange <em>Minimum Range</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange <em>Minimum Range</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum Range</em>' attribute.
@@ -77,15 +77,15 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Range</em>' attribute.
 	 * @see #setMaximumRange(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumRange()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumRange()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getMaximumRange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange <em>Maximum Range</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange <em>Maximum Range</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Range</em>' attribute.
@@ -108,15 +108,15 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Edge Length</em>' attribute.
 	 * @see #setMaximumEdgeLength(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumEdgeLength()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumEdgeLength()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getMaximumEdgeLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength <em>Maximum Edge Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength <em>Maximum Edge Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Edge Length</em>' attribute.

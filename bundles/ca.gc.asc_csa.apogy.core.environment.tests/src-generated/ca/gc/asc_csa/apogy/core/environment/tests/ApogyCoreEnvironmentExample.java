@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentExample {
+public class ApogyCoreEnvironmentExample {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Load all the argument file paths or URIs as instances of the model.
@@ -52,16 +52,16 @@ public class Symphony__CoreEnvironmentExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(Symphony__CoreEnvironmentPackage.eNS_URI, 
-			 Symphony__CoreEnvironmentPackage.eINSTANCE);
+			(ApogyCoreEnvironmentPackage.eNS_URI, 
+			 ApogyCoreEnvironmentPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.symphony__coreenvironment"));
-				EarthSurfaceWorksite root = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogy__coreenvironment"));
+				EarthSurfaceWorksite root = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}
@@ -119,4 +119,4 @@ public class Symphony__CoreEnvironmentExample {
 		}
 	}
 
-} //Symphony__CoreEnvironmentExample
+} //ApogyCoreEnvironmentExample

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover;
+package ca.gc.asc_csa.apogy.examples.rover;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -21,20 +21,20 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getBatteries <em>Batteries</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getActiveBattery <em>Active Battery</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getCurrentCurrent <em>Current Current</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getBatteries <em>Batteries</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getActiveBattery <em>Active Battery</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getCurrentCurrent <em>Current Current</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem()
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getPowerSystem()
  * @model
  * @generated
  */
 public interface PowerSystem extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Batteries</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.examples.rover.Battery}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.rover.Battery}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -42,7 +42,7 @@ public interface PowerSystem extends EObject {
 	 * power system.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Batteries</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_Batteries()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getPowerSystem_Batteries()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' createChild='false'"
 	 * @generated
@@ -58,7 +58,7 @@ public interface PowerSystem extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Battery</em>' reference.
 	 * @see #setActiveBattery(Battery)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_ActiveBattery()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getPowerSystem_ActiveBattery()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -66,7 +66,7 @@ public interface PowerSystem extends EObject {
 	Battery getActiveBattery();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.PowerSystem#getActiveBattery <em>Active Battery</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getActiveBattery <em>Active Battery</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active Battery</em>' reference.
@@ -84,9 +84,9 @@ public interface PowerSystem extends EObject {
 	 * is currently outputting.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Voltage</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_CurrentVoltage()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getPowerSystem_CurrentVoltage()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='V' get='<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getVoltage();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='V' get='<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getVoltage();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getCurrentVoltage();
@@ -100,9 +100,9 @@ public interface PowerSystem extends EObject {
 	 * is currently outputting.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Current</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_CurrentCurrent()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getPowerSystem_CurrentCurrent()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='A' get='<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getCurrent();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='A' get='<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getCurrent();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getCurrentCurrent();

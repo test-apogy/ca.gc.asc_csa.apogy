@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,15 +27,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.util.Symphony__CommonGeometryDataSwitch;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.util.Symphony__CommonGeometryData25DAdapterFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.util.ApogyCommonGeometryDataSwitch;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.util.ApogyCommonGeometryData25DAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -46,7 +46,7 @@ import org.eclipse.symphony.common.geometry.data25d.util.Symphony__CommonGeometr
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends Symphony__CommonGeometryData25DAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonGeometryData25DItemProviderAdapterFactory extends ApogyCommonGeometryData25DAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonGeometryData25DEditPlugin.INSTANCE, Symphony__CommonGeometryData25DPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonGeometryData25DEditPlugin.INSTANCE, ApogyCommonGeometryData25DPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DItemProviderAdapterFactory() {
+	public ApogyCommonGeometryData25DItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -94,7 +94,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,7 +102,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	protected Coordinates25DItemProvider coordinates25DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	protected CoordinatesSet25DItemProvider coordinatesSet25DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	protected VolumetricCoordinatesSet25DItemProvider volumetricCoordinatesSet25DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,7 +163,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.Polygon25D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	protected Polygon25DItemProvider polygon25DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Polygon25D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.Mesh25D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	protected Mesh25DItemProvider mesh25DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Mesh25D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,7 +209,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	protected VolumetricMesh25DItemProvider volumetricMesh25DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,30 +232,30 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData25DFacadeItemProvider symphony__CommonGeometryData25DFacadeItemProvider;
+	protected ApogyCommonGeometryData25DFacadeItemProvider apogy__CommonGeometryData25DFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonGeometryData25DFacadeAdapter() {
-		if (symphony__CommonGeometryData25DFacadeItemProvider == null) {
-			symphony__CommonGeometryData25DFacadeItemProvider = new Symphony__CommonGeometryData25DFacadeItemProvider(this);
+	public Adapter createApogyCommonGeometryData25DFacadeAdapter() {
+		if (apogy__CommonGeometryData25DFacadeItemProvider == null) {
+			apogy__CommonGeometryData25DFacadeItemProvider = new ApogyCommonGeometryData25DFacadeItemProvider(this);
 		}
 
-		return symphony__CommonGeometryData25DFacadeItemProvider;
+		return apogy__CommonGeometryData25DFacadeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.Data25DIO} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -263,7 +263,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	protected Data25DIOItemProvider data25DIOItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Data25DIO}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -409,24 +409,24 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 		if (polygon25DItemProvider != null) polygon25DItemProvider.dispose();
 		if (mesh25DItemProvider != null) mesh25DItemProvider.dispose();
 		if (volumetricMesh25DItemProvider != null) volumetricMesh25DItemProvider.dispose();
-		if (symphony__CommonGeometryData25DFacadeItemProvider != null) symphony__CommonGeometryData25DFacadeItemProvider.dispose();
+		if (apogy__CommonGeometryData25DFacadeItemProvider != null) apogy__CommonGeometryData25DFacadeItemProvider.dispose();
 		if (data25DIOItemProvider != null) data25DIOItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonGeometryDataPackage}.
+	 * A child creation extender for the {@link ApogyCommonGeometryDataPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonGeometryDataChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonGeometryDataChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonGeometryDataSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonGeometryDataSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -462,8 +462,8 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 			public <T extends Coordinates> Object caseCoordinatesSet(CoordinatesSet<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData25DFactory.eINSTANCE.createCoordinates25D()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyCommonGeometryData25DFactory.eINSTANCE.createCoordinates25D()));
 
 				return null;
 			}
@@ -477,8 +477,8 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 			public <CoordinatesType extends Coordinates, PolygonType extends Polygon<CoordinatesType>> Object caseMesh(Mesh<CoordinatesType, PolygonType> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-						 Symphony__CommonGeometryData25DFactory.eINSTANCE.createPolygon25D()));
+						(ApogyCommonGeometryDataPackage.Literals.MESH__POLYGONS,
+						 ApogyCommonGeometryData25DFactory.eINSTANCE.createPolygon25D()));
 
 				return null;
 			}
@@ -511,7 +511,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CommonGeometryData25DEditPlugin.INSTANCE;
+			return ApogyCommonGeometryData25DEditPlugin.INSTANCE;
 		}
 	}
 

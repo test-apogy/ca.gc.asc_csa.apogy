@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class SpacecraftLocationWorldWindLayerItemProvider extends AbstractWorldW
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class SpacecraftLocationWorldWindLayerItemProvider extends AbstractWorldW
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftLocationWorldWindLayer_orbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftLocationWorldWindLayer_orbitModel_feature", "_UI_SpacecraftLocationWorldWindLayer_type"),
-				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL,
+				 ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL,
 				 true,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class SpacecraftLocationWorldWindLayerItemProvider extends AbstractWorldW
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftLocationWorldWindLayer_timeSource_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftLocationWorldWindLayer_timeSource_feature", "_UI_SpacecraftLocationWorldWindLayer_type"),
-				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE,
+				 ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE,
 				 true,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class SpacecraftLocationWorldWindLayerItemProvider extends AbstractWorldW
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftLocationWorldWindLayer_showGroundProjection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftLocationWorldWindLayer_showGroundProjection_feature", "_UI_SpacecraftLocationWorldWindLayer_type"),
-				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION,
+				 ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION,
 				 true,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class SpacecraftLocationWorldWindLayerItemProvider extends AbstractWorldW
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftLocationWorldWindLayer_showLatLon_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftLocationWorldWindLayer_showLatLon_feature", "_UI_SpacecraftLocationWorldWindLayer_type"),
-				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON,
+				 ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON,
 				 true,
 				 false,
 				 false,
@@ -202,9 +202,9 @@ public class SpacecraftLocationWorldWindLayerItemProvider extends AbstractWorldW
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftLocationWorldWindLayer.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

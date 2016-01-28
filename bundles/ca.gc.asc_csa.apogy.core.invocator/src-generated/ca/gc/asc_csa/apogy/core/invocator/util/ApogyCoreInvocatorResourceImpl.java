@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.util;
+package ca.gc.asc_csa.apogy.core.invocator.util;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
  * <!-- begin-user-doc -->
  * The <b>Resource </b> associated with the package.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceFactoryImpl
+ * @see ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl
  * @generated_NOT
  */
-public class Symphony__CoreInvocatorResourceImpl extends XMIResourceImpl {
+public class ApogyCoreInvocatorResourceImpl extends XMIResourceImpl {
 	/**
 	 * Creates an instance of the resource.
 	 * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ public class Symphony__CoreInvocatorResourceImpl extends XMIResourceImpl {
 	 * @param uri the URI of the new resource.
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorResourceImpl(URI uri) {
+	public ApogyCoreInvocatorResourceImpl(URI uri) {
 		super(uri);
 	}
 	
@@ -30,4 +30,4 @@ public class Symphony__CoreInvocatorResourceImpl extends XMIResourceImpl {
 		return true;
 	}
 
-} //Symphony__CoreInvocatorResourceImpl
+} //ApogyCoreInvocatorResourceImpl

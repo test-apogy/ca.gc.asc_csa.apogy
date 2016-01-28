@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,12 +25,12 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.Symphony__AddonsFactory
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__Addons' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='Symphony__Addons' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons/src-generated' editDirectory='/org.eclipse.symphony.addons.edit/src-generated' basePackage='org.eclipse.symphony'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddons' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='ApogyAddons' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.edit/src-generated' basePackage='ca.gc.asc_csa.apogy'"
  * @generated
  */
-public interface Symphony__AddonsPackage extends EPackage
+public interface ApogyAddonsPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -46,7 +46,7 @@ public interface Symphony__AddonsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.addons";
+  String eNS_URI = "ca.gc.asc_csa.apogy.addons";
 
   /**
 	 * The package namespace name.
@@ -62,14 +62,14 @@ public interface Symphony__AddonsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsPackage eINSTANCE = org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl.init();
+  ApogyAddonsPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.AbstractToolImpl <em>Abstract Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.AbstractToolImpl <em>Abstract Tool</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.AbstractToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getAbstractTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.AbstractToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getAbstractTool()
 	 * @generated
 	 */
   int ABSTRACT_TOOL = 0;
@@ -81,7 +81,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int ABSTRACT_TOOL__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -90,7 +90,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int ABSTRACT_TOOL__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Abstract Tool</em>' class.
@@ -99,7 +99,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int ABSTRACT_TOOL_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Abstract Tool</em>' class.
@@ -108,15 +108,15 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int ABSTRACT_TOOL_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.SimpleToolListImpl <em>Simple Tool List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.SimpleToolListImpl <em>Simple Tool List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.SimpleToolListImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSimpleToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.SimpleToolListImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSimpleToolList()
 	 * @generated
 	 */
 	int SIMPLE_TOOL_LIST = 1;
@@ -128,7 +128,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST__TOOLS_LIST = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
+	int SIMPLE_TOOL_LIST__TOOLS_LIST = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
 
 		/**
 	 * The feature id for the '<em><b>Simple Tools</b></em>' containment reference list.
@@ -137,7 +137,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST__SIMPLE_TOOLS = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
+	int SIMPLE_TOOL_LIST__SIMPLE_TOOLS = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Simple Tool List</em>' class.
@@ -146,7 +146,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
+	int SIMPLE_TOOL_LIST_FEATURE_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Simple Tool List</em>' class.
@@ -155,14 +155,14 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
+	int SIMPLE_TOOL_LIST_OPERATION_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.SimpleToolImpl <em>Simple Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.SimpleToolImpl <em>Simple Tool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.SimpleToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSimpleTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.SimpleToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSimpleTool()
 	 * @generated
 	 */
 	int SIMPLE_TOOL = 2;
@@ -240,11 +240,11 @@ public interface Symphony__AddonsPackage extends EPackage
 	int SIMPLE_TOOL_OPERATION_COUNT = ABSTRACT_TOOL_OPERATION_COUNT + 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.Simple3DToolImpl <em>Simple3 DTool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl <em>Simple3 DTool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.Simple3DToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSimple3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSimple3DTool()
 	 * @generated
 	 */
 	int SIMPLE3_DTOOL = 3;
@@ -350,11 +350,11 @@ public interface Symphony__AddonsPackage extends EPackage
 
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl <em>Abstract Two Points3 DTool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl <em>Abstract Two Points3 DTool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getAbstractTwoPoints3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	int ABSTRACT_TWO_POINTS3_DTOOL = 4;
@@ -549,11 +549,11 @@ public interface Symphony__AddonsPackage extends EPackage
 	int ABSTRACT_TWO_POINTS3_DTOOL_OPERATION_COUNT = SIMPLE3_DTOOL_OPERATION_COUNT + 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl <em>Ruler3 DTool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl <em>Ruler3 DTool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.Ruler3DToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getRuler3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getRuler3DTool()
 	 * @generated
 	 */
 	int RULER3_DTOOL = 5;
@@ -830,11 +830,11 @@ public interface Symphony__AddonsPackage extends EPackage
 
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.Ruler3dToolNodeImpl <em>Ruler3d Tool Node</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3dToolNodeImpl <em>Ruler3d Tool Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.Ruler3dToolNodeImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getRuler3dToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.Ruler3dToolNodeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getRuler3dToolNode()
 	 * @generated
 	 */
 	int RULER3D_TOOL_NODE = 6;
@@ -846,7 +846,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
+	int RULER3D_TOOL_NODE__PARENT = ApogyCommonTopologyPackage.NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -855,7 +855,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
+	int RULER3D_TOOL_NODE__DESCRIPTION = ApogyCommonTopologyPackage.NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -864,7 +864,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
+	int RULER3D_TOOL_NODE__NODE_ID = ApogyCommonTopologyPackage.NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Ruler3 DTool</b></em>' reference.
@@ -873,7 +873,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__RULER3_DTOOL = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
+	int RULER3D_TOOL_NODE__RULER3_DTOOL = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Ruler3d Tool Node</em>' class.
@@ -882,7 +882,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
+	int RULER3D_TOOL_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -891,7 +891,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int RULER3D_TOOL_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Ruler3d Tool Node</em>' class.
@@ -900,14 +900,14 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
+	int RULER3D_TOOL_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl <em>Feature Of Interest Picking Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl <em>Feature Of Interest Picking Tool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getFeatureOfInterestPickingTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getFeatureOfInterestPickingTool()
 	 * @generated
 	 */
 	int FEATURE_OF_INTEREST_PICKING_TOOL = 7;
@@ -1066,11 +1066,11 @@ public interface Symphony__AddonsPackage extends EPackage
 	int FEATURE_OF_INTEREST_PICKING_TOOL_OPERATION_COUNT = SIMPLE3_DTOOL_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl <em>Sun Vector3 DTool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl <em>Sun Vector3 DTool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.SunVector3DToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSunVector3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DTool()
 	 * @generated
 	 */
 	int SUN_VECTOR3_DTOOL = 8;
@@ -1328,11 +1328,11 @@ public interface Symphony__AddonsPackage extends EPackage
 	int SUN_VECTOR3_DTOOL_OPERATION_COUNT = ABSTRACT_TWO_POINTS3_DTOOL_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.SunVector3DToolNodeImpl <em>Sun Vector3 DTool Node</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl <em>Sun Vector3 DTool Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.SunVector3DToolNodeImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSunVector3DToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DToolNode()
 	 * @generated
 	 */
 	int SUN_VECTOR3_DTOOL_NODE = 9;
@@ -1344,7 +1344,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
+	int SUN_VECTOR3_DTOOL_NODE__PARENT = ApogyCommonTopologyPackage.NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1353,7 +1353,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
+	int SUN_VECTOR3_DTOOL_NODE__DESCRIPTION = ApogyCommonTopologyPackage.NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1362,7 +1362,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
+	int SUN_VECTOR3_DTOOL_NODE__NODE_ID = ApogyCommonTopologyPackage.NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Sun Vector3 DTool</b></em>' reference.
@@ -1371,7 +1371,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
+	int SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Sun Vector3 DTool Node</em>' class.
@@ -1380,7 +1380,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
+	int SUN_VECTOR3_DTOOL_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1389,7 +1389,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int SUN_VECTOR3_DTOOL_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Sun Vector3 DTool Node</em>' class.
@@ -1398,14 +1398,14 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
+	int SUN_VECTOR3_DTOOL_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl <em>Trajectory3 DTool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl <em>Trajectory3 DTool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.Trajectory3DToolImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getTrajectory3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DTool()
 	 * @generated
 	 */
 	int TRAJECTORY3_DTOOL = 10;
@@ -1573,11 +1573,11 @@ public interface Symphony__AddonsPackage extends EPackage
 	int TRAJECTORY3_DTOOL_OPERATION_COUNT = SIMPLE3_DTOOL_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.Trajectory3DToolNodeImpl <em>Trajectory3 DTool Node</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolNodeImpl <em>Trajectory3 DTool Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.impl.Trajectory3DToolNodeImpl
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getTrajectory3DToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolNodeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DToolNode()
 	 * @generated
 	 */
 	int TRAJECTORY3_DTOOL_NODE = 11;
@@ -1589,7 +1589,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int TRAJECTORY3_DTOOL_NODE__PARENT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1598,7 +1598,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int TRAJECTORY3_DTOOL_NODE__DESCRIPTION = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1607,7 +1607,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int TRAJECTORY3_DTOOL_NODE__NODE_ID = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1616,7 +1616,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int TRAJECTORY3_DTOOL_NODE__CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -1625,7 +1625,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int TRAJECTORY3_DTOOL_NODE__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Trajectory3 DTool</b></em>' reference.
@@ -1634,7 +1634,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Trajectory3 DTool Node</em>' class.
@@ -1643,7 +1643,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int TRAJECTORY3_DTOOL_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1652,7 +1652,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int TRAJECTORY3_DTOOL_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Trajectory3 DTool Node</em>' class.
@@ -1661,14 +1661,14 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int TRAJECTORY3_DTOOL_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '<em>Color3f</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Color3f
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getColor3f()
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getColor3f()
 	 * @generated
 	 */
 	int COLOR3F = 12;
@@ -1678,587 +1678,587 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * The meta object id for the '<em>Node Selection</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
-	 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getNodeSelection()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection
+	 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getNodeSelection()
 	 * @generated
 	 */
 	int NODE_SELECTION = 13;
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.AbstractTool <em>Abstract Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.AbstractTool <em>Abstract Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Tool</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTool
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTool
 	 * @generated
 	 */
   EClass getAbstractTool();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.SimpleToolList <em>Simple Tool List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.SimpleToolList <em>Simple Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simple Tool List</em>'.
-	 * @see org.eclipse.symphony.addons.SimpleToolList
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleToolList
 	 * @generated
 	 */
 	EClass getSimpleToolList();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Simple Tools</em>'.
-	 * @see org.eclipse.symphony.addons.SimpleToolList#getSimpleTools()
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleToolList#getSimpleTools()
 	 * @see #getSimpleToolList()
 	 * @generated
 	 */
 	EReference getSimpleToolList_SimpleTools();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.SimpleTool <em>Simple Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.SimpleTool <em>Simple Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simple Tool</em>'.
-	 * @see org.eclipse.symphony.addons.SimpleTool
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool
 	 * @generated
 	 */
 	EClass getSimpleTool();
 
 		/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.SimpleTool#getToolList <em>Tool List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#getToolList <em>Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Tool List</em>'.
-	 * @see org.eclipse.symphony.addons.SimpleTool#getToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool#getToolList()
 	 * @see #getSimpleTool()
 	 * @generated
 	 */
 	EReference getSimpleTool_ToolList();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SimpleTool#isActive <em>Active</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#isActive <em>Active</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Active</em>'.
-	 * @see org.eclipse.symphony.addons.SimpleTool#isActive()
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool#isActive()
 	 * @see #getSimpleTool()
 	 * @generated
 	 */
 	EAttribute getSimpleTool_Active();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SimpleTool#isDisposed <em>Disposed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#isDisposed <em>Disposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Disposed</em>'.
-	 * @see org.eclipse.symphony.addons.SimpleTool#isDisposed()
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool#isDisposed()
 	 * @see #getSimpleTool()
 	 * @generated
 	 */
 	EAttribute getSimpleTool_Disposed();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.SimpleTool#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.addons.SimpleTool#dispose()
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool#dispose()
 	 * @generated
 	 */
 	EOperation getSimpleTool__Dispose();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.Simple3DTool <em>Simple3 DTool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.Simple3DTool <em>Simple3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simple3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.Simple3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.Simple3DTool
 	 * @generated
 	 */
 	EClass getSimple3DTool();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Simple3DTool#isVisible <em>Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Simple3DTool#isVisible <em>Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see org.eclipse.symphony.addons.Simple3DTool#isVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.Simple3DTool#isVisible()
 	 * @see #getSimple3DTool()
 	 * @generated
 	 */
 	EAttribute getSimple3DTool_Visible();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.Simple3DTool#getRootNode <em>Root Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.Simple3DTool#getRootNode <em>Root Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Root Node</em>'.
-	 * @see org.eclipse.symphony.addons.Simple3DTool#getRootNode()
+	 * @see ca.gc.asc_csa.apogy.addons.Simple3DTool#getRootNode()
 	 * @see #getSimple3DTool()
 	 * @generated
 	 */
 	EReference getSimple3DTool_RootNode();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.Simple3DTool#selectionChanged(org.eclipse.symphony.common.topology.ui.NodeSelection) <em>Selection Changed</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.Simple3DTool#selectionChanged(ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection) <em>Selection Changed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Selection Changed</em>' operation.
-	 * @see org.eclipse.symphony.addons.Simple3DTool#selectionChanged(org.eclipse.symphony.common.topology.ui.NodeSelection)
+	 * @see ca.gc.asc_csa.apogy.addons.Simple3DTool#selectionChanged(ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection)
 	 * @generated
 	 */
 	EOperation getSimple3DTool__SelectionChanged__NodeSelection();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool <em>Abstract Two Points3 DTool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool <em>Abstract Two Points3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Two Points3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool
 	 * @generated
 	 */
 	EClass getAbstractTwoPoints3DTool();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition <em>From Absolute Position</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition <em>From Absolute Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>From Absolute Position</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EReference getAbstractTwoPoints3DTool_FromAbsolutePosition();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromRelativePosition <em>From Relative Position</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromRelativePosition <em>From Relative Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>From Relative Position</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromRelativePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromRelativePosition()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EReference getAbstractTwoPoints3DTool_FromRelativePosition();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromNode <em>From Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromNode <em>From Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>From Node</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromNode()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromNode()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EReference getAbstractTwoPoints3DTool_FromNode();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isFromNodeLock <em>From Node Lock</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isFromNodeLock <em>From Node Lock</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>From Node Lock</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isFromNodeLock()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isFromNodeLock()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EAttribute getAbstractTwoPoints3DTool_FromNodeLock();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToAbsolutePosition <em>To Absolute Position</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToAbsolutePosition <em>To Absolute Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>To Absolute Position</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToAbsolutePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToAbsolutePosition()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EReference getAbstractTwoPoints3DTool_ToAbsolutePosition();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToRelativePosition <em>To Relative Position</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToRelativePosition <em>To Relative Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>To Relative Position</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToRelativePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToRelativePosition()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EReference getAbstractTwoPoints3DTool_ToRelativePosition();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToNode <em>To Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToNode <em>To Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>To Node</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToNode()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToNode()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EReference getAbstractTwoPoints3DTool_ToNode();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isToNodeLock <em>To Node Lock</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isToNodeLock <em>To Node Lock</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>To Node Lock</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isToNodeLock()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isToNodeLock()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EAttribute getAbstractTwoPoints3DTool_ToNodeLock();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getDistance <em>Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getDistance <em>Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Distance</em>'.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getDistance()
 	 * @see #getAbstractTwoPoints3DTool()
 	 * @generated
 	 */
 	EAttribute getAbstractTwoPoints3DTool_Distance();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#pointsRelativePoseChanged(javax.vecmath.Matrix4d) <em>Points Relative Pose Changed</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#pointsRelativePoseChanged(javax.vecmath.Matrix4d) <em>Points Relative Pose Changed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Points Relative Pose Changed</em>' operation.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool#pointsRelativePoseChanged(javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#pointsRelativePoseChanged(javax.vecmath.Matrix4d)
 	 * @generated
 	 */
 	EOperation getAbstractTwoPoints3DTool__PointsRelativePoseChanged__Matrix4d();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.Ruler3DTool <em>Ruler3 DTool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool <em>Ruler3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Ruler3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool
 	 * @generated
 	 */
 	EClass getRuler3DTool();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.Ruler3DTool#getRuler3dToolNode <em>Ruler3d Tool Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getRuler3dToolNode <em>Ruler3d Tool Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ruler3d Tool Node</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getRuler3dToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getRuler3dToolNode()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EReference getRuler3DTool_Ruler3dToolNode();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.Ruler3dToolNode <em>Ruler3d Tool Node</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.Ruler3dToolNode <em>Ruler3d Tool Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Ruler3d Tool Node</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3dToolNode
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3dToolNode
 	 * @generated
 	 */
 	EClass getRuler3dToolNode();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.Ruler3dToolNode#getRuler3DTool <em>Ruler3 DTool</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.Ruler3dToolNode#getRuler3DTool <em>Ruler3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ruler3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3dToolNode#getRuler3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3dToolNode#getRuler3DTool()
 	 * @see #getRuler3dToolNode()
 	 * @generated
 	 */
 	EReference getRuler3dToolNode_Ruler3DTool();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool <em>Feature Of Interest Picking Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool <em>Feature Of Interest Picking Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Feature Of Interest Picking Tool</em>'.
-	 * @see org.eclipse.symphony.addons.FeatureOfInterestPickingTool
+	 * @see ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool
 	 * @generated
 	 */
 	EClass getFeatureOfInterestPickingTool();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList <em>Feature Of Interest List</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList <em>Feature Of Interest List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Feature Of Interest List</em>'.
-	 * @see org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList()
+	 * @see ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList()
 	 * @see #getFeatureOfInterestPickingTool()
 	 * @generated
 	 */
 	EReference getFeatureOfInterestPickingTool_FeatureOfInterestList();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition <em>Pick Absolute Position</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition <em>Pick Absolute Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pick Absolute Position</em>'.
-	 * @see org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition()
 	 * @see #getFeatureOfInterestPickingTool()
 	 * @generated
 	 */
 	EReference getFeatureOfInterestPickingTool_PickAbsolutePosition();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativePosition <em>Pick Relative Position</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativePosition <em>Pick Relative Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pick Relative Position</em>'.
-	 * @see org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativePosition()
 	 * @see #getFeatureOfInterestPickingTool()
 	 * @generated
 	 */
 	EReference getFeatureOfInterestPickingTool_PickRelativePosition();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickedNode <em>Picked Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickedNode <em>Picked Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Picked Node</em>'.
-	 * @see org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickedNode()
+	 * @see ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickedNode()
 	 * @see #getFeatureOfInterestPickingTool()
 	 * @generated
 	 */
 	EReference getFeatureOfInterestPickingTool_PickedNode();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pick Absolute Normal</em>'.
-	 * @see org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal()
+	 * @see ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal()
 	 * @see #getFeatureOfInterestPickingTool()
 	 * @generated
 	 */
 	EReference getFeatureOfInterestPickingTool_PickAbsoluteNormal();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pick Relative Normal</em>'.
-	 * @see org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativeNormal()
+	 * @see ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool#getPickRelativeNormal()
 	 * @see #getFeatureOfInterestPickingTool()
 	 * @generated
 	 */
 	EReference getFeatureOfInterestPickingTool_PickRelativeNormal();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.SunVector3DTool <em>Sun Vector3 DTool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool <em>Sun Vector3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sun Vector3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool
 	 * @generated
 	 */
 	EClass getSunVector3DTool();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vector Color</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool#getVectorColor()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorColor()
 	 * @see #getSunVector3DTool()
 	 * @generated
 	 */
 	EAttribute getSunVector3DTool_VectorColor();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vector Length</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool#getVectorLength()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorLength()
 	 * @see #getSunVector3DTool()
 	 * @generated
 	 */
 	EAttribute getSunVector3DTool_VectorLength();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SunVector3DTool#getEndPointRadius <em>End Point Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getEndPointRadius <em>End Point Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>End Point Radius</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool#getEndPointRadius()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getEndPointRadius()
 	 * @see #getSunVector3DTool()
 	 * @generated
 	 */
 	EAttribute getSunVector3DTool_EndPointRadius();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SunVector3DTool#getSunIntensity <em>Sun Intensity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunIntensity <em>Sun Intensity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Sun Intensity</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool#getSunIntensity()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunIntensity()
 	 * @see #getSunVector3DTool()
 	 * @generated
 	 */
 	EAttribute getSunVector3DTool_SunIntensity();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Day Maximum Sun Intensity</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity()
 	 * @see #getSunVector3DTool()
 	 * @generated
 	 */
 	EAttribute getSunVector3DTool_CurrentDayMaximumSunIntensity();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Sun Intensity Percentage</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool#getCurrentSunIntensityPercentage()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentSunIntensityPercentage()
 	 * @see #getSunVector3DTool()
 	 * @generated
 	 */
 	EAttribute getSunVector3DTool_CurrentSunIntensityPercentage();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Sun Vector3 DTool Node</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DTool#getSunVector3DToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunVector3DToolNode()
 	 * @see #getSunVector3DTool()
 	 * @generated
 	 */
 	EReference getSunVector3DTool_SunVector3DToolNode();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.SunVector3DToolNode <em>Sun Vector3 DTool Node</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode <em>Sun Vector3 DTool Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sun Vector3 DTool Node</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DToolNode
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DToolNode
 	 * @generated
 	 */
 	EClass getSunVector3DToolNode();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.SunVector3DToolNode#getSunVector3DTool <em>Sun Vector3 DTool</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode#getSunVector3DTool <em>Sun Vector3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Sun Vector3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.SunVector3DToolNode#getSunVector3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DToolNode#getSunVector3DTool()
 	 * @see #getSunVector3DToolNode()
 	 * @generated
 	 */
 	EReference getSunVector3DToolNode_SunVector3DTool();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.Trajectory3DTool <em>Trajectory3 DTool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool <em>Trajectory3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Trajectory3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool
 	 * @generated
 	 */
 	EClass getTrajectory3DTool();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Trajectory3DTool#isPenDown <em>Pen Down</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool#isPenDown <em>Pen Down</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Pen Down</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool#isPenDown()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool#isPenDown()
 	 * @see #getTrajectory3DTool()
 	 * @generated
 	 */
 	EAttribute getTrajectory3DTool_PenDown();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.Trajectory3DTool#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool#getVariable()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getVariable()
 	 * @see #getTrajectory3DTool()
 	 * @generated
 	 */
 	EReference getTrajectory3DTool_Variable();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Trajectory3DTool#getDistanceThreshold <em>Distance Threshold</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getDistanceThreshold <em>Distance Threshold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Distance Threshold</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool#getDistanceThreshold()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getDistanceThreshold()
 	 * @see #getTrajectory3DTool()
 	 * @generated
 	 */
 	EAttribute getTrajectory3DTool_DistanceThreshold();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Trajectory3DTool#getTotalDistance <em>Total Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getTotalDistance <em>Total Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Total Distance</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool#getTotalDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getTotalDistance()
 	 * @see #getTrajectory3DTool()
 	 * @generated
 	 */
 	EAttribute getTrajectory3DTool_TotalDistance();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.Trajectory3DTool#getPaths <em>Paths</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getPaths <em>Paths</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Paths</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool#getPaths()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getPaths()
 	 * @see #getTrajectory3DTool()
 	 * @generated
 	 */
 	EReference getTrajectory3DTool_Paths();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.Trajectory3DTool#getPoseProvider <em>Pose Provider</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getPoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pose Provider</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool#getPoseProvider()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getPoseProvider()
 	 * @see #getTrajectory3DTool()
 	 * @generated
 	 */
 	EReference getTrajectory3DTool_PoseProvider();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.Trajectory3DTool#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Trajectory3 DTool Node</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DTool#getTrajectory3DToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DTool#getTrajectory3DToolNode()
 	 * @see #getTrajectory3DTool()
 	 * @generated
 	 */
 	EReference getTrajectory3DTool_Trajectory3DToolNode();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.Trajectory3DToolNode <em>Trajectory3 DTool Node</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode <em>Trajectory3 DTool Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Trajectory3 DTool Node</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DToolNode
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode
 	 * @generated
 	 */
 	EClass getTrajectory3DToolNode();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.Trajectory3DToolNode#getTrajectory3DTool <em>Trajectory3 DTool</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode#getTrajectory3DTool <em>Trajectory3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Trajectory3 DTool</em>'.
-	 * @see org.eclipse.symphony.addons.Trajectory3DToolNode#getTrajectory3DTool()
+	 * @see ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode#getTrajectory3DTool()
 	 * @see #getTrajectory3DToolNode()
 	 * @generated
 	 */
@@ -2276,12 +2276,12 @@ public interface Symphony__AddonsPackage extends EPackage
 	EDataType getColor3f();
 
 		/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.common.topology.ui.NodeSelection <em>Node Selection</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection <em>Node Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Node Selection</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
-	 * @model instanceClass="org.eclipse.symphony.common.topology.ui.NodeSelection"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection
+	 * @model instanceClass="ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection"
 	 * @generated
 	 */
 	EDataType getNodeSelection();
@@ -2293,91 +2293,91 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsFactory getSymphony__AddonsFactory();
+	ApogyAddonsFactory getApogyAddonsFactory();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getRulerColor <em>Ruler Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getRulerColor <em>Ruler Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ruler Color</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getRulerColor()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getRulerColor()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EAttribute getRuler3DTool_RulerColor();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getExtremitiesRadius <em>Extremities Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getExtremitiesRadius <em>Extremities Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Extremities Radius</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getExtremitiesRadius()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getExtremitiesRadius()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EAttribute getRuler3DTool_ExtremitiesRadius();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickColor <em>Minor Tick Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMinorTickColor <em>Minor Tick Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minor Tick Color</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMinorTickColor()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMinorTickColor()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EAttribute getRuler3DTool_MinorTickColor();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickSpacing <em>Minor Tick Spacing</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMinorTickSpacing <em>Minor Tick Spacing</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minor Tick Spacing</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMinorTickSpacing()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMinorTickSpacing()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EAttribute getRuler3DTool_MinorTickSpacing();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLength <em>Minor Tick Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMinorTickLength <em>Minor Tick Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minor Tick Length</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLength()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMinorTickLength()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EAttribute getRuler3DTool_MinorTickLength();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickColor <em>Major Tick Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMajorTickColor <em>Major Tick Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Major Tick Color</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMajorTickColor()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMajorTickColor()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EAttribute getRuler3DTool_MajorTickColor();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickSpacing <em>Major Tick Spacing</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMajorTickSpacing <em>Major Tick Spacing</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Major Tick Spacing</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMajorTickSpacing()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMajorTickSpacing()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
 	EAttribute getRuler3DTool_MajorTickSpacing();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLength <em>Major Tick Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMajorTickLength <em>Major Tick Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Major Tick Length</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLength()
+	 * @see ca.gc.asc_csa.apogy.addons.Ruler3DTool#getMajorTickLength()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
@@ -2399,20 +2399,20 @@ public interface Symphony__AddonsPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.AbstractToolImpl <em>Abstract Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.AbstractToolImpl <em>Abstract Tool</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.AbstractToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getAbstractTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.AbstractToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getAbstractTool()
 		 * @generated
 		 */
     EClass ABSTRACT_TOOL = eINSTANCE.getAbstractTool();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.SimpleToolListImpl <em>Simple Tool List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.SimpleToolListImpl <em>Simple Tool List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.SimpleToolListImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSimpleToolList()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.SimpleToolListImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSimpleToolList()
 		 * @generated
 		 */
 		EClass SIMPLE_TOOL_LIST = eINSTANCE.getSimpleToolList();
@@ -2424,11 +2424,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EReference SIMPLE_TOOL_LIST__SIMPLE_TOOLS = eINSTANCE.getSimpleToolList_SimpleTools();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.SimpleToolImpl <em>Simple Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.SimpleToolImpl <em>Simple Tool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.SimpleToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSimpleTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.SimpleToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSimpleTool()
 		 * @generated
 		 */
 		EClass SIMPLE_TOOL = eINSTANCE.getSimpleTool();
@@ -2461,11 +2461,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EOperation SIMPLE_TOOL___DISPOSE = eINSTANCE.getSimpleTool__Dispose();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.Simple3DToolImpl <em>Simple3 DTool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl <em>Simple3 DTool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.Simple3DToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSimple3DTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.Simple3DToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSimple3DTool()
 		 * @generated
 		 */
 		EClass SIMPLE3_DTOOL = eINSTANCE.getSimple3DTool();
@@ -2491,11 +2491,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EOperation SIMPLE3_DTOOL___SELECTION_CHANGED__NODESELECTION = eINSTANCE.getSimple3DTool__SelectionChanged__NodeSelection();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl <em>Abstract Two Points3 DTool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl <em>Abstract Two Points3 DTool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getAbstractTwoPoints3DTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getAbstractTwoPoints3DTool()
 		 * @generated
 		 */
 		EClass ABSTRACT_TWO_POINTS3_DTOOL = eINSTANCE.getAbstractTwoPoints3DTool();
@@ -2570,11 +2570,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EOperation ABSTRACT_TWO_POINTS3_DTOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D = eINSTANCE.getAbstractTwoPoints3DTool__PointsRelativePoseChanged__Matrix4d();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl <em>Ruler3 DTool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl <em>Ruler3 DTool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.Ruler3DToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getRuler3DTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.Ruler3DToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getRuler3DTool()
 		 * @generated
 		 */
 		EClass RULER3_DTOOL = eINSTANCE.getRuler3DTool();
@@ -2586,11 +2586,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EReference RULER3_DTOOL__RULER3D_TOOL_NODE = eINSTANCE.getRuler3DTool_Ruler3dToolNode();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.Ruler3dToolNodeImpl <em>Ruler3d Tool Node</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3dToolNodeImpl <em>Ruler3d Tool Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.Ruler3dToolNodeImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getRuler3dToolNode()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.Ruler3dToolNodeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getRuler3dToolNode()
 		 * @generated
 		 */
 		EClass RULER3D_TOOL_NODE = eINSTANCE.getRuler3dToolNode();
@@ -2602,11 +2602,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EReference RULER3D_TOOL_NODE__RULER3_DTOOL = eINSTANCE.getRuler3dToolNode_Ruler3DTool();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl <em>Feature Of Interest Picking Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl <em>Feature Of Interest Picking Tool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getFeatureOfInterestPickingTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getFeatureOfInterestPickingTool()
 		 * @generated
 		 */
 		EClass FEATURE_OF_INTEREST_PICKING_TOOL = eINSTANCE.getFeatureOfInterestPickingTool();
@@ -2653,11 +2653,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EReference FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL = eINSTANCE.getFeatureOfInterestPickingTool_PickRelativeNormal();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl <em>Sun Vector3 DTool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl <em>Sun Vector3 DTool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.SunVector3DToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSunVector3DTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DTool()
 		 * @generated
 		 */
 		EClass SUN_VECTOR3_DTOOL = eINSTANCE.getSunVector3DTool();
@@ -2711,11 +2711,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EReference SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE = eINSTANCE.getSunVector3DTool_SunVector3DToolNode();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.SunVector3DToolNodeImpl <em>Sun Vector3 DTool Node</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl <em>Sun Vector3 DTool Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.SunVector3DToolNodeImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getSunVector3DToolNode()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.SunVector3DToolNodeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getSunVector3DToolNode()
 		 * @generated
 		 */
 		EClass SUN_VECTOR3_DTOOL_NODE = eINSTANCE.getSunVector3DToolNode();
@@ -2727,11 +2727,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EReference SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = eINSTANCE.getSunVector3DToolNode_SunVector3DTool();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl <em>Trajectory3 DTool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl <em>Trajectory3 DTool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.Trajectory3DToolImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getTrajectory3DTool()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DTool()
 		 * @generated
 		 */
 		EClass TRAJECTORY3_DTOOL = eINSTANCE.getTrajectory3DTool();
@@ -2785,11 +2785,11 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EReference TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE = eINSTANCE.getTrajectory3DTool_Trajectory3DToolNode();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.impl.Trajectory3DToolNodeImpl <em>Trajectory3 DTool Node</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolNodeImpl <em>Trajectory3 DTool Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.impl.Trajectory3DToolNodeImpl
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getTrajectory3DToolNode()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolNodeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getTrajectory3DToolNode()
 		 * @generated
 		 */
 		EClass TRAJECTORY3_DTOOL_NODE = eINSTANCE.getTrajectory3DToolNode();
@@ -2805,7 +2805,7 @@ public interface Symphony__AddonsPackage extends EPackage
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Color3f
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getColor3f()
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getColor3f()
 		 * @generated
 		 */
 		EDataType COLOR3F = eINSTANCE.getColor3f();
@@ -2813,8 +2813,8 @@ public interface Symphony__AddonsPackage extends EPackage
 		 * The meta object literal for the '<em>Node Selection</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
-		 * @see org.eclipse.symphony.addons.impl.Symphony__AddonsPackageImpl#getNodeSelection()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection
+		 * @see ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsPackageImpl#getNodeSelection()
 		 * @generated
 		 */
 		EDataType NODE_SELECTION = eINSTANCE.getNodeSelection();
@@ -2877,4 +2877,4 @@ public interface Symphony__AddonsPackage extends EPackage
 
   }
 
-} //Symphony__AddonsPackage
+} //ApogyAddonsPackage

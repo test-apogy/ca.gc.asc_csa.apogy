@@ -1,27 +1,27 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Symphony Topology</b></em>'. <!-- end-user-doc -->
+ * <em><b>Apogy Topology</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.SymphonyTopology#getRootNode <em>Root Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ApogyTopology#getRootNode <em>Root Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyTopology()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyTopology()
  * @model
  * @generated
  */
-public interface SymphonyTopology extends EObject {
+public interface ApogyTopology extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Root Node</b></em>' reference. <!--
 	 * begin-user-doc -->
@@ -33,7 +33,7 @@ public interface SymphonyTopology extends EObject {
 	 * 
 	 * @return the value of the '<em>Root Node</em>' reference.
 	 * @see #setRootNode(GroupNode)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyTopology_RootNode()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyTopology_RootNode()
 	 * @model transient="true" derived="true" annotation=
 	 *        "http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly'"
 	 * @generated
@@ -42,7 +42,7 @@ public interface SymphonyTopology extends EObject {
 
 	/**
 	 * Sets the value of the '
-	 * {@link org.eclipse.symphony.core.SymphonyTopology#getRootNode
+	 * {@link ca.gc.asc_csa.apogy.core.ApogyTopology#getRootNode
 	 * <em>Root Node</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
 	 * -->
 	 * 
@@ -53,4 +53,4 @@ public interface SymphonyTopology extends EObject {
 	 */
 	void setRootNode(GroupNode value);
 
-} // SymphonyTopology
+} // ApogyTopology

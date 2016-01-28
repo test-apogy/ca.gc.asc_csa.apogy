@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.SymphonySystemSimulatorAPI} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ApogySystemSimulatorAPI} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class SymphonySystemSimulatorAPIItemProvider extends ItemProviderAdapter
+public class ApogySystemSimulatorAPIItemProvider extends ItemProviderAdapter
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -34,7 +34,7 @@ public class SymphonySystemSimulatorAPIItemProvider extends ItemProviderAdapter
 	 * 
 	 * @generated
 	 */
-	public SymphonySystemSimulatorAPIItemProvider(AdapterFactory adapterFactory) {
+	public ApogySystemSimulatorAPIItemProvider(AdapterFactory adapterFactory) {
     super(adapterFactory);
   }
 
@@ -55,14 +55,14 @@ public class SymphonySystemSimulatorAPIItemProvider extends ItemProviderAdapter
   }
 
 	/**
-   * This returns SymphonySystemSimulatorAPI.gif.
+   * This returns ApogySystemSimulatorAPI.gif.
    * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
    * @generated
    */
 	@Override
 	public Object getImage(Object object) {
-    return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonySystemSimulatorAPI"));
+    return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogySystemSimulatorAPI"));
   }
 
 	/**
@@ -73,7 +73,7 @@ public class SymphonySystemSimulatorAPIItemProvider extends ItemProviderAdapter
    */
 	@Override
 	public String getText(Object object) {
-    return getString("_UI_SymphonySystemSimulatorAPI_type");
+    return getString("_UI_ApogySystemSimulatorAPI_type");
   }
 
 	/**

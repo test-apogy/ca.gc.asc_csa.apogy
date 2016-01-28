@@ -4,17 +4,17 @@
  *
  * $Id: LightImpl.java,v 1.3.2.2 2015/02/03 20:01:31 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.addons.primitives.Light;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.impl.LeafImpl;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Light;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.LeafImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +24,8 @@ import org.eclipse.symphony.common.topology.impl.LeafImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.LightImpl#isEnabled <em>Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.LightImpl#getColor <em>Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.LightImpl#isEnabled <em>Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.LightImpl#getColor <em>Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,7 +77,7 @@ public abstract class LightImpl extends LeafImpl implements Light {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT;
+		return ApogyCommonTopologyAddonsPrimitivesPackage.Literals.LIGHT;
 	}
 
 	/**
@@ -98,7 +98,7 @@ public abstract class LightImpl extends LeafImpl implements Light {
 		boolean oldEnabled = enabled;
 		enabled = newEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED, oldEnabled, enabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED, oldEnabled, enabled));
 	}
 
 	/**
@@ -119,7 +119,7 @@ public abstract class LightImpl extends LeafImpl implements Light {
 		Tuple3d oldColor = color;
 		color = newColor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, oldColor, newColor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, oldColor, newColor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -134,14 +134,14 @@ public abstract class LightImpl extends LeafImpl implements Light {
 		if (newColor != color) {
 			NotificationChain msgs = null;
 			if (color != null)
-				msgs = ((InternalEObject)color).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, null, msgs);
+				msgs = ((InternalEObject)color).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, null, msgs);
 			if (newColor != null)
-				msgs = ((InternalEObject)newColor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, null, msgs);
+				msgs = ((InternalEObject)newColor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, null, msgs);
 			msgs = basicSetColor(newColor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, newColor, newColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR, newColor, newColor));
 	}
 
 	/**
@@ -152,7 +152,7 @@ public abstract class LightImpl extends LeafImpl implements Light {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
 				return basicSetColor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -166,9 +166,9 @@ public abstract class LightImpl extends LeafImpl implements Light {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
 				return isEnabled();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
 				return getColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -182,10 +182,10 @@ public abstract class LightImpl extends LeafImpl implements Light {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
 				setEnabled((Boolean)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
 				setColor((Tuple3d)newValue);
 				return;
 		}
@@ -200,10 +200,10 @@ public abstract class LightImpl extends LeafImpl implements Light {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
 				setEnabled(ENABLED_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
 				setColor((Tuple3d)null);
 				return;
 		}
@@ -218,9 +218,9 @@ public abstract class LightImpl extends LeafImpl implements Light {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
 				return enabled != ENABLED_EDEFAULT;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
 				return color != null;
 		}
 		return super.eIsSet(featureID);

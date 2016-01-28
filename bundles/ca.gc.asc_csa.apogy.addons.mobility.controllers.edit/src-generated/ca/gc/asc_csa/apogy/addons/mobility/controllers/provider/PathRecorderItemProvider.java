@@ -3,7 +3,7 @@
  *
  * $Id: PathRecorderItemProvider.java,v 1.3.4.2 2015/05/21 15:50:54 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_recordedPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_recordedPath_feature", "_UI_PathRecorder_type"),
-				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__RECORDED_PATH,
+				 ApogyAddonsMobilityControllersPackage.Literals.PATH_RECORDER__RECORDED_PATH,
 				 true,
 				 false,
 				 true,
@@ -109,7 +109,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_positionSensor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_positionSensor_feature", "_UI_PathRecorder_type"),
-				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__POSITION_SENSOR,
+				 ApogyAddonsMobilityControllersPackage.Literals.PATH_RECORDER__POSITION_SENSOR,
 				 true,
 				 false,
 				 true,
@@ -132,7 +132,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_minimumDistanceDelta_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_minimumDistanceDelta_feature", "_UI_PathRecorder_type"),
-				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__MINIMUM_DISTANCE_DELTA,
+				 ApogyAddonsMobilityControllersPackage.Literals.PATH_RECORDER__MINIMUM_DISTANCE_DELTA,
 				 true,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_minimumTimeDelta_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_minimumTimeDelta_feature", "_UI_PathRecorder_type"),
-				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__MINIMUM_TIME_DELTA,
+				 ApogyAddonsMobilityControllersPackage.Literals.PATH_RECORDER__MINIMUM_TIME_DELTA,
 				 true,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_samplingMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_samplingMode_feature", "_UI_PathRecorder_type"),
-				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__SAMPLING_MODE,
+				 ApogyAddonsMobilityControllersPackage.Literals.PATH_RECORDER__SAMPLING_MODE,
 				 true,
 				 false,
 				 false,
@@ -225,9 +225,9 @@ public class PathRecorderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PathRecorder.class)) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
-			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
-			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE:
+			case ApogyAddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
+			case ApogyAddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
+			case ApogyAddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,28 +1,28 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners;
 
 import org.eclipse.emf.ecore.EFactory;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage
  * @generated
  */
-public interface Symphony__AddonsMobilityPathplannersFactory extends EFactory {
+public interface ApogyAddonsMobilityPathplannersFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsMobilityPathplannersFactory eINSTANCE = org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersFactoryImpl.init();
+	ApogyAddonsMobilityPathplannersFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl.ApogyAddonsMobilityPathplannersFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Way Point Path Planner</em>'.
@@ -58,7 +58,7 @@ public interface Symphony__AddonsMobilityPathplannersFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__AddonsMobilityPathplannersFacade createSymphony__AddonsMobilityPathplannersFacade();
+	ApogyAddonsMobilityPathplannersFacade createApogyAddonsMobilityPathplannersFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -67,6 +67,6 @@ public interface Symphony__AddonsMobilityPathplannersFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsMobilityPathplannersPackage getSymphony__AddonsMobilityPathplannersPackage();
+	ApogyAddonsMobilityPathplannersPackage getApogyAddonsMobilityPathplannersPackage();
 
-} //Symphony__AddonsMobilityPathplannersFactory
+} //ApogyAddonsMobilityPathplannersFactory

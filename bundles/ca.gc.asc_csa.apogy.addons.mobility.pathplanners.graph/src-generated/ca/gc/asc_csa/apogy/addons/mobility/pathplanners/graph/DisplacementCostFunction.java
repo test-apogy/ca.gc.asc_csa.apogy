@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDisplacementCostFunction()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDisplacementCostFunction()
  * @model abstract="true"
  * @generated
  */

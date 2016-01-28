@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.graphs;
+package ca.gc.asc_csa.apogy.common.converters.graphs;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsPackage
+ * @see ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage
  * @generated
  */
-public interface Symphony__CommonConvertersGraphsFactory extends EFactory {
+public interface ApogyCommonConvertersGraphsFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonConvertersGraphsFactory eINSTANCE = org.eclipse.symphony.common.converters.graphs.impl.Symphony__CommonConvertersGraphsFactoryImpl.init();
+	ApogyCommonConvertersGraphsFactory eINSTANCE = ca.gc.asc_csa.apogy.common.converters.graphs.impl.ApogyCommonConvertersGraphsFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Facade</em>'.
@@ -29,7 +29,7 @@ public interface Symphony__CommonConvertersGraphsFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CommonConvertersGraphsFacade createSymphony__CommonConvertersGraphsFacade();
+	ApogyCommonConvertersGraphsFacade createApogyCommonConvertersGraphsFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -38,6 +38,6 @@ public interface Symphony__CommonConvertersGraphsFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonConvertersGraphsPackage getSymphony__CommonConvertersGraphsPackage();
+	ApogyCommonConvertersGraphsPackage getApogyCommonConvertersGraphsPackage();
 
-} //Symphony__CommonConvertersGraphsFactory
+} //ApogyCommonConvertersGraphsFactory

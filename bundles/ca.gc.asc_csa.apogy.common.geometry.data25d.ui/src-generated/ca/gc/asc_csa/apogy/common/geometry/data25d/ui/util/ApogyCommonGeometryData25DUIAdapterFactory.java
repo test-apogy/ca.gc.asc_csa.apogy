@@ -1,32 +1,32 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.ui.util;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage;
-import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage
  * @generated
  */
-public class Symphony__CommonGeometryData25DUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonGeometryData25DUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData25DUIPackage modelPackage;
+	protected static ApogyCommonGeometryData25DUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class Symphony__CommonGeometryData25DUIAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DUIAdapterFactory() {
+	public ApogyCommonGeometryData25DUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData25DUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData25DUIPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class Symphony__CommonGeometryData25DUIAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData25DUISwitch<Adapter> modelSwitch =
-		new Symphony__CommonGeometryData25DUISwitch<Adapter>() {
+	protected ApogyCommonGeometryData25DUISwitch<Adapter> modelSwitch =
+		new ApogyCommonGeometryData25DUISwitch<Adapter>() {
 			@Override
 			public Adapter caseVolumetricCoordinatesSet25DPresentation(VolumetricCoordinatesSet25DPresentation object) {
 				return createVolumetricCoordinatesSet25DPresentationAdapter();
@@ -96,13 +96,13 @@ public class Symphony__CommonGeometryData25DUIAdapterFactory extends AdapterFact
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation <em>Volumetric Coordinates Set25 DPresentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation <em>Volumetric Coordinates Set25 DPresentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation
 	 * @generated
 	 */
 	public Adapter createVolumetricCoordinatesSet25DPresentationAdapter() {
@@ -110,13 +110,13 @@ public class Symphony__CommonGeometryData25DUIAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -135,4 +135,4 @@ public class Symphony__CommonGeometryData25DUIAdapterFactory extends AdapterFact
 		return null;
 	}
 
-} //Symphony__CommonGeometryData25DUIAdapterFactory
+} //ApogyCommonGeometryData25DUIAdapterFactory

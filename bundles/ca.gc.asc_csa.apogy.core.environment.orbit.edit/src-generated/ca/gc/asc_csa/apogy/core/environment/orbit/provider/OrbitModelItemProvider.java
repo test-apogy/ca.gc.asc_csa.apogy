@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -11,12 +11,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.provider.AbstractOrbitModelItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.provider.AbstractOrbitModelItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.OrbitModel} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -60,8 +60,8 @@ public class OrbitModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__INITIAL_ORBIT);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__PROPAGATOR);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__INITIAL_ORBIT);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__PROPAGATOR);
 		}
 		return childrenFeatures;
 	}
@@ -117,8 +117,8 @@ public class OrbitModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitModel.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

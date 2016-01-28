@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,14 +15,14 @@ import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
  *
  * @generated
  */
-public class Symphony__AddonsVehicleFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__AddonsVehicleFacade
+public class ApogyAddonsVehicleFacadeImpl extends MinimalEObjectImpl.Container implements ApogyAddonsVehicleFacade
 {
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__AddonsVehicleFacadeImpl()
+  protected ApogyAddonsVehicleFacadeImpl()
   {
 		super();
 	}
@@ -35,7 +35,7 @@ public class Symphony__AddonsVehicleFacadeImpl extends MinimalEObjectImpl.Contai
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehiclePackage.Literals.SYMPHONY_ADDONS_VEHICLE_FACADE;
+		return ApogyAddonsVehiclePackage.Literals.APOGY_ADDONS_VEHICLE_FACADE;
 	}
 
-} //Symphony__AddonsVehicleFacadeImpl
+} //ApogyAddonsVehicleFacadeImpl

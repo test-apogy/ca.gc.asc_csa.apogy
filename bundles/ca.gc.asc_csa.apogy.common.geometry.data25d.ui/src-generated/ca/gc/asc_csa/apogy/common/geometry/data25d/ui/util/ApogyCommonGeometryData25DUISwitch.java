@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.ui.util;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage;
-import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage
  * @generated
  */
-public class Symphony__CommonGeometryData25DUISwitch<T> extends Switch<T> {
+public class ApogyCommonGeometryData25DUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData25DUIPackage modelPackage;
+	protected static ApogyCommonGeometryData25DUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__CommonGeometryData25DUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DUISwitch() {
+	public ApogyCommonGeometryData25DUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData25DUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData25DUIPackage.eINSTANCE;
 		}
 	}
 
@@ -67,7 +67,7 @@ public class Symphony__CommonGeometryData25DUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonGeometryData25DUIPackage.VOLUMETRIC_COORDINATES_SET25_DPRESENTATION: {
+			case ApogyCommonGeometryData25DUIPackage.VOLUMETRIC_COORDINATES_SET25_DPRESENTATION: {
 				VolumetricCoordinatesSet25DPresentation volumetricCoordinatesSet25DPresentation = (VolumetricCoordinatesSet25DPresentation)theEObject;
 				T result = caseVolumetricCoordinatesSet25DPresentation(volumetricCoordinatesSet25DPresentation);
 				if (result == null) result = caseNodePresentation(volumetricCoordinatesSet25DPresentation);
@@ -124,4 +124,4 @@ public class Symphony__CommonGeometryData25DUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonGeometryData25DUISwitch
+} //ApogyCommonGeometryData25DUISwitch

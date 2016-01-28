@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.addons.geometry.paths;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator#getDistanceInterval <em>Distance Interval</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator#getDistanceInterval <em>Distance Interval</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getUniformDistanceWayPointPathInterpolator()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getUniformDistanceWayPointPathInterpolator()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface UniformDistanceWayPointPathInterpolator extends WayPointPathFil
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distance Interval</em>' attribute.
 	 * @see #setDistanceInterval(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getUniformDistanceWayPointPathInterpolator_DistanceInterval()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getUniformDistanceWayPointPathInterpolator_DistanceInterval()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getDistanceInterval();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator#getDistanceInterval <em>Distance Interval</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator#getDistanceInterval <em>Distance Interval</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Distance Interval</em>' attribute.

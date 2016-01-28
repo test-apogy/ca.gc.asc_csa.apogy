@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage
  * @generated
  */
-public interface Symphony__CoreProgramsControllersFactory extends EFactory
+public interface ApogyCoreProgramsControllersFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__CoreProgramsControllersFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreProgramsControllersFactory eINSTANCE = org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersFactoryImpl.init();
+  ApogyCoreProgramsControllersFactory eINSTANCE = ca.gc.asc_csa.apogy.core.programs.controllers.impl.ApogyCoreProgramsControllersFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Facade</em>'.
@@ -30,7 +30,7 @@ public interface Symphony__CoreProgramsControllersFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreProgramsControllersFacade createSymphony__CoreProgramsControllersFacade();
+	ApogyCoreProgramsControllersFacade createApogyCoreProgramsControllersFacade();
 
 		/**
 	 * Returns a new object of class '<em>Controllers Configuration</em>'.
@@ -174,6 +174,6 @@ public interface Symphony__CoreProgramsControllersFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreProgramsControllersPackage getSymphony__CoreProgramsControllersPackage();
+	ApogyCoreProgramsControllersPackage getApogyCoreProgramsControllersPackage();
 
-} //Symphony__CoreProgramsControllersFactory
+} //ApogyCoreProgramsControllersFactory

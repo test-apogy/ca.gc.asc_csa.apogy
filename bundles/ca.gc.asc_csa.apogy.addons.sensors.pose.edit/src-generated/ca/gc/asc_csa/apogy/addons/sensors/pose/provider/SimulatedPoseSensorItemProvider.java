@@ -3,7 +3,7 @@
  *
  * $Id: SimulatedPoseSensorItemProvider.java,v 1.3.4.2 2015/05/21 15:50:00 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -75,7 +75,7 @@ public class SimulatedPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPoseSensor_updatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPoseSensor_updatePeriod_feature", "_UI_SimulatedPoseSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__UPDATE_PERIOD,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -98,7 +98,7 @@ public class SimulatedPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPoseSensor_xVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPoseSensor_xVelocity_feature", "_UI_SimulatedPoseSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__XVELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__XVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class SimulatedPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPoseSensor_yVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPoseSensor_yVelocity_feature", "_UI_SimulatedPoseSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__YVELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__YVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -144,7 +144,7 @@ public class SimulatedPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPoseSensor_zVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPoseSensor_zVelocity_feature", "_UI_SimulatedPoseSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__ZVELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__ZVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -167,7 +167,7 @@ public class SimulatedPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPoseSensor_xAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPoseSensor_xAngularVelocity_feature", "_UI_SimulatedPoseSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__XANGULAR_VELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__XANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -190,7 +190,7 @@ public class SimulatedPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPoseSensor_yAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPoseSensor_yAngularVelocity_feature", "_UI_SimulatedPoseSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__YANGULAR_VELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__YANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -213,7 +213,7 @@ public class SimulatedPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPoseSensor_zAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPoseSensor_zAngularVelocity_feature", "_UI_SimulatedPoseSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__ZANGULAR_VELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSE_SENSOR__ZANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -262,13 +262,13 @@ public class SimulatedPoseSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimulatedPoseSensor.class)) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__XVELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__YVELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__ZVELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__XANGULAR_VELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__YANGULAR_VELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__ZANGULAR_VELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__XVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__YVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__ZVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__XANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__YANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__ZANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR__UPDATE_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

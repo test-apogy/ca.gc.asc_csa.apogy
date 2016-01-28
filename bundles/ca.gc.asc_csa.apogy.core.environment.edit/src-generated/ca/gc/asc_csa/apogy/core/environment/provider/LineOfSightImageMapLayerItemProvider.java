@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -14,13 +14,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 				 getResourceLocator(),
 				 getString("_UI_LineOfSightImageMapLayer_lineOfSightAvailableColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LineOfSightImageMapLayer_lineOfSightAvailableColor_feature", "_UI_LineOfSightImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR,
+				 ApogyCoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 				 getResourceLocator(),
 				 getString("_UI_LineOfSightImageMapLayer_lineOfSightNotAvailableColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LineOfSightImageMapLayer_lineOfSightNotAvailableColor_feature", "_UI_LineOfSightImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR,
+				 ApogyCoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 				 getResourceLocator(),
 				 getString("_UI_LineOfSightImageMapLayer_observerPose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LineOfSightImageMapLayer_observerPose_feature", "_UI_LineOfSightImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE,
+				 ApogyCoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 				 getResourceLocator(),
 				 getString("_UI_LineOfSightImageMapLayer_targetHeightAboveGround_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LineOfSightImageMapLayer_targetHeightAboveGround_feature", "_UI_LineOfSightImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND,
+				 ApogyCoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND,
 				 true,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 				 getResourceLocator(),
 				 getString("_UI_LineOfSightImageMapLayer_useHeightPerpendicularToGround_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LineOfSightImageMapLayer_useHeightPerpendicularToGround_feature", "_UI_LineOfSightImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND,
+				 ApogyCoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND,
 				 true,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE);
 		}
 		return childrenFeatures;
 	}
@@ -233,13 +233,13 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LineOfSightImageMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR:
-			case Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR:
-			case Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND:
-			case Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND:
+			case ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR:
+			case ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR:
+			case ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND:
+			case ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE:
+			case ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -259,8 +259,8 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCoreEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 	/**
@@ -275,8 +275,8 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

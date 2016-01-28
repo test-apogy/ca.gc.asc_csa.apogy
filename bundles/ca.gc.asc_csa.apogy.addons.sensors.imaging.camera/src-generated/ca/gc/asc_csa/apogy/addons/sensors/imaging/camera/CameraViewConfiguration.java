@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import java.util.List;
 
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,21 +18,21 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList <em>Camera View Configuration List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera <em>Camera</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth <em>Image Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight <em>Image Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount <em>Image Count</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage <em>Display Rectified Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList <em>Overlay List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList <em>Tool List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList <em>Filter List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable <em>Image Auto Save Enable</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays <em>Save Image With Overlays</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList <em>Camera View Configuration List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera <em>Camera</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth <em>Image Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight <em>Image Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount <em>Image Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage <em>Display Rectified Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList <em>Overlay List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList <em>Tool List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList <em>Filter List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable <em>Image Auto Save Enable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays <em>Save Image With Overlays</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 
   /**
 	 * Returns the value of the '<em><b>Camera View Configuration List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations <em>Camera View Configurations</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations <em>Camera View Configurations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -49,8 +49,8 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Camera View Configuration List</em>' container reference.
 	 * @see #setCameraViewConfigurationList(CameraViewConfigurationList)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_CameraViewConfigurationList()
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_CameraViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations
 	 * @model opposite="cameraViewConfigurations" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -58,7 +58,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	CameraViewConfigurationList getCameraViewConfigurationList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList <em>Camera View Configuration List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList <em>Camera View Configuration List</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Camera View Configuration List</em>' container reference.
@@ -76,7 +76,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Camera</em>' reference.
 	 * @see #setCamera(AbstractCamera)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_Camera()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_Camera()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -84,7 +84,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
   AbstractCamera getCamera();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera <em>Camera</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera <em>Camera</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Camera</em>' reference.
@@ -103,7 +103,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image Width</em>' attribute.
 	 * @see #setImageWidth(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageWidth()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageWidth()
 	 * @model default="640" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_DISPLAY_SETTINGS'"
 	 * @generated
@@ -111,7 +111,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
   int getImageWidth();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth <em>Image Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth <em>Image Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Width</em>' attribute.
@@ -130,7 +130,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image Height</em>' attribute.
 	 * @see #setImageHeight(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageHeight()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageHeight()
 	 * @model default="480" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_DISPLAY_SETTINGS'"
 	 * @generated
@@ -138,7 +138,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
   int getImageHeight();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight <em>Image Height</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight <em>Image Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Height</em>' attribute.
@@ -157,14 +157,14 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image Count</em>' attribute.
 	 * @see #setImageCount(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageCount()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageCount()
 	 * @model default="0" unique="false" transient="true"
 	 * @generated
 	 */
 	int getImageCount();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount <em>Image Count</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount <em>Image Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Count</em>' attribute.
@@ -187,7 +187,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Display Rectified Image</em>' attribute.
 	 * @see #setDisplayRectifiedImage(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_DisplayRectifiedImage()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_DisplayRectifiedImage()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_DISPLAY_SETTINGS'"
 	 * @generated
@@ -195,7 +195,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
   boolean isDisplayRectifiedImage();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage <em>Display Rectified Image</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage <em>Display Rectified Image</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Display Rectified Image</em>' attribute.
@@ -206,7 +206,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 
   /**
 	 * Returns the value of the '<em><b>Overlay List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -214,15 +214,15 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Overlay List</em>' containment reference.
 	 * @see #setOverlayList(CameraOverlayList)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_OverlayList()
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_OverlayList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration
 	 * @model opposite="cameraViewConfiguration" containment="true" required="true"
 	 * @generated
 	 */
   CameraOverlayList getOverlayList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList <em>Overlay List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList <em>Overlay List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Overlay List</em>' containment reference.
@@ -233,7 +233,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 
   /**
 	 * Returns the value of the '<em><b>Tool List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -241,15 +241,15 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tool List</em>' containment reference.
 	 * @see #setToolList(CameraToolList)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ToolList()
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration
 	 * @model opposite="cameraViewConfiguration" containment="true" required="true"
 	 * @generated
 	 */
 	CameraToolList getToolList();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList <em>Tool List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList <em>Tool List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tool List</em>' containment reference.
@@ -260,7 +260,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 
 		/**
 	 * Returns the value of the '<em><b>Filter List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -268,15 +268,15 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Filter List</em>' containment reference.
 	 * @see #setFilterList(FilterList)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_FilterList()
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_FilterList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration
 	 * @model opposite="cameraViewConfiguration" containment="true" required="true"
 	 * @generated
 	 */
   FilterList getFilterList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList <em>Filter List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList <em>Filter List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Filter List</em>' containment reference.
@@ -295,7 +295,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image Auto Save Enable</em>' attribute.
 	 * @see #setImageAutoSaveEnable(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageAutoSaveEnable()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageAutoSaveEnable()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_AUTOSAVE_SETTINGS'"
 	 * @generated
@@ -303,7 +303,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	boolean isImageAutoSaveEnable();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable <em>Image Auto Save Enable</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable <em>Image Auto Save Enable</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Auto Save Enable</em>' attribute.
@@ -322,7 +322,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Save Image With Overlays</em>' attribute.
 	 * @see #setSaveImageWithOverlays(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_SaveImageWithOverlays()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_SaveImageWithOverlays()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_AUTOSAVE_SETTINGS'"
 	 * @generated
@@ -330,7 +330,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	boolean isSaveImageWithOverlays();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays <em>Save Image With Overlays</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays <em>Save Image With Overlays</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Save Image With Overlays</em>' attribute.
@@ -348,7 +348,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image Auto Save Folder Path</em>' attribute.
 	 * @see #setImageAutoSaveFolderPath(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageAutoSaveFolderPath()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraViewConfiguration_ImageAutoSaveFolderPath()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_AUTOSAVE_SETTINGS'"
 	 * @generated
@@ -356,7 +356,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	String getImageAutoSaveFolderPath();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Auto Save Folder Path</em>' attribute.
@@ -375,7 +375,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * <!-- begin-model-doc -->
 	 * * Returns the list of all  CameraImageAnnotation.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.List<org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.List<ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation>" unique="false" many="false"
 	 * @generated
 	 */
 	List<CameraImageAnnotation> getCameraImageAnnotations();

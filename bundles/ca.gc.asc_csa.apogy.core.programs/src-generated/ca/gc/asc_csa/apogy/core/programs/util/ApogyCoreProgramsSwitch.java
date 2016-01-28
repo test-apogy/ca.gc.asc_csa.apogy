@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.util;
+package ca.gc.asc_csa.apogy.core.programs.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.programs.*;
+import ca.gc.asc_csa.apogy.core.programs.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,17 +18,17 @@ import org.eclipse.symphony.core.programs.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage
+ * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage
  * @generated
  */
-public class Symphony__CoreProgramsSwitch<T> extends Switch<T> {
+public class ApogyCoreProgramsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreProgramsPackage modelPackage;
+	protected static ApogyCoreProgramsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -36,9 +36,9 @@ public class Symphony__CoreProgramsSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsSwitch() {
+	public ApogyCoreProgramsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreProgramsPackage.eINSTANCE;
+			modelPackage = ApogyCoreProgramsPackage.eINSTANCE;
 		}
 	}
 
@@ -65,19 +65,19 @@ public class Symphony__CoreProgramsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME: {
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME: {
 				AbstractProgramRuntime abstractProgramRuntime = (AbstractProgramRuntime)theEObject;
 				T result = caseAbstractProgramRuntime(abstractProgramRuntime);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE: {
-				Symphony__CoreProgramsFacade symphony__CoreProgramsFacade = (Symphony__CoreProgramsFacade)theEObject;
-				T result = caseSymphony__CoreProgramsFacade(symphony__CoreProgramsFacade);
+			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE: {
+				ApogyCoreProgramsFacade apogy__CoreProgramsFacade = (ApogyCoreProgramsFacade)theEObject;
+				T result = caseApogyCoreProgramsFacade(apogy__CoreProgramsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL: {
+			case ApogyCoreProgramsPackage.TIME_INTERVAL: {
 				TimeInterval timeInterval = (TimeInterval)theEObject;
 				T result = caseTimeInterval(timeInterval);
 				if (result == null) result = defaultCase(theEObject);
@@ -113,7 +113,7 @@ public class Symphony__CoreProgramsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreProgramsFacade(Symphony__CoreProgramsFacade object) {
+	public T caseApogyCoreProgramsFacade(ApogyCoreProgramsFacade object) {
 		return null;
 	}
 
@@ -148,4 +148,4 @@ public class Symphony__CoreProgramsSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CoreProgramsSwitch
+} //ApogyCoreProgramsSwitch

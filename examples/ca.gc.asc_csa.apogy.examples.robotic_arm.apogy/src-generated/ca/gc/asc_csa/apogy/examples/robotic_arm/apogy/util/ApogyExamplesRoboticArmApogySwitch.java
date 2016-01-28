@@ -1,20 +1,20 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.util;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +26,10 @@ import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRobo
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage
  * @generated
  */
-public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
+public class ApogyExamplesRoboticArmApogySwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -37,7 +37,7 @@ public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesRoboticArmSymphonyPackage modelPackage;
+  protected static ApogyExamplesRoboticArmApogyPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -45,10 +45,10 @@ public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoboticArmSymphonySwitch()
+  public ApogyExamplesRoboticArmApogySwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesRoboticArmSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesRoboticArmApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -77,19 +77,19 @@ public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER: {
-				RoboticArmSymphonySystemApiAdapter roboticArmSymphonySystemApiAdapter = (RoboticArmSymphonySystemApiAdapter)theEObject;
-				T result = caseRoboticArmSymphonySystemApiAdapter(roboticArmSymphonySystemApiAdapter);
-				if (result == null) result = caseSymphonySystemApiAdapter(roboticArmSymphonySystemApiAdapter);
-				if (result == null) result = caseTypeApiAdapter(roboticArmSymphonySystemApiAdapter);
-				if (result == null) result = casePoseProvider(roboticArmSymphonySystemApiAdapter);
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER: {
+				RoboticArmApogySystemApiAdapter roboticArmApogySystemApiAdapter = (RoboticArmApogySystemApiAdapter)theEObject;
+				T result = caseRoboticArmApogySystemApiAdapter(roboticArmApogySystemApiAdapter);
+				if (result == null) result = caseApogySystemApiAdapter(roboticArmApogySystemApiAdapter);
+				if (result == null) result = caseTypeApiAdapter(roboticArmApogySystemApiAdapter);
+				if (result == null) result = casePoseProvider(roboticArmApogySystemApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA: {
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA: {
 				RoboticArmData roboticArmData = (RoboticArmData)theEObject;
 				T result = caseRoboticArmData(roboticArmData);
-				if (result == null) result = caseSymphonyInitializationData(roboticArmData);
+				if (result == null) result = caseApogyInitializationData(roboticArmData);
 				if (result == null) result = caseInitializationData(roboticArmData);
 				if (result == null) result = caseAbstractInitializationData(roboticArmData);
 				if (result == null) result = defaultCase(theEObject);
@@ -100,17 +100,17 @@ public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Robotic Arm Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Robotic Arm Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Robotic Arm Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Robotic Arm Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseRoboticArmSymphonySystemApiAdapter(RoboticArmSymphonySystemApiAdapter object)
+  public T caseRoboticArmApogySystemApiAdapter(RoboticArmApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -163,17 +163,17 @@ public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object)
+  public T caseApogySystemApiAdapter(ApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -209,17 +209,17 @@ public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonyInitializationData(SymphonyInitializationData object)
+  public T caseApogyInitializationData(ApogyInitializationData object)
   {
 		return null;
 	}
@@ -241,4 +241,4 @@ public class Symphony__ExamplesRoboticArmSymphonySwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesRoboticArmSymphonySwitch
+} //ApogyExamplesRoboticArmApogySwitch

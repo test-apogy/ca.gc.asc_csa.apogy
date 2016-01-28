@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 /*
  * Interface used to listen for new and clear Variable instance events.

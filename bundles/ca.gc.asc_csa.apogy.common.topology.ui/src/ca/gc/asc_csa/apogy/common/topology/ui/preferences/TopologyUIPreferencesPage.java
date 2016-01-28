@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.preferences;
+package ca.gc.asc_csa.apogy.common.topology.ui.preferences;
 
 import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.PreferencePage;
@@ -10,7 +10,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 

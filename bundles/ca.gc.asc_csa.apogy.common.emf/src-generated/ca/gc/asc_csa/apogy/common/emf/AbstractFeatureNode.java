@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeatureNode()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractFeatureNode()
  * @model abstract="true"
  * @generated
  */

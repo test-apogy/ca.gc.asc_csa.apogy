@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.dialogs;
+package ca.gc.asc_csa.apogy.core.environment.ui.dialogs;
 
 import java.util.HashMap;
 
@@ -13,12 +13,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
 
 public class MapSelectionDialog extends Dialog 
 {
@@ -77,10 +77,10 @@ public class MapSelectionDialog extends Dialog
 	{
 		final Combo combo = new Combo(parent, SWT.NONE);
 		
-		if(context.getEnvironment() instanceof SymphonyEnvironment)
+		if(context.getEnvironment() instanceof ApogyEnvironment)
 		{
-			SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) context.getEnvironment();
-			AbstractWorksite worksite = symphonyEnvironment.getActiveWorksite();
+			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
+			AbstractWorksite worksite = apogyEnvironment.getActiveWorksite();
 			
 			if(worksite instanceof SurfaceWorksite)
 			{

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.text.DecimalFormat;
@@ -15,13 +15,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class PointerCameraToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointerCameraTool_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointerCameraTool_fov_feature", "_UI_PointerCameraTool_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__FOV,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__FOV,
 				 false,
 				 false,
 				 true,
@@ -94,7 +94,7 @@ public class PointerCameraToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointerCameraTool_vectorColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointerCameraTool_vectorColor_feature", "_UI_PointerCameraTool_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__VECTOR_COLOR,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__VECTOR_COLOR,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class PointerCameraToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointerCameraTool_intersectionDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointerCameraTool_intersectionDistance_feature", "_UI_PointerCameraTool_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -137,7 +137,7 @@ public class PointerCameraToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+			childrenFeatures.add(ApogyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -222,11 +222,11 @@ public class PointerCameraToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PointerCameraTool.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -246,8 +246,8 @@ public class PointerCameraToolItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 }

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.FeatureOfInterestNode#getFeatureOfInterest <em>Feature Of Interest</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.FeatureOfInterestNode#getFeatureOfInterest <em>Feature Of Interest</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestNode()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getFeatureOfInterestNode()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface FeatureOfInterestNode extends TransformNode {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Of Interest</em>' reference.
 	 * @see #setFeatureOfInterest(FeatureOfInterest)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestNode_FeatureOfInterest()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getFeatureOfInterestNode_FeatureOfInterest()
 	 * @model transient="true"
 	 * @generated
 	 */
 	FeatureOfInterest getFeatureOfInterest();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.FeatureOfInterestNode#getFeatureOfInterest <em>Feature Of Interest</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.FeatureOfInterestNode#getFeatureOfInterest <em>Feature Of Interest</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Of Interest</em>' reference.

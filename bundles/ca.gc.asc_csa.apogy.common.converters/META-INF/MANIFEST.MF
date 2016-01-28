@@ -1,25 +1,25 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.converters;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.converters;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.common.converters.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.common.converters.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.jgrapht;bundle-version="0.8.2";visibility:=reexport,
  org.eclipse.ui;bundle-version="3.106.1";visibility:=reexport,
- org.eclipse.symphony.common.log,
+ ca.gc.asc_csa.apogy.common.log,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.common.converters;visibility:=reexport
+ ca.gc.asc_csa.apogy.common.converters;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.symphony.common.converters,
- org.eclipse.symphony.common.converters.graphs,
- org.eclipse.symphony.common.converters.graphs.impl,
- org.eclipse.symphony.common.converters.graphs.util,
- org.eclipse.symphony.common.converters.impl,
- org.eclipse.symphony.common.converters.util
+Export-Package: ca.gc.asc_csa.apogy.common.converters,
+ ca.gc.asc_csa.apogy.common.converters.graphs,
+ ca.gc.asc_csa.apogy.common.converters.graphs.impl,
+ ca.gc.asc_csa.apogy.common.converters.graphs.util,
+ ca.gc.asc_csa.apogy.common.converters.impl,
+ ca.gc.asc_csa.apogy.common.converters.util

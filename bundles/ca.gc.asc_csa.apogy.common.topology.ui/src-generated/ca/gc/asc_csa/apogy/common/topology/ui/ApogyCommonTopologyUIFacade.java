@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3f;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.ApogyCommonTopologyUIFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,13 +17,13 @@ import org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFa
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getSymphony__CommonTopologyUIFacade()
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getApogyCommonTopologyUIFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonTopologyUIFacade extends EObject 
+public interface ApogyCommonTopologyUIFacade extends EObject 
 {
-	public static final Symphony__CommonTopologyUIFacade INSTANCE = Symphony__CommonTopologyUIFacadeImpl.getInstance();
+	public static final ApogyCommonTopologyUIFacade INSTANCE = ApogyCommonTopologyUIFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public interface Symphony__CommonTopologyUIFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" topologyPresentationSetUnique="false" nodePresentationUnique="false" relativePositionDataType="org.eclipse.symphony.common.topology.ui.Point3d" relativePositionUnique="false"
+	 * @model unique="false" topologyPresentationSetUnique="false" nodePresentationUnique="false" relativePositionDataType="ca.gc.asc_csa.apogy.common.topology.ui.Point3d" relativePositionUnique="false"
 	 * @generated
 	 */
 	NodeSelection createNodeSelection(TopologyPresentationSet topologyPresentationSet, NodePresentation nodePresentation, Point3d relativePosition);
@@ -52,9 +52,9 @@ public interface Symphony__CommonTopologyUIFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" topologyPresentationSetUnique="false" nodeUnique="false" relativePositionDataType="org.eclipse.symphony.common.topology.ui.Point3d" relativePositionUnique="false" relativeNormalDataType="org.eclipse.symphony.common.topology.ui.Vector3f" relativeNormalUnique="false"
+	 * @model unique="false" topologyPresentationSetUnique="false" nodeUnique="false" relativePositionDataType="ca.gc.asc_csa.apogy.common.topology.ui.Point3d" relativePositionUnique="false" relativeNormalDataType="ca.gc.asc_csa.apogy.common.topology.ui.Vector3f" relativeNormalUnique="false"
 	 * @generated
 	 */
 	NodeSelection createNodeSelection(TopologyPresentationSet topologyPresentationSet, Node node, Point3d relativePosition, Vector3f relativeNormal);
 
-} // Symphony__CommonTopologyUIFacade
+} // ApogyCommonTopologyUIFacade

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.symphony.feature"
+      id="ca.gc.asc_csa.apogy.feature"
       label="%featureName"
       version="0.5.0.qualifier">
 
@@ -17,19 +17,19 @@
    </license>
 
    <includes
-         id="org.eclipse.symphony.addons.feature"
+         id="ca.gc.asc_csa.apogy.addons.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.symphony.common.feature"
+         id="ca.gc.asc_csa.apogy.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.symphony.core.feature"
+         id="ca.gc.asc_csa.apogy.core.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.symphony.examples.feature"
+         id="ca.gc.asc_csa.apogy.examples.feature"
          version="0.0.0"/>
 
 </feature>

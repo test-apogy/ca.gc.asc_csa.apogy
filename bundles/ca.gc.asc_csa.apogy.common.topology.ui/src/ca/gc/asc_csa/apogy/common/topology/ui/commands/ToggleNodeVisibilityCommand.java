@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.commands;
+package ca.gc.asc_csa.apogy.common.topology.ui.commands;
 
 import java.util.Iterator;
 
@@ -7,9 +7,9 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class ToggleNodeVisibilityCommand extends AbstractHandler implements IHandler 
@@ -26,7 +26,7 @@ public class ToggleNodeVisibilityCommand extends AbstractHandler implements IHan
 			if(selection instanceof Node)
 			{
 				Node node = (Node) selection;								
-				NodePresentation nodePresentation = (NodePresentation) Symphony__CommonConvertersFacade.INSTANCE.convert(node, NodePresentation.class);
+				NodePresentation nodePresentation = (NodePresentation) ApogyCommonConvertersFacade.INSTANCE.convert(node, NodePresentation.class);
 				
 				if(nodePresentation != null)
 				{

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl;
-import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.FixedValueSource;
-import org.eclipse.symphony.core.programs.controllers.ValueSource;
+import ca.gc.asc_csa.apogy.core.invocator.impl.EDataTypeArgumentImpl;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.programs.controllers.ValueSource;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.FixedValueSourceImpl#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.FixedValueSourceImpl#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,7 +52,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.FIXED_VALUE_SOURCE;
+		return ApogyCoreProgramsControllersPackage.Literals.FIXED_VALUE_SOURCE;
 	}
 
   /**
@@ -62,7 +62,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
 	 */
   public BindedEDataTypeArgument getBindedEDataTypeArgument()
   {
-		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
+		if (eContainerFeatureID() != ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
 		return (BindedEDataTypeArgument)eContainer();
 	}
 
@@ -73,7 +73,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
 	 */
   public BindedEDataTypeArgument basicGetBindedEDataTypeArgument()
   {
-		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
+		if (eContainerFeatureID() != ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
 		return (BindedEDataTypeArgument)eInternalContainer();
 	}
 
@@ -84,7 +84,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
 	 */
   public NotificationChain basicSetBindedEDataTypeArgument(BindedEDataTypeArgument newBindedEDataTypeArgument, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newBindedEDataTypeArgument, Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newBindedEDataTypeArgument, ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, msgs);
 		return msgs;
 	}
 
@@ -95,19 +95,19 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
 	 */
   public void setBindedEDataTypeArgument(BindedEDataTypeArgument newBindedEDataTypeArgument)
   {
-		if (newBindedEDataTypeArgument != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT && newBindedEDataTypeArgument != null)) {
+		if (newBindedEDataTypeArgument != eInternalContainer() || (eContainerFeatureID() != ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT && newBindedEDataTypeArgument != null)) {
 			if (EcoreUtil.isAncestor(this, newBindedEDataTypeArgument))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newBindedEDataTypeArgument != null)
-				msgs = ((InternalEObject)newBindedEDataTypeArgument).eInverseAdd(this, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
+				msgs = ((InternalEObject)newBindedEDataTypeArgument).eInverseAdd(this, ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
 			msgs = basicSetBindedEDataTypeArgument(newBindedEDataTypeArgument, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, newBindedEDataTypeArgument, newBindedEDataTypeArgument));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, newBindedEDataTypeArgument, newBindedEDataTypeArgument));
 	}
 
 
@@ -137,7 +137,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetBindedEDataTypeArgument((BindedEDataTypeArgument)otherEnd, msgs);
@@ -154,7 +154,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				return basicSetBindedEDataTypeArgument(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -169,8 +169,8 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -184,7 +184,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				if (resolve) return getBindedEDataTypeArgument();
 				return basicGetBindedEDataTypeArgument();
 		}
@@ -200,7 +200,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				setBindedEDataTypeArgument((BindedEDataTypeArgument)newValue);
 				return;
 		}
@@ -216,7 +216,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				setBindedEDataTypeArgument((BindedEDataTypeArgument)null);
 				return;
 		}
@@ -232,7 +232,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				return basicGetBindedEDataTypeArgument() != null;
 		}
 		return super.eIsSet(featureID);
@@ -248,7 +248,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   {
 		if (baseClass == ValueSource.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT: return Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT;
+				case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT: return ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT;
 				default: return -1;
 			}
 		}
@@ -265,7 +265,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   {
 		if (baseClass == ValueSource.class) {
 			switch (baseFeatureID) {
-				case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT: return Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT;
+				case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT: return ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT;
 				default: return -1;
 			}
 		}
@@ -282,7 +282,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   {
 		if (baseClass == ValueSource.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE___GET_SOURCE_VALUE: return Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE___GET_SOURCE_VALUE;
+				case ApogyCoreProgramsControllersPackage.VALUE_SOURCE___GET_SOURCE_VALUE: return ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE___GET_SOURCE_VALUE;
 				default: return -1;
 			}
 		}
@@ -298,7 +298,7 @@ public class FixedValueSourceImpl extends EDataTypeArgumentImpl implements Fixed
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE___GET_SOURCE_VALUE:
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE___GET_SOURCE_VALUE:
 				return getSourceValue();
 		}
 		return super.eInvoke(operationID, arguments);

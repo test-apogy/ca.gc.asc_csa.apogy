@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import org.jfree.chart.JFreeChart;
 import org.jfree.experimental.chart.swt.ChartComposite;
@@ -19,10 +19,10 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapTool#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool#isActive <em>Active</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapTool()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapTool()
  * @model abstract="true"
  * @generated
  */
@@ -38,14 +38,14 @@ public interface MapTool extends MapAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapTool_Active()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapTool_Active()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
   boolean isActive();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapTool#isActive <em>Active</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool#isActive <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active</em>' attribute.
@@ -62,7 +62,7 @@ public interface MapTool extends MapAnnotation
 	 * @param composite The ChartComposite used to display the map.
 	 * @param chart The JFreeChart used to display the map.
 	 * <!-- end-model-doc -->
-	 * @model compositeDataType="org.eclipse.symphony.core.environment.ui.ChartComposite" compositeUnique="false" chartDataType="org.eclipse.symphony.core.environment.ui.JFreeChart" chartUnique="false"
+	 * @model compositeDataType="ca.gc.asc_csa.apogy.core.environment.ui.ChartComposite" compositeUnique="false" chartDataType="ca.gc.asc_csa.apogy.core.environment.ui.JFreeChart" chartUnique="false"
 	 * @generated
 	 */
   void initialize(ChartComposite composite, JFreeChart chart);

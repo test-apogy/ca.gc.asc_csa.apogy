@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.examples.satellite.AbstractConstellation;
-import org.eclipse.symphony.examples.satellite.symphony.ConstellationData;
-import org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter;
-import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyFactory;
-import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatell
  *
  * @generated
  */
-public class ConstellationSystemApiAdapterImpl extends SymphonySystemApiAdapterImpl implements ConstellationSystemApiAdapter {
+public class ConstellationSystemApiAdapterImpl extends ApogySystemApiAdapterImpl implements ConstellationSystemApiAdapter {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,12 +37,12 @@ public class ConstellationSystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_SYSTEM_API_ADAPTER;
+		return ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_SYSTEM_API_ADAPTER;
 	}
 
 	@Override
 	public AbstractInitializationData createInitializationData() {
-		return Symphony__ExamplesSatelliteSymphonyFactory.eINSTANCE.createConstellationData();
+		return ApogyExamplesSatelliteApogyFactory.eINSTANCE.createConstellationData();
 	}
 	
 	@Override

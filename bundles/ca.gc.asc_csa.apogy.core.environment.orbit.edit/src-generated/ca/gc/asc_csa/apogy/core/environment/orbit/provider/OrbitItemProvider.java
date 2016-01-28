@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.Orbit} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.Orbit} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -81,7 +81,7 @@ public class OrbitItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -103,7 +103,7 @@ public class OrbitItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class OrbitItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -146,7 +146,7 @@ public class OrbitItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT__REFERENCE_FRAME);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT__REFERENCE_FRAME);
 		}
 		return childrenFeatures;
 	}
@@ -191,12 +191,12 @@ public class OrbitItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Orbit.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__NAME:
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION:
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT__NAME:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

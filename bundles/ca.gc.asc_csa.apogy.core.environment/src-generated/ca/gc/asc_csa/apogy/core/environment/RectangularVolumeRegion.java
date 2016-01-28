@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -13,12 +13,12 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZMin <em>ZMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZMax <em>ZMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZDimension <em>ZDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZMin <em>ZMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZMax <em>ZMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZDimension <em>ZDimension</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularVolumeRegion()
  * @model
  * @generated
  */
@@ -33,15 +33,15 @@ public interface RectangularVolumeRegion extends RectangularRegion {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZMin</em>' attribute.
 	 * @see #setZMin(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion_ZMin()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularVolumeRegion_ZMin()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' apogy_units='m'"
 	 * @generated
 	 */
 	double getZMin();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZMin <em>ZMin</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZMin <em>ZMin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZMin</em>' attribute.
@@ -60,15 +60,15 @@ public interface RectangularVolumeRegion extends RectangularRegion {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZMax</em>' attribute.
 	 * @see #setZMax(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion_ZMax()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularVolumeRegion_ZMax()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' apogy_units='m'"
 	 * @generated
 	 */
 	double getZMax();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZMax <em>ZMax</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZMax <em>ZMax</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZMax</em>' attribute.
@@ -85,9 +85,9 @@ public interface RectangularVolumeRegion extends RectangularRegion {
 	 * Dimension along the Z axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZDimension</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion_ZDimension()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularVolumeRegion_ZDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' apogy_units='m'"
 	 * @generated
 	 */
 	double getZDimension();

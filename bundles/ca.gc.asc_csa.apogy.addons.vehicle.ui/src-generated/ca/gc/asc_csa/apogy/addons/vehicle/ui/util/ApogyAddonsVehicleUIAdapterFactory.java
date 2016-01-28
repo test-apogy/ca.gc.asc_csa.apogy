@@ -1,27 +1,27 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui.util;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage
  * @generated
  */
-public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
+public class ApogyAddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -29,7 +29,7 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsVehicleUIPackage modelPackage;
+  protected static ApogyAddonsVehicleUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -37,10 +37,10 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleUIAdapterFactory()
+  public ApogyAddonsVehicleUIAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsVehicleUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsVehicleUIPackage.eINSTANCE;
 		}
 	}
 
@@ -70,8 +70,8 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__AddonsVehicleUISwitch<Adapter> modelSwitch =
-    new Symphony__AddonsVehicleUISwitch<Adapter>() {
+  protected ApogyAddonsVehicleUISwitch<Adapter> modelSwitch =
+    new ApogyAddonsVehicleUISwitch<Adapter>() {
 			@Override
 			public Adapter casePhysicalWheelPresentation(PhysicalWheelPresentation object) {
 				return createPhysicalWheelPresentationAdapter();
@@ -110,13 +110,13 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation <em>Physical Wheel Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation <em>Physical Wheel Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation
 	 * @generated
 	 */
   public Adapter createPhysicalWheelPresentationAdapter()
@@ -125,13 +125,13 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation <em>Lander Spherical Foot Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation <em>Lander Spherical Foot Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation
 	 * @generated
 	 */
   public Adapter createLanderSphericalFootPresentationAdapter()
@@ -140,13 +140,13 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation <em>Thruster Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation <em>Thruster Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation
 	 * @generated
 	 */
   public Adapter createThrusterPresentationAdapter()
@@ -155,13 +155,13 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
   public Adapter createNodePresentationAdapter()
@@ -182,4 +182,4 @@ public class Symphony__AddonsVehicleUIAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__AddonsVehicleUIAdapterFactory
+} //ApogyAddonsVehicleUIAdapterFactory

@@ -1,14 +1,14 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui;
+package ca.gc.asc_csa.apogy.common.emf.ui;
 
 import javax.measure.unit.Unit;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.swt.graphics.Color;
-import org.eclipse.symphony.common.emf.Ranges;
-import org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl;
+import ca.gc.asc_csa.apogy.common.emf.Ranges;
+import ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage#getSymphony__CommonEMFUIFacade()
+ * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage#getApogyCommonEMFUIFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonEMFUIFacade extends EObject
+public interface ApogyCommonEMFUIFacade extends EObject
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -29,12 +29,12 @@ public interface Symphony__CommonEMFUIFacade extends EObject
 	 * Returns the color currently associated with the specified
 	 * Ranges. Can be null.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.ui.Color" unique="false" rangeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.ui.Color" unique="false" rangeUnique="false"
 	 * @generated
 	 */
 	Color getColorForRange(Ranges range);
 
-	public static Symphony__CommonEMFUIFacade INSTANCE = Symphony__CommonEMFUIFacadeImpl.getInstance();
+	public static ApogyCommonEMFUIFacade INSTANCE = ApogyCommonEMFUIFacadeImpl.getInstance();
 	
   /**
 	 * <!-- begin-user-doc -->
@@ -44,9 +44,9 @@ public interface Symphony__CommonEMFUIFacade extends EObject
 	 * @param eTypedElement The specified ETypedElement.
 	 * @return the display Unit, or the native unit if none found.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.ui.Unit" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.ui.Unit" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Unit<?> getDisplayUnits(ETypedElement eTypedElement);
 
-} // Symphony__CommonEMFUIFacade
+} // ApogyCommonEMFUIFacade

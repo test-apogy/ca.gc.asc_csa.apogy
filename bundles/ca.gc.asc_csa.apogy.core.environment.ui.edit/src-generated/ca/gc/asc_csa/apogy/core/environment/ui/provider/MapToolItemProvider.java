@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.MapTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class MapToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapTool_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapTool_active_feature", "_UI_MapTool_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
 				 true,
 				 false,
 				 false,
@@ -138,7 +138,7 @@ public class MapToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapTool.class)) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

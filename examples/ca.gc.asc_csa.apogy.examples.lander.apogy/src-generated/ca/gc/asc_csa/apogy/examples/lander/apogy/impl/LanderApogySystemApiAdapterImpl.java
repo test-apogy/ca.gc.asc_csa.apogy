@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.lander.apogy.impl;
 
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
@@ -12,32 +12,32 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Lander;
-import org.eclipse.symphony.examples.lander.Position;
-import org.eclipse.symphony.examples.lander.symphony.LanderData;
-import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyFactory;
-import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Lander;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.LanderApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyFactory;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Lander Symphony System Api Adapter</b></em>'.
+ * An implementation of the model object '<em><b>Lander Apogy System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class LanderSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterImpl
-implements LanderSymphonySystemApiAdapter
+public class LanderApogySystemApiAdapterImpl extends ApogySystemApiAdapterImpl
+implements LanderApogySystemApiAdapter
 {
 	/**
 	 * This adapter is used to intercept notifications regarding
@@ -51,7 +51,7 @@ implements LanderSymphonySystemApiAdapter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LanderSymphonySystemApiAdapterImpl()
+	protected LanderApogySystemApiAdapterImpl()
 	{
 		super();
 	}
@@ -64,7 +64,7 @@ implements LanderSymphonySystemApiAdapter
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyExamplesLanderApogyPackage.Literals.LANDER_APOGY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -79,9 +79,9 @@ implements LanderSymphonySystemApiAdapter
 
 	/**
 	 * This is the callback method that is called by the API adapter
-	 * when the lander instance is being initialized by Symphony.
+	 * when the lander instance is being initialized by Apogy.
 	 * 
-	 * @param environment The environment in which Symphony and its components are operating.
+	 * @param environment The environment in which Apogy and its components are operating.
 	 * @param elementType The type (e.g. class) of the given instance.
 	 * @param instance The instance which is being handled by this API adapter.
 	 */
@@ -99,10 +99,10 @@ implements LanderSymphonySystemApiAdapter
 
 		// Create a vehicle pose corrector to perform the required changes
 		// to update the pose of the lander
-		VehiclePoseCorrector corrector = Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector();
+		VehiclePoseCorrector corrector = ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector();
 		
 		// Indicate that the corrector is using spherical feet when determining contact points 
-		corrector.setContactProvider(Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider());
+		corrector.setContactProvider(ApogyAddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider());
 
 		// Set the pose corrector for the lander
 		this.setPoseCorrector(corrector);
@@ -111,7 +111,7 @@ implements LanderSymphonySystemApiAdapter
 	/**
 	 * This is the callback method that is called by the API adapter
 	 * when the PTU dish antenna instance is being disposed (i.e. shutdown /
-	 * destroyed) by Symphony
+	 * destroyed) by Apogy
 	 */
 	@Override
 	public void dispose() 
@@ -153,7 +153,7 @@ implements LanderSymphonySystemApiAdapter
 		// Use the relevant factory method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of LanderData.
-		return Symphony__ExamplesLanderSymphonyFactory.eINSTANCE.createLanderData();
+		return ApogyExamplesLanderApogyFactory.eINSTANCE.createLanderData();
 	}
 
 	/**
@@ -192,7 +192,7 @@ implements LanderSymphonySystemApiAdapter
 								 "it already is in that state.";
 				
 				// Throw an exception to indicate that the apply() has failed; this will
-				// be caught and logged by Symphony
+				// be caught and logged by Apogy
 				throw new RuntimeException(message);
 			}
 			
@@ -303,7 +303,7 @@ implements LanderSymphonySystemApiAdapter
 			LanderData landerData = (LanderData) initializationData;
 
 			// Create a copy of the lander's current pose transform
-			Matrix4x4 currPose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(this.getPoseTransform().asMatrix4d());
+			Matrix4x4 currPose = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(this.getPoseTransform().asMatrix4d());
 			
 			// Save the pose transform of the lander 
 			landerData.setInitialPoseTransform(currPose);
@@ -342,7 +342,7 @@ class PositionAdapter extends AdapterImpl
 	 * This is the API adapter whose lander instance's position is
 	 * being monitored by this adapter.
 	 */
-	LanderSymphonySystemApiAdapterImpl apiAdapter;
+	LanderApogySystemApiAdapterImpl apiAdapter;
 	
 	/**
 	 * This is the constructor for the PositionAdapter class;
@@ -350,7 +350,7 @@ class PositionAdapter extends AdapterImpl
 	 * initialization operations.
 	 * @param apiAdapter The API adapter whose lander's position is being monitored
 	 */
-	public PositionAdapter(LanderSymphonySystemApiAdapterImpl apiAdapter)
+	public PositionAdapter(LanderApogySystemApiAdapterImpl apiAdapter)
 	{
 		// Just keep track of the API adapter
 		this.apiAdapter = apiAdapter;
@@ -376,7 +376,7 @@ class PositionAdapter extends AdapterImpl
 			if (msg.getNotifier() instanceof Lander) 
 			{
 				// If the lander's feature being changes was the position
-				if (msg.getFeatureID(Lander.class) == Symphony__ExamplesLanderPackage.LANDER__POSITION) 
+				if (msg.getFeatureID(Lander.class) == ApogyExamplesLanderPackage.LANDER__POSITION) 
 				{
 					// If there was a previous position object being monitored
 					if (msg.getOldValue() instanceof Position) 
@@ -456,7 +456,7 @@ class PositionAdapter extends AdapterImpl
 		}
 
 		// Create a EObject wrapper for the complete transform
-		Matrix4x4 matrix = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
+		Matrix4x4 matrix = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m);
 		
 		// Set the pose transform accordingly, causing
 		// the pose corrector to trigger (if it is enabled)

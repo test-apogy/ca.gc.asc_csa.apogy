@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.descriptors;
+package ca.gc.asc_csa.apogy.common.emf.ui.descriptors;
 
 import javax.measure.unit.Unit;
 
@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.ui.Activator;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class AbstractUnitItemPropertyDescriptor extends ItemPropertyDescriptor 
 {
@@ -167,7 +167,7 @@ public class AbstractUnitItemPropertyDescriptor extends ItemPropertyDescriptor
 	{
 		if(displayUnit == null)
 		{
-			displayUnit = Symphony__CommonEMFUIFacade.INSTANCE.getDisplayUnits(feature);
+			displayUnit = ApogyCommonEMFUIFacade.INSTANCE.getDisplayUnits(feature);
 		}
 		return displayUnit;
 	}
@@ -176,7 +176,7 @@ public class AbstractUnitItemPropertyDescriptor extends ItemPropertyDescriptor
 	{				
 		if(nativeUnit == null)
 		{
-			nativeUnit = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(feature);
+			nativeUnit = ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(feature);
 		}
 		return nativeUnit;
 	}

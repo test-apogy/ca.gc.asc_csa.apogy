@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.examples.satellite.AbstractConstellationRequest;
-import org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.ConstellationRequestPriority;
-import org.eclipse.symphony.examples.satellite.ConstellationRequestStatus;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +26,10 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl#getUid <em>Uid</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl#getOrderPriority <em>Order Priority</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl#getOrderStatus <em>Order Status</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl#getSatelliteCommand <em>Satellite Command</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl#getUid <em>Uid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl#getOrderPriority <em>Order Priority</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl#getOrderStatus <em>Order Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationRequestImpl#getSatelliteCommand <em>Satellite Command</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,7 +121,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST;
+		return ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST;
 	}
 
 	/**
@@ -142,7 +142,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 		long oldUid = uid;
 		uid = newUid;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, oldUid, uid));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID, oldUid, uid));
 	}
 
 	/**
@@ -163,7 +163,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 		ConstellationRequestPriority oldOrderPriority = orderPriority;
 		orderPriority = newOrderPriority == null ? ORDER_PRIORITY_EDEFAULT : newOrderPriority;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY, oldOrderPriority, orderPriority));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY, oldOrderPriority, orderPriority));
 	}
 
 	/**
@@ -184,7 +184,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 		ConstellationRequestStatus oldOrderStatus = orderStatus;
 		orderStatus = newOrderStatus == null ? ORDER_STATUS_EDEFAULT : newOrderStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS, oldOrderStatus, orderStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS, oldOrderStatus, orderStatus));
 	}
 
 	/**
@@ -205,7 +205,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 		AbstractSatelliteCommand oldSatelliteCommand = satelliteCommand;
 		satelliteCommand = newSatelliteCommand;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, oldSatelliteCommand, newSatelliteCommand);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, oldSatelliteCommand, newSatelliteCommand);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -220,14 +220,14 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 		if (newSatelliteCommand != satelliteCommand) {
 			NotificationChain msgs = null;
 			if (satelliteCommand != null)
-				msgs = ((InternalEObject)satelliteCommand).eInverseRemove(this, Symphony__ExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST, AbstractSatelliteCommand.class, msgs);
+				msgs = ((InternalEObject)satelliteCommand).eInverseRemove(this, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST, AbstractSatelliteCommand.class, msgs);
 			if (newSatelliteCommand != null)
-				msgs = ((InternalEObject)newSatelliteCommand).eInverseAdd(this, Symphony__ExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST, AbstractSatelliteCommand.class, msgs);
+				msgs = ((InternalEObject)newSatelliteCommand).eInverseAdd(this, ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST, AbstractSatelliteCommand.class, msgs);
 			msgs = basicSetSatelliteCommand(newSatelliteCommand, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, newSatelliteCommand, newSatelliteCommand));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, newSatelliteCommand, newSatelliteCommand));
 	}
 
 	/**
@@ -238,9 +238,9 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				if (satelliteCommand != null)
-					msgs = ((InternalEObject)satelliteCommand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, null, msgs);
+					msgs = ((InternalEObject)satelliteCommand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND, null, msgs);
 				return basicSetSatelliteCommand((AbstractSatelliteCommand)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -254,7 +254,7 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				return basicSetSatelliteCommand(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -268,13 +268,13 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 				return getUid();
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				return getOrderPriority();
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
 				return getOrderStatus();
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				return getSatelliteCommand();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -288,16 +288,16 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 				setUid((Long)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				setOrderPriority((ConstellationRequestPriority)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
 				setOrderStatus((ConstellationRequestStatus)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				setSatelliteCommand((AbstractSatelliteCommand)newValue);
 				return;
 		}
@@ -312,16 +312,16 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 				setUid(UID_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				setOrderPriority(ORDER_PRIORITY_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
 				setOrderStatus(ORDER_STATUS_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				setSatelliteCommand((AbstractSatelliteCommand)null);
 				return;
 		}
@@ -336,13 +336,13 @@ public abstract class AbstractConstellationRequestImpl extends MinimalEObjectImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
 				return uid != UID_EDEFAULT;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
 				return orderPriority != ORDER_PRIORITY_EDEFAULT;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
 				return orderStatus != ORDER_STATUS_EDEFAULT;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				return satelliteCommand != null;
 		}
 		return super.eIsSet(featureID);

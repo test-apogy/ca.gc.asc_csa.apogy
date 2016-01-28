@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.PoseCorrector;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +26,8 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.PoseCorrectorImpl#getSymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.PoseCorrectorImpl#isEnabled <em>Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.PoseCorrectorImpl#getApogySystemApiAdapter <em>Apogy System Api Adapter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.PoseCorrectorImpl#isEnabled <em>Enabled</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,7 +71,7 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CorePackage.Literals.POSE_CORRECTOR;
+		return ApogyCorePackage.Literals.POSE_CORRECTOR;
 	}
 
   /**
@@ -79,10 +79,10 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemApiAdapter getSymphonySystemApiAdapter()
+  public ApogySystemApiAdapter getApogySystemApiAdapter()
   {
-		if (eContainerFeatureID() != Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER) return null;
-		return (SymphonySystemApiAdapter)eContainer();
+		if (eContainerFeatureID() != ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER) return null;
+		return (ApogySystemApiAdapter)eContainer();
 	}
 
   /**
@@ -90,10 +90,10 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemApiAdapter basicGetSymphonySystemApiAdapter()
+  public ApogySystemApiAdapter basicGetApogySystemApiAdapter()
   {
-		if (eContainerFeatureID() != Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER) return null;
-		return (SymphonySystemApiAdapter)eInternalContainer();
+		if (eContainerFeatureID() != ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER) return null;
+		return (ApogySystemApiAdapter)eInternalContainer();
 	}
 
   /**
@@ -101,9 +101,9 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetSymphonySystemApiAdapter(SymphonySystemApiAdapter newSymphonySystemApiAdapter, NotificationChain msgs)
+  public NotificationChain basicSetApogySystemApiAdapter(ApogySystemApiAdapter newApogySystemApiAdapter, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newSymphonySystemApiAdapter, Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newApogySystemApiAdapter, ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER, msgs);
 		return msgs;
 	}
 
@@ -112,21 +112,21 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setSymphonySystemApiAdapter(SymphonySystemApiAdapter newSymphonySystemApiAdapter)
+  public void setApogySystemApiAdapter(ApogySystemApiAdapter newApogySystemApiAdapter)
   {
-		if (newSymphonySystemApiAdapter != eInternalContainer() || (eContainerFeatureID() != Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER && newSymphonySystemApiAdapter != null)) {
-			if (EcoreUtil.isAncestor(this, newSymphonySystemApiAdapter))
+		if (newApogySystemApiAdapter != eInternalContainer() || (eContainerFeatureID() != ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER && newApogySystemApiAdapter != null)) {
+			if (EcoreUtil.isAncestor(this, newApogySystemApiAdapter))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			if (newSymphonySystemApiAdapter != null)
-				msgs = ((InternalEObject)newSymphonySystemApiAdapter).eInverseAdd(this, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, SymphonySystemApiAdapter.class, msgs);
-			msgs = basicSetSymphonySystemApiAdapter(newSymphonySystemApiAdapter, msgs);
+			if (newApogySystemApiAdapter != null)
+				msgs = ((InternalEObject)newApogySystemApiAdapter).eInverseAdd(this, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, ApogySystemApiAdapter.class, msgs);
+			msgs = basicSetApogySystemApiAdapter(newApogySystemApiAdapter, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, newSymphonySystemApiAdapter, newSymphonySystemApiAdapter));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER, newApogySystemApiAdapter, newApogySystemApiAdapter));
 	}
 
   /**
@@ -149,7 +149,7 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
 		boolean oldEnabled = enabled;
 		enabled = newEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSE_CORRECTOR__ENABLED, oldEnabled, enabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.POSE_CORRECTOR__ENABLED, oldEnabled, enabled));
 	}
 
   /**
@@ -173,10 +173,10 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER:
+			case ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetSymphonySystemApiAdapter((SymphonySystemApiAdapter)otherEnd, msgs);
+				return basicSetApogySystemApiAdapter((ApogySystemApiAdapter)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -190,8 +190,8 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER:
-				return basicSetSymphonySystemApiAdapter(null, msgs);
+			case ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER:
+				return basicSetApogySystemApiAdapter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -205,8 +205,8 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER:
-				return eInternalContainer().eInverseRemove(this, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, SymphonySystemApiAdapter.class, msgs);
+			case ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER:
+				return eInternalContainer().eInverseRemove(this, ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, ApogySystemApiAdapter.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -220,10 +220,10 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER:
-				if (resolve) return getSymphonySystemApiAdapter();
-				return basicGetSymphonySystemApiAdapter();
-			case Symphony__CorePackage.POSE_CORRECTOR__ENABLED:
+			case ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER:
+				if (resolve) return getApogySystemApiAdapter();
+				return basicGetApogySystemApiAdapter();
+			case ApogyCorePackage.POSE_CORRECTOR__ENABLED:
 				return isEnabled();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -238,10 +238,10 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER:
-				setSymphonySystemApiAdapter((SymphonySystemApiAdapter)newValue);
+			case ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER:
+				setApogySystemApiAdapter((ApogySystemApiAdapter)newValue);
 				return;
-			case Symphony__CorePackage.POSE_CORRECTOR__ENABLED:
+			case ApogyCorePackage.POSE_CORRECTOR__ENABLED:
 				setEnabled((Boolean)newValue);
 				return;
 		}
@@ -257,10 +257,10 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER:
-				setSymphonySystemApiAdapter((SymphonySystemApiAdapter)null);
+			case ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER:
+				setApogySystemApiAdapter((ApogySystemApiAdapter)null);
 				return;
-			case Symphony__CorePackage.POSE_CORRECTOR__ENABLED:
+			case ApogyCorePackage.POSE_CORRECTOR__ENABLED:
 				setEnabled(ENABLED_EDEFAULT);
 				return;
 		}
@@ -276,9 +276,9 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER:
-				return basicGetSymphonySystemApiAdapter() != null;
-			case Symphony__CorePackage.POSE_CORRECTOR__ENABLED:
+			case ApogyCorePackage.POSE_CORRECTOR__APOGY_SYSTEM_API_ADAPTER:
+				return basicGetApogySystemApiAdapter() != null;
+			case ApogyCorePackage.POSE_CORRECTOR__ENABLED:
 				return enabled != ENABLED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -293,7 +293,7 @@ public abstract class PoseCorrectorImpl extends MinimalEObjectImpl.Container imp
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CorePackage.POSE_CORRECTOR___APPLY_CORRECTION__MATRIX4X4:
+			case ApogyCorePackage.POSE_CORRECTOR___APPLY_CORRECTION__MATRIX4X4:
 				return applyCorrection((Matrix4x4)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

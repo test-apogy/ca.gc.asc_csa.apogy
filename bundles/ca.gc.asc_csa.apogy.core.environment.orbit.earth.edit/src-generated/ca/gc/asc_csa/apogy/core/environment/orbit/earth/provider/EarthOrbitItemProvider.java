@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -10,13 +10,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.provider.OrbitItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.provider.OrbitItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -88,8 +88,8 @@ public class EarthOrbitItemProvider extends OrbitItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT__REFERENCE_FRAME,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedFrame()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT__REFERENCE_FRAME,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedFrame()));
 	}
 
 }

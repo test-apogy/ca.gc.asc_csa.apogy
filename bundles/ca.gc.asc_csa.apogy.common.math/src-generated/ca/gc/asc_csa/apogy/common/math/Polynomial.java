@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getDegree <em>Degree</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getCoeffs <em>Coeffs</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getRealRoots <em>Real Roots</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getImaginaryRoots <em>Imaginary Roots</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getDegree <em>Degree</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getCoeffs <em>Coeffs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getRealRoots <em>Real Roots</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getImaginaryRoots <em>Imaginary Roots</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial()
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getPolynomial()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Polynomial extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Degree</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_Degree()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getPolynomial_Degree()
 	 * @model default="0" unique="false" transient="true" changeable="false" volatile="true"
 	 * @generated
 	 */
@@ -54,14 +54,14 @@ public interface Polynomial extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Coeffs</em>' attribute.
 	 * @see #setCoeffs(double[])
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_Coeffs()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray"
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getPolynomial_Coeffs()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.math.EDoubleArray"
 	 * @generated
 	 */
 	double[] getCoeffs();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Polynomial#getCoeffs <em>Coeffs</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getCoeffs <em>Coeffs</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Coeffs</em>' attribute.
@@ -79,8 +79,8 @@ public interface Polynomial extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Real Roots</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_RealRoots()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getPolynomial_RealRoots()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double[] getRealRoots();
@@ -94,8 +94,8 @@ public interface Polynomial extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Imaginary Roots</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_ImaginaryRoots()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getPolynomial_ImaginaryRoots()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double[] getImaginaryRoots();

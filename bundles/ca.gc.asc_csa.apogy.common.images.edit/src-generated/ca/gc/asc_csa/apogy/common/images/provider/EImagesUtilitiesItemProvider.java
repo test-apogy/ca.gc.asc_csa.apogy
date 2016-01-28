@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.provider;
+package ca.gc.asc_csa.apogy.common.images.provider;
 
 
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.EImagesUtilities} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.images.EImagesUtilities} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

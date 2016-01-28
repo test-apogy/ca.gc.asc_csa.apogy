@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.common.file.csv"
-            class="org.eclipse.symphony.common.file.csv.provider.Symphony__CommonFileCSVItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.common.file.csv"
+            class="ca.gc.asc_csa.apogy.common.file.csv.provider.ApogyCommonFileCSVItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

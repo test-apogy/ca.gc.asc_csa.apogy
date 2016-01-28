@@ -3,7 +3,7 @@
  *
  * $Id: WayPointPathPlannerItemProvider.java,v 1.2.4.3 2015/09/22 19:39:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner;
+import ca.gc.asc_csa.apogy.common.processors.provider.ProcessorItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class WayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPlanner_currentPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPlanner_currentPosition_feature", "_UI_WayPointPathPlanner_type"),
-				 Symphony__AddonsMobilityPathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_POSITION,
+				 ApogyAddonsMobilityPathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_POSITION,
 				 true,
 				 false,
 				 true,
@@ -91,7 +91,7 @@ public class WayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPlanner_currentDestination_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPlanner_currentDestination_feature", "_UI_WayPointPathPlanner_type"),
-				 Symphony__AddonsMobilityPathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION,
+				 ApogyAddonsMobilityPathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION,
 				 true,
 				 false,
 				 true,

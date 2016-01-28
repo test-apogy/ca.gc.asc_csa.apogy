@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getCoordinates2D()
  * @model
  * @generated
  */
@@ -37,15 +37,15 @@ public interface Coordinates2D extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D_X()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getCoordinates2D_X()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getX();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>X</em>' attribute.
@@ -64,15 +64,15 @@ public interface Coordinates2D extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D_Y()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getCoordinates2D_Y()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getY();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Y</em>' attribute.

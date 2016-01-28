@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,24 +24,24 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.Argument;
-import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.invocator.OperationCall} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.invocator.OperationCall} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
@@ -88,7 +88,7 @@ public class OperationCallItemProvider extends
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class OperationCallItemProvider extends
 						"_UI_PropertyDescriptor_description",
 						"_UI_OperationCall_eOperation_feature",
 						"_UI_OperationCall_type"),
-				Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+				ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 				true, false, true, null, null, null) {
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
@@ -136,7 +136,7 @@ public class OperationCallItemProvider extends
 				// Gets the EClass that is refered to by the OperationCall
 				// AbstractFeatureNode.
 				if (operationCall.getFeatureRoot() != null) {
-					AbstractFeatureSpecifier specifier = (AbstractFeatureSpecifier) Symphony__CommonEMFFacade.INSTANCE
+					AbstractFeatureSpecifier specifier = (AbstractFeatureSpecifier) ApogyCommonEMFFacade.INSTANCE
 							.getLeaf(operationCall.getFeatureRoot());
 					EClassifier eClassifier = specifier.getStructuralFeature()
 							.getEType();
@@ -149,7 +149,7 @@ public class OperationCallItemProvider extends
 
 				/** Returns the list of possible operations. */
 				if (interface_class != null) {
-					eOperations = Symphony__CommonEMFFacade.INSTANCE
+					eOperations = ApogyCommonEMFFacade.INSTANCE
 							.getAllAvailableEOperations(interface_class);
 				}
 
@@ -170,7 +170,7 @@ public class OperationCallItemProvider extends
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -214,21 +214,21 @@ public class OperationCallItemProvider extends
 		}
 
 		String variable_str = operationCall.getVariable() == null ? getString("_UI_NOT_DEFINED")
-				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
+				: ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getVariable());
 
 		String feature_str = null;
 		if (operationCall.getFeatureRoot() != null) {
-			AbstractFeatureListNode leaf = Symphony__CommonEMFFacade.INSTANCE
+			AbstractFeatureListNode leaf = ApogyCommonEMFFacade.INSTANCE
 					.getLeaf(operationCall.getFeatureRoot());
 			if (leaf != null) {
-				feature_str = Symphony__CommonEMFFacade.INSTANCE.getAncestriesString(leaf);
+				feature_str = ApogyCommonEMFFacade.INSTANCE.getAncestriesString(leaf);
 			}
 		}
 
 		String operation_str = operationCall.getEOperation() == null ? getString("_UI_NOT_DEFINED")
 				+ "()"
-				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
+				: ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getEOperation());
 
 		if (feature_str != null) {
@@ -251,11 +251,11 @@ public class OperationCallItemProvider extends
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCall.class)) {
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -287,7 +287,7 @@ public class OperationCallItemProvider extends
 
 		CompoundCommand compoundCommand = (CompoundCommand) super.createSetCommand(domain, owner, feature, value, index);
 		
-		if (feature == Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) {
+		if (feature == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) {
 
 			EOperation eOperation = (EOperation) value;
 
@@ -297,7 +297,7 @@ public class OperationCallItemProvider extends
 				Argument argument = null;
 
 				if (parameter.getEType() instanceof EEnum) {
-					argument = Symphony__CoreInvocatorFactory.eINSTANCE
+					argument = ApogyCoreInvocatorFactory.eINSTANCE
 							.createEEnumArgument();
 					EEnum eEnum = (EEnum) parameter.getEType();
 					((EEnumArgument) argument).setEEnum(eEnum);
@@ -307,7 +307,7 @@ public class OperationCallItemProvider extends
 					((EEnumArgument) argument).setEEnumLiteral(eEnum
 							.getEEnumLiteral(defaultValue.name()));
 				} else if (parameter.getEType() instanceof EDataType) {
-					argument = Symphony__CoreInvocatorFactory.eINSTANCE
+					argument = ApogyCoreInvocatorFactory.eINSTANCE
 							.createEDataTypeArgument();
 					Object defaultValue = parameter.getEType()
 							.getDefaultValue();
@@ -317,7 +317,7 @@ public class OperationCallItemProvider extends
 								.valueOf(defaultValue));
 					}
 				} else {
-					argument = Symphony__CoreInvocatorFactory.eINSTANCE
+					argument = ApogyCoreInvocatorFactory.eINSTANCE
 							.createEClassArgument();
 				}
 				arguments.add(argument);
@@ -325,7 +325,7 @@ public class OperationCallItemProvider extends
 
 			/** Add arguments if there are parameters only. */
 			if (!arguments.isEmpty()) {
-				ArgumentsList argumentsList = Symphony__CoreInvocatorFactory.eINSTANCE
+				ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE
 						.createArgumentsList();
 				argumentsList.getArguments().addAll(arguments);
 
@@ -333,7 +333,7 @@ public class OperationCallItemProvider extends
 						.append(new SetCommand(
 								domain,
 								owner,
-								Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+								ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 								argumentsList));
 			} else {
 				// Clears the list.
@@ -341,17 +341,17 @@ public class OperationCallItemProvider extends
 						.append(new SetCommand(
 								domain,
 								owner,
-								Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+								ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 								null));
 			}
-		} else if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) {
+		} else if (feature == ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) {
 
 			// Clears the eOperation
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 							null));
 
 			// Clears the arguments
@@ -359,16 +359,16 @@ public class OperationCallItemProvider extends
 					.append(new SetCommand(
 							domain,
 							owner,
-							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 							null));
 						
-		} else if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT) {
+		} else if (feature == ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT) {
 			// Clears the eOperation
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 							null));
 
 			// Clears the arguments
@@ -376,16 +376,16 @@ public class OperationCallItemProvider extends
 					.append(new SetCommand(
 							domain,
 							owner,
-							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 							null));
 
-		} else if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT) {
+		} else if (feature == ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT) {
 			// Clears the eOperation
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 							null));
 
 			// Clears the arguments
@@ -393,7 +393,7 @@ public class OperationCallItemProvider extends
 					.append(new SetCommand(
 							domain,
 							owner,
-							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 							null));
 		}
 

@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data3d.las;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.geometry.data3d.las;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.symphony.common.geometry.data3d.las,
- org.eclipse.symphony.common.geometry.data3d.las.impl,
- org.eclipse.symphony.common.geometry.data3d.las.util
+Export-Package: ca.gc.asc_csa.apogy.common.geometry.data3d.las,
+ ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl,
+ ca.gc.asc_csa.apogy.common.geometry.data3d.las.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.symphony.common.lang.java,
+ ca.gc.asc_csa.apogy.common.lang.java,
  javax.vecmath;bundle-version="1.5.2",
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,10 +26,10 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Slider;
 import org.eclipse.swt.widgets.Spinner;
-import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DateToStringConverter;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 
 
 public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComposite 
@@ -426,7 +426,7 @@ public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComp
 		if(timeLineStartTimeValueLabel != null)
 		{					
 			IObservableValue startTimeLabelValue = PojoProperties.value("text").observe(timeLineStartTimeValueLabel);		
-			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE)).observe(getTimeSource());			
+			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE)).observe(getTimeSource());			
 			UpdateValueStrategy startTimeValueStrategy = new UpdateValueStrategy();
 			startTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
 			dataBindingContext.bindValue(startTimeLabelValue, startTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), startTimeValueStrategy);
@@ -436,7 +436,7 @@ public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComp
 		if(timeLineEndTimeValueLabel != null)
 		{
 			IObservableValue endTimeLabelValue = PojoProperties.value("text").observe(timeLineEndTimeValueLabel);		
-			IObservableValue endTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE)).observe(getTimeSource());			
+			IObservableValue endTimeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE)).observe(getTimeSource());			
 			UpdateValueStrategy endTimeValueStrategy = new UpdateValueStrategy();
 			endTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
 			dataBindingContext.bindValue(endTimeLabelValue, endTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), endTimeValueStrategy);
@@ -446,7 +446,7 @@ public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComp
 		if(loopingEnabledButton != null)
 		{
 			IObservableValue loopButtonValue = WidgetProperties.selection().observe(loopingEnabledButton);	
-			IObservableValue loopObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE)).observe(getTimeSource());			
+			IObservableValue loopObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE)).observe(getTimeSource());			
 			UpdateValueStrategy loopValueStrategy = new UpdateValueStrategy();		
 			dataBindingContext.bindValue(loopButtonValue, loopObserveValue, loopValueStrategy, loopValueStrategy);
 		}
@@ -501,7 +501,7 @@ public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComp
 						
 						switch (featureId) 
 						{
-							case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
+							case ApogyCommonEMFPackage.TIME_SOURCE__TIME:
 							{
 								if(msg.getNewValue() instanceof Date)
 								{

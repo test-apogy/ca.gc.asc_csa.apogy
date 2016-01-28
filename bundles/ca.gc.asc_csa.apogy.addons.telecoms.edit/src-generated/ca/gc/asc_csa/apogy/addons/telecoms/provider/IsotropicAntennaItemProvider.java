@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.provider;
 
 
 import java.util.Collection;
@@ -10,10 +10,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.telecoms.IsotropicAntenna;
+import ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.IsotropicAntenna} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

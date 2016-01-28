@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 
 /**
@@ -13,12 +13,12 @@ package org.eclipse.symphony.common.topology;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.URLNode#getUrl <em>Url</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.URLNode#getPolygonCount <em>Polygon Count</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.URLNode#getVertexCount <em>Vertex Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.URLNode#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.URLNode#getPolygonCount <em>Polygon Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.URLNode#getVertexCount <em>Vertex Count</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getURLNode()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface URLNode extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode_Url()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getURLNode_Url()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getUrl();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.URLNode#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.URLNode#getUrl <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Url</em>' attribute.
@@ -59,14 +59,14 @@ public interface URLNode extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygon Count</em>' attribute.
 	 * @see #setPolygonCount(int)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode_PolygonCount()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getURLNode_PolygonCount()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getPolygonCount();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.URLNode#getPolygonCount <em>Polygon Count</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.URLNode#getPolygonCount <em>Polygon Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Polygon Count</em>' attribute.
@@ -85,14 +85,14 @@ public interface URLNode extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vertex Count</em>' attribute.
 	 * @see #setVertexCount(int)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode_VertexCount()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getURLNode_VertexCount()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getVertexCount();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.URLNode#getVertexCount <em>Vertex Count</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.URLNode#getVertexCount <em>Vertex Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vertex Count</em>' attribute.

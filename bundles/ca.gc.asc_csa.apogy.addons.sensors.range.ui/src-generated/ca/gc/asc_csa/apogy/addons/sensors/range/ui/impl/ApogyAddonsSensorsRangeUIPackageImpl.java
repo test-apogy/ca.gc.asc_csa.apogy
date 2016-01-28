@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
-import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsRangeUIPackage {
+public class ApogyAddonsSensorsRangeUIPackageImpl extends EPackageImpl implements ApogyAddonsSensorsRangeUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,12 +46,12 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsRangeUIPackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsRangeUIFactory.eINSTANCE);
+	private ApogyAddonsSensorsRangeUIPackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsRangeUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsRangeUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsRangeUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,30 +73,30 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsRangeUIPackage init() {
-		if (isInited) return (Symphony__AddonsSensorsRangeUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsRangeUIPackage.eNS_URI);
+	public static ApogyAddonsSensorsRangeUIPackage init() {
+		if (isInited) return (ApogyAddonsSensorsRangeUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsRangeUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsRangeUIPackageImpl theSymphony__AddonsSensorsRangeUIPackage = (Symphony__AddonsSensorsRangeUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsRangeUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsRangeUIPackageImpl());
+		ApogyAddonsSensorsRangeUIPackageImpl theApogyAddonsSensorsRangeUIPackage = (ApogyAddonsSensorsRangeUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsRangeUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsRangeUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsRangeUIPackage.createPackageContents();
+		theApogyAddonsSensorsRangeUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsRangeUIPackage.initializePackageContents();
+		theApogyAddonsSensorsRangeUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsRangeUIPackage.freeze();
+		theApogyAddonsSensorsRangeUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsRangeUIPackage.eNS_URI, theSymphony__AddonsSensorsRangeUIPackage);
-		return theSymphony__AddonsSensorsRangeUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsRangeUIPackage.eNS_URI, theApogyAddonsSensorsRangeUIPackage);
+		return theApogyAddonsSensorsRangeUIPackage;
 	}
 
 	/**
@@ -158,8 +158,8 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeUIFactory getSymphony__AddonsSensorsRangeUIFactory() {
-		return (Symphony__AddonsSensorsRangeUIFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsRangeUIFactory getApogyAddonsSensorsRangeUIFactory() {
+		return (ApogyAddonsSensorsRangeUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -222,12 +222,12 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		rasterScanDataPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		simpleSonarPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		rasterScanDataPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		simpleSonarPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(rasterScanDataPresentationEClass, RasterScanDataPresentation.class, "RasterScanDataPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRasterScanDataPresentation_FovPresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "fovPresentationMode", "WIREFRAME", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRasterScanDataPresentation_FovPresentationMode(), theApogyCommonTopologyUIPackage.getMeshPresentationMode(), "fovPresentationMode", "WIREFRAME", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRasterScanDataPresentation_FovVisible(), theEcorePackage.getEBoolean(), "fovVisible", "true", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRasterScanDataPresentation_DataVisible(), theEcorePackage.getEBoolean(), "dataVisible", "true", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -238,4 +238,4 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsSensorsRangeUIPackageImpl
+} //ApogyAddonsSensorsRangeUIPackageImpl

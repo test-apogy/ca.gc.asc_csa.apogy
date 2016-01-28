@@ -1,19 +1,19 @@
-@GenModel(prefix="Symphony__AddonsROS",
-		  modelName="Symphony__AddonsROS",
+@GenModel(prefix="ApogyAddonsROS",
+		  modelName="ApogyAddonsROS",
 		  operationReflection="true",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.ros/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.ros.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.ros/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.ros.edit/src-generated")
 
-package org.eclipse.symphony.addons.ros
+package ca.gc.asc_csa.apogy.addons.ros
 
-type ResponseLogger wraps org.eclipse.symphony.addons.ros.utilities.ResponseLogger
-type NullResponseHandler wraps org.eclipse.symphony.addons.ros.utilities.NullResponseHandler
-type NullRequestHandler wraps org.eclipse.symphony.addons.ros.utilities.NullRequestHandler
+type ResponseLogger wraps ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger
+type NullResponseHandler wraps ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler
+type NullRequestHandler wraps ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler
 type ConnectedNode wraps org.ros.node.ConnectedNode
 type ServiceNotFoundException wraps org.ros.exception.ServiceNotFoundException
 type Message wraps org.ros.internal.message.Message
@@ -658,7 +658,7 @@ class ROSListener<T extends Message>
 	MessageListener<T> messageListener
 }
 
-class Symphony__AddonsROSFacade
+class ApogyAddonsROSFacade
 {
 	/*
 	 * Returns a prefix for a Node name (typically used for client node)

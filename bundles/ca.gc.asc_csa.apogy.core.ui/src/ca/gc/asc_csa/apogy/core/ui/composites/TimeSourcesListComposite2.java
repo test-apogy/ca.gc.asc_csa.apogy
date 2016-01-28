@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -46,16 +46,16 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.TimeSourcesList;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.ui.composites.ContextsListComposite;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.TimeSourcesList;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsListComposite;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class TimeSourcesListComposite2 extends Composite {
@@ -114,7 +114,7 @@ public class TimeSourcesListComposite2 extends Composite {
 					SetCommand command = new SetCommand(
 							editingDomain,
 							getEnvironment(),
-							Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE,
+							ApogyCorePackage.Literals.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE,
 							event.getElement());
 					editingDomain.getCommandStack().execute(command);
 				}
@@ -139,7 +139,7 @@ public class TimeSourcesListComposite2 extends Composite {
 				SetCommand command = new SetCommand(
 						editingDomain,
 						timeSource,
-						Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+						ApogyCommonEMFPackage.Literals.NAMED__NAME,
 						value);
 				editingDomain.getCommandStack().execute(command);				
 			}
@@ -255,7 +255,7 @@ public class TimeSourcesListComposite2 extends Composite {
 	 * 
 	 * @return Reference to the environment.
 	 */
-	private SymphonyEnvironment getEnvironment() {
+	private ApogyEnvironment getEnvironment() {
 		return timeSourcesList == null ? null : timeSourcesList.getEnvironment();
 	}
 		
@@ -375,7 +375,7 @@ public class TimeSourcesListComposite2 extends Composite {
 			environmentAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(Environment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE) {
+					if (msg.getFeatureID(Environment.class) == ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE) {
 						timeSourcesListViewer.refresh();
 					}
 				}

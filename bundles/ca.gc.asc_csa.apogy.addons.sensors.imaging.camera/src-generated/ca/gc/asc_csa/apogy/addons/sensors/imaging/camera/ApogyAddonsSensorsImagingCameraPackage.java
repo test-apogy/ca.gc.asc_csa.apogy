@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,12 +25,12 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsSensorsImagingCamera' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsSensorsImagingCamera' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.sensors.imaging.camera/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.imaging.camera.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors.imaging'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensorsImagingCamera' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsSensorsImagingCamera' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.sensors.imaging'"
  * @generated
  */
-public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
+public interface ApogyAddonsSensorsImagingCameraPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -46,7 +46,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.addons.sensors.imaging.camera";
+  String eNS_URI = "ca.gc.asc_csa.apogy.addons.sensors.imaging.camera";
 
   /**
 	 * The package namespace name.
@@ -62,14 +62,14 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsSensorsImagingCameraPackage eINSTANCE = org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl.init();
+  ApogyAddonsSensorsImagingCameraPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl <em>Camera View Utilities</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl <em>Camera View Utilities</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraViewUtilities()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraViewUtilities()
 	 * @generated
 	 */
 	int CAMERA_VIEW_UTILITIES = 0;
@@ -120,11 +120,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int CAMERA_VIEW_UTILITIES_OPERATION_COUNT = 3;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl <em>Camera View Configuration List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl <em>Camera View Configuration List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraViewConfigurationList()
 	 * @generated
 	 */
   int CAMERA_VIEW_CONFIGURATION_LIST = 1;
@@ -136,7 +136,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST__TOOLS_LIST = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
+  int CAMERA_VIEW_CONFIGURATION_LIST__TOOLS_LIST = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
 
   /**
 	 * The feature id for the '<em><b>Camera View Configurations</b></em>' containment reference list.
@@ -145,7 +145,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
+  int CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Camera View Configuration List</em>' class.
@@ -154,7 +154,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
+  int CAMERA_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Camera View Configuration List</em>' class.
@@ -163,14 +163,14 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
+  int CAMERA_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl <em>Camera View Configuration</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl <em>Camera View Configuration</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraViewConfiguration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraViewConfiguration()
 	 * @generated
 	 */
   int CAMERA_VIEW_CONFIGURATION = 2;
@@ -182,7 +182,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__NAME = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+  int CAMERA_VIEW_CONFIGURATION__NAME = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -191,7 +191,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__VARIABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
+  int CAMERA_VIEW_CONFIGURATION__VARIABLE = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
 
 		/**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -200,7 +200,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
+  int CAMERA_VIEW_CONFIGURATION__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -209,7 +209,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__FEATURE_ROOT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
+  int CAMERA_VIEW_CONFIGURATION__FEATURE_ROOT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -218,7 +218,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
+  int CAMERA_VIEW_CONFIGURATION__DESCRIPTION = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Camera View Configuration List</b></em>' container reference.
@@ -227,7 +227,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
+	int CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Camera</b></em>' reference.
@@ -236,7 +236,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__CAMERA = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
+  int CAMERA_VIEW_CONFIGURATION__CAMERA = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Image Width</b></em>' attribute.
@@ -245,7 +245,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
+  int CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Image Height</b></em>' attribute.
@@ -254,7 +254,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
+  int CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Image Count</b></em>' attribute.
@@ -263,7 +263,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Display Rectified Image</b></em>' attribute.
@@ -272,7 +272,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
+  int CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
 
   /**
 	 * The feature id for the '<em><b>Overlay List</b></em>' containment reference.
@@ -281,7 +281,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 7;
+  int CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 7;
 
   /**
 	 * The feature id for the '<em><b>Tool List</b></em>' containment reference.
@@ -290,7 +290,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__TOOL_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 8;
+	int CAMERA_VIEW_CONFIGURATION__TOOL_LIST = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 8;
 
 		/**
 	 * The feature id for the '<em><b>Filter List</b></em>' containment reference.
@@ -299,7 +299,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__FILTER_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 9;
+  int CAMERA_VIEW_CONFIGURATION__FILTER_LIST = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 9;
 
   /**
 	 * The feature id for the '<em><b>Image Auto Save Enable</b></em>' attribute.
@@ -308,7 +308,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 10;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 10;
 
 		/**
 	 * The feature id for the '<em><b>Save Image With Overlays</b></em>' attribute.
@@ -317,7 +317,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 11;
+	int CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 11;
 
 		/**
 	 * The feature id for the '<em><b>Image Auto Save Folder Path</b></em>' attribute.
@@ -326,7 +326,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 12;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 12;
 
 		/**
 	 * The number of structural features of the '<em>Camera View Configuration</em>' class.
@@ -335,7 +335,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 13;
+  int CAMERA_VIEW_CONFIGURATION_FEATURE_COUNT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 13;
 
   /**
 	 * The operation id for the '<em>Get Camera Image Annotations</em>' operation.
@@ -344,7 +344,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION___GET_CAMERA_IMAGE_ANNOTATIONS = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
+	int CAMERA_VIEW_CONFIGURATION___GET_CAMERA_IMAGE_ANNOTATIONS = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Camera View Configuration</em>' class.
@@ -353,15 +353,15 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 1;
+  int CAMERA_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 1;
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FilterListImpl <em>Filter List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FilterListImpl <em>Filter List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.FilterListImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getFilterList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FilterListImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getFilterList()
 	 * @generated
 	 */
   int FILTER_LIST = 3;
@@ -403,11 +403,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int FILTER_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl <em>Image Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFilterImpl <em>Image Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageFilter()
 	 * @generated
 	 */
   int IMAGE_FILTER = 4;
@@ -419,7 +419,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int IMAGE_FILTER__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -428,7 +428,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int IMAGE_FILTER__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -437,7 +437,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER__ENABLED = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int IMAGE_FILTER__ENABLED = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Image Filter</em>' class.
@@ -446,7 +446,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int IMAGE_FILTER_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Filter</em>' operation.
@@ -455,7 +455,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER___FILTER__ABSTRACTCAMERA_ABSTRACTEIMAGE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int IMAGE_FILTER___FILTER__ABSTRACTCAMERA_ABSTRACTEIMAGE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -464,7 +464,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FILTER___DISPOSE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
+	int IMAGE_FILTER___DISPOSE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Image Filter</em>' class.
@@ -473,14 +473,14 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
+  int IMAGE_FILTER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl <em>Gray Scale Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl <em>Gray Scale Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getGrayScaleFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getGrayScaleFilter()
 	 * @generated
 	 */
   int GRAY_SCALE_FILTER = 5;
@@ -549,11 +549,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int GRAY_SCALE_FILTER_OPERATION_COUNT = IMAGE_FILTER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EdgeFilterImpl <em>Edge Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EdgeFilterImpl <em>Edge Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.EdgeFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getEdgeFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EdgeFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getEdgeFilter()
 	 * @generated
 	 */
   int EDGE_FILTER = 6;
@@ -622,11 +622,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int EDGE_FILTER_OPERATION_COUNT = IMAGE_FILTER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl <em>Contrast And Brightness Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl <em>Contrast And Brightness Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getContrastAndBrightnessFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getContrastAndBrightnessFilter()
 	 * @generated
 	 */
   int CONTRAST_AND_BRIGHTNESS_FILTER = 7;
@@ -713,11 +713,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int CONTRAST_AND_BRIGHTNESS_FILTER_OPERATION_COUNT = IMAGE_FILTER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ExposureFilterImpl <em>Exposure Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ExposureFilterImpl <em>Exposure Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ExposureFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getExposureFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ExposureFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getExposureFilter()
 	 * @generated
 	 */
   int EXPOSURE_FILTER = 8;
@@ -795,11 +795,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int EXPOSURE_FILTER_OPERATION_COUNT = IMAGE_FILTER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl <em>Gain Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GainFilterImpl <em>Gain Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getGainFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GainFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getGainFilter()
 	 * @generated
 	 */
   int GAIN_FILTER = 9;
@@ -886,11 +886,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int GAIN_FILTER_OPERATION_COUNT = IMAGE_FILTER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.InvertFilterImpl <em>Invert Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.InvertFilterImpl <em>Invert Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.InvertFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getInvertFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.InvertFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getInvertFilter()
 	 * @generated
 	 */
   int INVERT_FILTER = 10;
@@ -959,11 +959,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int INVERT_FILTER_OPERATION_COUNT = IMAGE_FILTER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.RescaleFilterImpl <em>Rescale Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.RescaleFilterImpl <em>Rescale Filter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.RescaleFilterImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getRescaleFilter()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.RescaleFilterImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getRescaleFilter()
 	 * @generated
 	 */
   int RESCALE_FILTER = 11;
@@ -1041,11 +1041,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int RESCALE_FILTER_OPERATION_COUNT = IMAGE_FILTER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl <em>Camera Image Annotation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl <em>Camera Image Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraImageAnnotation()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraImageAnnotation()
 	 * @generated
 	 */
 	int CAMERA_IMAGE_ANNOTATION = 12;
@@ -1057,7 +1057,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int CAMERA_IMAGE_ANNOTATION__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1066,7 +1066,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int CAMERA_IMAGE_ANNOTATION__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1075,7 +1075,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION__VISIBLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int CAMERA_IMAGE_ANNOTATION__VISIBLE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Camera Image Annotation</em>' class.
@@ -1084,7 +1084,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int CAMERA_IMAGE_ANNOTATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -1093,7 +1093,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION___DISPOSE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int CAMERA_IMAGE_ANNOTATION___DISPOSE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Camera Image Annotation</em>' class.
@@ -1102,14 +1102,14 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
+	int CAMERA_IMAGE_ANNOTATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayListImpl <em>Camera Overlay List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayListImpl <em>Camera Overlay List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayListImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraOverlayList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayListImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraOverlayList()
 	 * @generated
 	 */
   int CAMERA_OVERLAY_LIST = 13;
@@ -1151,11 +1151,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int CAMERA_OVERLAY_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayImpl <em>Camera Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayImpl <em>Camera Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraOverlay()
 	 * @generated
 	 */
   int CAMERA_OVERLAY = 14;
@@ -1234,11 +1234,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl <em>Drawn Camera Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl <em>Drawn Camera Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getDrawnCameraOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getDrawnCameraOverlay()
 	 * @generated
 	 */
   int DRAWN_CAMERA_OVERLAY = 15;
@@ -1325,11 +1325,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int DRAWN_CAMERA_OVERLAY_OPERATION_COUNT = CAMERA_OVERLAY_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl <em>Abstract Text Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl <em>Abstract Text Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getAbstractTextOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getAbstractTextOverlay()
 	 * @generated
 	 */
   int ABSTRACT_TEXT_OVERLAY = 16;
@@ -1470,11 +1470,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int ABSTRACT_TEXT_OVERLAY_OPERATION_COUNT = DRAWN_CAMERA_OVERLAY_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl <em>EMF Feature Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl <em>EMF Feature Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getEMFFeatureOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getEMFFeatureOverlay()
 	 * @generated
 	 */
   int EMF_FEATURE_OVERLAY = 17;
@@ -1642,11 +1642,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int EMF_FEATURE_OVERLAY_OPERATION_COUNT = ABSTRACT_TEXT_OVERLAY_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl <em>Camera Name Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl <em>Camera Name Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraNameOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraNameOverlay()
 	 * @generated
 	 */
   int CAMERA_NAME_OVERLAY = 18;
@@ -1787,11 +1787,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int CAMERA_NAME_OVERLAY_OPERATION_COUNT = ABSTRACT_TEXT_OVERLAY_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl <em>Image Count Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl <em>Image Count Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageCountOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageCountOverlay()
 	 * @generated
 	 */
 	int IMAGE_COUNT_OVERLAY = 19;
@@ -1941,11 +1941,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int IMAGE_COUNT_OVERLAY_OPERATION_COUNT = ABSTRACT_TEXT_OVERLAY_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl <em>Image Frozen Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl <em>Image Frozen Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageFrozenOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageFrozenOverlay()
 	 * @generated
 	 */
 	int IMAGE_FROZEN_OVERLAY = 20;
@@ -2113,11 +2113,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int IMAGE_FROZEN_OVERLAY_OPERATION_COUNT = ABSTRACT_TEXT_OVERLAY_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl <em>Image Camera Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl <em>Image Camera Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageCameraOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageCameraOverlay()
 	 * @generated
 	 */
   int IMAGE_CAMERA_OVERLAY = 21;
@@ -2204,11 +2204,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   int IMAGE_CAMERA_OVERLAY_OPERATION_COUNT = CAMERA_OVERLAY_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl <em>URL Image Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.URLImageOverlayImpl <em>URL Image Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getURLImageOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.URLImageOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getURLImageOverlay()
 	 * @generated
 	 */
 	int URL_IMAGE_OVERLAY = 22;
@@ -2322,14 +2322,14 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int URL_IMAGE_OVERLAY_OPERATION_COUNT = IMAGE_CAMERA_OVERLAY_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.SymphonyLogoOverlayImpl <em>Symphony Logo Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyLogoOverlayImpl <em>Apogy Logo Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.SymphonyLogoOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getSymphonyLogoOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyLogoOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getApogyLogoOverlay()
 	 * @generated
 	 */
-  int SYMPHONY_LOGO_OVERLAY = 23;
+  int APOGY_LOGO_OVERLAY = 23;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2338,7 +2338,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_LOGO_OVERLAY__NAME = IMAGE_CAMERA_OVERLAY__NAME;
+  int APOGY_LOGO_OVERLAY__NAME = IMAGE_CAMERA_OVERLAY__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2347,7 +2347,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_LOGO_OVERLAY__DESCRIPTION = IMAGE_CAMERA_OVERLAY__DESCRIPTION;
+  int APOGY_LOGO_OVERLAY__DESCRIPTION = IMAGE_CAMERA_OVERLAY__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -2356,7 +2356,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_LOGO_OVERLAY__VISIBLE = IMAGE_CAMERA_OVERLAY__VISIBLE;
+  int APOGY_LOGO_OVERLAY__VISIBLE = IMAGE_CAMERA_OVERLAY__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Camera Overlay List</b></em>' container reference.
@@ -2365,7 +2365,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_LOGO_OVERLAY__CAMERA_OVERLAY_LIST = IMAGE_CAMERA_OVERLAY__CAMERA_OVERLAY_LIST;
+	int APOGY_LOGO_OVERLAY__CAMERA_OVERLAY_LIST = IMAGE_CAMERA_OVERLAY__CAMERA_OVERLAY_LIST;
 
 		/**
 	 * The feature id for the '<em><b>Overlay Alignment</b></em>' attribute.
@@ -2374,16 +2374,16 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_LOGO_OVERLAY__OVERLAY_ALIGNMENT = IMAGE_CAMERA_OVERLAY__OVERLAY_ALIGNMENT;
+  int APOGY_LOGO_OVERLAY__OVERLAY_ALIGNMENT = IMAGE_CAMERA_OVERLAY__OVERLAY_ALIGNMENT;
 
   /**
-	 * The number of structural features of the '<em>Symphony Logo Overlay</em>' class.
+	 * The number of structural features of the '<em>Apogy Logo Overlay</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_LOGO_OVERLAY_FEATURE_COUNT = IMAGE_CAMERA_OVERLAY_FEATURE_COUNT + 0;
+  int APOGY_LOGO_OVERLAY_FEATURE_COUNT = IMAGE_CAMERA_OVERLAY_FEATURE_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -2392,7 +2392,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_LOGO_OVERLAY___DISPOSE = IMAGE_CAMERA_OVERLAY___DISPOSE;
+	int APOGY_LOGO_OVERLAY___DISPOSE = IMAGE_CAMERA_OVERLAY___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Get Overlay</em>' operation.
@@ -2401,23 +2401,23 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_LOGO_OVERLAY___GET_OVERLAY__ABSTRACTCAMERA_OVERLAYALIGNMENT_INT_INT = IMAGE_CAMERA_OVERLAY___GET_OVERLAY__ABSTRACTCAMERA_OVERLAYALIGNMENT_INT_INT;
+  int APOGY_LOGO_OVERLAY___GET_OVERLAY__ABSTRACTCAMERA_OVERLAYALIGNMENT_INT_INT = IMAGE_CAMERA_OVERLAY___GET_OVERLAY__ABSTRACTCAMERA_OVERLAYALIGNMENT_INT_INT;
 
   /**
-	 * The number of operations of the '<em>Symphony Logo Overlay</em>' class.
+	 * The number of operations of the '<em>Apogy Logo Overlay</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_LOGO_OVERLAY_OPERATION_COUNT = IMAGE_CAMERA_OVERLAY_OPERATION_COUNT + 0;
+  int APOGY_LOGO_OVERLAY_OPERATION_COUNT = IMAGE_CAMERA_OVERLAY_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl <em>FOV Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FOVOverlayImpl <em>FOV Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getFOVOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FOVOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getFOVOverlay()
 	 * @generated
 	 */
 	int FOV_OVERLAY = 24;
@@ -2585,11 +2585,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int FOV_OVERLAY_OPERATION_COUNT = DRAWN_CAMERA_OVERLAY_OPERATION_COUNT + 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl <em>Azimuth Elevation FOV Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl <em>Azimuth Elevation FOV Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getAzimuthElevationFOVOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getAzimuthElevationFOVOverlay()
 	 * @generated
 	 */
 	int AZIMUTH_ELEVATION_FOV_OVERLAY = 25;
@@ -2775,11 +2775,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int AZIMUTH_ELEVATION_FOV_OVERLAY_OPERATION_COUNT = FOV_OVERLAY_OPERATION_COUNT + 2;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl <em>EMF Feature Azimuth Elevation FOV Overlay</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl <em>EMF Feature Azimuth Elevation FOV Overlay</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getEMFFeatureAzimuthElevationFOVOverlay()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getEMFFeatureAzimuthElevationFOVOverlay()
 	 * @generated
 	 */
 	int EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY = 26;
@@ -2983,11 +2983,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY_OPERATION_COUNT = AZIMUTH_ELEVATION_FOV_OVERLAY_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl <em>Azimuth Feature Reference</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl <em>Azimuth Feature Reference</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getAzimuthFeatureReference()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getAzimuthFeatureReference()
 	 * @generated
 	 */
 	int AZIMUTH_FEATURE_REFERENCE = 27;
@@ -2999,7 +2999,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__NAME = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+	int AZIMUTH_FEATURE_REFERENCE__NAME = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -3008,7 +3008,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__VARIABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
+	int AZIMUTH_FEATURE_REFERENCE__VARIABLE = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
 
 		/**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -3017,7 +3017,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
+	int AZIMUTH_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -3026,7 +3026,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__FEATURE_ROOT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
+	int AZIMUTH_FEATURE_REFERENCE__FEATURE_ROOT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
 
 		/**
 	 * The number of structural features of the '<em>Azimuth Feature Reference</em>' class.
@@ -3035,7 +3035,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE_FEATURE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
+	int AZIMUTH_FEATURE_REFERENCE_FEATURE_COUNT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Azimuth Feature Reference</em>' class.
@@ -3044,14 +3044,14 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE_OPERATION_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
+	int AZIMUTH_FEATURE_REFERENCE_OPERATION_COUNT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl <em>Elevation Feature Reference</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl <em>Elevation Feature Reference</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getElevationFeatureReference()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getElevationFeatureReference()
 	 * @generated
 	 */
 	int ELEVATION_FEATURE_REFERENCE = 28;
@@ -3063,7 +3063,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__NAME = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+	int ELEVATION_FEATURE_REFERENCE__NAME = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -3072,7 +3072,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__VARIABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
+	int ELEVATION_FEATURE_REFERENCE__VARIABLE = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
 
 		/**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -3081,7 +3081,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
+	int ELEVATION_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -3090,7 +3090,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__FEATURE_ROOT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
+	int ELEVATION_FEATURE_REFERENCE__FEATURE_ROOT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
 
 		/**
 	 * The number of structural features of the '<em>Elevation Feature Reference</em>' class.
@@ -3099,7 +3099,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE_FEATURE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
+	int ELEVATION_FEATURE_REFERENCE_FEATURE_COUNT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Elevation Feature Reference</em>' class.
@@ -3108,14 +3108,14 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE_OPERATION_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
+	int ELEVATION_FEATURE_REFERENCE_OPERATION_COUNT = ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl <em>Tool Tip Text Provider</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl <em>Tool Tip Text Provider</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getToolTipTextProvider()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getToolTipTextProvider()
 	 * @generated
 	 */
 	int TOOL_TIP_TEXT_PROVIDER = 29;
@@ -3148,11 +3148,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int TOOL_TIP_TEXT_PROVIDER_OPERATION_COUNT = 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolImpl <em>Camera Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolImpl <em>Camera Tool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraTool()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraTool()
 	 * @generated
 	 */
 	int CAMERA_TOOL = 30;
@@ -3257,11 +3257,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int CAMERA_TOOL_OPERATION_COUNT = CAMERA_IMAGE_ANNOTATION_OPERATION_COUNT + 5;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolListImpl <em>Camera Tool List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolListImpl <em>Camera Tool List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolListImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolListImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraToolList()
 	 * @generated
 	 */
 	int CAMERA_TOOL_LIST = 31;
@@ -3303,11 +3303,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int CAMERA_TOOL_LIST_OPERATION_COUNT = 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl <em>Pointer Camera Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl <em>Pointer Camera Tool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getPointerCameraTool()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getPointerCameraTool()
 	 * @generated
 	 */
 	int POINTER_CAMERA_TOOL = 32;
@@ -3457,21 +3457,21 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	int POINTER_CAMERA_TOOL_OPERATION_COUNT = CAMERA_TOOL_OPERATION_COUNT + 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment <em>Overlay Alignment</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment <em>Overlay Alignment</em>}' enum.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getOverlayAlignment()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getOverlayAlignment()
 	 * @generated
 	 */
   int OVERLAY_ALIGNMENT = 33;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy <em>Image Size Policy</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy <em>Image Size Policy</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageSizePolicy()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageSizePolicy()
 	 * @generated
 	 */
 	int IMAGE_SIZE_POLICY = 34;
@@ -3481,7 +3481,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see javax.vecmath.Color3f
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getColor3f()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getColor3f()
 	 * @generated
 	 */
   int COLOR3F = 35;
@@ -3492,1176 +3492,1176 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getList()
 	 * @generated
 	 */
 	int LIST = 36;
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities <em>Camera View Utilities</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities <em>Camera View Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera View Utilities</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities
 	 * @generated
 	 */
 	EClass getCameraViewUtilities();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities#getCameraViewConfigurationIdentifier(org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration) <em>Get Camera View Configuration Identifier</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities#getCameraViewConfigurationIdentifier(ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration) <em>Get Camera View Configuration Identifier</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Camera View Configuration Identifier</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities#getCameraViewConfigurationIdentifier(org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities#getCameraViewConfigurationIdentifier(ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration)
 	 * @generated
 	 */
 	EOperation getCameraViewUtilities__GetCameraViewConfigurationIdentifier__CameraViewConfiguration();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfiguration(java.lang.String) <em>Get Active Camera View Configuration</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfiguration(java.lang.String) <em>Get Active Camera View Configuration</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Active Camera View Configuration</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfiguration(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfiguration(java.lang.String)
 	 * @generated
 	 */
 	EOperation getCameraViewUtilities__GetActiveCameraViewConfiguration__String();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfigurationList() <em>Get Active Camera View Configuration List</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfigurationList() <em>Get Active Camera View Configuration List</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Active Camera View Configuration List</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities#getActiveCameraViewConfigurationList()
 	 * @generated
 	 */
 	EOperation getCameraViewUtilities__GetActiveCameraViewConfigurationList();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList <em>Camera View Configuration List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList <em>Camera View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera View Configuration List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList
 	 * @generated
 	 */
   EClass getCameraViewConfigurationList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations <em>Camera View Configurations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations <em>Camera View Configurations</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Camera View Configurations</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations()
 	 * @see #getCameraViewConfigurationList()
 	 * @generated
 	 */
   EReference getCameraViewConfigurationList_CameraViewConfigurations();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera View Configuration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration
 	 * @generated
 	 */
   EClass getCameraViewConfiguration();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList <em>Camera View Configuration List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList <em>Camera View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Camera View Configuration List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
 	EReference getCameraViewConfiguration_CameraViewConfigurationList();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera <em>Camera</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera <em>Camera</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Camera</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
   EReference getCameraViewConfiguration_Camera();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth <em>Image Width</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth <em>Image Width</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Image Width</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageWidth()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
   EAttribute getCameraViewConfiguration_ImageWidth();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight <em>Image Height</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight <em>Image Height</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Image Height</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageHeight()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
   EAttribute getCameraViewConfiguration_ImageHeight();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount <em>Image Count</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount <em>Image Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Image Count</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageCount()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
 	EAttribute getCameraViewConfiguration_ImageCount();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage <em>Display Rectified Image</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage <em>Display Rectified Image</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Display Rectified Image</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isDisplayRectifiedImage()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
   EAttribute getCameraViewConfiguration_DisplayRectifiedImage();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList <em>Overlay List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList <em>Overlay List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Overlay List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
   EReference getCameraViewConfiguration_OverlayList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList <em>Tool List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList <em>Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Tool List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
 	EReference getCameraViewConfiguration_ToolList();
 
 		/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList <em>Filter List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList <em>Filter List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Filter List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
   EReference getCameraViewConfiguration_FilterList();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable <em>Image Auto Save Enable</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable <em>Image Auto Save Enable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Image Auto Save Enable</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isImageAutoSaveEnable()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
 	EAttribute getCameraViewConfiguration_ImageAutoSaveEnable();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays <em>Save Image With Overlays</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays <em>Save Image With Overlays</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Save Image With Overlays</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
 	EAttribute getCameraViewConfiguration_SaveImageWithOverlays();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Image Auto Save Folder Path</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath()
 	 * @see #getCameraViewConfiguration()
 	 * @generated
 	 */
 	EAttribute getCameraViewConfiguration_ImageAutoSaveFolderPath();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraImageAnnotations() <em>Get Camera Image Annotations</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraImageAnnotations() <em>Get Camera Image Annotations</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Camera Image Annotations</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraImageAnnotations()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraImageAnnotations()
 	 * @generated
 	 */
 	EOperation getCameraViewConfiguration__GetCameraImageAnnotations();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList <em>Filter List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList <em>Filter List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Filter List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FilterList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList
 	 * @generated
 	 */
   EClass getFilterList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Camera View Configuration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration()
 	 * @see #getFilterList()
 	 * @generated
 	 */
 	EReference getFilterList_CameraViewConfiguration();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getImageFilters <em>Image Filters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList#getImageFilters <em>Image Filters</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Image Filters</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getImageFilters()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList#getImageFilters()
 	 * @see #getFilterList()
 	 * @generated
 	 */
   EReference getFilterList_ImageFilters();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter <em>Image Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter <em>Image Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Image Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter
 	 * @generated
 	 */
   EClass getImageFilter();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#isEnabled <em>Enabled</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter#isEnabled <em>Enabled</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Enabled</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#isEnabled()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter#isEnabled()
 	 * @see #getImageFilter()
 	 * @generated
 	 */
   EAttribute getImageFilter_Enabled();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#filter(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage) <em>Filter</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter#filter(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.common.images.AbstractEImage) <em>Filter</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Filter</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#filter(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter#filter(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.common.images.AbstractEImage)
 	 * @generated
 	 */
   EOperation getImageFilter__Filter__AbstractCamera_AbstractEImage();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#dispose()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter#dispose()
 	 * @generated
 	 */
 	EOperation getImageFilter__Dispose();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter <em>Gray Scale Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter <em>Gray Scale Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Gray Scale Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter
 	 * @generated
 	 */
   EClass getGrayScaleFilter();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter <em>Edge Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter <em>Edge Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Edge Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter
 	 * @generated
 	 */
   EClass getEdgeFilter();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter <em>Contrast And Brightness Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter <em>Contrast And Brightness Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Contrast And Brightness Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter
 	 * @generated
 	 */
   EClass getContrastAndBrightnessFilter();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getContrast <em>Contrast</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getContrast <em>Contrast</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Contrast</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getContrast()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getContrast()
 	 * @see #getContrastAndBrightnessFilter()
 	 * @generated
 	 */
   EAttribute getContrastAndBrightnessFilter_Contrast();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getBrightness <em>Brightness</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getBrightness <em>Brightness</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Brightness</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getBrightness()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getBrightness()
 	 * @see #getContrastAndBrightnessFilter()
 	 * @generated
 	 */
   EAttribute getContrastAndBrightnessFilter_Brightness();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter <em>Exposure Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter <em>Exposure Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Exposure Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter
 	 * @generated
 	 */
   EClass getExposureFilter();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter#getExposure <em>Exposure</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter#getExposure <em>Exposure</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Exposure</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter#getExposure()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter#getExposure()
 	 * @see #getExposureFilter()
 	 * @generated
 	 */
   EAttribute getExposureFilter_Exposure();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter <em>Gain Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter <em>Gain Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Gain Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter
 	 * @generated
 	 */
   EClass getGainFilter();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Gain</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getGain()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getGain()
 	 * @see #getGainFilter()
 	 * @generated
 	 */
   EAttribute getGainFilter_Gain();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Bias</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getBias()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getBias()
 	 * @see #getGainFilter()
 	 * @generated
 	 */
   EAttribute getGainFilter_Bias();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter <em>Invert Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter <em>Invert Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Invert Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter
 	 * @generated
 	 */
   EClass getInvertFilter();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter <em>Rescale Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter <em>Rescale Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rescale Filter</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter
 	 * @generated
 	 */
   EClass getRescaleFilter();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter#getScale <em>Scale</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter#getScale <em>Scale</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Scale</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter#getScale()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter#getScale()
 	 * @see #getRescaleFilter()
 	 * @generated
 	 */
   EAttribute getRescaleFilter_Scale();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation <em>Camera Image Annotation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation <em>Camera Image Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Image Annotation</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation
 	 * @generated
 	 */
 	EClass getCameraImageAnnotation();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation#isVisible <em>Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation#isVisible <em>Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation#isVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation#isVisible()
 	 * @see #getCameraImageAnnotation()
 	 * @generated
 	 */
 	EAttribute getCameraImageAnnotation_Visible();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation#dispose()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation#dispose()
 	 * @generated
 	 */
 	EOperation getCameraImageAnnotation__Dispose();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList <em>Camera Overlay List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList <em>Camera Overlay List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Overlay List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList
 	 * @generated
 	 */
   EClass getCameraOverlayList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Camera View Configuration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration()
 	 * @see #getCameraOverlayList()
 	 * @generated
 	 */
 	EReference getCameraOverlayList_CameraViewConfiguration();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getOverlays <em>Overlays</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList#getOverlays <em>Overlays</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Overlays</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getOverlays()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList#getOverlays()
 	 * @see #getCameraOverlayList()
 	 * @generated
 	 */
   EReference getCameraOverlayList_Overlays();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay <em>Camera Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay <em>Camera Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay
 	 * @generated
 	 */
   EClass getCameraOverlay();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay#getCameraOverlayList <em>Camera Overlay List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay#getCameraOverlayList <em>Camera Overlay List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Camera Overlay List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay#getCameraOverlayList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay#getCameraOverlayList()
 	 * @see #getCameraOverlay()
 	 * @generated
 	 */
 	EReference getCameraOverlay_CameraOverlayList();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay#getOverlayAlignment <em>Overlay Alignment</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay#getOverlayAlignment <em>Overlay Alignment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Overlay Alignment</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay#getOverlayAlignment()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay#getOverlayAlignment()
 	 * @see #getCameraOverlay()
 	 * @generated
 	 */
   EAttribute getCameraOverlay_OverlayAlignment();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay <em>Drawn Camera Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay <em>Drawn Camera Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Drawn Camera Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay
 	 * @generated
 	 */
   EClass getDrawnCameraOverlay();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.common.images.AbstractEImage, ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Overlay</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.common.images.AbstractEImage, ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment, int, int)
 	 * @generated
 	 */
   EOperation getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay <em>Abstract Text Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay <em>Abstract Text Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Text Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay
 	 * @generated
 	 */
   EClass getAbstractTextOverlay();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Font Name</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName()
 	 * @see #getAbstractTextOverlay()
 	 * @generated
 	 */
   EAttribute getAbstractTextOverlay_FontName();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Font Size</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize()
 	 * @see #getAbstractTextOverlay()
 	 * @generated
 	 */
   EAttribute getAbstractTextOverlay_FontSize();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset <em>Horizontal Offset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset <em>Horizontal Offset</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Horizontal Offset</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset()
 	 * @see #getAbstractTextOverlay()
 	 * @generated
 	 */
   EAttribute getAbstractTextOverlay_HorizontalOffset();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vertical Offset</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset()
 	 * @see #getAbstractTextOverlay()
 	 * @generated
 	 */
   EAttribute getAbstractTextOverlay_VerticalOffset();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Text Color</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor()
 	 * @see #getAbstractTextOverlay()
 	 * @generated
 	 */
   EAttribute getAbstractTextOverlay_TextColor();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getDisplayedString() <em>Get Displayed String</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getDisplayedString() <em>Get Displayed String</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Displayed String</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getDisplayedString()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getDisplayedString()
 	 * @generated
 	 */
   EOperation getAbstractTextOverlay__GetDisplayedString();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay <em>EMF Feature Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay <em>EMF Feature Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EMF Feature Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay
 	 * @generated
 	 */
   EClass getEMFFeatureOverlay();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReference <em>Variable Feature Reference</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReference <em>Variable Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Variable Feature Reference</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReference()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReference()
 	 * @see #getEMFFeatureOverlay()
 	 * @generated
 	 */
   EReference getEMFFeatureOverlay_VariableFeatureReference();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getNumberFormat <em>Number Format</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay#getNumberFormat <em>Number Format</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Format</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getNumberFormat()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay#getNumberFormat()
 	 * @see #getEMFFeatureOverlay()
 	 * @generated
 	 */
   EAttribute getEMFFeatureOverlay_NumberFormat();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReferenceChangeCount <em>Variable Feature Reference Change Count</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReferenceChangeCount <em>Variable Feature Reference Change Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Variable Feature Reference Change Count</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReferenceChangeCount()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReferenceChangeCount()
 	 * @see #getEMFFeatureOverlay()
 	 * @generated
 	 */
 	EAttribute getEMFFeatureOverlay_VariableFeatureReferenceChangeCount();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay <em>Camera Name Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay <em>Camera Name Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Name Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay
 	 * @generated
 	 */
   EClass getCameraNameOverlay();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay <em>Image Count Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay <em>Image Count Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Image Count Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay
 	 * @generated
 	 */
 	EClass getImageCountOverlay();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay#isIndicatorVisible <em>Indicator Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay#isIndicatorVisible <em>Indicator Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Indicator Visible</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay#isIndicatorVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay#isIndicatorVisible()
 	 * @see #getImageCountOverlay()
 	 * @generated
 	 */
 	EAttribute getImageCountOverlay_IndicatorVisible();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay <em>Image Frozen Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay <em>Image Frozen Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Image Frozen Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay
 	 * @generated
 	 */
 	EClass getImageFrozenOverlay();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Frozen</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen()
 	 * @see #getImageFrozenOverlay()
 	 * @generated
 	 */
 	EAttribute getImageFrozenOverlay_Frozen();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Expected Image Update Period</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod()
 	 * @see #getImageFrozenOverlay()
 	 * @generated
 	 */
 	EAttribute getImageFrozenOverlay_ExpectedImageUpdatePeriod();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Frozen Message</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage()
 	 * @see #getImageFrozenOverlay()
 	 * @generated
 	 */
 	EAttribute getImageFrozenOverlay_FrozenMessage();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay <em>Image Camera Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay <em>Image Camera Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Image Camera Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay
 	 * @generated
 	 */
   EClass getImageCameraOverlay();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Get Overlay</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Get Overlay</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Overlay</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment, int, int)
 	 * @generated
 	 */
   EOperation getImageCameraOverlay__GetOverlay__AbstractCamera_OverlayAlignment_int_int();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay <em>URL Image Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay <em>URL Image Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>URL Image Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay
 	 * @generated
 	 */
 	EClass getURLImageOverlay();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getUrl()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getUrl()
 	 * @see #getURLImageOverlay()
 	 * @generated
 	 */
 	EAttribute getURLImageOverlay_Url();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Image Size Policy</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy()
 	 * @see #getURLImageOverlay()
 	 * @generated
 	 */
 	EAttribute getURLImageOverlay_ImageSizePolicy();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Image</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImage()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImage()
 	 * @see #getURLImageOverlay()
 	 * @generated
 	 */
 	EReference getURLImageOverlay_Image();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay <em>Symphony Logo Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay <em>Apogy Logo Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symphony Logo Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay
+	 * @return the meta object for class '<em>Apogy Logo Overlay</em>'.
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay
 	 * @generated
 	 */
-  EClass getSymphonyLogoOverlay();
+  EClass getApogyLogoOverlay();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay <em>FOV Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay <em>FOV Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>FOV Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay
 	 * @generated
 	 */
 	EClass getFOVOverlay();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Line Width</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getLineWidth()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getLineWidth()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_LineWidth();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Positive Values Color</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_PositiveValuesColor();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor <em>Negative Value Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor <em>Negative Value Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Negative Value Color</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getNegativeValueColor()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_NegativeValueColor();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval <em>Angle Interval</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval <em>Angle Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Angle Interval</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAngleInterval()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_AngleInterval();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontName <em>Font Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontName <em>Font Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Font Name</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontName()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontName()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_FontName();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontSize <em>Font Size</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontSize <em>Font Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Font Size</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getFontSize()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getFontSize()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_FontSize();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Azimuth Direction</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_AzimuthDirection();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Elevation Direction</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection()
 	 * @see #getFOVOverlay()
 	 * @generated
 	 */
 	EAttribute getFOVOverlay_ElevationDirection();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay <em>Azimuth Elevation FOV Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay <em>Azimuth Elevation FOV Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Azimuth Elevation FOV Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay
 	 * @generated
 	 */
 	EClass getAzimuthElevationFOVOverlay();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeAzimuth(double) <em>Change Azimuth</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeAzimuth(double) <em>Change Azimuth</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Azimuth</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeAzimuth(double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeAzimuth(double)
 	 * @generated
 	 */
 	EOperation getAzimuthElevationFOVOverlay__ChangeAzimuth__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeElevation(double) <em>Change Elevation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeElevation(double) <em>Change Elevation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Elevation</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeElevation(double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay#changeElevation(double)
 	 * @generated
 	 */
 	EOperation getAzimuthElevationFOVOverlay__ChangeElevation__double();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay <em>EMF Feature Azimuth Elevation FOV Overlay</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay <em>EMF Feature Azimuth Elevation FOV Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EMF Feature Azimuth Elevation FOV Overlay</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay
 	 * @generated
 	 */
 	EClass getEMFFeatureAzimuthElevationFOVOverlay();
 
 		/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getAzimuthFeatureReference <em>Azimuth Feature Reference</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getAzimuthFeatureReference <em>Azimuth Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Azimuth Feature Reference</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getAzimuthFeatureReference()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getAzimuthFeatureReference()
 	 * @see #getEMFFeatureAzimuthElevationFOVOverlay()
 	 * @generated
 	 */
 	EReference getEMFFeatureAzimuthElevationFOVOverlay_AzimuthFeatureReference();
 
 		/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getElevationFeatureReference <em>Elevation Feature Reference</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getElevationFeatureReference <em>Elevation Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Elevation Feature Reference</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getElevationFeatureReference()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getElevationFeatureReference()
 	 * @see #getEMFFeatureAzimuthElevationFOVOverlay()
 	 * @generated
 	 */
 	EReference getEMFFeatureAzimuthElevationFOVOverlay_ElevationFeatureReference();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference <em>Azimuth Feature Reference</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference <em>Azimuth Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Azimuth Feature Reference</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference
 	 * @generated
 	 */
 	EClass getAzimuthFeatureReference();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference <em>Elevation Feature Reference</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference <em>Elevation Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Elevation Feature Reference</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference
 	 * @generated
 	 */
 	EClass getElevationFeatureReference();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider <em>Tool Tip Text Provider</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider <em>Tool Tip Text Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Tool Tip Text Provider</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider
 	 * @generated
 	 */
 	EClass getToolTipTextProvider();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot, int, int, int) <em>Get Tool Tip Text</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot, int, int, int) <em>Get Tool Tip Text</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Tool Tip Text</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot, int, int, int)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera, ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot, int, int, int)
 	 * @generated
 	 */
 	EOperation getToolTipTextProvider__GetToolTipText__AbstractCamera_ImageSnapshot_int_int_int();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool <em>Camera Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool <em>Camera Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Tool</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool
 	 * @generated
 	 */
 	EClass getCameraTool();
 
 		/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#getCameraToolList <em>Camera Tool List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#getCameraToolList <em>Camera Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Camera Tool List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#getCameraToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#getCameraToolList()
 	 * @see #getCameraTool()
 	 * @generated
 	 */
 	EReference getCameraTool_CameraToolList();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#initializeCamera(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera) <em>Initialize Camera</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#initializeCamera(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera) <em>Initialize Camera</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize Camera</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#initializeCamera(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#initializeCamera(ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera)
 	 * @generated
 	 */
 	EOperation getCameraTool__InitializeCamera__AbstractCamera();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot) <em>Update Image Snapshot</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot) <em>Update Image Snapshot</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Image Snapshot</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot)
 	 * @generated
 	 */
 	EOperation getCameraTool__UpdateImageSnapshot__ImageSnapshot();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#dispose()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#dispose()
 	 * @generated
 	 */
 	EOperation getCameraTool__Dispose();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#mouseMoved(org.eclipse.symphony.common.images.AbstractEImage, int, int, int) <em>Mouse Moved</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#mouseMoved(ca.gc.asc_csa.apogy.common.images.AbstractEImage, int, int, int) <em>Mouse Moved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Mouse Moved</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#mouseMoved(org.eclipse.symphony.common.images.AbstractEImage, int, int, int)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#mouseMoved(ca.gc.asc_csa.apogy.common.images.AbstractEImage, int, int, int)
 	 * @generated
 	 */
 	EOperation getCameraTool__MouseMoved__AbstractEImage_int_int_int();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#positionSelected(org.eclipse.symphony.common.images.AbstractEImage, int, int, int) <em>Position Selected</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#positionSelected(ca.gc.asc_csa.apogy.common.images.AbstractEImage, int, int, int) <em>Position Selected</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Position Selected</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#positionSelected(org.eclipse.symphony.common.images.AbstractEImage, int, int, int)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#positionSelected(ca.gc.asc_csa.apogy.common.images.AbstractEImage, int, int, int)
 	 * @generated
 	 */
 	EOperation getCameraTool__PositionSelected__AbstractEImage_int_int_int();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList <em>Camera Tool List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList <em>Camera Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Tool List</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList
 	 * @generated
 	 */
 	EClass getCameraToolList();
 
 		/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Camera View Configuration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration()
 	 * @see #getCameraToolList()
 	 * @generated
 	 */
 	EReference getCameraToolList_CameraViewConfiguration();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getTools <em>Tools</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getTools <em>Tools</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Tools</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getTools()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getTools()
 	 * @see #getCameraToolList()
 	 * @generated
 	 */
 	EReference getCameraToolList_Tools();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool <em>Pointer Camera Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool <em>Pointer Camera Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pointer Camera Tool</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool
 	 * @generated
 	 */
 	EClass getPointerCameraTool();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getFov()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getFov()
 	 * @see #getPointerCameraTool()
 	 * @generated
 	 */
 	EReference getPointerCameraTool_Fov();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vector Color</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor()
 	 * @see #getPointerCameraTool()
 	 * @generated
 	 */
 	EAttribute getPointerCameraTool_VectorColor();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Intersection Distance</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance()
 	 * @see #getPointerCameraTool()
 	 * @generated
 	 */
 	EAttribute getPointerCameraTool_IntersectionDistance();
 
 		/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment <em>Overlay Alignment</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment <em>Overlay Alignment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Overlay Alignment</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment
 	 * @generated
 	 */
   EEnum getOverlayAlignment();
 
   /**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy <em>Image Size Policy</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy <em>Image Size Policy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Image Size Policy</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy
 	 * @generated
 	 */
 	EEnum getImageSizePolicy();
@@ -4695,7 +4695,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsImagingCameraFactory getSymphony__AddonsSensorsImagingCameraFactory();
+	ApogyAddonsSensorsImagingCameraFactory getApogyAddonsSensorsImagingCameraFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -4713,11 +4713,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl <em>Camera View Utilities</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl <em>Camera View Utilities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraViewUtilities()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewUtilitiesImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraViewUtilities()
 		 * @generated
 		 */
 		EClass CAMERA_VIEW_UTILITIES = eINSTANCE.getCameraViewUtilities();
@@ -4743,11 +4743,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EOperation CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION_LIST = eINSTANCE.getCameraViewUtilities__GetActiveCameraViewConfigurationList();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl <em>Camera View Configuration List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl <em>Camera View Configuration List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraViewConfigurationList()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraViewConfigurationList()
 		 * @generated
 		 */
     EClass CAMERA_VIEW_CONFIGURATION_LIST = eINSTANCE.getCameraViewConfigurationList();
@@ -4759,11 +4759,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EReference CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS = eINSTANCE.getCameraViewConfigurationList_CameraViewConfigurations();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl <em>Camera View Configuration</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl <em>Camera View Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraViewConfiguration()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraViewConfiguration()
 		 * @generated
 		 */
     EClass CAMERA_VIEW_CONFIGURATION = eINSTANCE.getCameraViewConfiguration();
@@ -4859,11 +4859,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EOperation CAMERA_VIEW_CONFIGURATION___GET_CAMERA_IMAGE_ANNOTATIONS = eINSTANCE.getCameraViewConfiguration__GetCameraImageAnnotations();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FilterListImpl <em>Filter List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FilterListImpl <em>Filter List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.FilterListImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getFilterList()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FilterListImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getFilterList()
 		 * @generated
 		 */
     EClass FILTER_LIST = eINSTANCE.getFilterList();
@@ -4882,11 +4882,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EReference FILTER_LIST__IMAGE_FILTERS = eINSTANCE.getFilterList_ImageFilters();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl <em>Image Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFilterImpl <em>Image Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageFilter()
 		 * @generated
 		 */
     EClass IMAGE_FILTER = eINSTANCE.getImageFilter();
@@ -4912,29 +4912,29 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EOperation IMAGE_FILTER___DISPOSE = eINSTANCE.getImageFilter__Dispose();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl <em>Gray Scale Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl <em>Gray Scale Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getGrayScaleFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getGrayScaleFilter()
 		 * @generated
 		 */
     EClass GRAY_SCALE_FILTER = eINSTANCE.getGrayScaleFilter();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EdgeFilterImpl <em>Edge Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EdgeFilterImpl <em>Edge Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.EdgeFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getEdgeFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EdgeFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getEdgeFilter()
 		 * @generated
 		 */
     EClass EDGE_FILTER = eINSTANCE.getEdgeFilter();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl <em>Contrast And Brightness Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl <em>Contrast And Brightness Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getContrastAndBrightnessFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getContrastAndBrightnessFilter()
 		 * @generated
 		 */
     EClass CONTRAST_AND_BRIGHTNESS_FILTER = eINSTANCE.getContrastAndBrightnessFilter();
@@ -4953,11 +4953,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EAttribute CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS = eINSTANCE.getContrastAndBrightnessFilter_Brightness();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ExposureFilterImpl <em>Exposure Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ExposureFilterImpl <em>Exposure Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ExposureFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getExposureFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ExposureFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getExposureFilter()
 		 * @generated
 		 */
     EClass EXPOSURE_FILTER = eINSTANCE.getExposureFilter();
@@ -4969,11 +4969,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EAttribute EXPOSURE_FILTER__EXPOSURE = eINSTANCE.getExposureFilter_Exposure();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl <em>Gain Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GainFilterImpl <em>Gain Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getGainFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GainFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getGainFilter()
 		 * @generated
 		 */
     EClass GAIN_FILTER = eINSTANCE.getGainFilter();
@@ -4992,20 +4992,20 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EAttribute GAIN_FILTER__BIAS = eINSTANCE.getGainFilter_Bias();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.InvertFilterImpl <em>Invert Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.InvertFilterImpl <em>Invert Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.InvertFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getInvertFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.InvertFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getInvertFilter()
 		 * @generated
 		 */
     EClass INVERT_FILTER = eINSTANCE.getInvertFilter();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.RescaleFilterImpl <em>Rescale Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.RescaleFilterImpl <em>Rescale Filter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.RescaleFilterImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getRescaleFilter()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.RescaleFilterImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getRescaleFilter()
 		 * @generated
 		 */
     EClass RESCALE_FILTER = eINSTANCE.getRescaleFilter();
@@ -5017,11 +5017,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EAttribute RESCALE_FILTER__SCALE = eINSTANCE.getRescaleFilter_Scale();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl <em>Camera Image Annotation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl <em>Camera Image Annotation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraImageAnnotation()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraImageAnnotation()
 		 * @generated
 		 */
 		EClass CAMERA_IMAGE_ANNOTATION = eINSTANCE.getCameraImageAnnotation();
@@ -5040,11 +5040,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EOperation CAMERA_IMAGE_ANNOTATION___DISPOSE = eINSTANCE.getCameraImageAnnotation__Dispose();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayListImpl <em>Camera Overlay List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayListImpl <em>Camera Overlay List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayListImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraOverlayList()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayListImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraOverlayList()
 		 * @generated
 		 */
     EClass CAMERA_OVERLAY_LIST = eINSTANCE.getCameraOverlayList();
@@ -5063,11 +5063,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EReference CAMERA_OVERLAY_LIST__OVERLAYS = eINSTANCE.getCameraOverlayList_Overlays();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayImpl <em>Camera Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayImpl <em>Camera Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraOverlay()
 		 * @generated
 		 */
     EClass CAMERA_OVERLAY = eINSTANCE.getCameraOverlay();
@@ -5086,11 +5086,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EAttribute CAMERA_OVERLAY__OVERLAY_ALIGNMENT = eINSTANCE.getCameraOverlay_OverlayAlignment();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl <em>Drawn Camera Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl <em>Drawn Camera Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getDrawnCameraOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.DrawnCameraOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getDrawnCameraOverlay()
 		 * @generated
 		 */
     EClass DRAWN_CAMERA_OVERLAY = eINSTANCE.getDrawnCameraOverlay();
@@ -5102,11 +5102,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EOperation DRAWN_CAMERA_OVERLAY___APPLY_OVERLAY__ABSTRACTCAMERA_ABSTRACTEIMAGE_OVERLAYALIGNMENT_INT_INT = eINSTANCE.getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl <em>Abstract Text Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl <em>Abstract Text Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getAbstractTextOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getAbstractTextOverlay()
 		 * @generated
 		 */
     EClass ABSTRACT_TEXT_OVERLAY = eINSTANCE.getAbstractTextOverlay();
@@ -5153,11 +5153,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EOperation ABSTRACT_TEXT_OVERLAY___GET_DISPLAYED_STRING = eINSTANCE.getAbstractTextOverlay__GetDisplayedString();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl <em>EMF Feature Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl <em>EMF Feature Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getEMFFeatureOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getEMFFeatureOverlay()
 		 * @generated
 		 */
     EClass EMF_FEATURE_OVERLAY = eINSTANCE.getEMFFeatureOverlay();
@@ -5183,20 +5183,20 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EAttribute EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT = eINSTANCE.getEMFFeatureOverlay_VariableFeatureReferenceChangeCount();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl <em>Camera Name Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl <em>Camera Name Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraNameOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraNameOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraNameOverlay()
 		 * @generated
 		 */
     EClass CAMERA_NAME_OVERLAY = eINSTANCE.getCameraNameOverlay();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl <em>Image Count Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl <em>Image Count Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageCountOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageCountOverlay()
 		 * @generated
 		 */
 		EClass IMAGE_COUNT_OVERLAY = eINSTANCE.getImageCountOverlay();
@@ -5208,11 +5208,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EAttribute IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE = eINSTANCE.getImageCountOverlay_IndicatorVisible();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl <em>Image Frozen Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl <em>Image Frozen Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageFrozenOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageFrozenOverlay()
 		 * @generated
 		 */
 		EClass IMAGE_FROZEN_OVERLAY = eINSTANCE.getImageFrozenOverlay();
@@ -5238,11 +5238,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EAttribute IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE = eINSTANCE.getImageFrozenOverlay_FrozenMessage();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl <em>Image Camera Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl <em>Image Camera Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageCameraOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ImageCameraOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageCameraOverlay()
 		 * @generated
 		 */
     EClass IMAGE_CAMERA_OVERLAY = eINSTANCE.getImageCameraOverlay();
@@ -5254,11 +5254,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
     EOperation IMAGE_CAMERA_OVERLAY___GET_OVERLAY__ABSTRACTCAMERA_OVERLAYALIGNMENT_INT_INT = eINSTANCE.getImageCameraOverlay__GetOverlay__AbstractCamera_OverlayAlignment_int_int();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl <em>URL Image Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.URLImageOverlayImpl <em>URL Image Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getURLImageOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.URLImageOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getURLImageOverlay()
 		 * @generated
 		 */
 		EClass URL_IMAGE_OVERLAY = eINSTANCE.getURLImageOverlay();
@@ -5284,20 +5284,20 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EReference URL_IMAGE_OVERLAY__IMAGE = eINSTANCE.getURLImageOverlay_Image();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.SymphonyLogoOverlayImpl <em>Symphony Logo Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyLogoOverlayImpl <em>Apogy Logo Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.SymphonyLogoOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getSymphonyLogoOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyLogoOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getApogyLogoOverlay()
 		 * @generated
 		 */
-    EClass SYMPHONY_LOGO_OVERLAY = eINSTANCE.getSymphonyLogoOverlay();
+    EClass APOGY_LOGO_OVERLAY = eINSTANCE.getApogyLogoOverlay();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl <em>FOV Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FOVOverlayImpl <em>FOV Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getFOVOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.FOVOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getFOVOverlay()
 		 * @generated
 		 */
 		EClass FOV_OVERLAY = eINSTANCE.getFOVOverlay();
@@ -5358,11 +5358,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EAttribute FOV_OVERLAY__ELEVATION_DIRECTION = eINSTANCE.getFOVOverlay_ElevationDirection();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl <em>Azimuth Elevation FOV Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl <em>Azimuth Elevation FOV Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getAzimuthElevationFOVOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthElevationFOVOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getAzimuthElevationFOVOverlay()
 		 * @generated
 		 */
 		EClass AZIMUTH_ELEVATION_FOV_OVERLAY = eINSTANCE.getAzimuthElevationFOVOverlay();
@@ -5381,11 +5381,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EOperation AZIMUTH_ELEVATION_FOV_OVERLAY___CHANGE_ELEVATION__DOUBLE = eINSTANCE.getAzimuthElevationFOVOverlay__ChangeElevation__double();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl <em>EMF Feature Azimuth Elevation FOV Overlay</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl <em>EMF Feature Azimuth Elevation FOV Overlay</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getEMFFeatureAzimuthElevationFOVOverlay()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getEMFFeatureAzimuthElevationFOVOverlay()
 		 * @generated
 		 */
 		EClass EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY = eINSTANCE.getEMFFeatureAzimuthElevationFOVOverlay();
@@ -5404,29 +5404,29 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EReference EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE = eINSTANCE.getEMFFeatureAzimuthElevationFOVOverlay_ElevationFeatureReference();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl <em>Azimuth Feature Reference</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl <em>Azimuth Feature Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getAzimuthFeatureReference()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.AzimuthFeatureReferenceImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getAzimuthFeatureReference()
 		 * @generated
 		 */
 		EClass AZIMUTH_FEATURE_REFERENCE = eINSTANCE.getAzimuthFeatureReference();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl <em>Elevation Feature Reference</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl <em>Elevation Feature Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getElevationFeatureReference()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getElevationFeatureReference()
 		 * @generated
 		 */
 		EClass ELEVATION_FEATURE_REFERENCE = eINSTANCE.getElevationFeatureReference();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl <em>Tool Tip Text Provider</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl <em>Tool Tip Text Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getToolTipTextProvider()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getToolTipTextProvider()
 		 * @generated
 		 */
 		EClass TOOL_TIP_TEXT_PROVIDER = eINSTANCE.getToolTipTextProvider();
@@ -5438,11 +5438,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EOperation TOOL_TIP_TEXT_PROVIDER___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT = eINSTANCE.getToolTipTextProvider__GetToolTipText__AbstractCamera_ImageSnapshot_int_int_int();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolImpl <em>Camera Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolImpl <em>Camera Tool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraTool()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraTool()
 		 * @generated
 		 */
 		EClass CAMERA_TOOL = eINSTANCE.getCameraTool();
@@ -5489,11 +5489,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EOperation CAMERA_TOOL___POSITION_SELECTED__ABSTRACTEIMAGE_INT_INT_INT = eINSTANCE.getCameraTool__PositionSelected__AbstractEImage_int_int_int();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolListImpl <em>Camera Tool List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolListImpl <em>Camera Tool List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolListImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getCameraToolList()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolListImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getCameraToolList()
 		 * @generated
 		 */
 		EClass CAMERA_TOOL_LIST = eINSTANCE.getCameraToolList();
@@ -5512,11 +5512,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EReference CAMERA_TOOL_LIST__TOOLS = eINSTANCE.getCameraToolList_Tools();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl <em>Pointer Camera Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl <em>Pointer Camera Tool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getPointerCameraTool()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getPointerCameraTool()
 		 * @generated
 		 */
 		EClass POINTER_CAMERA_TOOL = eINSTANCE.getPointerCameraTool();
@@ -5542,20 +5542,20 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 */
 		EAttribute POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE = eINSTANCE.getPointerCameraTool_IntersectionDistance();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment <em>Overlay Alignment</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment <em>Overlay Alignment</em>}' enum.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getOverlayAlignment()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getOverlayAlignment()
 		 * @generated
 		 */
     EEnum OVERLAY_ALIGNMENT = eINSTANCE.getOverlayAlignment();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy <em>Image Size Policy</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy <em>Image Size Policy</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getImageSizePolicy()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getImageSizePolicy()
 		 * @generated
 		 */
 		EEnum IMAGE_SIZE_POLICY = eINSTANCE.getImageSizePolicy();
@@ -5564,7 +5564,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see javax.vecmath.Color3f
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getColor3f()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getColor3f()
 		 * @generated
 		 */
     EDataType COLOR3F = eINSTANCE.getColor3f();
@@ -5573,11 +5573,11 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraPackageImpl#getList()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraPackageImpl#getList()
 		 * @generated
 		 */
 		EDataType LIST = eINSTANCE.getList();
 
   }
 
-} //Symphony__AddonsSensorsImagingCameraPackage
+} //ApogyAddonsSensorsImagingCameraPackage

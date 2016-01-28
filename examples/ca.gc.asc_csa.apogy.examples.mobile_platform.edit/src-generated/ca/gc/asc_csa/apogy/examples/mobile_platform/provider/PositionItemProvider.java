@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.Position;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Position;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.mobile_platform.Position} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ IItemPropertySource
 						getResourceLocator(),
 						getString("_UI_Position_x_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
-						Symphony__ExamplesMobilePlatformPackage.Literals.POSITION__X,
+						ApogyExamplesMobilePlatformPackage.Literals.POSITION__X,
 						true,
 						false,
 						false,
@@ -107,7 +107,7 @@ IItemPropertySource
 						getResourceLocator(),
 						getString("_UI_Position_y_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
-						Symphony__ExamplesMobilePlatformPackage.Literals.POSITION__Y,
+						ApogyExamplesMobilePlatformPackage.Literals.POSITION__Y,
 						true,
 						false,
 						false,
@@ -130,7 +130,7 @@ IItemPropertySource
 						getResourceLocator(),
 						getString("_UI_Position_theta_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Position_theta_feature", "_UI_Position_type"),
-						Symphony__ExamplesMobilePlatformPackage.Literals.POSITION__THETA,
+						ApogyExamplesMobilePlatformPackage.Literals.POSITION__THETA,
 						true,
 						false,
 						false,
@@ -196,9 +196,9 @@ IItemPropertySource
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Position.class)) {
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
+			case ApogyExamplesMobilePlatformPackage.POSITION__X:
+			case ApogyExamplesMobilePlatformPackage.POSITION__Y:
+			case ApogyExamplesMobilePlatformPackage.POSITION__THETA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage
  * @generated
  */
-public interface Symphony__CoreEnvironmentOrbitFactory extends EFactory {
+public interface ApogyCoreEnvironmentOrbitFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitFactory eINSTANCE = org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitFactoryImpl.init();
+	ApogyCoreEnvironmentOrbitFactory eINSTANCE = ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>PVA Coordinates</em>'.
@@ -92,7 +92,7 @@ public interface Symphony__CoreEnvironmentOrbitFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitFacade createSymphony__CoreEnvironmentOrbitFacade();
+	ApogyCoreEnvironmentOrbitFacade createApogyCoreEnvironmentOrbitFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -101,6 +101,6 @@ public interface Symphony__CoreEnvironmentOrbitFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitPackage getSymphony__CoreEnvironmentOrbitPackage();
+	ApogyCoreEnvironmentOrbitPackage getApogyCoreEnvironmentOrbitPackage();
 
-} //Symphony__CoreEnvironmentOrbitFactory
+} //ApogyCoreEnvironmentOrbitFactory

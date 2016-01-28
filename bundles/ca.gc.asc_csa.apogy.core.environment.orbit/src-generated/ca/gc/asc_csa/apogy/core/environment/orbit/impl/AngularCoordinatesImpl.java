@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.orbit.AngularCoordinates;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,9 +22,9 @@ import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbi
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AngularCoordinatesImpl#getRotation <em>Rotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AngularCoordinatesImpl#getAngularRate <em>Angular Rate</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AngularCoordinatesImpl#getAngularAcceleration <em>Angular Acceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AngularCoordinatesImpl#getRotation <em>Rotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AngularCoordinatesImpl#getAngularRate <em>Angular Rate</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AngularCoordinatesImpl#getAngularAcceleration <em>Angular Acceleration</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,7 +76,7 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES;
+		return ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 		Matrix3x3 oldRotation = rotation;
 		rotation = newRotation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, oldRotation, newRotation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, oldRotation, newRotation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -112,14 +112,14 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 		if (newRotation != rotation) {
 			NotificationChain msgs = null;
 			if (rotation != null)
-				msgs = ((InternalEObject)rotation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, null, msgs);
+				msgs = ((InternalEObject)rotation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, null, msgs);
 			if (newRotation != null)
-				msgs = ((InternalEObject)newRotation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, null, msgs);
+				msgs = ((InternalEObject)newRotation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, null, msgs);
 			msgs = basicSetRotation(newRotation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, newRotation, newRotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION, newRotation, newRotation));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 		Tuple3d oldAngularRate = angularRate;
 		angularRate = newAngularRate;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, oldAngularRate, newAngularRate);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, oldAngularRate, newAngularRate);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -155,14 +155,14 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 		if (newAngularRate != angularRate) {
 			NotificationChain msgs = null;
 			if (angularRate != null)
-				msgs = ((InternalEObject)angularRate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, null, msgs);
+				msgs = ((InternalEObject)angularRate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, null, msgs);
 			if (newAngularRate != null)
-				msgs = ((InternalEObject)newAngularRate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, null, msgs);
+				msgs = ((InternalEObject)newAngularRate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, null, msgs);
 			msgs = basicSetAngularRate(newAngularRate, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, newAngularRate, newAngularRate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE, newAngularRate, newAngularRate));
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 		Tuple3d oldAngularAcceleration = angularAcceleration;
 		angularAcceleration = newAngularAcceleration;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, oldAngularAcceleration, newAngularAcceleration);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, oldAngularAcceleration, newAngularAcceleration);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -198,14 +198,14 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 		if (newAngularAcceleration != angularAcceleration) {
 			NotificationChain msgs = null;
 			if (angularAcceleration != null)
-				msgs = ((InternalEObject)angularAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)angularAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, null, msgs);
 			if (newAngularAcceleration != null)
-				msgs = ((InternalEObject)newAngularAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)newAngularAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, null, msgs);
 			msgs = basicSetAngularAcceleration(newAngularAcceleration, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, newAngularAcceleration, newAngularAcceleration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION, newAngularAcceleration, newAngularAcceleration));
 	}
 
 	/**
@@ -216,11 +216,11 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
 				return basicSetRotation(null, msgs);
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
 				return basicSetAngularRate(null, msgs);
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
 				return basicSetAngularAcceleration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -234,11 +234,11 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
 				return getRotation();
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
 				return getAngularRate();
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
 				return getAngularAcceleration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -252,13 +252,13 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
 				setRotation((Matrix3x3)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
 				setAngularRate((Tuple3d)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
 				setAngularAcceleration((Tuple3d)newValue);
 				return;
 		}
@@ -273,13 +273,13 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
 				setRotation((Matrix3x3)null);
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
 				setAngularRate((Tuple3d)null);
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
 				setAngularAcceleration((Tuple3d)null);
 				return;
 		}
@@ -294,11 +294,11 @@ public class AngularCoordinatesImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
 				return rotation != null;
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
 				return angularRate != null;
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
 				return angularAcceleration != null;
 		}
 		return super.eIsSet(featureID);

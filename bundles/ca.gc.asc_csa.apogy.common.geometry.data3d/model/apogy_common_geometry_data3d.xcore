@@ -1,28 +1,28 @@
-@GenModel(prefix="Symphony__CommonGeometryData3D",
+@GenModel(prefix="ApogyCommonGeometryData3D",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__CommonGeometryData3D",
+	      modelName="ApogyCommonGeometryData3D",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.edit/src-generated")
-@GenModel(testsDirectory="/org.eclipse.symphony.common.geometry.data3d.tests/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated")
+@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.tests/src-generated")
 
 
-package org.eclipse.symphony.common.geometry.data3d
+package ca.gc.asc_csa.apogy.common.geometry.data3d
 
-import org.eclipse.symphony.common.geometry.data.Polygon
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
-import org.eclipse.symphony.common.geometry.data.Coordinates
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet
-import org.eclipse.symphony.common.geometry.data.Mesh
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
-import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler
-import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler
-import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler
 
-import org.eclipse.symphony.common.processors.Processor
+import ca.gc.asc_csa.apogy.common.processors.Processor
 
 type Vector2d wraps javax.vecmath.Vector2d
 type Vector3d wraps javax.vecmath.Vector3d
@@ -72,7 +72,7 @@ class CartesianPolygon extends Polygon<CartesianPositionCoordinates>
 	/**
 	 * The surface of the polygon.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m²")
+	@GenModel(notify="true", children="false", apogy_units="m²")
 	transient readonly volatile derived double surface
 	
 	/**
@@ -109,13 +109,13 @@ class SphericalTriangle extends SphericalPolygon
  */
 class CartesianPositionCoordinates extends Coordinates
 {	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double x
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double y
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double z
 	
 	/**
@@ -150,13 +150,13 @@ class ColoredCartesianPositionCoordinates extends CartesianPositionCoordinates
  */
 class CartesianOrientationCoordinates extends Coordinates
 {
-	@GenModel(notify="true", children="false", symphony_units="rad")
+	@GenModel(notify="true", children="false", apogy_units="rad")
 	double xRotation
 	
-	@GenModel(notify="true", children="false", symphony_units="rad")
+	@GenModel(notify="true", children="false", apogy_units="rad")
 	double yRotation
 	
-	@GenModel(notify="true", children="false", symphony_units="rad")
+	@GenModel(notify="true", children="false", apogy_units="rad")
 	double zRotation
 }
 
@@ -189,31 +189,31 @@ class ColoredCoordinatesSet extends AbstractCartesianCoordinatesSet<ColoredCarte
  */
 class CartesianCoordinatesSetExtent
 {
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double xMin
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double xMax
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double yMin
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double yMax
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double zMin
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double zMax
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	transient readonly volatile derived double xDimension
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	transient readonly volatile derived double yDimension
 	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	transient readonly volatile derived double zDimension
 }
 
@@ -244,19 +244,19 @@ class SphericalCoordinates extends Coordinates
 	/**
 	 * The azimuthal angle (about Z), in radians.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="rad")
+	@GenModel(notify="true", children="false", apogy_units="rad")
 	double phi
 	
 	/**
 	 * The polar angle, in radians.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="rad")
+	@GenModel(notify="true", children="false", apogy_units="rad")
 	double theta
 	
 	/**
 	 * The radius, in meters.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double r
 }
 
@@ -292,7 +292,7 @@ class SphereSamplingShape<PolygonType extends CartesianPolygon> extends Coordina
 	/**
 	 * The radius of the sampling sphere, in meters.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double radius = "1.0"
 	
 	/**
@@ -477,7 +477,7 @@ class DigitalElevationMapSampler extends Processor<DigitalElevationMap, DigitalE
 	/**
 	 * The target resolution of the DEM the sampler will return.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double targetResolution = "1.0"
 }
 
@@ -506,20 +506,20 @@ class TriangleEdgeLengthTriangularMeshFilter
 	 * The minimum range of the center of the triangle with respect to the origin. Triangles with their center closer
 	 * to the origin than this value are filtered out.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double minimumRange
 	
 	/**
 	 * The maximum range of the center of the triangle with respect to the origin. Triangles with their center further
 	 * from the origin than this value are filtered out.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double maximumRange
 
 	/**
 	 * The maximum length of a edge that a triangle can have to pass the filter.
 	 */	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double maximumEdgeLength
 	
 	/**
@@ -538,7 +538,7 @@ class OutlierFilter extends Processor<CartesianCoordinatesSet, CartesianCoordina
 	/**
 	 * The maximum distance a point can be from its closest neighbor an not be filtered out.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double maxDistance
 }
 
@@ -561,19 +561,19 @@ class VoxelBased3DPointCloudResampler extends Processor<CartesianCoordinatesSet,
 	/**
 	 * Voxel resolution along the X axis.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double resolutionX = "0.1"
 	
 	/**
 	 * Voxel resolution along the Y axis.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double resolutionY = "0.1"
 
 	/**
 	 * Voxel resolution along the Z axis.
 	 */	
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double resolutionZ = "0.05"
 	
 	/**
@@ -584,7 +584,7 @@ class VoxelBased3DPointCloudResampler extends Processor<CartesianCoordinatesSet,
 	/**
 	 * TODO : Define what this does.
 	 */
-	@GenModel(notify="true", children="false", symphony_units="m")
+	@GenModel(notify="true", children="false", apogy_units="m")
 	double tileResolution = "5.0"
 }
 
@@ -640,7 +640,7 @@ class RigidBodyPoseTracker
 }
 
 
-class Symphony__CommonGeometryData3DFacade
+class ApogyCommonGeometryData3DFacade
 {	
 	op CartesianPositionCoordinates createCartesianPositionCoordinates(double x, double y, double z)
 	

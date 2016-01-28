@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,23 +13,23 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-import org.eclipse.symphony.core.Activator;
-import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ResultsList;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.Activator;
+import ca.gc.asc_csa.apogy.core.Positioned;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ResultsListNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -38,7 +38,7 @@ import org.eclipse.symphony.core.invocator.ResultsList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.ResultsListNodeImpl#getResultsList <em>Results List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ResultsListNodeImpl#getResultsList <em>Results List</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,7 +72,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.RESULTS_LIST_NODE;
+		return ApogyCorePackage.Literals.RESULTS_LIST_NODE;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 			resultsList = (ResultsList)eResolveProxy(oldResultsList);
 			if (resultsList != oldResultsList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
 			}
 		}
 		return resultsList;
@@ -121,7 +121,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 		ResultsList oldResultsList = resultsList;
 		resultsList = newResultsList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case ApogyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				if (resolve) return getResultsList();
 				return basicGetResultsList();
 		}
@@ -145,7 +145,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case ApogyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				setResultsList((ResultsList)newValue);
 				return;
 		}
@@ -159,7 +159,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case ApogyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				setResultsList((ResultsList)null);
 				return;
 		}
@@ -173,7 +173,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case ApogyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				return resultsList != null;
 		}
 		return super.eIsSet(featureID);
@@ -209,9 +209,9 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 			PositionedResult positionedResult = (PositionedResult) abstractResult;
 
 			// Creates a ResultNode.
-			ResultNode resultNode = Symphony__CoreFacade.INSTANCE.createResultNode(positionedResult);
+			ResultNode resultNode = ApogyCoreFacade.INSTANCE.createResultNode(positionedResult);
 
-			TransformNode transform = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(positionedResult.getPose().asMatrix4d());
+			TransformNode transform = ApogyCommonTopologyFacade.INSTANCE.createTransformNode(positionedResult.getPose().asMatrix4d());
 			if(positionedResult.getTime() != null)
 			{
 				String description = Long.toString(positionedResult.getTime().getTime());
@@ -283,7 +283,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 				public void notifyChanged(Notification msg) 
 				{
 					if (msg.getNotifier() instanceof ResultsList) {
-						if (msg.getFeatureID(ResultsList.class) == Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS) {
+						if (msg.getFeatureID(ResultsList.class) == ApogyCoreInvocatorPackage.RESULTS_LIST__RESULTS) {
 							switch (msg.getEventType()) {
 							case Notification.ADD: {
 								AbstractResult resultAdded = (AbstractResult) msg
@@ -340,7 +340,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 						
 						int featureID = msg.getFeatureID(Positioned.class);
 						
-						if(featureID == Symphony__CorePackage.POSITIONED_RESULT__POSE)
+						if(featureID == ApogyCorePackage.POSITIONED_RESULT__POSE)
 						{
 							// Unregister from previous pose.
 							if(msg.getOldValue() instanceof Matrix4x4)

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors;
+package ca.gc.asc_csa.apogy.common.processors;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -14,12 +14,12 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.processors.ProcessorsChain#getIntermediateResult <em>Intermediate Result</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.processors.ProcessorsChain#getRunningProcessor <em>Running Processor</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.processors.ProcessorsChain#getProcessors <em>Processors</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getIntermediateResult <em>Intermediate Result</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getRunningProcessor <em>Running Processor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getProcessors <em>Processors</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain()
+ * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getProcessorsChain()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface ProcessorsChain<I, O> extends Processor<I, O> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Intermediate Result</em>' attribute.
 	 * @see #setIntermediateResult(Object)
-	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain_IntermediateResult()
+	 * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getProcessorsChain_IntermediateResult()
 	 * @model unique="false"
 	 * @generated
 	 */
 	Object getIntermediateResult();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.processors.ProcessorsChain#getIntermediateResult <em>Intermediate Result</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getIntermediateResult <em>Intermediate Result</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Intermediate Result</em>' attribute.
@@ -60,14 +60,14 @@ public interface ProcessorsChain<I, O> extends Processor<I, O> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Running Processor</em>' reference.
 	 * @see #setRunningProcessor(Processor)
-	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain_RunningProcessor()
+	 * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getProcessorsChain_RunningProcessor()
 	 * @model required="true"
 	 * @generated
 	 */
 	Processor<?, ?> getRunningProcessor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.processors.ProcessorsChain#getRunningProcessor <em>Running Processor</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getRunningProcessor <em>Running Processor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Running Processor</em>' reference.
@@ -78,7 +78,7 @@ public interface ProcessorsChain<I, O> extends Processor<I, O> {
 
 	/**
 	 * Returns the value of the '<em><b>Processors</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.processors.Processor}&lt;?, ?>.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.processors.Processor}&lt;?, ?>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Processors</em>' reference list isn't clear,
@@ -86,7 +86,7 @@ public interface ProcessorsChain<I, O> extends Processor<I, O> {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Processors</em>' reference list.
-	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain_Processors()
+	 * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getProcessorsChain_Processors()
 	 * @model
 	 * @generated
 	 */

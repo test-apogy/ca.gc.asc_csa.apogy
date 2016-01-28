@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import javax.vecmath.Color3f;
 import org.eclipse.emf.ecore.EClass;
@@ -10,19 +10,19 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
-import org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.IsotropicAntenna;
-import org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomNode;
-import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
-import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
+import ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna;
+import ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
+import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,24 +30,24 @@ import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsTelecomsFactoryImpl extends EFactoryImpl implements Symphony__AddonsTelecomsFactory {
+public class ApogyAddonsTelecomsFactoryImpl extends EFactoryImpl implements ApogyAddonsTelecomsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsTelecomsFactory init() {
+	public static ApogyAddonsTelecomsFactory init() {
 		try {
-			Symphony__AddonsTelecomsFactory theSymphony__AddonsTelecomsFactory = (Symphony__AddonsTelecomsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsTelecomsPackage.eNS_URI);
-			if (theSymphony__AddonsTelecomsFactory != null) {
-				return theSymphony__AddonsTelecomsFactory;
+			ApogyAddonsTelecomsFactory theApogyAddonsTelecomsFactory = (ApogyAddonsTelecomsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsTelecomsPackage.eNS_URI);
+			if (theApogyAddonsTelecomsFactory != null) {
+				return theApogyAddonsTelecomsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsTelecomsFactoryImpl();
+		return new ApogyAddonsTelecomsFactoryImpl();
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class Symphony__AddonsTelecomsFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsFactoryImpl() {
+	public ApogyAddonsTelecomsFactoryImpl() {
 		super();
 	}
 
@@ -68,16 +68,16 @@ public class Symphony__AddonsTelecomsFactoryImpl extends EFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE: return createTelecomNode();
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL: return createTelecomStatusMonitorTool();
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST: return createTelecomStatusMonitorToolList();
-			case Symphony__AddonsTelecomsPackage.ISOTROPIC_ANTENNA: return createIsotropicAntenna();
-			case Symphony__AddonsTelecomsPackage.DIPOLE_ANTENNA_RADIATION_PATTERN: return createDipoleAntennaRadiationPattern();
-			case Symphony__AddonsTelecomsPackage.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN: return createHalfWaveDipoleAntennaRadiationPattern();
-			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN: return createSimpleConicalRadiationPattern();
-			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN: return createSimpleRectangularFrustumRadiationPattern();
-			case Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN: return createURlBasedAntennaRadiationPattern();
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER: return createAntennaRadiationPatternImageMapLayer();
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE: return createTelecomNode();
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL: return createTelecomStatusMonitorTool();
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST: return createTelecomStatusMonitorToolList();
+			case ApogyAddonsTelecomsPackage.ISOTROPIC_ANTENNA: return createIsotropicAntenna();
+			case ApogyAddonsTelecomsPackage.DIPOLE_ANTENNA_RADIATION_PATTERN: return createDipoleAntennaRadiationPattern();
+			case ApogyAddonsTelecomsPackage.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN: return createHalfWaveDipoleAntennaRadiationPattern();
+			case ApogyAddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN: return createSimpleConicalRadiationPattern();
+			case ApogyAddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN: return createSimpleRectangularFrustumRadiationPattern();
+			case ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN: return createURlBasedAntennaRadiationPattern();
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER: return createAntennaRadiationPatternImageMapLayer();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -91,9 +91,9 @@ public class Symphony__AddonsTelecomsFactoryImpl extends EFactoryImpl implements
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE_STATUS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE_STATUS:
 				return createTelecomNodeStatusFromString(eDataType, initialValue);
-			case Symphony__AddonsTelecomsPackage.COLOR3F:
+			case ApogyAddonsTelecomsPackage.COLOR3F:
 				return createColor3fFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -108,9 +108,9 @@ public class Symphony__AddonsTelecomsFactoryImpl extends EFactoryImpl implements
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE_STATUS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE_STATUS:
 				return convertTelecomNodeStatusToString(eDataType, instanceValue);
-			case Symphony__AddonsTelecomsPackage.COLOR3F:
+			case ApogyAddonsTelecomsPackage.COLOR3F:
 				return convertColor3fToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -260,8 +260,8 @@ public class Symphony__AddonsTelecomsFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsPackage getSymphony__AddonsTelecomsPackage() {
-		return (Symphony__AddonsTelecomsPackage)getEPackage();
+	public ApogyAddonsTelecomsPackage getApogyAddonsTelecomsPackage() {
+		return (ApogyAddonsTelecomsPackage)getEPackage();
 	}
 
 	/**
@@ -271,8 +271,8 @@ public class Symphony__AddonsTelecomsFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsTelecomsPackage getPackage() {
-		return Symphony__AddonsTelecomsPackage.eINSTANCE;
+	public static ApogyAddonsTelecomsPackage getPackage() {
+		return ApogyAddonsTelecomsPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsTelecomsFactoryImpl
+} //ApogyAddonsTelecomsFactoryImpl

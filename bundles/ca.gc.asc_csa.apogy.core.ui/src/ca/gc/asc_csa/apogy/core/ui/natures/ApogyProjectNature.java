@@ -1,12 +1,12 @@
-package org.eclipse.symphony.core.ui.natures;
+package ca.gc.asc_csa.apogy.core.ui.natures;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectNature;
 import org.eclipse.core.runtime.CoreException;
 
-public class SymphonyProjectNature implements IProjectNature {
+public class ApogyProjectNature implements IProjectNature {
 
-	public static final String NATURE_ID = "org.eclipse.symphony.core.ui.natures.SymphonyNature";
+	public static final String NATURE_ID = "ca.gc.asc_csa.apogy.core.ui.natures.ApogyNature";
 	
 	@Override
 	public void configure() throws CoreException {

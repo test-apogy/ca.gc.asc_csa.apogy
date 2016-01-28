@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -15,14 +15,14 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
 
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,8 +65,8 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__ELEVATION_MASK);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__ELEVATION_MASK);
 		}
 		return childrenFeatures;
 	}
@@ -122,8 +122,8 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GroundStation.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -143,13 +143,13 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__ELEVATION_MASK,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__ELEVATION_MASK,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask()));
 	}
 
 }

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.provider;
+package ca.gc.asc_csa.apogy.common.processors.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.processors.Processor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.processors.Processor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class ProcessorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Processor_input_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Processor_input_feature", "_UI_Processor_type"),
-				 Symphony__CommonProcessorsPackage.Literals.PROCESSOR__INPUT,
+				 ApogyCommonProcessorsPackage.Literals.PROCESSOR__INPUT,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class ProcessorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Processor_output_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Processor_output_feature", "_UI_Processor_type"),
-				 Symphony__CommonProcessorsPackage.Literals.PROCESSOR__OUTPUT,
+				 ApogyCommonProcessorsPackage.Literals.PROCESSOR__OUTPUT,
 				 true,
 				 false,
 				 false,
@@ -138,9 +138,9 @@ public class ProcessorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Processor.class)) {
-			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
-			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
-			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case ApogyCommonProcessorsPackage.PROCESSOR__INPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

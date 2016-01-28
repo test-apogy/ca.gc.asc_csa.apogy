@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import javax.vecmath.Matrix4d;
 
@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getMeshLocalizer()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getMeshLocalizer()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface MeshLocalizer extends EObject {
 	 * @param floatingMesh The mesh that is considered floating relative to the fixed one.
 	 * @param floatingMeshTransformEstimate An starting estimate of the pose of the floating mesh relative to the common reference frame.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.Exception" fixedMeshUnique="false" fixedMeshTransformDataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" fixedMeshTransformUnique="false" floatingMeshUnique="false" floatingMeshTransformEstimateDataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" floatingMeshTransformEstimateUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Matrix4d" unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.Exception" fixedMeshUnique="false" fixedMeshTransformDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Matrix4d" fixedMeshTransformUnique="false" floatingMeshUnique="false" floatingMeshTransformEstimateDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Matrix4d" floatingMeshTransformEstimateUnique="false"
 	 * @generated
 	 */
 	Matrix4d localize(CartesianTriangularMesh fixedMesh, Matrix4d fixedMeshTransform, CartesianTriangularMesh floatingMesh, Matrix4d floatingMeshTransformEstimate) throws Exception;

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.provider;
+package ca.gc.asc_csa.apogy.addons.provider;
 
 
 import java.text.DecimalFormat;
@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.SunVector3DTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.SunVector3DTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -77,7 +77,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_vectorColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_vectorColor_feature", "_UI_SunVector3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_COLOR,
+				 ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_COLOR,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_vectorLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_vectorLength_feature", "_UI_SunVector3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_LENGTH,
+				 ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_endPointRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_endPointRadius_feature", "_UI_SunVector3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__END_POINT_RADIUS,
+				 ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__END_POINT_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_sunIntensity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_sunIntensity_feature", "_UI_SunVector3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_INTENSITY,
+				 ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_INTENSITY,
 				 false,
 				 false,
 				 false,
@@ -165,7 +165,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentDayMaximumSunIntensity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_currentDayMaximumSunIntensity_feature", "_UI_SunVector3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY,
+				 ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY,
 				 false,
 				 false,
 				 false,
@@ -187,7 +187,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentSunIntensityPercentage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_currentSunIntensityPercentage_feature", "_UI_SunVector3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE,
+				 ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE,
 				 false,
 				 false,
 				 false,
@@ -209,7 +209,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_sunVector3DToolNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_sunVector3DToolNode_feature", "_UI_SunVector3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE,
+				 ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE,
 				 false,
 				 false,
 				 true,
@@ -230,7 +230,7 @@ public class SunVector3DToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE);
+			childrenFeatures.add(ApogyAddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -321,15 +321,15 @@ public class SunVector3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SunVector3DTool.class)) {
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

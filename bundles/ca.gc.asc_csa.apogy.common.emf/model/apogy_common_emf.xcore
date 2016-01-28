@@ -1,11 +1,11 @@
-@GenModel(prefix="Symphony__CommonEMF",
+@GenModel(prefix="ApogyCommonEMF",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
-		  modelName="Symphony__CommonEMF")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.emf/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.emf.edit/src-generated")
+		  modelName="ApogyCommonEMF")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.emf/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.emf.edit/src-generated")
 
-package org.eclipse.symphony.common.emf
+package ca.gc.asc_csa.apogy.common.emf
 
 import org.eclipse.emf.ecore.EOperation
 import org.eclipse.emf.ecore.EClass
@@ -42,7 +42,7 @@ type Job wraps org.eclipse.core.runtime.jobs.Job
  * 
  * ------------------------------------------------------------------------------------------ */ 
 
-class Symphony__CommonEMFFacade
+class ApogyCommonEMFFacade
 {	
 	op List<EClass> getAllAvailableEClasses()
 	
@@ -172,7 +172,7 @@ class Symphony__CommonEMFFacade
  	 * Returns the time span of a collection
  	 * of Timed elements.
  	 */
- 	@GenModel(symphony_units="s")
+ 	@GenModel(apogy_units="s")
  	op double getTimeSpan(Collection<Timed> timedCollection) 	 
  	 
  	/*
@@ -244,7 +244,7 @@ abstract class TimeSource extends Named, Described, Timed, Disposable
 	/**
 	 * Offset in milliseconds 
 	 */
-	@GenModel(symphony_units="ms", notify="true", property="Editable")
+	@GenModel(apogy_units="ms", notify="true", property="Editable")
 	int offset = "0"
 }
 
@@ -263,7 +263,7 @@ class CurrentTimeSource extends TimeSource
 	/*
 	 * The update period of the time, in milliseconds
 	 */
-	@GenModel(symphony_units="ms", notify="true", property="Editable")
+	@GenModel(apogy_units="ms", notify="true", property="Editable")
 	int updatePeriod = "1000"
 	
 	
@@ -299,7 +299,7 @@ class BrowseableTimeSource extends TimeSource
 	/*
 	 * The update period of the time.
 	 */
-	@GenModel(symphony_units="ms", notify="true", property="Editable")
+	@GenModel(apogy_units="ms", notify="true", property="Editable")
 	int updatePeriod = "1000"	
 	
 	/*

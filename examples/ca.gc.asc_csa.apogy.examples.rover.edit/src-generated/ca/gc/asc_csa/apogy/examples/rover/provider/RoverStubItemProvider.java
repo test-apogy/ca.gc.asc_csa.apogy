@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.provider;
+package ca.gc.asc_csa.apogy.examples.rover.provider;
 
 
 
@@ -11,10 +11,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.examples.rover.RoverStub;
+import ca.gc.asc_csa.apogy.examples.rover.RoverStub;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.rover.RoverStub} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.RoverStub} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

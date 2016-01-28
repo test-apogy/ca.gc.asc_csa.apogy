@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.processors.Processor;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getUniquePointsFilter()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getUniquePointsFilter()
  * @model
  * @generated
  */

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.provider;
+package ca.gc.asc_csa.apogy.addons.provider;
 
 
 import java.text.DecimalFormat;
@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.Ruler3DTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.Ruler3DTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -76,7 +76,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_ruler3dToolNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_ruler3dToolNode_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE,
 				 false,
 				 false,
 				 true,
@@ -97,7 +97,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsPackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE);
+			childrenFeatures.add(ApogyAddonsPackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -128,7 +128,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_rulerColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_rulerColor_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__RULER_COLOR,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__RULER_COLOR,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_extremitiesRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_extremitiesRadius_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__EXTREMITIES_RADIUS,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__EXTREMITIES_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickColor_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_COLOR,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_COLOR,
 				 true,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickSpacing_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickSpacing_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_SPACING,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_SPACING,
 				 true,
 				 false,
 				 false,
@@ -216,7 +216,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickLength_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_LENGTH,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickColor_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_COLOR,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_COLOR,
 				 true,
 				 false,
 				 false,
@@ -260,7 +260,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickSpacing_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickSpacing_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_SPACING,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_SPACING,
 				 true,
 				 false,
 				 false,
@@ -282,7 +282,7 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickLength_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_LENGTH,
+				 ApogyAddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -357,17 +357,17 @@ public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Ruler3DTool.class)) {
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
-			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

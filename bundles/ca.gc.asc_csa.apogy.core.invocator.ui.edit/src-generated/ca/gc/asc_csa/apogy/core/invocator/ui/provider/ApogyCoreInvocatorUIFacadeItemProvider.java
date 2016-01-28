@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui.provider;
+package ca.gc.asc_csa.apogy.core.invocator.ui.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorUIFacadeItemProvider 
+public class ApogyCoreInvocatorUIFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -39,7 +39,7 @@ public class Symphony__CoreInvocatorUIFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUIFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCoreInvocatorUIFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,14 +59,14 @@ public class Symphony__CoreInvocatorUIFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CoreInvocatorUIFacade.gif.
+	 * This returns ApogyCoreInvocatorUIFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreInvocatorUIFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreInvocatorUIFacade"));
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class Symphony__CoreInvocatorUIFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CoreInvocatorUIFacade_type");
+		return getString("_UI_ApogyCoreInvocatorUIFacade_type");
 	}
 	
 
@@ -114,7 +114,7 @@ public class Symphony__CoreInvocatorUIFacadeItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__CoreInvocatorUIEditPlugin.INSTANCE;
+		return ApogyCoreInvocatorUIEditPlugin.INSTANCE;
 	}
 
 }

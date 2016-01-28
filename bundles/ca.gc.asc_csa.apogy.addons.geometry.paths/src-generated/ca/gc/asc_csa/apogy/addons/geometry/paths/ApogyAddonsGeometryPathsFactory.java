@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage
  * @generated
  */
-public interface Symphony__AddonsGeometryPathsFactory extends EFactory {
+public interface ApogyAddonsGeometryPathsFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsGeometryPathsFactory eINSTANCE = org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsFactoryImpl.init();
+	ApogyAddonsGeometryPathsFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.geometry.paths.impl.ApogyAddonsGeometryPathsFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Way Point</em>'.
@@ -92,7 +92,7 @@ public interface Symphony__AddonsGeometryPathsFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__AddonsGeometryPathsFacade createSymphony__AddonsGeometryPathsFacade();
+	ApogyAddonsGeometryPathsFacade createApogyAddonsGeometryPathsFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -101,6 +101,6 @@ public interface Symphony__AddonsGeometryPathsFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsGeometryPathsPackage getSymphony__AddonsGeometryPathsPackage();
+	ApogyAddonsGeometryPathsPackage getApogyAddonsGeometryPathsPackage();
 
-} //Symphony__AddonsGeometryPathsFactory
+} //ApogyAddonsGeometryPathsFactory

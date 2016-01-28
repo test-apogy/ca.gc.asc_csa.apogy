@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,12 +14,12 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getVerticalResolution <em>Vertical Resolution</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getHorizontalResolution <em>Horizontal Resolution</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getNumberOfPoints <em>Number Of Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings#getVerticalResolution <em>Vertical Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings#getHorizontalResolution <em>Horizontal Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRasterScanSettings()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface RasterScanSettings extends RectangularFrustrumFieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vertical Resolution</em>' attribute.
 	 * @see #setVerticalResolution(int)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings_VerticalResolution()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRasterScanSettings_VerticalResolution()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getVerticalResolution();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getVerticalResolution <em>Vertical Resolution</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings#getVerticalResolution <em>Vertical Resolution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vertical Resolution</em>' attribute.
@@ -60,14 +60,14 @@ public interface RasterScanSettings extends RectangularFrustrumFieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Horizontal Resolution</em>' attribute.
 	 * @see #setHorizontalResolution(int)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings_HorizontalResolution()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRasterScanSettings_HorizontalResolution()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getHorizontalResolution();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getHorizontalResolution <em>Horizontal Resolution</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings#getHorizontalResolution <em>Horizontal Resolution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Horizontal Resolution</em>' attribute.
@@ -85,7 +85,7 @@ public interface RasterScanSettings extends RectangularFrustrumFieldOfView {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Points</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings_NumberOfPoints()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRasterScanSettings_NumberOfPoints()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

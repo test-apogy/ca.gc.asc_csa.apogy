@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -11,8 +11,8 @@ import java.awt.geom.Rectangle2D;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotRenderingInfo;

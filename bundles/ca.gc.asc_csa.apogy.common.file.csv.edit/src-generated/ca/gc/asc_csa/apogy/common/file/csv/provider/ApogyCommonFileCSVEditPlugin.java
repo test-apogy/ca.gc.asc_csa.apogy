@@ -1,26 +1,26 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.provider;
+package ca.gc.asc_csa.apogy.common.file.csv.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonFileCSV edit plugin.
+ * This is the central singleton for the ApogyCommonFileCSV edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonFileCSVEditPlugin extends EMFPlugin {
+public final class ApogyCommonFileCSVEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonFileCSVEditPlugin INSTANCE = new Symphony__CommonFileCSVEditPlugin();
+	public static final ApogyCommonFileCSVEditPlugin INSTANCE = new ApogyCommonFileCSVEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -36,7 +36,7 @@ public final class Symphony__CommonFileCSVEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonFileCSVEditPlugin() {
+	public ApogyCommonFileCSVEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

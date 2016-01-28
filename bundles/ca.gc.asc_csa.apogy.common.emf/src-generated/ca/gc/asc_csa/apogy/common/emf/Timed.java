@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.Date;
 
@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.Timed#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.Timed#getTime <em>Time</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimed()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getTimed()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -40,14 +40,14 @@ public interface Timed extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time</em>' attribute.
 	 * @see #setTime(Date)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimed_Time()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getTimed_Time()
 	 * @model unique="false"
 	 * @generated
 	 */
   Date getTime();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.Timed#getTime <em>Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.Timed#getTime <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time</em>' attribute.

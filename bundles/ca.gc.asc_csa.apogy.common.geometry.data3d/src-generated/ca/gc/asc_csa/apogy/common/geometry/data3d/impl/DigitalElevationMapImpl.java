@@ -3,13 +3,13 @@
  *
  * $Id: DigitalElevationMapImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,8 +19,8 @@ import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapImpl#getXDimension <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapImpl#getYDimension <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl#getXDimension <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl#getYDimension <em>YDimension</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,7 +82,7 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP;
+		return ApogyCommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 		int oldXDimension = xDimension;
 		xDimension = newXDimension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION, oldXDimension, xDimension));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION, oldXDimension, xDimension));
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 		int oldYDimension = yDimension;
 		yDimension = newYDimension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION, oldYDimension, yDimension));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION, oldYDimension, yDimension));
 	}
 
 	/**
@@ -135,9 +135,9 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				return getXDimension();
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				return getYDimension();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -151,10 +151,10 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				setXDimension((Integer)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				setYDimension((Integer)newValue);
 				return;
 		}
@@ -169,10 +169,10 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				setXDimension(XDIMENSION_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				setYDimension(YDIMENSION_EDEFAULT);
 				return;
 		}
@@ -187,9 +187,9 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				return xDimension != XDIMENSION_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				return yDimension != YDIMENSION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv;
+package ca.gc.asc_csa.apogy.common.file.csv;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVFactory
+ * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonFileCSV' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonFileCSV' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.file.csv/src-generated' editDirectory='/org.eclipse.symphony.common.file.csv.edit/src-generated' basePackage='org.eclipse.symphony.common.file'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonFileCSV' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonFileCSV' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.file.csv/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.file.csv.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.file'"
  * @generated
  */
-public interface Symphony__CommonFileCSVPackage extends EPackage {
+public interface ApogyCommonFileCSVPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.file.csv";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.file.csv";
 
 	/**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonFileCSVPackage eINSTANCE = org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl.init();
+	ApogyCommonFileCSVPackage eINSTANCE = ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnValuesMapImpl <em>Csv Column Values Map</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnValuesMapImpl <em>Csv Column Values Map</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.file.csv.impl.CsvColumnValuesMapImpl
-	 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumnValuesMap()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnValuesMapImpl
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumnValuesMap()
 	 * @generated
 	 */
 	int CSV_COLUMN_VALUES_MAP = 0;
@@ -107,11 +107,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	int CSV_COLUMN_VALUES_MAP_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl <em>Csv Column</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnImpl <em>Csv Column</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl
-	 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumn()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnImpl
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumn()
 	 * @generated
 	 */
 	int CSV_COLUMN = 1;
@@ -162,11 +162,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	int CSV_COLUMN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnsSetImpl <em>Csv Columns Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnsSetImpl <em>Csv Columns Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.file.csv.impl.CsvColumnsSetImpl
-	 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumnsSet()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnsSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumnsSet()
 	 * @generated
 	 */
 	int CSV_COLUMNS_SET = 2;
@@ -208,11 +208,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	int CSV_COLUMNS_SET_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvValueProviderImpl <em>Csv Value Provider</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvValueProviderImpl <em>Csv Value Provider</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.file.csv.impl.CsvValueProviderImpl
-	 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvValueProvider()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvValueProviderImpl
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvValueProvider()
 	 * @generated
 	 */
 	int CSV_VALUE_PROVIDER = 3;
@@ -249,7 +249,7 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.Map
-	 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumnMap()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumnMap()
 	 * @generated
 	 */
 	int CSV_COLUMN_MAP = 4;
@@ -290,96 +290,96 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	EAttribute getCsvColumnValuesMap_Key();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.file.csv.CsvColumn <em>Csv Column</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn <em>Csv Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Csv Column</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumn
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumn
 	 * @generated
 	 */
 	EClass getCsvColumn();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.file.csv.CsvColumn#getValues <em>Values</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getValues <em>Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Values</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumn#getValues()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getValues()
 	 * @see #getCsvColumn()
 	 * @generated
 	 */
 	EReference getCsvColumn_Values();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.file.csv.CsvColumn#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumn#getName()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getName()
 	 * @see #getCsvColumn()
 	 * @generated
 	 */
 	EAttribute getCsvColumn_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.file.csv.CsvColumn#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumn#getDescription()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getDescription()
 	 * @see #getCsvColumn()
 	 * @generated
 	 */
 	EAttribute getCsvColumn_Description();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet <em>Csv Columns Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet <em>Csv Columns Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Csv Columns Set</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumnsSet
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet
 	 * @generated
 	 */
 	EClass getCsvColumnsSet();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet#getColumns <em>Columns</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getColumns <em>Columns</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Columns</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumnsSet#getColumns()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getColumns()
 	 * @see #getCsvColumnsSet()
 	 * @generated
 	 */
 	EAttribute getCsvColumnsSet_Columns();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumnsSet#getName()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getName()
 	 * @see #getCsvColumnsSet()
 	 * @generated
 	 */
 	EAttribute getCsvColumnsSet_Name();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.file.csv.CsvValueProvider <em>Csv Value Provider</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider <em>Csv Value Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Csv Value Provider</em>'.
-	 * @see org.eclipse.symphony.common.file.csv.CsvValueProvider
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider
 	 * @generated
 	 */
 	EClass getCsvValueProvider();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.file.csv.CsvValueProvider#getStringValue(java.lang.Object) <em>Get String Value</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider#getStringValue(java.lang.Object) <em>Get String Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get String Value</em>' operation.
-	 * @see org.eclipse.symphony.common.file.csv.CsvValueProvider#getStringValue(java.lang.Object)
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider#getStringValue(java.lang.Object)
 	 * @generated
 	 */
 	EOperation getCsvValueProvider__GetStringValue__Object();
@@ -390,7 +390,7 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Csv Column Map</em>'.
 	 * @see java.util.Map
-	 * @model instanceClass="java.util.Map<java.lang.String, org.eclipse.symphony.common.file.csv.CsvColumn>"
+	 * @model instanceClass="java.util.Map<java.lang.String, ca.gc.asc_csa.apogy.common.file.csv.CsvColumn>"
 	 * @generated
 	 */
 	EDataType getCsvColumnMap();
@@ -402,7 +402,7 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonFileCSVFactory getSymphony__CommonFileCSVFactory();
+	ApogyCommonFileCSVFactory getApogyCommonFileCSVFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -419,11 +419,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnValuesMapImpl <em>Csv Column Values Map</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnValuesMapImpl <em>Csv Column Values Map</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.file.csv.impl.CsvColumnValuesMapImpl
-		 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumnValuesMap()
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnValuesMapImpl
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumnValuesMap()
 		 * @generated
 		 */
 		EClass CSV_COLUMN_VALUES_MAP = eINSTANCE.getCsvColumnValuesMap();
@@ -445,11 +445,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 		EAttribute CSV_COLUMN_VALUES_MAP__KEY = eINSTANCE.getCsvColumnValuesMap_Key();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl <em>Csv Column</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnImpl <em>Csv Column</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl
-		 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumn()
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnImpl
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumn()
 		 * @generated
 		 */
 		EClass CSV_COLUMN = eINSTANCE.getCsvColumn();
@@ -479,11 +479,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 		EAttribute CSV_COLUMN__DESCRIPTION = eINSTANCE.getCsvColumn_Description();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnsSetImpl <em>Csv Columns Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnsSetImpl <em>Csv Columns Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.file.csv.impl.CsvColumnsSetImpl
-		 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumnsSet()
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnsSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumnsSet()
 		 * @generated
 		 */
 		EClass CSV_COLUMNS_SET = eINSTANCE.getCsvColumnsSet();
@@ -505,11 +505,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 		EAttribute CSV_COLUMNS_SET__NAME = eINSTANCE.getCsvColumnsSet_Name();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.file.csv.impl.CsvValueProviderImpl <em>Csv Value Provider</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvValueProviderImpl <em>Csv Value Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.file.csv.impl.CsvValueProviderImpl
-		 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvValueProvider()
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.CsvValueProviderImpl
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvValueProvider()
 		 * @generated
 		 */
 		EClass CSV_VALUE_PROVIDER = eINSTANCE.getCsvValueProvider();
@@ -527,11 +527,11 @@ public interface Symphony__CommonFileCSVPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.Map
-		 * @see org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVPackageImpl#getCsvColumnMap()
+		 * @see ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVPackageImpl#getCsvColumnMap()
 		 * @generated
 		 */
 		EDataType CSV_COLUMN_MAP = eINSTANCE.getCsvColumnMap();
 
 	}
 
-} //Symphony__CommonFileCSVPackage
+} //ApogyCommonFileCSVPackage

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -63,7 +63,7 @@ public class OrbitalImageConstellationDownlinkItemItemProvider extends AbstractC
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE);
 		}
 		return childrenFeatures;
 	}
@@ -117,7 +117,7 @@ public class OrbitalImageConstellationDownlinkItemItemProvider extends AbstractC
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitalImageConstellationDownlinkItem.class)) {
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,8 +137,8 @@ public class OrbitalImageConstellationDownlinkItemItemProvider extends AbstractC
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 	}
 
 }

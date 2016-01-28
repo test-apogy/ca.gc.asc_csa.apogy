@@ -1,24 +1,24 @@
-@GenModel(prefix="Symphony__CommonGeometryData25D",
+@GenModel(prefix="ApogyCommonGeometryData25D",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__CommonGeometryData25D",
+	      modelName="ApogyCommonGeometryData25D",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data25d/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data25d.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data25d/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data25d.edit/src-generated")
 
-package org.eclipse.symphony.common.geometry.data25d
+package ca.gc.asc_csa.apogy.common.geometry.data25d
 
-import org.eclipse.symphony.common.processors.Processor
+import ca.gc.asc_csa.apogy.common.processors.Processor
 
-import org.eclipse.symphony.common.geometry.data.Coordinates
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet
-import org.eclipse.symphony.common.geometry.data.Polygon
-import org.eclipse.symphony.common.geometry.data.Mesh
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
 
 type IOException wraps java.io.IOException
 
@@ -72,7 +72,7 @@ abstract class CoordinatesSet25DFilter <T extends CoordinatesSet25D> extends Pro
 	op T createCoordinatesSet25D()
 }
 
-class Symphony__CommonGeometryData25DFacade
+class ApogyCommonGeometryData25DFacade
 {
 	op Coordinates25D createCoordinates25D(Coordinates25D coordinates25D)
 	

@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.util;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersUISwitch<T> extends Switch<T> {
+public class ApogyAddonsMobilityPathplannersUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPathplannersUIPackage modelPackage;
+	protected static ApogyAddonsMobilityPathplannersUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__AddonsMobilityPathplannersUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersUISwitch() {
+	public ApogyAddonsMobilityPathplannersUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPathplannersUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPathplannersUIPackage.eINSTANCE;
 		}
 	}
 
@@ -67,7 +67,7 @@ public class Symphony__AddonsMobilityPathplannersUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION: {
+			case ApogyAddonsMobilityPathplannersUIPackage.CIRCULAR_EXCLUSION_ZONE_PRESENTATION: {
 				CircularExclusionZonePresentation circularExclusionZonePresentation = (CircularExclusionZonePresentation)theEObject;
 				T result = caseCircularExclusionZonePresentation(circularExclusionZonePresentation);
 				if (result == null) result = caseNodePresentation(circularExclusionZonePresentation);
@@ -124,4 +124,4 @@ public class Symphony__AddonsMobilityPathplannersUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsMobilityPathplannersUISwitch
+} //ApogyAddonsMobilityPathplannersUISwitch

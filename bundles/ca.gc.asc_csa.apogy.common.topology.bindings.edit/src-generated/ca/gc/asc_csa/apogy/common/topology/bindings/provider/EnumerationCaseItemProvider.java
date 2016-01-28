@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -23,12 +23,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationCase} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class EnumerationCaseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EnumerationCase_enumerationLiterals_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EnumerationCase_enumerationLiterals_feature", "_UI_EnumerationCase_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__ENUMERATION_LITERALS,
+				 ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__ENUMERATION_LITERALS,
 				 true,
 				 false,
 				 true,
@@ -106,7 +106,7 @@ public class EnumerationCaseItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT);
+			childrenFeatures.add(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT);
 		}
 		return childrenFeatures;
 	}
@@ -179,7 +179,7 @@ public class EnumerationCaseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EnumerationCase.class)) {
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -200,73 +200,73 @@ public class EnumerationCaseItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
   /**

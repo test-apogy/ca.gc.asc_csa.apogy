@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui.util;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,24 +10,24 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.examples.satellite.ui.*;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiPackage
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage
  * @generated
  */
-public class Symphony__ExamplesSatelliteUiAdapterFactory extends AdapterFactoryImpl {
+public class ApogyExamplesSatelliteUiAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__ExamplesSatelliteUiPackage modelPackage;
+	protected static ApogyExamplesSatelliteUiPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__ExamplesSatelliteUiAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiAdapterFactory() {
+	public ApogyExamplesSatelliteUiAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesSatelliteUiPackage.eINSTANCE;
+			modelPackage = ApogyExamplesSatelliteUiPackage.eINSTANCE;
 		}
 	}
 
@@ -66,11 +66,11 @@ public class Symphony__ExamplesSatelliteUiAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__ExamplesSatelliteUiSwitch<Adapter> modelSwitch =
-		new Symphony__ExamplesSatelliteUiSwitch<Adapter>() {
+	protected ApogyExamplesSatelliteUiSwitch<Adapter> modelSwitch =
+		new ApogyExamplesSatelliteUiSwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__ExamplesSatelliteUiFacade(Symphony__ExamplesSatelliteUiFacade object) {
-				return createSymphony__ExamplesSatelliteUiFacadeAdapter();
+			public Adapter caseApogyExamplesSatelliteUiFacade(ApogyExamplesSatelliteUiFacade object) {
+				return createApogyExamplesSatelliteUiFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -93,16 +93,16 @@ public class Symphony__ExamplesSatelliteUiAdapterFactory extends AdapterFactoryI
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__ExamplesSatelliteUiFacadeAdapter() {
+	public Adapter createApogyExamplesSatelliteUiFacadeAdapter() {
 		return null;
 	}
 
@@ -118,4 +118,4 @@ public class Symphony__ExamplesSatelliteUiAdapterFactory extends AdapterFactoryI
 		return null;
 	}
 
-} //Symphony__ExamplesSatelliteUiAdapterFactory
+} //ApogyExamplesSatelliteUiAdapterFactory

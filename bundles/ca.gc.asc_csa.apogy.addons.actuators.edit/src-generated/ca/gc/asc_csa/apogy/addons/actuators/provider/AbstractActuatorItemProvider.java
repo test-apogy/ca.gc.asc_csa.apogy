@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.provider;
+package ca.gc.asc_csa.apogy.addons.actuators.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.actuators.AbstractActuator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class AbstractActuatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_moving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_moving_feature", "_UI_AbstractActuator_type"),
-				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
+				 ApogyAddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
 				 false,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class AbstractActuatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_actuatorStatus_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_actuatorStatus_feature", "_UI_AbstractActuator_type"),
-				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
+				 ApogyAddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
 				 false,
 				 false,
 				 false,
@@ -129,8 +129,8 @@ public class AbstractActuatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractActuator.class)) {
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
-			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

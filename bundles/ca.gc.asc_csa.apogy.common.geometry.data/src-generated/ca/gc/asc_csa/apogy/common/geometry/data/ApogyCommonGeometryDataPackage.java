@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data;
+package ca.gc.asc_csa.apogy.common.geometry.data;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataFactory
+ * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonGeometryData' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry'"
  * @generated
  */
-public interface Symphony__CommonGeometryDataPackage extends EPackage {
+public interface ApogyCommonGeometryDataPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.geometry.data";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.geometry.data";
 
 	/**
 	 * The package namespace name.
@@ -60,14 +60,14 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryDataPackage eINSTANCE = org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl.init();
+	ApogyCommonGeometryDataPackage eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl <em>Coordinates</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesImpl <em>Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinates()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinates()
 	 * @generated
 	 */
 	int COORDINATES = 0;
@@ -91,11 +91,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	int COORDINATES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl <em>Coordinates Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetImpl <em>Coordinates Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinatesSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinatesSet()
 	 * @generated
 	 */
 	int COORDINATES_SET = 1;
@@ -137,11 +137,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	int COORDINATES_SET_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.impl.PolygonImpl <em>Polygon</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.PolygonImpl <em>Polygon</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.impl.PolygonImpl
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getPolygon()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.PolygonImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getPolygon()
 	 * @generated
 	 */
 	int POLYGON = 2;
@@ -174,11 +174,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	int POLYGON_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.impl.MeshImpl <em>Mesh</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl <em>Mesh</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.impl.MeshImpl
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getMesh()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getMesh()
 	 * @generated
 	 */
 	int MESH = 3;
@@ -256,11 +256,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	int MESH_OPERATION_COUNT = COORDINATES_SET_OPERATION_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape <em>Sampling Shape</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getSamplingShape()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getSamplingShape()
 	 * @generated
 	 */
 	int SAMPLING_SHAPE = 4;
@@ -284,11 +284,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	int SAMPLING_SHAPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinatesSamplingShape()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinatesSamplingShape()
 	 * @generated
 	 */
 	int COORDINATES_SAMPLING_SHAPE = 5;
@@ -321,11 +321,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	int COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT = SAMPLING_SHAPE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getPolygonSamplingShape()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getPolygonSamplingShape()
 	 * @generated
 	 */
 	int POLYGON_SAMPLING_SHAPE = 6;
@@ -358,11 +358,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	int POLYGON_SAMPLING_SHAPE_OPERATION_COUNT = SAMPLING_SHAPE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl <em>Coordinates Set Shapes Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl <em>Coordinates Set Shapes Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinatesSetShapesSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinatesSetShapesSampler()
 	 * @generated
 	 */
 	int COORDINATES_SET_SHAPES_SAMPLER = 7;
@@ -374,7 +374,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int COORDINATES_SET_SHAPES_SAMPLER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -383,7 +383,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int COORDINATES_SET_SHAPES_SAMPLER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -392,7 +392,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int COORDINATES_SET_SHAPES_SAMPLER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates Sampling Shapes</b></em>' reference list.
@@ -401,7 +401,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -410,7 +410,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Coordinates Set Shapes Sampler</em>' class.
@@ -419,7 +419,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
+	int COORDINATES_SET_SHAPES_SAMPLER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -428,7 +428,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int COORDINATES_SET_SHAPES_SAMPLER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Coordinates Set Shapes Sampler</em>' class.
@@ -437,14 +437,14 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET_SHAPES_SAMPLER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int COORDINATES_SET_SHAPES_SAMPLER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl <em>Mesh Coordinates Shapes Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl <em>Mesh Coordinates Shapes Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getMeshCoordinatesShapesSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getMeshCoordinatesShapesSampler()
 	 * @generated
 	 */
 	int MESH_COORDINATES_SHAPES_SAMPLER = 8;
@@ -456,7 +456,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int MESH_COORDINATES_SHAPES_SAMPLER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -465,7 +465,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int MESH_COORDINATES_SHAPES_SAMPLER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -474,7 +474,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int MESH_COORDINATES_SHAPES_SAMPLER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates Sampling Shapes</b></em>' reference list.
@@ -483,7 +483,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -492,7 +492,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Polygon Sampling Mode</b></em>' attribute.
@@ -501,7 +501,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
+	int MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Mesh Coordinates Shapes Sampler</em>' class.
@@ -510,7 +510,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 3;
+	int MESH_COORDINATES_SHAPES_SAMPLER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -519,7 +519,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int MESH_COORDINATES_SHAPES_SAMPLER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Mesh Coordinates Shapes Sampler</em>' class.
@@ -528,14 +528,14 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_COORDINATES_SHAPES_SAMPLER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int MESH_COORDINATES_SHAPES_SAMPLER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerImpl <em>Mesh Polygon Shapes Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshPolygonShapesSamplerImpl <em>Mesh Polygon Shapes Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getMeshPolygonShapesSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshPolygonShapesSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getMeshPolygonShapesSampler()
 	 * @generated
 	 */
 	int MESH_POLYGON_SHAPES_SAMPLER = 9;
@@ -547,7 +547,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int MESH_POLYGON_SHAPES_SAMPLER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -556,7 +556,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int MESH_POLYGON_SHAPES_SAMPLER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -565,7 +565,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int MESH_POLYGON_SHAPES_SAMPLER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Polygon Sampling Shapes</b></em>' reference list.
@@ -574,7 +574,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -583,7 +583,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Mesh Polygon Shapes Sampler</em>' class.
@@ -592,7 +592,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
+	int MESH_POLYGON_SHAPES_SAMPLER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -601,7 +601,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int MESH_POLYGON_SHAPES_SAMPLER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Mesh Polygon Shapes Sampler</em>' class.
@@ -610,24 +610,24 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_POLYGON_SHAPES_SAMPLER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int MESH_POLYGON_SHAPES_SAMPLER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.ShapeSamplingMode <em>Shape Sampling Mode</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode <em>Shape Sampling Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.ShapeSamplingMode
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getShapeSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getShapeSamplingMode()
 	 * @generated
 	 */
 	int SHAPE_SAMPLING_MODE = 10;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingMode <em>Polygon Sampling Mode</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode <em>Polygon Sampling Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingMode
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getPolygonSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getPolygonSamplingMode()
 	 * @generated
 	 */
 	int POLYGON_SAMPLING_MODE = 11;
@@ -637,7 +637,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getList()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getList()
 	 * @generated
 	 */
 	int LIST = 12;
@@ -647,299 +647,299 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Vector3d
-	 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getVector3d()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getVector3d()
 	 * @generated
 	 */
 	int VECTOR3D = 13;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.Coordinates <em>Coordinates</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Coordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.Coordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Coordinates
 	 * @generated
 	 */
 	EClass getCoordinates();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates Set</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet
 	 * @generated
 	 */
 	EClass getCoordinatesSet();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getPoints <em>Points</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet#getPoints <em>Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Points</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet#getPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet#getPoints()
 	 * @see #getCoordinatesSet()
 	 * @generated
 	 */
 	EReference getCoordinatesSet_Points();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Normals</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet#getNormals()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet#getNormals()
 	 * @see #getCoordinatesSet()
 	 * @generated
 	 */
 	EAttribute getCoordinatesSet_Normals();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.Polygon <em>Polygon</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon <em>Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Polygon</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.Polygon
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Polygon
 	 * @generated
 	 */
 	EClass getPolygon();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data.Polygon#getVertices <em>Vertices</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon#getVertices <em>Vertices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Vertices</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.Polygon#getVertices()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Polygon#getVertices()
 	 * @see #getPolygon()
 	 * @generated
 	 */
 	EReference getPolygon_Vertices();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.Mesh <em>Mesh</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh <em>Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mesh</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.Mesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Mesh
 	 * @generated
 	 */
 	EClass getMesh();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.geometry.data.Mesh#getPolygons <em>Polygons</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPolygons <em>Polygons</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Polygons</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.Mesh#getPolygons()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPolygons()
 	 * @see #getMesh()
 	 * @generated
 	 */
 	EReference getMesh_Polygons();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data.Mesh#getPolygonNeighbours(org.eclipse.symphony.common.geometry.data.Polygon) <em>Get Polygon Neighbours</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPolygonNeighbours(ca.gc.asc_csa.apogy.common.geometry.data.Polygon) <em>Get Polygon Neighbours</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Polygon Neighbours</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data.Mesh#getPolygonNeighbours(org.eclipse.symphony.common.geometry.data.Polygon)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPolygonNeighbours(ca.gc.asc_csa.apogy.common.geometry.data.Polygon)
 	 * @generated
 	 */
 	EOperation getMesh__GetPolygonNeighbours__Polygon();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data.Mesh#getPointNeighbours(org.eclipse.symphony.common.geometry.data.Coordinates) <em>Get Point Neighbours</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPointNeighbours(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates) <em>Get Point Neighbours</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Point Neighbours</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data.Mesh#getPointNeighbours(org.eclipse.symphony.common.geometry.data.Coordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPointNeighbours(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates)
 	 * @generated
 	 */
 	EOperation getMesh__GetPointNeighbours__Coordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data.Mesh#getPolygonsSharingPoint(org.eclipse.symphony.common.geometry.data.Coordinates) <em>Get Polygons Sharing Point</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPolygonsSharingPoint(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates) <em>Get Polygons Sharing Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Polygons Sharing Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data.Mesh#getPolygonsSharingPoint(org.eclipse.symphony.common.geometry.data.Coordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Mesh#getPolygonsSharingPoint(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates)
 	 * @generated
 	 */
 	EOperation getMesh__GetPolygonsSharingPoint__Coordinates();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sampling Shape</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape
 	 * @generated
 	 */
 	EClass getSamplingShape();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates Sampling Shape</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
 	 * @generated
 	 */
 	EClass getCoordinatesSamplingShape();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape#isInside(org.eclipse.symphony.common.geometry.data.Coordinates) <em>Is Inside</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape#isInside(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates) <em>Is Inside</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Inside</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape#isInside(org.eclipse.symphony.common.geometry.data.Coordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape#isInside(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates)
 	 * @generated
 	 */
 	EOperation getCoordinatesSamplingShape__IsInside__Coordinates();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Polygon Sampling Shape</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
 	 * @generated
 	 */
 	EClass getPolygonSamplingShape();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape#isPolygonInside(org.eclipse.symphony.common.geometry.data.Polygon) <em>Is Polygon Inside</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape#isPolygonInside(ca.gc.asc_csa.apogy.common.geometry.data.Polygon) <em>Is Polygon Inside</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Polygon Inside</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape#isPolygonInside(org.eclipse.symphony.common.geometry.data.Polygon)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape#isPolygonInside(ca.gc.asc_csa.apogy.common.geometry.data.Polygon)
 	 * @generated
 	 */
 	EOperation getPolygonSamplingShape__IsPolygonInside__Polygon();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler <em>Coordinates Set Shapes Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler <em>Coordinates Set Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates Set Shapes Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler
 	 * @generated
 	 */
 	EClass getCoordinatesSetShapesSampler();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Coordinates Sampling Shapes</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler#getCoordinatesSamplingShapes()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler#getCoordinatesSamplingShapes()
 	 * @see #getCoordinatesSetShapesSampler()
 	 * @generated
 	 */
 	EReference getCoordinatesSetShapesSampler_CoordinatesSamplingShapes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Shape Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler#getShapeSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler#getShapeSamplingMode()
 	 * @see #getCoordinatesSetShapesSampler()
 	 * @generated
 	 */
 	EAttribute getCoordinatesSetShapesSampler_ShapeSamplingMode();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler <em>Mesh Coordinates Shapes Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler <em>Mesh Coordinates Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mesh Coordinates Shapes Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler
 	 * @generated
 	 */
 	EClass getMeshCoordinatesShapesSampler();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Coordinates Sampling Shapes</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler#getCoordinatesSamplingShapes()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler#getCoordinatesSamplingShapes()
 	 * @see #getMeshCoordinatesShapesSampler()
 	 * @generated
 	 */
 	EReference getMeshCoordinatesShapesSampler_CoordinatesSamplingShapes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Shape Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler#getShapeSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler#getShapeSamplingMode()
 	 * @see #getMeshCoordinatesShapesSampler()
 	 * @generated
 	 */
 	EAttribute getMeshCoordinatesShapesSampler_ShapeSamplingMode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler#getPolygonSamplingMode <em>Polygon Sampling Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler#getPolygonSamplingMode <em>Polygon Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Polygon Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler#getPolygonSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler#getPolygonSamplingMode()
 	 * @see #getMeshCoordinatesShapesSampler()
 	 * @generated
 	 */
 	EAttribute getMeshCoordinatesShapesSampler_PolygonSamplingMode();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler <em>Mesh Polygon Shapes Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler <em>Mesh Polygon Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mesh Polygon Shapes Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler
 	 * @generated
 	 */
 	EClass getMeshPolygonShapesSampler();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler#getPolygonSamplingShapes <em>Polygon Sampling Shapes</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler#getPolygonSamplingShapes <em>Polygon Sampling Shapes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Polygon Sampling Shapes</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler#getPolygonSamplingShapes()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler#getPolygonSamplingShapes()
 	 * @see #getMeshPolygonShapesSampler()
 	 * @generated
 	 */
 	EReference getMeshPolygonShapesSampler_PolygonSamplingShapes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Shape Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler#getShapeSamplingMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler#getShapeSamplingMode()
 	 * @see #getMeshPolygonShapesSampler()
 	 * @generated
 	 */
 	EAttribute getMeshPolygonShapesSampler_ShapeSamplingMode();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data.ShapeSamplingMode <em>Shape Sampling Mode</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode <em>Shape Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Shape Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.ShapeSamplingMode
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode
 	 * @generated
 	 */
 	EEnum getShapeSamplingMode();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingMode <em>Polygon Sampling Mode</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode <em>Polygon Sampling Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Polygon Sampling Mode</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingMode
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode
 	 * @generated
 	 */
 	EEnum getPolygonSamplingMode();
@@ -973,7 +973,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonGeometryDataFactory getSymphony__CommonGeometryDataFactory();
+	ApogyCommonGeometryDataFactory getApogyCommonGeometryDataFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -990,21 +990,21 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl <em>Coordinates</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesImpl <em>Coordinates</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinates()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinates()
 		 * @generated
 		 */
 		EClass COORDINATES = eINSTANCE.getCoordinates();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl <em>Coordinates Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetImpl <em>Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinatesSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinatesSet()
 		 * @generated
 		 */
 		EClass COORDINATES_SET = eINSTANCE.getCoordinatesSet();
@@ -1026,11 +1026,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EAttribute COORDINATES_SET__NORMALS = eINSTANCE.getCoordinatesSet_Normals();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.impl.PolygonImpl <em>Polygon</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.PolygonImpl <em>Polygon</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.impl.PolygonImpl
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getPolygon()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.PolygonImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getPolygon()
 		 * @generated
 		 */
 		EClass POLYGON = eINSTANCE.getPolygon();
@@ -1044,11 +1044,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EReference POLYGON__VERTICES = eINSTANCE.getPolygon_Vertices();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.impl.MeshImpl <em>Mesh</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl <em>Mesh</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.impl.MeshImpl
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getMesh()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getMesh()
 		 * @generated
 		 */
 		EClass MESH = eINSTANCE.getMesh();
@@ -1086,21 +1086,21 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EOperation MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = eINSTANCE.getMesh__GetPolygonsSharingPoint__Coordinates();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape <em>Sampling Shape</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getSamplingShape()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getSamplingShape()
 		 * @generated
 		 */
 		EClass SAMPLING_SHAPE = eINSTANCE.getSamplingShape();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinatesSamplingShape()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinatesSamplingShape()
 		 * @generated
 		 */
 		EClass COORDINATES_SAMPLING_SHAPE = eINSTANCE.getCoordinatesSamplingShape();
@@ -1114,11 +1114,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EOperation COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = eINSTANCE.getCoordinatesSamplingShape__IsInside__Coordinates();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getPolygonSamplingShape()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getPolygonSamplingShape()
 		 * @generated
 		 */
 		EClass POLYGON_SAMPLING_SHAPE = eINSTANCE.getPolygonSamplingShape();
@@ -1132,11 +1132,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EOperation POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = eINSTANCE.getPolygonSamplingShape__IsPolygonInside__Polygon();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl <em>Coordinates Set Shapes Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl <em>Coordinates Set Shapes Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getCoordinatesSetShapesSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getCoordinatesSetShapesSampler()
 		 * @generated
 		 */
 		EClass COORDINATES_SET_SHAPES_SAMPLER = eINSTANCE.getCoordinatesSetShapesSampler();
@@ -1158,11 +1158,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EAttribute COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = eINSTANCE.getCoordinatesSetShapesSampler_ShapeSamplingMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl <em>Mesh Coordinates Shapes Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl <em>Mesh Coordinates Shapes Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getMeshCoordinatesShapesSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getMeshCoordinatesShapesSampler()
 		 * @generated
 		 */
 		EClass MESH_COORDINATES_SHAPES_SAMPLER = eINSTANCE.getMeshCoordinatesShapesSampler();
@@ -1192,11 +1192,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EAttribute MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE = eINSTANCE.getMeshCoordinatesShapesSampler_PolygonSamplingMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerImpl <em>Mesh Polygon Shapes Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshPolygonShapesSamplerImpl <em>Mesh Polygon Shapes Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getMeshPolygonShapesSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshPolygonShapesSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getMeshPolygonShapesSampler()
 		 * @generated
 		 */
 		EClass MESH_POLYGON_SHAPES_SAMPLER = eINSTANCE.getMeshPolygonShapesSampler();
@@ -1218,21 +1218,21 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		EAttribute MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE = eINSTANCE.getMeshPolygonShapesSampler_ShapeSamplingMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.ShapeSamplingMode <em>Shape Sampling Mode</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode <em>Shape Sampling Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.ShapeSamplingMode
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getShapeSamplingMode()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getShapeSamplingMode()
 		 * @generated
 		 */
 		EEnum SHAPE_SAMPLING_MODE = eINSTANCE.getShapeSamplingMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingMode <em>Polygon Sampling Mode</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode <em>Polygon Sampling Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingMode
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getPolygonSamplingMode()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getPolygonSamplingMode()
 		 * @generated
 		 */
 		EEnum POLYGON_SAMPLING_MODE = eINSTANCE.getPolygonSamplingMode();
@@ -1242,7 +1242,7 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getList()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getList()
 		 * @generated
 		 */
 		EDataType LIST = eINSTANCE.getList();
@@ -1252,11 +1252,11 @@ public interface Symphony__CommonGeometryDataPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Vector3d
-		 * @see org.eclipse.symphony.common.geometry.data.impl.Symphony__CommonGeometryDataPackageImpl#getVector3d()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data.impl.ApogyCommonGeometryDataPackageImpl#getVector3d()
 		 * @generated
 		 */
 		EDataType VECTOR3D = eINSTANCE.getVector3d();
 
 	}
 
-} //Symphony__CommonGeometryDataPackage
+} //ApogyCommonGeometryDataPackage

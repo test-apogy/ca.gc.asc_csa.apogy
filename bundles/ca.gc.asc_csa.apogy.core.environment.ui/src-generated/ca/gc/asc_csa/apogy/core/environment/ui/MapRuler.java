@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import javax.vecmath.Color3f;
 
@@ -20,10 +20,10 @@ import javax.vecmath.Color3f;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapRuler()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapRuler()
  * @model
  * @generated
  */
@@ -40,14 +40,14 @@ public interface MapRuler extends MapTool
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ruler Color</em>' attribute.
 	 * @see #setRulerColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapRuler_RulerColor()
-	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapRuler_RulerColor()
+	 * @model default="0.0,1.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.ui.Color3f"
 	 * @generated
 	 */
   Color3f getRulerColor();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ruler Color</em>' attribute.

@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPathplannersFacadeItemProvider.java,v 1.2.4.2 2015/05/21 15:50:51 pallard Exp $
+ * $Id: ApogyAddonsMobilityPathplannersFacadeItemProvider.java,v 1.2.4.2 2015/05/21 15:50:51 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersFacadeItemProvider
+public class ApogyAddonsMobilityPathplannersFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -42,7 +42,7 @@ public class Symphony__AddonsMobilityPathplannersFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersFacadeItemProvider(AdapterFactory adapterFactory)
+	public ApogyAddonsMobilityPathplannersFacadeItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -64,7 +64,7 @@ public class Symphony__AddonsMobilityPathplannersFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsMobilityPathplannersFacade.gif.
+	 * This returns ApogyAddonsMobilityPathplannersFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,7 +72,7 @@ public class Symphony__AddonsMobilityPathplannersFacadeItemProvider
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsMobilityPathplannersFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsMobilityPathplannersFacade"));
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class Symphony__AddonsMobilityPathplannersFacadeItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Symphony__AddonsMobilityPathplannersFacade_type");
+		return getString("_UI_ApogyAddonsMobilityPathplannersFacade_type");
 	}
 
 	/**

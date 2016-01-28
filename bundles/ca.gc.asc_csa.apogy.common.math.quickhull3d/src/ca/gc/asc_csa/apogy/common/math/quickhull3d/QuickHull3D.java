@@ -10,7 +10,7 @@
  * whatsoever, arising out of or in connection with the use of this
  * software.
  */
-package org.eclipse.symphony.common.math.quickhull3d;
+package ca.gc.asc_csa.apogy.common.math.quickhull3d;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +22,14 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getEOperation <em>EOperation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getOperationCallContainer <em>Operation Call Container</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getEOperation <em>EOperation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getOperationCallContainer <em>Operation Call Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCall()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EOperation</em>' reference.
 	 * @see #setEOperation(EOperation)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_EOperation()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCall_EOperation()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -53,7 +53,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
   EOperation getEOperation();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.OperationCall#getEOperation <em>EOperation</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getEOperation <em>EOperation</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>EOperation</em>' reference.
@@ -64,7 +64,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
 
   /**
 	 * Returns the value of the '<em><b>Arguments List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Arguments List</em>' containment reference isn't clear,
@@ -73,8 +73,8 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments List</em>' containment reference.
 	 * @see #setArgumentsList(ArgumentsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_ArgumentsList()
-	 * @see org.eclipse.symphony.core.invocator.ArgumentsList#getOperationCall
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCall_ArgumentsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getOperationCall
 	 * @model opposite="operationCall" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel createChild='false'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
   ArgumentsList getArgumentsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Arguments List</em>' containment reference.
@@ -93,7 +93,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
 
   /**
 	 * Returns the value of the '<em><b>Operation Call Container</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.OperationCallContainer#getOperationCalls <em>Operation Calls</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getOperationCalls <em>Operation Calls</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operation Call Container</em>' container reference isn't clear,
@@ -102,8 +102,8 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call Container</em>' container reference.
 	 * @see #setOperationCallContainer(OperationCallContainer)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_OperationCallContainer()
-	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer#getOperationCalls
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCall_OperationCallContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getOperationCalls
 	 * @model opposite="operationCalls" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -111,7 +111,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
   OperationCallContainer getOperationCallContainer();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.OperationCall#getOperationCallContainer <em>Operation Call Container</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getOperationCallContainer <em>Operation Call Container</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operation Call Container</em>' container reference.
@@ -129,9 +129,9 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_InvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCall_InvocatorSession()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.OperationCallContainer%> _operationCallContainer = this.getOperationCallContainer();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_operationCallContainer, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.OperationCallContainer%> _operationCallContainer_1 = this.getOperationCallContainer();\n\treturn _operationCallContainer_1.getInvocatorSession();\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer%> _operationCallContainer = this.getOperationCallContainer();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_operationCallContainer, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer%> _operationCallContainer_1 = this.getOperationCallContainer();\n\treturn _operationCallContainer_1.getInvocatorSession();\n}'"
 	 * @generated
 	 */
   InvocatorSession getInvocatorSession();
@@ -145,9 +145,9 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_Environment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCall_Environment()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.InvocatorSession%> _invocatorSession = this.getInvocatorSession();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_invocatorSession, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.InvocatorSession%> _invocatorSession_1 = this.getInvocatorSession();\n\treturn _invocatorSession_1.getEnvironment();\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.InvocatorSession%> _invocatorSession = this.getInvocatorSession();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_invocatorSession, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.core.invocator.InvocatorSession%> _invocatorSession_1 = this.getInvocatorSession();\n\treturn _invocatorSession_1.getEnvironment();\n}'"
 	 * @generated
 	 */
   Environment getEnvironment();

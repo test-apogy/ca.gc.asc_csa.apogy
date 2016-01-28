@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.provider;
+package ca.gc.asc_csa.apogy.common.io.jinput.provider;
 
 
 import java.util.Collection;
@@ -12,11 +12,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.io.jinput.EVirtualComponent;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EVirtualComponent} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -62,7 +62,7 @@ public class EVirtualComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EVirtualComponent_currentValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EVirtualComponent_currentValue_feature", "_UI_EVirtualComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.EVIRTUAL_COMPONENT__CURRENT_VALUE,
+				 ApogyCommonIOJInputPackage.Literals.EVIRTUAL_COMPONENT__CURRENT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class EVirtualComponentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EVirtualComponent.class)) {
-			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
+			case ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

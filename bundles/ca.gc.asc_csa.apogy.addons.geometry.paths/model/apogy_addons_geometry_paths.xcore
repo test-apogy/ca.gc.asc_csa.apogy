@@ -1,20 +1,20 @@
-@GenModel(prefix="Symphony__AddonsGeometryPaths",
+@GenModel(prefix="ApogyAddonsGeometryPaths",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsGeometryPaths",
+	      modelName="ApogyAddonsGeometryPaths",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.geometry.paths/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.geometry.paths.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.geometry.paths/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.geometry.paths.edit/src-generated")
 
-package org.eclipse.symphony.addons.geometry.paths
+package ca.gc.asc_csa.apogy.addons.geometry.paths
 
-import org.eclipse.symphony.common.processors.Processor
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.common.topology.GroupNode
+import ca.gc.asc_csa.apogy.common.processors.Processor
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.GroupNode
 
 type List<T> wraps java.util.List
 
@@ -84,7 +84,7 @@ class UniformDistanceWayPointPathInterpolator extends WayPointPathFilter
 	double distanceInterval
 }
 
-class Symphony__AddonsGeometryPathsFacade
+class ApogyAddonsGeometryPathsFacade
 {
 	/*
 	 * Creates a WayPointPath from a WayPointPath. The WayPointPath created

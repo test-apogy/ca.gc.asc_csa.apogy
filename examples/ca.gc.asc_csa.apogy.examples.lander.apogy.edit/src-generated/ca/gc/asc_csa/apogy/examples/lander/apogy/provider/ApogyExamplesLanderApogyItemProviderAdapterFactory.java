@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.lander.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.examples.lander.symphony.util.Symphony__ExamplesLanderSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.util.ApogyExamplesLanderApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -31,7 +31,7 @@ import org.eclipse.symphony.examples.lander.symphony.util.Symphony__ExamplesLand
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory extends Symphony__ExamplesLanderSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+public class ApogyExamplesLanderApogyItemProviderAdapterFactory extends ApogyExamplesLanderApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -63,7 +63,7 @@ public class Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory extends 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory()
+  public ApogyExamplesLanderApogyItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -73,31 +73,31 @@ public class Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected LanderSymphonySystemApiAdapterItemProvider landerSymphonySystemApiAdapterItemProvider;
+  protected LanderApogySystemApiAdapterItemProvider landerApogySystemApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createLanderSymphonySystemApiAdapterAdapter()
+  public Adapter createLanderApogySystemApiAdapterAdapter()
   {
-		if (landerSymphonySystemApiAdapterItemProvider == null) {
-			landerSymphonySystemApiAdapterItemProvider = new LanderSymphonySystemApiAdapterItemProvider(this);
+		if (landerApogySystemApiAdapterItemProvider == null) {
+			landerApogySystemApiAdapterItemProvider = new LanderApogySystemApiAdapterItemProvider(this);
 		}
 
-		return landerSymphonySystemApiAdapterItemProvider;
+		return landerApogySystemApiAdapterItemProvider;
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.lander.symphony.LanderData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory extends 
 	protected LanderDataItemProvider landerDataItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.lander.symphony.LanderData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,7 +227,7 @@ public class Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory extends 
 	 */
   public void dispose()
   {
-		if (landerSymphonySystemApiAdapterItemProvider != null) landerSymphonySystemApiAdapterItemProvider.dispose();
+		if (landerApogySystemApiAdapterItemProvider != null) landerApogySystemApiAdapterItemProvider.dispose();
 		if (landerDataItemProvider != null) landerDataItemProvider.dispose();
 	}
 

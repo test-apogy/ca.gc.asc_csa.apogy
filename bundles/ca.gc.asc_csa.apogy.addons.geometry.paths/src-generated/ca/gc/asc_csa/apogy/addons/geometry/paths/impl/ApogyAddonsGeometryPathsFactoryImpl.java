@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.geometry.paths.*;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,24 +22,24 @@ import org.eclipse.symphony.addons.geometry.paths.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl implements Symphony__AddonsGeometryPathsFactory {
+public class ApogyAddonsGeometryPathsFactoryImpl extends EFactoryImpl implements ApogyAddonsGeometryPathsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsGeometryPathsFactory init() {
+	public static ApogyAddonsGeometryPathsFactory init() {
 		try {
-			Symphony__AddonsGeometryPathsFactory theSymphony__AddonsGeometryPathsFactory = (Symphony__AddonsGeometryPathsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsGeometryPathsPackage.eNS_URI);
-			if (theSymphony__AddonsGeometryPathsFactory != null) {
-				return theSymphony__AddonsGeometryPathsFactory;
+			ApogyAddonsGeometryPathsFactory theApogyAddonsGeometryPathsFactory = (ApogyAddonsGeometryPathsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsGeometryPathsPackage.eNS_URI);
+			if (theApogyAddonsGeometryPathsFactory != null) {
+				return theApogyAddonsGeometryPathsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsGeometryPathsFactoryImpl();
+		return new ApogyAddonsGeometryPathsFactoryImpl();
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsFactoryImpl() {
+	public ApogyAddonsGeometryPathsFactoryImpl() {
 		super();
 	}
 
@@ -60,14 +60,14 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT: return createWayPoint();
-			case Symphony__AddonsGeometryPathsPackage.PATH: return createPath();
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH: return createWayPointPath();
-			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR: return createCatmullRomWayPointPathInterpolator();
-			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR: return createSegmentWayPointPathInterpolator();
-			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER: return createMinimumDistanceFilter();
-			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR: return createUniformDistanceWayPointPathInterpolator();
-			case Symphony__AddonsGeometryPathsPackage.SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE: return createSymphony__AddonsGeometryPathsFacade();
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT: return createWayPoint();
+			case ApogyAddonsGeometryPathsPackage.PATH: return createPath();
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH: return createWayPointPath();
+			case ApogyAddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR: return createCatmullRomWayPointPathInterpolator();
+			case ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR: return createSegmentWayPointPathInterpolator();
+			case ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER: return createMinimumDistanceFilter();
+			case ApogyAddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR: return createUniformDistanceWayPointPathInterpolator();
+			case ApogyAddonsGeometryPathsPackage.APOGY_ADDONS_GEOMETRY_PATHS_FACADE: return createApogyAddonsGeometryPathsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,9 +81,9 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsGeometryPathsPackage.SPLINE_END_CONTROL_POINT_GENERATION_MODE:
+			case ApogyAddonsGeometryPathsPackage.SPLINE_END_CONTROL_POINT_GENERATION_MODE:
 				return createSplineEndControlPointGenerationModeFromString(eDataType, initialValue);
-			case Symphony__AddonsGeometryPathsPackage.LIST:
+			case ApogyAddonsGeometryPathsPackage.LIST:
 				return createListFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -98,9 +98,9 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsGeometryPathsPackage.SPLINE_END_CONTROL_POINT_GENERATION_MODE:
+			case ApogyAddonsGeometryPathsPackage.SPLINE_END_CONTROL_POINT_GENERATION_MODE:
 				return convertSplineEndControlPointGenerationModeToString(eDataType, instanceValue);
-			case Symphony__AddonsGeometryPathsPackage.LIST:
+			case ApogyAddonsGeometryPathsPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -182,9 +182,9 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsFacade createSymphony__AddonsGeometryPathsFacade() {
-		Symphony__AddonsGeometryPathsFacadeImpl symphony__AddonsGeometryPathsFacade = new Symphony__AddonsGeometryPathsFacadeImpl();
-		return symphony__AddonsGeometryPathsFacade;
+	public ApogyAddonsGeometryPathsFacade createApogyAddonsGeometryPathsFacade() {
+		ApogyAddonsGeometryPathsFacadeImpl apogy__AddonsGeometryPathsFacade = new ApogyAddonsGeometryPathsFacadeImpl();
+		return apogy__AddonsGeometryPathsFacade;
 	}
 
 	/**
@@ -230,8 +230,8 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsPackage getSymphony__AddonsGeometryPathsPackage() {
-		return (Symphony__AddonsGeometryPathsPackage)getEPackage();
+	public ApogyAddonsGeometryPathsPackage getApogyAddonsGeometryPathsPackage() {
+		return (ApogyAddonsGeometryPathsPackage)getEPackage();
 	}
 
 	/**
@@ -241,8 +241,8 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsGeometryPathsPackage getPackage() {
-		return Symphony__AddonsGeometryPathsPackage.eINSTANCE;
+	public static ApogyAddonsGeometryPathsPackage getPackage() {
+		return ApogyAddonsGeometryPathsPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsGeometryPathsFactoryImpl
+} //ApogyAddonsGeometryPathsFactoryImpl

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.text.SimpleDateFormat;
@@ -20,11 +20,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.TimeSource} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.TimeSource} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class TimeSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeSource_offset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeSource_offset_feature", "_UI_TimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.TIME_SOURCE__OFFSET,
+				 ApogyCommonEMFPackage.Literals.TIME_SOURCE__OFFSET,
 				 true,
 				 false,
 				 false,
@@ -191,10 +191,10 @@ public class TimeSourceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimeSource.class)) {
-			case Symphony__CommonEMFPackage.TIME_SOURCE__NAME:
-			case Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION:
-			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
-			case Symphony__CommonEMFPackage.TIME_SOURCE__OFFSET:
+			case ApogyCommonEMFPackage.TIME_SOURCE__NAME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION:
+			case ApogyCommonEMFPackage.TIME_SOURCE__TIME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__OFFSET:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

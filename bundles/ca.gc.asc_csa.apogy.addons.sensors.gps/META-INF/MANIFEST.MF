@@ -1,30 +1,30 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.gps;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.sensors.gps;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.symphony.addons.sensors.gps,
- org.eclipse.symphony.addons.sensors.gps.impl,
- org.eclipse.symphony.addons.sensors.gps.state,
- org.eclipse.symphony.addons.sensors.gps.util
+Export-Package: ca.gc.asc_csa.apogy.addons.sensors.gps,
+ ca.gc.asc_csa.apogy.addons.sensors.gps.impl,
+ ca.gc.asc_csa.apogy.addons.sensors.gps.state,
+ ca.gc.asc_csa.apogy.addons.sensors.gps.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.lang.java,
- org.eclipse.symphony.addons.sensors.pose;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.addons.sensors;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.lang.java,
+ ca.gc.asc_csa.apogy.addons.sensors.pose;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
  org.gavaghan.geodesy.core,
- org.eclipse.symphony.common.log;bundle-version="0.3.0",
- org.eclipse.symphony.common.emf;bundle-version="0.5.0";visibility:=reexport
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
+ ca.gc.asc_csa.apogy.common.emf;bundle-version="0.5.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.addons.sensors.gps.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.sensors.gps.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

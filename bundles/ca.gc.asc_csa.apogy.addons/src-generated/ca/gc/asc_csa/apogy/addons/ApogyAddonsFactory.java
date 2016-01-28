@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.Symphony__AddonsPackage
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage
  * @generated
  */
-public interface Symphony__AddonsFactory extends EFactory
+public interface ApogyAddonsFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__AddonsFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsFactory eINSTANCE = org.eclipse.symphony.addons.impl.Symphony__AddonsFactoryImpl.init();
+  ApogyAddonsFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.impl.ApogyAddonsFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Simple Tool List</em>'.
@@ -102,6 +102,6 @@ public interface Symphony__AddonsFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsPackage getSymphony__AddonsPackage();
+	ApogyAddonsPackage getApogyAddonsPackage();
 
-} //Symphony__AddonsFactory
+} //ApogyAddonsFactory

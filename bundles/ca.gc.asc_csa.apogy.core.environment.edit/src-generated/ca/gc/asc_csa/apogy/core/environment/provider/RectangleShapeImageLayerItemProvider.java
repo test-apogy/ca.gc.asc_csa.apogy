@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class RectangleShapeImageLayerItemProvider extends AbstractShapeImageLaye
 				 getResourceLocator(),
 				 getString("_UI_RectangleShapeImageLayer_rectangleWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangleShapeImageLayer_rectangleWidth_feature", "_UI_RectangleShapeImageLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH,
+				 ApogyCoreEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class RectangleShapeImageLayerItemProvider extends AbstractShapeImageLaye
 				 getResourceLocator(),
 				 getString("_UI_RectangleShapeImageLayer_rectangleHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangleShapeImageLayer_rectangleHeight_feature", "_UI_RectangleShapeImageLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT,
+				 ApogyCoreEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class RectangleShapeImageLayerItemProvider extends AbstractShapeImageLaye
 				 getResourceLocator(),
 				 getString("_UI_RectangleShapeImageLayer_showCenterLines_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangleShapeImageLayer_showCenterLines_feature", "_UI_RectangleShapeImageLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES,
+				 ApogyCoreEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES,
 				 true,
 				 false,
 				 false,
@@ -169,9 +169,9 @@ public class RectangleShapeImageLayerItemProvider extends AbstractShapeImageLaye
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RectangleShapeImageLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
-			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
-			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case ApogyCoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
+			case ApogyCoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
+			case ApogyCoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -202,8 +202,8 @@ public class RectangleShapeImageLayerItemProvider extends AbstractShapeImageLaye
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

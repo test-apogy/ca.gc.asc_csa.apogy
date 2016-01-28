@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityItemProviderAdapterFactory.java,v 1.3.4.2 2015/05/21 15:51:23 pallard Exp $
+ * $Id: ApogyAddonsMobilityItemProviderAdapterFactory.java,v 1.3.4.2 2015/05/21 15:51:23 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,14 +29,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityFactory;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
-import org.eclipse.symphony.addons.mobility.util.Symphony__AddonsMobilityAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.util.ApogyAddonsMobilityAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony__AddonsMobilityAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsMobilityItemProviderAdapterFactory extends ApogyAddonsMobilityAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -71,7 +71,7 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsMobilityEditPlugin.INSTANCE, Symphony__AddonsMobilityPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsMobilityEditPlugin.INSTANCE, ApogyAddonsMobilityPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -87,7 +87,7 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityItemProviderAdapterFactory()
+	public ApogyAddonsMobilityItemProviderAdapterFactory()
 	{
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -97,7 +97,7 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.MobilePlatform} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 	protected MobilePlatformItemProvider mobilePlatformItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.MobilePlatform}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 	protected SkidSteeredMobilePlatformItemProvider skidSteeredMobilePlatformItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -284,19 +284,19 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -332,13 +332,13 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
 
 				return null;
 			}
@@ -352,13 +352,13 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
 
 				return null;
 			}
@@ -372,13 +372,13 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
 
 				return null;
 			}
@@ -411,7 +411,7 @@ public class Symphony__AddonsMobilityItemProviderAdapterFactory extends Symphony
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsMobilityEditPlugin.INSTANCE;
+			return ApogyAddonsMobilityEditPlugin.INSTANCE;
 		}
 	}
 

@@ -4,7 +4,7 @@
  *
  * $Id: CADNodeItemProvider.java,v 1.4.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -17,11 +17,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.topology.CADNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.CADNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.CADNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.CADNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class CADNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CADNode_nodeName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CADNode_nodeName_feature", "_UI_CADNode_type"),
-				 Symphony__CommonTopologyPackage.Literals.CAD_NODE__NODE_NAME,
+				 ApogyCommonTopologyPackage.Literals.CAD_NODE__NODE_NAME,
 				 true,
 				 false,
 				 false,
@@ -122,7 +122,7 @@ public class CADNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CADNode.class)) {
-			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
+			case ApogyCommonTopologyPackage.CAD_NODE__NODE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.log;
+package ca.gc.asc_csa.apogy.common.log;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -7,7 +7,7 @@ public class Activator implements BundleActivator {
 
 	private static BundleContext context;
 	
-	public static final String ID = "org.eclipse.symphony.common.log";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.log";
 
 	public static BundleContext getContext() {
 		return context;

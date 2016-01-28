@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage
  * @generated
  */
-public interface Symphony__CoreEnvironmentUIFactory extends EFactory
+public interface ApogyCoreEnvironmentUIFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__CoreEnvironmentUIFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreEnvironmentUIFactory eINSTANCE = org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFactoryImpl.init();
+  ApogyCoreEnvironmentUIFactory eINSTANCE = ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Star Field Presentation</em>'.
@@ -93,7 +93,7 @@ public interface Symphony__CoreEnvironmentUIFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentUIFacade createSymphony__CoreEnvironmentUIFacade();
+	ApogyCoreEnvironmentUIFacade createApogyCoreEnvironmentUIFacade();
 
 		/**
 	 * Returns a new object of class '<em>Map View Configuration List</em>'.
@@ -183,6 +183,6 @@ public interface Symphony__CoreEnvironmentUIFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentUIPackage getSymphony__CoreEnvironmentUIPackage();
+	ApogyCoreEnvironmentUIPackage getApogyCoreEnvironmentUIPackage();
 
-} //Symphony__CoreEnvironmentUIFactory
+} //ApogyCoreEnvironmentUIFactory

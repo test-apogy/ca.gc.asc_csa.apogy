@@ -1,24 +1,24 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
-import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.*;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.*;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,17 +30,17 @@ import org.eclipse.symphony.common.processors.Processor;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
+public class ApogyCommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DPackage modelPackage;
+	protected static ApogyCommonGeometryData3DPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -48,9 +48,9 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DSwitch() {
+	public ApogyCommonGeometryData3DSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DPackage.eINSTANCE;
 		}
 	}
 
@@ -77,14 +77,14 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON: {
 				CartesianPolygon cartesianPolygon = (CartesianPolygon)theEObject;
 				T1 result = caseCartesianPolygon(cartesianPolygon);
 				if (result == null) result = casePolygon(cartesianPolygon);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGLE: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGLE: {
 				CartesianTriangle cartesianTriangle = (CartesianTriangle)theEObject;
 				T1 result = caseCartesianTriangle(cartesianTriangle);
 				if (result == null) result = caseCartesianPolygon(cartesianTriangle);
@@ -92,14 +92,14 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_POLYGON: {
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_POLYGON: {
 				SphericalPolygon sphericalPolygon = (SphericalPolygon)theEObject;
 				T1 result = caseSphericalPolygon(sphericalPolygon);
 				if (result == null) result = casePolygon(sphericalPolygon);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_TRIANGLE: {
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_TRIANGLE: {
 				SphericalTriangle sphericalTriangle = (SphericalTriangle)theEObject;
 				T1 result = caseSphericalTriangle(sphericalTriangle);
 				if (result == null) result = caseSphericalPolygon(sphericalTriangle);
@@ -107,14 +107,14 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES: {
 				CartesianPositionCoordinates cartesianPositionCoordinates = (CartesianPositionCoordinates)theEObject;
 				T1 result = caseCartesianPositionCoordinates(cartesianPositionCoordinates);
 				if (result == null) result = caseCoordinates(cartesianPositionCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: {
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: {
 				ColoredCartesianPositionCoordinates coloredCartesianPositionCoordinates = (ColoredCartesianPositionCoordinates)theEObject;
 				T1 result = caseColoredCartesianPositionCoordinates(coloredCartesianPositionCoordinates);
 				if (result == null) result = caseCartesianPositionCoordinates(coloredCartesianPositionCoordinates);
@@ -122,21 +122,21 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES: {
 				CartesianOrientationCoordinates cartesianOrientationCoordinates = (CartesianOrientationCoordinates)theEObject;
 				T1 result = caseCartesianOrientationCoordinates(cartesianOrientationCoordinates);
 				if (result == null) result = caseCoordinates(cartesianOrientationCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET: {
+			case ApogyCommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET: {
 				AbstractCartesianCoordinatesSet<?> abstractCartesianCoordinatesSet = (AbstractCartesianCoordinatesSet<?>)theEObject;
 				T1 result = caseAbstractCartesianCoordinatesSet(abstractCartesianCoordinatesSet);
 				if (result == null) result = caseCoordinatesSet(abstractCartesianCoordinatesSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET: {
 				CartesianCoordinatesSet cartesianCoordinatesSet = (CartesianCoordinatesSet)theEObject;
 				T1 result = caseCartesianCoordinatesSet(cartesianCoordinatesSet);
 				if (result == null) result = caseAbstractCartesianCoordinatesSet(cartesianCoordinatesSet);
@@ -144,7 +144,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.COLORED_COORDINATES_SET: {
+			case ApogyCommonGeometryData3DPackage.COLORED_COORDINATES_SET: {
 				ColoredCoordinatesSet coloredCoordinatesSet = (ColoredCoordinatesSet)theEObject;
 				T1 result = caseColoredCoordinatesSet(coloredCoordinatesSet);
 				if (result == null) result = caseAbstractCartesianCoordinatesSet(coloredCoordinatesSet);
@@ -152,13 +152,13 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT: {
 				CartesianCoordinatesSetExtent cartesianCoordinatesSetExtent = (CartesianCoordinatesSetExtent)theEObject;
 				T1 result = caseCartesianCoordinatesSetExtent(cartesianCoordinatesSetExtent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP: {
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP: {
 				DigitalElevationMap digitalElevationMap = (DigitalElevationMap)theEObject;
 				T1 result = caseDigitalElevationMap(digitalElevationMap);
 				if (result == null) result = caseCartesianCoordinatesSet(digitalElevationMap);
@@ -167,7 +167,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH: {
 				CartesianCoordinatesMesh cartesianCoordinatesMesh = (CartesianCoordinatesMesh)theEObject;
 				T1 result = caseCartesianCoordinatesMesh(cartesianCoordinatesMesh);
 				if (result == null) result = caseMesh(cartesianCoordinatesMesh);
@@ -177,7 +177,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH: {
 				CartesianTriangularMesh cartesianTriangularMesh = (CartesianTriangularMesh)theEObject;
 				T1 result = caseCartesianTriangularMesh(cartesianTriangularMesh);
 				if (result == null) result = caseMesh(cartesianTriangularMesh);
@@ -187,21 +187,21 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES: {
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_COORDINATES: {
 				SphericalCoordinates sphericalCoordinates = (SphericalCoordinates)theEObject;
 				T1 result = caseSphericalCoordinates(sphericalCoordinates);
 				if (result == null) result = caseCoordinates(sphericalCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES_SET: {
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_COORDINATES_SET: {
 				SphericalCoordinatesSet sphericalCoordinatesSet = (SphericalCoordinatesSet)theEObject;
 				T1 result = caseSphericalCoordinatesSet(sphericalCoordinatesSet);
 				if (result == null) result = caseCoordinatesSet(sphericalCoordinatesSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES_MESH: {
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_COORDINATES_MESH: {
 				SphericalCoordinatesMesh sphericalCoordinatesMesh = (SphericalCoordinatesMesh)theEObject;
 				T1 result = caseSphericalCoordinatesMesh(sphericalCoordinatesMesh);
 				if (result == null) result = caseMesh(sphericalCoordinatesMesh);
@@ -210,7 +210,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_TRIANGULAR_MESH: {
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_TRIANGULAR_MESH: {
 				SphericalTriangularMesh sphericalTriangularMesh = (SphericalTriangularMesh)theEObject;
 				T1 result = caseSphericalTriangularMesh(sphericalTriangularMesh);
 				if (result == null) result = caseMesh(sphericalTriangularMesh);
@@ -219,7 +219,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.POSE: {
+			case ApogyCommonGeometryData3DPackage.POSE: {
 				Pose pose = (Pose)theEObject;
 				T1 result = casePose(pose);
 				if (result == null) result = caseCartesianPositionCoordinates(pose);
@@ -228,7 +228,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE: {
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE: {
 				SphereSamplingShape<?> sphereSamplingShape = (SphereSamplingShape<?>)theEObject;
 				T1 result = caseSphereSamplingShape(sphereSamplingShape);
 				if (result == null) result = caseCoordinatesSamplingShape(sphereSamplingShape);
@@ -237,7 +237,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE: {
+			case ApogyCommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE: {
 				CubeSamplingShape<?> cubeSamplingShape = (CubeSamplingShape<?>)theEObject;
 				T1 result = caseCubeSamplingShape(cubeSamplingShape);
 				if (result == null) result = caseCoordinatesSamplingShape(cubeSamplingShape);
@@ -246,7 +246,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER: {
 				CartesianCoordinatesSetShapeSampler cartesianCoordinatesSetShapeSampler = (CartesianCoordinatesSetShapeSampler)theEObject;
 				T1 result = caseCartesianCoordinatesSetShapeSampler(cartesianCoordinatesSetShapeSampler);
 				if (result == null) result = caseCoordinatesSetShapesSampler(cartesianCoordinatesSetShapeSampler);
@@ -255,7 +255,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_SAMPLER: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_SAMPLER: {
 				CartesianCoordinatesMeshSampler cartesianCoordinatesMeshSampler = (CartesianCoordinatesMeshSampler)theEObject;
 				T1 result = caseCartesianCoordinatesMeshSampler(cartesianCoordinatesMeshSampler);
 				if (result == null) result = caseMeshCoordinatesShapesSampler(cartesianCoordinatesMeshSampler);
@@ -264,7 +264,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER: {
 				CartesianCoordinatesMeshPolygonSampler cartesianCoordinatesMeshPolygonSampler = (CartesianCoordinatesMeshPolygonSampler)theEObject;
 				T1 result = caseCartesianCoordinatesMeshPolygonSampler(cartesianCoordinatesMeshPolygonSampler);
 				if (result == null) result = caseMeshPolygonShapesSampler(cartesianCoordinatesMeshPolygonSampler);
@@ -273,7 +273,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_SAMPLER: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_SAMPLER: {
 				CartesianTriangularMeshSampler cartesianTriangularMeshSampler = (CartesianTriangularMeshSampler)theEObject;
 				T1 result = caseCartesianTriangularMeshSampler(cartesianTriangularMeshSampler);
 				if (result == null) result = caseMeshCoordinatesShapesSampler(cartesianTriangularMeshSampler);
@@ -282,7 +282,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER: {
 				CartesianTriangularMeshPolygonSampler cartesianTriangularMeshPolygonSampler = (CartesianTriangularMeshPolygonSampler)theEObject;
 				T1 result = caseCartesianTriangularMeshPolygonSampler(cartesianTriangularMeshPolygonSampler);
 				if (result == null) result = caseMeshPolygonShapesSampler(cartesianTriangularMeshPolygonSampler);
@@ -291,7 +291,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_MESHER: {
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_MESHER: {
 				CartesianPositionCoordinatesMesher cartesianPositionCoordinatesMesher = (CartesianPositionCoordinatesMesher)theEObject;
 				T1 result = caseCartesianPositionCoordinatesMesher(cartesianPositionCoordinatesMesher);
 				if (result == null) result = caseProcessor(cartesianPositionCoordinatesMesher);
@@ -299,32 +299,32 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD: {
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD: {
 				NormalPointCloud normalPointCloud = (NormalPointCloud)theEObject;
 				T1 result = caseNormalPointCloud(normalPointCloud);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR: {
+			case ApogyCommonGeometryData3DPackage.POINT_LOCATOR: {
 				PointLocator pointLocator = (PointLocator)theEObject;
 				T1 result = casePointLocator(pointLocator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.KD_TREE_BASED_POINT_LOCATOR: {
+			case ApogyCommonGeometryData3DPackage.KD_TREE_BASED_POINT_LOCATOR: {
 				KDTreeBasedPointLocator kdTreeBasedPointLocator = (KDTreeBasedPointLocator)theEObject;
 				T1 result = caseKDTreeBasedPointLocator(kdTreeBasedPointLocator);
 				if (result == null) result = casePointLocator(kdTreeBasedPointLocator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.MESH_LOCALIZER: {
+			case ApogyCommonGeometryData3DPackage.MESH_LOCALIZER: {
 				MeshLocalizer meshLocalizer = (MeshLocalizer)theEObject;
 				T1 result = caseMeshLocalizer(meshLocalizer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER: {
+			case ApogyCommonGeometryData3DPackage.DELAUNAY_MESHER: {
 				DelaunayMesher delaunayMesher = (DelaunayMesher)theEObject;
 				T1 result = caseDelaunayMesher(delaunayMesher);
 				if (result == null) result = caseCartesianPositionCoordinatesMesher(delaunayMesher);
@@ -333,7 +333,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_MESHER: {
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_MESHER: {
 				DigitalElevationMapMesher digitalElevationMapMesher = (DigitalElevationMapMesher)theEObject;
 				T1 result = caseDigitalElevationMapMesher(digitalElevationMapMesher);
 				if (result == null) result = caseProcessor(digitalElevationMapMesher);
@@ -341,7 +341,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER: {
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER: {
 				DigitalElevationMapSampler digitalElevationMapSampler = (DigitalElevationMapSampler)theEObject;
 				T1 result = caseDigitalElevationMapSampler(digitalElevationMapSampler);
 				if (result == null) result = caseProcessor(digitalElevationMapSampler);
@@ -349,7 +349,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.TRIANGULAR_MESH_NORMALS_CALCULATOR: {
+			case ApogyCommonGeometryData3DPackage.TRIANGULAR_MESH_NORMALS_CALCULATOR: {
 				TriangularMeshNormalsCalculator triangularMeshNormalsCalculator = (TriangularMeshNormalsCalculator)theEObject;
 				T1 result = caseTriangularMeshNormalsCalculator(triangularMeshNormalsCalculator);
 				if (result == null) result = caseProcessor(triangularMeshNormalsCalculator);
@@ -357,7 +357,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD: {
+			case ApogyCommonGeometryData3DPackage.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD: {
 				TriangularMeshToNormalPointCloud triangularMeshToNormalPointCloud = (TriangularMeshToNormalPointCloud)theEObject;
 				T1 result = caseTriangularMeshToNormalPointCloud(triangularMeshToNormalPointCloud);
 				if (result == null) result = caseProcessor(triangularMeshToNormalPointCloud);
@@ -365,7 +365,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.UNIQUE_POINTS_FILTER: {
+			case ApogyCommonGeometryData3DPackage.UNIQUE_POINTS_FILTER: {
 				UniquePointsFilter uniquePointsFilter = (UniquePointsFilter)theEObject;
 				T1 result = caseUniquePointsFilter(uniquePointsFilter);
 				if (result == null) result = caseProcessor(uniquePointsFilter);
@@ -373,13 +373,13 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER: {
+			case ApogyCommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER: {
 				TriangleEdgeLengthTriangularMeshFilter triangleEdgeLengthTriangularMeshFilter = (TriangleEdgeLengthTriangularMeshFilter)theEObject;
 				T1 result = caseTriangleEdgeLengthTriangularMeshFilter(triangleEdgeLengthTriangularMeshFilter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER: {
+			case ApogyCommonGeometryData3DPackage.OUTLIER_FILTER: {
 				OutlierFilter outlierFilter = (OutlierFilter)theEObject;
 				T1 result = caseOutlierFilter(outlierFilter);
 				if (result == null) result = caseProcessor(outlierFilter);
@@ -387,7 +387,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER: {
+			case ApogyCommonGeometryData3DPackage.MESH_SMOOTHER: {
 				MeshSmoother meshSmoother = (MeshSmoother)theEObject;
 				T1 result = caseMeshSmoother(meshSmoother);
 				if (result == null) result = caseProcessor(meshSmoother);
@@ -395,7 +395,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER: {
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER: {
 				VoxelBased3DPointCloudResampler voxelBased3DPointCloudResampler = (VoxelBased3DPointCloudResampler)theEObject;
 				T1 result = caseVoxelBased3DPointCloudResampler(voxelBased3DPointCloudResampler);
 				if (result == null) result = caseProcessor(voxelBased3DPointCloudResampler);
@@ -403,7 +403,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER: {
+			case ApogyCommonGeometryData3DPackage.POSITION_MARKER: {
 				PositionMarker positionMarker = (PositionMarker)theEObject;
 				T1 result = casePositionMarker(positionMarker);
 				if (result == null) result = caseCartesianPositionCoordinates(positionMarker);
@@ -411,25 +411,25 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: {
+			case ApogyCommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: {
 				RigidBodyPoseTracker rigidBodyPoseTracker = (RigidBodyPoseTracker)theEObject;
 				T1 result = caseRigidBodyPoseTracker(rigidBodyPoseTracker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE: {
-				Symphony__CommonGeometryData3DFacade symphony__CommonGeometryData3DFacade = (Symphony__CommonGeometryData3DFacade)theEObject;
-				T1 result = caseSymphony__CommonGeometryData3DFacade(symphony__CommonGeometryData3DFacade);
+			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE: {
+				ApogyCommonGeometryData3DFacade apogy__CommonGeometryData3DFacade = (ApogyCommonGeometryData3DFacade)theEObject;
+				T1 result = caseApogyCommonGeometryData3DFacade(apogy__CommonGeometryData3DFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO: {
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO: {
 				Data3DIO data3DIO = (Data3DIO)theEObject;
 				T1 result = caseData3DIO(data3DIO);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS: {
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS: {
 				Data3DUtils data3DUtils = (Data3DUtils)theEObject;
 				T1 result = caseData3DUtils(data3DUtils);
 				if (result == null) result = defaultCase(theEObject);
@@ -1095,7 +1095,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSymphony__CommonGeometryData3DFacade(Symphony__CommonGeometryData3DFacade object) {
+	public T1 caseApogyCommonGeometryData3DFacade(ApogyCommonGeometryData3DFacade object) {
 		return null;
 	}
 
@@ -1325,4 +1325,4 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DSwitch
+} //ApogyCommonGeometryData3DSwitch

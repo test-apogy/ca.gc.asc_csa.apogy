@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,27 +27,27 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.util.Symphony__AddonsTelecomsAdapterFactory;
-import org.eclipse.symphony.addons.util.Symphony__AddonsSwitch;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.util.Symphony__CoreEnvironmentSwitch;
-import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
+import ca.gc.asc_csa.apogy.addons.SimpleToolList;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.util.ApogyAddonsTelecomsAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.util.ApogyAddonsSwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
+import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -58,7 +58,7 @@ import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony__AddonsTelecomsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsTelecomsItemProviderAdapterFactory extends ApogyAddonsTelecomsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsTelecomsEditPlugin.INSTANCE, Symphony__AddonsTelecomsPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsTelecomsEditPlugin.INSTANCE, ApogyAddonsTelecomsPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -97,7 +97,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsItemProviderAdapterFactory() {
+	public ApogyAddonsTelecomsItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -106,7 +106,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.TelecomNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -114,7 +114,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected TelecomNodeItemProvider telecomNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.TelecomNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -137,7 +137,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected TelecomStatusMonitorToolItemProvider telecomStatusMonitorToolItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -152,7 +152,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -160,7 +160,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected TelecomStatusMonitorToolListItemProvider telecomStatusMonitorToolListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -175,7 +175,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.IsotropicAntenna} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -183,7 +183,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected IsotropicAntennaItemProvider isotropicAntennaItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.IsotropicAntenna}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -198,7 +198,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -206,7 +206,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected DipoleAntennaRadiationPatternItemProvider dipoleAntennaRadiationPatternItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -221,7 +221,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -229,7 +229,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected HalfWaveDipoleAntennaRadiationPatternItemProvider halfWaveDipoleAntennaRadiationPatternItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -244,7 +244,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -252,7 +252,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected SimpleConicalRadiationPatternItemProvider simpleConicalRadiationPatternItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -267,7 +267,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -275,7 +275,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected SimpleRectangularFrustumRadiationPatternItemProvider simpleRectangularFrustumRadiationPatternItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -290,7 +290,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -298,7 +298,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected URlBasedAntennaRadiationPatternItemProvider uRlBasedAntennaRadiationPatternItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -313,7 +313,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -321,7 +321,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	protected AntennaRadiationPatternImageMapLayerItemProvider antennaRadiationPatternImageMapLayerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -474,19 +474,19 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__AddonsPackage}.
+	 * A child creation extender for the {@link ApogyAddonsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__AddonsChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyAddonsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__AddonsSwitch<Object> {
+		protected static class CreationSwitch extends ApogyAddonsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -522,8 +522,8 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseSimpleToolList(SimpleToolList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorToolList()));
+						(ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorToolList()));
 
 				return null;
 			}
@@ -556,24 +556,24 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsTelecomsEditPlugin.INSTANCE;
+			return ApogyAddonsTelecomsEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -609,53 +609,53 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorToolList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorToolList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
 
 				return null;
 			}
@@ -669,53 +669,53 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorToolList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorToolList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
 
 				return null;
 			}
@@ -729,33 +729,33 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;
 			}
@@ -788,24 +788,24 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsTelecomsEditPlugin.INSTANCE;
+			return ApogyAddonsTelecomsEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreEnvironmentPackage}.
+	 * A child creation extender for the {@link ApogyCoreEnvironmentPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreEnvironmentChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreEnvironmentChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreEnvironmentSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreEnvironmentSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -841,8 +841,8 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseMap(Map object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
+						(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
 
 				return null;
 			}
@@ -875,24 +875,24 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsTelecomsEditPlugin.INSTANCE;
+			return ApogyAddonsTelecomsEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CorePackage}.
+	 * A child creation extender for the {@link ApogyCorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -928,33 +928,33 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;
 			}
@@ -968,33 +968,33 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseTopologyRoot(TopologyRoot object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;
 			}
@@ -1027,24 +1027,24 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsTelecomsEditPlugin.INSTANCE;
+			return ApogyAddonsTelecomsEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1080,33 +1080,33 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;
 			}
@@ -1139,7 +1139,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsTelecomsEditPlugin.INSTANCE;
+			return ApogyAddonsTelecomsEditPlugin.INSTANCE;
 		}
 	}
 

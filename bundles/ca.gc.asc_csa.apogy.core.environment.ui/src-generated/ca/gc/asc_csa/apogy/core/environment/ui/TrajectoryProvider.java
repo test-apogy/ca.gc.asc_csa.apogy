@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import java.util.List;
 
@@ -25,13 +25,13 @@ import org.jfree.data.xy.XYSeries;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getLatestPosition <em>Latest Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getAzimuthAngle <em>Azimuth Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryLength <em>Trajectory Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getLatestPosition <em>Latest Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getAzimuthAngle <em>Azimuth Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryLength <em>Trajectory Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getTrajectoryProvider()
  * @model abstract="true"
  * @generated
  */
@@ -46,14 +46,14 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latest Position</em>' attribute.
 	 * @see #setLatestPosition(XYDataItem)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_LatestPosition()
-	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.ui.XYDataItem" transient="true"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getTrajectoryProvider_LatestPosition()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.ui.XYDataItem" transient="true"
 	 * @generated
 	 */
   XYDataItem getLatestPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getLatestPosition <em>Latest Position</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getLatestPosition <em>Latest Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Latest Position</em>' attribute.
@@ -72,15 +72,15 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth Angle</em>' attribute.
 	 * @see #setAzimuthAngle(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_AzimuthAngle()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getTrajectoryProvider_AzimuthAngle()
 	 * @model default="0.0" unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getAzimuthAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getAzimuthAngle <em>Azimuth Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getAzimuthAngle <em>Azimuth Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth Angle</em>' attribute.
@@ -99,15 +99,15 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trajectory Length</em>' attribute.
 	 * @see #setTrajectoryLength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_TrajectoryLength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getTrajectoryProvider_TrajectoryLength()
 	 * @model default="0.0" unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
   double getTrajectoryLength();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryLength <em>Trajectory Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryLength <em>Trajectory Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Trajectory Length</em>' attribute.
@@ -126,14 +126,14 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trajectory Color</em>' attribute.
 	 * @see #setTrajectoryColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_TrajectoryColor()
-	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getTrajectoryProvider_TrajectoryColor()
+	 * @model default="0.0,1.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.ui.Color3f"
 	 * @generated
 	 */
   Color3f getTrajectoryColor();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Trajectory Color</em>' attribute.
@@ -170,7 +170,7 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-model-doc -->
 	 * Returns the current trajectory as a list of Point2d.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.ui.List<org.eclipse.symphony.core.environment.ui.Point2d>" unique="false" many="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.ui.List<ca.gc.asc_csa.apogy.core.environment.ui.Point2d>" unique="false" many="false"
 	 * @generated
 	 */
   List<Point2d> asListOfPoint2d();
@@ -181,7 +181,7 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-model-doc -->
 	 * The XYSeries containing the trajectory data to be displayed.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.ui.XYSeries" unique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.ui.XYSeries" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */

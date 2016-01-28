@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,20 +14,20 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
-import org.eclipse.symphony.core.invocator.VariableImplementationsList;
-import org.eclipse.symphony.core.invocator.Watch;
-import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
+import ca.gc.asc_csa.apogy.core.invocator.Watch;
+import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,10 +37,10 @@ import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#getSourceObject <em>Source Object</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#getFeatureNode <em>Feature Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#getCurrentValue <em>Current Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#isResolved <em>Resolved</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl#getSourceObject <em>Source Object</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl#getFeatureNode <em>Feature Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl#getCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl#isResolved <em>Resolved</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,7 +132,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER;
+		return ApogyCoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER;
 	}
 
   /**
@@ -147,7 +147,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 			sourceObject = eResolveProxy(oldSourceObject);
 			if (sourceObject != oldSourceObject) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 			}
 		}
 		return sourceObject;
@@ -189,7 +189,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		EObject oldSourceObject = sourceObject;
 		sourceObject = newSourceObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 	}
 
   /**
@@ -204,7 +204,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 			featureNode = (AbstractFeatureNode)eResolveProxy(oldFeatureNode);
 			if (featureNode != oldFeatureNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 			}
 		}
 		return featureNode;
@@ -229,7 +229,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		AbstractFeatureNode oldFeatureNode = featureNode;
 		featureNode = newFeatureNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 	}
 
 		/**
@@ -277,7 +277,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		Object oldCurrentValue = currentValue;
 		currentValue = newCurrentValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
 	}
 
   /**
@@ -300,7 +300,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		boolean oldResolved = resolved;
 		resolved = newResolved;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
 	}
 
   /**
@@ -312,15 +312,15 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				if (resolve) return getSourceObject();
 				return basicGetSourceObject();
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				if (resolve) return getFeatureNode();
 				return basicGetFeatureNode();
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return getCurrentValue();
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				return isResolved();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -335,16 +335,16 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved((Boolean)newValue);
 				return;
 		}
@@ -360,16 +360,16 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)null);
 				return;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)null);
 				return;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(CURRENT_VALUE_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved(RESOLVED_EDEFAULT);
 				return;
 		}
@@ -385,13 +385,13 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				return sourceObject != null;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				return featureNode != null;
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return CURRENT_VALUE_EDEFAULT == null ? currentValue != null : !CURRENT_VALUE_EDEFAULT.equals(currentValue);
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				return resolved != RESOLVED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -428,7 +428,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   
   protected void registerAdapters(AbstractFeatureNode newFeatureNode)
   {	  
-	  Watch watch = Symphony__CoreInvocatorFacade.INSTANCE.resolveWatch(newFeatureNode);
+	  Watch watch = ApogyCoreInvocatorFacade.INSTANCE.resolveWatch(newFeatureNode);
 	  
 	  if(watch != null)
 	  {
@@ -455,17 +455,17 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   {
 	  if(getFeatureNode() != null)
 	  {
-		  AbstractRootNode root = Symphony__CommonEMFFacade.INSTANCE.getFeatureRoot(getFeatureNode());
+		  AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE.getFeatureRoot(getFeatureNode());
 		  
 		  if(root.eContainer() instanceof Watch)
 		  {
 			  Watch watch = (Watch) root.eContainer();
-			  setSourceObject(Symphony__CoreInvocatorFacade.INSTANCE.getInstance(watch.getVariable()));
+			  setSourceObject(ApogyCoreInvocatorFacade.INSTANCE.getInstance(watch.getVariable()));
 		  }
 		  else if(root.eContainer() instanceof TypeMemberReferenceTreeElement)
 		  {
 			  TypeMemberReferenceTreeElement typeMemberReferenceTreeElement = (TypeMemberReferenceTreeElement) root.eContainer();
-			  setSourceObject(Symphony__CoreInvocatorFacade.INSTANCE.getInstance(typeMemberReferenceTreeElement));
+			  setSourceObject(ApogyCoreInvocatorFacade.INSTANCE.getInstance(typeMemberReferenceTreeElement));
 		  }
 	  }
   }
@@ -476,7 +476,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 	  
 	  if(getFeatureNode() != null)
 	  {
-		  watch = Symphony__CoreInvocatorFacade.INSTANCE.resolveWatch(getFeatureNode());
+		  watch = ApogyCoreInvocatorFacade.INSTANCE.resolveWatch(getFeatureNode());
 	  }
 	  
 	  return watch;
@@ -486,7 +486,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   {
 	  if(featureNodeAdapter == null)
 	  {
-		  featureNodeAdapter = Symphony__CommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();
+		  featureNodeAdapter = ApogyCommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();
 		  featureNodeAdapter.eAdapters().add(getFeatureNodeAdapterAdapter());
 	  }
 	  return featureNodeAdapter;
@@ -503,11 +503,11 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 				{
 					if(notification.getEventType() != Notification.REMOVING_ADAPTER)
 					{
-						if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+						if(notification.getFeatureID(FeatureNodeAdapter.class) == ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 						{
 							setCurrentValue(notification.getNewValue());
 						}
-						else if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED)
+						else if(notification.getFeatureID(FeatureNodeAdapter.class) == ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED)
 						{							
 							setResolved(notification.getNewBooleanValue());
 						}
@@ -534,7 +534,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 						if(notification.getNotifier() instanceof Environment)
 						{
 							// If the active context changes.
-							if(notification.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
+							if(notification.getFeatureID(Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
 							{																
 								Context oldContext = (Context) notification.getOldValue();
 								Context newContext = (Context) notification.getNewValue();
@@ -552,7 +552,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 						}
 						else if(notification.getNotifier() instanceof Context)
 						{
-							if(notification.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST)
+							if(notification.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST)
 							{
 								VariableImplementationsList oldList = (VariableImplementationsList) notification.getOldValue();
 								VariableImplementationsList newList = (VariableImplementationsList) notification.getNewValue();
@@ -566,7 +566,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 						}
 						else if(notification.getNotifier() instanceof VariableImplementationsList)							
 						{
-							if(notification.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS)
+							if(notification.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS)
 							{
 								switch(notification.getEventType())
 								{

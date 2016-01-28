@@ -1,20 +1,20 @@
-@GenModel(prefix="Symphony__AddonsTelecoms",
+@GenModel(prefix="ApogyAddonsTelecoms",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsTelecoms",
+	      modelName="ApogyAddonsTelecoms",
 	      complianceLevel="6.0",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.telecoms/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.telecoms.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.telecoms/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.telecoms.edit/src-generated")
 
-package org.eclipse.symphony.addons.telecoms
+package ca.gc.asc_csa.apogy.addons.telecoms
 
-import org.eclipse.symphony.common.emf.Named
-import org.eclipse.symphony.addons.SimpleTool
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.addons.SimpleTool
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer
 
 type Color3f wraps javax.vecmath.Color3f
 
@@ -263,8 +263,8 @@ abstract class AbstractAntennaRadiationPattern extends Node, Named
 	 * @param phi The angle between the x axis and the projection of the point in the x-y plane, in radians
 	 * @return The gain, in dBi (decibels isotropic or dBi) associated with the radiation pattern in the specified direction.
 	 */
-	@GenModel(symphony_units="dB")
-	op double computeGain(@GenModel(symphony_units="rad") double theta, @GenModel(symphony_units="rad") double phi)
+	@GenModel(apogy_units="dB")
+	op double computeGain(@GenModel(apogy_units="rad") double theta, @GenModel(apogy_units="rad") double phi)
 }
 
 /*
@@ -297,7 +297,7 @@ class SimpleConicalRadiationPattern extends AbstractAntennaRadiationPattern
 	/*
 	 * The apex angle of the cone. The cone is pointing toward +Z.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double apexAngle = "0.79"
 }
 
@@ -309,13 +309,13 @@ class SimpleRectangularFrustumRadiationPattern extends AbstractAntennaRadiationP
 	/*
 	 * Horizontal field of view angle.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double horizontalFieldOfView = "0.79"
 	
 	/*
 	 * Vertical field of view angle.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double verticalFieldOfView = "1.57"
 }
 
@@ -339,7 +339,7 @@ class AntennaRadiationPatternImageMapLayer extends LineOfSightImageMapLayer
 	/*
 	 * Cutoff signal strength under which no signal is usuable.
 	 */
-	@GenModel(property="Editable", propertyCategory="CUTOFF_SETTINGS", symphony_units="dB")
+	@GenModel(property="Editable", propertyCategory="CUTOFF_SETTINGS", apogy_units="dB")
 	double signalStrengthCutoff = "-100.0"
 	
 	/*

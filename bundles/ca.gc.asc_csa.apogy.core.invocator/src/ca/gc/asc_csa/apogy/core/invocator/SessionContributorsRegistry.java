@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class SessionContributorsRegistry 
 {
-	public static final String SESSION_CONTRIBUTORS_POINT_ID = "org.eclipse.symphony.core.invocator.sessionProvider";
+	public static final String SESSION_CONTRIBUTORS_POINT_ID = "ca.gc.asc_csa.apogy.core.invocator.sessionProvider";
 	public static final String SESSION_CONTRIBUTORS_NAME_ID = "Name";
 	public static final String SESSION_CONTRIBUTORS_DESCRIPTION_ID = "Description";
 	public static final String SESSION_CONTRIBUTORS_URI_ID = "URI";

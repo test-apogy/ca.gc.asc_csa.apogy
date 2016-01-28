@@ -4,7 +4,7 @@
  *
  * $Id: GPSImpl.java,v 1.2.4.2 2015/05/21 15:49:51 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.gps.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -18,15 +18,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPSConnection;
-import org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter;
-import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
-import org.eclipse.symphony.addons.sensors.gps.state.GPSState;
-import org.eclipse.symphony.addons.sensors.gps.state.GPSStateFactory;
-import org.eclipse.symphony.common.lang.java.Timer;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPS;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSConnection;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSDataInterpreter;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.state.GPSState;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.state.GPSStateFactory;
+import ca.gc.asc_csa.apogy.common.lang.java.Timer;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -35,15 +35,15 @@ import org.eclipse.symphony.common.lang.java.Timer;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getConnection <em>Connection</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getDataInterpreter <em>Data Interpreter</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getReading <em>Reading</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getStatus <em>Status</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getUpdateRate <em>Update Rate</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getLastFailure <em>Last Failure</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getMaxReconnectTime <em>Max Reconnect Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getSpeedKnots <em>Speed Knots</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getSpeedKmh <em>Speed Kmh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getConnection <em>Connection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getDataInterpreter <em>Data Interpreter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getReading <em>Reading</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getUpdateRate <em>Update Rate</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getLastFailure <em>Last Failure</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getMaxReconnectTime <em>Max Reconnect Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getSpeedKnots <em>Speed Knots</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.impl.GPSImpl#getSpeedKmh <em>Speed Kmh</em>}</li>
  * </ul>
  *
  * @generated
@@ -218,7 +218,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsGPSPackage.Literals.GPS;
+		return ApogyAddonsSensorsGPSPackage.Literals.GPS;
 	}
 
 	/**
@@ -238,7 +238,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		GPSConnection oldConnection = connection;
 		connection = newConnection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION, oldConnection, newConnection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__CONNECTION, oldConnection, newConnection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -252,14 +252,14 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		if (newConnection != connection) {
 			NotificationChain msgs = null;
 			if (connection != null)
-				msgs = ((InternalEObject)connection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION, null, msgs);
+				msgs = ((InternalEObject)connection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsGPSPackage.GPS__CONNECTION, null, msgs);
 			if (newConnection != null)
-				msgs = ((InternalEObject)newConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION, null, msgs);
+				msgs = ((InternalEObject)newConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsGPSPackage.GPS__CONNECTION, null, msgs);
 			msgs = basicSetConnection(newConnection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION, newConnection, newConnection));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__CONNECTION, newConnection, newConnection));
 	}
 
 	/**
@@ -279,7 +279,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		GPSDataInterpreter oldDataInterpreter = dataInterpreter;
 		dataInterpreter = newDataInterpreter;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER, oldDataInterpreter, newDataInterpreter);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER, oldDataInterpreter, newDataInterpreter);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -293,14 +293,14 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		if (newDataInterpreter != dataInterpreter) {
 			NotificationChain msgs = null;
 			if (dataInterpreter != null)
-				msgs = ((InternalEObject)dataInterpreter).eInverseRemove(this, Symphony__AddonsSensorsGPSPackage.GPS_DATA_INTERPRETER__GPS, GPSDataInterpreter.class, msgs);
+				msgs = ((InternalEObject)dataInterpreter).eInverseRemove(this, ApogyAddonsSensorsGPSPackage.GPS_DATA_INTERPRETER__GPS, GPSDataInterpreter.class, msgs);
 			if (newDataInterpreter != null)
-				msgs = ((InternalEObject)newDataInterpreter).eInverseAdd(this, Symphony__AddonsSensorsGPSPackage.GPS_DATA_INTERPRETER__GPS, GPSDataInterpreter.class, msgs);
+				msgs = ((InternalEObject)newDataInterpreter).eInverseAdd(this, ApogyAddonsSensorsGPSPackage.GPS_DATA_INTERPRETER__GPS, GPSDataInterpreter.class, msgs);
 			msgs = basicSetDataInterpreter(newDataInterpreter, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER, newDataInterpreter, newDataInterpreter));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER, newDataInterpreter, newDataInterpreter));
 	}
 
 	/**
@@ -331,7 +331,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		GPSReading oldReading = reading;
 		reading = newReading;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__READING, oldReading, newReading);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__READING, oldReading, newReading);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -345,14 +345,14 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		if (newReading != reading) {
 			NotificationChain msgs = null;
 			if (reading != null)
-				msgs = ((InternalEObject)reading).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsGPSPackage.GPS__READING, null, msgs);
+				msgs = ((InternalEObject)reading).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsGPSPackage.GPS__READING, null, msgs);
 			if (newReading != null)
-				msgs = ((InternalEObject)newReading).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsGPSPackage.GPS__READING, null, msgs);
+				msgs = ((InternalEObject)newReading).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsGPSPackage.GPS__READING, null, msgs);
 			msgs = basicSetReading(newReading, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__READING, newReading, newReading));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__READING, newReading, newReading));
 	}
 
 	/**
@@ -373,7 +373,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Symphony__AddonsSensorsGPSPackage.GPS__STATUS, oldStatus, status));
+					ApogyAddonsSensorsGPSPackage.GPS__STATUS, oldStatus, status));
 
 		gpsState = null;
 	}
@@ -401,7 +401,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		long oldUpdateRate = updateRate;
 		updateRate = newUpdateRate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__UPDATE_RATE, oldUpdateRate, updateRate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__UPDATE_RATE, oldUpdateRate, updateRate));
 	}
 
 	/**
@@ -420,7 +420,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		Exception oldLastFailure = lastFailure;
 		lastFailure = newLastFailure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__LAST_FAILURE, oldLastFailure, lastFailure));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__LAST_FAILURE, oldLastFailure, lastFailure));
 	}
 
 	/**
@@ -439,7 +439,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		int oldMaxReconnectTime = maxReconnectTime;
 		maxReconnectTime = newMaxReconnectTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME, oldMaxReconnectTime, maxReconnectTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME, oldMaxReconnectTime, maxReconnectTime));
 	}
 
 	/**
@@ -460,7 +460,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		double oldSpeedKnots = speedKnots;
 		speedKnots = newSpeedKnots;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KNOTS, oldSpeedKnots, speedKnots));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__SPEED_KNOTS, oldSpeedKnots, speedKnots));
 	}
 
 	/**
@@ -481,7 +481,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		double oldSpeedKmh = speedKmh;
 		speedKmh = newSpeedKmh;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KMH, oldSpeedKmh, speedKmh));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsGPSPackage.GPS__SPEED_KMH, oldSpeedKmh, speedKmh));
 	}
 
 	/**
@@ -550,9 +550,9 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
 				if (dataInterpreter != null)
-					msgs = ((InternalEObject)dataInterpreter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER, null, msgs);
+					msgs = ((InternalEObject)dataInterpreter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER, null, msgs);
 				return basicSetDataInterpreter((GPSDataInterpreter)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -566,11 +566,11 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION:
+			case ApogyAddonsSensorsGPSPackage.GPS__CONNECTION:
 				return basicSetConnection(null, msgs);
-			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
 				return basicSetDataInterpreter(null, msgs);
-			case Symphony__AddonsSensorsGPSPackage.GPS__READING:
+			case ApogyAddonsSensorsGPSPackage.GPS__READING:
 				return basicSetReading(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -583,23 +583,23 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION:
+			case ApogyAddonsSensorsGPSPackage.GPS__CONNECTION:
 				return getConnection();
-			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
 				return getDataInterpreter();
-			case Symphony__AddonsSensorsGPSPackage.GPS__READING:
+			case ApogyAddonsSensorsGPSPackage.GPS__READING:
 				return getReading();
-			case Symphony__AddonsSensorsGPSPackage.GPS__STATUS:
+			case ApogyAddonsSensorsGPSPackage.GPS__STATUS:
 				return getStatus();
-			case Symphony__AddonsSensorsGPSPackage.GPS__UPDATE_RATE:
+			case ApogyAddonsSensorsGPSPackage.GPS__UPDATE_RATE:
 				return getUpdateRate();
-			case Symphony__AddonsSensorsGPSPackage.GPS__LAST_FAILURE:
+			case ApogyAddonsSensorsGPSPackage.GPS__LAST_FAILURE:
 				return getLastFailure();
-			case Symphony__AddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
+			case ApogyAddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
 				return getMaxReconnectTime();
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
 				return getSpeedKnots();
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KMH:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KMH:
 				return getSpeedKmh();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -612,31 +612,31 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION:
+			case ApogyAddonsSensorsGPSPackage.GPS__CONNECTION:
 				setConnection((GPSConnection)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
 				setDataInterpreter((GPSDataInterpreter)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__READING:
+			case ApogyAddonsSensorsGPSPackage.GPS__READING:
 				setReading((GPSReading)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__STATUS:
+			case ApogyAddonsSensorsGPSPackage.GPS__STATUS:
 				setStatus((GPSStatus)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__UPDATE_RATE:
+			case ApogyAddonsSensorsGPSPackage.GPS__UPDATE_RATE:
 				setUpdateRate((Long)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__LAST_FAILURE:
+			case ApogyAddonsSensorsGPSPackage.GPS__LAST_FAILURE:
 				setLastFailure((Exception)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
+			case ApogyAddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
 				setMaxReconnectTime((Integer)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
 				setSpeedKnots((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KMH:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KMH:
 				setSpeedKmh((Double)newValue);
 				return;
 		}
@@ -650,31 +650,31 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION:
+			case ApogyAddonsSensorsGPSPackage.GPS__CONNECTION:
 				setConnection((GPSConnection)null);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
 				setDataInterpreter((GPSDataInterpreter)null);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__READING:
+			case ApogyAddonsSensorsGPSPackage.GPS__READING:
 				setReading((GPSReading)null);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__STATUS:
+			case ApogyAddonsSensorsGPSPackage.GPS__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__UPDATE_RATE:
+			case ApogyAddonsSensorsGPSPackage.GPS__UPDATE_RATE:
 				setUpdateRate(UPDATE_RATE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__LAST_FAILURE:
+			case ApogyAddonsSensorsGPSPackage.GPS__LAST_FAILURE:
 				setLastFailure(LAST_FAILURE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
+			case ApogyAddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
 				setMaxReconnectTime(MAX_RECONNECT_TIME_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
 				setSpeedKnots(SPEED_KNOTS_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KMH:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KMH:
 				setSpeedKmh(SPEED_KMH_EDEFAULT);
 				return;
 		}
@@ -688,23 +688,23 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION:
+			case ApogyAddonsSensorsGPSPackage.GPS__CONNECTION:
 				return connection != null;
-			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case ApogyAddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
 				return dataInterpreter != null;
-			case Symphony__AddonsSensorsGPSPackage.GPS__READING:
+			case ApogyAddonsSensorsGPSPackage.GPS__READING:
 				return reading != null;
-			case Symphony__AddonsSensorsGPSPackage.GPS__STATUS:
+			case ApogyAddonsSensorsGPSPackage.GPS__STATUS:
 				return status != STATUS_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS__UPDATE_RATE:
+			case ApogyAddonsSensorsGPSPackage.GPS__UPDATE_RATE:
 				return updateRate != UPDATE_RATE_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS__LAST_FAILURE:
+			case ApogyAddonsSensorsGPSPackage.GPS__LAST_FAILURE:
 				return LAST_FAILURE_EDEFAULT == null ? lastFailure != null : !LAST_FAILURE_EDEFAULT.equals(lastFailure);
-			case Symphony__AddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
+			case ApogyAddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
 				return maxReconnectTime != MAX_RECONNECT_TIME_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
 				return speedKnots != SPEED_KNOTS_EDEFAULT;
-			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KMH:
+			case ApogyAddonsSensorsGPSPackage.GPS__SPEED_KMH:
 				return speedKmh != SPEED_KMH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -718,16 +718,16 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsGPSPackage.GPS___START:
+			case ApogyAddonsSensorsGPSPackage.GPS___START:
 				start();
 				return null;
-			case Symphony__AddonsSensorsGPSPackage.GPS___STOP:
+			case ApogyAddonsSensorsGPSPackage.GPS___STOP:
 				stop();
 				return null;
-			case Symphony__AddonsSensorsGPSPackage.GPS___RESET:
+			case ApogyAddonsSensorsGPSPackage.GPS___RESET:
 				reset();
 				return null;
-			case Symphony__AddonsSensorsGPSPackage.GPS___RECONNECT:
+			case ApogyAddonsSensorsGPSPackage.GPS___RECONNECT:
 				return reconnect();
 		}
 		return super.eInvoke(operationID, arguments);

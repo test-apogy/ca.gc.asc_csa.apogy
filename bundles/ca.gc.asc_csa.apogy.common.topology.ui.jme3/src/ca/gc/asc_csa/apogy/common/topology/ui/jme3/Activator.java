@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +11,14 @@ import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.AdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.AdapterFactory;
 
 public class Activator implements BundleActivator {
 
-	public static final String ID = "org.eclipse.symphony.common.topology.ui.jme3";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.ui.jme3";
 	
-	public static final String JME3_EXTENSION_POINT_ID = "org.eclipse.symphony.common.topology.ui.jme3.jme3Adapter";
+	public static final String JME3_EXTENSION_POINT_ID = "ca.gc.asc_csa.apogy.common.topology.ui.jme3.jme3Adapter";
 	private static final String JME3_EXTENSION_POINT_ID_CLASS = "Class";
 
 	private static final String MAIN_JME_LOGGER_NAME = "com.jme3";

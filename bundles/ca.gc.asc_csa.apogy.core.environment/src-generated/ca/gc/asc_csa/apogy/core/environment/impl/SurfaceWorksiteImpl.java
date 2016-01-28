@@ -1,20 +1,20 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +24,8 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceWorksiteImpl#getSky <em>Sky</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceWorksiteImpl#getMapsList <em>Maps List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SurfaceWorksiteImpl#getSky <em>Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SurfaceWorksiteImpl#getMapsList <em>Maps List</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,7 +70,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE;
+		return ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE;
 	}
 
   /**
@@ -93,7 +93,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		Sky oldSky = sky;
 		sky = newSky;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, oldSky, newSky);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY, oldSky, newSky);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -104,7 +104,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 	{
   		if(!(super.getWorksiteNode() instanceof SurfaceWorksiteNode))
   		{
-  			worksiteNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode();
+  			worksiteNode = ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode();
   			worksiteNode.setWorksite(this);  			
   		}
   		
@@ -155,14 +155,14 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		if (newSky != sky) {
 			NotificationChain msgs = null;
 			if (sky != null)
-				msgs = ((InternalEObject)sky).eInverseRemove(this, Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
+				msgs = ((InternalEObject)sky).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
 			if (newSky != null)
-				msgs = ((InternalEObject)newSky).eInverseAdd(this, Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
+				msgs = ((InternalEObject)newSky).eInverseAdd(this, ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
 			msgs = basicSetSky(newSky, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, newSky, newSky));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY, newSky, newSky));
 	}
 
   /**
@@ -174,7 +174,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   {
 	  if(mapsList == null)
 	  {
-		  mapsList = Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsList();
+		  mapsList = ApogyCoreEnvironmentFactory.eINSTANCE.createMapsList();
 		  setMapsList(mapsList);
 	  }
 	  return mapsList;
@@ -190,7 +190,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		MapsList oldMapsList = mapsList;
 		mapsList = newMapsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, oldMapsList, newMapsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, oldMapsList, newMapsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -206,14 +206,14 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		if (newMapsList != mapsList) {
 			NotificationChain msgs = null;
 			if (mapsList != null)
-				msgs = ((InternalEObject)mapsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
+				msgs = ((InternalEObject)mapsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
 			if (newMapsList != null)
-				msgs = ((InternalEObject)newMapsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
+				msgs = ((InternalEObject)newMapsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
 			msgs = basicSetMapsList(newMapsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, newMapsList, newMapsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, newMapsList, newMapsList));
 	}
 
   /**
@@ -225,9 +225,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				if (sky != null)
-					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, null, msgs);
+					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY, null, msgs);
 				return basicSetSky((Sky)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -242,9 +242,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				return basicSetSky(null, msgs);
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				return basicSetMapsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -259,9 +259,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				return getSky();
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				return getMapsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -276,10 +276,10 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				setSky((Sky)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				setMapsList((MapsList)newValue);
 				return;
 		}
@@ -295,10 +295,10 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				setSky((Sky)null);
 				return;
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				setMapsList((MapsList)null);
 				return;
 		}
@@ -314,9 +314,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				return sky != null;
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				return mapsList != null;
 		}
 		return super.eIsSet(featureID);

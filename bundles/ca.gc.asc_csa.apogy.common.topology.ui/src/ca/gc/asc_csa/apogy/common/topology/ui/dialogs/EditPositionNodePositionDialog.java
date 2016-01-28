@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.dialogs;
+package ca.gc.asc_csa.apogy.common.topology.ui.dialogs;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
@@ -6,8 +6,8 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.ui.composites.EditPositionNodePositionComposite;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.composites.EditPositionNodePositionComposite;
 
 public class EditPositionNodePositionDialog extends MessageDialog
 {

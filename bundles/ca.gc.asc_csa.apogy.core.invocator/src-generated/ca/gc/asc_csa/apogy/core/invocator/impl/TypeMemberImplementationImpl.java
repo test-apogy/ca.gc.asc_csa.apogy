@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeMember;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImplementationImpl#getTypeMember <em>Type Member</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImplementationImpl#getTypeMember <em>Type Member</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_IMPLEMENTATION;
+		return ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_IMPLEMENTATION;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
 			typeMember = (TypeMember)eResolveProxy(oldTypeMember);
 			if (typeMember != oldTypeMember) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER, oldTypeMember, typeMember));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER, oldTypeMember, typeMember));
 			}
 		}
 		return typeMember;
@@ -96,7 +96,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
 		TypeMember oldTypeMember = typeMember;
 		typeMember = newTypeMember;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER, oldTypeMember, typeMember));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER, oldTypeMember, typeMember));
 	}
 
   /**
@@ -118,7 +118,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
 				if (resolve) return getTypeMember();
 				return basicGetTypeMember();
 		}
@@ -134,7 +134,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
 				setTypeMember((TypeMember)newValue);
 				return;
 		}
@@ -150,7 +150,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
 				setTypeMember((TypeMember)null);
 				return;
 		}
@@ -166,7 +166,7 @@ public class TypeMemberImplementationImpl extends AbstractTypeImplementationImpl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER:
 				return typeMember != null;
 		}
 		return super.eIsSet(featureID);

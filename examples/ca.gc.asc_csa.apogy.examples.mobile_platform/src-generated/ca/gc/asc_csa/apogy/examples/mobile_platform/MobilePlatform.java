@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
-import org.eclipse.symphony.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
 
 
 /**
@@ -22,17 +22,17 @@ import org.eclipse.symphony.common.emf.Disposable;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isDisposed <em>Disposed</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPositionError <em>Position Error</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLinearVelocity <em>Linear Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getAngularVelocity <em>Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLeftWheelPosition <em>Left Wheel Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getRightWheelPosition <em>Right Wheel Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPosition <em>Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPositionError <em>Position Error</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLinearVelocity <em>Linear Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getAngularVelocity <em>Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLeftWheelPosition <em>Left Wheel Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getRightWheelPosition <em>Right Wheel Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPosition <em>Position</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform()
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform()
  * @model abstract="true"
  * @generated
  */
@@ -54,7 +54,7 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface MobilePlatform extends Disposable
 	boolean isInitialized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -87,7 +87,7 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_Disposed()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -95,7 +95,7 @@ public interface MobilePlatform extends Disposable
 	boolean isDisposed();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.
@@ -117,7 +117,7 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position</em>' reference.
 	 * @see #setPosition(Position)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_Position()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_Position()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Position'"
 	 * @generated
@@ -125,7 +125,7 @@ public interface MobilePlatform extends Disposable
   Position getPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPosition <em>Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPosition <em>Position</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Position</em>' reference.
@@ -149,15 +149,15 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position Error</em>' attribute.
 	 * @see #setPositionError(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_PositionError()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_PositionError()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' apogy_units='m'"
 	 * @generated
 	 */
   double getPositionError();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPositionError <em>Position Error</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPositionError <em>Position Error</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Position Error</em>' attribute.
@@ -177,15 +177,15 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Linear Velocity</em>' attribute.
 	 * @see #setLinearVelocity(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_LinearVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_LinearVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' symphony_units='m/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' apogy_units='m/s'"
 	 * @generated
 	 */
 	double getLinearVelocity();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLinearVelocity <em>Linear Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLinearVelocity <em>Linear Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Linear Velocity</em>' attribute.
@@ -205,15 +205,15 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' attribute.
 	 * @see #setAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_AngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_AngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' symphony_units='rad/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' apogy_units='rad/s'"
 	 * @generated
 	 */
 	double getAngularVelocity();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getAngularVelocity <em>Angular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getAngularVelocity <em>Angular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angular Velocity</em>' attribute.
@@ -237,15 +237,15 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Left Wheel Position</em>' attribute.
 	 * @see #setLeftWheelPosition(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_LeftWheelPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_LeftWheelPosition()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' apogy_units='rad'"
 	 * @generated
 	 */
   double getLeftWheelPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLeftWheelPosition <em>Left Wheel Position</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLeftWheelPosition <em>Left Wheel Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Left Wheel Position</em>' attribute.
@@ -269,15 +269,15 @@ public interface MobilePlatform extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Right Wheel Position</em>' attribute.
 	 * @see #setRightWheelPosition(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_RightWheelPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatform_RightWheelPosition()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' apogy_units='rad'"
 	 * @generated
 	 */
   double getRightWheelPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getRightWheelPosition <em>Right Wheel Position</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getRightWheelPosition <em>Right Wheel Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Wheel Position</em>' attribute.
@@ -354,8 +354,8 @@ public interface MobilePlatform extends Disposable
 	 * @param y This is the mobile platform's desired Y coordinate.
 	 * <!-- end-model-doc -->
 	 * @model xUnique="false"
-	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'" yUnique="false"
-	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'" yUnique="false"
+	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	void moveTo(double x, double y);
@@ -376,7 +376,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m/s'"
 	 * @generated
 	 */
 	void cmdLinearVelocity(double linearVelocity);
@@ -397,7 +397,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s'"
 	 * @generated
 	 */
 	void cmdAngularVelocity(double angularVelocity);
@@ -426,8 +426,8 @@ public interface MobilePlatform extends Disposable
 	 * @see #cmdAngularVelocity(double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'" angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m/s'" angularVelocityUnique="false"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s'"
 	 * @generated
 	 */
 	void cmdVelocities(double linearVelocity, double angularVelocity);

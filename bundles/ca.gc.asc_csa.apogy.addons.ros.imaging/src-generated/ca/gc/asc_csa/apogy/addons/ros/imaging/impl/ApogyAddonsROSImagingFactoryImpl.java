@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.impl;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.ros.imaging.*;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.*;
 
 import org.ros.node.ConnectedNode;
 
@@ -25,24 +25,24 @@ import sensor_msgs.Image;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implements Symphony__AddonsROSImagingFactory {
+public class ApogyAddonsROSImagingFactoryImpl extends EFactoryImpl implements ApogyAddonsROSImagingFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsROSImagingFactory init() {
+	public static ApogyAddonsROSImagingFactory init() {
 		try {
-			Symphony__AddonsROSImagingFactory theSymphony__AddonsROSImagingFactory = (Symphony__AddonsROSImagingFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsROSImagingPackage.eNS_URI);
-			if (theSymphony__AddonsROSImagingFactory != null) {
-				return theSymphony__AddonsROSImagingFactory;
+			ApogyAddonsROSImagingFactory theApogyAddonsROSImagingFactory = (ApogyAddonsROSImagingFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsROSImagingPackage.eNS_URI);
+			if (theApogyAddonsROSImagingFactory != null) {
+				return theApogyAddonsROSImagingFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsROSImagingFactoryImpl();
+		return new ApogyAddonsROSImagingFactoryImpl();
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingFactoryImpl() {
+	public ApogyAddonsROSImagingFactoryImpl() {
 		super();
 	}
 
@@ -63,7 +63,7 @@ public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsROSImagingPackage.SYMPHONY_ADDONS_ROS_IMAGING_FACADE: return createSymphony__AddonsROSImagingFacade();
+			case ApogyAddonsROSImagingPackage.APOGY_ADDONS_ROS_IMAGING_FACADE: return createApogyAddonsROSImagingFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,11 +77,11 @@ public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsROSImagingPackage.IMAGE:
+			case ApogyAddonsROSImagingPackage.IMAGE:
 				return createImageFromString(eDataType, initialValue);
-			case Symphony__AddonsROSImagingPackage.COMPRESSED_IMAGE:
+			case ApogyAddonsROSImagingPackage.COMPRESSED_IMAGE:
 				return createCompressedImageFromString(eDataType, initialValue);
-			case Symphony__AddonsROSImagingPackage.CONNECTED_NODE:
+			case ApogyAddonsROSImagingPackage.CONNECTED_NODE:
 				return createConnectedNodeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -96,11 +96,11 @@ public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsROSImagingPackage.IMAGE:
+			case ApogyAddonsROSImagingPackage.IMAGE:
 				return convertImageToString(eDataType, instanceValue);
-			case Symphony__AddonsROSImagingPackage.COMPRESSED_IMAGE:
+			case ApogyAddonsROSImagingPackage.COMPRESSED_IMAGE:
 				return convertCompressedImageToString(eDataType, instanceValue);
-			case Symphony__AddonsROSImagingPackage.CONNECTED_NODE:
+			case ApogyAddonsROSImagingPackage.CONNECTED_NODE:
 				return convertConnectedNodeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -112,9 +112,9 @@ public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingFacade createSymphony__AddonsROSImagingFacade() {
-		Symphony__AddonsROSImagingFacadeImpl symphony__AddonsROSImagingFacade = new Symphony__AddonsROSImagingFacadeImpl();
-		return symphony__AddonsROSImagingFacade;
+	public ApogyAddonsROSImagingFacade createApogyAddonsROSImagingFacade() {
+		ApogyAddonsROSImagingFacadeImpl apogy__AddonsROSImagingFacade = new ApogyAddonsROSImagingFacadeImpl();
+		return apogy__AddonsROSImagingFacade;
 	}
 
 	/**
@@ -176,8 +176,8 @@ public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingPackage getSymphony__AddonsROSImagingPackage() {
-		return (Symphony__AddonsROSImagingPackage)getEPackage();
+	public ApogyAddonsROSImagingPackage getApogyAddonsROSImagingPackage() {
+		return (ApogyAddonsROSImagingPackage)getEPackage();
 	}
 
 	/**
@@ -187,8 +187,8 @@ public class Symphony__AddonsROSImagingFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsROSImagingPackage getPackage() {
-		return Symphony__AddonsROSImagingPackage.eINSTANCE;
+	public static ApogyAddonsROSImagingPackage getPackage() {
+		return ApogyAddonsROSImagingPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsROSImagingFactoryImpl
+} //ApogyAddonsROSImagingFactoryImpl

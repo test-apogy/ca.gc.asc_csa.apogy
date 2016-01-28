@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.util;
+package ca.gc.asc_csa.apogy.common.topology.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.*;
+import ca.gc.asc_csa.apogy.common.topology.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,17 +18,17 @@ import org.eclipse.symphony.common.topology.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage
  * @generated
  */
-public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
+public class ApogyCommonTopologySwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyPackage modelPackage;
+	protected static ApogyCommonTopologyPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -36,9 +36,9 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologySwitch() {
+	public ApogyCommonTopologySwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyPackage.eINSTANCE;
 		}
 	}
 
@@ -65,33 +65,33 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonTopologyPackage.TOPOLOGY_PROVIDER: {
+			case ApogyCommonTopologyPackage.TOPOLOGY_PROVIDER: {
 				TopologyProvider topologyProvider = (TopologyProvider)theEObject;
 				T1 result = caseTopologyProvider(topologyProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.NODE: {
+			case ApogyCommonTopologyPackage.NODE: {
 				Node node = (Node)theEObject;
 				T1 result = caseNode(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.LINK: {
+			case ApogyCommonTopologyPackage.LINK: {
 				Link link = (Link)theEObject;
 				T1 result = caseLink(link);
 				if (result == null) result = caseNode(link);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.LEAF: {
+			case ApogyCommonTopologyPackage.LEAF: {
 				Leaf leaf = (Leaf)theEObject;
 				T1 result = caseLeaf(leaf);
 				if (result == null) result = caseNode(leaf);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.URL_NODE: {
+			case ApogyCommonTopologyPackage.URL_NODE: {
 				URLNode urlNode = (URLNode)theEObject;
 				T1 result = caseURLNode(urlNode);
 				if (result == null) result = caseLeaf(urlNode);
@@ -99,7 +99,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.CAD_NODE: {
+			case ApogyCommonTopologyPackage.CAD_NODE: {
 				CADNode cadNode = (CADNode)theEObject;
 				T1 result = caseCADNode(cadNode);
 				if (result == null) result = caseURLNode(cadNode);
@@ -108,7 +108,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.CONTENT_NODE: {
+			case ApogyCommonTopologyPackage.CONTENT_NODE: {
 				ContentNode<?> contentNode = (ContentNode<?>)theEObject;
 				T1 result = caseContentNode(contentNode);
 				if (result == null) result = caseLeaf(contentNode);
@@ -116,7 +116,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE: {
+			case ApogyCommonTopologyPackage.REFERENCED_CONTENT_NODE: {
 				ReferencedContentNode<?> referencedContentNode = (ReferencedContentNode<?>)theEObject;
 				T1 result = caseReferencedContentNode(referencedContentNode);
 				if (result == null) result = caseContentNode(referencedContentNode);
@@ -125,7 +125,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE: {
+			case ApogyCommonTopologyPackage.AGGREGATE_CONTENT_NODE: {
 				AggregateContentNode<?> aggregateContentNode = (AggregateContentNode<?>)theEObject;
 				T1 result = caseAggregateContentNode(aggregateContentNode);
 				if (result == null) result = caseContentNode(aggregateContentNode);
@@ -134,14 +134,14 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.GROUP_NODE: {
+			case ApogyCommonTopologyPackage.GROUP_NODE: {
 				GroupNode groupNode = (GroupNode)theEObject;
 				T1 result = caseGroupNode(groupNode);
 				if (result == null) result = caseNode(groupNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE: {
+			case ApogyCommonTopologyPackage.REFERENCED_GROUP_NODE: {
 				ReferencedGroupNode referencedGroupNode = (ReferencedGroupNode)theEObject;
 				T1 result = caseReferencedGroupNode(referencedGroupNode);
 				if (result == null) result = caseGroupNode(referencedGroupNode);
@@ -149,7 +149,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE: {
+			case ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE: {
 				AggregateGroupNode aggregateGroupNode = (AggregateGroupNode)theEObject;
 				T1 result = caseAggregateGroupNode(aggregateGroupNode);
 				if (result == null) result = caseGroupNode(aggregateGroupNode);
@@ -157,7 +157,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.POSITION_NODE: {
+			case ApogyCommonTopologyPackage.POSITION_NODE: {
 				PositionNode positionNode = (PositionNode)theEObject;
 				T1 result = casePositionNode(positionNode);
 				if (result == null) result = caseAggregateGroupNode(positionNode);
@@ -166,7 +166,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.ROTATION_NODE: {
+			case ApogyCommonTopologyPackage.ROTATION_NODE: {
 				RotationNode rotationNode = (RotationNode)theEObject;
 				T1 result = caseRotationNode(rotationNode);
 				if (result == null) result = caseAggregateGroupNode(rotationNode);
@@ -175,7 +175,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE: {
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE: {
 				TransformNode transformNode = (TransformNode)theEObject;
 				T1 result = caseTransformNode(transformNode);
 				if (result == null) result = casePositionNode(transformNode);
@@ -186,7 +186,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.PICK_AND_PLACE_NODE: {
+			case ApogyCommonTopologyPackage.PICK_AND_PLACE_NODE: {
 				PickAndPlaceNode pickAndPlaceNode = (PickAndPlaceNode)theEObject;
 				T1 result = casePickAndPlaceNode(pickAndPlaceNode);
 				if (result == null) result = caseTransformNode(pickAndPlaceNode);
@@ -198,9 +198,9 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE: {
-				Symphony__CommonTopologyFacade symphony__CommonTopologyFacade = (Symphony__CommonTopologyFacade)theEObject;
-				T1 result = caseSymphony__CommonTopologyFacade(symphony__CommonTopologyFacade);
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE: {
+				ApogyCommonTopologyFacade apogy__CommonTopologyFacade = (ApogyCommonTopologyFacade)theEObject;
+				T1 result = caseApogyCommonTopologyFacade(apogy__CommonTopologyFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -459,7 +459,7 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSymphony__CommonTopologyFacade(Symphony__CommonTopologyFacade object) {
+	public T1 caseApogyCommonTopologyFacade(ApogyCommonTopologyFacade object) {
 		return null;
 	}
 
@@ -479,4 +479,4 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__CommonTopologySwitch
+} //ApogyCommonTopologySwitch

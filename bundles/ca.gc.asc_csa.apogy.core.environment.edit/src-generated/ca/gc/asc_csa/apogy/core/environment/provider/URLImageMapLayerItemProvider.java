@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.URLImageMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class URLImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLMapLayer_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLMapLayer_url_feature", "_UI_URLMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
+				 ApogyCoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class URLImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLImageMapLayer_legendURL_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageMapLayer_legendURL_feature", "_UI_URLImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.URL_IMAGE_MAP_LAYER__LEGEND_URL,
+				 ApogyCoreEnvironmentPackage.Literals.URL_IMAGE_MAP_LAYER__LEGEND_URL,
 				 true,
 				 false,
 				 false,
@@ -139,8 +139,8 @@ public class URLImageMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLImageMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
-			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
+			case ApogyCoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -173,8 +173,8 @@ public class URLImageMapLayerItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

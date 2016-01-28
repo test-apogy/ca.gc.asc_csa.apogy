@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsVehicleFacadeItemProvider
+public class ApogyAddonsVehicleFacadeItemProvider
   extends ItemProviderAdapter
   implements
     IEditingDomainItemProvider,
@@ -40,7 +40,7 @@ public class Symphony__AddonsVehicleFacadeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleFacadeItemProvider(AdapterFactory adapterFactory)
+  public ApogyAddonsVehicleFacadeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -62,7 +62,7 @@ public class Symphony__AddonsVehicleFacadeItemProvider
 	}
 
   /**
-	 * This returns Symphony__AddonsVehicleFacade.gif.
+	 * This returns ApogyAddonsVehicleFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -70,7 +70,7 @@ public class Symphony__AddonsVehicleFacadeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsVehicleFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsVehicleFacade"));
 	}
 
   /**
@@ -82,7 +82,7 @@ public class Symphony__AddonsVehicleFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_Symphony__AddonsVehicleFacade_type");
+		return getString("_UI_ApogyAddonsVehicleFacade_type");
 	}
 
   /**

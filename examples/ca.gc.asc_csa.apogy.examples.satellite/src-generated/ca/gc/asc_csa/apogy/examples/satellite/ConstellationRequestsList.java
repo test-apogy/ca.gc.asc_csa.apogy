@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -20,17 +20,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList#getConstellationRequests <em>Constellation Requests</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList#getConstellationRequests <em>Constellation Requests</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationRequestsList()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationRequestsList()
  * @model
  * @generated
  */
 public interface ConstellationRequestsList extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Constellation Requests</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Constellation Requests</em>' containment reference list isn't clear,
@@ -41,7 +41,7 @@ public interface ConstellationRequestsList extends EObject {
 	 * {@link AbstractConstellationRequest} container.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constellation Requests</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationRequestsList_ConstellationRequests()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationRequestsList_ConstellationRequests()
 	 * @model containment="true"
 	 * @generated
 	 */

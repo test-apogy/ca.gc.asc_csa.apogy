@@ -3,18 +3,18 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.util;
+package ca.gc.asc_csa.apogy.common.math.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.MathIO;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Polynomial;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.MathIO;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Polynomial;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,17 +26,17 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage
  * @generated
  */
-public class Symphony__CommonMathSwitch<T> extends Switch<T> {
+public class ApogyCommonMathSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonMathPackage modelPackage;
+	protected static ApogyCommonMathPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -44,9 +44,9 @@ public class Symphony__CommonMathSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathSwitch() {
+	public ApogyCommonMathSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonMathPackage.eINSTANCE;
+			modelPackage = ApogyCommonMathPackage.eINSTANCE;
 		}
 	}
 
@@ -74,37 +74,37 @@ public class Symphony__CommonMathSwitch<T> extends Switch<T> {
 	@Override
   protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonMathPackage.TUPLE3D: {
+			case ApogyCommonMathPackage.TUPLE3D: {
 				Tuple3d tuple3d = (Tuple3d)theEObject;
 				T result = caseTuple3d(tuple3d);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonMathPackage.MATRIX3X3: {
+			case ApogyCommonMathPackage.MATRIX3X3: {
 				Matrix3x3 matrix3x3 = (Matrix3x3)theEObject;
 				T result = caseMatrix3x3(matrix3x3);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonMathPackage.MATRIX4X4: {
+			case ApogyCommonMathPackage.MATRIX4X4: {
 				Matrix4x4 matrix4x4 = (Matrix4x4)theEObject;
 				T result = caseMatrix4x4(matrix4x4);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonMathPackage.POLYNOMIAL: {
+			case ApogyCommonMathPackage.POLYNOMIAL: {
 				Polynomial polynomial = (Polynomial)theEObject;
 				T result = casePolynomial(polynomial);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE: {
-				Symphony__CommonMathFacade symphony__CommonMathFacade = (Symphony__CommonMathFacade)theEObject;
-				T result = caseSymphony__CommonMathFacade(symphony__CommonMathFacade);
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE: {
+				ApogyCommonMathFacade apogy__CommonMathFacade = (ApogyCommonMathFacade)theEObject;
+				T result = caseApogyCommonMathFacade(apogy__CommonMathFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonMathPackage.MATH_IO: {
+			case ApogyCommonMathPackage.MATH_IO: {
 				MathIO mathIO = (MathIO)theEObject;
 				T result = caseMathIO(mathIO);
 				if (result == null) result = defaultCase(theEObject);
@@ -185,7 +185,7 @@ public class Symphony__CommonMathSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonMathFacade(Symphony__CommonMathFacade object) {
+	public T caseApogyCommonMathFacade(ApogyCommonMathFacade object) {
 		return null;
 	}
 
@@ -221,4 +221,4 @@ public class Symphony__CommonMathSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonMathSwitch
+} //ApogyCommonMathSwitch

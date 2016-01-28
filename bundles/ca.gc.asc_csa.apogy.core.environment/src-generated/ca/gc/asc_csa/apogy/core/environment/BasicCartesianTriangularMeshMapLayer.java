@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface BasicCartesianTriangularMeshMapLayer extends CartesianTriangula
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' containment reference.
 	 * @see #setMesh(CartesianTriangularMesh)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer_Mesh()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer_Mesh()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TRIANGULAR_MESH'"
 	 * @generated
@@ -44,7 +44,7 @@ public interface BasicCartesianTriangularMeshMapLayer extends CartesianTriangula
 	CartesianTriangularMesh getMesh();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer#getMesh <em>Mesh</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer#getMesh <em>Mesh</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mesh</em>' containment reference.

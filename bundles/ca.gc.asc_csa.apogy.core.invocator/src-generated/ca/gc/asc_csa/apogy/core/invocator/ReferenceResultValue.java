@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.ReferenceResultValue#getValue <em>Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getReferenceResultValue()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getReferenceResultValue()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ReferenceResultValue extends AbstractResultValue
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(EObject)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getReferenceResultValue_Value()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getReferenceResultValue_Value()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel createChild='true' property='Readonly'"
 	 * @generated
@@ -45,7 +45,7 @@ public interface ReferenceResultValue extends AbstractResultValue
   EObject getValue();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.ReferenceResultValue#getValue <em>Value</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue#getValue <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' containment reference.

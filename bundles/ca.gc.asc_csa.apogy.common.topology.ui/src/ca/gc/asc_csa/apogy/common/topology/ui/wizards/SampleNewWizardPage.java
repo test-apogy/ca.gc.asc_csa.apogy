@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.wizards;
+package ca.gc.asc_csa.apogy.common.topology.ui.wizards;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IResource;

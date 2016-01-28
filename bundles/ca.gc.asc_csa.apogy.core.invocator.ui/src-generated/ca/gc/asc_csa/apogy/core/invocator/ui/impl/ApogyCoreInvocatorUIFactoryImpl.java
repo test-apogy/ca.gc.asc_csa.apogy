@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui.impl;
+package ca.gc.asc_csa.apogy.core.invocator.ui.impl;
 
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.ecore.EClass;
@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.invocator.ui.*;
+import ca.gc.asc_csa.apogy.core.invocator.ui.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,24 +17,24 @@ import org.eclipse.symphony.core.invocator.ui.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implements Symphony__CoreInvocatorUIFactory {
+public class ApogyCoreInvocatorUIFactoryImpl extends EFactoryImpl implements ApogyCoreInvocatorUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CoreInvocatorUIFactory init() {
+	public static ApogyCoreInvocatorUIFactory init() {
 		try {
-			Symphony__CoreInvocatorUIFactory theSymphony__CoreInvocatorUIFactory = (Symphony__CoreInvocatorUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreInvocatorUIPackage.eNS_URI);
-			if (theSymphony__CoreInvocatorUIFactory != null) {
-				return theSymphony__CoreInvocatorUIFactory;
+			ApogyCoreInvocatorUIFactory theApogyCoreInvocatorUIFactory = (ApogyCoreInvocatorUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreInvocatorUIPackage.eNS_URI);
+			if (theApogyCoreInvocatorUIFactory != null) {
+				return theApogyCoreInvocatorUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreInvocatorUIFactoryImpl();
+		return new ApogyCoreInvocatorUIFactoryImpl();
 	}
 
 	/**
@@ -43,7 +43,7 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUIFactoryImpl() {
+	public ApogyCoreInvocatorUIFactoryImpl() {
 		super();
 	}
 
@@ -55,7 +55,7 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreInvocatorUIPackage.SYMPHONY_CORE_INVOCATOR_UI_FACADE: return createSymphony__CoreInvocatorUIFacade();
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: return createApogyCoreInvocatorUIFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -69,7 +69,7 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreInvocatorUIPackage.COMPOUND_COMMAND:
+			case ApogyCoreInvocatorUIPackage.COMPOUND_COMMAND:
 				return createCompoundCommandFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -84,7 +84,7 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreInvocatorUIPackage.COMPOUND_COMMAND:
+			case ApogyCoreInvocatorUIPackage.COMPOUND_COMMAND:
 				return convertCompoundCommandToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -96,9 +96,9 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUIFacade createSymphony__CoreInvocatorUIFacade() {
-		Symphony__CoreInvocatorUIFacadeImpl symphony__CoreInvocatorUIFacade = new Symphony__CoreInvocatorUIFacadeImpl();
-		return symphony__CoreInvocatorUIFacade;
+	public ApogyCoreInvocatorUIFacade createApogyCoreInvocatorUIFacade() {
+		ApogyCoreInvocatorUIFacadeImpl apogy__CoreInvocatorUIFacade = new ApogyCoreInvocatorUIFacadeImpl();
+		return apogy__CoreInvocatorUIFacade;
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUIPackage getSymphony__CoreInvocatorUIPackage() {
-		return (Symphony__CoreInvocatorUIPackage)getEPackage();
+	public ApogyCoreInvocatorUIPackage getApogyCoreInvocatorUIPackage() {
+		return (ApogyCoreInvocatorUIPackage)getEPackage();
 	}
 
 	/**
@@ -135,8 +135,8 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CoreInvocatorUIPackage getPackage() {
-		return Symphony__CoreInvocatorUIPackage.eINSTANCE;
+	public static ApogyCoreInvocatorUIPackage getPackage() {
+		return ApogyCoreInvocatorUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreInvocatorUIFactoryImpl
+} //ApogyCoreInvocatorUIFactoryImpl

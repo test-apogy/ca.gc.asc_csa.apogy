@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.emf.edit;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.emf.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin$Implementation
+Bundle-Activator: ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.common.emf.provider
+Export-Package: ca.gc.asc_csa.apogy.common.emf.provider
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.symphony.common.emf;bundle-version="0.1.0";visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;bundle-version="0.1.0";visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport

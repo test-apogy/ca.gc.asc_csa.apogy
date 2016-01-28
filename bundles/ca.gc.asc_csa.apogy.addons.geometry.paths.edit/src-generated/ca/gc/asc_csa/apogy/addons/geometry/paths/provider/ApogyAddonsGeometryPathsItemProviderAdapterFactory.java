@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,23 +33,23 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
 
-import org.eclipse.symphony.addons.geometry.paths.util.Symphony__AddonsGeometryPathsAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.util.ApogyAddonsGeometryPathsAdapterFactory;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 
-import org.eclipse.symphony.common.geometry.data.util.Symphony__CommonGeometryDataSwitch;
+import ca.gc.asc_csa.apogy.common.geometry.data.util.ApogyCommonGeometryDataSwitch;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -60,7 +60,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Symphony__AddonsGeometryPathsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsGeometryPathsItemProviderAdapterFactory extends ApogyAddonsGeometryPathsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsGeometryPathsEditPlugin.INSTANCE, Symphony__AddonsGeometryPathsPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsGeometryPathsEditPlugin.INSTANCE, ApogyAddonsGeometryPathsPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -99,7 +99,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsItemProviderAdapterFactory() {
+	public ApogyAddonsGeometryPathsItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -108,7 +108,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.WayPoint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	protected WayPointItemProvider wayPointItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.WayPoint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.Path} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.Path} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	protected PathItemProvider pathItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.Path}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.Path}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,7 +154,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.WayPointPath} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	protected WayPointPathItemProvider wayPointPathItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.WayPointPath}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,7 +177,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -185,7 +185,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	protected CatmullRomWayPointPathInterpolatorItemProvider catmullRomWayPointPathInterpolatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -200,7 +200,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -208,7 +208,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	protected SegmentWayPointPathInterpolatorItemProvider segmentWayPointPathInterpolatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -223,7 +223,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -231,7 +231,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	protected MinimumDistanceFilterItemProvider minimumDistanceFilterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -246,7 +246,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -254,7 +254,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	protected UniformDistanceWayPointPathInterpolatorItemProvider uniformDistanceWayPointPathInterpolatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -269,26 +269,26 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsGeometryPathsFacadeItemProvider symphony__AddonsGeometryPathsFacadeItemProvider;
+	protected ApogyAddonsGeometryPathsFacadeItemProvider apogy__AddonsGeometryPathsFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__AddonsGeometryPathsFacadeAdapter() {
-		if (symphony__AddonsGeometryPathsFacadeItemProvider == null) {
-			symphony__AddonsGeometryPathsFacadeItemProvider = new Symphony__AddonsGeometryPathsFacadeItemProvider(this);
+	public Adapter createApogyAddonsGeometryPathsFacadeAdapter() {
+		if (apogy__AddonsGeometryPathsFacadeItemProvider == null) {
+			apogy__AddonsGeometryPathsFacadeItemProvider = new ApogyAddonsGeometryPathsFacadeItemProvider(this);
 		}
 
-		return symphony__AddonsGeometryPathsFacadeItemProvider;
+		return apogy__AddonsGeometryPathsFacadeItemProvider;
 	}
 
 	/**
@@ -424,23 +424,23 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 		if (segmentWayPointPathInterpolatorItemProvider != null) segmentWayPointPathInterpolatorItemProvider.dispose();
 		if (minimumDistanceFilterItemProvider != null) minimumDistanceFilterItemProvider.dispose();
 		if (uniformDistanceWayPointPathInterpolatorItemProvider != null) uniformDistanceWayPointPathInterpolatorItemProvider.dispose();
-		if (symphony__AddonsGeometryPathsFacadeItemProvider != null) symphony__AddonsGeometryPathsFacadeItemProvider.dispose();
+		if (apogy__AddonsGeometryPathsFacadeItemProvider != null) apogy__AddonsGeometryPathsFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -476,43 +476,43 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createCatmullRomWayPointPathInterpolator()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createCatmullRomWayPointPathInterpolator()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createMinimumDistanceFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createMinimumDistanceFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createUniformDistanceWayPointPathInterpolator()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createUniformDistanceWayPointPathInterpolator()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSymphony__AddonsGeometryPathsFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createApogyAddonsGeometryPathsFacade()));
 
 				return null;
 			}
@@ -526,43 +526,43 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createCatmullRomWayPointPathInterpolator()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createCatmullRomWayPointPathInterpolator()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createMinimumDistanceFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createMinimumDistanceFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createUniformDistanceWayPointPathInterpolator()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createUniformDistanceWayPointPathInterpolator()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSymphony__AddonsGeometryPathsFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createApogyAddonsGeometryPathsFacade()));
 
 				return null;
 			}
@@ -576,18 +576,18 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 				return null;
 			}
@@ -620,24 +620,24 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsGeometryPathsEditPlugin.INSTANCE;
+			return ApogyAddonsGeometryPathsEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonGeometryDataPackage}.
+	 * A child creation extender for the {@link ApogyCommonGeometryDataPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonGeometryDataChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonGeometryDataChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonGeometryDataSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonGeometryDataSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -673,8 +673,8 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 			public <T extends Coordinates> Object caseCoordinatesSet(CoordinatesSet<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 				return null;
 			}
@@ -707,7 +707,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsGeometryPathsEditPlugin.INSTANCE;
+			return ApogyAddonsGeometryPathsEditPlugin.INSTANCE;
 		}
 	}
 

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage
  * @generated
  */
-public interface Symphony__ExamplesAntennaSymphonyFactory extends EFactory
+public interface ApogyExamplesAntennaApogyFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,16 +21,16 @@ public interface Symphony__ExamplesAntennaSymphonyFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesAntennaSymphonyFactory eINSTANCE = org.eclipse.symphony.examples.antenna.symphony.impl.Symphony__ExamplesAntennaSymphonyFactoryImpl.init();
+  ApogyExamplesAntennaApogyFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.ApogyExamplesAntennaApogyFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>PTU Dish Antenna Symphony System Api Adapter</em>'.
+	 * Returns a new object of class '<em>PTU Dish Antenna Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>PTU Dish Antenna Symphony System Api Adapter</em>'.
+	 * @return a new object of class '<em>PTU Dish Antenna Apogy System Api Adapter</em>'.
 	 * @generated
 	 */
-  PTUDishAntennaSymphonySystemApiAdapter createPTUDishAntennaSymphonySystemApiAdapter();
+  PTUDishAntennaApogySystemApiAdapter createPTUDishAntennaApogySystemApiAdapter();
 
   /**
 	 * Returns a new object of class '<em>PTU Dish Antenna Data</em>'.
@@ -48,6 +48,6 @@ public interface Symphony__ExamplesAntennaSymphonyFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesAntennaSymphonyPackage getSymphony__ExamplesAntennaSymphonyPackage();
+	ApogyExamplesAntennaApogyPackage getApogyExamplesAntennaApogyPackage();
 
-} //Symphony__ExamplesAntennaSymphonyFactory
+} //ApogyExamplesAntennaApogyFactory

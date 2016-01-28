@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology;
+package ca.gc.asc_csa.apogy.core.topology;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyFacadeImpl;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,16 +17,16 @@ import org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyFacadeImpl;
  *
  * <!-- begin-model-doc -->
  *  -------------------------------------------------------------------------
- * Symphony__CoreTopologyFacade
+ * ApogyCoreTopologyFacade
  * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphony__CoreTopologyFacade()
+ * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getApogyCoreTopologyFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreTopologyFacade extends EObject
+public interface ApogyCoreTopologyFacade extends EObject
 {
 
 	/**
@@ -48,14 +48,14 @@ public interface Symphony__CoreTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" symphonyEnvironmentUnique="false"
+	 * @model unique="false" apogyEnvironmentUnique="false"
 	 * @generated
 	 */
-	SymphonyEnvironmentNode createSymphonyEnvironmentNode(SymphonyEnvironment symphonyEnvironment);
+	ApogyEnvironmentNode createApogyEnvironmentNode(ApogyEnvironment apogyEnvironment);
 
 	/**
     * @generated_NOT
 	*/
-	public static Symphony__CoreTopologyFacade INSTANCE = Symphony__CoreTopologyFacadeImpl.getInstance();
+	public static ApogyCoreTopologyFacade INSTANCE = ApogyCoreTopologyFacadeImpl.getInstance();
 	
-} // Symphony__CoreTopologyFacade
+} // ApogyCoreTopologyFacade

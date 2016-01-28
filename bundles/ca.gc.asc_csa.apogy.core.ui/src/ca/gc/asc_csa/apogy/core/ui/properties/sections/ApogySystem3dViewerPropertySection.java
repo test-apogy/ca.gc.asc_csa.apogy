@@ -1,16 +1,16 @@
-package org.eclipse.symphony.core.ui.properties.sections;
+package ca.gc.asc_csa.apogy.core.ui.properties.sections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.ui.composites.SymphonySystem3dViewerComposite;
+import ca.gc.asc_csa.apogy.common.ui.properties.sections.AbstractExtendedPropertySection;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ui.composites.ApogySystem3dViewerComposite;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
-public class SymphonySystem3dViewerPropertySection extends AbstractExtendedPropertySection 
+public class ApogySystem3dViewerPropertySection extends AbstractExtendedPropertySection 
 {
-	SymphonySystem3dViewerComposite composite;
+	ApogySystem3dViewerComposite composite;
 	
 	@Override
 	public void createControls(Composite parent,TabbedPropertySheetPage aTabbedPropertySheetPage) 
@@ -20,19 +20,19 @@ public class SymphonySystem3dViewerPropertySection extends AbstractExtendedPrope
 	
 	@Override
 	protected Composite createComposite(Composite parent) {
-		composite = new SymphonySystem3dViewerComposite(parent, SWT.NONE);
+		composite = new ApogySystem3dViewerComposite(parent, SWT.NONE);
 		return composite;
 	}
 	
 	@Override
 	protected void render(EObject eObject) 
 	{
-		if (getEObject() instanceof SymphonySystem)
+		if (getEObject() instanceof ApogySystem)
 		{
-			composite.setSymphonySystem( (SymphonySystem) getEObject());	
+			composite.setApogySystem( (ApogySystem) getEObject());	
 		}
-/*		else if (getEObject() instanceof SymphonySystemAPI){
-			composite.setSymphonySystem( ((SymphonySystemAPI) getEObject()).getSystem());
+/*		else if (getEObject() instanceof ApogySystemAPI){
+			composite.setApogySystem( ((ApogySystemAPI) getEObject()).getSystem());
 		}
 //*/	
 	}

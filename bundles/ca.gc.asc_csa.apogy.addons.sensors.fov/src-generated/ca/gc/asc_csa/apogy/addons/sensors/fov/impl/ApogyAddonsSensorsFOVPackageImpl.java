@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -14,24 +14,24 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.addons.sensors.fov.AngularSpan;
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
 
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsFOVPackage {
+public class ApogyAddonsSensorsFOVPackageImpl extends EPackageImpl implements ApogyAddonsSensorsFOVPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,7 +94,7 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsSensorsFOVFacadeEClass = null;
+	private EClass apogy__AddonsSensorsFOVFacadeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -107,12 +107,12 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsFOVPackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsFOVFactory.eINSTANCE);
+	private ApogyAddonsSensorsFOVPackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsFOVFactory.eINSTANCE);
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsFOVPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsFOVPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134,31 +134,31 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsFOVPackage init() {
-		if (isInited) return (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
+	public static ApogyAddonsSensorsFOVPackage init() {
+		if (isInited) return (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsFOVPackageImpl theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsFOVPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsFOVPackageImpl());
+		ApogyAddonsSensorsFOVPackageImpl theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsFOVPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsFOVPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
-		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsFOVPackage.createPackageContents();
+		theApogyAddonsSensorsFOVPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsFOVPackage.initializePackageContents();
+		theApogyAddonsSensorsFOVPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsFOVPackage.freeze();
+		theApogyAddonsSensorsFOVPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsFOVPackage.eNS_URI, theSymphony__AddonsSensorsFOVPackage);
-		return theSymphony__AddonsSensorsFOVPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsFOVPackage.eNS_URI, theApogyAddonsSensorsFOVPackage);
+		return theApogyAddonsSensorsFOVPackage;
 	}
 
 	/**
@@ -418,8 +418,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsSensorsFOVFacade() {
-		return symphony__AddonsSensorsFOVFacadeEClass;
+	public EClass getApogyAddonsSensorsFOVFacade() {
+		return apogy__AddonsSensorsFOVFacadeEClass;
 	}
 
 	/**
@@ -427,8 +427,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__double_double() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateDistanceRange__double_double() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -436,8 +436,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -445,8 +445,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__double_double() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateAngularSpan__double_double() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -454,8 +454,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -463,8 +463,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(4);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -472,8 +472,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(5);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -481,8 +481,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(6);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -490,8 +490,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(7);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -499,8 +499,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(8);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -508,8 +508,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView() {
-		return symphony__AddonsSensorsFOVFacadeEClass.getEOperations().get(9);
+	public EOperation getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView() {
+		return apogy__AddonsSensorsFOVFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -517,8 +517,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVFactory getSymphony__AddonsSensorsFOVFactory() {
-		return (Symphony__AddonsSensorsFOVFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsFOVFactory getApogyAddonsSensorsFOVFactory() {
+		return (ApogyAddonsSensorsFOVFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -575,17 +575,17 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		createEReference(rectangularFrustrumFieldOfViewSamplingShapeEClass, RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM);
 		createEReference(rectangularFrustrumFieldOfViewSamplingShapeEClass, RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW);
 
-		symphony__AddonsSensorsFOVFacadeEClass = createEClass(SYMPHONY_ADDONS_SENSORS_FOV_FACADE);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(symphony__AddonsSensorsFOVFacadeEClass, SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW);
+		apogy__AddonsSensorsFOVFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_FOV_FACADE);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogy__AddonsSensorsFOVFacadeEClass, APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW);
 	}
 
 	/**
@@ -612,30 +612,30 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
-		Symphony__CommonGeometryDataPackage theSymphony__CommonGeometryDataPackage = (Symphony__CommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryDataPackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonGeometryDataPackage theApogyCommonGeometryDataPackage = (ApogyCommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryDataPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter rectangularFrustrumFieldOfViewSamplingShapeEClass_PolygonType = addETypeParameter(rectangularFrustrumFieldOfViewSamplingShapeEClass, "PolygonType");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		EGenericType g1 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		rectangularFrustrumFieldOfViewSamplingShapeEClass_PolygonType.getEBounds().add(g1);
 
 		// Add supertypes to classes
-		fieldOfViewEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		fieldOfViewEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		rectangularFrustrumFieldOfViewEClass.getESuperTypes().add(this.getFieldOfView());
 		conicalFieldOfViewEClass.getESuperTypes().add(this.getFieldOfView());
 		circularSectorFieldOfViewEClass.getESuperTypes().add(this.getFieldOfView());
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getCoordinatesSamplingShape());
-		EGenericType g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getCoordinatesSamplingShape());
+		EGenericType g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		rectangularFrustrumFieldOfViewSamplingShapeEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getPolygonSamplingShape());
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getPolygonSamplingShape());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(rectangularFrustrumFieldOfViewSamplingShapeEClass_PolygonType);
 		g1.getETypeArguments().add(g2);
@@ -678,49 +678,49 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		initEAttribute(getCircularSectorFieldOfView_Area(), theEcorePackage.getEDouble(), "area", null, 0, 1, CircularSectorFieldOfView.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(rectangularFrustrumFieldOfViewSamplingShapeEClass, RectangularFrustrumFieldOfViewSamplingShape.class, "RectangularFrustrumFieldOfViewSamplingShape", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_Transform(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_Transform(), theApogyCommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView(), this.getRectangularFrustrumFieldOfView(), null, "rectangularFrustrumFieldOfView", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__AddonsSensorsFOVFacadeEClass, Symphony__AddonsSensorsFOVFacade.class, "Symphony__AddonsSensorsFOVFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsSensorsFOVFacadeEClass, ApogyAddonsSensorsFOVFacade.class, "ApogyAddonsSensorsFOVFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__double_double(), this.getDistanceRange(), "createDistanceRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateDistanceRange__double_double(), this.getDistanceRange(), "createDistanceRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange(), this.getDistanceRange(), "createDistanceRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange(), this.getDistanceRange(), "createDistanceRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getDistanceRange(), "distanceRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__double_double(), this.getAngularSpan(), "createAngularSpan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateAngularSpan__double_double(), this.getAngularSpan(), "createAngularSpan", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan(), this.getAngularSpan(), "createAngularSpan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan(), this.getAngularSpan(), "createAngularSpan", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAngularSpan(), "angularSpan", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double(), this.getRectangularFrustrumFieldOfView(), "createRectangularFrustrumFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double(), this.getRectangularFrustrumFieldOfView(), "createRectangularFrustrumFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "horizontalFieldOfViewAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "verticalFieldOfViewAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView(), this.getRectangularFrustrumFieldOfView(), "createRectangularFrustrumFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView(), this.getRectangularFrustrumFieldOfView(), "createRectangularFrustrumFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularFrustrumFieldOfView(), "rectangularFrustrumFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double(), this.getConicalFieldOfView(), "createConicalFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double(), this.getConicalFieldOfView(), "createConicalFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "fieldOfViewAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView(), this.getConicalFieldOfView(), "createConicalFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView(), this.getConicalFieldOfView(), "createConicalFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConicalFieldOfView(), "conicalFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double(), this.getCircularSectorFieldOfView(), "createCircularSectorFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double(), this.getCircularSectorFieldOfView(), "createCircularSectorFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView(), this.getCircularSectorFieldOfView(), "createCircularSectorFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView(), this.getCircularSectorFieldOfView(), "createCircularSectorFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCircularSectorFieldOfView(), "circularSectorFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
@@ -743,16 +743,16 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsSensorsFOV",
+			 "prefix", "ApogyAddonsSensorsFOV",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsSensorsFOV",
+			 "modelName", "ApogyAddonsSensorsFOV",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.fov/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.sensors.fov.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons.sensors"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.fov/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.fov.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons.sensors"
 		   });	
 		addAnnotation
 		  (distanceRangeEClass, 
@@ -782,27 +782,27 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		  (getAngularSpan_MinimumAngle(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAngularSpan_MaximumAngle(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAngularSpan_SpanningAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The total angular span, in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAngularSpan_CenterAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The center of the angular span, in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (rectangularFrustrumFieldOfViewEClass, 
@@ -815,14 +815,14 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		   source, 
 		   new String[] {
 			 "documentation", "Total horizontal field of view, in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getRectangularFrustrumFieldOfView_VerticalFieldOfViewAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Total vertical field of view, in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getRectangularFrustrumFieldOfView_Volume(), 
@@ -841,7 +841,7 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		   source, 
 		   new String[] {
 			 "documentation", "The apex angle, in radians, of the conical field of view.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getConicalFieldOfView_Volume(), 
@@ -863,4 +863,4 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		   });
 	}
 
-} //Symphony__AddonsSensorsFOVPackageImpl
+} //ApogyAddonsSensorsFOVPackageImpl

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.util.Symphony__CommonEMFAdapterFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.util.ApogyCommonEMFAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -36,7 +36,7 @@ import org.eclipse.symphony.common.emf.util.Symphony__CommonEMFAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__CommonEMFAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyCommonEMFItemProviderAdapterFactory extends ApogyCommonEMFAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -60,7 +60,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonEMFEditPlugin.INSTANCE, Symphony__CommonEMFPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonEMFEditPlugin.INSTANCE, ApogyCommonEMFPackage.eNS_URI);
 
 		/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFItemProviderAdapterFactory()
+  public ApogyCommonEMFItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -86,30 +86,30 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonEMFFacadeItemProvider symphony__CommonEMFFacadeItemProvider;
+	protected ApogyCommonEMFFacadeItemProvider apogy__CommonEMFFacadeItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonEMFFacadeAdapter() {
-		if (symphony__CommonEMFFacadeItemProvider == null) {
-			symphony__CommonEMFFacadeItemProvider = new Symphony__CommonEMFFacadeItemProvider(this);
+	public Adapter createApogyCommonEMFFacadeAdapter() {
+		if (apogy__CommonEMFFacadeItemProvider == null) {
+			apogy__CommonEMFFacadeItemProvider = new ApogyCommonEMFFacadeItemProvider(this);
 		}
 
-		return symphony__CommonEMFFacadeItemProvider;
+		return apogy__CommonEMFFacadeItemProvider;
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.EObjectReference} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.EObjectReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected EObjectReferenceItemProvider eObjectReferenceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.EObjectReference}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.EObjectReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -132,7 +132,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Server} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.Server} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected ServerItemProvider serverItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.Server}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.Server}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -155,7 +155,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Startable} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.Startable} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,7 +163,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected StartableItemProvider startableItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.Startable}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.Startable}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -178,7 +178,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.FixedTimeSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.FixedTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected FixedTimeSourceItemProvider fixedTimeSourceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.FixedTimeSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.FixedTimeSource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -201,7 +201,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.CurrentTimeSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,7 +209,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected CurrentTimeSourceItemProvider currentTimeSourceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.CurrentTimeSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -224,7 +224,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.BrowseableTimeSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,7 +232,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected BrowseableTimeSourceItemProvider browseableTimeSourceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.BrowseableTimeSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -247,7 +247,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.SelectionBasedTimeSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.SelectionBasedTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -255,7 +255,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected SelectionBasedTimeSourceItemProvider selectionBasedTimeSourceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.SelectionBasedTimeSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.SelectionBasedTimeSource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -270,7 +270,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -278,7 +278,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	protected CollectionTimedTimeSourceItemProvider collectionTimedTimeSourceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -293,7 +293,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.FeatureNodeAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -301,7 +301,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
   protected FeatureNodeAdapterItemProvider featureNodeAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.FeatureNodeAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -317,7 +317,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.TreeRootNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.TreeRootNode} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -325,7 +325,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
   protected TreeRootNodeItemProvider treeRootNodeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.TreeRootNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.TreeRootNode}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -341,7 +341,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.TreeFeatureNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -349,7 +349,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
   protected TreeFeatureNodeItemProvider treeFeatureNodeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.TreeFeatureNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -365,7 +365,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.ListRootNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.ListRootNode} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -373,7 +373,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
   protected ListRootNodeItemProvider listRootNodeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.ListRootNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ListRootNode}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -389,7 +389,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.ListFeatureNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.emf.ListFeatureNode} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -397,7 +397,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
   protected ListFeatureNodeItemProvider listFeatureNodeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.ListFeatureNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ListFeatureNode}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -547,7 +547,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	 */
   public void dispose()
   {
-		if (symphony__CommonEMFFacadeItemProvider != null) symphony__CommonEMFFacadeItemProvider.dispose();
+		if (apogy__CommonEMFFacadeItemProvider != null) apogy__CommonEMFFacadeItemProvider.dispose();
 		if (eObjectReferenceItemProvider != null) eObjectReferenceItemProvider.dispose();
 		if (serverItemProvider != null) serverItemProvider.dispose();
 		if (startableItemProvider != null) startableItemProvider.dispose();

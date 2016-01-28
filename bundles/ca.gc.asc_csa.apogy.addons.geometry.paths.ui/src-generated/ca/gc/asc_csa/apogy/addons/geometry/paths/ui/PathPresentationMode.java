@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Path Presentation Mode</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getPathPresentationMode()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage#getPathPresentationMode()
  * @model
  * @generated
  */

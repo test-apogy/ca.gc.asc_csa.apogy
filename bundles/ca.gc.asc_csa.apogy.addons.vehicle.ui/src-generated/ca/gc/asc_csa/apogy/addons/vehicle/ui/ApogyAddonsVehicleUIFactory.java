@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage
  * @generated
  */
-public interface Symphony__AddonsVehicleUIFactory extends EFactory
+public interface ApogyAddonsVehicleUIFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__AddonsVehicleUIFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsVehicleUIFactory eINSTANCE = org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIFactoryImpl.init();
+  ApogyAddonsVehicleUIFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Physical Wheel Presentation</em>'.
@@ -57,6 +57,6 @@ public interface Symphony__AddonsVehicleUIFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsVehicleUIPackage getSymphony__AddonsVehicleUIPackage();
+	ApogyAddonsVehicleUIPackage getApogyAddonsVehicleUIPackage();
 
-} //Symphony__AddonsVehicleUIFactory
+} //ApogyAddonsVehicleUIFactory

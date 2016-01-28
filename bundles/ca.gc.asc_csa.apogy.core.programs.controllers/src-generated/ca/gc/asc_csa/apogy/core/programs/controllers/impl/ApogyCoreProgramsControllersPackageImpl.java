@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -13,32 +13,32 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
-import org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
-import org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger;
-import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
-import org.eclipse.symphony.core.programs.controllers.ControllerValueSource;
-import org.eclipse.symphony.core.programs.controllers.ControllersConfiguration;
-import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.EdgeType;
-import org.eclipse.symphony.core.programs.controllers.FixedValueSource;
-import org.eclipse.symphony.core.programs.controllers.LinearInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
-import org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.TimeTrigger;
-import org.eclipse.symphony.core.programs.controllers.ToggleValueSource;
-import org.eclipse.symphony.core.programs.controllers.Trigger;
-import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.ValueSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.EdgeType;
+import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ParabolicInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.Trigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 import java.util.List;
 import java.util.TreeSet;
 
@@ -48,14 +48,14 @@ import java.util.TreeSet;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl implements Symphony__CoreProgramsControllersPackage
+public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implements ApogyCoreProgramsControllersPackage
 {
   /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CoreProgramsControllersFacadeEClass = null;
+	private EClass apogy__CoreProgramsControllersFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -222,13 +222,13 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__CoreProgramsControllersPackageImpl()
+  private ApogyCoreProgramsControllersPackageImpl()
   {
-		super(eNS_URI, Symphony__CoreProgramsControllersFactory.eINSTANCE);
+		super(eNS_URI, ApogyCoreProgramsControllersFactory.eINSTANCE);
 	}
 
   /**
@@ -241,7 +241,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CoreProgramsControllersPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCoreProgramsControllersPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -250,32 +250,32 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__CoreProgramsControllersPackage init()
+  public static ApogyCoreProgramsControllersPackage init()
   {
-		if (isInited) return (Symphony__CoreProgramsControllersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreProgramsControllersPackage.eNS_URI);
+		if (isInited) return (ApogyCoreProgramsControllersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreProgramsControllersPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CoreProgramsControllersPackageImpl theSymphony__CoreProgramsControllersPackage = (Symphony__CoreProgramsControllersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CoreProgramsControllersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CoreProgramsControllersPackageImpl());
+		ApogyCoreProgramsControllersPackageImpl theApogyCoreProgramsControllersPackage = (ApogyCoreProgramsControllersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCoreProgramsControllersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCoreProgramsControllersPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CoreInvocatorPackage.eINSTANCE.eClass();
-		Symphony__CommonIOJInputPackage.eINSTANCE.eClass();
+		ApogyCoreInvocatorPackage.eINSTANCE.eClass();
+		ApogyCommonIOJInputPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CoreProgramsControllersPackage.createPackageContents();
+		theApogyCoreProgramsControllersPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CoreProgramsControllersPackage.initializePackageContents();
+		theApogyCoreProgramsControllersPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CoreProgramsControllersPackage.freeze();
+		theApogyCoreProgramsControllersPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CoreProgramsControllersPackage.eNS_URI, theSymphony__CoreProgramsControllersPackage);
-		return theSymphony__CoreProgramsControllersPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCoreProgramsControllersPackage.eNS_URI, theApogyCoreProgramsControllersPackage);
+		return theApogyCoreProgramsControllersPackage;
 	}
 
   /**
@@ -283,8 +283,8 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CoreProgramsControllersFacade() {
-		return symphony__CoreProgramsControllersFacadeEClass;
+	public EClass getApogyCoreProgramsControllersFacade() {
+		return apogy__CoreProgramsControllersFacadeEClass;
 	}
 
 		/**
@@ -292,8 +292,8 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreProgramsControllersFacade__CreateValue__EParameter_float() {
-		return symphony__CoreProgramsControllersFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCoreProgramsControllersFacade__CreateValue__EParameter_float() {
+		return apogy__CoreProgramsControllersFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -301,8 +301,8 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreProgramsControllersFacade__SortCustomInputConditioningPoint__List() {
-		return symphony__CoreProgramsControllersFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCoreProgramsControllersFacade__SortCustomInputConditioningPoint__List() {
+		return apogy__CoreProgramsControllersFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -310,8 +310,8 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double() {
-		return symphony__CoreProgramsControllersFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double() {
+		return apogy__CoreProgramsControllersFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -828,8 +828,8 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsControllersFactory getSymphony__CoreProgramsControllersFactory() {
-		return (Symphony__CoreProgramsControllersFactory)getEFactoryInstance();
+	public ApogyCoreProgramsControllersFactory getApogyCoreProgramsControllersFactory() {
+		return (ApogyCoreProgramsControllersFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -852,10 +852,10 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		isCreated = true;
 
 		// Create classes and their features
-		symphony__CoreProgramsControllersFacadeEClass = createEClass(SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE);
-		createEOperation(symphony__CoreProgramsControllersFacadeEClass, SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT);
-		createEOperation(symphony__CoreProgramsControllersFacadeEClass, SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST);
-		createEOperation(symphony__CoreProgramsControllersFacadeEClass, SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
+		apogy__CoreProgramsControllersFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE);
+		createEOperation(apogy__CoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT);
+		createEOperation(apogy__CoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST);
+		createEOperation(apogy__CoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
 
 		controllersConfigurationEClass = createEClass(CONTROLLERS_CONFIGURATION);
 		createEAttribute(controllersConfigurationEClass, CONTROLLERS_CONFIGURATION__ACTIVE);
@@ -960,9 +960,9 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CommonIOJInputPackage theSymphony__CommonIOJInputPackage = (Symphony__CommonIOJInputPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonIOJInputPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCommonIOJInputPackage theApogyCommonIOJInputPackage = (ApogyCommonIOJInputPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonIOJInputPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -971,17 +971,17 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		controllersConfigurationEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getProgram());
-		controllersConfigurationEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getOperationCallContainer());
-		operationCallControllerBindingEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getOperationCall());
-		triggerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		triggerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		controllersConfigurationEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getProgram());
+		controllersConfigurationEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getOperationCallContainer());
+		operationCallControllerBindingEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getOperationCall());
+		triggerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		triggerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		timeTriggerEClass.getESuperTypes().add(this.getTrigger());
 		controllerTriggerEClass.getESuperTypes().add(this.getTrigger());
 		controllerEdgeTriggerEClass.getESuperTypes().add(this.getControllerTrigger());
 		controllerStateTriggerEClass.getESuperTypes().add(this.getControllerTrigger());
-		bindedEDataTypeArgumentEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getArgument());
-		fixedValueSourceEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getEDataTypeArgument());
+		bindedEDataTypeArgumentEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getArgument());
+		fixedValueSourceEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getEDataTypeArgument());
 		fixedValueSourceEClass.getESuperTypes().add(this.getValueSource());
 		toggleValueSourceEClass.getESuperTypes().add(this.getValueSource());
 		controllerValueSourceEClass.getESuperTypes().add(this.getValueSource());
@@ -992,13 +992,13 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		userDefinedInputConditioningEClass.getESuperTypes().add(this.getAbstractInputConditioning());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(symphony__CoreProgramsControllersFacadeEClass, Symphony__CoreProgramsControllersFacade.class, "Symphony__CoreProgramsControllersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CoreProgramsControllersFacadeEClass, ApogyCoreProgramsControllersFacade.class, "ApogyCoreProgramsControllersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__CoreProgramsControllersFacade__CreateValue__EParameter_float(), theEcorePackage.getEJavaObject(), "createValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCoreProgramsControllersFacade__CreateValue__EParameter_float(), theEcorePackage.getEJavaObject(), "createValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEParameter(), "eParameter", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreProgramsControllersFacade__SortCustomInputConditioningPoint__List(), null, "sortCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreProgramsControllersFacade__SortCustomInputConditioningPoint__List(), null, "sortCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
 		EGenericType g2 = createEGenericType(this.getCustomInputConditioningPoint());
 		g1.getETypeArguments().add(g2);
@@ -1008,7 +1008,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphony__CoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double(), this.getCustomInputConditioningPoint(), "createCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double(), this.getCustomInputConditioningPoint(), "createCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "inputValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "outputValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1029,7 +1029,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		initEAttribute(getTimeTrigger_RefreshPeriod(), theEcorePackage.getELong(), "refreshPeriod", "100", 0, 1, TimeTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerTriggerEClass, ControllerTrigger.class, "ControllerTrigger", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControllerTrigger_ComponentQualifier(), theSymphony__CommonIOJInputPackage.getEComponentQualifier(), null, "componentQualifier", null, 0, 1, ControllerTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControllerTrigger_ComponentQualifier(), theApogyCommonIOJInputPackage.getEComponentQualifier(), null, "componentQualifier", null, 0, 1, ControllerTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerEdgeTriggerEClass, ControllerEdgeTrigger.class, "ControllerEdgeTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getControllerEdgeTrigger_EdgeType(), this.getEdgeType(), "edgeType", null, 0, 1, ControllerEdgeTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1053,15 +1053,15 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		initEAttribute(getToggleValueSource_CurrentValue(), theEcorePackage.getEBoolean(), "currentValue", null, 0, 1, ToggleValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerValueSourceEClass, ControllerValueSource.class, "ControllerValueSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControllerValueSource_Component(), theSymphony__CommonIOJInputPackage.getEComponent(), null, "component", null, 0, 1, ControllerValueSource.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getControllerValueSource_EComponentQualifier(), theSymphony__CommonIOJInputPackage.getEComponentQualifier(), null, "eComponentQualifier", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControllerValueSource_Component(), theApogyCommonIOJInputPackage.getEComponent(), null, "component", null, 0, 1, ControllerValueSource.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getControllerValueSource_EComponentQualifier(), theApogyCommonIOJInputPackage.getEComponentQualifier(), null, "eComponentQualifier", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getControllerValueSource_Conditioning(), this.getAbstractInputConditioning(), null, "conditioning", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getControllerValueSource_LastValue(), theEcorePackage.getEJavaObject(), "lastValue", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractInputConditioningEClass, AbstractInputConditioning.class, "AbstractInputConditioning", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getAbstractInputConditioning__ConditionInput__EComponent(), theEcorePackage.getEFloat(), "conditionInput", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonIOJInputPackage.getEComponent(), "component", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonIOJInputPackage.getEComponent(), "component", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(linearInputConditioningEClass, LinearInputConditioning.class, "LinearInputConditioning", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLinearInputConditioning_Minimum(), theEcorePackage.getEFloat(), "minimum", "-1.0", 0, 1, LinearInputConditioning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1117,16 +1117,16 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CoreProgramsControllers",
+			 "prefix", "ApogyCoreProgramsControllers",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CoreProgramsControllers",
+			 "modelName", "ApogyCoreProgramsControllers",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.core.programs.controllers/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.core.programs.controllers.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.core.programs"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.programs.controllers/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.core.programs.controllers.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.core.programs"
 		   });	
 		addAnnotation
 		  (listEDataType, 
@@ -1135,7 +1135,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 			 "documentation", " -------------------------------------------------------------------------\n\nDataTypes.\n\n-------------------------------------------------------------------------"
 		   });	
 		addAnnotation
-		  (symphony__CoreProgramsControllersFacadeEClass, 
+		  (apogy__CoreProgramsControllersFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", " -------------------------------------------------------------------------\n\nUtilities\n\n-------------------------------------------------------------------------"
@@ -1177,7 +1177,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		   new String[] {
 			 "documentation", "The refresh period, in millisecond, at which the operation should be called.",
 			 "notify", "true",
-			 "symphony_units", "ms"
+			 "apogy_units", "ms"
 		   });	
 		addAnnotation
 		  (getControllerTrigger_ComponentQualifier(), 
@@ -1197,7 +1197,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		   new String[] {
 			 "documentation", "The repeat period, in millisecond, at which the operation should be called.",
 			 "notify", "true",
-			 "symphony_units", "ms"
+			 "apogy_units", "ms"
 		   });	
 		addAnnotation
 		  (bindedEDataTypeArgumentEClass, 
@@ -1295,4 +1295,4 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		   });
 	}
 
-} //Symphony__CoreProgramsControllersPackageImpl
+} //ApogyCoreProgramsControllersPackageImpl

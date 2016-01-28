@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar;
+package ca.gc.asc_csa.apogy.examples.lidar;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,11 +25,11 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lidar.Lidar#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lidar.Lidar#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidar()
+ * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage#getLidar()
  * @model abstract="true"
  * @generated
  */
@@ -49,7 +49,7 @@ public interface Lidar extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidar_Fov()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage#getLidar_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly' propertyCategory='Field Of View'"
 	 * @generated
@@ -57,7 +57,7 @@ public interface Lidar extends EObject
   RectangularFrustrumFieldOfView getFov();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lidar.Lidar#getFov <em>Fov</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#getFov <em>Fov</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov</em>' containment reference.
@@ -78,7 +78,7 @@ public interface Lidar extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidar_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage#getLidar_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -86,7 +86,7 @@ public interface Lidar extends EObject
 	boolean isInitialized();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lidar.Lidar#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -123,8 +123,8 @@ public interface Lidar extends EObject
 	 * @see #acquireScanNonBlocking(double, double)
 	 * <!-- end-model-doc -->
 	 * @model unique="false" horizontalResolutionUnique="false"
-	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" verticalResolutionUnique="false"
-	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" verticalResolutionUnique="false"
+	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   CartesianCoordinatesSet acquireScan(double horizontalResolution, double verticalResolution);
@@ -144,8 +144,8 @@ public interface Lidar extends EObject
 	 * @see #acquireScan(double, double)
 	 * <!-- end-model-doc -->
 	 * @model unique="false" horizontalResolutionUnique="false"
-	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" verticalResolutionUnique="false"
-	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" verticalResolutionUnique="false"
+	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   CartesianCoordinatesSet acquireScanNonBlocking(double horizontalResolution, double verticalResolution);

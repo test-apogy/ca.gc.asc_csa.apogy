@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,18 +25,18 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.OperationCallPositionedResult;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.core.invocator.RecordingResultsList;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
 import org.eclipse.ui.PlatformUI;
 
 public class DataProductsListsContainerComposite extends Composite {
@@ -246,10 +246,10 @@ public class DataProductsListsContainerComposite extends Composite {
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
 				if (object instanceof Named) {
-					str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(object);
+					str = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(object);
 				} else if (object instanceof OperationCallResult) {
 					OperationCallResult result = (OperationCallResult) object;
-					str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(result
+					str = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(result
 							.getOperationCall());
 				}
 				break;
@@ -269,7 +269,7 @@ public class DataProductsListsContainerComposite extends Composite {
 				if (object instanceof OperationCallResult) {
 					Context context = ((OperationCallResult) object)
 							.getContext();
-					str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(context);
+					str = ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(context);
 				}
 				break;
 
@@ -281,9 +281,9 @@ public class DataProductsListsContainerComposite extends Composite {
 						if (result.getPose() == null) {
 							str = "Null";
 						} else {
-							Tuple3d position = Symphony__CommonMathFacade.INSTANCE
+							Tuple3d position = ApogyCommonMathFacade.INSTANCE
 									.extractPosition(result.getPose());
-							str = Symphony__CommonEMFEditUtilsFacade.INSTANCE
+							str = ApogyCommonEMFEditUtilsFacade.INSTANCE
 									.getText(position);
 						}
 					} else {
@@ -301,7 +301,7 @@ public class DataProductsListsContainerComposite extends Composite {
 							str = "Null";
 						} else {
 
-							Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE
+							Tuple3d orientation = ApogyCommonMathFacade.INSTANCE
 									.extractOrientation(result.getPose());
 							/** Convert in degrees. */
 							orientation
@@ -311,7 +311,7 @@ public class DataProductsListsContainerComposite extends Composite {
 							orientation
 									.setZ(Math.toDegrees(orientation.getZ()));
 
-							str = Symphony__CommonEMFEditUtilsFacade.INSTANCE
+							str = ApogyCommonEMFEditUtilsFacade.INSTANCE
 									.getText(orientation);
 						}
 					} else {
@@ -331,7 +331,7 @@ public class DataProductsListsContainerComposite extends Composite {
 								.getMessage();
 					} else {
 						str = result.getResultValue() == null ? "Null"
-								: Symphony__CommonEMFEditUtilsFacade.INSTANCE
+								: ApogyCommonEMFEditUtilsFacade.INSTANCE
 										.getText(result.getResultValue());
 					}
 				}

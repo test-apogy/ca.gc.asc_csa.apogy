@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,15 +23,15 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#isBinded <em>Binded</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getSource <em>Source</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#isBinded <em>Binded</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getSource <em>Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding()
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getAbstractTopologyBinding()
  * @model abstract="true"
  * @generated
  */
@@ -50,7 +50,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Binded</em>' attribute.
 	 * @see #setBinded(boolean)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Binded()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getAbstractTopologyBinding_Binded()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='INFORMATION'"
 	 * @generated
@@ -58,7 +58,7 @@ public interface AbstractTopologyBinding extends EObject
   boolean isBinded();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#isBinded <em>Binded</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#isBinded <em>Binded</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Binded</em>' attribute.
@@ -80,7 +80,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Description()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getAbstractTopologyBinding_Description()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='INFORMATION'"
 	 * @generated
@@ -88,7 +88,7 @@ public interface AbstractTopologyBinding extends EObject
   String getDescription();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -110,7 +110,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Name()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getAbstractTopologyBinding_Name()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='INFORMATION'"
 	 * @generated
@@ -118,7 +118,7 @@ public interface AbstractTopologyBinding extends EObject
   String getName();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -140,7 +140,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(EObject)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Source()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getAbstractTopologyBinding_Source()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' propertyCategory='SOURCE'"
 	 * @generated
@@ -148,7 +148,7 @@ public interface AbstractTopologyBinding extends EObject
   EObject getSource();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getSource <em>Source</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getSource <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source</em>' reference.
@@ -170,14 +170,14 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node</em>' reference.
 	 * @see #setFeatureNode(AbstractFeatureNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_FeatureNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getAbstractTopologyBinding_FeatureNode()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SOURCE'"
 	 * @generated
 	 */
   AbstractFeatureNode getFeatureNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Node</em>' reference.
@@ -198,7 +198,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * The adapter used to listens for changes of the feature value.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node Adapter</em>' reference.
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_FeatureNodeAdapter()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getAbstractTopologyBinding_FeatureNodeAdapter()
 	 * @model transient="true" changeable="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -237,7 +237,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * @param originalToCopyNodeMap Maps original Nodes to copied ones.
 	 * @return A copy of this Binding.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" originalToCopyNodeMapDataType="org.eclipse.symphony.common.topology.bindings.Map<org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node>" originalToCopyNodeMapUnique="false"
+	 * @model unique="false" originalToCopyNodeMapDataType="ca.gc.asc_csa.apogy.common.topology.bindings.Map<ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.Node>" originalToCopyNodeMapUnique="false"
 	 * @generated
 	 */
   AbstractTopologyBinding clone(Map<Node, Node> originalToCopyNodeMap);

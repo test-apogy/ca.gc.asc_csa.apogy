@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class AzimuthFeatureReferenceImpl extends VariableFeatureReferenceImpl im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.AZIMUTH_FEATURE_REFERENCE;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.AZIMUTH_FEATURE_REFERENCE;
 	}
 
 } //AzimuthFeatureReferenceImpl

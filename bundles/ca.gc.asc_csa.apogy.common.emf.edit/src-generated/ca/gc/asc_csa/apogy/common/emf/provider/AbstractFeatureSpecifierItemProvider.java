@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -20,11 +20,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.AbstractFeatureSpecifier} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class AbstractFeatureSpecifierItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_structuralFeature_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_structuralFeature_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE,
+				 ApogyCommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE,
 				 true,
 				 false,
 				 true,
@@ -105,7 +105,7 @@ public class AbstractFeatureSpecifierItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_multiValued_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_multiValued_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
+				 ApogyCommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
 				 false,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class AbstractFeatureSpecifierItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_index_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
+				 ApogyCommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
 				 true,
 				 false,
 				 false,
@@ -163,9 +163,9 @@ public class AbstractFeatureSpecifierItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractFeatureSpecifier.class)) {
-			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
-			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED:
-			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
+			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
+			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED:
+			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

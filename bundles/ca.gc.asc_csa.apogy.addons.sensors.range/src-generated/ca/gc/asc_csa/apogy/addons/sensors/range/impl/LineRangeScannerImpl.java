@@ -4,7 +4,7 @@
  *
  * $Id: LineRangeScannerImpl.java,v 1.5.4.2 2015/05/21 15:50:21 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,11 +12,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.LineRangeScannerImpl#getAngularResolution <em>Angular Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.LineRangeScannerImpl#getAngularResolution <em>Angular Resolution</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,7 +73,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.LINE_RANGE_SCANNER;
+		return ApogyAddonsSensorsRangePackage.Literals.LINE_RANGE_SCANNER;
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 	    	// If no CircularSectorFieldOfView is found, creates one.
 	    	if(fov == null)
 	    	{
-	    		fov = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView();	
+	    		fov = ApogyAddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView();	
 	    		getChildren().add(fov);
 	    	}
 		}
@@ -126,7 +126,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 		int oldAngularResolution = angularResolution;
 		angularResolution = newAngularResolution;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION, oldAngularResolution, angularResolution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION, oldAngularResolution, angularResolution));
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
 				return getAngularResolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,7 +153,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
 				setAngularResolution((Integer)newValue);
 				return;
 		}
@@ -169,7 +169,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
 				setAngularResolution(ANGULAR_RESOLUTION_EDEFAULT);
 				return;
 		}
@@ -185,7 +185,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
 				return angularResolution != ANGULAR_RESOLUTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -199,7 +199,7 @@ public class LineRangeScannerImpl extends RangeSensorImpl implements LineRangeSc
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER___GET_FIELD_OF_VIEW:
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER___GET_FIELD_OF_VIEW:
 				return getFieldOfView();
 		}
 		return super.eInvoke(operationID, arguments);

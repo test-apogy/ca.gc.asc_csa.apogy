@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm;
+package ca.gc.asc_csa.apogy.examples.robotic_arm;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,16 +20,16 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getTurretAngle <em>Turret Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getShoulderAngle <em>Shoulder Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getElbowAngle <em>Elbow Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getWristAngle <em>Wrist Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#isArmMoving <em>Arm Moving</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getTurretAngle <em>Turret Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getShoulderAngle <em>Shoulder Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getElbowAngle <em>Elbow Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getWristAngle <em>Wrist Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isArmMoving <em>Arm Moving</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm()
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm()
  * @model abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface RoboticArm extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Speed</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -46,9 +46,9 @@ public interface RoboticArm extends EObject
 	 * @see #cmdMoveSpeedLevel(MoveSpeedLevel)
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Speed</em>' attribute.
-	 * @see org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel
 	 * @see #setSpeed(MoveSpeedLevel)
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_Speed()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_Speed()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -56,11 +56,11 @@ public interface RoboticArm extends EObject
 	MoveSpeedLevel getSpeed();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Speed</em>' attribute.
-	 * @see org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel
 	 * @see #getSpeed()
 	 * @generated
 	 */
@@ -90,15 +90,15 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Turret Angle</em>' attribute.
 	 * @see #setTurretAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_TurretAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_TurretAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' apogy_units='deg'"
 	 * @generated
 	 */
 	double getTurretAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getTurretAngle <em>Turret Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getTurretAngle <em>Turret Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Turret Angle</em>' attribute.
@@ -122,15 +122,15 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Shoulder Angle</em>' attribute.
 	 * @see #setShoulderAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ShoulderAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_ShoulderAngle()
 	 * @model default="90.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' apogy_units='deg'"
 	 * @generated
 	 */
   double getShoulderAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getShoulderAngle <em>Shoulder Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getShoulderAngle <em>Shoulder Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Shoulder Angle</em>' attribute.
@@ -154,15 +154,15 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elbow Angle</em>' attribute.
 	 * @see #setElbowAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ElbowAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_ElbowAngle()
 	 * @model default="-180.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' apogy_units='deg'"
 	 * @generated
 	 */
   double getElbowAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getElbowAngle <em>Elbow Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getElbowAngle <em>Elbow Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elbow Angle</em>' attribute.
@@ -186,15 +186,15 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Wrist Angle</em>' attribute.
 	 * @see #setWristAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_WristAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_WristAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' apogy_units='deg'"
 	 * @generated
 	 */
   double getWristAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getWristAngle <em>Wrist Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getWristAngle <em>Wrist Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Wrist Angle</em>' attribute.
@@ -215,7 +215,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -223,7 +223,7 @@ public interface RoboticArm extends EObject
 	boolean isInitialized();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -245,7 +245,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Arm Moving</em>' attribute.
 	 * @see #setArmMoving(boolean)
-	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ArmMoving()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_ArmMoving()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -253,7 +253,7 @@ public interface RoboticArm extends EObject
 	boolean isArmMoving();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#isArmMoving <em>Arm Moving</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isArmMoving <em>Arm Moving</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Arm Moving</em>' attribute.
@@ -273,10 +273,10 @@ public interface RoboticArm extends EObject
 	 * @param wristAngle The expected angle (in radians) of the wrist joint (joint 4) after moving.
 	 * <!-- end-model-doc -->
 	 * @model turretAngleUnique="false"
-	 *        turretAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" shoulderAngleUnique="false"
-	 *        shoulderAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" elbowAngleUnique="false"
-	 *        elbowAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" wristAngleUnique="false"
-	 *        wristAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        turretAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" shoulderAngleUnique="false"
+	 *        shoulderAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" elbowAngleUnique="false"
+	 *        elbowAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" wristAngleUnique="false"
+	 *        wristAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   void moveTo(double turretAngle, double shoulderAngle, double elbowAngle, double wristAngle);

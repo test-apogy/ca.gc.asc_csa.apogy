@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander;
+package ca.gc.asc_csa.apogy.examples.lander;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderFactory
+ * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesLander' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='Symphony__ExamplesLander' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.lander/src-generated' editDirectory='/org.eclipse.symphony.examples.lander.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesLander' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='ApogyExamplesLander' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.lander/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.lander.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesLanderPackage extends EPackage
+public interface ApogyExamplesLanderPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -45,7 +45,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.lander";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.lander";
 
   /**
 	 * The package namespace name.
@@ -61,14 +61,14 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesLanderPackage eINSTANCE = org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl.init();
+  ApogyExamplesLanderPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lander.impl.PositionImpl <em>Position</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl <em>Position</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lander.impl.PositionImpl
-	 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getPosition()
 	 * @generated
 	 */
   int POSITION = 0;
@@ -128,11 +128,11 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
   int POSITION_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lander.impl.LanderImpl <em>Lander</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl <em>Lander</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lander.impl.LanderImpl
-	 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLander()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLander()
 	 * @generated
 	 */
   int LANDER = 1;
@@ -144,7 +144,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
+  int LANDER__POSITION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Thruster</b></em>' containment reference.
@@ -153,7 +153,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__THRUSTER = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
+	int LANDER__THRUSTER = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Leg AExtension</b></em>' attribute.
@@ -162,7 +162,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_AEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
+  int LANDER__LEG_AEXTENSION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Leg BExtension</b></em>' attribute.
@@ -171,7 +171,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_BEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
+  int LANDER__LEG_BEXTENSION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Leg CExtension</b></em>' attribute.
@@ -180,7 +180,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_CEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
+  int LANDER__LEG_CEXTENSION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Leg APosition</b></em>' attribute.
@@ -189,7 +189,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_APOSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
+  int LANDER__LEG_APOSITION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Leg BPosition</b></em>' attribute.
@@ -198,7 +198,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_BPOSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
+  int LANDER__LEG_BPOSITION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
 
 		/**
 	 * The feature id for the '<em><b>Leg CPosition</b></em>' attribute.
@@ -207,7 +207,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_CPOSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
+  int LANDER__LEG_CPOSITION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
 
 		/**
 	 * The feature id for the '<em><b>XAngular Velocity</b></em>' attribute.
@@ -216,7 +216,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__XANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
+  int LANDER__XANGULAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
 
   /**
 	 * The feature id for the '<em><b>YAngular Velocity</b></em>' attribute.
@@ -225,7 +225,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__YANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
+  int LANDER__YANGULAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
 
   /**
 	 * The feature id for the '<em><b>Mass</b></em>' attribute.
@@ -234,7 +234,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__MASS = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 10;
+	int LANDER__MASS = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 10;
 
 		/**
 	 * The feature id for the '<em><b>Gravitational Pull</b></em>' attribute.
@@ -243,7 +243,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__GRAVITATIONAL_PULL = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 11;
+	int LANDER__GRAVITATIONAL_PULL = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 11;
 
 		/**
 	 * The feature id for the '<em><b>Changing Legs</b></em>' attribute.
@@ -252,7 +252,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_LEGS = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 12;
+	int LANDER__CHANGING_LEGS = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 12;
 
 		/**
 	 * The feature id for the '<em><b>Changing Attitude</b></em>' attribute.
@@ -261,7 +261,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_ATTITUDE = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 13;
+	int LANDER__CHANGING_ATTITUDE = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 13;
 
 		/**
 	 * The feature id for the '<em><b>Changing Location</b></em>' attribute.
@@ -270,7 +270,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_LOCATION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 14;
+	int LANDER__CHANGING_LOCATION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 14;
 
 		/**
 	 * The feature id for the '<em><b>Flying Enabled</b></em>' attribute.
@@ -279,7 +279,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__FLYING_ENABLED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 15;
+	int LANDER__FLYING_ENABLED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 15;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -288,7 +288,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__INITIALIZED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 16;
+	int LANDER__INITIALIZED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 16;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -297,7 +297,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__DISPOSED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 17;
+	int LANDER__DISPOSED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 17;
 
 		/**
 	 * The number of structural features of the '<em>Lander</em>' class.
@@ -306,7 +306,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_FEATURE_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 18;
+  int LANDER_FEATURE_COUNT = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 18;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -315,7 +315,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___DISPOSE = Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE;
+	int LANDER___DISPOSE = ApogyCommonEMFPackage.DISPOSABLE___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -324,7 +324,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___INIT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
+	int LANDER___INIT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
 
 		/**
 	 * The operation id for the '<em>Command Leg Position</em>' operation.
@@ -333,7 +333,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___COMMAND_LEG_POSITION__LANDERLEGEXTENSION_LANDERLEGEXTENSION_LANDERLEGEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
+	int LANDER___COMMAND_LEG_POSITION__LANDERLEGEXTENSION_LANDERLEGEXTENSION_LANDERLEGEXTENSION = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Move To</em>' operation.
@@ -342,7 +342,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___MOVE_TO__DOUBLE_DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
+	int LANDER___MOVE_TO__DOUBLE_DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Change Attitude</em>' operation.
@@ -351,7 +351,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___CHANGE_ATTITUDE__DOUBLE_DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
+	int LANDER___CHANGE_ATTITUDE__DOUBLE_DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
 
 		/**
 	 * The operation id for the '<em>Reset Attitude</em>' operation.
@@ -360,7 +360,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___RESET_ATTITUDE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
+	int LANDER___RESET_ATTITUDE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
 
 		/**
 	 * The operation id for the '<em>Command Angular Velocities</em>' operation.
@@ -369,7 +369,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___COMMAND_ANGULAR_VELOCITIES__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 5;
+	int LANDER___COMMAND_ANGULAR_VELOCITIES__DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 5;
 
 		/**
 	 * The operation id for the '<em>Command Thrust</em>' operation.
@@ -378,7 +378,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER___COMMAND_THRUST__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 6;
+  int LANDER___COMMAND_THRUST__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 6;
 
   /**
 	 * The operation id for the '<em>Change Thrust By</em>' operation.
@@ -387,7 +387,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___CHANGE_THRUST_BY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 7;
+	int LANDER___CHANGE_THRUST_BY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 7;
 
 		/**
 	 * The operation id for the '<em>Start Flying</em>' operation.
@@ -396,7 +396,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___START_FLYING__BOOLEAN = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 8;
+	int LANDER___START_FLYING__BOOLEAN = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 8;
 
 		/**
 	 * The operation id for the '<em>Stop Flying</em>' operation.
@@ -405,7 +405,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___STOP_FLYING = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 9;
+	int LANDER___STOP_FLYING = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 9;
 
 		/**
 	 * The number of operations of the '<em>Lander</em>' class.
@@ -414,14 +414,14 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_OPERATION_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 10;
+  int LANDER_OPERATION_COUNT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 10;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lander.impl.LanderStubImpl <em>Lander Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderStubImpl <em>Lander Stub</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lander.impl.LanderStubImpl
-	 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLanderStub()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.LanderStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLanderStub()
 	 * @generated
 	 */
 	int LANDER_STUB = 2;
@@ -706,11 +706,11 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	int LANDER_STUB_OPERATION_COUNT = LANDER_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lander.impl.LanderSimulatedImpl <em>Lander Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderSimulatedImpl <em>Lander Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lander.impl.LanderSimulatedImpl
-	 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLanderSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.LanderSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLanderSimulated()
 	 * @generated
 	 */
 	int LANDER_SIMULATED = 3;
@@ -995,11 +995,11 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	int LANDER_SIMULATED_OPERATION_COUNT = LANDER_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lander.LanderLegExtension <em>Lander Leg Extension</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension <em>Lander Leg Extension</em>}' enum.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
-	 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLanderLegExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLanderLegExtension()
 	 * @generated
 	 */
   int LANDER_LEG_EXTENSION = 4;
@@ -1010,400 +1010,400 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see javax.vecmath.Matrix3d
-	 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getMatrix3d()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getMatrix3d()
 	 * @generated
 	 */
   int MATRIX3D = 5;
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lander.Position <em>Position</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lander.Position <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Position</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Position
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Position
 	 * @generated
 	 */
   EClass getPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Position#getX <em>X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getX <em>X</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Position#getX()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Position#getX()
 	 * @see #getPosition()
 	 * @generated
 	 */
   EAttribute getPosition_X();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Position#getY <em>Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getY <em>Y</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Position#getY()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Position#getY()
 	 * @see #getPosition()
 	 * @generated
 	 */
   EAttribute getPosition_Y();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Position#getZ <em>Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getZ <em>Z</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Z</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Position#getZ()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Position#getZ()
 	 * @see #getPosition()
 	 * @generated
 	 */
   EAttribute getPosition_Z();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Position#getAttitude <em>Attitude</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getAttitude <em>Attitude</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Attitude</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Position#getAttitude()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Position#getAttitude()
 	 * @see #getPosition()
 	 * @generated
 	 */
   EAttribute getPosition_Attitude();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lander.Lander <em>Lander</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lander.Lander <em>Lander</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lander</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander
 	 * @generated
 	 */
   EClass getLander();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.lander.Lander#getPosition <em>Position</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getPosition <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Position</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getPosition()
 	 * @see #getLander()
 	 * @generated
 	 */
   EReference getLander_Position();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.lander.Lander#getThruster <em>Thruster</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getThruster <em>Thruster</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Thruster</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getThruster()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getThruster()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EReference getLander_Thruster();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getLegAPosition <em>Leg APosition</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAPosition <em>Leg APosition</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leg APosition</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getLegAPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAPosition()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_LegAPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getLegAExtension <em>Leg AExtension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAExtension <em>Leg AExtension</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leg AExtension</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getLegAExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAExtension()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_LegAExtension();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getLegBPosition <em>Leg BPosition</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBPosition <em>Leg BPosition</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leg BPosition</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getLegBPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBPosition()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_LegBPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getLegBExtension <em>Leg BExtension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBExtension <em>Leg BExtension</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leg BExtension</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getLegBExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBExtension()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_LegBExtension();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getLegCPosition <em>Leg CPosition</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCPosition <em>Leg CPosition</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leg CPosition</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getLegCPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCPosition()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_LegCPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getLegCExtension <em>Leg CExtension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCExtension <em>Leg CExtension</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leg CExtension</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getLegCExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCExtension()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_LegCExtension();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getXAngularVelocity <em>XAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getXAngularVelocity <em>XAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getXAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getXAngularVelocity()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_XAngularVelocity();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getYAngularVelocity <em>YAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getYAngularVelocity <em>YAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getYAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getYAngularVelocity()
 	 * @see #getLander()
 	 * @generated
 	 */
   EAttribute getLander_YAngularVelocity();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getMass <em>Mass</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getMass <em>Mass</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mass</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getMass()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getMass()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_Mass();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#getGravitationalPull <em>Gravitational Pull</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getGravitationalPull <em>Gravitational Pull</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Gravitational Pull</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#getGravitationalPull()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#getGravitationalPull()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_GravitationalPull();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#isFlyingEnabled <em>Flying Enabled</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isFlyingEnabled <em>Flying Enabled</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Flying Enabled</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#isFlyingEnabled()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#isFlyingEnabled()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_FlyingEnabled();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#isInitialized()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_Initialized();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#isDisposed <em>Disposed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isDisposed <em>Disposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Disposed</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#isDisposed()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#isDisposed()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_Disposed();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#isChangingLegs <em>Changing Legs</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLegs <em>Changing Legs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Changing Legs</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#isChangingLegs()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLegs()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_ChangingLegs();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#isChangingAttitude <em>Changing Attitude</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingAttitude <em>Changing Attitude</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Changing Attitude</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#isChangingAttitude()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingAttitude()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_ChangingAttitude();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lander.Lander#isChangingLocation <em>Changing Location</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLocation <em>Changing Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Changing Location</em>'.
-	 * @see org.eclipse.symphony.examples.lander.Lander#isChangingLocation()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLocation()
 	 * @see #getLander()
 	 * @generated
 	 */
 	EAttribute getLander_ChangingLocation();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#init() <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#init() <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#init()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#init()
 	 * @generated
 	 */
 	EOperation getLander__Init();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#commandLegPosition(org.eclipse.symphony.examples.lander.LanderLegExtension, org.eclipse.symphony.examples.lander.LanderLegExtension, org.eclipse.symphony.examples.lander.LanderLegExtension) <em>Command Leg Position</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#commandLegPosition(ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension, ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension, ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension) <em>Command Leg Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Command Leg Position</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#commandLegPosition(org.eclipse.symphony.examples.lander.LanderLegExtension, org.eclipse.symphony.examples.lander.LanderLegExtension, org.eclipse.symphony.examples.lander.LanderLegExtension)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#commandLegPosition(ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension, ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension, ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension)
 	 * @generated
 	 */
 	EOperation getLander__CommandLegPosition__LanderLegExtension_LanderLegExtension_LanderLegExtension();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#moveTo(double, double, double) <em>Move To</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#moveTo(double, double, double) <em>Move To</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move To</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#moveTo(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#moveTo(double, double, double)
 	 * @generated
 	 */
 	EOperation getLander__MoveTo__double_double_double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#changeAttitude(double, double, double) <em>Change Attitude</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#changeAttitude(double, double, double) <em>Change Attitude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Attitude</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#changeAttitude(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#changeAttitude(double, double, double)
 	 * @generated
 	 */
 	EOperation getLander__ChangeAttitude__double_double_double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#resetAttitude() <em>Reset Attitude</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#resetAttitude() <em>Reset Attitude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Attitude</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#resetAttitude()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#resetAttitude()
 	 * @generated
 	 */
 	EOperation getLander__ResetAttitude();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#commandAngularVelocities(double, double) <em>Command Angular Velocities</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#commandAngularVelocities(double, double) <em>Command Angular Velocities</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Command Angular Velocities</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#commandAngularVelocities(double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#commandAngularVelocities(double, double)
 	 * @generated
 	 */
 	EOperation getLander__CommandAngularVelocities__double_double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#commandThrust(double) <em>Command Thrust</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#commandThrust(double) <em>Command Thrust</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Command Thrust</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#commandThrust(double)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#commandThrust(double)
 	 * @generated
 	 */
   EOperation getLander__CommandThrust__double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#changeThrustBy(double) <em>Change Thrust By</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#changeThrustBy(double) <em>Change Thrust By</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Thrust By</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#changeThrustBy(double)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#changeThrustBy(double)
 	 * @generated
 	 */
 	EOperation getLander__ChangeThrustBy__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#startFlying(boolean) <em>Start Flying</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#startFlying(boolean) <em>Start Flying</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start Flying</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#startFlying(boolean)
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#startFlying(boolean)
 	 * @generated
 	 */
 	EOperation getLander__StartFlying__boolean();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.lander.Lander#stopFlying() <em>Stop Flying</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#stopFlying() <em>Stop Flying</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop Flying</em>' operation.
-	 * @see org.eclipse.symphony.examples.lander.Lander#stopFlying()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander#stopFlying()
 	 * @generated
 	 */
 	EOperation getLander__StopFlying();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lander.LanderStub <em>Lander Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lander.LanderStub <em>Lander Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lander Stub</em>'.
-	 * @see org.eclipse.symphony.examples.lander.LanderStub
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderStub
 	 * @generated
 	 */
 	EClass getLanderStub();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lander.LanderSimulated <em>Lander Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lander.LanderSimulated <em>Lander Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lander Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.lander.LanderSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderSimulated
 	 * @generated
 	 */
 	EClass getLanderSimulated();
 
 		/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.examples.lander.LanderLegExtension <em>Lander Leg Extension</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension <em>Lander Leg Extension</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Lander Leg Extension</em>'.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @generated
 	 */
   EEnum getLanderLegExtension();
@@ -1426,7 +1426,7 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesLanderFactory getSymphony__ExamplesLanderFactory();
+	ApogyExamplesLanderFactory getApogyExamplesLanderFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -1444,11 +1444,11 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lander.impl.PositionImpl <em>Position</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl <em>Position</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lander.impl.PositionImpl
-		 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getPosition()
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getPosition()
 		 * @generated
 		 */
     EClass POSITION = eINSTANCE.getPosition();
@@ -1486,11 +1486,11 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
     EAttribute POSITION__ATTITUDE = eINSTANCE.getPosition_Attitude();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lander.impl.LanderImpl <em>Lander</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl <em>Lander</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lander.impl.LanderImpl
-		 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLander()
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.LanderImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLander()
 		 * @generated
 		 */
     EClass LANDER = eINSTANCE.getLander();
@@ -1720,31 +1720,31 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 		EOperation LANDER___STOP_FLYING = eINSTANCE.getLander__StopFlying();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lander.impl.LanderStubImpl <em>Lander Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderStubImpl <em>Lander Stub</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lander.impl.LanderStubImpl
-		 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLanderStub()
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.LanderStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLanderStub()
 		 * @generated
 		 */
 		EClass LANDER_STUB = eINSTANCE.getLanderStub();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lander.impl.LanderSimulatedImpl <em>Lander Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderSimulatedImpl <em>Lander Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lander.impl.LanderSimulatedImpl
-		 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLanderSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.LanderSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLanderSimulated()
 		 * @generated
 		 */
 		EClass LANDER_SIMULATED = eINSTANCE.getLanderSimulated();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lander.LanderLegExtension <em>Lander Leg Extension</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension <em>Lander Leg Extension</em>}' enum.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
-		 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getLanderLegExtension()
+		 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getLanderLegExtension()
 		 * @generated
 		 */
     EEnum LANDER_LEG_EXTENSION = eINSTANCE.getLanderLegExtension();
@@ -1754,11 +1754,11 @@ public interface Symphony__ExamplesLanderPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see javax.vecmath.Matrix3d
-		 * @see org.eclipse.symphony.examples.lander.impl.Symphony__ExamplesLanderPackageImpl#getMatrix3d()
+		 * @see ca.gc.asc_csa.apogy.examples.lander.impl.ApogyExamplesLanderPackageImpl#getMatrix3d()
 		 * @generated
 		 */
     EDataType MATRIX3D = eINSTANCE.getMatrix3d();
 
   }
 
-} //Symphony__ExamplesLanderPackage
+} //ApogyExamplesLanderPackage

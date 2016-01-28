@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.util;
+package ca.gc.asc_csa.apogy.examples.lander.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Lander;
-import org.eclipse.symphony.examples.lander.LanderSimulated;
-import org.eclipse.symphony.examples.lander.LanderStub;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Lander;
+import ca.gc.asc_csa.apogy.examples.lander.LanderSimulated;
+import ca.gc.asc_csa.apogy.examples.lander.LanderStub;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.symphony.examples.lander.Position;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage
+ * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage
  * @generated
  */
-public class Symphony__ExamplesLanderSwitch<T> extends Switch<T>
+public class ApogyExamplesLanderSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -34,7 +34,7 @@ public class Symphony__ExamplesLanderSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesLanderPackage modelPackage;
+  protected static ApogyExamplesLanderPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -42,10 +42,10 @@ public class Symphony__ExamplesLanderSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLanderSwitch()
+  public ApogyExamplesLanderSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesLanderPackage.eINSTANCE;
+			modelPackage = ApogyExamplesLanderPackage.eINSTANCE;
 		}
 	}
 
@@ -74,20 +74,20 @@ public class Symphony__ExamplesLanderSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesLanderPackage.POSITION: {
+			case ApogyExamplesLanderPackage.POSITION: {
 				Position position = (Position)theEObject;
 				T result = casePosition(position);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesLanderPackage.LANDER: {
+			case ApogyExamplesLanderPackage.LANDER: {
 				Lander lander = (Lander)theEObject;
 				T result = caseLander(lander);
 				if (result == null) result = caseDisposable(lander);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesLanderPackage.LANDER_STUB: {
+			case ApogyExamplesLanderPackage.LANDER_STUB: {
 				LanderStub landerStub = (LanderStub)theEObject;
 				T result = caseLanderStub(landerStub);
 				if (result == null) result = caseLander(landerStub);
@@ -95,7 +95,7 @@ public class Symphony__ExamplesLanderSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesLanderPackage.LANDER_SIMULATED: {
+			case ApogyExamplesLanderPackage.LANDER_SIMULATED: {
 				LanderSimulated landerSimulated = (LanderSimulated)theEObject;
 				T result = caseLanderSimulated(landerSimulated);
 				if (result == null) result = caseLander(landerSimulated);
@@ -201,4 +201,4 @@ public class Symphony__ExamplesLanderSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesLanderSwitch
+} //ApogyExamplesLanderSwitch

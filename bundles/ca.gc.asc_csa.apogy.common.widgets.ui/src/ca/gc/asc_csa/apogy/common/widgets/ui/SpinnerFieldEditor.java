@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.widgets.ui;
+package ca.gc.asc_csa.apogy.common.widgets.ui;
 
 import org.eclipse.jface.preference.FieldEditor;
 import org.eclipse.swt.SWT;

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 
-import org.eclipse.symphony.examples.satellite.Satellite;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,10 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getOrbitModel <em>Orbit Model</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getMaximumRollRate <em>Maximum Roll Rate</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getMaximumRoll <em>Maximum Roll</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getOrbitModel <em>Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getMaximumRollRate <em>Maximum Roll Rate</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.SatelliteImpl#getMaximumRoll <em>Maximum Roll</em>}</li>
  * </ul>
  *
  * @generated
@@ -119,7 +119,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE;
+		return ApogyExamplesSatellitePackage.Literals.SATELLITE;
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__NAME, oldName, name));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
 			}
 		}
 		return orbitModel;
@@ -178,7 +178,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, orbitModel));
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 		double oldMaximumRollRate = maximumRollRate;
 		maximumRollRate = newMaximumRollRate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE, oldMaximumRollRate, maximumRollRate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE, oldMaximumRollRate, maximumRollRate));
 	}
 
 	/**
@@ -220,7 +220,7 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 		double oldMaximumRoll = maximumRoll;
 		maximumRoll = newMaximumRoll;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL, oldMaximumRoll, maximumRoll));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL, oldMaximumRoll, maximumRoll));
 	}
 
 	/**
@@ -231,14 +231,14 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
+			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
 				return getName();
-			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				if (resolve) return getOrbitModel();
 				return basicGetOrbitModel();
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				return getMaximumRollRate();
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				return getMaximumRoll();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -252,16 +252,16 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
+			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				setMaximumRollRate((Double)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				setMaximumRoll((Double)newValue);
 				return;
 		}
@@ -276,16 +276,16 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
+			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				setMaximumRollRate(MAXIMUM_ROLL_RATE_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				setMaximumRoll(MAXIMUM_ROLL_EDEFAULT);
 				return;
 		}
@@ -300,13 +300,13 @@ public class SatelliteImpl extends MinimalEObjectImpl.Container implements Satel
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
+			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case ApogyExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				return orbitModel != null;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				return maximumRollRate != MAXIMUM_ROLL_RATE_EDEFAULT;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				return maximumRoll != MAXIMUM_ROLL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

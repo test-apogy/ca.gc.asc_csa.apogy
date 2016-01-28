@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.telecoms.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.adapters;
 
-import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
-import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIFactory;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class AbstractAntennaRadiationPatternAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class AbstractAntennaRadiationPatternAdapter implements NodePresentationA
 			throw new IllegalArgumentException();
 		}
 
-		AbstractAntennaRadiationPatternPresentation presentationNode = Symphony__AddonsTelecomsUIFactory.eINSTANCE.createAbstractAntennaRadiationPatternPresentation();
+		AbstractAntennaRadiationPatternPresentation presentationNode = ApogyAddonsTelecomsUIFactory.eINSTANCE.createAbstractAntennaRadiationPatternPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

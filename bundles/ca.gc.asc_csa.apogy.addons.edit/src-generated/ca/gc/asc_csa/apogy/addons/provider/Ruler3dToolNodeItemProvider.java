@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.provider;
+package ca.gc.asc_csa.apogy.addons.provider;
 
 
 import java.util.Collection;
@@ -11,12 +11,12 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.Ruler3dToolNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.Ruler3dToolNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -62,7 +62,7 @@ public class Ruler3dToolNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3dToolNode_ruler3DTool_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3dToolNode_ruler3DTool_feature", "_UI_Ruler3dToolNode_type"),
-				 Symphony__AddonsPackage.Literals.RULER3D_TOOL_NODE__RULER3_DTOOL,
+				 ApogyAddonsPackage.Literals.RULER3D_TOOL_NODE__RULER3_DTOOL,
 				 true,
 				 false,
 				 true,

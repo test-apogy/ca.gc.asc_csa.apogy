@@ -4,7 +4,7 @@
  *
  * $Id: NodeItemProvider.java,v 1.10.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -25,11 +25,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.Node} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.Node} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -83,7 +83,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_parent_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__PARENT,
+				 ApogyCommonTopologyPackage.Literals.NODE__PARENT,
 				 true,
 				 false,
 				 true,
@@ -105,7 +105,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_description_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__DESCRIPTION,
+				 ApogyCommonTopologyPackage.Literals.NODE__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_nodeId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_nodeId_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__NODE_ID,
+				 ApogyCommonTopologyPackage.Literals.NODE__NODE_ID,
 				 true,
 				 false,
 				 false,
@@ -172,8 +172,8 @@ public class NodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Node.class)) {
-			case Symphony__CommonTopologyPackage.NODE__DESCRIPTION:
-			case Symphony__CommonTopologyPackage.NODE__NODE_ID:
+			case ApogyCommonTopologyPackage.NODE__DESCRIPTION:
+			case ApogyCommonTopologyPackage.NODE__NODE_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

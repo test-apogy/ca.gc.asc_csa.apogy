@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction#getPlanner <em>Planner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction#getPlanner <em>Planner</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMeshDisplacementCostFunction()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getMeshDisplacementCostFunction()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface MeshDisplacementCostFunction extends DisplacementCostFunction {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Planner</em>' reference.
 	 * @see #setPlanner(CostBasedMeshWayPointPathPlanner)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMeshDisplacementCostFunction_Planner()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getMeshDisplacementCostFunction_Planner()
 	 * @model
 	 * @generated
 	 */
 	CostBasedMeshWayPointPathPlanner<? extends CartesianPolygon> getPlanner();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction#getPlanner <em>Planner</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction#getPlanner <em>Planner</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Planner</em>' reference.

@@ -1,15 +1,15 @@
-package org.eclipse.symphony.common.converters.ui.views;
+package ca.gc.asc_csa.apogy.common.converters.ui.views;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
-import org.eclipse.symphony.common.converters.ui.actions.SetClassNameDisplayModeAction;
-import org.eclipse.symphony.common.converters.ui.composites.AvailableConversionComposite;
-import org.eclipse.symphony.common.converters.ui.composites.ConverterGraphComposite;
-import org.eclipse.symphony.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade;
+import ca.gc.asc_csa.apogy.common.converters.ui.actions.SetClassNameDisplayModeAction;
+import ca.gc.asc_csa.apogy.common.converters.ui.composites.AvailableConversionComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.composites.ConverterGraphComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
 import org.eclipse.ui.part.ViewPart;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
@@ -23,14 +23,14 @@ public class ConvertersView extends ViewPart
 	@Override
 	public void createPartControl(Composite parent) {
 		
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph = Symphony__CommonConvertersFacade.INSTANCE.getGraph();
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph = ApogyCommonConvertersFacade.INSTANCE.getGraph();
 		parent.setLayout(new FillLayout(SWT.VERTICAL));
 		converterGraphComposite = new ConverterGraphComposite(parent, SWT.NONE, graph);
 		availableConversionComposite = new AvailableConversionComposite(parent, SWT.NONE, graph);		
 		
 		addActions();
 		
-		Symphony__CommonConvertersGraphsFacade.INSTANCE.getAvailableDestinationTypeMap(graph);
+		ApogyCommonConvertersGraphsFacade.INSTANCE.getAvailableDestinationTypeMap(graph);
 	}
 
 	@Override

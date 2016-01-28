@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.viewer.actions;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.actions;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.List;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.symphony.common.topology.ui.viewer.views.AbstractTopology3DView;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.views.AbstractTopology3DView;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;

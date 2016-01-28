@@ -1,29 +1,29 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__ExamplesSatelliteUi edit plugin.
+ * This is the central singleton for the ApogyExamplesSatelliteUi edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__ExamplesSatelliteUiEditPlugin extends EMFPlugin {
+public final class ApogyExamplesSatelliteUiEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__ExamplesSatelliteUiEditPlugin INSTANCE = new Symphony__ExamplesSatelliteUiEditPlugin();
+	public static final ApogyExamplesSatelliteUiEditPlugin INSTANCE = new ApogyExamplesSatelliteUiEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -39,11 +39,11 @@ public final class Symphony__ExamplesSatelliteUiEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiEditPlugin() {
+	public ApogyExamplesSatelliteUiEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		   });
 	}
 

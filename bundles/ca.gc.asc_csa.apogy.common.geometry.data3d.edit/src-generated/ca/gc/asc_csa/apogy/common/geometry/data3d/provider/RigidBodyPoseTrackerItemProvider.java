@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2008.
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -74,7 +74,7 @@ public class RigidBodyPoseTrackerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RigidBodyPoseTracker_positionMarkersAtOrigin_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RigidBodyPoseTracker_positionMarkersAtOrigin_feature", "_UI_RigidBodyPoseTracker_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN,
+				 ApogyCommonGeometryData3DPackage.Literals.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN,
 				 false,
 				 false,
 				 false,

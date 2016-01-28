@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3.impl;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl;
 
 import javax.vecmath.Color3f;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Factory;
-import org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Factory;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory;
 
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
@@ -26,7 +26,7 @@ import com.jme3.scene.Node;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIJME3PackageImpl extends EPackageImpl implements Symphony__CommonTopologyUIJME3Package {
+public class ApogyCommonTopologyUIJME3PackageImpl extends EPackageImpl implements ApogyCommonTopologyUIJME3Package {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,12 +94,12 @@ public class Symphony__CommonTopologyUIJME3PackageImpl extends EPackageImpl impl
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonTopologyUIJME3PackageImpl() {
-		super(eNS_URI, Symphony__CommonTopologyUIJME3Factory.eINSTANCE);
+	private ApogyCommonTopologyUIJME3PackageImpl() {
+		super(eNS_URI, ApogyCommonTopologyUIJME3Factory.eINSTANCE);
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class Symphony__CommonTopologyUIJME3PackageImpl extends EPackageImpl impl
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonTopologyUIJME3Package#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonTopologyUIJME3Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,27 +121,27 @@ public class Symphony__CommonTopologyUIJME3PackageImpl extends EPackageImpl impl
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyUIJME3Package init() {
-		if (isInited) return (Symphony__CommonTopologyUIJME3Package)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIJME3Package.eNS_URI);
+	public static ApogyCommonTopologyUIJME3Package init() {
+		if (isInited) return (ApogyCommonTopologyUIJME3Package)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIJME3Package.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonTopologyUIJME3PackageImpl theSymphony__CommonTopologyUIJME3Package = (Symphony__CommonTopologyUIJME3PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonTopologyUIJME3PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonTopologyUIJME3PackageImpl());
+		ApogyCommonTopologyUIJME3PackageImpl theApogyCommonTopologyUIJME3Package = (ApogyCommonTopologyUIJME3PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonTopologyUIJME3PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonTopologyUIJME3PackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theSymphony__CommonTopologyUIJME3Package.createPackageContents();
+		theApogyCommonTopologyUIJME3Package.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonTopologyUIJME3Package.initializePackageContents();
+		theApogyCommonTopologyUIJME3Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonTopologyUIJME3Package.freeze();
+		theApogyCommonTopologyUIJME3Package.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonTopologyUIJME3Package.eNS_URI, theSymphony__CommonTopologyUIJME3Package);
-		return theSymphony__CommonTopologyUIJME3Package;
+		EPackage.Registry.INSTANCE.put(ApogyCommonTopologyUIJME3Package.eNS_URI, theApogyCommonTopologyUIJME3Package);
+		return theApogyCommonTopologyUIJME3Package;
 	}
 
 	/**
@@ -239,8 +239,8 @@ public class Symphony__CommonTopologyUIJME3PackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIJME3Factory getSymphony__CommonTopologyUIJME3Factory() {
-		return (Symphony__CommonTopologyUIJME3Factory)getEFactoryInstance();
+	public ApogyCommonTopologyUIJME3Factory getApogyCommonTopologyUIJME3Factory() {
+		return (ApogyCommonTopologyUIJME3Factory)getEFactoryInstance();
 	}
 
 	/**
@@ -343,16 +343,16 @@ public class Symphony__CommonTopologyUIJME3PackageImpl extends EPackageImpl impl
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonTopologyUIJME3",
+			 "prefix", "ApogyCommonTopologyUIJME3",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
-			 "modelName", "Symphony__CommonTopologyUIJME3",
+			 "modelName", "ApogyCommonTopologyUIJME3",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.topology.ui.jme3/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.topology.ui.jme3.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.topology.ui"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.topology.ui.jme3/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.topology.ui.jme3.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.topology.ui"
 		   });
 	}
 
-} //Symphony__CommonTopologyUIJME3PackageImpl
+} //ApogyCommonTopologyUIJME3PackageImpl

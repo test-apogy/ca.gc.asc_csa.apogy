@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,10 +15,10 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList#getMapViewConfigurations <em>Map View Configurations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList#getMapViewConfigurations <em>Map View Configurations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfigurationList()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfigurationList()
  * @model
  * @generated
  */
@@ -26,7 +26,7 @@ public interface MapViewConfigurationList extends AbstractToolsListContainer
 {
   /**
 	 * Returns the value of the '<em><b>Map View Configurations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map View Configurations</em>' containment reference list isn't clear,
@@ -34,7 +34,7 @@ public interface MapViewConfigurationList extends AbstractToolsListContainer
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map View Configurations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfigurationList_MapViewConfigurations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfigurationList_MapViewConfigurations()
 	 * @model containment="true"
 	 * @generated
 	 */

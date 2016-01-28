@@ -1,9 +1,9 @@
-package org.eclipse.symphony.core.environment.ui.jme3;
+package ca.gc.asc_csa.apogy.core.environment.ui.jme3;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Mesh;

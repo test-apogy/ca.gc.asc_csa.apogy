@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2008.
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.PositionMarker} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class PositionMarkerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PositionMarker_identifier_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PositionMarker_identifier_feature", "_UI_PositionMarker_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.POSITION_MARKER__IDENTIFIER,
+				 ApogyCommonGeometryData3DPackage.Literals.POSITION_MARKER__IDENTIFIER,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class PositionMarkerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositionMarker.class)) {
-			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
+			case ApogyCommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

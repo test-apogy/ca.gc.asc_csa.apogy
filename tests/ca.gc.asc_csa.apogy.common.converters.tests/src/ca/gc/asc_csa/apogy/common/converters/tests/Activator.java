@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.converters.tests;
+package ca.gc.asc_csa.apogy.common.converters.tests;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.symphony.common.converters.tests"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common.converters.tests"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

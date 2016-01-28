@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data.impl;
 
 import java.util.List;
 
@@ -18,21 +18,21 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataFactory;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
-import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingMode;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
-import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implements Symphony__CommonGeometryDataPackage {
+public class ApogyCommonGeometryDataPackageImpl extends EPackageImpl implements ApogyCommonGeometryDataPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,12 +150,12 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonGeometryDataPackageImpl() {
-		super(eNS_URI, Symphony__CommonGeometryDataFactory.eINSTANCE);
+	private ApogyCommonGeometryDataPackageImpl() {
+		super(eNS_URI, ApogyCommonGeometryDataFactory.eINSTANCE);
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonGeometryDataPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonGeometryDataPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,30 +177,30 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryDataPackage init() {
-		if (isInited) return (Symphony__CommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryDataPackage.eNS_URI);
+	public static ApogyCommonGeometryDataPackage init() {
+		if (isInited) return (ApogyCommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryDataPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonGeometryDataPackageImpl theSymphony__CommonGeometryDataPackage = (Symphony__CommonGeometryDataPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonGeometryDataPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonGeometryDataPackageImpl());
+		ApogyCommonGeometryDataPackageImpl theApogyCommonGeometryDataPackage = (ApogyCommonGeometryDataPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonGeometryDataPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonGeometryDataPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonProcessorsPackage.eINSTANCE.eClass();
+		ApogyCommonProcessorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonGeometryDataPackage.createPackageContents();
+		theApogyCommonGeometryDataPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonGeometryDataPackage.initializePackageContents();
+		theApogyCommonGeometryDataPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonGeometryDataPackage.freeze();
+		theApogyCommonGeometryDataPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonGeometryDataPackage.eNS_URI, theSymphony__CommonGeometryDataPackage);
-		return theSymphony__CommonGeometryDataPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonGeometryDataPackage.eNS_URI, theApogyCommonGeometryDataPackage);
+		return theApogyCommonGeometryDataPackage;
 	}
 
 	/**
@@ -478,8 +478,8 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryDataFactory getSymphony__CommonGeometryDataFactory() {
-		return (Symphony__CommonGeometryDataFactory)getEFactoryInstance();
+	public ApogyCommonGeometryDataFactory getApogyCommonGeometryDataFactory() {
+		return (ApogyCommonGeometryDataFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -571,7 +571,7 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
+		ApogyCommonProcessorsPackage theApogyCommonProcessorsPackage = (ApogyCommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonProcessorsPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter coordinatesSetEClass_T = addETypeParameter(coordinatesSetEClass, "T");
@@ -629,7 +629,7 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 		meshEClass.getEGenericSuperTypes().add(g1);
 		coordinatesSamplingShapeEClass.getESuperTypes().add(this.getSamplingShape());
 		polygonSamplingShapeEClass.getESuperTypes().add(this.getSamplingShape());
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getCoordinatesSet());
 		g1.getETypeArguments().add(g2);
 		EGenericType g3 = createEGenericType(coordinatesSetShapesSamplerEClass_T);
@@ -639,7 +639,7 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 		g3 = createEGenericType(coordinatesSetShapesSamplerEClass_T);
 		g2.getETypeArguments().add(g3);
 		coordinatesSetShapesSamplerEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getMesh());
 		g1.getETypeArguments().add(g2);
 		g3 = createEGenericType(meshCoordinatesShapesSamplerEClass_CoordinatesType);
@@ -653,7 +653,7 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 		g3 = createEGenericType(meshCoordinatesShapesSamplerEClass_PolygonType);
 		g2.getETypeArguments().add(g3);
 		meshCoordinatesShapesSamplerEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getMesh());
 		g1.getETypeArguments().add(g2);
 		g3 = createEGenericType(meshPolygonShapesSamplerEClass_CoordinatesType);
@@ -776,16 +776,16 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonGeometryData",
+			 "prefix", "ApogyCommonGeometryData",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonGeometryData",
+			 "modelName", "ApogyCommonGeometryData",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.geometry.data.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.geometry"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry"
 		   });	
 		addAnnotation
 		  (polygonSamplingShapeEClass, 
@@ -795,4 +795,4 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 		   });
 	}
 
-} //Symphony__CommonGeometryDataPackageImpl
+} //ApogyCommonGeometryDataPackageImpl

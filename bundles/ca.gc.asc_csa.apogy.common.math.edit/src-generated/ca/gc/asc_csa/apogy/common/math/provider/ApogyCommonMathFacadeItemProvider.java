@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.provider;
+package ca.gc.asc_csa.apogy.common.math.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonMathFacadeItemProvider
+public class ApogyCommonMathFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class Symphony__CommonMathFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCommonMathFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,14 +61,14 @@ public class Symphony__CommonMathFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonMathFacade.gif.
+	 * This returns ApogyCommonMathFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonMathFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonMathFacade"));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Symphony__CommonMathFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CommonMathFacade_type");
+		return getString("_UI_ApogyCommonMathFacade_type");
 	}
 
 	/**

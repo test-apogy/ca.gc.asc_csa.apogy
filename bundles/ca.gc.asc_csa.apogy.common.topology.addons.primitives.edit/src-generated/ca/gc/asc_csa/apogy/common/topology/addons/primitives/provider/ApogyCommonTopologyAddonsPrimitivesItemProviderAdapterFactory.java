@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,17 +33,17 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
-import org.eclipse.symphony.common.topology.addons.primitives.util.Symphony__CommonTopologyAddonsPrimitivesAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.util.ApogyCommonTopologyAddonsPrimitivesAdapterFactory;
 
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -54,7 +54,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory extends Symphony__CommonTopologyAddonsPrimitivesAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonTopologyAddonsPrimitivesItemProviderAdapterFactory extends ApogyCommonTopologyAddonsPrimitivesAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonTopologyAddonsPrimitivesEditPlugin.INSTANCE, Symphony__CommonTopologyAddonsPrimitivesPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonTopologyAddonsPrimitivesEditPlugin.INSTANCE, ApogyCommonTopologyAddonsPrimitivesPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -93,7 +93,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory() {
+	public ApogyCommonTopologyAddonsPrimitivesItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -102,7 +102,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.Vector} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -110,7 +110,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected VectorItemProvider vectorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Vector}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.PickVector} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,7 +133,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected PickVectorItemProvider pickVectorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PickVector}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.Plane} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -156,7 +156,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected PlaneItemProvider planeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Plane}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.WayPoint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.WayPoint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,7 +179,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected WayPointItemProvider wayPointItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.WayPoint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.WayPoint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.Label} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -202,7 +202,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected LabelItemProvider labelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Label}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -225,7 +225,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected SpherePrimitiveItemProvider spherePrimitiveItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.AmbientLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -248,7 +248,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected AmbientLightItemProvider ambientLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.AmbientLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -263,7 +263,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -271,7 +271,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected DirectionalLightItemProvider directionalLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,7 +286,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.PointLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -294,7 +294,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected PointLightItemProvider pointLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PointLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -309,7 +309,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -317,7 +317,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	protected SpotLightItemProvider spotLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -332,26 +332,26 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider;
+	protected ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonTopologyAddonsPrimitivesFacadeAdapter() {
-		if (symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider == null) {
-			symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider = new Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider(this);
+	public Adapter createApogyCommonTopologyAddonsPrimitivesFacadeAdapter() {
+		if (apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider == null) {
+			apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider = new ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider(this);
 		}
 
-		return symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider;
+		return apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider;
 	}
 
 	/**
@@ -490,23 +490,23 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 		if (directionalLightItemProvider != null) directionalLightItemProvider.dispose();
 		if (pointLightItemProvider != null) pointLightItemProvider.dispose();
 		if (spotLightItemProvider != null) spotLightItemProvider.dispose();
-		if (symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider != null) symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider.dispose();
+		if (apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider != null) apogy__CommonTopologyAddonsPrimitivesFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -542,58 +542,58 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSymphony__CommonTopologyAddonsPrimitivesFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createApogyCommonTopologyAddonsPrimitivesFacade()));
 
 				return null;
 			}
@@ -607,58 +607,58 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSymphony__CommonTopologyAddonsPrimitivesFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createApogyCommonTopologyAddonsPrimitivesFacade()));
 
 				return null;
 			}
@@ -672,53 +672,53 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
 
 				return null;
 			}
@@ -751,7 +751,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CommonTopologyAddonsPrimitivesEditPlugin.INSTANCE;
+			return ApogyCommonTopologyAddonsPrimitivesEditPlugin.INSTANCE;
 		}
 	}
 

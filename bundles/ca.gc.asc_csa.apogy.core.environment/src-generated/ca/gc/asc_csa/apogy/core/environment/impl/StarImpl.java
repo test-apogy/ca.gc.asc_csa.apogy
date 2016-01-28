@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.StarImpl#getMagnitude <em>Magnitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.StarImpl#getEquatorialCoordinates <em>Equatorial Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.StarImpl#getMagnitude <em>Magnitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.StarImpl#getEquatorialCoordinates <em>Equatorial Coordinates</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,7 +76,7 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.STAR;
+		return ApogyCoreEnvironmentPackage.Literals.STAR;
 	}
 
   /**
@@ -99,7 +99,7 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
 		float oldMagnitude = magnitude;
 		magnitude = newMagnitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.STAR__MAGNITUDE, oldMagnitude, magnitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.STAR__MAGNITUDE, oldMagnitude, magnitude));
 	}
 
   /**
@@ -114,7 +114,7 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
 			equatorialCoordinates = (EquatorialCoordinates)eResolveProxy(oldEquatorialCoordinates);
 			if (equatorialCoordinates != oldEquatorialCoordinates) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES, oldEquatorialCoordinates, equatorialCoordinates));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES, oldEquatorialCoordinates, equatorialCoordinates));
 			}
 		}
 		return equatorialCoordinates;
@@ -140,7 +140,7 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
 		EquatorialCoordinates oldEquatorialCoordinates = equatorialCoordinates;
 		equatorialCoordinates = newEquatorialCoordinates;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES, oldEquatorialCoordinates, equatorialCoordinates));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES, oldEquatorialCoordinates, equatorialCoordinates));
 	}
 
   /**
@@ -152,9 +152,9 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR__MAGNITUDE:
+			case ApogyCoreEnvironmentPackage.STAR__MAGNITUDE:
 				return getMagnitude();
-			case Symphony__CoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
 				if (resolve) return getEquatorialCoordinates();
 				return basicGetEquatorialCoordinates();
 		}
@@ -170,10 +170,10 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR__MAGNITUDE:
+			case ApogyCoreEnvironmentPackage.STAR__MAGNITUDE:
 				setMagnitude((Float)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
 				setEquatorialCoordinates((EquatorialCoordinates)newValue);
 				return;
 		}
@@ -189,10 +189,10 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR__MAGNITUDE:
+			case ApogyCoreEnvironmentPackage.STAR__MAGNITUDE:
 				setMagnitude(MAGNITUDE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
 				setEquatorialCoordinates((EquatorialCoordinates)null);
 				return;
 		}
@@ -208,9 +208,9 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR__MAGNITUDE:
+			case ApogyCoreEnvironmentPackage.STAR__MAGNITUDE:
 				return magnitude != MAGNITUDE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.STAR__EQUATORIAL_COORDINATES:
 				return equatorialCoordinates != null;
 		}
 		return super.eIsSet(featureID);

@@ -11,32 +11,32 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"
             icon="icons/CameraView.gif"
-            id="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"
-            name="Symphony Camera View"
+            id="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView"
+            name="Apogy Camera View"
             restorable="true">
       </view>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_tools_camera -->
+      <!-- @generated apogy_tools_camera -->
       <package
-            uri="org.eclipse.symphony.addons.sensors.imaging.camera"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage"
-            genModel="model/symphony_addons_imaging_camera.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage"
+            genModel="model/apogy_addons_imaging_camera.xcore"/>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
-            id="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
+            id="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
             name="Toggle Image Filter">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleCameraImageAnnotationVisibilityCommand"
-            id="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleCameraImageAnnotationVisibilityCommand"
+            id="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
             name="Toggle Camera Image Annotation Visibility">
       </command>
    </extension>
@@ -44,9 +44,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
                label="Toggle Image Filter"
                style="push">
             <visibleWhen
@@ -57,14 +57,14 @@
                      ifEmpty="false"
                      operator="or">
                     <instanceof
-                          value="org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter">
+                          value="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter">
                     </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
                label="Toggle Visibility"
                style="push">
             <visibleWhen
@@ -75,7 +75,7 @@
                       ifEmpty="false"
                       operator="or">
                      <instanceof
-                           value="org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation">
+                           value="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation">
                      </instanceof>
                   </iterate>
                </with>

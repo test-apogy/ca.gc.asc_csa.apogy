@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
 
 /**
@@ -17,11 +17,11 @@ package org.eclipse.symphony.addons.telecoms;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern()
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern()
  * @model
  * @generated
  */
@@ -40,15 +40,15 @@ public interface SimpleRectangularFrustumRadiationPattern extends AbstractAntenn
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Horizontal Field Of View</em>' attribute.
 	 * @see #setHorizontalFieldOfView(double)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_HorizontalFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_HorizontalFieldOfView()
 	 * @model default="0.79" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getHorizontalFieldOfView();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Horizontal Field Of View</em>' attribute.
@@ -71,15 +71,15 @@ public interface SimpleRectangularFrustumRadiationPattern extends AbstractAntenn
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vertical Field Of View</em>' attribute.
 	 * @see #setVerticalFieldOfView(double)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView()
 	 * @model default="1.57" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getVerticalFieldOfView();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vertical Field Of View</em>' attribute.

@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestSceneObject;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestSceneObject;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPacka
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl#getPoleHeight <em>Pole Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl#isFlagVisible <em>Flag Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl#getPoleHeight <em>Pole Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,7 +83,7 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 		double oldPoleHeight = poleHeight;
 		poleHeight = newPoleHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 		boolean oldFlagVisible = flagVisible;
 		flagVisible = newFlagVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
 	}
 
 	/**
@@ -162,9 +162,9 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				return getPoleHeight();
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				return isFlagVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -178,10 +178,10 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible((Boolean)newValue);
 				return;
 		}
@@ -196,10 +196,10 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight(POLE_HEIGHT_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible(FLAG_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -214,9 +214,9 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				return poleHeight != POLE_HEIGHT_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				return flagVisible != FLAG_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

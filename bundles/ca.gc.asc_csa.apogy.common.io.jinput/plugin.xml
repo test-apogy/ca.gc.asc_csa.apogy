@@ -8,11 +8,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_common_ui_jinput -->
+      <!-- @generated apogy_common_ui_jinput -->
       <package
-            uri="org.eclipse.symphony.common.io.jinput"
-            class="org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage"
-            genModel="model/symphony_common_io_jinput.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.io.jinput"
+            class="ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage"
+            genModel="model/apogy_common_io_jinput.xcore"/>
    </extension>
 
 null

@@ -1,26 +1,26 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.provider;
+package ca.gc.asc_csa.apogy.common.images.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonImages edit plugin.
+ * This is the central singleton for the ApogyCommonImages edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonImagesEditPlugin extends EMFPlugin {
+public final class ApogyCommonImagesEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonImagesEditPlugin INSTANCE = new Symphony__CommonImagesEditPlugin();
+	public static final ApogyCommonImagesEditPlugin INSTANCE = new ApogyCommonImagesEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -36,7 +36,7 @@ public final class Symphony__CommonImagesEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonImagesEditPlugin() {
+	public ApogyCommonImagesEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

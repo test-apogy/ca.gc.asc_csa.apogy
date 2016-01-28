@@ -4,19 +4,19 @@
  *
  * $Id: ControllersEditPlugin.java,v 1.4.4.2 2015/05/21 15:50:54 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
-import org.eclipse.symphony.addons.mobility.provider.MobilityEditPlugin;
-import org.eclipse.symphony.addons.sensors.pose.provider.Symphony__AddonsSensorsPoseEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.PathsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.mobility.provider.MobilityEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.provider.ApogyAddonsSensorsPoseEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.provider.ApogyAddonsSensorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the Controllers edit plugin.
@@ -52,15 +52,15 @@ public final class ControllersEditPlugin extends EMFPlugin
 	{
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
 		     MobilityEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsPoseEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsPoseEditPlugin.INSTANCE,
 		   });
 	}
 

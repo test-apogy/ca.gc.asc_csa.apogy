@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2008.
  *
- * $Id: Symphony__AddonsMobilityPathplannersGraphFactoryImpl.java,v 1.2.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityPathplannersGraphFactoryImpl.java,v 1.2.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.*;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.*;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
@@ -22,24 +22,24 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersGraphFactoryImpl extends EFactoryImpl implements Symphony__AddonsMobilityPathplannersGraphFactory {
+public class ApogyAddonsMobilityPathplannersGraphFactoryImpl extends EFactoryImpl implements ApogyAddonsMobilityPathplannersGraphFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityPathplannersGraphFactory init() {
+	public static ApogyAddonsMobilityPathplannersGraphFactory init() {
 		try {
-			Symphony__AddonsMobilityPathplannersGraphFactory theSymphony__AddonsMobilityPathplannersGraphFactory = (Symphony__AddonsMobilityPathplannersGraphFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsMobilityPathplannersGraphPackage.eNS_URI);
-			if (theSymphony__AddonsMobilityPathplannersGraphFactory != null) {
-				return theSymphony__AddonsMobilityPathplannersGraphFactory;
+			ApogyAddonsMobilityPathplannersGraphFactory theApogyAddonsMobilityPathplannersGraphFactory = (ApogyAddonsMobilityPathplannersGraphFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsMobilityPathplannersGraphPackage.eNS_URI);
+			if (theApogyAddonsMobilityPathplannersGraphFactory != null) {
+				return theApogyAddonsMobilityPathplannersGraphFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsMobilityPathplannersGraphFactoryImpl();
+		return new ApogyAddonsMobilityPathplannersGraphFactoryImpl();
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Symphony__AddonsMobilityPathplannersGraphFactoryImpl extends EFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersGraphFactoryImpl() {
+	public ApogyAddonsMobilityPathplannersGraphFactoryImpl() {
 		super();
 	}
 
@@ -60,16 +60,16 @@ public class Symphony__AddonsMobilityPathplannersGraphFactoryImpl extends EFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER: return createCostBasedMeshWayPointPathPlanner();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION: return createMeshDisplacementCostFunction();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_ONLY_COST_FUNCTION: return createDistanceOnlyCostFunction();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: return createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: return createDirectedGraphBasedMeshWayPointPathPlanner();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE: return createMobilityEdge();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY: return createMobilityEdgeFactory();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION: return createDistanceAndSlopesCostFunction();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION: return createExclusionZonesCostFunction();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION: return createDistanceAndRoverFootprintCostFunction();
+			case ApogyAddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER: return createCostBasedMeshWayPointPathPlanner();
+			case ApogyAddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION: return createMeshDisplacementCostFunction();
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_ONLY_COST_FUNCTION: return createDistanceOnlyCostFunction();
+			case ApogyAddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: return createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
+			case ApogyAddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER: return createDirectedGraphBasedMeshWayPointPathPlanner();
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE: return createMobilityEdge();
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY: return createMobilityEdgeFactory();
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION: return createDistanceAndSlopesCostFunction();
+			case ApogyAddonsMobilityPathplannersGraphPackage.EXCLUSION_ZONES_COST_FUNCTION: return createExclusionZonesCostFunction();
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION: return createDistanceAndRoverFootprintCostFunction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,9 +83,9 @@ public class Symphony__AddonsMobilityPathplannersGraphFactoryImpl extends EFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH:
 				return createDirectedGraphFromString(eDataType, initialValue);
-			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case ApogyAddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				return createSimpleDirectedWeightedGraphFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -100,9 +100,9 @@ public class Symphony__AddonsMobilityPathplannersGraphFactoryImpl extends EFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH:
 				return convertDirectedGraphToString(eDataType, instanceValue);
-			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case ApogyAddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				return convertSimpleDirectedWeightedGraphToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -252,8 +252,8 @@ public class Symphony__AddonsMobilityPathplannersGraphFactoryImpl extends EFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersGraphPackage getSymphony__AddonsMobilityPathplannersGraphPackage() {
-		return (Symphony__AddonsMobilityPathplannersGraphPackage)getEPackage();
+	public ApogyAddonsMobilityPathplannersGraphPackage getApogyAddonsMobilityPathplannersGraphPackage() {
+		return (ApogyAddonsMobilityPathplannersGraphPackage)getEPackage();
 	}
 
 	/**
@@ -263,8 +263,8 @@ public class Symphony__AddonsMobilityPathplannersGraphFactoryImpl extends EFacto
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsMobilityPathplannersGraphPackage getPackage() {
-		return Symphony__AddonsMobilityPathplannersGraphPackage.eINSTANCE;
+	public static ApogyAddonsMobilityPathplannersGraphPackage getPackage() {
+		return ApogyAddonsMobilityPathplannersGraphPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsMobilityPathplannersGraphFactoryImpl
+} //ApogyAddonsMobilityPathplannersGraphFactoryImpl

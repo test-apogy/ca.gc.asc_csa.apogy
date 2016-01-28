@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.addons.sensors.imaging"
-            class="org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.sensors.imaging"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.provider.ApogyAddonsSensorsImagingItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,9 +23,9 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_sensors_imaging -->
+      <!-- @generated apogy_addons_sensors_imaging -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.provider.ApogyAddonsSensorsImagingItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 </plugin>

@@ -1,12 +1,12 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui.util;
+package ca.gc.asc_csa.apogy.common.emf.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage
+ * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage
  * @generated
  */
-public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
+public class ApogyCommonEMFUISwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -29,7 +29,7 @@ public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CommonEMFUIPackage modelPackage;
+  protected static ApogyCommonEMFUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -37,10 +37,10 @@ public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFUISwitch()
+  public ApogyCommonEMFUISwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonEMFUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonEMFUIPackage.eINSTANCE;
 		}
 	}
 
@@ -69,9 +69,9 @@ public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CommonEMFUIPackage.SYMPHONY_COMMON_EMFUI_FACADE: {
-				Symphony__CommonEMFUIFacade symphony__CommonEMFUIFacade = (Symphony__CommonEMFUIFacade)theEObject;
-				T result = caseSymphony__CommonEMFUIFacade(symphony__CommonEMFUIFacade);
+			case ApogyCommonEMFUIPackage.APOGY_COMMON_EMFUI_FACADE: {
+				ApogyCommonEMFUIFacade apogy__CommonEMFUIFacade = (ApogyCommonEMFUIFacade)theEObject;
+				T result = caseApogyCommonEMFUIFacade(apogy__CommonEMFUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -90,7 +90,7 @@ public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonEMFUIFacade(Symphony__CommonEMFUIFacade object) {
+	public T caseApogyCommonEMFUIFacade(ApogyCommonEMFUIFacade object) {
 		return null;
 	}
 
@@ -111,4 +111,4 @@ public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CommonEMFUISwitch
+} //ApogyCommonEMFUISwitch

@@ -3,16 +3,16 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.statistics.impl;
+package ca.gc.asc_csa.apogy.common.math.statistics.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.math.statistics.Population;
-import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsFactory;
-import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage;
+import ca.gc.asc_csa.apogy.common.math.statistics.Population;
+import ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsFactory;
+import ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatistic
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonMathStatisticsPackageImpl extends EPackageImpl implements Symphony__CommonMathStatisticsPackage {
+public class ApogyCommonMathStatisticsPackageImpl extends EPackageImpl implements ApogyCommonMathStatisticsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,12 +39,12 @@ public class Symphony__CommonMathStatisticsPackageImpl extends EPackageImpl impl
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonMathStatisticsPackageImpl() {
-		super(eNS_URI, Symphony__CommonMathStatisticsFactory.eINSTANCE);
+	private ApogyCommonMathStatisticsPackageImpl() {
+		super(eNS_URI, ApogyCommonMathStatisticsFactory.eINSTANCE);
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class Symphony__CommonMathStatisticsPackageImpl extends EPackageImpl impl
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonMathStatisticsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonMathStatisticsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,11 +66,11 @@ public class Symphony__CommonMathStatisticsPackageImpl extends EPackageImpl impl
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonMathStatisticsPackage init() {
-		if (isInited) return (Symphony__CommonMathStatisticsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathStatisticsPackage.eNS_URI);
+	public static ApogyCommonMathStatisticsPackage init() {
+		if (isInited) return (ApogyCommonMathStatisticsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathStatisticsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonMathStatisticsPackageImpl theSymphony__CommonMathStatisticsPackage = (Symphony__CommonMathStatisticsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonMathStatisticsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonMathStatisticsPackageImpl());
+		ApogyCommonMathStatisticsPackageImpl theApogyCommonMathStatisticsPackage = (ApogyCommonMathStatisticsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonMathStatisticsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonMathStatisticsPackageImpl());
 
 		isInited = true;
 
@@ -78,18 +78,18 @@ public class Symphony__CommonMathStatisticsPackageImpl extends EPackageImpl impl
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonMathStatisticsPackage.createPackageContents();
+		theApogyCommonMathStatisticsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonMathStatisticsPackage.initializePackageContents();
+		theApogyCommonMathStatisticsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonMathStatisticsPackage.freeze();
+		theApogyCommonMathStatisticsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonMathStatisticsPackage.eNS_URI, theSymphony__CommonMathStatisticsPackage);
-		return theSymphony__CommonMathStatisticsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonMathStatisticsPackage.eNS_URI, theApogyCommonMathStatisticsPackage);
+		return theApogyCommonMathStatisticsPackage;
 	}
 
 	/**
@@ -187,8 +187,8 @@ public class Symphony__CommonMathStatisticsPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathStatisticsFactory getSymphony__CommonMathStatisticsFactory() {
-		return (Symphony__CommonMathStatisticsFactory)getEFactoryInstance();
+	public ApogyCommonMathStatisticsFactory getApogyCommonMathStatisticsFactory() {
+		return (ApogyCommonMathStatisticsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -286,16 +286,16 @@ public class Symphony__CommonMathStatisticsPackageImpl extends EPackageImpl impl
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonMathStatistics",
+			 "prefix", "ApogyCommonMathStatistics",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonMathStatistics",
+			 "modelName", "ApogyCommonMathStatistics",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.math.statistics/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.math"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.math.statistics/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.math"
 		   });
 	}
 
-} //Symphony__CommonMathStatisticsPackageImpl
+} //ApogyCommonMathStatisticsPackageImpl

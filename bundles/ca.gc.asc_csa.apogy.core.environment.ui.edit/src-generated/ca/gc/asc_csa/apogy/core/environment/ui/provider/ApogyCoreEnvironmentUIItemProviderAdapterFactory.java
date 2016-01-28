@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,19 +26,19 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.util.Symphony__CommonTopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.util.Symphony__CoreEnvironmentUIAdapterFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ToolsList;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.util.ApogyCommonTopologyUISwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.util.ApogyCoreEnvironmentUIAdapterFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -49,7 +49,7 @@ import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symphony__CoreEnvironmentUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyCoreEnvironmentUIItemProviderAdapterFactory extends ApogyCoreEnvironmentUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -73,7 +73,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreEnvironmentUIEditPlugin.INSTANCE, Symphony__CoreEnvironmentUIPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreEnvironmentUIEditPlugin.INSTANCE, ApogyCoreEnvironmentUIPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -89,7 +89,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentUIItemProviderAdapterFactory()
+  public ApogyCoreEnvironmentUIItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -99,7 +99,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -107,7 +107,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected StarFieldPresentationItemProvider starFieldPresentationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -123,7 +123,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.SunPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected SunPresentationItemProvider sunPresentationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.SunPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -147,7 +147,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -155,7 +155,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected EarthSurfaceWorksitePresentationItemProvider earthSurfaceWorksitePresentationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.EarthSkyPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -179,7 +179,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected EarthSkyPresentationItemProvider earthSkyPresentationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.EarthSkyPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -195,7 +195,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.MoonPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -203,7 +203,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected MoonPresentationItemProvider moonPresentationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.MoonPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -219,7 +219,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,7 +227,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	protected FeatureOfInterestNodePresentationItemProvider featureOfInterestNodePresentationItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -242,7 +242,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -250,7 +250,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected EnvironmentUIUtilitiesItemProvider environmentUIUtilitiesItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -265,30 +265,30 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreEnvironmentUIFacadeItemProvider symphony__CoreEnvironmentUIFacadeItemProvider;
+  protected ApogyCoreEnvironmentUIFacadeItemProvider apogy__CoreEnvironmentUIFacadeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreEnvironmentUIFacadeAdapter() {
-		if (symphony__CoreEnvironmentUIFacadeItemProvider == null) {
-			symphony__CoreEnvironmentUIFacadeItemProvider = new Symphony__CoreEnvironmentUIFacadeItemProvider(this);
+	public Adapter createApogyCoreEnvironmentUIFacadeAdapter() {
+		if (apogy__CoreEnvironmentUIFacadeItemProvider == null) {
+			apogy__CoreEnvironmentUIFacadeItemProvider = new ApogyCoreEnvironmentUIFacadeItemProvider(this);
 		}
 
-		return symphony__CoreEnvironmentUIFacadeItemProvider;
+		return apogy__CoreEnvironmentUIFacadeItemProvider;
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -296,7 +296,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected MapViewConfigurationListItemProvider mapViewConfigurationListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -312,7 +312,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -320,7 +320,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected MapViewConfigurationItemProvider mapViewConfigurationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -336,7 +336,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -344,7 +344,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	protected FeaturesOfInterestMapLayerPresentationItemProvider featuresOfInterestMapLayerPresentationItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -359,7 +359,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.MapRuler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -367,7 +367,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected MapRulerItemProvider mapRulerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.MapRuler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -383,7 +383,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -391,7 +391,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected TrajectoryPickingToolItemProvider trajectoryPickingToolItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -407,7 +407,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -415,7 +415,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected DefaultVariableTrajectoryProviderItemProvider defaultVariableTrajectoryProviderItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -431,7 +431,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -439,7 +439,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected PoseVariableAnnotationItemProvider poseVariableAnnotationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -455,7 +455,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -463,7 +463,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected VariableTrajectoryAnnotationItemProvider variableTrajectoryAnnotationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -479,7 +479,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -487,7 +487,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
   protected VehicleVariableAnnotationItemProvider vehicleVariableAnnotationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -647,7 +647,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 		if (moonPresentationItemProvider != null) moonPresentationItemProvider.dispose();
 		if (featureOfInterestNodePresentationItemProvider != null) featureOfInterestNodePresentationItemProvider.dispose();
 		if (environmentUIUtilitiesItemProvider != null) environmentUIUtilitiesItemProvider.dispose();
-		if (symphony__CoreEnvironmentUIFacadeItemProvider != null) symphony__CoreEnvironmentUIFacadeItemProvider.dispose();
+		if (apogy__CoreEnvironmentUIFacadeItemProvider != null) apogy__CoreEnvironmentUIFacadeItemProvider.dispose();
 		if (mapViewConfigurationListItemProvider != null) mapViewConfigurationListItemProvider.dispose();
 		if (mapViewConfigurationItemProvider != null) mapViewConfigurationItemProvider.dispose();
 		if (mapRulerItemProvider != null) mapRulerItemProvider.dispose();
@@ -660,19 +660,19 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
   /**
-	 * A child creation extender for the {@link Symphony__CommonTopologyUIPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyUIChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyUISwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -708,33 +708,33 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 			public Object caseTopologyPresentationRegistry(TopologyPresentationRegistry object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
 
 				return null;
 			}
@@ -767,24 +767,24 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEnvironmentUIEditPlugin.INSTANCE;
+			return ApogyCoreEnvironmentUIEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -820,8 +820,8 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 			public Object caseToolsList(ToolsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
+						(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
 
 				return null;
 			}
@@ -854,24 +854,24 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEnvironmentUIEditPlugin.INSTANCE;
+			return ApogyCoreEnvironmentUIEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -907,88 +907,88 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSymphony__CoreEnvironmentUIFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createApogyCoreEnvironmentUIFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapRuler()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapRuler()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
 
 				return null;
 			}
@@ -1002,88 +1002,88 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSymphony__CoreEnvironmentUIFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createApogyCoreEnvironmentUIFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapRuler()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapRuler()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
 
 				return null;
 			}
@@ -1116,7 +1116,7 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEnvironmentUIEditPlugin.INSTANCE;
+			return ApogyCoreEnvironmentUIEditPlugin.INSTANCE;
 		}
 	}
 

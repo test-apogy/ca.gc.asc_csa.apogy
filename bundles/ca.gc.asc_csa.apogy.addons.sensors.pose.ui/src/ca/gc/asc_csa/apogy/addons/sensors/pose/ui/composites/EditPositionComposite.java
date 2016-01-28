@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.ui.composites;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
@@ -7,9 +7,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 
 public class EditPositionComposite extends Composite
 {
@@ -69,14 +69,14 @@ public class EditPositionComposite extends Composite
 	
 	public CartesianPositionCoordinates getNewValues()
 	{		
-		CartesianPositionCoordinates position = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(positionSensor.getPositionCoordinates());	
+		CartesianPositionCoordinates position = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(positionSensor.getPositionCoordinates());	
 		try
 		{
 			double x = Double.parseDouble(xValueText.getText());
 			double y = Double.parseDouble(yValueText.getText());
 			double z = Double.parseDouble(zValueText.getText());
 			
-			position = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);		
+			position = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);		
 		}
 		catch(Exception e)
 		{			

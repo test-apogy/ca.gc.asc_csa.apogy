@@ -1,26 +1,26 @@
-package org.eclipse.symphony.core.environment.ui.properties.sections;
+package ca.gc.asc_csa.apogy.core.environment.ui.properties.sections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.IFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
-import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ui.composites.Tuple3dComposite;
+import ca.gc.asc_csa.apogy.common.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class PositionCoordinatesSection extends AbstractExtendedPropertySection implements IFilter
 {
 	@Override
 	public boolean select(Object toTest)
 	{
-		return (Symphony__CommonConvertersFacade.INSTANCE.convert(toTest, Tuple3d.class) != null);
+		return (ApogyCommonConvertersFacade.INSTANCE.convert(toTest, Tuple3d.class) != null);
 	}
 
 	@Override
 	protected void render(EObject eObject) 
 	{
-		Tuple3d tuple3d = (Tuple3d) Symphony__CommonConvertersFacade.INSTANCE.convert(eObject, Tuple3d.class);
+		Tuple3d tuple3d = (Tuple3d) ApogyCommonConvertersFacade.INSTANCE.convert(eObject, Tuple3d.class);
 		
 		if (tuple3d != null) 
 		{			

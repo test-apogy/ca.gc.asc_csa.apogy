@@ -1,8 +1,8 @@
-package org.eclipse.symphony.common.emf.ui;
+package ca.gc.asc_csa.apogy.common.emf.ui;
 
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.AbstractTimeSourceComposite;
 
 public interface TimeSourceCompositeProvider<T extends TimeSource> 
 {

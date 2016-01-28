@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
 import java.io.IOException;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseDataLogger()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getPoseDataLogger()
  * @model abstract="true"
  * @generated
  */
@@ -36,14 +36,14 @@ public interface PoseDataLogger extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output File</em>' attribute.
 	 * @see #setOutputFile(String)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseDataLogger_OutputFile()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getPoseDataLogger_OutputFile()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getOutputFile();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Output File</em>' attribute.
@@ -55,7 +55,7 @@ public interface PoseDataLogger extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.sensors.pose.IOException" poseUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.sensors.pose.IOException" poseUnique="false"
 	 * @generated
 	 */
 	void logPose(Pose pose) throws IOException;

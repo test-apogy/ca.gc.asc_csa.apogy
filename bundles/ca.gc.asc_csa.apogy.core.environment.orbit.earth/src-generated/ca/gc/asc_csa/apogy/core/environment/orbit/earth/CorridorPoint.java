@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,12 +15,12 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getLeft <em>Left</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getCenter <em>Center</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getRight <em>Right</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint#getLeft <em>Left</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint#getCenter <em>Center</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint#getRight <em>Right</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getCorridorPoint()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface CorridorPoint extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left</em>' containment reference.
 	 * @see #setLeft(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint_Left()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getCorridorPoint_Left()
 	 * @model containment="true"
 	 * @generated
 	 */
 	GeographicCoordinates getLeft();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getLeft <em>Left</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint#getLeft <em>Left</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Left</em>' containment reference.
@@ -61,14 +61,14 @@ public interface CorridorPoint extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Center</em>' containment reference.
 	 * @see #setCenter(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint_Center()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getCorridorPoint_Center()
 	 * @model containment="true"
 	 * @generated
 	 */
 	GeographicCoordinates getCenter();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getCenter <em>Center</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint#getCenter <em>Center</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Center</em>' containment reference.
@@ -87,14 +87,14 @@ public interface CorridorPoint extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right</em>' containment reference.
 	 * @see #setRight(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint_Right()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getCorridorPoint_Right()
 	 * @model containment="true"
 	 * @generated
 	 */
 	GeographicCoordinates getRight();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getRight <em>Right</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint#getRight <em>Right</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right</em>' containment reference.

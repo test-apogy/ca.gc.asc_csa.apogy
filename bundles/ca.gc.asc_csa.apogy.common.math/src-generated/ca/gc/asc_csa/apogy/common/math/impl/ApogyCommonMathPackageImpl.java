@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.impl;
+package ca.gc.asc_csa.apogy.common.math.impl;
 
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
@@ -15,21 +15,21 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.MathIO;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Polynomial;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.MathIO;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Polynomial;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--
  * end-user-doc -->
  * @generated
  */
-public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Symphony__CommonMathPackage {
+public class ApogyCommonMathPackageImpl extends EPackageImpl implements ApogyCommonMathPackage {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -59,7 +59,7 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonMathFacadeEClass = null;
+	private EClass apogy__CommonMathFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,12 +113,12 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonMathPackageImpl() {
-		super(eNS_URI, Symphony__CommonMathFactory.eINSTANCE);
+	private ApogyCommonMathPackageImpl() {
+		super(eNS_URI, ApogyCommonMathFactory.eINSTANCE);
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * and for any others upon which it depends.
 	 * 
 	 * <p>
-	 * This method is used to initialize {@link Symphony__CommonMathPackage#eINSTANCE} when that
+	 * This method is used to initialize {@link ApogyCommonMathPackage#eINSTANCE} when that
 	 * field is accessed. Clients should not invoke it directly. Instead, they
 	 * should simply access that field to obtain the package. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -142,11 +142,11 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonMathPackage init() {
-		if (isInited) return (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+	public static ApogyCommonMathPackage init() {
+		if (isInited) return (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonMathPackageImpl theSymphony__CommonMathPackage = (Symphony__CommonMathPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonMathPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonMathPackageImpl());
+		ApogyCommonMathPackageImpl theApogyCommonMathPackage = (ApogyCommonMathPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonMathPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonMathPackageImpl());
 
 		isInited = true;
 
@@ -154,18 +154,18 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonMathPackage.createPackageContents();
+		theApogyCommonMathPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonMathPackage.initializePackageContents();
+		theApogyCommonMathPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonMathPackage.freeze();
+		theApogyCommonMathPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonMathPackage.eNS_URI, theSymphony__CommonMathPackage);
-		return theSymphony__CommonMathPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonMathPackage.eNS_URI, theApogyCommonMathPackage);
+		return theApogyCommonMathPackage;
 	}
 
 	/**
@@ -490,8 +490,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonMathFacade() {
-		return symphony__CommonMathFacadeEClass;
+	public EClass getApogyCommonMathFacade() {
+		return apogy__CommonMathFacadeEClass;
 	}
 
 	/**
@@ -499,8 +499,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__CreateMatrix4x4__Matrix4d() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonMathFacade__CreateMatrix4x4__Matrix4d() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -508,8 +508,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__CreateMatrix3x3__Matrix3d() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCommonMathFacade__CreateMatrix3x3__Matrix3d() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -517,8 +517,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__CreateTuple3d__Tuple3d() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCommonMathFacade__CreateTuple3d__Tuple3d() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -526,8 +526,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__CreateTuple3d__double_double_double() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyCommonMathFacade__CreateTuple3d__double_double_double() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -535,8 +535,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__CreatePolynomial__double() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(4);
+	public EOperation getApogyCommonMathFacade__CreatePolynomial__double() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -544,8 +544,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__CreateIdentityMatrix4x4() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(5);
+	public EOperation getApogyCommonMathFacade__CreateIdentityMatrix4x4() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -553,8 +553,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__CreateIdentityMatrix3x3() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(6);
+	public EOperation getApogyCommonMathFacade__CreateIdentityMatrix3x3() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -562,8 +562,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__ExtractPosition__Matrix4x4() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(7);
+	public EOperation getApogyCommonMathFacade__ExtractPosition__Matrix4x4() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -571,8 +571,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonMathFacade__ExtractOrientation__Matrix4x4() {
-		return symphony__CommonMathFacadeEClass.getEOperations().get(8);
+	public EOperation getApogyCommonMathFacade__ExtractOrientation__Matrix4x4() {
+		return apogy__CommonMathFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -661,8 +661,8 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathFactory getSymphony__CommonMathFactory() {
-		return (Symphony__CommonMathFactory)getEFactoryInstance();
+	public ApogyCommonMathFactory getApogyCommonMathFactory() {
+		return (ApogyCommonMathFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -726,16 +726,16 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 		createEAttribute(polynomialEClass, POLYNOMIAL__REAL_ROOTS);
 		createEAttribute(polynomialEClass, POLYNOMIAL__IMAGINARY_ROOTS);
 
-		symphony__CommonMathFacadeEClass = createEClass(SYMPHONY_COMMON_MATH_FACADE);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4);
-		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4);
+		apogy__CommonMathFacadeEClass = createEClass(APOGY_COMMON_MATH_FACADE);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4);
+		createEOperation(apogy__CommonMathFacadeEClass, APOGY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4);
 
 		mathIOEClass = createEClass(MATH_IO);
 		createEOperation(mathIOEClass, MATH_IO___READ_TR_MATRIX__STRING);
@@ -828,33 +828,33 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 		initEAttribute(getPolynomial_RealRoots(), this.getEDoubleArray(), "realRoots", null, 0, 1, Polynomial.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolynomial_ImaginaryRoots(), this.getEDoubleArray(), "imaginaryRoots", null, 0, 1, Polynomial.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__CommonMathFacadeEClass, Symphony__CommonMathFacade.class, "Symphony__CommonMathFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonMathFacadeEClass, ApogyCommonMathFacade.class, "ApogyCommonMathFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__CommonMathFacade__CreateMatrix4x4__Matrix4d(), this.getMatrix4x4(), "createMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCommonMathFacade__CreateMatrix4x4__Matrix4d(), this.getMatrix4x4(), "createMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonMathFacade__CreateMatrix3x3__Matrix3d(), this.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonMathFacade__CreateMatrix3x3__Matrix3d(), this.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix3d(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonMathFacade__CreateTuple3d__Tuple3d(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonMathFacade__CreateTuple3d__Tuple3d(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVecmathTuple3d(), "tuple", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonMathFacade__CreateTuple3d__double_double_double(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonMathFacade__CreateTuple3d__double_double_double(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonMathFacade__CreatePolynomial__double(), this.getPolynomial(), "createPolynomial", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonMathFacade__CreatePolynomial__double(), this.getPolynomial(), "createPolynomial", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEDoubleArray(), "coeffs", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CommonMathFacade__CreateIdentityMatrix4x4(), this.getMatrix4x4(), "createIdentityMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCommonMathFacade__CreateIdentityMatrix4x4(), this.getMatrix4x4(), "createIdentityMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CommonMathFacade__CreateIdentityMatrix3x3(), this.getMatrix3x3(), "createIdentityMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCommonMathFacade__CreateIdentityMatrix3x3(), this.getMatrix3x3(), "createIdentityMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonMathFacade__ExtractPosition__Matrix4x4(), this.getTuple3d(), "extractPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonMathFacade__ExtractPosition__Matrix4x4(), this.getTuple3d(), "extractPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4x4(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonMathFacade__ExtractOrientation__Matrix4x4(), this.getTuple3d(), "extractOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonMathFacade__ExtractOrientation__Matrix4x4(), this.getTuple3d(), "extractOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4x4(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mathIOEClass, MathIO.class, "MathIO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -900,16 +900,16 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonMath",
+			 "prefix", "ApogyCommonMath",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonMath",
+			 "modelName", "ApogyCommonMath",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.math/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.math.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.math/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.math.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common"
 		   });	
 		addAnnotation
 		  (getPolynomial_Coeffs(), 
@@ -918,11 +918,11 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 			 "documentation", "The coefficients of the polynomial, sorted in increasing order.\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0].\n\nFor instance: polynomial 3*x^2 + 5*x + 2, the coefficients would be:\ncoeffs = { 2, 5, 3 }."
 		   });	
 		addAnnotation
-		  (getSymphony__CommonMathFacade__CreatePolynomial__double(), 
+		  (getApogyCommonMathFacade__CreatePolynomial__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "@param coeffs The coefficients of the polynomial, sorted in increasing order.\\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0]"
 		   });
 	}
 
-} // Symphony__CommonMathPackageImpl
+} // ApogyCommonMathPackageImpl

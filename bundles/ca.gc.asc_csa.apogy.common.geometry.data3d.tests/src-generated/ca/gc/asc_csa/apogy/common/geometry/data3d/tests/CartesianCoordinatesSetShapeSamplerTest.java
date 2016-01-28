@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetShapeSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -76,7 +76,7 @@ public class CartesianCoordinatesSetShapeSamplerTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSetShapeSampler());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSetShapeSampler());
 	}
 
 	/**
@@ -96,13 +96,13 @@ public class CartesianCoordinatesSetShapeSamplerTest extends TestCase {
 		try
 		{
 			// Use the SphericalSamplingShape for the test.
-			SphereSamplingShape sphericalSamplingShape = Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
+			SphereSamplingShape sphericalSamplingShape = ApogyCommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
 			sphericalSamplingShape.setRadius(10.0);
-			sphericalSamplingShape.setCenter(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 1));
+			sphericalSamplingShape.setCenter(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 1));
 			
 			getFixture().getCoordinatesSamplingShapes().add(sphericalSamplingShape);
 			
-			CartesianCoordinatesSet input = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();								
+			CartesianCoordinatesSet input = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();								
 			
 			// First, test on an empty set.
 			try 
@@ -119,11 +119,11 @@ public class CartesianCoordinatesSetShapeSamplerTest extends TestCase {
 			
 			
 			// Test on a non-empty set.
-			CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 1);
+			CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 1);
 			input.getPoints().add(p0);
-			CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 11);
+			CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 11);
 			input.getPoints().add(p1);
-			CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 12);
+			CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 1, 12);
 			input.getPoints().add(p2);
 			
 			try 

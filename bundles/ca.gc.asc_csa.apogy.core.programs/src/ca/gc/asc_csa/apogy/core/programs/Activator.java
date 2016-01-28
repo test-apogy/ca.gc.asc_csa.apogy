@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.programs;
+package ca.gc.asc_csa.apogy.core.programs;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

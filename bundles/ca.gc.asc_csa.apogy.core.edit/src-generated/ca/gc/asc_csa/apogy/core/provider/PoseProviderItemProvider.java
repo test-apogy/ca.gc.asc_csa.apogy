@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.PoseProvider} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.PoseProvider} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class PoseProviderItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+			childrenFeatures.add(ApogyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class PoseProviderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PoseProvider.class)) {
-			case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM:
+			case ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,8 +156,8 @@ public class PoseProviderItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
   /**

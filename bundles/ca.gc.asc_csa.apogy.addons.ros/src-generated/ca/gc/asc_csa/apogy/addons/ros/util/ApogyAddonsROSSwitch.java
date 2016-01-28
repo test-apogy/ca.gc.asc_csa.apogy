@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.util;
+package ca.gc.asc_csa.apogy.addons.ros.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.ros.*;
+import ca.gc.asc_csa.apogy.addons.ros.*;
 
 import org.ros.internal.message.Message;
 
@@ -22,17 +22,17 @@ import org.ros.internal.message.Message;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage
  * @generated
  */
-public class Symphony__AddonsROSSwitch<T1> extends Switch<T1> {
+public class ApogyAddonsROSSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsROSPackage modelPackage;
+	protected static ApogyAddonsROSPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -40,9 +40,9 @@ public class Symphony__AddonsROSSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSSwitch() {
+	public ApogyAddonsROSSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsROSPackage.eINSTANCE;
+			modelPackage = ApogyAddonsROSPackage.eINSTANCE;
 		}
 	}
 
@@ -69,57 +69,57 @@ public class Symphony__AddonsROSSwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsROSPackage.ROS_NODE: {
+			case ApogyAddonsROSPackage.ROS_NODE: {
 				ROSNode rosNode = (ROSNode)theEObject;
 				T1 result = caseROSNode(rosNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.ROS_INTERFACE: {
+			case ApogyAddonsROSPackage.ROS_INTERFACE: {
 				ROSInterface rosInterface = (ROSInterface)theEObject;
 				T1 result = caseROSInterface(rosInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER: {
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER: {
 				ROSPublisherManager rosPublisherManager = (ROSPublisherManager)theEObject;
 				T1 result = caseROSPublisherManager(rosPublisherManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER: {
+			case ApogyAddonsROSPackage.ROS_PUBLISHER: {
 				ROSPublisher<?> rosPublisher = (ROSPublisher<?>)theEObject;
 				T1 result = caseROSPublisher(rosPublisher);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER: {
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER: {
 				ROSServiceManager rosServiceManager = (ROSServiceManager)theEObject;
 				T1 result = caseROSServiceManager(rosServiceManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.ROS_SERVICE: {
+			case ApogyAddonsROSPackage.ROS_SERVICE: {
 				ROSService<?, ?> rosService = (ROSService<?, ?>)theEObject;
 				T1 result = caseROSService(rosService);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER: {
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER: {
 				ROSTopicLauncher rosTopicLauncher = (ROSTopicLauncher)theEObject;
 				T1 result = caseROSTopicLauncher(rosTopicLauncher);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.ROS_LISTENER: {
+			case ApogyAddonsROSPackage.ROS_LISTENER: {
 				ROSListener<?> rosListener = (ROSListener<?>)theEObject;
 				T1 result = caseROSListener(rosListener);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsROSPackage.SYMPHONY_ADDONS_ROS_FACADE: {
-				Symphony__AddonsROSFacade symphony__AddonsROSFacade = (Symphony__AddonsROSFacade)theEObject;
-				T1 result = caseSymphony__AddonsROSFacade(symphony__AddonsROSFacade);
+			case ApogyAddonsROSPackage.APOGY_ADDONS_ROS_FACADE: {
+				ApogyAddonsROSFacade apogy__AddonsROSFacade = (ApogyAddonsROSFacade)theEObject;
+				T1 result = caseApogyAddonsROSFacade(apogy__AddonsROSFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -258,7 +258,7 @@ public class Symphony__AddonsROSSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSymphony__AddonsROSFacade(Symphony__AddonsROSFacade object) {
+	public T1 caseApogyAddonsROSFacade(ApogyAddonsROSFacade object) {
 		return null;
 	}
 
@@ -278,4 +278,4 @@ public class Symphony__AddonsROSSwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__AddonsROSSwitch
+} //ApogyAddonsROSSwitch

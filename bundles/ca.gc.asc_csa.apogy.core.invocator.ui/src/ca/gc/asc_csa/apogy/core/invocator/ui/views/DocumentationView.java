@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.views;
+package ca.gc.asc_csa.apogy.core.invocator.ui.views;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -8,14 +8,14 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.emf.ui.composites.EClassDocumentationComposite;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeMember;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EClassDocumentationComposite;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 
 public class DocumentationView extends AbstractView implements
@@ -69,6 +69,6 @@ public class DocumentationView extends AbstractView implements
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

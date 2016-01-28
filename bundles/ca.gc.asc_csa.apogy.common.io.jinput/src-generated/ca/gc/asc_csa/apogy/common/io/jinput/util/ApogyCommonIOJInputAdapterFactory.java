@@ -1,30 +1,30 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.util;
+package ca.gc.asc_csa.apogy.common.io.jinput.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.io.jinput.*;
+import ca.gc.asc_csa.apogy.common.io.jinput.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage
+ * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage
  * @generated
  */
-public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonIOJInputPackage modelPackage;
+	protected static ApogyCommonIOJInputPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -32,9 +32,9 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonIOJInputAdapterFactory() {
+	public ApogyCommonIOJInputAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonIOJInputPackage.eINSTANCE;
+			modelPackage = ApogyCommonIOJInputPackage.eINSTANCE;
 		}
 	}
 
@@ -63,8 +63,8 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonIOJInputSwitch<Adapter> modelSwitch =
-		new Symphony__CommonIOJInputSwitch<Adapter>() {
+	protected ApogyCommonIOJInputSwitch<Adapter> modelSwitch =
+		new ApogyCommonIOJInputSwitch<Adapter>() {
 			@Override
 			public Adapter caseEController(EController object) {
 				return createEControllerAdapter();
@@ -122,13 +122,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EController <em>EController</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EController <em>EController</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EController
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EController
 	 * @generated
 	 */
 	public Adapter createEControllerAdapter() {
@@ -136,13 +136,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment <em>EController Environment</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment <em>EController Environment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EControllerEnvironment
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment
 	 * @generated
 	 */
 	public Adapter createEControllerEnvironmentAdapter() {
@@ -150,13 +150,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EComponent <em>EComponent</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent <em>EComponent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponent
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponent
 	 * @generated
 	 */
 	public Adapter createEComponentAdapter() {
@@ -164,13 +164,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EComponents <em>EComponents</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponents <em>EComponents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponents
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponents
 	 * @generated
 	 */
 	public Adapter createEComponentsAdapter() {
@@ -178,13 +178,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EButton <em>EButton</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EButton <em>EButton</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EButton
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EButton
 	 * @generated
 	 */
 	public Adapter createEButtonAdapter() {
@@ -192,13 +192,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EAxis <em>EAxis</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EAxis <em>EAxis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EAxis
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EAxis
 	 * @generated
 	 */
 	public Adapter createEAxisAdapter() {
@@ -206,13 +206,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EKey <em>EKey</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EKey <em>EKey</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EKey
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EKey
 	 * @generated
 	 */
 	public Adapter createEKeyAdapter() {
@@ -220,13 +220,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EComponentQualifier <em>EComponent Qualifier</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier <em>EComponent Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EComponentQualifier
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier
 	 * @generated
 	 */
 	public Adapter createEComponentQualifierAdapter() {
@@ -234,13 +234,13 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.io.jinput.EVirtualComponent <em>EVirtual Component</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent <em>EVirtual Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.io.jinput.EVirtualComponent
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent
 	 * @generated
 	 */
 	public Adapter createEVirtualComponentAdapter() {
@@ -259,4 +259,4 @@ public class Symphony__CommonIOJInputAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__CommonIOJInputAdapterFactory
+} //ApogyCommonIOJInputAdapterFactory

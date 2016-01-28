@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonTopologyBindings' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonTopologyBindings' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.bindings/src-generated' editDirectory='/org.eclipse.symphony.common.topology.bindings.edit/src-generated' basePackage='org.eclipse.symphony.common.topology'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonTopologyBindings' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonTopologyBindings' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.common.topology.bindings/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.topology.bindings.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.topology'"
  * @generated
  */
-public interface Symphony__CommonTopologyBindingsPackage extends EPackage
+public interface ApogyCommonTopologyBindingsPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -44,7 +44,7 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.common.topology.bindings";
+  String eNS_URI = "ca.gc.asc_csa.apogy.common.topology.bindings";
 
   /**
 	 * The package namespace name.
@@ -60,14 +60,14 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CommonTopologyBindingsPackage eINSTANCE = org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl.init();
+  ApogyCommonTopologyBindingsPackage eINSTANCE = ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl <em>Abstract Topology Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl <em>Abstract Topology Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getAbstractTopologyBinding()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAbstractTopologyBinding()
 	 * @generated
 	 */
   int ABSTRACT_TOPOLOGY_BINDING = 0;
@@ -172,11 +172,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT = 3;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.RotationBindingImpl <em>Rotation Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.RotationBindingImpl <em>Rotation Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.RotationBindingImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getRotationBinding()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.RotationBindingImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getRotationBinding()
 	 * @generated
 	 */
   int ROTATION_BINDING = 1;
@@ -308,11 +308,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int ROTATION_BINDING_OPERATION_COUNT = ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl <em>Translation Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TranslationBindingImpl <em>Translation Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getTranslationBinding()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.TranslationBindingImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getTranslationBinding()
 	 * @generated
 	 */
   int TRANSLATION_BINDING = 2;
@@ -435,11 +435,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int TRANSLATION_BINDING_OPERATION_COUNT = ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.TransformMatrixBindingImpl <em>Transform Matrix Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TransformMatrixBindingImpl <em>Transform Matrix Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.TransformMatrixBindingImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getTransformMatrixBinding()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.TransformMatrixBindingImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getTransformMatrixBinding()
 	 * @generated
 	 */
   int TRANSFORM_MATRIX_BINDING = 3;
@@ -553,11 +553,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int TRANSFORM_MATRIX_BINDING_OPERATION_COUNT = ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationSwitchBindingImpl <em>Enumeration Switch Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationSwitchBindingImpl <em>Enumeration Switch Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.EnumerationSwitchBindingImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getEnumerationSwitchBinding()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationSwitchBindingImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getEnumerationSwitchBinding()
 	 * @generated
 	 */
   int ENUMERATION_SWITCH_BINDING = 4;
@@ -689,11 +689,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int ENUMERATION_SWITCH_BINDING_OPERATION_COUNT = ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl <em>Enumeration Case</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationCaseImpl <em>Enumeration Case</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getEnumerationCase()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationCaseImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getEnumerationCase()
 	 * @generated
 	 */
   int ENUMERATION_CASE = 5;
@@ -735,11 +735,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int ENUMERATION_CASE_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsListImpl <em>Bindings List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsListImpl <em>Bindings List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.BindingsListImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getBindingsList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsListImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getBindingsList()
 	 * @generated
 	 */
   int BINDINGS_LIST = 6;
@@ -772,11 +772,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int BINDINGS_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.FeatureRootsListImpl <em>Feature Roots List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.FeatureRootsListImpl <em>Feature Roots List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.FeatureRootsListImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getFeatureRootsList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.FeatureRootsListImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getFeatureRootsList()
 	 * @generated
 	 */
   int FEATURE_ROOTS_LIST = 7;
@@ -809,11 +809,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int FEATURE_ROOTS_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl <em>Bindings Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsSetImpl <em>Bindings Set</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getBindingsSet()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getBindingsSet()
 	 * @generated
 	 */
   int BINDINGS_SET = 8;
@@ -873,14 +873,14 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int BINDINGS_SET_OPERATION_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getSymphony__CommonTopologyBindingsFacade()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getApogyCommonTopologyBindingsFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE = 9;
+	int APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE = 9;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -889,7 +889,7 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE_FEATURE_COUNT = 0;
 
 		/**
 	 * The operation id for the '<em>Copy</em>' operation.
@@ -898,7 +898,7 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = 0;
+	int APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = 0;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -907,24 +907,24 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE_OPERATION_COUNT = 1;
+	int APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE_OPERATION_COUNT = 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.Axis <em>Axis</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.Axis <em>Axis</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.Axis
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getAxis()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.Axis
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAxis()
 	 * @generated
 	 */
 	int AXIS = 10;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.AngleUnits <em>Angle Units</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits <em>Angle Units</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.AngleUnits
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getAngleUnits()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAngleUnits()
 	 * @generated
 	 */
 	int ANGLE_UNITS = 11;
@@ -934,419 +934,419 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see java.util.Map
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getMap()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getMap()
 	 * @generated
 	 */
   int MAP = 12;
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Topology Binding</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
 	 * @generated
 	 */
   EClass getAbstractTopologyBinding();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#isBinded <em>Binded</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#isBinded <em>Binded</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Binded</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#isBinded()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#isBinded()
 	 * @see #getAbstractTopologyBinding()
 	 * @generated
 	 */
   EAttribute getAbstractTopologyBinding_Binded();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getDescription()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getDescription()
 	 * @see #getAbstractTopologyBinding()
 	 * @generated
 	 */
   EAttribute getAbstractTopologyBinding_Description();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getName()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getName()
 	 * @see #getAbstractTopologyBinding()
 	 * @generated
 	 */
   EAttribute getAbstractTopologyBinding_Name();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getSource()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getSource()
 	 * @see #getAbstractTopologyBinding()
 	 * @generated
 	 */
   EReference getAbstractTopologyBinding_Source();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Feature Node</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getFeatureNode()
 	 * @see #getAbstractTopologyBinding()
 	 * @generated
 	 */
   EReference getAbstractTopologyBinding_FeatureNode();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter <em>Feature Node Adapter</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter <em>Feature Node Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Feature Node Adapter</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter()
 	 * @see #getAbstractTopologyBinding()
 	 * @generated
 	 */
   EReference getAbstractTopologyBinding_FeatureNodeAdapter();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#bind() <em>Bind</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#bind() <em>Bind</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Bind</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#bind()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#bind()
 	 * @generated
 	 */
   EOperation getAbstractTopologyBinding__Bind();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#unbind() <em>Unbind</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#unbind() <em>Unbind</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Unbind</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#unbind()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#unbind()
 	 * @generated
 	 */
   EOperation getAbstractTopologyBinding__Unbind();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#clone(java.util.Map) <em>Clone</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#clone(java.util.Map) <em>Clone</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Clone</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#clone(java.util.Map)
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding#clone(java.util.Map)
 	 * @generated
 	 */
   EOperation getAbstractTopologyBinding__Clone__Map();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.RotationBinding <em>Rotation Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding <em>Rotation Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rotation Binding</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.RotationBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding
 	 * @generated
 	 */
   EClass getRotationBinding();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationNode <em>Rotation Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationNode <em>Rotation Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Rotation Node</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationNode()
 	 * @see #getRotationBinding()
 	 * @generated
 	 */
   EReference getRotationBinding_RotationNode();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationAxis <em>Rotation Axis</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationAxis <em>Rotation Axis</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Rotation Axis</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationAxis()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationAxis()
 	 * @see #getRotationBinding()
 	 * @generated
 	 */
   EAttribute getRotationBinding_RotationAxis();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Rotation Units</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationUnits()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding#getRotationUnits()
 	 * @see #getRotationBinding()
 	 * @generated
 	 */
   EAttribute getRotationBinding_RotationUnits();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding <em>Translation Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding <em>Translation Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Translation Binding</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.TranslationBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding
 	 * @generated
 	 */
   EClass getTranslationBinding();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Translation Axis</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.TranslationBinding#getTranslationAxis()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getTranslationAxis()
 	 * @see #getTranslationBinding()
 	 * @generated
 	 */
   EAttribute getTranslationBinding_TranslationAxis();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getPositionNode <em>Position Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getPositionNode <em>Position Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Position Node</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.TranslationBinding#getPositionNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getPositionNode()
 	 * @see #getTranslationBinding()
 	 * @generated
 	 */
   EReference getTranslationBinding_PositionNode();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding <em>Transform Matrix Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding <em>Transform Matrix Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Transform Matrix Binding</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding
 	 * @generated
 	 */
   EClass getTransformMatrixBinding();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding#getTransformNode <em>Transform Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding#getTransformNode <em>Transform Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Transform Node</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding#getTransformNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding#getTransformNode()
 	 * @see #getTransformMatrixBinding()
 	 * @generated
 	 */
   EReference getTransformMatrixBinding_TransformNode();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding <em>Enumeration Switch Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding <em>Enumeration Switch Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Enumeration Switch Binding</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding
 	 * @generated
 	 */
   EClass getEnumerationSwitchBinding();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getParentNode <em>Parent Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getParentNode <em>Parent Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Parent Node</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getParentNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getParentNode()
 	 * @see #getEnumerationSwitchBinding()
 	 * @generated
 	 */
   EReference getEnumerationSwitchBinding_ParentNode();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getCases <em>Cases</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getCases <em>Cases</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Cases</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getCases()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getCases()
 	 * @see #getEnumerationSwitchBinding()
 	 * @generated
 	 */
   EReference getEnumerationSwitchBinding_Cases();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Active Case</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getActiveCase()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding#getActiveCase()
 	 * @see #getEnumerationSwitchBinding()
 	 * @generated
 	 */
   EReference getEnumerationSwitchBinding_ActiveCase();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.EnumerationCase <em>Enumeration Case</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase <em>Enumeration Case</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Enumeration Case</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationCase
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase
 	 * @generated
 	 */
   EClass getEnumerationCase();
 
   /**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.topology.bindings.EnumerationCase#getEnumerationLiterals <em>Enumeration Literals</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase#getEnumerationLiterals <em>Enumeration Literals</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Enumeration Literals</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationCase#getEnumerationLiterals()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase#getEnumerationLiterals()
 	 * @see #getEnumerationCase()
 	 * @generated
 	 */
   EReference getEnumerationCase_EnumerationLiterals();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.bindings.EnumerationCase#getTopologyRoot <em>Topology Root</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase#getTopologyRoot <em>Topology Root</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Topology Root</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationCase#getTopologyRoot()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase#getTopologyRoot()
 	 * @see #getEnumerationCase()
 	 * @generated
 	 */
   EReference getEnumerationCase_TopologyRoot();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.BindingsList <em>Bindings List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList <em>Bindings List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Bindings List</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsList
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList
 	 * @generated
 	 */
   EClass getBindingsList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.bindings.BindingsList#getBindings <em>Bindings</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList#getBindings <em>Bindings</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Bindings</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsList#getBindings()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList#getBindings()
 	 * @see #getBindingsList()
 	 * @generated
 	 */
   EReference getBindingsList_Bindings();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList <em>Feature Roots List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList <em>Feature Roots List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Feature Roots List</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.FeatureRootsList
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList
 	 * @generated
 	 */
   EClass getFeatureRootsList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList#getFeatureRoots <em>Feature Roots</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList#getFeatureRoots <em>Feature Roots</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Feature Roots</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.FeatureRootsList#getFeatureRoots()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList#getFeatureRoots()
 	 * @see #getFeatureRootsList()
 	 * @generated
 	 */
   EReference getFeatureRootsList_FeatureRoots();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet <em>Bindings Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet <em>Bindings Set</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Bindings Set</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsSet
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet
 	 * @generated
 	 */
   EClass getBindingsSet();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getFeatureRootsList <em>Feature Roots List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getFeatureRootsList <em>Feature Roots List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Feature Roots List</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsSet#getFeatureRootsList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getFeatureRootsList()
 	 * @see #getBindingsSet()
 	 * @generated
 	 */
   EReference getBindingsSet_FeatureRootsList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Bindings List</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsSet#getBindingsList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getBindingsList()
 	 * @see #getBindingsSet()
 	 * @generated
 	 */
   EReference getBindingsSet_BindingsList();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#bind() <em>Bind</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#bind() <em>Bind</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Bind</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsSet#bind()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#bind()
 	 * @generated
 	 */
   EOperation getBindingsSet__Bind();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#unbind() <em>Unbind</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#unbind() <em>Unbind</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Unbind</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsSet#unbind()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#unbind()
 	 * @generated
 	 */
   EOperation getBindingsSet__Unbind();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonTopologyBindingsFacade();
+	EClass getApogyCommonTopologyBindingsFacade();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade#copy(org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding, java.util.Map) <em>Copy</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade#copy(ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding, java.util.Map) <em>Copy</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Copy</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade#copy(org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding, java.util.Map)
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade#copy(ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
+	EOperation getApogyCommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
 
 		/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.topology.bindings.Axis <em>Axis</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.topology.bindings.Axis <em>Axis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Axis</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.Axis
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.Axis
 	 * @generated
 	 */
 	EEnum getAxis();
 
 		/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.topology.bindings.AngleUnits <em>Angle Units</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits <em>Angle Units</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Angle Units</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.AngleUnits
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
 	 * @generated
 	 */
 	EEnum getAngleUnits();
@@ -1369,7 +1369,7 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonTopologyBindingsFactory getSymphony__CommonTopologyBindingsFactory();
+	ApogyCommonTopologyBindingsFactory getApogyCommonTopologyBindingsFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -1387,11 +1387,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl <em>Abstract Topology Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl <em>Abstract Topology Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getAbstractTopologyBinding()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.AbstractTopologyBindingImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAbstractTopologyBinding()
 		 * @generated
 		 */
     EClass ABSTRACT_TOPOLOGY_BINDING = eINSTANCE.getAbstractTopologyBinding();
@@ -1469,11 +1469,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EOperation ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP = eINSTANCE.getAbstractTopologyBinding__Clone__Map();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.RotationBindingImpl <em>Rotation Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.RotationBindingImpl <em>Rotation Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.RotationBindingImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getRotationBinding()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.RotationBindingImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getRotationBinding()
 		 * @generated
 		 */
     EClass ROTATION_BINDING = eINSTANCE.getRotationBinding();
@@ -1503,11 +1503,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EAttribute ROTATION_BINDING__ROTATION_UNITS = eINSTANCE.getRotationBinding_RotationUnits();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl <em>Translation Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TranslationBindingImpl <em>Translation Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getTranslationBinding()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.TranslationBindingImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getTranslationBinding()
 		 * @generated
 		 */
     EClass TRANSLATION_BINDING = eINSTANCE.getTranslationBinding();
@@ -1529,11 +1529,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EReference TRANSLATION_BINDING__POSITION_NODE = eINSTANCE.getTranslationBinding_PositionNode();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.TransformMatrixBindingImpl <em>Transform Matrix Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TransformMatrixBindingImpl <em>Transform Matrix Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.TransformMatrixBindingImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getTransformMatrixBinding()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.TransformMatrixBindingImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getTransformMatrixBinding()
 		 * @generated
 		 */
     EClass TRANSFORM_MATRIX_BINDING = eINSTANCE.getTransformMatrixBinding();
@@ -1547,11 +1547,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EReference TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE = eINSTANCE.getTransformMatrixBinding_TransformNode();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationSwitchBindingImpl <em>Enumeration Switch Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationSwitchBindingImpl <em>Enumeration Switch Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.EnumerationSwitchBindingImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getEnumerationSwitchBinding()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationSwitchBindingImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getEnumerationSwitchBinding()
 		 * @generated
 		 */
     EClass ENUMERATION_SWITCH_BINDING = eINSTANCE.getEnumerationSwitchBinding();
@@ -1581,11 +1581,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EReference ENUMERATION_SWITCH_BINDING__ACTIVE_CASE = eINSTANCE.getEnumerationSwitchBinding_ActiveCase();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl <em>Enumeration Case</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationCaseImpl <em>Enumeration Case</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getEnumerationCase()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationCaseImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getEnumerationCase()
 		 * @generated
 		 */
     EClass ENUMERATION_CASE = eINSTANCE.getEnumerationCase();
@@ -1607,11 +1607,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EReference ENUMERATION_CASE__TOPOLOGY_ROOT = eINSTANCE.getEnumerationCase_TopologyRoot();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsListImpl <em>Bindings List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsListImpl <em>Bindings List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.BindingsListImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getBindingsList()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsListImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getBindingsList()
 		 * @generated
 		 */
     EClass BINDINGS_LIST = eINSTANCE.getBindingsList();
@@ -1625,11 +1625,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EReference BINDINGS_LIST__BINDINGS = eINSTANCE.getBindingsList_Bindings();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.FeatureRootsListImpl <em>Feature Roots List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.FeatureRootsListImpl <em>Feature Roots List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.FeatureRootsListImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getFeatureRootsList()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.FeatureRootsListImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getFeatureRootsList()
 		 * @generated
 		 */
     EClass FEATURE_ROOTS_LIST = eINSTANCE.getFeatureRootsList();
@@ -1643,11 +1643,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EReference FEATURE_ROOTS_LIST__FEATURE_ROOTS = eINSTANCE.getFeatureRootsList_FeatureRoots();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl <em>Bindings Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsSetImpl <em>Bindings Set</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getBindingsSet()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getBindingsSet()
 		 * @generated
 		 */
     EClass BINDINGS_SET = eINSTANCE.getBindingsSet();
@@ -1685,14 +1685,14 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EOperation BINDINGS_SET___UNBIND = eINSTANCE.getBindingsSet__Unbind();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getSymphony__CommonTopologyBindingsFacade()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getApogyCommonTopologyBindingsFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE = eINSTANCE.getSymphony__CommonTopologyBindingsFacade();
+		EClass APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE = eINSTANCE.getApogyCommonTopologyBindingsFacade();
 
 				/**
 		 * The meta object literal for the '<em><b>Copy</b></em>' operation.
@@ -1700,24 +1700,24 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = eINSTANCE.getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
+		EOperation APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = eINSTANCE.getApogyCommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.Axis <em>Axis</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.Axis <em>Axis</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.Axis
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getAxis()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.Axis
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAxis()
 		 * @generated
 		 */
 		EEnum AXIS = eINSTANCE.getAxis();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.AngleUnits <em>Angle Units</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits <em>Angle Units</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.AngleUnits
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getAngleUnits()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getAngleUnits()
 		 * @generated
 		 */
 		EEnum ANGLE_UNITS = eINSTANCE.getAngleUnits();
@@ -1727,11 +1727,11 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see java.util.Map
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getMap()
+		 * @see ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsPackageImpl#getMap()
 		 * @generated
 		 */
     EDataType MAP = eINSTANCE.getMap();
 
   }
 
-} //Symphony__CommonTopologyBindingsPackage
+} //ApogyCommonTopologyBindingsPackage

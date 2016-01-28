@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.EclipticCoordinates} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -83,7 +83,7 @@ public class EclipticCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EclipticCoordinates_longitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EclipticCoordinates_longitude_feature", "_UI_EclipticCoordinates_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LONGITUDE,
+				 ApogyCoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LONGITUDE,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class EclipticCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EclipticCoordinates_latitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EclipticCoordinates_latitude_feature", "_UI_EclipticCoordinates_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LATITUDE,
+				 ApogyCoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LATITUDE,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class EclipticCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EclipticCoordinates_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EclipticCoordinates_radius_feature", "_UI_EclipticCoordinates_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__RADIUS,
+				 ApogyCoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -176,9 +176,9 @@ public class EclipticCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EclipticCoordinates.class)) {
-			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
-			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
-			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
+			case ApogyCoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
+			case ApogyCoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
+			case ApogyCoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

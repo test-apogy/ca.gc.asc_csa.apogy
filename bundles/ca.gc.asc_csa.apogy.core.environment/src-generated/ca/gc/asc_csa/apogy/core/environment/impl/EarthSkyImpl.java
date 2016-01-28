@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -16,22 +16,22 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,8 +41,8 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSkyImpl#getMoon <em>Moon</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSkyImpl#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.EarthSkyImpl#getMoon <em>Moon</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.EarthSkyImpl#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,7 +91,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SKY;
+		return ApogyCoreEnvironmentPackage.Literals.EARTH_SKY;
 	}
 
   /**
@@ -163,7 +163,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   {
 		if(getMoonHorizontalCoordinatesGen() == null)
 		{
-			HorizontalCoordinates newHorizontalCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
+			HorizontalCoordinates newHorizontalCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
 			setMoonHorizontalCoordinates(newHorizontalCoordinates);
 		}
 		
@@ -182,7 +182,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 			moonHorizontalCoordinates = (HorizontalCoordinates)eResolveProxy(oldMoonHorizontalCoordinates);
 			if (moonHorizontalCoordinates != oldMoonHorizontalCoordinates) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
 			}
 		}
 		return moonHorizontalCoordinates;
@@ -208,7 +208,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 		HorizontalCoordinates oldMoonHorizontalCoordinates = moonHorizontalCoordinates;
 		moonHorizontalCoordinates = newMoonHorizontalCoordinates;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
 	}
   
   /**
@@ -234,8 +234,8 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   	{
 	  	if(skyNode == null || !(skyNode instanceof EarthSkyNode))
 	  	{	  		
-	  		skyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();
-	  		Symphony__CoreEnvironmentFacade.INSTANCE.initializeEarthSkyNode(this, (EarthSkyNode) skyNode);							
+	  		skyNode = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();
+	  		ApogyCoreEnvironmentFacade.INSTANCE.initializeEarthSkyNode(this, (EarthSkyNode) skyNode);							
 	  	}
 	  	
 	  	return getSkyNodeGen();
@@ -250,10 +250,10 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON:
+			case ApogyCoreEnvironmentPackage.EARTH_SKY__MOON:
 				if (resolve) return getMoon();
 				return basicGetMoon();
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				if (resolve) return getMoonHorizontalCoordinates();
 				return basicGetMoonHorizontalCoordinates();
 		}
@@ -269,7 +269,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				setMoonHorizontalCoordinates((HorizontalCoordinates)newValue);
 				return;
 		}
@@ -285,7 +285,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				setMoonHorizontalCoordinates((HorizontalCoordinates)null);
 				return;
 		}
@@ -301,9 +301,9 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON:
+			case ApogyCoreEnvironmentPackage.EARTH_SKY__MOON:
 				return moon != null;
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				return moonHorizontalCoordinates != null;
 		}
 		return super.eIsSet(featureID);
@@ -318,7 +318,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY___GET_MOON_ANGULAR_DIAMETER:
+			case ApogyCoreEnvironmentPackage.EARTH_SKY___GET_MOON_ANGULAR_DIAMETER:
 				return getMoonAngularDiameter();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -391,7 +391,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 							switch (featureId) 
 							{
 								// Surface Worksite has changed.
-								case Symphony__CoreEnvironmentPackage.EARTH_SKY__SURFACE_WORKSITE:
+								case ApogyCoreEnvironmentPackage.EARTH_SKY__SURFACE_WORKSITE:
 								{
 									// Unregister from previous Worksite if applicable.
 									if(msg.getOldValue() instanceof EarthSurfaceWorksite)
@@ -435,7 +435,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 							switch(featureId)
 							{
 								// Geographical Coordinates of the Surface Worksite have changed.
-								case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+								case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 								{
 									// Unregister from previous GeographicCoordinates if applicable.
 									if(msg.getOldValue() instanceof GeographicCoordinates)

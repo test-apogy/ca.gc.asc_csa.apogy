@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -14,13 +14,13 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage.Literals;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage.Literals;
 
 public class PrismaticConstraintComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint prismaticConstraint;
+	private ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint prismaticConstraint;
 	private Button enabledButton;	
 	private ConstraintStateComposite linearConstraintStateComposite;
 	
@@ -29,7 +29,7 @@ public class PrismaticConstraintComposite extends Composite {
 	public PrismaticConstraintComposite(
 			Composite parent,
 			int style,
-			org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint newPrismaticConstraint) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint newPrismaticConstraint) {
 		this(parent, style);
 		setPrismaticConstraint(newPrismaticConstraint);
 	}
@@ -75,11 +75,11 @@ public class PrismaticConstraintComposite extends Composite {
 		return bindingContext;
 	}
 
-	public org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint getPrismaticConstraint() {
+	public ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint getPrismaticConstraint() {
 		return prismaticConstraint;
 	}
 
-	public void setPrismaticConstraint(org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint newPrismaticConstraint) 
+	public void setPrismaticConstraint(ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint newPrismaticConstraint) 
 	{
 		// Unregister listener from previous PrismaticConstraint
 		if(getPrismaticConstraint() != null)
@@ -103,7 +103,7 @@ public class PrismaticConstraintComposite extends Composite {
 	}
 
 	public void setPrismaticConstraint(
-			org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint newPrismaticConstraint,
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint newPrismaticConstraint,
 			boolean update) {
 		prismaticConstraint = newPrismaticConstraint;
 		if (update) {

@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.impl;
+package ca.gc.asc_csa.apogy.examples.rover.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.rover.Activator;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
-import org.eclipse.symphony.examples.rover.RoverStub;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.rover.Activator;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.examples.rover.RoverStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class RoverStubImpl extends RoverImpl implements RoverStub
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesRoverPackage.Literals.ROVER_STUB;
+		return ApogyExamplesRoverPackage.Literals.ROVER_STUB;
 	}
 
 	/** 

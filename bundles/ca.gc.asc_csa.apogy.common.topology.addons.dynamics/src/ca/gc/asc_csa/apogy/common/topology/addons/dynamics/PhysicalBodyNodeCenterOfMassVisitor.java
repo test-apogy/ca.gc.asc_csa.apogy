@@ -4,16 +4,16 @@
  *
  * $Id: PhysicalBodyNodeCenterOfMassVisitor.java,v 1.3.2.3 2015/02/03 20:01:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 
 public class PhysicalBodyNodeCenterOfMassVisitor extends PhysicalBodyNodeMassVisitor 
 {
@@ -43,7 +43,7 @@ public class PhysicalBodyNodeCenterOfMassVisitor extends PhysicalBodyNodeMassVis
 	{			
 		Vector3d temp = new Vector3d(temporaryCenterOfMassPosition);
 		temp.scale(1.0 / getTotalMass());					
-		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(temp);
+		return ApogyCommonMathFacade.INSTANCE.createTuple3d(temp);
 	}
 	
 	@Override
@@ -60,7 +60,7 @@ public class PhysicalBodyNodeCenterOfMassVisitor extends PhysicalBodyNodeMassVis
 				if(physicalProperties.getMass() != 0.0)
 				{
 					// Gets the transform of the node with respect to the root.
-					Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(physicalBodyNode, getRoot());
+					Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(physicalBodyNode, getRoot());
 					
 					// Gets the position of the center of mass in the root node frame.
 					Point3d v = new Point3d();					

@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy;
 
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList;
-import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList;
-import org.eclipse.symphony.examples.satellite.ConstellationRequestsList;
-import org.eclipse.symphony.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.examples.satellite.SatellitesList;
  * save and later restore the state of the component; this functionality is
  * implemented by the apply() (load) and collect() (save) methods of the constellation's
  * API adapter,
- * which is {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSymphonySystemApiAdapter}.
+ * which is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}.
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getSatellitesList <em>Satellites List</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getSatellitesList <em>Satellites List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage#getConstellationData()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData()
  * @model
  * @generated
  */
-public interface ConstellationData extends SymphonyInitializationData {
+public interface ConstellationData extends ApogyInitializationData {
 
 	/**
 	 * Returns the value of the '<em><b>Satellites List</b></em>' containment reference.
@@ -47,14 +47,14 @@ public interface ConstellationData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Satellites List</em>' containment reference.
 	 * @see #setSatellitesList(SatellitesList)
-	 * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage#getConstellationData_SatellitesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData_SatellitesList()
 	 * @model containment="true"
 	 * @generated
 	 */
 	SatellitesList getSatellitesList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getSatellitesList <em>Satellites List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getSatellitesList <em>Satellites List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Satellites List</em>' containment reference.
@@ -72,14 +72,14 @@ public interface ConstellationData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ground Stations References List</em>' containment reference.
 	 * @see #setGroundStationsReferencesList(GroundStationReferencesList)
-	 * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage#getConstellationData_GroundStationsReferencesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData_GroundStationsReferencesList()
 	 * @model containment="true"
 	 * @generated
 	 */
 	GroundStationReferencesList getGroundStationsReferencesList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getGroundStationsReferencesList <em>Ground Stations References List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getGroundStationsReferencesList <em>Ground Stations References List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ground Stations References List</em>' containment reference.
@@ -97,14 +97,14 @@ public interface ConstellationData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Downlinks Lists</em>' containment reference.
 	 * @see #setDownlinksLists(ConstellationDownlinksList)
-	 * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage#getConstellationData_DownlinksLists()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData_DownlinksLists()
 	 * @model containment="true"
 	 * @generated
 	 */
 	ConstellationDownlinksList getDownlinksLists();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Downlinks Lists</em>' containment reference.
@@ -122,14 +122,14 @@ public interface ConstellationData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constellation Requests List</em>' containment reference.
 	 * @see #setConstellationRequestsList(ConstellationRequestsList)
-	 * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage#getConstellationData_ConstellationRequestsList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationData_ConstellationRequestsList()
 	 * @model containment="true"
 	 * @generated
 	 */
 	ConstellationRequestsList getConstellationRequestsList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Constellation Requests List</em>' containment reference.

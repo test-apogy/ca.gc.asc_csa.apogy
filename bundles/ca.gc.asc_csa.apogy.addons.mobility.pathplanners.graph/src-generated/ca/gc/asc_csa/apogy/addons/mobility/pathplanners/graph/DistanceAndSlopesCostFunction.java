@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,14 +14,14 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getGravityAxis <em>Gravity Axis</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumUpSlope <em>Maximum Up Slope</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumDownSlope <em>Maximum Down Slope</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getGravityAxis <em>Gravity Axis</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumUpSlope <em>Maximum Up Slope</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumDownSlope <em>Maximum Down Slope</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Up Slope Cost Factor</em>' attribute.
 	 * @see #setUpSlopeCostFactor(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_UpSlopeCostFactor()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_UpSlopeCostFactor()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
 	double getUpSlopeCostFactor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Up Slope Cost Factor</em>' attribute.
@@ -64,14 +64,14 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Down Slope Cost Factor</em>' attribute.
 	 * @see #setDownSlopeCostFactor(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_DownSlopeCostFactor()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_DownSlopeCostFactor()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
 	double getDownSlopeCostFactor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Down Slope Cost Factor</em>' attribute.
@@ -83,7 +83,7 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	/**
 	 * Returns the value of the '<em><b>Gravity Axis</b></em>' attribute.
 	 * The default value is <code>"Z"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.common.geometry.data3d.CartesianAxis}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Gravity Axis</em>' attribute isn't clear,
@@ -91,20 +91,20 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gravity Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianAxis
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis
 	 * @see #setGravityAxis(CartesianAxis)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_GravityAxis()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_GravityAxis()
 	 * @model default="Z" unique="false"
 	 * @generated
 	 */
 	CartesianAxis getGravityAxis();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getGravityAxis <em>Gravity Axis</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getGravityAxis <em>Gravity Axis</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Gravity Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianAxis
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis
 	 * @see #getGravityAxis()
 	 * @generated
 	 */
@@ -121,14 +121,14 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Up Slope</em>' attribute.
 	 * @see #setMaximumUpSlope(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_MaximumUpSlope()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_MaximumUpSlope()
 	 * @model default="0.33" unique="false"
 	 * @generated
 	 */
 	double getMaximumUpSlope();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumUpSlope <em>Maximum Up Slope</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumUpSlope <em>Maximum Up Slope</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Up Slope</em>' attribute.
@@ -148,14 +148,14 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Down Slope</em>' attribute.
 	 * @see #setMaximumDownSlope(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_MaximumDownSlope()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction_MaximumDownSlope()
 	 * @model default="0.33" unique="false"
 	 * @generated
 	 */
 	double getMaximumDownSlope();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumDownSlope <em>Maximum Down Slope</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumDownSlope <em>Maximum Down Slope</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Down Slope</em>' attribute.

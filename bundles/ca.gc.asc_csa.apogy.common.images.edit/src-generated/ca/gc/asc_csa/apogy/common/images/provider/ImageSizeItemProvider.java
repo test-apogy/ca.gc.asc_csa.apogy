@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.provider;
+package ca.gc.asc_csa.apogy.common.images.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.images.ImageSize;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ImageSize;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.ImageSize} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.images.ImageSize} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class ImageSizeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSize_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSize_width_feature", "_UI_ImageSize_type"),
-				 Symphony__CommonImagesPackage.Literals.IMAGE_SIZE__WIDTH,
+				 ApogyCommonImagesPackage.Literals.IMAGE_SIZE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class ImageSizeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSize_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSize_height_feature", "_UI_ImageSize_type"),
-				 Symphony__CommonImagesPackage.Literals.IMAGE_SIZE__HEIGHT,
+				 ApogyCommonImagesPackage.Literals.IMAGE_SIZE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -144,8 +144,8 @@ public class ImageSizeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageSize.class)) {
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__WIDTH:
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__HEIGHT:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__WIDTH:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__HEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

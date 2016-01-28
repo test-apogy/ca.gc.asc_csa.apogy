@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.viewer.actions;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.actions;
 
 import java.awt.image.BufferedImage;
 
@@ -12,16 +12,16 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.viewer.Activator;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerProvider;
-import org.eclipse.symphony.common.topology.ui.viewer.internal.IConstants;
-import org.eclipse.symphony.common.topology.ui.viewer.internal.PluginImages;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerProvider;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.internal.IConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.internal.PluginImages;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.progress.UIJob;
@@ -52,7 +52,7 @@ public class TakeScreenShotAction extends Action
 		
 		if(image != null)
 		{
-			EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+			EImage eImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 			eImage.setImageContent(image);
 			
 			if(eImage != null)

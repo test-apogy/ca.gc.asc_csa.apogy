@@ -1,7 +1,7 @@
-package org.eclipse.symphony.core.environment.ui.preferences;
+package ca.gc.asc_csa.apogy.core.environment.ui.preferences;
 
 
-public class SymphonyEnvironmentUIPreferencesConstants 
+public class ApogyEnvironmentUIPreferencesConstants 
 {
 	public static final String DEFAULT_MAP_VIEW_CONFIGURATION_X_MIN_ID = "DEFAULT_MAP_VIEW_CONFIGURATION_X_MIN_ID";
 	public static final double DEFAULT_MAP_VIEW_CONFIGURATION_X_MIN = -20.0;

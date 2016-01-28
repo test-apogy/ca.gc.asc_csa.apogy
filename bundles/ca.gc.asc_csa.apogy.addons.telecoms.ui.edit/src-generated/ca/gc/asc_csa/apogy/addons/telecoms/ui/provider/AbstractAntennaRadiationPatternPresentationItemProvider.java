@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.ui.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.provider;
 
 
 import java.util.Collection;
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

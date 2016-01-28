@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class TransformNodePresentationItemProvider extends NodePresentationItemP
 				 getResourceLocator(),
 				 getString("_UI_TransformNodePresentation_axisVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TransformNodePresentation_axisVisible_feature", "_UI_TransformNodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE,
+				 ApogyCommonTopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class TransformNodePresentationItemProvider extends NodePresentationItemP
 				 getResourceLocator(),
 				 getString("_UI_TransformNodePresentation_axisLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TransformNodePresentation_axisLength_feature", "_UI_TransformNodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH,
+				 ApogyCommonTopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -134,8 +134,8 @@ public class TransformNodePresentationItemProvider extends NodePresentationItemP
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TransformNodePresentation.class)) {
-			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
-			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH:
+			case ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
+			case ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

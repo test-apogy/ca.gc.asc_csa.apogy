@@ -1,19 +1,19 @@
-package org.eclipse.symphony.core.ui.converters;
+package ca.gc.asc_csa.apogy.core.ui.converters;
 
 import java.util.Iterator;
 
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.SymphonyTopology;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 public class PositionedResultToNodeConverter implements IConverter{
 
@@ -45,17 +45,17 @@ public class PositionedResultToNodeConverter implements IConverter{
 	protected Node getNode(PositionedResult positionedResult){
 		Node node = null;
 				
-		InvocatorSession invocatorSession = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if (invocatorSession != null){
 			Environment environment = invocatorSession.getEnvironment();
-			if (environment instanceof SymphonyEnvironment){
-				SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) environment;				
-				SymphonyTopology symphonyTopology = symphonyEnvironment.getSymphonyTopology();				
-				if (symphonyTopology != null){
-					GroupNode groupNode = symphonyTopology.getRootNode();
+			if (environment instanceof ApogyEnvironment){
+				ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;				
+				ApogyTopology apogyTopology = apogyEnvironment.getApogyTopology();				
+				if (apogyTopology != null){
+					GroupNode groupNode = apogyTopology.getRootNode();
 					
 					if (groupNode != null){
-						Iterator<Node> resultNodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__CorePackage.Literals.RESULT_NODE, groupNode).iterator();
+						Iterator<Node> resultNodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCorePackage.Literals.RESULT_NODE, groupNode).iterator();
 						ResultNode resultNode = null;
 						
 						while (resultNodes.hasNext() && resultNode == null){

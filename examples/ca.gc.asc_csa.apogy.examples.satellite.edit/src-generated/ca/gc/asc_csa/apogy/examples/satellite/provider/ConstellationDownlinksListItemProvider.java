@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -26,14 +26,14 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
-import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class ConstellationDownlinksListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class ConstellationDownlinksListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class ConstellationDownlinksListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS);
 		}
 		return childrenFeatures;
 	}
@@ -185,11 +185,11 @@ public class ConstellationDownlinksListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstellationDownlinksList.class)) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -209,8 +209,8 @@ public class ConstellationDownlinksListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationDownlink()));
+				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlink()));
 	}
 
 	/**

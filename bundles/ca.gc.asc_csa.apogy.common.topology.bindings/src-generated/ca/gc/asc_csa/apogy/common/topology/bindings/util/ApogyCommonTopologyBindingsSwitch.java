@@ -1,22 +1,22 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.util;
+package ca.gc.asc_csa.apogy.common.topology.bindings.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
-import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
-import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,10 +28,10 @@ import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage
  * @generated
  */
-public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
+public class ApogyCommonTopologyBindingsSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -39,7 +39,7 @@ public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CommonTopologyBindingsPackage modelPackage;
+  protected static ApogyCommonTopologyBindingsPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -47,10 +47,10 @@ public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonTopologyBindingsSwitch()
+  public ApogyCommonTopologyBindingsSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyBindingsPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyBindingsPackage.eINSTANCE;
 		}
 	}
 
@@ -79,67 +79,67 @@ public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING: {
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING: {
 				AbstractTopologyBinding abstractTopologyBinding = (AbstractTopologyBinding)theEObject;
 				T result = caseAbstractTopologyBinding(abstractTopologyBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING: {
+			case ApogyCommonTopologyBindingsPackage.ROTATION_BINDING: {
 				RotationBinding rotationBinding = (RotationBinding)theEObject;
 				T result = caseRotationBinding(rotationBinding);
 				if (result == null) result = caseAbstractTopologyBinding(rotationBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING: {
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING: {
 				TranslationBinding translationBinding = (TranslationBinding)theEObject;
 				T result = caseTranslationBinding(translationBinding);
 				if (result == null) result = caseAbstractTopologyBinding(translationBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING: {
+			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING: {
 				TransformMatrixBinding transformMatrixBinding = (TransformMatrixBinding)theEObject;
 				T result = caseTransformMatrixBinding(transformMatrixBinding);
 				if (result == null) result = caseAbstractTopologyBinding(transformMatrixBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING: {
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING: {
 				EnumerationSwitchBinding enumerationSwitchBinding = (EnumerationSwitchBinding)theEObject;
 				T result = caseEnumerationSwitchBinding(enumerationSwitchBinding);
 				if (result == null) result = caseAbstractTopologyBinding(enumerationSwitchBinding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE: {
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE: {
 				EnumerationCase enumerationCase = (EnumerationCase)theEObject;
 				T result = caseEnumerationCase(enumerationCase);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST: {
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST: {
 				BindingsList bindingsList = (BindingsList)theEObject;
 				T result = caseBindingsList(bindingsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST: {
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST: {
 				FeatureRootsList featureRootsList = (FeatureRootsList)theEObject;
 				T result = caseFeatureRootsList(featureRootsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET: {
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET: {
 				BindingsSet bindingsSet = (BindingsSet)theEObject;
 				T result = caseBindingsSet(bindingsSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE: {
-				Symphony__CommonTopologyBindingsFacade symphony__CommonTopologyBindingsFacade = (Symphony__CommonTopologyBindingsFacade)theEObject;
-				T result = caseSymphony__CommonTopologyBindingsFacade(symphony__CommonTopologyBindingsFacade);
+			case ApogyCommonTopologyBindingsPackage.APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE: {
+				ApogyCommonTopologyBindingsFacade apogy__CommonTopologyBindingsFacade = (ApogyCommonTopologyBindingsFacade)theEObject;
+				T result = caseApogyCommonTopologyBindingsFacade(apogy__CommonTopologyBindingsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -302,7 +302,7 @@ public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonTopologyBindingsFacade(Symphony__CommonTopologyBindingsFacade object) {
+	public T caseApogyCommonTopologyBindingsFacade(ApogyCommonTopologyBindingsFacade object) {
 		return null;
 	}
 
@@ -323,4 +323,4 @@ public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CommonTopologyBindingsSwitch
+} //ApogyCommonTopologyBindingsSwitch

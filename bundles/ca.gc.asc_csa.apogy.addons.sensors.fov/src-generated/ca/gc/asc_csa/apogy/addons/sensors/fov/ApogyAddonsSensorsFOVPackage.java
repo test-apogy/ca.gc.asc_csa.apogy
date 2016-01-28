@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov;
+package ca.gc.asc_csa.apogy.addons.sensors.fov;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,12 +25,12 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsSensorsFOV' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__AddonsSensorsFOV' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.fov/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.fov.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensorsFOV' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyAddonsSensorsFOV' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors.fov/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.fov.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.sensors'"
  * @generated
  */
-public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
+public interface ApogyAddonsSensorsFOVPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -45,7 +45,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.sensors.fov";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.sensors.fov";
 
 	/**
 	 * The package namespace name.
@@ -61,14 +61,14 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVPackage eINSTANCE = org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl.init();
+	ApogyAddonsSensorsFOVPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.FieldOfViewImpl <em>Field Of View</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.FieldOfViewImpl <em>Field Of View</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.FieldOfViewImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.FieldOfViewImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getFieldOfView()
 	 * @generated
 	 */
 	int FIELD_OF_VIEW = 0;
@@ -80,7 +80,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
+	int FIELD_OF_VIEW__PARENT = ApogyCommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -89,7 +89,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
+	int FIELD_OF_VIEW__DESCRIPTION = ApogyCommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -98,7 +98,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
+	int FIELD_OF_VIEW__NODE_ID = ApogyCommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The number of structural features of the '<em>Field Of View</em>' class.
@@ -107,7 +107,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
+	int FIELD_OF_VIEW_FEATURE_COUNT = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -116,7 +116,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int FIELD_OF_VIEW___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Field Of View</em>' class.
@@ -125,14 +125,14 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
+	int FIELD_OF_VIEW_OPERATION_COUNT = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl <em>Distance Range</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.DistanceRangeImpl <em>Distance Range</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getDistanceRange()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.DistanceRangeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getDistanceRange()
 	 * @generated
 	 */
 	int DISTANCE_RANGE = 1;
@@ -192,11 +192,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	int DISTANCE_RANGE_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl <em>Angular Span</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.AngularSpanImpl <em>Angular Span</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getAngularSpan()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.AngularSpanImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getAngularSpan()
 	 * @generated
 	 */
 	int ANGULAR_SPAN = 2;
@@ -265,11 +265,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	int ANGULAR_SPAN_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl <em>Rectangular Frustrum Field Of View</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl <em>Rectangular Frustrum Field Of View</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfView()
 	 * @generated
 	 */
 	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = 3;
@@ -365,11 +365,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_OPERATION_COUNT = FIELD_OF_VIEW_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl <em>Conical Field Of View</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ConicalFieldOfViewImpl <em>Conical Field Of View</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getConicalFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ConicalFieldOfViewImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getConicalFieldOfView()
 	 * @generated
 	 */
 	int CONICAL_FIELD_OF_VIEW = 4;
@@ -456,11 +456,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	int CONICAL_FIELD_OF_VIEW_OPERATION_COUNT = FIELD_OF_VIEW_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl <em>Circular Sector Field Of View</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl <em>Circular Sector Field Of View</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getCircularSectorFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getCircularSectorFieldOfView()
 	 * @generated
 	 */
 	int CIRCULAR_SECTOR_FIELD_OF_VIEW = 5;
@@ -547,11 +547,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	int CIRCULAR_SECTOR_FIELD_OF_VIEW_OPERATION_COUNT = FIELD_OF_VIEW_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl <em>Rectangular Frustrum Field Of View Sampling Shape</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl <em>Rectangular Frustrum Field Of View Sampling Shape</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfViewSamplingShape()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfViewSamplingShape()
 	 * @generated
 	 */
 	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE = 6;
@@ -563,7 +563,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Rectangular Frustrum Field Of View</b></em>' reference.
@@ -572,7 +572,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Rectangular Frustrum Field Of View Sampling Shape</em>' class.
@@ -581,7 +581,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Is Inside</em>' operation.
@@ -590,7 +590,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Is Polygon Inside</em>' operation.
@@ -599,7 +599,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Rectangular Frustrum Field Of View Sampling Shape</em>' class.
@@ -608,17 +608,17 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getSymphony__AddonsSensorsFOVFacade()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getApogyAddonsSensorsFOVFacade()
 	 * @generated
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE = 7;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -627,7 +627,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE_FEATURE_COUNT = 0;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Distance Range</em>' operation.
@@ -636,7 +636,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = 0;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Create Distance Range</em>' operation.
@@ -645,7 +645,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = 1;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Angular Span</em>' operation.
@@ -654,7 +654,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = 2;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = 2;
 
 	/**
 	 * The operation id for the '<em>Create Angular Span</em>' operation.
@@ -663,7 +663,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = 3;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = 3;
 
 	/**
 	 * The operation id for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
@@ -672,7 +672,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 4;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
@@ -681,7 +681,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = 5;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = 5;
 
 	/**
 	 * The operation id for the '<em>Create Conical Field Of View</em>' operation.
@@ -690,7 +690,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = 6;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = 6;
 
 	/**
 	 * The operation id for the '<em>Create Conical Field Of View</em>' operation.
@@ -699,7 +699,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = 7;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = 7;
 
 	/**
 	 * The operation id for the '<em>Create Circular Sector Field Of View</em>' operation.
@@ -708,7 +708,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 8;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 8;
 
 	/**
 	 * The operation id for the '<em>Create Circular Sector Field Of View</em>' operation.
@@ -717,7 +717,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = 9;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = 9;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -726,416 +726,416 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE_OPERATION_COUNT = 10;
+	int APOGY_ADDONS_SENSORS_FOV_FACADE_OPERATION_COUNT = 10;
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Field Of View</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView
 	 * @generated
 	 */
 	EClass getFieldOfView();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange <em>Distance Range</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange <em>Distance Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Distance Range</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.DistanceRange
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange
 	 * @generated
 	 */
 	EClass getDistanceRange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minimum Distance</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMinimumDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMinimumDistance()
 	 * @see #getDistanceRange()
 	 * @generated
 	 */
 	EAttribute getDistanceRange_MinimumDistance();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Distance</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMaximumDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMaximumDistance()
 	 * @see #getDistanceRange()
 	 * @generated
 	 */
 	EAttribute getDistanceRange_MaximumDistance();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getDistance <em>Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getDistance <em>Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Distance</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.DistanceRange#getDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getDistance()
 	 * @see #getDistanceRange()
 	 * @generated
 	 */
 	EAttribute getDistanceRange_Distance();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#isWithinRange(double) <em>Is Within Range</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#isWithinRange(double) <em>Is Within Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Within Range</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.DistanceRange#isWithinRange(double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#isWithinRange(double)
 	 * @generated
 	 */
 	EOperation getDistanceRange__IsWithinRange__double();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan <em>Angular Span</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan <em>Angular Span</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Angular Span</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.AngularSpan
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan
 	 * @generated
 	 */
 	EClass getAngularSpan();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMinimumAngle <em>Minimum Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMinimumAngle <em>Minimum Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minimum Angle</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMinimumAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMinimumAngle()
 	 * @see #getAngularSpan()
 	 * @generated
 	 */
 	EAttribute getAngularSpan_MinimumAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMaximumAngle <em>Maximum Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMaximumAngle <em>Maximum Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Angle</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMaximumAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMaximumAngle()
 	 * @see #getAngularSpan()
 	 * @generated
 	 */
 	EAttribute getAngularSpan_MaximumAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getSpanningAngle <em>Spanning Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getSpanningAngle <em>Spanning Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Spanning Angle</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.AngularSpan#getSpanningAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getSpanningAngle()
 	 * @see #getAngularSpan()
 	 * @generated
 	 */
 	EAttribute getAngularSpan_SpanningAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getCenterAngle <em>Center Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getCenterAngle <em>Center Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Center Angle</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.AngularSpan#getCenterAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getCenterAngle()
 	 * @see #getAngularSpan()
 	 * @generated
 	 */
 	EAttribute getAngularSpan_CenterAngle();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#isWithinRange(double) <em>Is Within Range</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#isWithinRange(double) <em>Is Within Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Within Range</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.AngularSpan#isWithinRange(double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#isWithinRange(double)
 	 * @generated
 	 */
 	EOperation getAngularSpan__IsWithinRange__double();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rectangular Frustrum Field Of View</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 	 * @generated
 	 */
 	EClass getRectangularFrustrumFieldOfView();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getRange <em>Range</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getRange <em>Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Range</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getRange()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getRange()
 	 * @see #getRectangularFrustrumFieldOfView()
 	 * @generated
 	 */
 	EReference getRectangularFrustrumFieldOfView_Range();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getHorizontalFieldOfViewAngle <em>Horizontal Field Of View Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getHorizontalFieldOfViewAngle <em>Horizontal Field Of View Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Horizontal Field Of View Angle</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getHorizontalFieldOfViewAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getHorizontalFieldOfViewAngle()
 	 * @see #getRectangularFrustrumFieldOfView()
 	 * @generated
 	 */
 	EAttribute getRectangularFrustrumFieldOfView_HorizontalFieldOfViewAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getVerticalFieldOfViewAngle <em>Vertical Field Of View Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getVerticalFieldOfViewAngle <em>Vertical Field Of View Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vertical Field Of View Angle</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getVerticalFieldOfViewAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getVerticalFieldOfViewAngle()
 	 * @see #getRectangularFrustrumFieldOfView()
 	 * @generated
 	 */
 	EAttribute getRectangularFrustrumFieldOfView_VerticalFieldOfViewAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getVolume <em>Volume</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getVolume <em>Volume</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Volume</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getVolume()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView#getVolume()
 	 * @see #getRectangularFrustrumFieldOfView()
 	 * @generated
 	 */
 	EAttribute getRectangularFrustrumFieldOfView_Volume();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView <em>Conical Field Of View</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView <em>Conical Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Conical Field Of View</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
 	 * @generated
 	 */
 	EClass getConicalFieldOfView();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Range</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getRange()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getRange()
 	 * @see #getConicalFieldOfView()
 	 * @generated
 	 */
 	EReference getConicalFieldOfView_Range();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Field Of View Angle</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle()
 	 * @see #getConicalFieldOfView()
 	 * @generated
 	 */
 	EAttribute getConicalFieldOfView_FieldOfViewAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getVolume <em>Volume</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getVolume <em>Volume</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Volume</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getVolume()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getVolume()
 	 * @see #getConicalFieldOfView()
 	 * @generated
 	 */
 	EAttribute getConicalFieldOfView_Volume();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView <em>Circular Sector Field Of View</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView <em>Circular Sector Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Circular Sector Field Of View</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView
 	 * @generated
 	 */
 	EClass getCircularSectorFieldOfView();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Range</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getRange()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getRange()
 	 * @see #getCircularSectorFieldOfView()
 	 * @generated
 	 */
 	EReference getCircularSectorFieldOfView_Range();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular Span</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan()
 	 * @see #getCircularSectorFieldOfView()
 	 * @generated
 	 */
 	EReference getCircularSectorFieldOfView_AngularSpan();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getArea <em>Area</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getArea <em>Area</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Area</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getArea()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getArea()
 	 * @see #getCircularSectorFieldOfView()
 	 * @generated
 	 */
 	EAttribute getCircularSectorFieldOfView_Area();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape <em>Rectangular Frustrum Field Of View Sampling Shape</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape <em>Rectangular Frustrum Field Of View Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rectangular Frustrum Field Of View Sampling Shape</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape
 	 * @generated
 	 */
 	EClass getRectangularFrustrumFieldOfViewSamplingShape();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getTransform <em>Transform</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getTransform <em>Transform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Transform</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getTransform()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getTransform()
 	 * @see #getRectangularFrustrumFieldOfViewSamplingShape()
 	 * @generated
 	 */
 	EReference getRectangularFrustrumFieldOfViewSamplingShape_Transform();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getRectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getRectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Rectangular Frustrum Field Of View</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getRectangularFrustrumFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getRectangularFrustrumFieldOfView()
 	 * @see #getRectangularFrustrumFieldOfViewSamplingShape()
 	 * @generated
 	 */
 	EReference getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade
 	 * @generated
 	 */
-	EClass getSymphony__AddonsSensorsFOVFacade();
+	EClass getApogyAddonsSensorsFOVFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(double, double) <em>Create Distance Range</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createDistanceRange(double, double) <em>Create Distance Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Distance Range</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createDistanceRange(double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__double_double();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateDistanceRange__double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(org.eclipse.symphony.addons.sensors.fov.DistanceRange) <em>Create Distance Range</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createDistanceRange(ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange) <em>Create Distance Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Distance Range</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(org.eclipse.symphony.addons.sensors.fov.DistanceRange)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createDistanceRange(ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(double, double) <em>Create Angular Span</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createAngularSpan(double, double) <em>Create Angular Span</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Angular Span</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createAngularSpan(double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__double_double();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateAngularSpan__double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(org.eclipse.symphony.addons.sensors.fov.AngularSpan) <em>Create Angular Span</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createAngularSpan(ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan) <em>Create Angular Span</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Angular Span</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(org.eclipse.symphony.addons.sensors.fov.AngularSpan)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createAngularSpan(ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(double, double, double) <em>Create Conical Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createConicalFieldOfView(double, double, double) <em>Create Conical Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Conical Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createConicalFieldOfView(double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView) <em>Create Conical Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createConicalFieldOfView(ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView) <em>Create Conical Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Conical Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createConicalFieldOfView(ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(double, double, double, double) <em>Create Circular Sector Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createCircularSectorFieldOfView(double, double, double, double) <em>Create Circular Sector Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Circular Sector Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(double, double, double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createCircularSectorFieldOfView(double, double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView) <em>Create Circular Sector Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createCircularSectorFieldOfView(ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView) <em>Create Circular Sector Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Circular Sector Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade#createCircularSectorFieldOfView(ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
+	EOperation getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1144,7 +1144,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVFactory getSymphony__AddonsSensorsFOVFactory();
+	ApogyAddonsSensorsFOVFactory getApogyAddonsSensorsFOVFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1161,21 +1161,21 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.FieldOfViewImpl <em>Field Of View</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.FieldOfViewImpl <em>Field Of View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.FieldOfViewImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getFieldOfView()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.FieldOfViewImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getFieldOfView()
 		 * @generated
 		 */
 		EClass FIELD_OF_VIEW = eINSTANCE.getFieldOfView();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl <em>Distance Range</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.DistanceRangeImpl <em>Distance Range</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getDistanceRange()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.DistanceRangeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getDistanceRange()
 		 * @generated
 		 */
 		EClass DISTANCE_RANGE = eINSTANCE.getDistanceRange();
@@ -1213,11 +1213,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		EOperation DISTANCE_RANGE___IS_WITHIN_RANGE__DOUBLE = eINSTANCE.getDistanceRange__IsWithinRange__double();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl <em>Angular Span</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.AngularSpanImpl <em>Angular Span</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getAngularSpan()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.AngularSpanImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getAngularSpan()
 		 * @generated
 		 */
 		EClass ANGULAR_SPAN = eINSTANCE.getAngularSpan();
@@ -1263,11 +1263,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		EOperation ANGULAR_SPAN___IS_WITHIN_RANGE__DOUBLE = eINSTANCE.getAngularSpan__IsWithinRange__double();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl <em>Rectangular Frustrum Field Of View</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl <em>Rectangular Frustrum Field Of View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfView()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfView()
 		 * @generated
 		 */
 		EClass RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = eINSTANCE.getRectangularFrustrumFieldOfView();
@@ -1305,11 +1305,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		EAttribute RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME = eINSTANCE.getRectangularFrustrumFieldOfView_Volume();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl <em>Conical Field Of View</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ConicalFieldOfViewImpl <em>Conical Field Of View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getConicalFieldOfView()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ConicalFieldOfViewImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getConicalFieldOfView()
 		 * @generated
 		 */
 		EClass CONICAL_FIELD_OF_VIEW = eINSTANCE.getConicalFieldOfView();
@@ -1339,11 +1339,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		EAttribute CONICAL_FIELD_OF_VIEW__VOLUME = eINSTANCE.getConicalFieldOfView_Volume();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl <em>Circular Sector Field Of View</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl <em>Circular Sector Field Of View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getCircularSectorFieldOfView()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getCircularSectorFieldOfView()
 		 * @generated
 		 */
 		EClass CIRCULAR_SECTOR_FIELD_OF_VIEW = eINSTANCE.getCircularSectorFieldOfView();
@@ -1373,11 +1373,11 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		EAttribute CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA = eINSTANCE.getCircularSectorFieldOfView_Area();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl <em>Rectangular Frustrum Field Of View Sampling Shape</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl <em>Rectangular Frustrum Field Of View Sampling Shape</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfViewSamplingShape()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getRectangularFrustrumFieldOfViewSamplingShape()
 		 * @generated
 		 */
 		EClass RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE = eINSTANCE.getRectangularFrustrumFieldOfViewSamplingShape();
@@ -1399,14 +1399,14 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		EReference RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = eINSTANCE.getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getSymphony__AddonsSensorsFOVFacade()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVPackageImpl#getApogyAddonsSensorsFOVFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_ADDONS_SENSORS_FOV_FACADE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade();
+		EClass APOGY_ADDONS_SENSORS_FOV_FACADE = eINSTANCE.getApogyAddonsSensorsFOVFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Distance Range</b></em>' operation.
@@ -1414,7 +1414,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__double_double();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateDistanceRange__double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Distance Range</b></em>' operation.
@@ -1422,7 +1422,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Angular Span</b></em>' operation.
@@ -1430,7 +1430,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__double_double();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateAngularSpan__double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Angular Span</b></em>' operation.
@@ -1438,7 +1438,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rectangular Frustrum Field Of View</b></em>' operation.
@@ -1446,7 +1446,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rectangular Frustrum Field Of View</b></em>' operation.
@@ -1454,7 +1454,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Conical Field Of View</b></em>' operation.
@@ -1462,7 +1462,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Conical Field Of View</b></em>' operation.
@@ -1470,7 +1470,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Circular Sector Field Of View</b></em>' operation.
@@ -1478,7 +1478,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Circular Sector Field Of View</b></em>' operation.
@@ -1486,8 +1486,8 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
+		EOperation APOGY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = eINSTANCE.getApogyAddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
 
 	}
 
-} //Symphony__AddonsSensorsFOVPackage
+} //ApogyAddonsSensorsFOVPackage

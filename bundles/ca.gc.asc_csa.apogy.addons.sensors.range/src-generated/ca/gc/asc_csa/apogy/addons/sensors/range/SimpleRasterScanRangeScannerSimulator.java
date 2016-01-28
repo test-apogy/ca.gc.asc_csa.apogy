@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
 
 /**
@@ -13,13 +13,13 @@ package org.eclipse.symphony.addons.sensors.range;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getRangeNoiseAmplitude <em>Range Noise Amplitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getAzimuthNoiseAmplitude <em>Azimuth Noise Amplitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getElevationNoiseAmplitude <em>Elevation Noise Amplitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#isHorizonDetectionEnabled <em>Horizon Detection Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getRangeNoiseAmplitude <em>Range Noise Amplitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getAzimuthNoiseAmplitude <em>Azimuth Noise Amplitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getElevationNoiseAmplitude <em>Elevation Noise Amplitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#isHorizonDetectionEnabled <em>Horizon Detection Enabled</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range Noise Amplitude</em>' attribute.
 	 * @see #setRangeNoiseAmplitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_RangeNoiseAmplitude()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_RangeNoiseAmplitude()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getRangeNoiseAmplitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getRangeNoiseAmplitude <em>Range Noise Amplitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getRangeNoiseAmplitude <em>Range Noise Amplitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Range Noise Amplitude</em>' attribute.
@@ -62,14 +62,14 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth Noise Amplitude</em>' attribute.
 	 * @see #setAzimuthNoiseAmplitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_AzimuthNoiseAmplitude()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_AzimuthNoiseAmplitude()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getAzimuthNoiseAmplitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getAzimuthNoiseAmplitude <em>Azimuth Noise Amplitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getAzimuthNoiseAmplitude <em>Azimuth Noise Amplitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth Noise Amplitude</em>' attribute.
@@ -89,14 +89,14 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elevation Noise Amplitude</em>' attribute.
 	 * @see #setElevationNoiseAmplitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_ElevationNoiseAmplitude()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_ElevationNoiseAmplitude()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getElevationNoiseAmplitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getElevationNoiseAmplitude <em>Elevation Noise Amplitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getElevationNoiseAmplitude <em>Elevation Noise Amplitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation Noise Amplitude</em>' attribute.
@@ -117,14 +117,14 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Horizon Detection Enabled</em>' attribute.
 	 * @see #setHorizonDetectionEnabled(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_HorizonDetectionEnabled()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_HorizonDetectionEnabled()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isHorizonDetectionEnabled();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#isHorizonDetectionEnabled <em>Horizon Detection Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#isHorizonDetectionEnabled <em>Horizon Detection Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Horizon Detection Enabled</em>' attribute.

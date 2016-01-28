@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class GainFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GainFilter_gain_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GainFilter_gain_feature", "_UI_GainFilter_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER__GAIN,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER__GAIN,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class GainFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GainFilter_bias_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GainFilter_bias_feature", "_UI_GainFilter_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER__BIAS,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER__BIAS,
 				 true,
 				 false,
 				 false,
@@ -137,8 +137,8 @@ public class GainFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GainFilter.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.io.jinput;
+package ca.gc.asc_csa.apogy.common.io.jinput;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.io.jinput;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEButton()
+ * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getEButton()
  * @model
  * @generated
  */

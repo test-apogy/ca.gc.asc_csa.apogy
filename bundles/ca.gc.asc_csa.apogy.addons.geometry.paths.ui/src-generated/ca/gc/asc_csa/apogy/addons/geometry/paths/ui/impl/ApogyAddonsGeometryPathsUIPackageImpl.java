@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,12 +9,12 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIFactory;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl implements Symphony__AddonsGeometryPathsUIPackage {
+public class ApogyAddonsGeometryPathsUIPackageImpl extends EPackageImpl implements ApogyAddonsGeometryPathsUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,12 +55,12 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsGeometryPathsUIPackageImpl() {
-		super(eNS_URI, Symphony__AddonsGeometryPathsUIFactory.eINSTANCE);
+	private ApogyAddonsGeometryPathsUIPackageImpl() {
+		super(eNS_URI, ApogyAddonsGeometryPathsUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsGeometryPathsUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsGeometryPathsUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,30 +82,30 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsGeometryPathsUIPackage init() {
-		if (isInited) return (Symphony__AddonsGeometryPathsUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsUIPackage.eNS_URI);
+	public static ApogyAddonsGeometryPathsUIPackage init() {
+		if (isInited) return (ApogyAddonsGeometryPathsUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsGeometryPathsUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsGeometryPathsUIPackageImpl theSymphony__AddonsGeometryPathsUIPackage = (Symphony__AddonsGeometryPathsUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsGeometryPathsUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsGeometryPathsUIPackageImpl());
+		ApogyAddonsGeometryPathsUIPackageImpl theApogyAddonsGeometryPathsUIPackage = (ApogyAddonsGeometryPathsUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsGeometryPathsUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsGeometryPathsUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsGeometryPathsUIPackage.createPackageContents();
+		theApogyAddonsGeometryPathsUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsGeometryPathsUIPackage.initializePackageContents();
+		theApogyAddonsGeometryPathsUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsGeometryPathsUIPackage.freeze();
+		theApogyAddonsGeometryPathsUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsGeometryPathsUIPackage.eNS_URI, theSymphony__AddonsGeometryPathsUIPackage);
-		return theSymphony__AddonsGeometryPathsUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsGeometryPathsUIPackage.eNS_URI, theApogyAddonsGeometryPathsUIPackage);
+		return theApogyAddonsGeometryPathsUIPackage;
 	}
 
 	/**
@@ -167,8 +167,8 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsUIFactory getSymphony__AddonsGeometryPathsUIFactory() {
-		return (Symphony__AddonsGeometryPathsUIFactory)getEFactoryInstance();
+	public ApogyAddonsGeometryPathsUIFactory getApogyAddonsGeometryPathsUIFactory() {
+		return (ApogyAddonsGeometryPathsUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -225,7 +225,7 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -233,8 +233,8 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		wayPointPathPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		wayPointPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		wayPointPathPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		wayPointPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wayPointPathPresentationEClass, WayPointPathPresentation.class, "WayPointPathPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -254,4 +254,4 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsGeometryPathsUIPackageImpl
+} //ApogyAddonsGeometryPathsUIPackageImpl

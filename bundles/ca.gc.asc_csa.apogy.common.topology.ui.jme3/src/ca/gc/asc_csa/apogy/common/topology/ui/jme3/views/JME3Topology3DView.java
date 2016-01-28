@@ -1,20 +1,20 @@
-package org.eclipse.symphony.common.topology.ui.jme3.views;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.views;
 
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.URLNode;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewer;
-import org.eclipse.symphony.common.topology.ui.viewer.actions.NewAbstractTopology3DViewAction;
-import org.eclipse.symphony.common.topology.ui.viewer.views.AbstractTopology3DView;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.URLNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewer;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.actions.NewAbstractTopology3DViewAction;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.views.AbstractTopology3DView;
 
 public class JME3Topology3DView extends AbstractTopology3DView 
 {		
@@ -37,7 +37,7 @@ public class JME3Topology3DView extends AbstractTopology3DView
 	@Override
 	public String getViewID() 
 	{
-		return "org.eclipse.symphony.common.topology.ui.jme3.views.JME3Topology3DView";
+		return "ca.gc.asc_csa.apogy.common.topology.ui.jme3.views.JME3Topology3DView";
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class JME3Topology3DView extends AbstractTopology3DView
 	@Override
 	public void updateSelection(ISelection selection) 
 	{
-		GraphicsContext gc = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(createTestTopology());
+		GraphicsContext gc = ApogyCommonTopologyUIFacade.INSTANCE.createGraphicsContext(createTestTopology());
 		getTopologyViewer().setInput(gc);		
 		
 		updatePartName();
@@ -77,9 +77,9 @@ public class JME3Topology3DView extends AbstractTopology3DView
 		
 	private Node createTestTopology()
 	{
-		AggregateGroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode();
+		AggregateGroupNode root = ApogyCommonTopologyFactory.eINSTANCE.createAggregateGroupNode();
 		
-		TransformNode t1 = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(10, 5, 5,0, 0, 0);
+		TransformNode t1 = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(10, 5, 5,0, 0, 0);
 		root.getAggregatedChildren().add(t1);
 		
 		
@@ -87,11 +87,11 @@ public class JME3Topology3DView extends AbstractTopology3DView
 		System.out.println("X : " + x);
 		
 		
-		TransformNode t2 = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(x, 5, 5,0, 0, 0);
+		TransformNode t2 = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(x, 5, 5,0, 0, 0);
 		t1.getAggregatedChildren().add(t2);
 		
-		URLNode urlNode = Symphony__CommonTopologyFactory.eINSTANCE.createURLNode();
-		urlNode.setUrl("platform:/plugin/org.eclipse.symphony.examples.lander.symphony/vrml/lander.obj");
+		URLNode urlNode = ApogyCommonTopologyFactory.eINSTANCE.createURLNode();
+		urlNode.setUrl("platform:/plugin/ca.gc.asc_csa.apogy.examples.lander.apogy/vrml/lander.obj");
 		t2.getChildren().add(urlNode);
 		
 		count++;

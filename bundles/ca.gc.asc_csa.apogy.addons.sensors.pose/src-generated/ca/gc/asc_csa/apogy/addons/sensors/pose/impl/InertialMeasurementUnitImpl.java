@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency 2007.
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl#getLinearAcceleration <em>Linear Acceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.InertialMeasurementUnitImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.InertialMeasurementUnitImpl#getLinearAcceleration <em>Linear Acceleration</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,7 +63,7 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT;
+		return ApogyAddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT;
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 		Tuple3d oldAngularVelocity = angularVelocity;
 		angularVelocity = newAngularVelocity;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, oldAngularVelocity, newAngularVelocity);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, oldAngularVelocity, newAngularVelocity);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -99,14 +99,14 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 		if (newAngularVelocity != angularVelocity) {
 			NotificationChain msgs = null;
 			if (angularVelocity != null)
-				msgs = ((InternalEObject)angularVelocity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, null, msgs);
+				msgs = ((InternalEObject)angularVelocity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, null, msgs);
 			if (newAngularVelocity != null)
-				msgs = ((InternalEObject)newAngularVelocity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, null, msgs);
+				msgs = ((InternalEObject)newAngularVelocity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, null, msgs);
 			msgs = basicSetAngularVelocity(newAngularVelocity, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, newAngularVelocity, newAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY, newAngularVelocity, newAngularVelocity));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 		Tuple3d oldLinearAcceleration = linearAcceleration;
 		linearAcceleration = newLinearAcceleration;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, oldLinearAcceleration, newLinearAcceleration);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, oldLinearAcceleration, newLinearAcceleration);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -142,14 +142,14 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 		if (newLinearAcceleration != linearAcceleration) {
 			NotificationChain msgs = null;
 			if (linearAcceleration != null)
-				msgs = ((InternalEObject)linearAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)linearAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, null, msgs);
 			if (newLinearAcceleration != null)
-				msgs = ((InternalEObject)newLinearAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)newLinearAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, null, msgs);
 			msgs = basicSetLinearAcceleration(newLinearAcceleration, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, newLinearAcceleration, newLinearAcceleration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION, newLinearAcceleration, newLinearAcceleration));
 	}
 
 	/**
@@ -160,9 +160,9 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
 				return basicSetAngularVelocity(null, msgs);
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
 				return basicSetLinearAcceleration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -176,9 +176,9 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
 				return getAngularVelocity();
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
 				return getLinearAcceleration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -192,10 +192,10 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
 				setAngularVelocity((Tuple3d)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
 				setLinearAcceleration((Tuple3d)newValue);
 				return;
 		}
@@ -210,10 +210,10 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
 				setAngularVelocity((Tuple3d)null);
 				return;
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
 				setLinearAcceleration((Tuple3d)null);
 				return;
 		}
@@ -228,9 +228,9 @@ public class InertialMeasurementUnitImpl extends OrientationSensorImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
 				return angularVelocity != null;
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
 				return linearAcceleration != null;
 		}
 		return super.eIsSet(featureID);

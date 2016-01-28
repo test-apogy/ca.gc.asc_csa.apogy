@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging;
+package ca.gc.asc_csa.apogy.addons.ros.imaging;
 
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.swt.graphics.ImageData;
 
-import org.eclipse.symphony.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
 
 import org.ros.node.ConnectedNode;
 
-import org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingFacadeImpl;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingFacadeImpl;
 
 import sensor_msgs.CompressedImage;
 import sensor_msgs.Image;
@@ -22,18 +22,18 @@ import sensor_msgs.Image;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage#getSymphony__AddonsROSImagingFacade()
+ * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage#getApogyAddonsROSImagingFacade()
  * @model
  * @generated
  */
-public interface Symphony__AddonsROSImagingFacade extends EObject {
+public interface ApogyAddonsROSImagingFacade extends EObject {
 	
-	public static final Symphony__AddonsROSImagingFacade INSTANCE = Symphony__AddonsROSImagingFacadeImpl.getInstance();
+	public static final ApogyAddonsROSImagingFacade INSTANCE = ApogyAddonsROSImagingFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" rosImageDataType="org.eclipse.symphony.addons.ros.imaging.Image" rosImageUnique="false"
+	 * @model unique="false" rosImageDataType="ca.gc.asc_csa.apogy.addons.ros.imaging.Image" rosImageUnique="false"
 	 * @generated
 	 */
 	EImage convertToEImage(Image rosImage);
@@ -41,7 +41,7 @@ public interface Symphony__AddonsROSImagingFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" compressedImageDataType="org.eclipse.symphony.addons.ros.imaging.CompressedImage" compressedImageUnique="false"
+	 * @model unique="false" compressedImageDataType="ca.gc.asc_csa.apogy.addons.ros.imaging.CompressedImage" compressedImageUnique="false"
 	 * @generated
 	 */
 	EImage convertToEImage(CompressedImage compressedImage);
@@ -49,7 +49,7 @@ public interface Symphony__AddonsROSImagingFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.ros.imaging.CompressedImage" unique="false" eImageUnique="false" connectedNodeDataType="org.eclipse.symphony.addons.ros.imaging.ConnectedNode" connectedNodeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.ros.imaging.CompressedImage" unique="false" eImageUnique="false" connectedNodeDataType="ca.gc.asc_csa.apogy.addons.ros.imaging.ConnectedNode" connectedNodeUnique="false"
 	 * @generated
 	 */
 	CompressedImage convertToCompressedImage(EImage eImage, ConnectedNode connectedNode);
@@ -57,9 +57,9 @@ public interface Symphony__AddonsROSImagingFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.ros.imaging.CompressedImage" unique="false" imageDataDataType="org.eclipse.symphony.common.images.ImageData" imageDataUnique="false" connectedNodeDataType="org.eclipse.symphony.addons.ros.imaging.ConnectedNode" connectedNodeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.ros.imaging.CompressedImage" unique="false" imageDataDataType="ca.gc.asc_csa.apogy.common.images.ImageData" imageDataUnique="false" connectedNodeDataType="ca.gc.asc_csa.apogy.addons.ros.imaging.ConnectedNode" connectedNodeUnique="false"
 	 * @generated
 	 */
 	CompressedImage convertToCompressedImage(ImageData imageData, ConnectedNode connectedNode);
 
-} // Symphony__AddonsROSImagingFacade
+} // ApogyAddonsROSImagingFacade

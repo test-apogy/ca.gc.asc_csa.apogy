@@ -16,10 +16,10 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.common.topology.ui.jme3.views.JME3Topology3DView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.views.JME3Topology3DView"
             icon="icons/3d_topology_viewer.png"
-            id="org.eclipse.symphony.common.topology.ui.jme3.views.JME3Topology3DView"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.jme3.views.JME3Topology3DView"
             name="3D Topology Viewer - JME3"
             restorable="true">
       </view>
@@ -28,27 +28,27 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated jme3 -->
       <package
-            uri="org.eclipse.symphony.common.topology.ui.jme3"
-            class="org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package"
-            genModel="model/symphony_common_topology_ui_jme3.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.ui.jme3"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package"
+            genModel="model/apogy_common_topology_ui_jme3.xcore"/>
    </extension>
    
    <extension
-         point="org.eclipse.symphony.common.topology.ui.jme3.jme3Adapter">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.jme3.jme3Adapter">
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.GroupNodeJME3Adapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.adapters.GroupNodeJME3Adapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.TransformNodeJME3Adapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.adapters.TransformNodeJME3Adapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.URLNodeJME3Adapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.adapters.URLNodeJME3Adapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.DefaultNodeJME3Adapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.adapters.DefaultNodeJME3Adapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.ReferencedGroupNodeJME3Adapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.adapters.ReferencedGroupNodeJME3Adapter">
       </Class>
    </extension>
    <extension
@@ -60,7 +60,7 @@
             thread="main"
             visible="true">
          <run
-               class="org.eclipse.symphony.common.topology.ui.jme3.ObjToJ3oConverter">
+               class="ca.gc.asc_csa.apogy.common.topology.ui.jme3.ObjToJ3oConverter">
          </run>
       </application>
    </extension>

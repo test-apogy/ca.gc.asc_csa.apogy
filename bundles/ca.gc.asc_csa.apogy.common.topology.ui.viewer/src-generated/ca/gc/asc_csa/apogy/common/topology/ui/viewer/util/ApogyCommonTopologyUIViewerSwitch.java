@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.viewer.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage
  * @generated
  */
-public class Symphony__CommonTopologyUIViewerSwitch<T> extends Switch<T> {
+public class ApogyCommonTopologyUIViewerSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyUIViewerPackage modelPackage;
+	protected static ApogyCommonTopologyUIViewerPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class Symphony__CommonTopologyUIViewerSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIViewerSwitch() {
+	public ApogyCommonTopologyUIViewerSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyUIViewerPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyUIViewerPackage.eINSTANCE;
 		}
 	}
 
@@ -66,7 +66,7 @@ public class Symphony__CommonTopologyUIViewerSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY: {
+			case ApogyCommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY: {
 				TopologyViewerRegistry topologyViewerRegistry = (TopologyViewerRegistry)theEObject;
 				T result = caseTopologyViewerRegistry(topologyViewerRegistry);
 				if (result == null) result = defaultCase(theEObject);
@@ -107,4 +107,4 @@ public class Symphony__CommonTopologyUIViewerSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonTopologyUIViewerSwitch
+} //ApogyCommonTopologyUIViewerSwitch

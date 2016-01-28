@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.ros.utilities;
+package ca.gc.asc_csa.apogy.addons.ros.utilities;
 
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Quat4d;
 
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 public class GeometryUtils
 {
@@ -45,7 +45,7 @@ public class GeometryUtils
 		transformMatrix.setM33(1.0);		
 		
 		// Create Matrix4x4
-		Matrix4x4 pose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(transformMatrix);
+		Matrix4x4 pose = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(transformMatrix);
 		return pose;
 	}
 	
@@ -106,7 +106,7 @@ public class GeometryUtils
 	
 	public static Matrix4x4 createPositionMatrix(double x, double y, double z)
 	{
-		Matrix4x4 pose = Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4();
+		Matrix4x4 pose = ApogyCommonMathFactory.eINSTANCE.createMatrix4x4();
 		pose.setM03(x);
 		pose.setM13(y);
 		pose.setM23(z);

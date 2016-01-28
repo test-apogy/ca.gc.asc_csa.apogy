@@ -3,7 +3,7 @@
  *
  * $Id: PolygonItemProvider.java,v 1.3.4.2 2015/05/21 15:49:35 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data.provider;
 
 
 import java.util.Collection;
@@ -21,10 +21,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data.Polygon} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class PolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Polygon_vertices_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Polygon_vertices_feature", "_UI_Polygon_type"),
-				 Symphony__CommonGeometryDataPackage.Literals.POLYGON__VERTICES,
+				 ApogyCommonGeometryDataPackage.Literals.POLYGON__VERTICES,
 				 true,
 				 false,
 				 true,

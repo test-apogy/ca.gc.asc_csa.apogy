@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 
@@ -13,15 +13,15 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.Activator;
 
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -185,7 +185,7 @@ public class SpherePrimitiveJME3SceneObject extends DefaultJME3SceneObject<Spher
 				@Override
 				public void notifyChanged(Notification notification) 
 				{
-					if (notification.getFeatureID(SpherePrimitive.class) == Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS) 
+					if (notification.getFeatureID(SpherePrimitive.class) == ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS) 
 					{
 						float newRadius = (float) notification.getNewDoubleValue();						
 						updateGeometry(newRadius);

@@ -1,18 +1,18 @@
-@GenModel(prefix="Symphony__AddonsSensorsGPS",
+@GenModel(prefix="ApogyAddonsSensorsGPS",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsSensorsGPS",
+	      modelName="ApogyAddonsSensorsGPS",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.gps/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.gps.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.gps/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.gps.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.gps
+package ca.gc.asc_csa.apogy.addons.sensors.gps
 
-import org.eclipse.symphony.common.geometry.data3d.PositionMarker
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor
-import org.eclipse.symphony.common.emf.Server
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor
+import ca.gc.asc_csa.apogy.common.emf.Server
 
 type Exception wraps java.lang.Exception
 type IOException wraps java.io.IOException
@@ -100,7 +100,7 @@ class GPSPoseSensor extends PoseSensor, Server
 	 * value is set to "45.518206644445", which is the
 	 * MET's origin value.
 	 */
-	@GenModel(symphony_units="deg")
+	@GenModel(apogy_units="deg")
 	double originLatitude = "45.518206644445"
 	
 	/*
@@ -108,14 +108,14 @@ class GPSPoseSensor extends PoseSensor, Server
 	 * value is set to "-73.393904468182", which is the
 	 * value which is the MET's origin value.
 	 */
-	@GenModel(symphony_units="deg")
+	@GenModel(apogy_units="deg")
 	double originLongitude = "-73.393904468182"
 	
 	/*
 	 * The angle, in radians, between the Noth East frame (z rotation).
 	 * Default value is "0.5940676", which is the value used for the MET.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double neAngle = "0.5940676"
 	
 	double originElevation = "33.0985"
@@ -216,7 +216,7 @@ interface GPSRepository
 	op GPS getGPSById(String gpsId)
 }
 
-class Symphony__AddonsSensorsGPSFacade
+class ApogyAddonsSensorsGPSFacade
 {
 	op GPSPoseSensor createGPSPoseSensor(double originLatitude, double originLongitude)
 	

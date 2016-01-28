@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode;
-import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryD
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl implements Symphony__CommonGeometryData3DASCPackage {
+public class ApogyCommonGeometryData3DASCPackageImpl extends EPackageImpl implements ApogyCommonGeometryData3DASCPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -71,12 +71,12 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonGeometryData3DASCPackageImpl() {
-		super(eNS_URI, Symphony__CommonGeometryData3DASCFactory.eINSTANCE);
+	private ApogyCommonGeometryData3DASCPackageImpl() {
+		super(eNS_URI, ApogyCommonGeometryData3DASCFactory.eINSTANCE);
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonGeometryData3DASCPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonGeometryData3DASCPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,30 +98,30 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData3DASCPackage init() {
-		if (isInited) return (Symphony__CommonGeometryData3DASCPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DASCPackage.eNS_URI);
+	public static ApogyCommonGeometryData3DASCPackage init() {
+		if (isInited) return (ApogyCommonGeometryData3DASCPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DASCPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonGeometryData3DASCPackageImpl theSymphony__CommonGeometryData3DASCPackage = (Symphony__CommonGeometryData3DASCPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonGeometryData3DASCPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonGeometryData3DASCPackageImpl());
+		ApogyCommonGeometryData3DASCPackageImpl theApogyCommonGeometryData3DASCPackage = (ApogyCommonGeometryData3DASCPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonGeometryData3DASCPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonGeometryData3DASCPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonGeometryData3DASCPackage.createPackageContents();
+		theApogyCommonGeometryData3DASCPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonGeometryData3DASCPackage.initializePackageContents();
+		theApogyCommonGeometryData3DASCPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonGeometryData3DASCPackage.freeze();
+		theApogyCommonGeometryData3DASCPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonGeometryData3DASCPackage.eNS_URI, theSymphony__CommonGeometryData3DASCPackage);
-		return theSymphony__CommonGeometryData3DASCPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonGeometryData3DASCPackage.eNS_URI, theApogyCommonGeometryData3DASCPackage);
+		return theApogyCommonGeometryData3DASCPackage;
 	}
 
 	/**
@@ -318,8 +318,8 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DASCFactory getSymphony__CommonGeometryData3DASCFactory() {
-		return (Symphony__CommonGeometryData3DASCFactory)getEFactoryInstance();
+	public ApogyCommonGeometryData3DASCFactory getApogyCommonGeometryData3DASCFactory() {
+		return (ApogyCommonGeometryData3DASCFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -394,7 +394,7 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -404,27 +404,27 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(asc3DIOEClass, org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO.class, "ASC3DIO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(asc3DIOEClass, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO.class, "ASC3DIO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode(), theSymphony__CommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode(), theApogyCommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_double(), theSymphony__CommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_double(), theApogyCommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "targetResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D(), theSymphony__CommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D(), theApogyCommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates2D(), "southWestCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates2D(), "northEastCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D_double(), theSymphony__CommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D_double(), theApogyCommonGeometryData3DPackage.getDigitalElevationMap(), "loadDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates2D(), "southWestCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -432,25 +432,25 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		addEParameter(op, theEcorePackage.getEDouble(), "targetResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode_double(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode_double(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "targetResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates2D(), "southWestCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates2D(), "northEastCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D_double(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getASC3DIO__LoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D_double(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "loadTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "file", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAltitudeMode(), "altitudeMode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates2D(), "southWestCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -501,18 +501,18 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonGeometryData3DASC",
+			 "prefix", "ApogyCommonGeometryData3DASC",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonGeometryData3DASC",
+			 "modelName", "ApogyCommonGeometryData3DASC",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated",
-			 "testsDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.geometry.data3d"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.edit/src-generated",
+			 "testsDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry.data3d"
 		   });	
 		addAnnotation
 		  (asc3DIOEClass, 
@@ -578,7 +578,7 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		  (getASCHeaderData_CellSize(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (altitudeModeEEnum, 
@@ -626,14 +626,14 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		  (getCoordinates2D_X(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getCoordinates2D_Y(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });
 	}
 
-} //Symphony__CommonGeometryData3DASCPackageImpl
+} //ApogyCommonGeometryData3DASCPackageImpl

@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
 import javax.vecmath.Color3f;
 
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,12 +16,12 @@ import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor <em>Bellow Cutoff Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor <em>Bellow Cutoff Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer()
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface AntennaRadiationPatternImageMapLayer extends LineOfSightImageMa
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Antenna Radiation Pattern</em>' containment reference.
 	 * @see #setAntennaRadiationPattern(AbstractAntennaRadiationPattern)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer_AntennaRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer_AntennaRadiationPattern()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ANTENNA'"
 	 * @generated
@@ -44,7 +44,7 @@ public interface AntennaRadiationPatternImageMapLayer extends LineOfSightImageMa
 	AbstractAntennaRadiationPattern getAntennaRadiationPattern();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Antenna Radiation Pattern</em>' containment reference.
@@ -63,15 +63,15 @@ public interface AntennaRadiationPatternImageMapLayer extends LineOfSightImageMa
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Signal Strength Cutoff</em>' attribute.
 	 * @see #setSignalStrengthCutoff(double)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer_SignalStrengthCutoff()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer_SignalStrengthCutoff()
 	 * @model default="-100.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='CUTOFF_SETTINGS' symphony_units='dB'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='CUTOFF_SETTINGS' apogy_units='dB'"
 	 * @generated
 	 */
 	double getSignalStrengthCutoff();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Signal Strength Cutoff</em>' attribute.
@@ -89,15 +89,15 @@ public interface AntennaRadiationPatternImageMapLayer extends LineOfSightImageMa
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bellow Cutoff Color</em>' attribute.
 	 * @see #setBellowCutoffColor(Color3f)
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer_BellowCutoffColor()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.telecoms.Color3f"
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer_BellowCutoffColor()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.telecoms.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='CUTOFF_SETTINGS'"
 	 * @generated
 	 */
 	Color3f getBellowCutoffColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor <em>Bellow Cutoff Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor <em>Bellow Cutoff Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bellow Cutoff Color</em>' attribute.

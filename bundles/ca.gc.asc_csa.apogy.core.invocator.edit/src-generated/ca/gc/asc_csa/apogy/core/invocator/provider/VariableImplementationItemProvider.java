@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,15 +18,15 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.VariableImplementation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
@@ -70,7 +70,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 				 getResourceLocator(),
 				 getString("_UI_VariableImplementation_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableImplementation_variable_feature", "_UI_VariableImplementation_type"),
-				 Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE,
+				 ApogyCoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -93,7 +93,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
          getResourceLocator(),
          getString("_UI_VariableImplementation_implementationClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_VariableImplementation_implementationClass_feature", "_UI_VariableImplementation_type"),
-         Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+         ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
          true,
          false,
          true,
@@ -103,7 +103,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
 				VariableImplementation implementation = (VariableImplementation) object;											
-				return Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(implementation.getVariable().getVariableType().getInterfaceClass());
+				return ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(implementation.getVariable().getVariableType().getInterfaceClass());
 			}
 		});
   }
@@ -185,12 +185,12 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 		compoundCommand.append(new SetCommand(domain, owner, feature, value,
 				index));
 
-		if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE) {
+		if (feature == ApogyCoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE) {
 			Variable variable = (Variable) value;
 
 			if (variable.getVariableType() != null) {
 
-				List<TypeMemberImplementation> implementations = Symphony__CoreInvocatorFacade.INSTANCE
+				List<TypeMemberImplementation> implementations = ApogyCoreInvocatorFacade.INSTANCE
 						.createTypeMemberImplementations(variable
 								.getVariableType());
 
@@ -201,14 +201,14 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 							.append(new SetCommand(
 									domain,
 									owner,
-									Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
+									ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
 									implementations));
 
 					compoundCommand
 							.append(new AddCommand(
 									domain,
 									owner,
-									Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
+									ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
 									implementations));
 				}
 			}

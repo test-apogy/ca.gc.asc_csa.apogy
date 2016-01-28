@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.util;
+package ca.gc.asc_csa.apogy.common.file.csv.util;
 
 import java.util.Map;
 
@@ -9,24 +9,24 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.file.csv.*;
+import ca.gc.asc_csa.apogy.common.file.csv.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage
+ * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage
  * @generated
  */
-public class Symphony__CommonFileCSVAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonFileCSVAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonFileCSVPackage modelPackage;
+	protected static ApogyCommonFileCSVPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class Symphony__CommonFileCSVAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonFileCSVAdapterFactory() {
+	public ApogyCommonFileCSVAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonFileCSVPackage.eINSTANCE;
+			modelPackage = ApogyCommonFileCSVPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class Symphony__CommonFileCSVAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonFileCSVSwitch<Adapter> modelSwitch =
-		new Symphony__CommonFileCSVSwitch<Adapter>() {
+	protected ApogyCommonFileCSVSwitch<Adapter> modelSwitch =
+		new ApogyCommonFileCSVSwitch<Adapter>() {
 			@Override
 			public Adapter caseCsvColumnValuesMap(Map.Entry<Integer, Object> object) {
 				return createCsvColumnValuesMapAdapter();
@@ -118,13 +118,13 @@ public class Symphony__CommonFileCSVAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.file.csv.CsvColumn <em>Csv Column</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn <em>Csv Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumn
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumn
 	 * @generated
 	 */
 	public Adapter createCsvColumnAdapter() {
@@ -132,13 +132,13 @@ public class Symphony__CommonFileCSVAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet <em>Csv Columns Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet <em>Csv Columns Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.file.csv.CsvColumnsSet
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet
 	 * @generated
 	 */
 	public Adapter createCsvColumnsSetAdapter() {
@@ -146,13 +146,13 @@ public class Symphony__CommonFileCSVAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.file.csv.CsvValueProvider <em>Csv Value Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider <em>Csv Value Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.file.csv.CsvValueProvider
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider
 	 * @generated
 	 */
 	public Adapter createCsvValueProviderAdapter() {
@@ -171,4 +171,4 @@ public class Symphony__CommonFileCSVAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__CommonFileCSVAdapterFactory
+} //ApogyCommonFileCSVAdapterFactory

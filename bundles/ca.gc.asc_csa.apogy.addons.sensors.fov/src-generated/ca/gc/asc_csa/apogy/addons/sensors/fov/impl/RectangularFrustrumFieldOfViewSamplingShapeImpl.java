@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2007.
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -16,16 +16,16 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,8 +35,8 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl#getTransform <em>Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl#getRectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl#getTransform <em>Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl#getRectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE;
+		return ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE;
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 			transform = (Matrix4x4)eResolveProxy(oldTransform);
 			if (transform != oldTransform) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM, oldTransform, transform));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM, oldTransform, transform));
 			}
 		}
 		return transform;
@@ -119,7 +119,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 		Matrix4x4 oldTransform = transform;
 		transform = newTransform;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM, oldTransform, transform));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM, oldTransform, transform));
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 			rectangularFrustrumFieldOfView = (RectangularFrustrumFieldOfView)eResolveProxy(oldRectangularFrustrumFieldOfView);
 			if (rectangularFrustrumFieldOfView != oldRectangularFrustrumFieldOfView) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW, oldRectangularFrustrumFieldOfView, rectangularFrustrumFieldOfView));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW, oldRectangularFrustrumFieldOfView, rectangularFrustrumFieldOfView));
 			}
 		}
 		return rectangularFrustrumFieldOfView;
@@ -157,7 +157,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 		RectangularFrustrumFieldOfView oldRectangularFrustrumFieldOfView = rectangularFrustrumFieldOfView;
 		rectangularFrustrumFieldOfView = newRectangularFrustrumFieldOfView;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW, oldRectangularFrustrumFieldOfView, rectangularFrustrumFieldOfView));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW, oldRectangularFrustrumFieldOfView, rectangularFrustrumFieldOfView));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 		{
 			Point3d point3d = new Point3d();
 			matrix.transform(p.asPoint3d(), point3d);
-			CartesianPositionCoordinates transformedP = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point3d.x, point3d.y, point3d.z);
+			CartesianPositionCoordinates transformedP = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point3d.x, point3d.y, point3d.z);
 			newPolygon.getVertices().add(transformedP);
 		}
 				
@@ -298,10 +298,10 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
 				if (resolve) return getTransform();
 				return basicGetTransform();
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
 				if (resolve) return getRectangularFrustrumFieldOfView();
 				return basicGetRectangularFrustrumFieldOfView();
 		}
@@ -316,10 +316,10 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
 				setTransform((Matrix4x4)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
 				setRectangularFrustrumFieldOfView((RectangularFrustrumFieldOfView)newValue);
 				return;
 		}
@@ -334,10 +334,10 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
 				setTransform((Matrix4x4)null);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
 				setRectangularFrustrumFieldOfView((RectangularFrustrumFieldOfView)null);
 				return;
 		}
@@ -352,9 +352,9 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM:
 				return transform != null;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW:
 				return rectangularFrustrumFieldOfView != null;
 		}
 		return super.eIsSet(featureID);
@@ -369,7 +369,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == PolygonSamplingShape.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON;
+				case ApogyCommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON;
 				default: return -1;
 			}
 		}
@@ -385,9 +385,9 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON:
 				return isPolygonInside((PolygonType)arguments.get(0));
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_INSIDE__COORDINATES:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_INSIDE__COORDINATES:
 				return isInside((CartesianPositionCoordinates)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.ROSServiceManager;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.ROSServiceManager} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class ROSServiceManagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSServiceManager_services_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSServiceManager_services_feature", "_UI_ROSServiceManager_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE_MANAGER__SERVICES,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE_MANAGER__SERVICES,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class ROSServiceManagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSServiceManager_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSServiceManager_node_feature", "_UI_ROSServiceManager_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE_MANAGER__NODE,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE_MANAGER__NODE,
 				 false,
 				 false,
 				 true,
@@ -123,7 +123,7 @@ public class ROSServiceManagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSServiceManager_running_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSServiceManager_running_feature", "_UI_ROSServiceManager_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_SERVICE_MANAGER__RUNNING,
+				 ApogyAddonsROSPackage.Literals.ROS_SERVICE_MANAGER__RUNNING,
 				 false,
 				 false,
 				 false,
@@ -144,7 +144,7 @@ public class ROSServiceManagerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsROSPackage.Literals.ROS_SERVICE_MANAGER__NODE);
+			childrenFeatures.add(ApogyAddonsROSPackage.Literals.ROS_SERVICE_MANAGER__NODE);
 		}
 		return childrenFeatures;
 	}
@@ -222,11 +222,11 @@ public class ROSServiceManagerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ROSServiceManager.class)) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER__NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

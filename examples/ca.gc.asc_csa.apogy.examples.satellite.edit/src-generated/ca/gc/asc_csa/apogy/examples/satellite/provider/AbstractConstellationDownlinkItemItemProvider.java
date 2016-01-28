@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class AbstractConstellationDownlinkItemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstellationDownlinkItem_requestUID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationDownlinkItem_requestUID_feature", "_UI_AbstractConstellationDownlinkItem_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID,
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class AbstractConstellationDownlinkItemItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractConstellationDownlinkItem.class)) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

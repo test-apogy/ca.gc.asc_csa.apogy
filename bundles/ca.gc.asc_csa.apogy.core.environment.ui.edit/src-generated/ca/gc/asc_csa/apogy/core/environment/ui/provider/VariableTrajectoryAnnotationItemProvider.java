@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_latestPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_latestPosition_feature", "_UI_TrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__LATEST_POSITION,
+				 ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__LATEST_POSITION,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_azimuthAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_azimuthAngle_feature", "_UI_TrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE,
+				 ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_trajectoryLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_trajectoryLength_feature", "_UI_TrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH,
+				 ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -141,7 +141,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_trajectoryColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_trajectoryColor_feature", "_UI_TrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR,
+				 ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR,
 				 true,
 				 false,
 				 false,
@@ -163,7 +163,7 @@ public class VariableTrajectoryAnnotationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER);
+			childrenFeatures.add(ApogyCoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER);
 		}
 		return childrenFeatures;
 	}
@@ -225,13 +225,13 @@ public class VariableTrajectoryAnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VariableTrajectoryAnnotation.class)) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -252,8 +252,8 @@ public class VariableTrajectoryAnnotationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
+				(ApogyCoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
 	}
 
 }

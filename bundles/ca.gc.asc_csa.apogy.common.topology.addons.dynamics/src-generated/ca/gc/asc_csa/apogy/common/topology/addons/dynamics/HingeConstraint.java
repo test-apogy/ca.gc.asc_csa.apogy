@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState <em>Angular Current State</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState <em>Angular Current State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getHingeConstraint()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getHingeConstraint()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface HingeConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Current State</em>' containment reference.
 	 * @see #setAngularCurrentState(ConstraintState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getHingeConstraint_AngularCurrentState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getHingeConstraint_AngularCurrentState()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	ConstraintState getAngularCurrentState();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState <em>Angular Current State</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState <em>Angular Current State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angular Current State</em>' containment reference.

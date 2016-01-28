@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.impl;
+package ca.gc.asc_csa.apogy.examples.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,16 +11,16 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.ActuatorStatus;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.camera.Activator;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.PTUCamera;
-import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
+import ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator;
+import ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.camera.Activator;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +30,12 @@ import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl#isMoving <em>Moving</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl#getActuatorStatus <em>Actuator Status</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl#getCurrentPanAngle <em>Current Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl#getCurrentTiltAngle <em>Current Tilt Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl#isMoving <em>Moving</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl#getActuatorStatus <em>Actuator Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl#getCurrentPanAngle <em>Current Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl#getCurrentTiltAngle <em>Current Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
  * </ul>
  *
  * @generated
@@ -233,7 +233,7 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesCameraPackage.Literals.PTU_CAMERA_SIMULATED;
+		return ApogyExamplesCameraPackage.Literals.PTU_CAMERA_SIMULATED;
 	}
 
 	/**
@@ -254,7 +254,7 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		boolean oldMoving = moving;
 		moving = newMoving;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING, oldMoving, moving));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING, oldMoving, moving));
 	}
 
 	/**
@@ -275,7 +275,7 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		ActuatorStatus oldActuatorStatus = actuatorStatus;
 		actuatorStatus = newActuatorStatus == null ? ACTUATOR_STATUS_EDEFAULT : newActuatorStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS, oldActuatorStatus, actuatorStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS, oldActuatorStatus, actuatorStatus));
 	}
 
 	/**
@@ -296,7 +296,7 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		double oldCurrentPanAngle = currentPanAngle;
 		currentPanAngle = newCurrentPanAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE, oldCurrentPanAngle, currentPanAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE, oldCurrentPanAngle, currentPanAngle));
 	}
 
 	/**
@@ -317,7 +317,7 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		double oldCurrentTiltAngle = currentTiltAngle;
 		currentTiltAngle = newCurrentTiltAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE, oldCurrentTiltAngle, currentTiltAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE, oldCurrentTiltAngle, currentTiltAngle));
 	}
 
 	/**
@@ -338,7 +338,7 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		double oldCommandedPanAngle = commandedPanAngle;
 		commandedPanAngle = newCommandedPanAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE, oldCommandedPanAngle, commandedPanAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE, oldCommandedPanAngle, commandedPanAngle));
 	}
 
 	/**
@@ -359,7 +359,7 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		double oldCommandedTiltAngle = commandedTiltAngle;
 		commandedTiltAngle = newCommandedTiltAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE, oldCommandedTiltAngle, commandedTiltAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE, oldCommandedTiltAngle, commandedTiltAngle));
 	}
 
 	/**
@@ -945,17 +945,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
 				return isMoving();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
 				return getActuatorStatus();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
 				return getCurrentPanAngle();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
 				return getCurrentTiltAngle();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
 				return getCommandedPanAngle();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
 				return getCommandedTiltAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -969,22 +969,22 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
 				setMoving((Boolean)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
 				setActuatorStatus((ActuatorStatus)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
 				setCurrentPanAngle((Double)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
 				setCurrentTiltAngle((Double)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
 				setCommandedPanAngle((Double)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
 				setCommandedTiltAngle((Double)newValue);
 				return;
 		}
@@ -999,22 +999,22 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
 				setMoving(MOVING_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
 				setActuatorStatus(ACTUATOR_STATUS_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
 				setCurrentPanAngle(CURRENT_PAN_ANGLE_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
 				setCurrentTiltAngle(CURRENT_TILT_ANGLE_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
 				setCommandedPanAngle(COMMANDED_PAN_ANGLE_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
 				setCommandedTiltAngle(COMMANDED_TILT_ANGLE_EDEFAULT);
 				return;
 		}
@@ -1029,17 +1029,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
 				return moving != MOVING_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
 				return actuatorStatus != ACTUATOR_STATUS_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
 				return currentPanAngle != CURRENT_PAN_ANGLE_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
 				return currentTiltAngle != CURRENT_TILT_ANGLE_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
 				return commandedPanAngle != COMMANDED_PAN_ANGLE_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
 				return commandedTiltAngle != COMMANDED_TILT_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -1054,17 +1054,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractActuator.class) {
 			switch (derivedFeatureID) {
-				case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING: return Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING;
-				case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS: return Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS;
+				case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING: return ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING;
+				case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS: return ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS;
 				default: return -1;
 			}
 		}
 		if (baseClass == PanTiltUnit.class) {
 			switch (derivedFeatureID) {
-				case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE;
-				case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE;
-				case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE;
-				case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE;
+				case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE: return ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE;
+				case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE: return ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE;
+				case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE: return ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE;
+				case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE: return ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE;
 				default: return -1;
 			}
 		}
@@ -1085,17 +1085,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractActuator.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING;
-				case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS;
+				case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING;
+				case ApogyAddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS;
 				default: return -1;
 			}
 		}
 		if (baseClass == PanTiltUnit.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE;
 				default: return -1;
 			}
 		}
@@ -1121,17 +1121,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		}
 		if (baseClass == PanTiltUnit.class) {
 			switch (baseOperationID) {
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_PAN_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_PAN_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_TILT_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_TILT_ANGLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN__DOUBLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_TILT__DOUBLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN__DOUBLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_TILT__DOUBLE: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE;
-				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___STOP_MOTION: return Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___STOP_MOTION;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_PAN_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_PAN_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_TILT_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_TILT_ANGLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN__DOUBLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_TILT__DOUBLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN__DOUBLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_TILT__DOUBLE: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE;
+				case ApogyAddonsActuatorsPackage.PAN_TILT_UNIT___STOP_MOTION: return ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___STOP_MOTION;
 				default: return -1;
 			}
 		}
@@ -1151,27 +1151,27 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE:
 				return getMaximumPanAngle();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE:
 				return getMinimumPanAngle();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE:
 				return getMaximumTiltAngle();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE:
 				return getMinimumTiltAngle();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE:
 				return moveToPanTilt((Double)arguments.get(0), (Double)arguments.get(1));
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE:
 				return moveToPan((Double)arguments.get(0));
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE:
 				return moveToTilt((Double)arguments.get(0));
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE:
 				return moveByPanTilt((Double)arguments.get(0), (Double)arguments.get(1));
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE:
 				return moveByPan((Double)arguments.get(0));
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE:
 				return moveByTilt((Double)arguments.get(0));
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED___STOP_MOTION:
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED___STOP_MOTION:
 				return stopMotion();
 		}
 		return super.eInvoke(operationID, arguments);

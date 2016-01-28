@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius.util.topology;
+package ca.gc.asc_csa.apogy.core.ui.sirius.util.topology;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,11 +28,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 
 public class NodeClassPage extends WizardPage
 {
-	private static final String NODE_INST_CLASS_NAME = "org.eclipse.symphony.common.topology.Node";
+	private static final String NODE_INST_CLASS_NAME = "ca.gc.asc_csa.apogy.common.topology.Node";
 	private static final String FILTER_TEXT_MSG_STR = "Filter elements";
 	private static final String FILTER_LABEL_STR =
 						"Enter prefix or pattern (? = any character, * = any String):";
@@ -206,7 +206,7 @@ public class NodeClassPage extends WizardPage
 	private List<EClass> getAllNodeClasses()
 	{
 		// Extract the Node class' EClass
-		EClass nodeEClass = Symphony__CommonEMFFacade.INSTANCE.getEClass(NODE_INST_CLASS_NAME);
+		EClass nodeEClass = ApogyCommonEMFFacade.INSTANCE.getEClass(NODE_INST_CLASS_NAME);
 		
 		// Create an output list
 		List<EClass> nodeEClasses = new ArrayList<EClass>(); 
@@ -215,10 +215,10 @@ public class NodeClassPage extends WizardPage
 		nodeEClasses.add(nodeEClass);
 		
 		// Add all of the subclasses to the node class list
-		nodeEClasses.addAll(Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(nodeEClass));
+		nodeEClasses.addAll(ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(nodeEClass));
 		
 		// Get a sorted version of that node class list
-		SortedSet<EClass> sortedEClasses = Symphony__CommonEMFFacade.INSTANCE.sortAlphabetically(nodeEClasses);
+		SortedSet<EClass> sortedEClasses = ApogyCommonEMFFacade.INSTANCE.sortAlphabetically(nodeEClasses);
 	
 		// Return a list version of that ordering
 		return new ArrayList<EClass>(sortedEClasses);

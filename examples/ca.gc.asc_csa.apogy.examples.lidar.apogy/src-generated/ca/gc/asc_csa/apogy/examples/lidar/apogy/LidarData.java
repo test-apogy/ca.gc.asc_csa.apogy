@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy;
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.core.SymphonyInitializationData;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,25 +12,25 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class is specifies the initialization data that Symphony
+ * This class is specifies the initialization data that Apogy
  * should be interested in when (re)initializing the Lidar unit
  * antenna with the API Adapter (which in this case is
- * {@link org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter})
+ * {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter})
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarData()
+ * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage#getLidarData()
  * @model
  * @generated
  */
-public interface LidarData extends SymphonyInitializationData {
+public interface LidarData extends ApogyInitializationData {
 	/**
 	 * Returns the value of the '<em><b>Fov</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface LidarData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarData_Fov()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage#getLidarData_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable' propertyCategory='Field Of View'"
 	 * @generated
@@ -48,7 +48,7 @@ public interface LidarData extends SymphonyInitializationData {
 	RectangularFrustrumFieldOfView getFov();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#getFov <em>Fov</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#getFov <em>Fov</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov</em>' containment reference.
@@ -67,7 +67,7 @@ public interface LidarData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarData_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage#getLidarData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -75,7 +75,7 @@ public interface LidarData extends SymphonyInitializationData {
 	boolean isInitialized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Comparator;
@@ -12,10 +12,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
-import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,15 +24,15 @@ import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsCont
  *
  * @generated
  */
-public class Symphony__CoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CoreProgramsControllersFacade
+public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreProgramsControllersFacade
 {
-	private static Symphony__CoreProgramsControllersFacade instance = null;
+	private static ApogyCoreProgramsControllersFacade instance = null;
 
-	public static Symphony__CoreProgramsControllersFacade getInstance() 
+	public static ApogyCoreProgramsControllersFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CoreProgramsControllersFacadeImpl();
+			instance = new ApogyCoreProgramsControllersFacadeImpl();
 		}
 		return instance;
 	}
@@ -42,7 +42,7 @@ public class Symphony__CoreProgramsControllersFacadeImpl extends MinimalEObjectI
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreProgramsControllersFacadeImpl()
+  protected ApogyCoreProgramsControllersFacadeImpl()
   {
 		super();
 	}
@@ -55,7 +55,7 @@ public class Symphony__CoreProgramsControllersFacadeImpl extends MinimalEObjectI
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE;
+		return ApogyCoreProgramsControllersPackage.Literals.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE;
 	}
 
   /**
@@ -126,7 +126,7 @@ public class Symphony__CoreProgramsControllersFacadeImpl extends MinimalEObjectI
 	 */
 	public CustomInputConditioningPoint createCustomInputConditioningPoint(double inputValue, double outputValue) 
 	{
-		CustomInputConditioningPoint point = Symphony__CoreProgramsControllersFactory.eINSTANCE.createCustomInputConditioningPoint();
+		CustomInputConditioningPoint point = ApogyCoreProgramsControllersFactory.eINSTANCE.createCustomInputConditioningPoint();
 		
 		point.setInputValue(inputValue);
 		point.setOutputValue(outputValue);
@@ -144,11 +144,11 @@ public class Symphony__CoreProgramsControllersFacadeImpl extends MinimalEObjectI
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreProgramsControllersPackage.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT:
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT:
 				return createValue((EParameter)arguments.get(0), (Float)arguments.get(1));
-			case Symphony__CoreProgramsControllersPackage.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST:
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST:
 				return sortCustomInputConditioningPoint((List<CustomInputConditioningPoint>)arguments.get(0));
-			case Symphony__CoreProgramsControllersPackage.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE:
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE:
 				return createCustomInputConditioningPoint((Double)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -176,4 +176,4 @@ public class Symphony__CoreProgramsControllersFacadeImpl extends MinimalEObjectI
 	}	  
   }
  
-} //Symphony__CoreProgramsControllersFacadeImpl
+} //ApogyCoreProgramsControllersFacadeImpl

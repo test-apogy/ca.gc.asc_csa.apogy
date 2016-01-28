@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.text.DecimalFormat;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.HorizontalCoordinates} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -87,7 +87,7 @@ public class HorizontalCoordinatesItemProvider
 				getResourceLocator(),
 				getString("_UI_HorizontalCoordinates_altitude_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_altitude_feature", "_UI_HorizontalCoordinates_type"),
-				Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
+				ApogyCoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
 				true, 
 				false,
 				false, 
@@ -104,7 +104,7 @@ public class HorizontalCoordinatesItemProvider
 //         getResourceLocator(),
 //         getString("_UI_HorizontalCoordinates_altitude_feature"),
 //         getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_altitude_feature", "_UI_HorizontalCoordinates_type"),
-//         Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
+//         ApogyCoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
 //         true,
 //         false,
 //         false,
@@ -126,7 +126,7 @@ public class HorizontalCoordinatesItemProvider
 				getResourceLocator(),
 				getString("_UI_HorizontalCoordinates_azimuth_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_azimuth_feature", "_UI_HorizontalCoordinates_type"),
-				Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
+				ApogyCoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
 				true, 
 				false,
 				false, 
@@ -143,7 +143,7 @@ public class HorizontalCoordinatesItemProvider
 //         getResourceLocator(),
 //         getString("_UI_HorizontalCoordinates_azimuth_feature"),
 //         getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_azimuth_feature", "_UI_HorizontalCoordinates_type"),
-//         Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
+//         ApogyCoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
 //         true,
 //         false,
 //         false,
@@ -166,7 +166,7 @@ public class HorizontalCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_HorizontalCoordinates_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_radius_feature", "_UI_HorizontalCoordinates_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__RADIUS,
+				 ApogyCoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -215,9 +215,9 @@ public class HorizontalCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(HorizontalCoordinates.class)) {
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

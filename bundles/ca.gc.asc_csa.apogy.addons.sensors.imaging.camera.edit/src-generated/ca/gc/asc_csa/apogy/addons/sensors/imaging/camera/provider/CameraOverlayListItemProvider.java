@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class CameraOverlayListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS);
+			childrenFeatures.add(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class CameraOverlayListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraOverlayList.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,48 +156,48 @@ public class CameraOverlayListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createApogyLogoOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
 	}
 
   /**

@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,13 +24,13 @@ import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferences
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractConstellation()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation()
  * @model abstract="true"
  * @generated
  */
@@ -44,14 +44,14 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Satellites List</em>' containment reference.
 	 * @see #setSatellitesList(SatellitesList)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractConstellation_SatellitesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_SatellitesList()
 	 * @model containment="true"
 	 * @generated
 	 */
 	SatellitesList getSatellitesList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Satellites List</em>' containment reference.
@@ -69,14 +69,14 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ground Stations References List</em>' containment reference.
 	 * @see #setGroundStationsReferencesList(GroundStationReferencesList)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractConstellation_GroundStationsReferencesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_GroundStationsReferencesList()
 	 * @model containment="true"
 	 * @generated
 	 */
 	GroundStationReferencesList getGroundStationsReferencesList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ground Stations References List</em>' containment reference.
@@ -94,14 +94,14 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Downlinks Lists</em>' containment reference.
 	 * @see #setDownlinksLists(ConstellationDownlinksList)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractConstellation_DownlinksLists()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_DownlinksLists()
 	 * @model containment="true"
 	 * @generated
 	 */
 	ConstellationDownlinksList getDownlinksLists();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Downlinks Lists</em>' containment reference.
@@ -119,14 +119,14 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constellation Requests List</em>' containment reference.
 	 * @see #setConstellationRequestsList(ConstellationRequestsList)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractConstellation_ConstellationRequestsList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellation_ConstellationRequestsList()
 	 * @model containment="true"
 	 * @generated
 	 */
 	ConstellationRequestsList getConstellationRequestsList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Constellation Requests List</em>' containment reference.
@@ -161,7 +161,7 @@ public interface AbstractConstellation extends EObject {
 	 * @param endDate The end date of the period to be queried.
 	 * @return Reference to the {@link SatelliteCommandPlan}.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" requestsDataType="org.eclipse.symphony.examples.satellite.List<org.eclipse.symphony.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false" startDateUnique="false" endDateUnique="false"
+	 * @model unique="false" requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false" startDateUnique="false" endDateUnique="false"
 	 * @generated
 	 */
 	ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate);
@@ -173,7 +173,7 @@ public interface AbstractConstellation extends EObject {
 	 * Packages and commits the list of {@link AbstractSatelliteCommand}.
 	 * @param satelliteCommands Reference to the list of {@link AbstractSatelliteCommand}.
 	 * <!-- end-model-doc -->
-	 * @model satelliteCommandsDataType="org.eclipse.symphony.examples.satellite.List<org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand>" satelliteCommandsUnique="false" satelliteCommandsMany="false"
+	 * @model satelliteCommandsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand>" satelliteCommandsUnique="false" satelliteCommandsMany="false"
 	 * @generated
 	 */
 	void commit(List<AbstractSatelliteCommand> satelliteCommands);
@@ -209,7 +209,7 @@ public interface AbstractConstellation extends EObject {
 	 * Adds all the {@link AbstractConstellationRequest} specified in the list to the constellation.
 	 * @param requests Specifies the requests to add to the {@link AbstractConstellation}.
 	 * <!-- end-model-doc -->
-	 * @model requestsDataType="org.eclipse.symphony.examples.satellite.List<org.eclipse.symphony.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
+	 * @model requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
 	 * @generated
 	 */
 	void addAll(List<AbstractConstellationRequest> requests);
@@ -233,7 +233,7 @@ public interface AbstractConstellation extends EObject {
 	 * Removes all the {@link AbstractConstellationRequest} specified in the list from the constellation.
 	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
 	 * <!-- end-model-doc -->
-	 * @model requestsDataType="org.eclipse.symphony.examples.satellite.List<org.eclipse.symphony.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
+	 * @model requestsDataType="ca.gc.asc_csa.apogy.examples.satellite.List<ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest>" requestsUnique="false" requestsMany="false"
 	 * @generated
 	 */
 	void removeAll(List<AbstractConstellationRequest> requests);

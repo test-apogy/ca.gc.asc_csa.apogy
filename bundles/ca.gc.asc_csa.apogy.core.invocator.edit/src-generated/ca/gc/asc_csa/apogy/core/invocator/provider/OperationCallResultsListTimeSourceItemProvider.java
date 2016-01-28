@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.provider.CollectionTimedTimeSourceItemProvider;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.provider.CollectionTimedTimeSourceItemProvider;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -60,7 +60,7 @@ public class OperationCallResultsListTimeSourceItemProvider extends CollectionTi
 				 getResourceLocator(),
 				 getString("_UI_OperationCallResultsListTimeSource_opsCallList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallResultsListTimeSource_opsCallList_feature", "_UI_OperationCallResultsListTimeSource_type"),
-				 Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST,
+				 ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST,
 				 true,
 				 false,
 				 true,

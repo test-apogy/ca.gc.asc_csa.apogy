@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.ros.imaging;
+package ca.gc.asc_csa.apogy.addons.ros.imaging;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator 
 {
-	public static final String ID = "org.eclipse.symphony.addons.ros.imaging";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.ros.imaging";
 	
 	private static BundleContext context;
 

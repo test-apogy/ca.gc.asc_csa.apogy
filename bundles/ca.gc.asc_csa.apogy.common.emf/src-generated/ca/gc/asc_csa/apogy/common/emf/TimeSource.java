@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 
 /**
@@ -20,10 +20,10 @@ package org.eclipse.symphony.common.emf;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.TimeSource#getOffset <em>Offset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.TimeSource#getOffset <em>Offset</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimeSource()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getTimeSource()
  * @model abstract="true"
  * @generated
  */
@@ -40,15 +40,15 @@ public interface TimeSource extends Named, Described, Timed, Disposable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Offset</em>' attribute.
 	 * @see #setOffset(int)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimeSource_Offset()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getTimeSource_Offset()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='ms' notify='true' property='Editable'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='ms' notify='true' property='Editable'"
 	 * @generated
 	 */
 	int getOffset();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.TimeSource#getOffset <em>Offset</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.TimeSource#getOffset <em>Offset</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Offset</em>' attribute.

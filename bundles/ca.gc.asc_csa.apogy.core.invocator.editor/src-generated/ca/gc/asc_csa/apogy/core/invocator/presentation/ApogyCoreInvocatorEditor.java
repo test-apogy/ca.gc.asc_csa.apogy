@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.presentation;
+package ca.gc.asc_csa.apogy.core.invocator.presentation;
 
 
 import java.io.IOException;
@@ -91,8 +91,8 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFItemProviderAdapterFactory;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorItemProviderAdapterFactory;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFItemProviderAdapterFactory;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorItemProviderAdapterFactory;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -115,12 +115,12 @@ import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 
 
 /**
- * This is an example of a Symphony__CoreInvocator model editor.
+ * This is an example of a ApogyCoreInvocator model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorEditor
+public class ApogyCoreInvocatorEditor
   extends MultiPageEditorPart
   implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker
 {
@@ -233,18 +233,18 @@ public class Symphony__CoreInvocatorEditor
 			public void partActivated(IWorkbenchPart p) {
 				if (p instanceof ContentOutline) {
 					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
-						getActionBarContributor().setActiveEditor(Symphony__CoreInvocatorEditor.this);
+						getActionBarContributor().setActiveEditor(ApogyCoreInvocatorEditor.this);
 
 						setCurrentViewer(contentOutlineViewer);
 					}
 				}
 				else if (p instanceof PropertySheet) {
 					if (propertySheetPages.contains(((PropertySheet)p).getCurrentPage())) {
-						getActionBarContributor().setActiveEditor(Symphony__CoreInvocatorEditor.this);
+						getActionBarContributor().setActiveEditor(ApogyCoreInvocatorEditor.this);
 						handleActivate();
 					}
 				}
-				else if (p == Symphony__CoreInvocatorEditor.this) {
+				else if (p == ApogyCoreInvocatorEditor.this) {
 					handleActivate();
 				}
 			}
@@ -417,7 +417,7 @@ public class Symphony__CoreInvocatorEditor
 								 public void run() {
 									 removedResources.addAll(visitor.getRemovedResources());
 									 if (!isDirty()) {
-										 getSite().getPage().closeEditor(Symphony__CoreInvocatorEditor.this, false);
+										 getSite().getPage().closeEditor(ApogyCoreInvocatorEditor.this, false);
 									 }
 								 }
 							 });
@@ -428,7 +428,7 @@ public class Symphony__CoreInvocatorEditor
 							(new Runnable() {
 								 public void run() {
 									 changedResources.addAll(visitor.getChangedResources());
-									 if (getSite().getPage().getActiveEditor() == Symphony__CoreInvocatorEditor.this) {
+									 if (getSite().getPage().getActiveEditor() == ApogyCoreInvocatorEditor.this) {
 										 handleActivate();
 									 }
 								 }
@@ -436,7 +436,7 @@ public class Symphony__CoreInvocatorEditor
 					}
 				}
 				catch (CoreException exception) {
-					Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+					ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -461,7 +461,7 @@ public class Symphony__CoreInvocatorEditor
 
 		if (!removedResources.isEmpty()) {
 			if (handleDirtyConflict()) {
-				getSite().getPage().closeEditor(Symphony__CoreInvocatorEditor.this, false);
+				getSite().getPage().closeEditor(ApogyCoreInvocatorEditor.this, false);
 			}
 			else {
 				removedResources.clear();
@@ -527,7 +527,7 @@ public class Symphony__CoreInvocatorEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "org.eclipse.symphony.core.invocator.editor",
+					 "ca.gc.asc_csa.apogy.core.invocator.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -555,7 +555,7 @@ public class Symphony__CoreInvocatorEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+					ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -566,7 +566,7 @@ public class Symphony__CoreInvocatorEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+						ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -594,7 +594,7 @@ public class Symphony__CoreInvocatorEditor
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreInvocatorEditor()
+  public ApogyCoreInvocatorEditor()
   {
 		super();
 		initializeEditingDomain();
@@ -613,9 +613,9 @@ public class Symphony__CoreInvocatorEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new Symphony__CoreInvocatorItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ApogyCoreInvocatorItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new Symphony__CommonEMFItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ApogyCommonEMFItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -895,7 +895,7 @@ public class Symphony__CoreInvocatorEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
-					 "org.eclipse.symphony.core.invocator.editor",
+					 "ca.gc.asc_csa.apogy.core.invocator.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -906,7 +906,7 @@ public class Symphony__CoreInvocatorEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "org.eclipse.symphony.core.invocator.editor",
+					 "ca.gc.asc_csa.apogy.core.invocator.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });
@@ -1136,8 +1136,8 @@ public class Symphony__CoreInvocatorEditor
 			new ExtendedPropertySheetPage(editingDomain) {
 				@Override
 				public void setSelectionToViewer(List<?> selection) {
-					Symphony__CoreInvocatorEditor.this.setSelectionToViewer(selection);
-					Symphony__CoreInvocatorEditor.this.setFocus();
+					ApogyCoreInvocatorEditor.this.setSelectionToViewer(selection);
+					ApogyCoreInvocatorEditor.this.setFocus();
 				}
 
 				@Override
@@ -1250,7 +1250,7 @@ public class Symphony__CoreInvocatorEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+			ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1462,7 +1462,7 @@ public class Symphony__CoreInvocatorEditor
 	 */
   private static String getString(String key)
   {
-		return Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString(key);
+		return ApogyCoreInvocatorEditorPlugin.INSTANCE.getString(key);
 	}
 
   /**
@@ -1473,7 +1473,7 @@ public class Symphony__CoreInvocatorEditor
 	 */
   private static String getString(String key, Object s1)
   {
-		return Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return ApogyCoreInvocatorEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
   /**

@@ -1,18 +1,18 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.views;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views;
 
 import java.util.List;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.actions.PinViewAction;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.actions.PinViewAction;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
 
 public abstract class AbstractPinableView<T> extends ViewPart implements ISelectionListener 
 {
-	public static final String ID = "org.eclipse.symphony.common.topology.addons.dynamics.ui.views.AbstractPinableView";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.AbstractPinableView";
 
 	private T subject;
 	private boolean pinView = false;
@@ -54,7 +54,7 @@ public abstract class AbstractPinableView<T> extends ViewPart implements ISelect
 				currentSelection = selection;
 				
 				@SuppressWarnings("rawtypes")
-				List list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, getObjectClass());
+				List list = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, getObjectClass());
 
 				if(list.size() > 0) {
 					setObject((T) list.get(0));	

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class FeatureOfInterestNodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestNodePresentation_poleHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestNodePresentation_poleHeight_feature", "_UI_FeatureOfInterestNodePresentation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT,
+				 ApogyCoreEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class FeatureOfInterestNodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestNodePresentation_flagVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestNodePresentation_flagVisible_feature", "_UI_FeatureOfInterestNodePresentation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE,
+				 ApogyCoreEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -136,8 +136,8 @@ public class FeatureOfInterestNodePresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureOfInterestNodePresentation.class)) {
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

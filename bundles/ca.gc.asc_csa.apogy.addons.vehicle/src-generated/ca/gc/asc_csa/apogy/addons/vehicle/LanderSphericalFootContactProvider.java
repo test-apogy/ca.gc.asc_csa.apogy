@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.vehicle;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getLanderSphericalFootContactProvider()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getLanderSphericalFootContactProvider()
  * @model
  * @generated
  */

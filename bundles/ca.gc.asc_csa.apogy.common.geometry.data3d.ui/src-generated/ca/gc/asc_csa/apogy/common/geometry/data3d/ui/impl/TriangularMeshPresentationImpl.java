@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -12,19 +12,19 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.ui.Activator;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
-import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getMesh <em>Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getPointSize <em>Point Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getNumberOfPoints <em>Number Of Points</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getNumberOfPolygons <em>Number Of Polygons</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#isUseShading <em>Use Shading</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getTextureImage <em>Texture Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getPointSize <em>Point Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getNumberOfPoints <em>Number Of Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getNumberOfPolygons <em>Number Of Polygons</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getTransparency <em>Transparency</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#isUseShading <em>Use Shading</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getTextureImage <em>Texture Image</em>}</li>
  * </ul>
  *
  * @generated
@@ -207,7 +207,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION;
+		return ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION;
 	}
 
 	/**
@@ -226,7 +226,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 		int oldPointSize = pointSize;
 		pointSize = newPointSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
 	}
 
 	/**
@@ -265,7 +265,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 			mesh = (CartesianTriangularMesh)eResolveProxy(oldMesh);
 			if (mesh != oldMesh) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__MESH, oldMesh, mesh));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__MESH, oldMesh, mesh));
 			}
 		}
 		return mesh;
@@ -316,7 +316,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 		MeshPresentationMode oldPresentationMode = presentationMode;
 		presentationMode = newPresentationMode == null ? PRESENTATION_MODE_EDEFAULT : newPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
 	}
 
 	/**
@@ -335,7 +335,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 		float oldTransparency = transparency;
 		transparency = newTransparency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
 	}
 
 	/**
@@ -356,7 +356,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 		boolean oldUseShading = useShading;
 		useShading = newUseShading;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING, oldUseShading, useShading));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING, oldUseShading, useShading));
 	}
 
 	/**
@@ -370,7 +370,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 			textureImage = (AbstractEImage)eResolveProxy(oldTextureImage);
 			if (textureImage != oldTextureImage) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE, oldTextureImage, textureImage));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE, oldTextureImage, textureImage));
 			}
 		}
 		return textureImage;
@@ -394,7 +394,7 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 		AbstractEImage oldTextureImage = textureImage;
 		textureImage = newTextureImage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE, oldTextureImage, textureImage));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE, oldTextureImage, textureImage));
 	}
 
 	/**
@@ -404,22 +404,22 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__MESH:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__MESH:
 				if (resolve) return getMesh();
 				return basicGetMesh();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
 				return getPointSize();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
 				return getNumberOfPoints();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
 				return getNumberOfPolygons();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
 				return getTransparency();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
 				return isUseShading();
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
 				if (resolve) return getTextureImage();
 				return basicGetTextureImage();
 		}
@@ -433,19 +433,19 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
 				setPointSize((Integer)newValue);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((MeshPresentationMode)newValue);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
 				setTransparency((Float)newValue);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
 				setUseShading((Boolean)newValue);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
 				setTextureImage((AbstractEImage)newValue);
 				return;
 		}
@@ -459,19 +459,19 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
 				setPointSize(POINT_SIZE_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
 				setTransparency(TRANSPARENCY_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
 				setUseShading(USE_SHADING_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
 				setTextureImage((AbstractEImage)null);
 				return;
 		}
@@ -485,21 +485,21 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__MESH:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__MESH:
 				return mesh != null;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
 				return pointSize != POINT_SIZE_EDEFAULT;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
 				return numberOfPoints != NUMBER_OF_POINTS_EDEFAULT;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
 				return numberOfPolygons != NUMBER_OF_POLYGONS_EDEFAULT;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
 				return transparency != TRANSPARENCY_EDEFAULT;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
 				return useShading != USE_SHADING_EDEFAULT;
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE:
 				return textureImage != null;
 		}
 		return super.eIsSet(featureID);
@@ -552,21 +552,21 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 				
 				switch (featureID) 
 				{
-					case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
+					case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
 						int newPointSizeValue = notification.getNewIntValue();
 						meshSceneObject.setPointSize(newPointSizeValue);
 					break;
 					
-					case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
+					case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
 						MeshPresentationMode newMode = (MeshPresentationMode) notification.getNewValue();
 						meshSceneObject.setPresentationMode(newMode);	
 					break;
 					
-					case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
+					case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
 						meshSceneObject.setTransparency(notification.getNewFloatValue());
 					break;
 
-					case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+					case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
 						meshSceneObject.setUseShading(notification.getNewBooleanValue());
 					break;
 					
@@ -592,10 +592,10 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	public Tuple3d basicGetCentroid() 
 	{
-		Tuple3d centroid = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0.0, 0.0, 0.0);
+		Tuple3d centroid = ApogyCommonMathFacade.INSTANCE.createTuple3d(0.0, 0.0, 0.0);
 
 		if (getSceneObject() != null) {
-			centroid = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getSceneObject()
+			centroid = ApogyCommonMathFacade.INSTANCE.createTuple3d(getSceneObject()
 					.getCentroid());
 		}
 		return centroid;

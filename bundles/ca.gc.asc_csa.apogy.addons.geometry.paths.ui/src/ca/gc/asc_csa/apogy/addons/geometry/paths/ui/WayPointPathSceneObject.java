@@ -1,6 +1,6 @@
-package org.eclipse.symphony.addons.geometry.paths.ui;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui;
 
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface WayPointPathSceneObject extends SceneObject 
 {

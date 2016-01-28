@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,15 +13,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.listeners.AbstractTypeImplementationListener;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.listeners.AbstractTypeImplementationListener;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,9 +31,9 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractTypeImplementationL
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl#getVariableInstance <em>Variable Instance</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl#getSymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractVariableAnnotationImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractVariableAnnotationImpl#getVariableInstance <em>Variable Instance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractVariableAnnotationImpl#getApogySystemApiAdapter <em>Apogy System Api Adapter</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,14 +64,14 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   protected EObject variableInstance;
 
   /**
-	 * The cached value of the '{@link #getSymphonySystemApiAdapter() <em>Symphony System Api Adapter</em>}' reference.
+	 * The cached value of the '{@link #getApogySystemApiAdapter() <em>Apogy System Api Adapter</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getSymphonySystemApiAdapter()
+	 * @see #getApogySystemApiAdapter()
 	 * @generated
 	 * @ordered
 	 */
-  protected SymphonySystemApiAdapter symphonySystemApiAdapter;
+  protected ApogySystemApiAdapter apogySystemApiAdapter;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION;
 	}
 
   /**
@@ -106,7 +106,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -144,7 +144,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
 	}
 
   /**
@@ -159,7 +159,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			variableInstance = eResolveProxy(oldVariableInstance);
 			if (variableInstance != oldVariableInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
 			}
 		}
 		return variableInstance;
@@ -185,7 +185,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 		EObject oldVariableInstance = variableInstance;
 		variableInstance = newVariableInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
 	}
 
   /**
@@ -193,17 +193,17 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemApiAdapter getSymphonySystemApiAdapter()
+  public ApogySystemApiAdapter getApogySystemApiAdapter()
   {
-		if (symphonySystemApiAdapter != null && symphonySystemApiAdapter.eIsProxy()) {
-			InternalEObject oldSymphonySystemApiAdapter = (InternalEObject)symphonySystemApiAdapter;
-			symphonySystemApiAdapter = (SymphonySystemApiAdapter)eResolveProxy(oldSymphonySystemApiAdapter);
-			if (symphonySystemApiAdapter != oldSymphonySystemApiAdapter) {
+		if (apogySystemApiAdapter != null && apogySystemApiAdapter.eIsProxy()) {
+			InternalEObject oldApogySystemApiAdapter = (InternalEObject)apogySystemApiAdapter;
+			apogySystemApiAdapter = (ApogySystemApiAdapter)eResolveProxy(oldApogySystemApiAdapter);
+			if (apogySystemApiAdapter != oldApogySystemApiAdapter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER, oldSymphonySystemApiAdapter, symphonySystemApiAdapter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER, oldApogySystemApiAdapter, apogySystemApiAdapter));
 			}
 		}
-		return symphonySystemApiAdapter;
+		return apogySystemApiAdapter;
 	}
 
   /**
@@ -211,9 +211,9 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemApiAdapter basicGetSymphonySystemApiAdapter()
+  public ApogySystemApiAdapter basicGetApogySystemApiAdapter()
   {
-		return symphonySystemApiAdapter;
+		return apogySystemApiAdapter;
 	}
 
   	/**
@@ -221,21 +221,21 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
     * <!-- end-user-doc -->
  	 * @generated_NOT
  	 */
-   public void setSymphonySystemApiAdapter(SymphonySystemApiAdapter newSymphonySystemApiAdapter)
+   public void setApogySystemApiAdapter(ApogySystemApiAdapter newApogySystemApiAdapter)
    {
 		  // Unregister from previous adapter, if applicable.
-		  SymphonySystemApiAdapter oldAdapter = getSymphonySystemApiAdapter();
+		  ApogySystemApiAdapter oldAdapter = getApogySystemApiAdapter();
 		  if(oldAdapter != null)
 		  {
 			  oldAdapter.eAdapters().remove(getPoseProviderAdapter());		  
 		  }
 		  
-		  setSymphonySystemApiAdapterGen(newSymphonySystemApiAdapter);
+		  setApogySystemApiAdapterGen(newApogySystemApiAdapter);
 	
 		  // Register to new adapter, if applicable.
-		  if(newSymphonySystemApiAdapter != null)
+		  if(newApogySystemApiAdapter != null)
 		  {
-			  newSymphonySystemApiAdapter.eAdapters().add(getPoseProviderAdapter());
+			  newApogySystemApiAdapter.eAdapters().add(getPoseProviderAdapter());
 		  }	  
    }
   
@@ -244,12 +244,12 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-   public void setSymphonySystemApiAdapterGen(SymphonySystemApiAdapter newSymphonySystemApiAdapter)
+   public void setApogySystemApiAdapterGen(ApogySystemApiAdapter newApogySystemApiAdapter)
    {
-		SymphonySystemApiAdapter oldSymphonySystemApiAdapter = symphonySystemApiAdapter;
-		symphonySystemApiAdapter = newSymphonySystemApiAdapter;
+		ApogySystemApiAdapter oldApogySystemApiAdapter = apogySystemApiAdapter;
+		apogySystemApiAdapter = newApogySystemApiAdapter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER, oldSymphonySystemApiAdapter, symphonySystemApiAdapter));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER, oldApogySystemApiAdapter, apogySystemApiAdapter));
 	}
 
   /**
@@ -273,15 +273,15 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				if (resolve) return getVariableInstance();
 				return basicGetVariableInstance();
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
-				if (resolve) return getSymphonySystemApiAdapter();
-				return basicGetSymphonySystemApiAdapter();
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER:
+				if (resolve) return getApogySystemApiAdapter();
+				return basicGetApogySystemApiAdapter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -295,14 +295,14 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				setVariableInstance((EObject)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
-				setSymphonySystemApiAdapter((SymphonySystemApiAdapter)newValue);
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER:
+				setApogySystemApiAdapter((ApogySystemApiAdapter)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -317,14 +317,14 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				setVariable((Variable)null);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				setVariableInstance((EObject)null);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
-				setSymphonySystemApiAdapter((SymphonySystemApiAdapter)null);
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER:
+				setApogySystemApiAdapter((ApogySystemApiAdapter)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -339,12 +339,12 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				return variable != null;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				return variableInstance != null;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
-				return symphonySystemApiAdapter != null;
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER:
+				return apogySystemApiAdapter != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -357,7 +357,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4:
 				updatePose((Matrix4x4)arguments.get(0));
 				return null;
 		}
@@ -373,23 +373,23 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			  @Override
 			  protected void typeApiAdapterChanged(TypeApiAdapter oldTypeApiAdapterr, TypeApiAdapter newTypeApiAdapter) 
 			  {
-				  if(newTypeApiAdapter instanceof SymphonySystemApiAdapter)
+				  if(newTypeApiAdapter instanceof ApogySystemApiAdapter)
 				  {
-					  SymphonySystemApiAdapter apiAdapter = (SymphonySystemApiAdapter) newTypeApiAdapter;
+					  ApogySystemApiAdapter apiAdapter = (ApogySystemApiAdapter) newTypeApiAdapter;
 					  
 					  // Gets the APIAdapter of the pose provider if defined (typically for system assemblies).
-					  if(apiAdapter.getSymphonySystem() != null)
+					  if(apiAdapter.getApogySystem() != null)
 					  {
-						  if(apiAdapter.getSymphonySystem().getPoseProviderInstance() instanceof SymphonySystemApiAdapter)
+						  if(apiAdapter.getApogySystem().getPoseProviderInstance() instanceof ApogySystemApiAdapter)
 						  {
-							  SymphonySystemApiAdapter poseProvider = (SymphonySystemApiAdapter) apiAdapter.getSymphonySystem().getPoseProviderInstance();
+							  ApogySystemApiAdapter poseProvider = (ApogySystemApiAdapter) apiAdapter.getApogySystem().getPoseProviderInstance();
 							  
-							  setSymphonySystemApiAdapter(poseProvider);
+							  setApogySystemApiAdapter(poseProvider);
 							  
 							  return;
 						  }
 					  }
-					  setSymphonySystemApiAdapter(apiAdapter);					 
+					  setApogySystemApiAdapter(apiAdapter);					 
 				  }
 			  }
 			  
@@ -412,7 +412,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+				  if(msg.getFeatureID(PoseProvider.class) == ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 				  {					  					  
 					  if(msg.getNewValue() instanceof Matrix4x4)
 					  {

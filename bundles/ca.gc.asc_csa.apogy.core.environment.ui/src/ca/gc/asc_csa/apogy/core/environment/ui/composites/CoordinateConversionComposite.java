@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.ui.composites;
 
 import java.text.DecimalFormat;
 
@@ -22,23 +22,23 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
-import org.eclipse.symphony.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.Positioned;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
-import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
-import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
+import ca.gc.asc_csa.apogy.common.databinding.converters.StringToDoubleConverter;
 
 public class CoordinateConversionComposite extends Composite
 {
@@ -178,8 +178,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtLatObsVal = WidgetProperties.text(SWT.Modify).observe(txtLat); 
 			
 			IObservableValue modelLatObsVal = (objDomain == null ?
-											   EMFProperties.value(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates) :
-											   EMFEditProperties.value(objDomain, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates));
+											   EMFProperties.value(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates) :
+											   EMFEditProperties.value(objDomain, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelLatUpdateStrategy = new UpdateValueStrategy();
 			txtToModelLatUpdateStrategy.setConverter(new DegreeStringToRadiansConverter());
@@ -197,8 +197,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtLongObsVal = WidgetProperties.text(SWT.Modify).observe(txtLong);
 			
 			IObservableValue modelLongObsVal = (objDomain == null ?
-											    EMFProperties.value(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates) :
-											    EMFEditProperties.value(objDomain, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates));
+											    EMFProperties.value(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates) :
+											    EMFEditProperties.value(objDomain, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelLongUpdateStrategy = new UpdateValueStrategy();
 			txtToModelLongUpdateStrategy.setConverter(new DegreeStringToRadiansConverter());
@@ -216,8 +216,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtElevObsVal = WidgetProperties.text(SWT.Modify).observe(txtElev); 
 			
 			IObservableValue modelElevObsVal = (objDomain == null ?
-												EMFProperties.value(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates) :
-												EMFEditProperties.value(objDomain, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates));
+												EMFProperties.value(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates) :
+												EMFEditProperties.value(objDomain, ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelElevUpdateStrategy = new UpdateValueStrategy();
 			txtToModelElevUpdateStrategy.setConverter(new StringToDoubleConverter());
@@ -247,8 +247,8 @@ public class CoordinateConversionComposite extends Composite
 				IObservableValue txtXObsVal = WidgetProperties.text(SWT.Modify).observe(txtX);
 				
 				IObservableValue modelXObsVal = (objDomain == null ?
-												 EMFProperties.value(Symphony__CommonMathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()) :
-												 EMFEditProperties.value(objDomain, Symphony__CommonMathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()));
+												 EMFProperties.value(ApogyCommonMathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()) :
+												 EMFEditProperties.value(objDomain, ApogyCommonMathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()));
 				
 				UpdateValueStrategy txtToModelXUpdateStrategy = new UpdateValueStrategy();
 				txtToModelXUpdateStrategy.setConverter(new StringToDoubleConverter());
@@ -266,8 +266,8 @@ public class CoordinateConversionComposite extends Composite
 				IObservableValue txtYObsVal = WidgetProperties.text(SWT.Modify).observe(txtY);
 				
 				IObservableValue modelYObsVal = (objDomain == null ?
-												 EMFProperties.value(Symphony__CommonMathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()) :
-												 EMFEditProperties.value(objDomain, Symphony__CommonMathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()));
+												 EMFProperties.value(ApogyCommonMathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()) :
+												 EMFEditProperties.value(objDomain, ApogyCommonMathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()));
 				
 				UpdateValueStrategy txtToModelYUpdateStrategy = new UpdateValueStrategy();
 				txtToModelYUpdateStrategy.setConverter(new StringToDoubleConverter());
@@ -285,8 +285,8 @@ public class CoordinateConversionComposite extends Composite
 				IObservableValue txtZObsVal = WidgetProperties.text(SWT.Modify).observe(txtZ); 
 				
 				IObservableValue modelZObsVal = (objDomain == null ?
-												 EMFProperties.value(Symphony__CommonMathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()) :
-											     EMFEditProperties.value(objDomain, Symphony__CommonMathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()));
+												 EMFProperties.value(ApogyCommonMathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()) :
+											     EMFEditProperties.value(objDomain, ApogyCommonMathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()));
 				
 				UpdateValueStrategy txtToModelZUpdateStrategy = new UpdateValueStrategy();
 				txtToModelZUpdateStrategy.setConverter(new StringToDoubleConverter());
@@ -399,10 +399,10 @@ public class CoordinateConversionComposite extends Composite
 						InvocatorSession session = (InvocatorSession) container;
 						
 						// If there is an environment associated with this session
-						if(session.getEnvironment() instanceof SymphonyEnvironment)
+						if(session.getEnvironment() instanceof ApogyEnvironment)
 						{
 							// Extract the environment
-							SymphonyEnvironment se = (SymphonyEnvironment) session.getEnvironment();
+							ApogyEnvironment se = (ApogyEnvironment) session.getEnvironment();
 							
 							// If there is an earth surface worksite, which is
 							// the active worksite for this environment   
@@ -427,7 +427,7 @@ public class CoordinateConversionComposite extends Composite
 			if (esw == null)
 			{
 				// Just create one (to facilitate the conversions)
-				esw = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();				
+				esw = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();				
 			}
 
 			// Update the listener's earth surface worksite accordingly
@@ -507,7 +507,7 @@ public class CoordinateConversionComposite extends Composite
 							double zVal = Double.parseDouble(zStrVal);
 						
 							// Create a Tuple3d in order to facilitate conversion
-							Tuple3d tuple = Symphony__CommonMathFacade.INSTANCE.createTuple3d(xVal, yVal, zVal);
+							Tuple3d tuple = ApogyCommonMathFacade.INSTANCE.createTuple3d(xVal, yVal, zVal);
 						
 							// Perform the actual conversion from the XYZ to Geographic Coordinates
 							GeographicCoordinates coords = earthSurfaceWorksite.convertToGeographicCoordinates(tuple);
@@ -573,7 +573,7 @@ public class CoordinateConversionComposite extends Composite
 							longVal = Math.toRadians(longVal);
 						
 							// Create a geographic coordinate with those given values
-							GeographicCoordinates coords = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+							GeographicCoordinates coords = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 							coords.setLatitude(latVal);
 							coords.setLongitude(longVal);
 							coords.setElevation(elevVal);

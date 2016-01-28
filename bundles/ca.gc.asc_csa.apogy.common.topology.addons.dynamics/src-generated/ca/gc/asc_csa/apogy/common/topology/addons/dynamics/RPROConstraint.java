@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getLinearStrength <em>Linear Strength</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getLinearStrength <em>Linear Strength</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getRPROConstraint()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getRPROConstraint()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface RPROConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Strength</em>' reference.
 	 * @see #setLinearStrength(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getRPROConstraint_LinearStrength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getRPROConstraint_LinearStrength()
 	 * @model
 	 * @generated
 	 */
 	Tuple3d getLinearStrength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getLinearStrength <em>Linear Strength</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getLinearStrength <em>Linear Strength</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Linear Strength</em>' reference.
@@ -65,14 +65,14 @@ public interface RPROConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Strength</em>' reference.
 	 * @see #setAngularStrength(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getRPROConstraint_AngularStrength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getRPROConstraint_AngularStrength()
 	 * @model
 	 * @generated
 	 */
 	Tuple3d getAngularStrength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angular Strength</em>' reference.

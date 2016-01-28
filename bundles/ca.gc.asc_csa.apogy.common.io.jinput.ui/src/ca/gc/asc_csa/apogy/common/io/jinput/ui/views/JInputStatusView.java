@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.io.jinput.ui.views;
+package ca.gc.asc_csa.apogy.common.io.jinput.ui.views;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -15,14 +15,14 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.symphony.common.io.jinput.Activator;
+import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 
 
 public class JInputStatusView extends ViewPart
 {
-	public static final String ID = "org.eclipse.symphony.common.io.jinput.ui.views.JInputStatusView";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.io.jinput.ui.views.JInputStatusView";
 	
 	
 	private TreeViewer viewer;
@@ -89,14 +89,14 @@ public class JInputStatusView extends ViewPart
 			@Override
 			public Notifier getTarget() { return null; }
 		};
-		org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().eAdapters().add(viewerAdapter);
+		ca.gc.asc_csa.apogy.common.io.jinput.Activator.getEControllerEnvironment().eAdapters().add(viewerAdapter);
 		
 		parent.addDisposeListener(new DisposeListener()
 		{
 			@Override
 			public void widgetDisposed(DisposeEvent e)
 			{
-				org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().eAdapters().remove(viewerAdapter);
+				ca.gc.asc_csa.apogy.common.io.jinput.Activator.getEControllerEnvironment().eAdapters().remove(viewerAdapter);
 				viewerAdapter = null;
 			}
 		});

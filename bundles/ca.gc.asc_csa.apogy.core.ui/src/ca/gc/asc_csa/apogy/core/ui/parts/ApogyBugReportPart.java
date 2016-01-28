@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.parts;
+package ca.gc.asc_csa.apogy.core.ui.parts;
 
 import javax.annotation.PostConstruct;
 
@@ -9,7 +9,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
-public class SymphonyBugReportPart {
+public class ApogyBugReportPart {
 
 	private Browser browser;
 
@@ -18,7 +18,7 @@ public class SymphonyBugReportPart {
 		parent.setLayout(new GridLayout(1, false));
 		browser = new Browser(parent, SWT.NONE);
 		browser.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		browser.setUrl("http://liberty.speng.space.gc.ca/bugzilla/enter_bug.cgi?product=ca.gc.asc-csa.symphony");
+		browser.setUrl("http://liberty.speng.space.gc.ca/bugzilla/enter_bug.cgi?product=ca.gc.asc-csa.apogy");
 	}
 	
 	@Focus

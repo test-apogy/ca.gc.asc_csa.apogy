@@ -3,7 +3,7 @@
  *
  * $Id: PositionSensorImpl.java,v 1.4.4.2 2015/05/21 15:51:31 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Adapter;
@@ -12,18 +12,18 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.SensorStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.PositionNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,8 +33,8 @@ import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getStatus <em>Status</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PositionSensorImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PositionSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,7 +91,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPosePackage.Literals.POSITION_SENSOR;
+		return ApogyAddonsSensorsPosePackage.Literals.POSITION_SENSOR;
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.POSITION_SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	{
 		if(positionCoordinates == null)
 		{			
-			positionCoordinates = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();					
+			positionCoordinates = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();					
 		}
 		return positionCoordinates;
 	}
@@ -161,9 +161,9 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				return getStatus();
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES:
 				if (resolve) return getPositionCoordinates();
 				return basicGetPositionCoordinates();
 		}
@@ -179,7 +179,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
 		}
@@ -195,7 +195,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -211,9 +211,9 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES:
 				return positionCoordinates != null;
 		}
 		return super.eIsSet(featureID);
@@ -229,7 +229,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	{
 		if (baseClass == Sensor.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS: return Symphony__AddonsSensorsPackage.SENSOR__STATUS;
+				case ApogyAddonsSensorsPosePackage.POSITION_SENSOR__STATUS: return ApogyAddonsSensorsPackage.SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -251,7 +251,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	{
 		if (baseClass == Sensor.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsSensorsPackage.SENSOR__STATUS: return Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS;
+				case ApogyAddonsSensorsPackage.SENSOR__STATUS: return ApogyAddonsSensorsPosePackage.POSITION_SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -271,7 +271,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
 				try {
 					resetPosition((CartesianPositionCoordinates)arguments.get(0));
 					return null;
@@ -313,7 +313,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 				@Override
 				public void notifyChanged(Notification msg)
 				{				
-					if(msg.getFeatureID(PositionNode.class) == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION)
+					if(msg.getFeatureID(PositionNode.class) == ApogyCommonTopologyPackage.POSITION_NODE__POSITION)
 					{
 						// Updates the current Orientation data with the new values.
 						Tuple3d newPose = (Tuple3d) msg.getNewValue();

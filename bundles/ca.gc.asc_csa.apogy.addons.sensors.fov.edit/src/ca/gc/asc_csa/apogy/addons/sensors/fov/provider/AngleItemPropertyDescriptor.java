@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 import java.text.NumberFormat;
 

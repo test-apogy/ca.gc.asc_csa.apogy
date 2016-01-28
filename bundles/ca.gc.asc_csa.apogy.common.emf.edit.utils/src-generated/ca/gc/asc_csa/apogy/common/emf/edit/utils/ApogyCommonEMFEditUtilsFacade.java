@@ -1,11 +1,11 @@
 /**
  */
-package org.eclipse.symphony.common.emf.edit.utils;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils;
 
 import java.util.Collection;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,11 +13,11 @@ import org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUt
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage#getSymphony__CommonEMFEditUtilsFacade()
+ * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage#getApogyCommonEMFEditUtilsFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonEMFEditUtilsFacade extends EObject
+public interface ApogyCommonEMFEditUtilsFacade extends EObject
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -30,10 +30,10 @@ public interface Symphony__CommonEMFEditUtilsFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model newChildDescriptorsDataType="org.eclipse.symphony.common.emf.edit.utils.CollectionObject" newChildDescriptorsUnique="false" featureUnique="false"
+	 * @model newChildDescriptorsDataType="ca.gc.asc_csa.apogy.common.emf.edit.utils.CollectionObject" newChildDescriptorsUnique="false" featureUnique="false"
 	 * @generated
 	 */
   void removeChildDescriptor(Collection<Object> newChildDescriptors, Object feature);
 
-  public static Symphony__CommonEMFEditUtilsFacade INSTANCE = Symphony__CommonEMFEditUtilsFacadeImpl.getInstance();
-} // Symphony__CommonEMFEditUtilsFacade
+  public static ApogyCommonEMFEditUtilsFacade INSTANCE = ApogyCommonEMFEditUtilsFacadeImpl.getInstance();
+} // ApogyCommonEMFEditUtilsFacade

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion;
+package ca.gc.asc_csa.apogy.addons.sensors.motion;
 
 
 /**
@@ -13,12 +13,12 @@ package org.eclipse.symphony.addons.sensors.motion;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearAccelerationSensor()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface LinearAccelerationSensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XAcceleration</em>' attribute.
 	 * @see #setXAcceleration(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor_XAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearAccelerationSensor_XAcceleration()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getXAcceleration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XAcceleration</em>' attribute.
@@ -59,14 +59,14 @@ public interface LinearAccelerationSensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YAcceleration</em>' attribute.
 	 * @see #setYAcceleration(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor_YAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearAccelerationSensor_YAcceleration()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getYAcceleration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YAcceleration</em>' attribute.
@@ -85,14 +85,14 @@ public interface LinearAccelerationSensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZAcceleration</em>' attribute.
 	 * @see #setZAcceleration(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor_ZAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearAccelerationSensor_ZAcceleration()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getZAcceleration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZAcceleration</em>' attribute.

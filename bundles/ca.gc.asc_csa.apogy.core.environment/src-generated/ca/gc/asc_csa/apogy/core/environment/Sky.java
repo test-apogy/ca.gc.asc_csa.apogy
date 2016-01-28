@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,14 +20,14 @@ import org.eclipse.symphony.common.emf.Timed;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSurfaceWorksite <em>Surface Worksite</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSkyNode <em>Sky Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSun <em>Sun</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getStarField <em>Star Field</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSurfaceWorksite <em>Surface Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSkyNode <em>Sky Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSun <em>Sun</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getStarField <em>Star Field</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSky()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSky()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Sky extends Timed
 
   /**
 	 * Returns the value of the '<em><b>Surface Worksite</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.SurfaceWorksite#getSky <em>Sky</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite#getSky <em>Sky</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Surface Worksite</em>' container reference isn't clear,
@@ -48,8 +48,8 @@ public interface Sky extends Timed
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Surface Worksite</em>' container reference.
 	 * @see #setSurfaceWorksite(SurfaceWorksite)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSky_SurfaceWorksite()
-	 * @see org.eclipse.symphony.core.environment.SurfaceWorksite#getSky
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSky_SurfaceWorksite()
+	 * @see ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite#getSky
 	 * @model opposite="sky" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -57,7 +57,7 @@ public interface Sky extends Timed
   SurfaceWorksite getSurfaceWorksite();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.Sky#getSurfaceWorksite <em>Surface Worksite</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSurfaceWorksite <em>Surface Worksite</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Surface Worksite</em>' container reference.
@@ -75,7 +75,7 @@ public interface Sky extends Timed
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sky Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSky_SkyNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSky_SkyNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
@@ -94,7 +94,7 @@ public interface Sky extends Timed
 	 * The Sun in the sky.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sun</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSky_Sun()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSky_Sun()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN'"
 	 * @generated
@@ -114,7 +114,7 @@ public interface Sky extends Timed
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sun Horizontal Coordinates</em>' reference.
 	 * @see #setSunHorizontalCoordinates(HorizontalCoordinates)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSky_SunHorizontalCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSky_SunHorizontalCoordinates()
 	 * @model transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN'"
 	 * @generated
@@ -122,7 +122,7 @@ public interface Sky extends Timed
   HorizontalCoordinates getSunHorizontalCoordinates();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.Sky#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Sun Horizontal Coordinates</em>' reference.
@@ -143,7 +143,7 @@ public interface Sky extends Timed
 	 * The stars in the sky.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Star Field</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSky_StarField()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSky_StarField()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='STARS'"
 	 * @generated
@@ -157,7 +157,7 @@ public interface Sky extends Timed
 	 * Returns the Sun angular diameter, in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN' apogy_units='rad'"
 	 * @generated
 	 */
   double getSunAngularDiameter();

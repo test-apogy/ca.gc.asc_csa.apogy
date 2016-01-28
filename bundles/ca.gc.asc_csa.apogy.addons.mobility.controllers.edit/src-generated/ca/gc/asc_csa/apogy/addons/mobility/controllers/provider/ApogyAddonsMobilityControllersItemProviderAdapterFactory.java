@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsMobilityControllersItemProviderAdapterFactory.java,v 1.4.4.2 2015/05/21 15:50:54 pallard Exp $
+ * $Id: ApogyAddonsMobilityControllersItemProviderAdapterFactory.java,v 1.4.4.2 2015/05/21 15:50:54 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -30,13 +30,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersFactory;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.util.Symphony__AddonsMobilityControllersAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.util.ApogyAddonsMobilityControllersAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory extends Symphony__AddonsMobilityControllersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsMobilityControllersItemProviderAdapterFactory extends ApogyAddonsMobilityControllersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -71,7 +71,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsMobilityControllersEditPlugin.INSTANCE, Symphony__AddonsMobilityControllersPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsMobilityControllersEditPlugin.INSTANCE, ApogyAddonsMobilityControllersPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -87,7 +87,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityControllersItemProviderAdapterFactory()
+	public ApogyAddonsMobilityControllersItemProviderAdapterFactory()
 	{
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -97,7 +97,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.controllers.PathFollower} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	protected PathFollowerItemProvider pathFollowerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.PathFollower}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	protected SkidSteeredPlatformPathFollowerItemProvider skidSteeredPlatformPathFollowerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -145,7 +145,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -153,7 +153,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	protected PathRecorderItemProvider pathRecorderItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -169,7 +169,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,7 +177,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	protected WaypointPathRecorderItemProvider waypointPathRecorderItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -193,7 +193,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -201,7 +201,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	protected SkidSteeredWayPointPathFollowerItemProvider skidSteeredWayPointPathFollowerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -216,7 +216,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -224,7 +224,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	protected AstolfiGuidanceControllerItemProvider astolfiGuidanceControllerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -382,19 +382,19 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -430,33 +430,33 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createPathFollower()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createPathFollower()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredPlatformPathFollower()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredPlatformPathFollower()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createPathRecorder()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createPathRecorder()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createWaypointPathRecorder()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createWaypointPathRecorder()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredWayPointPathFollower()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredWayPointPathFollower()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createAstolfiGuidanceController()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createAstolfiGuidanceController()));
 
 				return null;
 			}
@@ -470,33 +470,33 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createPathFollower()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createPathFollower()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredPlatformPathFollower()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredPlatformPathFollower()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createPathRecorder()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createPathRecorder()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createWaypointPathRecorder()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createWaypointPathRecorder()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredWayPointPathFollower()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createSkidSteeredWayPointPathFollower()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityControllersFactory.eINSTANCE.createAstolfiGuidanceController()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityControllersFactory.eINSTANCE.createAstolfiGuidanceController()));
 
 				return null;
 			}
@@ -529,7 +529,7 @@ public class Symphony__AddonsMobilityControllersItemProviderAdapterFactory exten
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsMobilityControllersEditPlugin.INSTANCE;
+			return ApogyAddonsMobilityControllersEditPlugin.INSTANCE;
 		}
 	}
 

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.AbsolutePoseProvider} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.AbsolutePoseProvider} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

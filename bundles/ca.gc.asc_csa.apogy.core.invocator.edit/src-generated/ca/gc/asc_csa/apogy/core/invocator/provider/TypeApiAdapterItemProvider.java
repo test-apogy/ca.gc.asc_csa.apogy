@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class TypeApiAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeApiAdapter_environment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeApiAdapter_environment_feature", "_UI_TypeApiAdapter_type"),
-				 Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ENVIRONMENT,
+				 ApogyCoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ENVIRONMENT,
 				 true,
 				 false,
 				 true,
@@ -103,7 +103,7 @@ public class TypeApiAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeApiAdapter_instance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeApiAdapter_instance_feature", "_UI_TypeApiAdapter_type"),
-				 Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER__INSTANCE,
+				 ApogyCoreInvocatorPackage.Literals.TYPE_API_ADAPTER__INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -126,7 +126,7 @@ public class TypeApiAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeApiAdapter_elementType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeApiAdapter_elementType_feature", "_UI_TypeApiAdapter_type"),
-				 Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ELEMENT_TYPE,
+				 ApogyCoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ELEMENT_TYPE,
 				 true,
 				 false,
 				 true,

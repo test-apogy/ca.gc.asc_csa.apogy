@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.util;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,34 +10,34 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.addons.sensors.fov.*;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.*;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage
  * @generated
  */
-public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsFOVPackage modelPackage;
+	protected static ApogyAddonsSensorsFOVPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -45,9 +45,9 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVAdapterFactory() {
+	public ApogyAddonsSensorsFOVAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsFOVPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsFOVPackage.eINSTANCE;
 		}
 	}
 
@@ -76,8 +76,8 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsFOVSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsSensorsFOVSwitch<Adapter>() {
+	protected ApogyAddonsSensorsFOVSwitch<Adapter> modelSwitch =
+		new ApogyAddonsSensorsFOVSwitch<Adapter>() {
 			@Override
 			public Adapter caseFieldOfView(FieldOfView object) {
 				return createFieldOfViewAdapter();
@@ -107,8 +107,8 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 				return createRectangularFrustrumFieldOfViewSamplingShapeAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__AddonsSensorsFOVFacade(Symphony__AddonsSensorsFOVFacade object) {
-				return createSymphony__AddonsSensorsFOVFacadeAdapter();
+			public Adapter caseApogyAddonsSensorsFOVFacade(ApogyAddonsSensorsFOVFacade object) {
+				return createApogyAddonsSensorsFOVFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -147,13 +147,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView
 	 * @generated
 	 */
 	public Adapter createFieldOfViewAdapter() {
@@ -161,13 +161,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange <em>Distance Range</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange <em>Distance Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.DistanceRange
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange
 	 * @generated
 	 */
 	public Adapter createDistanceRangeAdapter() {
@@ -175,13 +175,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan <em>Angular Span</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan <em>Angular Span</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.AngularSpan
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan
 	 * @generated
 	 */
 	public Adapter createAngularSpanAdapter() {
@@ -189,13 +189,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 	 * @generated
 	 */
 	public Adapter createRectangularFrustrumFieldOfViewAdapter() {
@@ -203,13 +203,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView <em>Conical Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView <em>Conical Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
 	 * @generated
 	 */
 	public Adapter createConicalFieldOfViewAdapter() {
@@ -217,13 +217,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView <em>Circular Sector Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView <em>Circular Sector Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView
 	 * @generated
 	 */
 	public Adapter createCircularSectorFieldOfViewAdapter() {
@@ -231,13 +231,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape <em>Rectangular Frustrum Field Of View Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape <em>Rectangular Frustrum Field Of View Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape
 	 * @generated
 	 */
 	public Adapter createRectangularFrustrumFieldOfViewSamplingShapeAdapter() {
@@ -245,27 +245,27 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__AddonsSensorsFOVFacadeAdapter() {
+	public Adapter createApogyAddonsSensorsFOVFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -273,13 +273,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape
 	 * @generated
 	 */
 	public Adapter createSamplingShapeAdapter() {
@@ -287,13 +287,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
 	 * @generated
 	 */
 	public Adapter createCoordinatesSamplingShapeAdapter() {
@@ -301,13 +301,13 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
 	 * @generated
 	 */
 	public Adapter createPolygonSamplingShapeAdapter() {
@@ -326,4 +326,4 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__AddonsSensorsFOVAdapterFactory
+} //ApogyAddonsSensorsFOVAdapterFactory

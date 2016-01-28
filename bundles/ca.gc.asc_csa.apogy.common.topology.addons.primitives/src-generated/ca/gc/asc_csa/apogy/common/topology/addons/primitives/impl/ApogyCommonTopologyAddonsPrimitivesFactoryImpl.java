@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.common.topology.addons.primitives.*;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,24 +23,24 @@ import org.eclipse.symphony.common.topology.addons.primitives.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactoryImpl implements Symphony__CommonTopologyAddonsPrimitivesFactory {
+public class ApogyCommonTopologyAddonsPrimitivesFactoryImpl extends EFactoryImpl implements ApogyCommonTopologyAddonsPrimitivesFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyAddonsPrimitivesFactory init() {
+	public static ApogyCommonTopologyAddonsPrimitivesFactory init() {
 		try {
-			Symphony__CommonTopologyAddonsPrimitivesFactory theSymphony__CommonTopologyAddonsPrimitivesFactory = (Symphony__CommonTopologyAddonsPrimitivesFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonTopologyAddonsPrimitivesPackage.eNS_URI);
-			if (theSymphony__CommonTopologyAddonsPrimitivesFactory != null) {
-				return theSymphony__CommonTopologyAddonsPrimitivesFactory;
+			ApogyCommonTopologyAddonsPrimitivesFactory theApogyCommonTopologyAddonsPrimitivesFactory = (ApogyCommonTopologyAddonsPrimitivesFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonTopologyAddonsPrimitivesPackage.eNS_URI);
+			if (theApogyCommonTopologyAddonsPrimitivesFactory != null) {
+				return theApogyCommonTopologyAddonsPrimitivesFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonTopologyAddonsPrimitivesFactoryImpl();
+		return new ApogyCommonTopologyAddonsPrimitivesFactoryImpl();
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesFactoryImpl() {
+	public ApogyCommonTopologyAddonsPrimitivesFactoryImpl() {
 		super();
 	}
 
@@ -61,17 +61,17 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR: return createVector();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR: return createPickVector();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE: return createPlane();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.WAY_POINT: return createWayPoint();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LABEL: return createLabel();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE: return createSpherePrimitive();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.AMBIENT_LIGHT: return createAmbientLight();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT: return createDirectionalLight();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT_LIGHT: return createPointLight();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT: return createSpotLight();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE: return createSymphony__CommonTopologyAddonsPrimitivesFacade();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR: return createVector();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR: return createPickVector();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PLANE: return createPlane();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.WAY_POINT: return createWayPoint();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LABEL: return createLabel();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE: return createSpherePrimitive();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.AMBIENT_LIGHT: return createAmbientLight();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT: return createDirectionalLight();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.POINT_LIGHT: return createPointLight();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT: return createSpotLight();
+			case ApogyCommonTopologyAddonsPrimitivesPackage.APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE: return createApogyCommonTopologyAddonsPrimitivesFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,9 +85,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT3D:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.POINT3D:
 				return createPoint3dFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR3D:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR3D:
 				return createVector3dFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -102,9 +102,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT3D:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.POINT3D:
 				return convertPoint3dToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR3D:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR3D:
 				return convertVector3dToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -216,9 +216,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesFacade createSymphony__CommonTopologyAddonsPrimitivesFacade() {
-		Symphony__CommonTopologyAddonsPrimitivesFacadeImpl symphony__CommonTopologyAddonsPrimitivesFacade = new Symphony__CommonTopologyAddonsPrimitivesFacadeImpl();
-		return symphony__CommonTopologyAddonsPrimitivesFacade;
+	public ApogyCommonTopologyAddonsPrimitivesFacade createApogyCommonTopologyAddonsPrimitivesFacade() {
+		ApogyCommonTopologyAddonsPrimitivesFacadeImpl apogy__CommonTopologyAddonsPrimitivesFacade = new ApogyCommonTopologyAddonsPrimitivesFacadeImpl();
+		return apogy__CommonTopologyAddonsPrimitivesFacade;
 	}
 
 	/**
@@ -262,8 +262,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesPackage getSymphony__CommonTopologyAddonsPrimitivesPackage() {
-		return (Symphony__CommonTopologyAddonsPrimitivesPackage)getEPackage();
+	public ApogyCommonTopologyAddonsPrimitivesPackage getApogyCommonTopologyAddonsPrimitivesPackage() {
+		return (ApogyCommonTopologyAddonsPrimitivesPackage)getEPackage();
 	}
 
 	/**
@@ -273,8 +273,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonTopologyAddonsPrimitivesPackage getPackage() {
-		return Symphony__CommonTopologyAddonsPrimitivesPackage.eINSTANCE;
+	public static ApogyCommonTopologyAddonsPrimitivesPackage getPackage() {
+		return ApogyCommonTopologyAddonsPrimitivesPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonTopologyAddonsPrimitivesFactoryImpl
+} //ApogyCommonTopologyAddonsPrimitivesFactoryImpl

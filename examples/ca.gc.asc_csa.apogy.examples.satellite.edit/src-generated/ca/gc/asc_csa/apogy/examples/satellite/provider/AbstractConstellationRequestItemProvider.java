@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.examples.satellite.AbstractConstellationRequest;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class AbstractConstellationRequestItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstellationRequest_uid_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationRequest_uid_feature", "_UI_AbstractConstellationRequest_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__UID,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class AbstractConstellationRequestItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstellationRequest_orderPriority_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationRequest_orderPriority_feature", "_UI_AbstractConstellationRequest_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY,
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class AbstractConstellationRequestItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstellationRequest_orderStatus_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstellationRequest_orderStatus_feature", "_UI_AbstractConstellationRequest_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS,
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class AbstractConstellationRequestItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND);
 		}
 		return childrenFeatures;
 	}
@@ -193,12 +193,12 @@ public class AbstractConstellationRequestItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractConstellationRequest.class)) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__UID:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -218,13 +218,13 @@ public class AbstractConstellationRequestItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 	}
 
 	/**

@@ -1,21 +1,21 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentFacadeImpl;
-import org.eclipse.symphony.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentFacadeImpl;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,14 +27,14 @@ import org.eclipse.symphony.core.invocator.Environment;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSymphony__CoreEnvironmentFacade()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getApogyCoreEnvironmentFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreEnvironmentFacade extends EObject
+public interface ApogyCoreEnvironmentFacade extends EObject
 {
 	
-	public static Symphony__CoreEnvironmentFacade INSTANCE = Symphony__CoreEnvironmentFacadeImpl.getInstance();
+	public static ApogyCoreEnvironmentFacade INSTANCE = ApogyCoreEnvironmentFacadeImpl.getInstance();
 	
   /**
 	 * <!-- begin-user-doc -->
@@ -118,10 +118,10 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model unique="false" symphonySystemUnique="false" nodeIDUnique="false" environmentUnique="false"
+	 * @model unique="false" apogySystemUnique="false" nodeIDUnique="false" environmentUnique="false"
 	 * @generated
 	 */
-  Tuple3d getSunVector(SymphonySystem symphonySystem, String nodeID, Environment environment);
+  Tuple3d getSunVector(ApogySystem apogySystem, String nodeID, Environment environment);
 
   /**
 	 * <!-- begin-user-doc -->
@@ -134,10 +134,10 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model unique="false" symphonySystemUnique="false" nodeIDUnique="false" environmentUnique="false"
+	 * @model unique="false" apogySystemUnique="false" nodeIDUnique="false" environmentUnique="false"
 	 * @generated
 	 */
-  Tuple3d getMoonVector(SymphonySystem symphonySystem, String nodeID, Environment environment);
+  Tuple3d getMoonVector(ApogySystem apogySystem, String nodeID, Environment environment);
 
   /**
 	 * <!-- begin-user-doc -->
@@ -150,34 +150,34 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model unique="false" nodeUnique="false" targetSymphonySystemUnique="false" connectionPointUnique="false" environmentUnique="false"
+	 * @model unique="false" nodeUnique="false" targetApogySystemUnique="false" connectionPointUnique="false" environmentUnique="false"
 	 * @generated
 	 */
-  Tuple3d getVector(Node node, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint, Environment environment);
+  Tuple3d getVector(Node node, ApogySystem targetApogySystem, ConnectionPoint connectionPoint, Environment environment);
 
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model unique="false" sourceSymphonySystemUnique="false" nodeIDUnique="false" targetSymphonySystemUnique="false" connectionPointUnique="false" environmentUnique="false"
+	 * @model unique="false" sourceApogySystemUnique="false" nodeIDUnique="false" targetApogySystemUnique="false" connectionPointUnique="false" environmentUnique="false"
 	 * @generated
 	 */
-  Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint, Environment environment);
+  Tuple3d getVector(ApogySystem sourceApogySystem, String nodeID, ApogySystem targetApogySystem, ConnectionPoint connectionPoint, Environment environment);
 
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model unique="false" sourceSymphonySystemUnique="false" nodeIDUnique="false" targetSymphonySystemUnique="false" connectionPointNameUnique="false" environmentUnique="false"
+	 * @model unique="false" sourceApogySystemUnique="false" nodeIDUnique="false" targetApogySystemUnique="false" connectionPointNameUnique="false" environmentUnique="false"
 	 * @generated
 	 */
-  Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, String connectionPointName, Environment environment);
+  Tuple3d getVector(ApogySystem sourceApogySystem, String nodeID, ApogySystem targetApogySystem, String connectionPointName, Environment environment);
 
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model unique="false" sourceSymphonySystemUnique="false" nodeIDUnique="false" targetSystemfullyQualifiedNameUnique="false" connectionPointNameUnique="false" environmentUnique="false"
+	 * @model unique="false" sourceApogySystemUnique="false" nodeIDUnique="false" targetSystemfullyQualifiedNameUnique="false" connectionPointNameUnique="false" environmentUnique="false"
 	 * @generated
 	 */
-  Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, String targetSystemfullyQualifiedName, String connectionPointName, Environment environment);
+  Tuple3d getVector(ApogySystem sourceApogySystem, String nodeID, String targetSystemfullyQualifiedName, String connectionPointName, Environment environment);
 
   /**
 	 * <!-- begin-user-doc -->
@@ -187,7 +187,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * Note that only X,Y and Rz are used in transformation applied between ImageMapLayer and the worksite
 	 * origin.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" rectangularRegionImagesDataType="org.eclipse.symphony.core.environment.List<? extends org.eclipse.symphony.core.environment.RectangularRegionImage>" rectangularRegionImagesUnique="false" rectangularRegionImagesMany="false"
+	 * @model unique="false" rectangularRegionImagesDataType="ca.gc.asc_csa.apogy.core.environment.List<? extends ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage>" rectangularRegionImagesUnique="false" rectangularRegionImagesMany="false"
 	 * @generated
 	 */
   AbstractEImage createEImage(List<? extends RectangularRegionImage> rectangularRegionImages);
@@ -201,7 +201,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * @return List containing the position (in the worksite frame) of the four corners of the ImageMapLayer.
 	 * The list contains : lowerLeftCorner, lowerRightCorner, upperRightCorner and upperLeftCorner.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.List<org.eclipse.symphony.common.math.Tuple3d>" unique="false" many="false" rectangularRegionUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.List<ca.gc.asc_csa.apogy.common.math.Tuple3d>" unique="false" many="false" rectangularRegionUnique="false"
 	 * @generated
 	 */
   List<Tuple3d> getAbsoluteRectangularRegionCorners(RectangularRegion rectangularRegion);
@@ -213,7 +213,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * Returns the ImageMapLayer with the highest resolution (minimum meters/pixel).
 	 * @return The ImageMapLayer with the highest resolution (minimum meters/pixel)
 	 * <!-- end-model-doc -->
-	 * @model unique="false" rectangularRegionImagesDataType="org.eclipse.symphony.core.environment.List<? extends org.eclipse.symphony.core.environment.RectangularRegionImage>" rectangularRegionImagesUnique="false" rectangularRegionImagesMany="false"
+	 * @model unique="false" rectangularRegionImagesDataType="ca.gc.asc_csa.apogy.core.environment.List<? extends ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage>" rectangularRegionImagesUnique="false" rectangularRegionImagesMany="false"
 	 * @generated
 	 */
   RectangularRegionImage getBestResolutionRectangularRegionImage(List<? extends RectangularRegionImage> rectangularRegionImages);
@@ -256,7 +256,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
 	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
 	 * <!-- end-model-doc -->
-	 * @model rectangularRegionProvidersDataType="org.eclipse.symphony.core.environment.List<? extends org.eclipse.symphony.core.environment.RectangularRegionProvider>" rectangularRegionProvidersUnique="false" rectangularRegionProvidersMany="false" lowerLeftCornerUnique="false" upperRightCornerUnique="false"
+	 * @model rectangularRegionProvidersDataType="ca.gc.asc_csa.apogy.core.environment.List<? extends ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider>" rectangularRegionProvidersUnique="false" rectangularRegionProvidersMany="false" lowerLeftCornerUnique="false" upperRightCornerUnique="false"
 	 * @generated
 	 */
 	void getRectangularRegionExtent(List<? extends RectangularRegionProvider> rectangularRegionProviders, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner);
@@ -271,7 +271,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
 	 * TODO DEPRECATE - REMOVE
 	 * <!-- end-model-doc -->
-	 * @model rectangularRegionImagesDataType="org.eclipse.symphony.core.environment.List<? extends org.eclipse.symphony.core.environment.RectangularRegionImage>" rectangularRegionImagesUnique="false" rectangularRegionImagesMany="false" lowerLeftCornerUnique="false" upperRightCornerUnique="false"
+	 * @model rectangularRegionImagesDataType="ca.gc.asc_csa.apogy.core.environment.List<? extends ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage>" rectangularRegionImagesUnique="false" rectangularRegionImagesMany="false" lowerLeftCornerUnique="false" upperRightCornerUnique="false"
 	 * @generated
 	 */
   void getRectangularRegionImageExtent(List<? extends RectangularRegionImage> rectangularRegionImages, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner);
@@ -318,7 +318,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model imageMapLayerPresentationsDataType="org.eclipse.symphony.core.environment.List<org.eclipse.symphony.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false" lowerLeftCornerUnique="false" upperRightCornerUnique="false"
+	 * @model imageMapLayerPresentationsDataType="ca.gc.asc_csa.apogy.core.environment.List<ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false" lowerLeftCornerUnique="false" upperRightCornerUnique="false"
 	 * @generated
 	 */
 	void getImageMapLayerPresentationExtent(List<ImageMapLayerPresentation> imageMapLayerPresentations, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner);
@@ -331,7 +331,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The image representing the specified list of ImageMapLayerPresentation.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" imageMapLayerPresentationsDataType="org.eclipse.symphony.core.environment.List<org.eclipse.symphony.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false"
+	 * @model unique="false" imageMapLayerPresentationsDataType="ca.gc.asc_csa.apogy.core.environment.List<ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false"
 	 * @generated
 	 */
 	AbstractEImage getImageMapLayerPresentationImage(List<ImageMapLayerPresentation> imageMapLayerPresentations);
@@ -343,7 +343,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * Returns the ImageMapLayerPresentation with the highest resolution (minimum meters/pixel).
 	 * @return The ImageMapLayerPresentation with the highest resolution (minimum meters/pixel)
 	 * <!-- end-model-doc -->
-	 * @model unique="false" imageMapLayerPresentationsDataType="org.eclipse.symphony.core.environment.List<org.eclipse.symphony.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false"
+	 * @model unique="false" imageMapLayerPresentationsDataType="ca.gc.asc_csa.apogy.core.environment.List<ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false"
 	 * @generated
 	 */
 	ImageMapLayerPresentation getBestResolutionMapLayer(List<ImageMapLayerPresentation> imageMapLayerPresentations);
@@ -356,7 +356,7 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The list of visible ImageMapLayerPresentation.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.List<org.eclipse.symphony.core.environment.ImageMapLayerPresentation>" unique="false" many="false" imageMapLayerPresentationsDataType="org.eclipse.symphony.core.environment.List<org.eclipse.symphony.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.List<ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation>" unique="false" many="false" imageMapLayerPresentationsDataType="ca.gc.asc_csa.apogy.core.environment.List<ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation>" imageMapLayerPresentationsUnique="false" imageMapLayerPresentationsMany="false"
 	 * @generated
 	 */
 	List<ImageMapLayerPresentation> getVisibleImageMapLayerPresentation(List<ImageMapLayerPresentation> imageMapLayerPresentations);
@@ -374,4 +374,4 @@ public interface Symphony__CoreEnvironmentFacade extends EObject
 	 */
 	RectangularVolumeRegion getRectangularVolumeRegion(CartesianTriangularMesh mesh);
 
-} // Symphony__CoreEnvironmentFacade
+} // ApogyCoreEnvironmentFacade

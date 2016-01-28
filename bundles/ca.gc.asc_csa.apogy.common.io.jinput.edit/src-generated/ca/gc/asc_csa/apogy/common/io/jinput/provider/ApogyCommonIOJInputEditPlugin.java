@@ -1,25 +1,25 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.provider;
+package ca.gc.asc_csa.apogy.common.io.jinput.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonIOJInput edit plugin.
+ * This is the central singleton for the ApogyCommonIOJInput edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonIOJInputEditPlugin extends EMFPlugin {
+public final class ApogyCommonIOJInputEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonIOJInputEditPlugin INSTANCE = new Symphony__CommonIOJInputEditPlugin();
+	public static final ApogyCommonIOJInputEditPlugin INSTANCE = new ApogyCommonIOJInputEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -35,7 +35,7 @@ public final class Symphony__CommonIOJInputEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonIOJInputEditPlugin() {
+	public ApogyCommonIOJInputEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

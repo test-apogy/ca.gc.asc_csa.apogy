@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.mobility.controllers;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -6,7 +6,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends Plugin
 {
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.mobility.controllers";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.mobility.controllers";
 
 	// The shared instance
 	private static Activator plugin;

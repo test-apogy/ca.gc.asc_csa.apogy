@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.core.ui.jme3.scene_objects;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,18 +11,18 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.ui.ResultNodeSceneObject;
-import org.eclipse.symphony.core.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodeSceneObject;
+import ca.gc.asc_csa.apogy.core.ui.jme3.Activator;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

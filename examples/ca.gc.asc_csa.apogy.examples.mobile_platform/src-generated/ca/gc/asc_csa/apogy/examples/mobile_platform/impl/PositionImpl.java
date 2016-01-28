@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.Position;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +18,9 @@ import org.eclipse.symphony.examples.mobile_platform.Position;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl#getTheta <em>Theta</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.PositionImpl#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.PositionImpl#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.PositionImpl#getTheta <em>Theta</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,7 +105,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__ExamplesMobilePlatformPackage.Literals.POSITION;
+		return ApogyExamplesMobilePlatformPackage.Literals.POSITION;
 	}
 
   /**
@@ -128,7 +128,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.POSITION__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.POSITION__X, oldX, x));
 	}
 
   /**
@@ -151,7 +151,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.POSITION__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.POSITION__Y, oldY, y));
 	}
 
   /**
@@ -174,7 +174,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldTheta = theta;
 		theta = newTheta;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.POSITION__THETA, oldTheta, theta));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.POSITION__THETA, oldTheta, theta));
 	}
 
   /**
@@ -186,11 +186,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
+			case ApogyExamplesMobilePlatformPackage.POSITION__X:
 				return getX();
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
+			case ApogyExamplesMobilePlatformPackage.POSITION__Y:
 				return getY();
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
+			case ApogyExamplesMobilePlatformPackage.POSITION__THETA:
 				return getTheta();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,13 +205,13 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
+			case ApogyExamplesMobilePlatformPackage.POSITION__X:
 				setX((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
+			case ApogyExamplesMobilePlatformPackage.POSITION__Y:
 				setY((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
+			case ApogyExamplesMobilePlatformPackage.POSITION__THETA:
 				setTheta((Double)newValue);
 				return;
 		}
@@ -227,13 +227,13 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
+			case ApogyExamplesMobilePlatformPackage.POSITION__X:
 				setX(X_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
+			case ApogyExamplesMobilePlatformPackage.POSITION__Y:
 				setY(Y_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
+			case ApogyExamplesMobilePlatformPackage.POSITION__THETA:
 				setTheta(THETA_EDEFAULT);
 				return;
 		}
@@ -249,11 +249,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
+			case ApogyExamplesMobilePlatformPackage.POSITION__X:
 				return x != X_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
+			case ApogyExamplesMobilePlatformPackage.POSITION__Y:
 				return y != Y_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
+			case ApogyExamplesMobilePlatformPackage.POSITION__THETA:
 				return theta != THETA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

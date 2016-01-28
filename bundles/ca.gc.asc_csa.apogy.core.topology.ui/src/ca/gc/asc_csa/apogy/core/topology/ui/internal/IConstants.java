@@ -9,9 +9,9 @@
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
 
-package org.eclipse.symphony.core.topology.ui.internal;
+package ca.gc.asc_csa.apogy.core.topology.ui.internal;
 
-import org.eclipse.symphony.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
 
 
 /**

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -19,18 +19,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin <em>XMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax <em>XMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin <em>YMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax <em>YMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin <em>ZMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax <em>ZMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension <em>YDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension <em>ZDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin <em>XMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax <em>XMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin <em>YMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax <em>YMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin <em>ZMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax <em>ZMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension <em>ZDimension</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent()
  * @model
  * @generated
  */
@@ -45,15 +45,15 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XMin</em>' attribute.
 	 * @see #setXMin(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMin()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getXMin();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin <em>XMin</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin <em>XMin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XMin</em>' attribute.
@@ -72,15 +72,15 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XMax</em>' attribute.
 	 * @see #setXMax(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMax()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMax()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getXMax();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax <em>XMax</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax <em>XMax</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XMax</em>' attribute.
@@ -99,15 +99,15 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YMin</em>' attribute.
 	 * @see #setYMin(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMin()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getYMin();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin <em>YMin</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin <em>YMin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YMin</em>' attribute.
@@ -126,15 +126,15 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YMax</em>' attribute.
 	 * @see #setYMax(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMax()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMax()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getYMax();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax <em>YMax</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax <em>YMax</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YMax</em>' attribute.
@@ -153,15 +153,15 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZMin</em>' attribute.
 	 * @see #setZMin(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMin()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getZMin();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin <em>ZMin</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin <em>ZMin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZMin</em>' attribute.
@@ -180,15 +180,15 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZMax</em>' attribute.
 	 * @see #setZMax(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMax()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMax()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getZMax();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax <em>ZMax</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax <em>ZMax</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZMax</em>' attribute.
@@ -206,9 +206,9 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XDimension</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getXDimension();
@@ -222,9 +222,9 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YDimension</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getYDimension();
@@ -238,9 +238,9 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZDimension</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getZDimension();

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.util.Date;
 import java.util.List;
@@ -15,59 +15,59 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.Earth;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceEnvironment;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
-import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapNode;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.MapsListNode;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SurfaceEnvironment;
-import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
-import org.eclipse.symphony.core.environment.URLImageMapLayer;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.Atmosphere;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Earth;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.Environment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapNode;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.MapsListNode;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.SlopeRange;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implements Symphony__CoreEnvironmentFactory
+public class ApogyCoreEnvironmentFactoryImpl extends EFactoryImpl implements ApogyCoreEnvironmentFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -83,18 +83,18 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CoreEnvironmentFactory init()
+  public static ApogyCoreEnvironmentFactory init()
   {
 		try {
-			Symphony__CoreEnvironmentFactory theSymphony__CoreEnvironmentFactory = (Symphony__CoreEnvironmentFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreEnvironmentPackage.eNS_URI);
-			if (theSymphony__CoreEnvironmentFactory != null) {
-				return theSymphony__CoreEnvironmentFactory;
+			ApogyCoreEnvironmentFactory theApogyCoreEnvironmentFactory = (ApogyCoreEnvironmentFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreEnvironmentPackage.eNS_URI);
+			if (theApogyCoreEnvironmentFactory != null) {
+				return theApogyCoreEnvironmentFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreEnvironmentFactoryImpl();
+		return new ApogyCoreEnvironmentFactoryImpl();
 	}
 
   /**
@@ -103,7 +103,7 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentFactoryImpl()
+  public ApogyCoreEnvironmentFactoryImpl()
   {
 		super();
 	}
@@ -117,57 +117,57 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE: return createEarthSurfaceWorksite();
-			case Symphony__CoreEnvironmentPackage.ENVIRONMENT: return createEnvironment();
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT: return createSurfaceEnvironment();
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_ENVIRONMENT: return createEarthSurfaceEnvironment();
-			case Symphony__CoreEnvironmentPackage.ATMOSPHERE: return createAtmosphere();
-			case Symphony__CoreEnvironmentPackage.ATMOSPHERE_UTILS: return createAtmosphereUtils();
-			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES: return createEquatorialCoordinates();
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES: return createGeographicCoordinates();
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES: return createHorizontalCoordinates();
-			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES: return createEclipticCoordinates();
-			case Symphony__CoreEnvironmentPackage.SKY: return createSky();
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY: return createEarthSky();
-			case Symphony__CoreEnvironmentPackage.SUN: return createSun();
-			case Symphony__CoreEnvironmentPackage.EARTH: return createEarth();
-			case Symphony__CoreEnvironmentPackage.MOON: return createMoon();
-			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES: return createEnvironmentUtilities();
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE: return createSymphony__CoreEnvironmentFacade();
-			case Symphony__CoreEnvironmentPackage.STAR: return createStar();
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD: return createStarField();
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS: return createAstronomyUtils();
-			case Symphony__CoreEnvironmentPackage.MAP: return createMap();
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST: return createMapsList();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION: return createRectangularRegion();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION: return createRectangularVolumeRegion();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER: return createImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION: return createImageMapLayerPresentation();
-			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER: return createURLImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER: return createTopologyTreeMapLayer();
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE: return createTopologyTreeMapLayerNode();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: return createCartesianTriangularMeshMapLayer();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER: return createCartesianTriangularMeshSlopeImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER: return createCartesianTriangularMeshDiscreteSlopeImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER: return createCartesianTriangularMeshHeightImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE: return createSlopeRange();
-			case Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER: return createLineOfSightImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER: return createEllipseShapeImageLayer();
-			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER: return createRectangleShapeImageLayer();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: return createCartesianCoordinatesPolygonShapeImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: return createGeographicCoordinatesPolygonShapeImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: return createBasicCartesianTriangularMeshMapLayer();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER: return createCartesianTriangularMeshURLMapLayer();
-			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER: return createFeaturesOfInterestMapLayer();
-			case Symphony__CoreEnvironmentPackage.WORKSITE_NODE: return createWorksiteNode();
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE_NODE: return createSurfaceWorksiteNode();
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE: return createEarthSurfaceWorksiteNode();
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE: return createMapsListNode();
-			case Symphony__CoreEnvironmentPackage.MAP_NODE: return createMapNode();
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE: return createAbstractMapLayerNode();
-			case Symphony__CoreEnvironmentPackage.SKY_NODE: return createSkyNode();
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY_NODE: return createEarthSkyNode();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE: return createCartesianTriangularMeshMapLayerNode();
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE: return createEarthSurfaceWorksite();
+			case ApogyCoreEnvironmentPackage.ENVIRONMENT: return createEnvironment();
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT: return createSurfaceEnvironment();
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_ENVIRONMENT: return createEarthSurfaceEnvironment();
+			case ApogyCoreEnvironmentPackage.ATMOSPHERE: return createAtmosphere();
+			case ApogyCoreEnvironmentPackage.ATMOSPHERE_UTILS: return createAtmosphereUtils();
+			case ApogyCoreEnvironmentPackage.EQUATORIAL_COORDINATES: return createEquatorialCoordinates();
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES: return createGeographicCoordinates();
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES: return createHorizontalCoordinates();
+			case ApogyCoreEnvironmentPackage.ECLIPTIC_COORDINATES: return createEclipticCoordinates();
+			case ApogyCoreEnvironmentPackage.SKY: return createSky();
+			case ApogyCoreEnvironmentPackage.EARTH_SKY: return createEarthSky();
+			case ApogyCoreEnvironmentPackage.SUN: return createSun();
+			case ApogyCoreEnvironmentPackage.EARTH: return createEarth();
+			case ApogyCoreEnvironmentPackage.MOON: return createMoon();
+			case ApogyCoreEnvironmentPackage.ENVIRONMENT_UTILITIES: return createEnvironmentUtilities();
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE: return createApogyCoreEnvironmentFacade();
+			case ApogyCoreEnvironmentPackage.STAR: return createStar();
+			case ApogyCoreEnvironmentPackage.STAR_FIELD: return createStarField();
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS: return createAstronomyUtils();
+			case ApogyCoreEnvironmentPackage.MAP: return createMap();
+			case ApogyCoreEnvironmentPackage.MAPS_LIST: return createMapsList();
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION: return createRectangularRegion();
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION: return createRectangularVolumeRegion();
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER: return createImageMapLayer();
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION: return createImageMapLayerPresentation();
+			case ApogyCoreEnvironmentPackage.URL_IMAGE_MAP_LAYER: return createURLImageMapLayer();
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER: return createTopologyTreeMapLayer();
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE: return createTopologyTreeMapLayerNode();
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: return createCartesianTriangularMeshMapLayer();
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER: return createCartesianTriangularMeshSlopeImageMapLayer();
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER: return createCartesianTriangularMeshDiscreteSlopeImageMapLayer();
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER: return createCartesianTriangularMeshHeightImageMapLayer();
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE: return createSlopeRange();
+			case ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER: return createLineOfSightImageMapLayer();
+			case ApogyCoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER: return createEllipseShapeImageLayer();
+			case ApogyCoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER: return createRectangleShapeImageLayer();
+			case ApogyCoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: return createCartesianCoordinatesPolygonShapeImageMapLayer();
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: return createGeographicCoordinatesPolygonShapeImageMapLayer();
+			case ApogyCoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: return createBasicCartesianTriangularMeshMapLayer();
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER: return createCartesianTriangularMeshURLMapLayer();
+			case ApogyCoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER: return createFeaturesOfInterestMapLayer();
+			case ApogyCoreEnvironmentPackage.WORKSITE_NODE: return createWorksiteNode();
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE_NODE: return createSurfaceWorksiteNode();
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE: return createEarthSurfaceWorksiteNode();
+			case ApogyCoreEnvironmentPackage.MAPS_LIST_NODE: return createMapsListNode();
+			case ApogyCoreEnvironmentPackage.MAP_NODE: return createMapNode();
+			case ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE: return createAbstractMapLayerNode();
+			case ApogyCoreEnvironmentPackage.SKY_NODE: return createSkyNode();
+			case ApogyCoreEnvironmentPackage.EARTH_SKY_NODE: return createEarthSkyNode();
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE: return createCartesianTriangularMeshMapLayerNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -182,17 +182,17 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentPackage.LIST:
+			case ApogyCoreEnvironmentPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentPackage.SORTED_SET:
+			case ApogyCoreEnvironmentPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentPackage.DATE:
+			case ApogyCoreEnvironmentPackage.DATE:
 				return createDateFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentPackage.POINT3D:
+			case ApogyCoreEnvironmentPackage.POINT3D:
 				return createPoint3dFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentPackage.COLOR3F:
+			case ApogyCoreEnvironmentPackage.COLOR3F:
 				return createColor3fFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentPackage.IPROGRESS_MONITOR:
+			case ApogyCoreEnvironmentPackage.IPROGRESS_MONITOR:
 				return createIProgressMonitorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -208,17 +208,17 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentPackage.LIST:
+			case ApogyCoreEnvironmentPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentPackage.SORTED_SET:
+			case ApogyCoreEnvironmentPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentPackage.DATE:
+			case ApogyCoreEnvironmentPackage.DATE:
 				return convertDateToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentPackage.POINT3D:
+			case ApogyCoreEnvironmentPackage.POINT3D:
 				return convertPoint3dToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentPackage.COLOR3F:
+			case ApogyCoreEnvironmentPackage.COLOR3F:
 				return convertColor3fToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentPackage.IPROGRESS_MONITOR:
+			case ApogyCoreEnvironmentPackage.IPROGRESS_MONITOR:
 				return convertIProgressMonitorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -405,9 +405,9 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentFacade createSymphony__CoreEnvironmentFacade() {
-		Symphony__CoreEnvironmentFacadeImpl symphony__CoreEnvironmentFacade = new Symphony__CoreEnvironmentFacadeImpl();
-		return symphony__CoreEnvironmentFacade;
+	public ApogyCoreEnvironmentFacade createApogyCoreEnvironmentFacade() {
+		ApogyCoreEnvironmentFacadeImpl apogy__CoreEnvironmentFacade = new ApogyCoreEnvironmentFacadeImpl();
+		return apogy__CoreEnvironmentFacade;
 	}
 
 		/**
@@ -903,8 +903,8 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentPackage getSymphony__CoreEnvironmentPackage() {
-		return (Symphony__CoreEnvironmentPackage)getEPackage();
+	public ApogyCoreEnvironmentPackage getApogyCoreEnvironmentPackage() {
+		return (ApogyCoreEnvironmentPackage)getEPackage();
 	}
 
 		/**
@@ -914,9 +914,9 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CoreEnvironmentPackage getPackage()
+  public static ApogyCoreEnvironmentPackage getPackage()
   {
-		return Symphony__CoreEnvironmentPackage.eINSTANCE;
+		return ApogyCoreEnvironmentPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreEnvironmentFactoryImpl
+} //ApogyCoreEnvironmentFactoryImpl

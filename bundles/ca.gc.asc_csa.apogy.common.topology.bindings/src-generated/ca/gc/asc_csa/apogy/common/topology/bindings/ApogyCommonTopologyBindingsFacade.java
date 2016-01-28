@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.bindings.impl.ApogyCommonTopologyBindingsFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,13 +19,13 @@ import org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopolo
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getSymphony__CommonTopologyBindingsFacade()
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getApogyCommonTopologyBindingsFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonTopologyBindingsFacade extends EObject
+public interface ApogyCommonTopologyBindingsFacade extends EObject
 {
-	public static final Symphony__CommonTopologyBindingsFacade INSTANCE = Symphony__CommonTopologyBindingsFacadeImpl.getInstance();
+	public static final ApogyCommonTopologyBindingsFacade INSTANCE = ApogyCommonTopologyBindingsFacadeImpl.getInstance();
 
   /**
 	 * <!-- begin-user-doc -->
@@ -36,8 +36,8 @@ public interface Symphony__CommonTopologyBindingsFacade extends EObject
 	 * @param originalToCopyNodeMap Maps original Nodes to copied ones.
 	 * @return The copy of the original Binding.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" originalBindingUnique="false" originalToCopyNodeMapDataType="org.eclipse.symphony.common.topology.bindings.Map<org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node>" originalToCopyNodeMapUnique="false"
+	 * @model unique="false" originalBindingUnique="false" originalToCopyNodeMapDataType="ca.gc.asc_csa.apogy.common.topology.bindings.Map<ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.Node>" originalToCopyNodeMapUnique="false"
 	 * @generated
 	 */
   AbstractTopologyBinding copy(AbstractTopologyBinding originalBinding, Map<Node, Node> originalToCopyNodeMap);
-} // Symphony__CommonTopologyBindingsFacade
+} // ApogyCommonTopologyBindingsFacade

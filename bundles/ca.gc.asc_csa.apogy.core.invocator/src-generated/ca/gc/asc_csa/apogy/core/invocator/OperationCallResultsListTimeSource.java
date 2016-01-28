@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
 
 
 /**
@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResultsListTimeSource()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCallResultsListTimeSource()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface OperationCallResultsListTimeSource extends CollectionTimedTimeS
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ops Call List</em>' reference.
 	 * @see #setOpsCallList(OperationCallResultsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResultsListTimeSource_OpsCallList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCallResultsListTimeSource_OpsCallList()
 	 * @model
 	 * @generated
 	 */
 	OperationCallResultsList getOpsCallList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ops Call List</em>' reference.

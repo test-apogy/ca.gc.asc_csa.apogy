@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,19 +21,19 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyFactory
+ * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesSatelliteSymphony' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016' modelName='Symphony__ExamplesSatelliteSymphony' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.satellite.symphony/src-generated' editDirectory='/org.eclipse.symphony.examples.satellite.symphony.edit/src-generated' basePackage='org.eclipse.symphony.examples.satellite'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesSatelliteApogy' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016' modelName='ApogyExamplesSatelliteApogy' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.satellite.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.satellite'"
  * @generated
  */
-public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
+public interface ApogyExamplesSatelliteApogyPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "symphony";
+	String eNAME = "apogy";
 
 	/**
 	 * The package namespace URI.
@@ -41,7 +41,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.examples.satellite.symphony";
+	String eNS_URI = "ca.gc.asc_csa.apogy.examples.satellite.apogy";
 
 	/**
 	 * The package namespace name.
@@ -49,7 +49,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "symphony";
+	String eNS_PREFIX = "apogy";
 
 	/**
 	 * The singleton instance of the package.
@@ -57,14 +57,14 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesSatelliteSymphonyPackage eINSTANCE = org.eclipse.symphony.examples.satellite.symphony.impl.Symphony__ExamplesSatelliteSymphonyPackageImpl.init();
+	ApogyExamplesSatelliteApogyPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ApogyExamplesSatelliteApogyPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationSystemApiAdapterImpl <em>Constellation System Api Adapter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationSystemApiAdapterImpl <em>Constellation System Api Adapter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationSystemApiAdapterImpl
-	 * @see org.eclipse.symphony.examples.satellite.symphony.impl.Symphony__ExamplesSatelliteSymphonyPackageImpl#getConstellationSystemApiAdapter()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationSystemApiAdapterImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ApogyExamplesSatelliteApogyPackageImpl#getConstellationSystemApiAdapter()
 	 * @generated
 	 */
 	int CONSTELLATION_SYSTEM_API_ADAPTER = 0;
@@ -76,7 +76,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER__ENVIRONMENT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT;
+	int CONSTELLATION_SYSTEM_API_ADAPTER__ENVIRONMENT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' reference.
@@ -85,7 +85,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER__INSTANCE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE;
+	int CONSTELLATION_SYSTEM_API_ADAPTER__INSTANCE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -94,7 +94,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER__ELEMENT_TYPE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
+	int CONSTELLATION_SYSTEM_API_ADAPTER__ELEMENT_TYPE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -103,7 +103,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER__POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
+	int CONSTELLATION_SYSTEM_API_ADAPTER__POSE_TRANSFORM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
 
 	/**
 	 * The feature id for the '<em><b>Pose Corrector</b></em>' containment reference.
@@ -112,16 +112,16 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER__POSE_CORRECTOR = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
+	int CONSTELLATION_SYSTEM_API_ADAPTER__POSE_CORRECTOR = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
 
 	/**
-	 * The feature id for the '<em><b>Symphony System</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM;
+	int CONSTELLATION_SYSTEM_API_ADAPTER__APOGY_SYSTEM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM;
 
 	/**
 	 * The number of structural features of the '<em>Constellation System Api Adapter</em>' class.
@@ -130,7 +130,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
+	int CONSTELLATION_SYSTEM_API_ADAPTER_FEATURE_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -139,7 +139,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -148,7 +148,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
 
 	/**
 	 * The operation id for the '<em>Create Initialization Data</em>' operation.
@@ -157,7 +157,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -166,7 +166,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
 
 	/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -175,7 +175,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
 
 	/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -184,7 +184,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
 
 	/**
 	 * The operation id for the '<em>Invoke</em>' operation.
@@ -193,7 +193,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -202,7 +202,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___DISPOSE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___DISPOSE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___DISPOSE;
 
 	/**
 	 * The operation id for the '<em>Create Result Matrix</em>' operation.
@@ -211,7 +211,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
+	int CONSTELLATION_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
 
 	/**
 	 * The number of operations of the '<em>Constellation System Api Adapter</em>' class.
@@ -220,14 +220,14 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_SYSTEM_API_ADAPTER_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
+	int CONSTELLATION_SYSTEM_API_ADAPTER_OPERATION_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl <em>Constellation Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl <em>Constellation Data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl
-	 * @see org.eclipse.symphony.examples.satellite.symphony.impl.Symphony__ExamplesSatelliteSymphonyPackageImpl#getConstellationData()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ApogyExamplesSatelliteApogyPackageImpl#getConstellationData()
 	 * @generated
 	 */
 	int CONSTELLATION_DATA = 1;
@@ -239,7 +239,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA__INITIAL_POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
+	int CONSTELLATION_DATA__INITIAL_POSE_TRANSFORM = ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
 
 	/**
 	 * The feature id for the '<em><b>Satellites List</b></em>' containment reference.
@@ -248,7 +248,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA__SATELLITES_LIST = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
+	int CONSTELLATION_DATA__SATELLITES_LIST = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Ground Stations References List</b></em>' containment reference.
@@ -257,7 +257,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
+	int CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Downlinks Lists</b></em>' containment reference.
@@ -266,7 +266,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA__DOWNLINKS_LISTS = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
+	int CONSTELLATION_DATA__DOWNLINKS_LISTS = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Constellation Requests List</b></em>' containment reference.
@@ -275,7 +275,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
+	int CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Constellation Data</em>' class.
@@ -284,7 +284,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
+	int CONSTELLATION_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Constellation Data</em>' class.
@@ -293,68 +293,68 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+	int CONSTELLATION_DATA_OPERATION_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter <em>Constellation System Api Adapter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter <em>Constellation System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation System Api Adapter</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter
 	 * @generated
 	 */
 	EClass getConstellationSystemApiAdapter();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData <em>Constellation Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData <em>Constellation Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constellation Data</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData
 	 * @generated
 	 */
 	EClass getConstellationData();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getSatellitesList <em>Satellites List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getSatellitesList <em>Satellites List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Satellites List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getSatellitesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getSatellitesList()
 	 * @see #getConstellationData()
 	 * @generated
 	 */
 	EReference getConstellationData_SatellitesList();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getGroundStationsReferencesList <em>Ground Stations References List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getGroundStationsReferencesList <em>Ground Stations References List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Ground Stations References List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getGroundStationsReferencesList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getGroundStationsReferencesList()
 	 * @see #getConstellationData()
 	 * @generated
 	 */
 	EReference getConstellationData_GroundStationsReferencesList();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Downlinks Lists</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getDownlinksLists()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getDownlinksLists()
 	 * @see #getConstellationData()
 	 * @generated
 	 */
 	EReference getConstellationData_DownlinksLists();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Constellation Requests List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getConstellationRequestsList()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData#getConstellationRequestsList()
 	 * @see #getConstellationData()
 	 * @generated
 	 */
@@ -367,7 +367,7 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesSatelliteSymphonyFactory getSymphony__ExamplesSatelliteSymphonyFactory();
+	ApogyExamplesSatelliteApogyFactory getApogyExamplesSatelliteApogyFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -384,21 +384,21 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationSystemApiAdapterImpl <em>Constellation System Api Adapter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationSystemApiAdapterImpl <em>Constellation System Api Adapter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationSystemApiAdapterImpl
-		 * @see org.eclipse.symphony.examples.satellite.symphony.impl.Symphony__ExamplesSatelliteSymphonyPackageImpl#getConstellationSystemApiAdapter()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationSystemApiAdapterImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ApogyExamplesSatelliteApogyPackageImpl#getConstellationSystemApiAdapter()
 		 * @generated
 		 */
 		EClass CONSTELLATION_SYSTEM_API_ADAPTER = eINSTANCE.getConstellationSystemApiAdapter();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl <em>Constellation Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl <em>Constellation Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl
-		 * @see org.eclipse.symphony.examples.satellite.symphony.impl.Symphony__ExamplesSatelliteSymphonyPackageImpl#getConstellationData()
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ConstellationDataImpl
+		 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.impl.ApogyExamplesSatelliteApogyPackageImpl#getConstellationData()
 		 * @generated
 		 */
 		EClass CONSTELLATION_DATA = eINSTANCE.getConstellationData();
@@ -437,4 +437,4 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 
 	}
 
-} //Symphony__ExamplesSatelliteSymphonyPackage
+} //ApogyExamplesSatelliteApogyPackage

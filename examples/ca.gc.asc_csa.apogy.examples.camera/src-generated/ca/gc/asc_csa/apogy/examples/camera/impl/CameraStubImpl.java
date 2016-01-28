@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.impl;
+package ca.gc.asc_csa.apogy.examples.camera.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.camera.Activator;
-import org.eclipse.symphony.examples.camera.CameraStub;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.camera.Activator;
+import ca.gc.asc_csa.apogy.examples.camera.CameraStub;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class CameraStubImpl extends CameraImpl implements CameraStub
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesCameraPackage.Literals.CAMERA_STUB;
+		return ApogyExamplesCameraPackage.Literals.CAMERA_STUB;
 	}
 
 	/**

@@ -3,7 +3,7 @@
  *
  * $Id: Coordinates25DItemProvider.java,v 1.3.4.2 2015/05/21 15:50:03 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.provider.CoordinatesItemProvider;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.CoordinatesItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class Coordinates25DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Coordinates25D_u_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Coordinates25D_u_feature", "_UI_Coordinates25D_type"),
-				 Symphony__CommonGeometryData25DPackage.Literals.COORDINATES25_D__U,
+				 ApogyCommonGeometryData25DPackage.Literals.COORDINATES25_D__U,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class Coordinates25DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Coordinates25D_v_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Coordinates25D_v_feature", "_UI_Coordinates25D_type"),
-				 Symphony__CommonGeometryData25DPackage.Literals.COORDINATES25_D__V,
+				 ApogyCommonGeometryData25DPackage.Literals.COORDINATES25_D__V,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class Coordinates25DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Coordinates25D_w_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Coordinates25D_w_feature", "_UI_Coordinates25D_type"),
-				 Symphony__CommonGeometryData25DPackage.Literals.COORDINATES25_D__W,
+				 ApogyCommonGeometryData25DPackage.Literals.COORDINATES25_D__W,
 				 true,
 				 false,
 				 false,
@@ -165,9 +165,9 @@ public class Coordinates25DItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Coordinates25D.class)) {
-			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__U:
-			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__V:
-			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__W:
+			case ApogyCommonGeometryData25DPackage.COORDINATES25_D__U:
+			case ApogyCommonGeometryData25DPackage.COORDINATES25_D__V:
+			case ApogyCommonGeometryData25DPackage.COORDINATES25_D__W:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_antenna -->
+      <!-- @generated apogy_examples_antenna -->
       <factory
-            uri="org.eclipse.symphony.examples.antenna"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.antenna"
+            class="ca.gc.asc_csa.apogy.examples.antenna.apogy.provider.ApogyExamplesAntennaApogyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,13 +21,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_antenna_symphony -->
+      <!-- @generated apogy_examples_antenna_apogy -->
       <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.examples.antenna.apogy.provider.ApogyExamplesAntennaApogyItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.examples.antenna.apogy.provider.ApogyExamplesAntennaApogyItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

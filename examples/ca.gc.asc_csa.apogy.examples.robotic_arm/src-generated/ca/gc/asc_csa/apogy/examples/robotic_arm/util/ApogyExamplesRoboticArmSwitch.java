@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.util;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.examples.robotic_arm.*;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.examples.robotic_arm.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage
  * @generated
  */
-public class Symphony__ExamplesRoboticArmSwitch<T> extends Switch<T>
+public class ApogyExamplesRoboticArmSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -29,7 +29,7 @@ public class Symphony__ExamplesRoboticArmSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesRoboticArmPackage modelPackage;
+  protected static ApogyExamplesRoboticArmPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -37,10 +37,10 @@ public class Symphony__ExamplesRoboticArmSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoboticArmSwitch()
+  public ApogyExamplesRoboticArmSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesRoboticArmPackage.eINSTANCE;
+			modelPackage = ApogyExamplesRoboticArmPackage.eINSTANCE;
 		}
 	}
 
@@ -69,20 +69,20 @@ public class Symphony__ExamplesRoboticArmSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM: {
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM: {
 				RoboticArm roboticArm = (RoboticArm)theEObject;
 				T result = caseRoboticArm(roboticArm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM_STUB: {
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_STUB: {
 				RoboticArmStub roboticArmStub = (RoboticArmStub)theEObject;
 				T result = caseRoboticArmStub(roboticArmStub);
 				if (result == null) result = caseRoboticArm(roboticArmStub);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM_SIMULATED: {
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_SIMULATED: {
 				RoboticArmSimulated roboticArmSimulated = (RoboticArmSimulated)theEObject;
 				T result = caseRoboticArmSimulated(roboticArmSimulated);
 				if (result == null) result = caseRoboticArm(roboticArmSimulated);
@@ -157,4 +157,4 @@ public class Symphony__ExamplesRoboticArmSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesRoboticArmSwitch
+} //ApogyExamplesRoboticArmSwitch

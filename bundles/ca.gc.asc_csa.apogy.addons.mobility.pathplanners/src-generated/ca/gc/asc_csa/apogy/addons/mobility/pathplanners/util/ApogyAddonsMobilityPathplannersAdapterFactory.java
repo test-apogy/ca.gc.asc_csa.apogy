@@ -1,46 +1,46 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPathplannersAdapterFactory.java,v 1.4.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityPathplannersAdapterFactory.java,v 1.4.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.util;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsMobilityPathplannersAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPathplannersPackage modelPackage;
+	protected static ApogyAddonsMobilityPathplannersPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -48,9 +48,9 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersAdapterFactory() {
+	public ApogyAddonsMobilityPathplannersAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPathplannersPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPathplannersPackage.eINSTANCE;
 		}
 	}
 
@@ -79,8 +79,8 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsMobilityPathplannersSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsMobilityPathplannersSwitch<Adapter>() {
+	protected ApogyAddonsMobilityPathplannersSwitch<Adapter> modelSwitch =
+		new ApogyAddonsMobilityPathplannersSwitch<Adapter>() {
 			@Override
 			public Adapter caseWayPointPathPlanner(WayPointPathPlanner object) {
 				return createWayPointPathPlannerAdapter();
@@ -98,8 +98,8 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 				return createCircularExclusionZoneAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__AddonsMobilityPathplannersFacade(Symphony__AddonsMobilityPathplannersFacade object) {
-				return createSymphony__AddonsMobilityPathplannersFacadeAdapter();
+			public Adapter caseApogyAddonsMobilityPathplannersFacade(ApogyAddonsMobilityPathplannersFacade object) {
+				return createApogyAddonsMobilityPathplannersFacadeAdapter();
 			}
 			@Override
 			public Adapter caseMonitorable(Monitorable object) {
@@ -146,13 +146,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner <em>Way Point Path Planner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner <em>Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner
 	 * @generated
 	 */
 	public Adapter createWayPointPathPlannerAdapter() {
@@ -160,13 +160,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner <em>Mesh Way Point Path Planner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner <em>Mesh Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner
 	 * @generated
 	 */
 	public Adapter createMeshWayPointPathPlannerAdapter() {
@@ -174,13 +174,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone <em>Exclusion Zone</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone <em>Exclusion Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone
 	 * @generated
 	 */
 	public Adapter createExclusionZoneAdapter() {
@@ -188,13 +188,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone <em>Circular Exclusion Zone</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone <em>Circular Exclusion Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone
 	 * @generated
 	 */
 	public Adapter createCircularExclusionZoneAdapter() {
@@ -202,27 +202,27 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__AddonsMobilityPathplannersFacadeAdapter() {
+	public Adapter createApogyAddonsMobilityPathplannersFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -230,13 +230,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -244,13 +244,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter()
@@ -259,13 +259,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape
 	 * @generated
 	 */
 	public Adapter createSamplingShapeAdapter() {
@@ -273,13 +273,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
 	 * @generated
 	 */
 	public Adapter createCoordinatesSamplingShapeAdapter() {
@@ -287,13 +287,13 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
 	 * @generated
 	 */
 	public Adapter createPolygonSamplingShapeAdapter() {
@@ -312,4 +312,4 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 		return null;
 	}
 
-} //Symphony__AddonsMobilityPathplannersAdapterFactory
+} //ApogyAddonsMobilityPathplannersAdapterFactory

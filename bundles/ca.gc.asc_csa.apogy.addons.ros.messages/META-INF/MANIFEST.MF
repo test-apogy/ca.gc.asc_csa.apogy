@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.ros.messages
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.ros.messages
 Bundle-Version: 0.5.0.qualifier
 Require-Bundle: org.ros.bootstrap;bundle-version="1.6.6",
  org.ros.messages;bundle-version="1.6.6"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
 Eclipse-RegisterBuddy: org.ros.messages, org.ros.bootstrap
-Export-Package: org.eclipse.symphony.addons.ros.messages
+Export-Package: ca.gc.asc_csa.apogy.addons.ros.messages

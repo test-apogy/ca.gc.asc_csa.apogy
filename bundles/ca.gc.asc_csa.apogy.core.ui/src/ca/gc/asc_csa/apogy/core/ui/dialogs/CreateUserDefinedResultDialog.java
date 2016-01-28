@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.dialogs;
+package ca.gc.asc_csa.apogy.core.ui.dialogs;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,21 +19,21 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.UserDefinedResult;
-import org.eclipse.symphony.core.invocator.Context;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.UserDefinedResult;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
 
 public class CreateUserDefinedResultDialog extends Dialog 
 {	
 	protected Context context;
 		
-	private Matrix4x4 resultPose = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
+	private Matrix4x4 resultPose = ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 	
 	private UserDefinedResult userDefinedResult = null;
 		
@@ -105,8 +105,8 @@ public class CreateUserDefinedResultDialog extends Dialog
 				Node selectedNode = indexToNodeMap.get(nodesCombo.getSelectionIndex());
 				if(selectedNode != null)
 				{
-					Matrix4d absolutePosition = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(selectedNode);
-					resultPose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(absolutePosition);
+					Matrix4d absolutePosition = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(selectedNode);
+					resultPose = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(absolutePosition);
 				}
 			}
 			
@@ -146,7 +146,7 @@ public class CreateUserDefinedResultDialog extends Dialog
 	@Override
 	protected void okPressed() 
 	{
-		userDefinedResult = Symphony__CoreFactory.eINSTANCE.createUserDefinedResult();
+		userDefinedResult = ApogyCoreFactory.eINSTANCE.createUserDefinedResult();
 		userDefinedResult.setName(getResultName());
 		userDefinedResult.setDescription(getResultDescription());
 		userDefinedResult.setPose(getResultPose());		
@@ -161,11 +161,11 @@ public class CreateUserDefinedResultDialog extends Dialog
 	{
 		final Combo combo = new Combo(parent, SWT.NONE);
 		
-		if(context.getEnvironment() instanceof SymphonyEnvironment)
+		if(context.getEnvironment() instanceof ApogyEnvironment)
 		{
-			SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) context.getEnvironment();
+			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) context.getEnvironment();
 			
-			Node rootNode = symphonyEnvironment.getSymphonyTopology().getRootNode();			
+			Node rootNode = apogyEnvironment.getApogyTopology().getRootNode();			
 			
 			List<Node> nodes = getAllNodes(rootNode);
 			

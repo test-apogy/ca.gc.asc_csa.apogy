@@ -1,18 +1,18 @@
-@GenModel(prefix="Symphony__CommonConvertersUI",
+@GenModel(prefix="ApogyCommonConvertersUI",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  operationReflection="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CommonConvertersUI") 
-@GenModel(modelDirectory="/org.eclipse.symphony.common.converters.ui/src-generated")
+		  modelName="ApogyCommonConvertersUI") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.converters.ui/src-generated")
 
-package org.eclipse.symphony.common.converters.ui
+package ca.gc.asc_csa.apogy.common.converters.ui
 
-import org.eclipse.symphony.common.converters.List
+import ca.gc.asc_csa.apogy.common.converters.List
 
 type ISelection wraps org.eclipse.jface.viewers.ISelection
 
-class Symphony__CommonConvertersUIFacade
+class ApogyCommonConvertersUIFacade
 {
 		/*
 	 * Converts an ISelection to an object of type targetType

@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
-import org.eclipse.symphony.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.topology.PositionNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PositionSensor#getPositionCoordinates <em>Position Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor#getPositionCoordinates <em>Position Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPositionSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getPositionSensor()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface PositionSensor extends PositionNode, SelfPlaceSensor {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position Coordinates</em>' reference.
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPositionSensor_PositionCoordinates()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getPositionSensor_PositionCoordinates()
 	 * @model transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -42,7 +42,7 @@ public interface PositionSensor extends PositionNode, SelfPlaceSensor {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.sensors.pose.Exception" newPositionUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.sensors.pose.Exception" newPositionUnique="false"
 	 * @generated
 	 */
 	void resetPosition(CartesianPositionCoordinates newPosition) throws Exception;

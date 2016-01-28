@@ -9,10 +9,10 @@
 
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_addons_ros_imaging -->
+      <!-- @generated apogy_addons_ros_imaging -->
       <factory
-            uri="org.eclipse.symphony.addons.ros.imaging"
-            class="org.eclipse.symphony.addons.ros.imaging.provider.Symphony__AddonsROSImagingItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.ros.imaging"
+            class="ca.gc.asc_csa.apogy.addons.ros.imaging.provider.ApogyAddonsROSImagingItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.impl;
+package ca.gc.asc_csa.apogy.common.images.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.images.ImageSize;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ImageSize;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +18,8 @@ import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.images.impl.ImageSizeImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.impl.ImageSizeImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.ImageSizeImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.ImageSizeImpl#getHeight <em>Height</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class ImageSizeImpl extends MinimalEObjectImpl.Container implements Image
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonImagesPackage.Literals.IMAGE_SIZE;
+		return ApogyCommonImagesPackage.Literals.IMAGE_SIZE;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class ImageSizeImpl extends MinimalEObjectImpl.Container implements Image
 		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.IMAGE_SIZE__WIDTH, oldWidth, width));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.IMAGE_SIZE__WIDTH, oldWidth, width));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class ImageSizeImpl extends MinimalEObjectImpl.Container implements Image
 		int oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.IMAGE_SIZE__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.IMAGE_SIZE__HEIGHT, oldHeight, height));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class ImageSizeImpl extends MinimalEObjectImpl.Container implements Image
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__WIDTH:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__WIDTH:
 				return getWidth();
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__HEIGHT:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__HEIGHT:
 				return getHeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class ImageSizeImpl extends MinimalEObjectImpl.Container implements Image
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__WIDTH:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__WIDTH:
 				setWidth((Integer)newValue);
 				return;
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__HEIGHT:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__HEIGHT:
 				setHeight((Integer)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class ImageSizeImpl extends MinimalEObjectImpl.Container implements Image
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__WIDTH:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__HEIGHT:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class ImageSizeImpl extends MinimalEObjectImpl.Container implements Image
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__WIDTH:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__WIDTH:
 				return width != WIDTH_EDEFAULT;
-			case Symphony__CommonImagesPackage.IMAGE_SIZE__HEIGHT:
+			case ApogyCommonImagesPackage.IMAGE_SIZE__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

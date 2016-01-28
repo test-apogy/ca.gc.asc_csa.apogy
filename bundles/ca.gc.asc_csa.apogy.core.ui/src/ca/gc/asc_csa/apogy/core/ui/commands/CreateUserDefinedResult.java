@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.commands;
+package ca.gc.asc_csa.apogy.core.ui.commands;
 
 import java.util.Iterator;
 
@@ -9,10 +9,10 @@ import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.core.UserDefinedResult;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.ui.dialogs.CreateUserDefinedResultDialog;
+import ca.gc.asc_csa.apogy.core.UserDefinedResult;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.ui.dialogs.CreateUserDefinedResultDialog;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 

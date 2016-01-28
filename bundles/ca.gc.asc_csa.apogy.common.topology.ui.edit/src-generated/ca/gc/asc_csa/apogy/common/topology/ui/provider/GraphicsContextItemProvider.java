@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.GraphicsContext} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -75,7 +75,7 @@ public class GraphicsContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GraphicsContext_topology_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GraphicsContext_topology_feature", "_UI_GraphicsContext_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY,
+				 ApogyCommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY,
 				 true,
 				 false,
 				 true,
@@ -97,7 +97,7 @@ public class GraphicsContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GraphicsContext_topologyPresentationSet_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GraphicsContext_topologyPresentationSet_feature", "_UI_GraphicsContext_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET,
+				 ApogyCommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET,
 				 true,
 				 false,
 				 true,

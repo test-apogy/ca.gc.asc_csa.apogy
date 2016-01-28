@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.commands;
+package ca.gc.asc_csa.apogy.core.environment.commands;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
@@ -12,7 +12,7 @@ import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class UpdateImageMapLayerCommandHandler extends AbstractHandler implements

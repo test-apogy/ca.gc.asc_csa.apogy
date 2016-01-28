@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypesList;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,8 +80,8 @@ public class TypesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -137,8 +137,8 @@ public class TypesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypesList.class)) {
-			case Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
-			case Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
+			case ApogyCoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
+			case ApogyCoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,13 +159,13 @@ public class TypesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createLocalTypesList()));
+				(ApogyCoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createLocalTypesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createRegisteredTypesList()));
+				(ApogyCoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createRegisteredTypesList()));
 	}
 
   /**

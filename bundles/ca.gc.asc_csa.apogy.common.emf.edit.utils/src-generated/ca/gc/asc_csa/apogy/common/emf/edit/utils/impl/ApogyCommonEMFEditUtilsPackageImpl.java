@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.edit.utils.impl;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils.impl;
 
 import java.util.Collection;
 
@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFactory;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFactory;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,14 +20,14 @@ import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPa
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implements Symphony__CommonEMFEditUtilsPackage
+public class ApogyCommonEMFEditUtilsPackageImpl extends EPackageImpl implements ApogyCommonEMFEditUtilsPackage
 {
   /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonEMFEditUtilsFacadeEClass = null;
+	private EClass apogy__CommonEMFEditUtilsFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -47,13 +47,13 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__CommonEMFEditUtilsPackageImpl()
+  private ApogyCommonEMFEditUtilsPackageImpl()
   {
-		super(eNS_URI, Symphony__CommonEMFEditUtilsFactory.eINSTANCE);
+		super(eNS_URI, ApogyCommonEMFEditUtilsFactory.eINSTANCE);
 	}
 
   /**
@@ -66,7 +66,7 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonEMFEditUtilsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonEMFEditUtilsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -75,12 +75,12 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__CommonEMFEditUtilsPackage init()
+  public static ApogyCommonEMFEditUtilsPackage init()
   {
-		if (isInited) return (Symphony__CommonEMFEditUtilsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFEditUtilsPackage.eNS_URI);
+		if (isInited) return (ApogyCommonEMFEditUtilsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFEditUtilsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonEMFEditUtilsPackageImpl theSymphony__CommonEMFEditUtilsPackage = (Symphony__CommonEMFEditUtilsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonEMFEditUtilsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonEMFEditUtilsPackageImpl());
+		ApogyCommonEMFEditUtilsPackageImpl theApogyCommonEMFEditUtilsPackage = (ApogyCommonEMFEditUtilsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonEMFEditUtilsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonEMFEditUtilsPackageImpl());
 
 		isInited = true;
 
@@ -88,18 +88,18 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonEMFEditUtilsPackage.createPackageContents();
+		theApogyCommonEMFEditUtilsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonEMFEditUtilsPackage.initializePackageContents();
+		theApogyCommonEMFEditUtilsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonEMFEditUtilsPackage.freeze();
+		theApogyCommonEMFEditUtilsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonEMFEditUtilsPackage.eNS_URI, theSymphony__CommonEMFEditUtilsPackage);
-		return theSymphony__CommonEMFEditUtilsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonEMFEditUtilsPackage.eNS_URI, theApogyCommonEMFEditUtilsPackage);
+		return theApogyCommonEMFEditUtilsPackage;
 	}
 
   /**
@@ -107,8 +107,8 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonEMFEditUtilsFacade() {
-		return symphony__CommonEMFEditUtilsFacadeEClass;
+	public EClass getApogyCommonEMFEditUtilsFacade() {
+		return apogy__CommonEMFEditUtilsFacadeEClass;
 	}
 
 		/**
@@ -116,8 +116,8 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonEMFEditUtilsFacade__GetText__Object() {
-		return symphony__CommonEMFEditUtilsFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonEMFEditUtilsFacade__GetText__Object() {
+		return apogy__CommonEMFEditUtilsFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -125,8 +125,8 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object() {
-		return symphony__CommonEMFEditUtilsFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object() {
+		return apogy__CommonEMFEditUtilsFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -144,8 +144,8 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFEditUtilsFactory getSymphony__CommonEMFEditUtilsFactory() {
-		return (Symphony__CommonEMFEditUtilsFactory)getEFactoryInstance();
+	public ApogyCommonEMFEditUtilsFactory getApogyCommonEMFEditUtilsFactory() {
+		return (ApogyCommonEMFEditUtilsFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -168,9 +168,9 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 		isCreated = true;
 
 		// Create classes and their features
-		symphony__CommonEMFEditUtilsFacadeEClass = createEClass(SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE);
-		createEOperation(symphony__CommonEMFEditUtilsFacadeEClass, SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT);
-		createEOperation(symphony__CommonEMFEditUtilsFacadeEClass, SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT);
+		apogy__CommonEMFEditUtilsFacadeEClass = createEClass(APOGY_COMMON_EMF_EDIT_UTILS_FACADE);
+		createEOperation(apogy__CommonEMFEditUtilsFacadeEClass, APOGY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT);
+		createEOperation(apogy__CommonEMFEditUtilsFacadeEClass, APOGY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT);
 
 		// Create data types
 		collectionObjectEDataType = createEDataType(COLLECTION_OBJECT);
@@ -210,12 +210,12 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(symphony__CommonEMFEditUtilsFacadeEClass, Symphony__CommonEMFEditUtilsFacade.class, "Symphony__CommonEMFEditUtilsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonEMFEditUtilsFacadeEClass, ApogyCommonEMFEditUtilsFacade.class, "ApogyCommonEMFEditUtilsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__CommonEMFEditUtilsFacade__GetText__Object(), theEcorePackage.getEString(), "getText", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCommonEMFEditUtilsFacade__GetText__Object(), theEcorePackage.getEString(), "getText", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "object", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object(), null, "removeChildDescriptor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object(), null, "removeChildDescriptor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCollectionObject(), "newChildDescriptors", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -226,4 +226,4 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonEMFEditUtilsPackageImpl
+} //ApogyCommonEMFEditUtilsPackageImpl

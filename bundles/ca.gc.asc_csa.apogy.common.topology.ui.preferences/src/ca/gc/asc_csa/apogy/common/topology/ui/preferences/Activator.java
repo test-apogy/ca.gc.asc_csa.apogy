@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.preferences;
+package ca.gc.asc_csa.apogy.common.topology.ui.preferences;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.symphony.common.topology.ui.preferences";
+	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common.topology.ui.preferences";
 
 	// The shared instance
 	private static Activator plugin;

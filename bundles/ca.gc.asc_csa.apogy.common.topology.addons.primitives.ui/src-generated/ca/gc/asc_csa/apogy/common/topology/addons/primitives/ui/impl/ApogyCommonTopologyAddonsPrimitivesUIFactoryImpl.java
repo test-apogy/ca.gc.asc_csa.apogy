@@ -1,19 +1,19 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.LabelPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.WayPointPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +21,24 @@ import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresent
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl extends EFactoryImpl implements Symphony__CommonTopologyAddonsPrimitivesUIFactory {
+public class ApogyCommonTopologyAddonsPrimitivesUIFactoryImpl extends EFactoryImpl implements ApogyCommonTopologyAddonsPrimitivesUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyAddonsPrimitivesUIFactory init() {
+	public static ApogyCommonTopologyAddonsPrimitivesUIFactory init() {
 		try {
-			Symphony__CommonTopologyAddonsPrimitivesUIFactory theSymphony__CommonTopologyAddonsPrimitivesUIFactory = (Symphony__CommonTopologyAddonsPrimitivesUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonTopologyAddonsPrimitivesUIPackage.eNS_URI);
-			if (theSymphony__CommonTopologyAddonsPrimitivesUIFactory != null) {
-				return theSymphony__CommonTopologyAddonsPrimitivesUIFactory;
+			ApogyCommonTopologyAddonsPrimitivesUIFactory theApogyCommonTopologyAddonsPrimitivesUIFactory = (ApogyCommonTopologyAddonsPrimitivesUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonTopologyAddonsPrimitivesUIPackage.eNS_URI);
+			if (theApogyCommonTopologyAddonsPrimitivesUIFactory != null) {
+				return theApogyCommonTopologyAddonsPrimitivesUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl();
+		return new ApogyCommonTopologyAddonsPrimitivesUIFactoryImpl();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl extends EFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl() {
+	public ApogyCommonTopologyAddonsPrimitivesUIFactoryImpl() {
 		super();
 	}
 
@@ -59,10 +59,10 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl extends EFact
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION: return createVectorPresentation();
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.WAY_POINT_PRESENTATION: return createWayPointPresentation();
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.LABEL_PRESENTATION: return createLabelPresentation();
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.SPHERE_PRIMITIVE_PRESENTATION: return createSpherePrimitivePresentation();
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION: return createVectorPresentation();
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.WAY_POINT_PRESENTATION: return createWayPointPresentation();
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.LABEL_PRESENTATION: return createLabelPresentation();
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.SPHERE_PRIMITIVE_PRESENTATION: return createSpherePrimitivePresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -113,8 +113,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl extends EFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesUIPackage getSymphony__CommonTopologyAddonsPrimitivesUIPackage() {
-		return (Symphony__CommonTopologyAddonsPrimitivesUIPackage)getEPackage();
+	public ApogyCommonTopologyAddonsPrimitivesUIPackage getApogyCommonTopologyAddonsPrimitivesUIPackage() {
+		return (ApogyCommonTopologyAddonsPrimitivesUIPackage)getEPackage();
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl extends EFact
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonTopologyAddonsPrimitivesUIPackage getPackage() {
-		return Symphony__CommonTopologyAddonsPrimitivesUIPackage.eINSTANCE;
+	public static ApogyCommonTopologyAddonsPrimitivesUIPackage getPackage() {
+		return ApogyCommonTopologyAddonsPrimitivesUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonTopologyAddonsPrimitivesUIFactoryImpl
+} //ApogyCommonTopologyAddonsPrimitivesUIFactoryImpl

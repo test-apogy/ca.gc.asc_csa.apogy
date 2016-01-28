@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangeFacadeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.range.impl.ApogyAddonsSensorsRangeFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,16 +12,16 @@ import org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRan
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSymphony__AddonsSensorsRangeFacade()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getApogyAddonsSensorsRangeFacade()
  * @model
  * @generated
  */
-public interface Symphony__AddonsSensorsRangeFacade extends EObject {
+public interface ApogyAddonsSensorsRangeFacade extends EObject {
 	
 	/**
-	 * Singleton of Symphony__AddonsSensorsRangeFacade.
+	 * Singleton of ApogyAddonsSensorsRangeFacade.
 	 */
-	public static final Symphony__AddonsSensorsRangeFacade INSTANCE = Symphony__AddonsSensorsRangeFacadeImpl.getInstance(); 
+	public static final ApogyAddonsSensorsRangeFacade INSTANCE = ApogyAddonsSensorsRangeFacadeImpl.getInstance(); 
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -39,4 +39,4 @@ public interface Symphony__AddonsSensorsRangeFacade extends EObject {
 	 */
 	RasterScanSettings createRasterScanSettings(RasterScanSettings rasterScanSettings);
 
-} // Symphony__AddonsSensorsRangeFacade
+} // ApogyAddonsSensorsRangeFacade

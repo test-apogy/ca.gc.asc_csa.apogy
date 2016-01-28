@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class RotationNodePresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_RotationNodePresentation_axisVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationNodePresentation_axisVisible_feature", "_UI_RotationNodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE,
+				 ApogyCommonTopologyUIPackage.Literals.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class RotationNodePresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_RotationNodePresentation_axisLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationNodePresentation_axisLength_feature", "_UI_RotationNodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.ROTATION_NODE_PRESENTATION__AXIS_LENGTH,
+				 ApogyCommonTopologyUIPackage.Literals.ROTATION_NODE_PRESENTATION__AXIS_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -134,8 +134,8 @@ public class RotationNodePresentationItemProvider extends NodePresentationItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RotationNodePresentation.class)) {
-			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
-			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGTH:
+			case ApogyCommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
+			case ApogyCommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.io.PrintWriter;
@@ -23,11 +23,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.ExceptionContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ExceptionContainer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class ExceptionContainerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExceptionContainer_exception_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExceptionContainer_exception_feature", "_UI_ExceptionContainer_type"),
-				 Symphony__CoreInvocatorPackage.Literals.EXCEPTION_CONTAINER__EXCEPTION,
+				 ApogyCoreInvocatorPackage.Literals.EXCEPTION_CONTAINER__EXCEPTION,
 				 false,
 				 false,
 				 false,
@@ -141,7 +141,7 @@ public class ExceptionContainerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ExceptionContainer.class)) {
-			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
+			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

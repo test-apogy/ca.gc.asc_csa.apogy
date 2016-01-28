@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 
 /**
@@ -13,11 +13,11 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getGainFilter()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getGainFilter()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface GainFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gain</em>' attribute.
 	 * @see #setGain(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getGainFilter_Gain()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getGainFilter_Gain()
 	 * @model default="50" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated
@@ -42,7 +42,7 @@ public interface GainFilter extends ImageFilter
   double getGain();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Gain</em>' attribute.
@@ -62,7 +62,7 @@ public interface GainFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bias</em>' attribute.
 	 * @see #setBias(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getGainFilter_Bias()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getGainFilter_Bias()
 	 * @model default="50" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated
@@ -70,7 +70,7 @@ public interface GainFilter extends ImageFilter
   double getBias();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bias</em>' attribute.

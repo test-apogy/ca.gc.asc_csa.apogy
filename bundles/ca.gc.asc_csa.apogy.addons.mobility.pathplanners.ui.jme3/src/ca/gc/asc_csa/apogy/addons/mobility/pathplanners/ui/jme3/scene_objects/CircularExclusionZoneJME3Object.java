@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.jme3.scene_objects;
 
 
 import java.util.ArrayList;
@@ -9,16 +9,16 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.jme3.Activator;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.material.Material;
 import com.jme3.material.RenderState.FaceCullMode;
@@ -241,7 +241,7 @@ public class CircularExclusionZoneJME3Object extends DefaultJME3SceneObject<Circ
 						
 						switch (featureId) 
 						{
-							case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+							case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 								 updateGeometry();
 							break;
 

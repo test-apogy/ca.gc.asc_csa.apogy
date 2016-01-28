@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 
 /**
@@ -13,11 +13,11 @@ package org.eclipse.symphony.common.geometry.data3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getXDimension <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getXDimension <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMap()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getDigitalElevationMap()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface DigitalElevationMap extends CartesianCoordinatesSet {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XDimension</em>' attribute.
 	 * @see #setXDimension(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMap_XDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getDigitalElevationMap_XDimension()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getXDimension();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getXDimension <em>XDimension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getXDimension <em>XDimension</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XDimension</em>' attribute.
@@ -58,14 +58,14 @@ public interface DigitalElevationMap extends CartesianCoordinatesSet {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YDimension</em>' attribute.
 	 * @see #setYDimension(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMap_YDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getDigitalElevationMap_YDimension()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getYDimension();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YDimension</em>' attribute.

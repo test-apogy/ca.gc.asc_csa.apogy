@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.geometry.data3d.pif;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.pif;
 
 import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.symphony.common.geometry.data3d.pif.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "ca.gc.asc_csa.apogy.common.geometry.data3d.pif.messages"; //$NON-NLS-1$
 	public static String PifToXYZ_0;
 	public static String PifToXYZ_1;
 	public static String PifToXYZ_5;

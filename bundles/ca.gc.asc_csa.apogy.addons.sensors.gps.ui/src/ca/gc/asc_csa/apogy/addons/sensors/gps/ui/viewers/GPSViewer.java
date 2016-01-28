@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.gps.ui.viewers;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.ui.viewers;
 
 import java.text.NumberFormat;
 
@@ -21,14 +21,14 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.addons.sensors.gps.Activator;
-import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
-import org.eclipse.symphony.common.emf.EListAdapter;
-import org.eclipse.symphony.common.emf.ListEventDelegate;
-import org.eclipse.symphony.common.lang.java.Timer;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPS;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSRepository;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
+import ca.gc.asc_csa.apogy.common.emf.EListAdapter;
+import ca.gc.asc_csa.apogy.common.emf.ListEventDelegate;
+import ca.gc.asc_csa.apogy.common.lang.java.Timer;
 
 /**
  * This class is a GPS viewer. that displays a {@link GPS} object.
@@ -306,7 +306,7 @@ public class GPSViewer extends Viewer {
 			};
 
 			gpsRepListener = new EListAdapter<GPS>(
-					Symphony__AddonsSensorsGPSPackage.GPS_REPOSITORY__GPS_DEVICES, delegate,
+					ApogyAddonsSensorsGPSPackage.GPS_REPOSITORY__GPS_DEVICES, delegate,
 					GPSRepository.class);
 		}
 		return gpsRepListener;
@@ -371,7 +371,7 @@ public class GPSViewer extends Viewer {
 					int featureId = msg.getFeatureID(GPS.class);
 
 					// A new gps reading is available.
-					if (featureId == Symphony__AddonsSensorsGPSPackage.GPS__READING
+					if (featureId == ApogyAddonsSensorsGPSPackage.GPS__READING
 							&& msg.getEventType() == Notification.SET
 							&& msg.getNewValue() != null) {
 						getGpsTimer().stop();
@@ -384,7 +384,7 @@ public class GPSViewer extends Viewer {
 						GPSReading reading = (GPSReading) msg.getNewValue();
 
 						updateGUIThreadSafe(reading, refreshRate);
-					} else if (featureId == Symphony__AddonsSensorsGPSPackage.GPS__STATUS) {
+					} else if (featureId == ApogyAddonsSensorsGPSPackage.GPS__STATUS) {
 						updateGUIThreadSafe(null, 0);
 					}
 

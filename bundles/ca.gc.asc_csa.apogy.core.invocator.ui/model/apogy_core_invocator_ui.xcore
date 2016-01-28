@@ -1,18 +1,18 @@
-@GenModel(prefix="Symphony__CoreInvocatorUI",
+@GenModel(prefix="ApogyCoreInvocatorUI",
 		  childCreationExtenders="true",
-		  modelName="Symphony__CoreInvocatorUI")
-@GenModel(modelDirectory="/org.eclipse.symphony.core.invocator.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.core.invocator.ui.edit/src-generated")
+		  modelName="ApogyCoreInvocatorUI")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.invocator.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.invocator.ui.edit/src-generated")
 
-package org.eclipse.symphony.core.invocator.ui
+package ca.gc.asc_csa.apogy.core.invocator.ui
 
-import org.eclipse.symphony.core.invocator.Context
-import org.eclipse.symphony.common.emf.Exception
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation
+import ca.gc.asc_csa.apogy.core.invocator.Context
+import ca.gc.asc_csa.apogy.common.emf.Exception
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
 
-class Symphony__CoreInvocatorUIFacade
+class ApogyCoreInvocatorUIFacade
 {
 	/*  
 	 * Copies the Initialization Data.

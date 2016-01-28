@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import javax.vecmath.Color3f;
 
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +21,12 @@ import org.eclipse.symphony.core.environment.RectangularRegionProvider;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation()
  * @model
  * @generated
  */
@@ -41,14 +41,14 @@ public interface FeaturesOfInterestMapLayerPresentation extends MapAnnotation, R
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features Of Interest Map Layer</em>' reference.
 	 * @see #setFeaturesOfInterestMapLayer(FeaturesOfInterestMapLayer)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeaturesOfInterestMapLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeaturesOfInterestMapLayer()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FOI_PROPERTIES'"
 	 * @generated
 	 */
 	FeaturesOfInterestMapLayer getFeaturesOfInterestMapLayer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Features Of Interest Map Layer</em>' reference.
@@ -68,15 +68,15 @@ public interface FeaturesOfInterestMapLayerPresentation extends MapAnnotation, R
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Of Interest Radius</em>' attribute.
 	 * @see #setFeatureOfInterestRadius(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestRadius()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestRadius()
 	 * @model default="0.25" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FOI_PROPERTIES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FOI_PROPERTIES' apogy_units='m'"
 	 * @generated
 	 */
 	double getFeatureOfInterestRadius();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Of Interest Radius</em>' attribute.
@@ -95,15 +95,15 @@ public interface FeaturesOfInterestMapLayerPresentation extends MapAnnotation, R
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Of Interest Color</em>' attribute.
 	 * @see #setFeatureOfInterestColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor()
-	 * @model default="0.0,0.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor()
+	 * @model default="0.0,0.0,1.0" unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.ui.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FOI_PROPERTIES'"
 	 * @generated
 	 */
 	Color3f getFeatureOfInterestColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Of Interest Color</em>' attribute.

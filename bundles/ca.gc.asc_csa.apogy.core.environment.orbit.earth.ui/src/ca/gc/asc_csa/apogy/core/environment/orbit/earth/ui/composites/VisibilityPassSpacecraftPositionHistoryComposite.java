@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 public class VisibilityPassSpacecraftPositionHistoryComposite extends Composite 
 {

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.provider;
 
 
 import java.util.Collection;
@@ -14,17 +14,17 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
-import org.eclipse.symphony.examples.rover.symphony.RoverData;
-import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.rover.symphony.RoverData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RoverDataItemProvider extends SymphonyInitializationDataItemProvider {
+public class RoverDataItemProvider extends ApogyInitializationDataItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_RoverData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoverData_initialized_feature", "_UI_RoverData_type"),
-				 Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_DATA__INITIALIZED,
+				 ApogyExamplesRoverApogyPackage.Literals.ROVER_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_RoverData_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoverData_disposed_feature", "_UI_RoverData_type"),
-				 Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_DATA__DISPOSED,
+				 ApogyExamplesRoverApogyPackage.Literals.ROVER_DATA__DISPOSED,
 				 true,
 				 false,
 				 false,
@@ -132,8 +132,8 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RoverData.class)) {
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__INITIALIZED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__DISPOSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -160,7 +160,7 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__ExamplesRoverSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesRoverApogyEditPlugin.INSTANCE;
 	}
 
 }

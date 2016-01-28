@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.statistics.impl;
+package ca.gc.asc_csa.apogy.common.math.statistics.impl;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -14,8 +14,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.symphony.common.math.statistics.Population;
-import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage;
+import ca.gc.asc_csa.apogy.common.math.statistics.Population;
+import ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -24,15 +24,15 @@ import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatistic
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getData <em>Data</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getStandardDeviation <em>Standard Deviation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getAverage <em>Average</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getSum <em>Sum</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getMedian <em>Median</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getSumSquared <em>Sum Squared</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getVariance <em>Variance</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getMin <em>Min</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getMax <em>Max</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getData <em>Data</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getStandardDeviation <em>Standard Deviation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getAverage <em>Average</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getSum <em>Sum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getMedian <em>Median</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getSumSquared <em>Sum Squared</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getVariance <em>Variance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getMin <em>Min</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl#getMax <em>Max</em>}</li>
  * </ul>
  *
  * @generated
@@ -205,7 +205,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonMathStatisticsPackage.Literals.POPULATION;
+		return ApogyCommonMathStatisticsPackage.Literals.POPULATION;
 	}
 
 	/**
@@ -217,7 +217,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	public EList<Double> getData() {
 		if (data == null) {
 			data = new EDataTypeEList<Double>(Double.class, this,
-					Symphony__CommonMathStatisticsPackage.POPULATION__DATA) {
+					ApogyCommonMathStatisticsPackage.POPULATION__DATA) {
 				@Override
 				protected boolean isUnique() {
 					return false;
@@ -387,23 +387,23 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
+			case ApogyCommonMathStatisticsPackage.POPULATION__DATA:
 				return getData();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__STANDARD_DEVIATION:
+			case ApogyCommonMathStatisticsPackage.POPULATION__STANDARD_DEVIATION:
 				return getStandardDeviation();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__AVERAGE:
+			case ApogyCommonMathStatisticsPackage.POPULATION__AVERAGE:
 				return getAverage();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM:
+			case ApogyCommonMathStatisticsPackage.POPULATION__SUM:
 				return getSum();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__MEDIAN:
+			case ApogyCommonMathStatisticsPackage.POPULATION__MEDIAN:
 				return getMedian();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM_SQUARED:
+			case ApogyCommonMathStatisticsPackage.POPULATION__SUM_SQUARED:
 				return getSumSquared();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__VARIANCE:
+			case ApogyCommonMathStatisticsPackage.POPULATION__VARIANCE:
 				return getVariance();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__MIN:
+			case ApogyCommonMathStatisticsPackage.POPULATION__MIN:
 				return getMin();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__MAX:
+			case ApogyCommonMathStatisticsPackage.POPULATION__MAX:
 				return getMax();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -417,7 +417,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
+			case ApogyCommonMathStatisticsPackage.POPULATION__DATA:
 				getData().clear();
 				getData().addAll((Collection<? extends Double>)newValue);
 				return;
@@ -432,7 +432,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
+			case ApogyCommonMathStatisticsPackage.POPULATION__DATA:
 				getData().clear();
 				return;
 		}
@@ -446,23 +446,23 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
+			case ApogyCommonMathStatisticsPackage.POPULATION__DATA:
 				return data != null && !data.isEmpty();
-			case Symphony__CommonMathStatisticsPackage.POPULATION__STANDARD_DEVIATION:
+			case ApogyCommonMathStatisticsPackage.POPULATION__STANDARD_DEVIATION:
 				return standardDeviation != STANDARD_DEVIATION_EDEFAULT;
-			case Symphony__CommonMathStatisticsPackage.POPULATION__AVERAGE:
+			case ApogyCommonMathStatisticsPackage.POPULATION__AVERAGE:
 				return average != AVERAGE_EDEFAULT;
-			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM:
+			case ApogyCommonMathStatisticsPackage.POPULATION__SUM:
 				return sum != SUM_EDEFAULT;
-			case Symphony__CommonMathStatisticsPackage.POPULATION__MEDIAN:
+			case ApogyCommonMathStatisticsPackage.POPULATION__MEDIAN:
 				return median != MEDIAN_EDEFAULT;
-			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM_SQUARED:
+			case ApogyCommonMathStatisticsPackage.POPULATION__SUM_SQUARED:
 				return sumSquared != SUM_SQUARED_EDEFAULT;
-			case Symphony__CommonMathStatisticsPackage.POPULATION__VARIANCE:
+			case ApogyCommonMathStatisticsPackage.POPULATION__VARIANCE:
 				return variance != VARIANCE_EDEFAULT;
-			case Symphony__CommonMathStatisticsPackage.POPULATION__MIN:
+			case ApogyCommonMathStatisticsPackage.POPULATION__MIN:
 				return getMin() != MIN_EDEFAULT;
-			case Symphony__CommonMathStatisticsPackage.POPULATION__MAX:
+			case ApogyCommonMathStatisticsPackage.POPULATION__MAX:
 				return getMax() != MAX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -517,7 +517,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 						int featureID = notification
 								.getFeatureID(Population.class);
 
-						if (featureID == Symphony__CommonMathStatisticsPackage.POPULATION__DATA) {
+						if (featureID == ApogyCommonMathStatisticsPackage.POPULATION__DATA) {
 							if (!notification.isTouch()) {
 								averageDirty = true;
 								sumDirty = true;

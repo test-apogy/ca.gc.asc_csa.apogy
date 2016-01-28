@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.processors.Processor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPointPathFilter()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getWayPointPathFilter()
  * @model abstract="true"
  * @generated
  */

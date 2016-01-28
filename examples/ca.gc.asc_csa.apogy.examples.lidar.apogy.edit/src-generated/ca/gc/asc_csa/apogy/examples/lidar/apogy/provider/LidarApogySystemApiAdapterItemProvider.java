@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy.provider;
 
 
 import java.util.Collection;
@@ -11,22 +11,22 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LidarSymphonySystemApiAdapterItemProvider extends SymphonySystemApiAdapterItemProvider {
+public class LidarApogySystemApiAdapterItemProvider extends ApogySystemApiAdapterItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LidarSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory) {
+	public LidarApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,14 +46,14 @@ public class LidarSymphonySystemApiAdapterItemProvider extends SymphonySystemApi
 	}
 
 	/**
-	 * This returns LidarSymphonySystemApiAdapter.gif.
+	 * This returns LidarApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LidarSymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/LidarApogySystemApiAdapter"));
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class LidarSymphonySystemApiAdapterItemProvider extends SymphonySystemApi
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_LidarSymphonySystemApiAdapter_type");
+		return getString("_UI_LidarApogySystemApiAdapter_type");
 	}
 	
 
@@ -101,7 +101,7 @@ public class LidarSymphonySystemApiAdapterItemProvider extends SymphonySystemApi
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__ExamplesLidarSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesLidarApogyEditPlugin.INSTANCE;
 	}
 
 }

@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSFacadeImpl;
+import ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,13 +12,13 @@ import org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getSymphony__AddonsROSFacade()
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getApogyAddonsROSFacade()
  * @model
  * @generated
  */
-public interface Symphony__AddonsROSFacade extends EObject {
+public interface ApogyAddonsROSFacade extends EObject {
 	
-	public static final Symphony__AddonsROSFacade INSTANCE = Symphony__AddonsROSFacadeImpl.getInstance();
+	public static final ApogyAddonsROSFacade INSTANCE = ApogyAddonsROSFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,4 +72,4 @@ public interface Symphony__AddonsROSFacade extends EObject {
 	 */
 	String getROSIp();
 
-} // Symphony__AddonsROSFacade
+} // ApogyAddonsROSFacade

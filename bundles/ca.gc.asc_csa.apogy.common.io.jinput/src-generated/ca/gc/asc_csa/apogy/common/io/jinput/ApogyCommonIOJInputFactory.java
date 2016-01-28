@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.io.jinput;
+package ca.gc.asc_csa.apogy.common.io.jinput;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage
+ * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage
  * @generated
  */
-public interface Symphony__CommonIOJInputFactory extends EFactory {
+public interface ApogyCommonIOJInputFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonIOJInputFactory eINSTANCE = org.eclipse.symphony.common.io.jinput.impl.Symphony__CommonIOJInputFactoryImpl.init();
+	ApogyCommonIOJInputFactory eINSTANCE = ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>EController</em>'.
@@ -110,6 +110,6 @@ public interface Symphony__CommonIOJInputFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonIOJInputPackage getSymphony__CommonIOJInputPackage();
+	ApogyCommonIOJInputPackage getApogyCommonIOJInputPackage();
 
-} //Symphony__CommonIOJInputFactory
+} //ApogyCommonIOJInputFactory

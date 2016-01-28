@@ -1,19 +1,19 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.util;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Leaf;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Leaf;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
-import org.eclipse.symphony.common.topology.addons.primitives.*;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,17 +25,17 @@ import org.eclipse.symphony.common.topology.addons.primitives.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T> {
+public class ApogyCommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyAddonsPrimitivesPackage modelPackage;
+	protected static ApogyCommonTopologyAddonsPrimitivesPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -43,9 +43,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesSwitch() {
+	public ApogyCommonTopologyAddonsPrimitivesSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyAddonsPrimitivesPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyAddonsPrimitivesPackage.eINSTANCE;
 		}
 	}
 
@@ -72,14 +72,14 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR: {
 				Vector vector = (Vector)theEObject;
 				T result = caseVector(vector);
 				if (result == null) result = caseNode(vector);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR: {
 				PickVector pickVector = (PickVector)theEObject;
 				T result = casePickVector(pickVector);
 				if (result == null) result = caseVector(pickVector);
@@ -87,14 +87,14 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PLANE: {
 				Plane plane = (Plane)theEObject;
 				T result = casePlane(plane);
 				if (result == null) result = caseNode(plane);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.WAY_POINT: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.WAY_POINT: {
 				WayPoint wayPoint = (WayPoint)theEObject;
 				T result = caseWayPoint(wayPoint);
 				if (result == null) result = caseAggregateGroupNode(wayPoint);
@@ -103,14 +103,14 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LABEL: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LABEL: {
 				Label label = (Label)theEObject;
 				T result = caseLabel(label);
 				if (result == null) result = caseNode(label);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE: {
 				SpherePrimitive spherePrimitive = (SpherePrimitive)theEObject;
 				T result = caseSpherePrimitive(spherePrimitive);
 				if (result == null) result = caseAggregateGroupNode(spherePrimitive);
@@ -119,7 +119,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.LIGHT: {
 				Light light = (Light)theEObject;
 				T result = caseLight(light);
 				if (result == null) result = caseLeaf(light);
@@ -127,7 +127,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.AMBIENT_LIGHT: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.AMBIENT_LIGHT: {
 				AmbientLight ambientLight = (AmbientLight)theEObject;
 				T result = caseAmbientLight(ambientLight);
 				if (result == null) result = caseLight(ambientLight);
@@ -136,7 +136,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT: {
 				DirectionalLight directionalLight = (DirectionalLight)theEObject;
 				T result = caseDirectionalLight(directionalLight);
 				if (result == null) result = caseLight(directionalLight);
@@ -145,7 +145,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT_LIGHT: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.POINT_LIGHT: {
 				PointLight pointLight = (PointLight)theEObject;
 				T result = casePointLight(pointLight);
 				if (result == null) result = caseLight(pointLight);
@@ -154,7 +154,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT: {
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT: {
 				SpotLight spotLight = (SpotLight)theEObject;
 				T result = caseSpotLight(spotLight);
 				if (result == null) result = casePointLight(spotLight);
@@ -164,9 +164,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE: {
-				Symphony__CommonTopologyAddonsPrimitivesFacade symphony__CommonTopologyAddonsPrimitivesFacade = (Symphony__CommonTopologyAddonsPrimitivesFacade)theEObject;
-				T result = caseSymphony__CommonTopologyAddonsPrimitivesFacade(symphony__CommonTopologyAddonsPrimitivesFacade);
+			case ApogyCommonTopologyAddonsPrimitivesPackage.APOGY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE: {
+				ApogyCommonTopologyAddonsPrimitivesFacade apogy__CommonTopologyAddonsPrimitivesFacade = (ApogyCommonTopologyAddonsPrimitivesFacade)theEObject;
+				T result = caseApogyCommonTopologyAddonsPrimitivesFacade(apogy__CommonTopologyAddonsPrimitivesFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -350,7 +350,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonTopologyAddonsPrimitivesFacade(Symphony__CommonTopologyAddonsPrimitivesFacade object) {
+	public T caseApogyCommonTopologyAddonsPrimitivesFacade(ApogyCommonTopologyAddonsPrimitivesFacade object) {
 		return null;
 	}
 
@@ -430,4 +430,4 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CommonTopologyAddonsPrimitivesSwitch
+} //ApogyCommonTopologyAddonsPrimitivesSwitch

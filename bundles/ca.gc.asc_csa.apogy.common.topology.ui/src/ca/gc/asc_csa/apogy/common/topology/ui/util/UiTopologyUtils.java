@@ -1,10 +1,10 @@
-package org.eclipse.symphony.common.topology.ui.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.util;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 public class UiTopologyUtils {
 

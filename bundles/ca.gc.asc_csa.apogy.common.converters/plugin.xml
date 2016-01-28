@@ -2,25 +2,25 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension-point
-            id="org.eclipse.symphony.common.converters"
+            id="ca.gc.asc_csa.apogy.common.converters"
             name="Converters"
             schema="schema/converters.exsd">
    </extension-point>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_common_converters -->
+      <!-- @generated apogy_common_converters -->
       <package
-            uri="org.eclipse.symphony.common.converters"
-            class="org.eclipse.symphony.common.converters.Symphony__CommonConvertersPackage"
-            genModel="model/symphony_common_converters.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.converters"
+            class="ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersPackage"
+            genModel="model/apogy_common_converters.xcore"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_common_converters_graphs -->
+      <!-- @generated apogy_common_converters_graphs -->
       <package
-            uri="org.eclipse.symphony.common.converters.graphs"
-            class="org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsPackage"
-            genModel="model/symphony_common_converters_graphs.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.converters.graphs"
+            class="ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage"
+            genModel="model/apogy_common_converters_graphs.xcore"/>
    </extension>
 
 </plugin>

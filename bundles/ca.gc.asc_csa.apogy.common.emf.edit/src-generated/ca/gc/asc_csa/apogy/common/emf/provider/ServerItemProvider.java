@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Server;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Server;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.Server} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.Server} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -63,7 +63,7 @@ public class ServerItemProvider extends StartableItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Server_serverJob_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Server_serverJob_feature", "_UI_Server_type"),
-				 Symphony__CommonEMFPackage.Literals.SERVER__SERVER_JOB,
+				 ApogyCommonEMFPackage.Literals.SERVER__SERVER_JOB,
 				 false,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class ServerItemProvider extends StartableItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Server.class)) {
-			case Symphony__CommonEMFPackage.SERVER__SERVER_JOB:
+			case ApogyCommonEMFPackage.SERVER__SERVER_JOB:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

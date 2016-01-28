@@ -1,27 +1,27 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.vehicle.ui;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.vehicle.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.addons.vehicle.ui,
- org.eclipse.symphony.addons.vehicle.ui.adapters,
- org.eclipse.symphony.addons.vehicle.ui.commands,
- org.eclipse.symphony.addons.vehicle.ui.impl,
- org.eclipse.symphony.addons.vehicle.ui.preferences,
- org.eclipse.symphony.addons.vehicle.ui.util
+Export-Package: ca.gc.asc_csa.apogy.addons.vehicle.ui,
+ ca.gc.asc_csa.apogy.addons.vehicle.ui.adapters,
+ ca.gc.asc_csa.apogy.addons.vehicle.ui.commands,
+ ca.gc.asc_csa.apogy.addons.vehicle.ui.impl,
+ ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences,
+ ca.gc.asc_csa.apogy.addons.vehicle.ui.util
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.topology.ui;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.addons.vehicle;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.ui;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.vehicle;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.105.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.addons.vehicle.ui.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.vehicle.ui.Activator

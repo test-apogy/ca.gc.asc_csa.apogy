@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsSensorsRangeFacadeItemProvider.java,v 1.2.4.2 2015/05/21 15:49:57 pallard Exp $
+ * $Id: ApogyAddonsSensorsRangeFacadeItemProvider.java,v 1.2.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -23,12 +23,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsRangeFacadeItemProvider
+public class ApogyAddonsSensorsRangeFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -43,7 +43,7 @@ public class Symphony__AddonsSensorsRangeFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeFacadeItemProvider(AdapterFactory adapterFactory)
+	public ApogyAddonsSensorsRangeFacadeItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -65,7 +65,7 @@ public class Symphony__AddonsSensorsRangeFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsSensorsRangeFacade.gif.
+	 * This returns ApogyAddonsSensorsRangeFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -73,7 +73,7 @@ public class Symphony__AddonsSensorsRangeFacadeItemProvider
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsSensorsRangeFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsSensorsRangeFacade"));
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class Symphony__AddonsSensorsRangeFacadeItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Symphony__AddonsSensorsRangeFacade_type");
+		return getString("_UI_ApogyAddonsSensorsRangeFacade_type");
 	}
 
 	/**

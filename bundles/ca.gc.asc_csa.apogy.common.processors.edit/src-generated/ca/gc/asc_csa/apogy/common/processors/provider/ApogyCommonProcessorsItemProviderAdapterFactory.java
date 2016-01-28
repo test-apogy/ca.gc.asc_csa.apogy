@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.provider;
+package ca.gc.asc_csa.apogy.common.processors.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
-import org.eclipse.symphony.common.processors.util.Symphony__CommonProcessorsAdapterFactory;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.processors.util.ApogyCommonProcessorsAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.processors.util.Symphony__CommonProcessorsAda
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonProcessorsItemProviderAdapterFactory extends Symphony__CommonProcessorsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonProcessorsItemProviderAdapterFactory extends ApogyCommonProcessorsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonProcessorsItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonProcessorsEditPlugin.INSTANCE, Symphony__CommonProcessorsPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonProcessorsEditPlugin.INSTANCE, ApogyCommonProcessorsPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonProcessorsItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonProcessorsItemProviderAdapterFactory() {
+	public ApogyCommonProcessorsItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonProcessorsItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.processors.ProcessorsChain} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonProcessorsItemProviderAdapterFactory extends Sympho
 	protected ProcessorsChainItemProvider processorsChainItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.processors.ProcessorsChain}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,7 +108,7 @@ public class Symphony__CommonProcessorsItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.processors.JobProcessorsChain} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CommonProcessorsItemProviderAdapterFactory extends Sympho
 	protected JobProcessorsChainItemProvider jobProcessorsChainItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.processors.JobProcessorsChain}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

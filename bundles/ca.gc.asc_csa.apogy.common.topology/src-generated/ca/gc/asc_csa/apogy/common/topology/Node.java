@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,12 +15,12 @@ import org.eclipse.symphony.common.topology.INodeVisitor;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.Node#getParent <em>Parent</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.Node#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.Node#getNodeId <em>Node Id</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.Node#getParent <em>Parent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.Node#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.Node#getNodeId <em>Node Id</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNode()
  * @model abstract="true"
  * @generated
  */
@@ -35,14 +35,14 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' reference.
 	 * @see #setParent(Node)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode_Parent()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNode_Parent()
 	 * @model
 	 * @generated
 	 */
 	Node getParent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.Node#getParent <em>Parent</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.Node#getParent <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parent</em>' reference.
@@ -61,14 +61,14 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode_Description()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNode_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.Node#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.Node#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -87,14 +87,14 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Id</em>' attribute.
 	 * @see #setNodeId(String)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode_NodeId()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getNode_NodeId()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getNodeId();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.Node#getNodeId <em>Node Id</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.Node#getNodeId <em>Node Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node Id</em>' attribute.
@@ -106,7 +106,7 @@ public interface Node extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model visitorDataType="org.eclipse.symphony.common.topology.INodeVisitor" visitorUnique="false"
+	 * @model visitorDataType="ca.gc.asc_csa.apogy.common.topology.INodeVisitor" visitorUnique="false"
 	 * @generated
 	 */
 	void accept(INodeVisitor visitor);

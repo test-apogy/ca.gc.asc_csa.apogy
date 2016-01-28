@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.wizards;
+package ca.gc.asc_csa.apogy.core.ui.wizards;
 
 import java.util.List;
 
@@ -11,34 +11,34 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.WorksiteContributor;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.ui.Activator;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.WorksiteContributor;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-public class ImportSymphonyWorksiteWizard extends Wizard implements INewWizard {
-	private SymphonyWorksiteSelectionWizardPage page;
+public class ImportApogyWorksiteWizard extends Wizard implements INewWizard {
+	private ApogyWorksiteSelectionWizardPage page;
 
 	/**
-	 * Constructor for NewSymphonySessionWizard.
+	 * Constructor for NewApogySessionWizard.
 	 */
-	public ImportSymphonyWorksiteWizard() {
+	public ImportApogyWorksiteWizard() {
 		super();
-		setWindowTitle("Import Symphony Worksite");
+		setWindowTitle("Import Apogy Worksite");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
 				Activator.ID,
-				"icons/wizban/symphony_import_worksite.png");
+				"icons/wizban/apogy_import_worksite.png");
 		setDefaultPageImageDescriptor(image);
 	}
 
@@ -55,7 +55,7 @@ public class ImportSymphonyWorksiteWizard extends Wizard implements INewWizard {
 	 * Adding the page to the wizard.
 	 */
 	public void addPages() {
-		page = new SymphonyWorksiteSelectionWizardPage();
+		page = new ApogyWorksiteSelectionWizardPage();
 		addPage(page);
 	}
 
@@ -65,13 +65,13 @@ public class ImportSymphonyWorksiteWizard extends Wizard implements INewWizard {
 		WorksiteContributor worksiteContributor = page.getWorksiteContributor();
 
 		try {
-			List<EObject> content = Symphony__CommonEMFFacade.INSTANCE
+			List<EObject> content = ApogyCommonEMFFacade.INSTANCE
 					.getContent(worksiteContributor.uri);
 			AbstractWorksite worksite = (AbstractWorksite) content.get(0);
 
-			InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE
+			InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE
 					.getActiveInvocatorSession();
-			SymphonyEnvironment environment = (SymphonyEnvironment) session
+			ApogyEnvironment environment = (ApogyEnvironment) session
 					.getEnvironment();
 
 			/**
@@ -83,13 +83,13 @@ public class ImportSymphonyWorksiteWizard extends Wizard implements INewWizard {
 			CompoundCommand command = new CompoundCommand();
 			command.append(new AddCommand(editingDomain, environment
 					.getWorksitesList(),
-					Symphony__CorePackage.Literals.WORKSITES_LIST__WORKSITES,
+					ApogyCorePackage.Literals.WORKSITES_LIST__WORKSITES,
 					worksite));
 
 			command.append(new SetCommand(
 					editingDomain,
 					environment,
-					Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE,
+					ApogyCorePackage.Literals.APOGY_ENVIRONMENT__ACTIVE_WORKSITE,
 					worksite));
 			editingDomain.getCommandStack().execute(command);
 

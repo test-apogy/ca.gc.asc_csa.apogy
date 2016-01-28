@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.provider;
 
 
 import java.util.Collection;
@@ -15,16 +15,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.Sensor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.Sensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class SensorItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Sensor_status_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sensor_status_feature", "_UI_Sensor_type"),
-				 Symphony__AddonsSensorsPackage.Literals.SENSOR__STATUS,
+				 ApogyAddonsSensorsPackage.Literals.SENSOR__STATUS,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class SensorItemProvider extends AggregateGroupNodeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Sensor.class)) {
-			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
+			case ApogyAddonsSensorsPackage.SENSOR__STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -136,8 +136,8 @@ public class SensorItemProvider extends AggregateGroupNodeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsFactory.eINSTANCE.createSensor()));
 	}
 
 }

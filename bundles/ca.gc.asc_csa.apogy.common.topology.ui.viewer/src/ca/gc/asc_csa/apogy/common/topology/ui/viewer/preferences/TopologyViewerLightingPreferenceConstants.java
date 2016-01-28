@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.topology.ui.viewer.preferences;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences;
 
 import org.eclipse.swt.graphics.RGB;
 
 public class TopologyViewerLightingPreferenceConstants {
 
-	public static final String P_ANTI_ALIASING = "org.eclipse.symphony.common.topology.ui.antialising";
+	public static final String P_ANTI_ALIASING = "ca.gc.asc_csa.apogy.common.topology.ui.antialising";
 
-	public static final String P_SHOW_3D_AXIS = "org.eclipse.symphony.common.topology.ui.show3DAxis";
+	public static final String P_SHOW_3D_AXIS = "ca.gc.asc_csa.apogy.common.topology.ui.show3DAxis";
 
 	// Warmth
 	public static final String P_KEY_LIGHT_WARMTH = "keyLigthWarmth";

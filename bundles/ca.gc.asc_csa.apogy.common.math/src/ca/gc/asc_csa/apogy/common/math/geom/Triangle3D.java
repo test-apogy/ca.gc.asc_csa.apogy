@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.math.geom;
+package ca.gc.asc_csa.apogy.common.math.geom;
 
 import javax.vecmath.Point3d;
 

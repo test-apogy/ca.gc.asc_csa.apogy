@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov;
+package ca.gc.asc_csa.apogy.addons.sensors.fov;
 
 
 /**
@@ -17,12 +17,12 @@ package org.eclipse.symphony.addons.sensors.fov;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getVolume <em>Volume</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getVolume <em>Volume</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getConicalFieldOfView()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface ConicalFieldOfView extends FieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' containment reference.
 	 * @see #setRange(DistanceRange)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView_Range()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getConicalFieldOfView_Range()
 	 * @model containment="true"
 	 * @generated
 	 */
 	DistanceRange getRange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Range</em>' containment reference.
@@ -62,15 +62,15 @@ public interface ConicalFieldOfView extends FieldOfView {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Field Of View Angle</em>' attribute.
 	 * @see #setFieldOfViewAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView_FieldOfViewAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getConicalFieldOfView_FieldOfViewAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getFieldOfViewAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Field Of View Angle</em>' attribute.
@@ -87,7 +87,7 @@ public interface ConicalFieldOfView extends FieldOfView {
 	 * The volume of the contained within the field of view.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Volume</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView_Volume()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getConicalFieldOfView_Volume()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

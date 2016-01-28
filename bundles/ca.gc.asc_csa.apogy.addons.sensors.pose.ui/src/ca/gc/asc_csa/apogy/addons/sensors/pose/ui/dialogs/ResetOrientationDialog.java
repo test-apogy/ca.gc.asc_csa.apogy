@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.ui.dialogs;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.dialogs;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
@@ -6,11 +6,11 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.ui.composites.EditOrientationComposite;
-import org.eclipse.symphony.addons.sensors.pose.Activator;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.composites.EditOrientationComposite;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class ResetOrientationDialog extends MessageDialog
 {

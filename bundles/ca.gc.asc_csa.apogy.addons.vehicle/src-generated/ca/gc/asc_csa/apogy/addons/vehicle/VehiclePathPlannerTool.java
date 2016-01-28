@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.core.invocator.Variable;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool#getVariable <em>Variable</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePathPlannerTool()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePathPlannerTool()
  * @model
  * @generated
  */
@@ -27,11 +27,11 @@ public interface VehiclePathPlannerTool extends PathPlannerTool {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The Symphony System for which to plan a path.
+	 *  The Apogy System for which to plan a path.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePathPlannerTool_Variable()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getVehiclePathPlannerTool_Variable()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TRAJECTORY_3D_TOOL'"
 	 * @generated
@@ -39,7 +39,7 @@ public interface VehiclePathPlannerTool extends PathPlannerTool {
 	Variable getVariable();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool#getVariable <em>Variable</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool#getVariable <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable</em>' reference.

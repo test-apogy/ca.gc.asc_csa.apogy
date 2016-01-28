@@ -1,12 +1,12 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class AbstractFeatureNodeImpl extends MinimalEObjectImpl.Contain
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_NODE;
+		return ApogyCommonEMFPackage.Literals.ABSTRACT_FEATURE_NODE;
 	}
 
 } //AbstractFeatureNodeImpl

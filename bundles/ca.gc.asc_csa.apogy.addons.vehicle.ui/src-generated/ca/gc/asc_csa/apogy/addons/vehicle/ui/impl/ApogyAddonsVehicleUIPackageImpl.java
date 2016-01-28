@@ -1,19 +1,19 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implements Symphony__AddonsVehicleUIPackage
+public class ApogyAddonsVehicleUIPackageImpl extends EPackageImpl implements ApogyAddonsVehicleUIPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -55,13 +55,13 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__AddonsVehicleUIPackageImpl()
+  private ApogyAddonsVehicleUIPackageImpl()
   {
-		super(eNS_URI, Symphony__AddonsVehicleUIFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsVehicleUIFactory.eINSTANCE);
 	}
 
   /**
@@ -74,7 +74,7 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsVehicleUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsVehicleUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -83,31 +83,31 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__AddonsVehicleUIPackage init()
+  public static ApogyAddonsVehicleUIPackage init()
   {
-		if (isInited) return (Symphony__AddonsVehicleUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsVehicleUIPackage.eNS_URI);
+		if (isInited) return (ApogyAddonsVehicleUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsVehicleUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsVehicleUIPackageImpl theSymphony__AddonsVehicleUIPackage = (Symphony__AddonsVehicleUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsVehicleUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsVehicleUIPackageImpl());
+		ApogyAddonsVehicleUIPackageImpl theApogyAddonsVehicleUIPackage = (ApogyAddonsVehicleUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsVehicleUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsVehicleUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsVehicleUIPackage.createPackageContents();
+		theApogyAddonsVehicleUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsVehicleUIPackage.initializePackageContents();
+		theApogyAddonsVehicleUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsVehicleUIPackage.freeze();
+		theApogyAddonsVehicleUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsVehicleUIPackage.eNS_URI, theSymphony__AddonsVehicleUIPackage);
-		return theSymphony__AddonsVehicleUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsVehicleUIPackage.eNS_URI, theApogyAddonsVehicleUIPackage);
+		return theApogyAddonsVehicleUIPackage;
 	}
 
   /**
@@ -163,8 +163,8 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsVehicleUIFactory getSymphony__AddonsVehicleUIFactory() {
-		return (Symphony__AddonsVehicleUIFactory)getEFactoryInstance();
+	public ApogyAddonsVehicleUIFactory getApogyAddonsVehicleUIFactory() {
+		return (ApogyAddonsVehicleUIFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -221,7 +221,7 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -229,9 +229,9 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		physicalWheelPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		landerSphericalFootPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		thrusterPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		physicalWheelPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		landerSphericalFootPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		thrusterPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalWheelPresentationEClass, PhysicalWheelPresentation.class, "PhysicalWheelPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -246,4 +246,4 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsVehicleUIPackageImpl
+} //ApogyAddonsVehicleUIPackageImpl

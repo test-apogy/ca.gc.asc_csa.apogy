@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.geometry.paths.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,17 +14,17 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathSceneObject;
-import org.eclipse.symphony.addons.geometry.paths.ui.jme3.Activator;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathSceneObject;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.material.Material;
 import com.jme3.material.RenderState.FaceCullMode;
@@ -627,7 +627,7 @@ public class WayPointPathJME3Object extends DefaultJME3SceneObject<WayPointPath>
 	
 						switch (featureId) 
 						{
-							case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH__POINTS:
+							case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH__POINTS:
 								int eventType = notification.getEventType() ;
 								switch(eventType)
 								{
@@ -690,9 +690,9 @@ public class WayPointPathJME3Object extends DefaultJME3SceneObject<WayPointPath>
 						
 						switch (featureId) 
 						{
-							case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
-							case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
-							case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
+							case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
+							case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
+							case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
 							{
 								Job job = new Job("WayPointPathJME3Object : Updating geometry")
 								{

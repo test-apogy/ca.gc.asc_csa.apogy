@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="_MjIYQArPEeW4-_ONWXXiAw" name="">
-  <environment xsi:type="core:SymphonyEnvironment" xmi:id="_MjIYQQrPEeW4-_ONWXXiAw" name="Robotic Arm Example" description="This is an example session, illustrating how to use the robotic arm example" activeContext="_MjI_UQrPEeW4-_ONWXXiAw" time="2015-04-13T11:56:46.865-0400" activeWorksite="_MjI_WArPEeW4-_ONWXXiAw" activeTimeSource="_MjKNcgrPEeW4-_ONWXXiAw">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmi:id="_MjIYQArPEeW4-_ONWXXiAw" name="">
+  <environment xsi:type="core:ApogyEnvironment" xmi:id="_MjIYQQrPEeW4-_ONWXXiAw" name="Robotic Arm Example" description="This is an example session, illustrating how to use the robotic arm example" activeContext="_MjI_UQrPEeW4-_ONWXXiAw" time="2015-04-13T11:56:46.865-0400" activeWorksite="_MjI_WArPEeW4-_ONWXXiAw" activeTimeSource="_MjKNcgrPEeW4-_ONWXXiAw">
     <typesList xmi:id="_MjIYQgrPEeW4-_ONWXXiAw">
       <localTypes xmi:id="_MjIYQwrPEeW4-_ONWXXiAw"/>
       <registeredTypes xmi:id="_MjIYRArPEeW4-_ONWXXiAw"/>
     </typesList>
     <variablesList xmi:id="_MjIYRQrPEeW4-_ONWXXiAw">
       <variables xmi:id="_MjIYRgrPEeW4-_ONWXXiAw" name="roboticArm">
-        <variableType href="platform:/plugin/org.eclipse.symphony.examples.robotic_arm.symphony/model/RoboticArmSymphonySystem.ss#_LQwxcArPEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.robotic_arm.apogy/model/RoboticArmApogySystem.ss#_LQwxcArPEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="_MjI_UArPEeW4-_ONWXXiAw">
       <contexts xsi:type="invocator:BasicContext" xmi:id="_MjI_UQrPEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_MjK0jgrPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_MjI_UgrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_MjI_UwrPEeW4-_ONWXXiAw" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-            <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmSimulated"/>
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArmSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="_MjI_VArPEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_MjLbkArPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_MjI_VQrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_MjI_VgrPEeW4-_ONWXXiAw" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-            <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmStub"/>
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArmStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -32,7 +32,7 @@
         <mapsList xmi:id="_MjJmYArPEeW4-_ONWXXiAw">
           <maps xmi:id="_MjJmYQrPEeW4-_ONWXXiAw" name="MarsYard" description="Simple Mars Yard Map.">
             <transformation xmi:id="_MjJmYgrPEeW4-_ONWXXiAw"/>
-            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_MjJmYwrPEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_MjJmYwrPEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
           </maps>
         </mapsList>
         <geographicalCoordinates xmi:id="_MjJmZArPEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
@@ -46,19 +46,19 @@
   <programsList xmi:id="_MjK0gArPEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_MjK0gQrPEeW4-_ONWXXiAw">
       <operationCalls xmi:id="_MjK0ggrPEeW4-_ONWXXiAw" name="Init" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/init"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/init"/>
       </operationCalls>
       <operationCalls xmi:id="_MjK0gwrPEeW4-_ONWXXiAw" name="Change Move Speed" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
         <argumentsList xmi:id="_MjK0hArPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EEnumArgument" xmi:id="_MjK0hQrPEeW4-_ONWXXiAw">
-            <eEnumLiteral href="org.eclipse.symphony.examples.robotic_arm#//MoveSpeedLevel/FAST"/>
-            <eEnum href="org.eclipse.symphony.examples.robotic_arm#//MoveSpeedLevel"/>
+            <eEnumLiteral href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel/FAST"/>
+            <eEnum href="ca.gc.asc_csa.apogy.examples.robotic_arm#//MoveSpeedLevel"/>
           </arguments>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_MjK0hgrPEeW4-_ONWXXiAw" name="Move To" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/moveTo"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/moveTo"/>
         <argumentsList xmi:id="_MjK0hwrPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0iArPEeW4-_ONWXXiAw" value="0.7853981633974483"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0iQrPEeW4-_ONWXXiAw" value="0.5235987755982988"/>
@@ -67,7 +67,7 @@
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_MjK0jArPEeW4-_ONWXXiAw" name="Stow" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/stow"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.robotic_arm#//RoboticArm/stow"/>
       </operationCalls>
     </programs>
   </programsList>

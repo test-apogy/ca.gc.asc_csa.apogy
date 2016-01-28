@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.provider;
+package ca.gc.asc_csa.apogy.common.io.jinput.provider;
 
 
 import java.util.Collection;
@@ -9,10 +9,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.io.jinput.EAxis;
+import ca.gc.asc_csa.apogy.common.io.jinput.EAxis;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EAxis} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EAxis} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

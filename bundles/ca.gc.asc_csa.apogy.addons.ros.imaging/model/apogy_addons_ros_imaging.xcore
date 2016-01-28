@@ -1,22 +1,22 @@
-@GenModel(prefix="Symphony__AddonsROSImaging",
-		  modelName="Symphony__AddonsROSImaging",
+@GenModel(prefix="ApogyAddonsROSImaging",
+		  modelName="ApogyAddonsROSImaging",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.ros.imaging/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.ros.imaging.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.ros.imaging/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.ros.imaging.edit/src-generated")
 
-package org.eclipse.symphony.addons.ros.imaging
+package ca.gc.asc_csa.apogy.addons.ros.imaging
 
-import org.eclipse.symphony.common.images.EImage
-import org.eclipse.symphony.common.images.ImageData
+import ca.gc.asc_csa.apogy.common.images.EImage
+import ca.gc.asc_csa.apogy.common.images.ImageData
 
 type Image wraps sensor_msgs.Image
 type CompressedImage wraps sensor_msgs.CompressedImage
 type ConnectedNode wraps org.ros.node.ConnectedNode
 
-class Symphony__AddonsROSImagingFacade
+class ApogyAddonsROSImagingFacade
 {
 	op EImage convertToEImage(Image rosImage)
 	op EImage convertToEImage(CompressedImage compressedImage)

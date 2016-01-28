@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 
 /**
@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.emf.Timed;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getTimedStampedPVACoordinates()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getTimedStampedPVACoordinates()
  * @model
  * @generated
  */

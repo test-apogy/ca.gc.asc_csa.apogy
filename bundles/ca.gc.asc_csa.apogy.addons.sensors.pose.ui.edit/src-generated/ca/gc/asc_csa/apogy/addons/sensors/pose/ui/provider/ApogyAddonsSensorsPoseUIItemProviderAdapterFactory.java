@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.ui.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,16 +26,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIFactory;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
-import org.eclipse.symphony.addons.sensors.pose.ui.util.Symphony__AddonsSensorsPoseUIAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.util.Symphony__CommonTopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.util.ApogyAddonsSensorsPoseUIAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.util.ApogyCommonTopologyUISwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -46,7 +46,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Symphony__AddonsSensorsPoseUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsSensorsPoseUIItemProviderAdapterFactory extends ApogyAddonsSensorsPoseUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsSensorsPoseUIEditPlugin.INSTANCE, Symphony__AddonsSensorsPoseUIPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsSensorsPoseUIEditPlugin.INSTANCE, ApogyAddonsSensorsPoseUIPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory() {
+	public ApogyAddonsSensorsPoseUIItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -94,7 +94,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,7 +102,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	protected PositionSensorPresentationItemProvider positionSensorPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.OrientationSensorPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	protected OrientationSensorPresentationItemProvider orientationSensorPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.OrientationSensorPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	protected PoseSensorPresentationItemProvider poseSensorPresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -294,19 +294,19 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyUIPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyUIChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyUISwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -342,18 +342,18 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 			public Object caseTopologyPresentationRegistry(TopologyPresentationRegistry object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation()));
 
 				return null;
 			}
@@ -386,24 +386,24 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsPoseUIEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsPoseUIEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -439,18 +439,18 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation()));
 
 				return null;
 			}
@@ -464,18 +464,18 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation()));
 
 				return null;
 			}
@@ -508,7 +508,7 @@ public class Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory extends Sym
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsPoseUIEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsPoseUIEditPlugin.INSTANCE;
 		}
 	}
 

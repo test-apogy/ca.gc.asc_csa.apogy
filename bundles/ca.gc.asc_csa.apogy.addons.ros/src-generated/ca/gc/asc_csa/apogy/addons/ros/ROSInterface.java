@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSInterface#getServiceManager <em>Service Manager</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSInterface#getTopicLauncher <em>Topic Launcher</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSInterface#getPublisherManager <em>Publisher Manager</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSInterface#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getServiceManager <em>Service Manager</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getTopicLauncher <em>Topic Launcher</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getPublisherManager <em>Publisher Manager</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getNode <em>Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSInterface()
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSInterface()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -34,14 +34,14 @@ public interface ROSInterface extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Service Manager</em>' reference.
 	 * @see #setServiceManager(ROSServiceManager)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSInterface_ServiceManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSInterface_ServiceManager()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' notify='true' propertyCategory='ROS_INTERFACE'"
 	 * @generated
 	 */
 	ROSServiceManager getServiceManager();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSInterface#getServiceManager <em>Service Manager</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getServiceManager <em>Service Manager</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Service Manager</em>' reference.
@@ -59,14 +59,14 @@ public interface ROSInterface extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topic Launcher</em>' reference.
 	 * @see #setTopicLauncher(ROSTopicLauncher)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSInterface_TopicLauncher()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSInterface_TopicLauncher()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' notify='true' propertyCategory='ROS_INTERFACE'"
 	 * @generated
 	 */
 	ROSTopicLauncher getTopicLauncher();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSInterface#getTopicLauncher <em>Topic Launcher</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getTopicLauncher <em>Topic Launcher</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Topic Launcher</em>' reference.
@@ -84,14 +84,14 @@ public interface ROSInterface extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Publisher Manager</em>' reference.
 	 * @see #setPublisherManager(ROSPublisherManager)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSInterface_PublisherManager()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSInterface_PublisherManager()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' notify='true' propertyCategory='ROS_INTERFACE'"
 	 * @generated
 	 */
 	ROSPublisherManager getPublisherManager();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSInterface#getPublisherManager <em>Publisher Manager</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getPublisherManager <em>Publisher Manager</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Publisher Manager</em>' reference.
@@ -109,14 +109,14 @@ public interface ROSInterface extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(ROSNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSInterface_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSInterface_Node()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' notify='true' propertyCategory='ROS_INTERFACE'"
 	 * @generated
 	 */
 	ROSNode getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSInterface#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.

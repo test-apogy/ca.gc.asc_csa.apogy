@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging;
 
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera#getLatestImageSnapshot <em>Latest Image Snapshot</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera#getLatestImageSnapshot <em>Latest Image Snapshot</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getAbstractCamera()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#getAbstractCamera()
  * @model abstract="true"
  * @generated
  */
@@ -39,7 +39,7 @@ public interface AbstractCamera extends Sensor, Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latest Image Snapshot</em>' reference.
 	 * @see #setLatestImageSnapshot(ImageSnapshot)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getAbstractCamera_LatestImageSnapshot()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#getAbstractCamera_LatestImageSnapshot()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' propertyCategory='CAMERA_PROPERTIES'"
 	 * @generated
@@ -47,7 +47,7 @@ public interface AbstractCamera extends Sensor, Named
   ImageSnapshot getLatestImageSnapshot();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera#getLatestImageSnapshot <em>Latest Image Snapshot</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera#getLatestImageSnapshot <em>Latest Image Snapshot</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Latest Image Snapshot</em>' reference.

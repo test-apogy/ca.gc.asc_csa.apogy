@@ -1,28 +1,28 @@
-@GenModel(prefix="Symphony__AddonsSensorsImagingCamera",
+@GenModel(prefix="ApogyAddonsSensorsImagingCamera",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__AddonsSensorsImagingCamera",
+		  modelName="ApogyAddonsSensorsImagingCamera",
 		  complianceLevel="6.0")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.imaging.camera/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.imaging.camera.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.imaging.camera
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera
 
-import org.eclipse.symphony.common.emf.Described
-import org.eclipse.symphony.common.emf.Named
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer
-import org.eclipse.symphony.core.invocator.VariableFeatureReference
-import org.eclipse.symphony.common.images.AbstractEImage
-import org.eclipse.symphony.addons.AbstractTool
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage
+import ca.gc.asc_csa.apogy.addons.AbstractTool
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
-import org.eclipse.symphony.core.AbsolutePoseProvider
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot
-import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection
-import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection
 
 type Color3f wraps javax.vecmath.Color3f
 type List<T> wraps java.util.List
@@ -320,7 +320,7 @@ class ImageFrozenOverlay extends AbstractTextOverlay
 	/**
 	 * The expected image update period, in seconds.
 	 */
-	@GenModel(propertyCategory="FROZEN_PROPERTIES", symphony_units="s")
+	@GenModel(propertyCategory="FROZEN_PROPERTIES", apogy_units="s")
 	double expectedImageUpdatePeriod = "1.0"
 	
 	/**
@@ -375,9 +375,9 @@ enum ImageSizePolicy
 
 
 /*
- * An overlay that displays the Symphony Logo.
+ * An overlay that displays the Apogy Logo.
  */
-class SymphonyLogoOverlay extends ImageCameraOverlay
+class ApogyLogoOverlay extends ImageCameraOverlay
 {	
 }
 
@@ -393,7 +393,7 @@ class FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider
 	Color3f negativeValueColor = "1.0,0.0,0.0"
 
 	/* The interval, in degrees, for which to display numericals. */
-	@GenModel(propertyCategory="OVERLAY_PROPERTIES", symphony_units = "deg")	
+	@GenModel(propertyCategory="OVERLAY_PROPERTIES", apogy_units = "deg")	
 	int angleInterval = "5"
 
 	/* Name of the font to use.*/

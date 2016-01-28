@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.util.List;
 import javax.vecmath.Color3f;
@@ -13,25 +13,25 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
-import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
-import org.eclipse.symphony.core.environment.ui.MapRuler;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.MoonPresentation;
-import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.SunPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
-import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.plot.XYPlot;
@@ -45,7 +45,7 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl implements Symphony__CoreEnvironmentUIFactory
+public class ApogyCoreEnvironmentUIFactoryImpl extends EFactoryImpl implements ApogyCoreEnvironmentUIFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -53,18 +53,18 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CoreEnvironmentUIFactory init()
+  public static ApogyCoreEnvironmentUIFactory init()
   {
 		try {
-			Symphony__CoreEnvironmentUIFactory theSymphony__CoreEnvironmentUIFactory = (Symphony__CoreEnvironmentUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreEnvironmentUIPackage.eNS_URI);
-			if (theSymphony__CoreEnvironmentUIFactory != null) {
-				return theSymphony__CoreEnvironmentUIFactory;
+			ApogyCoreEnvironmentUIFactory theApogyCoreEnvironmentUIFactory = (ApogyCoreEnvironmentUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreEnvironmentUIPackage.eNS_URI);
+			if (theApogyCoreEnvironmentUIFactory != null) {
+				return theApogyCoreEnvironmentUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreEnvironmentUIFactoryImpl();
+		return new ApogyCoreEnvironmentUIFactoryImpl();
 	}
 
   /**
@@ -73,7 +73,7 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentUIFactoryImpl()
+  public ApogyCoreEnvironmentUIFactoryImpl()
   {
 		super();
 	}
@@ -87,23 +87,23 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION: return createStarFieldPresentation();
-			case Symphony__CoreEnvironmentUIPackage.SUN_PRESENTATION: return createSunPresentation();
-			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION: return createEarthSurfaceWorksitePresentation();
-			case Symphony__CoreEnvironmentUIPackage.EARTH_SKY_PRESENTATION: return createEarthSkyPresentation();
-			case Symphony__CoreEnvironmentUIPackage.MOON_PRESENTATION: return createMoonPresentation();
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION: return createFeatureOfInterestNodePresentation();
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: return createEnvironmentUIUtilities();
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE: return createSymphony__CoreEnvironmentUIFacade();
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST: return createMapViewConfigurationList();
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION: return createMapViewConfiguration();
-			case Symphony__CoreEnvironmentUIPackage.MAP_RULER: return createMapRuler();
-			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION: return createFeaturesOfInterestMapLayerPresentation();
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PICKING_TOOL: return createTrajectoryPickingTool();
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER: return createDefaultVariableTrajectoryProvider();
-			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION: return createPoseVariableAnnotation();
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION: return createVariableTrajectoryAnnotation();
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION: return createVehicleVariableAnnotation();
+			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION: return createStarFieldPresentation();
+			case ApogyCoreEnvironmentUIPackage.SUN_PRESENTATION: return createSunPresentation();
+			case ApogyCoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION: return createEarthSurfaceWorksitePresentation();
+			case ApogyCoreEnvironmentUIPackage.EARTH_SKY_PRESENTATION: return createEarthSkyPresentation();
+			case ApogyCoreEnvironmentUIPackage.MOON_PRESENTATION: return createMoonPresentation();
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION: return createFeatureOfInterestNodePresentation();
+			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: return createEnvironmentUIUtilities();
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE: return createApogyCoreEnvironmentUIFacade();
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST: return createMapViewConfigurationList();
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION: return createMapViewConfiguration();
+			case ApogyCoreEnvironmentUIPackage.MAP_RULER: return createMapRuler();
+			case ApogyCoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION: return createFeaturesOfInterestMapLayerPresentation();
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PICKING_TOOL: return createTrajectoryPickingTool();
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER: return createDefaultVariableTrajectoryProvider();
+			case ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION: return createPoseVariableAnnotation();
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION: return createVariableTrajectoryAnnotation();
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION: return createVehicleVariableAnnotation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -118,25 +118,25 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentUIPackage.LIST:
+			case ApogyCoreEnvironmentUIPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.POINT2D:
+			case ApogyCoreEnvironmentUIPackage.POINT2D:
 				return createPoint2dFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.COLOR3F:
+			case ApogyCoreEnvironmentUIPackage.COLOR3F:
 				return createColor3fFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.POINT3F:
+			case ApogyCoreEnvironmentUIPackage.POINT3F:
 				return createPoint3fFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.XY_SERIES:
+			case ApogyCoreEnvironmentUIPackage.XY_SERIES:
 				return createXYSeriesFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.XY_PLOT:
+			case ApogyCoreEnvironmentUIPackage.XY_PLOT:
 				return createXYPlotFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.XY_DATA_ITEM:
+			case ApogyCoreEnvironmentUIPackage.XY_DATA_ITEM:
 				return createXYDataItemFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_XY_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_XY_ANNOTATION:
 				return createAbstractXYAnnotationFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.CHART_COMPOSITE:
+			case ApogyCoreEnvironmentUIPackage.CHART_COMPOSITE:
 				return createChartCompositeFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentUIPackage.JFREE_CHART:
+			case ApogyCoreEnvironmentUIPackage.JFREE_CHART:
 				return createJFreeChartFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -152,25 +152,25 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentUIPackage.LIST:
+			case ApogyCoreEnvironmentUIPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.POINT2D:
+			case ApogyCoreEnvironmentUIPackage.POINT2D:
 				return convertPoint2dToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.COLOR3F:
+			case ApogyCoreEnvironmentUIPackage.COLOR3F:
 				return convertColor3fToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.POINT3F:
+			case ApogyCoreEnvironmentUIPackage.POINT3F:
 				return convertPoint3fToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.XY_SERIES:
+			case ApogyCoreEnvironmentUIPackage.XY_SERIES:
 				return convertXYSeriesToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.XY_PLOT:
+			case ApogyCoreEnvironmentUIPackage.XY_PLOT:
 				return convertXYPlotToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.XY_DATA_ITEM:
+			case ApogyCoreEnvironmentUIPackage.XY_DATA_ITEM:
 				return convertXYDataItemToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_XY_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_XY_ANNOTATION:
 				return convertAbstractXYAnnotationToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.CHART_COMPOSITE:
+			case ApogyCoreEnvironmentUIPackage.CHART_COMPOSITE:
 				return convertChartCompositeToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentUIPackage.JFREE_CHART:
+			case ApogyCoreEnvironmentUIPackage.JFREE_CHART:
 				return convertJFreeChartToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -257,9 +257,9 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentUIFacade createSymphony__CoreEnvironmentUIFacade() {
-		Symphony__CoreEnvironmentUIFacadeImpl symphony__CoreEnvironmentUIFacade = new Symphony__CoreEnvironmentUIFacadeImpl();
-		return symphony__CoreEnvironmentUIFacade;
+	public ApogyCoreEnvironmentUIFacade createApogyCoreEnvironmentUIFacade() {
+		ApogyCoreEnvironmentUIFacadeImpl apogy__CoreEnvironmentUIFacade = new ApogyCoreEnvironmentUIFacadeImpl();
+		return apogy__CoreEnvironmentUIFacade;
 	}
 
 		/**
@@ -627,8 +627,8 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentUIPackage getSymphony__CoreEnvironmentUIPackage() {
-		return (Symphony__CoreEnvironmentUIPackage)getEPackage();
+	public ApogyCoreEnvironmentUIPackage getApogyCoreEnvironmentUIPackage() {
+		return (ApogyCoreEnvironmentUIPackage)getEPackage();
 	}
 
 		/**
@@ -638,9 +638,9 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CoreEnvironmentUIPackage getPackage()
+  public static ApogyCoreEnvironmentUIPackage getPackage()
   {
-		return Symphony__CoreEnvironmentUIPackage.eINSTANCE;
+		return ApogyCoreEnvironmentUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreEnvironmentUIFactoryImpl
+} //ApogyCoreEnvironmentUIFactoryImpl

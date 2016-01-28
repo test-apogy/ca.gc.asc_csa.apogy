@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.emf;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.emf;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.common.emf,
- org.eclipse.symphony.common.emf.impl,
- org.eclipse.symphony.common.emf.util
+Export-Package: ca.gc.asc_csa.apogy.common.emf,
+ ca.gc.asc_csa.apogy.common.emf.impl,
+ ca.gc.asc_csa.apogy.common.emf.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -17,6 +17,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;bundle-version="3.8.1",
  org.jscience;bundle-version="4.3.1";visibility:=reexport,
  org.eclipse.emf.ecore.xmi;bundle-version="2.10.2",
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.common.emf.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.common.emf.Activator

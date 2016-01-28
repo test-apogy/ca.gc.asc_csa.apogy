@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,14 +16,14 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#init(org.eclipse.symphony.core.invocator.Environment, org.eclipse.symphony.core.invocator.Type, org.eclipse.emf.ecore.EObject) <em>Init</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#apply(org.eclipse.symphony.core.invocator.AbstractInitializationData) <em>Apply</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createInitializationData() <em>Create Initialization Data</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#collect(org.eclipse.symphony.core.invocator.AbstractInitializationData) <em>Collect</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall) <em>Create Result</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception) <em>Create Result</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.core.invocator.OperationCall, boolean) <em>Invoke</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#dispose() <em>Dispose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#init(ca.gc.asc_csa.apogy.core.invocator.Environment, ca.gc.asc_csa.apogy.core.invocator.Type, org.eclipse.emf.ecore.EObject) <em>Init</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#apply(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData) <em>Apply</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createInitializationData() <em>Create Initialization Data</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#collect(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData) <em>Collect</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Create Result</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception) <em>Create Result</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean) <em>Invoke</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#dispose() <em>Dispose</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -85,7 +85,7 @@ public class TypeApiAdapterTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createTypeApiAdapter());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createTypeApiAdapter());
 	}
 
 	/**
@@ -100,10 +100,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#init(org.eclipse.symphony.core.invocator.Environment, org.eclipse.symphony.core.invocator.Type, org.eclipse.emf.ecore.EObject) <em>Init</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#init(ca.gc.asc_csa.apogy.core.invocator.Environment, ca.gc.asc_csa.apogy.core.invocator.Type, org.eclipse.emf.ecore.EObject) <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#init(org.eclipse.symphony.core.invocator.Environment, org.eclipse.symphony.core.invocator.Type, org.eclipse.emf.ecore.EObject)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#init(ca.gc.asc_csa.apogy.core.invocator.Environment, ca.gc.asc_csa.apogy.core.invocator.Type, org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
 	public void testInit__Environment_Type_EObject() {
@@ -113,10 +113,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#apply(org.eclipse.symphony.core.invocator.AbstractInitializationData) <em>Apply</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#apply(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData) <em>Apply</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#apply(org.eclipse.symphony.core.invocator.AbstractInitializationData)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#apply(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData)
 	 * @generated
 	 */
 	public void testApply__AbstractInitializationData() {
@@ -126,10 +126,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createInitializationData() <em>Create Initialization Data</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createInitializationData() <em>Create Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#createInitializationData()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createInitializationData()
 	 * @generated
 	 */
 	public void testCreateInitializationData() {
@@ -139,10 +139,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#collect(org.eclipse.symphony.core.invocator.AbstractInitializationData) <em>Collect</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#collect(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData) <em>Collect</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#collect(org.eclipse.symphony.core.invocator.AbstractInitializationData)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#collect(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData)
 	 * @generated
 	 */
 	public void testCollect__AbstractInitializationData() {
@@ -152,10 +152,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall) <em>Create Result</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Create Result</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall)
 	 * @generated
 	 */
 	public void testCreateResult__OperationCall() {
@@ -165,10 +165,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception) <em>Create Result</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception) <em>Create Result</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception)
 	 * @generated
 	 */
 	public void testCreateResult__OperationCall_long_Object_Exception() {
@@ -178,10 +178,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.core.invocator.OperationCall, boolean) <em>Invoke</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean) <em>Invoke</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.core.invocator.OperationCall, boolean)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean)
 	 * @generated
 	 */
 	public void testInvoke__EObject_OperationCall_boolean() {
@@ -191,10 +191,10 @@ public class TypeApiAdapterTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#dispose() <em>Dispose</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#dispose()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#dispose()
 	 * @generated
 	 */
 	public void testDispose() {

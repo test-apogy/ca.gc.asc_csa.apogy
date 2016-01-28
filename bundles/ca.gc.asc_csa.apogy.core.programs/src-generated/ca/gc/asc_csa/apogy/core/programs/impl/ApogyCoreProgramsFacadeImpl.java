@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.impl;
+package ca.gc.asc_csa.apogy.core.programs.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -9,11 +9,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,19 +23,19 @@ import org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl#getSession <em>Session</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl#getVariables <em>Variables</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsFacadeImpl#getSession <em>Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsFacadeImpl#getVariables <em>Variables</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Symphony__CoreProgramsFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CoreProgramsFacade {
+public class ApogyCoreProgramsFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreProgramsFacade {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreProgramsFacadeImpl() {
+	protected ApogyCoreProgramsFacadeImpl() {
 		super();
 	}
 
@@ -46,7 +46,7 @@ public class Symphony__CoreProgramsFacadeImpl extends MinimalEObjectImpl.Contain
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreProgramsPackage.Literals.SYMPHONY_CORE_PROGRAMS_FACADE;
+		return ApogyCoreProgramsPackage.Literals.APOGY_CORE_PROGRAMS_FACADE;
 	}
 
 	/**
@@ -103,10 +103,10 @@ public class Symphony__CoreProgramsFacadeImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE__SESSION:
+			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE__SESSION:
 				if (resolve) return getSession();
 				return basicGetSession();
-			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES:
+			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE__VARIABLES:
 				return getVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -120,9 +120,9 @@ public class Symphony__CoreProgramsFacadeImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE__SESSION:
+			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE__SESSION:
 				return basicGetSession() != null;
-			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES:
+			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE__VARIABLES:
 				return !getVariables().isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -136,7 +136,7 @@ public class Symphony__CoreProgramsFacadeImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL:
+			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL:
 				try {
 					return exec((OperationCall)arguments.get(0));
 				}
@@ -147,4 +147,4 @@ public class Symphony__CoreProgramsFacadeImpl extends MinimalEObjectImpl.Contain
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CoreProgramsFacadeImpl
+} //ApogyCoreProgramsFacadeImpl

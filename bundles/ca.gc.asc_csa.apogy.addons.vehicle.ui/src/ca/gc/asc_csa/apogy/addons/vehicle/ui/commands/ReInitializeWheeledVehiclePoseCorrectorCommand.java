@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.vehicle.ui.commands;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.commands;
 
 import java.util.Iterator;
 
@@ -11,8 +11,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class ReInitializeWheeledVehiclePoseCorrectorCommand extends AbstractHandler implements

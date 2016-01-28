@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.provider;
 
 
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

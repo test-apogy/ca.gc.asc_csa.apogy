@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.provider;
+package ca.gc.asc_csa.apogy.addons.provider;
 
 
 import java.util.Collection;
@@ -12,11 +12,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
+import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_featureOfInterestList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_featureOfInterestList_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST,
+				 ApogyAddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST,
 				 true,
 				 false,
 				 true,
@@ -89,7 +89,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickAbsolutePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickAbsolutePosition_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION,
+				 ApogyAddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION,
 				 false,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickRelativePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickRelativePosition_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION,
+				 ApogyAddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION,
 				 true,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickedNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickedNode_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE,
+				 ApogyAddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE,
 				 true,
 				 false,
 				 true,
@@ -155,7 +155,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickAbsoluteNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickAbsoluteNormal_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL,
+				 ApogyAddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL,
 				 true,
 				 false,
 				 true,
@@ -177,7 +177,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickRelativeNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickRelativeNormal_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL,
+				 ApogyAddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL,
 				 true,
 				 false,
 				 true,
@@ -238,12 +238,12 @@ public class FeatureOfInterestPickingToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureOfInterestPickingTool.class)) {
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

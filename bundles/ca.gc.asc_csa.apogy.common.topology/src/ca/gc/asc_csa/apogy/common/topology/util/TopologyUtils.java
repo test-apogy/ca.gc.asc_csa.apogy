@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.topology.util;
+package ca.gc.asc_csa.apogy.common.topology.util;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 public class TopologyUtils {
 

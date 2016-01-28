@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.provider;
+package ca.gc.asc_csa.apogy.addons.actuators.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.addons.actuators.util.Symphony__AddonsActuatorsAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.addons.actuators.util.ApogyAddonsActuatorsAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.addons.actuators.util.Symphony__AddonsActuatorsAdapt
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsActuatorsItemProviderAdapterFactory extends Symphony__AddonsActuatorsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsActuatorsItemProviderAdapterFactory extends ApogyAddonsActuatorsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -61,7 +61,7 @@ public class Symphony__AddonsActuatorsItemProviderAdapterFactory extends Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsActuatorsEditPlugin.INSTANCE, Symphony__AddonsActuatorsPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsActuatorsEditPlugin.INSTANCE, ApogyAddonsActuatorsPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -77,7 +77,7 @@ public class Symphony__AddonsActuatorsItemProviderAdapterFactory extends Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsActuatorsItemProviderAdapterFactory()
+  public ApogyAddonsActuatorsItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);

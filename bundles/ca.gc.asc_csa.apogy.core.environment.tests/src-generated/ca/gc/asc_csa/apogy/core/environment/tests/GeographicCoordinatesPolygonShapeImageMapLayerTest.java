@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -60,26 +60,26 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerTest extends PolygonS
 	@Override
 	protected void setUp() throws Exception 
 	{
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer());
 				
 		getFixture().setRequiredResolution(0.5);		
 				
-		GeographicCoordinates g0 = Symphony__CoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();				
+		GeographicCoordinates g0 = ApogyCoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();				
 		getFixture().getPolygonVerticesGeographicCoordinates().add(g0);
 		
-		GeographicCoordinates g1 = Symphony__CoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();			
+		GeographicCoordinates g1 = ApogyCoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();			
 		g1.setLatitude(g1.getLatitude() + 0.00000001);		
 		getFixture().getPolygonVerticesGeographicCoordinates().add(g1);
 		
-		GeographicCoordinates g2 = Symphony__CoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();		
+		GeographicCoordinates g2 = ApogyCoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();		
 		g2.setLatitude(g2.getLatitude()   + 0.00000001);
 		g2.setLongitude(g2.getLongitude() + 0.00000001);
 		getFixture().getPolygonVerticesGeographicCoordinates().add(g2);
 					
-//		Map map = Symphony__CoreEnvironmentFactory.eINSTANCE.createMap();				
+//		Map map = ApogyCoreEnvironmentFactory.eINSTANCE.createMap();				
 //		map.getLayers().add(getFixture());
 				
-		EarthSurfaceWorksite  earthSurfaceWorksite = Symphony__CoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();
+		EarthSurfaceWorksite  earthSurfaceWorksite = ApogyCoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();
 		earthSurfaceWorksite.getMapsList().getMaps().get(0).getLayers().add(getFixture());
 		
 		earthSurfaceWorksite.getMapsList().getMaps().get(0).setName("test");

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class TransformMatrixBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TransformMatrixBinding_transformNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TransformMatrixBinding_transformNode_feature", "_UI_TransformMatrixBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE,
+				 ApogyCommonTopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE,
 				 true,
 				 false,
 				 true,

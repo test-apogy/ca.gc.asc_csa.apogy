@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv;
+package ca.gc.asc_csa.apogy.common.file.csv;
 
 import java.util.Map;
 
@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumn#getValues <em>Values</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumn#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumn#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getValues <em>Values</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn()
+ * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvColumn()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface CsvColumn extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' reference.
 	 * @see #setValues(Map.Entry)
-	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn_Values()
-	 * @model mapType="org.eclipse.symphony.common.file.csv.CsvColumnValuesMap<org.eclipse.emf.ecore.EIntegerObject, org.eclipse.emf.ecore.EJavaObject>"
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvColumn_Values()
+	 * @model mapType="ca.gc.asc_csa.apogy.common.file.csv.CsvColumnValuesMap<org.eclipse.emf.ecore.EIntegerObject, org.eclipse.emf.ecore.EJavaObject>"
 	 * @generated
 	 */
 	Map.Entry<Integer, Object> getValues();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.file.csv.CsvColumn#getValues <em>Values</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getValues <em>Values</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Values</em>' reference.
@@ -62,14 +62,14 @@ public interface CsvColumn extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn_Name()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvColumn_Name()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.file.csv.CsvColumn#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -88,14 +88,14 @@ public interface CsvColumn extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn_Description()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvColumn_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.file.csv.CsvColumn#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.

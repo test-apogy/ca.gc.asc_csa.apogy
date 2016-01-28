@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -10,12 +10,12 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.provider.WorksiteItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.provider.WorksiteItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.OrbitWorksite} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -60,7 +60,7 @@ public class OrbitWorksiteItemProvider extends WorksiteItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_OrbitWorksite_activeOrbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitWorksite_activeOrbitModel_feature", "_UI_OrbitWorksite_type"),
-				 Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL,
+				 ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL,
 				 true,
 				 false,
 				 true,

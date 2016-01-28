@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import javax.vecmath.Color3f;
 import org.eclipse.emf.ecore.EClass;
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsFactory;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.SimpleToolList;
+import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
+import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.topology.ui.NodeSelection;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphony__AddonsFactory
+public class ApogyAddonsFactoryImpl extends EFactoryImpl implements ApogyAddonsFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -36,18 +36,18 @@ public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__AddonsFactory init()
+  public static ApogyAddonsFactory init()
   {
 		try {
-			Symphony__AddonsFactory theSymphony__AddonsFactory = (Symphony__AddonsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsPackage.eNS_URI);
-			if (theSymphony__AddonsFactory != null) {
-				return theSymphony__AddonsFactory;
+			ApogyAddonsFactory theApogyAddonsFactory = (ApogyAddonsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsPackage.eNS_URI);
+			if (theApogyAddonsFactory != null) {
+				return theApogyAddonsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsFactoryImpl();
+		return new ApogyAddonsFactoryImpl();
 	}
 
   /**
@@ -56,7 +56,7 @@ public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsFactoryImpl()
+  public ApogyAddonsFactoryImpl()
   {
 		super();
 	}
@@ -70,14 +70,14 @@ public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphon
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST: return createSimpleToolList();
-			case Symphony__AddonsPackage.RULER3_DTOOL: return createRuler3DTool();
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE: return createRuler3dToolNode();
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL: return createFeatureOfInterestPickingTool();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL: return createSunVector3DTool();
-			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE: return createSunVector3DToolNode();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL: return createTrajectory3DTool();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE: return createTrajectory3DToolNode();
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST: return createSimpleToolList();
+			case ApogyAddonsPackage.RULER3_DTOOL: return createRuler3DTool();
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE: return createRuler3dToolNode();
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL: return createFeatureOfInterestPickingTool();
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL: return createSunVector3DTool();
+			case ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE: return createSunVector3DToolNode();
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL: return createTrajectory3DTool();
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE: return createTrajectory3DToolNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -91,9 +91,9 @@ public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphon
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsPackage.COLOR3F:
+			case ApogyAddonsPackage.COLOR3F:
 				return createColor3fFromString(eDataType, initialValue);
-			case Symphony__AddonsPackage.NODE_SELECTION:
+			case ApogyAddonsPackage.NODE_SELECTION:
 				return createNodeSelectionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -108,9 +108,9 @@ public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphon
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsPackage.COLOR3F:
+			case ApogyAddonsPackage.COLOR3F:
 				return convertColor3fToString(eDataType, instanceValue);
-			case Symphony__AddonsPackage.NODE_SELECTION:
+			case ApogyAddonsPackage.NODE_SELECTION:
 				return convertNodeSelectionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -250,8 +250,8 @@ public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsPackage getSymphony__AddonsPackage() {
-		return (Symphony__AddonsPackage)getEPackage();
+	public ApogyAddonsPackage getApogyAddonsPackage() {
+		return (ApogyAddonsPackage)getEPackage();
 	}
 
 		/**
@@ -261,9 +261,9 @@ public class Symphony__AddonsFactoryImpl extends EFactoryImpl implements Symphon
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__AddonsPackage getPackage()
+  public static ApogyAddonsPackage getPackage()
   {
-		return Symphony__AddonsPackage.eINSTANCE;
+		return ApogyAddonsPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsFactoryImpl
+} //ApogyAddonsFactoryImpl

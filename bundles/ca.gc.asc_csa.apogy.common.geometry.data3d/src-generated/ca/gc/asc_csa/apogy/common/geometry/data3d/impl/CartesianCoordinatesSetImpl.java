@@ -3,7 +3,7 @@
  *
  * $Id: CartesianCoordinatesSetImpl.java,v 1.3.4.5 2015/09/22 19:39:41 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -60,7 +60,7 @@ public class CartesianCoordinatesSetImpl extends AbstractCartesianCoordinatesSet
 			@SuppressWarnings("unchecked")
 			public void notifyChanged(Notification notification) {
 				if (notification
-						.getFeatureID(CartesianCoordinatesSet.class) == Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS) {
+						.getFeatureID(CartesianCoordinatesSet.class) == ApogyCommonGeometryDataPackage.COORDINATES_SET__POINTS) {
 					if (notification.getEventType() == Notification.ADD
 							|| notification.getEventType() == Notification.ADD_MANY) {
 						if (notification.getNewValue() != null) {
@@ -93,7 +93,7 @@ public class CartesianCoordinatesSetImpl extends AbstractCartesianCoordinatesSet
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET;
 	}
 
 	/**

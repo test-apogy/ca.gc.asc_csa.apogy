@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.camera.apogy.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
-import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class PTUCameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUCameraData_panAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUCameraData_panAngle_feature", "_UI_PTUCameraData_type"),
-				 Symphony__ExamplesCameraSymphonyPackage.Literals.PTU_CAMERA_DATA__PAN_ANGLE,
+				 ApogyExamplesCameraApogyPackage.Literals.PTU_CAMERA_DATA__PAN_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class PTUCameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUCameraData_tiltAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUCameraData_tiltAngle_feature", "_UI_PTUCameraData_type"),
-				 Symphony__ExamplesCameraSymphonyPackage.Literals.PTU_CAMERA_DATA__TILT_ANGLE,
+				 ApogyExamplesCameraApogyPackage.Literals.PTU_CAMERA_DATA__TILT_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -137,8 +137,8 @@ public class PTUCameraDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PTUCameraData.class)) {
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

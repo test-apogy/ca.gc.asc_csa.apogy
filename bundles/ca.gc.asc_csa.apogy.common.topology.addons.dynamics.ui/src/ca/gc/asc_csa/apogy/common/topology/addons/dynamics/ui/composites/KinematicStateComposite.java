@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.Adapter;
@@ -10,10 +10,10 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
-import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ui.composites.Tuple3dComposite;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 public class KinematicStateComposite extends Composite {
 	@SuppressWarnings("unused")
@@ -161,27 +161,27 @@ public class KinematicStateComposite extends Composite {
 					Tuple3dComposite compositeToUpdate = null;
 
 					switch (featureId) {
-					case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
+					case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dPosition;
 						break;
-					case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+					case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dOrientation;
 						break;
-					case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+					case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dAngularAcceleration;
 						break;
-					case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+					case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dAngularVelocity;
 						break;
-					case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+					case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dLinearAcceleration;
 						break;
-					case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+					case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dLinearVelocity;
 						break;

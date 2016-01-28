@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.utils;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.utils;
 
 import java.util.ArrayList;
 import java.util.List;

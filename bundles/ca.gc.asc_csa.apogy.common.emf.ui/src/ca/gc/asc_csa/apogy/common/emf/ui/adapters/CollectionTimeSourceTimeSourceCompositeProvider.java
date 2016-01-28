@@ -1,10 +1,10 @@
-package org.eclipse.symphony.common.emf.ui.adapters;
+package ca.gc.asc_csa.apogy.common.emf.ui.adapters;
 
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
-import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
-import org.eclipse.symphony.common.emf.ui.composites.CollectionTimedTimeSourceComposite;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ui.TimeSourceCompositeProvider;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.AbstractTimeSourceComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.CollectionTimedTimeSourceComposite;
 
 public class CollectionTimeSourceTimeSourceCompositeProvider implements	TimeSourceCompositeProvider<CollectionTimedTimeSource> 
 {

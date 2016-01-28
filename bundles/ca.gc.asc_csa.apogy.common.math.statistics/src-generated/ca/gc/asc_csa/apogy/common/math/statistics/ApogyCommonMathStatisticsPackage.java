@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math.statistics;
+package ca.gc.asc_csa.apogy.common.math.statistics;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsFactory
+ * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonMathStatistics' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonMathStatistics' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.math.statistics/src-generated' basePackage='org.eclipse.symphony.common.math'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonMathStatistics' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonMathStatistics' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.math.statistics/src-generated' basePackage='ca.gc.asc_csa.apogy.common.math'"
  * @generated
  */
-public interface Symphony__CommonMathStatisticsPackage extends EPackage {
+public interface ApogyCommonMathStatisticsPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public interface Symphony__CommonMathStatisticsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.math.statistics";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.math.statistics";
 
 	/**
 	 * The package namespace name.
@@ -55,14 +55,14 @@ public interface Symphony__CommonMathStatisticsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonMathStatisticsPackage eINSTANCE = org.eclipse.symphony.common.math.statistics.impl.Symphony__CommonMathStatisticsPackageImpl.init();
+	ApogyCommonMathStatisticsPackage eINSTANCE = ca.gc.asc_csa.apogy.common.math.statistics.impl.ApogyCommonMathStatisticsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl <em>Population</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl <em>Population</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.statistics.impl.PopulationImpl
-	 * @see org.eclipse.symphony.common.math.statistics.impl.Symphony__CommonMathStatisticsPackageImpl#getPopulation()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.impl.ApogyCommonMathStatisticsPackageImpl#getPopulation()
 	 * @generated
 	 */
 	int POPULATION = 0;
@@ -168,109 +168,109 @@ public interface Symphony__CommonMathStatisticsPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.statistics.Population <em>Population</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population <em>Population</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Population</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population
 	 * @generated
 	 */
 	EClass getPopulation();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.symphony.common.math.statistics.Population#getData <em>Data</em>}'.
+	 * Returns the meta object for the attribute list '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute list '<em>Data</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getData()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getData()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_Data();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getStandardDeviation <em>Standard Deviation</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getStandardDeviation <em>Standard Deviation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Standard Deviation</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getStandardDeviation()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getStandardDeviation()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_StandardDeviation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getAverage <em>Average</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getAverage <em>Average</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Average</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getAverage()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getAverage()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_Average();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getSum <em>Sum</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getSum <em>Sum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Sum</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getSum()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getSum()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_Sum();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getMedian <em>Median</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getMedian <em>Median</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Median</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getMedian()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getMedian()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_Median();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getSumSquared <em>Sum Squared</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getSumSquared <em>Sum Squared</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Sum Squared</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getSumSquared()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getSumSquared()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_SumSquared();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getVariance <em>Variance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getVariance <em>Variance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Variance</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getVariance()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getVariance()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_Variance();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getMin <em>Min</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getMin <em>Min</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Min</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getMin()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getMin()
 	 * @see #getPopulation()
 	 * @generated
 	 */
 	EAttribute getPopulation_Min();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.statistics.Population#getMax <em>Max</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getMax <em>Max</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max</em>'.
-	 * @see org.eclipse.symphony.common.math.statistics.Population#getMax()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population#getMax()
 	 * @see #getPopulation()
 	 * @generated
 	 */
@@ -283,7 +283,7 @@ public interface Symphony__CommonMathStatisticsPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonMathStatisticsFactory getSymphony__CommonMathStatisticsFactory();
+	ApogyCommonMathStatisticsFactory getApogyCommonMathStatisticsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -300,11 +300,11 @@ public interface Symphony__CommonMathStatisticsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl <em>Population</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl <em>Population</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.statistics.impl.PopulationImpl
-		 * @see org.eclipse.symphony.common.math.statistics.impl.Symphony__CommonMathStatisticsPackageImpl#getPopulation()
+		 * @see ca.gc.asc_csa.apogy.common.math.statistics.impl.PopulationImpl
+		 * @see ca.gc.asc_csa.apogy.common.math.statistics.impl.ApogyCommonMathStatisticsPackageImpl#getPopulation()
 		 * @generated
 		 */
 		EClass POPULATION = eINSTANCE.getPopulation();
@@ -383,4 +383,4 @@ public interface Symphony__CommonMathStatisticsPackage extends EPackage {
 
 	}
 
-} //Symphony__CommonMathStatisticsPackage
+} //ApogyCommonMathStatisticsPackage

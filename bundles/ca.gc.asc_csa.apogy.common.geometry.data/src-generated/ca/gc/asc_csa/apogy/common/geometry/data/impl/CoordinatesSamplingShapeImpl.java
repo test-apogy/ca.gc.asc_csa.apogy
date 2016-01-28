@@ -3,13 +3,13 @@
  *
  * $Id: CoordinatesSamplingShapeImpl.java,v 1.2.4.2 2015/05/21 15:50:05 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public abstract class CoordinatesSamplingShapeImpl<T extends Coordinates> extend
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SAMPLING_SHAPE;
+		return ApogyCommonGeometryDataPackage.Literals.COORDINATES_SAMPLING_SHAPE;
 	}
 
 	/**

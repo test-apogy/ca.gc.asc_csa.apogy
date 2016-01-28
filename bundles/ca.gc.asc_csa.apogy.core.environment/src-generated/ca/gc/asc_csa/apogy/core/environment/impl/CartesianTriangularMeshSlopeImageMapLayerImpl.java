@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.awt.Color;
 
@@ -13,15 +13,15 @@ import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import edu.wlu.cs.levy.CG.KDTree;
 
 /**
@@ -32,9 +32,9 @@ import edu.wlu.cs.levy.CG.KDTree;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#isAutoScale <em>Auto Scale</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#getMinimumSlope <em>Minimum Slope</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#getMaximumSlope <em>Maximum Slope</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#isAutoScale <em>Auto Scale</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#getMinimumSlope <em>Minimum Slope</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#getMaximumSlope <em>Maximum Slope</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,7 +110,7 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER;
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 		boolean oldAutoScale = autoScale;
 		autoScale = newAutoScale;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE, oldAutoScale, autoScale));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE, oldAutoScale, autoScale));
 	}
 
 	/**
@@ -152,7 +152,7 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 		double oldMinimumSlope = minimumSlope;
 		minimumSlope = newMinimumSlope;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE, oldMinimumSlope, minimumSlope));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE, oldMinimumSlope, minimumSlope));
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 		double oldMaximumSlope = maximumSlope;
 		maximumSlope = newMaximumSlope;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE, oldMaximumSlope, maximumSlope));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE, oldMaximumSlope, maximumSlope));
 	}
 
 	/**
@@ -184,11 +184,11 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
 				return isAutoScale();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
 				return getMinimumSlope();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
 				return getMaximumSlope();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -202,13 +202,13 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
 				setAutoScale((Boolean)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
 				setMinimumSlope((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
 				setMaximumSlope((Double)newValue);
 				return;
 		}
@@ -223,13 +223,13 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
 				setAutoScale(AUTO_SCALE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
 				setMinimumSlope(MINIMUM_SLOPE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
 				setMaximumSlope(MAXIMUM_SLOPE_EDEFAULT);
 				return;
 		}
@@ -244,11 +244,11 @@ public class CartesianTriangularMeshSlopeImageMapLayerImpl extends CartesianTria
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
 				return autoScale != AUTO_SCALE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
 				return minimumSlope != MINIMUM_SLOPE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
 				return maximumSlope != MAXIMUM_SLOPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

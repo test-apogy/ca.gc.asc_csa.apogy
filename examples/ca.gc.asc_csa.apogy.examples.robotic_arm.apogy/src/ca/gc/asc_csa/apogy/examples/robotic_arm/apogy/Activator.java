@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.robotic_arm.symphony;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

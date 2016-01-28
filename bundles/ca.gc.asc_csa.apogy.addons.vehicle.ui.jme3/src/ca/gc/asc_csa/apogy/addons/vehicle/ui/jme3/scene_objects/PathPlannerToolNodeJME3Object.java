@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.vehicle.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.jme3.scene_objects;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 public class PathPlannerToolNodeJME3Object extends DefaultJME3SceneObject<PathPlannerToolNode>
 {				
@@ -49,7 +49,7 @@ public class PathPlannerToolNodeJME3Object extends DefaultJME3SceneObject<PathPl
 						
 						switch(featureId)
 						{
-							case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+							case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 								setVisible(msg.getNewBooleanValue());
 							break;
 						}						

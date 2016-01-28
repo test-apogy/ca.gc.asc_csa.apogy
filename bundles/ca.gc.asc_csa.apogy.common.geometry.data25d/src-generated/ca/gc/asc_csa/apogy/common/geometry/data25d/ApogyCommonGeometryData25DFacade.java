@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d;
+package ca.gc.asc_csa.apogy.common.geometry.data25d;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DFacadeImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,13 +13,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getSymphony__CommonGeometryData25DFacade()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getApogyCommonGeometryData25DFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonGeometryData25DFacade extends EObject {
+public interface ApogyCommonGeometryData25DFacade extends EObject {
 	
-	public static Symphony__CommonGeometryData25DFacade INSTANCE = Symphony__CommonGeometryData25DFacadeImpl.getInstance();
+	public static ApogyCommonGeometryData25DFacade INSTANCE = ApogyCommonGeometryData25DFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,4 +45,4 @@ public interface Symphony__CommonGeometryData25DFacade extends EObject {
 	 */
 	<T extends VolumetricCoordinatesSet25D> CartesianCoordinatesSet createCartesianCoordinatesSet(T volumetricCoordinatesSet25D);
 
-} // Symphony__CommonGeometryData25DFacade
+} // ApogyCommonGeometryData25DFacade

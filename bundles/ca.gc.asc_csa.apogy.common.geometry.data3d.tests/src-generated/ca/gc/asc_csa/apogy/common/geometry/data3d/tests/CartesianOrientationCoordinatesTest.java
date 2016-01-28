@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -73,7 +73,7 @@ public class CartesianOrientationCoordinatesTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates());
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class CartesianOrientationCoordinatesTest extends TestCase {
 		assertTrue(getFixture().equals(getFixture()));
 		
 		// Should be equal to another point with the same coordinates.		
-		CartesianOrientationCoordinates p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(getFixture());
+		CartesianOrientationCoordinates p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(getFixture());
 		assertTrue(getFixture().equals(p));			
 		
 		// Should not be equal to this one.

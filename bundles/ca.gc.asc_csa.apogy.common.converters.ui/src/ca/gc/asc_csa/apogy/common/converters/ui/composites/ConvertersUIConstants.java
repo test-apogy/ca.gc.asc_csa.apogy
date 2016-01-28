@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.converters.ui.composites;
+package ca.gc.asc_csa.apogy.common.converters.ui.composites;
 
 public class ConvertersUIConstants 
 {

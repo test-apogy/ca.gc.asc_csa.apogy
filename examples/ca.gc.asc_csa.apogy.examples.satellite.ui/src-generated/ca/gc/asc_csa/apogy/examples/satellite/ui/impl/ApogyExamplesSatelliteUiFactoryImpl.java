@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.examples.satellite.ui.*;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.examples.satellite.ui.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteUiFactoryImpl extends EFactoryImpl implements Symphony__ExamplesSatelliteUiFactory {
+public class ApogyExamplesSatelliteUiFactoryImpl extends EFactoryImpl implements ApogyExamplesSatelliteUiFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesSatelliteUiFactory init() {
+	public static ApogyExamplesSatelliteUiFactory init() {
 		try {
-			Symphony__ExamplesSatelliteUiFactory theSymphony__ExamplesSatelliteUiFactory = (Symphony__ExamplesSatelliteUiFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesSatelliteUiPackage.eNS_URI);
-			if (theSymphony__ExamplesSatelliteUiFactory != null) {
-				return theSymphony__ExamplesSatelliteUiFactory;
+			ApogyExamplesSatelliteUiFactory theApogyExamplesSatelliteUiFactory = (ApogyExamplesSatelliteUiFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesSatelliteUiPackage.eNS_URI);
+			if (theApogyExamplesSatelliteUiFactory != null) {
+				return theApogyExamplesSatelliteUiFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesSatelliteUiFactoryImpl();
+		return new ApogyExamplesSatelliteUiFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__ExamplesSatelliteUiFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiFactoryImpl() {
+	public ApogyExamplesSatelliteUiFactoryImpl() {
 		super();
 	}
 
@@ -57,7 +57,7 @@ public class Symphony__ExamplesSatelliteUiFactoryImpl extends EFactoryImpl imple
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesSatelliteUiPackage.SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE: return createSymphony__ExamplesSatelliteUiFacade();
+			case ApogyExamplesSatelliteUiPackage.APOGY_EXAMPLES_SATELLITE_UI_FACADE: return createApogyExamplesSatelliteUiFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -68,9 +68,9 @@ public class Symphony__ExamplesSatelliteUiFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiFacade createSymphony__ExamplesSatelliteUiFacade() {
-		Symphony__ExamplesSatelliteUiFacadeImpl symphony__ExamplesSatelliteUiFacade = new Symphony__ExamplesSatelliteUiFacadeImpl();
-		return symphony__ExamplesSatelliteUiFacade;
+	public ApogyExamplesSatelliteUiFacade createApogyExamplesSatelliteUiFacade() {
+		ApogyExamplesSatelliteUiFacadeImpl apogy__ExamplesSatelliteUiFacade = new ApogyExamplesSatelliteUiFacadeImpl();
+		return apogy__ExamplesSatelliteUiFacade;
 	}
 
 	/**
@@ -78,8 +78,8 @@ public class Symphony__ExamplesSatelliteUiFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiPackage getSymphony__ExamplesSatelliteUiPackage() {
-		return (Symphony__ExamplesSatelliteUiPackage)getEPackage();
+	public ApogyExamplesSatelliteUiPackage getApogyExamplesSatelliteUiPackage() {
+		return (ApogyExamplesSatelliteUiPackage)getEPackage();
 	}
 
 	/**
@@ -89,8 +89,8 @@ public class Symphony__ExamplesSatelliteUiFactoryImpl extends EFactoryImpl imple
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesSatelliteUiPackage getPackage() {
-		return Symphony__ExamplesSatelliteUiPackage.eINSTANCE;
+	public static ApogyExamplesSatelliteUiPackage getPackage() {
+		return ApogyExamplesSatelliteUiPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesSatelliteUiFactoryImpl
+} //ApogyExamplesSatelliteUiFactoryImpl

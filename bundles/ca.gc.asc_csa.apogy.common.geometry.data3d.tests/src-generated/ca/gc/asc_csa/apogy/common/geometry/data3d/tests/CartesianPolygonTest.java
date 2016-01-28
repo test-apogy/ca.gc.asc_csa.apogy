@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -20,9 +20,9 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getSurface() <em>Surface</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getNormal() <em>Normal</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid() <em>Centroid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getSurface() <em>Surface</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getNormal() <em>Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getCentroid() <em>Centroid</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -86,11 +86,11 @@ public class CartesianPolygonTest extends TestCase
 	@Override
 	protected void setUp() throws Exception 
 	{
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon());
 			
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
 		
 		getFixture().getVertices().add(p0);
 		getFixture().getVertices().add(p1);
@@ -109,10 +109,10 @@ public class CartesianPolygonTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getSurface() <em>Surface</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getSurface() <em>Surface</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getSurface()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getSurface()
 	 * @generated_NOT
 	 */
 	public void testGetSurface() {
@@ -120,10 +120,10 @@ public class CartesianPolygonTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getNormal() <em>Normal</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getNormal() <em>Normal</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getNormal()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getNormal()
 	 * @generated_NOT
 	 */
 	public void testGetNormal() 
@@ -136,10 +136,10 @@ public class CartesianPolygonTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid() <em>Centroid</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getCentroid() <em>Centroid</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getCentroid()
 	 * @generated_NOT
 	 */
 	public void testGetCentroid() 

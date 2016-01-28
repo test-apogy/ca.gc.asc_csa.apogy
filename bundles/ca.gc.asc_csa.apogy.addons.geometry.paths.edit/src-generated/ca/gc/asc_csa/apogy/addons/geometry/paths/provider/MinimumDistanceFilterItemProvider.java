@@ -3,7 +3,7 @@
  *
  * $Id: MinimumDistanceFilterItemProvider.java,v 1.3.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class MinimumDistanceFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MinimumDistanceFilter_minimumDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MinimumDistanceFilter_minimumDistance_feature", "_UI_MinimumDistanceFilter_type"),
-				 Symphony__AddonsGeometryPathsPackage.Literals.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE,
+				 ApogyAddonsGeometryPathsPackage.Literals.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class MinimumDistanceFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MinimumDistanceFilter.class)) {
-			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
+			case ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

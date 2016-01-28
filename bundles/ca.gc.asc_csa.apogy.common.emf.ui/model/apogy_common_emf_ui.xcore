@@ -1,19 +1,19 @@
-@GenModel(prefix="Symphony__CommonEMFUI",
+@GenModel(prefix="ApogyCommonEMFUI",
 		  childCreationExtenders="true",
-		  modelName="Symphony__CommonEMFUI")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.emf.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.emf.ui.edit/src-generated")
+		  modelName="ApogyCommonEMFUI")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.emf.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.emf.ui.edit/src-generated")
 
-package org.eclipse.symphony.common.emf.ui
+package ca.gc.asc_csa.apogy.common.emf.ui
 
 import org.eclipse.emf.ecore.ETypedElement
 
-import org.eclipse.symphony.common.emf.Ranges
+import ca.gc.asc_csa.apogy.common.emf.Ranges
 
 type Color wraps org.eclipse.swt.graphics.Color
 type Unit wraps javax.measure.unit.Unit<?>
 
-class Symphony__CommonEMFUIFacade
+class ApogyCommonEMFUIFacade
 {	
 	/*
 	 * Returns the color currently associated with the specified

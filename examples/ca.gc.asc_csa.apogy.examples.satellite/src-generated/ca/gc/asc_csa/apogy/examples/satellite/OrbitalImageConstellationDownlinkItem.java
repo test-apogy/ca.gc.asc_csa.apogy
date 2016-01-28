@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.examples.satellite;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImageConstellationDownlinkItem()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImageConstellationDownlinkItem()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface OrbitalImageConstellationDownlinkItem extends AbstractConstella
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image</em>' containment reference.
 	 * @see #setImage(OrbitalImage)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImageConstellationDownlinkItem_Image()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImageConstellationDownlinkItem_Image()
 	 * @model containment="true"
 	 * @generated
 	 */
 	OrbitalImage getImage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image</em>' containment reference.

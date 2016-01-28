@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.vehicle.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,15 +8,15 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterSceneObject;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import org.eclipse.symphony.core.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.effect.ParticleEmitter;
@@ -417,11 +417,11 @@ public class ThrusterJME3Object extends DefaultJME3SceneObject<Thruster> impleme
 					
 						switch (featureId) 
 						{
-							case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
+							case ApogyAddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 								updateExhaustPlume((float) getTopologyNode().getThrustLevel(), (float) getTopologyNode().getPlumeAngle());
 								updateGeometry();
 							break;
-							case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
+							case ApogyAddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
 								updateExhaustPlume((float) getTopologyNode().getThrustLevel(), (float) getTopologyNode().getPlumeAngle());
 							break;
 

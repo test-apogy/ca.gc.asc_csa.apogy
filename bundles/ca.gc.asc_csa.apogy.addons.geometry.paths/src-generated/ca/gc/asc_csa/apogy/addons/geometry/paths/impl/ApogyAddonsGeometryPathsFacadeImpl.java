@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsGeometryPathsFacadeImpl.java,v 1.3.4.2 2015/05/21 15:50:36 pallard Exp $
+ * $Id: ApogyAddonsGeometryPathsFacadeImpl.java,v 1.3.4.2 2015/05/21 15:50:36 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
@@ -12,12 +12,12 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,15 +26,15 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  *
  * @generated
  */
-public class Symphony__AddonsGeometryPathsFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__AddonsGeometryPathsFacade {
+public class ApogyAddonsGeometryPathsFacadeImpl extends MinimalEObjectImpl.Container implements ApogyAddonsGeometryPathsFacade {
 	
-	private static Symphony__AddonsGeometryPathsFacade instance = null;
+	private static ApogyAddonsGeometryPathsFacade instance = null;
 	
-	public static Symphony__AddonsGeometryPathsFacade getInstance()
+	public static ApogyAddonsGeometryPathsFacade getInstance()
 	{
 		if (instance == null)
 		{
-			instance = new Symphony__AddonsGeometryPathsFacadeImpl();
+			instance = new ApogyAddonsGeometryPathsFacadeImpl();
 		}
 		
 		return instance;
@@ -45,7 +45,7 @@ public class Symphony__AddonsGeometryPathsFacadeImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsGeometryPathsFacadeImpl() {
+	protected ApogyAddonsGeometryPathsFacadeImpl() {
 		super();
 	}
 
@@ -56,7 +56,7 @@ public class Symphony__AddonsGeometryPathsFacadeImpl extends MinimalEObjectImpl.
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsGeometryPathsPackage.Literals.SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE;
+		return ApogyAddonsGeometryPathsPackage.Literals.APOGY_ADDONS_GEOMETRY_PATHS_FACADE;
 	}
 
 	/**
@@ -83,13 +83,13 @@ public class Symphony__AddonsGeometryPathsFacadeImpl extends MinimalEObjectImpl.
 	@Override
 	public WayPointPath createWayPointPath(List<CartesianPositionCoordinates> points)
 	{
-		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 				
 		// Copies all of the points.
 		Iterator <CartesianPositionCoordinates> it = points.iterator();
 		while(it.hasNext())
 		{
-			CartesianPositionCoordinates wayPointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(it.next());
+			CartesianPositionCoordinates wayPointCopy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(it.next());
 			path.getPoints().add(wayPointCopy);
 		}				
 					
@@ -105,12 +105,12 @@ public class Symphony__AddonsGeometryPathsFacadeImpl extends MinimalEObjectImpl.
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsGeometryPathsPackage.SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH:
+			case ApogyAddonsGeometryPathsPackage.APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH:
 				return createWayPointPath((WayPointPath)arguments.get(0));
-			case Symphony__AddonsGeometryPathsPackage.SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST:
+			case ApogyAddonsGeometryPathsPackage.APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST:
 				return createWayPointPath((List<CartesianPositionCoordinates>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 	
-} //Symphony__AddonsGeometryPathsFacadeImpl
+} //ApogyAddonsGeometryPathsFacadeImpl

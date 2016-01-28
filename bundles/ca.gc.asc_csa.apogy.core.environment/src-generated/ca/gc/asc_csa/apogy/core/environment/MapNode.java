@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.MapNode#getMap <em>Map</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.MapNode#getMap <em>Map</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapNode()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapNode()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface MapNode extends TransformNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map</em>' reference.
 	 * @see #setMap(Map)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapNode_Map()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapNode_Map()
 	 * @model transient="true"
 	 * @generated
 	 */
   Map getMap();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.MapNode#getMap <em>Map</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.MapNode#getMap <em>Map</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Map</em>' reference.

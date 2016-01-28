@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.worksites.surface;
+package ca.gc.asc_csa.apogy.examples.worksites.surface;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

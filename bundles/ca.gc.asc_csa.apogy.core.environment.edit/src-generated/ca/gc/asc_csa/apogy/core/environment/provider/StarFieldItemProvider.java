@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.StarField} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.StarField} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class StarFieldItemProvider
 				 getResourceLocator(),
 				 getString("_UI_StarField_starFieldFileName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_StarField_starFieldFileName_feature", "_UI_StarField_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.STAR_FIELD__STAR_FIELD_FILE_NAME,
+				 ApogyCoreEnvironmentPackage.Literals.STAR_FIELD__STAR_FIELD_FILE_NAME,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class StarFieldItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.STAR_FIELD__STARS);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.STAR_FIELD__STARS);
 		}
 		return childrenFeatures;
 	}
@@ -157,10 +157,10 @@ public class StarFieldItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(StarField.class)) {
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STARS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

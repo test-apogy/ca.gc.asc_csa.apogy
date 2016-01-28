@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -76,7 +76,7 @@ public class TopologyPresentationSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyPresentationSet_topologyPresentationRegistry_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyPresentationSet_topologyPresentationRegistry_feature", "_UI_TopologyPresentationSet_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__TOPOLOGY_PRESENTATION_REGISTRY,
+				 ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__TOPOLOGY_PRESENTATION_REGISTRY,
 				 true,
 				 false,
 				 true,
@@ -98,7 +98,7 @@ public class TopologyPresentationSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyPresentationSet_graphicsContext_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyPresentationSet_graphicsContext_feature", "_UI_TopologyPresentationSet_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT,
+				 ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT,
 				 true,
 				 false,
 				 true,
@@ -120,7 +120,7 @@ public class TopologyPresentationSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyPresentationSet_nodePresentationList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyPresentationSet_nodePresentationList_feature", "_UI_TopologyPresentationSet_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST,
+				 ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST,
 				 true,
 				 false,
 				 true,

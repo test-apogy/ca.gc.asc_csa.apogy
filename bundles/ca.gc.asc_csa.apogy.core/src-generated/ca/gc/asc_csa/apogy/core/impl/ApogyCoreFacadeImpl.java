@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -24,40 +24,40 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.emf.CurrentTimeSource;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ReferencedContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.WorksitesList;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.AttributeResultValue;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.ToolsList;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -65,13 +65,13 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter;
  *
  * @generated
  */
-public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
-		implements Symphony__CoreFacade {
-	private static Symphony__CoreFacade instance = null;
+public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container
+		implements ApogyCoreFacade {
+	private static ApogyCoreFacade instance = null;
 
-	public static Symphony__CoreFacade getInstance() {
+	public static ApogyCoreFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CoreFacadeImpl();
+			instance = new ApogyCoreFacadeImpl();
 		}
 		return instance;
 	}
@@ -80,7 +80,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreFacadeImpl() {
+	protected ApogyCoreFacadeImpl() {
 		super();
 	}
 
@@ -90,7 +90,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.SYMPHONY_CORE_FACADE;
+		return ApogyCorePackage.Literals.APOGY_CORE_FACADE;
 	}
 
 	/**
@@ -98,12 +98,12 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Matrix4x4 computeAbsolutePoseMatrix(SymphonySystem symphonySystem, Matrix4x4 relativePose)
+  public Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose)
   {
 	  	// Gets system pose.
-		Node root = Symphony__CommonTopologyFacade.INSTANCE.findRoot(symphonySystem.getTopologyRoot().getOriginNode());
+		Node root = ApogyCommonTopologyFacade.INSTANCE.findRoot(apogySystem.getTopologyRoot().getOriginNode());
 						
-		Matrix4d systemPose = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(symphonySystem.getTopologyRoot().getOriginNode(), root);	  	  	
+		Matrix4d systemPose = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(apogySystem.getTopologyRoot().getOriginNode(), root);	  	  	
 		
 		// Gets the system centric result.
 		Matrix4x4 pose = relativePose;
@@ -116,7 +116,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 		m.setIdentity();		
 		m.mul(systemPose, matrix);			
 
-		return Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
+		return ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m);
   }
 
   /**
@@ -128,7 +128,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 	public ResultNode createResultNode(PositionedResult result) 
 	{
 		// Creates the ResultNode.
-		ResultNode resultNode = Symphony__CoreFactory.eINSTANCE
+		ResultNode resultNode = ApogyCoreFactory.eINSTANCE
 				.createResultNode();
 		resultNode.setResult(result);
 
@@ -161,7 +161,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 				{
 					// Creates and adds a ReferencedContentNode with the result as its content.
 					EObject content = (EObject) referenceResultValue.getValue();
-					ReferencedContentNode contentNode = Symphony__CommonTopologyFacade.INSTANCE.createReferencedContentNode(content);
+					ReferencedContentNode contentNode = ApogyCommonTopologyFacade.INSTANCE.createReferencedContentNode(content);
 
 					// Adds a the node via a ReferenceNode under the DataProductNode.
 					resultNode.getChildren().add(contentNode);
@@ -177,35 +177,35 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public InvocatorSession createSymphonySession(boolean createEnvironment,
+	public InvocatorSession createApogySession(boolean createEnvironment,
 			boolean createPrograms, boolean createDataProducts,
 			boolean createTools) {
-		InvocatorSession session = Symphony__CoreInvocatorFactory.eINSTANCE
+		InvocatorSession session = ApogyCoreInvocatorFactory.eINSTANCE
 				.createInvocatorSession();
 		Context context = null;
 
 		if (createEnvironment) {
-			SymphonyEnvironment environment = Symphony__CoreFactory.eINSTANCE
-					.createSymphonyEnvironment();
-			environment.setTypesList(Symphony__CoreInvocatorFactory.eINSTANCE
+			ApogyEnvironment environment = ApogyCoreFactory.eINSTANCE
+					.createApogyEnvironment();
+			environment.setTypesList(ApogyCoreInvocatorFactory.eINSTANCE
 					.createTypesList());
-			environment.setVariablesList(Symphony__CoreInvocatorFactory.eINSTANCE
+			environment.setVariablesList(ApogyCoreInvocatorFactory.eINSTANCE
 					.createVariablesList());
-			environment.setContextsList(Symphony__CoreInvocatorFactory.eINSTANCE
+			environment.setContextsList(ApogyCoreInvocatorFactory.eINSTANCE
 					.createContextsList());
 
 			/** Create a default Context */
-			context = Symphony__CoreInvocatorFactory.eINSTANCE.createBasicContext();
+			context = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
 			context.setName("Default");
 			environment.getContextsList().getContexts().add(context);
 			environment.setActiveContext(context);
 			
 			/** Creates the Worksites List */
-			WorksitesList worksitesList =  Symphony__CoreFactory.eINSTANCE.createWorksitesList();
+			WorksitesList worksitesList =  ApogyCoreFactory.eINSTANCE.createWorksitesList();
 			environment.setWorksitesList(worksitesList);
 						
 			/** Creates the Timesource.*/
-			org.eclipse.symphony.core.TimeSourcesList timeSourcesList = Symphony__CoreFactory.eINSTANCE.createTimeSourcesList();
+			ca.gc.asc_csa.apogy.core.TimeSourcesList timeSourcesList = ApogyCoreFactory.eINSTANCE.createTimeSourcesList();
 			
 			// Fills in the TimeSource List.
 			timeSourcesList.getTimeSources().addAll(getAllAvaibleTimeSource());						
@@ -218,19 +218,19 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		if (createPrograms) {
-			session.setProgramsList(Symphony__CoreInvocatorFactory.eINSTANCE
+			session.setProgramsList(ApogyCoreInvocatorFactory.eINSTANCE
 					.createProgramsList());
 		}
 
 		if (createDataProducts) {
-			DataProductsListsContainer listsContainer = Symphony__CoreInvocatorFactory.eINSTANCE
+			DataProductsListsContainer listsContainer = ApogyCoreInvocatorFactory.eINSTANCE
 					.createDataProductsListsContainer();
-			DataProductsList dataProductsList = Symphony__CoreInvocatorFactory.eINSTANCE
+			DataProductsList dataProductsList = ApogyCoreInvocatorFactory.eINSTANCE
 					.createDataProductsList();
 			listsContainer.getDataProductsList().add(dataProductsList);
 			session.setDataProductsListContainer(listsContainer);
 			
-			OperationCallResultsList operationCallResultsList = Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallResultsList();
+			OperationCallResultsList operationCallResultsList = ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallResultsList();
 			dataProductsList.setOperationCallResultsList(operationCallResultsList);			
 
 			if (context != null) {
@@ -239,7 +239,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		if (createTools) {
-			ToolsList toolsList = Symphony__CoreInvocatorFactory.eINSTANCE
+			ToolsList toolsList = ApogyCoreInvocatorFactory.eINSTANCE
 					.createToolsList();
 			session.setToolsList(toolsList);
 		}
@@ -253,17 +253,17 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public SymphonySystem getSymphonySystem(Environment environment, String fullyQualifiedName)
+  public ApogySystem getApogySystem(Environment environment, String fullyQualifiedName)
   {
-	  SymphonySystem result = null;
-	  AbstractTypeImplementation typeImplementation = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(environment, fullyQualifiedName);
+	  ApogySystem result = null;
+	  AbstractTypeImplementation typeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(environment, fullyQualifiedName);
 	  
 	  if (typeImplementation != null){
 		  TypeApiAdapter typeApiAdapter = typeImplementation.getAdapterInstance();
 		  
-		  if (typeApiAdapter instanceof SymphonySystemApiAdapter){
-			  SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) typeApiAdapter;
-			  result = symphonySystemApiAdapter.getSymphonySystem();
+		  if (typeApiAdapter instanceof ApogySystemApiAdapter){
+			  ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) typeApiAdapter;
+			  result = apogySystemApiAdapter.getApogySystem();
 		  }
 	  }
 	  
@@ -320,14 +320,14 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 		double ry = Double.parseDouble(entries[6]);
 		double rz = Double.parseDouble(entries[7]);
 		
-		foi = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest();
+		foi = ApogyCoreFactory.eINSTANCE.createFeatureOfInterest();
 		foi.setName(name);
 		foi.setDescription(description);
 		
 		// Sets pose.
-		TransformNode tmp = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(x, y, z, rx, ry, rz);
+		TransformNode tmp = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(x, y, z, rx, ry, rz);
 		Matrix4d m  = tmp.asMatrix4d();		
-		foi.setPose(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m));
+		foi.setPose(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m));
 		
 		return foi;
 	}
@@ -374,13 +374,13 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 				csvString += ",";
 			}						
 			
-			Tuple3d position = Symphony__CommonMathFacade.INSTANCE.extractPosition(foi.getPose());
+			Tuple3d position = ApogyCommonMathFacade.INSTANCE.extractPosition(foi.getPose());
 			
 			csvString += position.getX() + ",";
 			csvString += position.getY() + ",";
 			csvString += position.getZ() + ",";
 			
-			Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(foi.getPose());
+			Tuple3d orientation = ApogyCommonMathFacade.INSTANCE.extractOrientation(foi.getPose());
 			csvString += orientation.getX() + ",";
 			csvString += orientation.getY() + ",";
 			csvString += orientation.getZ() + "\n";
@@ -399,22 +399,22 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4:
-				return computeAbsolutePoseMatrix((SymphonySystem)arguments.get(0), (Matrix4x4)arguments.get(1));
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
+			case ApogyCorePackage.APOGY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4:
+				return computeAbsolutePoseMatrix((ApogySystem)arguments.get(0), (Matrix4x4)arguments.get(1));
+			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
 				return createResultNode((PositionedResult)arguments.get(0));
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___CREATE_SYMPHONY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
-				return createSymphonySession((Boolean)arguments.get(0), (Boolean)arguments.get(1), (Boolean)arguments.get(2), (Boolean)arguments.get(3));
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___GET_SYMPHONY_SYSTEM__ENVIRONMENT_STRING:
-				return getSymphonySystem((Environment)arguments.get(0), (String)arguments.get(1));
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
+			case ApogyCorePackage.APOGY_CORE_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
+				return createApogySession((Boolean)arguments.get(0), (Boolean)arguments.get(1), (Boolean)arguments.get(2), (Boolean)arguments.get(3));
+			case ApogyCorePackage.APOGY_CORE_FACADE___GET_APOGY_SYSTEM__ENVIRONMENT_STRING:
+				return getApogySystem((Environment)arguments.get(0), (String)arguments.get(1));
+			case ApogyCorePackage.APOGY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
 				try {
 					return loadFeatureOfInterestFromFile((String)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
+			case ApogyCorePackage.APOGY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
 				try {
 					saveFeatureOfInterestToFile((String)arguments.get(0), (List<FeatureOfInterest>)arguments.get(1));
 					return null;
@@ -430,7 +430,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 	{
 		List<TimeSource> timeSources = new ArrayList<TimeSource>();
 		
-		List<EClass> timeSourceEClass = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(Symphony__CommonEMFPackage.Literals.TIME_SOURCE);
+		List<EClass> timeSourceEClass = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(ApogyCommonEMFPackage.Literals.TIME_SOURCE);
 		
 		for(EClass eClass : timeSourceEClass)
 		{
@@ -525,4 +525,4 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 		
 		return fileExtension;
 	}
-} // Symphony__CoreFacadeImpl
+} // ApogyCoreFacadeImpl

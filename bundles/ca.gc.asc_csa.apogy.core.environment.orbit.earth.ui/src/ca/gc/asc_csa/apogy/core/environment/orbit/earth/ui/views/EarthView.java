@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views;
 
 import java.util.List;
 
@@ -10,13 +10,13 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 
 
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.commands.EarthViewShowFlatEarthAction;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.commands.EarthViewShowRoundEarthAction;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.EarthComposite;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.EarthComposite.EarthViewMode;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.commands.EarthViewShowFlatEarthAction;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.commands.EarthViewShowRoundEarthAction;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.EarthComposite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.EarthComposite.EarthViewMode;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 
 public class EarthView extends AbstractView 
 {
@@ -72,7 +72,7 @@ public class EarthView extends AbstractView
  	public void updateSelection(ISelection selection) 
  	{
 		
-		List<Object> earthViewConfigurations = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, EarthViewConfiguration.class);
+		List<Object> earthViewConfigurations = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, EarthViewConfiguration.class);
 		
 		if(!earthViewConfigurations.isEmpty())
 		{				

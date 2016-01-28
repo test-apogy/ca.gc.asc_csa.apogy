@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementations <em>Variable Implementations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementations <em>Variable Implementations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableImplementationsList()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariableImplementationsList()
  * @model
  * @generated
  */
@@ -33,8 +33,8 @@ public interface VariableImplementationsList extends EObject
 
   /**
 	 * Returns the value of the '<em><b>Variable Implementations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.VariableImplementation}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.VariableImplementation#getVariableImplementationsList <em>Variable Implementations List</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation#getVariableImplementationsList <em>Variable Implementations List</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Variable Implementations</em>' containment reference list isn't clear,
@@ -42,8 +42,8 @@ public interface VariableImplementationsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Implementations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableImplementationsList_VariableImplementations()
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementation#getVariableImplementationsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariableImplementationsList_VariableImplementations()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementation#getVariableImplementationsList
 	 * @model opposite="variableImplementationsList" containment="true"
 	 * @generated
 	 */

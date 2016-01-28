@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.impl;
+package ca.gc.asc_csa.apogy.core.ui.impl;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
@@ -10,25 +10,25 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Symphony Resource Settings</b></em>'.
+ * An implementation of the model object '<em><b>Apogy Resource Settings</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl#getResourceProject <em>Resource Project</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl#getResourceFile <em>Resource File</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl#getResourceContainer <em>Resource Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl#getResourceProject <em>Resource Project</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl#getResourceFile <em>Resource File</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyResourceSettingsImpl#getResourceContainer <em>Resource Container</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container implements SymphonyResourceSettings {
+public class ApogyResourceSettingsImpl extends MinimalEObjectImpl.Container implements ApogyResourceSettings {
 	/**
 	 * The default value of the '{@link #getResourceProject() <em>Resource Project</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyResourceSettingsImpl() {
+	protected ApogyResourceSettingsImpl() {
 		super();
 	}
 
@@ -105,7 +105,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS;
+		return ApogyCoreUIPackage.Literals.APOGY_RESOURCE_SETTINGS;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 		IProject oldResourceProject = resourceProject;
 		resourceProject = newResourceProject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT, oldResourceProject, resourceProject));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT, oldResourceProject, resourceProject));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 		IFile oldResourceFile = resourceFile;
 		resourceFile = newResourceFile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE, oldResourceFile, resourceFile));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_FILE, oldResourceFile, resourceFile));
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 		IContainer oldResourceContainer = resourceContainer;
 		resourceContainer = newResourceContainer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER, oldResourceContainer, resourceContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER, oldResourceContainer, resourceContainer));
 	}
 
 	/**
@@ -179,11 +179,11 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				return getResourceProject();
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				return getResourceFile();
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				return getResourceContainer();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -197,13 +197,13 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				setResourceProject((IProject)newValue);
 				return;
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				setResourceFile((IFile)newValue);
 				return;
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				setResourceContainer((IContainer)newValue);
 				return;
 		}
@@ -218,13 +218,13 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				setResourceProject(RESOURCE_PROJECT_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				setResourceFile(RESOURCE_FILE_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				setResourceContainer(RESOURCE_CONTAINER_EDEFAULT);
 				return;
 		}
@@ -239,11 +239,11 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				return RESOURCE_PROJECT_EDEFAULT == null ? resourceProject != null : !RESOURCE_PROJECT_EDEFAULT.equals(resourceProject);
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				return RESOURCE_FILE_EDEFAULT == null ? resourceFile != null : !RESOURCE_FILE_EDEFAULT.equals(resourceFile);
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				return RESOURCE_CONTAINER_EDEFAULT == null ? resourceContainer != null : !RESOURCE_CONTAINER_EDEFAULT.equals(resourceContainer);
 		}
 		return super.eIsSet(featureID);
@@ -269,4 +269,4 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 		return result.toString();
 	}
 
-} //SymphonyResourceSettingsImpl
+} //ApogyResourceSettingsImpl

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.Trigger;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.Trigger;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.Trigger} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.Trigger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class TriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class TriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -141,8 +141,8 @@ public class TriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Trigger.class)) {
-			case Symphony__CoreProgramsControllersPackage.TRIGGER__NAME:
-			case Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION:
+			case ApogyCoreProgramsControllersPackage.TRIGGER__NAME:
+			case ApogyCoreProgramsControllersPackage.TRIGGER__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

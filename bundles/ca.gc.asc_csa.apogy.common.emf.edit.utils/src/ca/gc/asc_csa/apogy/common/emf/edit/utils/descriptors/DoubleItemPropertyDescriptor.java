@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.edit.utils.descriptors;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils.descriptors;
 
 import java.text.NumberFormat;
 

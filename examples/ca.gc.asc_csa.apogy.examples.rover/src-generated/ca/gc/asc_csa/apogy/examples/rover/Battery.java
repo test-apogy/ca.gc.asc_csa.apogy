@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover;
+package ca.gc.asc_csa.apogy.examples.rover;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.rover.Battery#isActive <em>Active</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Battery#getVoltage <em>Voltage</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Battery#getCurrent <em>Current</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Battery#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Battery#getVoltage <em>Voltage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Battery#getCurrent <em>Current</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery()
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getBattery()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface Battery extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Active()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getBattery_Active()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly'"
 	 * @generated
@@ -47,7 +47,7 @@ public interface Battery extends EObject {
 	boolean isActive();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Battery#isActive <em>Active</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#isActive <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active</em>' attribute.
@@ -67,15 +67,15 @@ public interface Battery extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Voltage</em>' attribute.
 	 * @see #setVoltage(double)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Voltage()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getBattery_Voltage()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='V' property='Readonly'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='V' property='Readonly'"
 	 * @generated
 	 */
 	double getVoltage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Battery#getVoltage <em>Voltage</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#getVoltage <em>Voltage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Voltage</em>' attribute.
@@ -95,15 +95,15 @@ public interface Battery extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current</em>' attribute.
 	 * @see #setCurrent(double)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Current()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getBattery_Current()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='A' property='Readonly'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='A' property='Readonly'"
 	 * @generated
 	 */
 	double getCurrent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Battery#getCurrent <em>Current</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#getCurrent <em>Current</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current</em>' attribute.

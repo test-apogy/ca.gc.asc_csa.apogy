@@ -3,16 +3,16 @@
  *
  * $Id: Mesh25DImpl.java,v 1.4.4.3 2015/09/22 19:39:38 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.Mesh25D;
-import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class Mesh25DImpl extends MeshImpl<Coordinates25D, Polygon25D> implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData25DPackage.Literals.MESH25_D;
+		return ApogyCommonGeometryData25DPackage.Literals.MESH25_D;
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class Mesh25DImpl extends MeshImpl<Coordinates25D, Polygon25D> implements
 	@Override
 	public EList<Polygon25D> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<Polygon25D>(Polygon25D.class, this, Symphony__CommonGeometryData25DPackage.MESH25_D__POLYGONS);
+			polygons = new EObjectContainmentEList<Polygon25D>(Polygon25D.class, this, ApogyCommonGeometryData25DPackage.MESH25_D__POLYGONS);
 		}
 		return polygons;
 	}

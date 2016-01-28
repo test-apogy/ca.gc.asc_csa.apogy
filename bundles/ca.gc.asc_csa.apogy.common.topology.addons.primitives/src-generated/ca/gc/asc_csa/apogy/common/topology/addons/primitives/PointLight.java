@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,11 +32,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PointLight#getPosition <em>Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PointLight#getAttenuation <em>Attenuation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight#getPosition <em>Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight#getAttenuation <em>Attenuation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPointLight()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPointLight()
  * @model
  * @generated
  */
@@ -51,14 +51,14 @@ public interface PointLight extends Light {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPointLight_Position()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPointLight_Position()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getPosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.PointLight#getPosition <em>Position</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight#getPosition <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Position</em>' containment reference.
@@ -77,14 +77,14 @@ public interface PointLight extends Light {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attenuation</em>' containment reference.
 	 * @see #setAttenuation(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPointLight_Attenuation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPointLight_Attenuation()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getAttenuation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.PointLight#getAttenuation <em>Attenuation</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight#getAttenuation <em>Attenuation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Attenuation</em>' containment reference.

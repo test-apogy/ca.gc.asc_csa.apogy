@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.vehicle.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,11 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -148,8 +148,8 @@ public class WheelJME3Object extends DefaultJME3SceneObject<Wheel>
 					
 						switch (featureId) 
 						{
-							case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
-							case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
+							case ApogyAddonsVehiclePackage.WHEEL__LENGTH:
+							case ApogyAddonsVehiclePackage.WHEEL__RADIUS:
 								updateGeometry();
 							break;
 

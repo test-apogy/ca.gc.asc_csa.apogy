@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeature#getStructuralFeature <em>Structural Feature</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeature#isMultiValued <em>Multi Valued</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeature#getIndex <em>Index</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeature#getStructuralFeature <em>Structural Feature</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeature#isMultiValued <em>Multi Valued</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeature#getIndex <em>Index</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractFeature()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface AbstractFeature extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Structural Feature</em>' reference.
    * @see #setStructuralFeature(EStructuralFeature)
-   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature_StructuralFeature()
+   * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractFeature_StructuralFeature()
    * @model required="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
    * @generated
@@ -42,7 +42,7 @@ public interface AbstractFeature extends EObject
   EStructuralFeature getStructuralFeature();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.common.emf.AbstractFeature#getStructuralFeature <em>Structural Feature</em>}' reference.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeature#getStructuralFeature <em>Structural Feature</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Structural Feature</em>' reference.
@@ -60,7 +60,7 @@ public interface AbstractFeature extends EObject
    * Whether or not this FeatureNode refers to a multi-valued feature.
    * <!-- end-model-doc -->
    * @return the value of the '<em>Multi Valued</em>' attribute.
-   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature_MultiValued()
+   * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractFeature_MultiValued()
    * @model default="false" unique="false" transient="true" changeable="false" volatile="true" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
    * @generated
@@ -77,7 +77,7 @@ public interface AbstractFeature extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Index</em>' attribute.
    * @see #setIndex(int)
-   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature_Index()
+   * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractFeature_Index()
    * @model default="-1" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
    * @generated
@@ -85,7 +85,7 @@ public interface AbstractFeature extends EObject
   int getIndex();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.common.emf.AbstractFeature#getIndex <em>Index</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.AbstractFeature#getIndex <em>Index</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Index</em>' attribute.

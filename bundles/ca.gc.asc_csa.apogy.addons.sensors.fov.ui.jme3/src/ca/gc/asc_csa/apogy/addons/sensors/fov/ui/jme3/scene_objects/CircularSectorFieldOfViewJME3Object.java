@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,19 +12,19 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.AngularSpan;
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.CircularSectorFieldOfViewImageProjectorControl;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
-import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.CircularSectorFieldOfViewSceneObject;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.CircularSectorFieldOfViewImageProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.scene_objects.CircularSectorFieldOfViewSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -325,8 +325,8 @@ public class CircularSectorFieldOfViewJME3Object extends AbstractFieldOfViewJME3
 						
 						switch (featureId) 
 						{
-							case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
-							case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:							
+							case ApogyAddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
+							case ApogyAddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:							
 								
 								// Updates Geometry.
 								updateGeometry();
@@ -354,14 +354,14 @@ public class CircularSectorFieldOfViewJME3Object extends AbstractFieldOfViewJME3
 			{				
 				public void notifyChanged(Notification notification)
 				{					
-					if (notification.getFeatureID(CircularSectorFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE)
+					if (notification.getFeatureID(CircularSectorFieldOfView.class) == ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE)
 					{
 						updateGeometry();	
 						
 						// Updates the FOV Settings of the projector.
 						getCircularSectorFieldOfViewImageProjectorControl().updateProjectorFOVSettings();
 					} 
-					else if (notification.getFeatureID(CircularSectorFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE)
+					else if (notification.getFeatureID(CircularSectorFieldOfView.class) == ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE)
 					{
 						updateGeometry();
 						

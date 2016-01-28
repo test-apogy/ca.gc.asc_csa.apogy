@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import javax.vecmath.Point3d;
 
@@ -10,16 +10,16 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import org.jfree.data.xy.XYDataItem;
 
 /**
@@ -30,8 +30,8 @@ import org.jfree.data.xy.XYDataItem;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl#getDistanceThreshold <em>Distance Threshold</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl#getAzimuthThreshold <em>Azimuth Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl#getDistanceThreshold <em>Distance Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl#getAzimuthThreshold <em>Azimuth Threshold</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,7 +100,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER;
+		return ApogyCoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER;
 	}
 
   /**
@@ -143,7 +143,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 		double oldDistanceThreshold = distanceThreshold;
 		distanceThreshold = newDistanceThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
 	}
 
   /**
@@ -166,7 +166,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 		double oldAzimuthThreshold = azimuthThreshold;
 		azimuthThreshold = newAzimuthThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD, oldAzimuthThreshold, azimuthThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD, oldAzimuthThreshold, azimuthThreshold));
 	}
 
   /**
@@ -178,9 +178,9 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				return getDistanceThreshold();
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				return getAzimuthThreshold();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,10 +195,10 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				setDistanceThreshold((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				setAzimuthThreshold((Double)newValue);
 				return;
 		}
@@ -214,10 +214,10 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				setDistanceThreshold(DISTANCE_THRESHOLD_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				setAzimuthThreshold(AZIMUTH_THRESHOLD_EDEFAULT);
 				return;
 		}
@@ -233,9 +233,9 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				return distanceThreshold != DISTANCE_THRESHOLD_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				return azimuthThreshold != AZIMUTH_THRESHOLD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -268,18 +268,18 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 	  {
 		  try
 		  {
-			  AbstractTypeImplementation abstractTypeImplementation = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariableAnnotation().getVariable());			  
-			  if(abstractTypeImplementation.getAdapterInstance() instanceof SymphonySystemApiAdapter)
+			  AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariableAnnotation().getVariable());			  
+			  if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
 			  {
-				  SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
-				  setPoseProvider(symphonySystemApiAdapter);
+				  ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
+				  setPoseProvider(apogySystemApiAdapter);
 				  
 				  // Resets pose and azimuth,						 
 				  previousPosition = null;
 				  previousAzimuth = Double.NaN;
-				  if(symphonySystemApiAdapter.getPoseTransform() != null)
+				  if(apogySystemApiAdapter.getPoseTransform() != null)
 				  {
-					  updatePose(symphonySystemApiAdapter.getPoseTransform());
+					  updatePose(apogySystemApiAdapter.getPoseTransform());
 				  }
 			  }
 		  }
@@ -313,8 +313,8 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
    */
   protected void updatePose(Matrix4x4 newPose)
   {
-	  Tuple3d position = Symphony__CommonMathFacade.INSTANCE.extractPosition(newPose);
-	  Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(newPose);	
+	  Tuple3d position = ApogyCommonMathFacade.INSTANCE.extractPosition(newPose);
+	  Tuple3d orientation = ApogyCommonMathFacade.INSTANCE.extractOrientation(newPose);	
 	  
 	  if(previousPosition == null)
 	  {
@@ -347,7 +347,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+				  if(msg.getFeatureID(PoseProvider.class) == ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 				  {					  					  
 					  if(msg.getNewValue() instanceof Matrix4x4)
 					  {

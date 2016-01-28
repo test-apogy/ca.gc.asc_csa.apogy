@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -22,13 +22,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.Corridor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class CorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class CorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class CorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Corridor_points_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Corridor_points_feature", "_UI_Corridor_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS,
 				 false,
 				 false,
 				 false,
@@ -147,7 +147,7 @@ public class CorridorItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -203,11 +203,11 @@ public class CorridorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Corridor.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -227,8 +227,8 @@ public class CorridorItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridorPoint()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridorPoint()));
 	}
 
 	/**

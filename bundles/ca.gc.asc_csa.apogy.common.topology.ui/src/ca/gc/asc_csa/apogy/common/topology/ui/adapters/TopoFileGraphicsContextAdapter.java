@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.ui.adapters;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -10,10 +10,10 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContextAdapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 public class TopoFileGraphicsContextAdapter implements GraphicsContextAdapter {
 
@@ -43,7 +43,7 @@ public class TopoFileGraphicsContextAdapter implements GraphicsContextAdapter {
 
 		if (isAdapterFor(obj)) {
 
-			ctx = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
+			ctx = ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 
 			IProgressMonitor monitor = new NullProgressMonitor();
 

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.util.List;
 import java.util.SortedSet;
@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.examples.satellite.*;
+import ca.gc.asc_csa.apogy.examples.satellite.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,24 +23,24 @@ import org.eclipse.symphony.examples.satellite.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl implements Symphony__ExamplesSatelliteFactory {
+public class ApogyExamplesSatelliteFactoryImpl extends EFactoryImpl implements ApogyExamplesSatelliteFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesSatelliteFactory init() {
+	public static ApogyExamplesSatelliteFactory init() {
 		try {
-			Symphony__ExamplesSatelliteFactory theSymphony__ExamplesSatelliteFactory = (Symphony__ExamplesSatelliteFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesSatellitePackage.eNS_URI);
-			if (theSymphony__ExamplesSatelliteFactory != null) {
-				return theSymphony__ExamplesSatelliteFactory;
+			ApogyExamplesSatelliteFactory theApogyExamplesSatelliteFactory = (ApogyExamplesSatelliteFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesSatellitePackage.eNS_URI);
+			if (theApogyExamplesSatelliteFactory != null) {
+				return theApogyExamplesSatelliteFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesSatelliteFactoryImpl();
+		return new ApogyExamplesSatelliteFactoryImpl();
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteFactoryImpl() {
+	public ApogyExamplesSatelliteFactoryImpl() {
 		super();
 	}
 
@@ -61,20 +61,20 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: return createConstellationCommandPlanItem();
-			case Symphony__ExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
-			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
-			case Symphony__ExamplesSatellitePackage.SATELLITE: return createSatellite();
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND: return createAbstractSatelliteCommand();
-			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINK: return createConstellationDownlink();
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: return createOrbitalImageConstellationDownlinkItem();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_UTILITIES: return createConstellationUtilities();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: return createConstellationCommandPlanItem();
+			case ApogyExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
+			case ApogyExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
+			case ApogyExamplesSatellitePackage.SATELLITE: return createSatellite();
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND: return createAbstractSatelliteCommand();
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINK: return createConstellationDownlink();
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: return createOrbitalImageConstellationDownlinkItem();
+			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES: return createConstellationUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -88,13 +88,13 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_PRIORITY:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUEST_PRIORITY:
 				return createConstellationRequestPriorityFromString(eDataType, initialValue);
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_STATUS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUEST_STATUS:
 				return createConstellationRequestStatusFromString(eDataType, initialValue);
-			case Symphony__ExamplesSatellitePackage.LIST:
+			case ApogyExamplesSatellitePackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__ExamplesSatellitePackage.SORTED_SET:
+			case ApogyExamplesSatellitePackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -109,13 +109,13 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_PRIORITY:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUEST_PRIORITY:
 				return convertConstellationRequestPriorityToString(eDataType, instanceValue);
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_STATUS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_REQUEST_STATUS:
 				return convertConstellationRequestStatusToString(eDataType, instanceValue);
-			case Symphony__ExamplesSatellitePackage.LIST:
+			case ApogyExamplesSatellitePackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__ExamplesSatellitePackage.SORTED_SET:
+			case ApogyExamplesSatellitePackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -343,8 +343,8 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatellitePackage getSymphony__ExamplesSatellitePackage() {
-		return (Symphony__ExamplesSatellitePackage)getEPackage();
+	public ApogyExamplesSatellitePackage getApogyExamplesSatellitePackage() {
+		return (ApogyExamplesSatellitePackage)getEPackage();
 	}
 
 	/**
@@ -354,8 +354,8 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesSatellitePackage getPackage() {
-		return Symphony__ExamplesSatellitePackage.eINSTANCE;
+	public static ApogyExamplesSatellitePackage getPackage() {
+		return ApogyExamplesSatellitePackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesSatelliteFactoryImpl
+} //ApogyExamplesSatelliteFactoryImpl

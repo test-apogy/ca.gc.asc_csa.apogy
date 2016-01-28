@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class TrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_latestPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_latestPosition_feature", "_UI_TrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__LATEST_POSITION,
+				 ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__LATEST_POSITION,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class TrajectoryProviderItemProvider
          getResourceLocator(),
          getString("_UI_TrajectoryProvider_azimuthAngle_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_azimuthAngle_feature", "_UI_TrajectoryProvider_type"),
-         Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE,
+         ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE,
          true,
          false,
          false,
@@ -130,7 +130,7 @@ public class TrajectoryProviderItemProvider
          getResourceLocator(),
          getString("_UI_TrajectoryProvider_trajectoryLength_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_trajectoryLength_feature", "_UI_TrajectoryProvider_type"),
-         Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH,
+         ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH,
          true,
          false,
          false,
@@ -153,7 +153,7 @@ public class TrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_trajectoryColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_trajectoryColor_feature", "_UI_TrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR,
+				 ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR,
 				 true,
 				 false,
 				 false,
@@ -187,10 +187,10 @@ public class TrajectoryProviderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TrajectoryProvider.class)) {
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,67 +1,67 @@
-@GenModel(prefix="Symphony__CoreUI",
+@GenModel(prefix="ApogyCoreUI",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CoreUI") 
-@GenModel(modelDirectory="/org.eclipse.symphony.core.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.core.ui.edit/src-generated")
+		  modelName="ApogyCoreUI") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.ui.edit/src-generated")
 
-package org.eclipse.symphony.core.ui
+package ca.gc.asc_csa.apogy.core.ui
 
-import org.eclipse.symphony.core.invocator.InvocatorSession
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 
-import org.eclipse.symphony.core.SymphonySystem
+import ca.gc.asc_csa.apogy.core.ApogySystem
 import org.eclipse.core.resources.IProject
 import org.eclipse.core.resources.IContainer
 import org.eclipse.core.resources.IFile
 import org.eclipse.core.resources.IFolder
-import org.eclipse.symphony.common.emf.Exception
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation
+import ca.gc.asc_csa.apogy.common.emf.Exception
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
 
 type IProject wraps IProject
 type IContainer wraps IContainer
 type IFile wraps IFile
 type IFolder wraps IFolder
 
-class Symphony__CoreUIFacade
+class ApogyCoreUIFacade
 {	
 	/*
-	 * Default Symphony Project Name Prefix.
+	 * Default Apogy Project Name Prefix.
 	 */
-	readonly String defaultSymphonyProjectNamePrefix = "Project"
+	readonly String defaultApogyProjectNamePrefix = "Project"
 
 	/*
-	 * Default Symphony Session Filename Prefix.
+	 * Default Apogy Session Filename Prefix.
 	 */
-	readonly String defaultSymphonySessionFilename = "session"
+	readonly String defaultApogySessionFilename = "session"
 	
 	/*
-	 * Default Symphony Session Filename Extension Prefix.
+	 * Default Apogy Session Filename Extension Prefix.
 	 */
-	readonly String defaultSymphonySessionFilenameExtension = "sym"
+	readonly String defaultApogySessionFilenameExtension = "sym"
 	
 	/*
-	 * Default Symphony Sessions Directory.
+	 * Default Apogy Sessions Directory.
 	 */
-	readonly String defaultSymphonySessionFolderName = "Sessions"
+	readonly String defaultApogySessionFolderName = "Sessions"
 		
-	op IProject createSymphonyProject(NewSymphonyProjectSettings settings)	
-	op IFolder createSymphonySessionFolder(NewSymphonyProjectSettings settings)
-	op InvocatorSession createSymphonySession(NewSymphonySessionSettings sessionSettings)
-	op IFile createSymphonySessionFile(IContainer resourceContainer, String filename, InvocatorSession session) throws Exception
-	op IFile getSymphonySessionFile(IContainer resourceContainer, String filename)
-	op SymphonySystem createSymphonySystem(NewSymphonySystemSettings systemSettings)
+	op IProject createApogyProject(NewApogyProjectSettings settings)	
+	op IFolder createApogySessionFolder(NewApogyProjectSettings settings)
+	op InvocatorSession createApogySession(NewApogySessionSettings sessionSettings)
+	op IFile createApogySessionFile(IContainer resourceContainer, String filename, InvocatorSession session) throws Exception
+	op IFile getApogySessionFile(IContainer resourceContainer, String filename)
+	op ApogySystem createApogySystem(NewApogySystemSettings systemSettings)
 }
 
 /*
- * This class is used to support Symphony wizards.
+ * This class is used to support Apogy wizards.
  */
-class SymphonyResourceSettings
+class ApogyResourceSettings
 {
 	IProject resourceProject
 	IFile resourceFile
 	IContainer resourceContainer
 }
 
-class NewSymphonyProjectSettings
+class NewApogyProjectSettings
 {	
 	/*
 	 * Returns an available project name.
@@ -85,7 +85,7 @@ class NewSymphonyProjectSettings
 }
 
 
-class NewSymphonySessionSettings
+class NewApogySessionSettings
 {	
 	/*
 	 * Returns an available session filename.
@@ -105,7 +105,7 @@ class NewSymphonySessionSettings
 	op void setDefaultValues(IContainer resourceContainer)
 }
 
-class NewSymphonySystemSettings
+class NewApogySystemSettings
 {
 	String folder	
 	String filename

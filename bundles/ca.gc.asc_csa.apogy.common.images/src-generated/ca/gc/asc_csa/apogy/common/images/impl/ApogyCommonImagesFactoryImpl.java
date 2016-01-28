@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.impl;
+package ca.gc.asc_csa.apogy.common.images.impl;
 
 
 import java.awt.Color;
@@ -20,17 +20,17 @@ import org.eclipse.emf.ecore.xml.type.internal.DataValue.Base64;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.graphics.ImageLoader;
-import org.eclipse.symphony.common.images.Activator;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImageAlignment;
-import org.eclipse.symphony.common.images.ImageSize;
-import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.images.URLEImage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.images.Activator;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ImageAlignment;
+import ca.gc.asc_csa.apogy.common.images.ImageSize;
+import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.URLEImage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,24 +38,24 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonImagesFactoryImpl extends EFactoryImpl implements Symphony__CommonImagesFactory {
+public class ApogyCommonImagesFactoryImpl extends EFactoryImpl implements ApogyCommonImagesFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonImagesFactory init() {
+	public static ApogyCommonImagesFactory init() {
 		try {
-			Symphony__CommonImagesFactory theSymphony__CommonImagesFactory = (Symphony__CommonImagesFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonImagesPackage.eNS_URI);
-			if (theSymphony__CommonImagesFactory != null) {
-				return theSymphony__CommonImagesFactory;
+			ApogyCommonImagesFactory theApogyCommonImagesFactory = (ApogyCommonImagesFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonImagesPackage.eNS_URI);
+			if (theApogyCommonImagesFactory != null) {
+				return theApogyCommonImagesFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonImagesFactoryImpl();
+		return new ApogyCommonImagesFactoryImpl();
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class Symphony__CommonImagesFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonImagesFactoryImpl() {
+	public ApogyCommonImagesFactoryImpl() {
 		super();
 	}
 
@@ -76,11 +76,11 @@ public class Symphony__CommonImagesFactoryImpl extends EFactoryImpl implements S
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonImagesPackage.EIMAGE: return createEImage();
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM: return createImagesAlbum();
-			case Symphony__CommonImagesPackage.URLE_IMAGE: return createURLEImage();
-			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES: return createEImagesUtilities();
-			case Symphony__CommonImagesPackage.IMAGE_SIZE: return createImageSize();
+			case ApogyCommonImagesPackage.EIMAGE: return createEImage();
+			case ApogyCommonImagesPackage.IMAGES_ALBUM: return createImagesAlbum();
+			case ApogyCommonImagesPackage.URLE_IMAGE: return createURLEImage();
+			case ApogyCommonImagesPackage.EIMAGES_UTILITIES: return createEImagesUtilities();
+			case ApogyCommonImagesPackage.IMAGE_SIZE: return createImageSize();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -94,19 +94,19 @@ public class Symphony__CommonImagesFactoryImpl extends EFactoryImpl implements S
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonImagesPackage.IMAGE_ALIGNMENT:
+			case ApogyCommonImagesPackage.IMAGE_ALIGNMENT:
 				return createImageAlignmentFromString(eDataType, initialValue);
-			case Symphony__CommonImagesPackage.LIST:
+			case ApogyCommonImagesPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CommonImagesPackage.IMAGE_DATA:
+			case ApogyCommonImagesPackage.IMAGE_DATA:
 				return createImageDataFromString(eDataType, initialValue);
-			case Symphony__CommonImagesPackage.BUFFERED_IMAGE:
+			case ApogyCommonImagesPackage.BUFFERED_IMAGE:
 				return createBufferedImageFromString(eDataType, initialValue);
-			case Symphony__CommonImagesPackage.EXCEPTION:
+			case ApogyCommonImagesPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
-			case Symphony__CommonImagesPackage.COLOR:
+			case ApogyCommonImagesPackage.COLOR:
 				return createColorFromString(eDataType, initialValue);
-			case Symphony__CommonImagesPackage.FONT:
+			case ApogyCommonImagesPackage.FONT:
 				return createFontFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -121,19 +121,19 @@ public class Symphony__CommonImagesFactoryImpl extends EFactoryImpl implements S
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonImagesPackage.IMAGE_ALIGNMENT:
+			case ApogyCommonImagesPackage.IMAGE_ALIGNMENT:
 				return convertImageAlignmentToString(eDataType, instanceValue);
-			case Symphony__CommonImagesPackage.LIST:
+			case ApogyCommonImagesPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CommonImagesPackage.IMAGE_DATA:
+			case ApogyCommonImagesPackage.IMAGE_DATA:
 				return convertImageDataToString(eDataType, instanceValue);
-			case Symphony__CommonImagesPackage.BUFFERED_IMAGE:
+			case ApogyCommonImagesPackage.BUFFERED_IMAGE:
 				return convertBufferedImageToString(eDataType, instanceValue);
-			case Symphony__CommonImagesPackage.EXCEPTION:
+			case ApogyCommonImagesPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
-			case Symphony__CommonImagesPackage.COLOR:
+			case ApogyCommonImagesPackage.COLOR:
 				return convertColorToString(eDataType, instanceValue);
-			case Symphony__CommonImagesPackage.FONT:
+			case ApogyCommonImagesPackage.FONT:
 				return convertFontToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -235,8 +235,8 @@ public class Symphony__CommonImagesFactoryImpl extends EFactoryImpl implements S
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonImagesPackage getPackage() {
-		return Symphony__CommonImagesPackage.eINSTANCE;
+	public static ApogyCommonImagesPackage getPackage() {
+		return ApogyCommonImagesPackage.eINSTANCE;
 	}
 
 	/**
@@ -396,7 +396,7 @@ public class Symphony__CommonImagesFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonImagesPackage getSymphony__CommonImagesPackage() {
-		return (Symphony__CommonImagesPackage)getEPackage();
+	public ApogyCommonImagesPackage getApogyCommonImagesPackage() {
+		return (ApogyCommonImagesPackage)getEPackage();
 	}	
-} //Symphony__CommonImagesFactoryImpl
+} //ApogyCommonImagesFactoryImpl

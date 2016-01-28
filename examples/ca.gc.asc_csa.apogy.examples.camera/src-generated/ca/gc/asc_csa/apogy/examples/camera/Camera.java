@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera;
+package ca.gc.asc_csa.apogy.examples.camera;
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,12 +22,12 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.camera.Camera#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.Camera#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.Camera#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.Camera#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera()
+ * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage#getCamera()
  * @model abstract="true"
  * @generated
  */
@@ -47,7 +47,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera_Fov()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage#getCamera_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Field Of View'"
 	 * @generated
@@ -55,7 +55,7 @@ public interface Camera extends AbstractCamera, Zoomable
   RectangularFrustrumFieldOfView getFov();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.Camera#getFov <em>Fov</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#getFov <em>Fov</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov</em>' containment reference.
@@ -76,7 +76,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage#getCamera_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -84,7 +84,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	boolean isInitialized();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.Camera#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -103,7 +103,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Streaming Enabled</em>' attribute.
 	 * @see #setStreamingEnabled(boolean)
-	 * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera_StreamingEnabled()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage#getCamera_StreamingEnabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -111,7 +111,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	boolean isStreamingEnabled();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Streaming Enabled</em>' attribute.

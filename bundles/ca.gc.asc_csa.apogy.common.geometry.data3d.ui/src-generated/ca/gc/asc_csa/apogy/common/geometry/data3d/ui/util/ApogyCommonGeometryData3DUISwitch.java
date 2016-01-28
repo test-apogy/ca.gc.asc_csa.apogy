@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,17 +21,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DUISwitch<T> extends Switch<T> {
+public class ApogyCommonGeometryData3DUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DUIPackage modelPackage;
+	protected static ApogyCommonGeometryData3DUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -39,9 +39,9 @@ public class Symphony__CommonGeometryData3DUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DUISwitch() {
+	public ApogyCommonGeometryData3DUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DUIPackage.eINSTANCE;
 		}
 	}
 
@@ -68,14 +68,14 @@ public class Symphony__CommonGeometryData3DUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION: {
+			case ApogyCommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION: {
 				CartesianCoordinatesSetPresentation cartesianCoordinatesSetPresentation = (CartesianCoordinatesSetPresentation)theEObject;
 				T result = caseCartesianCoordinatesSetPresentation(cartesianCoordinatesSetPresentation);
 				if (result == null) result = caseNodePresentation(cartesianCoordinatesSetPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION: {
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION: {
 				TriangularMeshPresentation triangularMeshPresentation = (TriangularMeshPresentation)theEObject;
 				T result = caseTriangularMeshPresentation(triangularMeshPresentation);
 				if (result == null) result = caseNodePresentation(triangularMeshPresentation);
@@ -147,4 +147,4 @@ public class Symphony__CommonGeometryData3DUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DUISwitch
+} //ApogyCommonGeometryData3DUISwitch

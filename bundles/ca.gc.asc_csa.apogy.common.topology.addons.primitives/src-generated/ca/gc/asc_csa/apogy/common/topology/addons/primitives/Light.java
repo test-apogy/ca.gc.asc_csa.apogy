@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
-import org.eclipse.symphony.common.topology.Leaf;
+import ca.gc.asc_csa.apogy.common.topology.Leaf;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.topology.Leaf;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Light#isEnabled <em>Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Light#getColor <em>Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Light#isEnabled <em>Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Light#getColor <em>Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getLight()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getLight()
  * @model abstract="true"
  * @generated
  */
@@ -36,14 +36,14 @@ public interface Light extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Enabled</em>' attribute.
 	 * @see #setEnabled(boolean)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getLight_Enabled()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getLight_Enabled()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isEnabled();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.Light#isEnabled <em>Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Light#isEnabled <em>Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Enabled</em>' attribute.
@@ -62,14 +62,14 @@ public interface Light extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' containment reference.
 	 * @see #setColor(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getLight_Color()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getLight_Color()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.Light#getColor <em>Color</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Light#getColor <em>Color</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Color</em>' containment reference.

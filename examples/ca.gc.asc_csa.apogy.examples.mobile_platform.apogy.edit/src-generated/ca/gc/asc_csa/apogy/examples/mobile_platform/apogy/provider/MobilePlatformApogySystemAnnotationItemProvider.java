@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider;
 
 
 import java.util.Collection;
@@ -10,23 +10,23 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.ui.provider.PoseVariableAnnotationItemProvider;
-import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.provider.PoseVariableAnnotationItemProvider;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobilePlatformSymphonySystemAnnotationItemProvider extends PoseVariableAnnotationItemProvider {
+public class MobilePlatformApogySystemAnnotationItemProvider extends PoseVariableAnnotationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobilePlatformSymphonySystemAnnotationItemProvider(AdapterFactory adapterFactory) {
+	public MobilePlatformApogySystemAnnotationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,14 +46,14 @@ public class MobilePlatformSymphonySystemAnnotationItemProvider extends PoseVari
 	}
 
 	/**
-	 * This returns MobilePlatformSymphonySystemAnnotation.gif.
+	 * This returns MobilePlatformApogySystemAnnotation.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobilePlatformSymphonySystemAnnotation"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobilePlatformApogySystemAnnotation"));
 	}
 
 	/**
@@ -64,8 +64,8 @@ public class MobilePlatformSymphonySystemAnnotationItemProvider extends PoseVari
 	 */
 	@Override
 	public String getText(Object object) {
-		MobilePlatformSymphonySystemAnnotation mobilePlatformSymphonySystemAnnotation = (MobilePlatformSymphonySystemAnnotation)object;
-		return getString("_UI_MobilePlatformSymphonySystemAnnotation_type") + " " + mobilePlatformSymphonySystemAnnotation.isVisible();
+		MobilePlatformApogySystemAnnotation mobilePlatformApogySystemAnnotation = (MobilePlatformApogySystemAnnotation)object;
+		return getString("_UI_MobilePlatformApogySystemAnnotation_type") + " " + mobilePlatformApogySystemAnnotation.isVisible();
 	}
 	
 

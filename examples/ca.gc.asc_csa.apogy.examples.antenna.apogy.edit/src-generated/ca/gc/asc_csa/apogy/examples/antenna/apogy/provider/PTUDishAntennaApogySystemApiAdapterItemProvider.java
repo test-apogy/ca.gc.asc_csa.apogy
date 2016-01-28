@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.provider;
 
 
 import java.util.Collection;
@@ -10,16 +10,16 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PTUDishAntennaSymphonySystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+public class PTUDishAntennaApogySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -27,7 +27,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public PTUDishAntennaSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public PTUDishAntennaApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -49,7 +49,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterItemProvider
 	}
 
   /**
-	 * This returns PTUDishAntennaSymphonySystemApiAdapter.gif.
+	 * This returns PTUDishAntennaApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -57,7 +57,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PTUDishAntennaSymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PTUDishAntennaApogySystemApiAdapter"));
 	}
 
   /**
@@ -69,7 +69,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_PTUDishAntennaSymphonySystemApiAdapter_type");
+		return getString("_UI_PTUDishAntennaApogySystemApiAdapter_type");
 	}
 
   /**

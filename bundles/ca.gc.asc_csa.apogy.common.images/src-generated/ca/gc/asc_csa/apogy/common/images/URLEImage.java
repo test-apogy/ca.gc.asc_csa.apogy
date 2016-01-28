@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.images;
+package ca.gc.asc_csa.apogy.common.images;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.common.images;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.images.URLEImage#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.URLEImage#getUrl <em>Url</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getURLEImage()
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getURLEImage()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface URLEImage extends AbstractEImage {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getURLEImage_Url()
+	 * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getURLEImage_Url()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getUrl();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.images.URLEImage#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.images.URLEImage#getUrl <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Url</em>' attribute.

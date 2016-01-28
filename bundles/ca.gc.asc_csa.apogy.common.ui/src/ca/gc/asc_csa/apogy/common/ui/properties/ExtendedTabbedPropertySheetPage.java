@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.ui.properties;
+package ca.gc.asc_csa.apogy.common.ui.properties;
 
 import org.eclipse.core.runtime.ListenerList;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -29,7 +29,7 @@ public class ExtendedTabbedPropertySheetPage extends TabbedPropertySheetPage imp
 
 	private ComposedAdapterFactory adapterFactory;	
 	
-	public static String PROPERTY_CONTRIBUTOR_ID = "org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor";
+	public static String PROPERTY_CONTRIBUTOR_ID = "ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor";
 	
 	/**
 	 * the contributor

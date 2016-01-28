@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.vehicle.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.adapters;
 
 
 
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class LanderSphericalFootPresentationAdapter implements NodePresentationAdapter
 {
@@ -32,7 +32,7 @@ public class LanderSphericalFootPresentationAdapter implements NodePresentationA
 
 		LanderSphericalFoot foot = (LanderSphericalFoot) obj;
 		
-		LanderSphericalFootPresentation presentationNode = Symphony__AddonsVehicleUIFactory.eINSTANCE.createLanderSphericalFootPresentation();
+		LanderSphericalFootPresentation presentationNode = ApogyAddonsVehicleUIFactory.eINSTANCE.createLanderSphericalFootPresentation();
 		presentationNode.setNode(foot);			
 						
 		return presentationNode;

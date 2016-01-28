@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 
 /**
@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getXAxisAzimuth <em>XAxis Azimuth</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getEarthSky <em>Earth Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getXAxisAzimuth <em>XAxis Azimuth</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getEarthSky <em>Earth Sky</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSurfaceWorksite()
  * @model
  * @generated
  */
@@ -44,14 +44,14 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Geographical Coordinates</em>' containment reference.
 	 * @see #setGeographicalCoordinates(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite_GeographicalCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSurfaceWorksite_GeographicalCoordinates()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
   GeographicCoordinates getGeographicalCoordinates();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getGeographicalCoordinates <em>Geographical Coordinates</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getGeographicalCoordinates <em>Geographical Coordinates</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Geographical Coordinates</em>' containment reference.
@@ -72,15 +72,15 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XAxis Azimuth</em>' attribute.
 	 * @see #setXAxisAzimuth(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite_XAxisAzimuth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSurfaceWorksite_XAxisAzimuth()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getXAxisAzimuth();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getXAxisAzimuth <em>XAxis Azimuth</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getXAxisAzimuth <em>XAxis Azimuth</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XAxis Azimuth</em>' attribute.
@@ -102,14 +102,14 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Earth Sky</em>' reference.
 	 * @see #setEarthSky(EarthSky)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite_EarthSky()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSurfaceWorksite_EarthSky()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
   EarthSky getEarthSky();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getEarthSky <em>Earth Sky</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getEarthSky <em>Earth Sky</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Earth Sky</em>' reference.

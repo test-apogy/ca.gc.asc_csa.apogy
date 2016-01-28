@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getSphereGeometry()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getSphereGeometry()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface SphereGeometry extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getSphereGeometry_Radius()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getSphereGeometry_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getRadius();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Radius</em>' attribute.

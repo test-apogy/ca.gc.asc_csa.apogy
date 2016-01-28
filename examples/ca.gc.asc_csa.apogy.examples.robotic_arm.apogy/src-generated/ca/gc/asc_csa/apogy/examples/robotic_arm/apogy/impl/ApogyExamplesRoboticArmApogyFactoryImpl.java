@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyFactory;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyFactory;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRobo
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoboticArmSymphonyFactoryImpl extends EFactoryImpl implements Symphony__ExamplesRoboticArmSymphonyFactory
+public class ApogyExamplesRoboticArmApogyFactoryImpl extends EFactoryImpl implements ApogyExamplesRoboticArmApogyFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -27,18 +27,18 @@ public class Symphony__ExamplesRoboticArmSymphonyFactoryImpl extends EFactoryImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__ExamplesRoboticArmSymphonyFactory init()
+  public static ApogyExamplesRoboticArmApogyFactory init()
   {
 		try {
-			Symphony__ExamplesRoboticArmSymphonyFactory theSymphony__ExamplesRoboticArmSymphonyFactory = (Symphony__ExamplesRoboticArmSymphonyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesRoboticArmSymphonyPackage.eNS_URI);
-			if (theSymphony__ExamplesRoboticArmSymphonyFactory != null) {
-				return theSymphony__ExamplesRoboticArmSymphonyFactory;
+			ApogyExamplesRoboticArmApogyFactory theApogyExamplesRoboticArmApogyFactory = (ApogyExamplesRoboticArmApogyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesRoboticArmApogyPackage.eNS_URI);
+			if (theApogyExamplesRoboticArmApogyFactory != null) {
+				return theApogyExamplesRoboticArmApogyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesRoboticArmSymphonyFactoryImpl();
+		return new ApogyExamplesRoboticArmApogyFactoryImpl();
 	}
 
   /**
@@ -47,7 +47,7 @@ public class Symphony__ExamplesRoboticArmSymphonyFactoryImpl extends EFactoryImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoboticArmSymphonyFactoryImpl()
+  public ApogyExamplesRoboticArmApogyFactoryImpl()
   {
 		super();
 	}
@@ -61,8 +61,8 @@ public class Symphony__ExamplesRoboticArmSymphonyFactoryImpl extends EFactoryImp
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER: return createRoboticArmSymphonySystemApiAdapter();
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA: return createRoboticArmData();
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER: return createRoboticArmApogySystemApiAdapter();
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA: return createRoboticArmData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -73,10 +73,10 @@ public class Symphony__ExamplesRoboticArmSymphonyFactoryImpl extends EFactoryImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public RoboticArmSymphonySystemApiAdapter createRoboticArmSymphonySystemApiAdapter()
+  public RoboticArmApogySystemApiAdapter createRoboticArmApogySystemApiAdapter()
   {
-		RoboticArmSymphonySystemApiAdapterImpl roboticArmSymphonySystemApiAdapter = new RoboticArmSymphonySystemApiAdapterImpl();
-		return roboticArmSymphonySystemApiAdapter;
+		RoboticArmApogySystemApiAdapterImpl roboticArmApogySystemApiAdapter = new RoboticArmApogySystemApiAdapterImpl();
+		return roboticArmApogySystemApiAdapter;
 	}
 
   /**
@@ -95,8 +95,8 @@ public class Symphony__ExamplesRoboticArmSymphonyFactoryImpl extends EFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoboticArmSymphonyPackage getSymphony__ExamplesRoboticArmSymphonyPackage() {
-		return (Symphony__ExamplesRoboticArmSymphonyPackage)getEPackage();
+	public ApogyExamplesRoboticArmApogyPackage getApogyExamplesRoboticArmApogyPackage() {
+		return (ApogyExamplesRoboticArmApogyPackage)getEPackage();
 	}
 
 		/**
@@ -106,9 +106,9 @@ public class Symphony__ExamplesRoboticArmSymphonyFactoryImpl extends EFactoryImp
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__ExamplesRoboticArmSymphonyPackage getPackage()
+  public static ApogyExamplesRoboticArmApogyPackage getPackage()
   {
-		return Symphony__ExamplesRoboticArmSymphonyPackage.eINSTANCE;
+		return ApogyExamplesRoboticArmApogyPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesRoboticArmSymphonyFactoryImpl
+} //ApogyExamplesRoboticArmApogyFactoryImpl

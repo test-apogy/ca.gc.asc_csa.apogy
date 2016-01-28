@@ -4,7 +4,7 @@
  *
  * $Id: TransformNodeImpl.java,v 1.13.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -18,14 +18,14 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -34,7 +34,7 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.TransformNodeImpl#getRotationMatrix <em>Rotation Matrix</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.TransformNodeImpl#getRotationMatrix <em>Rotation Matrix</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,7 +87,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.TRANSFORM_NODE;
+		return ApogyCommonTopologyPackage.Literals.TRANSFORM_NODE;
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
 				return basicSetRotationMatrix(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -132,7 +132,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 		{
 			Matrix3d matrix = new Matrix3d();
 			matrix.setIdentity();
-			tmp = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(matrix);
+			tmp = ApogyCommonMathFacade.INSTANCE.createMatrix3x3(matrix);
 			setRotationMatrix(tmp);
 		}
 		return tmp;
@@ -155,7 +155,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 		Matrix3x3 oldRotationMatrix = rotationMatrix;
 		rotationMatrix = newRotationMatrix;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, oldRotationMatrix, newRotationMatrix);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, oldRotationMatrix, newRotationMatrix);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -169,14 +169,14 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 		if (newRotationMatrix != rotationMatrix) {
 			NotificationChain msgs = null;
 			if (rotationMatrix != null)
-				msgs = ((InternalEObject)rotationMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, null, msgs);
+				msgs = ((InternalEObject)rotationMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, null, msgs);
 			if (newRotationMatrix != null)
-				msgs = ((InternalEObject)newRotationMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, null, msgs);
+				msgs = ((InternalEObject)newRotationMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, null, msgs);
 			msgs = basicSetRotationMatrix(newRotationMatrix, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, newRotationMatrix, newRotationMatrix));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX, newRotationMatrix, newRotationMatrix));
 	}
 
 	/**
@@ -220,8 +220,8 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 		matrix.get(translation);
 		// matrix.get(rotation, translation);
 
-		Matrix3x3 rMat = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotation);
-		Tuple3d trans = Symphony__CommonMathFacade.INSTANCE.createTuple3d(translation);
+		Matrix3x3 rMat = ApogyCommonMathFacade.INSTANCE.createMatrix3x3(rotation);
+		Tuple3d trans = ApogyCommonMathFacade.INSTANCE.createTuple3d(translation);
 
 		this.setRotationMatrix(rMat);
 		this.setPosition(trans);
@@ -234,7 +234,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
 				return getRotationMatrix();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -247,7 +247,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
 				setRotationMatrix((Matrix3x3)newValue);
 				return;
 		}
@@ -261,7 +261,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
 				setRotationMatrix((Matrix3x3)null);
 				return;
 		}
@@ -275,7 +275,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX:
 				return rotationMatrix != null;
 		}
 		return super.eIsSet(featureID);
@@ -289,7 +289,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == RotationNode.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX: return Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX;
+				case ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX: return ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX;
 				default: return -1;
 			}
 		}
@@ -304,7 +304,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == RotationNode.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX: return Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
+				case ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX: return ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
 				default: return -1;
 			}
 		}
@@ -319,9 +319,9 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE___AS_MATRIX4D:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE___AS_MATRIX4D:
 				return asMatrix4d();
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D:
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D:
 				setTransformation((Matrix4d)arguments.get(0));
 				return null;
 		}

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.common.geometry.data3d.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.geometry.data3d.ui";
 
 	// The shared instance
 	private static Activator plugin;

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,15 +21,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getFile <em>File</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getVlrs <em>Vlrs</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getProgressMonitor <em>Progress Monitor</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getPoints <em>Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getFile <em>File</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getVlrs <em>Vlrs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getProgressMonitor <em>Progress Monitor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getPoints <em>Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASReader()
  * @model
  * @generated
  */
@@ -44,14 +44,14 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>File</em>' attribute.
 	 * @see #setFile(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_File()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASReader_File()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getFile();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getFile <em>File</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getFile <em>File</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>File</em>' attribute.
@@ -70,14 +70,14 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Stream</em>' attribute.
 	 * @see #setInputStream(InputStream)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_InputStream()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.InputStream" transient="true"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASReader_InputStream()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.las.InputStream" transient="true"
 	 * @generated
 	 */
 	InputStream getInputStream();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Input Stream</em>' attribute.
@@ -88,7 +88,7 @@ public interface LASReader extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Vlrs</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Vlrs</em>' reference list isn't clear,
@@ -96,7 +96,7 @@ public interface LASReader extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vlrs</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_Vlrs()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASReader_Vlrs()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -112,14 +112,14 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Progress Monitor</em>' attribute.
 	 * @see #setProgressMonitor(IProgressMonitor)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_ProgressMonitor()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.IProgressMonitor" transient="true"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASReader_ProgressMonitor()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.las.IProgressMonitor" transient="true"
 	 * @generated
 	 */
 	IProgressMonitor getProgressMonitor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getProgressMonitor <em>Progress Monitor</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getProgressMonitor <em>Progress Monitor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Progress Monitor</em>' attribute.
@@ -138,14 +138,14 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Header</em>' reference.
 	 * @see #setHeader(LASHeader)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_Header()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASReader_Header()
 	 * @model transient="true"
 	 * @generated
 	 */
 	LASHeader getHeader();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Header</em>' reference.
@@ -156,7 +156,7 @@ public interface LASReader extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Points</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Points</em>' reference list isn't clear,
@@ -164,7 +164,7 @@ public interface LASReader extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_Points()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getLASReader_Points()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -173,7 +173,7 @@ public interface LASReader extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.las.IOException"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.las.IOException"
 	 * @generated
 	 */
 	void read() throws IOException;

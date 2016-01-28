@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.addons.ros.ROSListener;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ROSListener;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.ROSListener} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSListener} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -83,7 +83,7 @@ public class ROSListenerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSListener_running_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSListener_running_feature", "_UI_ROSListener_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_LISTENER__RUNNING,
+				 ApogyAddonsROSPackage.Literals.ROS_LISTENER__RUNNING,
 				 true,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class ROSListenerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSListener_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSListener_node_feature", "_UI_ROSListener_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_LISTENER__NODE,
+				 ApogyAddonsROSPackage.Literals.ROS_LISTENER__NODE,
 				 true,
 				 false,
 				 true,
@@ -127,7 +127,7 @@ public class ROSListenerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSListener_rosSubscriber_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSListener_rosSubscriber_feature", "_UI_ROSListener_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_LISTENER__ROS_SUBSCRIBER,
+				 ApogyAddonsROSPackage.Literals.ROS_LISTENER__ROS_SUBSCRIBER,
 				 true,
 				 false,
 				 false,
@@ -149,7 +149,7 @@ public class ROSListenerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSListener_topicName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSListener_topicName_feature", "_UI_ROSListener_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_LISTENER__TOPIC_NAME,
+				 ApogyAddonsROSPackage.Literals.ROS_LISTENER__TOPIC_NAME,
 				 true,
 				 false,
 				 false,
@@ -171,7 +171,7 @@ public class ROSListenerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSListener_messageType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSListener_messageType_feature", "_UI_ROSListener_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_LISTENER__MESSAGE_TYPE,
+				 ApogyAddonsROSPackage.Literals.ROS_LISTENER__MESSAGE_TYPE,
 				 true,
 				 false,
 				 false,
@@ -193,7 +193,7 @@ public class ROSListenerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSListener_messageListener_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSListener_messageListener_feature", "_UI_ROSListener_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_LISTENER__MESSAGE_LISTENER,
+				 ApogyAddonsROSPackage.Literals.ROS_LISTENER__MESSAGE_LISTENER,
 				 true,
 				 false,
 				 false,
@@ -240,11 +240,11 @@ public class ROSListenerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ROSListener.class)) {
-			case Symphony__AddonsROSPackage.ROS_LISTENER__RUNNING:
-			case Symphony__AddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
-			case Symphony__AddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

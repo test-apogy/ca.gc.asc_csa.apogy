@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
+import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.SimpleToolList;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.SimpleToolListImpl#getSimpleTools <em>Simple Tools</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.SimpleToolListImpl#getSimpleTools <em>Simple Tools</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST;
+		return ApogyAddonsPackage.Literals.SIMPLE_TOOL_LIST;
 	}
 	
 	
@@ -77,7 +77,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	 */
 	public EList<SimpleTool> getSimpleTools() {
 		if (simpleTools == null) {
-			simpleTools = new EObjectContainmentWithInverseEList<SimpleTool>(SimpleTool.class, this, Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS, Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST);
+			simpleTools = new EObjectContainmentWithInverseEList<SimpleTool>(SimpleTool.class, this, ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS, ApogyAddonsPackage.SIMPLE_TOOL__TOOL_LIST);
 		}
 		return simpleTools;
 	}
@@ -91,7 +91,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSimpleTools()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -105,7 +105,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 				return ((InternalEList<?>)getSimpleTools()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -119,7 +119,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 				return getSimpleTools();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -134,7 +134,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 				getSimpleTools().clear();
 				getSimpleTools().addAll((Collection<? extends SimpleTool>)newValue);
 				return;
@@ -150,7 +150,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 				getSimpleTools().clear();
 				return;
 		}
@@ -165,7 +165,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+			case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 				return simpleTools != null && !simpleTools.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -186,7 +186,7 @@ public class SimpleToolListImpl extends AbstractToolsListContainerImpl implement
 						
 						switch(featureId)
 						{
-							case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+							case ApogyAddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 							{
 								if(msg.getEventType() == Notification.REMOVE)
 								{

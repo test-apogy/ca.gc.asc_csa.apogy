@@ -1,22 +1,22 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CommonTopologyBindings edit plugin.
+ * This is the central singleton for the ApogyCommonTopologyBindings edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonTopologyBindingsEditPlugin extends EMFPlugin
+public final class ApogyCommonTopologyBindingsEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -24,7 +24,7 @@ public final class Symphony__CommonTopologyBindingsEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final Symphony__CommonTopologyBindingsEditPlugin INSTANCE = new Symphony__CommonTopologyBindingsEditPlugin();
+  public static final ApogyCommonTopologyBindingsEditPlugin INSTANCE = new ApogyCommonTopologyBindingsEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -40,14 +40,14 @@ public final class Symphony__CommonTopologyBindingsEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonTopologyBindingsEditPlugin()
+  public ApogyCommonTopologyBindingsEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

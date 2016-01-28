@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.MapRuler;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.MapRuler} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class MapRulerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapRuler_rulerColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapRuler_rulerColor_feature", "_UI_MapRuler_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_RULER__RULER_COLOR,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_RULER__RULER_COLOR,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class MapRulerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapRuler.class)) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
+			case ApogyCoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

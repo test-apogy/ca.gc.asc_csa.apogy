@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsFactory
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsSensorsFOVBindings' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne - Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsSensorsFOVBindings' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.sensors.fov.bindings/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.fov.bindings.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors.fov'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensorsFOVBindings' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne - Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsSensorsFOVBindings' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors.fov.bindings/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.sensors.fov'"
  * @generated
  */
-public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
+public interface ApogyAddonsSensorsFOVBindingsPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -41,7 +41,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.addons.sensors.fov.bindings";
+  String eNS_URI = "ca.gc.asc_csa.apogy.addons.sensors.fov.bindings";
 
   /**
 	 * The package namespace name.
@@ -57,14 +57,14 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsSensorsFOVBindingsPackage eINSTANCE = org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsPackageImpl.init();
+  ApogyAddonsSensorsFOVBindingsPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl <em>Circular Sector Field Of View Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl <em>Circular Sector Field Of View Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsPackageImpl#getCircularSectorFieldOfViewBinding()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsPackageImpl#getCircularSectorFieldOfViewBinding()
 	 * @generated
 	 */
   int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING = 0;
@@ -76,7 +76,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__BINDED = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__BINDED = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -85,7 +85,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__DESCRIPTION = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__DESCRIPTION = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -94,7 +94,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__NAME = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__NAME = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
 
   /**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -103,7 +103,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__SOURCE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__SOURCE = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node</b></em>' reference.
@@ -112,7 +112,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node Adapter</b></em>' reference.
@@ -121,7 +121,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' reference.
@@ -130,7 +130,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Circular Sector Field Of View Binding</em>' class.
@@ -139,7 +139,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Bind</em>' operation.
@@ -148,7 +148,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___BIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___BIND = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
 
   /**
 	 * The operation id for the '<em>Unbind</em>' operation.
@@ -157,7 +157,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___UNBIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___UNBIND = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
 
   /**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -166,7 +166,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___CLONE__MAP = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
+	int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___CLONE__MAP = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
 
 		/**
 	 * The number of operations of the '<em>Circular Sector Field Of View Binding</em>' class.
@@ -175,14 +175,14 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl <em>Conical Field Of View Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl <em>Conical Field Of View Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsPackageImpl#getConicalFieldOfViewBinding()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsPackageImpl#getConicalFieldOfViewBinding()
 	 * @generated
 	 */
   int CONICAL_FIELD_OF_VIEW_BINDING = 1;
@@ -194,7 +194,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__BINDED = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
+  int CONICAL_FIELD_OF_VIEW_BINDING__BINDED = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -203,7 +203,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__DESCRIPTION = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
+  int CONICAL_FIELD_OF_VIEW_BINDING__DESCRIPTION = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -212,7 +212,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__NAME = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
+  int CONICAL_FIELD_OF_VIEW_BINDING__NAME = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
 
   /**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -221,7 +221,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__SOURCE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
+  int CONICAL_FIELD_OF_VIEW_BINDING__SOURCE = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node</b></em>' reference.
@@ -230,7 +230,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
+  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node Adapter</b></em>' reference.
@@ -239,7 +239,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
+  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' reference.
@@ -248,7 +248,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__FOV = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
+  int CONICAL_FIELD_OF_VIEW_BINDING__FOV = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Conical Field Of View Binding</em>' class.
@@ -257,7 +257,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
+  int CONICAL_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Bind</em>' operation.
@@ -266,7 +266,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING___BIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
+  int CONICAL_FIELD_OF_VIEW_BINDING___BIND = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
 
   /**
 	 * The operation id for the '<em>Unbind</em>' operation.
@@ -275,7 +275,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING___UNBIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
+  int CONICAL_FIELD_OF_VIEW_BINDING___UNBIND = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
 
   /**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -284,7 +284,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CONICAL_FIELD_OF_VIEW_BINDING___CLONE__MAP = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
+	int CONICAL_FIELD_OF_VIEW_BINDING___CLONE__MAP = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
 
 		/**
 	 * The number of operations of the '<em>Conical Field Of View Binding</em>' class.
@@ -293,14 +293,14 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
+  int CONICAL_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl <em>Rectangular Frustrum Field Of View Binding</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl <em>Rectangular Frustrum Field Of View Binding</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsPackageImpl#getRectangularFrustrumFieldOfViewBinding()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsPackageImpl#getRectangularFrustrumFieldOfViewBinding()
 	 * @generated
 	 */
   int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING = 2;
@@ -312,7 +312,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__BINDED = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__BINDED = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -321,7 +321,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__DESCRIPTION = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__DESCRIPTION = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -330,7 +330,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__NAME = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__NAME = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
 
   /**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -339,7 +339,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__SOURCE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__SOURCE = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node</b></em>' reference.
@@ -348,7 +348,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node Adapter</b></em>' reference.
@@ -357,7 +357,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' reference.
@@ -366,7 +366,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Rectangular Frustrum Field Of View Binding</em>' class.
@@ -375,7 +375,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Bind</em>' operation.
@@ -384,7 +384,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___BIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___BIND = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
 
   /**
 	 * The operation id for the '<em>Unbind</em>' operation.
@@ -393,7 +393,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___UNBIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___UNBIND = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
 
   /**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -402,7 +402,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___CLONE__MAP = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___CLONE__MAP = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
 
 		/**
 	 * The number of operations of the '<em>Rectangular Frustrum Field Of View Binding</em>' class.
@@ -411,67 +411,67 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding <em>Circular Sector Field Of View Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding <em>Circular Sector Field Of View Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Circular Sector Field Of View Binding</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding
 	 * @generated
 	 */
   EClass getCircularSectorFieldOfViewBinding();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding#getFov()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding#getFov()
 	 * @see #getCircularSectorFieldOfViewBinding()
 	 * @generated
 	 */
   EReference getCircularSectorFieldOfViewBinding_Fov();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding <em>Conical Field Of View Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding <em>Conical Field Of View Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Conical Field Of View Binding</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding
 	 * @generated
 	 */
   EClass getConicalFieldOfViewBinding();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding#getFov()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding#getFov()
 	 * @see #getConicalFieldOfViewBinding()
 	 * @generated
 	 */
   EReference getConicalFieldOfViewBinding_Fov();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding <em>Rectangular Frustrum Field Of View Binding</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding <em>Rectangular Frustrum Field Of View Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rectangular Frustrum Field Of View Binding</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding
 	 * @generated
 	 */
   EClass getRectangularFrustrumFieldOfViewBinding();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding#getFov()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding#getFov()
 	 * @see #getRectangularFrustrumFieldOfViewBinding()
 	 * @generated
 	 */
@@ -484,7 +484,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVBindingsFactory getSymphony__AddonsSensorsFOVBindingsFactory();
+	ApogyAddonsSensorsFOVBindingsFactory getApogyAddonsSensorsFOVBindingsFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -502,11 +502,11 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl <em>Circular Sector Field Of View Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl <em>Circular Sector Field Of View Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsPackageImpl#getCircularSectorFieldOfViewBinding()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsPackageImpl#getCircularSectorFieldOfViewBinding()
 		 * @generated
 		 */
     EClass CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING = eINSTANCE.getCircularSectorFieldOfViewBinding();
@@ -520,11 +520,11 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
     EReference CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV = eINSTANCE.getCircularSectorFieldOfViewBinding_Fov();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl <em>Conical Field Of View Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl <em>Conical Field Of View Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsPackageImpl#getConicalFieldOfViewBinding()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsPackageImpl#getConicalFieldOfViewBinding()
 		 * @generated
 		 */
     EClass CONICAL_FIELD_OF_VIEW_BINDING = eINSTANCE.getConicalFieldOfViewBinding();
@@ -538,11 +538,11 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
     EReference CONICAL_FIELD_OF_VIEW_BINDING__FOV = eINSTANCE.getConicalFieldOfViewBinding_Fov();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl <em>Rectangular Frustrum Field Of View Binding</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl <em>Rectangular Frustrum Field Of View Binding</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsPackageImpl#getRectangularFrustrumFieldOfViewBinding()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsPackageImpl#getRectangularFrustrumFieldOfViewBinding()
 		 * @generated
 		 */
     EClass RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING = eINSTANCE.getRectangularFrustrumFieldOfViewBinding();
@@ -557,4 +557,4 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 
   }
 
-} //Symphony__AddonsSensorsFOVBindingsPackage
+} //ApogyAddonsSensorsFOVBindingsPackage

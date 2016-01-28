@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log.impl;
+package ca.gc.asc_csa.apogy.common.log.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.osgi.framework.log.FrameworkLog;
-import org.eclipse.symphony.common.log.*;
+import ca.gc.asc_csa.apogy.common.log.*;
 import org.osgi.framework.Bundle;
 
 /**
@@ -19,24 +19,24 @@ import org.osgi.framework.Bundle;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonLogFactoryImpl extends EFactoryImpl implements Symphony__CommonLogFactory {
+public class ApogyCommonLogFactoryImpl extends EFactoryImpl implements ApogyCommonLogFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonLogFactory init() {
+	public static ApogyCommonLogFactory init() {
 		try {
-			Symphony__CommonLogFactory theSymphony__CommonLogFactory = (Symphony__CommonLogFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonLogPackage.eNS_URI);
-			if (theSymphony__CommonLogFactory != null) {
-				return theSymphony__CommonLogFactory;
+			ApogyCommonLogFactory theApogyCommonLogFactory = (ApogyCommonLogFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonLogPackage.eNS_URI);
+			if (theApogyCommonLogFactory != null) {
+				return theApogyCommonLogFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonLogFactoryImpl();
+		return new ApogyCommonLogFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__CommonLogFactoryImpl extends EFactoryImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonLogFactoryImpl() {
+	public ApogyCommonLogFactoryImpl() {
 		super();
 	}
 
@@ -57,7 +57,7 @@ public class Symphony__CommonLogFactoryImpl extends EFactoryImpl implements Symp
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonLogPackage.LOGGER: return createLogger();
+			case ApogyCommonLogPackage.LOGGER: return createLogger();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,13 +71,13 @@ public class Symphony__CommonLogFactoryImpl extends EFactoryImpl implements Symp
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonLogPackage.EVENT_SEVERITY:
+			case ApogyCommonLogPackage.EVENT_SEVERITY:
 				return createEventSeverityFromString(eDataType, initialValue);
-			case Symphony__CommonLogPackage.THROWABLE:
+			case ApogyCommonLogPackage.THROWABLE:
 				return createThrowableFromString(eDataType, initialValue);
-			case Symphony__CommonLogPackage.BUNDLE:
+			case ApogyCommonLogPackage.BUNDLE:
 				return createBundleFromString(eDataType, initialValue);
-			case Symphony__CommonLogPackage.FRAMEWORK_LOG:
+			case ApogyCommonLogPackage.FRAMEWORK_LOG:
 				return createFrameworkLogFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -92,13 +92,13 @@ public class Symphony__CommonLogFactoryImpl extends EFactoryImpl implements Symp
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonLogPackage.EVENT_SEVERITY:
+			case ApogyCommonLogPackage.EVENT_SEVERITY:
 				return convertEventSeverityToString(eDataType, instanceValue);
-			case Symphony__CommonLogPackage.THROWABLE:
+			case ApogyCommonLogPackage.THROWABLE:
 				return convertThrowableToString(eDataType, instanceValue);
-			case Symphony__CommonLogPackage.BUNDLE:
+			case ApogyCommonLogPackage.BUNDLE:
 				return convertBundleToString(eDataType, instanceValue);
-			case Symphony__CommonLogPackage.FRAMEWORK_LOG:
+			case ApogyCommonLogPackage.FRAMEWORK_LOG:
 				return convertFrameworkLogToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -194,8 +194,8 @@ public class Symphony__CommonLogFactoryImpl extends EFactoryImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonLogPackage getSymphony__CommonLogPackage() {
-		return (Symphony__CommonLogPackage)getEPackage();
+	public ApogyCommonLogPackage getApogyCommonLogPackage() {
+		return (ApogyCommonLogPackage)getEPackage();
 	}
 
 	/**
@@ -205,8 +205,8 @@ public class Symphony__CommonLogFactoryImpl extends EFactoryImpl implements Symp
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonLogPackage getPackage() {
-		return Symphony__CommonLogPackage.eINSTANCE;
+	public static ApogyCommonLogPackage getPackage() {
+		return ApogyCommonLogPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonLogFactoryImpl
+} //ApogyCommonLogFactoryImpl

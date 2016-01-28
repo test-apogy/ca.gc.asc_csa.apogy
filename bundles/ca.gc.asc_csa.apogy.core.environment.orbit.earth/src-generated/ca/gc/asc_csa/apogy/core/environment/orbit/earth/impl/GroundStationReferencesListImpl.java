@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.util.Collection;
 
@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironme
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationReferencesListImpl#getGroundStations <em>Ground Stations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.GroundStationReferencesListImpl#getGroundStations <em>Ground Stations</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,7 +57,7 @@ public class GroundStationReferencesListImpl extends MinimalEObjectImpl.Containe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_REFERENCES_LIST;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_REFERENCES_LIST;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class GroundStationReferencesListImpl extends MinimalEObjectImpl.Containe
 	 */
 	public EList<GroundStation> getGroundStations() {
 		if (groundStations == null) {
-			groundStations = new EObjectResolvingEList<GroundStation>(GroundStation.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS);
+			groundStations = new EObjectResolvingEList<GroundStation>(GroundStation.class, this, ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS);
 		}
 		return groundStations;
 	}
@@ -80,7 +80,7 @@ public class GroundStationReferencesListImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
 				return getGroundStations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -95,7 +95,7 @@ public class GroundStationReferencesListImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
 				getGroundStations().clear();
 				getGroundStations().addAll((Collection<? extends GroundStation>)newValue);
 				return;
@@ -111,7 +111,7 @@ public class GroundStationReferencesListImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
 				getGroundStations().clear();
 				return;
 		}
@@ -126,7 +126,7 @@ public class GroundStationReferencesListImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS:
 				return groundStations != null && !groundStations.isEmpty();
 		}
 		return super.eIsSet(featureID);

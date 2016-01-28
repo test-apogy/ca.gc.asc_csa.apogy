@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -22,7 +22,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -68,25 +68,25 @@ public class FeaturesOfInterestMapLayerTest extends AbstractMapLayerTest {
 	@Override
 	protected void setUp() throws Exception 
 	{
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer());
 		
 		// Adds a few FOI.
-		FeatureOfInterest foi1 = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest();		
+		FeatureOfInterest foi1 = ApogyCoreFactory.eINSTANCE.createFeatureOfInterest();		
 		Matrix4d m1 = new Matrix4d();
 		m1.set(new Vector3d(0, 0, 0));
-		foi1.setPose(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m1));
+		foi1.setPose(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m1));
 		getFixture().getFeatures().getFeaturesOfInterest().add(foi1);
 		
-		FeatureOfInterest foi2 = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest();		
+		FeatureOfInterest foi2 = ApogyCoreFactory.eINSTANCE.createFeatureOfInterest();		
 		Matrix4d m2 = new Matrix4d();
 		m2.set(new Vector3d(10, 20, -5));
-		foi2.setPose(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m2));
+		foi2.setPose(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m2));
 		getFixture().getFeatures().getFeaturesOfInterest().add(foi2);
 		
-		FeatureOfInterest foi3 = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest();		
+		FeatureOfInterest foi3 = ApogyCoreFactory.eINSTANCE.createFeatureOfInterest();		
 		Matrix4d m3 = new Matrix4d();
 		m3.set(new Vector3d(-5, -25, 10));
-		foi3.setPose(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m3));		
+		foi3.setPose(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m3));		
 		getFixture().getFeatures().getFeaturesOfInterest().add(foi3);
 	}
 
@@ -102,10 +102,10 @@ public class FeaturesOfInterestMapLayerTest extends AbstractMapLayerTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion()
 	 * @generated_NOT
 	 */
 	public void testGetRegion() 

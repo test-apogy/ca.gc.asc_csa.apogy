@@ -1,28 +1,28 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy;
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Lidar Symphony System Api Adapter</b></em>'.
+ * A representation of the model object '<em><b>Lidar Apogy System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class is the specialized Symphony API adapter, used for connecting
+ * This class is the specialized Apogy API adapter, used for connecting
  * the existing Lidar unit example, located at
- * {@link org.eclipse.symphony.examples.lidar.Lidar},
- * to Symphony; one can override the well-known callback functions to make
- * Symphony perform a variety of useful functions, including initialization,
+ * {@link ca.gc.asc_csa.apogy.examples.lidar.Lidar},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
  * disposal and other features.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarSymphonySystemApiAdapter()
+ * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage#getLidarApogySystemApiAdapter()
  * @model
  * @generated
  */
-public interface LidarSymphonySystemApiAdapter extends SymphonySystemApiAdapter {
-} // LidarSymphonySystemApiAdapter
+public interface LidarApogySystemApiAdapter extends ApogySystemApiAdapter {
+} // LidarApogySystemApiAdapter

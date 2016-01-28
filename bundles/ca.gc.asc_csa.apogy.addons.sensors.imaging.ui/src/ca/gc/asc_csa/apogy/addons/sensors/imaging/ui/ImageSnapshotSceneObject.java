@@ -1,7 +1,7 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui;
 
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface ImageSnapshotSceneObject extends SceneObject 
 {		

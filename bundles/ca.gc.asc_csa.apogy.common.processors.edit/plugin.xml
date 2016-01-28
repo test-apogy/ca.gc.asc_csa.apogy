@@ -10,10 +10,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_common_processors -->
+      <!-- @generated apogy_common_processors -->
       <factory
-            uri="org.eclipse.symphony.common.processors"
-            class="org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.common.processors"
+            class="ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

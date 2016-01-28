@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractResultValue} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class AbstractResultValueItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractResultValue_result_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractResultValue_result_feature", "_UI_AbstractResultValue_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT_VALUE__RESULT,
+				 ApogyCoreInvocatorPackage.Literals.ABSTRACT_RESULT_VALUE__RESULT,
 				 true,
 				 false,
 				 true,

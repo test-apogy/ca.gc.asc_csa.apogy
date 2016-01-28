@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.provider;
+package ca.gc.asc_csa.apogy.examples.lander.provider;
 
 
 import java.text.DecimalFormat;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lander.Position} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.lander.Position} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -88,7 +88,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Position_x_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
-				Symphony__ExamplesLanderPackage.Literals.POSITION__X,
+				ApogyExamplesLanderPackage.Literals.POSITION__X,
 				false,
 				false,
 				false,
@@ -111,7 +111,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Position_y_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
-				Symphony__ExamplesLanderPackage.Literals.POSITION__Y,
+				ApogyExamplesLanderPackage.Literals.POSITION__Y,
 				false,
 				false,
 				false,
@@ -134,7 +134,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Position_z_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Position_z_feature", "_UI_Position_type"),
-				 Symphony__ExamplesLanderPackage.Literals.POSITION__Z,
+				 ApogyExamplesLanderPackage.Literals.POSITION__Z,
 				 false,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Position_attitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Position_attitude_feature", "_UI_Position_type"),
-				 Symphony__ExamplesLanderPackage.Literals.POSITION__ATTITUDE,
+				 ApogyExamplesLanderPackage.Literals.POSITION__ATTITUDE,
 				 false,
 				 false,
 				 false,
@@ -215,10 +215,10 @@ public class PositionItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Position.class)) {
-			case Symphony__ExamplesLanderPackage.POSITION__X:
-			case Symphony__ExamplesLanderPackage.POSITION__Y:
-			case Symphony__ExamplesLanderPackage.POSITION__Z:
-			case Symphony__ExamplesLanderPackage.POSITION__ATTITUDE:
+			case ApogyExamplesLanderPackage.POSITION__X:
+			case ApogyExamplesLanderPackage.POSITION__Y:
+			case ApogyExamplesLanderPackage.POSITION__Z:
+			case ApogyExamplesLanderPackage.POSITION__ATTITUDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

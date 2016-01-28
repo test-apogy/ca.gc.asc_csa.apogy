@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.presentation;
+package ca.gc.asc_csa.apogy.core.invocator.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -36,12 +36,12 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 /**
- * This is the action bar contributor for the Symphony__CoreInvocator model editor.
+ * This is the action bar contributor for the ApogyCoreInvocator model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorActionBarContributor
+public class ApogyCoreInvocatorActionBarContributor
   extends EditingDomainActionBarContributor
   implements ISelectionChangedListener
 {
@@ -68,14 +68,14 @@ public class Symphony__CoreInvocatorActionBarContributor
 	 * @generated
 	 */
   protected IAction showPropertiesViewAction =
-    new Action(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+    new Action(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
 			@Override
 			public void run() {
 				try {
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
 				catch (PartInitException exception) {
-					Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+					ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -88,7 +88,7 @@ public class Symphony__CoreInvocatorActionBarContributor
 	 * @generated
 	 */
   protected IAction refreshViewerAction =
-    new Action(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+    new Action(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
 			@Override
 			public boolean isEnabled() {
 				return activeEditorPart instanceof IViewerProvider;
@@ -145,7 +145,7 @@ public class Symphony__CoreInvocatorActionBarContributor
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreInvocatorActionBarContributor()
+  public ApogyCoreInvocatorActionBarContributor()
   {
 		super(ADDITIONS_LAST_STYLE);
 		loadResourceAction = new LoadResourceAction();
@@ -162,8 +162,8 @@ public class Symphony__CoreInvocatorActionBarContributor
   @Override
   public void contributeToToolBar(IToolBarManager toolBarManager)
   {
-		toolBarManager.add(new Separator("symphony__coreinvocator-settings"));
-		toolBarManager.add(new Separator("symphony__coreinvocator-additions"));
+		toolBarManager.add(new Separator("apogy__coreinvocator-settings"));
+		toolBarManager.add(new Separator("apogy__coreinvocator-additions"));
 	}
 
   /**
@@ -178,7 +178,7 @@ public class Symphony__CoreInvocatorActionBarContributor
   {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorEditor_menu"), "org.eclipse.symphony.core.invocatorMenuID");
+		IMenuManager submenuManager = new MenuManager(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorEditor_menu"), "ca.gc.asc_csa.apogy.core.invocatorMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -187,12 +187,12 @@ public class Symphony__CoreInvocatorActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		createChildMenuManager = new MenuManager(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		submenuManager.insertBefore("additions", createChildMenuManager);
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
 		// Force an update because Eclipse hides empty menus now.
@@ -390,11 +390,11 @@ public class Symphony__CoreInvocatorActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		submenuManager = new MenuManager(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		submenuManager = new MenuManager(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 	}

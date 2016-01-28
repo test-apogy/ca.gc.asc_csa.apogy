@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,17 +15,17 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.common.EclipseUtils;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.URLNode;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.adapters.URLNodeSceneObject;
-import org.eclipse.symphony.common.topology.ui.jme3.Activator;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities.OS;
+import ca.gc.asc_csa.apogy.common.EclipseUtils;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.URLNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.adapters.URLNodeSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities.OS;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;
@@ -201,7 +201,7 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 	}
 	
 	@Override
-	public void setShadowMode(final org.eclipse.symphony.common.topology.ui.ShadowMode shadowMode) 
+	public void setShadowMode(final ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode shadowMode) 
 	{
 		super.setShadowMode(shadowMode);
 		
@@ -412,7 +412,7 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 			{
 				public void notifyChanged(org.eclipse.emf.common.notify.Notification msg) 
 				{
-					if (msg.getFeatureID(URLNode.class) == Symphony__CommonTopologyPackage.URL_NODE__URL) 
+					if (msg.getFeatureID(URLNode.class) == ApogyCommonTopologyPackage.URL_NODE__URL) 
 					{
 						Job job = new Job("Loadding <" + getTopologyNode().getUrl() + ">.")
 						{
@@ -481,9 +481,9 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 	 */
 	private class ShadowModeSceneGraphVisitor implements SceneGraphVisitor
 	{
-		private org.eclipse.symphony.common.topology.ui.ShadowMode shadowMode = org.eclipse.symphony.common.topology.ui.ShadowMode.INHERIT;
+		private ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode shadowMode = ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode.INHERIT;
 		
-		public ShadowModeSceneGraphVisitor(org.eclipse.symphony.common.topology.ui.ShadowMode shadowMode)
+		public ShadowModeSceneGraphVisitor(ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode shadowMode)
 		{
 			this.shadowMode = shadowMode;
 		}

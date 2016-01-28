@@ -3,7 +3,7 @@
  *
  * $Id: CartesianPositionCoordinatesImpl.java,v 1.3.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,9 +13,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -24,9 +24,9 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getZ <em>Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getZ <em>Z</em>}</li>
  * </ul>
  *
  * @generated
@@ -107,7 +107,7 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POSITION_COORDINATES;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_POSITION_COORDINATES;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X, oldX, x));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y, oldY, y));
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 		double oldZ = z;
 		z = newZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z, oldZ, z));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z, oldZ, z));
 	}
 
 	/**
@@ -183,11 +183,11 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
 				return getX();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
 				return getY();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
 				return getZ();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
 				setX((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
 				setY((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
 				setZ((Double)newValue);
 				return;
 		}
@@ -220,13 +220,13 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
 				setX(X_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
 				setY(Y_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
 				setZ(Z_EDEFAULT);
 				return;
 		}
@@ -240,11 +240,11 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
 				return x != X_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
 				return y != Y_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
 				return z != Z_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -258,7 +258,7 @@ public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES___AS_POINT3D:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES___AS_POINT3D:
 				return asPoint3d();
 		}
 		return super.eInvoke(operationID, arguments);

@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.impl;
+package ca.gc.asc_csa.apogy.examples.rover.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.rover.Activator;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
-import org.eclipse.symphony.examples.rover.RoverSimulated;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.rover.Activator;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.examples.rover.RoverSimulated;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesRoverPackage.Literals.ROVER_SIMULATED;
+		return ApogyExamplesRoverPackage.Literals.ROVER_SIMULATED;
 	}
 
 	/**
@@ -240,7 +240,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 								"been disposed.";
 			
 			// Throw an exception to indicate the operation has failed; it will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Else the rover hasn't been disposed yet
@@ -301,7 +301,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the operation has failed; it will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the rover has not been successfully initialized
@@ -313,7 +313,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 								"successfully initialized (with init()).";
 			
 			// Throw an exception to indicate the operation has failed; it will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, it's been initialized and not disposed
@@ -356,7 +356,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the operation has failed; it will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Else if the rover has not been successfully initialized
@@ -368,7 +368,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 								"successfully initialized (with init()).";
 			
 			// Throw an exception to indicate the operation has failed; it will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, it's been initialized and not disposed
@@ -418,7 +418,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the operation has failed; it will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// If the rover has not been successfully initialized (with init())
@@ -429,7 +429,7 @@ public class RoverSimulatedImpl extends RoverImpl implements RoverSimulated
 								"Rejected; the rover has not been successfully initialized (with init()).";
 			
 			// Throw an exception to indicate the operation has failed; it will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, it's been initialized

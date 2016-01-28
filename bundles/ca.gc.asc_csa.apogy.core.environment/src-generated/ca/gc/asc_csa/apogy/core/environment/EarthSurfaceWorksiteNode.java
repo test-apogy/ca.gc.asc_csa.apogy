@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 
 /**
@@ -15,10 +15,10 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode#getSkyTransformNode <em>Sky Transform Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode#getSkyTransformNode <em>Sky Transform Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksiteNode()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSurfaceWorksiteNode()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface EarthSurfaceWorksiteNode extends SurfaceWorksiteNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sky Transform Node</em>' reference.
 	 * @see #setSkyTransformNode(TransformNode)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksiteNode_SkyTransformNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getEarthSurfaceWorksiteNode_SkyTransformNode()
 	 * @model transient="true"
 	 * @generated
 	 */
   TransformNode getSkyTransformNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode#getSkyTransformNode <em>Sky Transform Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode#getSkyTransformNode <em>Sky Transform Node</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Sky Transform Node</em>' reference.

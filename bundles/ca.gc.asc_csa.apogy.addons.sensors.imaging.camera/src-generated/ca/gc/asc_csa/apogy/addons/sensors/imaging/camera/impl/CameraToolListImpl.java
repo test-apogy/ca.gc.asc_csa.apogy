@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.util.Collection;
 
@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,8 +28,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensor
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolListImpl#getCameraViewConfiguration <em>Camera View Configuration</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolListImpl#getTools <em>Tools</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolListImpl#getCameraViewConfiguration <em>Camera View Configuration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolListImpl#getTools <em>Tools</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +61,7 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_TOOL_LIST;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_TOOL_LIST;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public CameraViewConfiguration getCameraViewConfiguration() {
-		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION) return null;
+		if (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION) return null;
 		return (CameraViewConfiguration)eContainer();
 	}
 
@@ -80,7 +80,7 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public CameraViewConfiguration basicGetCameraViewConfiguration() {
-		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION) return null;
+		if (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION) return null;
 		return (CameraViewConfiguration)eInternalContainer();
 	}
 
@@ -90,7 +90,7 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public NotificationChain basicSetCameraViewConfiguration(CameraViewConfiguration newCameraViewConfiguration, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newCameraViewConfiguration, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newCameraViewConfiguration, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION, msgs);
 		return msgs;
 	}
 
@@ -100,19 +100,19 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void setCameraViewConfiguration(CameraViewConfiguration newCameraViewConfiguration) {
-		if (newCameraViewConfiguration != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION && newCameraViewConfiguration != null)) {
+		if (newCameraViewConfiguration != eInternalContainer() || (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION && newCameraViewConfiguration != null)) {
 			if (EcoreUtil.isAncestor(this, newCameraViewConfiguration))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newCameraViewConfiguration != null)
-				msgs = ((InternalEObject)newCameraViewConfiguration).eInverseAdd(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST, CameraViewConfiguration.class, msgs);
+				msgs = ((InternalEObject)newCameraViewConfiguration).eInverseAdd(this, ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST, CameraViewConfiguration.class, msgs);
 			msgs = basicSetCameraViewConfiguration(newCameraViewConfiguration, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION, newCameraViewConfiguration, newCameraViewConfiguration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION, newCameraViewConfiguration, newCameraViewConfiguration));
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<CameraTool> getTools() {
 		if (tools == null) {
-			tools = new EObjectContainmentWithInverseEList<CameraTool>(CameraTool.class, this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST);
+			tools = new EObjectContainmentWithInverseEList<CameraTool>(CameraTool.class, this, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST);
 		}
 		return tools;
 	}
@@ -136,11 +136,11 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetCameraViewConfiguration((CameraViewConfiguration)otherEnd, msgs);
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTools()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -154,9 +154,9 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
 				return basicSetCameraViewConfiguration(null, msgs);
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
 				return ((InternalEList<?>)getTools()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -170,8 +170,8 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
-				return eInternalContainer().eInverseRemove(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST, CameraViewConfiguration.class, msgs);
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
+				return eInternalContainer().eInverseRemove(this, ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST, CameraViewConfiguration.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -184,10 +184,10 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
 				if (resolve) return getCameraViewConfiguration();
 				return basicGetCameraViewConfiguration();
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
 				return getTools();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -202,10 +202,10 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
 				setCameraViewConfiguration((CameraViewConfiguration)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
 				getTools().clear();
 				getTools().addAll((Collection<? extends CameraTool>)newValue);
 				return;
@@ -221,10 +221,10 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
 				setCameraViewConfiguration((CameraViewConfiguration)null);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
 				getTools().clear();
 				return;
 		}
@@ -239,9 +239,9 @@ public class CameraToolListImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__CAMERA_VIEW_CONFIGURATION:
 				return basicGetCameraViewConfiguration() != null;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
 				return tools != null && !tools.isEmpty();
 		}
 		return super.eIsSet(featureID);

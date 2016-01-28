@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class ImageFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class ImageFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -130,7 +130,7 @@ public class ImageFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageFilter_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFilter_enabled_feature", "_UI_ImageFilter_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FILTER__ENABLED,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.IMAGE_FILTER__ENABLED,
 				 true,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class ImageFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageFilter.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

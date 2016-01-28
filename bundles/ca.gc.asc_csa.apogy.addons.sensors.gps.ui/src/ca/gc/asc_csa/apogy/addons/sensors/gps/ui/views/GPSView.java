@@ -1,10 +1,10 @@
-package org.eclipse.symphony.addons.sensors.gps.ui.views;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.ui.views;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.addons.sensors.gps.ui.viewers.GPSViewer;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ui.viewers.GPSViewer;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IViewSite;
@@ -23,7 +23,7 @@ import org.eclipse.ui.part.ViewPart;
  */
 public class GPSView extends ViewPart implements ISelectionListener {
 
-	public static final String ID = "org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.gps.ui.views.GPSView";
 //	private IMemento memento;
 	private GPSViewer gpsViewer;
 

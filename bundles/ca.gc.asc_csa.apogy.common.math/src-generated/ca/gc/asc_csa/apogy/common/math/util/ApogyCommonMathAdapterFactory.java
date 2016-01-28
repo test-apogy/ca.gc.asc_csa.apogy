@@ -3,36 +3,36 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.util;
+package ca.gc.asc_csa.apogy.common.math.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.MathIO;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Polynomial;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.MathIO;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Polynomial;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage
  * @generated
  */
-public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonMathAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonMathPackage modelPackage;
+	protected static ApogyCommonMathPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -40,9 +40,9 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathAdapterFactory() {
+	public ApogyCommonMathAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonMathPackage.eINSTANCE;
+			modelPackage = ApogyCommonMathPackage.eINSTANCE;
 		}
 	}
 
@@ -71,8 +71,8 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonMathSwitch<Adapter> modelSwitch =
-		new Symphony__CommonMathSwitch<Adapter>() {
+	protected ApogyCommonMathSwitch<Adapter> modelSwitch =
+		new ApogyCommonMathSwitch<Adapter>() {
 			@Override
 			public Adapter caseTuple3d(Tuple3d object) {
 				return createTuple3dAdapter();
@@ -90,8 +90,8 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 				return createPolynomialAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonMathFacade(Symphony__CommonMathFacade object) {
-				return createSymphony__CommonMathFacadeAdapter();
+			public Adapter caseApogyCommonMathFacade(ApogyCommonMathFacade object) {
+				return createApogyCommonMathFacadeAdapter();
 			}
 			@Override
 			public Adapter caseMathIO(MathIO object) {
@@ -118,13 +118,13 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.Matrix4x4 <em>Matrix4x4</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4 <em>Matrix4x4</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4
 	 * @generated
 	 */
 	public Adapter createMatrix4x4Adapter() {
@@ -132,13 +132,13 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.Matrix3x3 <em>Matrix3x3</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3 <em>Matrix3x3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3
 	 * @generated
 	 */
 	public Adapter createMatrix3x3Adapter() {
@@ -146,13 +146,13 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.Tuple3d <em>Tuple3d</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d <em>Tuple3d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.Tuple3d
+	 * @see ca.gc.asc_csa.apogy.common.math.Tuple3d
 	 * @generated
 	 */
 	public Adapter createTuple3dAdapter() {
@@ -160,13 +160,13 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.Polynomial <em>Polynomial</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.math.Polynomial <em>Polynomial</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.Polynomial
+	 * @see ca.gc.asc_csa.apogy.common.math.Polynomial
 	 * @generated
 	 */
 	public Adapter createPolynomialAdapter() {
@@ -174,27 +174,27 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonMathFacadeAdapter() {
+	public Adapter createApogyCommonMathFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.MathIO <em>Math IO</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.math.MathIO <em>Math IO</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.MathIO
+	 * @see ca.gc.asc_csa.apogy.common.math.MathIO
 	 * @generated
 	 */
   public Adapter createMathIOAdapter()
@@ -214,4 +214,4 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__CommonMathAdapterFactory
+} //ApogyCommonMathAdapterFactory

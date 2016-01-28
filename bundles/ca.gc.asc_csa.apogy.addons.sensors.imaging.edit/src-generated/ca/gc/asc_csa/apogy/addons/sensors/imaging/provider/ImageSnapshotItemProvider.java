@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.provider;
 
 
 import java.util.Collection;
@@ -14,15 +14,15 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.topology.provider.GroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.topology.provider.GroupNodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class ImageSnapshotItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -94,8 +94,8 @@ public class ImageSnapshotItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW);
-			childrenFeatures.add(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE);
+			childrenFeatures.add(ApogyAddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW);
+			childrenFeatures.add(ApogyAddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE);
 		}
 		return childrenFeatures;
 	}
@@ -154,11 +154,11 @@ public class ImageSnapshotItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageSnapshot.class)) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -179,18 +179,18 @@ public class ImageSnapshotItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				(ApogyAddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
-				 Symphony__CommonImagesFactory.eINSTANCE.createEImage()));
+				(ApogyAddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
+				 ApogyCommonImagesFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
-				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
+				(ApogyAddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
+				 ApogyCommonImagesFactory.eINSTANCE.createURLEImage()));
 	}
 
 }

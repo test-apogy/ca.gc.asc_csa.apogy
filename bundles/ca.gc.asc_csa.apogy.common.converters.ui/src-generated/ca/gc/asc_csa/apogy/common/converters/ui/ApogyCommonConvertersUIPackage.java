@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.ui;
+package ca.gc.asc_csa.apogy.common.converters.ui;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFactory
+ * @see ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonConvertersUI' childCreationExtenders='true' extensibleProviderFactory='true' operationReflection='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonConvertersUI' modelDirectory='/org.eclipse.symphony.common.converters.ui/src-generated' basePackage='org.eclipse.symphony.common.converters'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonConvertersUI' childCreationExtenders='true' extensibleProviderFactory='true' operationReflection='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonConvertersUI' modelDirectory='/ca.gc.asc_csa.apogy.common.converters.ui/src-generated' basePackage='ca.gc.asc_csa.apogy.common.converters'"
  * @generated
  */
-public interface Symphony__CommonConvertersUIPackage extends EPackage {
+public interface ApogyCommonConvertersUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.converters.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.converters.ui";
 
 	/**
 	 * The package namespace name.
@@ -56,17 +56,17 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonConvertersUIPackage eINSTANCE = org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIPackageImpl.init();
+	ApogyCommonConvertersUIPackage eINSTANCE = ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIFacadeImpl
-	 * @see org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIPackageImpl#getSymphony__CommonConvertersUIFacade()
+	 * @see ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIPackageImpl#getApogyCommonConvertersUIFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_UI_FACADE = 0;
+	int APOGY_COMMON_CONVERTERS_UI_FACADE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -75,7 +75,7 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_UI_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_CONVERTERS_UI_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Convert</em>' operation.
@@ -84,7 +84,7 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS = 0;
+	int APOGY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS = 0;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -93,38 +93,38 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_UI_FACADE_OPERATION_COUNT = 1;
+	int APOGY_COMMON_CONVERTERS_UI_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '<em>ISelection</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.jface.viewers.ISelection
-	 * @see org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIPackageImpl#getISelection()
+	 * @see ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIPackageImpl#getISelection()
 	 * @generated
 	 */
 	int ISELECTION = 1;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade
+	 * @see ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonConvertersUIFacade();
+	EClass getApogyCommonConvertersUIFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade#convert(org.eclipse.jface.viewers.ISelection, java.lang.Class) <em>Convert</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade#convert(org.eclipse.jface.viewers.ISelection, java.lang.Class) <em>Convert</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert</em>' operation.
-	 * @see org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade#convert(org.eclipse.jface.viewers.ISelection, java.lang.Class)
+	 * @see ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade#convert(org.eclipse.jface.viewers.ISelection, java.lang.Class)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonConvertersUIFacade__Convert__ISelection_Class();
+	EOperation getApogyCommonConvertersUIFacade__Convert__ISelection_Class();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.jface.viewers.ISelection <em>ISelection</em>}'.
@@ -144,7 +144,7 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonConvertersUIFactory getSymphony__CommonConvertersUIFactory();
+	ApogyCommonConvertersUIFactory getApogyCommonConvertersUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,14 +161,14 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIFacadeImpl
-		 * @see org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIPackageImpl#getSymphony__CommonConvertersUIFacade()
+		 * @see ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIPackageImpl#getApogyCommonConvertersUIFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_CONVERTERS_UI_FACADE = eINSTANCE.getSymphony__CommonConvertersUIFacade();
+		EClass APOGY_COMMON_CONVERTERS_UI_FACADE = eINSTANCE.getApogyCommonConvertersUIFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Convert</b></em>' operation.
@@ -176,18 +176,18 @@ public interface Symphony__CommonConvertersUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS = eINSTANCE.getSymphony__CommonConvertersUIFacade__Convert__ISelection_Class();
+		EOperation APOGY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS = eINSTANCE.getApogyCommonConvertersUIFacade__Convert__ISelection_Class();
 
 		/**
 		 * The meta object literal for the '<em>ISelection</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.jface.viewers.ISelection
-		 * @see org.eclipse.symphony.common.converters.ui.impl.Symphony__CommonConvertersUIPackageImpl#getISelection()
+		 * @see ca.gc.asc_csa.apogy.common.converters.ui.impl.ApogyCommonConvertersUIPackageImpl#getISelection()
 		 * @generated
 		 */
 		EDataType ISELECTION = eINSTANCE.getISelection();
 
 	}
 
-} //Symphony__CommonConvertersUIPackage
+} //ApogyCommonConvertersUIPackage

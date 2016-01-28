@@ -3,17 +3,17 @@
  *
  * $Id: ConicalFieldOfViewImpl.java,v 1.3.4.2 2015/05/21 15:51:25 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,9 +23,9 @@ import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getRange <em>Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getFieldOfViewAngle <em>Field Of View Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getVolume <em>Volume</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getRange <em>Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getFieldOfViewAngle <em>Field Of View Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getVolume <em>Volume</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,7 +87,7 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW;
+		return ApogyAddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW;
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 		double oldFieldOfViewAngle = fieldOfViewAngle;
 		fieldOfViewAngle = newFieldOfViewAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE, oldFieldOfViewAngle, fieldOfViewAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE, oldFieldOfViewAngle, fieldOfViewAngle));
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 		DistanceRange tmp = getRangeGen();
 		if(tmp == null)
 		{
-			tmp = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
+			tmp = ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
 			setRange(tmp);
 		}
 		
@@ -147,7 +147,7 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 		DistanceRange oldRange = range;
 		range = newRange;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, oldRange, newRange);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, oldRange, newRange);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -162,14 +162,14 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 		if (newRange != range) {
 			NotificationChain msgs = null;
 			if (range != null)
-				msgs = ((InternalEObject)range).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, null, msgs);
+				msgs = ((InternalEObject)range).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, null, msgs);
 			if (newRange != null)
-				msgs = ((InternalEObject)newRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, null, msgs);
+				msgs = ((InternalEObject)newRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, null, msgs);
 			msgs = basicSetRange(newRange, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, newRange, newRange));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE, newRange, newRange));
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 				return basicSetRange(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -208,11 +208,11 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 				return getRange();
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
 				return getFieldOfViewAngle();
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
 				return getVolume();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -226,10 +226,10 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 				setRange((DistanceRange)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
 				setFieldOfViewAngle((Double)newValue);
 				return;
 		}
@@ -244,10 +244,10 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 				setRange((DistanceRange)null);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
 				setFieldOfViewAngle(FIELD_OF_VIEW_ANGLE_EDEFAULT);
 				return;
 		}
@@ -262,11 +262,11 @@ public class ConicalFieldOfViewImpl extends FieldOfViewImpl implements ConicalFi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 				return range != null;
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
 				return fieldOfViewAngle != FIELD_OF_VIEW_ANGLE_EDEFAULT;
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
 				return getVolume() != VOLUME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

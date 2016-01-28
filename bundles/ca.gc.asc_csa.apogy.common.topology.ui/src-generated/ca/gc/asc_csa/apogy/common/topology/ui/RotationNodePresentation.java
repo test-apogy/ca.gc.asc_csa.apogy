@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 
 /**
@@ -13,11 +13,11 @@ package org.eclipse.symphony.common.topology.ui;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#isAxisVisible <em>Axis Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLength <em>Axis Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#isAxisVisible <em>Axis Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#getAxisLength <em>Axis Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getRotationNodePresentation()
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getRotationNodePresentation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface RotationNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Visible</em>' attribute.
 	 * @see #setAxisVisible(boolean)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getRotationNodePresentation_AxisVisible()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getRotationNodePresentation_AxisVisible()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
@@ -41,7 +41,7 @@ public interface RotationNodePresentation extends NodePresentation {
 	boolean isAxisVisible();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#isAxisVisible <em>Axis Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#isAxisVisible <em>Axis Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Axis Visible</em>' attribute.
@@ -61,7 +61,7 @@ public interface RotationNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Length</em>' attribute.
 	 * @see #setAxisLength(double)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getRotationNodePresentation_AxisLength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getRotationNodePresentation_AxisLength()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface RotationNodePresentation extends NodePresentation {
 	double getAxisLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLength <em>Axis Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation#getAxisLength <em>Axis Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Axis Length</em>' attribute.

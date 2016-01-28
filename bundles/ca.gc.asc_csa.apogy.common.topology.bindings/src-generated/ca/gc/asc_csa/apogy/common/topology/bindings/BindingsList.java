@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.BindingsList#getBindings <em>Bindings</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList#getBindings <em>Bindings</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsList()
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBindingsList()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface BindingsList extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Bindings</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Bindings</em>' containment reference list isn't clear,
@@ -38,7 +38,7 @@ public interface BindingsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bindings</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsList_Bindings()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBindingsList_Bindings()
 	 * @model containment="true"
 	 * @generated
 	 */

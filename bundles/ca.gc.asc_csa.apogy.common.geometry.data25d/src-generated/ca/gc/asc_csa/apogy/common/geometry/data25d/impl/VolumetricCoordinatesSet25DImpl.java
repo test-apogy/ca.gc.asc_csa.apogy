@@ -3,17 +3,17 @@
  *
  * $Id: VolumetricCoordinatesSet25DImpl.java,v 1.5.4.3 2015/09/22 19:39:38 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class VolumetricCoordinatesSet25DImpl extends CoordinatesSet25DImpl imple
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryData25DPackage.Literals.VOLUMETRIC_COORDINATES_SET25_D;
+		return ApogyCommonGeometryData25DPackage.Literals.VOLUMETRIC_COORDINATES_SET25_D;
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class VolumetricCoordinatesSet25DImpl extends CoordinatesSet25DImpl imple
 	 */
 	public CartesianPositionCoordinates getCartesianPositionCoordinates(Coordinates25D coordinates)
 	{
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(coordinates.getU(), coordinates.getV(), coordinates.getW());
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(coordinates.getU(), coordinates.getV(), coordinates.getW());
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class VolumetricCoordinatesSet25DImpl extends CoordinatesSet25DImpl imple
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData25DPackage.VOLUMETRIC_COORDINATES_SET25_D___GET_CARTESIAN_POSITION_COORDINATES__COORDINATES25D:
+			case ApogyCommonGeometryData25DPackage.VOLUMETRIC_COORDINATES_SET25_D___GET_CARTESIAN_POSITION_COORDINATES__COORDINATES25D:
 				return getCartesianPositionCoordinates((Coordinates25D)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

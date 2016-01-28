@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import java.util.Date;
 
 import javax.vecmath.Point3d;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.environment.impl.AstronomyUtilsImpl;
+import ca.gc.asc_csa.apogy.core.environment.impl.AstronomyUtilsImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.environment.impl.AstronomyUtilsImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAstronomyUtils()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAstronomyUtils()
  * @model
  * @generated
  */
@@ -64,9 +64,9 @@ public interface AstronomyUtils extends EObject
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" dateDataType="org.eclipse.symphony.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model unique="false" dateDataType="ca.gc.asc_csa.apogy.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" observerLatitudeUnique="false"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   HorizontalCoordinates getHorizontalSunPosition(Date date, double observerLongitude, double observerLatitude);
@@ -94,9 +94,9 @@ public interface AstronomyUtils extends EObject
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" dateDataType="org.eclipse.symphony.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model unique="false" dateDataType="ca.gc.asc_csa.apogy.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" observerLatitudeUnique="false"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   EquatorialCoordinates getMoonTopocentricEquatorialPosition(Date date, double observerLongitude, double observerLatitude);
@@ -109,9 +109,9 @@ public interface AstronomyUtils extends EObject
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" dateDataType="org.eclipse.symphony.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model unique="false" dateDataType="ca.gc.asc_csa.apogy.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" observerLatitudeUnique="false"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   HorizontalCoordinates getHorizontalMoonPosition(Date date, double observerLongitude, double observerLatitude);
@@ -195,8 +195,8 @@ public interface AstronomyUtils extends EObject
 	 * @param date The date
 	 * @param observerLongitude The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" dateDataType="org.eclipse.symphony.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model unique="false" dateDataType="ca.gc.asc_csa.apogy.core.environment.Date" dateUnique="false" observerLongitudeUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getLocalSideralTime(Date date, double observerLongitude);
@@ -207,7 +207,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-model-doc -->
 	 * Return the decimal time of day in UTC for a given date.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" dateDataType="org.eclipse.symphony.core.environment.Date" dateUnique="false"
+	 * @model unique="false" dateDataType="ca.gc.asc_csa.apogy.core.environment.Date" dateUnique="false"
 	 * @generated
 	 */
   double getUTCDecimalHours(Date date);
@@ -223,8 +223,8 @@ public interface AstronomyUtils extends EObject
 	 * @param date The date
 	 * <!-- end-model-doc -->
 	 * @model unique="false" equatorialCoordinatesUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" dateDataType="org.eclipse.symphony.core.environment.Date" dateUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" observerLatitudeUnique="false"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" dateDataType="ca.gc.asc_csa.apogy.core.environment.Date" dateUnique="false"
 	 * @generated
 	 */
   HorizontalCoordinates convertToHorizontalCoordinates(EquatorialCoordinates equatorialCoordinates, double observerLongitude, double observerLatitude, Date date);
@@ -236,7 +236,7 @@ public interface AstronomyUtils extends EObject
 	 * Convert a day's hour, minutes and seconds to an angle, in radians. 24 hours converts to 2π (360 degrees).
 	 * <!-- end-model-doc -->
 	 * @model unique="false" hoursUnique="false" minutesUnique="false" secondsUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double convertTimeToAngle(int hours, int minutes, int seconds);
@@ -248,8 +248,8 @@ public interface AstronomyUtils extends EObject
 	 * Clamps the specified angle between 0 and 2π (360 degrees).
 	 * <!-- end-model-doc -->
 	 * @model unique="false" angleInRadiansUnique="false"
-	 *        angleInRadiansAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        angleInRadiansAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double clampAngleToZero2PI(double angleInRadians);
@@ -283,7 +283,7 @@ public interface AstronomyUtils extends EObject
 	 * Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates
 	 * (Right Ascension and Declination).
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.Point3d" unique="false" equatorialRectangularCoordinatesDataType="org.eclipse.symphony.core.environment.Point3d" equatorialRectangularCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.Point3d" unique="false" equatorialRectangularCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.Point3d" equatorialRectangularCoordinatesUnique="false"
 	 * @generated
 	 */
   Point3d convertFromEquatorialRectangularToEclipticRectangular(Point3d equatorialRectangularCoordinates);
@@ -294,7 +294,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-model-doc -->
 	 * Converts Rectangular (x,y,z) Ecliptic Coordinates to Rectangular (x,y,z) Equatorial Coordinates.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.Point3d" unique="false" eclipticCoordinatesDataType="org.eclipse.symphony.core.environment.Point3d" eclipticCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.Point3d" unique="false" eclipticCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.Point3d" eclipticCoordinatesUnique="false"
 	 * @generated
 	 */
   Point3d convertFromEclipticRectangularToEquatorialRectangular(Point3d eclipticCoordinates);
@@ -305,7 +305,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-model-doc -->
 	 * Converts Rectangular (x,y,z) Ecliptic Coordinates to Ecliptic Coordinates (longitude, latitude, radius).
 	 * <!-- end-model-doc -->
-	 * @model unique="false" eclipticCoordinatesDataType="org.eclipse.symphony.core.environment.Point3d" eclipticCoordinatesUnique="false"
+	 * @model unique="false" eclipticCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.Point3d" eclipticCoordinatesUnique="false"
 	 * @generated
 	 */
   EclipticCoordinates convertFromEclipticRectangularToEclipticCoordinates(Point3d eclipticCoordinates);
@@ -316,7 +316,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-model-doc -->
 	 * Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates (Right Ascension, Declination).
 	 * <!-- end-model-doc -->
-	 * @model unique="false" equatorialCoordinatesDataType="org.eclipse.symphony.core.environment.Point3d" equatorialCoordinatesUnique="false"
+	 * @model unique="false" equatorialCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.Point3d" equatorialCoordinatesUnique="false"
 	 * @generated
 	 */
   EquatorialCoordinates convertFromEquatorialRectangularToEquatorialCoordinates(Point3d equatorialCoordinates);
@@ -331,7 +331,7 @@ public interface AstronomyUtils extends EObject
 	 * - Y points West.
 	 * - Z point toward nadir (up)
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.Point3d" unique="false" horizontalCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.Point3d" unique="false" horizontalCoordinatesUnique="false"
 	 * @generated
 	 */
   Point3d convertFromHorizontalCoordinatesToHorizontalRectangular(HorizontalCoordinates horizontalCoordinates);
@@ -339,7 +339,7 @@ public interface AstronomyUtils extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.Point3d" unique="false" equatorialCoordinatesUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.Point3d" unique="false" equatorialCoordinatesUnique="false"
 	 * @generated
 	 */
   Point3d convertFromEquatorialCoordinatesToEquatorialRectangular(EquatorialCoordinates equatorialCoordinates);
@@ -351,7 +351,7 @@ public interface AstronomyUtils extends EObject
 	 * Convert Astronomical Units (A.U.) to meters.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" astronomicalUnitsUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
   double convertAUtoMeters(double astronomicalUnits);
@@ -363,8 +363,8 @@ public interface AstronomyUtils extends EObject
 	 * Return the maximum altitude angle that the sun could reach at the specified latitude, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getMaximumSunAltitude(double observerLatitude);
@@ -389,9 +389,9 @@ public interface AstronomyUtils extends EObject
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.Date" unique="false" dayDataType="org.eclipse.symphony.core.environment.Date" dayUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.Date" unique="false" dayDataType="ca.gc.asc_csa.apogy.core.environment.Date" dayUnique="false" observerLongitudeUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" observerLatitudeUnique="false"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	Date getSunRiseTime(Date day, double observerLongitude, double observerLatitude);
@@ -405,9 +405,9 @@ public interface AstronomyUtils extends EObject
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.Date" unique="false" dayDataType="org.eclipse.symphony.core.environment.Date" dayUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.Date" unique="false" dayDataType="ca.gc.asc_csa.apogy.core.environment.Date" dayUnique="false" observerLongitudeUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" observerLatitudeUnique="false"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	Date getSunSetTime(Date day, double observerLongitude, double observerLatitude);
@@ -421,9 +421,9 @@ public interface AstronomyUtils extends EObject
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.Date" unique="false" dayDataType="org.eclipse.symphony.core.environment.Date" dayUnique="false" observerLongitudeUnique="false"
-	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" observerLatitudeUnique="false"
-	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.Date" unique="false" dayDataType="ca.gc.asc_csa.apogy.core.environment.Date" dayUnique="false" observerLongitudeUnique="false"
+	 *        observerLongitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" observerLatitudeUnique="false"
+	 *        observerLatitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	Date getSunHighestElevationTime(Date day, double observerLongitude, double observerLatitude);

@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.SurfaceEnvironment;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.Atmosphere;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,8 +21,8 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceEnvironmentImpl#getAtmosphere <em>Atmosphere</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceEnvironmentImpl#getGravity <em>Gravity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SurfaceEnvironmentImpl#getAtmosphere <em>Atmosphere</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SurfaceEnvironmentImpl#getGravity <em>Gravity</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT;
+		return ApogyCoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT;
 	}
 
   /**
@@ -89,7 +89,7 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
 		Atmosphere oldAtmosphere = atmosphere;
 		atmosphere = newAtmosphere;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, oldAtmosphere, newAtmosphere);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, oldAtmosphere, newAtmosphere);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -105,14 +105,14 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
 		if (newAtmosphere != atmosphere) {
 			NotificationChain msgs = null;
 			if (atmosphere != null)
-				msgs = ((InternalEObject)atmosphere).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, null, msgs);
+				msgs = ((InternalEObject)atmosphere).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, null, msgs);
 			if (newAtmosphere != null)
-				msgs = ((InternalEObject)newAtmosphere).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, null, msgs);
+				msgs = ((InternalEObject)newAtmosphere).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, null, msgs);
 			msgs = basicSetAtmosphere(newAtmosphere, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, newAtmosphere, newAtmosphere));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE, newAtmosphere, newAtmosphere));
 	}
 
   /**
@@ -135,7 +135,7 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
 		Tuple3d oldGravity = gravity;
 		gravity = newGravity;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, oldGravity, newGravity);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, oldGravity, newGravity);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -151,14 +151,14 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
 		if (newGravity != gravity) {
 			NotificationChain msgs = null;
 			if (gravity != null)
-				msgs = ((InternalEObject)gravity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, null, msgs);
+				msgs = ((InternalEObject)gravity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, null, msgs);
 			if (newGravity != null)
-				msgs = ((InternalEObject)newGravity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, null, msgs);
+				msgs = ((InternalEObject)newGravity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, null, msgs);
 			msgs = basicSetGravity(newGravity, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, newGravity, newGravity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY, newGravity, newGravity));
 	}
 
   /**
@@ -170,9 +170,9 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
 				return basicSetAtmosphere(null, msgs);
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
 				return basicSetGravity(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -187,9 +187,9 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
 				return getAtmosphere();
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
 				return getGravity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -204,10 +204,10 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
 				setAtmosphere((Atmosphere)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
 				setGravity((Tuple3d)newValue);
 				return;
 		}
@@ -223,10 +223,10 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
 				setAtmosphere((Atmosphere)null);
 				return;
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
 				setGravity((Tuple3d)null);
 				return;
 		}
@@ -242,9 +242,9 @@ public class SurfaceEnvironmentImpl extends EnvironmentImpl implements SurfaceEn
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
 				return atmosphere != null;
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
 				return gravity != null;
 		}
 		return super.eIsSet(featureID);

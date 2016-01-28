@@ -1,20 +1,20 @@
-package org.eclipse.symphony.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.ui.Activator;
-import org.eclipse.symphony.core.invocator.ui.composites.SourceDestinationContextsComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.SourceDestinationContextsComposite;
 
 public class CopyInitializationDataWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.CopyInitializationDataWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.CopyInitializationDataWizardPage";
 	private SourceDestinationContextsComposite contextsComposite;
 	
 	/**
@@ -22,7 +22,7 @@ public class CopyInitializationDataWizardPage extends WizardPage {
 	 */
 	public CopyInitializationDataWizardPage() {
 		super(WIZARD_PAGE_ID);
-		setTitle("Export Symphony Initialization Data");
+		setTitle("Export Apogy Initialization Data");
 		setDescription("Copy the Initialization Data from a source context to a destination context.");
 		validate();
 	}
@@ -44,7 +44,7 @@ public class CopyInitializationDataWizardPage extends WizardPage {
 		};
 		setControl(contextsComposite);
 		
-		InvocatorSession invocatorSession = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 
 		if (invocatorSession == null){
 			Logger.INSTANCE.log(Activator.ID, this, "There is no active session.", EventSeverity.ERROR);
@@ -63,7 +63,7 @@ public class CopyInitializationDataWizardPage extends WizardPage {
 
 	protected void validate(){
 		String message = null;
-		if (Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
+		if (ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
 			message = "There is no active session.";
 		} else if (getSourceContext() == null){
 			message = "The context source is not defined.";

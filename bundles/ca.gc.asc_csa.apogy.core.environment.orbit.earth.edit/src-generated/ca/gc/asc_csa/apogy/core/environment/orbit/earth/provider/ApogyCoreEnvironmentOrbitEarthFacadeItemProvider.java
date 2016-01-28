@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthFacadeItemProvider 
+public class ApogyCoreEnvironmentOrbitEarthFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCoreEnvironmentOrbitEarthFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,14 +61,14 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CoreEnvironmentOrbitEarthFacade.gif.
+	 * This returns ApogyCoreEnvironmentOrbitEarthFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreEnvironmentOrbitEarthFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreEnvironmentOrbitEarthFacade"));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CoreEnvironmentOrbitEarthFacade_type");
+		return getString("_UI_ApogyCoreEnvironmentOrbitEarthFacade_type");
 	}
 	
 

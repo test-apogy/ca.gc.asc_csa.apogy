@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.io.jinput.ui.composites;
+package ca.gc.asc_csa.apogy.common.io.jinput.ui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.symphony.common.io.jinput.Activator;
+import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
 
 public class RefreshCommandComposite extends Composite {
 

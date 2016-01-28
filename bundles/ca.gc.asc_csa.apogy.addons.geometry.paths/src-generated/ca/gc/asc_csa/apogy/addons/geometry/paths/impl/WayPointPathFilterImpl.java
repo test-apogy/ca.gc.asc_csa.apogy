@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPathFilter;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathFilter;
 
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class WayPointPathFilterImpl extends ProcessorImpl<WayPointPath,
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsGeometryPathsPackage.Literals.WAY_POINT_PATH_FILTER;
+		return ApogyAddonsGeometryPathsPackage.Literals.WAY_POINT_PATH_FILTER;
 	}
 
 	/**

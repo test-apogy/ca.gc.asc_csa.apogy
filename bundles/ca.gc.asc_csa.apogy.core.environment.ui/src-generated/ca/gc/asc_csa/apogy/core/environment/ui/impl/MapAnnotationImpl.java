@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 
 /**
@@ -39,7 +39,7 @@ public abstract class MapAnnotationImpl extends MapViewItemPresentationImpl impl
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_ANNOTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.MAP_ANNOTATION;
 	}
 
   /**
@@ -63,7 +63,7 @@ public abstract class MapAnnotationImpl extends MapViewItemPresentationImpl impl
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION:
 				return getXYShapeAnnotation();
 		}
 		return super.eInvoke(operationID, arguments);

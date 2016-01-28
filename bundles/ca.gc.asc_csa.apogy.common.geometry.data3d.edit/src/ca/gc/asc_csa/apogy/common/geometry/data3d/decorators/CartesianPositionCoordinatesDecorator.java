@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.geometry.data3d.decorators;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.decorators;
 
 import org.eclipse.jface.viewers.IDecoration;
 import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.ILightweightLabelDecorator;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
 public class CartesianPositionCoordinatesDecorator implements ILightweightLabelDecorator
 {

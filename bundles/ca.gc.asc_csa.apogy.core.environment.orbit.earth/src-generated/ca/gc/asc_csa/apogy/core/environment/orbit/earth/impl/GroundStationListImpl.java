@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.util.Collection;
 
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationList;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +28,9 @@ import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironme
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationListImpl#getGroundStations <em>Ground Stations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.GroundStationListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.GroundStationListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.GroundStationListImpl#getGroundStations <em>Ground Stations</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,7 +102,7 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_LIST;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_LIST;
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME, oldName, name));
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<GroundStation> getGroundStations() {
 		if (groundStations == null) {
-			groundStations = new EObjectContainmentEList<GroundStation>(GroundStation.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS);
+			groundStations = new EObjectContainmentEList<GroundStation>(GroundStation.class, this, ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS);
 		}
 		return groundStations;
 	}
@@ -167,7 +167,7 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
 				return ((InternalEList<?>)getGroundStations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,11 +181,11 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
 				return getName();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
 				return getGroundStations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
 				getGroundStations().clear();
 				getGroundStations().addAll((Collection<? extends GroundStation>)newValue);
 				return;
@@ -222,13 +222,13 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
 				getGroundStations().clear();
 				return;
 		}
@@ -243,11 +243,11 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
 				return groundStations != null && !groundStations.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -262,7 +262,7 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -278,7 +278,7 @@ public class GroundStationListImpl extends MinimalEObjectImpl.Container implemen
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

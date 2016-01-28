@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 import edu.wlu.cs.levy.CG.KDTree;
 import edu.wlu.cs.levy.CG.KeyDuplicateException;
@@ -58,7 +58,7 @@ public class KDTreeBasedPointLocatorImpl extends PointLocatorImpl implements KDT
 	@Override
 	protected EClass eStaticClass() 
 	{
-		return Symphony__CommonGeometryData3DPackage.Literals.KD_TREE_BASED_POINT_LOCATOR;
+		return ApogyCommonGeometryData3DPackage.Literals.KD_TREE_BASED_POINT_LOCATOR;
 	}	
 	
 	@Override

@@ -1,19 +1,19 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIFactory;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.OrientationSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsPoseUIPackage {
+public class ApogyAddonsSensorsPoseUIPackageImpl extends EPackageImpl implements ApogyAddonsSensorsPoseUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -54,12 +54,12 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsPoseUIPackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsPoseUIFactory.eINSTANCE);
+	private ApogyAddonsSensorsPoseUIPackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsPoseUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsPoseUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsPoseUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,30 +81,30 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsPoseUIPackage init() {
-		if (isInited) return (Symphony__AddonsSensorsPoseUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPoseUIPackage.eNS_URI);
+	public static ApogyAddonsSensorsPoseUIPackage init() {
+		if (isInited) return (ApogyAddonsSensorsPoseUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPoseUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsPoseUIPackageImpl theSymphony__AddonsSensorsPoseUIPackage = (Symphony__AddonsSensorsPoseUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsPoseUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsPoseUIPackageImpl());
+		ApogyAddonsSensorsPoseUIPackageImpl theApogyAddonsSensorsPoseUIPackage = (ApogyAddonsSensorsPoseUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsPoseUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsPoseUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsPoseUIPackage.createPackageContents();
+		theApogyAddonsSensorsPoseUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsPoseUIPackage.initializePackageContents();
+		theApogyAddonsSensorsPoseUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsPoseUIPackage.freeze();
+		theApogyAddonsSensorsPoseUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsPoseUIPackage.eNS_URI, theSymphony__AddonsSensorsPoseUIPackage);
-		return theSymphony__AddonsSensorsPoseUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsPoseUIPackage.eNS_URI, theApogyAddonsSensorsPoseUIPackage);
+		return theApogyAddonsSensorsPoseUIPackage;
 	}
 
 	/**
@@ -166,8 +166,8 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPoseUIFactory getSymphony__AddonsSensorsPoseUIFactory() {
-		return (Symphony__AddonsSensorsPoseUIFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsPoseUIFactory getApogyAddonsSensorsPoseUIFactory() {
+		return (ApogyAddonsSensorsPoseUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -223,7 +223,7 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -231,9 +231,9 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		positionSensorPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		orientationSensorPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		poseSensorPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		positionSensorPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		orientationSensorPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		poseSensorPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(positionSensorPresentationEClass, PositionSensorPresentation.class, "PositionSensorPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -249,4 +249,4 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsSensorsPoseUIPackageImpl
+} //ApogyAddonsSensorsPoseUIPackageImpl

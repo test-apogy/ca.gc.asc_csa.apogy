@@ -1,20 +1,20 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion.util;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
 
-import org.eclipse.symphony.addons.sensors.motion.*;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.*;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,17 +26,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage
  * @generated
  */
-public class Symphony__AddonsSensorsMotionSwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsMotionSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsMotionPackage modelPackage;
+	protected static ApogyAddonsSensorsMotionPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -44,9 +44,9 @@ public class Symphony__AddonsSensorsMotionSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsMotionSwitch() {
+	public ApogyAddonsSensorsMotionSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsMotionPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsMotionPackage.eINSTANCE;
 		}
 	}
 
@@ -73,7 +73,7 @@ public class Symphony__AddonsSensorsMotionSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsMotionPackage.SELF_MOTION_SENSOR: {
+			case ApogyAddonsSensorsMotionPackage.SELF_MOTION_SENSOR: {
 				SelfMotionSensor selfMotionSensor = (SelfMotionSensor)theEObject;
 				T result = caseSelfMotionSensor(selfMotionSensor);
 				if (result == null) result = caseSensor(selfMotionSensor);
@@ -83,7 +83,7 @@ public class Symphony__AddonsSensorsMotionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR: {
+			case ApogyAddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR: {
 				AngularVelocitySensor angularVelocitySensor = (AngularVelocitySensor)theEObject;
 				T result = caseAngularVelocitySensor(angularVelocitySensor);
 				if (result == null) result = caseSelfMotionSensor(angularVelocitySensor);
@@ -94,7 +94,7 @@ public class Symphony__AddonsSensorsMotionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR: {
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR: {
 				LinearAccelerationSensor linearAccelerationSensor = (LinearAccelerationSensor)theEObject;
 				T result = caseLinearAccelerationSensor(linearAccelerationSensor);
 				if (result == null) result = caseSelfMotionSensor(linearAccelerationSensor);
@@ -105,7 +105,7 @@ public class Symphony__AddonsSensorsMotionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR: {
+			case ApogyAddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR: {
 				LinearVelocitySensor linearVelocitySensor = (LinearVelocitySensor)theEObject;
 				T result = caseLinearVelocitySensor(linearVelocitySensor);
 				if (result == null) result = caseSelfMotionSensor(linearVelocitySensor);
@@ -256,4 +256,4 @@ public class Symphony__AddonsSensorsMotionSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsMotionSwitch
+} //ApogyAddonsSensorsMotionSwitch

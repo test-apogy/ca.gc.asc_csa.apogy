@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="org.eclipse.symphony.common.topology.bindings" xmlns:topology="org.eclipse.symphony.common.topology" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="org.eclipse.symphony.addons.vehicle" xmi:id="_6dMtoArOEeW4-_ONWXXiAw" name="LanderSymphonySystem">
-  <interfaceClass href="org.eclipse.symphony.examples.lander#//Lander"/>
-  <typeApiAdapterClass href="org.eclipse.symphony.examples.lander.symphony#//LanderSymphonySystemApiAdapter"/>
+<core:ApogySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.apogy.common.topology.bindings" xmlns:topology="ca.gc.asc_csa.apogy.common.topology" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="ca.gc.asc_csa.apogy.common.emf" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="ca.gc.asc_csa.apogy.addons.vehicle" xmi:id="_6dMtoArOEeW4-_ONWXXiAw" name="LanderApogySystem">
+  <interfaceClass href="ca.gc.asc_csa.apogy.examples.lander#//Lander"/>
+  <typeApiAdapterClass href="ca.gc.asc_csa.apogy.examples.lander.apogy#//LanderApogySystemApiAdapter"/>
   <topologyRoot xmi:id="_6dMtoQrOEeW4-_ONWXXiAw">
     <originNode xsi:type="topology:AggregateGroupNode" xmi:id="_6dMtogrOEeW4-_ONWXXiAw" description="The base of the lander" nodeId="LANDER_SYM_SYS_ROOT">
       <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_6dMtowrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the omni antenna" nodeId="LANDER_SYM_SYS_OMNI_ANTENNA">
@@ -9,7 +9,7 @@
         <rotationMatrix xmi:id="_6dMtpQrOEeW4-_ONWXXiAw"/>
       </aggregatedChildren>
       <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_6dMtpgrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the CAD for the lander" nodeId="LANDER_SYM_SYS_CAD_TRANSFORM">
-        <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_6dNUsArOEeW4-_ONWXXiAw" parent="_6dMtpgrOEeW4-_ONWXXiAw" description="The CAD of the lander" nodeId="LANDER_SYM_SYS_LANDER_CAD" url="platform:/plugin/org.eclipse.symphony.examples.lander.symphony/vrml/lander.wrl"/>
+        <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_6dNUsArOEeW4-_ONWXXiAw" parent="_6dMtpgrOEeW4-_ONWXXiAw" description="The CAD of the lander" nodeId="LANDER_SYM_SYS_LANDER_CAD" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.lander.apogy/vrml/lander.wrl"/>
         <position xmi:id="_6dNUsQrOEeW4-_ONWXXiAw"/>
         <rotationMatrix xmi:id="_6dNUsgrOEeW4-_ONWXXiAw" m11="6.123233995736766E-17" m12="1.0" m21="-1.0" m22="6.123233995736766E-17"/>
       </aggregatedChildren>
@@ -66,18 +66,18 @@
     <featureRootsList xmi:id="_6dNU1grOEeW4-_ONWXXiAw">
       <featureRoots xmi:id="_6dNU1wrOEeW4-_ONWXXiAw">
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_6dNU2ArOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.examples.lander#//Lander/legAPosition"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.asc_csa.apogy.examples.lander#//Lander/legAPosition"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_6dNU2QrOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.examples.lander#//Lander/legBPosition"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.asc_csa.apogy.examples.lander#//Lander/legBPosition"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_6dNU2grOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.examples.lander#//Lander/legCPosition"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.asc_csa.apogy.examples.lander#//Lander/legCPosition"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_6dNU2wrOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EReference" href="org.eclipse.symphony.examples.lander#//Lander/thruster"/>
+          <structuralFeature xsi:type="ecore_1:EReference" href="ca.gc.asc_csa.apogy.examples.lander#//Lander/thruster"/>
         </children>
-        <sourceClass href="org.eclipse.symphony.examples.lander#//Lander"/>
+        <sourceClass href="ca.gc.asc_csa.apogy.examples.lander#//Lander"/>
       </featureRoots>
     </featureRootsList>
     <bindingsList xmi:id="_6dNU3ArOEeW4-_ONWXXiAw">
@@ -90,4 +90,4 @@
   <connectionPointsList xmi:id="_6dNU4QrOEeW4-_ONWXXiAw">
     <connectionPoints xmi:id="_6dN7wArOEeW4-_ONWXXiAw" name="LANDER_SYM_SYS_CONNECT_OMNI_ANTENNA" description="The connection point for a omni antenna" node="_6dMtowrOEeW4-_ONWXXiAw"/>
   </connectionPointsList>
-</core:SymphonySystem>
+</core:ApogySystem>

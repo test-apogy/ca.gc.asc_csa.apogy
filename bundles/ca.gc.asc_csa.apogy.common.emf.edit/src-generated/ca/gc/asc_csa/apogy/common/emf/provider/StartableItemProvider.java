@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -23,11 +23,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Startable;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Startable;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.Startable} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.Startable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class StartableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Startable_started_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Startable_started_feature", "_UI_Startable_type"),
-				 Symphony__CommonEMFPackage.Literals.STARTABLE__STARTED,
+				 ApogyCommonEMFPackage.Literals.STARTABLE__STARTED,
 				 true,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class StartableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Startable.class)) {
-			case Symphony__CommonEMFPackage.STARTABLE__STARTED:
+			case ApogyCommonEMFPackage.STARTABLE__STARTED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

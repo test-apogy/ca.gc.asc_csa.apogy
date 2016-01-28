@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander;
+package ca.gc.asc_csa.apogy.examples.lander;
 
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,27 +22,27 @@ import org.eclipse.symphony.common.emf.Disposable;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getPosition <em>Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getThruster <em>Thruster</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getLegAExtension <em>Leg AExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getLegBExtension <em>Leg BExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getLegCExtension <em>Leg CExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getLegAPosition <em>Leg APosition</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getLegBPosition <em>Leg BPosition</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getLegCPosition <em>Leg CPosition</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getXAngularVelocity <em>XAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getYAngularVelocity <em>YAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getMass <em>Mass</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getGravitationalPull <em>Gravitational Pull</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isChangingLegs <em>Changing Legs</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isChangingAttitude <em>Changing Attitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isChangingLocation <em>Changing Location</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isFlyingEnabled <em>Flying Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getPosition <em>Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getThruster <em>Thruster</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAExtension <em>Leg AExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBExtension <em>Leg BExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCExtension <em>Leg CExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAPosition <em>Leg APosition</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBPosition <em>Leg BPosition</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCPosition <em>Leg CPosition</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getXAngularVelocity <em>XAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getYAngularVelocity <em>YAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getMass <em>Mass</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getGravitationalPull <em>Gravitational Pull</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLegs <em>Changing Legs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingAttitude <em>Changing Attitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLocation <em>Changing Location</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isFlyingEnabled <em>Flying Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander()
+ * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander()
  * @model abstract="true"
  * @generated
  */
@@ -65,7 +65,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Position)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Position()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_Position()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Position'"
 	 * @generated
@@ -73,7 +73,7 @@ public interface Lander extends Disposable
   Position getPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getPosition <em>Position</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getPosition <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Position</em>' containment reference.
@@ -96,7 +96,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Thruster</em>' containment reference.
 	 * @see #setThruster(Thruster)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Thruster()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_Thruster()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Flight'"
 	 * @generated
@@ -104,7 +104,7 @@ public interface Lander extends Disposable
 	Thruster getThruster();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getThruster <em>Thruster</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getThruster <em>Thruster</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Thruster</em>' containment reference.
@@ -124,15 +124,15 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg APosition</em>' attribute.
 	 * @see #setLegAPosition(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegAPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_LegAPosition()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='m' propertyCategory='Leg Positions'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' apogy_units='m' propertyCategory='Leg Positions'"
 	 * @generated
 	 */
   double getLegAPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getLegAPosition <em>Leg APosition</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAPosition <em>Leg APosition</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg APosition</em>' attribute.
@@ -143,7 +143,7 @@ public interface Lander extends Disposable
 
   /**
 	 * Returns the value of the '<em><b>Leg AExtension</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.examples.lander.LanderLegExtension}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -151,9 +151,9 @@ public interface Lander extends Disposable
 	 * extension for the lander's leg A.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg AExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #setLegAExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegAExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_LegAExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' propertyCategory='Leg Extension Levels'"
 	 * @generated
@@ -161,11 +161,11 @@ public interface Lander extends Disposable
   LanderLegExtension getLegAExtension();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getLegAExtension <em>Leg AExtension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegAExtension <em>Leg AExtension</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg AExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #getLegAExtension()
 	 * @generated
 	 */
@@ -182,15 +182,15 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg BPosition</em>' attribute.
 	 * @see #setLegBPosition(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegBPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_LegBPosition()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='m' propertyCategory='Leg Positions'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' apogy_units='m' propertyCategory='Leg Positions'"
 	 * @generated
 	 */
   double getLegBPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getLegBPosition <em>Leg BPosition</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBPosition <em>Leg BPosition</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg BPosition</em>' attribute.
@@ -201,7 +201,7 @@ public interface Lander extends Disposable
 
   /**
 	 * Returns the value of the '<em><b>Leg BExtension</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.examples.lander.LanderLegExtension}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -209,9 +209,9 @@ public interface Lander extends Disposable
 	 * extension for the lander's leg B.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg BExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #setLegBExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegBExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_LegBExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' propertyCategory='Leg Extension Levels'"
 	 * @generated
@@ -219,11 +219,11 @@ public interface Lander extends Disposable
   LanderLegExtension getLegBExtension();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getLegBExtension <em>Leg BExtension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegBExtension <em>Leg BExtension</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg BExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #getLegBExtension()
 	 * @generated
 	 */
@@ -240,15 +240,15 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg CPosition</em>' attribute.
 	 * @see #setLegCPosition(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegCPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_LegCPosition()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='m' propertyCategory='Leg Positions'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' apogy_units='m' propertyCategory='Leg Positions'"
 	 * @generated
 	 */
   double getLegCPosition();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getLegCPosition <em>Leg CPosition</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCPosition <em>Leg CPosition</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg CPosition</em>' attribute.
@@ -259,7 +259,7 @@ public interface Lander extends Disposable
 
   /**
 	 * Returns the value of the '<em><b>Leg CExtension</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.examples.lander.LanderLegExtension}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -267,9 +267,9 @@ public interface Lander extends Disposable
 	 * extension for the lander's leg C.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg CExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #setLegCExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegCExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_LegCExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' propertyCategory='Leg Extension Levels'"
 	 * @generated
@@ -277,11 +277,11 @@ public interface Lander extends Disposable
   LanderLegExtension getLegCExtension();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getLegCExtension <em>Leg CExtension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getLegCExtension <em>Leg CExtension</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg CExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #getLegCExtension()
 	 * @generated
 	 */
@@ -311,15 +311,15 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XAngular Velocity</em>' attribute.
 	 * @see #setXAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_XAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_XAngularVelocity()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad/s' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='rad/s' propertyCategory='Velocities'"
 	 * @generated
 	 */
   double getXAngularVelocity();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getXAngularVelocity <em>XAngular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getXAngularVelocity <em>XAngular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XAngular Velocity</em>' attribute.
@@ -352,15 +352,15 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YAngular Velocity</em>' attribute.
 	 * @see #setYAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_YAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_YAngularVelocity()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad/s' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='rad/s' propertyCategory='Velocities'"
 	 * @generated
 	 */
   double getYAngularVelocity();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#getYAngularVelocity <em>YAngular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#getYAngularVelocity <em>YAngular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YAngular Velocity</em>' attribute.
@@ -377,9 +377,9 @@ public interface Lander extends Disposable
 	 * This represents the mass of the lander (in kg).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mass</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Mass()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_Mass()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' symphony_units='kg' property='Readonly' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' apogy_units='kg' property='Readonly' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getMass();
@@ -402,9 +402,9 @@ public interface Lander extends Disposable
 	 * @return The amount of gravitational force (in N) imposed upon the lander
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gravitational Pull</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_GravitationalPull()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_GravitationalPull()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' symphony_units='N' property='Readonly' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' apogy_units='N' property='Readonly' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getGravitationalPull();
@@ -424,7 +424,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Flying Enabled</em>' attribute.
 	 * @see #setFlyingEnabled(boolean)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_FlyingEnabled()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_FlyingEnabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Flight'"
 	 * @generated
@@ -432,7 +432,7 @@ public interface Lander extends Disposable
 	boolean isFlyingEnabled();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#isFlyingEnabled <em>Flying Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isFlyingEnabled <em>Flying Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Flying Enabled</em>' attribute.
@@ -453,7 +453,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -461,7 +461,7 @@ public interface Lander extends Disposable
 	boolean isInitialized();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -481,7 +481,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Disposed()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -489,7 +489,7 @@ public interface Lander extends Disposable
 	boolean isDisposed();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.
@@ -510,7 +510,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Changing Legs</em>' attribute.
 	 * @see #setChangingLegs(boolean)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_ChangingLegs()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_ChangingLegs()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -518,7 +518,7 @@ public interface Lander extends Disposable
 	boolean isChangingLegs();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#isChangingLegs <em>Changing Legs</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLegs <em>Changing Legs</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Changing Legs</em>' attribute.
@@ -539,7 +539,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Changing Attitude</em>' attribute.
 	 * @see #setChangingAttitude(boolean)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_ChangingAttitude()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_ChangingAttitude()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -547,7 +547,7 @@ public interface Lander extends Disposable
 	boolean isChangingAttitude();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#isChangingAttitude <em>Changing Attitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingAttitude <em>Changing Attitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Changing Attitude</em>' attribute.
@@ -568,7 +568,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Changing Location</em>' attribute.
 	 * @see #setChangingLocation(boolean)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_ChangingLocation()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLander_ChangingLocation()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status' propertyDescription=''"
 	 * @generated
@@ -576,7 +576,7 @@ public interface Lander extends Disposable
 	boolean isChangingLocation();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Lander#isChangingLocation <em>Changing Location</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Lander#isChangingLocation <em>Changing Location</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Changing Location</em>' attribute.
@@ -642,9 +642,9 @@ public interface Lander extends Disposable
 	 * @param zAngle The lander's new angle of rotation (in radians) around the Z axis
 	 * <!-- end-model-doc -->
 	 * @model xAngleUnique="false"
-	 *        xAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" yAngleUnique="false"
-	 *        yAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" zAngleUnique="false"
-	 *        zAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        xAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" yAngleUnique="false"
+	 *        yAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" zAngleUnique="false"
+	 *        zAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	void changeAttitude(double xAngle, double yAngle, double zAngle);
@@ -682,8 +682,8 @@ public interface Lander extends Disposable
 	 * @param yAngularVelocity The new Y angular velocity for the lander (given in radians / second)
 	 * <!-- end-model-doc -->
 	 * @model xAngularVelocityUnique="false"
-	 *        xAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'" yAngularVelocityUnique="false"
-	 *        yAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
+	 *        xAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s'" yAngularVelocityUnique="false"
+	 *        yAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s'"
 	 * @generated
 	 */
 	void commandAngularVelocities(double xAngularVelocity, double yAngularVelocity);
@@ -701,7 +701,7 @@ public interface Lander extends Disposable
 	 * @param thrustLevel The lander's new thrust level (given in N)
 	 * <!-- end-model-doc -->
 	 * @model thrustLevelUnique="false"
-	 *        thrustLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N'"
+	 *        thrustLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='N'"
 	 * @generated
 	 */
   void commandThrust(double thrustLevel);
@@ -720,7 +720,7 @@ public interface Lander extends Disposable
 	 * @param thrustOffset The amount (in N) that the thrust level should be increased / decreased.
 	 * <!-- end-model-doc -->
 	 * @model thrustOffsetUnique="false"
-	 *        thrustOffsetAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N'"
+	 *        thrustOffsetAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='N'"
 	 * @generated
 	 */
 	void changeThrustBy(double thrustOffset);

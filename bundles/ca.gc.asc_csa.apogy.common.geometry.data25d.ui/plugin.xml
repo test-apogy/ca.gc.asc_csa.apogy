@@ -12,9 +12,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
    
       <package
-            uri="org.eclipse.symphony.common.geometry.data25d.ui"
-            class="org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage"
-            genModel="model/symphony_common_geometry_data25d_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.geometry.data25d.ui"
+            class="ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage"
+            genModel="model/apogy_common_geometry_data25d_ui.xcore"/>
    </extension>
 
 </plugin>

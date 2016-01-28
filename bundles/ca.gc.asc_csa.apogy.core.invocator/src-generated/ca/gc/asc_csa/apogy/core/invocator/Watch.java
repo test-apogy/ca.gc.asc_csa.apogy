@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.TreeRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
 
 
 /**
@@ -23,13 +23,13 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getWatchesList <em>Watches List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getWatchesList <em>Watches List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatch()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Watch extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Watches List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.WatchesList#getWatches <em>Watches</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatches <em>Watches</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Watches List</em>' container reference isn't clear,
@@ -46,8 +46,8 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Watches List</em>' container reference.
 	 * @see #setWatchesList(WatchesList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_WatchesList()
-	 * @see org.eclipse.symphony.core.invocator.WatchesList#getWatches
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatch_WatchesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatches
 	 * @model opposite="watches" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -55,7 +55,7 @@ public interface Watch extends Named, Described
   WatchesList getWatchesList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Watch#getWatchesList <em>Watches List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getWatchesList <em>Watches List</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Watches List</em>' container reference.
@@ -74,7 +74,7 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_Variable()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatch_Variable()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface Watch extends Named, Described
   Variable getVariable();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Watch#getVariable <em>Variable</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getVariable <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable</em>' reference.
@@ -101,14 +101,14 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member Reference Tree Element</em>' containment reference.
 	 * @see #setTypeMemberReferenceTreeElement(TypeMemberReferenceTreeElement)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_TypeMemberReferenceTreeElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatch_TypeMemberReferenceTreeElement()
 	 * @model containment="true"
 	 * @generated
 	 */
   TypeMemberReferenceTreeElement getTypeMemberReferenceTreeElement();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type Member Reference Tree Element</em>' containment reference.
@@ -127,14 +127,14 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tree Root Node</em>' containment reference.
 	 * @see #setTreeRootNode(TreeRootNode)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_TreeRootNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatch_TreeRootNode()
 	 * @model containment="true"
 	 * @generated
 	 */
   TreeRootNode getTreeRootNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tree Root Node</em>' containment reference.

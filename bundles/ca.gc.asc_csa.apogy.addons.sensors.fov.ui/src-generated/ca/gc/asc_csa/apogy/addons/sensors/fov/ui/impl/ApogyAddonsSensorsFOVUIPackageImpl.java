@@ -1,20 +1,20 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfView
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsFOVUIPackage {
+public class ApogyAddonsSensorsFOVUIPackageImpl extends EPackageImpl implements ApogyAddonsSensorsFOVUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,12 +62,12 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsFOVUIPackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsFOVUIFactory.eINSTANCE);
+	private ApogyAddonsSensorsFOVUIPackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsFOVUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsFOVUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsFOVUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,30 +89,30 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsFOVUIPackage init() {
-		if (isInited) return (Symphony__AddonsSensorsFOVUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVUIPackage.eNS_URI);
+	public static ApogyAddonsSensorsFOVUIPackage init() {
+		if (isInited) return (ApogyAddonsSensorsFOVUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsFOVUIPackageImpl theSymphony__AddonsSensorsFOVUIPackage = (Symphony__AddonsSensorsFOVUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsFOVUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsFOVUIPackageImpl());
+		ApogyAddonsSensorsFOVUIPackageImpl theApogyAddonsSensorsFOVUIPackage = (ApogyAddonsSensorsFOVUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsFOVUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsFOVUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsFOVUIPackage.createPackageContents();
+		theApogyAddonsSensorsFOVUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsFOVUIPackage.initializePackageContents();
+		theApogyAddonsSensorsFOVUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsFOVUIPackage.freeze();
+		theApogyAddonsSensorsFOVUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsFOVUIPackage.eNS_URI, theSymphony__AddonsSensorsFOVUIPackage);
-		return theSymphony__AddonsSensorsFOVUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsFOVUIPackage.eNS_URI, theApogyAddonsSensorsFOVUIPackage);
+		return theApogyAddonsSensorsFOVUIPackage;
 	}
 
 	/**
@@ -201,8 +201,8 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVUIFactory getSymphony__AddonsSensorsFOVUIFactory() {
-		return (Symphony__AddonsSensorsFOVUIFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsFOVUIFactory getApogyAddonsSensorsFOVUIFactory() {
+		return (ApogyAddonsSensorsFOVUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -262,7 +262,7 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -270,7 +270,7 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		fieldOfViewPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		fieldOfViewPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 		circularSectorFieldOfViewPresentationEClass.getESuperTypes().add(this.getFieldOfViewPresentation());
 		conicalFieldOfViewPresentationEClass.getESuperTypes().add(this.getFieldOfViewPresentation());
 		rectangularFrustrumFieldOfViewPresentationEClass.getESuperTypes().add(this.getFieldOfViewPresentation());
@@ -278,10 +278,10 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fieldOfViewPresentationEClass, FieldOfViewPresentation.class, "FieldOfViewPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFieldOfViewPresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFieldOfViewPresentation_PresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFieldOfViewPresentation_PresentationMode(), theApogyCommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFieldOfViewPresentation_ShowOutlineOnly(), theEcorePackage.getEBoolean(), "showOutlineOnly", "true", 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFieldOfViewPresentation_ShowProjection(), theEcorePackage.getEBoolean(), "showProjection", "false", 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFieldOfViewPresentation_ProjectionColor(), theSymphony__CommonTopologyUIPackage.getRGB(), "projectionColor", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFieldOfViewPresentation_ProjectionColor(), theApogyCommonTopologyUIPackage.getRGB(), "projectionColor", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(circularSectorFieldOfViewPresentationEClass, CircularSectorFieldOfViewPresentation.class, "CircularSectorFieldOfViewPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -293,4 +293,4 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsSensorsFOVUIPackageImpl
+} //ApogyAddonsSensorsFOVUIPackageImpl

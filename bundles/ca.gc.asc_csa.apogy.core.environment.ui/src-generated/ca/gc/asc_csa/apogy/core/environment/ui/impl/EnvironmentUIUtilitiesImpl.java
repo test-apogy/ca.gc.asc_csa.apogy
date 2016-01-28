@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,10 +11,10 @@ import javax.vecmath.Point3f;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,7 +53,7 @@ public class EnvironmentUIUtilitiesImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.ENVIRONMENT_UI_UTILITIES;
+		return ApogyCoreEnvironmentUIPackage.Literals.ENVIRONMENT_UI_UTILITIES;
 	}
 
   /**
@@ -185,15 +185,15 @@ public class EnvironmentUIUtilitiesImpl extends MinimalEObjectImpl.Container imp
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR:
+			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR:
 				return toPoint3f((Star)arguments.get(0));
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT:
+			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT:
 				return getPointSizeForMagnitude((Float)arguments.get(0), (Float)arguments.get(1), (Float)arguments.get(2), (Float)arguments.get(3), (Float)arguments.get(4));
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE:
+			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE:
 				return getSunLightColor((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE:
+			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE:
 				return getSkyTransparency((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE:
+			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE:
 				return getSkyColor((Double)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

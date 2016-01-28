@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm;
+package ca.gc.asc_csa.apogy.examples.robotic_arm;
 
 
 /**
@@ -16,7 +16,7 @@ package org.eclipse.symphony.examples.robotic_arm;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArmStub()
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArmStub()
  * @model
  * @generated
  */

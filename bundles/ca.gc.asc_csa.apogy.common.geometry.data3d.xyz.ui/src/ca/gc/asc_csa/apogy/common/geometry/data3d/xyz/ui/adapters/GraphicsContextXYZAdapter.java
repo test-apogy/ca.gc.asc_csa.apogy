@@ -1,19 +1,19 @@
-package org.eclipse.symphony.common.geometry.data3d.xyz.ui.adapters;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.xyz.ui.adapters;
 
 import java.io.IOException;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContextAdapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 public class GraphicsContextXYZAdapter implements GraphicsContextAdapter {
 
@@ -57,15 +57,15 @@ public class GraphicsContextXYZAdapter implements GraphicsContextAdapter {
 				CartesianCoordinatesSet points = Data3DIO.INSTANCE.loadXYZ(file
 						.getLocation().toOSString());
 
-				GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE
+				GroupNode root = ApogyCommonTopologyFactory.eINSTANCE
 						.createAggregateGroupNode();
 
-				ContentNode<CartesianCoordinatesSet> content = Symphony__CommonTopologyFacade.INSTANCE
+				ContentNode<CartesianCoordinatesSet> content = ApogyCommonTopologyFacade.INSTANCE
 						.createContentNode(points);
 
 				root.getChildren().add(content);
 
-				ctx = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
+				ctx = ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 				ctx.setTopology(root);
 
 			} catch (IOException e) {

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv;
+package ca.gc.asc_csa.apogy.common.file.csv;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvValueProvider()
+ * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvValueProvider()
  * @model
  * @generated
  */

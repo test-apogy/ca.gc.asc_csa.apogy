@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -19,29 +19,29 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.Activator;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.addons.Activator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,12 +51,12 @@ import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#isBusy <em>Busy</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#getMeshLayer <em>Mesh Layer</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#getPathPlanner <em>Path Planner</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#getPlannedPath <em>Planned Path</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#getPathPlannerToolNode <em>Path Planner Tool Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.PathPlannerToolImpl#isBusy <em>Busy</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.PathPlannerToolImpl#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.PathPlannerToolImpl#getMeshLayer <em>Mesh Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.PathPlannerToolImpl#getPathPlanner <em>Path Planner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.PathPlannerToolImpl#getPlannedPath <em>Planned Path</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.PathPlannerToolImpl#getPathPlannerToolNode <em>Path Planner Tool Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -159,7 +159,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL;
+		return ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL;
 	}
 
 	/**
@@ -180,7 +180,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		boolean oldBusy = busy;
 		busy = newBusy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY, oldBusy, busy));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY, oldBusy, busy));
 	}
 
 	/**
@@ -201,7 +201,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		boolean oldAutoPathPlanEnabled = autoPathPlanEnabled;
 		autoPathPlanEnabled = newAutoPathPlanEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED, oldAutoPathPlanEnabled, autoPathPlanEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED, oldAutoPathPlanEnabled, autoPathPlanEnabled));
 	}
 
 	/**
@@ -215,7 +215,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			meshLayer = (CartesianTriangularMeshMapLayer)eResolveProxy(oldMeshLayer);
 			if (meshLayer != oldMeshLayer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER, oldMeshLayer, meshLayer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER, oldMeshLayer, meshLayer));
 			}
 		}
 		return meshLayer;
@@ -255,7 +255,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		CartesianTriangularMeshMapLayer oldMeshLayer = meshLayer;
 		meshLayer = newMeshLayer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER, oldMeshLayer, meshLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER, oldMeshLayer, meshLayer));
 	}
 
 	/**
@@ -268,8 +268,8 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	{		
 		if(pathPlanner == null)
 		{
-			SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<CartesianPolygon> tmp = Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
-			DistanceAndSlopesCostFunction das = Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction();			
+			SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<CartesianPolygon> tmp = ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
+			DistanceAndSlopesCostFunction das = ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction();			
 			das.setGravityAxis(CartesianAxis.Z);
 			tmp.getCostFunctions().add(das);						
 			tmp.setEnablePathSimplification(false);
@@ -288,7 +288,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		MeshWayPointPathPlanner oldPathPlanner = pathPlanner;
 		pathPlanner = newPathPlanner;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, oldPathPlanner, newPathPlanner);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, oldPathPlanner, newPathPlanner);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -303,14 +303,14 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		if (newPathPlanner != pathPlanner) {
 			NotificationChain msgs = null;
 			if (pathPlanner != null)
-				msgs = ((InternalEObject)pathPlanner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, null, msgs);
+				msgs = ((InternalEObject)pathPlanner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, null, msgs);
 			if (newPathPlanner != null)
-				msgs = ((InternalEObject)newPathPlanner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, null, msgs);
+				msgs = ((InternalEObject)newPathPlanner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, null, msgs);
 			msgs = basicSetPathPlanner(newPathPlanner, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, newPathPlanner, newPathPlanner));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, newPathPlanner, newPathPlanner));
 	}
 
 	/**
@@ -331,7 +331,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		WayPointPath oldPlannedPath = plannedPath;
 		plannedPath = newPlannedPath;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, oldPlannedPath, newPlannedPath);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, oldPlannedPath, newPlannedPath);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -346,14 +346,14 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		if (newPlannedPath != plannedPath) {
 			NotificationChain msgs = null;
 			if (plannedPath != null)
-				msgs = ((InternalEObject)plannedPath).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, null, msgs);
+				msgs = ((InternalEObject)plannedPath).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, null, msgs);
 			if (newPlannedPath != null)
-				msgs = ((InternalEObject)newPlannedPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, null, msgs);
+				msgs = ((InternalEObject)newPlannedPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, null, msgs);
 			msgs = basicSetPlannedPath(newPlannedPath, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, newPlannedPath, newPlannedPath));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH, newPlannedPath, newPlannedPath));
 	}
 
 	/**
@@ -367,7 +367,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		
 		if(node == null)
 		{
-			node = Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode();
+			node = ApogyAddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode();
 			setPathPlannerToolNode(node);
 		}
 		
@@ -385,7 +385,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			pathPlannerToolNode = (PathPlannerToolNode)eResolveProxy(oldPathPlannerToolNode);
 			if (pathPlannerToolNode != oldPathPlannerToolNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, oldPathPlannerToolNode, pathPlannerToolNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, oldPathPlannerToolNode, pathPlannerToolNode));
 			}
 		}
 		return pathPlannerToolNode;
@@ -409,7 +409,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		PathPlannerToolNode oldPathPlannerToolNode = pathPlannerToolNode;
 		pathPlannerToolNode = newPathPlannerToolNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, oldPathPlannerToolNode, newPathPlannerToolNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, oldPathPlannerToolNode, newPathPlannerToolNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -424,14 +424,14 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		if (newPathPlannerToolNode != pathPlannerToolNode) {
 			NotificationChain msgs = null;
 			if (pathPlannerToolNode != null)
-				msgs = ((InternalEObject)pathPlannerToolNode).eInverseRemove(this, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, PathPlannerToolNode.class, msgs);
+				msgs = ((InternalEObject)pathPlannerToolNode).eInverseRemove(this, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, PathPlannerToolNode.class, msgs);
 			if (newPathPlannerToolNode != null)
-				msgs = ((InternalEObject)newPathPlannerToolNode).eInverseAdd(this, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, PathPlannerToolNode.class, msgs);
+				msgs = ((InternalEObject)newPathPlannerToolNode).eInverseAdd(this, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, PathPlannerToolNode.class, msgs);
 			msgs = basicSetPathPlannerToolNode(newPathPlannerToolNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, newPathPlannerToolNode, newPathPlannerToolNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, newPathPlannerToolNode, newPathPlannerToolNode));
 	}
 
 	/**
@@ -442,9 +442,9 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				if (pathPlannerToolNode != null)
-					msgs = ((InternalEObject)pathPlannerToolNode).eInverseRemove(this, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, PathPlannerToolNode.class, msgs);
+					msgs = ((InternalEObject)pathPlannerToolNode).eInverseRemove(this, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, PathPlannerToolNode.class, msgs);
 				return basicSetPathPlannerToolNode((PathPlannerToolNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -458,11 +458,11 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
 				return basicSetPathPlanner(null, msgs);
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				return basicSetPlannedPath(null, msgs);
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				return basicSetPathPlannerToolNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -476,18 +476,18 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
 				return isBusy();
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
 				return isAutoPathPlanEnabled();
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
 				if (resolve) return getMeshLayer();
 				return basicGetMeshLayer();
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
 				return getPathPlanner();
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				return getPlannedPath();
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				if (resolve) return getPathPlannerToolNode();
 				return basicGetPathPlannerToolNode();
 		}
@@ -502,22 +502,22 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
 				setBusy((Boolean)newValue);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
 				setAutoPathPlanEnabled((Boolean)newValue);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
 				setMeshLayer((CartesianTriangularMeshMapLayer)newValue);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
 				setPathPlanner((MeshWayPointPathPlanner)newValue);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				setPlannedPath((WayPointPath)newValue);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				setPathPlannerToolNode((PathPlannerToolNode)newValue);
 				return;
 		}
@@ -532,22 +532,22 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
 				setBusy(BUSY_EDEFAULT);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
 				setAutoPathPlanEnabled(AUTO_PATH_PLAN_ENABLED_EDEFAULT);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
 				setMeshLayer((CartesianTriangularMeshMapLayer)null);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
 				setPathPlanner((MeshWayPointPathPlanner)null);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				setPlannedPath((WayPointPath)null);
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				setPathPlannerToolNode((PathPlannerToolNode)null);
 				return;
 		}
@@ -562,17 +562,17 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
 				return busy != BUSY_EDEFAULT;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
 				return autoPathPlanEnabled != AUTO_PATH_PLAN_ENABLED_EDEFAULT;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER:
 				return meshLayer != null;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
 				return pathPlanner != null;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				return plannedPath != null;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				return pathPlannerToolNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -586,7 +586,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL___PLAN_PATH:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL___PLAN_PATH:
 				return planPath();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -638,13 +638,13 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			Tuple3d normal = null;
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				normal = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
+				normal = ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
 			}
 				
 			if(nextNode == TO_NODE_INDEX)
@@ -813,7 +813,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Vector3d fromVector = new Vector3d(getFromAbsolutePosition().asTuple3d());
 			meshToWorld.transform(fromVector);
 			
-			from = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(fromVector.x, fromVector.y, fromVector.z);
+			from = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(fromVector.x, fromVector.y, fromVector.z);
 		}
 		
 		return from;
@@ -829,7 +829,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Vector3d toVector = new Vector3d(getToAbsolutePosition().asTuple3d());
 			meshToWorld.transform(toVector);
 			
-			to = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(toVector.x, toVector.y, toVector.z);
+			to = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(toVector.x, toVector.y, toVector.z);
 		}
 		
 		return to;

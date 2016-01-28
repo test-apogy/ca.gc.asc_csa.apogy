@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import javax.vecmath.Color3f;
 
@@ -13,27 +13,27 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsFactory;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.Simple3DTool;
+import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.SimpleToolList;
+import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
+import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphony__AddonsPackage {
+public class ApogyAddonsPackageImpl extends EPackageImpl implements ApogyAddonsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -151,12 +151,12 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsPackageImpl() {
-		super(eNS_URI, Symphony__AddonsFactory.eINSTANCE);
+	private ApogyAddonsPackageImpl() {
+		super(eNS_URI, ApogyAddonsFactory.eINSTANCE);
 	}
 
 	/**
@@ -169,7 +169,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -178,31 +178,31 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsPackage init() {
-		if (isInited) return (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
+	public static ApogyAddonsPackage init() {
+		if (isInited) return (ApogyAddonsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsPackageImpl theSymphony__AddonsPackage = (Symphony__AddonsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsPackageImpl());
+		ApogyAddonsPackageImpl theApogyAddonsPackage = (ApogyAddonsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CorePackage.eINSTANCE.eClass();
-		Symphony__AddonsGeometryPathsPackage.eINSTANCE.eClass();
+		ApogyCorePackage.eINSTANCE.eClass();
+		ApogyAddonsGeometryPathsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsPackage.createPackageContents();
+		theApogyAddonsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsPackage.initializePackageContents();
+		theApogyAddonsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsPackage.freeze();
+		theApogyAddonsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsPackage.eNS_URI, theSymphony__AddonsPackage);
-		return theSymphony__AddonsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsPackage.eNS_URI, theApogyAddonsPackage);
+		return theApogyAddonsPackage;
 	}
 
 	/**
@@ -786,8 +786,8 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsFactory getSymphony__AddonsFactory() {
-		return (Symphony__AddonsFactory)getEFactoryInstance();
+	public ApogyAddonsFactory getApogyAddonsFactory() {
+		return (ApogyAddonsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -912,32 +912,32 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
-		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyAddonsGeometryPathsPackage theApogyAddonsGeometryPathsPackage = (ApogyAddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsGeometryPathsPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		abstractToolEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		abstractToolEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
-		simpleToolListEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getAbstractToolsListContainer());
+		abstractToolEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractToolEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		simpleToolListEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getAbstractToolsListContainer());
 		simpleToolEClass.getESuperTypes().add(this.getAbstractTool());
 		simple3DToolEClass.getESuperTypes().add(this.getSimpleTool());
 		abstractTwoPoints3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		ruler3DToolEClass.getESuperTypes().add(this.getAbstractTwoPoints3DTool());
-		ruler3dToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		ruler3dToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		featureOfInterestPickingToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		sunVector3DToolEClass.getESuperTypes().add(this.getAbstractTwoPoints3DTool());
-		sunVector3DToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		sunVector3DToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		trajectory3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
-		trajectory3DToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		trajectory3DToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractToolEClass, AbstractTool.class, "AbstractTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -954,24 +954,24 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 
 		initEClass(simple3DToolEClass, Simple3DTool.class, "Simple3DTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSimple3DTool_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSimple3DTool_RootNode(), theSymphony__CommonTopologyPackage.getNode(), null, "rootNode", null, 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimple3DTool_RootNode(), theApogyCommonTopologyPackage.getNode(), null, "rootNode", null, 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getSimple3DTool__SelectionChanged__NodeSelection(), null, "selectionChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNodeSelection(), "nodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(abstractTwoPoints3DToolEClass, AbstractTwoPoints3DTool.class, "AbstractTwoPoints3DTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractTwoPoints3DTool_FromAbsolutePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "fromAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_FromRelativePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "fromRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_FromNode(), theSymphony__CommonTopologyPackage.getNode(), null, "fromNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_FromAbsolutePosition(), theApogyCommonMathPackage.getTuple3d(), null, "fromAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_FromRelativePosition(), theApogyCommonMathPackage.getTuple3d(), null, "fromRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_FromNode(), theApogyCommonTopologyPackage.getNode(), null, "fromNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTwoPoints3DTool_FromNodeLock(), theEcorePackage.getEBoolean(), "fromNodeLock", "false", 0, 1, AbstractTwoPoints3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_ToAbsolutePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "toAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_ToRelativePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "toRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_ToNode(), theSymphony__CommonTopologyPackage.getNode(), null, "toNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_ToAbsolutePosition(), theApogyCommonMathPackage.getTuple3d(), null, "toAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_ToRelativePosition(), theApogyCommonMathPackage.getTuple3d(), null, "toRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_ToNode(), theApogyCommonTopologyPackage.getNode(), null, "toNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTwoPoints3DTool_ToNodeLock(), theEcorePackage.getEBoolean(), "toNodeLock", "false", 0, 1, AbstractTwoPoints3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTwoPoints3DTool_Distance(), theEcorePackage.getEDouble(), "distance", "0", 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAbstractTwoPoints3DTool__PointsRelativePoseChanged__Matrix4d(), null, "pointsRelativePoseChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4d(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getMatrix4d(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(ruler3DToolEClass, Ruler3DTool.class, "Ruler3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRuler3DTool_RulerColor(), this.getColor3f(), "rulerColor", "0.0,1.0,0.0", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -988,12 +988,12 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		initEReference(getRuler3dToolNode_Ruler3DTool(), this.getRuler3DTool(), this.getRuler3DTool_Ruler3dToolNode(), "ruler3DTool", null, 0, 1, Ruler3dToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureOfInterestPickingToolEClass, FeatureOfInterestPickingTool.class, "FeatureOfInterestPickingTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureOfInterestPickingTool_FeatureOfInterestList(), theSymphony__CorePackage.getFeatureOfInterestList(), null, "featureOfInterestList", null, 0, 1, FeatureOfInterestPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickAbsolutePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickAbsolutePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickRelativePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickRelativePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickedNode(), theSymphony__CommonTopologyPackage.getNode(), null, "pickedNode", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickAbsoluteNormal(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickAbsoluteNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickRelativeNormal(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickRelativeNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_FeatureOfInterestList(), theApogyCorePackage.getFeatureOfInterestList(), null, "featureOfInterestList", null, 0, 1, FeatureOfInterestPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickAbsolutePosition(), theApogyCommonMathPackage.getTuple3d(), null, "pickAbsolutePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickRelativePosition(), theApogyCommonMathPackage.getTuple3d(), null, "pickRelativePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickedNode(), theApogyCommonTopologyPackage.getNode(), null, "pickedNode", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickAbsoluteNormal(), theApogyCommonMathPackage.getTuple3d(), null, "pickAbsoluteNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickRelativeNormal(), theApogyCommonMathPackage.getTuple3d(), null, "pickRelativeNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sunVector3DToolEClass, SunVector3DTool.class, "SunVector3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSunVector3DTool_VectorColor(), this.getColor3f(), "vectorColor", "1.0,1.0,0.0", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1009,11 +1009,11 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 
 		initEClass(trajectory3DToolEClass, Trajectory3DTool.class, "Trajectory3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTrajectory3DTool_PenDown(), theEcorePackage.getEBoolean(), "penDown", "true", 0, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrajectory3DTool_Variable(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectory3DTool_Variable(), theApogyCoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrajectory3DTool_DistanceThreshold(), theEcorePackage.getEDouble(), "distanceThreshold", "0.01", 0, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrajectory3DTool_TotalDistance(), theEcorePackage.getEDouble(), "totalDistance", "0.0", 0, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrajectory3DTool_Paths(), theSymphony__AddonsGeometryPathsPackage.getWayPointPath(), null, "paths", null, 0, -1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrajectory3DTool_PoseProvider(), theSymphony__CorePackage.getPoseProvider(), null, "poseProvider", null, 0, 1, Trajectory3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectory3DTool_Paths(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), null, "paths", null, 0, -1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectory3DTool_PoseProvider(), theApogyCorePackage.getPoseProvider(), null, "poseProvider", null, 0, 1, Trajectory3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectory3DTool_Trajectory3DToolNode(), this.getTrajectory3DToolNode(), this.getTrajectory3DToolNode_Trajectory3DTool(), "trajectory3DToolNode", null, 0, 1, Trajectory3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trajectory3DToolNodeEClass, Trajectory3DToolNode.class, "Trajectory3DToolNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1043,17 +1043,17 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__Addons",
+			 "prefix", "ApogyAddons",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)",
-			 "modelName", "Symphony__Addons",
+			 "modelName", "ApogyAddons",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy"
 		   });	
 		addAnnotation
 		  (getSimpleToolList_SimpleTools(), 
@@ -1077,7 +1077,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		  (getSimple3DTool_RootNode(), 
 		   source, 
 		   new String[] {
-			 "documentation", "* The root node of the current topology. Set automatically by Symphony after the too is registered."
+			 "documentation", "* The root node of the current topology. Set automatically by Apogy after the too is registered."
 		   });	
 		addAnnotation
 		  (abstractTwoPoints3DToolEClass, 
@@ -1165,7 +1165,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "notify", "true",
 			 "property", "Readonly",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (ruler3DToolEClass, 
@@ -1186,7 +1186,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Radius of sphere used as ruler end points.",
 			 "notify", "true",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "RULER_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1202,7 +1202,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Spacing between minor tick mark.",
 			 "notify", "true",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "MINOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1211,7 +1211,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Length of the minor tick marks as displayed on the ruler.",
 			 "notify", "true",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "MINOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1227,7 +1227,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Spacing between major tick mark.",
 			 "notify", "true",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "MAJOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1236,7 +1236,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Length of the major tick marks as displayed on the ruler.",
 			 "notify", "true",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "MAJOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1323,7 +1323,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Length of the vector.",
 			 "notify", "true",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1332,7 +1332,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Radius of sphere used as end point to vector.",
 			 "notify", "true",
-			 "symphony_units", "m",
+			 "apogy_units", "m",
 			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1341,7 +1341,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current sun intensity.",
 			 "notify", "true",
-			 "symphony_units", "W/m*m",
+			 "apogy_units", "W/m*m",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1351,7 +1351,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current day maximum sun intensity.",
 			 "notify", "true",
-			 "symphony_units", "W/m*m",
+			 "apogy_units", "W/m*m",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1361,7 +1361,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current sun intensity.",
 			 "notify", "true",
-			 "symphony_units", "%",
+			 "apogy_units", "%",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1392,7 +1392,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		  (getTrajectory3DTool_Variable(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The Symphony System being displayed.",
+			 "documentation", " The Apogy System being displayed.",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL"
 		   });	
 		addAnnotation
@@ -1401,7 +1401,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", "* Minimum distance used to trigger a new point being accepted.",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectory3DTool_TotalDistance(), 
@@ -1410,7 +1410,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectory3DTool_Paths(), 
@@ -1445,4 +1445,4 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   });
 	}
 
-} //Symphony__AddonsPackageImpl
+} //ApogyAddonsPackageImpl

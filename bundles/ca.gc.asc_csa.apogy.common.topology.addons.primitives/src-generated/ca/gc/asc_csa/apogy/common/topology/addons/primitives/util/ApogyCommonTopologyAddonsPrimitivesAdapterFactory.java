@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.util;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,29 +10,29 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Leaf;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Leaf;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
-import org.eclipse.symphony.common.topology.addons.primitives.*;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonTopologyAddonsPrimitivesAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyAddonsPrimitivesPackage modelPackage;
+	protected static ApogyCommonTopologyAddonsPrimitivesPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -40,9 +40,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesAdapterFactory() {
+	public ApogyCommonTopologyAddonsPrimitivesAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyAddonsPrimitivesPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyAddonsPrimitivesPackage.eINSTANCE;
 		}
 	}
 
@@ -71,8 +71,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyAddonsPrimitivesSwitch<Adapter> modelSwitch =
-		new Symphony__CommonTopologyAddonsPrimitivesSwitch<Adapter>() {
+	protected ApogyCommonTopologyAddonsPrimitivesSwitch<Adapter> modelSwitch =
+		new ApogyCommonTopologyAddonsPrimitivesSwitch<Adapter>() {
 			@Override
 			public Adapter caseVector(Vector object) {
 				return createVectorAdapter();
@@ -118,8 +118,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 				return createSpotLightAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonTopologyAddonsPrimitivesFacade(Symphony__CommonTopologyAddonsPrimitivesFacade object) {
-				return createSymphony__CommonTopologyAddonsPrimitivesFacadeAdapter();
+			public Adapter caseApogyCommonTopologyAddonsPrimitivesFacade(ApogyCommonTopologyAddonsPrimitivesFacade object) {
+				return createApogyCommonTopologyAddonsPrimitivesFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -158,13 +158,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.Vector <em>Vector</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector <em>Vector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Vector
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector
 	 * @generated
 	 */
 	public Adapter createVectorAdapter() {
@@ -172,13 +172,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector <em>Pick Vector</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector <em>Pick Vector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PickVector
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector
 	 * @generated
 	 */
 	public Adapter createPickVectorAdapter() {
@@ -186,13 +186,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.Plane <em>Plane</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane <em>Plane</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Plane
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane
 	 * @generated
 	 */
 	public Adapter createPlaneAdapter() {
@@ -200,13 +200,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.WayPoint <em>Way Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.WayPoint <em>Way Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.WayPoint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.WayPoint
 	 * @generated
 	 */
 	public Adapter createWayPointAdapter() {
@@ -214,13 +214,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.Label <em>Label</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label <em>Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Label
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label
 	 * @generated
 	 */
 	public Adapter createLabelAdapter() {
@@ -228,13 +228,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive <em>Sphere Primitive</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive <em>Sphere Primitive</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive
 	 * @generated
 	 */
 	public Adapter createSpherePrimitiveAdapter() {
@@ -242,13 +242,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.Light <em>Light</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Light <em>Light</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Light
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.Light
 	 * @generated
 	 */
 	public Adapter createLightAdapter() {
@@ -256,13 +256,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.AmbientLight <em>Ambient Light</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight <em>Ambient Light</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.AmbientLight
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight
 	 * @generated
 	 */
 	public Adapter createAmbientLightAdapter() {
@@ -270,13 +270,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight <em>Directional Light</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight <em>Directional Light</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight
 	 * @generated
 	 */
 	public Adapter createDirectionalLightAdapter() {
@@ -284,13 +284,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.PointLight <em>Point Light</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight <em>Point Light</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PointLight
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight
 	 * @generated
 	 */
 	public Adapter createPointLightAdapter() {
@@ -298,13 +298,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight <em>Spot Light</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight <em>Spot Light</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.SpotLight
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight
 	 * @generated
 	 */
 	public Adapter createSpotLightAdapter() {
@@ -312,27 +312,27 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonTopologyAddonsPrimitivesFacadeAdapter() {
+	public Adapter createApogyCommonTopologyAddonsPrimitivesFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -340,13 +340,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter() {
@@ -354,13 +354,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -368,13 +368,13 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Leaf <em>Leaf</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Leaf <em>Leaf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Leaf
+	 * @see ca.gc.asc_csa.apogy.common.topology.Leaf
 	 * @generated
 	 */
 	public Adapter createLeafAdapter() {
@@ -393,4 +393,4 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 		return null;
 	}
 
-} //Symphony__CommonTopologyAddonsPrimitivesAdapterFactory
+} //ApogyCommonTopologyAddonsPrimitivesAdapterFactory

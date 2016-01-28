@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.rover.symphony.*;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.symphony.examples.rover.symphony.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoverSymphonyFactoryImpl extends EFactoryImpl implements Symphony__ExamplesRoverSymphonyFactory
+public class ApogyExamplesRoverApogyFactoryImpl extends EFactoryImpl implements ApogyExamplesRoverApogyFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -24,18 +24,18 @@ public class Symphony__ExamplesRoverSymphonyFactoryImpl extends EFactoryImpl imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__ExamplesRoverSymphonyFactory init()
+  public static ApogyExamplesRoverApogyFactory init()
   {
 		try {
-			Symphony__ExamplesRoverSymphonyFactory theSymphony__ExamplesRoverSymphonyFactory = (Symphony__ExamplesRoverSymphonyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesRoverSymphonyPackage.eNS_URI);
-			if (theSymphony__ExamplesRoverSymphonyFactory != null) {
-				return theSymphony__ExamplesRoverSymphonyFactory;
+			ApogyExamplesRoverApogyFactory theApogyExamplesRoverApogyFactory = (ApogyExamplesRoverApogyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesRoverApogyPackage.eNS_URI);
+			if (theApogyExamplesRoverApogyFactory != null) {
+				return theApogyExamplesRoverApogyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesRoverSymphonyFactoryImpl();
+		return new ApogyExamplesRoverApogyFactoryImpl();
 	}
 
   /**
@@ -44,7 +44,7 @@ public class Symphony__ExamplesRoverSymphonyFactoryImpl extends EFactoryImpl imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoverSymphonyFactoryImpl()
+  public ApogyExamplesRoverApogyFactoryImpl()
   {
 		super();
 	}
@@ -58,8 +58,8 @@ public class Symphony__ExamplesRoverSymphonyFactoryImpl extends EFactoryImpl imp
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_SYMPHONY_SYSTEM_API_ADAPTER: return createRoverSymphonySystemApiAdapter();
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA: return createRoverData();
+			case ApogyExamplesRoverApogyPackage.ROVER_APOGY_SYSTEM_API_ADAPTER: return createRoverApogySystemApiAdapter();
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA: return createRoverData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -70,10 +70,10 @@ public class Symphony__ExamplesRoverSymphonyFactoryImpl extends EFactoryImpl imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public RoverSymphonySystemApiAdapter createRoverSymphonySystemApiAdapter()
+  public RoverApogySystemApiAdapter createRoverApogySystemApiAdapter()
   {
-		RoverSymphonySystemApiAdapterImpl roverSymphonySystemApiAdapter = new RoverSymphonySystemApiAdapterImpl();
-		return roverSymphonySystemApiAdapter;
+		RoverApogySystemApiAdapterImpl roverApogySystemApiAdapter = new RoverApogySystemApiAdapterImpl();
+		return roverApogySystemApiAdapter;
 	}
 
   /**
@@ -91,8 +91,8 @@ public class Symphony__ExamplesRoverSymphonyFactoryImpl extends EFactoryImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoverSymphonyPackage getSymphony__ExamplesRoverSymphonyPackage() {
-		return (Symphony__ExamplesRoverSymphonyPackage)getEPackage();
+	public ApogyExamplesRoverApogyPackage getApogyExamplesRoverApogyPackage() {
+		return (ApogyExamplesRoverApogyPackage)getEPackage();
 	}
 
 		/**
@@ -102,9 +102,9 @@ public class Symphony__ExamplesRoverSymphonyFactoryImpl extends EFactoryImpl imp
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__ExamplesRoverSymphonyPackage getPackage()
+  public static ApogyExamplesRoverApogyPackage getPackage()
   {
-		return Symphony__ExamplesRoverSymphonyPackage.eINSTANCE;
+		return ApogyExamplesRoverApogyPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesRoverSymphonyFactoryImpl
+} //ApogyExamplesRoverApogyFactoryImpl

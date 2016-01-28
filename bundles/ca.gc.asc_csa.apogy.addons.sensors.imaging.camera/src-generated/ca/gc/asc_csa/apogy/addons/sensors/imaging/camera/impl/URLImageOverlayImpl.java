@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.awt.Graphics2D;
 
@@ -9,15 +9,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy;
-import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.images.URLEImage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.URLEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,9 +27,9 @@ import org.eclipse.symphony.common.images.URLEImage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getImageSizePolicy <em>Image Size Policy</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getImageSizePolicy <em>Image Size Policy</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getImage <em>Image</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY;
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 		
 		try
 		{
-			URLEImage urlEImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
+			URLEImage urlEImage = ApogyCommonImagesFactory.eINSTANCE.createURLEImage();
 			urlEImage.setUrl(newUrl);
 			setImage(urlEImage);
 		}
@@ -142,7 +142,7 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL, oldUrl, url));
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 		ImageSizePolicy oldImageSizePolicy = imageSizePolicy;
 		imageSizePolicy = newImageSizePolicy == null ? IMAGE_SIZE_POLICY_EDEFAULT : newImageSizePolicy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY, oldImageSizePolicy, imageSizePolicy));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY, oldImageSizePolicy, imageSizePolicy));
 	}
 
 	/**
@@ -177,7 +177,7 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 			image = (AbstractEImage)eResolveProxy(oldImage);
 			if (image != oldImage) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE, oldImage, image));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE, oldImage, image));
 			}
 		}
 		return image;
@@ -201,7 +201,7 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 		AbstractEImage oldImage = image;
 		image = newImage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE, oldImage, image));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE, oldImage, image));
 	}
 
 	/**
@@ -212,11 +212,11 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
 				return getUrl();
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
 				return getImageSizePolicy();
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
 				if (resolve) return getImage();
 				return basicGetImage();
 		}
@@ -231,13 +231,13 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
 				setUrl((String)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
 				setImageSizePolicy((ImageSizePolicy)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
 				setImage((AbstractEImage)newValue);
 				return;
 		}
@@ -252,13 +252,13 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
 				setUrl(URL_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
 				setImageSizePolicy(IMAGE_SIZE_POLICY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
 				setImage((AbstractEImage)null);
 				return;
 		}
@@ -273,11 +273,11 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
 				return imageSizePolicy != IMAGE_SIZE_POLICY_EDEFAULT;
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE:
 				return image != null;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -11,12 +11,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SymphonyLogoOverlayItemProvider
+public class ApogyLogoOverlayItemProvider
   extends ImageCameraOverlayItemProvider
 {
   /**
@@ -25,7 +25,7 @@ public class SymphonyLogoOverlayItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyLogoOverlayItemProvider(AdapterFactory adapterFactory)
+  public ApogyLogoOverlayItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -47,7 +47,7 @@ public class SymphonyLogoOverlayItemProvider
 	}
 
   /**
-	 * This returns SymphonyLogoOverlay.gif.
+	 * This returns ApogyLogoOverlay.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -55,7 +55,7 @@ public class SymphonyLogoOverlayItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonyLogoOverlay"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyLogoOverlay"));
 	}
 
   /**
@@ -67,7 +67,7 @@ public class SymphonyLogoOverlayItemProvider
   @Override
   public String getText(Object object)
   {
-	  return getCameraImageAnnotationText(object, "_UI_SymphonyLogoOverlay_type");      
+	  return getCameraImageAnnotationText(object, "_UI_ApogyLogoOverlay_type");      
   }
 
   /**

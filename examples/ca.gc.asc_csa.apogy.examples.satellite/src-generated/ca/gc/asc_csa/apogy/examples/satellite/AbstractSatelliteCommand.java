@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,11 +20,11 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractSatelliteCommand()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand()
  * @model
  * @generated
  */
@@ -38,14 +38,14 @@ public interface AbstractSatelliteCommand extends GeographicCoordinates, Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Satellite</em>' reference.
 	 * @see #setSatellite(Satellite)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractSatelliteCommand_Satellite()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand_Satellite()
 	 * @model
 	 * @generated
 	 */
 	Satellite getSatellite();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Satellite</em>' reference.
@@ -56,7 +56,7 @@ public interface AbstractSatelliteCommand extends GeographicCoordinates, Timed {
 
 	/**
 	 * Returns the value of the '<em><b>Constellation Request</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -64,15 +64,15 @@ public interface AbstractSatelliteCommand extends GeographicCoordinates, Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constellation Request</em>' container reference.
 	 * @see #setConstellationRequest(AbstractConstellationRequest)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractSatelliteCommand_ConstellationRequest()
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getSatelliteCommand
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractSatelliteCommand_ConstellationRequest()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest#getSatelliteCommand
 	 * @model opposite="satelliteCommand" transient="false"
 	 * @generated
 	 */
 	AbstractConstellationRequest getConstellationRequest();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Constellation Request</em>' container reference.

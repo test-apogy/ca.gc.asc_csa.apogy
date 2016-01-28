@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.impl;
+package ca.gc.asc_csa.apogy.examples.rover.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -12,21 +12,21 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
 
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
 
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
 
-import org.eclipse.symphony.examples.rover.Battery;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverFactory;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
-import org.eclipse.symphony.examples.rover.PowerSystem;
-import org.eclipse.symphony.examples.rover.Rover;
-import org.eclipse.symphony.examples.rover.RoverSimulated;
-import org.eclipse.symphony.examples.rover.RoverStub;
+import ca.gc.asc_csa.apogy.examples.rover.Battery;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverFactory;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.examples.rover.PowerSystem;
+import ca.gc.asc_csa.apogy.examples.rover.Rover;
+import ca.gc.asc_csa.apogy.examples.rover.RoverSimulated;
+import ca.gc.asc_csa.apogy.examples.rover.RoverStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ import org.eclipse.symphony.examples.rover.RoverStub;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements Symphony__ExamplesRoverPackage {
+public class ApogyExamplesRoverPackageImpl extends EPackageImpl implements ApogyExamplesRoverPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,12 +81,12 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__ExamplesRoverPackageImpl() {
-		super(eNS_URI, Symphony__ExamplesRoverFactory.eINSTANCE);
+	private ApogyExamplesRoverPackageImpl() {
+		super(eNS_URI, ApogyExamplesRoverFactory.eINSTANCE);
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesRoverPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesRoverPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,32 +108,32 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__ExamplesRoverPackage init() {
-		if (isInited) return (Symphony__ExamplesRoverPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesRoverPackage.eNS_URI);
+	public static ApogyExamplesRoverPackage init() {
+		if (isInited) return (ApogyExamplesRoverPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesRoverPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesRoverPackageImpl theSymphony__ExamplesRoverPackage = (Symphony__ExamplesRoverPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesRoverPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesRoverPackageImpl());
+		ApogyExamplesRoverPackageImpl theApogyExamplesRoverPackage = (ApogyExamplesRoverPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesRoverPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesRoverPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__ExamplesRoboticArmPackage.eINSTANCE.eClass();
-		Symphony__ExamplesMobilePlatformPackage.eINSTANCE.eClass();
-		Symphony__ExamplesCameraPackage.eINSTANCE.eClass();
+		ApogyExamplesRoboticArmPackage.eINSTANCE.eClass();
+		ApogyExamplesMobilePlatformPackage.eINSTANCE.eClass();
+		ApogyExamplesCameraPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesRoverPackage.createPackageContents();
+		theApogyExamplesRoverPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesRoverPackage.initializePackageContents();
+		theApogyExamplesRoverPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesRoverPackage.freeze();
+		theApogyExamplesRoverPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesRoverPackage.eNS_URI, theSymphony__ExamplesRoverPackage);
-		return theSymphony__ExamplesRoverPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesRoverPackage.eNS_URI, theApogyExamplesRoverPackage);
+		return theApogyExamplesRoverPackage;
 	}
 
 	/**
@@ -393,8 +393,8 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoverFactory getSymphony__ExamplesRoverFactory() {
-		return (Symphony__ExamplesRoverFactory)getEFactoryInstance();
+	public ApogyExamplesRoverFactory getApogyExamplesRoverFactory() {
+		return (ApogyExamplesRoverFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -475,17 +475,17 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__ExamplesRoboticArmPackage theSymphony__ExamplesRoboticArmPackage = (Symphony__ExamplesRoboticArmPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesRoboticArmPackage.eNS_URI);
-		Symphony__ExamplesMobilePlatformPackage theSymphony__ExamplesMobilePlatformPackage = (Symphony__ExamplesMobilePlatformPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesMobilePlatformPackage.eNS_URI);
-		Symphony__ExamplesCameraPackage theSymphony__ExamplesCameraPackage = (Symphony__ExamplesCameraPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesCameraPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyExamplesRoboticArmPackage theApogyExamplesRoboticArmPackage = (ApogyExamplesRoboticArmPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesRoboticArmPackage.eNS_URI);
+		ApogyExamplesMobilePlatformPackage theApogyExamplesMobilePlatformPackage = (ApogyExamplesMobilePlatformPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesMobilePlatformPackage.eNS_URI);
+		ApogyExamplesCameraPackage theApogyExamplesCameraPackage = (ApogyExamplesCameraPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesCameraPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		roverEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDisposable());
+		roverEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDisposable());
 		roverStubEClass.getESuperTypes().add(this.getRover());
 		roverSimulatedEClass.getESuperTypes().add(this.getRover());
 
@@ -509,10 +509,10 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		addEParameter(op, theEcorePackage.getEInt(), "batteryIndex", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(roverEClass, Rover.class, "Rover", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRover_RoboticArm(), theSymphony__ExamplesRoboticArmPackage.getRoboticArm(), null, "roboticArm", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRover_MobilePlatform(), theSymphony__ExamplesMobilePlatformPackage.getMobilePlatform(), null, "mobilePlatform", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRover_ArmCamera(), theSymphony__ExamplesCameraPackage.getPTUCamera(), null, "armCamera", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRover_CenterCamera(), theSymphony__ExamplesCameraPackage.getPTUCamera(), null, "centerCamera", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRover_RoboticArm(), theApogyExamplesRoboticArmPackage.getRoboticArm(), null, "roboticArm", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRover_MobilePlatform(), theApogyExamplesMobilePlatformPackage.getMobilePlatform(), null, "mobilePlatform", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRover_ArmCamera(), theApogyExamplesCameraPackage.getPTUCamera(), null, "armCamera", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRover_CenterCamera(), theApogyExamplesCameraPackage.getPTUCamera(), null, "centerCamera", null, 1, 1, Rover.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRover_PowerSystem(), this.getPowerSystem(), null, "powerSystem", null, 1, 1, Rover.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRover_LinearVelocity(), theEcorePackage.getEDouble(), "linearVelocity", null, 0, 1, Rover.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRover_AngularVelocity(), theEcorePackage.getEDouble(), "angularVelocity", null, 0, 1, Rover.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -555,15 +555,15 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesRover",
+			 "prefix", "ApogyExamplesRover",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-			 "modelName", "Symphony__ExamplesRover",
+			 "modelName", "ApogyExamplesRover",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.rover/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.rover.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.rover/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.rover.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
 		  (batteryEClass, 
@@ -598,7 +598,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is the voltage output by the battery,\nas measured in volts; initially, zero",
 			 "notify", "true",
-			 "symphony_units", "V",
+			 "apogy_units", "V",
 			 "property", "Readonly"
 		   });	
 		addAnnotation
@@ -607,7 +607,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is the current output by the battery,\nas measured in amps; initially, zero",
 			 "notify", "true",
-			 "symphony_units", "A",
+			 "apogy_units", "A",
 			 "property", "Readonly"
 		   });	
 		addAnnotation
@@ -643,8 +643,8 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is used to get the voltage that the power system\nis currently outputting.",
 			 "notify", "true",
-			 "symphony_units", "V",
-			 "get", "<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getVoltage();\n}\nelse\n{\n\treturn 0.0;\n}"
+			 "apogy_units", "V",
+			 "get", "<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getVoltage();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
 		  (getPowerSystem_CurrentCurrent(), 
@@ -652,8 +652,8 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is used to get the current that the power system\nis currently outputting.",
 			 "notify", "true",
-			 "symphony_units", "A",
-			 "get", "<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getCurrent();\n}\nelse\n{\n\treturn 0.0;\n}"
+			 "apogy_units", "A",
+			 "get", "<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getCurrent();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
 		  (roverEClass, 
@@ -677,7 +677,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		  ((getRover__CmdLinearVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m/s"
+			 "apogy_units", "m/s"
 		   });	
 		addAnnotation
 		  (getRover__CmdAngularVelocity__double(), 
@@ -689,7 +689,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		  ((getRover__CmdAngularVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getRover__CmdVelocities__double_double(), 
@@ -701,13 +701,13 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		  ((getRover__CmdVelocities__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m/s"
+			 "apogy_units", "m/s"
 		   });	
 		addAnnotation
 		  ((getRover__CmdVelocities__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getRover_RoboticArm(), 
@@ -760,10 +760,10 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 			 "documentation", "This is the linear velocity of the rover (given in\nmetres per second.)\n<p>\nNote: Unlike the traditional definition of linear velocity\nas a vector, this is simply a signed scalar; a positive\nvalue indicates the speed forward while a negative value\nis the speed backwards.  Zero means there is no movement.",
 			 "children", "false",
 			 "notify", "true",
-			 "symphony_units", "m/s",
+			 "apogy_units", "m/s",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "get", "<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
+			 "get", "<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
 		  (getRover_AngularVelocity(), 
@@ -772,10 +772,10 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 			 "documentation", "This is the angular velocity of the rover (given in\nradians per second.)\n<p>\nNote: Unlike the traditional definition of angular\nvelocity as a vector, this is simply a signed scalar;\na positive value is the rotation in the clockwise\ndirection while a negative value implies the rotation\nis in the counter-clockwise direction.  Zero means\nthere is no rotation.",
 			 "children", "false",
 			 "notify", "true",
-			 "symphony_units", "rad/s",
+			 "apogy_units", "rad/s",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "get", "<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
+			 "get", "<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
 		  (getRover_Initialized(), 
@@ -811,4 +811,4 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   });
 	}
 
-} //Symphony__ExamplesRoverPackageImpl
+} //ApogyExamplesRoverPackageImpl

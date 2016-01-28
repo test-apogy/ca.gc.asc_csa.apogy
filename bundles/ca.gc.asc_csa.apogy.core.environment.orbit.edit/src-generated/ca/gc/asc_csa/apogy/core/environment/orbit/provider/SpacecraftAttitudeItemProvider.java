@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -23,13 +23,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -81,7 +81,7 @@ public class SpacecraftAttitudeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -102,8 +102,8 @@ public class SpacecraftAttitudeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__REFERENCE_FRAME);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__REFERENCE_FRAME);
 		}
 		return childrenFeatures;
 	}
@@ -160,11 +160,11 @@ public class SpacecraftAttitudeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftAttitude.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME:
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -184,8 +184,8 @@ public class SpacecraftAttitudeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION,
-				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION,
+				 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
 	}
 
 	/**

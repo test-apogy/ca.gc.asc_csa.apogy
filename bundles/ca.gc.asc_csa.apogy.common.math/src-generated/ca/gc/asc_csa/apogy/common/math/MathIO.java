@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import javax.vecmath.Matrix4d;
 
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMathIO()
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMathIO()
  * @model
  * @generated
  */
@@ -21,7 +21,7 @@ public interface MathIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.math.Exception" fileNameUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.math.Exception" fileNameUnique="false"
 	 * @generated
 	 */
 	Matrix4x4 readTrMatrix(String fileName) throws Exception;
@@ -29,7 +29,7 @@ public interface MathIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.math.Exception" trMatrixUnique="false" fileNameUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.math.Exception" trMatrixUnique="false" fileNameUnique="false"
 	 * @generated
 	 */
 	void writeTrMatrix(Matrix4x4 trMatrix, String fileName) throws Exception;
@@ -37,7 +37,7 @@ public interface MathIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.math.Exception" trMatrixDataType="org.eclipse.symphony.common.math.Matrix4d" trMatrixUnique="false" fileNameUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.math.Exception" trMatrixDataType="ca.gc.asc_csa.apogy.common.math.Matrix4d" trMatrixUnique="false" fileNameUnique="false"
 	 * @generated
 	 */
 	void writeTrMatrix(Matrix4d trMatrix, String fileName) throws Exception;

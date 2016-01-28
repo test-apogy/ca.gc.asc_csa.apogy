@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -9,12 +9,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode;
-import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,24 +22,24 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryD
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DASCFactoryImpl extends EFactoryImpl implements Symphony__CommonGeometryData3DASCFactory {
+public class ApogyCommonGeometryData3DASCFactoryImpl extends EFactoryImpl implements ApogyCommonGeometryData3DASCFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData3DASCFactory init() {
+	public static ApogyCommonGeometryData3DASCFactory init() {
 		try {
-			Symphony__CommonGeometryData3DASCFactory theSymphony__CommonGeometryData3DASCFactory = (Symphony__CommonGeometryData3DASCFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonGeometryData3DASCPackage.eNS_URI);
-			if (theSymphony__CommonGeometryData3DASCFactory != null) {
-				return theSymphony__CommonGeometryData3DASCFactory;
+			ApogyCommonGeometryData3DASCFactory theApogyCommonGeometryData3DASCFactory = (ApogyCommonGeometryData3DASCFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonGeometryData3DASCPackage.eNS_URI);
+			if (theApogyCommonGeometryData3DASCFactory != null) {
+				return theApogyCommonGeometryData3DASCFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonGeometryData3DASCFactoryImpl();
+		return new ApogyCommonGeometryData3DASCFactoryImpl();
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Symphony__CommonGeometryData3DASCFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DASCFactoryImpl() {
+	public ApogyCommonGeometryData3DASCFactoryImpl() {
 		super();
 	}
 
@@ -60,9 +60,9 @@ public class Symphony__CommonGeometryData3DASCFactoryImpl extends EFactoryImpl i
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO: return createASC3DIO();
-			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA: return createASCHeaderData();
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D: return createCoordinates2D();
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO: return createASC3DIO();
+			case ApogyCommonGeometryData3DASCPackage.ASC_HEADER_DATA: return createASCHeaderData();
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D: return createCoordinates2D();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -76,9 +76,9 @@ public class Symphony__CommonGeometryData3DASCFactoryImpl extends EFactoryImpl i
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryData3DASCPackage.ALTITUDE_MODE:
+			case ApogyCommonGeometryData3DASCPackage.ALTITUDE_MODE:
 				return createAltitudeModeFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DASCPackage.EXCEPTION:
+			case ApogyCommonGeometryData3DASCPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -93,9 +93,9 @@ public class Symphony__CommonGeometryData3DASCFactoryImpl extends EFactoryImpl i
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryData3DASCPackage.ALTITUDE_MODE:
+			case ApogyCommonGeometryData3DASCPackage.ALTITUDE_MODE:
 				return convertAltitudeModeToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DASCPackage.EXCEPTION:
+			case ApogyCommonGeometryData3DASCPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -175,8 +175,8 @@ public class Symphony__CommonGeometryData3DASCFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DASCPackage getSymphony__CommonGeometryData3DASCPackage() {
-		return (Symphony__CommonGeometryData3DASCPackage)getEPackage();
+	public ApogyCommonGeometryData3DASCPackage getApogyCommonGeometryData3DASCPackage() {
+		return (ApogyCommonGeometryData3DASCPackage)getEPackage();
 	}
 
 	/**
@@ -186,8 +186,8 @@ public class Symphony__CommonGeometryData3DASCFactoryImpl extends EFactoryImpl i
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonGeometryData3DASCPackage getPackage() {
-		return Symphony__CommonGeometryData3DASCPackage.eINSTANCE;
+	public static ApogyCommonGeometryData3DASCPackage getPackage() {
+		return ApogyCommonGeometryData3DASCPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonGeometryData3DASCFactoryImpl
+} //ApogyCommonGeometryData3DASCFactoryImpl

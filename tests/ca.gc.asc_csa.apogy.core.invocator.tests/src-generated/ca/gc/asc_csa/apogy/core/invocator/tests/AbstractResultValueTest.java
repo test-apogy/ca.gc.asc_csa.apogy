@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.AbstractResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
 
 import junit.framework.TestCase;
 

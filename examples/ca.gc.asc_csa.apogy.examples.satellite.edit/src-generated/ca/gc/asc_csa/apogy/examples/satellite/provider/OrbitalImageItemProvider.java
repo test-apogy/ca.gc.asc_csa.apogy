@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -15,15 +15,15 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.images.provider.EImageItemProvider;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.images.provider.EImageItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
-import org.eclipse.symphony.examples.satellite.OrbitalImage;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.OrbitalImage} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OrbitalImage_rollAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitalImage_rollAngle_feature", "_UI_OrbitalImage_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__ROLL_ANGLE,
+				 ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__ROLL_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class OrbitalImageItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -144,10 +144,10 @@ public class OrbitalImageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitalImage.class)) {
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
+			case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,23 +167,23 @@ public class OrbitalImageItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(ApogyExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 }

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data;
+package ca.gc.asc_csa.apogy.common.geometry.data;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.Polygon#getVertices <em>Vertices</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon#getVertices <em>Vertices</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getPolygon()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getPolygon()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Polygon<T extends Coordinates> extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vertices</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getPolygon_Vertices()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getPolygon_Vertices()
 	 * @model resolveProxies="false" ordered="false"
 	 * @generated
 	 */

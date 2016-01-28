@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
-import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class StarFieldPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_StarFieldPresentation_cutOffMagnitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_StarFieldPresentation_cutOffMagnitude_feature", "_UI_StarFieldPresentation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE,
+				 ApogyCoreEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class StarFieldPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(StarFieldPresentation.class)) {
-			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -4,7 +4,7 @@
  *
  * $Id: VectorItemProvider.java,v 1.8.2.3 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 
 import java.util.Collection;
@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.Vector;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Vector} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -75,7 +75,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_xRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_xRotation_feature", "_UI_Vector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__XROTATION,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__XROTATION,
 				 true,
 				 false,
 				 false,
@@ -98,7 +98,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_yRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_yRotation_feature", "_UI_Vector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__YROTATION,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__YROTATION,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_zRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_zRotation_feature", "_UI_Vector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__ZROTATION,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__ZROTATION,
 				 true,
 				 false,
 				 false,
@@ -144,7 +144,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_length_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_length_feature", "_UI_Vector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__LENGTH,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__LENGTH,
 				 true,
 				 false,
 				 false,
@@ -167,7 +167,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_endPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_endPoint_feature", "_UI_Vector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__END_POINT,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__END_POINT,
 				 false,
 				 false,
 				 false,
@@ -218,11 +218,11 @@ public class VectorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Vector.class)) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__END_POINT:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__END_POINT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

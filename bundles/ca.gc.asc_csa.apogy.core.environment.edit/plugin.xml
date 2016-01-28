@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.core.environment.provider.Symphony__CoreEnvironmentItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.core.environment"
+            class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,15 +20,15 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_core_environment -->
+      <!-- @generated apogy_core_environment -->
       <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.core.environment.provider.Symphony__CoreEnvironmentItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.environment.provider.Symphony__CoreEnvironmentItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.core.environment.provider.Symphony__CoreEnvironmentItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.bindings"
+            class="ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
    </extension>
 </plugin>

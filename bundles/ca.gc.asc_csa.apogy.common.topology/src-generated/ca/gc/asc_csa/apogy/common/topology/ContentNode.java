@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.common.topology;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ContentNode#getContent <em>Content</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ContentNode#getContent <em>Content</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getContentNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getContentNode()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface ContentNode<T> extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Content</em>' containment reference.
 	 * @see #setContent(Object)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getContentNode_Content()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getContentNode_Content()
 	 * @model kind="reference" containment="true"
 	 * @generated
 	 */
 	T getContent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ContentNode#getContent <em>Content</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ContentNode#getContent <em>Content</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Content</em>' containment reference.

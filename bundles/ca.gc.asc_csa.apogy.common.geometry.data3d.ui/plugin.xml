@@ -8,24 +8,24 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.common.geometry.data3d.ui.adapters.CartesianCoordinatMeshNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters.CartesianCoordinatMeshNodePresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.geometry.data3d.ui.adapters.TriangularMeshPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters.TriangularMeshPresentationAdapter">
       </Class>
    </extension> 
    <extension
          point="org.eclipse.ui.commands">
       <command
             description="Saves a CartesianCoordinates To File."
-            id="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
+            id="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
             name="Save Cartesian Coordinates To File">
       </command>
       <command
             description="Saves a Triangular Mesh To File."
-            id="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand"
+            id="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand"
             name="Save Mesh To File">
       </command>
    </extension>
@@ -33,9 +33,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
+               commandId="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
                label="Export Points To File"
                style="push">
             <visibleWhen
@@ -46,14 +46,14 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet">
+                           value="ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet">
                        </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand"
+               commandId="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand"
                label="Export Mesh To File"
                style="push">
             <visibleWhen
@@ -64,7 +64,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh">
+                           value="ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh">
                        </instanceof>
                   </iterate>
                </with>
@@ -75,40 +75,40 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesPage"
-            id="org.eclipse.symphony.common.geometry.data3d.ui.page3"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.page3"
             name="Mesh And Point Clouds">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="org.eclipse.symphony.common.geometry.data3d.ui.commands.CartesianCoordinatesSetPropertyTester"
-            id="org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPropertyTester"
-            namespace="org.eclipse.symphony.common.geometry.data3d.ui"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.CartesianCoordinatesSetPropertyTester"
+            id="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPropertyTester"
+            namespace="ca.gc.asc_csa.apogy.common.geometry.data3d.ui"
             properties="pointsNotEmpty"
-            type="org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet">
+            type="ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet">
       </propertyTester>
       <propertyTester
-            class="org.eclipse.symphony.common.geometry.data3d.ui.commands.CartesianTriangularMeshPropertyTester"
-            id="org.eclipse.symphony.common.geometry.data3d.ui.commands.CartesianTriangularMeshPropertyTester"
-            namespace="org.eclipse.symphony.common.geometry.data3d.ui"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.CartesianTriangularMeshPropertyTester"
+            id="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.CartesianTriangularMeshPropertyTester"
+            namespace="ca.gc.asc_csa.apogy.common.geometry.data3d.ui"
             properties="pointsNotEmpty,trianglesNotEmpty"
-            type="org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh">
+            type="ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh">
       </propertyTester>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommandHandler"
-            commandId="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand">
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommandHandler"
+            commandId="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand">
          <enabledWhen>
             <with
                   variable="activeMenuSelection">
@@ -117,15 +117,15 @@
                      operator="and">
                   <test
                        forcePluginActivation="true"
-                       property="org.eclipse.symphony.common.geometry.data3d.ui.pointsNotEmpty">
+                       property="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.pointsNotEmpty">
                   </test>
                </iterate>
             </with>
          </enabledWhen>
       </handler>
       <handler
-            class="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommandHandler"
-            commandId="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand">
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommandHandler"
+            commandId="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand">
          <enabledWhen>
             <with
                   variable="activeMenuSelection">
@@ -134,7 +134,7 @@
                      operator="and">
                   <test
                        forcePluginActivation="true"
-                       property="org.eclipse.symphony.common.geometry.data3d.ui.trianglesNotEmpty">
+                       property="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.trianglesNotEmpty">
                   </test>
                </iterate>
             </with>
@@ -143,9 +143,9 @@
    </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.common.geometry.data3d.ui"
-            class="org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage"
-            genModel="model/symphony_common_geometry_data3d_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.geometry.data3d.ui"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage"
+            genModel="model/apogy_common_geometry_data3d_ui.xcore"/>
    </extension>
 
 </plugin>

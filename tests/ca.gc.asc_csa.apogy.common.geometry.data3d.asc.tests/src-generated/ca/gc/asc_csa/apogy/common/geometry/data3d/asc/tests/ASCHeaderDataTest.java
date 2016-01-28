@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests;
 
-import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -72,7 +72,7 @@ public class ASCHeaderDataTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DASCFactory.eINSTANCE.createASCHeaderData());
+		setFixture(ApogyCommonGeometryData3DASCFactory.eINSTANCE.createASCHeaderData());
 	}
 
 	/**

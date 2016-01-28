@@ -4,7 +4,7 @@
  *
  * $Id: SimpleRasterScanRangeScannerSimulatorItemProvider.java,v 1.2.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_rangeNoiseAmplitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_rangeNoiseAmplitude_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE,
+				 ApogyAddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_azimuthNoiseAmplitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_azimuthNoiseAmplitude_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE,
+				 ApogyAddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_elevationNoiseAmplitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_elevationNoiseAmplitude_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE,
+				 ApogyAddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE,
 				 true,
 				 false,
 				 false,
@@ -134,7 +134,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_horizonDetectionEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_horizonDetectionEnabled_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED,
+				 ApogyAddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -180,10 +180,10 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleRasterScanRangeScannerSimulator.class)) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE:
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE:
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE:
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class FeatureRootsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS);
+			childrenFeatures.add(ApogyCommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,7 @@ public class FeatureRootsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureRootsList.class)) {
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -165,8 +165,8 @@ public class FeatureRootsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS,
-				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
+				(ApogyCommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS,
+				 ApogyCommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 
   /**

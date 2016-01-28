@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.Collection;
 
@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.AbstractDisplay;
-import org.eclipse.symphony.core.invocator.DisplaysList;
-import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay;
+import ca.gc.asc_csa.apogy.core.invocator.DisplaysList;
+import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,10 +30,10 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getDisplaysListsContainer <em>Displays Lists Container</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getDisplays <em>Displays</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl#getDisplaysListsContainer <em>Displays Lists Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl#getDisplays <em>Displays</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,7 +108,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.DISPLAYS_LIST;
+		return ApogyCoreInvocatorPackage.Literals.DISPLAYS_LIST;
 	}
 
   /**
@@ -131,7 +131,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DISPLAYS_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DISPLAYS_LIST__NAME, oldName, name));
 	}
 
   /**
@@ -154,7 +154,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -164,7 +164,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
 	 */
   public DisplaysListsContainer getDisplaysListsContainer()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER) return null;
 		return (DisplaysListsContainer)eContainer();
 	}
 
@@ -175,7 +175,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
 	 */
   public DisplaysListsContainer basicGetDisplaysListsContainer()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER) return null;
 		return (DisplaysListsContainer)eInternalContainer();
 	}
 
@@ -186,7 +186,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
 	 */
   public NotificationChain basicSetDisplaysListsContainer(DisplaysListsContainer newDisplaysListsContainer, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newDisplaysListsContainer, Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newDisplaysListsContainer, ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER, msgs);
 		return msgs;
 	}
 
@@ -197,19 +197,19 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
 	 */
   public void setDisplaysListsContainer(DisplaysListsContainer newDisplaysListsContainer)
   {
-		if (newDisplaysListsContainer != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER && newDisplaysListsContainer != null)) {
+		if (newDisplaysListsContainer != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER && newDisplaysListsContainer != null)) {
 			if (EcoreUtil.isAncestor(this, newDisplaysListsContainer))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDisplaysListsContainer != null)
-				msgs = ((InternalEObject)newDisplaysListsContainer).eInverseAdd(this, Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS, DisplaysListsContainer.class, msgs);
+				msgs = ((InternalEObject)newDisplaysListsContainer).eInverseAdd(this, ApogyCoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS, DisplaysListsContainer.class, msgs);
 			msgs = basicSetDisplaysListsContainer(newDisplaysListsContainer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER, newDisplaysListsContainer, newDisplaysListsContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER, newDisplaysListsContainer, newDisplaysListsContainer));
 	}
 
   /**
@@ -220,7 +220,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public EList<AbstractDisplay> getDisplays()
   {
 		if (displays == null) {
-			displays = new EObjectContainmentWithInverseEList<AbstractDisplay>(AbstractDisplay.class, this, Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS, Symphony__CoreInvocatorPackage.ABSTRACT_DISPLAY__DISPLAYS_LIST);
+			displays = new EObjectContainmentWithInverseEList<AbstractDisplay>(AbstractDisplay.class, this, ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS, ApogyCoreInvocatorPackage.ABSTRACT_DISPLAY__DISPLAYS_LIST);
 		}
 		return displays;
 	}
@@ -235,11 +235,11 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetDisplaysListsContainer((DisplaysListsContainer)otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDisplays()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -254,9 +254,9 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
 				return basicSetDisplaysListsContainer(null, msgs);
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
 				return ((InternalEList<?>)getDisplays()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -271,8 +271,8 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS, DisplaysListsContainer.class, msgs);
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS, DisplaysListsContainer.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -286,14 +286,14 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__NAME:
 				return getName();
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
 				if (resolve) return getDisplaysListsContainer();
 				return basicGetDisplaysListsContainer();
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
 				return getDisplays();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -309,16 +309,16 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
 				setDisplaysListsContainer((DisplaysListsContainer)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
 				getDisplays().clear();
 				getDisplays().addAll((Collection<? extends AbstractDisplay>)newValue);
 				return;
@@ -335,16 +335,16 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
 				setDisplaysListsContainer((DisplaysListsContainer)null);
 				return;
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
 				getDisplays().clear();
 				return;
 		}
@@ -360,13 +360,13 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER:
 				return basicGetDisplaysListsContainer() != null;
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
 				return displays != null && !displays.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -382,7 +382,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class DisplaysListImpl extends MinimalEObjectImpl.Container implements Di
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

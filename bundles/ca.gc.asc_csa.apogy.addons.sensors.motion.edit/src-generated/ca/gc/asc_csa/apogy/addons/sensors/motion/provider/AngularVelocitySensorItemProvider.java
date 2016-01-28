@@ -4,7 +4,7 @@
  *
  * $Id: AngularVelocitySensorItemProvider.java,v 1.4.4.2 2015/05/21 15:50:04 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.motion.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class AngularVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AngularVelocitySensor_xAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AngularVelocitySensor_xAngularVelocity_feature", "_UI_AngularVelocitySensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY,
+				 ApogyAddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class AngularVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AngularVelocitySensor_yAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AngularVelocitySensor_yAngularVelocity_feature", "_UI_AngularVelocitySensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY,
+				 ApogyAddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class AngularVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AngularVelocitySensor_zAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AngularVelocitySensor_zAngularVelocity_feature", "_UI_AngularVelocitySensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY,
+				 ApogyAddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class AngularVelocitySensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AngularVelocitySensor.class)) {
-			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
-			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
-			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
+			case ApogyAddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
+			case ApogyAddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
+			case ApogyAddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

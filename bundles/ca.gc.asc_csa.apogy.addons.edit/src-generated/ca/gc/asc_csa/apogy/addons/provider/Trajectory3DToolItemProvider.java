@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.provider;
+package ca.gc.asc_csa.apogy.addons.provider;
 
 
 import java.text.DecimalFormat;
@@ -15,13 +15,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.Trajectory3DTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.Trajectory3DTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -74,7 +74,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_penDown_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_penDown_feature", "_UI_Trajectory3DTool_type"),
-				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__PEN_DOWN,
+				 ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__PEN_DOWN,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_variable_feature", "_UI_Trajectory3DTool_type"),
-				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__VARIABLE,
+				 ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -118,7 +118,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_distanceThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_distanceThreshold_feature", "_UI_Trajectory3DTool_type"),
-				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD,
+				 ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_totalDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_totalDistance_feature", "_UI_Trajectory3DTool_type"),
-				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE,
+				 ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -162,7 +162,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_poseProvider_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_poseProvider_feature", "_UI_Trajectory3DTool_type"),
-				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER,
+				 ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER,
 				 false,
 				 false,
 				 true,
@@ -184,7 +184,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_trajectory3DToolNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_trajectory3DToolNode_feature", "_UI_Trajectory3DTool_type"),
-				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE,
+				 ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE,
 				 false,
 				 false,
 				 true,
@@ -205,7 +205,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__PATHS);
+			childrenFeatures.add(ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__PATHS);
 		}
 		return childrenFeatures;
 	}
@@ -294,14 +294,14 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Trajectory3DTool.class)) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -321,8 +321,8 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__PATHS,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
+				(ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__PATHS,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 }

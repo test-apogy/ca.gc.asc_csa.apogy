@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyBindingsFacadeItemProvider
+public class ApogyCommonTopologyBindingsFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -39,7 +39,7 @@ public class Symphony__CommonTopologyBindingsFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyBindingsFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCommonTopologyBindingsFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,14 +59,14 @@ public class Symphony__CommonTopologyBindingsFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonTopologyBindingsFacade.gif.
+	 * This returns ApogyCommonTopologyBindingsFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonTopologyBindingsFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonTopologyBindingsFacade"));
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class Symphony__CommonTopologyBindingsFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CommonTopologyBindingsFacade_type");
+		return getString("_UI_ApogyCommonTopologyBindingsFacade_type");
 	}
 
 	/**

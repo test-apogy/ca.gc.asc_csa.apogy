@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -11,23 +11,23 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.Activator;
-import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
-import org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractOrbitPropagatorImpl;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -70,7 +70,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_PROPAGATOR;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_PROPAGATOR;
 	}
 
 	/**
@@ -133,19 +133,19 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				try
 				{
 					// Checks that the state falls inside the specified range.
-					Date date = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(spacecraftState.getDate());
+					Date date = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(spacecraftState.getDate());
 					if(date.getTime() >= startDate.getTime() && endDate.getTime() >= date.getTime())
 					{	
 						Orbit orbit = null;
 						if(spacecraftState.getOrbit() instanceof KeplerianOrbit)
 						{
-							orbit = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createKeplerianOrbit((KeplerianOrbit) spacecraftState.getOrbit());	
+							orbit = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createKeplerianOrbit((KeplerianOrbit) spacecraftState.getOrbit());	
 						}
 						else if(spacecraftState.getOrbit() instanceof CartesianOrbit)
 						{
-							orbit = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createCartesianEarthOrbit((CartesianOrbit) spacecraftState.getOrbit());
+							orbit = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createCartesianEarthOrbit((CartesianOrbit) spacecraftState.getOrbit());
 						}
-						OreKitBackedSpacecraftState ss = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createOreKitBackedSpacecraftState(orbit, spacecraftState);
+						OreKitBackedSpacecraftState ss = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createOreKitBackedSpacecraftState(orbit, spacecraftState);
 						states.add(ss);
 					}
 				}
@@ -160,7 +160,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 			}
 		});
 						
-		AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
 		
 		try 
 		{						
@@ -225,8 +225,8 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass == null)
 					{
-						lastPass = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();						
-						lastPass.setStartTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+						lastPass = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();						
+						lastPass.setStartTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						lastPass.setSurfaceLocation(earthSurfaceLocation);						
 						
 						if(eContainer() instanceof OrbitModel)
@@ -243,7 +243,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass != null)
 					{
-						lastPass.setEndTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setEndTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						passes.add(lastPass);
 						
 						// Update pass position history
@@ -285,8 +285,8 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		propagator.setSlaveMode();
 		propagator.addEventDetector(detector);
 		
-		AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
-		AbsoluteDate endAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
 		
 		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
 		
@@ -330,9 +330,9 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass == null)
 					{
-						lastPass = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();	
+						lastPass = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();	
 						lastPass.setSurfaceLocation(groundStation);
-						lastPass.setStartTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setStartTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						
 						if(eContainer() instanceof OrbitModel)
 						{
@@ -344,7 +344,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass != null)
 					{
-						lastPass.setEndTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setEndTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						passes.add(lastPass);
 						
 						// Update pass position history
@@ -385,8 +385,8 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		propagator.setSlaveMode();
 		propagator.addEventDetector(detector);
 		
-		AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
-		AbsoluteDate endAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
+		AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
 		
 		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
 		
@@ -399,7 +399,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		if(isDateInValidRange(targetDate))
 		{
 			Propagator propagator = getOreKitPropagator();
-			AbsoluteDate targetAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(targetDate);
+			AbsoluteDate targetAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(targetDate);
 			
 			// Set propagator to slave mode.
 			propagator.setSlaveMode();
@@ -410,7 +410,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 			// Makes a copy of the initial Orbit
 			Orbit orbitCopy = EcoreUtil.copy(getInitialOrbit());
 			
-			return Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createSpacecraftState(orbitCopy, ss);
+			return ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createSpacecraftState(orbitCopy, ss);
 		}
 		else
 		{
@@ -431,16 +431,16 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR:
 				return getOreKitPropagator();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK:
 				try {
 					return getTargetPasses((EarthSurfaceLocation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE:
 				try {
 					return getGroundStationPasses((GroundStation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 				}

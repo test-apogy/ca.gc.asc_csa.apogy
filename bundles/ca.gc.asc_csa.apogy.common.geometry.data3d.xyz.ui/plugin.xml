@@ -2,9 +2,9 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.graphicsContextAdapter">
       <Class
-            Class="org.eclipse.symphony.common.geometry.data3d.xyz.ui.adapters.GraphicsContextXYZAdapter">
+            Class="ca.gc.asc_csa.apogy.common.geometry.data3d.xyz.ui.adapters.GraphicsContextXYZAdapter">
       </Class>
    </extension>
 

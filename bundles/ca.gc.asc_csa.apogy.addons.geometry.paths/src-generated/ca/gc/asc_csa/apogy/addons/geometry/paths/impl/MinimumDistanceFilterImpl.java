@@ -3,18 +3,18 @@
  *
  * $Id: MinimumDistanceFilterImpl.java,v 1.2.4.2 2015/05/21 15:50:36 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.MinimumDistanceFilterImpl#getMinimumDistance <em>Minimum Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.impl.MinimumDistanceFilterImpl#getMinimumDistance <em>Minimum Distance</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,7 +67,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsGeometryPathsPackage.Literals.MINIMUM_DISTANCE_FILTER;
+		return ApogyAddonsGeometryPathsPackage.Literals.MINIMUM_DISTANCE_FILTER;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 		double oldMinimumDistance = minimumDistance;
 		minimumDistance = newMinimumDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE, oldMinimumDistance, minimumDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE, oldMinimumDistance, minimumDistance));
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
+			case ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
 				return getMinimumDistance();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
+			case ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
 				setMinimumDistance((Double)newValue);
 				return;
 		}
@@ -128,7 +128,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
+			case ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
 				setMinimumDistance(MINIMUM_DISTANCE_EDEFAULT);
 				return;
 		}
@@ -143,7 +143,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
+			case ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
 				return minimumDistance != MINIMUM_DISTANCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -176,12 +176,12 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 		// If there are enough points to allow for filtering.
 		if(input.getPoints().size() > 2)
 		{
-			WayPointPath filtered = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+			WayPointPath filtered = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 			
 			if(getProgressMonitor() != null) getProgressMonitor().beginTask("Filtering WayPointPath.", input.getPoints().size());
 			
 			// The first way point is always kept.
-			filtered.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getPoints().get(0)));
+			filtered.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getPoints().get(0)));
 			if(getProgressMonitor() != null) getProgressMonitor().worked(1);
 			
 			// Goes through the list of points and adds to the filtered list only those that are further apart then the specified minimum distance.
@@ -193,7 +193,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 				
 				if(distance > getMinimumDistance())
 				{
-					filtered.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(nextPoint));
+					filtered.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(nextPoint));
 					previousPoint = nextPoint;
 				}
 				

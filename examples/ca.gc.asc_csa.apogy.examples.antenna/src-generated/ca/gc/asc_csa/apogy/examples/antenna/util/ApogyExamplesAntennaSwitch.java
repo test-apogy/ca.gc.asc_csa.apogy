@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.util;
+package ca.gc.asc_csa.apogy.examples.antenna.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.examples.antenna.Antenna;
-import org.eclipse.symphony.examples.antenna.DishAntenna;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
-import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
+import ca.gc.asc_csa.apogy.examples.antenna.Antenna;
+import ca.gc.asc_csa.apogy.examples.antenna.DishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage
  * @generated
  */
-public class Symphony__ExamplesAntennaSwitch<T> extends Switch<T>
+public class ApogyExamplesAntennaSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -34,7 +34,7 @@ public class Symphony__ExamplesAntennaSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesAntennaPackage modelPackage;
+  protected static ApogyExamplesAntennaPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -42,10 +42,10 @@ public class Symphony__ExamplesAntennaSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesAntennaSwitch()
+  public ApogyExamplesAntennaSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesAntennaPackage.eINSTANCE;
+			modelPackage = ApogyExamplesAntennaPackage.eINSTANCE;
 		}
 	}
 
@@ -74,20 +74,20 @@ public class Symphony__ExamplesAntennaSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesAntennaPackage.ANTENNA: {
+			case ApogyExamplesAntennaPackage.ANTENNA: {
 				Antenna antenna = (Antenna)theEObject;
 				T result = caseAntenna(antenna);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA: {
+			case ApogyExamplesAntennaPackage.DISH_ANTENNA: {
 				DishAntenna dishAntenna = (DishAntenna)theEObject;
 				T result = caseDishAntenna(dishAntenna);
 				if (result == null) result = caseAntenna(dishAntenna);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA: {
+			case ApogyExamplesAntennaPackage.PTU_DISH_ANTENNA: {
 				PTUDishAntenna ptuDishAntenna = (PTUDishAntenna)theEObject;
 				T result = casePTUDishAntenna(ptuDishAntenna);
 				if (result == null) result = caseDishAntenna(ptuDishAntenna);
@@ -95,7 +95,7 @@ public class Symphony__ExamplesAntennaSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA_STUB: {
+			case ApogyExamplesAntennaPackage.PTU_DISH_ANTENNA_STUB: {
 				PTUDishAntennaStub ptuDishAntennaStub = (PTUDishAntennaStub)theEObject;
 				T result = casePTUDishAntennaStub(ptuDishAntennaStub);
 				if (result == null) result = casePTUDishAntenna(ptuDishAntennaStub);
@@ -104,7 +104,7 @@ public class Symphony__ExamplesAntennaSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA_SIMULATED: {
+			case ApogyExamplesAntennaPackage.PTU_DISH_ANTENNA_SIMULATED: {
 				PTUDishAntennaSimulated ptuDishAntennaSimulated = (PTUDishAntennaSimulated)theEObject;
 				T result = casePTUDishAntennaSimulated(ptuDishAntennaSimulated);
 				if (result == null) result = casePTUDishAntenna(ptuDishAntennaSimulated);
@@ -212,4 +212,4 @@ public class Symphony__ExamplesAntennaSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesAntennaSwitch
+} //ApogyExamplesAntennaSwitch

@@ -3,17 +3,17 @@
  *
  * $Id: RectangularFrustrumFieldOfViewImpl.java,v 1.3.4.2 2015/05/21 15:51:25 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getRange <em>Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getHorizontalFieldOfViewAngle <em>Horizontal Field Of View Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getVerticalFieldOfViewAngle <em>Vertical Field Of View Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getVolume <em>Volume</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getRange <em>Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getHorizontalFieldOfViewAngle <em>Horizontal Field Of View Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getVerticalFieldOfViewAngle <em>Vertical Field Of View Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getVolume <em>Volume</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,7 +108,7 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW;
+		return ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW;
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 		DistanceRange tmp = getRangeGen();
 		if(tmp == null)
 		{
-			tmp = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
+			tmp = ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
 			setRange(tmp);
 		}
 		
@@ -147,7 +147,7 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 		DistanceRange oldRange = range;
 		range = newRange;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, oldRange, newRange);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, oldRange, newRange);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -162,14 +162,14 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 		if (newRange != range) {
 			NotificationChain msgs = null;
 			if (range != null)
-				msgs = ((InternalEObject)range).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, null, msgs);
+				msgs = ((InternalEObject)range).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, null, msgs);
 			if (newRange != null)
-				msgs = ((InternalEObject)newRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, null, msgs);
+				msgs = ((InternalEObject)newRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, null, msgs);
 			msgs = basicSetRange(newRange, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, newRange, newRange));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE, newRange, newRange));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 		double oldHorizontalFieldOfViewAngle = horizontalFieldOfViewAngle;
 		horizontalFieldOfViewAngle = newHorizontalFieldOfViewAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE, oldHorizontalFieldOfViewAngle, horizontalFieldOfViewAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE, oldHorizontalFieldOfViewAngle, horizontalFieldOfViewAngle));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 		double oldVerticalFieldOfViewAngle = verticalFieldOfViewAngle;
 		verticalFieldOfViewAngle = newVerticalFieldOfViewAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE, oldVerticalFieldOfViewAngle, verticalFieldOfViewAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE, oldVerticalFieldOfViewAngle, verticalFieldOfViewAngle));
 	}
 
 	/**
@@ -246,7 +246,7 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 				return basicSetRange(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -260,13 +260,13 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 				return getRange();
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
 				return getHorizontalFieldOfViewAngle();
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
 				return getVerticalFieldOfViewAngle();
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
 				return getVolume();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -280,13 +280,13 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 				setRange((DistanceRange)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
 				setHorizontalFieldOfViewAngle((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
 				setVerticalFieldOfViewAngle((Double)newValue);
 				return;
 		}
@@ -301,13 +301,13 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 				setRange((DistanceRange)null);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
 				setHorizontalFieldOfViewAngle(HORIZONTAL_FIELD_OF_VIEW_ANGLE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
 				setVerticalFieldOfViewAngle(VERTICAL_FIELD_OF_VIEW_ANGLE_EDEFAULT);
 				return;
 		}
@@ -322,13 +322,13 @@ public class RectangularFrustrumFieldOfViewImpl extends FieldOfViewImpl implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 				return range != null;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
 				return horizontalFieldOfViewAngle != HORIZONTAL_FIELD_OF_VIEW_ANGLE_EDEFAULT;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
 				return verticalFieldOfViewAngle != VERTICAL_FIELD_OF_VIEW_ANGLE_EDEFAULT;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
 				return getVolume() != VOLUME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

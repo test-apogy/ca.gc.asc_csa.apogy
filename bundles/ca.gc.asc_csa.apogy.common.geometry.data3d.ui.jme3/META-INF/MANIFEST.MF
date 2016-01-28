@@ -2,18 +2,18 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-Localization: plugin
-Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data3d.ui.jme3;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.common.geometry.data3d.ui.jme3.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.symphony.common.topology.ui.jme3;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d.ui;visibility:=reexport,
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ ca.gc.asc_csa.apogy.common.topology.ui.jme3;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d.ui;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
-Export-Package: org.eclipse.symphony.common.geometry.data3d.ui.jme3,
- org.eclipse.symphony.common.geometry.data3d.ui.jme3.adapters,
- org.eclipse.symphony.common.geometry.data3d.ui.jme3.scene_objects
+Export-Package: ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3,
+ ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.adapters,
+ ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.scene_objects

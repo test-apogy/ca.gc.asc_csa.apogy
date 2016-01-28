@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getFeatureRoot <em>Feature Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl#getFeatureRoot <em>Feature Root</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,7 +101,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE;
+		return ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE;
 	}
 
   /**
@@ -122,7 +122,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME, oldName, name));
 	}
 
 		/**
@@ -137,7 +137,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -163,7 +163,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE, oldVariable, variable));
 	}
 
   /**
@@ -186,7 +186,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 		TypeMemberReferenceListElement oldTypeMemberReferenceListElement = typeMemberReferenceListElement;
 		typeMemberReferenceListElement = newTypeMemberReferenceListElement;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, oldTypeMemberReferenceListElement, newTypeMemberReferenceListElement);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, oldTypeMemberReferenceListElement, newTypeMemberReferenceListElement);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -202,14 +202,14 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 		if (newTypeMemberReferenceListElement != typeMemberReferenceListElement) {
 			NotificationChain msgs = null;
 			if (typeMemberReferenceListElement != null)
-				msgs = ((InternalEObject)typeMemberReferenceListElement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, null, msgs);
+				msgs = ((InternalEObject)typeMemberReferenceListElement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, null, msgs);
 			if (newTypeMemberReferenceListElement != null)
-				msgs = ((InternalEObject)newTypeMemberReferenceListElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, null, msgs);
+				msgs = ((InternalEObject)newTypeMemberReferenceListElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, null, msgs);
 			msgs = basicSetTypeMemberReferenceListElement(newTypeMemberReferenceListElement, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, newTypeMemberReferenceListElement, newTypeMemberReferenceListElement));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT, newTypeMemberReferenceListElement, newTypeMemberReferenceListElement));
 	}
 
   /**
@@ -231,7 +231,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 		ListRootNode oldFeatureRoot = featureRoot;
 		featureRoot = newFeatureRoot;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, oldFeatureRoot, newFeatureRoot);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, oldFeatureRoot, newFeatureRoot);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -246,14 +246,14 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 		if (newFeatureRoot != featureRoot) {
 			NotificationChain msgs = null;
 			if (featureRoot != null)
-				msgs = ((InternalEObject)featureRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, null, msgs);
+				msgs = ((InternalEObject)featureRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, null, msgs);
 			if (newFeatureRoot != null)
-				msgs = ((InternalEObject)newFeatureRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, null, msgs);
+				msgs = ((InternalEObject)newFeatureRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, null, msgs);
 			msgs = basicSetFeatureRoot(newFeatureRoot, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, newFeatureRoot, newFeatureRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, newFeatureRoot, newFeatureRoot));
 	}
 
 		/**
@@ -265,9 +265,9 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 				return basicSetTypeMemberReferenceListElement(null, msgs);
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
 				return basicSetFeatureRoot(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -282,14 +282,14 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
 				return getName();
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 				return getTypeMemberReferenceListElement();
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
 				return getFeatureRoot();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -304,16 +304,16 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 				setTypeMemberReferenceListElement((TypeMemberReferenceListElement)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
 				setFeatureRoot((ListRootNode)newValue);
 				return;
 		}
@@ -329,16 +329,16 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 				setVariable((Variable)null);
 				return;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 				setTypeMemberReferenceListElement((TypeMemberReferenceListElement)null);
 				return;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
 				setFeatureRoot((ListRootNode)null);
 				return;
 		}
@@ -354,13 +354,13 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 				return variable != null;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 				return typeMemberReferenceListElement != null;
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
 				return featureRoot != null;
 		}
 		return super.eIsSet(featureID);

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 
 import java.text.SimpleDateFormat;
 
@@ -13,9 +13,9 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DateToStringConverter;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 
 public abstract class AbstractTimeSourceComposite extends Composite 
 {	
@@ -71,7 +71,7 @@ public abstract class AbstractTimeSourceComposite extends Composite
 		if(timeSourceTimeValueLabel != null)
 		{
 			IObservableValue timeSourceTimeLabelValue = PojoProperties.value("text").observe(timeSourceTimeValueLabel);		
-			IObservableValue timeSourceTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getTimeSource());			
+			IObservableValue timeSourceTimeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.TIMED__TIME)).observe(getTimeSource());			
 			UpdateValueStrategy timeSourceTimeValueStrategy = new UpdateValueStrategy();
 			timeSourceTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
 			bindingContext.bindValue(timeSourceTimeLabelValue, timeSourceTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), timeSourceTimeValueStrategy);

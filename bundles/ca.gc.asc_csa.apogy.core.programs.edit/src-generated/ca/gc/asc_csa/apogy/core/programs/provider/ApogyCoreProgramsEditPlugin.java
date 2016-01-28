@@ -1,27 +1,27 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.provider;
+package ca.gc.asc_csa.apogy.core.programs.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CorePrograms edit plugin.
+ * This is the central singleton for the ApogyCorePrograms edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CoreProgramsEditPlugin extends EMFPlugin {
+public final class ApogyCoreProgramsEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CoreProgramsEditPlugin INSTANCE = new Symphony__CoreProgramsEditPlugin();
+	public static final ApogyCoreProgramsEditPlugin INSTANCE = new ApogyCoreProgramsEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -37,11 +37,11 @@ public final class Symphony__CoreProgramsEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsEditPlugin() {
+	public ApogyCoreProgramsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		   });
 	}
 

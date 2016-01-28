@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -22,14 +22,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Watch;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Watch;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Watch} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Watch} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class WatchItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class WatchItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -132,7 +132,7 @@ public class WatchItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Watch_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Watch_variable_feature", "_UI_Watch_type"),
-				 Symphony__CoreInvocatorPackage.Literals.WATCH__VARIABLE,
+				 ApogyCoreInvocatorPackage.Literals.WATCH__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -154,8 +154,8 @@ public class WatchItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.WATCH__TREE_ROOT_NODE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.WATCH__TREE_ROOT_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -227,13 +227,13 @@ public class WatchItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Watch.class)) {
-			case Symphony__CoreInvocatorPackage.WATCH__NAME:
-			case Symphony__CoreInvocatorPackage.WATCH__DESCRIPTION:
-			case Symphony__CoreInvocatorPackage.WATCH__VARIABLE:
+			case ApogyCoreInvocatorPackage.WATCH__NAME:
+			case ApogyCoreInvocatorPackage.WATCH__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.WATCH__VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT:
-			case Symphony__CoreInvocatorPackage.WATCH__TREE_ROOT_NODE:
+			case ApogyCoreInvocatorPackage.WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT:
+			case ApogyCoreInvocatorPackage.WATCH__TREE_ROOT_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -254,13 +254,13 @@ public class WatchItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement()));
+				(ApogyCoreInvocatorPackage.Literals.WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.WATCH__TREE_ROOT_NODE,
-				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
+				(ApogyCoreInvocatorPackage.Literals.WATCH__TREE_ROOT_NODE,
+				 ApogyCommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 
   /**

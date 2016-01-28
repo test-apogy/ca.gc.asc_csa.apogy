@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Collection;
 
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +28,9 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestListImpl#getFeaturesOfInterest <em>Features Of Interest</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestListImpl#getFeaturesOfInterest <em>Features Of Interest</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST;
+		return ApogyCorePackage.Literals.FEATURE_OF_INTEREST_LIST;
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.FEATURE_OF_INTEREST_LIST__NAME, oldName, name));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<FeatureOfInterest> getFeaturesOfInterest() {
 		if (featuresOfInterest == null) {
-			featuresOfInterest = new EObjectContainmentEList<FeatureOfInterest>(FeatureOfInterest.class, this, Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST);
+			featuresOfInterest = new EObjectContainmentEList<FeatureOfInterest>(FeatureOfInterest.class, this, ApogyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST);
 		}
 		return featuresOfInterest;
 	}
@@ -163,7 +163,7 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
 				return ((InternalEList<?>)getFeaturesOfInterest()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -177,11 +177,11 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__NAME:
 				return getName();
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
 				return getFeaturesOfInterest();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
 				getFeaturesOfInterest().clear();
 				getFeaturesOfInterest().addAll((Collection<? extends FeatureOfInterest>)newValue);
 				return;
@@ -218,13 +218,13 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
 				getFeaturesOfInterest().clear();
 				return;
 		}
@@ -239,11 +239,11 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
 				return featuresOfInterest != null && !featuresOfInterest.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -258,7 +258,7 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -274,7 +274,7 @@ public class FeatureOfInterestListImpl extends MinimalEObjectImpl.Container impl
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

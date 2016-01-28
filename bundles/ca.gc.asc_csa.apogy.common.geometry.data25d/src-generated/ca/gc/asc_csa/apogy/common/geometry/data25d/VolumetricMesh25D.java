@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d;
+package ca.gc.asc_csa.apogy.common.geometry.data25d;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.geometry.data25d;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getVolumetricMesh25D()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getVolumetricMesh25D()
  * @model
  * @generated
  */

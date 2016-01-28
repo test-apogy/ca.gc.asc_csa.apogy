@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
@@ -48,13 +48,13 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
@@ -472,7 +472,7 @@ public class VariableImplementationsComposite extends Composite {
 						EClass interfaceClass = variableImplementation
 								.getVariable().getVariableType()
 								.getInterfaceClass();
-						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
+						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
 								interfaceClass).toArray();
 					}
 				}
@@ -484,7 +484,7 @@ public class VariableImplementationsComposite extends Composite {
 						EClass interfaceClass = typeMemberImplementation
 								.getTypeMember().getMemberType()
 								.getInterfaceClass();
-						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
+						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
 								interfaceClass).toArray();
 					}
 				}
@@ -528,7 +528,7 @@ public class VariableImplementationsComposite extends Composite {
 			SetCommand command = new SetCommand(
 					editingDomain,
 					implementation,
-					Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+					ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 					eClass);
 			editingDomain.getCommandStack().execute(command);
 

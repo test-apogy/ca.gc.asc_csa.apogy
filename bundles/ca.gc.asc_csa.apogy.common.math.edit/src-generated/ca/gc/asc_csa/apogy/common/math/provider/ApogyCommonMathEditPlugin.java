@@ -3,25 +3,25 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.provider;
+package ca.gc.asc_csa.apogy.common.math.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonMath edit plugin.
+ * This is the central singleton for the ApogyCommonMath edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonMathEditPlugin extends EMFPlugin {
+public final class ApogyCommonMathEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonMathEditPlugin INSTANCE = new Symphony__CommonMathEditPlugin();
+	public static final ApogyCommonMathEditPlugin INSTANCE = new ApogyCommonMathEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -37,7 +37,7 @@ public final class Symphony__CommonMathEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathEditPlugin() {
+	public ApogyCommonMathEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

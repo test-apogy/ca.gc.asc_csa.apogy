@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,13 +21,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.WorksitesList;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.WorksitesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.WorksitesList} object.
  * <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * @generated
@@ -75,7 +75,7 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -97,7 +97,7 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -118,8 +118,8 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.WORKSITES_LIST__WORKSITES);
-			childrenFeatures.add(Symphony__CorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS);
+			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__WORKSITES);
+			childrenFeatures.add(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS);
 		}
 		return childrenFeatures;
 	}
@@ -173,12 +173,12 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WorksitesList.class)) {
-			case Symphony__CorePackage.WORKSITES_LIST__NAME:
-			case Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION:
+			case ApogyCorePackage.WORKSITES_LIST__NAME:
+			case ApogyCorePackage.WORKSITES_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
-			case Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -199,8 +199,8 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
-				 Symphony__CoreFactory.eINSTANCE.createOrbitModelsList()));
+				(ApogyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
+				 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
 	}
 
 	/**

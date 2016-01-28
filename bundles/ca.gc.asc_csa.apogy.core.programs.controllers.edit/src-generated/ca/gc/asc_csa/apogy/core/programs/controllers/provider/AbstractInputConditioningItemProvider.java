@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

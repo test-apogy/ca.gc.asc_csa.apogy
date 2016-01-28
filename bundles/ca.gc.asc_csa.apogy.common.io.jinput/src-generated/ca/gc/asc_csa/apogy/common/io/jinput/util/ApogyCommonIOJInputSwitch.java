@@ -1,12 +1,12 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.util;
+package ca.gc.asc_csa.apogy.common.io.jinput.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.io.jinput.*;
+import ca.gc.asc_csa.apogy.common.io.jinput.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,17 +18,17 @@ import org.eclipse.symphony.common.io.jinput.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage
+ * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage
  * @generated
  */
-public class Symphony__CommonIOJInputSwitch<T> extends Switch<T> {
+public class ApogyCommonIOJInputSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonIOJInputPackage modelPackage;
+	protected static ApogyCommonIOJInputPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -36,9 +36,9 @@ public class Symphony__CommonIOJInputSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonIOJInputSwitch() {
+	public ApogyCommonIOJInputSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonIOJInputPackage.eINSTANCE;
+			modelPackage = ApogyCommonIOJInputPackage.eINSTANCE;
 		}
 	}
 
@@ -65,58 +65,58 @@ public class Symphony__CommonIOJInputSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER: {
+			case ApogyCommonIOJInputPackage.ECONTROLLER: {
 				EController eController = (EController)theEObject;
 				T result = caseEController(eController);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT: {
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT: {
 				EControllerEnvironment eControllerEnvironment = (EControllerEnvironment)theEObject;
 				T result = caseEControllerEnvironment(eControllerEnvironment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.ECOMPONENT: {
+			case ApogyCommonIOJInputPackage.ECOMPONENT: {
 				EComponent eComponent = (EComponent)theEObject;
 				T result = caseEComponent(eComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.ECOMPONENTS: {
+			case ApogyCommonIOJInputPackage.ECOMPONENTS: {
 				EComponents eComponents = (EComponents)theEObject;
 				T result = caseEComponents(eComponents);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.EBUTTON: {
+			case ApogyCommonIOJInputPackage.EBUTTON: {
 				EButton eButton = (EButton)theEObject;
 				T result = caseEButton(eButton);
 				if (result == null) result = caseEComponent(eButton);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.EAXIS: {
+			case ApogyCommonIOJInputPackage.EAXIS: {
 				EAxis eAxis = (EAxis)theEObject;
 				T result = caseEAxis(eAxis);
 				if (result == null) result = caseEComponent(eAxis);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.EKEY: {
+			case ApogyCommonIOJInputPackage.EKEY: {
 				EKey eKey = (EKey)theEObject;
 				T result = caseEKey(eKey);
 				if (result == null) result = caseEComponent(eKey);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER: {
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER: {
 				EComponentQualifier eComponentQualifier = (EComponentQualifier)theEObject;
 				T result = caseEComponentQualifier(eComponentQualifier);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT: {
+			case ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT: {
 				EVirtualComponent eVirtualComponent = (EVirtualComponent)theEObject;
 				T result = caseEVirtualComponent(eVirtualComponent);
 				if (result == null) result = caseEComponent(eVirtualComponent);
@@ -278,4 +278,4 @@ public class Symphony__CommonIOJInputSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonIOJInputSwitch
+} //ApogyCommonIOJInputSwitch

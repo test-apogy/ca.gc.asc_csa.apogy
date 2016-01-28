@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv;
+package ca.gc.asc_csa.apogy.common.file.csv;
 
 import java.util.Map;
 
@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet#getColumns <em>Columns</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getColumns <em>Columns</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumnsSet()
+ * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvColumnsSet()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface CsvColumnsSet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Columns</em>' attribute.
 	 * @see #setColumns(Map)
-	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumnsSet_Columns()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.file.csv.CsvColumnMap" transient="true"
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvColumnsSet_Columns()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.file.csv.CsvColumnMap" transient="true"
 	 * @generated
 	 */
 	Map<String, CsvColumn> getColumns();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet#getColumns <em>Columns</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getColumns <em>Columns</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Columns</em>' attribute.
@@ -61,14 +61,14 @@ public interface CsvColumnsSet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumnsSet_Name()
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#getCsvColumnsSet_Name()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.

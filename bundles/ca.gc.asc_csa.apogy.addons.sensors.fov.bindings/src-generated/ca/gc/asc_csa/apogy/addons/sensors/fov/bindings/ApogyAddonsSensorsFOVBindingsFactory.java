@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage
  * @generated
  */
-public interface Symphony__AddonsSensorsFOVBindingsFactory extends EFactory
+public interface ApogyAddonsSensorsFOVBindingsFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__AddonsSensorsFOVBindingsFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsSensorsFOVBindingsFactory eINSTANCE = org.eclipse.symphony.addons.sensors.fov.bindings.impl.Symphony__AddonsSensorsFOVBindingsFactoryImpl.init();
+  ApogyAddonsSensorsFOVBindingsFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl.ApogyAddonsSensorsFOVBindingsFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Circular Sector Field Of View Binding</em>'.
@@ -57,6 +57,6 @@ public interface Symphony__AddonsSensorsFOVBindingsFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVBindingsPackage getSymphony__AddonsSensorsFOVBindingsPackage();
+	ApogyAddonsSensorsFOVBindingsPackage getApogyAddonsSensorsFOVBindingsPackage();
 
-} //Symphony__AddonsSensorsFOVBindingsFactory
+} //ApogyAddonsSensorsFOVBindingsFactory

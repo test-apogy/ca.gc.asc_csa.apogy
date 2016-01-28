@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.EEnumLiteral;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnumLiteral <em>EEnum Literal</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnumLiteral <em>EEnum Literal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEEnumArgument()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEEnumArgument()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface EEnumArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EEnum Literal</em>' reference.
 	 * @see #setEEnumLiteral(EEnumLiteral)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEEnumArgument_EEnumLiteral()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEEnumArgument_EEnumLiteral()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable'"
 	 * @generated
 	 */
   EEnumLiteral getEEnumLiteral();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnumLiteral <em>EEnum Literal</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnumLiteral <em>EEnum Literal</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>EEnum Literal</em>' reference.
@@ -61,14 +61,14 @@ public interface EEnumArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EEnum</em>' reference.
 	 * @see #setEEnum(EEnum)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEEnumArgument_EEnum()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEEnumArgument_EEnum()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='None' notify='true'"
 	 * @generated
 	 */
   EEnum getEEnum();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>EEnum</em>' reference.

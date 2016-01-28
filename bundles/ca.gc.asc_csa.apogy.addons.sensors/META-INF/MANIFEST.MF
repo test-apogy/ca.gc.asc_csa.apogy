@@ -2,19 +2,19 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.sensors;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.sensors;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Eclipse-LazyStart: true
-Export-Package: org.eclipse.symphony.addons.sensors,
- org.eclipse.symphony.addons.sensors.impl,
- org.eclipse.symphony.addons.sensors.util
+Export-Package: ca.gc.asc_csa.apogy.addons.sensors,
+ ca.gc.asc_csa.apogy.addons.sensors.impl,
+ ca.gc.asc_csa.apogy.addons.sensors.util
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

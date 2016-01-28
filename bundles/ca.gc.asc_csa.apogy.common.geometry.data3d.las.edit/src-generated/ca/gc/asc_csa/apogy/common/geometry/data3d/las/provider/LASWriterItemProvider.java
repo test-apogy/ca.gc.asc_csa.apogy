@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.provider;
 
 
 import java.util.Collection;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.geometry.data3d.las.LASWriter;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -90,7 +90,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_fileName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_fileName_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__FILE_NAME,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__FILE_NAME,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_progressMonitor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_progressMonitor_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__PROGRESS_MONITOR,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__PROGRESS_MONITOR,
 				 true,
 				 false,
 				 false,
@@ -134,7 +134,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_points_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_points_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__POINTS,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__POINTS,
 				 true,
 				 false,
 				 true,
@@ -156,7 +156,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_scaleX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_scaleX_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__SCALE_X,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__SCALE_X,
 				 true,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_scaleY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_scaleY_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__SCALE_Y,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__SCALE_Y,
 				 true,
 				 false,
 				 false,
@@ -200,7 +200,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_scaleZ_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_scaleZ_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__SCALE_Z,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__SCALE_Z,
 				 true,
 				 false,
 				 false,
@@ -222,7 +222,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_header_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_header_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__HEADER,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__HEADER,
 				 false,
 				 false,
 				 false,
@@ -244,7 +244,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_xOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_xOffset_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__XOFFSET,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__XOFFSET,
 				 true,
 				 false,
 				 false,
@@ -266,7 +266,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_yOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_yOffset_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__YOFFSET,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__YOFFSET,
 				 true,
 				 false,
 				 false,
@@ -288,7 +288,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_zOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_zOffset_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__ZOFFSET,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__ZOFFSET,
 				 true,
 				 false,
 				 false,
@@ -310,7 +310,7 @@ public class LASWriterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASWriter_outputStream_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASWriter_outputStream_feature", "_UI_LASWriter_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER__OUTPUT_STREAM,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_WRITER__OUTPUT_STREAM,
 				 true,
 				 false,
 				 false,
@@ -357,15 +357,15 @@ public class LASWriterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LASWriter.class)) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__FILE_NAME:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__PROGRESS_MONITOR:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_X:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Y:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Z:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__XOFFSET:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__YOFFSET:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__ZOFFSET:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__OUTPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__FILE_NAME:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__PROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__SCALE_X:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Y:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Z:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__XOFFSET:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__YOFFSET:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__ZOFFSET:
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER__OUTPUT_STREAM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

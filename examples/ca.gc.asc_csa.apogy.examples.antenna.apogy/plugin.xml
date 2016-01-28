@@ -8,20 +8,20 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_examples_antenna -->
+      <!-- @generated apogy_examples_antenna -->
       <package
-            uri="org.eclipse.symphony.examples.antenna.symphony"
-            class="org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage"
-            genModel="model/symphony_examples_antenna_symphony.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.antenna.apogy"
+            class="ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage"
+            genModel="model/apogy_examples_antenna_apogy.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.typeContributor">
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
       <Type
-            URI="model/PTUDishAntennaSymphonySystem.ss">
+            URI="model/PTUDishAntennaApogySystem.ss">
       </Type>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.sessionProvider">
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
       <SessionProvider
             Description="Session showing the use of the PTU Dish Antenna example system."
             Name="PTU Dish Antenna Example"

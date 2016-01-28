@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.io.jinput.ui;
+package ca.gc.asc_csa.apogy.common.io.jinput.ui;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -10,7 +10,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.symphony.common.io.jinput.ui"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common.io.jinput.ui"; //$NON-NLS-1$
 	
 	// The shared instance
 	private static Activator plugin;

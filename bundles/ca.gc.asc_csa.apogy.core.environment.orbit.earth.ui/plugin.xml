@@ -5,35 +5,35 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="false"
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.environment.orbit.earth.ui.views.EarthView"
-            id="org.eclipse.symphony.core.environment.orbit.earth.ui.view1"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.EarthView"
+            id="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.view1"
             name="Earth View"
             restorable="true">
       </view>
       <view
             allowMultiple="false"
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
-            id="org.eclipse.symphony.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
+            id="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
             name="Spacecraft Visibility"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
-            id="org.eclipse.symphony.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
+            id="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
             name="Visibility Pass View"
             restorable="true">
       </view>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_environment_orbit_earth_ui -->
+      <!-- @generated apogy_environment_orbit_earth_ui -->
       <package
-            uri="org.eclipse.symphony.core.environment.orbit.earth.ui"
-            class="org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage"
-            genModel="model/symphony_core_environment_orbit_earth_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage"
+            genModel="model/apogy_core_environment_orbit_earth_ui.xcore"/>
    </extension>
 
 </plugin>

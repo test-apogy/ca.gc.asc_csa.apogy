@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode#getCartesianTriangularMeshMapLayer() <em>Get Cartesian Triangular Mesh Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode#getCartesianTriangularMeshMapLayer() <em>Get Cartesian Triangular Mesh Map Layer</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -60,7 +60,7 @@ public class CartesianTriangularMeshMapLayerNodeTest extends AbstractMapLayerNod
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode());
 	}
 
 	/**
@@ -75,10 +75,10 @@ public class CartesianTriangularMeshMapLayerNodeTest extends AbstractMapLayerNod
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode#getCartesianTriangularMeshMapLayer() <em>Get Cartesian Triangular Mesh Map Layer</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode#getCartesianTriangularMeshMapLayer() <em>Get Cartesian Triangular Mesh Map Layer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode#getCartesianTriangularMeshMapLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode#getCartesianTriangularMeshMapLayer()
 	 * @generated_NOT
 	 */
 	public void testGetCartesianTriangularMeshMapLayer() {

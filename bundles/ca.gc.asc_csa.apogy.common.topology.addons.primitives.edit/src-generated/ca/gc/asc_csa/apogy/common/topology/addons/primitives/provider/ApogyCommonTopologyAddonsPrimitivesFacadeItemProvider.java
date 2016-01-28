@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider.java,v 1.6.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
+ * $Id: ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider.java,v 1.6.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 
 import java.util.Collection;
@@ -23,12 +23,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider
+public class ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -43,7 +43,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider(AdapterFactory adapterFactory)
+	public ApogyCommonTopologyAddonsPrimitivesFacadeItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -65,7 +65,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonTopologyAddonsPrimitivesFacade.gif.
+	 * This returns ApogyCommonTopologyAddonsPrimitivesFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -73,7 +73,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonTopologyAddonsPrimitivesFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonTopologyAddonsPrimitivesFacade"));
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Symphony__CommonTopologyAddonsPrimitivesFacade_type");
+		return getString("_UI_ApogyCommonTopologyAddonsPrimitivesFacade_type");
 	}
 
 	/**

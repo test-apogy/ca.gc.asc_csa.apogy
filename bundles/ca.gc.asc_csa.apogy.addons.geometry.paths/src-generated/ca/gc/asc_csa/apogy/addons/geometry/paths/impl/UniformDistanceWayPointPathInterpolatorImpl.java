@@ -3,20 +3,20 @@
  *
  * $Id: UniformDistanceWayPointPathInterpolatorImpl.java,v 1.2.4.2 2015/05/21 15:50:36 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import javax.vecmath.Point3d;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.UniformDistanceWayPointPathInterpolatorImpl#getDistanceInterval <em>Distance Interval</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.impl.UniformDistanceWayPointPathInterpolatorImpl#getDistanceInterval <em>Distance Interval</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,7 +71,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsGeometryPathsPackage.Literals.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR;
+		return ApogyAddonsGeometryPathsPackage.Literals.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR;
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		double oldDistanceInterval = distanceInterval;
 		distanceInterval = newDistanceInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL, oldDistanceInterval, distanceInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL, oldDistanceInterval, distanceInterval));
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				return getDistanceInterval();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -121,7 +121,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				setDistanceInterval((Double)newValue);
 				return;
 		}
@@ -137,7 +137,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				setDistanceInterval(DISTANCE_INTERVAL_EDEFAULT);
 				return;
 		}
@@ -153,7 +153,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				return distanceInterval != DISTANCE_INTERVAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -183,7 +183,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	
 	private WayPointPath getHighResolutionWayPointPath(WayPointPath path) throws Exception
 	{	
-		SegmentWayPointPathInterpolator interpolator = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator();			
+		SegmentWayPointPathInterpolator interpolator = ApogyAddonsGeometryPathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator();			
 		interpolator.setMaximumDistanceInterval(getHighResolutionMaximumDistanceInterval());		
 		return interpolator.process(path);				
 	}
@@ -201,7 +201,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	
 	private WayPointPath filterPath(WayPointPath path) throws Exception
 	{
-		WayPointPath result = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath result = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
 		int n = Math.round( (float) Math.ceil(getDistanceInterval() / getHighResolutionMaximumDistanceInterval())); 
 		int nlPath = (int) Math.round((float) path.getLength() / getDistanceInterval());
@@ -224,7 +224,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		}
 		
 		// Adds the first point into the resulting path.
-		result.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(path.getPoints().get(0)));
+		result.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(path.getPoints().get(0)));
 		
 		// Interpolate the trajectory.
 		int ihpath = 0;
@@ -249,7 +249,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 			
 			ihpath = ihpath + n;
 			Point3d lastPoint = result.getEndPoint().asPoint3d();
-			CartesianPositionCoordinates newPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates( lastPoint.x + ux * getDistanceInterval(),
+			CartesianPositionCoordinates newPoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates( lastPoint.x + ux * getDistanceInterval(),
 										   							  lastPoint.y + uy * getDistanceInterval(), 
 										   							  lastPoint.z + uz * getDistanceInterval());
 			
@@ -271,7 +271,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		else
 		{
 			// Last point is far from the last point of the hight resolution trajectory, need to add an extra point.
-			result.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(path.getEndPoint()));
+			result.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(path.getEndPoint()));
 		}
 		
 		return result;
@@ -284,7 +284,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		
 		if(getProgressMonitor() != null) getProgressMonitor().beginTask("Interpolating WayPointPath.", 2);
 		
-		WayPointPath result = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath result = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		setOutput(result);	
 				
 		// First, interpolate the path at high resolution.

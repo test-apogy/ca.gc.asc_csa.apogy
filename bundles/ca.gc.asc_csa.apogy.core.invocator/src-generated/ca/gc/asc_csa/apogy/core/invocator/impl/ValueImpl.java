@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Value;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Value;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,8 +21,8 @@ import org.eclipse.symphony.core.invocator.Value;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ValueImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ValueImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ValueImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,7 +77,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.VALUE;
+		return ApogyCoreInvocatorPackage.Literals.VALUE;
 	}
 
   /**
@@ -100,7 +100,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VALUE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VALUE__NAME, oldName, name));
 	}
 
   /**
@@ -123,7 +123,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
 		EObject oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VALUE__VALUE, oldValue, newValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VALUE__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -139,14 +139,14 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VALUE__VALUE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.VALUE__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VALUE__VALUE, null, msgs);
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.VALUE__VALUE, null, msgs);
 			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VALUE__VALUE, newValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.VALUE__VALUE, newValue, newValue));
 	}
 
   /**
@@ -158,7 +158,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.VALUE__VALUE:
 				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -173,9 +173,9 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUE__NAME:
+			case ApogyCoreInvocatorPackage.VALUE__NAME:
 				return getName();
-			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.VALUE__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -190,10 +190,10 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUE__NAME:
+			case ApogyCoreInvocatorPackage.VALUE__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.VALUE__VALUE:
 				setValue((EObject)newValue);
 				return;
 		}
@@ -209,10 +209,10 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUE__NAME:
+			case ApogyCoreInvocatorPackage.VALUE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.VALUE__VALUE:
 				setValue((EObject)null);
 				return;
 		}
@@ -228,9 +228,9 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUE__NAME:
+			case ApogyCoreInvocatorPackage.VALUE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.VALUE__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

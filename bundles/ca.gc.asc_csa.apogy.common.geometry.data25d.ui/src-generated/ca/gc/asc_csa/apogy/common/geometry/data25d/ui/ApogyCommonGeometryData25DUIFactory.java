@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.ui;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage
  * @generated
  */
-public interface Symphony__CommonGeometryData25DUIFactory extends EFactory {
+public interface ApogyCommonGeometryData25DUIFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData25DUIFactory eINSTANCE = org.eclipse.symphony.common.geometry.data25d.ui.impl.Symphony__CommonGeometryData25DUIFactoryImpl.init();
+	ApogyCommonGeometryData25DUIFactory eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.ApogyCommonGeometryData25DUIFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Volumetric Coordinates Set25 DPresentation</em>'.
@@ -38,6 +38,6 @@ public interface Symphony__CommonGeometryData25DUIFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData25DUIPackage getSymphony__CommonGeometryData25DUIPackage();
+	ApogyCommonGeometryData25DUIPackage getApogyCommonGeometryData25DUIPackage();
 
-} //Symphony__CommonGeometryData25DUIFactory
+} //ApogyCommonGeometryData25DUIFactory

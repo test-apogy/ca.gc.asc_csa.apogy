@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsFactory;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
-import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumField
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVBindingsFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsFOVBindingsFactory
+public class ApogyAddonsSensorsFOVBindingsFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsFOVBindingsFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -28,18 +28,18 @@ public class Symphony__AddonsSensorsFOVBindingsFactoryImpl extends EFactoryImpl 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__AddonsSensorsFOVBindingsFactory init()
+  public static ApogyAddonsSensorsFOVBindingsFactory init()
   {
 		try {
-			Symphony__AddonsSensorsFOVBindingsFactory theSymphony__AddonsSensorsFOVBindingsFactory = (Symphony__AddonsSensorsFOVBindingsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsFOVBindingsPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsFOVBindingsFactory != null) {
-				return theSymphony__AddonsSensorsFOVBindingsFactory;
+			ApogyAddonsSensorsFOVBindingsFactory theApogyAddonsSensorsFOVBindingsFactory = (ApogyAddonsSensorsFOVBindingsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsFOVBindingsPackage.eNS_URI);
+			if (theApogyAddonsSensorsFOVBindingsFactory != null) {
+				return theApogyAddonsSensorsFOVBindingsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsFOVBindingsFactoryImpl();
+		return new ApogyAddonsSensorsFOVBindingsFactoryImpl();
 	}
 
   /**
@@ -48,7 +48,7 @@ public class Symphony__AddonsSensorsFOVBindingsFactoryImpl extends EFactoryImpl 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsFOVBindingsFactoryImpl()
+  public ApogyAddonsSensorsFOVBindingsFactoryImpl()
   {
 		super();
 	}
@@ -62,9 +62,9 @@ public class Symphony__AddonsSensorsFOVBindingsFactoryImpl extends EFactoryImpl 
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING: return createCircularSectorFieldOfViewBinding();
-			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING: return createConicalFieldOfViewBinding();
-			case Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING: return createRectangularFrustrumFieldOfViewBinding();
+			case ApogyAddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING: return createCircularSectorFieldOfViewBinding();
+			case ApogyAddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING: return createConicalFieldOfViewBinding();
+			case ApogyAddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING: return createRectangularFrustrumFieldOfViewBinding();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -108,8 +108,8 @@ public class Symphony__AddonsSensorsFOVBindingsFactoryImpl extends EFactoryImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVBindingsPackage getSymphony__AddonsSensorsFOVBindingsPackage() {
-		return (Symphony__AddonsSensorsFOVBindingsPackage)getEPackage();
+	public ApogyAddonsSensorsFOVBindingsPackage getApogyAddonsSensorsFOVBindingsPackage() {
+		return (ApogyAddonsSensorsFOVBindingsPackage)getEPackage();
 	}
 
 		/**
@@ -119,9 +119,9 @@ public class Symphony__AddonsSensorsFOVBindingsFactoryImpl extends EFactoryImpl 
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__AddonsSensorsFOVBindingsPackage getPackage()
+  public static ApogyAddonsSensorsFOVBindingsPackage getPackage()
   {
-		return Symphony__AddonsSensorsFOVBindingsPackage.eINSTANCE;
+		return ApogyAddonsSensorsFOVBindingsPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsFOVBindingsFactoryImpl
+} //ApogyAddonsSensorsFOVBindingsFactoryImpl

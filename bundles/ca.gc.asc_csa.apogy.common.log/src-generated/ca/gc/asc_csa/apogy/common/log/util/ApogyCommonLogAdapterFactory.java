@@ -1,30 +1,30 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log.util;
+package ca.gc.asc_csa.apogy.common.log.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.log.*;
+import ca.gc.asc_csa.apogy.common.log.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.log.Symphony__CommonLogPackage
+ * @see ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage
  * @generated
  */
-public class Symphony__CommonLogAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonLogAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonLogPackage modelPackage;
+	protected static ApogyCommonLogPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -32,9 +32,9 @@ public class Symphony__CommonLogAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonLogAdapterFactory() {
+	public ApogyCommonLogAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonLogPackage.eINSTANCE;
+			modelPackage = ApogyCommonLogPackage.eINSTANCE;
 		}
 	}
 
@@ -63,8 +63,8 @@ public class Symphony__CommonLogAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonLogSwitch<Adapter> modelSwitch =
-		new Symphony__CommonLogSwitch<Adapter>() {
+	protected ApogyCommonLogSwitch<Adapter> modelSwitch =
+		new ApogyCommonLogSwitch<Adapter>() {
 			@Override
 			public Adapter caseLogger(Logger object) {
 				return createLoggerAdapter();
@@ -90,13 +90,13 @@ public class Symphony__CommonLogAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.log.Logger <em>Logger</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.log.Logger <em>Logger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.log.Logger
+	 * @see ca.gc.asc_csa.apogy.common.log.Logger
 	 * @generated
 	 */
 	public Adapter createLoggerAdapter() {
@@ -115,4 +115,4 @@ public class Symphony__CommonLogAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__CommonLogAdapterFactory
+} //ApogyCommonLogAdapterFactory

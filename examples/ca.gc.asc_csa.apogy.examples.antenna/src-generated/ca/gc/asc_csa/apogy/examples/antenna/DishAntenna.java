@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna;
+package ca.gc.asc_csa.apogy.examples.antenna;
 
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +19,10 @@ import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.antenna.DishAntenna#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.DishAntenna#getFov <em>Fov</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getDishAntenna()
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getDishAntenna()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface DishAntenna extends Antenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(ConicalFieldOfView)
-	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getDishAntenna_Fov()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getDishAntenna_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly' propertyCategory='Field Of View'"
 	 * @generated
@@ -49,7 +49,7 @@ public interface DishAntenna extends Antenna
   ConicalFieldOfView getFov();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.antenna.DishAntenna#getFov <em>Fov</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.antenna.DishAntenna#getFov <em>Fov</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov</em>' containment reference.

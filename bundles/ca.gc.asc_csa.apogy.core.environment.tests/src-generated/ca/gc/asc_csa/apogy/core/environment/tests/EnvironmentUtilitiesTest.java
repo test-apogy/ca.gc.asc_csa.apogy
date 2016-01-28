@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -9,10 +9,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
 
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -24,10 +24,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#convertToJulianDate(java.util.Date) <em>Convert To Julian Date</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#parseRightAscension(java.lang.String) <em>Parse Right Ascension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#parseDegMinSec(java.lang.String) <em>Parse Deg Min Sec</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#sortByMagnitude(java.util.List) <em>Sort By Magnitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#convertToJulianDate(java.util.Date) <em>Convert To Julian Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#parseRightAscension(java.lang.String) <em>Parse Right Ascension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#parseDegMinSec(java.lang.String) <em>Parse Deg Min Sec</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#sortByMagnitude(java.util.List) <em>Sort By Magnitude</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -89,7 +89,7 @@ public class EnvironmentUtilitiesTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createEnvironmentUtilities());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createEnvironmentUtilities());
 	}
 
 	/**
@@ -104,10 +104,10 @@ public class EnvironmentUtilitiesTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#convertToJulianDate(java.util.Date) <em>Convert To Julian Date</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#convertToJulianDate(java.util.Date) <em>Convert To Julian Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EnvironmentUtilities#convertToJulianDate(java.util.Date)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#convertToJulianDate(java.util.Date)
 	 * @generated_NOT
 	 */
 	public void testConvertToJulianDate__Date() 
@@ -136,10 +136,10 @@ public class EnvironmentUtilitiesTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#parseRightAscension(java.lang.String) <em>Parse Right Ascension</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#parseRightAscension(java.lang.String) <em>Parse Right Ascension</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EnvironmentUtilities#parseRightAscension(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#parseRightAscension(java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testParseRightAscension__String() 
@@ -178,10 +178,10 @@ public class EnvironmentUtilitiesTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#parseDegMinSec(java.lang.String) <em>Parse Deg Min Sec</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#parseDegMinSec(java.lang.String) <em>Parse Deg Min Sec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EnvironmentUtilities#parseDegMinSec(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#parseDegMinSec(java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testParseDegMinSec__String() 
@@ -225,10 +225,10 @@ public class EnvironmentUtilitiesTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EnvironmentUtilities#sortByMagnitude(java.util.List) <em>Sort By Magnitude</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#sortByMagnitude(java.util.List) <em>Sort By Magnitude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EnvironmentUtilities#sortByMagnitude(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities#sortByMagnitude(java.util.List)
 	 * @generated_NOT
 	 */
 	public void testSortByMagnitude__List() 
@@ -240,17 +240,17 @@ public class EnvironmentUtilitiesTest extends TestCase {
 		assertNotNull(sortedStars);
 		
 		// Test with one star.
-		Star star1 = Symphony__CoreEnvironmentFacade.INSTANCE.createStar(1.0f, 0, 0);		
+		Star star1 = ApogyCoreEnvironmentFacade.INSTANCE.createStar(1.0f, 0, 0);		
 		stars.add(star1);
 		sortedStars = getFixture().sortByMagnitude(stars);
 		assertNotNull(sortedStars);
 		assertEquals(1, sortedStars.size());
 		
 		// Test with 3 stars.
-		Star star2 = Symphony__CoreEnvironmentFacade.INSTANCE.createStar(2.0f, 0, 0);	
+		Star star2 = ApogyCoreEnvironmentFacade.INSTANCE.createStar(2.0f, 0, 0);	
 		stars.add(star2);
 
-		Star star3 = Symphony__CoreEnvironmentFacade.INSTANCE.createStar(0.1f, 0, 0);	
+		Star star3 = ApogyCoreEnvironmentFacade.INSTANCE.createStar(0.1f, 0, 0);	
 		stars.add(star3);
 		
 		sortedStars = getFixture().sortByMagnitude(stars);
@@ -262,10 +262,10 @@ public class EnvironmentUtilitiesTest extends TestCase {
 		
 		// Test with two stars with the same magnitude but different Right Ascension.
 		stars.clear();
-		star1 = Symphony__CoreEnvironmentFacade.INSTANCE.createStar(1.1f, Math.toRadians(20), 0);
+		star1 = ApogyCoreEnvironmentFacade.INSTANCE.createStar(1.1f, Math.toRadians(20), 0);
 		stars.add(star1);
 		
-		star2 = Symphony__CoreEnvironmentFacade.INSTANCE.createStar(1.1f, Math.toRadians(10), 0);		
+		star2 = ApogyCoreEnvironmentFacade.INSTANCE.createStar(1.1f, Math.toRadians(10), 0);		
 		stars.add(star2);
 		
 		sortedStars = getFixture().sortByMagnitude(stars);

@@ -2,17 +2,17 @@
  * Canadian Space Agency 2007.
  *
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.pose.CSVDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFactory;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.CSVDataLogger;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -20,13 +20,13 @@ import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePacka
  *
  * @generated
  */
-public class Symphony__AddonsSensorsPoseFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__AddonsSensorsPoseFacade {
+public class ApogyAddonsSensorsPoseFacadeImpl extends MinimalEObjectImpl.Container implements ApogyAddonsSensorsPoseFacade {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsPoseFacadeImpl() {
+	protected ApogyAddonsSensorsPoseFacadeImpl() {
 		super();
 	}
 
@@ -36,7 +36,7 @@ public class Symphony__AddonsSensorsPoseFacadeImpl extends MinimalEObjectImpl.Co
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPosePackage.Literals.SYMPHONY_ADDONS_SENSORS_POSE_FACADE;
+		return ApogyAddonsSensorsPosePackage.Literals.APOGY_ADDONS_SENSORS_POSE_FACADE;
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__AddonsSensorsPoseFacadeImpl extends MinimalEObjectImpl.Co
 	 * @generated_NOT
 	 */
 	public CSVDataLogger createCSVDataLogger(String fileName) {
-		CSVDataLogger logger = Symphony__AddonsSensorsPoseFactory.eINSTANCE.createCSVDataLogger();
+		CSVDataLogger logger = ApogyAddonsSensorsPoseFactory.eINSTANCE.createCSVDataLogger();
 		logger.setOutputFile(fileName);
 
 		return logger;
@@ -59,10 +59,10 @@ public class Symphony__AddonsSensorsPoseFacadeImpl extends MinimalEObjectImpl.Co
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsPosePackage.SYMPHONY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING:
+			case ApogyAddonsSensorsPosePackage.APOGY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING:
 				return createCSVDataLogger((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} // Symphony__AddonsSensorsPoseFacadeImpl
+} // ApogyAddonsSensorsPoseFacadeImpl

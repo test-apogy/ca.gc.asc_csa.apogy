@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,59 +12,59 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.*;
-import org.eclipse.symphony.core.AbsolutePoseProvider;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.AssemblyLinksList;
-import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.ConnectionPointsList;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.FeatureOfInterestListNode;
-import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.OperationCallPositionedResult;
-import org.eclipse.symphony.core.OrbitModelsList;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.SymphonyTopology;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.UserDefinedResult;
-import org.eclipse.symphony.core.WorksitesList;
+import ca.gc.asc_csa.apogy.core.*;
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
+import ca.gc.asc_csa.apogy.core.OrbitModelsList;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.Positioned;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ResultsListNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.UserDefinedResult;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
  * end-user-doc -->
  * @generated
  */
-public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
-		Symphony__CoreFactory {
+public class ApogyCoreFactoryImpl extends EFactoryImpl implements
+		ApogyCoreFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CoreFactory init() {
+	public static ApogyCoreFactory init() {
 		try {
-			Symphony__CoreFactory theSymphony__CoreFactory = (Symphony__CoreFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CorePackage.eNS_URI);
-			if (theSymphony__CoreFactory != null) {
-				return theSymphony__CoreFactory;
+			ApogyCoreFactory theApogyCoreFactory = (ApogyCoreFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCorePackage.eNS_URI);
+			if (theApogyCoreFactory != null) {
+				return theApogyCoreFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreFactoryImpl();
+		return new ApogyCoreFactoryImpl();
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	 * end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreFactoryImpl() {
+	public ApogyCoreFactoryImpl() {
 		super();
 	}
 
@@ -84,32 +84,32 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE: return createSymphony__CoreFacade();
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT: return createSymphonyEnvironment();
-			case Symphony__CorePackage.TIME_SOURCES_LIST: return createTimeSourcesList();
-			case Symphony__CorePackage.SYMPHONY_TOPOLOGY: return createSymphonyTopology();
-			case Symphony__CorePackage.SYMPHONY_SYSTEM: return createSymphonySystem();
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER: return createSymphonySystemApiAdapter();
-			case Symphony__CorePackage.CONNECTION_POINTS_LIST: return createConnectionPointsList();
-			case Symphony__CorePackage.CONNECTION_POINT: return createConnectionPoint();
-			case Symphony__CorePackage.ASSEMBLY_LINK: return createAssemblyLink();
-			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST: return createAssemblyLinksList();
-			case Symphony__CorePackage.POSE_PROVIDER: return createPoseProvider();
-			case Symphony__CorePackage.ABSOLUTE_POSE_PROVIDER: return createAbsolutePoseProvider();
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA: return createSymphonyInitializationData();
-			case Symphony__CorePackage.WORKSITES_LIST: return createWorksitesList();
-			case Symphony__CorePackage.ORBIT_MODELS_LIST: return createOrbitModelsList();
-			case Symphony__CorePackage.POSITIONED: return createPositioned();
-			case Symphony__CorePackage.FEATURE_OF_INTEREST: return createFeatureOfInterest();
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST: return createFeatureOfInterestList();
-			case Symphony__CorePackage.TOPOLOGY_ROOT: return createTopologyRoot();
-			case Symphony__CorePackage.POSITIONED_RESULT: return createPositionedResult();
-			case Symphony__CorePackage.OPERATION_CALL_POSITIONED_RESULT: return createOperationCallPositionedResult();
-			case Symphony__CorePackage.USER_DEFINED_RESULT: return createUserDefinedResult();
-			case Symphony__CorePackage.RESULT_NODE: return createResultNode();
-			case Symphony__CorePackage.RESULTS_LIST_NODE: return createResultsListNode();
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE: return createFeatureOfInterestNode();
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE: return createFeatureOfInterestListNode();
+			case ApogyCorePackage.APOGY_CORE_FACADE: return createApogyCoreFacade();
+			case ApogyCorePackage.APOGY_ENVIRONMENT: return createApogyEnvironment();
+			case ApogyCorePackage.TIME_SOURCES_LIST: return createTimeSourcesList();
+			case ApogyCorePackage.APOGY_TOPOLOGY: return createApogyTopology();
+			case ApogyCorePackage.APOGY_SYSTEM: return createApogySystem();
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER: return createApogySystemApiAdapter();
+			case ApogyCorePackage.CONNECTION_POINTS_LIST: return createConnectionPointsList();
+			case ApogyCorePackage.CONNECTION_POINT: return createConnectionPoint();
+			case ApogyCorePackage.ASSEMBLY_LINK: return createAssemblyLink();
+			case ApogyCorePackage.ASSEMBLY_LINKS_LIST: return createAssemblyLinksList();
+			case ApogyCorePackage.POSE_PROVIDER: return createPoseProvider();
+			case ApogyCorePackage.ABSOLUTE_POSE_PROVIDER: return createAbsolutePoseProvider();
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA: return createApogyInitializationData();
+			case ApogyCorePackage.WORKSITES_LIST: return createWorksitesList();
+			case ApogyCorePackage.ORBIT_MODELS_LIST: return createOrbitModelsList();
+			case ApogyCorePackage.POSITIONED: return createPositioned();
+			case ApogyCorePackage.FEATURE_OF_INTEREST: return createFeatureOfInterest();
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST: return createFeatureOfInterestList();
+			case ApogyCorePackage.TOPOLOGY_ROOT: return createTopologyRoot();
+			case ApogyCorePackage.POSITIONED_RESULT: return createPositionedResult();
+			case ApogyCorePackage.OPERATION_CALL_POSITIONED_RESULT: return createOperationCallPositionedResult();
+			case ApogyCorePackage.USER_DEFINED_RESULT: return createUserDefinedResult();
+			case ApogyCorePackage.RESULT_NODE: return createResultNode();
+			case ApogyCorePackage.RESULTS_LIST_NODE: return createResultsListNode();
+			case ApogyCorePackage.FEATURE_OF_INTEREST_NODE: return createFeatureOfInterestNode();
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE: return createFeatureOfInterestListNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -122,13 +122,13 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CorePackage.MAP:
+			case ApogyCorePackage.MAP:
 				return createMapFromString(eDataType, initialValue);
-			case Symphony__CorePackage.LIST:
+			case ApogyCorePackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CorePackage.COLLECTION:
+			case ApogyCorePackage.COLLECTION:
 				return createCollectionFromString(eDataType, initialValue);
-			case Symphony__CorePackage.EXCEPTION:
+			case ApogyCorePackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -142,13 +142,13 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CorePackage.MAP:
+			case ApogyCorePackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
-			case Symphony__CorePackage.LIST:
+			case ApogyCorePackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CorePackage.COLLECTION:
+			case ApogyCorePackage.COLLECTION:
 				return convertCollectionToString(eDataType, instanceValue);
-			case Symphony__CorePackage.EXCEPTION:
+			case ApogyCorePackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -160,18 +160,18 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreFacade createSymphony__CoreFacade() {
-		Symphony__CoreFacadeImpl symphony__CoreFacade = new Symphony__CoreFacadeImpl();
-		return symphony__CoreFacade;
+	public ApogyCoreFacade createApogyCoreFacade() {
+		ApogyCoreFacadeImpl apogy__CoreFacade = new ApogyCoreFacadeImpl();
+		return apogy__CoreFacade;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonyEnvironment createSymphonyEnvironment() {
-		SymphonyEnvironmentImpl symphonyEnvironment = new SymphonyEnvironmentImpl();
-		return symphonyEnvironment;
+	public ApogyEnvironment createApogyEnvironment() {
+		ApogyEnvironmentImpl apogyEnvironment = new ApogyEnvironmentImpl();
+		return apogyEnvironment;
 	}
 
 	/**
@@ -188,18 +188,18 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonyTopology createSymphonyTopology() {
-		SymphonyTopologyImpl symphonyTopology = new SymphonyTopologyImpl();
-		return symphonyTopology;
+	public ApogyTopology createApogyTopology() {
+		ApogyTopologyImpl apogyTopology = new ApogyTopologyImpl();
+		return apogyTopology;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonySystem createSymphonySystem() {
-		SymphonySystemImpl symphonySystem = new SymphonySystemImpl();
-		return symphonySystem;
+	public ApogySystem createApogySystem() {
+		ApogySystemImpl apogySystem = new ApogySystemImpl();
+		return apogySystem;
 	}
 
 	/**
@@ -207,10 +207,10 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemApiAdapter createSymphonySystemApiAdapter()
+  public ApogySystemApiAdapter createApogySystemApiAdapter()
   {
-		SymphonySystemApiAdapterImpl symphonySystemApiAdapter = new SymphonySystemApiAdapterImpl();
-		return symphonySystemApiAdapter;
+		ApogySystemApiAdapterImpl apogySystemApiAdapter = new ApogySystemApiAdapterImpl();
+		return apogySystemApiAdapter;
 	}
 
   /**
@@ -274,9 +274,9 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonyInitializationData createSymphonyInitializationData() {
-		SymphonyInitializationDataImpl symphonyInitializationData = new SymphonyInitializationDataImpl();
-		return symphonyInitializationData;
+	public ApogyInitializationData createApogyInitializationData() {
+		ApogyInitializationDataImpl apogyInitializationData = new ApogyInitializationDataImpl();
+		return apogyInitializationData;
 	}
 
 	/**
@@ -478,8 +478,8 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CorePackage getSymphony__CorePackage() {
-		return (Symphony__CorePackage)getEPackage();
+	public ApogyCorePackage getApogyCorePackage() {
+		return (ApogyCorePackage)getEPackage();
 	}
 
 	/**
@@ -488,8 +488,8 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CorePackage getPackage() {
-		return Symphony__CorePackage.eINSTANCE;
+	public static ApogyCorePackage getPackage() {
+		return ApogyCorePackage.eINSTANCE;
 	}
 
-} // Symphony__CoreFactoryImpl
+} // ApogyCoreFactoryImpl

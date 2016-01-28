@@ -4,7 +4,7 @@
  *
  * $Id: SkidSteeredPlatformPathFollowerItemProvider.java,v 1.3.4.2 2015/05/21 15:50:54 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class SkidSteeredPlatformPathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredPlatformPathFollower_maximumAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredPlatformPathFollower_maximumAngularVelocity_feature", "_UI_SkidSteeredPlatformPathFollower_type"),
-				 Symphony__AddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY,
+				 ApogyAddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -93,7 +93,7 @@ public class SkidSteeredPlatformPathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredPlatformPathFollower_maximumLinearVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredPlatformPathFollower_maximumLinearVelocity_feature", "_UI_SkidSteeredPlatformPathFollower_type"),
-				 Symphony__AddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY,
+				 ApogyAddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -140,8 +140,8 @@ public class SkidSteeredPlatformPathFollowerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SkidSteeredPlatformPathFollower.class)) {
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
-			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

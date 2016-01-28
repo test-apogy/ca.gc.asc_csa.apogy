@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.impl.CollectionTimedTimeSourceImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl#getOpsCallList <em>Ops Call List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListTimeSourceImpl#getOpsCallList <em>Ops Call List</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,7 +57,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE;
+		return ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE;
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 			opsCallList = (OperationCallResultsList)eResolveProxy(oldOpsCallList);
 			if (opsCallList != oldOpsCallList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
 			}
 		}
 		return opsCallList;
@@ -123,7 +123,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 		OperationCallResultsList oldOpsCallList = opsCallList;
 		opsCallList = newOpsCallList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				if (resolve) return getOpsCallList();
 				return basicGetOpsCallList();
 		}
@@ -149,7 +149,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				setOpsCallList((OperationCallResultsList)newValue);
 				return;
 		}
@@ -164,7 +164,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				setOpsCallList((OperationCallResultsList)null);
 				return;
 		}
@@ -179,7 +179,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				return opsCallList != null;
 		}
 		return super.eIsSet(featureID);

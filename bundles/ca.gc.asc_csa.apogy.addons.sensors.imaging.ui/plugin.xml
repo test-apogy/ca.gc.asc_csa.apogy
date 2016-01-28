@@ -13,28 +13,28 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesPage"
-            id="org.eclipse.symphony.addons.sensors.imaging.ui.page1"
+            category="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesPage"
+            id="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.page1"
             name="Image Snapshot">
       </page>
    </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.addons.sensors.imaging.ui"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage"
-            genModel="model/symphony_addons_sensors_imaging_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage"
+            genModel="model/apogy_addons_sensors_imaging_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.converters">
+         point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-            Class="org.eclipse.symphony.addons.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
+            Class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
       </new_element>
    </extension>
 

@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPacka
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewItemPresentationImpl#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewItemPresentationImpl#isVisible <em>Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,7 +63,7 @@ public abstract class MapViewItemPresentationImpl extends MinimalEObjectImpl.Con
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION;
 	}
 
   /**
@@ -86,7 +86,7 @@ public abstract class MapViewItemPresentationImpl extends MinimalEObjectImpl.Con
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE, oldVisible, visible));
 	}
 
   /**
@@ -98,7 +98,7 @@ public abstract class MapViewItemPresentationImpl extends MinimalEObjectImpl.Con
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
 				return isVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public abstract class MapViewItemPresentationImpl extends MinimalEObjectImpl.Con
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public abstract class MapViewItemPresentationImpl extends MinimalEObjectImpl.Con
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public abstract class MapViewItemPresentationImpl extends MinimalEObjectImpl.Con
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

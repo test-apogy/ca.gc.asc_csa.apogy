@@ -1,27 +1,27 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.fov.bindings;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.sensors.fov.bindings;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.addons.sensors.fov.bindings.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.addons.sensors.fov;bundle-version="0.1.0";visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
- org.eclipse.symphony.common.topology.bindings;bundle-version="0.1.0";visibility:=reexport
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors.fov;bundle-version="0.1.0";visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;bundle-version="0.1.0";visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.symphony.addons.sensors.fov.bindings,
- org.eclipse.symphony.addons.sensors.fov.bindings.impl,
- org.eclipse.symphony.addons.sensors.fov.bindings.util
+Export-Package: ca.gc.asc_csa.apogy.addons.sensors.fov.bindings,
+ ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl,
+ ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.util

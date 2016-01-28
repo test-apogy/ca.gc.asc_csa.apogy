@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.vehicle.impl.WheelVehicleUtilitiesImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.addons.vehicle.impl.WheelVehicleUtilitiesImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheelVehicleUtilities()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getWheelVehicleUtilities()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface WheelVehicleUtilities extends EObject
 	 * @param segment The specified segment.
 	 * @return The position of the wheel center, null if none is found.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.Point2d" unique="false" wheelRadiusUnique="false" wheelCenterXUnique="false" segmentDataType="org.eclipse.symphony.addons.vehicle.Segment2D" segmentUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.vehicle.Point2d" unique="false" wheelRadiusUnique="false" wheelCenterXUnique="false" segmentDataType="ca.gc.asc_csa.apogy.addons.vehicle.Segment2D" segmentUnique="false"
 	 * @generated
 	 */
   Point2d getWheelCenterPoint(double wheelRadius, double wheelCenterX, Segment2D segment);
@@ -56,7 +56,7 @@ public interface WheelVehicleUtilities extends EObject
 	 * @param terrainProfile The specified TerrainProfile.
 	 * @return The position of the wheel center, null if none is found.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.Point2d" unique="false" wheelRadiusUnique="false" wheelCenterXUnique="false" terrainProfileDataType="org.eclipse.symphony.addons.vehicle.TerrainProfile" terrainProfileUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.vehicle.Point2d" unique="false" wheelRadiusUnique="false" wheelCenterXUnique="false" terrainProfileDataType="ca.gc.asc_csa.apogy.addons.vehicle.TerrainProfile" terrainProfileUnique="false"
 	 * @generated
 	 */
   Point2d getWheelCenterPoint(double wheelRadius, double wheelCenterX, TerrainProfile terrainProfile);
@@ -70,7 +70,7 @@ public interface WheelVehicleUtilities extends EObject
 	 * @param plane The specified plane.
 	 * @return The set of Segment (sorted by p1.x) of the profile found at the intersection.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.TerrainProfile" unique="false" meshUnique="false" planeDataType="org.eclipse.symphony.addons.vehicle.Plane" planeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.vehicle.TerrainProfile" unique="false" meshUnique="false" planeDataType="ca.gc.asc_csa.apogy.addons.vehicle.Plane" planeUnique="false"
 	 * @generated
 	 */
   TerrainProfile findTerrainProfile(CartesianTriangularMesh mesh, Plane plane);
@@ -86,7 +86,7 @@ public interface WheelVehicleUtilities extends EObject
 	 * Can contain 1 point if the line intersect with the plane but does lies in it. Can contain 2
 	 * points (the segment end points) if the line lies in the plane.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.List<org.eclipse.symphony.addons.vehicle.Point3d>" unique="false" many="false" planeDataType="org.eclipse.symphony.addons.vehicle.Plane" planeUnique="false" line3dDataType="org.eclipse.symphony.addons.vehicle.Line3d" line3dUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.vehicle.List<ca.gc.asc_csa.apogy.addons.vehicle.Point3d>" unique="false" many="false" planeDataType="ca.gc.asc_csa.apogy.addons.vehicle.Plane" planeUnique="false" line3dDataType="ca.gc.asc_csa.apogy.addons.vehicle.Line3d" line3dUnique="false"
 	 * @generated
 	 */
   List<Point3d> findIntersection(Plane plane, Line3d line3d);
@@ -100,7 +100,7 @@ public interface WheelVehicleUtilities extends EObject
 	 * @param segment The sepcified Segment2D.
 	 * @return True if the point falls on the segment, false otherwise.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" pDataType="org.eclipse.symphony.addons.vehicle.Point2d" pUnique="false" segmentDataType="org.eclipse.symphony.addons.vehicle.Segment2D" segmentUnique="false"
+	 * @model unique="false" pDataType="ca.gc.asc_csa.apogy.addons.vehicle.Point2d" pUnique="false" segmentDataType="ca.gc.asc_csa.apogy.addons.vehicle.Segment2D" segmentUnique="false"
 	 * @generated
 	 */
   boolean isPointOnSegment(Point2d p, Segment2D segment);
@@ -127,7 +127,7 @@ public interface WheelVehicleUtilities extends EObject
 	 * @param meshExtent The specified mesh extent.
 	 * @return True is the point falls within the meshExtent, false otherwise.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" pointDataType="org.eclipse.symphony.addons.vehicle.Point3d" pointUnique="false" meshExtentUnique="false"
+	 * @model unique="false" pointDataType="ca.gc.asc_csa.apogy.addons.vehicle.Point3d" pointUnique="false" meshExtentUnique="false"
 	 * @generated
 	 */
   boolean isWithin(Point3d point, MeshExtent2D meshExtent);
@@ -141,7 +141,7 @@ public interface WheelVehicleUtilities extends EObject
 	 * @return The normal of the plane that best (least square errors) fits a set of points, null if it is not defined.
 	 * @see D. Gingras, Memoire de maitrise, pp. 73-74.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.Vector3d" unique="false" pointsDataType="org.eclipse.symphony.addons.vehicle.List<org.eclipse.symphony.addons.vehicle.Point3d>" pointsUnique="false" pointsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.vehicle.Vector3d" unique="false" pointsDataType="ca.gc.asc_csa.apogy.addons.vehicle.List<ca.gc.asc_csa.apogy.addons.vehicle.Point3d>" pointsUnique="false" pointsMany="false"
 	 * @generated
 	 */
   Vector3d findBestFitPlane(List<Point3d> points);

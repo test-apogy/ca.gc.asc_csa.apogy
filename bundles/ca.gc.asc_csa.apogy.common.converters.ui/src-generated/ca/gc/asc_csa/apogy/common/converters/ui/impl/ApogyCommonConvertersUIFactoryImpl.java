@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.ui.impl;
+package ca.gc.asc_csa.apogy.common.converters.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.eclipse.jface.viewers.ISelection;
 
-import org.eclipse.symphony.common.converters.ui.*;
+import ca.gc.asc_csa.apogy.common.converters.ui.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,24 +22,24 @@ import org.eclipse.symphony.common.converters.ui.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implements Symphony__CommonConvertersUIFactory {
+public class ApogyCommonConvertersUIFactoryImpl extends EFactoryImpl implements ApogyCommonConvertersUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonConvertersUIFactory init() {
+	public static ApogyCommonConvertersUIFactory init() {
 		try {
-			Symphony__CommonConvertersUIFactory theSymphony__CommonConvertersUIFactory = (Symphony__CommonConvertersUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonConvertersUIPackage.eNS_URI);
-			if (theSymphony__CommonConvertersUIFactory != null) {
-				return theSymphony__CommonConvertersUIFactory;
+			ApogyCommonConvertersUIFactory theApogyCommonConvertersUIFactory = (ApogyCommonConvertersUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonConvertersUIPackage.eNS_URI);
+			if (theApogyCommonConvertersUIFactory != null) {
+				return theApogyCommonConvertersUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonConvertersUIFactoryImpl();
+		return new ApogyCommonConvertersUIFactoryImpl();
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersUIFactoryImpl() {
+	public ApogyCommonConvertersUIFactoryImpl() {
 		super();
 	}
 
@@ -60,7 +60,7 @@ public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implem
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonConvertersUIPackage.SYMPHONY_COMMON_CONVERTERS_UI_FACADE: return createSymphony__CommonConvertersUIFacade();
+			case ApogyCommonConvertersUIPackage.APOGY_COMMON_CONVERTERS_UI_FACADE: return createApogyCommonConvertersUIFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -74,7 +74,7 @@ public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implem
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonConvertersUIPackage.ISELECTION:
+			case ApogyCommonConvertersUIPackage.ISELECTION:
 				return createISelectionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -89,7 +89,7 @@ public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implem
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonConvertersUIPackage.ISELECTION:
+			case ApogyCommonConvertersUIPackage.ISELECTION:
 				return convertISelectionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -101,9 +101,9 @@ public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersUIFacade createSymphony__CommonConvertersUIFacade() {
-		Symphony__CommonConvertersUIFacadeImpl symphony__CommonConvertersUIFacade = new Symphony__CommonConvertersUIFacadeImpl();
-		return symphony__CommonConvertersUIFacade;
+	public ApogyCommonConvertersUIFacade createApogyCommonConvertersUIFacade() {
+		ApogyCommonConvertersUIFacadeImpl apogy__CommonConvertersUIFacade = new ApogyCommonConvertersUIFacadeImpl();
+		return apogy__CommonConvertersUIFacade;
 	}
 
 	/**
@@ -129,8 +129,8 @@ public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersUIPackage getSymphony__CommonConvertersUIPackage() {
-		return (Symphony__CommonConvertersUIPackage)getEPackage();
+	public ApogyCommonConvertersUIPackage getApogyCommonConvertersUIPackage() {
+		return (ApogyCommonConvertersUIPackage)getEPackage();
 	}
 
 	/**
@@ -140,8 +140,8 @@ public class Symphony__CommonConvertersUIFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonConvertersUIPackage getPackage() {
-		return Symphony__CommonConvertersUIPackage.eINSTANCE;
+	public static ApogyCommonConvertersUIPackage getPackage() {
+		return ApogyCommonConvertersUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonConvertersUIFactoryImpl
+} //ApogyCommonConvertersUIFactoryImpl

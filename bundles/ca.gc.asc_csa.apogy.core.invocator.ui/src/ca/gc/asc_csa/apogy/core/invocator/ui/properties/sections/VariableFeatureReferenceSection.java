@@ -1,20 +1,20 @@
-package org.eclipse.symphony.core.invocator.ui.properties.sections;
+package ca.gc.asc_csa.apogy.core.invocator.ui.properties.sections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.ui.composites.VariableFeatureReferenceComposite;
+import ca.gc.asc_csa.apogy.common.ui.properties.sections.AbstractExtendedPropertySection;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
 
 public class VariableFeatureReferenceSection extends AbstractExtendedPropertySection {
 		
 	@Override
 	protected void render(EObject eObject) {
-		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE
 				.getActiveInvocatorSession();
 		VariablesList variables = session.getEnvironment()
 				.getVariablesList();

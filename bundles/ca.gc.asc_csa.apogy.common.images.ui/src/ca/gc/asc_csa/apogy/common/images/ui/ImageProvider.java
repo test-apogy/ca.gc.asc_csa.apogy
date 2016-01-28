@@ -1,6 +1,6 @@
-package org.eclipse.symphony.common.images.ui;
+package ca.gc.asc_csa.apogy.common.images.ui;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 public interface ImageProvider 
 {

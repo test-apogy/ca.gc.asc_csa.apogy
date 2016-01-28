@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_rover -->
+      <!-- @generated apogy_examples_rover -->
       <factory
-            uri="org.eclipse.symphony.examples.rover.symphony"
-            class="org.eclipse.symphony.examples.rover.symphony.provider.Symphony__ExamplesRoverSymphonyItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.rover.apogy"
+            class="ca.gc.asc_csa.apogy.examples.rover.apogy.provider.ApogyExamplesRoverApogyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

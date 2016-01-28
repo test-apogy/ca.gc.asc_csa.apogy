@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander;
+package ca.gc.asc_csa.apogy.examples.lander;
 
 import javax.vecmath.Matrix3d;
 
@@ -23,13 +23,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lander.Position#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Position#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Position#getZ <em>Z</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.Position#getAttitude <em>Attitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Position#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Position#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Position#getZ <em>Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.Position#getAttitude <em>Attitude</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition()
+ * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getPosition()
  * @model
  * @generated
  */
@@ -50,15 +50,15 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_X()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getPosition_X()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' apogy_units='m'"
 	 * @generated
 	 */
   double getX();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Position#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getX <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>X</em>' attribute.
@@ -82,15 +82,15 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Y()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getPosition_Y()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' apogy_units='m'"
 	 * @generated
 	 */
   double getY();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Position#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getY <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Y</em>' attribute.
@@ -114,15 +114,15 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Z()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getPosition_Z()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' apogy_units='m'"
 	 * @generated
 	 */
   double getZ();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Position#getZ <em>Z</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getZ <em>Z</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Z</em>' attribute.
@@ -145,15 +145,15 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attitude</em>' attribute.
 	 * @see #setAttitude(Matrix3d)
-	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Attitude()
-	 * @model unique="false" dataType="org.eclipse.symphony.examples.lander.Matrix3d"
+	 * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getPosition_Attitude()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.examples.lander.Matrix3d"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Attitude'"
 	 * @generated
 	 */
   Matrix3d getAttitude();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.Position#getAttitude <em>Attitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.Position#getAttitude <em>Attitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Attitude</em>' attribute.

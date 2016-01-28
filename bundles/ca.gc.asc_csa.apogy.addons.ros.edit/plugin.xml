@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_addons_ros -->
+      <!-- @generated apogy_addons_ros -->
       <factory
-            uri="org.eclipse.symphony.addons.ros"
-            class="org.eclipse.symphony.addons.ros.provider.Symphony__AddonsROSItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.ros"
+            class="ca.gc.asc_csa.apogy.addons.ros.provider.ApogyAddonsROSItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

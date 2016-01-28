@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated utils_log -->
       <package
-            uri="org.eclipse.symphony.common.log"
-            class="org.eclipse.symphony.common.log.Symphony__CommonLogPackage"
-            genModel="model/symphony_common_log.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.log"
+            class="ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage"
+            genModel="model/apogy_common_log.xcore"/>
    </extension>
 
 </plugin>

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion;
+package ca.gc.asc_csa.apogy.addons.sensors.motion;
 
 
 /**
@@ -13,12 +13,12 @@ package org.eclipse.symphony.addons.sensors.motion;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearVelocitySensor()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XVelocity</em>' attribute.
 	 * @see #setXVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor_XVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearVelocitySensor_XVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getXVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XVelocity</em>' attribute.
@@ -59,14 +59,14 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YVelocity</em>' attribute.
 	 * @see #setYVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor_YVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearVelocitySensor_YVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getYVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YVelocity</em>' attribute.
@@ -85,14 +85,14 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZVelocity</em>' attribute.
 	 * @see #setZVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor_ZVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getLinearVelocitySensor_ZVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getZVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZVelocity</em>' attribute.

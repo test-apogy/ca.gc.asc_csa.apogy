@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -17,16 +17,16 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList;
-import org.eclipse.symphony.examples.satellite.AbstractConstellation;
-import org.eclipse.symphony.examples.satellite.AbstractConstellationRequest;
-import org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.ConstellationCommandPlan;
-import org.eclipse.symphony.examples.satellite.ConstellationDownlink;
-import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList;
-import org.eclipse.symphony.examples.satellite.ConstellationRequestsList;
-import org.eclipse.symphony.examples.satellite.SatellitesList;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,10 +36,10 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl#getSatellitesList <em>Satellites List</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl#getDownlinksLists <em>Downlinks Lists</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getSatellitesList <em>Satellites List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getDownlinksLists <em>Downlinks Lists</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AbstractConstellationImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,7 +101,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION;
+		return ApogyExamplesSatellitePackage.Literals.ABSTRACT_CONSTELLATION;
 	}
 
 	/**
@@ -122,7 +122,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		SatellitesList oldSatellitesList = satellitesList;
 		satellitesList = newSatellitesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, oldSatellitesList, newSatellitesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, oldSatellitesList, newSatellitesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -137,14 +137,14 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		if (newSatellitesList != satellitesList) {
 			NotificationChain msgs = null;
 			if (satellitesList != null)
-				msgs = ((InternalEObject)satellitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, null, msgs);
+				msgs = ((InternalEObject)satellitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, null, msgs);
 			if (newSatellitesList != null)
-				msgs = ((InternalEObject)newSatellitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, null, msgs);
+				msgs = ((InternalEObject)newSatellitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, null, msgs);
 			msgs = basicSetSatellitesList(newSatellitesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, newSatellitesList, newSatellitesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST, newSatellitesList, newSatellitesList));
 	}
 
 	/**
@@ -165,7 +165,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		GroundStationReferencesList oldGroundStationsReferencesList = groundStationsReferencesList;
 		groundStationsReferencesList = newGroundStationsReferencesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, oldGroundStationsReferencesList, newGroundStationsReferencesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, oldGroundStationsReferencesList, newGroundStationsReferencesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -180,14 +180,14 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		if (newGroundStationsReferencesList != groundStationsReferencesList) {
 			NotificationChain msgs = null;
 			if (groundStationsReferencesList != null)
-				msgs = ((InternalEObject)groundStationsReferencesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, null, msgs);
+				msgs = ((InternalEObject)groundStationsReferencesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, null, msgs);
 			if (newGroundStationsReferencesList != null)
-				msgs = ((InternalEObject)newGroundStationsReferencesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, null, msgs);
+				msgs = ((InternalEObject)newGroundStationsReferencesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, null, msgs);
 			msgs = basicSetGroundStationsReferencesList(newGroundStationsReferencesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, newGroundStationsReferencesList, newGroundStationsReferencesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST, newGroundStationsReferencesList, newGroundStationsReferencesList));
 	}
 
 	/**
@@ -208,7 +208,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		ConstellationDownlinksList oldDownlinksLists = downlinksLists;
 		downlinksLists = newDownlinksLists;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, oldDownlinksLists, newDownlinksLists);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, oldDownlinksLists, newDownlinksLists);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -223,14 +223,14 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		if (newDownlinksLists != downlinksLists) {
 			NotificationChain msgs = null;
 			if (downlinksLists != null)
-				msgs = ((InternalEObject)downlinksLists).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, null, msgs);
+				msgs = ((InternalEObject)downlinksLists).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, null, msgs);
 			if (newDownlinksLists != null)
-				msgs = ((InternalEObject)newDownlinksLists).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, null, msgs);
+				msgs = ((InternalEObject)newDownlinksLists).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, null, msgs);
 			msgs = basicSetDownlinksLists(newDownlinksLists, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, newDownlinksLists, newDownlinksLists));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS, newDownlinksLists, newDownlinksLists));
 	}
 
 	/**
@@ -251,7 +251,7 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		ConstellationRequestsList oldConstellationRequestsList = constellationRequestsList;
 		constellationRequestsList = newConstellationRequestsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, oldConstellationRequestsList, newConstellationRequestsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, oldConstellationRequestsList, newConstellationRequestsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -266,14 +266,14 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 		if (newConstellationRequestsList != constellationRequestsList) {
 			NotificationChain msgs = null;
 			if (constellationRequestsList != null)
-				msgs = ((InternalEObject)constellationRequestsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, null, msgs);
+				msgs = ((InternalEObject)constellationRequestsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, null, msgs);
 			if (newConstellationRequestsList != null)
-				msgs = ((InternalEObject)newConstellationRequestsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, null, msgs);
+				msgs = ((InternalEObject)newConstellationRequestsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, null, msgs);
 			msgs = basicSetConstellationRequestsList(newConstellationRequestsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, newConstellationRequestsList, newConstellationRequestsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST, newConstellationRequestsList, newConstellationRequestsList));
 	}
 
 	/**
@@ -372,13 +372,13 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
 				return basicSetSatellitesList(null, msgs);
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
 				return basicSetGroundStationsReferencesList(null, msgs);
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
 				return basicSetDownlinksLists(null, msgs);
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
 				return basicSetConstellationRequestsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -392,13 +392,13 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
 				return getSatellitesList();
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
 				return getGroundStationsReferencesList();
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
 				return getDownlinksLists();
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
 				return getConstellationRequestsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -413,16 +413,16 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
 				setSatellitesList((SatellitesList)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
 				setGroundStationsReferencesList((GroundStationReferencesList)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
 				setDownlinksLists((ConstellationDownlinksList)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
 				setConstellationRequestsList((ConstellationRequestsList)newValue);
 				return;
 		}
@@ -437,16 +437,16 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
 				setSatellitesList((SatellitesList)null);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
 				setGroundStationsReferencesList((GroundStationReferencesList)null);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
 				setDownlinksLists((ConstellationDownlinksList)null);
 				return;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
 				setConstellationRequestsList((ConstellationRequestsList)null);
 				return;
 		}
@@ -461,13 +461,13 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__SATELLITES_LIST:
 				return satellitesList != null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST:
 				return groundStationsReferencesList != null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS:
 				return downlinksLists != null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST:
 				return constellationRequestsList != null;
 		}
 		return super.eIsSet(featureID);
@@ -482,26 +482,26 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__DATE_DATE:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__DATE_DATE:
 				return plan((Date)arguments.get(0), (Date)arguments.get(1));
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE:
 				return plan((List<AbstractConstellationRequest>)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__LIST:
 				commit((List<AbstractSatelliteCommand>)arguments.get(0));
 				return null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK:
 				apply((ConstellationDownlink)arguments.get(0));
 				return null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST:
 				add((AbstractConstellationRequest)arguments.get(0));
 				return null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD_ALL__LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___ADD_ALL__LIST:
 				addAll((List<AbstractConstellationRequest>)arguments.get(0));
 				return null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST:
 				remove((AbstractConstellationRequest)arguments.get(0));
 				return null;
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST:
+			case ApogyExamplesSatellitePackage.ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST:
 				removeAll((List<AbstractConstellationRequest>)arguments.get(0));
 				return null;
 		}

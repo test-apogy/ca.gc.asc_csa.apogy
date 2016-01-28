@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolImpl#getCameraToolList <em>Camera Tool List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraToolImpl#getCameraToolList <em>Camera Tool List</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,7 +49,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_TOOL;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_TOOL;
 	}
 
 	/**
@@ -58,7 +58,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	 * @generated
 	 */
 	public CameraToolList getCameraToolList() {
-		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST) return null;
+		if (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST) return null;
 		return (CameraToolList)eContainer();
 	}
 
@@ -68,7 +68,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	 * @generated
 	 */
 	public CameraToolList basicGetCameraToolList() {
-		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST) return null;
+		if (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST) return null;
 		return (CameraToolList)eInternalContainer();
 	}
 
@@ -78,7 +78,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	 * @generated
 	 */
 	public NotificationChain basicSetCameraToolList(CameraToolList newCameraToolList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newCameraToolList, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newCameraToolList, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST, msgs);
 		return msgs;
 	}
 
@@ -88,19 +88,19 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	 * @generated
 	 */
 	public void setCameraToolList(CameraToolList newCameraToolList) {
-		if (newCameraToolList != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST && newCameraToolList != null)) {
+		if (newCameraToolList != eInternalContainer() || (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST && newCameraToolList != null)) {
 			if (EcoreUtil.isAncestor(this, newCameraToolList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newCameraToolList != null)
-				msgs = ((InternalEObject)newCameraToolList).eInverseAdd(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS, CameraToolList.class, msgs);
+				msgs = ((InternalEObject)newCameraToolList).eInverseAdd(this, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS, CameraToolList.class, msgs);
 			msgs = basicSetCameraToolList(newCameraToolList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST, newCameraToolList, newCameraToolList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST, newCameraToolList, newCameraToolList));
 	}
 
 	/**
@@ -155,7 +155,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetCameraToolList((CameraToolList)otherEnd, msgs);
@@ -171,7 +171,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
 				return basicSetCameraToolList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -185,8 +185,8 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
-				return eInternalContainer().eInverseRemove(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS, CameraToolList.class, msgs);
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS, CameraToolList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -199,7 +199,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
 				if (resolve) return getCameraToolList();
 				return basicGetCameraToolList();
 		}
@@ -214,7 +214,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
 				setCameraToolList((CameraToolList)newValue);
 				return;
 		}
@@ -229,7 +229,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
 				setCameraToolList((CameraToolList)null);
 				return;
 		}
@@ -244,7 +244,7 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL__CAMERA_TOOL_LIST:
 				return basicGetCameraToolList() != null;
 		}
 		return super.eIsSet(featureID);
@@ -258,16 +258,16 @@ public abstract class CameraToolImpl extends CameraImageAnnotationImpl implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL___INITIALIZE_CAMERA__ABSTRACTCAMERA:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL___INITIALIZE_CAMERA__ABSTRACTCAMERA:
 				initializeCamera((AbstractCamera)arguments.get(0));
 				return null;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL___UPDATE_IMAGE_SNAPSHOT__IMAGESNAPSHOT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL___UPDATE_IMAGE_SNAPSHOT__IMAGESNAPSHOT:
 				updateImageSnapshot((ImageSnapshot)arguments.get(0));
 				return null;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL___MOUSE_MOVED__ABSTRACTEIMAGE_INT_INT_INT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL___MOUSE_MOVED__ABSTRACTEIMAGE_INT_INT_INT:
 				mouseMoved((AbstractEImage)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
 				return null;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL___POSITION_SELECTED__ABSTRACTEIMAGE_INT_INT_INT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL___POSITION_SELECTED__ABSTRACTEIMAGE_INT_INT_INT:
 				positionSelected((AbstractEImage)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
 				return null;
 		}

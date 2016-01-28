@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.util.Date;
 
@@ -12,18 +12,18 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SKY_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.EARTH_SKY_NODE;
 	}
 
 	@Override
@@ -82,7 +82,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 					{
 						EarthSky earthSky = (EarthSky) msg.getNotifier();
 						
-						if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES)
+						if(msg.getFeatureID(EarthSky.class) == ApogyCoreEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES)
 						{				
 							//System.out.println("Sun has moved ! ");
 							
@@ -97,10 +97,10 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 							if(sun != null) 
 							{
 								TransformNode sunTransformNode = (TransformNode) sun.getParent();										
-								sunTransformNode.setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(sunPosition));
+								sunTransformNode.setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(sunPosition));
 							}
 						}
-						else if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES)
+						else if(msg.getFeatureID(EarthSky.class) == ApogyCoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES)
 						{
 							//System.out.println("Moon has moved ! ");
 							
@@ -116,10 +116,10 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 							if(moon != null) 
 							{
 								TransformNode moonTransformNode = (TransformNode) moon.getParent();								
-								moonTransformNode.setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(moonPosition));
+								moonTransformNode.setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(moonPosition));
 							}							
 						}
-						else if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.SKY__TIME)
+						else if(msg.getFeatureID(EarthSky.class) == ApogyCoreEnvironmentPackage.SKY__TIME)
 						{
 							//System.out.println("Time has changed ! ");
 							
@@ -136,7 +136,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 							if(starField != null) 
 							{
 								TransformNode starFieldTransformNode = (TransformNode) starField.getParent();																
-								starFieldTransformNode.setRotationMatrix(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3( m));			
+								starFieldTransformNode.setRotationMatrix(ApogyCommonMathFacade.INSTANCE.createMatrix3x3( m));			
 							}
 						}
 					}

@@ -3,7 +3,7 @@
  *
  * $Id: PoseItemProvider.java,v 1.2.4.2 2015/05/21 15:50:28 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.text.DecimalFormat;
@@ -18,12 +18,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Pose} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.Pose} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -75,7 +75,7 @@ public class PoseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianOrientationCoordinates_xRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_xRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__XROTATION,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__XROTATION,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class PoseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianOrientationCoordinates_yRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_yRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__YROTATION,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__YROTATION,
 				 true,
 				 false,
 				 false,
@@ -142,7 +142,7 @@ public class PoseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianOrientationCoordinates_zRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_zRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION,
 				 true,
 				 false,
 				 false,
@@ -198,9 +198,9 @@ public class PoseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Pose.class)) {
-			case Symphony__CommonGeometryData3DPackage.POSE__XROTATION:
-			case Symphony__CommonGeometryData3DPackage.POSE__YROTATION:
-			case Symphony__CommonGeometryData3DPackage.POSE__ZROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__XROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__YROTATION:
+			case ApogyCommonGeometryData3DPackage.POSE__ZROTATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

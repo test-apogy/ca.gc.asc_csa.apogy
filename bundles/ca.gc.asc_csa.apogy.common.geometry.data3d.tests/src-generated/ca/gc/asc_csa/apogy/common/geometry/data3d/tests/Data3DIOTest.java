@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,13 +16,13 @@ import java.util.List;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -34,19 +34,19 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String) <em>Load Triangular Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream) <em>Load Triangular Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream) <em>Save Triangular Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String) <em>Load Triangular Mesh From ASCII As Normal Point Cloud</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String) <em>Load Triangular Mesh From ASCII</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh As ASCII</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String) <em>Load Triangular Mesh From Tri XYZ</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To XYZ</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To XYZ</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To CSV</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To CSV</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String) <em>Load Triangular Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream) <em>Load Triangular Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream) <em>Save Triangular Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String) <em>Load Triangular Mesh From ASCII As Normal Point Cloud</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String) <em>Load Triangular Mesh From ASCII</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh As ASCII</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String) <em>Load Triangular Mesh From Tri XYZ</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To XYZ</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To XYZ</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To CSV</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To CSV</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -109,7 +109,7 @@ public class Data3DIOTest extends TestCase
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3DIO());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createData3DIO());
 	}
 
 	/**
@@ -124,10 +124,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String) <em>Load Triangular Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testLoadTriangularMesh__String() 
@@ -144,7 +144,7 @@ public class Data3DIOTest extends TestCase
 			URL url = FileLocator.find(Activator.getDefault().getBundle(), new Path("data/good.xml"), null);
 			IPath xmlDataFileLocation = new Path(FileLocator.resolve(url).getPath());
 
-			Data3DIO io = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3DIO();
+			Data3DIO io = ApogyCommonGeometryData3DFactory.eINSTANCE.createData3DIO();
 			CartesianTriangularMesh xmiMesh = null;
 			try 
 			{
@@ -177,10 +177,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream) <em>Load Triangular Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream)
 	 * @generated_NOT
 	 */
 	public void testLoadTriangularMesh__InputStream() 
@@ -197,7 +197,7 @@ public class Data3DIOTest extends TestCase
 			URL url = FileLocator.find(Activator.getDefault().getBundle(), new Path("data/good.xml"), null);
 			IPath xmlDataFileLocation = new Path(FileLocator.resolve(url).getPath());
 
-			Data3DIO io = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3DIO();
+			Data3DIO io = ApogyCommonGeometryData3DFactory.eINSTANCE.createData3DIO();
 			CartesianTriangularMesh xmiMesh = null;
 			try 
 			{
@@ -230,10 +230,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testSaveTriangularMesh__CartesianTriangularMesh_String() 
@@ -277,10 +277,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream) <em>Save Triangular Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream) <em>Save Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream)
 	 * @generated_NOT
 	 */
 	public void testSaveTriangularMesh__CartesianTriangularMesh_OutputStream() 
@@ -324,10 +324,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String) <em>Load Triangular Mesh From ASCII As Normal Point Cloud</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String) <em>Load Triangular Mesh From ASCII As Normal Point Cloud</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testLoadTriangularMeshFromASCIIAsNormalPointCloud__String() 
@@ -336,10 +336,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String) <em>Load Triangular Mesh From ASCII</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String) <em>Load Triangular Mesh From ASCII</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testLoadTriangularMeshFromASCII__String() 
@@ -384,10 +384,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh As ASCII</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh As ASCII</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testSaveTriangularMeshAsASCII__CartesianTriangularMesh_String() 
@@ -441,10 +441,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String)
 	 * @generated_NOT
 	 */
 	@SuppressWarnings("unused")
@@ -546,10 +546,10 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String) <em>Load Triangular Mesh From Tri XYZ</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String) <em>Load Triangular Mesh From Tri XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testLoadTriangularMeshFromTriXYZ__String_String() 
@@ -573,19 +573,19 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To XYZ</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testSaveCoordinatesSetToXYZ__CartesianCoordinatesSet_String() 
 	{
-		CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
 		
 		cartesianCoordinatesSet.getPoints().add(p0);
 		cartesianCoordinatesSet.getPoints().add(p1);
@@ -619,19 +619,19 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To XYZ</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
 	 * @generated_NOT
 	 */
 	public void testSaveCoordinatesSetToXYZ__CartesianCoordinatesSet_OutputStream() 	
 	{
-		CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
 		
 		cartesianCoordinatesSet.getPoints().add(p0);
 		cartesianCoordinatesSet.getPoints().add(p1);
@@ -666,19 +666,19 @@ public class Data3DIOTest extends TestCase
 	
 	
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To CSV</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To CSV</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
 	 * @generated_NOT
 	 */
 	public void testSaveCoordinatesSetToCSV__CartesianCoordinatesSet_String() 
 	{
-		CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
 		
 		cartesianCoordinatesSet.getPoints().add(p0);
 		cartesianCoordinatesSet.getPoints().add(p1);
@@ -723,19 +723,19 @@ public class Data3DIOTest extends TestCase
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To CSV</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To CSV</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
 	 * @generated_NOT
 	 */
 	public void testSaveCoordinatesSetToCSV__CartesianCoordinatesSet_OutputStream() 
 	{
-		CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 0, 0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 20, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 30);
 		
 		cartesianCoordinatesSet.getPoints().add(p0);
 		cartesianCoordinatesSet.getPoints().add(p1);

@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.addons.sensors.range"
-            class="org.eclipse.symphony.addons.sensors.range.provider.Symphony__AddonsSensorsRangeItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.sensors.range"
+            class="ca.gc.asc_csa.apogy.addons.sensors.range.provider.ApogyAddonsSensorsRangeItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,10 +23,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_sensors_range -->
+      <!-- @generated apogy_addons_sensors_range -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.range.provider.Symphony__AddonsSensorsRangeItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.sensors.range.provider.ApogyAddonsSensorsRangeItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

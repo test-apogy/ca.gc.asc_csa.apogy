@@ -9,9 +9,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.common.geometry.data3d.asc"
-            class="org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage"
-            genModel="model/symphony_common_geometry_data3d_asc.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.geometry.data3d.asc"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage"
+            genModel="model/apogy_common_geometry_data3d_asc.xcore"/>
    </extension>
 
 </plugin>

@@ -1,27 +1,27 @@
-@GenModel(prefix="Symphony__AddonsVehicle",
+@GenModel(prefix="ApogyAddonsVehicle",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__AddonsVehicle",
+		  modelName="ApogyAddonsVehicle",
 		  suppressGenModelAnnotations="false") 
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.vehicle/src-generated")
-@GenModel(editDirectory= "/org.eclipse.symphony.addons.vehicle.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.vehicle/src-generated")
+@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.addons.vehicle.edit/src-generated")
 
-package org.eclipse.symphony.addons.vehicle
+package ca.gc.asc_csa.apogy.addons.vehicle
 
-import org.eclipse.symphony.core.invocator.Variable
-import org.eclipse.symphony.core.PoseCorrector
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody
-import org.eclipse.symphony.common.math.Matrix3x3
-import org.eclipse.symphony.common.math.Matrix4x4
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath
-import org.eclipse.symphony.common.topology.AggregateGroupNode
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner
+import ca.gc.asc_csa.apogy.core.invocator.Variable
+import ca.gc.asc_csa.apogy.core.PoseCorrector
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner
 
 
 type Point2d wraps javax.vecmath.Point2d
@@ -33,12 +33,12 @@ type List<T> wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet
 type Iterator<T> wraps java.util.Iterator
 
-type Segment2D wraps org.eclipse.symphony.addons.vehicle.Segment2D
-type Line3d wraps org.eclipse.symphony.addons.vehicle.Line3d
-type Plane wraps org.eclipse.symphony.addons.vehicle.Plane
-type TerrainProfile wraps org.eclipse.symphony.addons.vehicle.TerrainProfile
+type Segment2D wraps ca.gc.asc_csa.apogy.addons.vehicle.Segment2D
+type Line3d wraps ca.gc.asc_csa.apogy.addons.vehicle.Line3d
+type Plane wraps ca.gc.asc_csa.apogy.addons.vehicle.Plane
+type TerrainProfile wraps ca.gc.asc_csa.apogy.addons.vehicle.TerrainProfile
 
-type ClosestNeighbourIteratorProvider wraps org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider
+type ClosestNeighbourIteratorProvider wraps ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider
 
 
 /*
@@ -95,7 +95,7 @@ class VehiclePoseCorrector extends PoseCorrector
 	/* 
 	 * The last value of the pose correction along the Z axis.
 	 */
-	@GenModel(notify="true", property="Readonly", propertyCategory="CORRECTION_INFO", symphony_units="m")
+	@GenModel(notify="true", property="Readonly", propertyCategory="CORRECTION_INFO", apogy_units="m")
 	double zCorrection = "0"
 	
 	/* The method used to correct orientation.
@@ -153,10 +153,10 @@ abstract class ContactProvider
  */
 class Wheel extends PhysicalBody
 {
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	double radius = "0.25"	
 	
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	double length = "0.1"
 }
 
@@ -169,19 +169,19 @@ class Thruster extends Node
 	/*
 	 * The minimum thrust, in Newtons. Must be positive.
 	 */
-	@GenModel(notify="true", symphony_units="N", propertyCategory="THRUST_INFO")
+	@GenModel(notify="true", apogy_units="N", propertyCategory="THRUST_INFO")
 	double minimumThrust = "0"
 	
 	/*
 	 * The maximum thrust, in Newtons. Must be positive.
 	 */
-	@GenModel(notify="true", symphony_units="N", propertyCategory="THRUST_INFO")
+	@GenModel(notify="true", apogy_units="N", propertyCategory="THRUST_INFO")
 	double maximumThrust = "100"
 	
 	/*
 	 * The current thrust, in Newtons. Always between minimumThrust and maximumThrust.
 	 */
-	@GenModel(notify="true", symphony_units="N", propertyCategory="THRUST_INFO")
+	@GenModel(notify="true", apogy_units="N", propertyCategory="THRUST_INFO")
 	transient double currentThrust
 	
 	/*
@@ -193,7 +193,7 @@ class Thruster extends Node
 	/*
 	 * Plume angle, in radians
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double plumeAngle = "0.5"
 }
 
@@ -225,7 +225,7 @@ class WheelContactProvider extends ContactProvider
 
 class LanderSphericalFoot extends PhysicalBody
 {
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	double radius = "0.01"	
 }
 
@@ -236,7 +236,7 @@ class LanderSphericalFootContactProvider extends ContactProvider
 
 // Others
 
-class Symphony__AddonsVehicleFacade
+class ApogyAddonsVehicleFacade
 {	
 	
 }
@@ -361,7 +361,7 @@ class PathPlannerToolNode extends AggregateGroupNode
 class VehiclePathPlannerTool extends PathPlannerTool
 {
 	/*
-	 *  The Symphony System for which to plan a path.
+	 *  The Apogy System for which to plan a path.
 	 */
  	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL")
 	refers Variable[1] variable

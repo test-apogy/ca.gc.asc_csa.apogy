@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.views;
+package ca.gc.asc_csa.apogy.core.invocator.ui.views;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -9,11 +9,11 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.ui.composites.ContextsDefinitionComposite;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ContextsDefinitionComposite;
 
 public class ContextsDefinitionView extends AbstractView implements	IEditingDomainProvider {
 	private ContextsDefinitionComposite contextsDefinitionComposite;
@@ -33,21 +33,21 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 				getSelectionProvider().setSelection(selection);
 			}
 		};
-		InvocatorSession activeSession = Symphony__CoreInvocatorFacade.INSTANCE
+		InvocatorSession activeSession = ApogyCoreInvocatorFacade.INSTANCE
 				.getActiveInvocatorSession();
 		contextsDefinitionComposite.setEnvironment(activeSession == null ? null
 				: activeSession.getEnvironment());
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(
-				getSymphony__CoreInvocatorFacadeAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(
+				getApogyCoreInvocatorFacadeAdapter());
 	}
 
-	private Adapter getSymphony__CoreInvocatorFacadeAdapter() {
+	private Adapter getApogyCoreInvocatorFacadeAdapter() {
 		if (adapter == null) {
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(Symphony__CoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
-						InvocatorSession activeSession = Symphony__CoreInvocatorFacade.INSTANCE
+					if (msg.getFeatureID(ApogyCoreInvocatorFacade.class) == ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
+						InvocatorSession activeSession = ApogyCoreInvocatorFacade.INSTANCE
 								.getActiveInvocatorSession();
 						contextsDefinitionComposite
 								.setEnvironment(activeSession == null ? null
@@ -62,8 +62,8 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 	@Override
 	public void dispose() {
 		super.dispose();
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(
-				getSymphony__CoreInvocatorFacadeAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(
+				getApogyCoreInvocatorFacadeAdapter());
 	}
 
 	@Override
@@ -72,6 +72,6 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

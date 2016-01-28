@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,11 +19,11 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.AbstractMapLayer#getMap <em>Map</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AbstractMapLayer#getAbstractMapLayerNode <em>Abstract Map Layer Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getMap <em>Map</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getAbstractMapLayerNode <em>Abstract Map Layer Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractMapLayer()
  * @model abstract="true"
  * @generated
  */
@@ -32,7 +32,7 @@ public interface AbstractMapLayer extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Map</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.Map#getLayers <em>Layers</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.Map#getLayers <em>Layers</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map</em>' container reference isn't clear,
@@ -41,8 +41,8 @@ public interface AbstractMapLayer extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map</em>' container reference.
 	 * @see #setMap(Map)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayer_Map()
-	 * @see org.eclipse.symphony.core.environment.Map#getLayers
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractMapLayer_Map()
+	 * @see ca.gc.asc_csa.apogy.core.environment.Map#getLayers
 	 * @model opposite="layers" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -50,7 +50,7 @@ public interface AbstractMapLayer extends Named, Described
   Map getMap();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.AbstractMapLayer#getMap <em>Map</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getMap <em>Map</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Map</em>' container reference.
@@ -68,7 +68,7 @@ public interface AbstractMapLayer extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Map Layer Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayer_AbstractMapLayerNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractMapLayer_AbstractMapLayerNode()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import org.eclipse.symphony.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation#getFieldOfViewOrientation <em>Field Of View Orientation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation#getElevationMask <em>Elevation Mask</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation#getFieldOfViewOrientation <em>Field Of View Orientation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStation()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getGroundStation()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface GroundStation extends EarthSurfaceLocation {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Field Of View Orientation</em>' containment reference.
 	 * @see #setFieldOfViewOrientation(Matrix3x3)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStation_FieldOfViewOrientation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getGroundStation_FieldOfViewOrientation()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -49,7 +49,7 @@ public interface GroundStation extends EarthSurfaceLocation {
 	Matrix3x3 getFieldOfViewOrientation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation#getFieldOfViewOrientation <em>Field Of View Orientation</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation#getFieldOfViewOrientation <em>Field Of View Orientation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Field Of View Orientation</em>' containment reference.
@@ -67,7 +67,7 @@ public interface GroundStation extends EarthSurfaceLocation {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation Mask</em>' containment reference.
 	 * @see #setElevationMask(ElevationMask)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStation_ElevationMask()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getGroundStation_ElevationMask()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -75,7 +75,7 @@ public interface GroundStation extends EarthSurfaceLocation {
 	ElevationMask getElevationMask();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation#getElevationMask <em>Elevation Mask</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation#getElevationMask <em>Elevation Mask</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation Mask</em>' containment reference.

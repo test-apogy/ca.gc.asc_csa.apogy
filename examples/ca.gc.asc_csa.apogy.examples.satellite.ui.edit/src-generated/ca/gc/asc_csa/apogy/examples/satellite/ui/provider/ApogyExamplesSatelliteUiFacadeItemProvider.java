@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.provider;
 
 
 import java.util.Collection;
@@ -24,16 +24,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade;
-import org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteUiFacadeItemProvider 
+public class ApogyExamplesSatelliteUiFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -47,7 +47,7 @@ public class Symphony__ExamplesSatelliteUiFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyExamplesSatelliteUiFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -78,9 +78,9 @@ public class Symphony__ExamplesSatelliteUiFacadeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__ExamplesSatelliteUiFacade_constellationVariableName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__ExamplesSatelliteUiFacade_constellationVariableName_feature", "_UI_Symphony__ExamplesSatelliteUiFacade_type"),
-				 Symphony__ExamplesSatelliteUiPackage.Literals.SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME,
+				 getString("_UI_ApogyExamplesSatelliteUiFacade_constellationVariableName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyExamplesSatelliteUiFacade_constellationVariableName_feature", "_UI_ApogyExamplesSatelliteUiFacade_type"),
+				 ApogyExamplesSatelliteUiPackage.Literals.APOGY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME,
 				 false,
 				 false,
 				 false,
@@ -90,14 +90,14 @@ public class Symphony__ExamplesSatelliteUiFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__ExamplesSatelliteUiFacade.gif.
+	 * This returns ApogyExamplesSatelliteUiFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__ExamplesSatelliteUiFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyExamplesSatelliteUiFacade"));
 	}
 
 	/**
@@ -108,10 +108,10 @@ public class Symphony__ExamplesSatelliteUiFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Symphony__ExamplesSatelliteUiFacade)object).getConstellationVariableName();
+		String label = ((ApogyExamplesSatelliteUiFacade)object).getConstellationVariableName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Symphony__ExamplesSatelliteUiFacade_type") :
-			getString("_UI_Symphony__ExamplesSatelliteUiFacade_type") + " " + label;
+			getString("_UI_ApogyExamplesSatelliteUiFacade_type") :
+			getString("_UI_ApogyExamplesSatelliteUiFacade_type") + " " + label;
 	}
 	
 
@@ -126,8 +126,8 @@ public class Symphony__ExamplesSatelliteUiFacadeItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Symphony__ExamplesSatelliteUiFacade.class)) {
-			case Symphony__ExamplesSatelliteUiPackage.SYMPHONY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME:
+		switch (notification.getFeatureID(ApogyExamplesSatelliteUiFacade.class)) {
+			case ApogyExamplesSatelliteUiPackage.APOGY_EXAMPLES_SATELLITE_UI_FACADE__CONSTELLATION_VARIABLE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

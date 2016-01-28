@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.provider;
+package ca.gc.asc_csa.apogy.common.images.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.images.URLEImage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.URLEImage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.URLEImage} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.images.URLEImage} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class URLEImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_width_feature", "_UI_AbstractEImage_type"),
-				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__WIDTH,
+				 ApogyCommonImagesPackage.Literals.ABSTRACT_EIMAGE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class URLEImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_height_feature", "_UI_AbstractEImage_type"),
-				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
+				 ApogyCommonImagesPackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class URLEImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLEImage_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLEImage_url_feature", "_UI_URLEImage_type"),
-				 Symphony__CommonImagesPackage.Literals.URLE_IMAGE__URL,
+				 ApogyCommonImagesPackage.Literals.URLE_IMAGE__URL,
 				 true,
 				 false,
 				 false,
@@ -171,9 +171,9 @@ public class URLEImageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLEImage.class)) {
-			case Symphony__CommonImagesPackage.URLE_IMAGE__WIDTH:
-			case Symphony__CommonImagesPackage.URLE_IMAGE__HEIGHT:
-			case Symphony__CommonImagesPackage.URLE_IMAGE__URL:
+			case ApogyCommonImagesPackage.URLE_IMAGE__WIDTH:
+			case ApogyCommonImagesPackage.URLE_IMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.URLE_IMAGE__URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

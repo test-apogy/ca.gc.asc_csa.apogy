@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -22,10 +22,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -77,7 +77,7 @@ public class GroundStationReferencesListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GroundStationReferencesList_groundStations_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GroundStationReferencesList_groundStations_feature", "_UI_GroundStationReferencesList_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS,
 				 true,
 				 false,
 				 true,

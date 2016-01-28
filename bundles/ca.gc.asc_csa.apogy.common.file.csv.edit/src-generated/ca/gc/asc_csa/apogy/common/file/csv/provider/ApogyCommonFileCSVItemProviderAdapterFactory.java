@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.provider;
+package ca.gc.asc_csa.apogy.common.file.csv.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
-import org.eclipse.symphony.common.file.csv.util.Symphony__CommonFileCSVAdapterFactory;
+import ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage;
+import ca.gc.asc_csa.apogy.common.file.csv.util.ApogyCommonFileCSVAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.file.csv.util.Symphony__CommonFileCSVAdapterF
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony__CommonFileCSVAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonFileCSVItemProviderAdapterFactory extends ApogyCommonFileCSVAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonFileCSVEditPlugin.INSTANCE, Symphony__CommonFileCSVPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonFileCSVEditPlugin.INSTANCE, ApogyCommonFileCSVPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonFileCSVItemProviderAdapterFactory() {
+	public ApogyCommonFileCSVItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -108,7 +108,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.file.csv.CsvColumn} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	protected CsvColumnItemProvider csvColumnItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.file.csv.CsvColumn}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.file.csv.CsvColumnsSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	protected CsvColumnsSetItemProvider csvColumnsSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.file.csv.CsvColumnsSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,7 +154,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.file.csv.CsvValueProvider} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__CommonFileCSVItemProviderAdapterFactory extends Symphony_
 	protected CsvValueProviderItemProvider csvValueProviderItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.file.csv.CsvValueProvider}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

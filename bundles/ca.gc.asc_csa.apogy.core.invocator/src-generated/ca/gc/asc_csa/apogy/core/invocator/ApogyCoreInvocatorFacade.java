@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import java.util.Date;
 import java.util.List;
@@ -9,9 +9,9 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,15 +30,15 @@ import org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImp
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getSymphony__CoreInvocatorFacade()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getApogyCoreInvocatorFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreInvocatorFacade extends EObject
+public interface ApogyCoreInvocatorFacade extends EObject
 {
 	/**
 	 * Returns the value of the '<em><b>Init Variable Instances Date</b></em>' attribute.
@@ -49,14 +49,14 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Init Variable Instances Date</em>' attribute.
 	 * @see #setInitVariableInstancesDate(Date)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getSymphony__CoreInvocatorFacade_InitVariableInstancesDate()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getApogyCoreInvocatorFacade_InitVariableInstancesDate()
 	 * @model unique="false"
 	 * @generated
 	 */
 	Date getInitVariableInstancesDate();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Init Variable Instances Date</em>' attribute.
@@ -74,14 +74,14 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Invocator Session</em>' reference.
 	 * @see #setActiveInvocatorSession(InvocatorSession)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getSymphony__CoreInvocatorFacade_ActiveInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getApogyCoreInvocatorFacade_ActiveInvocatorSession()
 	 * @model
 	 * @generated
 	 */
 	InvocatorSession getActiveInvocatorSession();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active Invocator Session</em>' reference.
@@ -90,7 +90,7 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 */
 	void setActiveInvocatorSession(InvocatorSession value);
 
-	public Symphony__CoreInvocatorFacade INSTANCE = Symphony__CoreInvocatorFacadeImpl.getInstance();
+	public ApogyCoreInvocatorFacade INSTANCE = ApogyCoreInvocatorFacadeImpl.getInstance();
 	
   /**
 	 * <!-- begin-user-doc -->
@@ -269,7 +269,7 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * @param name Name.
 	 * @return Reference to the {@link Variable} or null if there is no match.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.core.invocator.Variable>" unique="false" many="false" sessionUnique="false" nameUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.core.invocator.Variable>" unique="false" many="false" sessionUnique="false" nameUnique="false"
 	 * @generated
 	 */
 	List<Variable> getVariableByName(InvocatorSession session, String name);
@@ -283,7 +283,7 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * @param Sequence from the first to the last of type members.
 	 * @return Reference to the newly created structure of {@link TypeMemberReferenceListElement}.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" typeMembersDataType="org.eclipse.symphony.core.invocator.TypeMembersArray" typeMembersUnique="false"
+	 * @model unique="false" typeMembersDataType="ca.gc.asc_csa.apogy.core.invocator.TypeMembersArray" typeMembersUnique="false"
 	 * @generated
 	 */
 	TypeMemberReferenceListElement createTypeMemberReferences(TypeMember[] typeMembers);
@@ -326,7 +326,7 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * @param variableType Reference to the type.
 	 * @return List of TypeMemberImplementation.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.core.invocator.TypeMemberImplementation>" unique="false" many="false" variableTypeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation>" unique="false" many="false" variableTypeUnique="false"
 	 * @generated
 	 */
   List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType);
@@ -435,7 +435,7 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * Returns the list of all the {@link Type} contained in the specified {@link Environment}.
 	 * @environment Reference to the environment.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.core.invocator.Type>" unique="false" many="false" environmentUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.core.invocator.Type>" unique="false" many="false" environmentUnique="false"
 	 * @generated
 	 */
 	List<Type> getAllTypes(Environment environment);
@@ -447,7 +447,7 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * Adds the specified {@link IVariableListener}.
 	 * @param listener Reference to the {@link IVariableListener}.
 	 * <!-- end-model-doc -->
-	 * @model listenerDataType="org.eclipse.symphony.core.invocator.IVariableListener" listenerUnique="false"
+	 * @model listenerDataType="ca.gc.asc_csa.apogy.core.invocator.IVariableListener" listenerUnique="false"
 	 * @generated
 	 */
 	void addVariableListener(IVariableListener listener);
@@ -459,7 +459,7 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * Removes the specified {@link IVariableListener}.
 	 * @param listener Reference to the {@link IVariableListener}.
 	 * <!-- end-model-doc -->
-	 * @model listenerDataType="org.eclipse.symphony.core.invocator.IVariableListener" listenerUnique="false"
+	 * @model listenerDataType="ca.gc.asc_csa.apogy.core.invocator.IVariableListener" listenerUnique="false"
 	 * @generated
 	 */
 	void removeVariableListener(IVariableListener listener);
@@ -477,4 +477,4 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 */
 	void notifyVariableListeners(Variable variable, VariableListenerEventType event);
 
-} // Symphony__CoreInvocatorFacade
+} // ApogyCoreInvocatorFacade

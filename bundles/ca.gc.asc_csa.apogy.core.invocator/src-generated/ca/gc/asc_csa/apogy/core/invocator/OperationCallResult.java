@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 
 /**
@@ -17,11 +17,11 @@ package org.eclipse.symphony.core.invocator;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResult#getOperationCall <em>Operation Call</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResult#getExceptionContainer <em>Exception Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getOperationCall <em>Operation Call</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getExceptionContainer <em>Exception Container</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResult()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCallResult()
  * @model
  * @generated
  */
@@ -39,9 +39,9 @@ public interface OperationCallResult extends AbstractResult, OperationCallContai
 	 * In this case, operationCall refers to the OperationCall stored in the OperationCallContainer.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Operation Call</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResult_OperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCallResult_OperationCall()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' children='false' notify='true' get='<%org.eclipse.emf.common.util.EList%><<%org.eclipse.symphony.core.invocator.OperationCall%>> _operationCalls = this.getOperationCalls();\nint _size = _operationCalls.size();\nboolean _equals = (_size == 0);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.emf.common.util.EList%><<%org.eclipse.symphony.core.invocator.OperationCall%>> _operationCalls_1 = this.getOperationCalls();\n\treturn _operationCalls_1.get(0);\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' children='false' notify='true' get='<%org.eclipse.emf.common.util.EList%><<%ca.gc.asc_csa.apogy.core.invocator.OperationCall%>> _operationCalls = this.getOperationCalls();\nint _size = _operationCalls.size();\nboolean _equals = (_size == 0);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.emf.common.util.EList%><<%ca.gc.asc_csa.apogy.core.invocator.OperationCall%>> _operationCalls_1 = this.getOperationCalls();\n\treturn _operationCalls_1.get(0);\n}'"
 	 * @generated
 	 */
   OperationCall getOperationCall();
@@ -56,7 +56,7 @@ public interface OperationCallResult extends AbstractResult, OperationCallContai
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exception Container</em>' containment reference.
 	 * @see #setExceptionContainer(ExceptionContainer)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResult_ExceptionContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getOperationCallResult_ExceptionContainer()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false' property='Readonly'"
 	 * @generated
@@ -64,7 +64,7 @@ public interface OperationCallResult extends AbstractResult, OperationCallContai
   ExceptionContainer getExceptionContainer();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.OperationCallResult#getExceptionContainer <em>Exception Container</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getExceptionContainer <em>Exception Container</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exception Container</em>' containment reference.

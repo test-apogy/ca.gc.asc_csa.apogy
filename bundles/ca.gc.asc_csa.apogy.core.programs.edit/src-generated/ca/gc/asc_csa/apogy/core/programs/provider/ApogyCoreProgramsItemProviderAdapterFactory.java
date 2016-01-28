@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.provider;
+package ca.gc.asc_csa.apogy.core.programs.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
-import org.eclipse.symphony.core.programs.util.Symphony__CoreProgramsAdapterFactory;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.programs.util.ApogyCoreProgramsAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.core.programs.util.Symphony__CoreProgramsAdapterFact
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__CoreProgramsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCoreProgramsItemProviderAdapterFactory extends ApogyCoreProgramsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreProgramsEditPlugin.INSTANCE, Symphony__CoreProgramsPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreProgramsEditPlugin.INSTANCE, ApogyCoreProgramsPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsItemProviderAdapterFactory() {
+	public ApogyCoreProgramsItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,30 +85,30 @@ public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreProgramsFacadeItemProvider symphony__CoreProgramsFacadeItemProvider;
+	protected ApogyCoreProgramsFacadeItemProvider apogy__CoreProgramsFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreProgramsFacadeAdapter() {
-		if (symphony__CoreProgramsFacadeItemProvider == null) {
-			symphony__CoreProgramsFacadeItemProvider = new Symphony__CoreProgramsFacadeItemProvider(this);
+	public Adapter createApogyCoreProgramsFacadeAdapter() {
+		if (apogy__CoreProgramsFacadeItemProvider == null) {
+			apogy__CoreProgramsFacadeItemProvider = new ApogyCoreProgramsFacadeItemProvider(this);
 		}
 
-		return symphony__CoreProgramsFacadeItemProvider;
+		return apogy__CoreProgramsFacadeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.TimeInterval} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.programs.TimeInterval} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__
 	protected TimeIntervalItemProvider timeIntervalItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.TimeInterval}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.programs.TimeInterval}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -256,7 +256,7 @@ public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphony__CoreProgramsFacadeItemProvider != null) symphony__CoreProgramsFacadeItemProvider.dispose();
+		if (apogy__CoreProgramsFacadeItemProvider != null) apogy__CoreProgramsFacadeItemProvider.dispose();
 		if (timeIntervalItemProvider != null) timeIntervalItemProvider.dispose();
 	}
 

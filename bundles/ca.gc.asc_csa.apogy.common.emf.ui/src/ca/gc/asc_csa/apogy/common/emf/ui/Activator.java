@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui;
+package ca.gc.asc_csa.apogy.common.emf.ui;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,13 +19,13 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Ranges;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.ui.preferences.PreferencesConstants;
-import org.eclipse.symphony.common.emf.ui.utils.TimeSourceCompositeProviderFactory;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.Ranges;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ui.preferences.PreferencesConstants;
+import ca.gc.asc_csa.apogy.common.emf.ui.utils.TimeSourceCompositeProviderFactory;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -41,9 +41,9 @@ public class Activator extends AbstractUIPlugin
 	private IPropertyChangeListener preferencesListener = null;
 	
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.common.emf.ui"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.emf.ui"; //$NON-NLS-1$
 
-	private static final String TIME_SOURCE_COMPOSITE_PROVIDER_POINT_ID = "org.eclipse.symphony.common.emf.ui.timeSourceCompositeProvider";
+	private static final String TIME_SOURCE_COMPOSITE_PROVIDER_POINT_ID = "ca.gc.asc_csa.apogy.common.emf.ui.timeSourceCompositeProvider";
 	private static final String TIME_SOURCE_COMPOSITE_PROVIDER_POINT_ID_CLASS = "Class";
 	
 	// The Bundle Context
@@ -129,7 +129,7 @@ public class Activator extends AbstractUIPlugin
 		// If no ETypedElement specific unit have been define, use the defaults. 
 		if(displayUnits == null)
 		{
-			Unit<?> nativeUnits = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
+			Unit<?> nativeUnits = ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
 			displayUnits = getDefaultDisplayUnits(nativeUnits);
 		}
 	

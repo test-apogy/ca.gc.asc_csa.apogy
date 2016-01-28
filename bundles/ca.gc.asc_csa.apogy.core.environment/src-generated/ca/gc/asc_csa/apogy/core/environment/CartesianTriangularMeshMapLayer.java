@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,13 +20,13 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#isMeshIsDirty <em>Mesh Is Dirty</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getMapLayerPresentations <em>Map Layer Presentations</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getTextureImage <em>Texture Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getCartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer#isMeshIsDirty <em>Mesh Is Dirty</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer#getMapLayerPresentations <em>Map Layer Presentations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer#getTextureImage <em>Texture Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer#getCartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshMapLayer()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mesh Is Dirty</em>' attribute.
 	 * @see #setMeshIsDirty(boolean)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_MeshIsDirty()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_MeshIsDirty()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' propertyCategory='TRIANGULAR_MESH'"
 	 * @generated
@@ -53,7 +53,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	boolean isMeshIsDirty();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#isMeshIsDirty <em>Mesh Is Dirty</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer#isMeshIsDirty <em>Mesh Is Dirty</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mesh Is Dirty</em>' attribute.
@@ -64,14 +64,14 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 
 	/**
 	 * Returns the value of the '<em><b>Map Layer Presentations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.MapLayerPresentation}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * A list of map layer presentation associated with this CartesianTriangularMeshMapLayer.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Layer Presentations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_MapLayerPresentations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_MapLayerPresentations()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Texture Image</em>' reference.
 	 * @see #setTextureImage(AbstractEImage)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_TextureImage()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_TextureImage()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' property='None'"
 	 * @generated
@@ -94,7 +94,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	AbstractEImage getTextureImage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getTextureImage <em>Texture Image</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer#getTextureImage <em>Texture Image</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Texture Image</em>' reference.
@@ -112,7 +112,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Cartesian Triangular Mesh Map Layer Node</em>' reference.
 	 * @see #setCartesianTriangularMeshMapLayerNode(CartesianTriangularMeshMapLayerNode)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_CartesianTriangularMeshMapLayerNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_CartesianTriangularMeshMapLayerNode()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -120,7 +120,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	CartesianTriangularMeshMapLayerNode getCartesianTriangularMeshMapLayerNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getCartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer#getCartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cartesian Triangular Mesh Map Layer Node</em>' reference.

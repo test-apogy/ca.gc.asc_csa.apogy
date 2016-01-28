@@ -1,9 +1,9 @@
-package org.eclipse.symphony.core.environment.ui.databindings.converters;
+package ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters;
 
 import java.util.Date;
 
 import org.eclipse.core.databinding.conversion.Converter;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
 
 public class DateToSideralTimeStringConverter extends Converter 
 {	

@@ -1,8 +1,8 @@
-package org.eclipse.symphony.addons.ui;
+package ca.gc.asc_csa.apogy.addons.ui;
 
 import javax.vecmath.Color3f;
 
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface Ruler3dToolSceneObject extends SceneObject 
 {

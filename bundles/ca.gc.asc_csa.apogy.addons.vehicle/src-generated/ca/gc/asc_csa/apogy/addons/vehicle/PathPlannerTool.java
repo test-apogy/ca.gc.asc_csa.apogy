@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,15 +17,15 @@ import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#isBusy <em>Busy</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getMeshLayer <em>Mesh Layer</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPathPlanner <em>Path Planner</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPlannedPath <em>Planned Path</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPathPlannerToolNode <em>Path Planner Tool Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#isBusy <em>Busy</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getMeshLayer <em>Mesh Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getPathPlanner <em>Path Planner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getPlannedPath <em>Planned Path</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getPathPlannerToolNode <em>Path Planner Tool Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getPathPlannerTool()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Busy</em>' attribute.
 	 * @see #setBusy(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_Busy()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getPathPlannerTool_Busy()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -50,7 +50,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	boolean isBusy();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#isBusy <em>Busy</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#isBusy <em>Busy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Busy</em>' attribute.
@@ -70,7 +70,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auto Path Plan Enabled</em>' attribute.
 	 * @see #setAutoPathPlanEnabled(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_AutoPathPlanEnabled()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getPathPlannerTool_AutoPathPlanEnabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -78,7 +78,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	boolean isAutoPathPlanEnabled();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Auto Path Plan Enabled</em>' attribute.
@@ -100,14 +100,14 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mesh Layer</em>' reference.
 	 * @see #setMeshLayer(CartesianTriangularMeshMapLayer)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_MeshLayer()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getPathPlannerTool_MeshLayer()
 	 * @model
 	 * @generated
 	 */
 	CartesianTriangularMeshMapLayer getMeshLayer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getMeshLayer <em>Mesh Layer</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getMeshLayer <em>Mesh Layer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mesh Layer</em>' reference.
@@ -126,7 +126,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path Planner</em>' containment reference.
 	 * @see #setPathPlanner(MeshWayPointPathPlanner)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_PathPlanner()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getPathPlannerTool_PathPlanner()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -134,7 +134,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	MeshWayPointPathPlanner getPathPlanner();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPathPlanner <em>Path Planner</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getPathPlanner <em>Path Planner</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Path Planner</em>' containment reference.
@@ -153,7 +153,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Planned Path</em>' containment reference.
 	 * @see #setPlannedPath(WayPointPath)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_PlannedPath()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getPathPlannerTool_PlannedPath()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly'"
 	 * @generated
@@ -161,7 +161,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	WayPointPath getPlannedPath();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPlannedPath <em>Planned Path</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getPlannedPath <em>Planned Path</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Planned Path</em>' containment reference.
@@ -172,7 +172,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 
 	/**
 	 * Returns the value of the '<em><b>Path Planner Tool Node</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.vehicle.PathPlannerToolNode#getPathPlannerTool <em>Path Planner Tool</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode#getPathPlannerTool <em>Path Planner Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Path Planner Tool Node</em>' reference isn't clear,
@@ -181,8 +181,8 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path Planner Tool Node</em>' reference.
 	 * @see #setPathPlannerToolNode(PathPlannerToolNode)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_PathPlannerToolNode()
-	 * @see org.eclipse.symphony.addons.vehicle.PathPlannerToolNode#getPathPlannerTool
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getPathPlannerTool_PathPlannerToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode#getPathPlannerTool
 	 * @model opposite="pathPlannerTool" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='None' propertyCategory='TRAJECTORY_3D_TOOL'"
 	 * @generated
@@ -190,7 +190,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	PathPlannerToolNode getPathPlannerToolNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPathPlannerToolNode <em>Path Planner Tool Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool#getPathPlannerToolNode <em>Path Planner Tool Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Path Planner Tool Node</em>' reference.

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.provider;
+package ca.gc.asc_csa.apogy.addons.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_fromAbsolutePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_fromAbsolutePosition_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION,
 				 false,
 				 false,
 				 true,
@@ -94,7 +94,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_fromRelativePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_fromRelativePosition_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION,
 				 false,
 				 false,
 				 true,
@@ -116,7 +116,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_fromNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_fromNode_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE,
 				 false,
 				 false,
 				 true,
@@ -138,7 +138,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_fromNodeLock_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_fromNodeLock_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK,
 				 true,
 				 false,
 				 false,
@@ -160,7 +160,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_toAbsolutePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_toAbsolutePosition_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION,
 				 false,
 				 false,
 				 true,
@@ -182,7 +182,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_toRelativePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_toRelativePosition_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION,
 				 false,
 				 false,
 				 true,
@@ -204,7 +204,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_toNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_toNode_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE,
 				 false,
 				 false,
 				 true,
@@ -226,7 +226,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_toNodeLock_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_toNodeLock_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK,
 				 true,
 				 false,
 				 false,
@@ -248,7 +248,7 @@ public class AbstractTwoPoints3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTwoPoints3DTool_distance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTwoPoints3DTool_distance_feature", "_UI_AbstractTwoPoints3DTool_type"),
-				 Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE,
+				 ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -305,15 +305,15 @@ public class AbstractTwoPoints3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTwoPoints3DTool.class)) {
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
-			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
+			case ApogyAddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

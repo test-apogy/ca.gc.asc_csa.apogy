@@ -3,7 +3,7 @@
  *
  * $Id: PathItemProvider.java,v 1.4.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,11 +11,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.Path} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.Path} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

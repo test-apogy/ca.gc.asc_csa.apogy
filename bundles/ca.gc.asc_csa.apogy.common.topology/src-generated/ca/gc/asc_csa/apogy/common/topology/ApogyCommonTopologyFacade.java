@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyFacadeImpl;
+import ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,13 +16,13 @@ import org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyFacadeI
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getSymphony__CommonTopologyFacade()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getApogyCommonTopologyFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonTopologyFacade extends EObject 
+public interface ApogyCommonTopologyFacade extends EObject 
 {
-	public static Symphony__CommonTopologyFacade INSTANCE = Symphony__CommonTopologyFacadeImpl.getInstance();
+	public static ApogyCommonTopologyFacade INSTANCE = ApogyCommonTopologyFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,7 +199,7 @@ public interface Symphony__CommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" matrixDataType="org.eclipse.symphony.common.topology.Matrix4d" matrixUnique="false"
+	 * @model unique="false" matrixDataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" matrixUnique="false"
 	 * @generated
 	 */
 	TransformNode createTransformNode(Matrix4d matrix);
@@ -207,7 +207,7 @@ public interface Symphony__CommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" matrixDataType="org.eclipse.symphony.common.topology.Matrix4d" matrixUnique="false"
+	 * @model unique="false" matrixDataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" matrixUnique="false"
 	 * @generated
 	 */
 	PickAndPlaceNode createPickAndPlaceNode(Matrix4d matrix);
@@ -215,7 +215,7 @@ public interface Symphony__CommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.topology.Matrix4d" unique="false" nodeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" unique="false" nodeUnique="false"
 	 * @generated
 	 */
 	Matrix4d expressNodeInRootFrame(Node node);
@@ -223,7 +223,7 @@ public interface Symphony__CommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.topology.Matrix4d" unique="false" nodeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" unique="false" nodeUnique="false"
 	 * @generated
 	 */
 	Matrix4d expressRootInNodeFrame(Node node);
@@ -244,7 +244,7 @@ public interface Symphony__CommonTopologyFacade extends EObject
 	 * laser scanner in the frame of the sonar sensor.
 	 * </p>
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.topology.Matrix4d" unique="false" sourceFrameUnique="false" targetFrameUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" unique="false" sourceFrameUnique="false" targetFrameUnique="false"
 	 * @generated
 	 */
 	Matrix4d expressInFrame(Node sourceFrame, Node targetFrame);
@@ -268,7 +268,7 @@ public interface Symphony__CommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" clazzDataType="org.eclipse.symphony.common.topology.EClass" clazzUnique="false" topologyUnique="false"
+	 * @model unique="false" clazzDataType="ca.gc.asc_csa.apogy.common.topology.EClass" clazzUnique="false" topologyUnique="false"
 	 * @generated
 	 */
 	EList<Node> findNodesByType(EClass clazz, Node topology);
@@ -305,4 +305,4 @@ public interface Symphony__CommonTopologyFacade extends EObject
 	 */
 	void printTopology(Node node);
 
-} // Symphony__CommonTopologyFacade
+} // ApogyCommonTopologyFacade

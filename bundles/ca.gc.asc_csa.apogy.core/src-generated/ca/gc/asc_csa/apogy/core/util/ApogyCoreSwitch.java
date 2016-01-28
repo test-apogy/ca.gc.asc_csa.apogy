@@ -1,60 +1,60 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.util;
+package ca.gc.asc_csa.apogy.core.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.*;
-import org.eclipse.symphony.core.AbsolutePoseProvider;
-import org.eclipse.symphony.core.AbstractOrbitModel;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.AssemblyLinksList;
-import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.ConnectionPointsList;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.FeatureOfInterestListNode;
-import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.OperationCallPositionedResult;
-import org.eclipse.symphony.core.OrbitModelsList;
-import org.eclipse.symphony.core.PoseCorrector;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.SymphonyTopology;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.UserDefinedResult;
-import org.eclipse.symphony.core.WorksitesList;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.AbstractType;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.*;
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
+import ca.gc.asc_csa.apogy.core.OrbitModelsList;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.Positioned;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ResultsListNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.UserDefinedResult;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
 /**
  * <!-- begin-user-doc --> The <b>Switch</b> for the model's inheritance
@@ -63,16 +63,16 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter;
  * starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the
  * result of the switch. <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.Symphony__CorePackage
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage
  * @generated
  */
-public class Symphony__CoreSwitch<T> extends Switch<T> {
+public class ApogyCoreSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CorePackage modelPackage;
+	protected static ApogyCorePackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -80,9 +80,9 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 	 * end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreSwitch() {
+	public ApogyCoreSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CorePackage.eINSTANCE;
+			modelPackage = ApogyCorePackage.eINSTANCE;
 		}
 	}
 
@@ -109,58 +109,58 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE: {
-				Symphony__CoreFacade symphony__CoreFacade = (Symphony__CoreFacade)theEObject;
-				T result = caseSymphony__CoreFacade(symphony__CoreFacade);
+			case ApogyCorePackage.APOGY_CORE_FACADE: {
+				ApogyCoreFacade apogy__CoreFacade = (ApogyCoreFacade)theEObject;
+				T result = caseApogyCoreFacade(apogy__CoreFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT: {
-				SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment)theEObject;
-				T result = caseSymphonyEnvironment(symphonyEnvironment);
-				if (result == null) result = caseEnvironment(symphonyEnvironment);
-				if (result == null) result = caseTimed(symphonyEnvironment);
-				if (result == null) result = caseNamed(symphonyEnvironment);
-				if (result == null) result = caseDescribed(symphonyEnvironment);
+			case ApogyCorePackage.APOGY_ENVIRONMENT: {
+				ApogyEnvironment apogyEnvironment = (ApogyEnvironment)theEObject;
+				T result = caseApogyEnvironment(apogyEnvironment);
+				if (result == null) result = caseEnvironment(apogyEnvironment);
+				if (result == null) result = caseTimed(apogyEnvironment);
+				if (result == null) result = caseNamed(apogyEnvironment);
+				if (result == null) result = caseDescribed(apogyEnvironment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.TIME_SOURCES_LIST: {
+			case ApogyCorePackage.TIME_SOURCES_LIST: {
 				TimeSourcesList timeSourcesList = (TimeSourcesList)theEObject;
 				T result = caseTimeSourcesList(timeSourcesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.SYMPHONY_TOPOLOGY: {
-				SymphonyTopology symphonyTopology = (SymphonyTopology)theEObject;
-				T result = caseSymphonyTopology(symphonyTopology);
+			case ApogyCorePackage.APOGY_TOPOLOGY: {
+				ApogyTopology apogyTopology = (ApogyTopology)theEObject;
+				T result = caseApogyTopology(apogyTopology);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.SYMPHONY_SYSTEM: {
-				SymphonySystem symphonySystem = (SymphonySystem)theEObject;
-				T result = caseSymphonySystem(symphonySystem);
-				if (result == null) result = caseType(symphonySystem);
-				if (result == null) result = caseNamed(symphonySystem);
-				if (result == null) result = caseAbstractType(symphonySystem);
+			case ApogyCorePackage.APOGY_SYSTEM: {
+				ApogySystem apogySystem = (ApogySystem)theEObject;
+				T result = caseApogySystem(apogySystem);
+				if (result == null) result = caseType(apogySystem);
+				if (result == null) result = caseNamed(apogySystem);
+				if (result == null) result = caseAbstractType(apogySystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER: {
-				SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter)theEObject;
-				T result = caseSymphonySystemApiAdapter(symphonySystemApiAdapter);
-				if (result == null) result = caseTypeApiAdapter(symphonySystemApiAdapter);
-				if (result == null) result = casePoseProvider(symphonySystemApiAdapter);
+			case ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER: {
+				ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter)theEObject;
+				T result = caseApogySystemApiAdapter(apogySystemApiAdapter);
+				if (result == null) result = caseTypeApiAdapter(apogySystemApiAdapter);
+				if (result == null) result = casePoseProvider(apogySystemApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.CONNECTION_POINTS_LIST: {
+			case ApogyCorePackage.CONNECTION_POINTS_LIST: {
 				ConnectionPointsList connectionPointsList = (ConnectionPointsList)theEObject;
 				T result = caseConnectionPointsList(connectionPointsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.CONNECTION_POINT: {
+			case ApogyCorePackage.CONNECTION_POINT: {
 				ConnectionPoint connectionPoint = (ConnectionPoint)theEObject;
 				T result = caseConnectionPoint(connectionPoint);
 				if (result == null) result = caseNamed(connectionPoint);
@@ -168,7 +168,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.ASSEMBLY_LINK: {
+			case ApogyCorePackage.ASSEMBLY_LINK: {
 				AssemblyLink assemblyLink = (AssemblyLink)theEObject;
 				T result = caseAssemblyLink(assemblyLink);
 				if (result == null) result = caseNamed(assemblyLink);
@@ -176,40 +176,40 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST: {
+			case ApogyCorePackage.ASSEMBLY_LINKS_LIST: {
 				AssemblyLinksList assemblyLinksList = (AssemblyLinksList)theEObject;
 				T result = caseAssemblyLinksList(assemblyLinksList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.POSE_PROVIDER: {
+			case ApogyCorePackage.POSE_PROVIDER: {
 				PoseProvider poseProvider = (PoseProvider)theEObject;
 				T result = casePoseProvider(poseProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.ABSOLUTE_POSE_PROVIDER: {
+			case ApogyCorePackage.ABSOLUTE_POSE_PROVIDER: {
 				AbsolutePoseProvider absolutePoseProvider = (AbsolutePoseProvider)theEObject;
 				T result = caseAbsolutePoseProvider(absolutePoseProvider);
 				if (result == null) result = casePoseProvider(absolutePoseProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.POSE_CORRECTOR: {
+			case ApogyCorePackage.POSE_CORRECTOR: {
 				PoseCorrector poseCorrector = (PoseCorrector)theEObject;
 				T result = casePoseCorrector(poseCorrector);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA: {
-				SymphonyInitializationData symphonyInitializationData = (SymphonyInitializationData)theEObject;
-				T result = caseSymphonyInitializationData(symphonyInitializationData);
-				if (result == null) result = caseInitializationData(symphonyInitializationData);
-				if (result == null) result = caseAbstractInitializationData(symphonyInitializationData);
+			case ApogyCorePackage.APOGY_INITIALIZATION_DATA: {
+				ApogyInitializationData apogyInitializationData = (ApogyInitializationData)theEObject;
+				T result = caseApogyInitializationData(apogyInitializationData);
+				if (result == null) result = caseInitializationData(apogyInitializationData);
+				if (result == null) result = caseAbstractInitializationData(apogyInitializationData);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.WORKSITES_LIST: {
+			case ApogyCorePackage.WORKSITES_LIST: {
 				WorksitesList worksitesList = (WorksitesList)theEObject;
 				T result = caseWorksitesList(worksitesList);
 				if (result == null) result = caseNamed(worksitesList);
@@ -217,7 +217,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.ABSTRACT_WORKSITE: {
+			case ApogyCorePackage.ABSTRACT_WORKSITE: {
 				AbstractWorksite abstractWorksite = (AbstractWorksite)theEObject;
 				T result = caseAbstractWorksite(abstractWorksite);
 				if (result == null) result = caseNamed(abstractWorksite);
@@ -226,7 +226,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.ORBIT_MODELS_LIST: {
+			case ApogyCorePackage.ORBIT_MODELS_LIST: {
 				OrbitModelsList orbitModelsList = (OrbitModelsList)theEObject;
 				T result = caseOrbitModelsList(orbitModelsList);
 				if (result == null) result = caseNamed(orbitModelsList);
@@ -234,7 +234,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL: {
+			case ApogyCorePackage.ABSTRACT_ORBIT_MODEL: {
 				AbstractOrbitModel abstractOrbitModel = (AbstractOrbitModel)theEObject;
 				T result = caseAbstractOrbitModel(abstractOrbitModel);
 				if (result == null) result = caseNamed(abstractOrbitModel);
@@ -242,13 +242,13 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.POSITIONED: {
+			case ApogyCorePackage.POSITIONED: {
 				Positioned positioned = (Positioned)theEObject;
 				T result = casePositioned(positioned);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.FEATURE_OF_INTEREST: {
+			case ApogyCorePackage.FEATURE_OF_INTEREST: {
 				FeatureOfInterest featureOfInterest = (FeatureOfInterest)theEObject;
 				T result = caseFeatureOfInterest(featureOfInterest);
 				if (result == null) result = casePositioned(featureOfInterest);
@@ -257,7 +257,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST: {
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST: {
 				FeatureOfInterestList featureOfInterestList = (FeatureOfInterestList)theEObject;
 				T result = caseFeatureOfInterestList(featureOfInterestList);
 				if (result == null) result = caseNamed(featureOfInterestList);
@@ -265,13 +265,13 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.TOPOLOGY_ROOT: {
+			case ApogyCorePackage.TOPOLOGY_ROOT: {
 				TopologyRoot topologyRoot = (TopologyRoot)theEObject;
 				T result = caseTopologyRoot(topologyRoot);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.POSITIONED_RESULT: {
+			case ApogyCorePackage.POSITIONED_RESULT: {
 				PositionedResult positionedResult = (PositionedResult)theEObject;
 				T result = casePositionedResult(positionedResult);
 				if (result == null) result = caseAbstractResult(positionedResult);
@@ -281,7 +281,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.OPERATION_CALL_POSITIONED_RESULT: {
+			case ApogyCorePackage.OPERATION_CALL_POSITIONED_RESULT: {
 				OperationCallPositionedResult operationCallPositionedResult = (OperationCallPositionedResult)theEObject;
 				T result = caseOperationCallPositionedResult(operationCallPositionedResult);
 				if (result == null) result = caseOperationCallResult(operationCallPositionedResult);
@@ -294,7 +294,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.USER_DEFINED_RESULT: {
+			case ApogyCorePackage.USER_DEFINED_RESULT: {
 				UserDefinedResult userDefinedResult = (UserDefinedResult)theEObject;
 				T result = caseUserDefinedResult(userDefinedResult);
 				if (result == null) result = casePositionedResult(userDefinedResult);
@@ -306,7 +306,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.RESULT_NODE: {
+			case ApogyCorePackage.RESULT_NODE: {
 				ResultNode resultNode = (ResultNode)theEObject;
 				T result = caseResultNode(resultNode);
 				if (result == null) result = caseAggregateGroupNode(resultNode);
@@ -315,7 +315,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.RESULTS_LIST_NODE: {
+			case ApogyCorePackage.RESULTS_LIST_NODE: {
 				ResultsListNode resultsListNode = (ResultsListNode)theEObject;
 				T result = caseResultsListNode(resultsListNode);
 				if (result == null) result = caseAggregateGroupNode(resultsListNode);
@@ -324,7 +324,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE: {
+			case ApogyCorePackage.FEATURE_OF_INTEREST_NODE: {
 				FeatureOfInterestNode featureOfInterestNode = (FeatureOfInterestNode)theEObject;
 				T result = caseFeatureOfInterestNode(featureOfInterestNode);
 				if (result == null) result = caseTransformNode(featureOfInterestNode);
@@ -336,7 +336,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE: {
+			case ApogyCorePackage.FEATURE_OF_INTEREST_LIST_NODE: {
 				FeatureOfInterestListNode featureOfInterestListNode = (FeatureOfInterestListNode)theEObject;
 				T result = caseFeatureOfInterestListNode(featureOfInterestListNode);
 				if (result == null) result = caseAggregateGroupNode(featureOfInterestListNode);
@@ -345,7 +345,7 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CorePackage.UPDATABLE: {
+			case ApogyCorePackage.UPDATABLE: {
 				Updatable updatable = (Updatable)theEObject;
 				T result = caseUpdatable(updatable);
 				if (result == null) result = defaultCase(theEObject);
@@ -366,21 +366,21 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreFacade(Symphony__CoreFacade object) {
+	public T caseApogyCoreFacade(ApogyCoreFacade object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Environment</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Environment</em>'.
 	 * <!-- begin-user-doc --> This
 	 * implementation returns null; returning a non-null result will terminate
 	 * the switch. <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Environment</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Environment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyEnvironment(SymphonyEnvironment object) {
+	public T caseApogyEnvironment(ApogyEnvironment object) {
 		return null;
 	}
 
@@ -400,45 +400,45 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Topology</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Topology</em>'.
 	 * <!-- begin-user-doc --> This implementation
 	 * returns null; returning a non-null result will terminate the switch. <!--
 	 * end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Topology</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Topology</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyTopology(SymphonyTopology object) {
+	public T caseApogyTopology(ApogyTopology object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System</em>'.
 	 * <!-- begin-user-doc --> This implementation
 	 * returns null; returning a non-null result will terminate the switch. <!--
 	 * end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonySystem(SymphonySystem object) {
+	public T caseApogySystem(ApogySystem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object)
+  public T caseApogySystemApiAdapter(ApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -547,16 +547,16 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc --> This
 	 * implementation returns null; returning a non-null result will terminate
 	 * the switch. <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyInitializationData(SymphonyInitializationData object) {
+	public T caseApogyInitializationData(ApogyInitializationData object) {
 		return null;
 	}
 
@@ -1078,4 +1078,4 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} // Symphony__CoreSwitch
+} // ApogyCoreSwitch

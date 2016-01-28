@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.internal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
 
 public class MultiNodeListener 
 {
@@ -51,7 +51,7 @@ public class MultiNodeListener
 						int featureId = msg.getFeatureID(GraphicsContext.class);
 						switch (featureId) 
 						{
-							case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
+							case ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN:
 							{
 								int eventType = msg.getEventType();
 								switch (eventType) 

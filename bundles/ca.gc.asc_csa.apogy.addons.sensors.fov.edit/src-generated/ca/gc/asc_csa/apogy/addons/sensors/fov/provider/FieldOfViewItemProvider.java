@@ -3,7 +3,7 @@
  *
  * $Id: FieldOfViewItemProvider.java,v 1.3.4.2 2015/05/21 15:51:09 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 
 import java.util.Collection;
@@ -12,11 +12,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.FieldOfView} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

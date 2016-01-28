@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
-import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetImpl;
 
-import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class AbstractCartesianCoordinatesSetImpl<T extends CartesianPositionCoor
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.ABSTRACT_CARTESIAN_COORDINATES_SET;
+		return ApogyCommonGeometryData3DPackage.Literals.ABSTRACT_CARTESIAN_COORDINATES_SET;
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class AbstractCartesianCoordinatesSetImpl<T extends CartesianPositionCoor
 	@Override
 	public EList<T> getPoints() {
 		if (points == null) {
-			points = new EObjectContainmentEList<T>(CartesianPositionCoordinates.class, this, Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS);
+			points = new EObjectContainmentEList<T>(CartesianPositionCoordinates.class, this, ApogyCommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS);
 		}
 		return points;
 	}
@@ -78,7 +78,7 @@ public class AbstractCartesianCoordinatesSetImpl<T extends CartesianPositionCoor
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT:
+			case ApogyCommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT:
 				return getExtent();
 		}
 		return super.eInvoke(operationID, arguments);

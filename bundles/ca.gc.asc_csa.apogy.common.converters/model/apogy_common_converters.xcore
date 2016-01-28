@@ -1,24 +1,24 @@
-@GenModel(prefix="Symphony__CommonConverters",
+@GenModel(prefix="ApogyCommonConverters",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  operationReflection="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CommonConverters") 
-@GenModel(modelDirectory="/org.eclipse.symphony.common.converters/src-generated")
+		  modelName="ApogyCommonConverters") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.converters/src-generated")
 
-package org.eclipse.symphony.common.converters
+package ca.gc.asc_csa.apogy.common.converters
 
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge
 
 type List<E> wraps java.util.List
 type SimpleDirectedWeightedGraph<V, E> wraps org.jgrapht.graph.SimpleDirectedWeightedGraph
 type Exception wraps java.lang.Exception
-type IConverter wraps org.eclipse.symphony.common.converters.IConverter
+type IConverter wraps ca.gc.asc_csa.apogy.common.converters.IConverter
 
 /*
  * A utility class to perform a variety of common functions
  */
-class Symphony__CommonConvertersFacade
+class ApogyCommonConvertersFacade
 {	
 	/*
 	 * Converts an Object to an object of type targetType

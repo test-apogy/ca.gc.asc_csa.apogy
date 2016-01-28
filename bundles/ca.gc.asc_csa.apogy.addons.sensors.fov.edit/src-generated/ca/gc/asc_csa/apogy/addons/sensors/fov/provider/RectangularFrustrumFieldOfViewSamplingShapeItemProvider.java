@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2007.
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -75,7 +75,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularFrustrumFieldOfViewSamplingShape_transform_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfViewSamplingShape_transform_feature", "_UI_RectangularFrustrumFieldOfViewSamplingShape_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM,
+				 ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM,
 				 true,
 				 false,
 				 true,
@@ -97,7 +97,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularFrustrumFieldOfViewSamplingShape_rectangularFrustrumFieldOfView_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfViewSamplingShape_rectangularFrustrumFieldOfView_feature", "_UI_RectangularFrustrumFieldOfViewSamplingShape_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW,
+				 ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW,
 				 true,
 				 false,
 				 true,

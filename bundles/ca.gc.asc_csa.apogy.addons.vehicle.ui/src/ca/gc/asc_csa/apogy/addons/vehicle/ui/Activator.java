@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.vehicle.ui;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleActivator;
@@ -6,7 +6,7 @@ import org.osgi.framework.BundleContext;
 
 public class Activator extends AbstractUIPlugin implements BundleActivator 
 {
-	public static String ID = "org.eclipse.symphony.addons.vehicle.ui";
+	public static String ID = "ca.gc.asc_csa.apogy.addons.vehicle.ui";
 
 	// The shared instance
 	private static Activator plugin;

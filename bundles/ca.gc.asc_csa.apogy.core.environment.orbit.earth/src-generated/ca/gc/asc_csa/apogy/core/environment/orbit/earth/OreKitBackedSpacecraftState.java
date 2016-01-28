@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState#getOreKitSpacecraftState <em>Ore Kit Spacecraft State</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState#getOreKitSpacecraftState <em>Ore Kit Spacecraft State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getOreKitBackedSpacecraftState()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getOreKitBackedSpacecraftState()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface OreKitBackedSpacecraftState extends SpacecraftState {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ore Kit Spacecraft State</em>' attribute.
 	 * @see #setOreKitSpacecraftState(org.orekit.propagation.SpacecraftState)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getOreKitBackedSpacecraftState_OreKitSpacecraftState()
-	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitSpacecraftState" transient="true"
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getOreKitBackedSpacecraftState_OreKitSpacecraftState()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitSpacecraftState" transient="true"
 	 * @generated
 	 */
 	org.orekit.propagation.SpacecraftState getOreKitSpacecraftState();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState#getOreKitSpacecraftState <em>Ore Kit Spacecraft State</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState#getOreKitSpacecraftState <em>Ore Kit Spacecraft State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ore Kit Spacecraft State</em>' attribute.

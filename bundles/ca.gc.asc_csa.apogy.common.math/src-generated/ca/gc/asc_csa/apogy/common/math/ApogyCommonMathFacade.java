@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.impl.Symphony__CommonMathFacadeImpl;
+import ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,18 +15,18 @@ import org.eclipse.symphony.common.math.impl.Symphony__CommonMathFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getSymphony__CommonMathFacade()
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getApogyCommonMathFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonMathFacade extends EObject
+public interface ApogyCommonMathFacade extends EObject
 {
-	public static Symphony__CommonMathFacade INSTANCE = Symphony__CommonMathFacadeImpl.getInstance();
+	public static ApogyCommonMathFacade INSTANCE = ApogyCommonMathFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" matrixDataType="org.eclipse.symphony.common.math.Matrix4d" matrixUnique="false"
+	 * @model unique="false" matrixDataType="ca.gc.asc_csa.apogy.common.math.Matrix4d" matrixUnique="false"
 	 * @generated
 	 */
 	Matrix4x4 createMatrix4x4(Matrix4d matrix);
@@ -34,7 +34,7 @@ public interface Symphony__CommonMathFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" matrixDataType="org.eclipse.symphony.common.math.Matrix3d" matrixUnique="false"
+	 * @model unique="false" matrixDataType="ca.gc.asc_csa.apogy.common.math.Matrix3d" matrixUnique="false"
 	 * @generated
 	 */
 	Matrix3x3 createMatrix3x3(Matrix3d matrix);
@@ -42,7 +42,7 @@ public interface Symphony__CommonMathFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" tupleDataType="org.eclipse.symphony.common.math.VecmathTuple3d" tupleUnique="false"
+	 * @model unique="false" tupleDataType="ca.gc.asc_csa.apogy.common.math.VecmathTuple3d" tupleUnique="false"
 	 * @generated
 	 */
 	Tuple3d createTuple3d(javax.vecmath.Tuple3d tuple);
@@ -61,7 +61,7 @@ public interface Symphony__CommonMathFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * @param coeffs The coefficients of the polynomial, sorted in increasing order.\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0]
 	 * <!-- end-model-doc -->
-	 * @model unique="false" coeffsDataType="org.eclipse.symphony.common.math.EDoubleArray" coeffsUnique="false"
+	 * @model unique="false" coeffsDataType="ca.gc.asc_csa.apogy.common.math.EDoubleArray" coeffsUnique="false"
 	 * @generated
 	 */
 	Polynomial createPolynomial(double[] coeffs);
@@ -98,4 +98,4 @@ public interface Symphony__CommonMathFacade extends EObject
 	 */
 	Tuple3d extractOrientation(Matrix4x4 matrix);
 
-} // Symphony__CommonMathFacade
+} // ApogyCommonMathFacade

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.SpacecraftsVisibilitySetComposite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.SpacecraftsVisibilitySetComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 
 public class SpacecraftVisibilitySetView extends AbstractView 
 {	
@@ -63,7 +63,7 @@ public class SpacecraftVisibilitySetView extends AbstractView
 	@Override
  	public void updateSelection(ISelection selection) 
  	{ 		
-		List<Object> spacecraftsVisibilitySets = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SpacecraftsVisibilitySet.class);
+		List<Object> spacecraftsVisibilitySets = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, SpacecraftsVisibilitySet.class);
 		
 		if(!spacecraftsVisibilitySets.isEmpty())
 		{				

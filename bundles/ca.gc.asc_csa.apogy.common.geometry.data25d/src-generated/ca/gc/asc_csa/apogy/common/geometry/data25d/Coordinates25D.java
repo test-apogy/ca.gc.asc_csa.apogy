@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d;
+package ca.gc.asc_csa.apogy.common.geometry.data25d;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getU <em>U</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getV <em>V</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getW <em>W</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getU <em>U</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getV <em>V</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getW <em>W</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getCoordinates25D()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface Coordinates25D extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>U</em>' attribute.
 	 * @see #setU(double)
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D_U()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getCoordinates25D_U()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getU();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getU <em>U</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getU <em>U</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>U</em>' attribute.
@@ -65,14 +65,14 @@ public interface Coordinates25D extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>V</em>' attribute.
 	 * @see #setV(double)
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D_V()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getCoordinates25D_V()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getV();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getV <em>V</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getV <em>V</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>V</em>' attribute.
@@ -91,14 +91,14 @@ public interface Coordinates25D extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>W</em>' attribute.
 	 * @see #setW(double)
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D_W()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#getCoordinates25D_W()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getW();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getW <em>W</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getW <em>W</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>W</em>' attribute.

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,17 +14,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible <em>Axis Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength <em>Axis Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible <em>Azimuth Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible <em>Elevation Lines Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible <em>Azimuth Lines Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible <em>Plane Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize <em>Plane Grid Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible <em>Axis Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength <em>Axis Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible <em>Azimuth Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible <em>Elevation Lines Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible <em>Azimuth Lines Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible <em>Plane Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize <em>Plane Grid Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Visible</em>' attribute.
 	 * @see #setAxisVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='AXIS'"
 	 * @generated
@@ -49,7 +49,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
   boolean isAxisVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible <em>Axis Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible <em>Axis Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Axis Visible</em>' attribute.
@@ -69,15 +69,15 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Length</em>' attribute.
 	 * @see #setAxisLength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisLength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisLength()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='AXIS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='AXIS' apogy_units='m'"
 	 * @generated
 	 */
   double getAxisLength();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength <em>Axis Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength <em>Axis Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Axis Length</em>' attribute.
@@ -97,7 +97,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth Visible</em>' attribute.
 	 * @see #setAzimuthVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SKY'"
 	 * @generated
@@ -105,7 +105,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
   boolean isAzimuthVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible <em>Azimuth Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible <em>Azimuth Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth Visible</em>' attribute.
@@ -125,7 +125,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elevation Lines Visible</em>' attribute.
 	 * @see #setElevationLinesVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_ElevationLinesVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_ElevationLinesVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SKY'"
 	 * @generated
@@ -133,7 +133,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
   boolean isElevationLinesVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible <em>Elevation Lines Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible <em>Elevation Lines Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation Lines Visible</em>' attribute.
@@ -153,7 +153,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth Lines Visible</em>' attribute.
 	 * @see #setAzimuthLinesVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthLinesVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthLinesVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SKY'"
 	 * @generated
@@ -161,7 +161,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
   boolean isAzimuthLinesVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible <em>Azimuth Lines Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible <em>Azimuth Lines Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth Lines Visible</em>' attribute.
@@ -181,7 +181,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plane Visible</em>' attribute.
 	 * @see #setPlaneVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE'"
 	 * @generated
@@ -189,7 +189,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
   boolean isPlaneVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible <em>Plane Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible <em>Plane Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Plane Visible</em>' attribute.
@@ -209,15 +209,15 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plane Grid Size</em>' attribute.
 	 * @see #setPlaneGridSize(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneGridSize()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneGridSize()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' apogy_units='m'"
 	 * @generated
 	 */
   double getPlaneGridSize();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize <em>Plane Grid Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize <em>Plane Grid Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Plane Grid Size</em>' attribute.
@@ -237,15 +237,15 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plane Size</em>' attribute.
 	 * @see #setPlaneSize(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneSize()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneSize()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' apogy_units='m'"
 	 * @generated
 	 */
   double getPlaneSize();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Plane Size</em>' attribute.

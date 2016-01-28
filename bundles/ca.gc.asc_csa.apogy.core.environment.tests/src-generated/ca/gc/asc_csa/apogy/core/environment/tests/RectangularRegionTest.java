@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -15,12 +15,12 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getXDimension() <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getYDimension() <em>YDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getLowerLeftCorner() <em>Lower Left Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperLeftCorner() <em>Upper Left Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getLowerRightCorner() <em>Lower Right Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperRightCorner() <em>Upper Right Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXDimension() <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYDimension() <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerLeftCorner() <em>Lower Left Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperLeftCorner() <em>Upper Left Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerRightCorner() <em>Lower Right Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperRightCorner() <em>Upper Right Corner</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -65,7 +65,7 @@ public class RectangularRegionTest extends RegionTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularRegion());
 	}
 
 	/**
@@ -80,10 +80,10 @@ public class RectangularRegionTest extends RegionTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getXDimension() <em>XDimension</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXDimension() <em>XDimension</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegion#getXDimension()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXDimension()
 	 * @generated_NOT
 	 */
 	public void testGetXDimension() 
@@ -97,10 +97,10 @@ public class RectangularRegionTest extends RegionTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getYDimension() <em>YDimension</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYDimension() <em>YDimension</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegion#getYDimension()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYDimension()
 	 * @generated_NOT
 	 */
 	public void testGetYDimension() 
@@ -114,10 +114,10 @@ public class RectangularRegionTest extends RegionTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getLowerLeftCorner() <em>Lower Left Corner</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerLeftCorner() <em>Lower Left Corner</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegion#getLowerLeftCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerLeftCorner()
 	 * @generated_NOT
 	 */
 	public void testGetLowerLeftCorner() 
@@ -133,10 +133,10 @@ public class RectangularRegionTest extends RegionTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperLeftCorner() <em>Upper Left Corner</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperLeftCorner() <em>Upper Left Corner</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegion#getUpperLeftCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperLeftCorner()
 	 * @generated_NOT
 	 */
 	public void testGetUpperLeftCorner() 
@@ -152,10 +152,10 @@ public class RectangularRegionTest extends RegionTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getLowerRightCorner() <em>Lower Right Corner</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerRightCorner() <em>Lower Right Corner</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegion#getLowerRightCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerRightCorner()
 	 * @generated_NOT
 	 */
 	public void testGetLowerRightCorner() 
@@ -171,10 +171,10 @@ public class RectangularRegionTest extends RegionTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperRightCorner() <em>Upper Right Corner</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperRightCorner() <em>Upper Right Corner</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegion#getUpperRightCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperRightCorner()
 	 * @generated_NOT
 	 */
 	public void testGetUpperRightCorner() 

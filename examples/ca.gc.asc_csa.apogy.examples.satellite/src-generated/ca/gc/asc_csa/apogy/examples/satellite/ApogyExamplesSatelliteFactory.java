@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage
  * @generated
  */
-public interface Symphony__ExamplesSatelliteFactory extends EFactory {
+public interface ApogyExamplesSatelliteFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesSatelliteFactory eINSTANCE = org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatelliteFactoryImpl.init();
+	ApogyExamplesSatelliteFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.satellite.impl.ApogyExamplesSatelliteFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Constellation Command Plan</em>'.
@@ -155,6 +155,6 @@ public interface Symphony__ExamplesSatelliteFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesSatellitePackage getSymphony__ExamplesSatellitePackage();
+	ApogyExamplesSatellitePackage getApogyExamplesSatellitePackage();
 
-} //Symphony__ExamplesSatelliteFactory
+} //ApogyExamplesSatelliteFactory

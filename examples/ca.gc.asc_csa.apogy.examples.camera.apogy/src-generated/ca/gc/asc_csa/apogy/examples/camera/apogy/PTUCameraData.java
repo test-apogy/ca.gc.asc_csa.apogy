@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony;
+package ca.gc.asc_csa.apogy.examples.camera.apogy;
 
 
 
@@ -14,19 +14,19 @@ package org.eclipse.symphony.examples.camera.symphony;
  * This class is the data required in order to initialize (or
  * reinitialized) the basic camera implementations.  This will
  * be used by the relevant API adapter, which in this case
- * is {@link PTUCameraSymphonySystenApiAdapter}.
- * @see #PTUCameraSymphonySystemApiAdapter
+ * is {@link PTUCameraApogySystenApiAdapter}.
+ * @see #PTUCameraApogySystemApiAdapter
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData#getPanAngle <em>Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData#getTiltAngle <em>Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData#getPanAngle <em>Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData#getTiltAngle <em>Tilt Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getPTUCameraData()
+ * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getPTUCameraData()
  * @model
  * @generated
  */
@@ -42,15 +42,15 @@ public interface PTUCameraData extends CameraData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pan Angle</em>' attribute.
 	 * @see #setPanAngle(double)
-	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getPTUCameraData_PanAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getPTUCameraData_PanAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
 	double getPanAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData#getPanAngle <em>Pan Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData#getPanAngle <em>Pan Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pan Angle</em>' attribute.
@@ -69,15 +69,15 @@ public interface PTUCameraData extends CameraData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tilt Angle</em>' attribute.
 	 * @see #setTiltAngle(double)
-	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getPTUCameraData_TiltAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getPTUCameraData_TiltAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
 	double getTiltAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData#getTiltAngle <em>Tilt Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData#getTiltAngle <em>Tilt Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tilt Angle</em>' attribute.

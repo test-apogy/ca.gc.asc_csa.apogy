@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.ui.util;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.LabelPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,17 +23,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesUISwitch<T> extends Switch<T> {
+public class ApogyCommonTopologyAddonsPrimitivesUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyAddonsPrimitivesUIPackage modelPackage;
+	protected static ApogyCommonTopologyAddonsPrimitivesUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -41,9 +41,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesUISwitch<T> extends Switch<
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesUISwitch() {
+	public ApogyCommonTopologyAddonsPrimitivesUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyAddonsPrimitivesUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyAddonsPrimitivesUIPackage.eINSTANCE;
 		}
 	}
 
@@ -70,28 +70,28 @@ public class Symphony__CommonTopologyAddonsPrimitivesUISwitch<T> extends Switch<
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION: {
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION: {
 				VectorPresentation vectorPresentation = (VectorPresentation)theEObject;
 				T result = caseVectorPresentation(vectorPresentation);
 				if (result == null) result = caseNodePresentation(vectorPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.WAY_POINT_PRESENTATION: {
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.WAY_POINT_PRESENTATION: {
 				WayPointPresentation wayPointPresentation = (WayPointPresentation)theEObject;
 				T result = caseWayPointPresentation(wayPointPresentation);
 				if (result == null) result = caseNodePresentation(wayPointPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.LABEL_PRESENTATION: {
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.LABEL_PRESENTATION: {
 				LabelPresentation labelPresentation = (LabelPresentation)theEObject;
 				T result = caseLabelPresentation(labelPresentation);
 				if (result == null) result = caseNodePresentation(labelPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.SPHERE_PRIMITIVE_PRESENTATION: {
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.SPHERE_PRIMITIVE_PRESENTATION: {
 				SpherePrimitivePresentation spherePrimitivePresentation = (SpherePrimitivePresentation)theEObject;
 				T result = caseSpherePrimitivePresentation(spherePrimitivePresentation);
 				if (result == null) result = caseNodePresentation(spherePrimitivePresentation);
@@ -193,4 +193,4 @@ public class Symphony__CommonTopologyAddonsPrimitivesUISwitch<T> extends Switch<
 		return null;
 	}
 
-} //Symphony__CommonTopologyAddonsPrimitivesUISwitch
+} //ApogyCommonTopologyAddonsPrimitivesUISwitch

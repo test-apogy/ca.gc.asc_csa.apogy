@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.TimeTrigger;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.TimeTrigger} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class TimeTriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeTrigger_refreshPeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeTrigger_refreshPeriod_feature", "_UI_TimeTrigger_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.TIME_TRIGGER__REFRESH_PERIOD,
+				 ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER__REFRESH_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class TimeTriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimeTrigger.class)) {
-			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
+			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

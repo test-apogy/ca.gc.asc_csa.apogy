@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.tests;
+package ca.gc.asc_csa.apogy.common.topology.ui.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.GraphicsContext#dispose() <em>Dispose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#dispose() <em>Dispose</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -79,7 +79,7 @@ public class GraphicsContextTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext());
+		setFixture(ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext());
 	}
 
 	/**
@@ -94,10 +94,10 @@ public class GraphicsContextTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.GraphicsContext#dispose() <em>Dispose</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext#dispose()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#dispose()
 	 * @generated
 	 */
 	public void testDispose() {

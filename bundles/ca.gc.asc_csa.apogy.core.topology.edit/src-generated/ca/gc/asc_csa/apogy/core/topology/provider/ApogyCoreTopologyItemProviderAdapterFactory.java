@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.provider;
+package ca.gc.asc_csa.apogy.core.topology.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,28 +33,28 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
-import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
+import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
 
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
 
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFactory;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
 
-import org.eclipse.symphony.core.topology.util.Symphony__CoreTopologyAdapterFactory;
+import ca.gc.asc_csa.apogy.core.topology.util.ApogyCoreTopologyAdapterFactory;
 
-import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
+import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -65,7 +65,7 @@ import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__CoreTopologyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCoreTopologyItemProviderAdapterFactory extends ApogyCoreTopologyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -88,7 +88,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreTopologyEditPlugin.INSTANCE, Symphony__CoreTopologyPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreTopologyEditPlugin.INSTANCE, ApogyCoreTopologyPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -104,7 +104,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreTopologyItemProviderAdapterFactory() {
+	public ApogyCoreTopologyItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -113,7 +113,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 	protected SystemsTopologyAdapterItemProvider systemsTopologyAdapterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,72 +136,72 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyEnvironmentNodeItemProvider symphonyEnvironmentNodeItemProvider;
+	protected ApogyEnvironmentNodeItemProvider apogyEnvironmentNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyEnvironmentNodeAdapter() {
-		if (symphonyEnvironmentNodeItemProvider == null) {
-			symphonyEnvironmentNodeItemProvider = new SymphonyEnvironmentNodeItemProvider(this);
+	public Adapter createApogyEnvironmentNodeAdapter() {
+		if (apogyEnvironmentNodeItemProvider == null) {
+			apogyEnvironmentNodeItemProvider = new ApogyEnvironmentNodeItemProvider(this);
 		}
 
-		return symphonyEnvironmentNodeItemProvider;
+		return apogyEnvironmentNodeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.topology.SymphonySystemAPIsNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonySystemAPIsNodeItemProvider symphonySystemAPIsNodeItemProvider;
+	protected ApogySystemAPIsNodeItemProvider apogySystemAPIsNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.topology.SymphonySystemAPIsNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonySystemAPIsNodeAdapter() {
-		if (symphonySystemAPIsNodeItemProvider == null) {
-			symphonySystemAPIsNodeItemProvider = new SymphonySystemAPIsNodeItemProvider(this);
+	public Adapter createApogySystemAPIsNodeAdapter() {
+		if (apogySystemAPIsNodeItemProvider == null) {
+			apogySystemAPIsNodeItemProvider = new ApogySystemAPIsNodeItemProvider(this);
 		}
 
-		return symphonySystemAPIsNodeItemProvider;
+		return apogySystemAPIsNodeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreTopologyFacadeItemProvider symphony__CoreTopologyFacadeItemProvider;
+	protected ApogyCoreTopologyFacadeItemProvider apogy__CoreTopologyFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreTopologyFacadeAdapter() {
-		if (symphony__CoreTopologyFacadeItemProvider == null) {
-			symphony__CoreTopologyFacadeItemProvider = new Symphony__CoreTopologyFacadeItemProvider(this);
+	public Adapter createApogyCoreTopologyFacadeAdapter() {
+		if (apogy__CoreTopologyFacadeItemProvider == null) {
+			apogy__CoreTopologyFacadeItemProvider = new ApogyCoreTopologyFacadeItemProvider(this);
 		}
 
-		return symphony__CoreTopologyFacadeItemProvider;
+		return apogy__CoreTopologyFacadeItemProvider;
 	}
 
 	/**
@@ -331,25 +331,25 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 	 */
 	public void dispose() {
 		if (systemsTopologyAdapterItemProvider != null) systemsTopologyAdapterItemProvider.dispose();
-		if (symphonyEnvironmentNodeItemProvider != null) symphonyEnvironmentNodeItemProvider.dispose();
-		if (symphonySystemAPIsNodeItemProvider != null) symphonySystemAPIsNodeItemProvider.dispose();
-		if (symphony__CoreTopologyFacadeItemProvider != null) symphony__CoreTopologyFacadeItemProvider.dispose();
+		if (apogyEnvironmentNodeItemProvider != null) apogyEnvironmentNodeItemProvider.dispose();
+		if (apogySystemAPIsNodeItemProvider != null) apogySystemAPIsNodeItemProvider.dispose();
+		if (apogy__CoreTopologyFacadeItemProvider != null) apogy__CoreTopologyFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CorePackage}.
+	 * A child creation extender for the {@link ApogyCorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -385,13 +385,13 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyEnvironmentNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+						(ApogyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
 
 				return null;
 			}
@@ -405,13 +405,13 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 			public Object caseTopologyRoot(TopologyRoot object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyEnvironmentNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+						(ApogyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
 
 				return null;
 			}
@@ -444,24 +444,24 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreTopologyEditPlugin.INSTANCE;
+			return ApogyCoreTopologyEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -497,23 +497,23 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSystemsTopologyAdapter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createSystemsTopologyAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyEnvironmentNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphony__CoreTopologyFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyCoreTopologyFacade()));
 
 				return null;
 			}
@@ -527,23 +527,23 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSystemsTopologyAdapter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createSystemsTopologyAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyEnvironmentNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphony__CoreTopologyFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyCoreTopologyFacade()));
 
 				return null;
 			}
@@ -557,13 +557,13 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyEnvironmentNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
 
 				return null;
 			}
@@ -596,24 +596,24 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreTopologyEditPlugin.INSTANCE;
+			return ApogyCoreTopologyEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -649,13 +649,13 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogyEnvironmentNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode()));
 
 				return null;
 			}
@@ -688,7 +688,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreTopologyEditPlugin.INSTANCE;
+			return ApogyCoreTopologyEditPlugin.INSTANCE;
 		}
 	}
 

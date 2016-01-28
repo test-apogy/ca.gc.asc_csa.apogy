@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -12,8 +12,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class NamedComposite extends Composite
@@ -65,7 +65,7 @@ public class NamedComposite extends Composite
 	private DataBindingContext initDataBindings()
 	{
 		IObservableValue nameObserveWidget = WidgetProperties.text(SWT.Modify).observe(nameText);
-		IObservableValue nameObserveValue = EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME).observe(named);
+		IObservableValue nameObserveValue = EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named);
 
 		DataBindingContext bindingContext = new DataBindingContext();
 
@@ -78,8 +78,8 @@ public class NamedComposite extends Composite
 	{
 		IObservableValue nameObserveWidget = WidgetProperties.text(SWT.Modify).observe(nameText);
 		IObservableValue nameObserveValue = (editingDomain == null ?
-				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME).observe(named) :
-				EMFEditProperties.value(editingDomain, Symphony__CommonEMFPackage.Literals.NAMED__NAME).observe(named));
+				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named) :
+				EMFEditProperties.value(editingDomain, ApogyCommonEMFPackage.Literals.NAMED__NAME).observe(named));
 		
 		DataBindingContext bindingContext = new DataBindingContext();
 		

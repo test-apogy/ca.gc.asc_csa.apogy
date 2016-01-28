@@ -1,21 +1,21 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.SymphonySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
 
-public class SymphonySystem3dViewerComposite extends Composite {
+public class ApogySystem3dViewerComposite extends Composite {
 	
-	private SymphonySystem symphonySystem;
+	private ApogySystem apogySystem;
 	
 	//private ITopologyViewer topologyViewer;	
-	public SymphonySystem3dViewerComposite(Composite parent, int style) 
+	public ApogySystem3dViewerComposite(Composite parent, int style) 
 	{
 		this(parent, style, null);		
 	}
 	
-	public SymphonySystem3dViewerComposite(Composite parent, int style, SymphonySystem symphonySystem) 
+	public ApogySystem3dViewerComposite(Composite parent, int style, ApogySystem apogySystem) 
 	{
 		super(parent, style);		
 		setLayout(new FillLayout());
@@ -23,7 +23,7 @@ public class SymphonySystem3dViewerComposite extends Composite {
 //		topologyViewer = new JME3TopologyViewer(this);
 //		topologyViewer.setAntiAliasing(true);		
 		
-		setSymphonySystem(symphonySystem, true);
+		setApogySystem(apogySystem, true);
 	}
 
 	@Override
@@ -31,19 +31,19 @@ public class SymphonySystem3dViewerComposite extends Composite {
 		// Disable the check that prevents sub-classing of SWT components
 	}
 
-	public SymphonySystem getSymphonySystem() {
-		return symphonySystem;
+	public ApogySystem getApogySystem() {
+		return apogySystem;
 	}
 
-	public void setSymphonySystem(SymphonySystem symphonySystem) {
-		setSymphonySystem(symphonySystem, true);
+	public void setApogySystem(ApogySystem apogySystem) {
+		setApogySystem(apogySystem, true);
 	}
 
-	public void setSymphonySystem(SymphonySystem symphonySystem, boolean update) 
+	public void setApogySystem(ApogySystem apogySystem, boolean update) 
 	{
 //		try
 //		{
-//			this.symphonySystem = symphonySystem;
+//			this.apogySystem = apogySystem;
 //			if (update) 
 //			{
 //				
@@ -55,15 +55,15 @@ public class SymphonySystem3dViewerComposite extends Composite {
 //				
 //				// Initialize a GraphicsContext to be sent to the TopologyViewer
 //				GraphicsContext graphicsContext = topology.ui.UiFactory.eINSTANCE.createGraphicsContext();
-//				GroupNode root = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);		
+//				GroupNode root = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);		
 //				
-//				if (symphonySystem != null) 
+//				if (apogySystem != null) 
 //				{
-//					ReferencedGroupNode rgn = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
+//					ReferencedGroupNode rgn = ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
 //					root.getChildren().add(rgn);
 //					
 //					// FIXME : Do not make a copy after bug#1429 in Link and ReferenceGroupNode is fixed.
-//					Node copy = EcoreUtil.copy(symphonySystem.getTopologyRoot().getOriginNode());
+//					Node copy = EcoreUtil.copy(apogySystem.getTopologyRoot().getOriginNode());
 //					
 //					rgn.getChildren().add(copy);
 //					
@@ -75,7 +75,7 @@ public class SymphonySystem3dViewerComposite extends Composite {
 //		}
 //		catch(Throwable t)
 //		{
-//			Logger.INSTANCE.log(Activator.ID, this, "Could not display Symphony System", EventSeverity.ERROR, t);
+//			Logger.INSTANCE.log(Activator.ID, this, "Could not display Apogy System", EventSeverity.ERROR, t);
 //		}
 	}
 

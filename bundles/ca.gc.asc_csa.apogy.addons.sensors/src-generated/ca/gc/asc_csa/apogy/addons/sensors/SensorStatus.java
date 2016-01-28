@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors;
+package ca.gc.asc_csa.apogy.addons.sensors;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  *  * Data acquition (nominal): READY -> BUSY (Acquisition) -> READY
  * Data acquition (off-nominal): READY -> BUSY (Acquisition) -> FAILED
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getSensorStatus()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage#getSensorStatus()
  * @model
  * @generated
  */

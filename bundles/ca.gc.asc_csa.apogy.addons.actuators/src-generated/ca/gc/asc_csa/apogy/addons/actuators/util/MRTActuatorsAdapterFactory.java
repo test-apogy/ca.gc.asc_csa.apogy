@@ -1,23 +1,23 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.util;
+package ca.gc.asc_csa.apogy.addons.actuators.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage
+ * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage
  * @generated
  */
 public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
@@ -28,7 +28,7 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsActuatorsPackage modelPackage;
+  protected static ApogyAddonsActuatorsPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -39,7 +39,7 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
   public MRTActuatorsAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsActuatorsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsActuatorsPackage.eINSTANCE;
 		}
 	}
 
@@ -105,13 +105,13 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.actuators.AbstractActuator
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator
 	 * @generated
 	 */
   public Adapter createAbstractActuatorAdapter()
@@ -120,13 +120,13 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit
 	 * @generated
 	 */
   public Adapter createPanTiltUnitAdapter()
@@ -135,13 +135,13 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
   public Adapter createNodeAdapter()

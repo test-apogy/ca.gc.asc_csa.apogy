@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl#getContrast <em>Contrast</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl#getBrightness <em>Brightness</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl#getContrast <em>Contrast</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl#getBrightness <em>Brightness</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,7 +86,7 @@ public class ContrastAndBrightnessFilterImpl extends ImageFilterImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CONTRAST_AND_BRIGHTNESS_FILTER;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.CONTRAST_AND_BRIGHTNESS_FILTER;
 	}
 
   /**
@@ -109,7 +109,7 @@ public class ContrastAndBrightnessFilterImpl extends ImageFilterImpl implements 
 		double oldContrast = contrast;
 		contrast = newContrast;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST, oldContrast, contrast));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST, oldContrast, contrast));
 	}
 
   /**
@@ -132,7 +132,7 @@ public class ContrastAndBrightnessFilterImpl extends ImageFilterImpl implements 
 		double oldBrightness = brightness;
 		brightness = newBrightness;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS, oldBrightness, brightness));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS, oldBrightness, brightness));
 	}
 
   /**
@@ -144,9 +144,9 @@ public class ContrastAndBrightnessFilterImpl extends ImageFilterImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
 				return getContrast();
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
 				return getBrightness();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public class ContrastAndBrightnessFilterImpl extends ImageFilterImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
 				setContrast((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
 				setBrightness((Double)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public class ContrastAndBrightnessFilterImpl extends ImageFilterImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
 				setContrast(CONTRAST_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
 				setBrightness(BRIGHTNESS_EDEFAULT);
 				return;
 		}
@@ -199,9 +199,9 @@ public class ContrastAndBrightnessFilterImpl extends ImageFilterImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
 				return contrast != CONTRAST_EDEFAULT;
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
 				return brightness != BRIGHTNESS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

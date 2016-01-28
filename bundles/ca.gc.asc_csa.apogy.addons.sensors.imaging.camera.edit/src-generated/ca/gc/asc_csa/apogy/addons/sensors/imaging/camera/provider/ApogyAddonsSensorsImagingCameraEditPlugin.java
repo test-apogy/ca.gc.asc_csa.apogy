@@ -1,33 +1,33 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsEditPlugin;
-import org.eclipse.symphony.addons.provider.Symphony__AddonsEditPlugin;
-import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
-import org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
-import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.ApogyAddonsGeometryPathsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.provider.ApogyAddonsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.provider.ApogyAddonsSensorsFOVEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.provider.ApogyAddonsSensorsImagingEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.provider.ApogyAddonsSensorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.core.provider.ApogyCoreEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsSensorsImagingCamera edit plugin.
+ * This is the central singleton for the ApogyAddonsSensorsImagingCamera edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsSensorsImagingCameraEditPlugin extends EMFPlugin
+public final class ApogyAddonsSensorsImagingCameraEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -35,7 +35,7 @@ public final class Symphony__AddonsSensorsImagingCameraEditPlugin extends EMFPlu
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final Symphony__AddonsSensorsImagingCameraEditPlugin INSTANCE = new Symphony__AddonsSensorsImagingCameraEditPlugin();
+  public static final ApogyAddonsSensorsImagingCameraEditPlugin INSTANCE = new ApogyAddonsSensorsImagingCameraEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -51,25 +51,25 @@ public final class Symphony__AddonsSensorsImagingCameraEditPlugin extends EMFPlu
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingCameraEditPlugin()
+  public ApogyAddonsSensorsImagingCameraEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
-		     Symphony__AddonsEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsImagingEditPlugin.INSTANCE,
-		     Symphony__CommonImagesEditPlugin.INSTANCE,
-		     Symphony__CoreEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
-		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyAddonsEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsImagingEditPlugin.INSTANCE,
+		     ApogyCommonImagesEditPlugin.INSTANCE,
+		     ApogyCoreEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsFOVEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
+		     ApogyAddonsGeometryPathsEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsEditPlugin.INSTANCE,
+		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

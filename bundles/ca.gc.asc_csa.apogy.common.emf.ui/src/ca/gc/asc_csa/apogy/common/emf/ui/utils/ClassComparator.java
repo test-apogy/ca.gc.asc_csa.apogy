@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.utils;
+package ca.gc.asc_csa.apogy.common.emf.ui.utils;
 
 import java.util.Comparator;
 

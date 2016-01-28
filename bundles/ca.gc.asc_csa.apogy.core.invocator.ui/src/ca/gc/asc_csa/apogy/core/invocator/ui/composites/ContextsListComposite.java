@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.Adapter;
@@ -32,12 +32,12 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class ContextsListComposite extends Composite {
@@ -116,7 +116,7 @@ public class ContextsListComposite extends Composite {
 					SetCommand command = new SetCommand(
 							editingDomain,
 							getEnvironment(),
-							Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT,
+							ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT,
 							event.getElement());
 					editingDomain.getCommandStack().execute(command);
 				}
@@ -153,12 +153,12 @@ public class ContextsListComposite extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 								
-				Context basicContext = Symphony__CoreInvocatorFactory.eINSTANCE.createBasicContext();
+				Context basicContext = ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext();
 				basicContext.setName("New Context");
 				AddCommand command = new AddCommand(
 						editingDomain,
 						contextsList,
-						Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS,
+						ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS,
 						basicContext);
 				editingDomain.getCommandStack().execute(command);
 			}
@@ -242,8 +242,8 @@ public class ContextsListComposite extends Composite {
 		 */
 		ViewerSupport.bind(contextsListViewer, EMFObservables.observeList(
 				contextsList,
-				Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
-				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
+				ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
+				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
 
 		/**
 		 * Set the default selection to the active context if any or the first
@@ -314,7 +314,7 @@ public class ContextsListComposite extends Composite {
 			environmentAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT) {
+					if (msg.getFeatureID(Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT) {
 						contextsListViewer.refresh();
 					}
 				}
@@ -351,7 +351,7 @@ public class ContextsListComposite extends Composite {
 //						EClass interfaceClass = variableImplementation
 //								.getVariable().getVariableType()
 //								.getInterfaceClass();
-//						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
+//						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
 //								interfaceClass).toArray();
 //					}
 //				}
@@ -363,7 +363,7 @@ public class ContextsListComposite extends Composite {
 //						EClass interfaceClass = typeMemberImplementation
 //								.getTypeMember().getMemberType()
 //								.getInterfaceClass();
-//						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
+//						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
 //								interfaceClass).toArray();
 //					}
 //				}
@@ -409,7 +409,7 @@ public class ContextsListComposite extends Composite {
 //			SetCommand command = new SetCommand(
 //					editingDomain,
 //					implementation,
-//					Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+//					ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 //					eClass);
 //			editingDomain.getCommandStack().execute(command);
 //

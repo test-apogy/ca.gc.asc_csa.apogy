@@ -4,7 +4,7 @@
  *
  * $Id: RangeScannerSimulatorItemProvider.java,v 1.3.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_meshNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_meshNode_feature", "_UI_RangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__MESH_NODE,
+				 ApogyAddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__MESH_NODE,
 				 true,
 				 false,
 				 true,
@@ -91,7 +91,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_noiseEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_noiseEnabled_feature", "_UI_RangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED,
+				 ApogyAddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_timeCroppingMesh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_timeCroppingMesh_feature", "_UI_RangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH,
+				 ApogyAddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_timeFindingIntersections_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_timeFindingIntersections_feature", "_UI_RangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS,
+				 ApogyAddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS,
 				 true,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_timeGettingSimulatedRays_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_timeGettingSimulatedRays_feature", "_UI_RangeScannerSimulator_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS,
+				 ApogyAddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS,
 				 true,
 				 false,
 				 false,
@@ -192,10 +192,10 @@ public class RangeScannerSimulatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RangeScannerSimulator.class)) {
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator{
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.common.topology";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology";
 
 	// The shared instance
 	private static Activator plugin;

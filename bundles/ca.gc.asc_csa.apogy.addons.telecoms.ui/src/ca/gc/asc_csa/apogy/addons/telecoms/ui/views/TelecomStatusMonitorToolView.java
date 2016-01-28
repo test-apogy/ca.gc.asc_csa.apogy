@@ -1,19 +1,19 @@
-package org.eclipse.symphony.addons.telecoms.ui.views;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.views;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.addons.telecoms.TelecomNode;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
-import org.eclipse.symphony.addons.telecoms.ui.composites.TelecomStatusMonitorToolComposite;
-import org.eclipse.symphony.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.composites.TelecomStatusMonitorToolComposite;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 
 public class TelecomStatusMonitorToolView extends AbstractView
 {
 	public final static String partName = "Telecom Status Monitor View";
-	public final static String ID = "org.eclipse.symphony.addons.telecoms.ui.views.TelecomStatusMonitorToolView";
+	public final static String ID = "ca.gc.asc_csa.apogy.addons.telecoms.ui.views.TelecomStatusMonitorToolView";
 	
 	private TelecomStatusMonitorToolComposite statusMonitorToolComposite;
 	

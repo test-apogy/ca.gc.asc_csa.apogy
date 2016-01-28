@@ -3,14 +3,14 @@
  *
  * $Id: CartesianPositionCoordinatesMesherImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinatesMesher;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public class CartesianPositionCoordinatesMesherImpl extends ProcessorImpl<Cartes
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POSITION_COORDINATES_MESHER;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_POSITION_COORDINATES_MESHER;
 	}
 
 	/**

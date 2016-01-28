@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import javax.vecmath.Color3f;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +21,12 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.SlopeRange#getSlopeLowerBound <em>Slope Lower Bound</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.SlopeRange#getSlopeUpperBound <em>Slope Upper Bound</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.SlopeRange#getColor <em>Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.SlopeRange#getSlopeLowerBound <em>Slope Lower Bound</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.SlopeRange#getSlopeUpperBound <em>Slope Upper Bound</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.SlopeRange#getColor <em>Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSlopeRange()
  * @model
  * @generated
  */
@@ -45,15 +45,15 @@ public interface SlopeRange extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Slope Lower Bound</em>' attribute.
 	 * @see #setSlopeLowerBound(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_SlopeLowerBound()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSlopeRange_SlopeLowerBound()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' apogy_units='deg'"
 	 * @generated
 	 */
 	double getSlopeLowerBound();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.SlopeRange#getSlopeLowerBound <em>Slope Lower Bound</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.SlopeRange#getSlopeLowerBound <em>Slope Lower Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Slope Lower Bound</em>' attribute.
@@ -76,15 +76,15 @@ public interface SlopeRange extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Slope Upper Bound</em>' attribute.
 	 * @see #setSlopeUpperBound(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_SlopeUpperBound()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSlopeRange_SlopeUpperBound()
 	 * @model default="10" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' apogy_units='deg'"
 	 * @generated
 	 */
 	double getSlopeUpperBound();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.SlopeRange#getSlopeUpperBound <em>Slope Upper Bound</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.SlopeRange#getSlopeUpperBound <em>Slope Upper Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Slope Upper Bound</em>' attribute.
@@ -107,15 +107,15 @@ public interface SlopeRange extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_Color()
-	 * @model default="1.0,1.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.Color3f"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSlopeRange_Color()
+	 * @model default="1.0,1.0,1.0" unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable'"
 	 * @generated
 	 */
 	Color3f getColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.SlopeRange#getColor <em>Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.SlopeRange#getColor <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Color</em>' attribute.

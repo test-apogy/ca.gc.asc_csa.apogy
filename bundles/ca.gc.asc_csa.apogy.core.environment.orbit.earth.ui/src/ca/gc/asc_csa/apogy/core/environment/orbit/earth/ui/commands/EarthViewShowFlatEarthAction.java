@@ -1,18 +1,18 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.commands;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.commands;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuCreator;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.widgets.Event;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Activator;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.EarthComposite;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.EarthComposite.EarthViewMode;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.views.EarthView;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.EarthComposite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.EarthComposite.EarthViewMode;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views.EarthView;
 
 public class EarthViewShowFlatEarthAction extends Action {
 
-	private static final String id ="org.eclipse.symphony.core.environment.orbit.earth.ui.commands.ToggleEarthViewModeAction";
+	private static final String id ="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.commands.ToggleEarthViewModeAction";
 	private String description = "Displays Earth using Mercator projection.";
 	private String toolTipText = "Displays Earth using Mercator projection.";
 	private String text = "Displays Earth using Mercator projection.";	

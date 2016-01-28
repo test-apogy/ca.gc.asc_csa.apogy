@@ -1,16 +1,16 @@
-@GenModel(prefix="Symphony__AddonsSensorsImagingUI",
+@GenModel(prefix="ApogyAddonsSensorsImagingUI",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsSensorsImagingUI")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.imaging.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.imaging.ui.edit/src-generated")
+	      modelName="ApogyAddonsSensorsImagingUI")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.imaging.ui
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
 
 class ImageSnapshotPresentation extends NodePresentation
 {

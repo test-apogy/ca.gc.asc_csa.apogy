@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -22,14 +22,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -90,7 +90,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -134,7 +134,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_updating_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_updating_feature", "_UI_Updatable_type"),
-				 Symphony__CorePackage.Literals.UPDATABLE__UPDATING,
+				 ApogyCorePackage.Literals.UPDATABLE__UPDATING,
 				 false,
 				 false,
 				 false,
@@ -156,7 +156,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_autoUpdateEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_autoUpdateEnabled_feature", "_UI_Updatable_type"),
-				 Symphony__CorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
+				 ApogyCorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathCorridor_startTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathCorridor_startTime_feature", "_UI_SpacecraftSwathCorridor_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__START_TIME,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__START_TIME,
 				 true,
 				 false,
 				 false,
@@ -200,7 +200,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathCorridor_endTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathCorridor_endTime_feature", "_UI_SpacecraftSwathCorridor_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__END_TIME,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__END_TIME,
 				 true,
 				 false,
 				 false,
@@ -222,7 +222,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathCorridor_timeInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathCorridor_timeInterval_feature", "_UI_SpacecraftSwathCorridor_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -244,7 +244,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathCorridor_orbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathCorridor_orbitModel_feature", "_UI_SpacecraftSwathCorridor_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL,
 				 true,
 				 false,
 				 true,
@@ -266,7 +266,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathCorridor_leftSwathAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathCorridor_leftSwathAngle_feature", "_UI_SpacecraftSwathCorridor_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -288,7 +288,7 @@ public class SpacecraftSwathCorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathCorridor_rightSwathAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathCorridor_rightSwathAngle_feature", "_UI_SpacecraftSwathCorridor_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -309,7 +309,7 @@ public class SpacecraftSwathCorridorItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR);
 		}
 		return childrenFeatures;
 	}
@@ -365,18 +365,18 @@ public class SpacecraftSwathCorridorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftSwathCorridor.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -396,8 +396,8 @@ public class SpacecraftSwathCorridorItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridor()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridor()));
 	}
 
 	/**

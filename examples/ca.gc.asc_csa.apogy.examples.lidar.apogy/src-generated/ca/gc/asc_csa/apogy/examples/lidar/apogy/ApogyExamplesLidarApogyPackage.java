@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +21,12 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyFactory
+ * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesLidarSymphony' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='Symphony__ExamplesLidarSymphony' modelDirectory='/org.eclipse.symphony.examples.lidar.symphony/src-generated' editDirectory='/org.eclipse.symphony.examples.lidar.symphony.edit/src-generated' basePackage='org.eclipse.symphony.examples.lidar'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesLidarApogy' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='ApogyExamplesLidarApogy' modelDirectory='/ca.gc.asc_csa.apogy.examples.lidar.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.lidar.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.lidar'"
  * @generated
  */
-public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
+public interface ApogyExamplesLidarApogyPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -34,7 +34,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNAME = "symphony";
+  String eNAME = "apogy";
 
   /**
 	 * The package namespace URI.
@@ -42,7 +42,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.lidar.symphony";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.lidar.apogy";
 
   /**
 	 * The package namespace name.
@@ -50,7 +50,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_PREFIX = "symphony";
+  String eNS_PREFIX = "apogy";
 
   /**
 	 * The singleton instance of the package.
@@ -58,17 +58,17 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesLidarSymphonyPackage eINSTANCE = org.eclipse.symphony.examples.lidar.symphony.impl.Symphony__ExamplesLidarSymphonyPackageImpl.init();
+  ApogyExamplesLidarApogyPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.ApogyExamplesLidarApogyPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarSymphonySystemApiAdapterImpl <em>Lidar Symphony System Api Adapter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarApogySystemApiAdapterImpl <em>Lidar Apogy System Api Adapter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lidar.symphony.impl.LidarSymphonySystemApiAdapterImpl
-	 * @see org.eclipse.symphony.examples.lidar.symphony.impl.Symphony__ExamplesLidarSymphonyPackageImpl#getLidarSymphonySystemApiAdapter()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarApogySystemApiAdapterImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.ApogyExamplesLidarApogyPackageImpl#getLidarApogySystemApiAdapter()
 	 * @generated
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER = 0;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER = 0;
 
 		/**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -77,7 +77,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT;
 
 		/**
 	 * The feature id for the '<em><b>Instance</b></em>' reference.
@@ -86,7 +86,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER__INSTANCE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__INSTANCE;
 
 		/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -95,7 +95,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
 
 		/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -104,7 +104,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
 
 		/**
 	 * The feature id for the '<em><b>Pose Corrector</b></em>' containment reference.
@@ -113,25 +113,25 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
 
 		/**
-	 * The feature id for the '<em><b>Symphony System</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM;
 
 		/**
-	 * The number of structural features of the '<em>Lidar Symphony System Api Adapter</em>' class.
+	 * The number of structural features of the '<em>Lidar Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
 
 		/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -140,7 +140,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
 
 		/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -149,7 +149,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
 
 		/**
 	 * The operation id for the '<em>Create Initialization Data</em>' operation.
@@ -158,7 +158,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
 
 		/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -167,7 +167,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
 
 		/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -176,7 +176,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
 
 		/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -185,7 +185,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
 
 		/**
 	 * The operation id for the '<em>Invoke</em>' operation.
@@ -194,7 +194,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -203,7 +203,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___DISPOSE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Create Result Matrix</em>' operation.
@@ -212,24 +212,24 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
 
 		/**
-	 * The number of operations of the '<em>Lidar Symphony System Api Adapter</em>' class.
+	 * The number of operations of the '<em>Lidar Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
+	int LIDAR_APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
 
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl <em>Lidar Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarDataImpl <em>Lidar Data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl
-	 * @see org.eclipse.symphony.examples.lidar.symphony.impl.Symphony__ExamplesLidarSymphonyPackageImpl#getLidarData()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarDataImpl
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.ApogyExamplesLidarApogyPackageImpl#getLidarData()
 	 * @generated
 	 */
 	int LIDAR_DATA = 1;
@@ -241,7 +241,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_DATA__INITIAL_POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
+	int LIDAR_DATA__INITIAL_POSE_TRANSFORM = ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
 
 		/**
 	 * The feature id for the '<em><b>Fov</b></em>' containment reference.
@@ -250,7 +250,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_DATA__FOV = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
+	int LIDAR_DATA__FOV = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -259,7 +259,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_DATA__INITIALIZED = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
+	int LIDAR_DATA__INITIALIZED = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Lidar Data</em>' class.
@@ -268,7 +268,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_DATA_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
+	int LIDAR_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of operations of the '<em>Lidar Data</em>' class.
@@ -277,46 +277,46 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LIDAR_DATA_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+	int LIDAR_DATA_OPERATION_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter <em>Lidar Symphony System Api Adapter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter <em>Lidar Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Lidar Symphony System Api Adapter</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter
+	 * @return the meta object for class '<em>Lidar Apogy System Api Adapter</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter
 	 * @generated
 	 */
-	EClass getLidarSymphonySystemApiAdapter();
+	EClass getLidarApogySystemApiAdapter();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.lidar.symphony.LidarData <em>Lidar Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData <em>Lidar Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lidar Data</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.symphony.LidarData
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData
 	 * @generated
 	 */
 	EClass getLidarData();
 
 		/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.symphony.LidarData#getFov()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#getFov()
 	 * @see #getLidarData()
 	 * @generated
 	 */
 	EReference getLidarData_Fov();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.lidar.symphony.LidarData#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData#isInitialized()
 	 * @see #getLidarData()
 	 * @generated
 	 */
@@ -329,7 +329,7 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesLidarSymphonyFactory getSymphony__ExamplesLidarSymphonyFactory();
+	ApogyExamplesLidarApogyFactory getApogyExamplesLidarApogyFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -347,20 +347,20 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarSymphonySystemApiAdapterImpl <em>Lidar Symphony System Api Adapter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarApogySystemApiAdapterImpl <em>Lidar Apogy System Api Adapter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lidar.symphony.impl.LidarSymphonySystemApiAdapterImpl
-		 * @see org.eclipse.symphony.examples.lidar.symphony.impl.Symphony__ExamplesLidarSymphonyPackageImpl#getLidarSymphonySystemApiAdapter()
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarApogySystemApiAdapterImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.ApogyExamplesLidarApogyPackageImpl#getLidarApogySystemApiAdapter()
 		 * @generated
 		 */
-		EClass LIDAR_SYMPHONY_SYSTEM_API_ADAPTER = eINSTANCE.getLidarSymphonySystemApiAdapter();
+		EClass LIDAR_APOGY_SYSTEM_API_ADAPTER = eINSTANCE.getLidarApogySystemApiAdapter();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl <em>Lidar Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarDataImpl <em>Lidar Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl
-		 * @see org.eclipse.symphony.examples.lidar.symphony.impl.Symphony__ExamplesLidarSymphonyPackageImpl#getLidarData()
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarDataImpl
+		 * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.ApogyExamplesLidarApogyPackageImpl#getLidarData()
 		 * @generated
 		 */
 		EClass LIDAR_DATA = eINSTANCE.getLidarData();
@@ -381,4 +381,4 @@ public interface Symphony__ExamplesLidarSymphonyPackage extends EPackage
 
   }
 
-} //Symphony__ExamplesLidarSymphonyPackage
+} //ApogyExamplesLidarApogyPackage

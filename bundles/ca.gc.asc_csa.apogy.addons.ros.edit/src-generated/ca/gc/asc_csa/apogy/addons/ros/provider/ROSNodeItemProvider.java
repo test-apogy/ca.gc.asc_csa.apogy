@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.ROSNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -90,7 +90,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_connectedNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_connectedNode_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__CONNECTED_NODE,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__CONNECTED_NODE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_modules_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_modules_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__MODULES,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__MODULES,
 				 true,
 				 false,
 				 true,
@@ -134,7 +134,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_serviceManagers_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_serviceManagers_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__SERVICE_MANAGERS,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__SERVICE_MANAGERS,
 				 true,
 				 false,
 				 true,
@@ -156,7 +156,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_topicLaunchers_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_topicLaunchers_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__TOPIC_LAUNCHERS,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__TOPIC_LAUNCHERS,
 				 true,
 				 false,
 				 true,
@@ -178,7 +178,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_publisherManagers_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_publisherManagers_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__PUBLISHER_MANAGERS,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__PUBLISHER_MANAGERS,
 				 true,
 				 false,
 				 true,
@@ -200,7 +200,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_initialized_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__INITIALIZED,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -222,7 +222,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_connected_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_connected_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__CONNECTED,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__CONNECTED,
 				 false,
 				 false,
 				 false,
@@ -244,7 +244,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_restarting_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_restarting_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__RESTARTING,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__RESTARTING,
 				 false,
 				 false,
 				 false,
@@ -266,7 +266,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_enableAutoRestartOnConnectionLost_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_enableAutoRestartOnConnectionLost_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST,
 				 false,
 				 false,
 				 false,
@@ -288,7 +288,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_nodeName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_nodeName_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__NODE_NAME,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__NODE_NAME,
 				 false,
 				 false,
 				 false,
@@ -310,7 +310,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_responseLogger_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_responseLogger_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__RESPONSE_LOGGER,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__RESPONSE_LOGGER,
 				 true,
 				 false,
 				 false,
@@ -332,7 +332,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_nullResponseHandler_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_nullResponseHandler_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__NULL_RESPONSE_HANDLER,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__NULL_RESPONSE_HANDLER,
 				 true,
 				 false,
 				 false,
@@ -354,7 +354,7 @@ public class ROSNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSNode_nullRequestHandler_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNode_nullRequestHandler_feature", "_UI_ROSNode_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_NODE__NULL_REQUEST_HANDLER,
+				 ApogyAddonsROSPackage.Literals.ROS_NODE__NULL_REQUEST_HANDLER,
 				 true,
 				 false,
 				 false,
@@ -438,15 +438,15 @@ public class ROSNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ROSNode.class)) {
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED_NODE:
-			case Symphony__AddonsROSPackage.ROS_NODE__INITIALIZED:
-			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED:
-			case Symphony__AddonsROSPackage.ROS_NODE__RESTARTING:
-			case Symphony__AddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
-			case Symphony__AddonsROSPackage.ROS_NODE__NODE_NAME:
-			case Symphony__AddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
-			case Symphony__AddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED_NODE:
+			case ApogyAddonsROSPackage.ROS_NODE__INITIALIZED:
+			case ApogyAddonsROSPackage.ROS_NODE__CONNECTED:
+			case ApogyAddonsROSPackage.ROS_NODE__RESTARTING:
+			case ApogyAddonsROSPackage.ROS_NODE__ENABLE_AUTO_RESTART_ON_CONNECTION_LOST:
+			case ApogyAddonsROSPackage.ROS_NODE__NODE_NAME:
+			case ApogyAddonsROSPackage.ROS_NODE__RESPONSE_LOGGER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_RESPONSE_HANDLER:
+			case ApogyAddonsROSPackage.ROS_NODE__NULL_REQUEST_HANDLER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

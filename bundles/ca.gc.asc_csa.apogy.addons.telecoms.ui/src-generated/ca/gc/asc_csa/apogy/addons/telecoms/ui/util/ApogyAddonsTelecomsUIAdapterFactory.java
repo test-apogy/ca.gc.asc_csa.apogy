@@ -1,31 +1,31 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.ui.util;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.telecoms.ui.*;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.*;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIPackage
  * @generated
  */
-public class Symphony__AddonsTelecomsUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsTelecomsUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsTelecomsUIPackage modelPackage;
+	protected static ApogyAddonsTelecomsUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -33,9 +33,9 @@ public class Symphony__AddonsTelecomsUIAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsUIAdapterFactory() {
+	public ApogyAddonsTelecomsUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsTelecomsUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsTelecomsUIPackage.eINSTANCE;
 		}
 	}
 
@@ -64,8 +64,8 @@ public class Symphony__AddonsTelecomsUIAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsTelecomsUISwitch<Adapter> modelSwitch =
-		new Symphony__AddonsTelecomsUISwitch<Adapter>() {
+	protected ApogyAddonsTelecomsUISwitch<Adapter> modelSwitch =
+		new ApogyAddonsTelecomsUISwitch<Adapter>() {
 			@Override
 			public Adapter caseAbstractAntennaRadiationPatternPresentation(AbstractAntennaRadiationPatternPresentation object) {
 				return createAbstractAntennaRadiationPatternPresentationAdapter();
@@ -95,13 +95,13 @@ public class Symphony__AddonsTelecomsUIAdapterFactory extends AdapterFactoryImpl
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation <em>Abstract Antenna Radiation Pattern Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation <em>Abstract Antenna Radiation Pattern Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation
 	 * @generated
 	 */
 	public Adapter createAbstractAntennaRadiationPatternPresentationAdapter() {
@@ -109,13 +109,13 @@ public class Symphony__AddonsTelecomsUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -134,4 +134,4 @@ public class Symphony__AddonsTelecomsUIAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__AddonsTelecomsUIAdapterFactory
+} //ApogyAddonsTelecomsUIAdapterFactory

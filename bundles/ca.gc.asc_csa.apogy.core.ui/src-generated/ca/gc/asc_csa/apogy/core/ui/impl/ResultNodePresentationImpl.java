@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.impl;
+package ca.gc.asc_csa.apogy.core.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -9,12 +9,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-import org.eclipse.symphony.common.topology.ui.impl.TransformNodePresentationImpl;
-import org.eclipse.symphony.core.ui.Activator;
-import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.ResultNodeSceneObject;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
-import org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.TransformNodePresentationImpl;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodeSceneObject;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesConstants;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +24,8 @@ import org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesConstants
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl#getPoleHeight <em>Pole Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl#isFlagVisible <em>Flag Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ResultNodePresentationImpl#getPoleHeight <em>Pole Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ResultNodePresentationImpl#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreUIPackage.Literals.RESULT_NODE_PRESENTATION;
+		return ApogyCoreUIPackage.Literals.RESULT_NODE_PRESENTATION;
 	}
 
   /**
@@ -120,7 +120,7 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
 		float oldPoleHeight = poleHeight;
 		poleHeight = newPoleHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
 	}
   
   /**
@@ -144,7 +144,7 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
 		boolean oldFlagVisible = flagVisible;
 		flagVisible = newFlagVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
 	}
 
   /**
@@ -156,9 +156,9 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				return getPoleHeight();
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				return isFlagVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -173,10 +173,10 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight((Float)newValue);
 				return;
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible((Boolean)newValue);
 				return;
 		}
@@ -192,10 +192,10 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight(POLE_HEIGHT_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible(FLAG_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -211,9 +211,9 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				return poleHeight != POLE_HEIGHT_EDEFAULT;
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				return flagVisible != FLAG_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -253,10 +253,10 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 					
 		// Change visibility.
-		setFlagVisible(store.getBoolean(SymphonyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_VISIBILITY_ID));
+		setFlagVisible(store.getBoolean(ApogyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_VISIBILITY_ID));
 		
 		// Change flag pole height		
-		setPoleHeight(store.getFloat(SymphonyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_POLE_HEIGHT_ID));			
+		setPoleHeight(store.getFloat(ApogyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_POLE_HEIGHT_ID));			
 			  	 		
 		super.applyPreferences();
 	}
@@ -272,11 +272,11 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
 			
 			switch (featureId) 
 			{
-				case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+				case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 					resultNodeSceneObject.setFlagVisible(this.isFlagVisible());
 				break;
 								
-				case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+				case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 					resultNodeSceneObject.setFlagPoleHeight(this.getPoleHeight());
 				break;
 										

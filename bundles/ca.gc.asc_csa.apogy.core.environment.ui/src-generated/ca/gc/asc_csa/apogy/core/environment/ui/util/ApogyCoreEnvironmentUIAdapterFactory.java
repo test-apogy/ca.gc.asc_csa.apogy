@@ -1,52 +1,52 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.util;
+package ca.gc.asc_csa.apogy.core.environment.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
-import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
-import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapRuler;
-import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.MoonPresentation;
-import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.SunPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImpl
+public class ApogyCoreEnvironmentUIAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -54,7 +54,7 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreEnvironmentUIPackage modelPackage;
+  protected static ApogyCoreEnvironmentUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -62,10 +62,10 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentUIAdapterFactory()
+  public ApogyCoreEnvironmentUIAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentUIPackage.eINSTANCE;
 		}
 	}
 
@@ -95,8 +95,8 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreEnvironmentUISwitch<Adapter> modelSwitch =
-    new Symphony__CoreEnvironmentUISwitch<Adapter>() {
+  protected ApogyCoreEnvironmentUISwitch<Adapter> modelSwitch =
+    new ApogyCoreEnvironmentUISwitch<Adapter>() {
 			@Override
 			public Adapter caseStarFieldPresentation(StarFieldPresentation object) {
 				return createStarFieldPresentationAdapter();
@@ -126,8 +126,8 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 				return createEnvironmentUIUtilitiesAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CoreEnvironmentUIFacade(Symphony__CoreEnvironmentUIFacade object) {
-				return createSymphony__CoreEnvironmentUIFacadeAdapter();
+			public Adapter caseApogyCoreEnvironmentUIFacade(ApogyCoreEnvironmentUIFacade object) {
+				return createApogyCoreEnvironmentUIFacadeAdapter();
 			}
 			@Override
 			public Adapter caseMapViewConfigurationList(MapViewConfigurationList object) {
@@ -235,13 +235,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation <em>Star Field Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation <em>Star Field Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.StarFieldPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation
 	 * @generated
 	 */
   public Adapter createStarFieldPresentationAdapter()
@@ -250,13 +250,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.SunPresentation <em>Sun Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation <em>Sun Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.SunPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation
 	 * @generated
 	 */
   public Adapter createSunPresentationAdapter()
@@ -265,13 +265,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation <em>Earth Surface Worksite Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation <em>Earth Surface Worksite Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation
 	 * @generated
 	 */
   public Adapter createEarthSurfaceWorksitePresentationAdapter()
@@ -280,13 +280,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.EarthSkyPresentation <em>Earth Sky Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation <em>Earth Sky Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSkyPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation
 	 * @generated
 	 */
   public Adapter createEarthSkyPresentationAdapter()
@@ -295,13 +295,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MoonPresentation <em>Moon Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation <em>Moon Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.MoonPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation
 	 * @generated
 	 */
   public Adapter createMoonPresentationAdapter()
@@ -310,13 +310,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation <em>Feature Of Interest Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation <em>Feature Of Interest Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation
 	 * @generated
 	 */
 	public Adapter createFeatureOfInterestNodePresentationAdapter() {
@@ -324,13 +324,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities
 	 * @generated
 	 */
 	public Adapter createEnvironmentUIUtilitiesAdapter() {
@@ -338,27 +338,27 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreEnvironmentUIFacadeAdapter() {
+	public Adapter createApogyCoreEnvironmentUIFacadeAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList <em>Map View Configuration List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList <em>Map View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList
 	 * @generated
 	 */
   public Adapter createMapViewConfigurationListAdapter()
@@ -367,13 +367,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration <em>Map View Configuration</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration <em>Map View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration
 	 * @generated
 	 */
   public Adapter createMapViewConfigurationAdapter()
@@ -382,13 +382,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewItemPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation
 	 * @generated
 	 */
   public Adapter createMapViewItemPresentationAdapter()
@@ -397,13 +397,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation <em>Features Of Interest Map Layer Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation <em>Features Of Interest Map Layer Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation
 	 * @generated
 	 */
 	public Adapter createFeaturesOfInterestMapLayerPresentationAdapter() {
@@ -411,13 +411,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.MapAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation
 	 * @generated
 	 */
   public Adapter createMapAnnotationAdapter()
@@ -426,13 +426,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapTool <em>Map Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool <em>Map Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.MapTool
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapTool
 	 * @generated
 	 */
   public Adapter createMapToolAdapter()
@@ -441,13 +441,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapRuler <em>Map Ruler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler <em>Map Ruler</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.MapRuler
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapRuler
 	 * @generated
 	 */
   public Adapter createMapRulerAdapter()
@@ -456,13 +456,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider <em>Variable Trajectory Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider <em>Variable Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider
 	 * @generated
 	 */
   public Adapter createVariableTrajectoryProviderAdapter()
@@ -471,13 +471,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider <em>Default Variable Trajectory Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider <em>Default Variable Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider
 	 * @generated
 	 */
   public Adapter createDefaultVariableTrajectoryProviderAdapter()
@@ -486,13 +486,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation
 	 * @generated
 	 */
   public Adapter createAbstractVariableAnnotationAdapter()
@@ -501,13 +501,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation
 	 * @generated
 	 */
   public Adapter createPoseVariableAnnotationAdapter()
@@ -516,13 +516,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation <em>Variable Trajectory Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation <em>Variable Trajectory Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation
 	 * @generated
 	 */
   public Adapter createVariableTrajectoryAnnotationAdapter()
@@ -531,13 +531,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation <em>Vehicle Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation <em>Vehicle Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation
 	 * @generated
 	 */
   public Adapter createVehicleVariableAnnotationAdapter()
@@ -546,13 +546,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider <em>Trajectory Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider <em>Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider
 	 * @generated
 	 */
   public Adapter createTrajectoryProviderAdapter()
@@ -561,13 +561,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool <em>Abstract Trajectory Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool <em>Abstract Trajectory Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool
 	 * @generated
 	 */
   public Adapter createAbstractTrajectoryToolAdapter()
@@ -576,13 +576,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool
 	 * @generated
 	 */
   public Adapter createTrajectoryPickingToolAdapter()
@@ -591,13 +591,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
   public Adapter createNodePresentationAdapter()
@@ -606,13 +606,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
 	 * @generated
 	 */
   public Adapter createAbstractToolsListContainerAdapter()
@@ -621,13 +621,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
   public Adapter createNamedAdapter()
@@ -636,13 +636,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
   public Adapter createDescribedAdapter()
@@ -651,13 +651,13 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider
 	 * @generated
 	 */
 	public Adapter createRectangularRegionProviderAdapter() {
@@ -677,4 +677,4 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentUIAdapterFactory
+} //ApogyCoreEnvironmentUIAdapterFactory

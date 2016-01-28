@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -11,11 +11,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -63,7 +63,7 @@ public class CollectionTimedTimeSourceItemProvider extends BrowseableTimeSourceI
 				 getResourceLocator(),
 				 getString("_UI_CollectionTimedTimeSource_loopEnable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionTimedTimeSource_loopEnable_feature", "_UI_CollectionTimedTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE,
+				 ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE,
 				 true,
 				 false,
 				 false,
@@ -85,7 +85,7 @@ public class CollectionTimedTimeSourceItemProvider extends BrowseableTimeSourceI
 				 getResourceLocator(),
 				 getString("_UI_CollectionTimedTimeSource_currentTimedElement_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionTimedTimeSource_currentTimedElement_feature", "_UI_CollectionTimedTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT,
+				 ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT,
 				 false,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class CollectionTimedTimeSourceItemProvider extends BrowseableTimeSourceI
 				 getResourceLocator(),
 				 getString("_UI_CollectionTimedTimeSource_earliestDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionTimedTimeSource_earliestDate_feature", "_UI_CollectionTimedTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE,
+				 ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE,
 				 false,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class CollectionTimedTimeSourceItemProvider extends BrowseableTimeSourceI
 				 getResourceLocator(),
 				 getString("_UI_CollectionTimedTimeSource_latestDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionTimedTimeSource_latestDate_feature", "_UI_CollectionTimedTimeSource_type"),
-				 Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE,
+				 ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE,
 				 false,
 				 false,
 				 false,
@@ -173,9 +173,9 @@ public class CollectionTimedTimeSourceItemProvider extends BrowseableTimeSourceI
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CollectionTimedTimeSource.class)) {
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

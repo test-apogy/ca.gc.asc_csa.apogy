@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.tests;
+package ca.gc.asc_csa.apogy.common.topology.ui.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,12 +17,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getCentroid() <em>Centroid</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getMin() <em>Min</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getMax() <em>Max</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getXRange() <em>XRange</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getYRange() <em>YRange</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getZRange() <em>ZRange</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getCentroid() <em>Centroid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMin() <em>Min</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMax() <em>Max</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getXRange() <em>XRange</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getYRange() <em>YRange</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getZRange() <em>ZRange</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -84,7 +84,7 @@ public class NodePresentationTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createNodePresentation());
+		setFixture(ApogyCommonTopologyUIFactory.eINSTANCE.createNodePresentation());
 	}
 
 	/**
@@ -99,10 +99,10 @@ public class NodePresentationTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getCentroid() <em>Centroid</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getCentroid() <em>Centroid</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getCentroid()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getCentroid()
 	 * @generated
 	 */
 	public void testGetCentroid() {
@@ -112,10 +112,10 @@ public class NodePresentationTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getMin() <em>Min</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMin() <em>Min</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getMin()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMin()
 	 * @generated
 	 */
 	public void testGetMin() {
@@ -125,10 +125,10 @@ public class NodePresentationTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getMax() <em>Max</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMax() <em>Max</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getMax()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getMax()
 	 * @generated
 	 */
 	public void testGetMax() {
@@ -138,10 +138,10 @@ public class NodePresentationTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getXRange() <em>XRange</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getXRange() <em>XRange</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getXRange()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getXRange()
 	 * @generated
 	 */
 	public void testGetXRange() {
@@ -151,10 +151,10 @@ public class NodePresentationTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getYRange() <em>YRange</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getYRange() <em>YRange</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getYRange()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getYRange()
 	 * @generated
 	 */
 	public void testGetYRange() {
@@ -164,10 +164,10 @@ public class NodePresentationTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getZRange() <em>ZRange</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getZRange() <em>ZRange</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getZRange()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getZRange()
 	 * @generated
 	 */
 	public void testGetZRange() {

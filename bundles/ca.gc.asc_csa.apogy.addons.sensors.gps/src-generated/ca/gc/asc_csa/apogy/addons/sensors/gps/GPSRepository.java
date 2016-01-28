@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSRepository#getGpsDevices <em>Gps Devices</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSRepository#getGpsDevices <em>Gps Devices</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSRepository()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSRepository()
  * @model interface="true" abstract="true"
  * @generated
  */
 public interface GPSRepository extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Gps Devices</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.sensors.gps.GPS}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPS}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Gps Devices</em>' reference list isn't clear,
@@ -34,7 +34,7 @@ public interface GPSRepository extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gps Devices</em>' reference list.
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSRepository_GpsDevices()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSRepository_GpsDevices()
 	 * @model
 	 * @generated
 	 */

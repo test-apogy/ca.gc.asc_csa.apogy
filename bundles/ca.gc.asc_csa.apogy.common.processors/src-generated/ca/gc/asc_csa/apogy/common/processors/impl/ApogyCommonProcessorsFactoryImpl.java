@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.impl;
+package ca.gc.asc_csa.apogy.common.processors.impl;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EClass;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.processors.*;
+import ca.gc.asc_csa.apogy.common.processors.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,24 +18,24 @@ import org.eclipse.symphony.common.processors.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonProcessorsFactoryImpl extends EFactoryImpl implements Symphony__CommonProcessorsFactory {
+public class ApogyCommonProcessorsFactoryImpl extends EFactoryImpl implements ApogyCommonProcessorsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonProcessorsFactory init() {
+	public static ApogyCommonProcessorsFactory init() {
 		try {
-			Symphony__CommonProcessorsFactory theSymphony__CommonProcessorsFactory = (Symphony__CommonProcessorsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonProcessorsPackage.eNS_URI);
-			if (theSymphony__CommonProcessorsFactory != null) {
-				return theSymphony__CommonProcessorsFactory;
+			ApogyCommonProcessorsFactory theApogyCommonProcessorsFactory = (ApogyCommonProcessorsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonProcessorsPackage.eNS_URI);
+			if (theApogyCommonProcessorsFactory != null) {
+				return theApogyCommonProcessorsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonProcessorsFactoryImpl();
+		return new ApogyCommonProcessorsFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Symphony__CommonProcessorsFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonProcessorsFactoryImpl() {
+	public ApogyCommonProcessorsFactoryImpl() {
 		super();
 	}
 
@@ -56,8 +56,8 @@ public class Symphony__CommonProcessorsFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN: return createProcessorsChain();
-			case Symphony__CommonProcessorsPackage.JOB_PROCESSORS_CHAIN: return createJobProcessorsChain();
+			case ApogyCommonProcessorsPackage.PROCESSORS_CHAIN: return createProcessorsChain();
+			case ApogyCommonProcessorsPackage.JOB_PROCESSORS_CHAIN: return createJobProcessorsChain();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,9 +71,9 @@ public class Symphony__CommonProcessorsFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonProcessorsPackage.IPROGRESS_MONITOR:
+			case ApogyCommonProcessorsPackage.IPROGRESS_MONITOR:
 				return createIProgressMonitorFromString(eDataType, initialValue);
-			case Symphony__CommonProcessorsPackage.EXCEPTION:
+			case ApogyCommonProcessorsPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -88,9 +88,9 @@ public class Symphony__CommonProcessorsFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonProcessorsPackage.IPROGRESS_MONITOR:
+			case ApogyCommonProcessorsPackage.IPROGRESS_MONITOR:
 				return convertIProgressMonitorToString(eDataType, instanceValue);
-			case Symphony__CommonProcessorsPackage.EXCEPTION:
+			case ApogyCommonProcessorsPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -158,8 +158,8 @@ public class Symphony__CommonProcessorsFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonProcessorsPackage getSymphony__CommonProcessorsPackage() {
-		return (Symphony__CommonProcessorsPackage)getEPackage();
+	public ApogyCommonProcessorsPackage getApogyCommonProcessorsPackage() {
+		return (ApogyCommonProcessorsPackage)getEPackage();
 	}
 
 	/**
@@ -169,8 +169,8 @@ public class Symphony__CommonProcessorsFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonProcessorsPackage getPackage() {
-		return Symphony__CommonProcessorsPackage.eINSTANCE;
+	public static ApogyCommonProcessorsPackage getPackage() {
+		return ApogyCommonProcessorsPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonProcessorsFactoryImpl
+} //ApogyCommonProcessorsFactoryImpl

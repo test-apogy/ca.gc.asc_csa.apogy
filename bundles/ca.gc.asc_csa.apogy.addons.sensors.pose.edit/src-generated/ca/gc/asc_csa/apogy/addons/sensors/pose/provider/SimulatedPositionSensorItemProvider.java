@@ -3,7 +3,7 @@
  *
  * $Id: SimulatedPositionSensorItemProvider.java,v 1.3.4.2 2015/05/21 15:50:00 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_xVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_xVelocity_feature", "_UI_SimulatedPositionSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__XVELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__XVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_yVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_yVelocity_feature", "_UI_SimulatedPositionSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__YVELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__YVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_zVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_zVelocity_feature", "_UI_SimulatedPositionSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__ZVELOCITY,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__ZVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -141,7 +141,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_updatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_updatePeriod_feature", "_UI_SimulatedPositionSensor_type"),
-				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD,
+				 ApogyAddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -190,10 +190,10 @@ public class SimulatedPositionSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimulatedPositionSensor.class)) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

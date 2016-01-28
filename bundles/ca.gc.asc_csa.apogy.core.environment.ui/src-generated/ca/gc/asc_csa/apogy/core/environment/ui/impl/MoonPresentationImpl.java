@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
-import org.eclipse.symphony.core.environment.ui.MoonPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class MoonPresentationImpl extends NodePresentationImpl implements MoonPr
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.MOON_PRESENTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.MOON_PRESENTATION;
 	}
 
   @Override

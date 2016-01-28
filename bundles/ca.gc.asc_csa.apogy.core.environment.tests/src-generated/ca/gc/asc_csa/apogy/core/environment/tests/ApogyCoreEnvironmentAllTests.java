@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -10,11 +10,11 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>Symphony__CoreEnvironment</b></em>' model.
+ * A test suite for the '<em><b>ApogyCoreEnvironment</b></em>' model.
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentAllTests extends TestSuite {
+public class ApogyCoreEnvironmentAllTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,8 +31,8 @@ public class Symphony__CoreEnvironmentAllTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new Symphony__CoreEnvironmentAllTests("Symphony__CoreEnvironment Tests");
-		suite.addTest(Symphony__CoreEnvironmentTests.suite());
+		TestSuite suite = new ApogyCoreEnvironmentAllTests("ApogyCoreEnvironment Tests");
+		suite.addTest(ApogyCoreEnvironmentTests.suite());
 		return suite;
 	}
 
@@ -41,8 +41,8 @@ public class Symphony__CoreEnvironmentAllTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentAllTests(String name) {
+	public ApogyCoreEnvironmentAllTests(String name) {
 		super(name);
 	}
 
-} //Symphony__CoreEnvironmentAllTests
+} //ApogyCoreEnvironmentAllTests

@@ -1,41 +1,41 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.util;
+package ca.gc.asc_csa.apogy.core.environment.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
-import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
-import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapRuler;
-import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.MoonPresentation;
-import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.SunPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,10 +47,10 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
+public class ApogyCoreEnvironmentUISwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -58,7 +58,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreEnvironmentUIPackage modelPackage;
+  protected static ApogyCoreEnvironmentUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -66,10 +66,10 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentUISwitch()
+  public ApogyCoreEnvironmentUISwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentUIPackage.eINSTANCE;
 		}
 	}
 
@@ -98,68 +98,68 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION: {
 				StarFieldPresentation starFieldPresentation = (StarFieldPresentation)theEObject;
 				T result = caseStarFieldPresentation(starFieldPresentation);
 				if (result == null) result = caseNodePresentation(starFieldPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.SUN_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.SUN_PRESENTATION: {
 				SunPresentation sunPresentation = (SunPresentation)theEObject;
 				T result = caseSunPresentation(sunPresentation);
 				if (result == null) result = caseNodePresentation(sunPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION: {
 				EarthSurfaceWorksitePresentation earthSurfaceWorksitePresentation = (EarthSurfaceWorksitePresentation)theEObject;
 				T result = caseEarthSurfaceWorksitePresentation(earthSurfaceWorksitePresentation);
 				if (result == null) result = caseNodePresentation(earthSurfaceWorksitePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.EARTH_SKY_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.EARTH_SKY_PRESENTATION: {
 				EarthSkyPresentation earthSkyPresentation = (EarthSkyPresentation)theEObject;
 				T result = caseEarthSkyPresentation(earthSkyPresentation);
 				if (result == null) result = caseNodePresentation(earthSkyPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.MOON_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.MOON_PRESENTATION: {
 				MoonPresentation moonPresentation = (MoonPresentation)theEObject;
 				T result = caseMoonPresentation(moonPresentation);
 				if (result == null) result = caseNodePresentation(moonPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION: {
 				FeatureOfInterestNodePresentation featureOfInterestNodePresentation = (FeatureOfInterestNodePresentation)theEObject;
 				T result = caseFeatureOfInterestNodePresentation(featureOfInterestNodePresentation);
 				if (result == null) result = caseNodePresentation(featureOfInterestNodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: {
+			case ApogyCoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: {
 				EnvironmentUIUtilities environmentUIUtilities = (EnvironmentUIUtilities)theEObject;
 				T result = caseEnvironmentUIUtilities(environmentUIUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE: {
-				Symphony__CoreEnvironmentUIFacade symphony__CoreEnvironmentUIFacade = (Symphony__CoreEnvironmentUIFacade)theEObject;
-				T result = caseSymphony__CoreEnvironmentUIFacade(symphony__CoreEnvironmentUIFacade);
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE: {
+				ApogyCoreEnvironmentUIFacade apogy__CoreEnvironmentUIFacade = (ApogyCoreEnvironmentUIFacade)theEObject;
+				T result = caseApogyCoreEnvironmentUIFacade(apogy__CoreEnvironmentUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST: {
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST: {
 				MapViewConfigurationList mapViewConfigurationList = (MapViewConfigurationList)theEObject;
 				T result = caseMapViewConfigurationList(mapViewConfigurationList);
 				if (result == null) result = caseAbstractToolsListContainer(mapViewConfigurationList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION: {
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION: {
 				MapViewConfiguration mapViewConfiguration = (MapViewConfiguration)theEObject;
 				T result = caseMapViewConfiguration(mapViewConfiguration);
 				if (result == null) result = caseNamed(mapViewConfiguration);
@@ -167,20 +167,20 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION: {
 				MapViewItemPresentation mapViewItemPresentation = (MapViewItemPresentation)theEObject;
 				T result = caseMapViewItemPresentation(mapViewItemPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.MAP_ANNOTATION: {
+			case ApogyCoreEnvironmentUIPackage.MAP_ANNOTATION: {
 				MapAnnotation mapAnnotation = (MapAnnotation)theEObject;
 				T result = caseMapAnnotation(mapAnnotation);
 				if (result == null) result = caseMapViewItemPresentation(mapAnnotation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL: {
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL: {
 				MapTool mapTool = (MapTool)theEObject;
 				T result = caseMapTool(mapTool);
 				if (result == null) result = caseMapAnnotation(mapTool);
@@ -188,7 +188,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.MAP_RULER: {
+			case ApogyCoreEnvironmentUIPackage.MAP_RULER: {
 				MapRuler mapRuler = (MapRuler)theEObject;
 				T result = caseMapRuler(mapRuler);
 				if (result == null) result = caseMapTool(mapRuler);
@@ -197,7 +197,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION: {
+			case ApogyCoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION: {
 				FeaturesOfInterestMapLayerPresentation featuresOfInterestMapLayerPresentation = (FeaturesOfInterestMapLayerPresentation)theEObject;
 				T result = caseFeaturesOfInterestMapLayerPresentation(featuresOfInterestMapLayerPresentation);
 				if (result == null) result = caseMapAnnotation(featuresOfInterestMapLayerPresentation);
@@ -206,13 +206,13 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER: {
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER: {
 				TrajectoryProvider trajectoryProvider = (TrajectoryProvider)theEObject;
 				T result = caseTrajectoryProvider(trajectoryProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL: {
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL: {
 				AbstractTrajectoryTool abstractTrajectoryTool = (AbstractTrajectoryTool)theEObject;
 				T result = caseAbstractTrajectoryTool(abstractTrajectoryTool);
 				if (result == null) result = caseTrajectoryProvider(abstractTrajectoryTool);
@@ -222,7 +222,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PICKING_TOOL: {
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PICKING_TOOL: {
 				TrajectoryPickingTool trajectoryPickingTool = (TrajectoryPickingTool)theEObject;
 				T result = caseTrajectoryPickingTool(trajectoryPickingTool);
 				if (result == null) result = caseAbstractTrajectoryTool(trajectoryPickingTool);
@@ -233,14 +233,14 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER: {
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER: {
 				VariableTrajectoryProvider variableTrajectoryProvider = (VariableTrajectoryProvider)theEObject;
 				T result = caseVariableTrajectoryProvider(variableTrajectoryProvider);
 				if (result == null) result = caseTrajectoryProvider(variableTrajectoryProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER: {
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER: {
 				DefaultVariableTrajectoryProvider defaultVariableTrajectoryProvider = (DefaultVariableTrajectoryProvider)theEObject;
 				T result = caseDefaultVariableTrajectoryProvider(defaultVariableTrajectoryProvider);
 				if (result == null) result = caseVariableTrajectoryProvider(defaultVariableTrajectoryProvider);
@@ -248,7 +248,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION: {
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION: {
 				AbstractVariableAnnotation abstractVariableAnnotation = (AbstractVariableAnnotation)theEObject;
 				T result = caseAbstractVariableAnnotation(abstractVariableAnnotation);
 				if (result == null) result = caseMapAnnotation(abstractVariableAnnotation);
@@ -256,7 +256,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION: {
+			case ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION: {
 				PoseVariableAnnotation poseVariableAnnotation = (PoseVariableAnnotation)theEObject;
 				T result = casePoseVariableAnnotation(poseVariableAnnotation);
 				if (result == null) result = caseAbstractVariableAnnotation(poseVariableAnnotation);
@@ -265,7 +265,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION: {
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION: {
 				VariableTrajectoryAnnotation variableTrajectoryAnnotation = (VariableTrajectoryAnnotation)theEObject;
 				T result = caseVariableTrajectoryAnnotation(variableTrajectoryAnnotation);
 				if (result == null) result = caseAbstractVariableAnnotation(variableTrajectoryAnnotation);
@@ -275,7 +275,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION: {
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION: {
 				VehicleVariableAnnotation vehicleVariableAnnotation = (VehicleVariableAnnotation)theEObject;
 				T result = caseVehicleVariableAnnotation(vehicleVariableAnnotation);
 				if (result == null) result = casePoseVariableAnnotation(vehicleVariableAnnotation);
@@ -410,7 +410,7 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreEnvironmentUIFacade(Symphony__CoreEnvironmentUIFacade object) {
+	public T caseApogyCoreEnvironmentUIFacade(ApogyCoreEnvironmentUIFacade object) {
 		return null;
 	}
 
@@ -763,4 +763,4 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentUISwitch
+} //ApogyCoreEnvironmentUISwitch

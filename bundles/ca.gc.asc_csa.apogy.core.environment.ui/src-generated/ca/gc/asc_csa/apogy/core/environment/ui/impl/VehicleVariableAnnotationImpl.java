@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -12,8 +12,8 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 import org.jfree.chart.annotations.XYTextAnnotation;
@@ -27,8 +27,8 @@ import org.jfree.ui.TextAnchor;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl#getVehicleLength <em>Vehicle Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl#getVehicleWidth <em>Vehicle Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VehicleVariableAnnotationImpl#getVehicleLength <em>Vehicle Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VehicleVariableAnnotationImpl#getVehicleWidth <em>Vehicle Width</em>}</li>
  * </ul>
  *
  * @generated
@@ -95,7 +95,7 @@ public class VehicleVariableAnnotationImpl extends PoseVariableAnnotationImpl im
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.VEHICLE_VARIABLE_ANNOTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.VEHICLE_VARIABLE_ANNOTATION;
 	}
 
   /**
@@ -136,7 +136,7 @@ public class VehicleVariableAnnotationImpl extends PoseVariableAnnotationImpl im
 		double oldVehicleLength = vehicleLength;
 		vehicleLength = newVehicleLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH, oldVehicleLength, vehicleLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH, oldVehicleLength, vehicleLength));
 	}
 
   /**
@@ -176,7 +176,7 @@ public class VehicleVariableAnnotationImpl extends PoseVariableAnnotationImpl im
 		double oldVehicleWidth = vehicleWidth;
 		vehicleWidth = newVehicleWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH, oldVehicleWidth, vehicleWidth));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH, oldVehicleWidth, vehicleWidth));
 	}
 
   /**
@@ -188,9 +188,9 @@ public class VehicleVariableAnnotationImpl extends PoseVariableAnnotationImpl im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
 				return getVehicleLength();
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
 				return getVehicleWidth();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,10 +205,10 @@ public class VehicleVariableAnnotationImpl extends PoseVariableAnnotationImpl im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
 				setVehicleLength((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
 				setVehicleWidth((Double)newValue);
 				return;
 		}
@@ -224,10 +224,10 @@ public class VehicleVariableAnnotationImpl extends PoseVariableAnnotationImpl im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
 				setVehicleLength(VEHICLE_LENGTH_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
 				setVehicleWidth(VEHICLE_WIDTH_EDEFAULT);
 				return;
 		}
@@ -243,9 +243,9 @@ public class VehicleVariableAnnotationImpl extends PoseVariableAnnotationImpl im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
 				return vehicleLength != VEHICLE_LENGTH_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
+			case ApogyCoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
 				return vehicleWidth != VEHICLE_WIDTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

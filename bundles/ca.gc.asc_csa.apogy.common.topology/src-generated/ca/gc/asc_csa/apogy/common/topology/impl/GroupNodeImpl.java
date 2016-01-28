@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import java.util.Collection;
 
@@ -11,9 +11,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.GroupNodeImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.GROUP_NODE;
+		return ApogyCommonTopologyPackage.Literals.GROUP_NODE;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	 */
 	public EList<Node> getChildren() {
 		if (children == null) {
-			children = new EObjectContainmentEList<Node>(Node.class, this, Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN);
+			children = new EObjectContainmentEList<Node>(Node.class, this, ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN);
 		}
 		return children;
 	}
@@ -78,7 +78,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
+			case ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN:
 				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -92,7 +92,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
+			case ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN:
 				return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
+			case ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN:
 				getChildren().clear();
 				getChildren().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -123,7 +123,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
+			case ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN:
 				getChildren().clear();
 				return;
 		}
@@ -138,7 +138,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
+			case ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN:
 				return children != null && !children.isEmpty();
 		}
 		return super.eIsSet(featureID);

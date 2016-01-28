@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.ui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
@@ -6,7 +6,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
 
 public class EarthSkyComposite extends Composite 
 {

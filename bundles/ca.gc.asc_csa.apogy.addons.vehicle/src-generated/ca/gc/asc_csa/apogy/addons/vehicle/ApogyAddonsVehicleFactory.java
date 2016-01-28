@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage
  * @generated
  */
-public interface Symphony__AddonsVehicleFactory extends EFactory
+public interface ApogyAddonsVehicleFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__AddonsVehicleFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsVehicleFactory eINSTANCE = org.eclipse.symphony.addons.vehicle.impl.Symphony__AddonsVehicleFactoryImpl.init();
+  ApogyAddonsVehicleFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.vehicle.impl.ApogyAddonsVehicleFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Vehicle Pose Corrector</em>'.
@@ -102,7 +102,7 @@ public interface Symphony__AddonsVehicleFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__AddonsVehicleFacade createSymphony__AddonsVehicleFacade();
+	ApogyAddonsVehicleFacade createApogyAddonsVehicleFacade();
 
 		/**
 	 * Returns a new object of class '<em>Wheel Vehicle Utilities</em>'.
@@ -156,6 +156,6 @@ public interface Symphony__AddonsVehicleFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsVehiclePackage getSymphony__AddonsVehiclePackage();
+	ApogyAddonsVehiclePackage getApogyAddonsVehiclePackage();
 
-} //Symphony__AddonsVehicleFactory
+} //ApogyAddonsVehicleFactory

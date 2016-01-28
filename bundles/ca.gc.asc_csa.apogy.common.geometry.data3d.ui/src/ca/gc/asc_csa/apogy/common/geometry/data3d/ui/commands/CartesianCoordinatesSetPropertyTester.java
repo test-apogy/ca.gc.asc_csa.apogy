@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.commands;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.commands;
 
 import org.eclipse.core.expressions.PropertyTester;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
 
 public class CartesianCoordinatesSetPropertyTester extends PropertyTester
 {

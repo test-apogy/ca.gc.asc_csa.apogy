@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.primitives;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
 
 import org.eclipse.core.runtime.Plugin;
 

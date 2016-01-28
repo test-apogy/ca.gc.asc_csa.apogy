@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.wizards;
+package ca.gc.asc_csa.apogy.core.ui.wizards;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -9,41 +9,41 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
-import org.eclipse.symphony.core.ui.composites.NewSymphonyProjectComposite;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
+import ca.gc.asc_csa.apogy.core.ui.composites.NewApogyProjectComposite;
 
-public class NewSymphonyProjectWizardPage extends WizardPage {
+public class NewApogyProjectWizardPage extends WizardPage {
 
-	private NewSymphonyProjectSettings projectSettings;
+	private NewApogyProjectSettings projectSettings;
 	private Adapter projectSettingsAdapter;
-	private SymphonyResourceSettings symphonyResourceSettings; 
+	private ApogyResourceSettings apogyResourceSettings; 
 	
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.ui.wizards.NewSymphonyProjectWizardPage"; 
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.ui.wizards.NewApogyProjectWizardPage"; 
 	
 	/**
 	 * Constructor for SampleNewWizardPage.
 	 * 
 	 * @param pageName
 	 */
-	public NewSymphonyProjectWizardPage(NewSymphonyProjectSettings projectSettings, SymphonyResourceSettings symphonyResourceSettings) {
+	public NewApogyProjectWizardPage(NewApogyProjectSettings projectSettings, ApogyResourceSettings apogyResourceSettings) {
 		super(WIZARD_PAGE_ID);
-		setTitle("New Symphony Project");
-		setDescription("This wizard creates a new Symphony Project.");
+		setTitle("New Apogy Project");
+		setDescription("This wizard creates a new Apogy Project.");
 		this.projectSettings = projectSettings;
 		projectSettings.setDefaultValues();	
 		projectSettings.eAdapters().add(getSettingsAdapter());
-		this.symphonyResourceSettings = symphonyResourceSettings;
-		updateSymphonyResourceSettings();
+		this.apogyResourceSettings = apogyResourceSettings;
+		updateApogyResourceSettings();
 	}
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {		
-		NewSymphonyProjectComposite settingsComposite = new NewSymphonyProjectComposite(parent, SWT.NONE, projectSettings);
-		settingsComposite.setNewSymphonyProjectSettings(projectSettings);
+		NewApogyProjectComposite settingsComposite = new NewApogyProjectComposite(parent, SWT.NONE, projectSettings);
+		settingsComposite.setNewApogyProjectSettings(projectSettings);
 		setControl(settingsComposite);
 	}
 	
@@ -61,7 +61,7 @@ public class NewSymphonyProjectWizardPage extends WizardPage {
 					String message = validate();	
 					
 					if (message == null){
-						updateSymphonyResourceSettings();
+						updateApogyResourceSettings();
 					}
 					
 					setErrorMessage(message);
@@ -72,10 +72,10 @@ public class NewSymphonyProjectWizardPage extends WizardPage {
 		return projectSettingsAdapter;
 	}	
 	
-	protected void updateSymphonyResourceSettings() {
+	protected void updateApogyResourceSettings() {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(projectSettings.getName());
-		symphonyResourceSettings.setResourceProject(project);
-		symphonyResourceSettings.setResourceContainer(project.getFolder(Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonySessionFolderName()));
+		apogyResourceSettings.setResourceProject(project);
+		apogyResourceSettings.setResourceContainer(project.getFolder(ApogyCoreUIFacade.INSTANCE.getDefaultApogySessionFolderName()));
 	}
 
 	private String validate() {

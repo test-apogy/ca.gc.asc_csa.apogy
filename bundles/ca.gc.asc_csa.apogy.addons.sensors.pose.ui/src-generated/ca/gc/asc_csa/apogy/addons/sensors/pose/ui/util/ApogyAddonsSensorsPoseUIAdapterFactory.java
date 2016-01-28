@@ -1,34 +1,34 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.ui.util;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.OrientationSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage
  * @generated
  */
-public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsSensorsPoseUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsPoseUIPackage modelPackage;
+	protected static ApogyAddonsSensorsPoseUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -36,9 +36,9 @@ public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPoseUIAdapterFactory() {
+	public ApogyAddonsSensorsPoseUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsPoseUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsPoseUIPackage.eINSTANCE;
 		}
 	}
 
@@ -67,8 +67,8 @@ public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsPoseUISwitch<Adapter> modelSwitch =
-		new Symphony__AddonsSensorsPoseUISwitch<Adapter>() {
+	protected ApogyAddonsSensorsPoseUISwitch<Adapter> modelSwitch =
+		new ApogyAddonsSensorsPoseUISwitch<Adapter>() {
 			@Override
 			public Adapter casePositionSensorPresentation(PositionSensorPresentation object) {
 				return createPositionSensorPresentationAdapter();
@@ -106,13 +106,13 @@ public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryI
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation <em>Position Sensor Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation <em>Position Sensor Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation
 	 * @generated
 	 */
 	public Adapter createPositionSensorPresentationAdapter() {
@@ -120,13 +120,13 @@ public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation <em>Orientation Sensor Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.OrientationSensorPresentation <em>Orientation Sensor Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.OrientationSensorPresentation
 	 * @generated
 	 */
 	public Adapter createOrientationSensorPresentationAdapter() {
@@ -134,13 +134,13 @@ public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation <em>Pose Sensor Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation <em>Pose Sensor Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation
 	 * @generated
 	 */
 	public Adapter createPoseSensorPresentationAdapter() {
@@ -148,13 +148,13 @@ public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -173,4 +173,4 @@ public class Symphony__AddonsSensorsPoseUIAdapterFactory extends AdapterFactoryI
 		return null;
 	}
 
-} //Symphony__AddonsSensorsPoseUIAdapterFactory
+} //ApogyAddonsSensorsPoseUIAdapterFactory

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.core.programs.controllers;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning#getDeadBand <em>Dead Band</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning#getDeadBand <em>Dead Band</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCenteredParabolicInputConditioning()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getCenteredParabolicInputConditioning()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface CenteredParabolicInputConditioning extends ParabolicInputCondit
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dead Band</em>' attribute.
 	 * @see #setDeadBand(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCenteredParabolicInputConditioning_DeadBand()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getCenteredParabolicInputConditioning_DeadBand()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	float getDeadBand();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning#getDeadBand <em>Dead Band</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning#getDeadBand <em>Dead Band</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Dead Band</em>' attribute.

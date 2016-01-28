@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.provider.SimpleToolItemProvider;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
+import ca.gc.asc_csa.apogy.addons.provider.SimpleToolItemProvider;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -61,7 +61,7 @@ public class TelecomStatusMonitorToolListItemProvider extends SimpleToolItemProv
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS);
+			childrenFeatures.add(ApogyAddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS);
 		}
 		return childrenFeatures;
 	}
@@ -117,7 +117,7 @@ public class TelecomStatusMonitorToolListItemProvider extends SimpleToolItemProv
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TelecomStatusMonitorToolList.class)) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,8 +137,8 @@ public class TelecomStatusMonitorToolListItemProvider extends SimpleToolItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS,
-				 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
+				(ApogyAddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS,
+				 ApogyAddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
 	}
 
 }

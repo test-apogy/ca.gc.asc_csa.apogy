@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.provider.OrbitWorksiteItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.provider.OrbitWorksiteItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -61,8 +61,8 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -118,8 +118,8 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthOrbitWorksite.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,13 +139,13 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitSky()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitSky()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocationList()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocationList()));
 	}
 
 }

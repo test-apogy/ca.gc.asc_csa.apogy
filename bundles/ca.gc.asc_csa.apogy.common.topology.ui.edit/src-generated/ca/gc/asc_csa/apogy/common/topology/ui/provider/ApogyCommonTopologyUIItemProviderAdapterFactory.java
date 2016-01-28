@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,13 +26,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.util.Symphony__CommonTopologyUIAdapterFactory;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.util.ApogyCommonTopologyUIAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -43,7 +43,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Symphony__CommonTopologyUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonTopologyUIItemProviderAdapterFactory extends ApogyCommonTopologyUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonTopologyUIEditPlugin.INSTANCE, Symphony__CommonTopologyUIPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonTopologyUIEditPlugin.INSTANCE, ApogyCommonTopologyUIPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -82,7 +82,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIItemProviderAdapterFactory() {
+	public ApogyCommonTopologyUIItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -91,7 +91,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -99,7 +99,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected TopologyPresentationRegistryItemProvider topologyPresentationRegistryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -114,7 +114,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.GraphicsContext} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -122,7 +122,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected GraphicsContextItemProvider graphicsContextItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.GraphicsContext}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -137,7 +137,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.NodeSelection} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -145,7 +145,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected NodeSelectionItemProvider nodeSelectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.NodeSelection}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -160,7 +160,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -168,7 +168,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected TopologyPresentationSetItemProvider topologyPresentationSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -183,7 +183,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.NodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -191,7 +191,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected NodePresentationItemProvider nodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.NodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -206,7 +206,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -214,7 +214,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected TransformNodePresentationItemProvider transformNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -229,7 +229,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -237,7 +237,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected RotationNodePresentationItemProvider rotationNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -252,7 +252,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -260,7 +260,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected PositionNodePresentationItemProvider positionNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -275,7 +275,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.URLNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -283,7 +283,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	protected URLNodePresentationItemProvider urlNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.URLNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -298,26 +298,26 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyUIFacadeItemProvider symphony__CommonTopologyUIFacadeItemProvider;
+	protected ApogyCommonTopologyUIFacadeItemProvider apogy__CommonTopologyUIFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonTopologyUIFacadeAdapter() {
-		if (symphony__CommonTopologyUIFacadeItemProvider == null) {
-			symphony__CommonTopologyUIFacadeItemProvider = new Symphony__CommonTopologyUIFacadeItemProvider(this);
+	public Adapter createApogyCommonTopologyUIFacadeAdapter() {
+		if (apogy__CommonTopologyUIFacadeItemProvider == null) {
+			apogy__CommonTopologyUIFacadeItemProvider = new ApogyCommonTopologyUIFacadeItemProvider(this);
 		}
 
-		return symphony__CommonTopologyUIFacadeItemProvider;
+		return apogy__CommonTopologyUIFacadeItemProvider;
 	}
 
 	/**
@@ -455,23 +455,23 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 		if (rotationNodePresentationItemProvider != null) rotationNodePresentationItemProvider.dispose();
 		if (positionNodePresentationItemProvider != null) positionNodePresentationItemProvider.dispose();
 		if (urlNodePresentationItemProvider != null) urlNodePresentationItemProvider.dispose();
-		if (symphony__CommonTopologyUIFacadeItemProvider != null) symphony__CommonTopologyUIFacadeItemProvider.dispose();
+		if (apogy__CommonTopologyUIFacadeItemProvider != null) apogy__CommonTopologyUIFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -507,53 +507,53 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createNodeSelection()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createNodeSelection()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createURLNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createURLNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createSymphony__CommonTopologyUIFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createApogyCommonTopologyUIFacade()));
 
 				return null;
 			}
@@ -567,53 +567,53 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createNodeSelection()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createNodeSelection()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createURLNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createURLNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createSymphony__CommonTopologyUIFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyUIFactory.eINSTANCE.createApogyCommonTopologyUIFacade()));
 
 				return null;
 			}
@@ -646,7 +646,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CommonTopologyUIEditPlugin.INSTANCE;
+			return ApogyCommonTopologyUIEditPlugin.INSTANCE;
 		}
 	}
 

@@ -4,7 +4,7 @@
  *
  * $Id: RPROConstraintItemProvider.java,v 1.3.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class RPROConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RPROConstraint_linearStrength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RPROConstraint_linearStrength_feature", "_UI_RPROConstraint_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH,
 				 true,
 				 false,
 				 true,
@@ -87,7 +87,7 @@ public class RPROConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RPROConstraint_angularStrength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RPROConstraint_angularStrength_feature", "_UI_RPROConstraint_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH,
 				 true,
 				 false,
 				 true,

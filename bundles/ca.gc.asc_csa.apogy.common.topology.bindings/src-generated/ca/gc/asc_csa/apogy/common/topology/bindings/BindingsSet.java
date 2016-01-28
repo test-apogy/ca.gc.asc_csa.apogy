@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 
 import org.eclipse.emf.ecore.EObject;
@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getFeatureRootsList <em>Feature Roots List</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getFeatureRootsList <em>Feature Roots List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsSet()
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBindingsSet()
  * @model
  * @generated
  */
@@ -43,14 +43,14 @@ public interface BindingsSet extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Roots List</em>' containment reference.
 	 * @see #setFeatureRootsList(FeatureRootsList)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsSet_FeatureRootsList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBindingsSet_FeatureRootsList()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
   FeatureRootsList getFeatureRootsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getFeatureRootsList <em>Feature Roots List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getFeatureRootsList <em>Feature Roots List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Roots List</em>' containment reference.
@@ -72,14 +72,14 @@ public interface BindingsSet extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bindings List</em>' containment reference.
 	 * @see #setBindingsList(BindingsList)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsSet_BindingsList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getBindingsSet_BindingsList()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
   BindingsList getBindingsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bindings List</em>' containment reference.

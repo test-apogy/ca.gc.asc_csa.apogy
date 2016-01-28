@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.primitives.PickVector;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PickVector} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_PickVector_intersectionDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PickVector_intersectionDistance_feature", "_UI_PickVector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__INTERSECTION_DISTANCE,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__INTERSECTION_DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_PickVector_intersectedNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PickVector_intersectedNode_feature", "_UI_PickVector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__INTERSECTED_NODE,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__INTERSECTED_NODE,
 				 true,
 				 false,
 				 true,
@@ -112,7 +112,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_PickVector_nodeTypesInIntersection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PickVector_nodeTypesInIntersection_feature", "_UI_PickVector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION,
 				 true,
 				 false,
 				 true,
@@ -134,7 +134,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_PickVector_relativeIntersectionPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PickVector_relativeIntersectionPosition_feature", "_UI_PickVector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION,
 				 true,
 				 false,
 				 false,
@@ -156,7 +156,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_PickVector_absoluteIntersectionPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PickVector_absoluteIntersectionPosition_feature", "_UI_PickVector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION,
 				 true,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class PickVectorItemProvider extends VectorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_PickVector_nodeTypesToExcludeFromIntersection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PickVector_nodeTypesToExcludeFromIntersection_feature", "_UI_PickVector_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION,
+				 ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION,
 				 true,
 				 false,
 				 true,
@@ -225,9 +225,9 @@ public class PickVectorItemProvider extends VectorItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PickVector.class)) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.impl.OrbitWorksiteImpl;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +22,8 @@ import org.eclipse.symphony.core.environment.orbit.impl.OrbitWorksiteImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getSky <em>Sky</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getEarthLocations <em>Earth Locations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getSky <em>Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getEarthLocations <em>Earth Locations</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		EarthOrbitSky oldSky = sky;
 		sky = newSky;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, oldSky, newSky);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, oldSky, newSky);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -101,14 +101,14 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		if (newSky != sky) {
 			NotificationChain msgs = null;
 			if (sky != null)
-				msgs = ((InternalEObject)sky).eInverseRemove(this, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, EarthOrbitSky.class, msgs);
+				msgs = ((InternalEObject)sky).eInverseRemove(this, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, EarthOrbitSky.class, msgs);
 			if (newSky != null)
-				msgs = ((InternalEObject)newSky).eInverseAdd(this, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, EarthOrbitSky.class, msgs);
+				msgs = ((InternalEObject)newSky).eInverseAdd(this, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, EarthOrbitSky.class, msgs);
 			msgs = basicSetSky(newSky, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, newSky, newSky));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, newSky, newSky));
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		EarthSurfaceLocationList oldEarthLocations = earthLocations;
 		earthLocations = newEarthLocations;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, oldEarthLocations, newEarthLocations);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, oldEarthLocations, newEarthLocations);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -144,14 +144,14 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 		if (newEarthLocations != earthLocations) {
 			NotificationChain msgs = null;
 			if (earthLocations != null)
-				msgs = ((InternalEObject)earthLocations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, null, msgs);
+				msgs = ((InternalEObject)earthLocations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, null, msgs);
 			if (newEarthLocations != null)
-				msgs = ((InternalEObject)newEarthLocations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, null, msgs);
+				msgs = ((InternalEObject)newEarthLocations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, null, msgs);
 			msgs = basicSetEarthLocations(newEarthLocations, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, newEarthLocations, newEarthLocations));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS, newEarthLocations, newEarthLocations));
 	}
 
 	/**
@@ -162,9 +162,9 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				if (sky != null)
-					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, null, msgs);
+					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, null, msgs);
 				return basicSetSky((EarthOrbitSky)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -178,9 +178,9 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				return basicSetSky(null, msgs);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				return basicSetEarthLocations(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -194,9 +194,9 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				return getSky();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				return getEarthLocations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -210,10 +210,10 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				setSky((EarthOrbitSky)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				setEarthLocations((EarthSurfaceLocationList)newValue);
 				return;
 		}
@@ -228,10 +228,10 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				setSky((EarthOrbitSky)null);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				setEarthLocations((EarthSurfaceLocationList)null);
 				return;
 		}
@@ -246,9 +246,9 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
 				return sky != null;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				return earthLocations != null;
 		}
 		return super.eIsSet(featureID);

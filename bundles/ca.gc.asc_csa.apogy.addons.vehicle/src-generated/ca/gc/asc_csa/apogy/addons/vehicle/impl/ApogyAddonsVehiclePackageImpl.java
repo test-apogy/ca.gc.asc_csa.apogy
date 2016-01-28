@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import java.util.Iterator;
 import java.util.List;
@@ -22,42 +22,42 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
-import org.eclipse.symphony.addons.vehicle.ContactProvider;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
-import org.eclipse.symphony.addons.vehicle.Line3d;
-import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode;
-import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.addons.vehicle.Plane;
-import org.eclipse.symphony.addons.vehicle.Segment2D;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.TerrainProfile;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
-import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.addons.vehicle.WheelContactMode;
-import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
-import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
-import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.Line3d;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
+import ca.gc.asc_csa.apogy.addons.vehicle.OrientationCorrectionMode;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.addons.vehicle.Plane;
+import ca.gc.asc_csa.apogy.addons.vehicle.Segment2D;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.TerrainProfile;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactMode;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities;
+import ca.gc.asc_csa.apogy.addons.vehicle.ZCorrectionMode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements Symphony__AddonsVehiclePackage
+public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements ApogyAddonsVehiclePackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -135,7 +135,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsVehicleFacadeEClass = null;
+	private EClass apogy__AddonsVehicleFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -288,13 +288,13 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__AddonsVehiclePackageImpl()
+  private ApogyAddonsVehiclePackageImpl()
   {
-		super(eNS_URI, Symphony__AddonsVehicleFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsVehicleFactory.eINSTANCE);
 	}
 
   /**
@@ -307,7 +307,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsVehiclePackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsVehiclePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -316,34 +316,34 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__AddonsVehiclePackage init()
+  public static ApogyAddonsVehiclePackage init()
   {
-		if (isInited) return (Symphony__AddonsVehiclePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsVehiclePackage.eNS_URI);
+		if (isInited) return (ApogyAddonsVehiclePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsVehiclePackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsVehiclePackageImpl theSymphony__AddonsVehiclePackage = (Symphony__AddonsVehiclePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsVehiclePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsVehiclePackageImpl());
+		ApogyAddonsVehiclePackageImpl theApogyAddonsVehiclePackage = (ApogyAddonsVehiclePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsVehiclePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsVehiclePackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyAddonsDynamicsPackage.eINSTANCE.eClass();
-		Symphony__AddonsPackage.eINSTANCE.eClass();
-		Symphony__CoreEnvironmentPackage.eINSTANCE.eClass();
-		Symphony__AddonsMobilityPathplannersPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyAddonsDynamicsPackage.eINSTANCE.eClass();
+		ApogyAddonsPackage.eINSTANCE.eClass();
+		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
+		ApogyAddonsMobilityPathplannersPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsVehiclePackage.createPackageContents();
+		theApogyAddonsVehiclePackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsVehiclePackage.initializePackageContents();
+		theApogyAddonsVehiclePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsVehiclePackage.freeze();
+		theApogyAddonsVehiclePackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsVehiclePackage.eNS_URI, theSymphony__AddonsVehiclePackage);
-		return theSymphony__AddonsVehiclePackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsVehiclePackage.eNS_URI, theApogyAddonsVehiclePackage);
+		return theApogyAddonsVehiclePackage;
 	}
 
   /**
@@ -694,8 +694,8 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsVehicleFacade() {
-		return symphony__AddonsVehicleFacadeEClass;
+	public EClass getApogyAddonsVehicleFacade() {
+		return apogy__AddonsVehicleFacadeEClass;
 	}
 
 		/**
@@ -1031,8 +1031,8 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsVehicleFactory getSymphony__AddonsVehicleFactory() {
-		return (Symphony__AddonsVehicleFactory)getEFactoryInstance();
+	public ApogyAddonsVehicleFactory getApogyAddonsVehicleFactory() {
+		return (ApogyAddonsVehicleFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -1169,7 +1169,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
 		landerSphericalFootContactProviderEClass = createEClass(LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER);
 
-		symphony__AddonsVehicleFacadeEClass = createEClass(SYMPHONY_ADDONS_VEHICLE_FACADE);
+		apogy__AddonsVehicleFacadeEClass = createEClass(APOGY_ADDONS_VEHICLE_FACADE);
 
 		wheelVehicleUtilitiesEClass = createEClass(WHEEL_VEHICLE_UTILITIES);
 		createEOperation(wheelVehicleUtilitiesEClass, WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_SEGMENT2D);
@@ -1247,18 +1247,18 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonTopologyAddonsDynamicsPackage theSymphony__CommonTopologyAddonsDynamicsPackage = (Symphony__CommonTopologyAddonsDynamicsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyAddonsDynamicsPackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
-		Symphony__CommonTopologyBindingsPackage theSymphony__CommonTopologyBindingsPackage = (Symphony__CommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyBindingsPackage.eNS_URI);
-		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
-		Symphony__CoreEnvironmentPackage theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
-		Symphony__AddonsMobilityPathplannersPackage theSymphony__AddonsMobilityPathplannersPackage = (Symphony__AddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPathplannersPackage.eNS_URI);
-		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
+		ApogyCommonTopologyAddonsDynamicsPackage theApogyCommonTopologyAddonsDynamicsPackage = (ApogyCommonTopologyAddonsDynamicsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyAddonsDynamicsPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCommonTopologyBindingsPackage theApogyCommonTopologyBindingsPackage = (ApogyCommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyBindingsPackage.eNS_URI);
+		ApogyAddonsPackage theApogyAddonsPackage = (ApogyAddonsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsPackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogyAddonsMobilityPathplannersPackage theApogyAddonsMobilityPathplannersPackage = (ApogyAddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPathplannersPackage.eNS_URI);
+		ApogyAddonsGeometryPathsPackage theApogyAddonsGeometryPathsPackage = (ApogyAddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsGeometryPathsPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(mapEDataType, "K");
@@ -1270,53 +1270,53 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		vehiclePoseCorrectorEClass.getESuperTypes().add(theSymphony__CorePackage.getPoseCorrector());
-		wheelEClass.getESuperTypes().add(theSymphony__CommonTopologyAddonsDynamicsPackage.getPhysicalBody());
-		thrusterEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
-		thrusterBindingEClass.getESuperTypes().add(theSymphony__CommonTopologyBindingsPackage.getAbstractTopologyBinding());
+		vehiclePoseCorrectorEClass.getESuperTypes().add(theApogyCorePackage.getPoseCorrector());
+		wheelEClass.getESuperTypes().add(theApogyCommonTopologyAddonsDynamicsPackage.getPhysicalBody());
+		thrusterEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
+		thrusterBindingEClass.getESuperTypes().add(theApogyCommonTopologyBindingsPackage.getAbstractTopologyBinding());
 		wheelContactProviderEClass.getESuperTypes().add(this.getContactProvider());
-		landerSphericalFootEClass.getESuperTypes().add(theSymphony__CommonTopologyAddonsDynamicsPackage.getPhysicalBody());
+		landerSphericalFootEClass.getESuperTypes().add(theApogyCommonTopologyAddonsDynamicsPackage.getPhysicalBody());
 		landerSphericalFootContactProviderEClass.getESuperTypes().add(this.getContactProvider());
-		pathPlannerToolEClass.getESuperTypes().add(theSymphony__AddonsPackage.getAbstractTwoPoints3DTool());
-		pathPlannerToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		pathPlannerToolEClass.getESuperTypes().add(theApogyAddonsPackage.getAbstractTwoPoints3DTool());
+		pathPlannerToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		vehiclePathPlannerToolEClass.getESuperTypes().add(this.getPathPlannerTool());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vehiclePoseCorrectorEClass, VehiclePoseCorrector.class, "VehiclePoseCorrector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVehiclePoseCorrector_Initializing(), theEcorePackage.getEBoolean(), "initializing", "false", 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVehiclePoseCorrector_Meshes(), this.getMeshNodeEntry(), null, "meshes", null, 0, -1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVehiclePoseCorrector_ContactBodies(), theSymphony__CommonTopologyAddonsDynamicsPackage.getPhysicalBody(), null, "contactBodies", null, 0, -1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVehiclePoseCorrector_ContactBodies(), theApogyCommonTopologyAddonsDynamicsPackage.getPhysicalBody(), null, "contactBodies", null, 0, -1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehiclePoseCorrector_ZCorrectionMode(), this.getZCorrectionMode(), "zCorrectionMode", null, 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehiclePoseCorrector_ZCorrection(), theEcorePackage.getEDouble(), "zCorrection", "0", 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehiclePoseCorrector_OrientationCorrectionMode(), this.getOrientationCorrectionMode(), "orientationCorrectionMode", null, 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVehiclePoseCorrector_OrientationCorrection(), theSymphony__CommonMathPackage.getMatrix3x3(), null, "orientationCorrection", null, 0, 1, VehiclePoseCorrector.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVehiclePoseCorrector_OrientationCorrection(), theApogyCommonMathPackage.getMatrix3x3(), null, "orientationCorrection", null, 0, 1, VehiclePoseCorrector.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVehiclePoseCorrector_ContactProvider(), this.getContactProvider(), this.getContactProvider_VehiclePoseCorrector(), "contactProvider", null, 1, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getVehiclePoseCorrector__ReInitialize(), null, "reInitialize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		EOperation op = initEOperation(getVehiclePoseCorrector__GetMeshExtent2D__CartesianTriangularMesh(), this.getMeshExtent2D(), "getMeshExtent2D", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getVehiclePoseCorrector__GetClosestNeighbourIteratorProvider__CartesianTriangularMesh(), this.getClosestNeighbourIteratorProvider(), "getClosestNeighbourIteratorProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(meshNodeEntryEClass, MeshNodeEntry.class, "MeshNodeEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMeshNodeEntry_Node(), theSymphony__CommonTopologyPackage.getNode(), null, "node", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMeshNodeEntry_Mesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMeshNodeEntry_Node(), theApogyCommonTopologyPackage.getNode(), null, "node", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMeshNodeEntry_Mesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contactProviderEClass, ContactProvider.class, "ContactProvider", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContactProvider_VehiclePoseCorrector(), this.getVehiclePoseCorrector(), this.getVehiclePoseCorrector_ContactProvider(), "vehiclePoseCorrector", null, 0, 1, ContactProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getContactProvider__ExtractContactBodies(), null, "extractContactBodies", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
-		EGenericType g2 = createEGenericType(theSymphony__CommonTopologyAddonsDynamicsPackage.getPhysicalBody());
+		EGenericType g2 = createEGenericType(theApogyCommonTopologyAddonsDynamicsPackage.getPhysicalBody());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
 		op = initEOperation(getContactProvider__UpdateContactPoints__Matrix4x4_Map(), null, "updateContactPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "originalPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getMatrix4x4(), "originalPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getMap());
-		g2 = createEGenericType(theSymphony__CommonTopologyAddonsDynamicsPackage.getPhysicalBody());
+		g2 = createEGenericType(theApogyCommonTopologyAddonsDynamicsPackage.getPhysicalBody());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getPoint3d());
 		g1.getETypeArguments().add(g2);
@@ -1344,7 +1344,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
 		initEClass(landerSphericalFootContactProviderEClass, LanderSphericalFootContactProvider.class, "LanderSphericalFootContactProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(symphony__AddonsVehicleFacadeEClass, Symphony__AddonsVehicleFacade.class, "Symphony__AddonsVehicleFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsVehicleFacadeEClass, ApogyAddonsVehicleFacade.class, "ApogyAddonsVehicleFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(wheelVehicleUtilitiesEClass, WheelVehicleUtilities.class, "WheelVehicleUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1359,7 +1359,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		addEParameter(op, this.getTerrainProfile(), "terrainProfile", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__FindTerrainProfile__CartesianTriangularMesh_Plane(), this.getTerrainProfile(), "findTerrainProfile", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPlane(), "plane", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__FindIntersection__Plane_Line3d(), null, "findIntersection", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1375,7 +1375,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		addEParameter(op, this.getSegment2D(), "segment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__FindMeshExtent2D__CartesianTriangularMesh(), this.getMeshExtent2D(), "findMeshExtent2D", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__IsWithin__Point3d_MeshExtent2D(), theEcorePackage.getEBoolean(), "isWithin", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1396,9 +1396,9 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		initEClass(pathPlannerToolEClass, PathPlannerTool.class, "PathPlannerTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPathPlannerTool_Busy(), theEcorePackage.getEBoolean(), "busy", "false", 0, 1, PathPlannerTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathPlannerTool_AutoPathPlanEnabled(), theEcorePackage.getEBoolean(), "autoPathPlanEnabled", "false", 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPathPlannerTool_MeshLayer(), theSymphony__CoreEnvironmentPackage.getCartesianTriangularMeshMapLayer(), null, "meshLayer", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPathPlannerTool_PathPlanner(), theSymphony__AddonsMobilityPathplannersPackage.getMeshWayPointPathPlanner(), null, "pathPlanner", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPathPlannerTool_PlannedPath(), theSymphony__AddonsGeometryPathsPackage.getWayPointPath(), null, "plannedPath", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathPlannerTool_MeshLayer(), theApogyCoreEnvironmentPackage.getCartesianTriangularMeshMapLayer(), null, "meshLayer", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathPlannerTool_PathPlanner(), theApogyAddonsMobilityPathplannersPackage.getMeshWayPointPathPlanner(), null, "pathPlanner", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathPlannerTool_PlannedPath(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), null, "plannedPath", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPathPlannerTool_PathPlannerToolNode(), this.getPathPlannerToolNode(), this.getPathPlannerToolNode_PathPlannerTool(), "pathPlannerToolNode", null, 0, 1, PathPlannerTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPathPlannerTool__PlanPath(), theEcorePackage.getEBoolean(), "planPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1407,7 +1407,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		initEReference(getPathPlannerToolNode_PathPlannerTool(), this.getPathPlannerTool(), this.getPathPlannerTool_PathPlannerToolNode(), "pathPlannerTool", null, 0, 1, PathPlannerToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vehiclePathPlannerToolEClass, VehiclePathPlannerTool.class, "VehiclePathPlannerTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVehiclePathPlannerTool_Variable(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, VehiclePathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVehiclePathPlannerTool_Variable(), theApogyCoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, VehiclePathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(zCorrectionModeEEnum, ZCorrectionMode.class, "ZCorrectionMode");
@@ -1459,15 +1459,15 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsVehicle",
+			 "prefix", "ApogyAddonsVehicle",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsVehicle",
+			 "modelName", "ApogyAddonsVehicle",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.vehicle/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.vehicle.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.vehicle/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.vehicle.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons"
 		   });	
 		addAnnotation
 		  (zCorrectionModeEEnum, 
@@ -1542,7 +1542,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "CORRECTION_INFO",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getVehiclePoseCorrector_OrientationCorrectionMode(), 
@@ -1584,13 +1584,13 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getWheel_Radius(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getWheel_Length(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (thrusterEClass, 
@@ -1604,7 +1604,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "The minimum thrust, in Newtons. Must be positive.",
 			 "notify", "true",
-			 "symphony_units", "N",
+			 "apogy_units", "N",
 			 "propertyCategory", "THRUST_INFO"
 		   });	
 		addAnnotation
@@ -1613,7 +1613,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "The maximum thrust, in Newtons. Must be positive.",
 			 "notify", "true",
-			 "symphony_units", "N",
+			 "apogy_units", "N",
 			 "propertyCategory", "THRUST_INFO"
 		   });	
 		addAnnotation
@@ -1622,7 +1622,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "The current thrust, in Newtons. Always between minimumThrust and maximumThrust.",
 			 "notify", "true",
-			 "symphony_units", "N",
+			 "apogy_units", "N",
 			 "propertyCategory", "THRUST_INFO"
 		   });	
 		addAnnotation
@@ -1639,7 +1639,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   source, 
 		   new String[] {
 			 "documentation", "Plume angle, in radians",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (wheelContactModeEEnum, 
@@ -1659,7 +1659,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getLanderSphericalFoot_Radius(), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getWheelVehicleUtilities__GetWheelCenterPoint__double_double_Segment2D(), 
@@ -1764,9 +1764,9 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePathPlannerTool_Variable(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The Symphony System for which to plan a path.",
+			 "documentation", " The Apogy System for which to plan a path.",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL"
 		   });
 	}
 
-} //Symphony__AddonsVehiclePackageImpl
+} //ApogyAddonsVehiclePackageImpl

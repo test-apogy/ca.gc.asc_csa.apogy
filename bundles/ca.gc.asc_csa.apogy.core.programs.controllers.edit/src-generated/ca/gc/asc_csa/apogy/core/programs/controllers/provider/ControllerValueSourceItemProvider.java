@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -14,13 +14,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.core.programs.controllers.ControllerValueSource;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class ControllerValueSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ControllerValueSource_lastValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerValueSource_lastValue_feature", "_UI_ControllerValueSource_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE,
+				 ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE,
 				 false,
 				 false,
 				 false,
@@ -92,8 +92,8 @@ public class ControllerValueSourceItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
-			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
+			childrenFeatures.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
+			childrenFeatures.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
 		}
 		return childrenFeatures;
 	}
@@ -156,12 +156,12 @@ public class ControllerValueSourceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllerValueSource.class)) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -182,33 +182,33 @@ public class ControllerValueSourceItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER,
-				 Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier()));
+				(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER,
+				 ApogyCommonIOJInputFactory.eINSTANCE.createEComponentQualifier()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createLinearInputConditioning()));
+				(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createLinearInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createCenteredLinearInputConditioning()));
+				(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createCenteredLinearInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createParabolicInputConditioning()));
+				(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createParabolicInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createCenteredParabolicInputConditioning()));
+				(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createCenteredParabolicInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createUserDefinedInputConditioning()));
+				(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createUserDefinedInputConditioning()));
 	}
 
 }

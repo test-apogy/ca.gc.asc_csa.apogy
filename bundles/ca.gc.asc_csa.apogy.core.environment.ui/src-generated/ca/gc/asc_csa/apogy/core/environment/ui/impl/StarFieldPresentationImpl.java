@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -9,12 +9,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.StarFieldSceneObject;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldSceneObject;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentU
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.StarFieldPresentationImpl#getCutOffMagnitude <em>Cut Off Magnitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.StarFieldPresentationImpl#getCutOffMagnitude <em>Cut Off Magnitude</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,7 +74,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION;
 	}
 
   /**
@@ -110,7 +110,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
 		float oldCutOffMagnitude = cutOffMagnitude;
 		cutOffMagnitude = newCutOffMagnitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE, oldCutOffMagnitude, cutOffMagnitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE, oldCutOffMagnitude, cutOffMagnitude));
 	}
 
   /**
@@ -122,7 +122,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				return getCutOffMagnitude();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -137,7 +137,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				setCutOffMagnitude((Float)newValue);
 				return;
 		}
@@ -153,7 +153,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				setCutOffMagnitude(CUT_OFF_MAGNITUDE_EDEFAULT);
 				return;
 		}
@@ -169,7 +169,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case ApogyCoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				return cutOffMagnitude != CUT_OFF_MAGNITUDE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -206,12 +206,12 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
 				@Override
 				public void propertyChange(PropertyChangeEvent event) 
 				{					
-					if(event.getProperty().compareTo(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID) == 0)
+					if(event.getProperty().compareTo(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID) == 0)
 					{
 						System.out.println("StarFieldPresentationImpl " + event.getNewValue().getClass().getName());
 						
 						IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-						float magnitudeCutoff = (float) store.getDouble(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID);					
+						float magnitudeCutoff = (float) store.getDouble(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID);					
 						setCutOffMagnitude(magnitudeCutoff);						
 					}
 				}

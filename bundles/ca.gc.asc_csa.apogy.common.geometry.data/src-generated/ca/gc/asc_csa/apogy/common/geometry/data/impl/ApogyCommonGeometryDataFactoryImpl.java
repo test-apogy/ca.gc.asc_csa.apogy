@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data.impl;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.geometry.data.*;
+import ca.gc.asc_csa.apogy.common.geometry.data.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +21,24 @@ import org.eclipse.symphony.common.geometry.data.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryDataFactoryImpl extends EFactoryImpl implements Symphony__CommonGeometryDataFactory {
+public class ApogyCommonGeometryDataFactoryImpl extends EFactoryImpl implements ApogyCommonGeometryDataFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryDataFactory init() {
+	public static ApogyCommonGeometryDataFactory init() {
 		try {
-			Symphony__CommonGeometryDataFactory theSymphony__CommonGeometryDataFactory = (Symphony__CommonGeometryDataFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonGeometryDataPackage.eNS_URI);
-			if (theSymphony__CommonGeometryDataFactory != null) {
-				return theSymphony__CommonGeometryDataFactory;
+			ApogyCommonGeometryDataFactory theApogyCommonGeometryDataFactory = (ApogyCommonGeometryDataFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonGeometryDataPackage.eNS_URI);
+			if (theApogyCommonGeometryDataFactory != null) {
+				return theApogyCommonGeometryDataFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonGeometryDataFactoryImpl();
+		return new ApogyCommonGeometryDataFactoryImpl();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Symphony__CommonGeometryDataFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryDataFactoryImpl() {
+	public ApogyCommonGeometryDataFactoryImpl() {
 		super();
 	}
 
@@ -59,11 +59,11 @@ public class Symphony__CommonGeometryDataFactoryImpl extends EFactoryImpl implem
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES: return createCoordinates();
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET: return createCoordinatesSet();
-			case Symphony__CommonGeometryDataPackage.POLYGON: return createPolygon();
-			case Symphony__CommonGeometryDataPackage.MESH: return createMesh();
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER: return createCoordinatesSetShapesSampler();
+			case ApogyCommonGeometryDataPackage.COORDINATES: return createCoordinates();
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET: return createCoordinatesSet();
+			case ApogyCommonGeometryDataPackage.POLYGON: return createPolygon();
+			case ApogyCommonGeometryDataPackage.MESH: return createMesh();
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER: return createCoordinatesSetShapesSampler();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,13 +77,13 @@ public class Symphony__CommonGeometryDataFactoryImpl extends EFactoryImpl implem
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryDataPackage.SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.SHAPE_SAMPLING_MODE:
 				return createShapeSamplingModeFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.POLYGON_SAMPLING_MODE:
 				return createPolygonSamplingModeFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryDataPackage.LIST:
+			case ApogyCommonGeometryDataPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryDataPackage.VECTOR3D:
+			case ApogyCommonGeometryDataPackage.VECTOR3D:
 				return createVector3dFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -98,13 +98,13 @@ public class Symphony__CommonGeometryDataFactoryImpl extends EFactoryImpl implem
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryDataPackage.SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.SHAPE_SAMPLING_MODE:
 				return convertShapeSamplingModeToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.POLYGON_SAMPLING_MODE:
 				return convertPolygonSamplingModeToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryDataPackage.LIST:
+			case ApogyCommonGeometryDataPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryDataPackage.VECTOR3D:
+			case ApogyCommonGeometryDataPackage.VECTOR3D:
 				return convertVector3dToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -242,8 +242,8 @@ public class Symphony__CommonGeometryDataFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryDataPackage getSymphony__CommonGeometryDataPackage() {
-		return (Symphony__CommonGeometryDataPackage)getEPackage();
+	public ApogyCommonGeometryDataPackage getApogyCommonGeometryDataPackage() {
+		return (ApogyCommonGeometryDataPackage)getEPackage();
 	}
 
 	/**
@@ -253,8 +253,8 @@ public class Symphony__CommonGeometryDataFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonGeometryDataPackage getPackage() {
-		return Symphony__CommonGeometryDataPackage.eINSTANCE;
+	public static ApogyCommonGeometryDataPackage getPackage() {
+		return ApogyCommonGeometryDataPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonGeometryDataFactoryImpl
+} //ApogyCommonGeometryDataFactoryImpl

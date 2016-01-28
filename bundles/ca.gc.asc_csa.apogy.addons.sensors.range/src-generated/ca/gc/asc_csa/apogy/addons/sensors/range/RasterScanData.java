@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getRasterScanSettings <em>Raster Scan Settings</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getScanData <em>Scan Data</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData#getRasterScanSettings <em>Raster Scan Settings</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData#getScanData <em>Scan Data</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanData()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRasterScanData()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface RasterScanData extends AggregateGroupNode, Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Raster Scan Settings</em>' containment reference.
 	 * @see #setRasterScanSettings(RasterScanSettings)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanData_RasterScanSettings()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRasterScanData_RasterScanSettings()
 	 * @model containment="true"
 	 * @generated
 	 */
 	RasterScanSettings getRasterScanSettings();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getRasterScanSettings <em>Raster Scan Settings</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData#getRasterScanSettings <em>Raster Scan Settings</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Raster Scan Settings</em>' containment reference.
@@ -61,14 +61,14 @@ public interface RasterScanData extends AggregateGroupNode, Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scan Data</em>' containment reference.
 	 * @see #setScanData(VolumetricCoordinatesSet25D)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanData_ScanData()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRasterScanData_ScanData()
 	 * @model containment="true"
 	 * @generated
 	 */
 	VolumetricCoordinatesSet25D getScanData();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getScanData <em>Scan Data</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData#getScanData <em>Scan Data</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Scan Data</em>' containment reference.

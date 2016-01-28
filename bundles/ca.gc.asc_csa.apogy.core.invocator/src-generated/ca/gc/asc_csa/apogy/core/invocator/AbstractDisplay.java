@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 
 
 /**
@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.emf.Described;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractDisplay()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractDisplay()
  * @model abstract="true"
  * @generated
  */
@@ -32,7 +32,7 @@ public interface AbstractDisplay extends Described
 {
   /**
 	 * Returns the value of the '<em><b>Displays List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.DisplaysList#getDisplays <em>Displays</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplays <em>Displays</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Displays List</em>' container reference isn't clear,
@@ -41,8 +41,8 @@ public interface AbstractDisplay extends Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Displays List</em>' container reference.
 	 * @see #setDisplaysList(DisplaysList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractDisplay_DisplaysList()
-	 * @see org.eclipse.symphony.core.invocator.DisplaysList#getDisplays
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractDisplay_DisplaysList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplays
 	 * @model opposite="displays" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -50,7 +50,7 @@ public interface AbstractDisplay extends Described
   DisplaysList getDisplaysList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Displays List</em>' container reference.

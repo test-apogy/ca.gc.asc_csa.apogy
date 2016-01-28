@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.core.environment.ui.jme3.scene_objects;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -14,15 +14,15 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestSceneObject;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestSceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -252,11 +252,11 @@ public class FeatureOfInterestNodeJME3Object extends AbstractTransformationJME3S
 					if(msg.getNotifier() instanceof FeatureOfInterestNode)
 					{
 						int featureId = msg.getFeatureID(FeatureOfInterestNode.class);						
-						if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__POSITION || featureId == Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__ROTATION_MATRIX)
+						if(featureId == ApogyCorePackage.FEATURE_OF_INTEREST_NODE__POSITION || featureId == ApogyCorePackage.FEATURE_OF_INTEREST_NODE__ROTATION_MATRIX)
 						{
 							updateTransform();							
 						}
-						else if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST)
+						else if(featureId == ApogyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST)
 						{
 							if(msg.getOldValue() instanceof FeatureOfInterest)
 							{
@@ -277,7 +277,7 @@ public class FeatureOfInterestNodeJME3Object extends AbstractTransformationJME3S
 					else if(msg.getNotifier() instanceof FeatureOfInterest)
 					{
 						int featureId = msg.getFeatureID(FeatureOfInterest.class);
-						if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST__NAME)
+						if(featureId == ApogyCorePackage.FEATURE_OF_INTEREST__NAME)
 						{
 							updateGeometry();
 							// setFlagPoleText(msg.getNewStringValue());

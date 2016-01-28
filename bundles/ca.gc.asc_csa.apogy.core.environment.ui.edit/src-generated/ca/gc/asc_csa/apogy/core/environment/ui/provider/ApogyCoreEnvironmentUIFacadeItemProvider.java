@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentUIFacadeItemProvider
+public class ApogyCoreEnvironmentUIFacadeItemProvider
   extends ItemProviderAdapter
   implements
     IEditingDomainItemProvider,
@@ -42,7 +42,7 @@ public class Symphony__CoreEnvironmentUIFacadeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentUIFacadeItemProvider(AdapterFactory adapterFactory)
+  public ApogyCoreEnvironmentUIFacadeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -64,7 +64,7 @@ public class Symphony__CoreEnvironmentUIFacadeItemProvider
 	}
 
   /**
-	 * This returns Symphony__CoreEnvironmentUIFacade.gif.
+	 * This returns ApogyCoreEnvironmentUIFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -72,7 +72,7 @@ public class Symphony__CoreEnvironmentUIFacadeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreEnvironmentUIFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreEnvironmentUIFacade"));
 	}
 
   /**
@@ -84,7 +84,7 @@ public class Symphony__CoreEnvironmentUIFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_Symphony__CoreEnvironmentUIFacade_type");
+		return getString("_UI_ApogyCoreEnvironmentUIFacade_type");
 	}
 
   /**

@@ -1,8 +1,8 @@
-package org.eclipse.symphony.core.topology.ui;
+package ca.gc.asc_csa.apogy.core.topology.ui;
 
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.core.topology.ui.preferences.SymphonyTopologyUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogyTopologyUIPreferencesConstants;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -14,7 +14,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin 
 {		
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.core.topology.ui"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.core.topology.ui"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;
@@ -60,8 +60,8 @@ public class Activator extends AbstractUIPlugin
 		return context;
 	}
 	
-	public static RGB getSymphonySystem3DViewBackgroundColor()
+	public static RGB getApogySystem3DViewBackgroundColor()
 	{
-		return PreferenceConverter.getColor(getDefault().getPreferenceStore(), SymphonyTopologyUIPreferencesConstants.DEFAULT_SYMPHONY_SYSTEM_VIEW_BACKGROUND_COLOR_ID);		
+		return PreferenceConverter.getColor(getDefault().getPreferenceStore(), ApogyTopologyUIPreferencesConstants.DEFAULT_APOGY_SYSTEM_VIEW_BACKGROUND_COLOR_ID);		
 	}
 }

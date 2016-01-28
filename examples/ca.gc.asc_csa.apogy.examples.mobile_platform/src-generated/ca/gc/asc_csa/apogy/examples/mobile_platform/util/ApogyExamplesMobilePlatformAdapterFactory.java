@@ -1,24 +1,24 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.util;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.examples.mobile_platform.*;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesMobilePlatformAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -26,7 +26,7 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesMobilePlatformPackage modelPackage;
+  protected static ApogyExamplesMobilePlatformPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -34,10 +34,10 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesMobilePlatformAdapterFactory()
+  public ApogyExamplesMobilePlatformAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesMobilePlatformPackage.eINSTANCE;
+			modelPackage = ApogyExamplesMobilePlatformPackage.eINSTANCE;
 		}
 	}
 
@@ -67,8 +67,8 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesMobilePlatformSwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesMobilePlatformSwitch<Adapter>() {
+  protected ApogyExamplesMobilePlatformSwitch<Adapter> modelSwitch =
+    new ApogyExamplesMobilePlatformSwitch<Adapter>() {
 			@Override
 			public Adapter casePosition(Position object) {
 				return createPositionAdapter();
@@ -115,13 +115,13 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.mobile_platform.Position <em>Position</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.mobile_platform.Position
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.Position
 	 * @generated
 	 */
   public Adapter createPositionAdapter()
@@ -130,13 +130,13 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.mobile_platform.NamedPosition <em>Named Position</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition <em>Named Position</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.mobile_platform.NamedPosition
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition
 	 * @generated
 	 */
   public Adapter createNamedPositionAdapter()
@@ -145,13 +145,13 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform <em>Mobile Platform</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform <em>Mobile Platform</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform
 	 * @generated
 	 */
   public Adapter createMobilePlatformAdapter()
@@ -160,13 +160,13 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub <em>Mobile Platform Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub <em>Mobile Platform Stub</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub
 	 * @generated
 	 */
   public Adapter createMobilePlatformStubAdapter()
@@ -175,13 +175,13 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated <em>Mobile Platform Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated <em>Mobile Platform Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated
 	 * @generated
 	 */
 	public Adapter createMobilePlatformSimulatedAdapter() {
@@ -189,13 +189,13 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Disposable <em>Disposable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Disposable <em>Disposable</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Disposable
+	 * @see ca.gc.asc_csa.apogy.common.emf.Disposable
 	 * @generated
 	 */
   public Adapter createDisposableAdapter()
@@ -216,4 +216,4 @@ public class Symphony__ExamplesMobilePlatformAdapterFactory extends AdapterFacto
 		return null;
 	}
 
-} //Symphony__ExamplesMobilePlatformAdapterFactory
+} //ApogyExamplesMobilePlatformAdapterFactory

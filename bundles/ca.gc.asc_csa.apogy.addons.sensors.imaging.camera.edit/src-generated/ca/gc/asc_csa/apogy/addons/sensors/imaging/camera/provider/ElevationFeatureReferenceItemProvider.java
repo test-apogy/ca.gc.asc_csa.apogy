@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -10,11 +10,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
-import org.eclipse.symphony.core.invocator.provider.VariableFeatureReferenceItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.provider.VariableFeatureReferenceItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

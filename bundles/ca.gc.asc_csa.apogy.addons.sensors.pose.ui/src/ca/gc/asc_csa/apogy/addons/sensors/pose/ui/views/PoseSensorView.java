@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.ui.views;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.views;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -10,8 +10,8 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
@@ -117,9 +117,9 @@ public class PoseSensorView extends ViewPart implements ISelectionListener {
 				public void notifyChanged(Notification msg) {
 					int featureId = msg.getFeatureID(PoseSensor.class);
 
-					if (featureId == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION
-							|| featureId == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ROTATION_MATRIX
-							|| featureId == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS) {
+					if (featureId == ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSITION
+							|| featureId == ApogyAddonsSensorsPosePackage.POSE_SENSOR__ROTATION_MATRIX
+							|| featureId == ApogyAddonsSensorsPosePackage.POSE_SENSOR__STATUS) {
 						updateView();
 					}
 				}

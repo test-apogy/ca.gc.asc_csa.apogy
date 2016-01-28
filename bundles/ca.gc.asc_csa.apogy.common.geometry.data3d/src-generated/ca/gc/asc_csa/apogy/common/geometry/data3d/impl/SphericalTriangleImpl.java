@@ -3,11 +3,11 @@
  *
  * $Id: SphericalTriangleImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.SphericalTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangle;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class SphericalTriangleImpl extends SphericalPolygonImpl implements Spher
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_TRIANGLE;
+		return ApogyCommonGeometryData3DPackage.Literals.SPHERICAL_TRIANGLE;
 	}
 
 } //SphericalTriangleImpl

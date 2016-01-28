@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.ListRootNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ListRootNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class ListRootNodeItemProvider
 	       getResourceLocator(),
 	       getString("_UI_AbstractRootNode_sourceClass_feature"),
 	       getString("_UI_PropertyDescriptor_description", "_UI_AbstractRootNode_sourceClass_feature", "_UI_AbstractRootNode_type"),
-	       Symphony__CommonEMFPackage.Literals.ABSTRACT_ROOT_NODE__SOURCE_CLASS,
+	       ApogyCommonEMFPackage.Literals.ABSTRACT_ROOT_NODE__SOURCE_CLASS,
 	       true,
 	       false,
 	       true,
@@ -78,8 +78,8 @@ public class ListRootNodeItemProvider
 	       null){
 				@Override
 				protected Collection<?> getComboBoxObjects(Object object) {
-					List<EClass> list = Symphony__CommonEMFFacade.INSTANCE.getAllAvailableEClasses();
-					SortedSet<EClass> classes = Symphony__CommonEMFFacade.INSTANCE.sortAlphabetically(list);
+					List<EClass> list = ApogyCommonEMFFacade.INSTANCE.getAllAvailableEClasses();
+					SortedSet<EClass> classes = ApogyCommonEMFFacade.INSTANCE.sortAlphabetically(list);
 					return classes;
 				}
 			});
@@ -135,7 +135,7 @@ public class ListRootNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ListRootNode.class)) {
-			case Symphony__CommonEMFPackage.LIST_ROOT_NODE__SOURCE_CLASS:
+			case ApogyCommonEMFPackage.LIST_ROOT_NODE__SOURCE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

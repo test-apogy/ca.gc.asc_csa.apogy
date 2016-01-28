@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
 import junit.framework.TestCase;
 
@@ -15,7 +15,7 @@ import junit.framework.TestCase;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Worksite#getWorksiteNode() <em>Worksite Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Worksite#getWorksiteNode() <em>Worksite Node</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -61,10 +61,10 @@ public abstract class WorksiteTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Worksite#getWorksiteNode() <em>Worksite Node</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Worksite#getWorksiteNode() <em>Worksite Node</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Worksite#getWorksiteNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.Worksite#getWorksiteNode()
 	 * @generated_NOT
 	 */
 	public void testGetWorksiteNode() 

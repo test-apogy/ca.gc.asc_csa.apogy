@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.VariablesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.VariablesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class VariablesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +134,7 @@ public class VariablesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VariablesList.class)) {
-			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case ApogyCoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -155,8 +155,8 @@ public class VariablesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createVariable()));
+				(ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createVariable()));
 	}
 
   /**

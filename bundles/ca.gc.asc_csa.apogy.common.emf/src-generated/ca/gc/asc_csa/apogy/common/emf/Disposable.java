@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getDisposable()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getDisposable()
  * @model interface="true" abstract="true"
  * @generated
  */

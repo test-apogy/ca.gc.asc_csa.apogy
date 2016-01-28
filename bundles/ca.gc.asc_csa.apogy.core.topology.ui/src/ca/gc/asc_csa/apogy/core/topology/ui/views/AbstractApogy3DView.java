@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.topology.ui.views;
+package ca.gc.asc_csa.apogy.core.topology.ui.views;
 
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewer;
-import org.eclipse.symphony.common.topology.ui.viewer.views.AbstractTopology3DView;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewer;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.views.AbstractTopology3DView;
 
-public abstract class AbstractSymphony3DView extends AbstractTopology3DView
+public abstract class AbstractApogy3DView extends AbstractTopology3DView
 {
 	
 	@Override

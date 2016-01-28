@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -24,14 +24,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Type;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Type} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Type} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -89,7 +89,7 @@ public class TypeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class TypeItemProvider
          getResourceLocator(),
          getString("_UI_Type_interfaceClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Type_interfaceClass_feature", "_UI_Type_type"),
-         Symphony__CoreInvocatorPackage.Literals.TYPE__INTERFACE_CLASS,
+         ApogyCoreInvocatorPackage.Literals.TYPE__INTERFACE_CLASS,
          true,
          false,
          true,
@@ -121,8 +121,8 @@ public class TypeItemProvider
          null){
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
-				List<EClass> list = Symphony__CommonEMFFacade.INSTANCE.getAllAvailableEClasses();
-				SortedSet<EClass> classes = Symphony__CommonEMFFacade.INSTANCE.sortAlphabetically(list);
+				List<EClass> list = ApogyCommonEMFFacade.INSTANCE.getAllAvailableEClasses();
+				SortedSet<EClass> classes = ApogyCommonEMFFacade.INSTANCE.sortAlphabetically(list);
 				return classes;
 			}
 		});
@@ -142,7 +142,7 @@ public class TypeItemProvider
          getResourceLocator(),
          getString("_UI_Type_typeApiAdapterClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Type_typeApiAdapterClass_feature", "_UI_Type_type"),
-         Symphony__CoreInvocatorPackage.Literals.TYPE__TYPE_API_ADAPTER_CLASS,
+         ApogyCoreInvocatorPackage.Literals.TYPE__TYPE_API_ADAPTER_CLASS,
          true,
          false,
          true,
@@ -151,8 +151,8 @@ public class TypeItemProvider
          null){
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
-				List<EClass> list = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER);				
-				SortedSet<EClass> classes = Symphony__CommonEMFFacade.INSTANCE.sortAlphabetically(list);
+				List<EClass> list = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(ApogyCoreInvocatorPackage.Literals.TYPE_API_ADAPTER);				
+				SortedSet<EClass> classes = ApogyCommonEMFFacade.INSTANCE.sortAlphabetically(list);
 				return classes;
 			}
 		});
@@ -171,7 +171,7 @@ public class TypeItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE__MEMBERS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TYPE__MEMBERS);
 		}
 		return childrenFeatures;
 	}
@@ -241,12 +241,12 @@ public class TypeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Type.class)) {
-			case Symphony__CoreInvocatorPackage.TYPE__NAME:
-			case Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS:
-			case Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
+			case ApogyCoreInvocatorPackage.TYPE__NAME:
+			case ApogyCoreInvocatorPackage.TYPE__INTERFACE_CLASS:
+			case ApogyCoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE__MEMBERS:
+			case ApogyCoreInvocatorPackage.TYPE__MEMBERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -267,8 +267,8 @@ public class TypeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TYPE__MEMBERS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMember()));
+				(ApogyCoreInvocatorPackage.Literals.TYPE__MEMBERS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createTypeMember()));
 	}
 
   /**

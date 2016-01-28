@@ -1,8 +1,8 @@
-package org.eclipse.symphony.common.ui.properties.sections;
+package ca.gc.asc_csa.apogy.common.ui.properties.sections;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
+import ca.gc.asc_csa.apogy.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
 public class AdvancedPropertySection extends

@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPathplannersPackageImpl.java,v 1.3.4.2 2015/05/21 15:50:52 pallard Exp $
+ * $Id: ApogyAddonsMobilityPathplannersPackageImpl.java,v 1.3.4.2 2015/05/21 15:50:52 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImpl implements Symphony__AddonsMobilityPathplannersPackage {
+public class ApogyAddonsMobilityPathplannersPackageImpl extends EPackageImpl implements ApogyAddonsMobilityPathplannersPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,7 +67,7 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsMobilityPathplannersFacadeEClass = null;
+	private EClass apogy__AddonsMobilityPathplannersFacadeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -80,12 +80,12 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsMobilityPathplannersPackageImpl() {
-		super(eNS_URI, Symphony__AddonsMobilityPathplannersFactory.eINSTANCE);
+	private ApogyAddonsMobilityPathplannersPackageImpl() {
+		super(eNS_URI, ApogyAddonsMobilityPathplannersFactory.eINSTANCE);
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsMobilityPathplannersPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsMobilityPathplannersPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -107,30 +107,30 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityPathplannersPackage init() {
-		if (isInited) return (Symphony__AddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPathplannersPackage.eNS_URI);
+	public static ApogyAddonsMobilityPathplannersPackage init() {
+		if (isInited) return (ApogyAddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPathplannersPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsMobilityPathplannersPackageImpl theSymphony__AddonsMobilityPathplannersPackage = (Symphony__AddonsMobilityPathplannersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsMobilityPathplannersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsMobilityPathplannersPackageImpl());
+		ApogyAddonsMobilityPathplannersPackageImpl theApogyAddonsMobilityPathplannersPackage = (ApogyAddonsMobilityPathplannersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsMobilityPathplannersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsMobilityPathplannersPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsGeometryPathsPackage.eINSTANCE.eClass();
+		ApogyAddonsGeometryPathsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsMobilityPathplannersPackage.createPackageContents();
+		theApogyAddonsMobilityPathplannersPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsMobilityPathplannersPackage.initializePackageContents();
+		theApogyAddonsMobilityPathplannersPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsMobilityPathplannersPackage.freeze();
+		theApogyAddonsMobilityPathplannersPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsMobilityPathplannersPackage.eNS_URI, theSymphony__AddonsMobilityPathplannersPackage);
-		return theSymphony__AddonsMobilityPathplannersPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsMobilityPathplannersPackage.eNS_URI, theApogyAddonsMobilityPathplannersPackage);
+		return theApogyAddonsMobilityPathplannersPackage;
 	}
 
 	/**
@@ -247,8 +247,8 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsMobilityPathplannersFacade() {
-		return symphony__AddonsMobilityPathplannersFacadeEClass;
+	public EClass getApogyAddonsMobilityPathplannersFacade() {
+		return apogy__AddonsMobilityPathplannersFacadeEClass;
 	}
 
 	/**
@@ -256,8 +256,8 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode() {
-		return symphony__AddonsMobilityPathplannersFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode() {
+		return apogy__AddonsMobilityPathplannersFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -265,8 +265,8 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersFactory getSymphony__AddonsMobilityPathplannersFactory() {
-		return (Symphony__AddonsMobilityPathplannersFactory)getEFactoryInstance();
+	public ApogyAddonsMobilityPathplannersFactory getApogyAddonsMobilityPathplannersFactory() {
+		return (ApogyAddonsMobilityPathplannersFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -304,8 +304,8 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 		createEAttribute(circularExclusionZoneEClass, CIRCULAR_EXCLUSION_ZONE__RADIUS);
 		createEAttribute(circularExclusionZoneEClass, CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE);
 
-		symphony__AddonsMobilityPathplannersFacadeEClass = createEClass(SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE);
-		createEOperation(symphony__AddonsMobilityPathplannersFacadeEClass, SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE);
+		apogy__AddonsMobilityPathplannersFacadeEClass = createEClass(APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE);
+		createEOperation(apogy__AddonsMobilityPathplannersFacadeEClass, APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE);
 	}
 
 	/**
@@ -332,81 +332,81 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
-		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
-		Symphony__CommonGeometryDataPackage theSymphony__CommonGeometryDataPackage = (Symphony__CommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryDataPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonProcessorsPackage theApogyCommonProcessorsPackage = (ApogyCommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonProcessorsPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
+		ApogyAddonsGeometryPathsPackage theApogyAddonsGeometryPathsPackage = (ApogyAddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsGeometryPathsPackage.eNS_URI);
+		ApogyCommonGeometryDataPackage theApogyCommonGeometryDataPackage = (ApogyCommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryDataPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter meshWayPointPathPlannerEClass_T = addETypeParameter(meshWayPointPathPlannerEClass, "T");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		EGenericType g1 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		meshWayPointPathPlannerEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
-		EGenericType g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
+		EGenericType g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianCoordinatesSet());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getWayPointPath());
+		g2 = createEGenericType(theApogyAddonsGeometryPathsPackage.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		wayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
 		meshWayPointPathPlannerEClass.getESuperTypes().add(this.getWayPointPathPlanner());
-		exclusionZoneEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		exclusionZoneEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		g1 = createEGenericType(this.getExclusionZone());
 		circularExclusionZoneEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getCoordinatesSamplingShape());
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getCoordinatesSamplingShape());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		circularExclusionZoneEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getPolygonSamplingShape());
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getPolygonSamplingShape());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianTriangle());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianTriangle());
 		g1.getETypeArguments().add(g2);
 		circularExclusionZoneEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wayPointPathPlannerEClass, WayPointPathPlanner.class, "WayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWayPointPathPlanner_CurrentPosition(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentPosition", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWayPointPathPlanner_CurrentDestination(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentDestination", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWayPointPathPlanner_CurrentPosition(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentPosition", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWayPointPathPlanner_CurrentDestination(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentDestination", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getWayPointPathPlanner__Plan__CartesianPositionCoordinates_CartesianPositionCoordinates(), theSymphony__AddonsGeometryPathsPackage.getWayPointPath(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "currentPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "destinationPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theSymphony__CommonProcessorsPackage.getException());
+		EOperation op = initEOperation(getWayPointPathPlanner__Plan__CartesianPositionCoordinates_CartesianPositionCoordinates(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "currentPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "destinationPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCommonProcessorsPackage.getException());
 
 		initEClass(meshWayPointPathPlannerEClass, MeshWayPointPathPlanner.class, "MeshWayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getMesh());
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getMesh());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		g1.getETypeArguments().add(g2);
 		initEReference(getMeshWayPointPathPlanner_Mesh(), g1, null, "mesh", null, 0, 1, MeshWayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exclusionZoneEClass, ExclusionZone.class, "ExclusionZone", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getExclusionZone__IsInside__CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "isInside", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getExclusionZone__Intersects__CartesianPositionCoordinates_CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "intersects", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(circularExclusionZoneEClass, CircularExclusionZone.class, "CircularExclusionZone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCircularExclusionZone_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCircularExclusionZone_InvertSamplingShape(), theEcorePackage.getEBoolean(), "invertSamplingShape", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__AddonsMobilityPathplannersFacadeEClass, Symphony__AddonsMobilityPathplannersFacade.class, "Symphony__AddonsMobilityPathplannersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsMobilityPathplannersFacadeEClass, ApogyAddonsMobilityPathplannersFacade.class, "ApogyAddonsMobilityPathplannersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__AddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getGroupNode(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getGroupNode(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsMobilityPathplannersPackageImpl
+} //ApogyAddonsMobilityPathplannersPackageImpl

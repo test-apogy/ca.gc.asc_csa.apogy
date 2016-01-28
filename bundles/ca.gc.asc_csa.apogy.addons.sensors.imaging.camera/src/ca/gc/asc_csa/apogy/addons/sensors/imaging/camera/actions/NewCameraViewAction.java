@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.camera.actions;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.actions;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,10 +7,10 @@ import java.util.List;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views.CameraView;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;

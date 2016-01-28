@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -14,17 +14,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.AssemblyLinksList#getAssemblyLinks <em>Assembly Links</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.AssemblyLinksList#getAssemblyLinks <em>Assembly Links</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLinksList()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getAssemblyLinksList()
  * @model
  * @generated
  */
 public interface AssemblyLinksList extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Assembly Links</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.AssemblyLink}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.AssemblyLink}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Assembly Links</em>' containment reference
@@ -32,7 +32,7 @@ public interface AssemblyLinksList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assembly Links</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLinksList_AssemblyLinks()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getAssemblyLinksList_AssemblyLinks()
 	 * @model containment="true"
 	 * @generated
 	 */

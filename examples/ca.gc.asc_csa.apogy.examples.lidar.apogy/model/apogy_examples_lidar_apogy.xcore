@@ -1,39 +1,39 @@
-@GenModel(prefix="Symphony__ExamplesLidarSymphony",
+@GenModel(prefix="ApogyExamplesLidarApogy",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
-		  modelName="Symphony__ExamplesLidarSymphony")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.lidar.symphony/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.lidar.symphony.edit/src-generated")
+		  modelName="ApogyExamplesLidarApogy")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.lidar.apogy/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.lidar.apogy.edit/src-generated")
 
-package org.eclipse.symphony.examples.lidar.symphony
+package ca.gc.asc_csa.apogy.examples.lidar.apogy
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter
-import org.eclipse.symphony.core.SymphonyInitializationData
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
 /*
- * This class is the specialized Symphony API adapter, used for connecting
+ * This class is the specialized Apogy API adapter, used for connecting
  * the existing Lidar unit example, located at
- * {@link org.eclipse.symphony.examples.lidar.Lidar},
- * to Symphony; one can override the well-known callback functions to make
- * Symphony perform a variety of useful functions, including initialization,
+ * {@link ca.gc.asc_csa.apogy.examples.lidar.Lidar},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
  * disposal and other features. 
  */
-class LidarSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+class LidarApogySystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*
 	 * For specific implementation details,
-	 * please see {@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarSymphonySystemApiAdapterImpl}
+	 * please see {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarApogySystemApiAdapterImpl}
 	 */
 }
 
 /*
- * This class is specifies the initialization data that Symphony
+ * This class is specifies the initialization data that Apogy
  * should be interested in when (re)initializing the Lidar unit
  * antenna with the API Adapter (which in this case is
- * {@link org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter})
+ * {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter})
  */
-class LidarData extends SymphonyInitializationData
+class LidarData extends ApogyInitializationData
 {
 	/*
 	 * This is the field of view (FOV) for the Lidar unit

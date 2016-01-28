@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__CommonTopologyFacadeImpl.java,v 1.10.2.3 2015/02/03 20:01:30 rlarcheveque Exp $
+ * $Id: ApogyCommonTopologyFacadeImpl.java,v 1.10.2.3 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -20,26 +20,26 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Link;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PickAndPlaceNode;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.ReferencedContentNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.AbstractNodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Link;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PickAndPlaceNode;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -47,13 +47,13 @@ import org.eclipse.symphony.common.topology.TransformNode;
  *
  * @generated
  */
-public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonTopologyFacade {
+public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonTopologyFacade {
 
-	private static Symphony__CommonTopologyFacade instance;
+	private static ApogyCommonTopologyFacade instance;
 
-	public static Symphony__CommonTopologyFacade getInstance() {
+	public static ApogyCommonTopologyFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CommonTopologyFacadeImpl();
+			instance = new ApogyCommonTopologyFacadeImpl();
 		}
 
 		return instance;
@@ -63,7 +63,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyFacadeImpl() {
+	protected ApogyCommonTopologyFacadeImpl() {
 		super();
 	}
 
@@ -73,7 +73,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.SYMPHONY_COMMON_TOPOLOGY_FACADE;
+		return ApogyCommonTopologyPackage.Literals.APOGY_COMMON_TOPOLOGY_FACADE;
 	}
 
 	/**
@@ -91,9 +91,9 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 * @generated_NOT
 	 */
 	public PositionNode createPositionNode(double x, double y, double z) {
-		PositionNode node = Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode();
+		PositionNode node = ApogyCommonTopologyFactory.eINSTANCE.createPositionNode();
 
-		Tuple3d position = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		Tuple3d position = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 
 		node.setPosition(position);
 
@@ -111,11 +111,11 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 */
 	public RotationNode createRotationNodeXYZ(double x, double y, double z) {
 
-		RotationNode node = Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode();
+		RotationNode node = ApogyCommonTopologyFactory.eINSTANCE.createRotationNode();
 
 		Matrix3d rotationMatrix = GeometricUtils.packXYZ(x, y, z);
 
-		Matrix3x3 matrix = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotationMatrix);
+		Matrix3x3 matrix = ApogyCommonMathFacade.INSTANCE.createMatrix3x3(rotationMatrix);
 
 		node.setRotationMatrix(matrix);
 
@@ -158,11 +158,11 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 * @generated_NOT
 	 */
 	public RotationNode createRotationNodeYZX(double x, double y, double z) {
-		RotationNode node = Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode();
+		RotationNode node = ApogyCommonTopologyFactory.eINSTANCE.createRotationNode();
 
 		Matrix3d rotationMatrix = GeometricUtils.packYZX(x, y, z);
 
-		Matrix3x3 matrix = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotationMatrix);
+		Matrix3x3 matrix = ApogyCommonMathFacade.INSTANCE.createMatrix3x3(rotationMatrix);
 
 		node.setRotationMatrix(matrix);
 
@@ -175,11 +175,11 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 * @generated_NOT
 	 */
 	public RotationNode createRotationNodeZYX(double x, double y, double z) {
-		RotationNode node = Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode();
+		RotationNode node = ApogyCommonTopologyFactory.eINSTANCE.createRotationNode();
 
 		Matrix3d rotationMatrix = GeometricUtils.packZYX(x, y, z);
 
-		Matrix3x3 matrix = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotationMatrix);
+		Matrix3x3 matrix = ApogyCommonMathFacade.INSTANCE.createMatrix3x3(rotationMatrix);
 
 		node.setRotationMatrix(matrix);
 
@@ -196,12 +196,12 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 
 		RotationNode rotationNode = createRotationNodeXYZ(rx, ry, rz);
 
-		Tuple3d translation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		Tuple3d translation = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		translation.setX(tx);
 		translation.setY(ty);
 		translation.setZ(tz);
 
-		TransformNode trNode = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode trNode = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
 		trNode.setRotationMatrix(rotationNode.getRotationMatrix());
 		trNode.setPosition(translation);
 
@@ -218,12 +218,12 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 			double tz, double rx, double ry, double rz) {
 		RotationNode rotationNode = createRotationNodeYZX(rx, ry, rz);
 
-		Tuple3d translation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		Tuple3d translation = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		translation.setX(tx);
 		translation.setY(ty);
 		translation.setZ(tz);
 
-		TransformNode trNode = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode trNode = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
 		trNode.setRotationMatrix(rotationNode.getRotationMatrix());
 		trNode.setPosition(translation);
 
@@ -239,12 +239,12 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 			double tz, double rx, double ry, double rz) {
 		RotationNode rotationNode = createRotationNodeZYX(rx, ry, rz);
 
-		Tuple3d translation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		Tuple3d translation = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		translation.setX(tx);
 		translation.setY(ty);
 		translation.setZ(tz);
 
-		TransformNode trNode = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode trNode = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
 		trNode.setRotationMatrix(rotationNode.getRotationMatrix());
 		trNode.setPosition(translation);
 
@@ -258,7 +258,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 */
 	public TransformNode createTransformNode(Matrix4d matrix) {
 
-		TransformNode tn = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode tn = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
 
 		tn.setTransformation(matrix);
 
@@ -272,7 +272,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 */
 	public PickAndPlaceNode createPickAndPlaceNode(Matrix4d matrix) {
 
-		PickAndPlaceNode pnpn = Symphony__CommonTopologyFactory.eINSTANCE
+		PickAndPlaceNode pnpn = ApogyCommonTopologyFactory.eINSTANCE
 				.createPickAndPlaceNode();
 
 		pnpn.setTransformation(matrix);
@@ -299,7 +299,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 * @generated_NOT
 	 */
 	public <T> ReferencedContentNode<T> createReferencedContentNode(T content) {
-		ReferencedContentNode<T> contentNode = Symphony__CommonTopologyFactory.eINSTANCE
+		ReferencedContentNode<T> contentNode = ApogyCommonTopologyFactory.eINSTANCE
 				.createReferencedContentNode();
 		contentNode.setContent(content);
 
@@ -312,7 +312,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 * @generated_NOT
 	 */
 	public <T> AggregateContentNode<T> createAggregateContentNode(T content) {
-		AggregateContentNode<T> contentNode = Symphony__CommonTopologyFactory.eINSTANCE
+		AggregateContentNode<T> contentNode = ApogyCommonTopologyFactory.eINSTANCE
 				.createAggregateContentNode();
 		contentNode.setContent(content);
 
@@ -325,7 +325,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	 * @generated_NOT
 	 */
 	public Link createLink(Node node) {
-		Link link = Symphony__CommonTopologyFactory.eINSTANCE.createLink();
+		Link link = ApogyCommonTopologyFactory.eINSTANCE.createLink();
 		link.setNode(node);
 
 		return link;
@@ -581,51 +581,51 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_LINK__NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_LINK__NODE:
 				return createLink((Node)arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT:
 				return createContentNode(arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT:
 				return createReferencedContentNode(arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT:
 				return createAggregateContentNode(arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE:
 				return createPositionNode((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE:
 				return createRotationNodeXYZ((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE:
 				return createRotationNodeYZX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE:
 				return createRotationNodeZYX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createTransformNodeXYZ((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createTransformNodeYZX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createTransformNodeZYX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D:
 				return createTransformNode((Matrix4d)arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D:
 				return createPickAndPlaceNode((Matrix4d)arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE:
 				return expressNodeInRootFrame((Node)arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE:
 				return expressRootInNodeFrame((Node)arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE:
 				return expressInFrame((Node)arguments.get(0), (Node)arguments.get(1));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE:
 				return findNodesByDescription((String)arguments.get(0), (Node)arguments.get(1));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE:
 				return findNodesByID((String)arguments.get(0), (Node)arguments.get(1));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE:
 				return findNodesByType((EClass)arguments.get(0), (Node)arguments.get(1));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE:
 				return findRoot((Node)arguments.get(0));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE:
 				return getEuclideanDistance((Node)arguments.get(0), (Node)arguments.get(1));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE:
 				return getGeodesicDistance((Node)arguments.get(0), (Node)arguments.get(1));
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE:
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE:
 				printTopology((Node)arguments.get(0));
 				return null;
 		}
@@ -701,7 +701,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 	private Matrix4d computeMatrix(List<Matrix4d> matrices, boolean reverse) {
 		Matrix4d result = new Matrix4d();
 		result.setIdentity();
-		// System.out.println("Symphony__CommonTopologyFacadeImpl.computeMatrix()");
+		// System.out.println("ApogyCommonTopologyFacadeImpl.computeMatrix()");
 
 		while (!matrices.isEmpty()) {
 			Matrix4d matrix = null;
@@ -710,7 +710,7 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 			} else {
 				matrix = matrices.remove(0);
 			}
-			// System.out.println("Symphony__CommonTopologyFacadeImpl.computeMatrix() multiplying "
+			// System.out.println("ApogyCommonTopologyFacadeImpl.computeMatrix() multiplying "
 			// + matrix);
 			result.mul(matrix);
 		}
@@ -718,4 +718,4 @@ public class Symphony__CommonTopologyFacadeImpl extends MinimalEObjectImpl.Conta
 		return result;
 	}
 
-} // Symphony__CommonTopologyFacadeImpl
+} // ApogyCommonTopologyFacadeImpl

@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.impl;
+package ca.gc.asc_csa.apogy.common.io.jinput.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import net.java.games.input.Component;
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.io.jinput.EAxis;
-import org.eclipse.symphony.common.io.jinput.EButton;
-import org.eclipse.symphony.common.io.jinput.EComponents;
-import org.eclipse.symphony.common.io.jinput.EController;
-import org.eclipse.symphony.common.io.jinput.EKey;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EAxis;
+import ca.gc.asc_csa.apogy.common.io.jinput.EButton;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponents;
+import ca.gc.asc_csa.apogy.common.io.jinput.EController;
+import ca.gc.asc_csa.apogy.common.io.jinput.EKey;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,14 +30,14 @@ import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#isLastPollResult <em>Last Poll Result</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getPortNumber <em>Port Number</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getPortType <em>Port Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getPojoController <em>Pojo Controller</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getEComponents <em>EComponents</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getControllerCount <em>Controller Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#isLastPollResult <em>Last Poll Result</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#getPortNumber <em>Port Number</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#getType <em>Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#getPortType <em>Port Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#getPojoController <em>Pojo Controller</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#getEComponents <em>EComponents</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerImpl#getControllerCount <em>Controller Count</em>}</li>
  * </ul>
  *
  * @generated
@@ -180,7 +180,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonIOJInputPackage.Literals.ECONTROLLER;
+		return ApogyCommonIOJInputPackage.Literals.ECONTROLLER;
 	}
 
 	/**
@@ -203,7 +203,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 		boolean oldLastPollResult = lastPollResult;
 		lastPollResult = newLastPollResult;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT, oldLastPollResult, lastPollResult));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT, oldLastPollResult, lastPollResult));
 	}
 
 	/**
@@ -267,7 +267,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 		Controller oldPojoController = pojoController;
 		pojoController = newPojoController;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER, oldPojoController, pojoController));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER, oldPojoController, pojoController));
 	}
 
 	/**
@@ -281,7 +281,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 		{
 			if (pojoController != null)
 			{
-				EComponents ecs = Symphony__CommonIOJInputFactory.eINSTANCE.createEComponents();
+				EComponents ecs = ApogyCommonIOJInputFactory.eINSTANCE.createEComponents();
 				ecs.setName("Components");
 				Component[] componentsList = pojoController.getComponents();
 
@@ -289,19 +289,19 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 				{					
 					if(c.getIdentifier() instanceof Identifier.Button) 
 					{
-						EButton button = Symphony__CommonIOJInputFactory.eINSTANCE.createEButton();						
+						EButton button = ApogyCommonIOJInputFactory.eINSTANCE.createEButton();						
 						button.setPojoComponent(c);
 						ecs.getComponents().add(button);
 					}
 					else if(c.getIdentifier() instanceof Identifier.Axis)
 					{
-						EAxis axis = Symphony__CommonIOJInputFactory.eINSTANCE.createEAxis();
+						EAxis axis = ApogyCommonIOJInputFactory.eINSTANCE.createEAxis();
 						axis.setPojoComponent(c);
 						ecs.getComponents().add(axis);
 					}
 					else if(c.getIdentifier() instanceof Identifier.Key)
 					{
-						EKey key = Symphony__CommonIOJInputFactory.eINSTANCE.createEKey();
+						EKey key = ApogyCommonIOJInputFactory.eINSTANCE.createEKey();
 						key.setPojoComponent(c);
 						ecs.getComponents().add(key);
 					}
@@ -333,7 +333,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 		EComponents oldEComponents = eComponents;
 		eComponents = newEComponents;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, oldEComponents, newEComponents);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, oldEComponents, newEComponents);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -348,14 +348,14 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 		if (newEComponents != eComponents) {
 			NotificationChain msgs = null;
 			if (eComponents != null)
-				msgs = ((InternalEObject)eComponents).eInverseRemove(this, Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER, EComponents.class, msgs);
+				msgs = ((InternalEObject)eComponents).eInverseRemove(this, ApogyCommonIOJInputPackage.ECOMPONENTS__ECONTROLLER, EComponents.class, msgs);
 			if (newEComponents != null)
-				msgs = ((InternalEObject)newEComponents).eInverseAdd(this, Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER, EComponents.class, msgs);
+				msgs = ((InternalEObject)newEComponents).eInverseAdd(this, ApogyCommonIOJInputPackage.ECOMPONENTS__ECONTROLLER, EComponents.class, msgs);
 			msgs = basicSetEComponents(newEComponents, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, newEComponents, newEComponents));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, newEComponents, newEComponents));
 	}
 
 	/**
@@ -377,7 +377,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 		int oldControllerCount = controllerCount;
 		controllerCount = newControllerCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT, oldControllerCount, controllerCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT, oldControllerCount, controllerCount));
 	}
 
 	/**
@@ -400,9 +400,9 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
 				if (eComponents != null)
-					msgs = ((InternalEObject)eComponents).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, null, msgs);
+					msgs = ((InternalEObject)eComponents).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, null, msgs);
 				return basicSetEComponents((EComponents)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -416,7 +416,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
 				return basicSetEComponents(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -430,21 +430,21 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
 				return isLastPollResult();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__NAME:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__NAME:
 				return getName();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__PORT_NUMBER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__PORT_NUMBER:
 				return getPortNumber();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__TYPE:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__TYPE:
 				return getType();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__PORT_TYPE:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__PORT_TYPE:
 				return getPortType();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
 				return getPojoController();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
 				return getEComponents();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
 				return getControllerCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -458,16 +458,16 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
 				setLastPollResult((Boolean)newValue);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
 				setPojoController((Controller)newValue);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
 				setEComponents((EComponents)newValue);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
 				setControllerCount((Integer)newValue);
 				return;
 		}
@@ -482,16 +482,16 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
 				setLastPollResult(LAST_POLL_RESULT_EDEFAULT);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
 				setPojoController(POJO_CONTROLLER_EDEFAULT);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
 				setEComponents((EComponents)null);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
 				setControllerCount(CONTROLLER_COUNT_EDEFAULT);
 				return;
 		}
@@ -506,21 +506,21 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
 				return lastPollResult != LAST_POLL_RESULT_EDEFAULT;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__NAME:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__PORT_NUMBER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__PORT_NUMBER:
 				return getPortNumber() != PORT_NUMBER_EDEFAULT;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__TYPE:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__TYPE:
 				return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT.equals(getType());
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__PORT_TYPE:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__PORT_TYPE:
 				return PORT_TYPE_EDEFAULT == null ? getPortType() != null : !PORT_TYPE_EDEFAULT.equals(getPortType());
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
 				return POJO_CONTROLLER_EDEFAULT == null ? pojoController != null : !POJO_CONTROLLER_EDEFAULT.equals(pojoController);
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
 				return eComponents != null;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
 				return controllerCount != CONTROLLER_COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -534,7 +534,7 @@ public class EControllerImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER___POLL:
+			case ApogyCommonIOJInputPackage.ECONTROLLER___POLL:
 				return poll();
 		}
 		return super.eInvoke(operationID, arguments);

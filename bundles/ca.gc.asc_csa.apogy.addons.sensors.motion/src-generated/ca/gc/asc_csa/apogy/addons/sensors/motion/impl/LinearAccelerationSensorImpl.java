@@ -4,13 +4,13 @@
  *
  * $Id: LinearAccelerationSensorImpl.java,v 1.3.4.2 2015/05/21 15:50:25 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.motion.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionP
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getXAcceleration <em>XAcceleration</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getYAcceleration <em>YAcceleration</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getZAcceleration <em>ZAcceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getXAcceleration <em>XAcceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getYAcceleration <em>YAcceleration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getZAcceleration <em>ZAcceleration</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,7 +104,7 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR;
+		return ApogyAddonsSensorsMotionPackage.Literals.LINEAR_ACCELERATION_SENSOR;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 		double oldXAcceleration = xAcceleration;
 		xAcceleration = newXAcceleration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION, oldXAcceleration, xAcceleration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION, oldXAcceleration, xAcceleration));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 		double oldYAcceleration = yAcceleration;
 		yAcceleration = newYAcceleration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION, oldYAcceleration, yAcceleration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION, oldYAcceleration, yAcceleration));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 		double oldZAcceleration = zAcceleration;
 		zAcceleration = newZAcceleration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION, oldZAcceleration, zAcceleration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION, oldZAcceleration, zAcceleration));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
 				return getXAcceleration();
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
 				return getYAcceleration();
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
 				return getZAcceleration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
 				setXAcceleration((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
 				setYAcceleration((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
 				setZAcceleration((Double)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
 				setXAcceleration(XACCELERATION_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
 				setYAcceleration(YACCELERATION_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
 				setZAcceleration(ZACCELERATION_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class LinearAccelerationSensorImpl extends SelfMotionSensorImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__XACCELERATION:
 				return xAcceleration != XACCELERATION_EDEFAULT;
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__YACCELERATION:
 				return yAcceleration != YACCELERATION_EDEFAULT;
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR__ZACCELERATION:
 				return zAcceleration != ZACCELERATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

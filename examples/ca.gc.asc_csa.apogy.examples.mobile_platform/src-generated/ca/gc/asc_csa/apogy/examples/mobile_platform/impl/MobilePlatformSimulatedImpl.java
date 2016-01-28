@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.impl;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -13,13 +13,13 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.mobile_platform.Activator;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformFactory;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated;
-import org.eclipse.symphony.examples.mobile_platform.Position;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Activator;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -108,7 +108,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM_SIMULATED;
+		return ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM_SIMULATED;
 	}
 	
 	/**
@@ -203,7 +203,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation failed; this will
-			// be caught and handled by Symphony
+			// be caught and handled by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the platform hasn't been disposed yet 
@@ -251,7 +251,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the mobile platform has not been initialized
@@ -263,7 +263,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the error in position can be cleared
@@ -308,7 +308,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the mobile platform has not been initialized
@@ -320,7 +320,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the platform should stop
@@ -372,7 +372,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the mobile platform has not been initialized
@@ -384,7 +384,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"initialized (with init()),";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the platform is initialized and not disposed
@@ -405,7 +405,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 									"in the midst of another moveTo() operation.";
 				
 				// Throw an exception to indicate that the operation has failed; this will
-				// be caught and logged by Symphony
+				// be caught and logged by Apogy
 				throw new RuntimeException(message);
 			}
 			// Otherwise, there is no other moveTo() operation executing
@@ -481,7 +481,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the mobile platform hasn't been initialized
@@ -493,7 +493,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the platform is initialized and not yet disposed
@@ -540,7 +540,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the mobile platform has not been initialized
@@ -552,7 +552,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the platform is initialized and not yet disposed
@@ -608,7 +608,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the mobile platform has not been initialized
@@ -620,7 +620,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the platform is initialized and not yet disposed
@@ -667,7 +667,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"been disposed (with dispose()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the mobile platform has not been initialized
@@ -679,7 +679,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 								"initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the platform is initialized and not yet disposed
@@ -700,7 +700,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 									"in the midst of a moveTo() operation.";
 				
 				// Throw an exception to indicate that the operation has failed; this will
-				// be caught and logged by Symphony
+				// be caught and logged by Apogy
 				throw new RuntimeException(message);
 			}
 			// Otherwise, there is no move operation in progress
@@ -974,7 +974,7 @@ class MobilePlatformSimulatedMoveJob extends Job
 				newRightWheelPos = newRightWheelPos + (DELTA_T * rightWheelAngVel);
 
 				// Create a new position and populate it with new values
-				Position newPosition = Symphony__ExamplesMobilePlatformFactory.eINSTANCE
+				Position newPosition = ApogyExamplesMobilePlatformFactory.eINSTANCE
 						.createPosition();
 				newPosition.setX(newX);
 				newPosition.setY(newY);

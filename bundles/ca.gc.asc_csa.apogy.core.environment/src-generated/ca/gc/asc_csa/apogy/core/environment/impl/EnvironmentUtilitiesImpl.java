@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Calendar;
@@ -17,9 +17,9 @@ import java.util.TreeSet;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,7 +64,7 @@ public class EnvironmentUtilitiesImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.ENVIRONMENT_UTILITIES;
+		return ApogyCoreEnvironmentPackage.Literals.ENVIRONMENT_UTILITIES;
 	}
 
   /**
@@ -183,18 +183,18 @@ public class EnvironmentUtilitiesImpl extends MinimalEObjectImpl.Container imple
   {
     switch (operationID)
     {
-      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___CONVERT_TO_JULIAN_DATE__DATE:
+      case ApogyCoreEnvironmentPackage.ENVIRONMENT_UTILITIES___CONVERT_TO_JULIAN_DATE__DATE:
         return convertToJulianDate((Date)arguments.get(0));
-      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_RIGHT_ASCENSION__STRING:
+      case ApogyCoreEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_RIGHT_ASCENSION__STRING:
         try {
 			return parseRightAscension((String)arguments.get(0));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_DEG_MIN_SEC__STRING:
+      case ApogyCoreEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_DEG_MIN_SEC__STRING:
         return parseDegMinSec((String)arguments.get(0));
-      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST:
+      case ApogyCoreEnvironmentPackage.ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST:
         return sortByMagnitude((List<Star>)arguments.get(0));
     }
     return super.eInvoke(operationID, arguments);

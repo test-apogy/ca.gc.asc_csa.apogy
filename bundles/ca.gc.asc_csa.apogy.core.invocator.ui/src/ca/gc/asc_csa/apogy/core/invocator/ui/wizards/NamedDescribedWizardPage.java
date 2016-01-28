@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -9,14 +9,14 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.ui.composites.DescribedComposite;
-import org.eclipse.symphony.common.emf.ui.composites.NamedComposite;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.DescribedComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.NamedComposite;
 
 public class NamedDescribedWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.NamedDescribedWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NamedDescribedWizardPage";
 	private NamedComposite namedComposite;
 	private DescribedComposite describedComposite;
 	private Adapter adapter; 

@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,29 +22,29 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getSimulationProperties <em>Simulation Properties</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometry <em>Geometry</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getTransform <em>Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getMaterial <em>Material</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getSimulationProperties <em>Simulation Properties</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometry <em>Geometry</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getTransform <em>Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getMaterial <em>Material</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCollisionGeometry()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getCollisionGeometry()
  * @model
  * @generated
  */
 public interface CollisionGeometry extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Simulation Properties</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Simulation specific collision geometry properties.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Simulation Properties</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCollisionGeometry_SimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getCollisionGeometry_SimulationProperties()
 	 * @model
 	 * @generated
 	 */
@@ -59,14 +59,14 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Geometry</em>' containment reference.
 	 * @see #setGeometry(Geometry)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Geometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Geometry()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Geometry getGeometry();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometry <em>Geometry</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometry <em>Geometry</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Geometry</em>' containment reference.
@@ -84,14 +84,14 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transform</em>' containment reference.
 	 * @see #setTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Transform()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Transform()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Matrix4x4 getTransform();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getTransform <em>Transform</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getTransform <em>Transform</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transform</em>' containment reference.
@@ -109,14 +109,14 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Material</em>' reference.
 	 * @see #setMaterial(AbstractMaterial)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Material()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Material()
 	 * @model
 	 * @generated
 	 */
 	AbstractMaterial getMaterial();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getMaterial <em>Material</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getMaterial <em>Material</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Material</em>' reference.
@@ -134,14 +134,14 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Description()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getCollisionGeometry_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -159,14 +159,14 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Geometry Id</em>' attribute.
 	 * @see #setGeometryId(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCollisionGeometry_GeometryId()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getCollisionGeometry_GeometryId()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getGeometryId();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Geometry Id</em>' attribute.

@@ -1,24 +1,24 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.core.programs.controllers.ui;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.programs.controllers.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.core.programs.controllers.ui.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.symphony.core.programs.controllers,
+ ca.gc.asc_csa.apogy.core.programs.controllers,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
  org.eclipse.core.databinding;bundle-version="1.4.1",
- org.eclipse.symphony.common.ui,
- org.eclipse.symphony.common.emf.ui,
- org.eclipse.symphony.common.log;bundle-version="0.3.0",
+ ca.gc.asc_csa.apogy.common.ui,
+ ca.gc.asc_csa.apogy.common.emf.ui,
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
  org.jfree.jfreechart;bundle-version="1.0.13"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.symphony.core.programs.controllers.ui,
- org.eclipse.symphony.core.programs.controllers.ui.commands,
- org.eclipse.symphony.core.programs.controllers.ui.composite,
- org.eclipse.symphony.core.programs.controllers.ui.properties.sections
+Export-Package: ca.gc.asc_csa.apogy.core.programs.controllers.ui,
+ ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands,
+ ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite,
+ ca.gc.asc_csa.apogy.core.programs.controllers.ui.properties.sections
 Bundle-Localization: plugin
 

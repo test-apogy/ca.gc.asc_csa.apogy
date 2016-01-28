@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,12 +17,12 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Map#getTransformation <em>Transformation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Map#getLayers <em>Layers</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Map#getMapNode <em>Map Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Map#getTransformation <em>Transformation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Map#getLayers <em>Layers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Map#getMapNode <em>Map Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMap()
  * @model
  * @generated
  */
@@ -38,14 +38,14 @@ public interface Map extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transformation</em>' containment reference.
 	 * @see #setTransformation(Matrix4x4)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap_Transformation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMap_Transformation()
 	 * @model containment="true"
 	 * @generated
 	 */
   Matrix4x4 getTransformation();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.Map#getTransformation <em>Transformation</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.Map#getTransformation <em>Transformation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transformation</em>' containment reference.
@@ -56,8 +56,8 @@ public interface Map extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Layers</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.AbstractMapLayer}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.AbstractMapLayer#getMap <em>Map</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getMap <em>Map</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Layers</em>' containment reference list isn't clear,
@@ -65,8 +65,8 @@ public interface Map extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Layers</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap_Layers()
-	 * @see org.eclipse.symphony.core.environment.AbstractMapLayer#getMap
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMap_Layers()
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getMap
 	 * @model opposite="map" containment="true"
 	 * @generated
 	 */
@@ -81,7 +81,7 @@ public interface Map extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap_MapNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMap_MapNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

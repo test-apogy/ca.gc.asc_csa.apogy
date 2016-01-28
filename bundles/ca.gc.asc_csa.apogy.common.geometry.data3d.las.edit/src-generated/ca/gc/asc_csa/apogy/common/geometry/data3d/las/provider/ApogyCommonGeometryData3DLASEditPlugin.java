@@ -1,26 +1,26 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonGeometryData3DLAS edit plugin.
+ * This is the central singleton for the ApogyCommonGeometryData3DLAS edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonGeometryData3DLASEditPlugin extends EMFPlugin {
+public final class ApogyCommonGeometryData3DLASEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonGeometryData3DLASEditPlugin INSTANCE = new Symphony__CommonGeometryData3DLASEditPlugin();
+	public static final ApogyCommonGeometryData3DLASEditPlugin INSTANCE = new ApogyCommonGeometryData3DLASEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -36,7 +36,7 @@ public final class Symphony__CommonGeometryData3DLASEditPlugin extends EMFPlugin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASEditPlugin() {
+	public ApogyCommonGeometryData3DLASEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

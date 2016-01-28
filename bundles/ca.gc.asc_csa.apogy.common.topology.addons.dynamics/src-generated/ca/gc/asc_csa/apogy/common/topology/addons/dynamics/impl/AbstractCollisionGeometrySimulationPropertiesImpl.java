@@ -4,12 +4,12 @@
  *
  * $Id: AbstractCollisionGeometrySimulationPropertiesImpl.java,v 1.5.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class AbstractCollisionGeometrySimulationPropertiesImpl extends 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_COLLISION_GEOMETRY_SIMULATION_PROPERTIES;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_COLLISION_GEOMETRY_SIMULATION_PROPERTIES;
 	}
 
 } //AbstractCollisionGeometrySimulationPropertiesImpl

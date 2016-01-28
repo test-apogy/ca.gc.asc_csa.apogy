@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.util.Collection;
 
@@ -13,15 +13,15 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.impl.ProgramImpl;
-import org.eclipse.symphony.core.programs.controllers.ControllersConfiguration;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,8 +31,8 @@ import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBin
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllersConfigurationImpl#getOperationCalls <em>Operation Calls</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllersConfigurationImpl#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl#getOperationCalls <em>Operation Calls</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,7 +87,7 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLERS_CONFIGURATION;
+		return ApogyCoreProgramsControllersPackage.Literals.CONTROLLERS_CONFIGURATION;
 	}
 
   /**
@@ -98,7 +98,7 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   public EList<OperationCall> getOperationCalls()
   {
 		if (operationCalls == null) {
-			operationCalls = new EObjectContainmentWithInverseEList<OperationCall>(OperationCall.class, this, Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS, Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER);
+			operationCalls = new EObjectContainmentWithInverseEList<OperationCall>(OperationCall.class, this, ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS, ApogyCoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER);
 		}
 		return operationCalls;
 	}
@@ -160,7 +160,7 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE, oldActive, active));
 	}
 
   /**
@@ -173,7 +173,7 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperationCalls()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -188,7 +188,7 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return ((InternalEList<?>)getOperationCalls()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -203,9 +203,9 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return getOperationCalls();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
 				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -221,11 +221,11 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				getOperationCalls().clear();
 				getOperationCalls().addAll((Collection<? extends OperationCall>)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
 		}
@@ -241,10 +241,10 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				getOperationCalls().clear();
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
 		}
@@ -260,9 +260,9 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				return operationCalls != null && !operationCalls.isEmpty();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -278,7 +278,7 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   {
 		if (baseClass == OperationCallContainer.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS: return Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS;
+				case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS: return ApogyCoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS;
 				default: return -1;
 			}
 		}
@@ -295,7 +295,7 @@ public class ControllersConfigurationImpl extends ProgramImpl implements Control
   {
 		if (baseClass == OperationCallContainer.class) {
 			switch (baseFeatureID) {
-				case Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS: return Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS;
+				case ApogyCoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS: return ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS;
 				default: return -1;
 			}
 		}

@@ -3,7 +3,7 @@
  *
  * $Id: DistanceAndRoverFootprintCostFunctionImpl.java,v 1.2.4.2 2015/05/21 15:50:20 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -14,13 +14,13 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,9 +30,9 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl#getRoverFootPrintRadius <em>Rover Foot Print Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl#getMaximumRoughness <em>Maximum Roughness</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl#getMaximumCrossSlope <em>Maximum Cross Slope</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl#getRoverFootPrintRadius <em>Rover Foot Print Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl#getMaximumRoughness <em>Maximum Roughness</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl#getMaximumCrossSlope <em>Maximum Cross Slope</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,7 +121,7 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION;
+		return ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION;
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 		double oldRoverFootPrintRadius = roverFootPrintRadius;
 		roverFootPrintRadius = newRoverFootPrintRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS, oldRoverFootPrintRadius, roverFootPrintRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS, oldRoverFootPrintRadius, roverFootPrintRadius));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 		double oldMaximumRoughness = maximumRoughness;
 		maximumRoughness = newMaximumRoughness;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS, oldMaximumRoughness, maximumRoughness));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS, oldMaximumRoughness, maximumRoughness));
 	}
 
 	/**
@@ -190,7 +190,7 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 		double oldMaximumCrossSlope = maximumCrossSlope;
 		maximumCrossSlope = newMaximumCrossSlope;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE, oldMaximumCrossSlope, maximumCrossSlope));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE, oldMaximumCrossSlope, maximumCrossSlope));
 	}
 
 	/**
@@ -202,11 +202,11 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
 				return getRoverFootPrintRadius();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
 				return getMaximumRoughness();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
 				return getMaximumCrossSlope();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -221,13 +221,13 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
 				setRoverFootPrintRadius((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
 				setMaximumRoughness((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
 				setMaximumCrossSlope((Double)newValue);
 				return;
 		}
@@ -243,13 +243,13 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
 				setRoverFootPrintRadius(ROVER_FOOT_PRINT_RADIUS_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
 				setMaximumRoughness(MAXIMUM_ROUGHNESS_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
 				setMaximumCrossSlope(MAXIMUM_CROSS_SLOPE_EDEFAULT);
 				return;
 		}
@@ -265,11 +265,11 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
 				return roverFootPrintRadius != ROVER_FOOT_PRINT_RADIUS_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
 				return maximumRoughness != MAXIMUM_ROUGHNESS_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
 				return maximumCrossSlope != MAXIMUM_CROSS_SLOPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.Startable#isStarted <em>Started</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.Startable#isStarted <em>Started</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getStartable()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getStartable()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface Startable extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Started</em>' attribute.
 	 * @see #setStarted(boolean)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getStartable_Started()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getStartable_Started()
 	 * @model default="false" unique="false" transient="true"
 	 * @generated
 	 */
 	boolean isStarted();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.Startable#isStarted <em>Started</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.Startable#isStarted <em>Started</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Started</em>' attribute.

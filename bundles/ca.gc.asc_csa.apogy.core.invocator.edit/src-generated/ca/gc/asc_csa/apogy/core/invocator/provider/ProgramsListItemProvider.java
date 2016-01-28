@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ProgramsList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class ProgramsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class ProgramsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProgramsList.class)) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,8 +156,8 @@ public class ProgramsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallsList()));
+				(ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallsList()));
 	}
 
   /**

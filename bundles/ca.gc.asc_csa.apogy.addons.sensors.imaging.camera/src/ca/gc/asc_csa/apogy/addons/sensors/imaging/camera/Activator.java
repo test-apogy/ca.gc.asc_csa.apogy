@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import java.net.URL;
 
@@ -12,7 +12,7 @@ public class Activator implements BundleActivator
 {
 	private static BundleContext context;
 	
-	public static final String ID = "org.eclipse.symphony.addons.sensors.imaging.camera";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.imaging.camera";
 	
 	// The shared instance
 	private static Activator plugin;	

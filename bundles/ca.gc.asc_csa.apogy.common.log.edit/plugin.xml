@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated utils_log -->
       <factory
-            uri="org.eclipse.symphony.common.log"
-            class="org.eclipse.symphony.common.log.provider.Symphony__CommonLogItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.common.log"
+            class="ca.gc.asc_csa.apogy.common.log.provider.ApogyCommonLogItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

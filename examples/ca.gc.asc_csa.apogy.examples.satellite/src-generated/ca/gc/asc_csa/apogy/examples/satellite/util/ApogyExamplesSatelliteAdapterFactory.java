@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.util;
+package ca.gc.asc_csa.apogy.examples.satellite.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,32 +10,32 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.examples.satellite.*;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.examples.satellite.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage
  * @generated
  */
-public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
+public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__ExamplesSatellitePackage modelPackage;
+	protected static ApogyExamplesSatellitePackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -43,9 +43,9 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteAdapterFactory() {
+	public ApogyExamplesSatelliteAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesSatellitePackage.eINSTANCE;
+			modelPackage = ApogyExamplesSatellitePackage.eINSTANCE;
 		}
 	}
 
@@ -74,8 +74,8 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__ExamplesSatelliteSwitch<Adapter> modelSwitch =
-		new Symphony__ExamplesSatelliteSwitch<Adapter>() {
+	protected ApogyExamplesSatelliteSwitch<Adapter> modelSwitch =
+		new ApogyExamplesSatelliteSwitch<Adapter>() {
 			@Override
 			public Adapter caseAbstractConstellation(AbstractConstellation object) {
 				return createAbstractConstellationAdapter();
@@ -189,13 +189,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation
 	 * @generated
 	 */
 	public Adapter createAbstractConstellationAdapter() {
@@ -203,13 +203,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan <em>Constellation Command Plan</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan <em>Constellation Command Plan</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlan
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan
 	 * @generated
 	 */
 	public Adapter createConstellationCommandPlanAdapter() {
@@ -217,13 +217,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem <em>Constellation Command Plan Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem <em>Constellation Command Plan Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem
 	 * @generated
 	 */
 	public Adapter createConstellationCommandPlanItemAdapter() {
@@ -231,13 +231,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.DefaultConstellation <em>Default Constellation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation <em>Default Constellation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.DefaultConstellation
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation
 	 * @generated
 	 */
 	public Adapter createDefaultConstellationAdapter() {
@@ -245,13 +245,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList <em>Constellation Requests List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestsList
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList
 	 * @generated
 	 */
 	public Adapter createConstellationRequestsListAdapter() {
@@ -259,13 +259,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest <em>Abstract Constellation Request</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest <em>Abstract Constellation Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest
 	 * @generated
 	 */
 	public Adapter createAbstractConstellationRequestAdapter() {
@@ -273,13 +273,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest <em>Image Constellation Request</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest <em>Image Constellation Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ImageConstellationRequest
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest
 	 * @generated
 	 */
 	public Adapter createImageConstellationRequestAdapter() {
@@ -287,13 +287,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatellitesList <em>Satellites List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.SatellitesList <em>Satellites List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatellitesList
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.SatellitesList
 	 * @generated
 	 */
 	public Adapter createSatellitesListAdapter() {
@@ -301,13 +301,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.Satellite <em>Satellite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.Satellite <em>Satellite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.Satellite
 	 * @generated
 	 */
 	public Adapter createSatelliteAdapter() {
@@ -315,13 +315,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand <em>Abstract Satellite Command</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand <em>Abstract Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand
 	 * @generated
 	 */
 	public Adapter createAbstractSatelliteCommandAdapter() {
@@ -329,13 +329,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand
 	 * @generated
 	 */
 	public Adapter createAcquireImageSatelliteCommandAdapter() {
@@ -343,13 +343,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.OrbitalImage <em>Orbital Image</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage <em>Orbital Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage
 	 * @generated
 	 */
 	public Adapter createOrbitalImageAdapter() {
@@ -357,13 +357,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlinksList
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList
 	 * @generated
 	 */
 	public Adapter createConstellationDownlinksListAdapter() {
@@ -371,13 +371,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlink <em>Constellation Downlink</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink <em>Constellation Downlink</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlink
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink
 	 * @generated
 	 */
 	public Adapter createConstellationDownlinkAdapter() {
@@ -385,13 +385,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem <em>Abstract Constellation Downlink Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem <em>Abstract Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem
 	 * @generated
 	 */
 	public Adapter createAbstractConstellationDownlinkItemAdapter() {
@@ -399,13 +399,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem <em>Orbital Image Constellation Downlink Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem <em>Orbital Image Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem
 	 * @generated
 	 */
 	public Adapter createOrbitalImageConstellationDownlinkItemAdapter() {
@@ -413,13 +413,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationUtilities <em>Constellation Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities <em>Constellation Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ConstellationUtilities
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities
 	 * @generated
 	 */
 	public Adapter createConstellationUtilitiesAdapter() {
@@ -427,13 +427,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.GeographicCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
 	 * @generated
 	 */
 	public Adapter createGeographicCoordinatesAdapter() {
@@ -441,13 +441,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {
@@ -455,13 +455,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Timed
+	 * @see ca.gc.asc_csa.apogy.common.emf.Timed
 	 * @generated
 	 */
 	public Adapter createTimedAdapter() {
@@ -469,13 +469,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.AbstractEImage <em>Abstract EImage</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.AbstractEImage <em>Abstract EImage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.AbstractEImage
+	 * @see ca.gc.asc_csa.apogy.common.images.AbstractEImage
 	 * @generated
 	 */
 	public Adapter createAbstractEImageAdapter() {
@@ -483,13 +483,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.EImage <em>EImage</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.images.EImage <em>EImage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.images.EImage
+	 * @see ca.gc.asc_csa.apogy.common.images.EImage
 	 * @generated
 	 */
 	public Adapter createEImageAdapter() {
@@ -497,13 +497,13 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
@@ -522,4 +522,4 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 		return null;
 	}
 
-} //Symphony__ExamplesSatelliteAdapterFactory
+} //ApogyExamplesSatelliteAdapterFactory

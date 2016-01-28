@@ -3,15 +3,15 @@
  *
  * $Id: CSVDataLoggerImpl.java,v 1.4.4.2 2015/05/21 15:51:31 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import java.io.IOException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.pose.CSVDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.CSVDataLogger;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
 
 import com.csvreader.CsvWriter;
 
@@ -38,7 +38,7 @@ public class CSVDataLoggerImpl extends PoseDataLoggerImpl implements CSVDataLogg
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPosePackage.Literals.CSV_DATA_LOGGER;
+		return ApogyAddonsSensorsPosePackage.Literals.CSV_DATA_LOGGER;
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class CSVDataLoggerImpl extends PoseDataLoggerImpl implements CSVDataLogg
 		outputFile = newOutputFile;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Symphony__AddonsSensorsPosePackage.CSV_DATA_LOGGER__OUTPUT_FILE, oldOutputFile,
+					ApogyAddonsSensorsPosePackage.CSV_DATA_LOGGER__OUTPUT_FILE, oldOutputFile,
 					outputFile));
 
 		if (csvWriter != null) {

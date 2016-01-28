@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.io.File;
 import java.util.Collections;
@@ -11,15 +11,15 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -87,7 +87,7 @@ public class DigitalElevationMapMesherTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher());
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class DigitalElevationMapMesherTest extends TestCase {
 		int xDimension = 60;
 		int yDimension = 30;
 		
-		DigitalElevationMap input = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();		
+		DigitalElevationMap input = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();		
 		input.setXDimension(xDimension);
 		input.setYDimension(yDimension);
 					
@@ -117,7 +117,7 @@ public class DigitalElevationMapMesherTest extends TestCase {
 			{
 				double y = j;
 				double z = 10 * Math.sin(y / 5);
-				CartesianPositionCoordinates p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+				CartesianPositionCoordinates p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
 				input.getPoints().add(p);							
 			}
 		}
@@ -134,8 +134,8 @@ public class DigitalElevationMapMesherTest extends TestCase {
 			 
 			// Saves the result.
 			System.out.println("Saving results...");
-			TransformNode root = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);			
-			ContentNode<CartesianTriangularMesh> meshNode = Symphony__CommonTopologyFacade.INSTANCE.createContentNode(output);
+			TransformNode root = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);			
+			ContentNode<CartesianTriangularMesh> meshNode = ApogyCommonTopologyFacade.INSTANCE.createContentNode(output);
 			root.getChildren().add(meshNode);
 			
 			Resource resource = null;

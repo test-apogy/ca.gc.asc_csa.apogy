@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.impl;
+package ca.gc.asc_csa.apogy.addons.actuators.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,12 +10,12 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.ActuatorStatus;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsFactory;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator;
+import ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsFactory;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implements Symphony__AddonsActuatorsPackage
+public class ApogyAddonsActuatorsPackageImpl extends EPackageImpl implements ApogyAddonsActuatorsPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -57,13 +57,13 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__AddonsActuatorsPackageImpl()
+  private ApogyAddonsActuatorsPackageImpl()
   {
-		super(eNS_URI, Symphony__AddonsActuatorsFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsActuatorsFactory.eINSTANCE);
 	}
 
   /**
@@ -76,7 +76,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsActuatorsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsActuatorsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -85,31 +85,31 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__AddonsActuatorsPackage init()
+  public static ApogyAddonsActuatorsPackage init()
   {
-		if (isInited) return (Symphony__AddonsActuatorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsActuatorsPackage.eNS_URI);
+		if (isInited) return (ApogyAddonsActuatorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsActuatorsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsActuatorsPackageImpl theSymphony__AddonsActuatorsPackage = (Symphony__AddonsActuatorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsActuatorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsActuatorsPackageImpl());
+		ApogyAddonsActuatorsPackageImpl theApogyAddonsActuatorsPackage = (ApogyAddonsActuatorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsActuatorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsActuatorsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsActuatorsPackage.createPackageContents();
+		theApogyAddonsActuatorsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsActuatorsPackage.initializePackageContents();
+		theApogyAddonsActuatorsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsActuatorsPackage.freeze();
+		theApogyAddonsActuatorsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsActuatorsPackage.eNS_URI, theSymphony__AddonsActuatorsPackage);
-		return theSymphony__AddonsActuatorsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsActuatorsPackage.eNS_URI, theApogyAddonsActuatorsPackage);
+		return theApogyAddonsActuatorsPackage;
 	}
 
   /**
@@ -317,8 +317,8 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsActuatorsFactory getSymphony__AddonsActuatorsFactory() {
-		return (Symphony__AddonsActuatorsFactory)getEFactoryInstance();
+	public ApogyAddonsActuatorsFactory getApogyAddonsActuatorsFactory() {
+		return (ApogyAddonsActuatorsFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -391,7 +391,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -399,7 +399,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		abstractActuatorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		abstractActuatorEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		panTiltUnitEClass.getESuperTypes().add(this.getAbstractActuator());
 
 		// Initialize classes, features, and operations; add parameters
@@ -471,16 +471,16 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsActuators",
+			 "prefix", "ApogyAddonsActuators",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
-			 "modelName", "Symphony__AddonsActuators",
+			 "modelName", "ApogyAddonsActuators",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.actuators/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.actuators.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.actuators/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.actuators.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons"
 		   });	
 		addAnnotation
 		  (getAbstractActuator_Moving(), 
@@ -507,28 +507,28 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Return the maximum pan angle.\n@return The maximum pan angle,in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__GetMinimumPanAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the minimum pan angle.\n@return The minimum pan angle,in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__GetMaximumTiltAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the maximum tilt angle.\n@return The maximum tilt angle,in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__GetMinimumTiltAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the minimum tilt angle.\n@return The minimum tilt angle,in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveToPanTilt__double_double(), 
@@ -540,13 +540,13 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveToPanTilt__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getPanTiltUnit__MoveToPanTilt__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveToPan__double(), 
@@ -558,7 +558,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveToPan__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveToTilt__double(), 
@@ -570,7 +570,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveToTilt__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveByPanTilt__double_double(), 
@@ -582,13 +582,13 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveByPanTilt__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getPanTiltUnit__MoveByPanTilt__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveByPan__double(), 
@@ -600,7 +600,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveByPan__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveByTilt__double(), 
@@ -612,7 +612,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveByTilt__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__StopMotion(), 
@@ -629,7 +629,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit_CurrentTiltAngle(), 
@@ -640,7 +640,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit_CommandedPanAngle(), 
@@ -651,7 +651,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit_CommandedTiltAngle(), 
@@ -662,8 +662,8 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });
 	}
 
-} //Symphony__AddonsActuatorsPackageImpl
+} //ApogyAddonsActuatorsPackageImpl

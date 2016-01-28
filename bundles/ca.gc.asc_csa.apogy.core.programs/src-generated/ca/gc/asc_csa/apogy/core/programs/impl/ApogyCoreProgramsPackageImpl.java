@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.impl;
+package ca.gc.asc_csa.apogy.core.programs.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,13 +10,13 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.programs.AbstractProgramRuntime;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsFactory;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade;
-import org.eclipse.symphony.core.programs.TimeInterval;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFactory;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade;
+import ca.gc.asc_csa.apogy.core.programs.TimeInterval;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.programs.TimeInterval;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements Symphony__CoreProgramsPackage {
+public class ApogyCoreProgramsPackageImpl extends EPackageImpl implements ApogyCoreProgramsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +36,7 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CoreProgramsFacadeEClass = null;
+	private EClass apogy__CoreProgramsFacadeEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,12 +55,12 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CoreProgramsPackageImpl() {
-		super(eNS_URI, Symphony__CoreProgramsFactory.eINSTANCE);
+	private ApogyCoreProgramsPackageImpl() {
+		super(eNS_URI, ApogyCoreProgramsFactory.eINSTANCE);
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CoreProgramsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCoreProgramsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,30 +82,30 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CoreProgramsPackage init() {
-		if (isInited) return (Symphony__CoreProgramsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreProgramsPackage.eNS_URI);
+	public static ApogyCoreProgramsPackage init() {
+		if (isInited) return (ApogyCoreProgramsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreProgramsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CoreProgramsPackageImpl theSymphony__CoreProgramsPackage = (Symphony__CoreProgramsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CoreProgramsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CoreProgramsPackageImpl());
+		ApogyCoreProgramsPackageImpl theApogyCoreProgramsPackage = (ApogyCoreProgramsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCoreProgramsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCoreProgramsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CoreInvocatorPackage.eINSTANCE.eClass();
+		ApogyCoreInvocatorPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CoreProgramsPackage.createPackageContents();
+		theApogyCoreProgramsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CoreProgramsPackage.initializePackageContents();
+		theApogyCoreProgramsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CoreProgramsPackage.freeze();
+		theApogyCoreProgramsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CoreProgramsPackage.eNS_URI, theSymphony__CoreProgramsPackage);
-		return theSymphony__CoreProgramsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCoreProgramsPackage.eNS_URI, theApogyCoreProgramsPackage);
+		return theApogyCoreProgramsPackage;
 	}
 
 	/**
@@ -185,8 +185,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CoreProgramsFacade() {
-		return symphony__CoreProgramsFacadeEClass;
+	public EClass getApogyCoreProgramsFacade() {
+		return apogy__CoreProgramsFacadeEClass;
 	}
 
 	/**
@@ -194,8 +194,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSymphony__CoreProgramsFacade_Session() {
-		return (EReference)symphony__CoreProgramsFacadeEClass.getEStructuralFeatures().get(0);
+	public EReference getApogyCoreProgramsFacade_Session() {
+		return (EReference)apogy__CoreProgramsFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -203,8 +203,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSymphony__CoreProgramsFacade_Variables() {
-		return (EReference)symphony__CoreProgramsFacadeEClass.getEStructuralFeatures().get(1);
+	public EReference getApogyCoreProgramsFacade_Variables() {
+		return (EReference)apogy__CoreProgramsFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -212,8 +212,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreProgramsFacade__Exec__OperationCall() {
-		return symphony__CoreProgramsFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCoreProgramsFacade__Exec__OperationCall() {
+		return apogy__CoreProgramsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -257,8 +257,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsFactory getSymphony__CoreProgramsFactory() {
-		return (Symphony__CoreProgramsFactory)getEFactoryInstance();
+	public ApogyCoreProgramsFactory getApogyCoreProgramsFactory() {
+		return (ApogyCoreProgramsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -289,10 +289,10 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_OVER);
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN);
 
-		symphony__CoreProgramsFacadeEClass = createEClass(SYMPHONY_CORE_PROGRAMS_FACADE);
-		createEReference(symphony__CoreProgramsFacadeEClass, SYMPHONY_CORE_PROGRAMS_FACADE__SESSION);
-		createEReference(symphony__CoreProgramsFacadeEClass, SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES);
-		createEOperation(symphony__CoreProgramsFacadeEClass, SYMPHONY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL);
+		apogy__CoreProgramsFacadeEClass = createEClass(APOGY_CORE_PROGRAMS_FACADE);
+		createEReference(apogy__CoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__SESSION);
+		createEReference(apogy__CoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE__VARIABLES);
+		createEOperation(apogy__CoreProgramsFacadeEClass, APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL);
 
 		timeIntervalEClass = createEClass(TIME_INTERVAL);
 		createEAttribute(timeIntervalEClass, TIME_INTERVAL__START_TIME);
@@ -324,9 +324,9 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -336,7 +336,7 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractProgramRuntimeEClass, AbstractProgramRuntime.class, "AbstractProgramRuntime", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractProgramRuntime_Program(), theSymphony__CoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, AbstractProgramRuntime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractProgramRuntime_Program(), theApogyCoreInvocatorPackage.getProgram(), null, "program", null, 0, 1, AbstractProgramRuntime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getAbstractProgramRuntime__Resume(), null, "resume", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -350,13 +350,13 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 
 		initEOperation(getAbstractProgramRuntime__StepReturn(), null, "stepReturn", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(symphony__CoreProgramsFacadeEClass, Symphony__CoreProgramsFacade.class, "Symphony__CoreProgramsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSymphony__CoreProgramsFacade_Session(), theSymphony__CoreInvocatorPackage.getInvocatorSession(), null, "session", null, 0, 1, Symphony__CoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSymphony__CoreProgramsFacade_Variables(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variables", null, 0, -1, Symphony__CoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(apogy__CoreProgramsFacadeEClass, ApogyCoreProgramsFacade.class, "ApogyCoreProgramsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getApogyCoreProgramsFacade_Session(), theApogyCoreInvocatorPackage.getInvocatorSession(), null, "session", null, 0, 1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApogyCoreProgramsFacade_Variables(), theApogyCoreInvocatorPackage.getVariable(), null, "variables", null, 0, -1, ApogyCoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getSymphony__CoreProgramsFacade__Exec__OperationCall(), theEcorePackage.getEJavaObject(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theSymphony__CommonEMFPackage.getException());
+		EOperation op = initEOperation(getApogyCoreProgramsFacade__Exec__OperationCall(), theEcorePackage.getEJavaObject(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theApogyCommonEMFPackage.getException());
 
 		initEClass(timeIntervalEClass, TimeInterval.class, "TimeInterval", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimeInterval_StartTime(), theEcorePackage.getELong(), "startTime", null, 0, 1, TimeInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -367,4 +367,4 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CoreProgramsPackageImpl
+} //ApogyCoreProgramsPackageImpl

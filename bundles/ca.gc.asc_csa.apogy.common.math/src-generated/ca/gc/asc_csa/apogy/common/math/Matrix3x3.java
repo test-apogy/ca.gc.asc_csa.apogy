@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import javax.vecmath.Matrix3d;
 
@@ -16,18 +16,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM00 <em>M00</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM01 <em>M01</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM02 <em>M02</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM10 <em>M10</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM11 <em>M11</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM12 <em>M12</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM20 <em>M20</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM21 <em>M21</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM22 <em>M22</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM00 <em>M00</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM01 <em>M01</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM02 <em>M02</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM10 <em>M10</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM11 <em>M11</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM12 <em>M12</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM20 <em>M20</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM21 <em>M21</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM22 <em>M22</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3()
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3()
  * @model
  * @generated
  */
@@ -43,14 +43,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M00</em>' attribute.
 	 * @see #setM00(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M00()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M00()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getM00();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM00 <em>M00</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM00 <em>M00</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M00</em>' attribute.
@@ -69,14 +69,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M01</em>' attribute.
 	 * @see #setM01(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M01()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M01()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM01();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM01 <em>M01</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM01 <em>M01</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M01</em>' attribute.
@@ -95,14 +95,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M02</em>' attribute.
 	 * @see #setM02(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M02()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M02()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM02();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM02 <em>M02</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM02 <em>M02</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M02</em>' attribute.
@@ -121,14 +121,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M10</em>' attribute.
 	 * @see #setM10(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M10()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M10()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM10();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM10 <em>M10</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM10 <em>M10</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M10</em>' attribute.
@@ -148,14 +148,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M11</em>' attribute.
 	 * @see #setM11(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M11()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M11()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getM11();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM11 <em>M11</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM11 <em>M11</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M11</em>' attribute.
@@ -174,14 +174,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M12</em>' attribute.
 	 * @see #setM12(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M12()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M12()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM12();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM12 <em>M12</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM12 <em>M12</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M12</em>' attribute.
@@ -200,14 +200,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M20</em>' attribute.
 	 * @see #setM20(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M20()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M20()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM20();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM20 <em>M20</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM20 <em>M20</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M20</em>' attribute.
@@ -226,14 +226,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M21</em>' attribute.
 	 * @see #setM21(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M21()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M21()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM21();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM21 <em>M21</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM21 <em>M21</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M21</em>' attribute.
@@ -253,14 +253,14 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M22</em>' attribute.
 	 * @see #setM22(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M22()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix3x3_M22()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getM22();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix3x3#getM22 <em>M22</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM22 <em>M22</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M22</em>' attribute.
@@ -272,7 +272,7 @@ public interface Matrix3x3 extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.math.Matrix3d" unique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.math.Matrix3d" unique="false"
 	 * @generated
 	 */
 	Matrix3d asMatrix3d();

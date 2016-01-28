@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2008.
  *
- * $Id: Symphony__AddonsMobilityPathplannersGraphPackageImpl.java,v 1.3.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityPathplannersGraphPackageImpl.java,v 1.3.4.3 2015/09/22 19:39:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -15,22 +15,22 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DisplacementCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
@@ -41,7 +41,7 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPackageImpl implements Symphony__AddonsMobilityPathplannersGraphPackage {
+public class ApogyAddonsMobilityPathplannersGraphPackageImpl extends EPackageImpl implements ApogyAddonsMobilityPathplannersGraphPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,12 +146,12 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsMobilityPathplannersGraphPackageImpl() {
-		super(eNS_URI, Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE);
+	private ApogyAddonsMobilityPathplannersGraphPackageImpl() {
+		super(eNS_URI, ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE);
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsMobilityPathplannersGraphPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsMobilityPathplannersGraphPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,30 +173,30 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityPathplannersGraphPackage init() {
-		if (isInited) return (Symphony__AddonsMobilityPathplannersGraphPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPathplannersGraphPackage.eNS_URI);
+	public static ApogyAddonsMobilityPathplannersGraphPackage init() {
+		if (isInited) return (ApogyAddonsMobilityPathplannersGraphPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPathplannersGraphPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsMobilityPathplannersGraphPackageImpl theSymphony__AddonsMobilityPathplannersGraphPackage = (Symphony__AddonsMobilityPathplannersGraphPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsMobilityPathplannersGraphPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsMobilityPathplannersGraphPackageImpl());
+		ApogyAddonsMobilityPathplannersGraphPackageImpl theApogyAddonsMobilityPathplannersGraphPackage = (ApogyAddonsMobilityPathplannersGraphPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsMobilityPathplannersGraphPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsMobilityPathplannersGraphPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsMobilityPathplannersPackage.eINSTANCE.eClass();
+		ApogyAddonsMobilityPathplannersPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsMobilityPathplannersGraphPackage.createPackageContents();
+		theApogyAddonsMobilityPathplannersGraphPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsMobilityPathplannersGraphPackage.initializePackageContents();
+		theApogyAddonsMobilityPathplannersGraphPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsMobilityPathplannersGraphPackage.freeze();
+		theApogyAddonsMobilityPathplannersGraphPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsMobilityPathplannersGraphPackage.eNS_URI, theSymphony__AddonsMobilityPathplannersGraphPackage);
-		return theSymphony__AddonsMobilityPathplannersGraphPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsMobilityPathplannersGraphPackage.eNS_URI, theApogyAddonsMobilityPathplannersGraphPackage);
+		return theApogyAddonsMobilityPathplannersGraphPackage;
 	}
 
 	/**
@@ -339,8 +339,8 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersGraphFactory getSymphony__AddonsMobilityPathplannersGraphFactory() {
-		return (Symphony__AddonsMobilityPathplannersGraphFactory)getEFactoryInstance();
+	public ApogyAddonsMobilityPathplannersGraphFactory getApogyAddonsMobilityPathplannersGraphFactory() {
+		return (ApogyAddonsMobilityPathplannersGraphFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -616,10 +616,10 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
-		Symphony__AddonsMobilityPathplannersPackage theSymphony__AddonsMobilityPathplannersPackage = (Symphony__AddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPathplannersPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
+		ApogyAddonsMobilityPathplannersPackage theApogyAddonsMobilityPathplannersPackage = (ApogyAddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPathplannersPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
+		ApogyCommonProcessorsPackage theApogyCommonProcessorsPackage = (ApogyCommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonProcessorsPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter costBasedMeshWayPointPathPlannerEClass_PolygonType = addETypeParameter(costBasedMeshWayPointPathPlannerEClass, "PolygonType");
@@ -629,15 +629,15 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		addETypeParameter(edgeFactoryEClass, "E");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		EGenericType g1 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		costBasedMeshWayPointPathPlannerEClass_PolygonType.getEBounds().add(g1);
-		g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		g1 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass_PolygonType.getEBounds().add(g1);
-		g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		g1 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		directedGraphBasedMeshWayPointPathPlannerEClass_PolygonType.getEBounds().add(g1);
 
 		// Add supertypes to classes
-		g1 = createEGenericType(theSymphony__AddonsMobilityPathplannersPackage.getMeshWayPointPathPlanner());
+		g1 = createEGenericType(theApogyAddonsMobilityPathplannersPackage.getMeshWayPointPathPlanner());
 		EGenericType g2 = createEGenericType(costBasedMeshWayPointPathPlannerEClass_PolygonType);
 		g1.getETypeArguments().add(g2);
 		costBasedMeshWayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
@@ -647,14 +647,14 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		g2 = createEGenericType(simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass_PolygonType);
 		g1.getETypeArguments().add(g2);
 		simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getVerboseProvider());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getVerboseProvider());
 		simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getCostBasedMeshWayPointPathPlanner());
 		g2 = createEGenericType(directedGraphBasedMeshWayPointPathPlannerEClass_PolygonType);
 		g1.getETypeArguments().add(g2);
 		directedGraphBasedMeshWayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getEdgeFactory());
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getMobilityEdge());
 		g1.getETypeArguments().add(g2);
@@ -670,14 +670,14 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		initEClass(displacementCostFunctionEClass, DisplacementCostFunction.class, "DisplacementCostFunction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon(), theEcorePackage.getEDouble(), "getCost", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPolygon(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPolygon(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(meshDisplacementCostFunctionEClass, MeshDisplacementCostFunction.class, "MeshDisplacementCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		g1 = createEGenericType(this.getCostBasedMeshWayPointPathPlanner());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
-		EGenericType g3 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
+		EGenericType g3 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPolygon());
 		g2.setEUpperBound(g3);
 		initEReference(getMeshDisplacementCostFunction_Planner(), g1, null, "planner", null, 0, 1, MeshDisplacementCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -695,8 +695,8 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 
 		initEClass(mobilityEdgeEClass, MobilityEdge.class, "MobilityEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobilityEdge_CostFunctions(), this.getDisplacementCostFunction(), null, "costFunctions", null, 0, -1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobilityEdge_From(), theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), null, "from", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobilityEdge_To(), theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), null, "to", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobilityEdge_From(), theApogyCommonGeometryData3DPackage.getCartesianPolygon(), null, "from", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobilityEdge_To(), theApogyCommonGeometryData3DPackage.getCartesianPolygon(), null, "to", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobilityEdge_Weight(), theEcorePackage.getEDouble(), "weight", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobilityEdgeFactoryEClass, MobilityEdgeFactory.class, "MobilityEdgeFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -705,12 +705,12 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		initEClass(distanceAndSlopesCostFunctionEClass, DistanceAndSlopesCostFunction.class, "DistanceAndSlopesCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDistanceAndSlopesCostFunction_UpSlopeCostFactor(), theEcorePackage.getEDouble(), "upSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDistanceAndSlopesCostFunction_DownSlopeCostFactor(), theEcorePackage.getEDouble(), "downSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndSlopesCostFunction_GravityAxis(), theSymphony__CommonGeometryData3DPackage.getCartesianAxis(), "gravityAxis", "Z", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndSlopesCostFunction_GravityAxis(), theApogyCommonGeometryData3DPackage.getCartesianAxis(), "gravityAxis", "Z", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDistanceAndSlopesCostFunction_MaximumUpSlope(), theEcorePackage.getEDouble(), "maximumUpSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDistanceAndSlopesCostFunction_MaximumDownSlope(), theEcorePackage.getEDouble(), "maximumDownSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exclusionZonesCostFunctionEClass, ExclusionZonesCostFunction.class, "ExclusionZonesCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExclusionZonesCostFunction_ExclusionZones(), theSymphony__AddonsMobilityPathplannersPackage.getExclusionZone(), null, "exclusionZones", null, 0, -1, ExclusionZonesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExclusionZonesCostFunction_ExclusionZones(), theApogyAddonsMobilityPathplannersPackage.getExclusionZone(), null, "exclusionZones", null, 0, -1, ExclusionZonesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(distanceAndRoverFootprintCostFunctionEClass, DistanceAndRoverFootprintCostFunction.class, "DistanceAndRoverFootprintCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius(), theEcorePackage.getEDouble(), "roverFootPrintRadius", "0.5", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -725,4 +725,4 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsMobilityPathplannersGraphPackageImpl
+} //ApogyAddonsMobilityPathplannersGraphPackageImpl

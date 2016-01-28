@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.Collection;
 
@@ -15,14 +15,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.RecordingResultsList;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import com.google.common.base.Objects;
 
 /**
@@ -33,11 +33,11 @@ import com.google.common.base.Objects;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getResults <em>Results</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getDataProductsList <em>Data Products List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl#getResults <em>Results</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl#getDataProductsList <em>Data Products List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,7 +108,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.RECORDING_RESULTS_LIST;
+		return ApogyCoreInvocatorPackage.Literals.RECORDING_RESULTS_LIST;
 	}
 
 		/**
@@ -129,7 +129,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME, oldName, name));
 	}
 
 		/**
@@ -150,7 +150,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
 		/**
@@ -160,7 +160,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<AbstractResult> getResults() {
 		if (results == null) {
-			results = new EObjectContainmentWithInverseEList<AbstractResult>(AbstractResult.class, this, Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST);
+			results = new EObjectContainmentWithInverseEList<AbstractResult>(AbstractResult.class, this, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS, ApogyCoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST);
 		}
 		return results;
 	}
@@ -171,7 +171,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public DataProductsList getDataProductsList() {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST) return null;
 		return (DataProductsList)eContainer();
 	}
 
@@ -181,7 +181,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public DataProductsList basicGetDataProductsList() {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST) return null;
 		return (DataProductsList)eInternalContainer();
 	}
 
@@ -191,7 +191,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public NotificationChain basicSetDataProductsList(DataProductsList newDataProductsList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDataProductsList, Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newDataProductsList, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, msgs);
 		return msgs;
 	}
 
@@ -201,19 +201,19 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public void setDataProductsList(DataProductsList newDataProductsList) {
-		if (newDataProductsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST && newDataProductsList != null)) {
+		if (newDataProductsList != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST && newDataProductsList != null)) {
 			if (EcoreUtil.isAncestor(this, newDataProductsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDataProductsList != null)
-				msgs = ((InternalEObject)newDataProductsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, DataProductsList.class, msgs);
+				msgs = ((InternalEObject)newDataProductsList).eInverseAdd(this, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, DataProductsList.class, msgs);
 			msgs = basicSetDataProductsList(newDataProductsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, newDataProductsList, newDataProductsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST, newDataProductsList, newDataProductsList));
 	}
 
 		/**
@@ -242,9 +242,9 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResults()).basicAdd(otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetDataProductsList((DataProductsList)otherEnd, msgs);
@@ -260,9 +260,9 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
 				return ((InternalEList<?>)getResults()).basicRemove(otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
 				return basicSetDataProductsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -276,8 +276,8 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, DataProductsList.class, msgs);
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST, DataProductsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -290,16 +290,16 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
 				return getName();
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
 				return getResults();
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
 				if (resolve) return getDataProductsList();
 				return basicGetDataProductsList();
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__INVOCATOR_SESSION:
 				return getInvocatorSession();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -314,17 +314,17 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
 				getResults().clear();
 				getResults().addAll((Collection<? extends AbstractResult>)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
 				setDataProductsList((DataProductsList)newValue);
 				return;
 		}
@@ -339,16 +339,16 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
 				getResults().clear();
 				return;
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
 				setDataProductsList((DataProductsList)null);
 				return;
 		}
@@ -363,15 +363,15 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
 				return results != null && !results.isEmpty();
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST:
 				return basicGetDataProductsList() != null;
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__INVOCATOR_SESSION:
 				return getInvocatorSession() != null;
 		}
 		return super.eIsSet(featureID);
@@ -386,7 +386,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -402,7 +402,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

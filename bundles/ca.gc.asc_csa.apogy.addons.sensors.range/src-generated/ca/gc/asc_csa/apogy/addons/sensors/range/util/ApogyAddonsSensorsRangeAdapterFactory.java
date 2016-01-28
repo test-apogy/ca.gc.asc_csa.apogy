@@ -1,39 +1,39 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.util;
+package ca.gc.asc_csa.apogy.addons.sensors.range.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.range.*;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.range.*;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage
  * @generated
  */
-public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsSensorsRangeAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsRangePackage modelPackage;
+	protected static ApogyAddonsSensorsRangePackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -41,9 +41,9 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeAdapterFactory() {
+	public ApogyAddonsSensorsRangeAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsRangePackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsRangePackage.eINSTANCE;
 		}
 	}
 
@@ -72,8 +72,8 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsRangeSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsSensorsRangeSwitch<Adapter>() {
+	protected ApogyAddonsSensorsRangeSwitch<Adapter> modelSwitch =
+		new ApogyAddonsSensorsRangeSwitch<Adapter>() {
 			@Override
 			public Adapter caseRayData(RayData object) {
 				return createRayDataAdapter();
@@ -131,8 +131,8 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 				return createRasterScanDataAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__AddonsSensorsRangeFacade(Symphony__AddonsSensorsRangeFacade object) {
-				return createSymphony__AddonsSensorsRangeFacadeAdapter();
+			public Adapter caseApogyAddonsSensorsRangeFacade(ApogyAddonsSensorsRangeFacade object) {
+				return createApogyAddonsSensorsRangeFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -191,13 +191,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.RayData <em>Ray Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RayData <em>Ray Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.RayData
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.RayData
 	 * @generated
 	 */
 	public Adapter createRayDataAdapter() {
@@ -205,13 +205,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings <em>Raster Scan Settings</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings <em>Raster Scan Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.RasterScanSettings
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings
 	 * @generated
 	 */
 	public Adapter createRasterScanSettingsAdapter() {
@@ -219,13 +219,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.RangeSensor <em>Range Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeSensor <em>Range Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.RangeSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.RangeSensor
 	 * @generated
 	 */
 	public Adapter createRangeSensorAdapter() {
@@ -233,13 +233,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.ContactSensor <em>Contact Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ContactSensor <em>Contact Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.ContactSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ContactSensor
 	 * @generated
 	 */
 	public Adapter createContactSensorAdapter() {
@@ -247,13 +247,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor <em>Simple Range Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRangeSensor <em>Simple Range Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRangeSensor
 	 * @generated
 	 */
 	public Adapter createSimpleRangeSensorAdapter() {
@@ -261,13 +261,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.SimpleSonar <em>Simple Sonar</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar <em>Simple Sonar</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.SimpleSonar
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar
 	 * @generated
 	 */
 	public Adapter createSimpleSonarAdapter() {
@@ -275,13 +275,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.LineRangeScanner <em>Line Range Scanner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner <em>Line Range Scanner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.LineRangeScanner
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner
 	 * @generated
 	 */
 	public Adapter createLineRangeScannerAdapter() {
@@ -289,13 +289,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.SimpleLineRangeScanner <em>Simple Line Range Scanner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleLineRangeScanner <em>Simple Line Range Scanner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.SimpleLineRangeScanner
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.SimpleLineRangeScanner
 	 * @generated
 	 */
 	public Adapter createSimpleLineRangeScannerAdapter() {
@@ -303,13 +303,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.RangeScanner <em>Range Scanner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScanner <em>Range Scanner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.RangeScanner
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.RangeScanner
 	 * @generated
 	 */
 	public Adapter createRangeScannerAdapter() {
@@ -317,13 +317,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator <em>Range Scanner Simulator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator <em>Range Scanner Simulator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator
 	 * @generated
 	 */
 	public Adapter createRangeScannerSimulatorAdapter() {
@@ -331,13 +331,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor <em>Raster Scan Range Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanRangeSensor <em>Raster Scan Range Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanRangeSensor
 	 * @generated
 	 */
 	public Adapter createRasterScanRangeSensorAdapter() {
@@ -345,13 +345,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner <em>Simple Raster Scan Range Scanner</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScanner <em>Simple Raster Scan Range Scanner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScanner
 	 * @generated
 	 */
 	public Adapter createSimpleRasterScanRangeScannerAdapter() {
@@ -359,13 +359,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator <em>Simple Raster Scan Range Scanner Simulator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator <em>Simple Raster Scan Range Scanner Simulator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator
 	 * @generated
 	 */
 	public Adapter createSimpleRasterScanRangeScannerSimulatorAdapter() {
@@ -373,13 +373,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.RasterScanData <em>Raster Scan Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData <em>Raster Scan Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.RasterScanData
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData
 	 * @generated
 	 */
 	public Adapter createRasterScanDataAdapter() {
@@ -387,27 +387,27 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__AddonsSensorsRangeFacadeAdapter() {
+	public Adapter createApogyAddonsSensorsRangeFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -415,13 +415,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView
 	 * @generated
 	 */
 	public Adapter createFieldOfViewAdapter() {
@@ -429,13 +429,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 	 * @generated
 	 */
 	public Adapter createRectangularFrustrumFieldOfViewAdapter() {
@@ -443,13 +443,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter() {
@@ -457,13 +457,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -471,13 +471,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.Sensor <em>Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.Sensor <em>Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.Sensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Sensor
 	 * @generated
 	 */
 	public Adapter createSensorAdapter() {
@@ -485,13 +485,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -499,13 +499,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -513,13 +513,13 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Timed
+	 * @see ca.gc.asc_csa.apogy.common.emf.Timed
 	 * @generated
 	 */
 	public Adapter createTimedAdapter() {
@@ -538,4 +538,4 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 		return null;
 	}
 
-} //Symphony__AddonsSensorsRangeAdapterFactory
+} //ApogyAddonsSensorsRangeAdapterFactory

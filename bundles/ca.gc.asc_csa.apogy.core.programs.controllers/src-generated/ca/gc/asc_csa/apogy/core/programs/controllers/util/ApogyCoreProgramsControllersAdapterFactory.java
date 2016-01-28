@@ -1,38 +1,38 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.util;
+package ca.gc.asc_csa.apogy.core.programs.controllers.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.invocator.Argument;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.programs.controllers.*;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.programs.controllers.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage
  * @generated
  */
-public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCoreProgramsControllersAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreProgramsControllersPackage modelPackage;
+	protected static ApogyCoreProgramsControllersPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -40,9 +40,9 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsControllersAdapterFactory() {
+	public ApogyCoreProgramsControllersAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreProgramsControllersPackage.eINSTANCE;
+			modelPackage = ApogyCoreProgramsControllersPackage.eINSTANCE;
 		}
 	}
 
@@ -71,11 +71,11 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreProgramsControllersSwitch<Adapter> modelSwitch =
-		new Symphony__CoreProgramsControllersSwitch<Adapter>() {
+	protected ApogyCoreProgramsControllersSwitch<Adapter> modelSwitch =
+		new ApogyCoreProgramsControllersSwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__CoreProgramsControllersFacade(Symphony__CoreProgramsControllersFacade object) {
-				return createSymphony__CoreProgramsControllersFacadeAdapter();
+			public Adapter caseApogyCoreProgramsControllersFacade(ApogyCoreProgramsControllersFacade object) {
+				return createApogyCoreProgramsControllersFacadeAdapter();
 			}
 			@Override
 			public Adapter caseControllersConfiguration(ControllersConfiguration object) {
@@ -206,27 +206,27 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreProgramsControllersFacadeAdapter() {
+	public Adapter createApogyCoreProgramsControllersFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration <em>Controllers Configuration</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration <em>Controllers Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllersConfiguration
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration
 	 * @generated
 	 */
 	public Adapter createControllersConfigurationAdapter() {
@@ -234,13 +234,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding <em>Operation Call Controller Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding <em>Operation Call Controller Binding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding
 	 * @generated
 	 */
 	public Adapter createOperationCallControllerBindingAdapter() {
@@ -248,13 +248,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.Trigger <em>Trigger</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.Trigger <em>Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.Trigger
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.Trigger
 	 * @generated
 	 */
 	public Adapter createTriggerAdapter() {
@@ -262,13 +262,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.TimeTrigger <em>Time Trigger</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger <em>Time Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.TimeTrigger
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger
 	 * @generated
 	 */
 	public Adapter createTimeTriggerAdapter() {
@@ -276,13 +276,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger <em>Controller Trigger</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger <em>Controller Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerTrigger
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger
 	 * @generated
 	 */
 	public Adapter createControllerTriggerAdapter() {
@@ -290,13 +290,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger <em>Controller Edge Trigger</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger <em>Controller Edge Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger
 	 * @generated
 	 */
 	public Adapter createControllerEdgeTriggerAdapter() {
@@ -304,13 +304,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger <em>Controller State Trigger</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger <em>Controller State Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger
 	 * @generated
 	 */
 	public Adapter createControllerStateTriggerAdapter() {
@@ -318,13 +318,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument <em>Binded EData Type Argument</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument <em>Binded EData Type Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument
 	 * @generated
 	 */
 	public Adapter createBindedEDataTypeArgumentAdapter() {
@@ -332,13 +332,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ValueSource <em>Value Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource <em>Value Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ValueSource
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource
 	 * @generated
 	 */
 	public Adapter createValueSourceAdapter() {
@@ -346,13 +346,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.FixedValueSource <em>Fixed Value Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource <em>Fixed Value Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.FixedValueSource
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource
 	 * @generated
 	 */
 	public Adapter createFixedValueSourceAdapter() {
@@ -360,13 +360,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource <em>Toggle Value Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource <em>Toggle Value Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ToggleValueSource
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource
 	 * @generated
 	 */
 	public Adapter createToggleValueSourceAdapter() {
@@ -374,13 +374,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource <em>Controller Value Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource <em>Controller Value Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerValueSource
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource
 	 * @generated
 	 */
 	public Adapter createControllerValueSourceAdapter() {
@@ -388,13 +388,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning <em>Abstract Input Conditioning</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning <em>Abstract Input Conditioning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning
 	 * @generated
 	 */
 	public Adapter createAbstractInputConditioningAdapter() {
@@ -402,13 +402,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning <em>Linear Input Conditioning</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning <em>Linear Input Conditioning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.LinearInputConditioning
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning
 	 * @generated
 	 */
 	public Adapter createLinearInputConditioningAdapter() {
@@ -416,13 +416,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning <em>Centered Linear Input Conditioning</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning <em>Centered Linear Input Conditioning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning
 	 * @generated
 	 */
 	public Adapter createCenteredLinearInputConditioningAdapter() {
@@ -430,13 +430,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning <em>Parabolic Input Conditioning</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ParabolicInputConditioning <em>Parabolic Input Conditioning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ParabolicInputConditioning
 	 * @generated
 	 */
 	public Adapter createParabolicInputConditioningAdapter() {
@@ -444,13 +444,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning <em>Centered Parabolic Input Conditioning</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning <em>Centered Parabolic Input Conditioning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning
 	 * @generated
 	 */
 	public Adapter createCenteredParabolicInputConditioningAdapter() {
@@ -458,13 +458,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning <em>User Defined Input Conditioning</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning <em>User Defined Input Conditioning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning
 	 * @generated
 	 */
 	public Adapter createUserDefinedInputConditioningAdapter() {
@@ -472,13 +472,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint <em>Custom Input Conditioning Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint <em>Custom Input Conditioning Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint
 	 * @generated
 	 */
 	public Adapter createCustomInputConditioningPointAdapter() {
@@ -486,13 +486,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {
@@ -500,13 +500,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
@@ -514,13 +514,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.Program <em>Program</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.Program
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Program
 	 * @generated
 	 */
 	public Adapter createProgramAdapter() {
@@ -528,13 +528,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
 	 * @generated
 	 */
 	public Adapter createOperationCallContainerAdapter() {
@@ -542,13 +542,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.VariableFeatureReference
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference
 	 * @generated
 	 */
 	public Adapter createVariableFeatureReferenceAdapter() {
@@ -556,13 +556,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.OperationCall <em>Operation Call</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.OperationCall
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall
 	 * @generated
 	 */
 	public Adapter createOperationCallAdapter() {
@@ -570,13 +570,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.Argument <em>Argument</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.Argument <em>Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.Argument
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument
 	 * @generated
 	 */
 	public Adapter createArgumentAdapter() {
@@ -584,13 +584,13 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.EDataTypeArgument <em>EData Type Argument</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument <em>EData Type Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.EDataTypeArgument
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument
 	 * @generated
 	 */
 	public Adapter createEDataTypeArgumentAdapter() {
@@ -609,4 +609,4 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 		return null;
 	}
 
-} //Symphony__CoreProgramsControllersAdapterFactory
+} //ApogyCoreProgramsControllersAdapterFactory

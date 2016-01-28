@@ -1,6 +1,6 @@
-package org.eclipse.symphony.addons.vehicle.ui;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui;
 
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface ThrusterSceneObject extends SceneObject 
 {

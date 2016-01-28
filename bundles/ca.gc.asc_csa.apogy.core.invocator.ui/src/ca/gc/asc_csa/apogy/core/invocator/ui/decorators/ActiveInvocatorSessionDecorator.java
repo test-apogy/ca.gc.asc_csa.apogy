@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.decorators;
+package ca.gc.asc_csa.apogy.core.invocator.ui.decorators;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
@@ -14,17 +14,17 @@ import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.ILightweightLabelDecorator;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.ui.Activator;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 import org.eclipse.ui.IDecoratorManager;
 
 public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 		ILightweightLabelDecorator {
 
-	public static String DECORATOR_ID = "org.eclipse.symphony.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator";
+	public static String DECORATOR_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator";
 	private static String SUFFIX = " (Active)";
 
 //	private static ImageDescriptor ACTIVE_IMG_DESCRIPTOR = AbstractUIPlugin
@@ -33,29 +33,29 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 	
 	private boolean found = false;
 
-	private AdapterImpl Symphony__CoreInvocatorFacadeAdapter;
+	private AdapterImpl ApogyCoreInvocatorFacadeAdapter;
 
 	private IFile activeSessionFile = null;
 
 	public ActiveInvocatorSessionDecorator() {
 		super();
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(
-				getSymphony__CoreInvocatorFacadeAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(
+				getApogyCoreInvocatorFacadeAdapter());
 	}
 
-	private Adapter getSymphony__CoreInvocatorFacadeAdapter() {
-		if (Symphony__CoreInvocatorFacadeAdapter == null) {
-			Symphony__CoreInvocatorFacadeAdapter = new AdapterImpl() {
+	private Adapter getApogyCoreInvocatorFacadeAdapter() {
+		if (ApogyCoreInvocatorFacadeAdapter == null) {
+			ApogyCoreInvocatorFacadeAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(Symphony__CoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
+					if (msg.getFeatureID(ApogyCoreInvocatorFacade.class) == ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
 						final ActiveInvocatorSessionDecorator decorator = getActiveInvocatorSessionDecorator();
 						if (decorator != null) {
 							Display.getDefault().asyncExec(new Runnable() {
 								public void run() {
-									activeSessionFile = Symphony__CoreInvocatorFacade.INSTANCE
-											.getActiveInvocatorSession() != null ? Symphony__CommonEMFFacade.INSTANCE
-											.getFile(Symphony__CoreInvocatorFacade.INSTANCE
+									activeSessionFile = ApogyCoreInvocatorFacade.INSTANCE
+											.getActiveInvocatorSession() != null ? ApogyCommonEMFFacade.INSTANCE
+											.getFile(ApogyCoreInvocatorFacade.INSTANCE
 													.getActiveInvocatorSession()
 													.eResource())
 											: null;
@@ -70,7 +70,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 				}
 			};
 		}
-		return Symphony__CoreInvocatorFacadeAdapter;
+		return ApogyCoreInvocatorFacadeAdapter;
 	}
 
 	private static ActiveInvocatorSessionDecorator getActiveInvocatorSessionDecorator() {
@@ -86,8 +86,8 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 
 	@Override
 	public void dispose() {
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(
-				getSymphony__CoreInvocatorFacadeAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(
+				getApogyCoreInvocatorFacadeAdapter());
 	}
 
 	@Override
@@ -102,7 +102,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 	@Override
 	public void decorate(Object element, IDecoration decoration) {
 		
-		InvocatorSession activeSession = Symphony__CoreInvocatorFacade.INSTANCE
+		InvocatorSession activeSession = ApogyCoreInvocatorFacade.INSTANCE
 				.getActiveInvocatorSession();
 		
 		if (activeSession != null){

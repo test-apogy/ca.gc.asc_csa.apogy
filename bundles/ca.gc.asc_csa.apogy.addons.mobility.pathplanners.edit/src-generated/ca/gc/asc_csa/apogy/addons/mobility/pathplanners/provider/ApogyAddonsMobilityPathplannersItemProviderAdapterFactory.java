@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory.java,v 1.3.4.2 2015/05/21 15:50:51 pallard Exp $
+ * $Id: ApogyAddonsMobilityPathplannersItemProviderAdapterFactory.java,v 1.3.4.2 2015/05/21 15:50:51 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,14 +29,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.util.Symphony__AddonsMobilityPathplannersAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.util.ApogyAddonsMobilityPathplannersAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory extends Symphony__AddonsMobilityPathplannersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsMobilityPathplannersItemProviderAdapterFactory extends ApogyAddonsMobilityPathplannersAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -71,7 +71,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsMobilityPathplannersEditPlugin.INSTANCE, Symphony__AddonsMobilityPathplannersPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsMobilityPathplannersEditPlugin.INSTANCE, ApogyAddonsMobilityPathplannersPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -87,7 +87,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory()
+	public ApogyAddonsMobilityPathplannersItemProviderAdapterFactory()
 	{
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -97,7 +97,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	protected WayPointPathPlannerItemProvider wayPointPathPlannerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	protected MeshWayPointPathPlannerItemProvider meshWayPointPathPlannerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -145,7 +145,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -153,7 +153,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	protected CircularExclusionZoneItemProvider circularExclusionZoneItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -169,26 +169,26 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsMobilityPathplannersFacadeItemProvider symphony__AddonsMobilityPathplannersFacadeItemProvider;
+	protected ApogyAddonsMobilityPathplannersFacadeItemProvider apogy__AddonsMobilityPathplannersFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__AddonsMobilityPathplannersFacadeAdapter() {
-		if (symphony__AddonsMobilityPathplannersFacadeItemProvider == null) {
-			symphony__AddonsMobilityPathplannersFacadeItemProvider = new Symphony__AddonsMobilityPathplannersFacadeItemProvider(this);
+	public Adapter createApogyAddonsMobilityPathplannersFacadeAdapter() {
+		if (apogy__AddonsMobilityPathplannersFacadeItemProvider == null) {
+			apogy__AddonsMobilityPathplannersFacadeItemProvider = new ApogyAddonsMobilityPathplannersFacadeItemProvider(this);
 		}
 
-		return symphony__AddonsMobilityPathplannersFacadeItemProvider;
+		return apogy__AddonsMobilityPathplannersFacadeItemProvider;
 	}
 
 	/**
@@ -329,23 +329,23 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 		if (wayPointPathPlannerItemProvider != null) wayPointPathPlannerItemProvider.dispose();
 		if (meshWayPointPathPlannerItemProvider != null) meshWayPointPathPlannerItemProvider.dispose();
 		if (circularExclusionZoneItemProvider != null) circularExclusionZoneItemProvider.dispose();
-		if (symphony__AddonsMobilityPathplannersFacadeItemProvider != null) symphony__AddonsMobilityPathplannersFacadeItemProvider.dispose();
+		if (apogy__AddonsMobilityPathplannersFacadeItemProvider != null) apogy__AddonsMobilityPathplannersFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -381,23 +381,23 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createSymphony__AddonsMobilityPathplannersFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createApogyAddonsMobilityPathplannersFacade()));
 
 				return null;
 			}
@@ -411,23 +411,23 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createSymphony__AddonsMobilityPathplannersFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createApogyAddonsMobilityPathplannersFacade()));
 
 				return null;
 			}
@@ -441,8 +441,8 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 
 				return null;
 			}
@@ -475,7 +475,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsMobilityPathplannersEditPlugin.INSTANCE;
+			return ApogyAddonsMobilityPathplannersEditPlugin.INSTANCE;
 		}
 	}
 

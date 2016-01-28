@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 import javax.vecmath.Matrix4d;
 
@@ -11,7 +11,7 @@ import javax.vecmath.Matrix4d;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getTransformNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getTransformNode()
  * @model
  * @generated
  */
@@ -19,7 +19,7 @@ public interface TransformNode extends PositionNode, RotationNode {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.topology.Matrix4d" unique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" unique="false"
 	 * @generated
 	 */
 	Matrix4d asMatrix4d();
@@ -27,7 +27,7 @@ public interface TransformNode extends PositionNode, RotationNode {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model matrixDataType="org.eclipse.symphony.common.topology.Matrix4d" matrixUnique="false"
+	 * @model matrixDataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" matrixUnique="false"
 	 * @generated
 	 */
 	void setTransformation(Matrix4d matrix);

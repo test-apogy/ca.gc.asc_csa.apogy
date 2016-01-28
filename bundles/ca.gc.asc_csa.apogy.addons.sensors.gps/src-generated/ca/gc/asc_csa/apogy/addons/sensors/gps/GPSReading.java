@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
 import java.util.Date;
 
@@ -16,18 +16,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLatitude <em>Latitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLongitude <em>Longitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getElevation <em>Elevation</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getQuality <em>Quality</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getTimeStamp <em>Time Stamp</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getNumberOfSatellites <em>Number Of Satellites</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getHorizontalDilutionPos <em>Horizontal Dilution Pos</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getMeanSeaLevel <em>Mean Sea Level</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getCheckSum <em>Check Sum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getLongitude <em>Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getElevation <em>Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getQuality <em>Quality</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getTimeStamp <em>Time Stamp</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getNumberOfSatellites <em>Number Of Satellites</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getHorizontalDilutionPos <em>Horizontal Dilution Pos</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getMeanSeaLevel <em>Mean Sea Level</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getCheckSum <em>Check Sum</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Latitude</em>' attribute.
 	 * @see #setLatitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Latitude()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_Latitude()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getLatitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLatitude <em>Latitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getLatitude <em>Latitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Latitude</em>' attribute.
@@ -68,14 +68,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Longitude</em>' attribute.
 	 * @see #setLongitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Longitude()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_Longitude()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getLongitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLongitude <em>Longitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getLongitude <em>Longitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Longitude</em>' attribute.
@@ -94,14 +94,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
 	 * @see #setElevation(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Elevation()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_Elevation()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getElevation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getElevation <em>Elevation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getElevation <em>Elevation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation</em>' attribute.
@@ -112,7 +112,7 @@ public interface GPSReading extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Quality</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.gps.GPSQuality}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSQuality}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Quality</em>' attribute isn't clear,
@@ -120,20 +120,20 @@ public interface GPSReading extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quality</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.GPSQuality
 	 * @see #setQuality(GPSQuality)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Quality()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_Quality()
 	 * @model unique="false"
 	 * @generated
 	 */
 	GPSQuality getQuality();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getQuality <em>Quality</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getQuality <em>Quality</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Quality</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.GPSQuality
 	 * @see #getQuality()
 	 * @generated
 	 */
@@ -149,14 +149,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Stamp</em>' attribute.
 	 * @see #setTimeStamp(Date)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_TimeStamp()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.gps.Date"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_TimeStamp()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.gps.Date"
 	 * @generated
 	 */
 	Date getTimeStamp();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getTimeStamp <em>Time Stamp</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getTimeStamp <em>Time Stamp</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Stamp</em>' attribute.
@@ -175,14 +175,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Satellites</em>' attribute.
 	 * @see #setNumberOfSatellites(int)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_NumberOfSatellites()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_NumberOfSatellites()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getNumberOfSatellites();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getNumberOfSatellites <em>Number Of Satellites</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getNumberOfSatellites <em>Number Of Satellites</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Number Of Satellites</em>' attribute.
@@ -201,14 +201,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Horizontal Dilution Pos</em>' attribute.
 	 * @see #setHorizontalDilutionPos(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_HorizontalDilutionPos()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_HorizontalDilutionPos()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getHorizontalDilutionPos();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getHorizontalDilutionPos <em>Horizontal Dilution Pos</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getHorizontalDilutionPos <em>Horizontal Dilution Pos</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Horizontal Dilution Pos</em>' attribute.
@@ -227,14 +227,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mean Sea Level</em>' attribute.
 	 * @see #setMeanSeaLevel(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_MeanSeaLevel()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_MeanSeaLevel()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getMeanSeaLevel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getMeanSeaLevel <em>Mean Sea Level</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getMeanSeaLevel <em>Mean Sea Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mean Sea Level</em>' attribute.
@@ -253,14 +253,14 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check Sum</em>' attribute.
 	 * @see #setCheckSum(int)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_CheckSum()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSReading_CheckSum()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getCheckSum();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getCheckSum <em>Check Sum</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading#getCheckSum <em>Check Sum</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Check Sum</em>' attribute.

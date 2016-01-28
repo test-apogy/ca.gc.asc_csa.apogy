@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  * This enumeration is used to indicate the possible {@link AbstractConstellationRequest} order priorities.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationRequestPriority()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationRequestPriority()
  * @model
  * @generated
  */

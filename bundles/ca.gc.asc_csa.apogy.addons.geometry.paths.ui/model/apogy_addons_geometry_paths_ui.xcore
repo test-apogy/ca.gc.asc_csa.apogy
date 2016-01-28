@@ -1,16 +1,16 @@
-@GenModel(prefix="Symphony__AddonsGeometryPathsUI",
+@GenModel(prefix="ApogyAddonsGeometryPathsUI",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__AddonsGeometryPathsUI",
+		  modelName="ApogyAddonsGeometryPathsUI",
 		  complianceLevel="6.0")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.geometry.paths.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.geometry.paths.ui.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.geometry.paths.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.geometry.paths.ui.edit/src-generated")
 
-package org.eclipse.symphony.addons.geometry.paths.ui
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 
 enum PathPresentationMode
 {

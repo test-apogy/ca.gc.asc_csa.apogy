@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.widgets.ui;
+package ca.gc.asc_csa.apogy.common.widgets.ui;
 
 import java.net.URL;
 
@@ -16,7 +16,7 @@ import org.eclipse.swt.widgets.Display;
 
 public class BrakeStatComposite extends Composite  {
 	
-	private static final String IMAGES_FOLDER = "platform:/plugin/org.eclipse.symphony.common.widgets.ui/images/"; //Image path
+	private static final String IMAGES_FOLDER = "platform:/plugin/ca.gc.asc_csa.apogy.common.widgets.ui/images/"; //Image path
 	
 	//Images
 	private Image backgroundDisengaged;

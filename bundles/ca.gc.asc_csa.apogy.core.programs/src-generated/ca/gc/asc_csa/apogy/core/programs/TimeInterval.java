@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs;
+package ca.gc.asc_csa.apogy.core.programs;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.TimeInterval#getStartTime <em>Start Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.TimeInterval#getEndTime <em>End Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.TimeInterval#getDuration <em>Duration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getDuration <em>Duration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval()
+ * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage#getTimeInterval()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface TimeInterval extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(long)
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval_StartTime()
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage#getTimeInterval_StartTime()
 	 * @model unique="false"
 	 * @generated
 	 */
 	long getStartTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.TimeInterval#getStartTime <em>Start Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getStartTime <em>Start Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Start Time</em>' attribute.
@@ -60,14 +60,14 @@ public interface TimeInterval extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Time</em>' attribute.
 	 * @see #setEndTime(long)
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval_EndTime()
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage#getTimeInterval_EndTime()
 	 * @model unique="false"
 	 * @generated
 	 */
 	long getEndTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.TimeInterval#getEndTime <em>End Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getEndTime <em>End Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>End Time</em>' attribute.
@@ -85,7 +85,7 @@ public interface TimeInterval extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Duration</em>' attribute.
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval_Duration()
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage#getTimeInterval_Duration()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='long _endTime = this.getEndTime();\nlong _startTime = this.getStartTime();\nreturn (_endTime - _startTime);'"
 	 * @generated

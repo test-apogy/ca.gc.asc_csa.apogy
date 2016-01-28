@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ros.utilities;
+package ca.gc.asc_csa.apogy.addons.ros.utilities;
 
 import org.eclipse.core.runtime.ILogListener;
 import org.eclipse.core.runtime.IStatus;
@@ -11,7 +11,7 @@ public class FrameworkLogPublisher
 	protected ILogListener logListener = null;
 	protected ConnectedNode connectedNode = null;
 	protected String topicName = null;
-	protected Publisher<org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry> frameworkLogEntryPublisher = null;
+	protected Publisher<ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry> frameworkLogEntryPublisher = null;
 	
 	public FrameworkLogPublisher(String topicName, final ConnectedNode connectedNode)
 	{
@@ -45,7 +45,7 @@ public class FrameworkLogPublisher
 		
 		if(connectedNode != null)
 		{
-			frameworkLogEntryPublisher = connectedNode.newPublisher(topicName, org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry._TYPE);
+			frameworkLogEntryPublisher = connectedNode.newPublisher(topicName, ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry._TYPE);
 		}
 	}
 	
@@ -72,7 +72,7 @@ public class FrameworkLogPublisher
 					{
 						if (frameworkLogEntryPublisher != null)
 						{						
-							org.eclipse.symphony.addons.ros.messages.ROSFrameworkLogEntry entry = FrameworkLogUtils.convertToROSFrameworkLogEntry(status, connectedNode);
+							ca.gc.asc_csa.apogy.addons.ros.messages.ROSFrameworkLogEntry entry = FrameworkLogUtils.convertToROSFrameworkLogEntry(status, connectedNode);
 							frameworkLogEntryPublisher.publish(entry);
 						}
 					}

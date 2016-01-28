@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageImpl implements Symphony__AddonsMobilityPathplannersUIPackage {
+public class ApogyAddonsMobilityPathplannersUIPackageImpl extends EPackageImpl implements ApogyAddonsMobilityPathplannersUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,12 +38,12 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsMobilityPathplannersUIPackageImpl() {
-		super(eNS_URI, Symphony__AddonsMobilityPathplannersUIFactory.eINSTANCE);
+	private ApogyAddonsMobilityPathplannersUIPackageImpl() {
+		super(eNS_URI, ApogyAddonsMobilityPathplannersUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsMobilityPathplannersUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsMobilityPathplannersUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,30 +65,30 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityPathplannersUIPackage init() {
-		if (isInited) return (Symphony__AddonsMobilityPathplannersUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPathplannersUIPackage.eNS_URI);
+	public static ApogyAddonsMobilityPathplannersUIPackage init() {
+		if (isInited) return (ApogyAddonsMobilityPathplannersUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPathplannersUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsMobilityPathplannersUIPackageImpl theSymphony__AddonsMobilityPathplannersUIPackage = (Symphony__AddonsMobilityPathplannersUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsMobilityPathplannersUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsMobilityPathplannersUIPackageImpl());
+		ApogyAddonsMobilityPathplannersUIPackageImpl theApogyAddonsMobilityPathplannersUIPackage = (ApogyAddonsMobilityPathplannersUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsMobilityPathplannersUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsMobilityPathplannersUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsMobilityPathplannersUIPackage.createPackageContents();
+		theApogyAddonsMobilityPathplannersUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsMobilityPathplannersUIPackage.initializePackageContents();
+		theApogyAddonsMobilityPathplannersUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsMobilityPathplannersUIPackage.freeze();
+		theApogyAddonsMobilityPathplannersUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsMobilityPathplannersUIPackage.eNS_URI, theSymphony__AddonsMobilityPathplannersUIPackage);
-		return theSymphony__AddonsMobilityPathplannersUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsMobilityPathplannersUIPackage.eNS_URI, theApogyAddonsMobilityPathplannersUIPackage);
+		return theApogyAddonsMobilityPathplannersUIPackage;
 	}
 
 	/**
@@ -132,8 +132,8 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersUIFactory getSymphony__AddonsMobilityPathplannersUIFactory() {
-		return (Symphony__AddonsMobilityPathplannersUIFactory)getEFactoryInstance();
+	public ApogyAddonsMobilityPathplannersUIFactory getApogyAddonsMobilityPathplannersUIFactory() {
+		return (ApogyAddonsMobilityPathplannersUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -185,7 +185,7 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -193,16 +193,16 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		circularExclusionZonePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		circularExclusionZonePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(circularExclusionZonePresentationEClass, CircularExclusionZonePresentation.class, "CircularExclusionZonePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCircularExclusionZonePresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCircularExclusionZonePresentation_PresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCircularExclusionZonePresentation_PresentationMode(), theApogyCommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCircularExclusionZonePresentation_Height(), theEcorePackage.getEDouble(), "height", "10.0", 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsMobilityPathplannersUIPackageImpl
+} //ApogyAddonsMobilityPathplannersUIPackageImpl

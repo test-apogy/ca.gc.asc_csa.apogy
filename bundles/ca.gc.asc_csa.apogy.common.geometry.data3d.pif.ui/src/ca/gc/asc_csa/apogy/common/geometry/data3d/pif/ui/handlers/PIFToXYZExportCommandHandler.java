@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.pif.ui.handlers;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.pif.ui.handlers;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,7 +22,7 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.geometry.data3d.pif.PifReader;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.pif.PifReader;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
 

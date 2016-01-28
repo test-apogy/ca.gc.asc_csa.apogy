@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Collection;
 
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.OrbitModelsList;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.WorksitesList;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.OrbitModelsList;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -29,10 +29,10 @@ import org.eclipse.symphony.core.WorksitesList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getWorksites <em>Worksites</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getOrbitsModels <em>Orbits Models</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getWorksites <em>Worksites</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.WorksitesListImpl#getOrbitsModels <em>Orbits Models</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,7 +108,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.WORKSITES_LIST;
+		return ApogyCorePackage.Literals.WORKSITES_LIST;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.WORKSITES_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.WORKSITES_LIST__NAME, oldName, name));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.WORKSITES_LIST__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -155,7 +155,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<AbstractWorksite> getWorksites() {
 		if (worksites == null) {
-			worksites = new EObjectContainmentWithInverseEList<AbstractWorksite>(AbstractWorksite.class, this, Symphony__CorePackage.WORKSITES_LIST__WORKSITES, Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST);
+			worksites = new EObjectContainmentWithInverseEList<AbstractWorksite>(AbstractWorksite.class, this, ApogyCorePackage.WORKSITES_LIST__WORKSITES, ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST);
 		}
 		return worksites;
 	}
@@ -171,7 +171,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 		OrbitModelsList tmp = getOrbitsModelsGen();
 		if(tmp == null)
 		{
-			tmp = Symphony__CoreFactory.eINSTANCE.createOrbitModelsList();
+			tmp = ApogyCoreFactory.eINSTANCE.createOrbitModelsList();
 			setOrbitsModels(tmp);
 		}
 		
@@ -196,7 +196,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 		OrbitModelsList oldOrbitsModels = orbitsModels;
 		orbitsModels = newOrbitsModels;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS, oldOrbitsModels, newOrbitsModels);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, oldOrbitsModels, newOrbitsModels);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -211,14 +211,14 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 		if (newOrbitsModels != orbitsModels) {
 			NotificationChain msgs = null;
 			if (orbitsModels != null)
-				msgs = ((InternalEObject)orbitsModels).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS, null, msgs);
+				msgs = ((InternalEObject)orbitsModels).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, null, msgs);
 			if (newOrbitsModels != null)
-				msgs = ((InternalEObject)newOrbitsModels).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS, null, msgs);
+				msgs = ((InternalEObject)newOrbitsModels).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, null, msgs);
 			msgs = basicSetOrbitsModels(newOrbitsModels, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS, newOrbitsModels, newOrbitsModels));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS, newOrbitsModels, newOrbitsModels));
 	}
 
 	/**
@@ -230,7 +230,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
+			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getWorksites()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -244,9 +244,9 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
+			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return ((InternalEList<?>)getWorksites()).basicRemove(otherEnd, msgs);
-			case Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
 				return basicSetOrbitsModels(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -259,13 +259,13 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.WORKSITES_LIST__NAME:
+			case ApogyCorePackage.WORKSITES_LIST__NAME:
 				return getName();
-			case Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION:
+			case ApogyCorePackage.WORKSITES_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
+			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return getWorksites();
-			case Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
 				return getOrbitsModels();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -279,17 +279,17 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.WORKSITES_LIST__NAME:
+			case ApogyCorePackage.WORKSITES_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION:
+			case ApogyCorePackage.WORKSITES_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
+			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				getWorksites().clear();
 				getWorksites().addAll((Collection<? extends AbstractWorksite>)newValue);
 				return;
-			case Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
 				setOrbitsModels((OrbitModelsList)newValue);
 				return;
 		}
@@ -303,16 +303,16 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.WORKSITES_LIST__NAME:
+			case ApogyCorePackage.WORKSITES_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION:
+			case ApogyCorePackage.WORKSITES_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
+			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				getWorksites().clear();
 				return;
-			case Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
 				setOrbitsModels((OrbitModelsList)null);
 				return;
 		}
@@ -326,13 +326,13 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.WORKSITES_LIST__NAME:
+			case ApogyCorePackage.WORKSITES_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION:
+			case ApogyCorePackage.WORKSITES_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
+			case ApogyCorePackage.WORKSITES_LIST__WORKSITES:
 				return worksites != null && !worksites.isEmpty();
-			case Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case ApogyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
 				return orbitsModels != null;
 		}
 		return super.eIsSet(featureID);
@@ -346,7 +346,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCorePackage.WORKSITES_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -361,7 +361,7 @@ public class WorksitesListImpl extends MinimalEObjectImpl.Container implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCorePackage.WORKSITES_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

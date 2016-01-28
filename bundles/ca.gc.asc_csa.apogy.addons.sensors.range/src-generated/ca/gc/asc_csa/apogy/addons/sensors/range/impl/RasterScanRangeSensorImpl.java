@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,11 +11,11 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor;
-import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanRangeSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public class RasterScanRangeSensorImpl extends RangeScannerImpl<RasterScanSettin
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_RANGE_SENSOR;
+		return ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_RANGE_SENSOR;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class RasterScanRangeSensorImpl extends RangeScannerImpl<RasterScanSettin
 	    	// If no RasterScanSettings is found, creates one.
 	    	if(rasterScanSettings == null)
 	    	{
-	    		rasterScanSettings = Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
+	    		rasterScanSettings = ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
 	    		getChildren().add(rasterScanSettings);
 	    	}
 		}
@@ -113,7 +113,7 @@ public class RasterScanRangeSensorImpl extends RangeScannerImpl<RasterScanSettin
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_RANGE_SENSOR___GET_SCAN_SETTINGS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_RANGE_SENSOR___GET_SCAN_SETTINGS:
 				return getScanSettings();
 		}
 		return super.eInvoke(operationID, arguments);

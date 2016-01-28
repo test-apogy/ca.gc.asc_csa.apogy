@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui.handlers;
+package ca.gc.asc_csa.apogy.common.images.ui.handlers;
 
 import java.util.List;
 
@@ -7,14 +7,14 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.ImageData;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ui.Activator;
-import org.eclipse.symphony.common.images.ui.ImagesUiUtilities;
-import org.eclipse.symphony.common.images.ui.properties.sections.ImageSection;
-import org.eclipse.symphony.common.images.ui.views.ImageView;
-import org.eclipse.symphony.common.ui.EclipseUiUtilities;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ui.Activator;
+import ca.gc.asc_csa.apogy.common.images.ui.ImagesUiUtilities;
+import ca.gc.asc_csa.apogy.common.images.ui.properties.sections.ImageSection;
+import ca.gc.asc_csa.apogy.common.images.ui.views.ImageView;
+import ca.gc.asc_csa.apogy.common.ui.EclipseUiUtilities;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.views.properties.PropertySheet;
@@ -28,7 +28,7 @@ public class ExportImageHandler extends AbstractHandler {
 		/** Verifies if there is a selection associated to the event. */
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
 		if (selection != null) {
-			List<?> list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractEImage.class);
+			List<?> list = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, AbstractEImage.class);
 			if (list != null && !list.isEmpty()){
 				AbstractEImage image = (AbstractEImage) list.get(0);
 				ImageData imageData = EImagesUtilities.INSTANCE.convertToImageData(image.asBufferedImage());

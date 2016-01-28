@@ -1,12 +1,12 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui;
+package ca.gc.asc_csa.apogy.core.invocator.ui;
 
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,13 +14,13 @@ import org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFaca
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIPackage#getSymphony__CoreInvocatorUIFacade()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage#getApogyCoreInvocatorUIFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreInvocatorUIFacade extends EObject {
+public interface ApogyCoreInvocatorUIFacade extends EObject {
 
-	public static Symphony__CoreInvocatorUIFacade INSTANCE = Symphony__CoreInvocatorUIFacadeImpl.getInstance();
+	public static ApogyCoreInvocatorUIFacade INSTANCE = ApogyCoreInvocatorUIFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ public interface Symphony__CoreInvocatorUIFacade extends EObject {
 	 * @param source Reference to the source context.
 	 * @param destination Reference to the destination context.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.emf.Exception" sourceUnique="false" destinationUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.emf.Exception" sourceUnique="false" destinationUnique="false"
 	 * @generated
 	 */
 	void copyInitializationData(Context source, Context destination) throws Exception;
@@ -44,8 +44,8 @@ public interface Symphony__CoreInvocatorUIFacade extends EObject {
 	 * @param destination Reference to the destination implementation.
 	 * @param command Reference to the stack command.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.emf.Exception" sourceUnique="false" destinationUnique="false" commandDataType="org.eclipse.symphony.core.invocator.ui.CompoundCommand" commandUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.emf.Exception" sourceUnique="false" destinationUnique="false" commandDataType="ca.gc.asc_csa.apogy.core.invocator.ui.CompoundCommand" commandUnique="false"
 	 * @generated
 	 */
 	void copyInitializationData(AbstractTypeImplementation source, AbstractTypeImplementation destination, CompoundCommand command) throws Exception;
-} // Symphony__CoreInvocatorUIFacade
+} // ApogyCoreInvocatorUIFacade

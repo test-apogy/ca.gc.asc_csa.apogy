@@ -1,11 +1,11 @@
 /**
  */
-package org.eclipse.symphony.common.emf.util;
+package ca.gc.asc_csa.apogy.common.emf.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.*;
+import ca.gc.asc_csa.apogy.common.emf.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,10 +17,10 @@ import org.eclipse.symphony.common.emf.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage
  * @generated
  */
-public class Symphony__CommonEMFSwitch<T> extends Switch<T>
+public class ApogyCommonEMFSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -28,7 +28,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CommonEMFPackage modelPackage;
+  protected static ApogyCommonEMFPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -36,10 +36,10 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFSwitch()
+  public ApogyCommonEMFSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonEMFPackage.eINSTANCE;
+			modelPackage = ApogyCommonEMFPackage.eINSTANCE;
 		}
 	}
 
@@ -68,50 +68,50 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE: {
-				Symphony__CommonEMFFacade symphony__CommonEMFFacade = (Symphony__CommonEMFFacade)theEObject;
-				T result = caseSymphony__CommonEMFFacade(symphony__CommonEMFFacade);
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE: {
+				ApogyCommonEMFFacade apogy__CommonEMFFacade = (ApogyCommonEMFFacade)theEObject;
+				T result = caseApogyCommonEMFFacade(apogy__CommonEMFFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE: {
+			case ApogyCommonEMFPackage.EOBJECT_REFERENCE: {
 				EObjectReference eObjectReference = (EObjectReference)theEObject;
 				T result = caseEObjectReference(eObjectReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.NAMED: {
+			case ApogyCommonEMFPackage.NAMED: {
 				Named named = (Named)theEObject;
 				T result = caseNamed(named);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.DESCRIBED: {
+			case ApogyCommonEMFPackage.DESCRIBED: {
 				Described described = (Described)theEObject;
 				T result = caseDescribed(described);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.TIMED: {
+			case ApogyCommonEMFPackage.TIMED: {
 				Timed timed = (Timed)theEObject;
 				T result = caseTimed(timed);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.SERVER: {
+			case ApogyCommonEMFPackage.SERVER: {
 				Server server = (Server)theEObject;
 				T result = caseServer(server);
 				if (result == null) result = caseStartable(server);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.STARTABLE: {
+			case ApogyCommonEMFPackage.STARTABLE: {
 				Startable startable = (Startable)theEObject;
 				T result = caseStartable(startable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.TIME_SOURCE: {
+			case ApogyCommonEMFPackage.TIME_SOURCE: {
 				TimeSource timeSource = (TimeSource)theEObject;
 				T result = caseTimeSource(timeSource);
 				if (result == null) result = caseNamed(timeSource);
@@ -121,7 +121,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.FIXED_TIME_SOURCE: {
+			case ApogyCommonEMFPackage.FIXED_TIME_SOURCE: {
 				FixedTimeSource fixedTimeSource = (FixedTimeSource)theEObject;
 				T result = caseFixedTimeSource(fixedTimeSource);
 				if (result == null) result = caseTimeSource(fixedTimeSource);
@@ -132,7 +132,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE: {
+			case ApogyCommonEMFPackage.CURRENT_TIME_SOURCE: {
 				CurrentTimeSource currentTimeSource = (CurrentTimeSource)theEObject;
 				T result = caseCurrentTimeSource(currentTimeSource);
 				if (result == null) result = caseTimeSource(currentTimeSource);
@@ -143,7 +143,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE: {
+			case ApogyCommonEMFPackage.BROWSEABLE_TIME_SOURCE: {
 				BrowseableTimeSource browseableTimeSource = (BrowseableTimeSource)theEObject;
 				T result = caseBrowseableTimeSource(browseableTimeSource);
 				if (result == null) result = caseTimeSource(browseableTimeSource);
@@ -154,7 +154,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.SELECTION_BASED_TIME_SOURCE: {
+			case ApogyCommonEMFPackage.SELECTION_BASED_TIME_SOURCE: {
 				SelectionBasedTimeSource selectionBasedTimeSource = (SelectionBasedTimeSource)theEObject;
 				T result = caseSelectionBasedTimeSource(selectionBasedTimeSource);
 				if (result == null) result = caseTimeSource(selectionBasedTimeSource);
@@ -165,7 +165,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE: {
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE: {
 				CollectionTimedTimeSource collectionTimedTimeSource = (CollectionTimedTimeSource)theEObject;
 				T result = caseCollectionTimedTimeSource(collectionTimedTimeSource);
 				if (result == null) result = caseBrowseableTimeSource(collectionTimedTimeSource);
@@ -177,45 +177,45 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.DISPOSABLE: {
+			case ApogyCommonEMFPackage.DISPOSABLE: {
 				Disposable disposable = (Disposable)theEObject;
 				T result = caseDisposable(disposable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER: {
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER: {
 				FeatureNodeAdapter featureNodeAdapter = (FeatureNodeAdapter)theEObject;
 				T result = caseFeatureNodeAdapter(featureNodeAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_NODE: {
+			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_NODE: {
 				AbstractFeatureNode abstractFeatureNode = (AbstractFeatureNode)theEObject;
 				T result = caseAbstractFeatureNode(abstractFeatureNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE: {
+			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE: {
 				AbstractFeatureListNode abstractFeatureListNode = (AbstractFeatureListNode)theEObject;
 				T result = caseAbstractFeatureListNode(abstractFeatureListNode);
 				if (result == null) result = caseAbstractFeatureNode(abstractFeatureListNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_TREE_NODE: {
+			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_TREE_NODE: {
 				AbstractFeatureTreeNode abstractFeatureTreeNode = (AbstractFeatureTreeNode)theEObject;
 				T result = caseAbstractFeatureTreeNode(abstractFeatureTreeNode);
 				if (result == null) result = caseAbstractFeatureNode(abstractFeatureTreeNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE: {
+			case ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE: {
 				AbstractRootNode abstractRootNode = (AbstractRootNode)theEObject;
 				T result = caseAbstractRootNode(abstractRootNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.TREE_ROOT_NODE: {
+			case ApogyCommonEMFPackage.TREE_ROOT_NODE: {
 				TreeRootNode treeRootNode = (TreeRootNode)theEObject;
 				T result = caseTreeRootNode(treeRootNode);
 				if (result == null) result = caseAbstractFeatureTreeNode(treeRootNode);
@@ -224,7 +224,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE: {
+			case ApogyCommonEMFPackage.TREE_FEATURE_NODE: {
 				TreeFeatureNode treeFeatureNode = (TreeFeatureNode)theEObject;
 				T result = caseTreeFeatureNode(treeFeatureNode);
 				if (result == null) result = caseAbstractFeatureTreeNode(treeFeatureNode);
@@ -233,7 +233,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.LIST_ROOT_NODE: {
+			case ApogyCommonEMFPackage.LIST_ROOT_NODE: {
 				ListRootNode listRootNode = (ListRootNode)theEObject;
 				T result = caseListRootNode(listRootNode);
 				if (result == null) result = caseAbstractFeatureListNode(listRootNode);
@@ -242,7 +242,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE: {
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE: {
 				ListFeatureNode listFeatureNode = (ListFeatureNode)theEObject;
 				T result = caseListFeatureNode(listFeatureNode);
 				if (result == null) result = caseAbstractFeatureListNode(listFeatureNode);
@@ -251,7 +251,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER: {
+			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER: {
 				AbstractFeatureSpecifier abstractFeatureSpecifier = (AbstractFeatureSpecifier)theEObject;
 				T result = caseAbstractFeatureSpecifier(abstractFeatureSpecifier);
 				if (result == null) result = defaultCase(theEObject);
@@ -272,7 +272,7 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonEMFFacade(Symphony__CommonEMFFacade object) {
+	public T caseApogyCommonEMFFacade(ApogyCommonEMFFacade object) {
 		return null;
 	}
 
@@ -652,4 +652,4 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CommonEMFSwitch
+} //ApogyCommonEMFSwitch

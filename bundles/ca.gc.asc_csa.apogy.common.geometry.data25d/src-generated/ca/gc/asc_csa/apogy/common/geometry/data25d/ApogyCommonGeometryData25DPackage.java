@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d;
+package ca.gc.asc_csa.apogy.common.geometry.data25d;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,12 +23,12 @@ import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData25D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData25D' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data25d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data25d.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData25D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonGeometryData25D' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data25d/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data25d.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry'"
  * @generated
  */
-public interface Symphony__CommonGeometryData25DPackage extends EPackage {
+public interface ApogyCommonGeometryData25DPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.geometry.data25d";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.geometry.data25d";
 
 	/**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData25DPackage eINSTANCE = org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl.init();
+	ApogyCommonGeometryData25DPackage eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Coordinates25DImpl <em>Coordinates25 D</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Coordinates25DImpl <em>Coordinates25 D</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Coordinates25DImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getCoordinates25D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Coordinates25DImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getCoordinates25D()
 	 * @generated
 	 */
 	int COORDINATES25_D = 0;
@@ -78,7 +78,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES25_D__U = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
+	int COORDINATES25_D__U = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>V</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES25_D__V = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
+	int COORDINATES25_D__V = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>W</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES25_D__W = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
+	int COORDINATES25_D__W = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Coordinates25 D</em>' class.
@@ -105,7 +105,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES25_D_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
+	int COORDINATES25_D_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Coordinates25 D</em>' class.
@@ -114,14 +114,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES25_D_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
+	int COORDINATES25_D_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DImpl <em>Coordinates Set25 D</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DImpl <em>Coordinates Set25 D</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getCoordinatesSet25D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getCoordinatesSet25D()
 	 * @generated
 	 */
 	int COORDINATES_SET25_D = 1;
@@ -133,7 +133,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_D__POINTS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS;
+	int COORDINATES_SET25_D__POINTS = ApogyCommonGeometryDataPackage.COORDINATES_SET__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -142,7 +142,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_D__NORMALS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS;
+	int COORDINATES_SET25_D__NORMALS = ApogyCommonGeometryDataPackage.COORDINATES_SET__NORMALS;
 
 	/**
 	 * The feature id for the '<em><b>Enforce Uniqueness</b></em>' attribute.
@@ -151,7 +151,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_D__ENFORCE_UNIQUENESS = Symphony__CommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
+	int COORDINATES_SET25_D__ENFORCE_UNIQUENESS = ApogyCommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Coordinates Set25 D</em>' class.
@@ -160,7 +160,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_D_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 1;
+	int COORDINATES_SET25_D_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Coordinates Set25 D</em>' class.
@@ -169,14 +169,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_D_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
+	int COORDINATES_SET25_D_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl <em>Volumetric Coordinates Set25 D</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl <em>Volumetric Coordinates Set25 D</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getVolumetricCoordinatesSet25D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getVolumetricCoordinatesSet25D()
 	 * @generated
 	 */
 	int VOLUMETRIC_COORDINATES_SET25_D = 2;
@@ -236,11 +236,11 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	int VOLUMETRIC_COORDINATES_SET25_D_OPERATION_COUNT = COORDINATES_SET25_D_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Polygon25DImpl <em>Polygon25 D</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Polygon25DImpl <em>Polygon25 D</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Polygon25DImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getPolygon25D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Polygon25DImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getPolygon25D()
 	 * @generated
 	 */
 	int POLYGON25_D = 3;
@@ -252,7 +252,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLYGON25_D__VERTICES = Symphony__CommonGeometryDataPackage.POLYGON__VERTICES;
+	int POLYGON25_D__VERTICES = ApogyCommonGeometryDataPackage.POLYGON__VERTICES;
 
 	/**
 	 * The number of structural features of the '<em>Polygon25 D</em>' class.
@@ -261,7 +261,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLYGON25_D_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 0;
+	int POLYGON25_D_FEATURE_COUNT = ApogyCommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Polygon25 D</em>' class.
@@ -270,14 +270,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLYGON25_D_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.POLYGON_OPERATION_COUNT + 0;
+	int POLYGON25_D_OPERATION_COUNT = ApogyCommonGeometryDataPackage.POLYGON_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Mesh25DImpl <em>Mesh25 D</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Mesh25DImpl <em>Mesh25 D</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Mesh25DImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getMesh25D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Mesh25DImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getMesh25D()
 	 * @generated
 	 */
 	int MESH25_D = 4;
@@ -289,7 +289,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D__POINTS = Symphony__CommonGeometryDataPackage.MESH__POINTS;
+	int MESH25_D__POINTS = ApogyCommonGeometryDataPackage.MESH__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -298,7 +298,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D__NORMALS = Symphony__CommonGeometryDataPackage.MESH__NORMALS;
+	int MESH25_D__NORMALS = ApogyCommonGeometryDataPackage.MESH__NORMALS;
 
 	/**
 	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
@@ -307,7 +307,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D__POLYGONS = Symphony__CommonGeometryDataPackage.MESH__POLYGONS;
+	int MESH25_D__POLYGONS = ApogyCommonGeometryDataPackage.MESH__POLYGONS;
 
 	/**
 	 * The number of structural features of the '<em>Mesh25 D</em>' class.
@@ -316,7 +316,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
+	int MESH25_D_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
@@ -325,7 +325,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D___GET_POLYGON_NEIGHBOURS__POLYGON = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
+	int MESH25_D___GET_POLYGON_NEIGHBOURS__POLYGON = ApogyCommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
 
 	/**
 	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
@@ -334,7 +334,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D___GET_POINT_NEIGHBOURS__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
+	int MESH25_D___GET_POINT_NEIGHBOURS__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
@@ -343,7 +343,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D___GET_POLYGONS_SHARING_POINT__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
+	int MESH25_D___GET_POLYGONS_SHARING_POINT__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
 
 	/**
 	 * The number of operations of the '<em>Mesh25 D</em>' class.
@@ -352,14 +352,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH25_D_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
+	int MESH25_D_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.VolumetricMesh25DImpl <em>Volumetric Mesh25 D</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricMesh25DImpl <em>Volumetric Mesh25 D</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.VolumetricMesh25DImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getVolumetricMesh25D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricMesh25DImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getVolumetricMesh25D()
 	 * @generated
 	 */
 	int VOLUMETRIC_MESH25_D = 5;
@@ -437,11 +437,11 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	int VOLUMETRIC_MESH25_D_OPERATION_COUNT = MESH25_D_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl <em>Coordinates Set25 DFilter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl <em>Coordinates Set25 DFilter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getCoordinatesSet25DFilter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getCoordinatesSet25DFilter()
 	 * @generated
 	 */
 	int COORDINATES_SET25_DFILTER = 6;
@@ -453,7 +453,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_DFILTER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int COORDINATES_SET25_DFILTER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -462,7 +462,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_DFILTER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int COORDINATES_SET25_DFILTER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -471,7 +471,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_DFILTER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int COORDINATES_SET25_DFILTER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Coordinates Set25 DFilter</em>' class.
@@ -480,7 +480,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_DFILTER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int COORDINATES_SET25_DFILTER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -489,7 +489,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_DFILTER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int COORDINATES_SET25_DFILTER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Create Coordinates Set25 D</em>' operation.
@@ -498,7 +498,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Coordinates Set25 DFilter</em>' class.
@@ -507,17 +507,17 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATES_SET25_DFILTER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 1;
+	int COORDINATES_SET25_DFILTER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getSymphony__CommonGeometryData25DFacade()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getApogyCommonGeometryData25DFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE = 7;
+	int APOGY_COMMON_GEOMETRY_DATA25_DFACADE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -526,7 +526,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_GEOMETRY_DATA25_DFACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Coordinates25 D</em>' operation.
@@ -535,7 +535,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D = 0;
+	int APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D = 0;
 
 	/**
 	 * The operation id for the '<em>Create Coordinates25 D</em>' operation.
@@ -544,7 +544,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = 1;
+	int APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Set</em>' operation.
@@ -553,7 +553,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = 2;
+	int APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = 2;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -562,14 +562,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE_OPERATION_COUNT = 3;
+	int APOGY_COMMON_GEOMETRY_DATA25_DFACADE_OPERATION_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Data25DIOImpl <em>Data25 DIO</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Data25DIOImpl <em>Data25 DIO</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Data25DIOImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getData25DIO()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Data25DIOImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getData25DIO()
 	 * @generated
 	 */
 	int DATA25_DIO = 8;
@@ -615,212 +615,212 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.IOException
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getIOException()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getIOException()
 	 * @generated
 	 */
 	int IO_EXCEPTION = 9;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D <em>Coordinates25 D</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D <em>Coordinates25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates25 D</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Coordinates25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D
 	 * @generated
 	 */
 	EClass getCoordinates25D();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getU <em>U</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getU <em>U</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>U</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getU()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getU()
 	 * @see #getCoordinates25D()
 	 * @generated
 	 */
 	EAttribute getCoordinates25D_U();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getV <em>V</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getV <em>V</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>V</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getV()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getV()
 	 * @see #getCoordinates25D()
 	 * @generated
 	 */
 	EAttribute getCoordinates25D_V();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getW <em>W</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getW <em>W</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>W</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getW()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D#getW()
 	 * @see #getCoordinates25D()
 	 * @generated
 	 */
 	EAttribute getCoordinates25D_W();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D <em>Coordinates Set25 D</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D <em>Coordinates Set25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates Set25 D</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D
 	 * @generated
 	 */
 	EClass getCoordinatesSet25D();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness <em>Enforce Uniqueness</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness <em>Enforce Uniqueness</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Enforce Uniqueness</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness()
 	 * @see #getCoordinatesSet25D()
 	 * @generated
 	 */
 	EAttribute getCoordinatesSet25D_EnforceUniqueness();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D <em>Volumetric Coordinates Set25 D</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D <em>Volumetric Coordinates Set25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Volumetric Coordinates Set25 D</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D
 	 * @generated
 	 */
 	EClass getVolumetricCoordinatesSet25D();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D#getCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data25d.Coordinates25D) <em>Get Cartesian Position Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D#getCartesianPositionCoordinates(ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D) <em>Get Cartesian Position Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Cartesian Position Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D#getCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data25d.Coordinates25D)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D#getCartesianPositionCoordinates(ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D)
 	 * @generated
 	 */
 	EOperation getVolumetricCoordinatesSet25D__GetCartesianPositionCoordinates__Coordinates25D();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.Polygon25D <em>Polygon25 D</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D <em>Polygon25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Polygon25 D</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Polygon25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D
 	 * @generated
 	 */
 	EClass getPolygon25D();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.Mesh25D <em>Mesh25 D</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D <em>Mesh25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mesh25 D</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Mesh25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D
 	 * @generated
 	 */
 	EClass getMesh25D();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D <em>Volumetric Mesh25 D</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D <em>Volumetric Mesh25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Volumetric Mesh25 D</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D
 	 * @generated
 	 */
 	EClass getVolumetricMesh25D();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter <em>Coordinates Set25 DFilter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25DFilter <em>Coordinates Set25 DFilter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates Set25 DFilter</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25DFilter
 	 * @generated
 	 */
 	EClass getCoordinatesSet25DFilter();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter#createCoordinatesSet25D() <em>Create Coordinates Set25 D</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25DFilter#createCoordinatesSet25D() <em>Create Coordinates Set25 D</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Coordinates Set25 D</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter#createCoordinatesSet25D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25DFilter#createCoordinatesSet25D()
 	 * @generated
 	 */
 	EOperation getCoordinatesSet25DFilter__CreateCoordinatesSet25D();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonGeometryData25DFacade();
+	EClass getApogyCommonGeometryData25DFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(org.eclipse.symphony.common.geometry.data25d.Coordinates25D) <em>Create Coordinates25 D</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade#createCoordinates25D(ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D) <em>Create Coordinates25 D</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Coordinates25 D</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(org.eclipse.symphony.common.geometry.data25d.Coordinates25D)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade#createCoordinates25D(ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D();
+	EOperation getApogyCommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(double, double, double) <em>Create Coordinates25 D</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade#createCoordinates25D(double, double, double) <em>Create Coordinates25 D</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Coordinates25 D</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade#createCoordinates25D(double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double();
+	EOperation getApogyCommonGeometryData25DFacade__CreateCoordinates25D__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D) <em>Create Cartesian Coordinates Set</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade#createCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D) <em>Create Cartesian Coordinates Set</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Set</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade#createCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
+	EOperation getApogyCommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.Data25DIO <em>Data25 DIO</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO <em>Data25 DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Data25 DIO</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Data25DIO
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO
 	 * @generated
 	 */
 	EClass getData25DIO();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Data25DIO#saveXYZ(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D, java.lang.String) <em>Save XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO#saveXYZ(ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D, java.lang.String) <em>Save XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Data25DIO#saveXYZ(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO#saveXYZ(ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D, java.lang.String)
 	 * @generated
 	 */
 	EOperation getData25DIO__SaveXYZ__VolumetricCoordinatesSet25D_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Data25DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Data25DIO#loadXYZ(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO#loadXYZ(java.lang.String)
 	 * @generated
 	 */
 	EOperation getData25DIO__LoadXYZ__String();
@@ -843,7 +843,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData25DFactory getSymphony__CommonGeometryData25DFactory();
+	ApogyCommonGeometryData25DFactory getApogyCommonGeometryData25DFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -860,11 +860,11 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Coordinates25DImpl <em>Coordinates25 D</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Coordinates25DImpl <em>Coordinates25 D</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Coordinates25DImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getCoordinates25D()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Coordinates25DImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getCoordinates25D()
 		 * @generated
 		 */
 		EClass COORDINATES25_D = eINSTANCE.getCoordinates25D();
@@ -894,11 +894,11 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		EAttribute COORDINATES25_D__W = eINSTANCE.getCoordinates25D_W();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DImpl <em>Coordinates Set25 D</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DImpl <em>Coordinates Set25 D</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getCoordinatesSet25D()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getCoordinatesSet25D()
 		 * @generated
 		 */
 		EClass COORDINATES_SET25_D = eINSTANCE.getCoordinatesSet25D();
@@ -912,11 +912,11 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		EAttribute COORDINATES_SET25_D__ENFORCE_UNIQUENESS = eINSTANCE.getCoordinatesSet25D_EnforceUniqueness();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl <em>Volumetric Coordinates Set25 D</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl <em>Volumetric Coordinates Set25 D</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getVolumetricCoordinatesSet25D()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricCoordinatesSet25DImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getVolumetricCoordinatesSet25D()
 		 * @generated
 		 */
 		EClass VOLUMETRIC_COORDINATES_SET25_D = eINSTANCE.getVolumetricCoordinatesSet25D();
@@ -930,41 +930,41 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		EOperation VOLUMETRIC_COORDINATES_SET25_D___GET_CARTESIAN_POSITION_COORDINATES__COORDINATES25D = eINSTANCE.getVolumetricCoordinatesSet25D__GetCartesianPositionCoordinates__Coordinates25D();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Polygon25DImpl <em>Polygon25 D</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Polygon25DImpl <em>Polygon25 D</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Polygon25DImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getPolygon25D()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Polygon25DImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getPolygon25D()
 		 * @generated
 		 */
 		EClass POLYGON25_D = eINSTANCE.getPolygon25D();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Mesh25DImpl <em>Mesh25 D</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Mesh25DImpl <em>Mesh25 D</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Mesh25DImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getMesh25D()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Mesh25DImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getMesh25D()
 		 * @generated
 		 */
 		EClass MESH25_D = eINSTANCE.getMesh25D();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.VolumetricMesh25DImpl <em>Volumetric Mesh25 D</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricMesh25DImpl <em>Volumetric Mesh25 D</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.VolumetricMesh25DImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getVolumetricMesh25D()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.VolumetricMesh25DImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getVolumetricMesh25D()
 		 * @generated
 		 */
 		EClass VOLUMETRIC_MESH25_D = eINSTANCE.getVolumetricMesh25D();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl <em>Coordinates Set25 DFilter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl <em>Coordinates Set25 DFilter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getCoordinatesSet25DFilter()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getCoordinatesSet25DFilter()
 		 * @generated
 		 */
 		EClass COORDINATES_SET25_DFILTER = eINSTANCE.getCoordinatesSet25DFilter();
@@ -978,14 +978,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		EOperation COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D = eINSTANCE.getCoordinatesSet25DFilter__CreateCoordinatesSet25D();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getSymphony__CommonGeometryData25DFacade()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getApogyCommonGeometryData25DFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE = eINSTANCE.getSymphony__CommonGeometryData25DFacade();
+		EClass APOGY_COMMON_GEOMETRY_DATA25_DFACADE = eINSTANCE.getApogyCommonGeometryData25DFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Coordinates25 D</b></em>' operation.
@@ -993,7 +993,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D = eINSTANCE.getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D();
+		EOperation APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D = eINSTANCE.getApogyCommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Coordinates25 D</b></em>' operation.
@@ -1001,7 +1001,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double();
+		EOperation APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyCommonGeometryData25DFacade__CreateCoordinates25D__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Set</b></em>' operation.
@@ -1009,14 +1009,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = eINSTANCE.getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
+		EOperation APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = eINSTANCE.getApogyCommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Data25DIOImpl <em>Data25 DIO</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Data25DIOImpl <em>Data25 DIO</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Data25DIOImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getData25DIO()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.Data25DIOImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getData25DIO()
 		 * @generated
 		 */
 		EClass DATA25_DIO = eINSTANCE.getData25DIO();
@@ -1042,11 +1042,11 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.IOException
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getIOException()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.impl.ApogyCommonGeometryData25DPackageImpl#getIOException()
 		 * @generated
 		 */
 		EDataType IO_EXCEPTION = eINSTANCE.getIOException();
 
 	}
 
-} //Symphony__CommonGeometryData25DPackage
+} //ApogyCommonGeometryData25DPackage

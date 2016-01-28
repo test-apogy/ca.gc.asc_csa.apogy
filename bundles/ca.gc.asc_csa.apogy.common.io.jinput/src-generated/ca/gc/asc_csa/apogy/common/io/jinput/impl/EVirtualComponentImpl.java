@@ -1,13 +1,13 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.impl;
+package ca.gc.asc_csa.apogy.common.io.jinput.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.io.jinput.EVirtualComponent;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EVirtualComponentImpl#getCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EVirtualComponentImpl#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,7 +59,7 @@ public class EVirtualComponentImpl extends EComponentImpl implements EVirtualCom
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonIOJInputPackage.Literals.EVIRTUAL_COMPONENT;
+		return ApogyCommonIOJInputPackage.Literals.EVIRTUAL_COMPONENT;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class EVirtualComponentImpl extends EComponentImpl implements EVirtualCom
 		float oldCurrentValue = currentValue;
 		currentValue = newCurrentValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE, oldCurrentValue, currentValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE, oldCurrentValue, currentValue));
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class EVirtualComponentImpl extends EComponentImpl implements EVirtualCom
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
+			case ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
 				return getCurrentValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -105,7 +105,7 @@ public class EVirtualComponentImpl extends EComponentImpl implements EVirtualCom
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
+			case ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
 				setCurrentValue((Float)newValue);
 				return;
 		}
@@ -120,7 +120,7 @@ public class EVirtualComponentImpl extends EComponentImpl implements EVirtualCom
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
+			case ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
 				setCurrentValue(CURRENT_VALUE_EDEFAULT);
 				return;
 		}
@@ -135,7 +135,7 @@ public class EVirtualComponentImpl extends EComponentImpl implements EVirtualCom
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
+			case ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
 				return currentValue != CURRENT_VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

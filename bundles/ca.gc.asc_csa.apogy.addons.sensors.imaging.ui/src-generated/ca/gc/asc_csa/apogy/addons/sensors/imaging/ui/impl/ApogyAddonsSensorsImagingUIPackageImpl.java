@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIFactory;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsImagingUIPackage
+public class ApogyAddonsSensorsImagingUIPackageImpl extends EPackageImpl implements ApogyAddonsSensorsImagingUIPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -39,13 +39,13 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__AddonsSensorsImagingUIPackageImpl()
+  private ApogyAddonsSensorsImagingUIPackageImpl()
   {
-		super(eNS_URI, Symphony__AddonsSensorsImagingUIFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsSensorsImagingUIFactory.eINSTANCE);
 	}
 
   /**
@@ -58,7 +58,7 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsImagingUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsImagingUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -67,31 +67,31 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__AddonsSensorsImagingUIPackage init()
+  public static ApogyAddonsSensorsImagingUIPackage init()
   {
-		if (isInited) return (Symphony__AddonsSensorsImagingUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingUIPackage.eNS_URI);
+		if (isInited) return (ApogyAddonsSensorsImagingUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsImagingUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsImagingUIPackageImpl theSymphony__AddonsSensorsImagingUIPackage = (Symphony__AddonsSensorsImagingUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsImagingUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsImagingUIPackageImpl());
+		ApogyAddonsSensorsImagingUIPackageImpl theApogyAddonsSensorsImagingUIPackage = (ApogyAddonsSensorsImagingUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsImagingUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsImagingUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsImagingUIPackage.createPackageContents();
+		theApogyAddonsSensorsImagingUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsImagingUIPackage.initializePackageContents();
+		theApogyAddonsSensorsImagingUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsImagingUIPackage.freeze();
+		theApogyAddonsSensorsImagingUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsImagingUIPackage.eNS_URI, theSymphony__AddonsSensorsImagingUIPackage);
-		return theSymphony__AddonsSensorsImagingUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsImagingUIPackage.eNS_URI, theApogyAddonsSensorsImagingUIPackage);
+		return theApogyAddonsSensorsImagingUIPackage;
 	}
 
   /**
@@ -148,8 +148,8 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsImagingUIFactory getSymphony__AddonsSensorsImagingUIFactory() {
-		return (Symphony__AddonsSensorsImagingUIFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsImagingUIFactory getApogyAddonsSensorsImagingUIFactory() {
+		return (ApogyAddonsSensorsImagingUIFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -204,7 +204,7 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -212,11 +212,11 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		imageSnapshotPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		imageSnapshotPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(imageSnapshotPresentationEClass, ImageSnapshotPresentation.class, "ImageSnapshotPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImageSnapshotPresentation_PresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageSnapshotPresentation_PresentationMode(), theApogyCommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageSnapshotPresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageSnapshotPresentation_ImageProjectionVisible(), theEcorePackage.getEBoolean(), "imageProjectionVisible", "false", 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageSnapshotPresentation_ImageProjectionOnFOVVisible(), theEcorePackage.getEBoolean(), "imageProjectionOnFOVVisible", "false", 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -225,4 +225,4 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsSensorsImagingUIPackageImpl
+} //ApogyAddonsSensorsImagingUIPackageImpl

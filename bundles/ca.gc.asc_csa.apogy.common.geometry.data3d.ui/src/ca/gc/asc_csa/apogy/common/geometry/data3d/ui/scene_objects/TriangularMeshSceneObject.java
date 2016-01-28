@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.scene_objects;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects;
 
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface TriangularMeshSceneObject extends SceneObject {
 

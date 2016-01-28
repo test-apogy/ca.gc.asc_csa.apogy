@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.images;
+package ca.gc.asc_csa.apogy.common.images;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -13,7 +13,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.swt.graphics.ImageData;
-import org.eclipse.symphony.common.images.impl.EImagesUtilitiesImpl;
+import ca.gc.asc_csa.apogy.common.images.impl.EImagesUtilitiesImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.images.impl.EImagesUtilitiesImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getEImagesUtilities()
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getEImagesUtilities()
  * @model
  * @generated
  */
@@ -80,7 +80,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.images.Exception" destinationFilePathUnique="false" destinationFilePathRequired="true" imageUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.images.Exception" destinationFilePathUnique="false" destinationFilePathRequired="true" imageUnique="false"
 	 * @generated
 	 */
 	void saveImageAsJPEG(String destinationFilePath, AbstractEImage image) throws Exception;
@@ -88,7 +88,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.images.Exception" destinationFilePathUnique="false" destinationFilePathRequired="true" imageUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.images.Exception" destinationFilePathUnique="false" destinationFilePathRequired="true" imageUnique="false"
 	 * @generated
 	 */
 	void saveImageAsPNG(String destinationFilePath, AbstractEImage image) throws Exception;
@@ -136,7 +136,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" imagesDataType="org.eclipse.symphony.common.images.List<? extends org.eclipse.symphony.common.images.AbstractEImage>" imagesUnique="false" imagesMany="false"
+	 * @model unique="false" imagesDataType="ca.gc.asc_csa.apogy.common.images.List<? extends ca.gc.asc_csa.apogy.common.images.AbstractEImage>" imagesUnique="false" imagesMany="false"
 	 * @generated
 	 */
 	ImageSize getAllEncompassingImageSize(List<? extends AbstractEImage> images);
@@ -144,7 +144,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" imagesDataType="org.eclipse.symphony.common.images.List<? extends org.eclipse.symphony.common.images.AbstractEImage>" imagesUnique="false" imagesMany="false" allowImageResizeUnique="false" alignmentUnique="false"
+	 * @model unique="false" imagesDataType="ca.gc.asc_csa.apogy.common.images.List<? extends ca.gc.asc_csa.apogy.common.images.AbstractEImage>" imagesUnique="false" imagesMany="false" allowImageResizeUnique="false" alignmentUnique="false"
 	 * @generated
 	 */
 	AbstractEImage superPoseImages(List<? extends AbstractEImage> images, boolean allowImageResize, ImageAlignment alignment);
@@ -173,7 +173,7 @@ public interface EImagesUtilities extends EObject
 	 * widthOffset and heightOffset are relative to the upper
 	 * left corner of the image.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.images.Exception" originalImageUnique="false" widthOffsetUnique="false" heightOffsetUnique="false" subImageWidthUnique="false" subImageHeightUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.images.Exception" originalImageUnique="false" widthOffsetUnique="false" heightOffsetUnique="false" subImageWidthUnique="false" subImageHeightUnique="false"
 	 * @generated
 	 */
 	AbstractEImage getSubImage(AbstractEImage originalImage, int widthOffset, int heightOffset, int subImageWidth, int subImageHeight) throws Exception;
@@ -181,7 +181,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.images.BufferedImage" unique="false" imageDataDataType="org.eclipse.symphony.common.images.ImageData" imageDataUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.images.BufferedImage" unique="false" imageDataDataType="ca.gc.asc_csa.apogy.common.images.ImageData" imageDataUnique="false"
 	 * @generated
 	 */
 	BufferedImage convertToBufferedImage(ImageData imageData);
@@ -189,7 +189,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.images.ImageData" unique="false" bufferedImageDataType="org.eclipse.symphony.common.images.BufferedImage" bufferedImageUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.images.ImageData" unique="false" bufferedImageDataType="ca.gc.asc_csa.apogy.common.images.BufferedImage" bufferedImageUnique="false"
 	 * @generated
 	 */
 	ImageData convertToImageData(BufferedImage bufferedImage);
@@ -261,7 +261,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" textUnique="false" fontDataType="org.eclipse.symphony.common.images.Font" fontUnique="false" textColorDataType="org.eclipse.symphony.common.images.Color" textColorUnique="false" backgroundColorDataType="org.eclipse.symphony.common.images.Color" backgroundColorUnique="false" borderWidthUnique="false"
+	 * @model unique="false" textUnique="false" fontDataType="ca.gc.asc_csa.apogy.common.images.Font" fontUnique="false" textColorDataType="ca.gc.asc_csa.apogy.common.images.Color" textColorUnique="false" backgroundColorDataType="ca.gc.asc_csa.apogy.common.images.Color" backgroundColorUnique="false" borderWidthUnique="false"
 	 * @generated
 	 */
 	AbstractEImage createTextImage(String text, Font font, Color textColor, Color backgroundColor, int borderWidth);

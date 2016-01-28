@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna;
+package ca.gc.asc_csa.apogy.examples.antenna;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaFactory
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesAntenna' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='Symphony__ExamplesAntenna' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.antenna/src-generated' editDirectory='/org.eclipse.symphony.examples.antenna.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesAntenna' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='ApogyExamplesAntenna' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.antenna/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.antenna.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesAntennaPackage extends EPackage
+public interface ApogyExamplesAntennaPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -42,7 +42,7 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.antenna";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.antenna";
 
   /**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesAntennaPackage eINSTANCE = org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl.init();
+  ApogyExamplesAntennaPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.antenna.impl.AntennaImpl <em>Antenna</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.AntennaImpl <em>Antenna</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.antenna.impl.AntennaImpl
-	 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getAntenna()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.AntennaImpl
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getAntenna()
 	 * @generated
 	 */
   int ANTENNA = 0;
@@ -107,11 +107,11 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
   int ANTENNA_OPERATION_COUNT = 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.antenna.impl.DishAntennaImpl <em>Dish Antenna</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.DishAntennaImpl <em>Dish Antenna</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.antenna.impl.DishAntennaImpl
-	 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getDishAntenna()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.DishAntennaImpl
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getDishAntenna()
 	 * @generated
 	 */
   int DISH_ANTENNA = 1;
@@ -162,11 +162,11 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
   int DISH_ANTENNA_OPERATION_COUNT = ANTENNA_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaImpl <em>PTU Dish Antenna</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaImpl <em>PTU Dish Antenna</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaImpl
-	 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getPTUDishAntenna()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaImpl
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getPTUDishAntenna()
 	 * @generated
 	 */
   int PTU_DISH_ANTENNA = 2;
@@ -263,11 +263,11 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaStubImpl <em>PTU Dish Antenna Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaStubImpl <em>PTU Dish Antenna Stub</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaStubImpl
-	 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getPTUDishAntennaStub()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getPTUDishAntennaStub()
 	 * @generated
 	 */
 	int PTU_DISH_ANTENNA_STUB = 3;
@@ -363,11 +363,11 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
 	int PTU_DISH_ANTENNA_STUB_OPERATION_COUNT = PTU_DISH_ANTENNA_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaSimulatedImpl <em>PTU Dish Antenna Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaSimulatedImpl <em>PTU Dish Antenna Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaSimulatedImpl
-	 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getPTUDishAntennaSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getPTUDishAntennaSimulated()
 	 * @generated
 	 */
 	int PTU_DISH_ANTENNA_SIMULATED = 4;
@@ -463,136 +463,136 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
 	int PTU_DISH_ANTENNA_SIMULATED_OPERATION_COUNT = PTU_DISH_ANTENNA_OPERATION_COUNT + 0;
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.antenna.Antenna <em>Antenna</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.antenna.Antenna <em>Antenna</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Antenna</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.Antenna
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.Antenna
 	 * @generated
 	 */
   EClass getAntenna();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.Antenna#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.Antenna#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.Antenna#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.Antenna#isInitialized()
 	 * @see #getAntenna()
 	 * @generated
 	 */
 	EAttribute getAntenna_Initialized();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.antenna.Antenna#init() <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.antenna.Antenna#init() <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.examples.antenna.Antenna#init()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.Antenna#init()
 	 * @generated
 	 */
 	EOperation getAntenna__Init();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.antenna.DishAntenna <em>Dish Antenna</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.antenna.DishAntenna <em>Dish Antenna</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Dish Antenna</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.DishAntenna
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.DishAntenna
 	 * @generated
 	 */
   EClass getDishAntenna();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.antenna.DishAntenna#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.antenna.DishAntenna#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.DishAntenna#getFov()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.DishAntenna#getFov()
 	 * @see #getDishAntenna()
 	 * @generated
 	 */
   EReference getDishAntenna_Fov();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna <em>PTU Dish Antenna</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna <em>PTU Dish Antenna</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>PTU Dish Antenna</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntenna
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna
 	 * @generated
 	 */
   EClass getPTUDishAntenna();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getPanAngle <em>Pan Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getPanAngle <em>Pan Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Pan Angle</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntenna#getPanAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getPanAngle()
 	 * @see #getPTUDishAntenna()
 	 * @generated
 	 */
   EAttribute getPTUDishAntenna_PanAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getTiltAngle <em>Tilt Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getTiltAngle <em>Tilt Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tilt Angle</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntenna#getTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#getTiltAngle()
 	 * @see #getPTUDishAntenna()
 	 * @generated
 	 */
   EAttribute getPTUDishAntenna_TiltAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tracking Sun</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntenna#isTrackingSun()
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#isTrackingSun()
 	 * @see #getPTUDishAntenna()
 	 * @generated
 	 */
 	EAttribute getPTUDishAntenna_TrackingSun();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#moveTo(double, double) <em>Move To</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#moveTo(double, double) <em>Move To</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move To</em>' operation.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntenna#moveTo(double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#moveTo(double, double)
 	 * @generated
 	 */
   EOperation getPTUDishAntenna__MoveTo__double_double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#trackSun(boolean) <em>Track Sun</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#trackSun(boolean) <em>Track Sun</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Track Sun</em>' operation.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntenna#trackSun(boolean)
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna#trackSun(boolean)
 	 * @generated
 	 */
 	EOperation getPTUDishAntenna__TrackSun__boolean();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.antenna.PTUDishAntennaStub <em>PTU Dish Antenna Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub <em>PTU Dish Antenna Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>PTU Dish Antenna Stub</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntennaStub
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub
 	 * @generated
 	 */
 	EClass getPTUDishAntennaStub();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated <em>PTU Dish Antenna Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated <em>PTU Dish Antenna Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>PTU Dish Antenna Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated
 	 * @generated
 	 */
 	EClass getPTUDishAntennaSimulated();
@@ -604,7 +604,7 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesAntennaFactory getSymphony__ExamplesAntennaFactory();
+	ApogyExamplesAntennaFactory getApogyExamplesAntennaFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -622,11 +622,11 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.antenna.impl.AntennaImpl <em>Antenna</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.AntennaImpl <em>Antenna</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.antenna.impl.AntennaImpl
-		 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getAntenna()
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.AntennaImpl
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getAntenna()
 		 * @generated
 		 */
     EClass ANTENNA = eINSTANCE.getAntenna();
@@ -648,11 +648,11 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
 		EOperation ANTENNA___INIT = eINSTANCE.getAntenna__Init();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.antenna.impl.DishAntennaImpl <em>Dish Antenna</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.DishAntennaImpl <em>Dish Antenna</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.antenna.impl.DishAntennaImpl
-		 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getDishAntenna()
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.DishAntennaImpl
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getDishAntenna()
 		 * @generated
 		 */
     EClass DISH_ANTENNA = eINSTANCE.getDishAntenna();
@@ -666,11 +666,11 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
     EReference DISH_ANTENNA__FOV = eINSTANCE.getDishAntenna_Fov();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaImpl <em>PTU Dish Antenna</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaImpl <em>PTU Dish Antenna</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaImpl
-		 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getPTUDishAntenna()
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaImpl
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getPTUDishAntenna()
 		 * @generated
 		 */
     EClass PTU_DISH_ANTENNA = eINSTANCE.getPTUDishAntenna();
@@ -716,25 +716,25 @@ public interface Symphony__ExamplesAntennaPackage extends EPackage
 		EOperation PTU_DISH_ANTENNA___TRACK_SUN__BOOLEAN = eINSTANCE.getPTUDishAntenna__TrackSun__boolean();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaStubImpl <em>PTU Dish Antenna Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaStubImpl <em>PTU Dish Antenna Stub</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaStubImpl
-		 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getPTUDishAntennaStub()
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getPTUDishAntennaStub()
 		 * @generated
 		 */
 		EClass PTU_DISH_ANTENNA_STUB = eINSTANCE.getPTUDishAntennaStub();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaSimulatedImpl <em>PTU Dish Antenna Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaSimulatedImpl <em>PTU Dish Antenna Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaSimulatedImpl
-		 * @see org.eclipse.symphony.examples.antenna.impl.Symphony__ExamplesAntennaPackageImpl#getPTUDishAntennaSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.antenna.impl.ApogyExamplesAntennaPackageImpl#getPTUDishAntennaSimulated()
 		 * @generated
 		 */
 		EClass PTU_DISH_ANTENNA_SIMULATED = eINSTANCE.getPTUDishAntennaSimulated();
 
   }
 
-} //Symphony__ExamplesAntennaPackage
+} //ApogyExamplesAntennaPackage

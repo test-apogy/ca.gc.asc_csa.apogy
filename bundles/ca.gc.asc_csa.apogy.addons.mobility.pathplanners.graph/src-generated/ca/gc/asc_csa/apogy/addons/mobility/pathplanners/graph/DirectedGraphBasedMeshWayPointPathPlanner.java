@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 import org.jgrapht.DirectedGraph;
 
@@ -16,10 +16,10 @@ import org.jgrapht.DirectedGraph;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDirectedGraphBasedMeshWayPointPathPlanner()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDirectedGraphBasedMeshWayPointPathPlanner()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends C
 	 * @see #isSetDirectedGraph()
 	 * @see #unsetDirectedGraph()
 	 * @see #setDirectedGraph(DirectedGraph)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph()
-	 * @model unique="false" unsettable="true" dataType="org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraph" transient="true"
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph()
+	 * @model unique="false" unsettable="true" dataType="ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraph" transient="true"
 	 * @generated
 	 */
 	DirectedGraph<?, ?> getDirectedGraph();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Directed Graph</em>' attribute.
@@ -55,7 +55,7 @@ public interface DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends C
 	void setDirectedGraph(DirectedGraph<?, ?> value);
 
 	/**
-	 * Unsets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute.
+	 * Unsets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetDirectedGraph()
@@ -66,7 +66,7 @@ public interface DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends C
 	void unsetDirectedGraph();
 
 	/**
-	 * Returns whether the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute is set.
+	 * Returns whether the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return whether the value of the '<em>Directed Graph</em>' attribute is set.

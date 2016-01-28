@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberImplementation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class TypeMemberImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeMemberImplementation_typeMember_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberImplementation_typeMember_feature", "_UI_TypeMemberImplementation_type"),
-				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER,
+				 ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER,
 				 true,
 				 false,
 				 true,
@@ -90,7 +90,7 @@ public class TypeMemberImplementationItemProvider
          getResourceLocator(),
          getString("_UI_TypeMemberImplementation_implementationClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberImplementation_implementationClass_feature", "_UI_TypeMemberImplementation_type"),
-         Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+         ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
          true,
          false,
          true,
@@ -100,7 +100,7 @@ public class TypeMemberImplementationItemProvider
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
 				TypeMemberImplementation implementation = (TypeMemberImplementation) object;				
-				return Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(implementation.getTypeMember().getMemberType().getInterfaceClass());
+				return ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(implementation.getTypeMember().getMemberType().getInterfaceClass());
 			}
 		});
   }

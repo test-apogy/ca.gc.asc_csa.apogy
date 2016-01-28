@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters;
+package ca.gc.asc_csa.apogy.common.converters;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.converters.Symphony__CommonConvertersFactory
+ * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonConverters' childCreationExtenders='true' extensibleProviderFactory='true' operationReflection='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonConverters' modelDirectory='/org.eclipse.symphony.common.converters/src-generated' basePackage='org.eclipse.symphony.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonConverters' childCreationExtenders='true' extensibleProviderFactory='true' operationReflection='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonConverters' modelDirectory='/ca.gc.asc_csa.apogy.common.converters/src-generated' basePackage='ca.gc.asc_csa.apogy.common'"
  * @generated
  */
-public interface Symphony__CommonConvertersPackage extends EPackage {
+public interface ApogyCommonConvertersPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.converters";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.converters";
 
 	/**
 	 * The package namespace name.
@@ -56,27 +56,27 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonConvertersPackage eINSTANCE = org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl.init();
+	ApogyCommonConvertersPackage eINSTANCE = ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl.init();
 
 	/**
 	 * The meta object id for the '<em>IConverter</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.converters.IConverter
-	 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getIConverter()
+	 * @see ca.gc.asc_csa.apogy.common.converters.IConverter
+	 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getIConverter()
 	 * @generated
 	 */
 	int ICONVERTER = 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersFacadeImpl
-	 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getSymphony__CommonConvertersFacade()
+	 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getApogyCommonConvertersFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_FACADE = 0;
+	int APOGY_COMMON_CONVERTERS_FACADE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -85,7 +85,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_CONVERTERS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Convert</em>' operation.
@@ -94,7 +94,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS = 0;
+	int APOGY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS = 0;
 
 	/**
 	 * The operation id for the '<em>Get All Registered Converters</em>' operation.
@@ -103,7 +103,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS = 1;
+	int APOGY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS = 1;
 
 	/**
 	 * The operation id for the '<em>Get Graph</em>' operation.
@@ -112,7 +112,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_FACADE___GET_GRAPH = 2;
+	int APOGY_COMMON_CONVERTERS_FACADE___GET_GRAPH = 2;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -121,14 +121,14 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_CONVERTERS_FACADE_OPERATION_COUNT = 3;
+	int APOGY_COMMON_CONVERTERS_FACADE_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getList()
+	 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getList()
 	 * @generated
 	 */
 	int LIST = 1;
@@ -138,7 +138,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.jgrapht.graph.SimpleDirectedWeightedGraph
-	 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getSimpleDirectedWeightedGraph()
+	 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getSimpleDirectedWeightedGraph()
 	 * @generated
 	 */
 	int SIMPLE_DIRECTED_WEIGHTED_GRAPH = 2;
@@ -148,62 +148,62 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 3;
 
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.common.converters.IConverter <em>IConverter</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.common.converters.IConverter <em>IConverter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>IConverter</em>'.
-	 * @see org.eclipse.symphony.common.converters.IConverter
-	 * @model instanceClass="org.eclipse.symphony.common.converters.IConverter"
+	 * @see ca.gc.asc_csa.apogy.common.converters.IConverter
+	 * @model instanceClass="ca.gc.asc_csa.apogy.common.converters.IConverter"
 	 * @generated
 	 */
 	EDataType getIConverter();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade
+	 * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonConvertersFacade();
+	EClass getApogyCommonConvertersFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade#convert(java.lang.Object, java.lang.Class) <em>Convert</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade#convert(java.lang.Object, java.lang.Class) <em>Convert</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert</em>' operation.
-	 * @see org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade#convert(java.lang.Object, java.lang.Class)
+	 * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade#convert(java.lang.Object, java.lang.Class)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonConvertersFacade__Convert__Object_Class();
+	EOperation getApogyCommonConvertersFacade__Convert__Object_Class();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade#getAllRegisteredConverters() <em>Get All Registered Converters</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade#getAllRegisteredConverters() <em>Get All Registered Converters</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Registered Converters</em>' operation.
-	 * @see org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade#getAllRegisteredConverters()
+	 * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade#getAllRegisteredConverters()
 	 * @generated
 	 */
-	EOperation getSymphony__CommonConvertersFacade__GetAllRegisteredConverters();
+	EOperation getApogyCommonConvertersFacade__GetAllRegisteredConverters();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade#getGraph() <em>Get Graph</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade#getGraph() <em>Get Graph</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Graph</em>' operation.
-	 * @see org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade#getGraph()
+	 * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade#getGraph()
 	 * @generated
 	 */
-	EOperation getSymphony__CommonConvertersFacade__GetGraph();
+	EOperation getApogyCommonConvertersFacade__GetGraph();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
@@ -245,7 +245,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonConvertersFactory getSymphony__CommonConvertersFactory();
+	ApogyCommonConvertersFactory getApogyCommonConvertersFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,21 +265,21 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 		 * The meta object literal for the '<em>IConverter</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.converters.IConverter
-		 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getIConverter()
+		 * @see ca.gc.asc_csa.apogy.common.converters.IConverter
+		 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getIConverter()
 		 * @generated
 		 */
 		EDataType ICONVERTER = eINSTANCE.getIConverter();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersFacadeImpl
-		 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getSymphony__CommonConvertersFacade()
+		 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getApogyCommonConvertersFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_CONVERTERS_FACADE = eINSTANCE.getSymphony__CommonConvertersFacade();
+		EClass APOGY_COMMON_CONVERTERS_FACADE = eINSTANCE.getApogyCommonConvertersFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Convert</b></em>' operation.
@@ -287,7 +287,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS = eINSTANCE.getSymphony__CommonConvertersFacade__Convert__Object_Class();
+		EOperation APOGY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS = eINSTANCE.getApogyCommonConvertersFacade__Convert__Object_Class();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Registered Converters</b></em>' operation.
@@ -295,7 +295,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS = eINSTANCE.getSymphony__CommonConvertersFacade__GetAllRegisteredConverters();
+		EOperation APOGY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS = eINSTANCE.getApogyCommonConvertersFacade__GetAllRegisteredConverters();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Graph</b></em>' operation.
@@ -303,14 +303,14 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_CONVERTERS_FACADE___GET_GRAPH = eINSTANCE.getSymphony__CommonConvertersFacade__GetGraph();
+		EOperation APOGY_COMMON_CONVERTERS_FACADE___GET_GRAPH = eINSTANCE.getApogyCommonConvertersFacade__GetGraph();
 
 		/**
 		 * The meta object literal for the '<em>List</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getList()
+		 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getList()
 		 * @generated
 		 */
 		EDataType LIST = eINSTANCE.getList();
@@ -320,7 +320,7 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.jgrapht.graph.SimpleDirectedWeightedGraph
-		 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getSimpleDirectedWeightedGraph()
+		 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getSimpleDirectedWeightedGraph()
 		 * @generated
 		 */
 		EDataType SIMPLE_DIRECTED_WEIGHTED_GRAPH = eINSTANCE.getSimpleDirectedWeightedGraph();
@@ -330,11 +330,11 @@ public interface Symphony__CommonConvertersPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersPackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersPackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
 
 	}
 
-} //Symphony__CommonConvertersPackage
+} //ApogyCommonConvertersPackage

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import java.util.Iterator;
 import java.util.List;
@@ -16,30 +16,30 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
-import org.eclipse.symphony.addons.vehicle.Line3d;
-import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode;
-import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.addons.vehicle.Plane;
-import org.eclipse.symphony.addons.vehicle.Segment2D;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.TerrainProfile;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
-import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.addons.vehicle.WheelContactMode;
-import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
-import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
-import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
+import ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.Line3d;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
+import ca.gc.asc_csa.apogy.addons.vehicle.OrientationCorrectionMode;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.addons.vehicle.Plane;
+import ca.gc.asc_csa.apogy.addons.vehicle.Segment2D;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.TerrainProfile;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactMode;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities;
+import ca.gc.asc_csa.apogy.addons.vehicle.ZCorrectionMode;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements Symphony__AddonsVehicleFactory
+public class ApogyAddonsVehicleFactoryImpl extends EFactoryImpl implements ApogyAddonsVehicleFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -55,18 +55,18 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__AddonsVehicleFactory init()
+  public static ApogyAddonsVehicleFactory init()
   {
 		try {
-			Symphony__AddonsVehicleFactory theSymphony__AddonsVehicleFactory = (Symphony__AddonsVehicleFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsVehiclePackage.eNS_URI);
-			if (theSymphony__AddonsVehicleFactory != null) {
-				return theSymphony__AddonsVehicleFactory;
+			ApogyAddonsVehicleFactory theApogyAddonsVehicleFactory = (ApogyAddonsVehicleFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsVehiclePackage.eNS_URI);
+			if (theApogyAddonsVehicleFactory != null) {
+				return theApogyAddonsVehicleFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsVehicleFactoryImpl();
+		return new ApogyAddonsVehicleFactoryImpl();
 	}
 
   /**
@@ -75,7 +75,7 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleFactoryImpl()
+  public ApogyAddonsVehicleFactoryImpl()
   {
 		super();
 	}
@@ -89,20 +89,20 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR: return createVehiclePoseCorrector();
-			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY: return createMeshNodeEntry();
-			case Symphony__AddonsVehiclePackage.WHEEL: return createWheel();
-			case Symphony__AddonsVehiclePackage.THRUSTER: return createThruster();
-			case Symphony__AddonsVehiclePackage.THRUSTER_BINDING: return createThrusterBinding();
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER: return createWheelContactProvider();
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT: return createLanderSphericalFoot();
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER: return createLanderSphericalFootContactProvider();
-			case Symphony__AddonsVehiclePackage.SYMPHONY_ADDONS_VEHICLE_FACADE: return createSymphony__AddonsVehicleFacade();
-			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES: return createWheelVehicleUtilities();
-			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D: return createMeshExtent2D();
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL: return createPathPlannerTool();
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE: return createPathPlannerToolNode();
-			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL: return createVehiclePathPlannerTool();
+			case ApogyAddonsVehiclePackage.VEHICLE_POSE_CORRECTOR: return createVehiclePoseCorrector();
+			case ApogyAddonsVehiclePackage.MESH_NODE_ENTRY: return createMeshNodeEntry();
+			case ApogyAddonsVehiclePackage.WHEEL: return createWheel();
+			case ApogyAddonsVehiclePackage.THRUSTER: return createThruster();
+			case ApogyAddonsVehiclePackage.THRUSTER_BINDING: return createThrusterBinding();
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_PROVIDER: return createWheelContactProvider();
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT: return createLanderSphericalFoot();
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER: return createLanderSphericalFootContactProvider();
+			case ApogyAddonsVehiclePackage.APOGY_ADDONS_VEHICLE_FACADE: return createApogyAddonsVehicleFacade();
+			case ApogyAddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES: return createWheelVehicleUtilities();
+			case ApogyAddonsVehiclePackage.MESH_EXTENT2_D: return createMeshExtent2D();
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL: return createPathPlannerTool();
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL_NODE: return createPathPlannerToolNode();
+			case ApogyAddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL: return createVehiclePathPlannerTool();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -117,35 +117,35 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsVehiclePackage.ZCORRECTION_MODE:
+			case ApogyAddonsVehiclePackage.ZCORRECTION_MODE:
 				return createZCorrectionModeFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.ORIENTATION_CORRECTION_MODE:
+			case ApogyAddonsVehiclePackage.ORIENTATION_CORRECTION_MODE:
 				return createOrientationCorrectionModeFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_MODE:
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_MODE:
 				return createWheelContactModeFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.POINT2D:
+			case ApogyAddonsVehiclePackage.POINT2D:
 				return createPoint2dFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.POINT3D:
+			case ApogyAddonsVehiclePackage.POINT3D:
 				return createPoint3dFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.VECTOR3D:
+			case ApogyAddonsVehiclePackage.VECTOR3D:
 				return createVector3dFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.MAP:
+			case ApogyAddonsVehiclePackage.MAP:
 				return createMapFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.LIST:
+			case ApogyAddonsVehiclePackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.SORTED_SET:
+			case ApogyAddonsVehiclePackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.ITERATOR:
+			case ApogyAddonsVehiclePackage.ITERATOR:
 				return createIteratorFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.SEGMENT2_D:
+			case ApogyAddonsVehiclePackage.SEGMENT2_D:
 				return createSegment2DFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.LINE3D:
+			case ApogyAddonsVehiclePackage.LINE3D:
 				return createLine3dFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.PLANE:
+			case ApogyAddonsVehiclePackage.PLANE:
 				return createPlaneFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.TERRAIN_PROFILE:
+			case ApogyAddonsVehiclePackage.TERRAIN_PROFILE:
 				return createTerrainProfileFromString(eDataType, initialValue);
-			case Symphony__AddonsVehiclePackage.CLOSEST_NEIGHBOUR_ITERATOR_PROVIDER:
+			case ApogyAddonsVehiclePackage.CLOSEST_NEIGHBOUR_ITERATOR_PROVIDER:
 				return createClosestNeighbourIteratorProviderFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -161,35 +161,35 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsVehiclePackage.ZCORRECTION_MODE:
+			case ApogyAddonsVehiclePackage.ZCORRECTION_MODE:
 				return convertZCorrectionModeToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.ORIENTATION_CORRECTION_MODE:
+			case ApogyAddonsVehiclePackage.ORIENTATION_CORRECTION_MODE:
 				return convertOrientationCorrectionModeToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_MODE:
+			case ApogyAddonsVehiclePackage.WHEEL_CONTACT_MODE:
 				return convertWheelContactModeToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.POINT2D:
+			case ApogyAddonsVehiclePackage.POINT2D:
 				return convertPoint2dToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.POINT3D:
+			case ApogyAddonsVehiclePackage.POINT3D:
 				return convertPoint3dToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.VECTOR3D:
+			case ApogyAddonsVehiclePackage.VECTOR3D:
 				return convertVector3dToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.MAP:
+			case ApogyAddonsVehiclePackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.LIST:
+			case ApogyAddonsVehiclePackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.SORTED_SET:
+			case ApogyAddonsVehiclePackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.ITERATOR:
+			case ApogyAddonsVehiclePackage.ITERATOR:
 				return convertIteratorToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.SEGMENT2_D:
+			case ApogyAddonsVehiclePackage.SEGMENT2_D:
 				return convertSegment2DToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.LINE3D:
+			case ApogyAddonsVehiclePackage.LINE3D:
 				return convertLine3dToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.PLANE:
+			case ApogyAddonsVehiclePackage.PLANE:
 				return convertPlaneToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.TERRAIN_PROFILE:
+			case ApogyAddonsVehiclePackage.TERRAIN_PROFILE:
 				return convertTerrainProfileToString(eDataType, instanceValue);
-			case Symphony__AddonsVehiclePackage.CLOSEST_NEIGHBOUR_ITERATOR_PROVIDER:
+			case ApogyAddonsVehiclePackage.CLOSEST_NEIGHBOUR_ITERATOR_PROVIDER:
 				return convertClosestNeighbourIteratorProviderToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -288,9 +288,9 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsVehicleFacade createSymphony__AddonsVehicleFacade() {
-		Symphony__AddonsVehicleFacadeImpl symphony__AddonsVehicleFacade = new Symphony__AddonsVehicleFacadeImpl();
-		return symphony__AddonsVehicleFacade;
+	public ApogyAddonsVehicleFacade createApogyAddonsVehicleFacade() {
+		ApogyAddonsVehicleFacadeImpl apogy__AddonsVehicleFacade = new ApogyAddonsVehicleFacadeImpl();
+		return apogy__AddonsVehicleFacade;
 	}
 
 		/**
@@ -636,8 +636,8 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsVehiclePackage getSymphony__AddonsVehiclePackage() {
-		return (Symphony__AddonsVehiclePackage)getEPackage();
+	public ApogyAddonsVehiclePackage getApogyAddonsVehiclePackage() {
+		return (ApogyAddonsVehiclePackage)getEPackage();
 	}
 
 		/**
@@ -667,9 +667,9 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__AddonsVehiclePackage getPackage()
+  public static ApogyAddonsVehiclePackage getPackage()
   {
-		return Symphony__AddonsVehiclePackage.eINSTANCE;
+		return ApogyAddonsVehiclePackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsVehicleFactoryImpl
+} //ApogyAddonsVehicleFactoryImpl

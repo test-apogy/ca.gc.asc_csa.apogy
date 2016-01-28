@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,13 +13,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.provider.GroupNodeItemProvider;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.common.topology.provider.GroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Moon} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.Moon} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class MoonItemProvider
          getResourceLocator(),
          getString("_UI_Moon_radius_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Moon_radius_feature", "_UI_Moon_type"),
-         Symphony__CoreEnvironmentPackage.Literals.MOON__RADIUS,
+         ApogyCoreEnvironmentPackage.Literals.MOON__RADIUS,
          true,
          false,
          false,
@@ -118,7 +118,7 @@ public class MoonItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Moon.class)) {
-			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
+			case ApogyCoreEnvironmentPackage.MOON__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

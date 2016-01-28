@@ -1,20 +1,20 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.util;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +26,10 @@ import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaS
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage
  * @generated
  */
-public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
+public class ApogyExamplesAntennaApogySwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -37,7 +37,7 @@ public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesAntennaSymphonyPackage modelPackage;
+  protected static ApogyExamplesAntennaApogyPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -45,10 +45,10 @@ public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesAntennaSymphonySwitch()
+  public ApogyExamplesAntennaApogySwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesAntennaSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesAntennaApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -77,19 +77,19 @@ public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER: {
-				PTUDishAntennaSymphonySystemApiAdapter ptuDishAntennaSymphonySystemApiAdapter = (PTUDishAntennaSymphonySystemApiAdapter)theEObject;
-				T result = casePTUDishAntennaSymphonySystemApiAdapter(ptuDishAntennaSymphonySystemApiAdapter);
-				if (result == null) result = caseSymphonySystemApiAdapter(ptuDishAntennaSymphonySystemApiAdapter);
-				if (result == null) result = caseTypeApiAdapter(ptuDishAntennaSymphonySystemApiAdapter);
-				if (result == null) result = casePoseProvider(ptuDishAntennaSymphonySystemApiAdapter);
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER: {
+				PTUDishAntennaApogySystemApiAdapter ptuDishAntennaApogySystemApiAdapter = (PTUDishAntennaApogySystemApiAdapter)theEObject;
+				T result = casePTUDishAntennaApogySystemApiAdapter(ptuDishAntennaApogySystemApiAdapter);
+				if (result == null) result = caseApogySystemApiAdapter(ptuDishAntennaApogySystemApiAdapter);
+				if (result == null) result = caseTypeApiAdapter(ptuDishAntennaApogySystemApiAdapter);
+				if (result == null) result = casePoseProvider(ptuDishAntennaApogySystemApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA: {
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_DATA: {
 				PTUDishAntennaData ptuDishAntennaData = (PTUDishAntennaData)theEObject;
 				T result = casePTUDishAntennaData(ptuDishAntennaData);
-				if (result == null) result = caseSymphonyInitializationData(ptuDishAntennaData);
+				if (result == null) result = caseApogyInitializationData(ptuDishAntennaData);
 				if (result == null) result = caseInitializationData(ptuDishAntennaData);
 				if (result == null) result = caseAbstractInitializationData(ptuDishAntennaData);
 				if (result == null) result = defaultCase(theEObject);
@@ -100,17 +100,17 @@ public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>PTU Dish Antenna Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>PTU Dish Antenna Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>PTU Dish Antenna Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>PTU Dish Antenna Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T casePTUDishAntennaSymphonySystemApiAdapter(PTUDishAntennaSymphonySystemApiAdapter object)
+  public T casePTUDishAntennaApogySystemApiAdapter(PTUDishAntennaApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -163,17 +163,17 @@ public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object)
+  public T caseApogySystemApiAdapter(ApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -209,17 +209,17 @@ public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonyInitializationData(SymphonyInitializationData object)
+  public T caseApogyInitializationData(ApogyInitializationData object)
   {
 		return null;
 	}
@@ -241,4 +241,4 @@ public class Symphony__ExamplesAntennaSymphonySwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesAntennaSymphonySwitch
+} //ApogyExamplesAntennaApogySwitch

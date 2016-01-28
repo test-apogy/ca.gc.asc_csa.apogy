@@ -1,22 +1,22 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.PositionNodePresentation;
-import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
-import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,17 +28,17 @@ import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage
  * @generated
  */
-public class Symphony__CommonTopologyUISwitch<T> extends Switch<T> {
+public class ApogyCommonTopologyUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyUIPackage modelPackage;
+	protected static ApogyCommonTopologyUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -46,9 +46,9 @@ public class Symphony__CommonTopologyUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUISwitch() {
+	public ApogyCommonTopologyUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyUIPackage.eINSTANCE;
 		}
 	}
 
@@ -75,67 +75,67 @@ public class Symphony__CommonTopologyUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY: {
+			case ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY: {
 				TopologyPresentationRegistry topologyPresentationRegistry = (TopologyPresentationRegistry)theEObject;
 				T result = caseTopologyPresentationRegistry(topologyPresentationRegistry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT: {
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT: {
 				GraphicsContext graphicsContext = (GraphicsContext)theEObject;
 				T result = caseGraphicsContext(graphicsContext);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.NODE_SELECTION: {
+			case ApogyCommonTopologyUIPackage.NODE_SELECTION: {
 				NodeSelection nodeSelection = (NodeSelection)theEObject;
 				T result = caseNodeSelection(nodeSelection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET: {
+			case ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET: {
 				TopologyPresentationSet topologyPresentationSet = (TopologyPresentationSet)theEObject;
 				T result = caseTopologyPresentationSet(topologyPresentationSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION: {
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION: {
 				NodePresentation nodePresentation = (NodePresentation)theEObject;
 				T result = caseNodePresentation(nodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION: {
+			case ApogyCommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION: {
 				TransformNodePresentation transformNodePresentation = (TransformNodePresentation)theEObject;
 				T result = caseTransformNodePresentation(transformNodePresentation);
 				if (result == null) result = caseNodePresentation(transformNodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION: {
+			case ApogyCommonTopologyUIPackage.ROTATION_NODE_PRESENTATION: {
 				RotationNodePresentation rotationNodePresentation = (RotationNodePresentation)theEObject;
 				T result = caseRotationNodePresentation(rotationNodePresentation);
 				if (result == null) result = caseNodePresentation(rotationNodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION: {
+			case ApogyCommonTopologyUIPackage.POSITION_NODE_PRESENTATION: {
 				PositionNodePresentation positionNodePresentation = (PositionNodePresentation)theEObject;
 				T result = casePositionNodePresentation(positionNodePresentation);
 				if (result == null) result = caseNodePresentation(positionNodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION: {
+			case ApogyCommonTopologyUIPackage.URL_NODE_PRESENTATION: {
 				URLNodePresentation urlNodePresentation = (URLNodePresentation)theEObject;
 				T result = caseURLNodePresentation(urlNodePresentation);
 				if (result == null) result = caseNodePresentation(urlNodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE: {
-				Symphony__CommonTopologyUIFacade symphony__CommonTopologyUIFacade = (Symphony__CommonTopologyUIFacade)theEObject;
-				T result = caseSymphony__CommonTopologyUIFacade(symphony__CommonTopologyUIFacade);
+			case ApogyCommonTopologyUIPackage.APOGY_COMMON_TOPOLOGY_UI_FACADE: {
+				ApogyCommonTopologyUIFacade apogy__CommonTopologyUIFacade = (ApogyCommonTopologyUIFacade)theEObject;
+				T result = caseApogyCommonTopologyUIFacade(apogy__CommonTopologyUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -289,7 +289,7 @@ public class Symphony__CommonTopologyUISwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonTopologyUIFacade(Symphony__CommonTopologyUIFacade object) {
+	public T caseApogyCommonTopologyUIFacade(ApogyCommonTopologyUIFacade object) {
 		return null;
 	}
 
@@ -309,4 +309,4 @@ public class Symphony__CommonTopologyUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonTopologyUISwitch
+} //ApogyCommonTopologyUISwitch

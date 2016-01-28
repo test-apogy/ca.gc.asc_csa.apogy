@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__CommonGeometryData3DFacadeItemProvider.java,v 1.2.4.2 2015/05/21 15:50:28 pallard Exp $
+ * $Id: ApogyCommonGeometryData3DFacadeItemProvider.java,v 1.2.4.2 2015/05/21 15:50:28 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DFacadeItemProvider
+public class ApogyCommonGeometryData3DFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class Symphony__CommonGeometryData3DFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCommonGeometryData3DFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,14 +61,14 @@ public class Symphony__CommonGeometryData3DFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonGeometryData3DFacade.gif.
+	 * This returns ApogyCommonGeometryData3DFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonGeometryData3DFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonGeometryData3DFacade"));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Symphony__CommonGeometryData3DFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CommonGeometryData3DFacade_type");
+		return getString("_UI_ApogyCommonGeometryData3DFacade_type");
 	}
 
 	/**

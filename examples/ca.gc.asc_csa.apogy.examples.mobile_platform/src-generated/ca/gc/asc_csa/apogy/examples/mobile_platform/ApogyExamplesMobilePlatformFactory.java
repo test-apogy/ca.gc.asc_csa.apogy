@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage
  * @generated
  */
-public interface Symphony__ExamplesMobilePlatformFactory extends EFactory
+public interface ApogyExamplesMobilePlatformFactory extends EFactory
 {
 	/**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__ExamplesMobilePlatformFactory extends EFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesMobilePlatformFactory eINSTANCE = org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformFactoryImpl.init();
+	ApogyExamplesMobilePlatformFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformFactoryImpl.init();
 
 	/**
 	 * Returns a new Position object, which has the same type as
@@ -86,6 +86,6 @@ public interface Symphony__ExamplesMobilePlatformFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesMobilePlatformPackage getSymphony__ExamplesMobilePlatformPackage();
+	ApogyExamplesMobilePlatformPackage getApogyExamplesMobilePlatformPackage();
 
-} //Symphony__ExamplesMobilePlatformFactory
+} //ApogyExamplesMobilePlatformFactory

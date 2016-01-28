@@ -4,26 +4,26 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.topology.ui.views.SymphonyEnvironment3DView"
-            icon="icons/eview16/Symphony3DViewer.gif"
-            id="org.eclipse.symphony.core.topology.ui.views.Symphony3DView"
-            name="Symphony 3D Viewer"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogyEnvironment3DView"
+            icon="icons/eview16/Apogy3DViewer.gif"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.views.Apogy3DView"
+            name="Apogy 3D Viewer"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.topology.ui.views.SymphonySystem3DView"
-            icon="icons/eview16/SymphonySystem3DViewer.gif"
-            id="org.eclipse.symphony.core.topology.ui.views.SymphonySystem3DView"
-            name="Symphony System 3D Viewer"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogySystem3DView"
+            icon="icons/eview16/ApogySystem3DViewer.gif"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.views.ApogySystem3DView"
+            name="Apogy System 3D Viewer"
             restorable="true">
       </view>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            id="org.eclipse.symphony.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
             name="Toggle Variable Topology Visibility">
       </command>
    </extension>
@@ -31,9 +31,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
+               commandId="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
                label="Toggle Variable Topology Visibility"
                style="push">
             <visibleWhen
@@ -45,11 +45,11 @@
                     operator="or">
                      <and>
                         <instanceof
-                              value="org.eclipse.symphony.core.invocator.Variable">
+                              value="ca.gc.asc_csa.apogy.core.invocator.Variable">
                         </instanceof>
                         <test
                               forcePluginActivation="true"
-                              property="org.eclipse.symphony.core.ui.instanceOfSymphonySystem">
+                              property="ca.gc.asc_csa.apogy.core.ui.instanceOfApogySystem">
                         </test>
                      </and>
                   </iterate>
@@ -61,17 +61,17 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.core.topology.ui.preferences.SymphonySystem3DViewerUIPreferencesPage"
-            id="org.eclipse.symphony.core.topology.ui.preferences.SymphonySystem3DViewerUIPreferencesPage"
-            name="Symphony System 3D View">
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogySystem3DViewerUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogySystem3DViewerUIPreferencesPage"
+            name="Apogy System 3D View">
       </page>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.symphony.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommandHandler"
-            commandId="org.eclipse.symphony.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand">
+            class="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommandHandler"
+            commandId="ca.gc.asc_csa.apogy.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand">
          <enabledWhen>
             <with
                  variable="activeMenuSelection">
@@ -80,7 +80,7 @@
                   operator="and">
                     <test
                          forcePluginActivation="true"
-                         property="org.eclipse.symphony.core.ui.instanceOfSymphonySystem">
+                         property="ca.gc.asc_csa.apogy.core.ui.instanceOfApogySystem">
                     </test>
                </iterate>
             </with>
@@ -90,7 +90,7 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.core.topology.ui.preferences.SymphonyTopologyUIPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogyTopologyUIPreferencesInitializer">
       </initializer>
    </extension>
 

@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
-import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.impl.ApogyInitializationDataImpl;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRobo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getSpeed <em>Speed</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getTurretAngle <em>Turret Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getShoulderAngle <em>Shoulder Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getElbowAngle <em>Elbow Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getWristAngle <em>Wrist Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl#getSpeed <em>Speed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl#getTurretAngle <em>Turret Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl#getShoulderAngle <em>Shoulder Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl#getElbowAngle <em>Elbow Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl.RoboticArmDataImpl#getWristAngle <em>Wrist Angle</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implements RoboticArmData
+public class RoboticArmDataImpl extends ApogyInitializationDataImpl implements RoboticArmData
 {
   /**
 	 * The default value of the '{@link #isInitialized() <em>Initialized</em>}' attribute.
@@ -169,7 +169,7 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_DATA;
+		return ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA;
 	}
 
   /**
@@ -190,7 +190,7 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 		/**
@@ -211,7 +211,7 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
 		MoveSpeedLevel oldSpeed = speed;
 		speed = newSpeed == null ? SPEED_EDEFAULT : newSpeed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SPEED, oldSpeed, speed));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SPEED, oldSpeed, speed));
 	}
 
 		/**
@@ -232,7 +232,7 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
 		double oldTurretAngle = turretAngle;
 		turretAngle = newTurretAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE, oldTurretAngle, turretAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE, oldTurretAngle, turretAngle));
 	}
 
 		/**
@@ -255,7 +255,7 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
 		double oldShoulderAngle = shoulderAngle;
 		shoulderAngle = newShoulderAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE, oldShoulderAngle, shoulderAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE, oldShoulderAngle, shoulderAngle));
 	}
 
   /**
@@ -278,7 +278,7 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
 		double oldElbowAngle = elbowAngle;
 		elbowAngle = newElbowAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE, oldElbowAngle, elbowAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE, oldElbowAngle, elbowAngle));
 	}
 
   /**
@@ -301,7 +301,7 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
 		double oldWristAngle = wristAngle;
 		wristAngle = newWristAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE, oldWristAngle, wristAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE, oldWristAngle, wristAngle));
 	}
 
   /**
@@ -313,17 +313,17 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
 				return isInitialized();
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SPEED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SPEED:
 				return getSpeed();
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
 				return getTurretAngle();
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
 				return getShoulderAngle();
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
 				return getElbowAngle();
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
 				return getWristAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -338,22 +338,22 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SPEED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SPEED:
 				setSpeed((MoveSpeedLevel)newValue);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
 				setTurretAngle((Double)newValue);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
 				setShoulderAngle((Double)newValue);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
 				setElbowAngle((Double)newValue);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
 				setWristAngle((Double)newValue);
 				return;
 		}
@@ -369,22 +369,22 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SPEED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SPEED:
 				setSpeed(SPEED_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
 				setTurretAngle(TURRET_ANGLE_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
 				setShoulderAngle(SHOULDER_ANGLE_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
 				setElbowAngle(ELBOW_ANGLE_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
 				setWristAngle(WRIST_ANGLE_EDEFAULT);
 				return;
 		}
@@ -400,17 +400,17 @@ public class RoboticArmDataImpl extends SymphonyInitializationDataImpl implement
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SPEED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SPEED:
 				return speed != SPEED_EDEFAULT;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
 				return turretAngle != TURRET_ANGLE_EDEFAULT;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
 				return shoulderAngle != SHOULDER_ANGLE_EDEFAULT;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
 				return elbowAngle != ELBOW_ANGLE_EDEFAULT;
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
 				return wristAngle != WRIST_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -9,15 +9,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionImage;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerPresentationImpl#getAlpha <em>Alpha</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ImageMapLayerPresentationImpl#getAlpha <em>Alpha</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,7 +69,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION;
+		return ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 		float oldAlpha = alpha;
 		alpha = newAlpha;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA, oldAlpha, alpha));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA, oldAlpha, alpha));
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 		  }
 		  else
 		  {
-			  RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
+			  RectangularRegion rectangularRegion = ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 			  return rectangularRegion;
 		  }
 	}
@@ -191,7 +191,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				return getAlpha();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,7 +205,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				setAlpha((Float)newValue);
 				return;
 		}
@@ -220,7 +220,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				setAlpha(ALPHA_EDEFAULT);
 				return;
 		}
@@ -235,7 +235,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				return alpha != ALPHA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -250,14 +250,14 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == RectangularRegionProvider.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION;
+				case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION;
 				default: return -1;
 			}
 		}
 		if (baseClass == RectangularRegionImage.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_REGION_IMAGE: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE;
-				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_RESOLUTION: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION;
+				case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_REGION_IMAGE: return ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE;
+				case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_RESOLUTION: return ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION;
 				default: return -1;
 			}
 		}
@@ -272,13 +272,13 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_IMAGE_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_IMAGE_MAP_LAYER:
 				return getImageMapLayer();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE:
 				return getRegionImage();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION:
 				return getResolution();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION:
 				return getRegion();
 		}
 		return super.eInvoke(operationID, arguments);

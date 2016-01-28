@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.util;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.geometry.paths.ui.*;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.*;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,17 +22,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage
  * @generated
  */
-public class Symphony__AddonsGeometryPathsUISwitch<T> extends Switch<T> {
+public class ApogyAddonsGeometryPathsUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsGeometryPathsUIPackage modelPackage;
+	protected static ApogyAddonsGeometryPathsUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -40,9 +40,9 @@ public class Symphony__AddonsGeometryPathsUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsUISwitch() {
+	public ApogyAddonsGeometryPathsUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsGeometryPathsUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsGeometryPathsUIPackage.eINSTANCE;
 		}
 	}
 
@@ -69,14 +69,14 @@ public class Symphony__AddonsGeometryPathsUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION: {
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION: {
 				WayPointPathPresentation wayPointPathPresentation = (WayPointPathPresentation)theEObject;
 				T result = caseWayPointPathPresentation(wayPointPathPresentation);
 				if (result == null) result = caseNodePresentation(wayPointPathPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PRESENTATION: {
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PRESENTATION: {
 				WayPointPresentation wayPointPresentation = (WayPointPresentation)theEObject;
 				T result = caseWayPointPresentation(wayPointPresentation);
 				if (result == null) result = caseNodePresentation(wayPointPresentation);
@@ -148,4 +148,4 @@ public class Symphony__AddonsGeometryPathsUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsGeometryPathsUISwitch
+} //ApogyAddonsGeometryPathsUISwitch

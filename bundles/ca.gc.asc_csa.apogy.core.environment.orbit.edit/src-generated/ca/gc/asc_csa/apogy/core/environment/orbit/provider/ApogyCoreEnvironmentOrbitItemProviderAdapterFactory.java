@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,16 +26,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.OrbitModelsList;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.orbit.util.Symphony__CoreEnvironmentOrbitAdapterFactory;
-import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.OrbitModelsList;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.util.ApogyCoreEnvironmentOrbitAdapterFactory;
+import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -46,7 +46,7 @@ import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Symphony__CoreEnvironmentOrbitAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCoreEnvironmentOrbitItemProviderAdapterFactory extends ApogyCoreEnvironmentOrbitAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreEnvironmentOrbitEditPlugin.INSTANCE, Symphony__CoreEnvironmentOrbitPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE, ApogyCoreEnvironmentOrbitPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory() {
+	public ApogyCoreEnvironmentOrbitItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -94,7 +94,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.PVACoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.PVACoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,7 +102,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	protected PVACoordinatesItemProvider pvaCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.PVACoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.PVACoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	protected TimedStampedPVACoordinatesItemProvider timedStampedPVACoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	protected AngularCoordinatesItemProvider angularCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,7 +163,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	protected TimedStampedAngularCoordinatesItemProvider timedStampedAngularCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	protected SpacecraftAttitudeItemProvider spacecraftAttitudeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,7 +209,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.SpacecraftState} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	protected SpacecraftStateItemProvider spacecraftStateItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.SpacecraftState}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,7 +232,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.OrbitModel} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	protected OrbitModelItemProvider orbitModelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.OrbitModel}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -255,26 +255,26 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentOrbitFacadeItemProvider symphony__CoreEnvironmentOrbitFacadeItemProvider;
+	protected ApogyCoreEnvironmentOrbitFacadeItemProvider apogy__CoreEnvironmentOrbitFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreEnvironmentOrbitFacadeAdapter() {
-		if (symphony__CoreEnvironmentOrbitFacadeItemProvider == null) {
-			symphony__CoreEnvironmentOrbitFacadeItemProvider = new Symphony__CoreEnvironmentOrbitFacadeItemProvider(this);
+	public Adapter createApogyCoreEnvironmentOrbitFacadeAdapter() {
+		if (apogy__CoreEnvironmentOrbitFacadeItemProvider == null) {
+			apogy__CoreEnvironmentOrbitFacadeItemProvider = new ApogyCoreEnvironmentOrbitFacadeItemProvider(this);
 		}
 
-		return symphony__CoreEnvironmentOrbitFacadeItemProvider;
+		return apogy__CoreEnvironmentOrbitFacadeItemProvider;
 	}
 
 	/**
@@ -410,23 +410,23 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 		if (spacecraftAttitudeItemProvider != null) spacecraftAttitudeItemProvider.dispose();
 		if (spacecraftStateItemProvider != null) spacecraftStateItemProvider.dispose();
 		if (orbitModelItemProvider != null) orbitModelItemProvider.dispose();
-		if (symphony__CoreEnvironmentOrbitFacadeItemProvider != null) symphony__CoreEnvironmentOrbitFacadeItemProvider.dispose();
+		if (apogy__CoreEnvironmentOrbitFacadeItemProvider != null) apogy__CoreEnvironmentOrbitFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CorePackage}.
+	 * A child creation extender for the {@link ApogyCorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -462,8 +462,8 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 			public Object caseOrbitModelsList(OrbitModelsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
+						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
 
 				return null;
 			}
@@ -496,24 +496,24 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEnvironmentOrbitEditPlugin.INSTANCE;
+			return ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -549,43 +549,43 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createPVACoordinates()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createPVACoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createAngularCoordinates()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createAngularCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftAttitude()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftAttitude()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftState()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftState()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSymphony__CoreEnvironmentOrbitFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createApogyCoreEnvironmentOrbitFacade()));
 
 				return null;
 			}
@@ -599,43 +599,43 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createPVACoordinates()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createPVACoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createAngularCoordinates()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createAngularCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftAttitude()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftAttitude()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftState()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createSpacecraftState()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSymphony__CoreEnvironmentOrbitFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createApogyCoreEnvironmentOrbitFacade()));
 
 				return null;
 			}
@@ -668,7 +668,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEnvironmentOrbitEditPlugin.INSTANCE;
+			return ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE;
 		}
 	}
 

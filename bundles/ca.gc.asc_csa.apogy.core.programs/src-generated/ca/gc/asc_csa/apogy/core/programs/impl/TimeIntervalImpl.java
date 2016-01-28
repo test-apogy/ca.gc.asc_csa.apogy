@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.impl;
+package ca.gc.asc_csa.apogy.core.programs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
-import org.eclipse.symphony.core.programs.TimeInterval;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.programs.TimeInterval;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +18,9 @@ import org.eclipse.symphony.core.programs.TimeInterval;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl#getStartTime <em>Start Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl#getEndTime <em>End Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl#getDuration <em>Duration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.impl.TimeIntervalImpl#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.impl.TimeIntervalImpl#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.impl.TimeIntervalImpl#getDuration <em>Duration</em>}</li>
  * </ul>
  *
  * @generated
@@ -92,7 +92,7 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL;
+		return ApogyCoreProgramsPackage.Literals.TIME_INTERVAL;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 		long oldStartTime = startTime;
 		startTime = newStartTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME, oldStartTime, startTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsPackage.TIME_INTERVAL__START_TIME, oldStartTime, startTime));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 		long oldEndTime = endTime;
 		endTime = newEndTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME, oldEndTime, endTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsPackage.TIME_INTERVAL__END_TIME, oldEndTime, endTime));
 	}
 
 	/**
@@ -156,11 +156,11 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				return getStartTime();
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				return getEndTime();
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__DURATION:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__DURATION:
 				return getDuration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -174,10 +174,10 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				setStartTime((Long)newValue);
 				return;
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				setEndTime((Long)newValue);
 				return;
 		}
@@ -192,10 +192,10 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				setStartTime(START_TIME_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				setEndTime(END_TIME_EDEFAULT);
 				return;
 		}
@@ -210,11 +210,11 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				return startTime != START_TIME_EDEFAULT;
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				return endTime != END_TIME_EDEFAULT;
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__DURATION:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__DURATION:
 				return getDuration() != DURATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

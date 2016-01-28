@@ -3,7 +3,7 @@
  *
  * $Id: CircularSectorFieldOfViewItemProvider.java,v 1.4.4.2 2015/05/21 15:51:09 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 
 import java.util.Collection;
@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +71,7 @@ public class CircularSectorFieldOfViewItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CircularSectorFieldOfView_area_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularSectorFieldOfView_area_feature", "_UI_CircularSectorFieldOfView_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA,
+				 ApogyAddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA,
 				 false,
 				 false,
 				 false,
@@ -93,8 +93,8 @@ public class CircularSectorFieldOfViewItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE);
-			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN);
+			childrenFeatures.add(ApogyAddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE);
+			childrenFeatures.add(ApogyAddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN);
 		}
 		return childrenFeatures;
 	}
@@ -163,11 +163,11 @@ public class CircularSectorFieldOfViewItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CircularSectorFieldOfView.class)) {
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -188,13 +188,13 @@ public class CircularSectorFieldOfViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
+				(ApogyAddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createAngularSpan()));
+				(ApogyAddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createAngularSpan()));
 	}
 
 }

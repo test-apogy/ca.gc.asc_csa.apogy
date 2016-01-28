@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.ui.composites;
 
 import java.text.DecimalFormat;
 
@@ -15,13 +15,13 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage.Literals;
-import org.eclipse.symphony.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
-import org.eclipse.symphony.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage.Literals;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 
-import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
-import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
+import ca.gc.asc_csa.apogy.common.databinding.converters.StringToDoubleConverter;
 
 public class GeographicCoordinatesComposite extends Composite 
 {

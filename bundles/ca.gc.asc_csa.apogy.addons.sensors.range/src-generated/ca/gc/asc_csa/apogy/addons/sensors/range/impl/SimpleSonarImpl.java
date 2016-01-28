@@ -4,7 +4,7 @@
  *
  * $Id: SimpleSonarImpl.java,v 1.5.4.2 2015/05/21 15:50:21 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,11 +12,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleSonarImpl#isEchoDetected <em>Echo Detected</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.SimpleSonarImpl#isEchoDetected <em>Echo Detected</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,7 +73,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_SONAR;
+		return ApogyAddonsSensorsRangePackage.Literals.SIMPLE_SONAR;
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	    	// If no ConicalFieldOfView is found, creates one.
 	    	if(fov == null)
 	    	{
-	    		fov = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView();	
+	    		fov = ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView();	
 	    		getChildren().add(fov);
 	    	}
 		}
@@ -125,7 +125,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 		boolean oldEchoDetected = echoDetected;
 		echoDetected = newEchoDetected;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED, oldEchoDetected, echoDetected));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED, oldEchoDetected, echoDetected));
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				return isEchoDetected();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,7 +152,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				setEchoDetected((Boolean)newValue);
 				return;
 		}
@@ -168,7 +168,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				setEchoDetected(ECHO_DETECTED_EDEFAULT);
 				return;
 		}
@@ -184,7 +184,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				return echoDetected != ECHO_DETECTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -198,7 +198,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR___GET_FIELD_OF_VIEW:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR___GET_FIELD_OF_VIEW:
 				return getFieldOfView();
 		}
 		return super.eInvoke(operationID, arguments);

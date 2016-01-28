@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,19 +16,19 @@ import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel <em>Orbit Model</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource <em>Time Source</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval <em>Time Interval</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle <em>Left Swath Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle <em>Right Swath Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor <em>Forward Spacecraft Swath Corridor</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor <em>Backward Spacecraft Swath Corridor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel <em>Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource <em>Time Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval <em>Time Interval</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle <em>Left Swath Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle <em>Right Swath Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor <em>Forward Spacecraft Swath Corridor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor <em>Backward Spacecraft Swath Corridor</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer()
  * @model
  * @generated
  */
@@ -46,14 +46,14 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_OrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_OrbitModel()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='ORBIT_MODEL'"
 	 * @generated
 	 */
 	OrbitModel getOrbitModel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel <em>Orbit Model</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel <em>Orbit Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Orbit Model</em>' reference.
@@ -76,14 +76,14 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Source</em>' reference.
 	 * @see #setTimeSource(Timed)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_TimeSource()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_TimeSource()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME'"
 	 * @generated
 	 */
 	Timed getTimeSource();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource <em>Time Source</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource <em>Time Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Source</em>' reference.
@@ -103,15 +103,15 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Forward Propagation Duration</em>' attribute.
 	 * @see #setForwardPropagationDuration(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_ForwardPropagationDuration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_ForwardPropagationDuration()
 	 * @model default="43200.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' symphony_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' apogy_units='s'"
 	 * @generated
 	 */
 	double getForwardPropagationDuration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Forward Propagation Duration</em>' attribute.
@@ -131,15 +131,15 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Backward Propagation Duration</em>' attribute.
 	 * @see #setBackwardPropagationDuration(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration()
 	 * @model default="43200.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' symphony_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' apogy_units='s'"
 	 * @generated
 	 */
 	double getBackwardPropagationDuration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Backward Propagation Duration</em>' attribute.
@@ -159,15 +159,15 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Interval</em>' attribute.
 	 * @see #setTimeInterval(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_TimeInterval()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_TimeInterval()
 	 * @model default="600.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='TIME_PERIOD' property='Editable' symphony_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='TIME_PERIOD' property='Editable' apogy_units='s'"
 	 * @generated
 	 */
 	double getTimeInterval();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval <em>Time Interval</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval <em>Time Interval</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Interval</em>' attribute.
@@ -187,15 +187,15 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left Swath Angle</em>' attribute.
 	 * @see #setLeftSwathAngle(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_LeftSwathAngle()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_LeftSwathAngle()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='SWATH' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='SWATH' apogy_units='rad'"
 	 * @generated
 	 */
 	double getLeftSwathAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle <em>Left Swath Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle <em>Left Swath Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Left Swath Angle</em>' attribute.
@@ -215,15 +215,15 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Swath Angle</em>' attribute.
 	 * @see #setRightSwathAngle(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_RightSwathAngle()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_RightSwathAngle()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='SWATH' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='SWATH' apogy_units='rad'"
 	 * @generated
 	 */
 	double getRightSwathAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle <em>Right Swath Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle <em>Right Swath Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Swath Angle</em>' attribute.
@@ -243,7 +243,7 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Ground Trace</em>' attribute.
 	 * @see #setShowGroundTrace(boolean)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_ShowGroundTrace()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_ShowGroundTrace()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='VISUALS' property='Editable'"
 	 * @generated
@@ -251,7 +251,7 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	boolean isShowGroundTrace();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Show Ground Trace</em>' attribute.
@@ -270,14 +270,14 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Forward Spacecraft Swath Corridor</em>' containment reference.
 	 * @see #setForwardSpacecraftSwathCorridor(SpacecraftSwathCorridor)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_ForwardSpacecraftSwathCorridor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_ForwardSpacecraftSwathCorridor()
 	 * @model containment="true"
 	 * @generated
 	 */
 	SpacecraftSwathCorridor getForwardSpacecraftSwathCorridor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor <em>Forward Spacecraft Swath Corridor</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor <em>Forward Spacecraft Swath Corridor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Forward Spacecraft Swath Corridor</em>' containment reference.
@@ -296,14 +296,14 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Backward Spacecraft Swath Corridor</em>' containment reference.
 	 * @see #setBackwardSpacecraftSwathCorridor(SpacecraftSwathCorridor)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_BackwardSpacecraftSwathCorridor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getSpacecraftSwathWorldWindLayer_BackwardSpacecraftSwathCorridor()
 	 * @model containment="true"
 	 * @generated
 	 */
 	SpacecraftSwathCorridor getBackwardSpacecraftSwathCorridor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor <em>Backward Spacecraft Swath Corridor</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor <em>Backward Spacecraft Swath Corridor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Backward Spacecraft Swath Corridor</em>' containment reference.

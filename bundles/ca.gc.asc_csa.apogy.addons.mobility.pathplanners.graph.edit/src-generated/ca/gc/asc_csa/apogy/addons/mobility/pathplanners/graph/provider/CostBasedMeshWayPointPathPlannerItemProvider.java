@@ -3,7 +3,7 @@
  *
  * $Id: CostBasedMeshWayPointPathPlannerItemProvider.java,v 1.2.4.2 2015/05/21 15:51:33 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.provider;
 
 
 import java.util.Collection;
@@ -14,13 +14,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.provider.MeshWayPointPathPlannerItemProvider;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.provider.MeshWayPointPathPlannerItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS);
+			childrenFeatures.add(ApogyAddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -120,7 +120,7 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CostBasedMeshWayPointPathPlanner.class)) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -140,28 +140,28 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
+				(ApogyAddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
+				(ApogyAddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
+				(ApogyAddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
+				(ApogyAddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
+				(ApogyAddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
 	}
 
 }

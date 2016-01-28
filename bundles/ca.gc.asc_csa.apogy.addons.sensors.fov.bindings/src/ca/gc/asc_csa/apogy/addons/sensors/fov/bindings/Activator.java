@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.fov.bindings;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.sensors.fov.bindings"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.fov.bindings"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

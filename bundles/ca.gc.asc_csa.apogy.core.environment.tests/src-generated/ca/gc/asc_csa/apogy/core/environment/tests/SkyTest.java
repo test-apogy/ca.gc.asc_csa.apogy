@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import java.util.Date;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -23,16 +23,16 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSkyNode() <em>Sky Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSun() <em>Sun</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSunHorizontalCoordinates() <em>Sun Horizontal Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getStarField() <em>Star Field</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSkyNode() <em>Sky Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSun() <em>Sun</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSunHorizontalCoordinates() <em>Sun Horizontal Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getStarField() <em>Star Field</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSunAngularDiameter() <em>Get Sun Angular Diameter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSunAngularDiameter() <em>Get Sun Angular Diameter</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -94,7 +94,7 @@ public class SkyTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createSky());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createSky());
 	}
 
 	/**
@@ -109,16 +109,16 @@ public class SkyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Sky#getSkyNode() <em>Sky Node</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSkyNode() <em>Sky Node</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Sky#getSkyNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky#getSkyNode()
 	 * @generated_NOT
 	 */
 	public void testGetSkyNode() 
 	{
 		  // Ensures the Sky has a worksite associated to it.
-		  EarthSurfaceWorksite worksite = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();	  
+		  EarthSurfaceWorksite worksite = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();	  
 		  getFixture().setSurfaceWorksite(worksite);
 		  
 		  // Sets a time.
@@ -128,10 +128,10 @@ public class SkyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Sky#getSun() <em>Sun</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSun() <em>Sun</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Sky#getSun()
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky#getSun()
 	 * @generated_NOT
 	 */
 	public void testGetSun() 
@@ -145,10 +145,10 @@ public class SkyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Sky#getSunHorizontalCoordinates() <em>Sun Horizontal Coordinates</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSunHorizontalCoordinates() <em>Sun Horizontal Coordinates</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Sky#getSunHorizontalCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky#getSunHorizontalCoordinates()
 	 * @generated_NOT
 	 */
 	public void testGetSunHorizontalCoordinates() 
@@ -162,10 +162,10 @@ public class SkyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Sky#setSunHorizontalCoordinates(org.eclipse.symphony.core.environment.HorizontalCoordinates) <em>Sun Horizontal Coordinates</em>}' feature setter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#setSunHorizontalCoordinates(ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates) <em>Sun Horizontal Coordinates</em>}' feature setter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Sky#setSunHorizontalCoordinates(org.eclipse.symphony.core.environment.HorizontalCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky#setSunHorizontalCoordinates(ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates)
 	 * @generated_NOT
 	 */
 	public void testSetSunHorizontalCoordinates() {
@@ -173,16 +173,16 @@ public class SkyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Sky#getStarField() <em>Star Field</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getStarField() <em>Star Field</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Sky#getStarField()
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky#getStarField()
 	 * @generated_NOT
 	 */
 	public void testGetStarField() 
 	{
 		// Ensures the Sky has a worksite associated to it.
-		EarthSurfaceWorksite worksite = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
+		EarthSurfaceWorksite worksite = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
 		getFixture().setSurfaceWorksite(worksite);
 
 		// Sets a time.
@@ -203,17 +203,17 @@ public class SkyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.Sky#getSunAngularDiameter() <em>Get Sun Angular Diameter</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSunAngularDiameter() <em>Get Sun Angular Diameter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.Sky#getSunAngularDiameter()
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky#getSunAngularDiameter()
 	 * @generated_NOT
 	 */
 	public void testGetSunAngularDiameter() 
 	{
 		// Creates a fully initialise EarthSurfaceWorksite.
 		Date now = new Date();
-		EarthSurfaceWorksite earthSurfaceWorksite = Symphony__CoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();		
+		EarthSurfaceWorksite earthSurfaceWorksite = ApogyCoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();		
 		setFixture(earthSurfaceWorksite.getEarthSky());
 				
 		// Angular size goes from 31.6′ to 32.7′ (these are arc-minutes).

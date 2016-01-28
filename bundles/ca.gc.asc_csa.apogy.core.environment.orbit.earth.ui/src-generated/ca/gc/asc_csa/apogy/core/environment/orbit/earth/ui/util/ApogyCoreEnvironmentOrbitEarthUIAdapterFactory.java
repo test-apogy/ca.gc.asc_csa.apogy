@@ -1,44 +1,44 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.util;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCoreEnvironmentOrbitEarthUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreEnvironmentOrbitEarthUIPackage modelPackage;
+	protected static ApogyCoreEnvironmentOrbitEarthUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -46,9 +46,9 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory() {
+	public ApogyCoreEnvironmentOrbitEarthUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentOrbitEarthUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentOrbitEarthUIPackage.eINSTANCE;
 		}
 	}
 
@@ -77,8 +77,8 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentOrbitEarthUISwitch<Adapter> modelSwitch =
-		new Symphony__CoreEnvironmentOrbitEarthUISwitch<Adapter>() {
+	protected ApogyCoreEnvironmentOrbitEarthUISwitch<Adapter> modelSwitch =
+		new ApogyCoreEnvironmentOrbitEarthUISwitch<Adapter>() {
 			@Override
 			public Adapter caseEarthViewConfigurationList(EarthViewConfigurationList object) {
 				return createEarthViewConfigurationListAdapter();
@@ -156,13 +156,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList <em>Earth View Configuration List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList <em>Earth View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList
 	 * @generated
 	 */
 	public Adapter createEarthViewConfigurationListAdapter() {
@@ -170,13 +170,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration <em>Earth View Configuration</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration <em>Earth View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration
 	 * @generated
 	 */
 	public Adapter createEarthViewConfigurationAdapter() {
@@ -184,13 +184,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer <em>Abstract World Wind Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer <em>Abstract World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer
 	 * @generated
 	 */
 	public Adapter createAbstractWorldWindLayerAdapter() {
@@ -198,13 +198,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer <em>Spacecraft Location World Wind Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer <em>Spacecraft Location World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer
 	 * @generated
 	 */
 	public Adapter createSpacecraftLocationWorldWindLayerAdapter() {
@@ -212,13 +212,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer <em>Orbit Model World Wind Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer <em>Orbit Model World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer
 	 * @generated
 	 */
 	public Adapter createOrbitModelWorldWindLayerAdapter() {
@@ -226,13 +226,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer <em>Spacecraft Swath World Wind Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer <em>Spacecraft Swath World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer
 	 * @generated
 	 */
 	public Adapter createSpacecraftSwathWorldWindLayerAdapter() {
@@ -240,13 +240,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer <em>Earth Surface Location World Wind Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer <em>Earth Surface Location World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer
 	 * @generated
 	 */
 	public Adapter createEarthSurfaceLocationWorldWindLayerAdapter() {
@@ -254,13 +254,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer <em>Ground Station World Wind Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer <em>Ground Station World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer
 	 * @generated
 	 */
 	public Adapter createGroundStationWorldWindLayerAdapter() {
@@ -268,13 +268,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList <em>Spacecraft Visibility Pass View Configuration List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList <em>Spacecraft Visibility Pass View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList
 	 * @generated
 	 */
 	public Adapter createSpacecraftVisibilityPassViewConfigurationListAdapter() {
@@ -282,13 +282,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration <em>Spacecraft Visibility Pass View Configuration</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration <em>Spacecraft Visibility Pass View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration
 	 * @generated
 	 */
 	public Adapter createSpacecraftVisibilityPassViewConfigurationAdapter() {
@@ -296,13 +296,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
 	 * @generated
 	 */
 	public Adapter createAbstractToolsListContainerAdapter() {
@@ -310,13 +310,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {
@@ -324,13 +324,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
@@ -338,13 +338,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.Updatable <em>Updatable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.Updatable <em>Updatable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.Updatable
+	 * @see ca.gc.asc_csa.apogy.core.Updatable
 	 * @generated
 	 */
 	public Adapter createUpdatableAdapter() {
@@ -363,4 +363,4 @@ public class Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory extends Adapter
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentOrbitEarthUIAdapterFactory
+} //ApogyCoreEnvironmentOrbitEarthUIAdapterFactory

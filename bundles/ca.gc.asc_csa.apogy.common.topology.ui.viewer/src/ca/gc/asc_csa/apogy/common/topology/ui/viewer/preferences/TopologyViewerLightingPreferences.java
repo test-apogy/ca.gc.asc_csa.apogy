@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.viewer.preferences;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences;
 
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3f;
@@ -24,7 +24,7 @@ public class TopologyViewerLightingPreferences {
 		if (preferenceStore == null) 
 		{
 			IScopeContext context = InstanceScope.INSTANCE;
-			String qualifier = org.eclipse.symphony.common.topology.ui.viewer.Activator.ID;
+			String qualifier = ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.ID;
 			preferenceStore = new ScopedPreferenceStore(context, qualifier);
 		}
 		return preferenceStore;

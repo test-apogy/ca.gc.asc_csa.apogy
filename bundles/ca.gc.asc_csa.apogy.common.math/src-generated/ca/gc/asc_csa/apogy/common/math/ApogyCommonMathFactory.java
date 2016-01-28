@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage
  * @generated
  */
-public interface Symphony__CommonMathFactory extends EFactory {
+public interface ApogyCommonMathFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonMathFactory eINSTANCE = org.eclipse.symphony.common.math.impl.Symphony__CommonMathFactoryImpl.init();
+	ApogyCommonMathFactory eINSTANCE = ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Tuple3d</em>'.
@@ -65,7 +65,7 @@ public interface Symphony__CommonMathFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CommonMathFacade createSymphony__CommonMathFacade();
+	ApogyCommonMathFacade createApogyCommonMathFacade();
 
 	/**
 	 * Returns a new object of class '<em>Math IO</em>'.
@@ -83,6 +83,6 @@ public interface Symphony__CommonMathFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonMathPackage getSymphony__CommonMathPackage();
+	ApogyCommonMathPackage getApogyCommonMathPackage();
 
-} //Symphony__CommonMathFactory
+} //ApogyCommonMathFactory

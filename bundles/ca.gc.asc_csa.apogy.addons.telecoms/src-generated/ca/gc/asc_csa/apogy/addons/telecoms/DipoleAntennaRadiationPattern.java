@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
 
 /**
@@ -14,7 +14,7 @@ package org.eclipse.symphony.addons.telecoms;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getDipoleAntennaRadiationPattern()
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getDipoleAntennaRadiationPattern()
  * @model
  * @generated
  */

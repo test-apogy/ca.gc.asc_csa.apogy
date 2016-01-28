@@ -3,7 +3,7 @@
  *
  * $Id: DigitalElevationMapSamplerItemProvider.java,v 1.2.4.2 2015/05/21 15:50:28 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler;
-import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler;
+import ca.gc.asc_csa.apogy.common.processors.provider.ProcessorItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class DigitalElevationMapSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DigitalElevationMapSampler_targetResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DigitalElevationMapSampler_targetResolution_feature", "_UI_DigitalElevationMapSampler_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION,
+				 ApogyCommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class DigitalElevationMapSamplerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DigitalElevationMapSampler.class)) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

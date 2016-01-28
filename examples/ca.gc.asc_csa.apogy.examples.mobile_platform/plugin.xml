@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated emf_ecore_examples_mobile_platform -->
       <package
-            uri="org.eclipse.symphony.examples.mobile_platform"
-            class="org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage"
-            genModel="model/symphony_examples_mobile_platform.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.mobile_platform"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage"
+            genModel="model/apogy_examples_mobile_platform.xcore"/>
    </extension>
 
 </plugin>

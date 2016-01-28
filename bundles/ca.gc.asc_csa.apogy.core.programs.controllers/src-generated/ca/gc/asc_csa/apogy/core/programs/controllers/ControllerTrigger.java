@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger#getComponentQualifier <em>Component Qualifier</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger#getComponentQualifier <em>Component Qualifier</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerTrigger()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerTrigger()
  * @model abstract="true"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface ControllerTrigger extends Trigger
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component Qualifier</em>' containment reference.
 	 * @see #setComponentQualifier(EComponentQualifier)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerTrigger_ComponentQualifier()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerTrigger_ComponentQualifier()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -41,7 +41,7 @@ public interface ControllerTrigger extends Trigger
   EComponentQualifier getComponentQualifier();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger#getComponentQualifier <em>Component Qualifier</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger#getComponentQualifier <em>Component Qualifier</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Component Qualifier</em>' containment reference.

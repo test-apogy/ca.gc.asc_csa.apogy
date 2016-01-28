@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.programs.controllers.ui.commands;
+package ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,12 +15,12 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
-import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.ui.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
+import ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class LoadUserDefinedInputConditioningFromFileCommand extends AbstractHandler implements IHandler 
@@ -89,7 +89,7 @@ public class LoadUserDefinedInputConditioningFromFileCommand extends AbstractHan
 				double inputValue = Double.parseDouble(entries[0]);
 				double outputValue = Double.parseDouble(entries[1]);
 				
-				CustomInputConditioningPoint p = Symphony__CoreProgramsControllersFacade.INSTANCE.createCustomInputConditioningPoint(inputValue, outputValue);
+				CustomInputConditioningPoint p = ApogyCoreProgramsControllersFacade.INSTANCE.createCustomInputConditioningPoint(inputValue, outputValue);
 				
 				points.add(p);
 			}

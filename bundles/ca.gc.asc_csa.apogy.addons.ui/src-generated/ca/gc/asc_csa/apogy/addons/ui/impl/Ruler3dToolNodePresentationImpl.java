@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.impl;
+package ca.gc.asc_csa.apogy.addons.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation;
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class Ruler3dToolNodePresentationImpl extends NodePresentationImpl implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsUIPackage.Literals.RULER3D_TOOL_NODE_PRESENTATION;
+		return ApogyAddonsUIPackage.Literals.RULER3D_TOOL_NODE_PRESENTATION;
 	}
 
 	@Override

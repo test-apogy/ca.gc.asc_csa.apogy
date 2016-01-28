@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui;
+package ca.gc.asc_csa.apogy.common.emf.ui;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFactory
+ * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonEMFUI' childCreationExtenders='true' modelName='Symphony__CommonEMFUI' modelDirectory='/org.eclipse.symphony.common.emf.ui/src-generated' editDirectory='/org.eclipse.symphony.common.emf.ui.edit/src-generated' basePackage='org.eclipse.symphony.common.emf'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonEMFUI' childCreationExtenders='true' modelName='ApogyCommonEMFUI' modelDirectory='/ca.gc.asc_csa.apogy.common.emf.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.emf.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.emf'"
  * @generated
  */
-public interface Symphony__CommonEMFUIPackage extends EPackage
+public interface ApogyCommonEMFUIPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -40,7 +40,7 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.common.emf.ui";
+  String eNS_URI = "ca.gc.asc_csa.apogy.common.emf.ui";
 
   /**
 	 * The package namespace name.
@@ -56,17 +56,17 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CommonEMFUIPackage eINSTANCE = org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl.init();
+  ApogyCommonEMFUIPackage eINSTANCE = ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl
-	 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getSymphony__CommonEMFUIFacade()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getApogyCommonEMFUIFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_EMFUI_FACADE = 0;
+	int APOGY_COMMON_EMFUI_FACADE = 0;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -75,7 +75,7 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMFUI_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_EMFUI_FACADE_FEATURE_COUNT = 0;
 
 		/**
 	 * The operation id for the '<em>Get Color For Range</em>' operation.
@@ -84,7 +84,7 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES = 0;
+	int APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES = 0;
 
 		/**
 	 * The operation id for the '<em>Get Display Units</em>' operation.
@@ -93,7 +93,7 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = 1;
+	int APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = 1;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -102,14 +102,14 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMFUI_FACADE_OPERATION_COUNT = 2;
+	int APOGY_COMMON_EMFUI_FACADE_OPERATION_COUNT = 2;
 
 		/**
 	 * The meta object id for the '<em>Color</em>' data type.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.swt.graphics.Color
-	 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getColor()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getColor()
 	 * @generated
 	 */
   int COLOR = 1;
@@ -120,41 +120,41 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see javax.measure.unit.Unit
-	 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getUnit()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getUnit()
 	 * @generated
 	 */
   int UNIT = 2;
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonEMFUIFacade();
+	EClass getApogyCommonEMFUIFacade();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getColorForRange(org.eclipse.symphony.common.emf.Ranges) <em>Get Color For Range</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#getColorForRange(ca.gc.asc_csa.apogy.common.emf.Ranges) <em>Get Color For Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Color For Range</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getColorForRange(org.eclipse.symphony.common.emf.Ranges)
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#getColorForRange(ca.gc.asc_csa.apogy.common.emf.Ranges)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges();
+	EOperation getApogyCommonEMFUIFacade__GetColorForRange__Ranges();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement) <em>Get Display Units</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement) <em>Get Display Units</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Display Units</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement)
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement();
+	EOperation getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
 		/**
 	 * Returns the meta object for data type '{@link org.eclipse.swt.graphics.Color <em>Color</em>}'.
@@ -185,7 +185,7 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonEMFUIFactory getSymphony__CommonEMFUIFactory();
+	ApogyCommonEMFUIFactory getApogyCommonEMFUIFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -203,14 +203,14 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl
-		 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getSymphony__CommonEMFUIFacade()
+		 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getApogyCommonEMFUIFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_EMFUI_FACADE = eINSTANCE.getSymphony__CommonEMFUIFacade();
+		EClass APOGY_COMMON_EMFUI_FACADE = eINSTANCE.getApogyCommonEMFUIFacade();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Color For Range</b></em>' operation.
@@ -218,7 +218,7 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES = eINSTANCE.getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges();
+		EOperation APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES = eINSTANCE.getApogyCommonEMFUIFacade__GetColorForRange__Ranges();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Display Units</b></em>' operation.
@@ -226,14 +226,14 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement();
+		EOperation APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = eINSTANCE.getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
 				/**
 		 * The meta object literal for the '<em>Color</em>' data type.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.eclipse.swt.graphics.Color
-		 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getColor()
+		 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getColor()
 		 * @generated
 		 */
     EDataType COLOR = eINSTANCE.getColor();
@@ -243,11 +243,11 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see javax.measure.unit.Unit
-		 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getUnit()
+		 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getUnit()
 		 * @generated
 		 */
     EDataType UNIT = eINSTANCE.getUnit();
 
   }
 
-} //Symphony__CommonEMFUIPackage
+} //ApogyCommonEMFUIPackage

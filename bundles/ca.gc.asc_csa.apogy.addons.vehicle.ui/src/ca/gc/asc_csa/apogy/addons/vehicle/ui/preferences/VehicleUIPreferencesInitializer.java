@@ -1,9 +1,9 @@
-package org.eclipse.symphony.addons.vehicle.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
-import org.eclipse.symphony.addons.vehicle.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.Activator;
 
 public class VehicleUIPreferencesInitializer extends AbstractPreferenceInitializer {
 

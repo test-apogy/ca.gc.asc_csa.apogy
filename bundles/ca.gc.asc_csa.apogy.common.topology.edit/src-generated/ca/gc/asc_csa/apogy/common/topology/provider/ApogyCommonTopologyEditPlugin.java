@@ -1,27 +1,27 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CommonTopology edit plugin.
+ * This is the central singleton for the ApogyCommonTopology edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonTopologyEditPlugin extends EMFPlugin {
+public final class ApogyCommonTopologyEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonTopologyEditPlugin INSTANCE = new Symphony__CommonTopologyEditPlugin();
+	public static final ApogyCommonTopologyEditPlugin INSTANCE = new ApogyCommonTopologyEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -37,10 +37,10 @@ public final class Symphony__CommonTopologyEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyEditPlugin() {
+	public ApogyCommonTopologyEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

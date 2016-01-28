@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,10 +17,10 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getAirMass(double) <em>Get Air Mass</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getDirectSunIntensity(double, double) <em>Get Direct Sun Intensity</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getDiffuseSunIntensity(double, double) <em>Get Diffuse Sun Intensity</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getAtmosphereRefractionCorrection(double) <em>Get Atmosphere Refraction Correction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getAirMass(double) <em>Get Air Mass</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getDirectSunIntensity(double, double) <em>Get Direct Sun Intensity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getDiffuseSunIntensity(double, double) <em>Get Diffuse Sun Intensity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getAtmosphereRefractionCorrection(double) <em>Get Atmosphere Refraction Correction</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -82,7 +82,7 @@ public class AtmosphereUtilsTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createAtmosphereUtils());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createAtmosphereUtils());
 	}
 
 	/**
@@ -97,10 +97,10 @@ public class AtmosphereUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getAirMass(double) <em>Get Air Mass</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getAirMass(double) <em>Get Air Mass</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AtmosphereUtils#getAirMass(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getAirMass(double)
 	 * @generated_NOT
 	 */
 	public void testGetAirMass__double() 
@@ -127,10 +127,10 @@ public class AtmosphereUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getDirectSunIntensity(double, double) <em>Get Direct Sun Intensity</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getDirectSunIntensity(double, double) <em>Get Direct Sun Intensity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AtmosphereUtils#getDirectSunIntensity(double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getDirectSunIntensity(double, double)
 	 * @generated_NOT
 	 */
 	public void testGetDirectSunIntensity__double_double() 
@@ -153,10 +153,10 @@ public class AtmosphereUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getDiffuseSunIntensity(double, double) <em>Get Diffuse Sun Intensity</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getDiffuseSunIntensity(double, double) <em>Get Diffuse Sun Intensity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AtmosphereUtils#getDiffuseSunIntensity(double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getDiffuseSunIntensity(double, double)
 	 * @generated_NOT
 	 */
 	public void testGetDiffuseSunIntensity__double_double() 
@@ -178,10 +178,10 @@ public class AtmosphereUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AtmosphereUtils#getAtmosphereRefractionCorrection(double) <em>Get Atmosphere Refraction Correction</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getAtmosphereRefractionCorrection(double) <em>Get Atmosphere Refraction Correction</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AtmosphereUtils#getAtmosphereRefractionCorrection(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils#getAtmosphereRefractionCorrection(double)
 	 * @generated_NOT
 	 */
 	public void testGetAtmosphereRefractionCorrection__double() 

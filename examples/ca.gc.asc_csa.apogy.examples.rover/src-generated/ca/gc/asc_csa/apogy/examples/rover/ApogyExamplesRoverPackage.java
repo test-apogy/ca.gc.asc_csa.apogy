@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover;
+package ca.gc.asc_csa.apogy.examples.rover;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverFactory
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesRover' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='Symphony__ExamplesRover' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.rover/src-generated' editDirectory='/org.eclipse.symphony.examples.rover.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRover' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='ApogyExamplesRover' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.rover/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.rover.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesRoverPackage extends EPackage
+public interface ApogyExamplesRoverPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -43,7 +43,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.rover";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.rover";
 
   /**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesRoverPackage eINSTANCE = org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl.init();
+  ApogyExamplesRoverPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl <em>Battery</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.BatteryImpl <em>Battery</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.rover.impl.BatteryImpl
-	 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getBattery()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.BatteryImpl
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getBattery()
 	 * @generated
 	 */
 	int BATTERY = 0;
@@ -135,11 +135,11 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	int BATTERY_OPERATION_COUNT = 2;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl <em>Power System</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl <em>Power System</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.rover.impl.PowerSystemImpl
-	 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getPowerSystem()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getPowerSystem()
 	 * @generated
 	 */
 	int POWER_SYSTEM = 1;
@@ -208,11 +208,11 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	int POWER_SYSTEM_OPERATION_COUNT = 1;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.impl.RoverImpl <em>Rover</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl <em>Rover</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.rover.impl.RoverImpl
-	 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getRover()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getRover()
 	 * @generated
 	 */
   int ROVER = 2;
@@ -224,7 +224,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER__ROBOTIC_ARM = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
+  int ROVER__ROBOTIC_ARM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Mobile Platform</b></em>' reference.
@@ -233,7 +233,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER__MOBILE_PLATFORM = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
+  int ROVER__MOBILE_PLATFORM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Arm Camera</b></em>' reference.
@@ -242,7 +242,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__ARM_CAMERA = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
+	int ROVER__ARM_CAMERA = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Center Camera</b></em>' reference.
@@ -251,7 +251,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__CENTER_CAMERA = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
+	int ROVER__CENTER_CAMERA = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Power System</b></em>' containment reference.
@@ -260,7 +260,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__POWER_SYSTEM = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
+	int ROVER__POWER_SYSTEM = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Linear Velocity</b></em>' attribute.
@@ -269,7 +269,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__LINEAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
+	int ROVER__LINEAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Angular Velocity</b></em>' attribute.
@@ -278,7 +278,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__ANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
+	int ROVER__ANGULAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -287,7 +287,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__INITIALIZED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
+	int ROVER__INITIALIZED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -296,7 +296,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__DISPOSED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
+	int ROVER__DISPOSED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
 
 		/**
 	 * The number of structural features of the '<em>Rover</em>' class.
@@ -305,7 +305,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_FEATURE_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
+  int ROVER_FEATURE_COUNT = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -314,7 +314,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___DISPOSE = Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE;
+	int ROVER___DISPOSE = ApogyCommonEMFPackage.DISPOSABLE___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -323,7 +323,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER___INIT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
+  int ROVER___INIT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Cmd Linear Velocity</em>' operation.
@@ -332,7 +332,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_LINEAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
+	int ROVER___CMD_LINEAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Cmd Angular Velocity</em>' operation.
@@ -341,7 +341,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_ANGULAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
+	int ROVER___CMD_ANGULAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Cmd Velocities</em>' operation.
@@ -350,7 +350,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
+	int ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
 
 		/**
 	 * The number of operations of the '<em>Rover</em>' class.
@@ -359,14 +359,14 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_OPERATION_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
+  int ROVER_OPERATION_COUNT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.impl.RoverStubImpl <em>Rover Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverStubImpl <em>Rover Stub</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.rover.impl.RoverStubImpl
-	 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getRoverStub()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.RoverStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getRoverStub()
 	 * @generated
 	 */
   int ROVER_STUB = 3;
@@ -516,11 +516,11 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
   int ROVER_STUB_OPERATION_COUNT = ROVER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.impl.RoverSimulatedImpl <em>Rover Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverSimulatedImpl <em>Rover Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.rover.impl.RoverSimulatedImpl
-	 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getRoverSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.RoverSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getRoverSimulated()
 	 * @generated
 	 */
 	int ROVER_SIMULATED = 4;
@@ -670,297 +670,297 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	int ROVER_SIMULATED_OPERATION_COUNT = ROVER_OPERATION_COUNT + 0;
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.rover.Battery <em>Battery</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.rover.Battery <em>Battery</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Battery</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Battery
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Battery
 	 * @generated
 	 */
 	EClass getBattery();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.Battery#isActive <em>Active</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#isActive <em>Active</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Active</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Battery#isActive()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Battery#isActive()
 	 * @see #getBattery()
 	 * @generated
 	 */
 	EAttribute getBattery_Active();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.Battery#getVoltage <em>Voltage</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#getVoltage <em>Voltage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Voltage</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Battery#getVoltage()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Battery#getVoltage()
 	 * @see #getBattery()
 	 * @generated
 	 */
 	EAttribute getBattery_Voltage();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.Battery#getCurrent <em>Current</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#getCurrent <em>Current</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Battery#getCurrent()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Battery#getCurrent()
 	 * @see #getBattery()
 	 * @generated
 	 */
 	EAttribute getBattery_Current();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.rover.Battery#activate() <em>Activate</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#activate() <em>Activate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Activate</em>' operation.
-	 * @see org.eclipse.symphony.examples.rover.Battery#activate()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Battery#activate()
 	 * @generated
 	 */
 	EOperation getBattery__Activate();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.rover.Battery#deactivate() <em>Deactivate</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Battery#deactivate() <em>Deactivate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Deactivate</em>' operation.
-	 * @see org.eclipse.symphony.examples.rover.Battery#deactivate()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Battery#deactivate()
 	 * @generated
 	 */
 	EOperation getBattery__Deactivate();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.rover.PowerSystem <em>Power System</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem <em>Power System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Power System</em>'.
-	 * @see org.eclipse.symphony.examples.rover.PowerSystem
+	 * @see ca.gc.asc_csa.apogy.examples.rover.PowerSystem
 	 * @generated
 	 */
 	EClass getPowerSystem();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.rover.PowerSystem#getBatteries <em>Batteries</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getBatteries <em>Batteries</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Batteries</em>'.
-	 * @see org.eclipse.symphony.examples.rover.PowerSystem#getBatteries()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getBatteries()
 	 * @see #getPowerSystem()
 	 * @generated
 	 */
 	EReference getPowerSystem_Batteries();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.rover.PowerSystem#getActiveBattery <em>Active Battery</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getActiveBattery <em>Active Battery</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Active Battery</em>'.
-	 * @see org.eclipse.symphony.examples.rover.PowerSystem#getActiveBattery()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getActiveBattery()
 	 * @see #getPowerSystem()
 	 * @generated
 	 */
 	EReference getPowerSystem_ActiveBattery();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Voltage</em>'.
-	 * @see org.eclipse.symphony.examples.rover.PowerSystem#getCurrentVoltage()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getCurrentVoltage()
 	 * @see #getPowerSystem()
 	 * @generated
 	 */
 	EAttribute getPowerSystem_CurrentVoltage();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.PowerSystem#getCurrentCurrent <em>Current Current</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getCurrentCurrent <em>Current Current</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Current</em>'.
-	 * @see org.eclipse.symphony.examples.rover.PowerSystem#getCurrentCurrent()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.PowerSystem#getCurrentCurrent()
 	 * @see #getPowerSystem()
 	 * @generated
 	 */
 	EAttribute getPowerSystem_CurrentCurrent();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.rover.PowerSystem#changeActiveBatteryTo(int) <em>Change Active Battery To</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem#changeActiveBatteryTo(int) <em>Change Active Battery To</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Active Battery To</em>' operation.
-	 * @see org.eclipse.symphony.examples.rover.PowerSystem#changeActiveBatteryTo(int)
+	 * @see ca.gc.asc_csa.apogy.examples.rover.PowerSystem#changeActiveBatteryTo(int)
 	 * @generated
 	 */
 	EOperation getPowerSystem__ChangeActiveBatteryTo__int();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.rover.Rover <em>Rover</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.rover.Rover <em>Rover</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rover</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover
 	 * @generated
 	 */
   EClass getRover();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.rover.Rover#getRoboticArm <em>Robotic Arm</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getRoboticArm <em>Robotic Arm</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Robotic Arm</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#getRoboticArm()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#getRoboticArm()
 	 * @see #getRover()
 	 * @generated
 	 */
   EReference getRover_RoboticArm();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.rover.Rover#getMobilePlatform <em>Mobile Platform</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getMobilePlatform <em>Mobile Platform</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Mobile Platform</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#getMobilePlatform()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#getMobilePlatform()
 	 * @see #getRover()
 	 * @generated
 	 */
   EReference getRover_MobilePlatform();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.rover.Rover#getArmCamera <em>Arm Camera</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getArmCamera <em>Arm Camera</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Arm Camera</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#getArmCamera()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#getArmCamera()
 	 * @see #getRover()
 	 * @generated
 	 */
 	EReference getRover_ArmCamera();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.rover.Rover#getCenterCamera <em>Center Camera</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getCenterCamera <em>Center Camera</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Center Camera</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#getCenterCamera()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#getCenterCamera()
 	 * @see #getRover()
 	 * @generated
 	 */
 	EReference getRover_CenterCamera();
 
 		/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.rover.Rover#getPowerSystem <em>Power System</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getPowerSystem <em>Power System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Power System</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#getPowerSystem()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#getPowerSystem()
 	 * @see #getRover()
 	 * @generated
 	 */
 	EReference getRover_PowerSystem();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.Rover#getLinearVelocity <em>Linear Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getLinearVelocity <em>Linear Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Linear Velocity</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#getLinearVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#getLinearVelocity()
 	 * @see #getRover()
 	 * @generated
 	 */
 	EAttribute getRover_LinearVelocity();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.Rover#getAngularVelocity <em>Angular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getAngularVelocity <em>Angular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Angular Velocity</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#getAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#getAngularVelocity()
 	 * @see #getRover()
 	 * @generated
 	 */
 	EAttribute getRover_AngularVelocity();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.Rover#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#isInitialized()
 	 * @see #getRover()
 	 * @generated
 	 */
 	EAttribute getRover_Initialized();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.Rover#isDisposed <em>Disposed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#isDisposed <em>Disposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Disposed</em>'.
-	 * @see org.eclipse.symphony.examples.rover.Rover#isDisposed()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#isDisposed()
 	 * @see #getRover()
 	 * @generated
 	 */
 	EAttribute getRover_Disposed();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.rover.Rover#init() <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#init() <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.examples.rover.Rover#init()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#init()
 	 * @generated
 	 */
   EOperation getRover__Init();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.rover.Rover#cmdLinearVelocity(double) <em>Cmd Linear Velocity</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#cmdLinearVelocity(double) <em>Cmd Linear Velocity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cmd Linear Velocity</em>' operation.
-	 * @see org.eclipse.symphony.examples.rover.Rover#cmdLinearVelocity(double)
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#cmdLinearVelocity(double)
 	 * @generated
 	 */
 	EOperation getRover__CmdLinearVelocity__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.rover.Rover#cmdAngularVelocity(double) <em>Cmd Angular Velocity</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#cmdAngularVelocity(double) <em>Cmd Angular Velocity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cmd Angular Velocity</em>' operation.
-	 * @see org.eclipse.symphony.examples.rover.Rover#cmdAngularVelocity(double)
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#cmdAngularVelocity(double)
 	 * @generated
 	 */
 	EOperation getRover__CmdAngularVelocity__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.rover.Rover#cmdVelocities(double, double) <em>Cmd Velocities</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#cmdVelocities(double, double) <em>Cmd Velocities</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cmd Velocities</em>' operation.
-	 * @see org.eclipse.symphony.examples.rover.Rover#cmdVelocities(double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover#cmdVelocities(double, double)
 	 * @generated
 	 */
 	EOperation getRover__CmdVelocities__double_double();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.rover.RoverStub <em>Rover Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.rover.RoverStub <em>Rover Stub</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rover Stub</em>'.
-	 * @see org.eclipse.symphony.examples.rover.RoverStub
+	 * @see ca.gc.asc_csa.apogy.examples.rover.RoverStub
 	 * @generated
 	 */
   EClass getRoverStub();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.rover.RoverSimulated <em>Rover Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.rover.RoverSimulated <em>Rover Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rover Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.rover.RoverSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.rover.RoverSimulated
 	 * @generated
 	 */
 	EClass getRoverSimulated();
@@ -972,7 +972,7 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesRoverFactory getSymphony__ExamplesRoverFactory();
+	ApogyExamplesRoverFactory getApogyExamplesRoverFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -990,11 +990,11 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl <em>Battery</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.BatteryImpl <em>Battery</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.rover.impl.BatteryImpl
-		 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getBattery()
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.BatteryImpl
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getBattery()
 		 * @generated
 		 */
 		EClass BATTERY = eINSTANCE.getBattery();
@@ -1040,11 +1040,11 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 		EOperation BATTERY___DEACTIVATE = eINSTANCE.getBattery__Deactivate();
 
 			/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl <em>Power System</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl <em>Power System</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.rover.impl.PowerSystemImpl
-		 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getPowerSystem()
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getPowerSystem()
 		 * @generated
 		 */
 		EClass POWER_SYSTEM = eINSTANCE.getPowerSystem();
@@ -1090,11 +1090,11 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 		EOperation POWER_SYSTEM___CHANGE_ACTIVE_BATTERY_TO__INT = eINSTANCE.getPowerSystem__ChangeActiveBatteryTo__int();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.rover.impl.RoverImpl <em>Rover</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl <em>Rover</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.rover.impl.RoverImpl
-		 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getRover()
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.RoverImpl
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getRover()
 		 * @generated
 		 */
     EClass ROVER = eINSTANCE.getRover();
@@ -1204,25 +1204,25 @@ public interface Symphony__ExamplesRoverPackage extends EPackage
 		EOperation ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE = eINSTANCE.getRover__CmdVelocities__double_double();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.rover.impl.RoverStubImpl <em>Rover Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverStubImpl <em>Rover Stub</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.rover.impl.RoverStubImpl
-		 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getRoverStub()
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.RoverStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getRoverStub()
 		 * @generated
 		 */
     EClass ROVER_STUB = eINSTANCE.getRoverStub();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.rover.impl.RoverSimulatedImpl <em>Rover Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverSimulatedImpl <em>Rover Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.rover.impl.RoverSimulatedImpl
-		 * @see org.eclipse.symphony.examples.rover.impl.Symphony__ExamplesRoverPackageImpl#getRoverSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.RoverSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.rover.impl.ApogyExamplesRoverPackageImpl#getRoverSimulated()
 		 * @generated
 		 */
 		EClass ROVER_SIMULATED = eINSTANCE.getRoverSimulated();
 
   }
 
-} //Symphony__ExamplesRoverPackage
+} //ApogyExamplesRoverPackage

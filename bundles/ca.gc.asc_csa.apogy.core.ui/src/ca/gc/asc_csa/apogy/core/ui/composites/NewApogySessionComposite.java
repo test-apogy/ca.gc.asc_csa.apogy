@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -16,23 +16,23 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage.Literals;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage.Literals;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-public class NewSymphonySessionComposite extends Composite {
+public class NewApogySessionComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 	private Text textFilename;
-	private NewSymphonySessionSettings sessionSettings;
+	private NewApogySessionSettings sessionSettings;
 	private Button btnEnvironmentCheckButton;
 	private Button btnProgramCheckButton;
 	private Button btnToolsCheckButton;
 	private Button btnDataProductsCheckButton;
 	
 	
-	public NewSymphonySessionComposite(Composite parent, int style, NewSymphonySessionSettings sessionSettings) {
+	public NewApogySessionComposite(Composite parent, int style, NewApogySessionSettings sessionSettings) {
 		this(parent, style);
 		this.sessionSettings = sessionSettings;
 	}
@@ -42,7 +42,7 @@ public class NewSymphonySessionComposite extends Composite {
 	 * @param parent
 	 * @param style
 	 */
-	public NewSymphonySessionComposite(Composite parent, int style) {
+	public NewApogySessionComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -98,15 +98,15 @@ public class NewSymphonySessionComposite extends Composite {
 		}
 	}
 	
-	public NewSymphonySessionSettings getNewSymphonySessionSettings() {
+	public NewApogySessionSettings getNewApogySessionSettings() {
 		return sessionSettings;
 	}
 
-	public void setNewSymphonySessionSettings(NewSymphonySessionSettings sessionSettings) {
-		setNewSymphonySessionSettings(sessionSettings, true);
+	public void setNewApogySessionSettings(NewApogySessionSettings sessionSettings) {
+		setNewApogySessionSettings(sessionSettings, true);
 	}
 
-	public void setNewSymphonySessionSettings(NewSymphonySessionSettings sessionSettings,
+	public void setNewApogySessionSettings(NewApogySessionSettings sessionSettings,
 			boolean update) {
 		this.sessionSettings = sessionSettings;
 		if (update) {
@@ -123,23 +123,23 @@ public class NewSymphonySessionComposite extends Composite {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
 		IObservableValue observeTextTextFilenameObserveWidget = WidgetProperties.text(SWT.Modify).observe(textFilename);
-		IObservableValue sessionSettingsFilenameObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME);
+		IObservableValue sessionSettingsFilenameObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_APOGY_SESSION_SETTINGS__FILENAME);
 		bindingContext.bindValue(observeTextTextFilenameObserveWidget, sessionSettingsFilenameObserveValue, null, null);
 		//
 		IObservableValue observeSelectionBtnToolsCheckButtonObserveWidget = WidgetProperties.selection().observe(btnToolsCheckButton);
-		IObservableValue sessionSettingsCreateToolsObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS);
+		IObservableValue sessionSettingsCreateToolsObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS);
 		bindingContext.bindValue(observeSelectionBtnToolsCheckButtonObserveWidget, sessionSettingsCreateToolsObserveValue, null, null);
 		//
 		IObservableValue observeSelectionBtnProgramCheckButtonObserveWidget = WidgetProperties.selection().observe(btnProgramCheckButton);
-		IObservableValue sessionSettingsCreateProgramsObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS);
+		IObservableValue sessionSettingsCreateProgramsObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS);
 		bindingContext.bindValue(observeSelectionBtnProgramCheckButtonObserveWidget, sessionSettingsCreateProgramsObserveValue, null, null);
 		//
 		IObservableValue observeSelectionBtnEnvironmentCheckButtonObserveWidget = WidgetProperties.selection().observe(btnEnvironmentCheckButton);
-		IObservableValue sessionSettingsCreateEnvironmentObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT);
+		IObservableValue sessionSettingsCreateEnvironmentObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT);
 		bindingContext.bindValue(observeSelectionBtnEnvironmentCheckButtonObserveWidget, sessionSettingsCreateEnvironmentObserveValue, null, null);
 		//
 		IObservableValue observeSelectionBtnDataProductsCheckButtonObserveWidget = WidgetProperties.selection().observe(btnDataProductsCheckButton);
-		IObservableValue sessionSettingsCreateDataProductsObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS);
+		IObservableValue sessionSettingsCreateDataProductsObserveValue = EMFObservables.observeValue(sessionSettings, Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS);
 		bindingContext.bindValue(observeSelectionBtnDataProductsCheckButtonObserveWidget, sessionSettingsCreateDataProductsObserveValue, null, null);
 		//
 		return bindingContext;

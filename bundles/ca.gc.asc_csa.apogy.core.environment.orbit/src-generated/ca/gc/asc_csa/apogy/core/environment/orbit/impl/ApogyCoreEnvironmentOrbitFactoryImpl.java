@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.impl;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.environment.orbit.*;
+import ca.gc.asc_csa.apogy.core.environment.orbit.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.core.environment.orbit.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl implements Symphony__CoreEnvironmentOrbitFactory {
+public class ApogyCoreEnvironmentOrbitFactoryImpl extends EFactoryImpl implements ApogyCoreEnvironmentOrbitFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CoreEnvironmentOrbitFactory init() {
+	public static ApogyCoreEnvironmentOrbitFactory init() {
 		try {
-			Symphony__CoreEnvironmentOrbitFactory theSymphony__CoreEnvironmentOrbitFactory = (Symphony__CoreEnvironmentOrbitFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreEnvironmentOrbitPackage.eNS_URI);
-			if (theSymphony__CoreEnvironmentOrbitFactory != null) {
-				return theSymphony__CoreEnvironmentOrbitFactory;
+			ApogyCoreEnvironmentOrbitFactory theApogyCoreEnvironmentOrbitFactory = (ApogyCoreEnvironmentOrbitFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
+			if (theApogyCoreEnvironmentOrbitFactory != null) {
+				return theApogyCoreEnvironmentOrbitFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreEnvironmentOrbitFactoryImpl();
+		return new ApogyCoreEnvironmentOrbitFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitFactoryImpl() {
+	public ApogyCoreEnvironmentOrbitFactoryImpl() {
 		super();
 	}
 
@@ -57,14 +57,14 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES: return createPVACoordinates();
-			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_PVA_COORDINATES: return createTimedStampedPVACoordinates();
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES: return createAngularCoordinates();
-			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES: return createTimedStampedAngularCoordinates();
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE: return createSpacecraftAttitude();
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE: return createSpacecraftState();
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL: return createOrbitModel();
-			case Symphony__CoreEnvironmentOrbitPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE: return createSymphony__CoreEnvironmentOrbitFacade();
+			case ApogyCoreEnvironmentOrbitPackage.PVA_COORDINATES: return createPVACoordinates();
+			case ApogyCoreEnvironmentOrbitPackage.TIMED_STAMPED_PVA_COORDINATES: return createTimedStampedPVACoordinates();
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES: return createAngularCoordinates();
+			case ApogyCoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES: return createTimedStampedAngularCoordinates();
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE: return createSpacecraftAttitude();
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE: return createSpacecraftState();
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL: return createOrbitModel();
+			case ApogyCoreEnvironmentOrbitPackage.APOGY_CORE_ENVIRONMENT_ORBIT_FACADE: return createApogyCoreEnvironmentOrbitFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,9 +78,9 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentOrbitPackage.LIST:
+			case ApogyCoreEnvironmentOrbitPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitPackage.EXCEPTION:
+			case ApogyCoreEnvironmentOrbitPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -95,9 +95,9 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentOrbitPackage.LIST:
+			case ApogyCoreEnvironmentOrbitPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitPackage.EXCEPTION:
+			case ApogyCoreEnvironmentOrbitPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -179,9 +179,9 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitFacade createSymphony__CoreEnvironmentOrbitFacade() {
-		Symphony__CoreEnvironmentOrbitFacadeImpl symphony__CoreEnvironmentOrbitFacade = new Symphony__CoreEnvironmentOrbitFacadeImpl();
-		return symphony__CoreEnvironmentOrbitFacade;
+	public ApogyCoreEnvironmentOrbitFacade createApogyCoreEnvironmentOrbitFacade() {
+		ApogyCoreEnvironmentOrbitFacadeImpl apogy__CoreEnvironmentOrbitFacade = new ApogyCoreEnvironmentOrbitFacadeImpl();
+		return apogy__CoreEnvironmentOrbitFacade;
 	}
 
 	/**
@@ -225,8 +225,8 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitPackage getSymphony__CoreEnvironmentOrbitPackage() {
-		return (Symphony__CoreEnvironmentOrbitPackage)getEPackage();
+	public ApogyCoreEnvironmentOrbitPackage getApogyCoreEnvironmentOrbitPackage() {
+		return (ApogyCoreEnvironmentOrbitPackage)getEPackage();
 	}
 
 	/**
@@ -236,8 +236,8 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CoreEnvironmentOrbitPackage getPackage() {
-		return Symphony__CoreEnvironmentOrbitPackage.eINSTANCE;
+	public static ApogyCoreEnvironmentOrbitPackage getPackage() {
+		return ApogyCoreEnvironmentOrbitPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreEnvironmentOrbitFactoryImpl
+} //ApogyCoreEnvironmentOrbitFactoryImpl

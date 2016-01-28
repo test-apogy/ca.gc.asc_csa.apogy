@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.provider;
 
 
 import java.util.Collection;
@@ -14,14 +14,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.provider.LineOfSightImageMapLayerItemProvider;
+import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.provider.LineOfSightImageMapLayerItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 				 getResourceLocator(),
 				 getString("_UI_AntennaRadiationPatternImageMapLayer_antennaRadiationPattern_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AntennaRadiationPatternImageMapLayer_antennaRadiationPattern_feature", "_UI_AntennaRadiationPatternImageMapLayer_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 				 getResourceLocator(),
 				 getString("_UI_AntennaRadiationPatternImageMapLayer_signalStrengthCutoff_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AntennaRadiationPatternImageMapLayer_signalStrengthCutoff_feature", "_UI_AntennaRadiationPatternImageMapLayer_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF,
+				 ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 				 getResourceLocator(),
 				 getString("_UI_AntennaRadiationPatternImageMapLayer_bellowCutoffColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AntennaRadiationPatternImageMapLayer_bellowCutoffColor_feature", "_UI_AntennaRadiationPatternImageMapLayer_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR,
+				 ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN);
+			childrenFeatures.add(ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN);
 		}
 		return childrenFeatures;
 	}
@@ -195,11 +195,11 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AntennaRadiationPatternImageMapLayer.class)) {
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -219,33 +219,33 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
+				(ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 ApogyAddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+				(ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 ApogyAddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+				(ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 ApogyAddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+				(ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+				(ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 ApogyAddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+				(ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 ApogyAddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 	}
 
 	/**
@@ -260,8 +260,8 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

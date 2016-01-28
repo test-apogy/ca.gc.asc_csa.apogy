@@ -3,14 +3,14 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.geometry.data3d.las.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
-import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getReserved <em>Reserved</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getUserID <em>User ID</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getRecordID <em>Record ID</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getRecordLengthAfterHeader <em>Record Length After Header</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getReserved <em>Reserved</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getUserID <em>User ID</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getRecordID <em>Record ID</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getRecordLengthAfterHeader <em>Record Length After Header</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -146,7 +146,7 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD;
+		return ApogyCommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD;
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 		int oldReserved = reserved;
 		reserved = newReserved;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED, oldReserved, reserved));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED, oldReserved, reserved));
 	}
 
 	/**
@@ -188,7 +188,7 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 		String oldUserID = userID;
 		userID = newUserID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID, oldUserID, userID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID, oldUserID, userID));
 	}
 
 	/**
@@ -209,7 +209,7 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 		int oldRecordID = recordID;
 		recordID = newRecordID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID, oldRecordID, recordID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID, oldRecordID, recordID));
 	}
 
 	/**
@@ -230,7 +230,7 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 		int oldRecordLengthAfterHeader = recordLengthAfterHeader;
 		recordLengthAfterHeader = newRecordLengthAfterHeader;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER, oldRecordLengthAfterHeader, recordLengthAfterHeader));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER, oldRecordLengthAfterHeader, recordLengthAfterHeader));
 	}
 
 	/**
@@ -251,7 +251,7 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -262,15 +262,15 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
 				return getReserved();
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
 				return getUserID();
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
 				return getRecordID();
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
 				return getRecordLengthAfterHeader();
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -284,19 +284,19 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
 				setReserved((Integer)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
 				setUserID((String)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
 				setRecordID((Integer)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
 				setRecordLengthAfterHeader((Integer)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -311,19 +311,19 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
 				setReserved(RESERVED_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
 				setUserID(USER_ID_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
 				setRecordID(RECORD_ID_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
 				setRecordLengthAfterHeader(RECORD_LENGTH_AFTER_HEADER_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -338,15 +338,15 @@ public class VariableLengthRecordImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
 				return reserved != RESERVED_EDEFAULT;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
 				return USER_ID_EDEFAULT == null ? userID != null : !USER_ID_EDEFAULT.equals(userID);
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
 				return recordID != RECORD_ID_EDEFAULT;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
 				return recordLengthAfterHeader != RECORD_LENGTH_AFTER_HEADER_EDEFAULT;
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);

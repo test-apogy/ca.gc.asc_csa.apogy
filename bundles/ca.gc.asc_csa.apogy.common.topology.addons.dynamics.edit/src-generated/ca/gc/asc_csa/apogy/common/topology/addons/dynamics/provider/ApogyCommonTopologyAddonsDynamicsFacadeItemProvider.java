@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider.java,v 1.3.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
+ * $Id: ApogyCommonTopologyAddonsDynamicsFacadeItemProvider.java,v 1.3.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -23,12 +23,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider
+public class ApogyCommonTopologyAddonsDynamicsFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -42,7 +42,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCommonTopologyAddonsDynamicsFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,14 +62,14 @@ public class Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonTopologyAddonsDynamicsFacade.gif.
+	 * This returns ApogyCommonTopologyAddonsDynamicsFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonTopologyAddonsDynamicsFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonTopologyAddonsDynamicsFacade"));
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CommonTopologyAddonsDynamicsFacade_type");
+		return getString("_UI_ApogyCommonTopologyAddonsDynamicsFacade_type");
 	}
 
 	/**

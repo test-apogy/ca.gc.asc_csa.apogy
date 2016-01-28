@@ -3,18 +3,18 @@
  *
  * $Id: MobilityEdgeFactoryImpl.java,v 1.2.4.2 2015/05/21 15:50:20 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DisplacementCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl#getCostFunctions <em>Cost Functions</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl#getCostFunctions <em>Cost Functions</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +56,7 @@ public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, M
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE_FACTORY;
+		return ApogyAddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE_FACTORY;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, M
 	 */
 	public EList<DisplacementCostFunction> getCostFunctions() {
 		if (costFunctions == null) {
-			costFunctions = new EObjectResolvingEList<DisplacementCostFunction>(DisplacementCostFunction.class, this, Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS);
+			costFunctions = new EObjectResolvingEList<DisplacementCostFunction>(DisplacementCostFunction.class, this, ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS);
 		}
 		return costFunctions;
 	}
@@ -79,7 +79,7 @@ public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, M
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
 				return getCostFunctions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -94,7 +94,7 @@ public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, M
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
 				getCostFunctions().clear();
 				getCostFunctions().addAll((Collection<? extends DisplacementCostFunction>)newValue);
 				return;
@@ -110,7 +110,7 @@ public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, M
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
 				getCostFunctions().clear();
 				return;
 		}
@@ -125,7 +125,7 @@ public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, M
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE_FACTORY__COST_FUNCTIONS:
 				return costFunctions != null && !costFunctions.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -134,7 +134,7 @@ public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, M
 	@Override
 	public MobilityEdge createEdge(CartesianPolygon source, CartesianPolygon destination) 
 	{
-		MobilityEdge edge = Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdge();
+		MobilityEdge edge = ApogyAddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdge();
 		
 		edge.setFrom(source);
 		edge.setTo(destination);

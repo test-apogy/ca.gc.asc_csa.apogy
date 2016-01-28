@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.primitives.Vector;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class VectorPresentationAdapter implements NodePresentationAdapter
 {
@@ -30,7 +30,7 @@ public class VectorPresentationAdapter implements NodePresentationAdapter
 
 		Vector vector = (Vector) obj;
 		
-		VectorPresentation presentationNode = Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createVectorPresentation();
+		VectorPresentation presentationNode = ApogyCommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createVectorPresentation();
 		presentationNode.setNode(vector);			
 						
 		return presentationNode;

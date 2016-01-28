@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.primitives.WayPoint;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.WayPoint;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class WayPointPresentationAdapter implements NodePresentationAdapter {
 
@@ -25,7 +25,7 @@ public class WayPointPresentationAdapter implements NodePresentationAdapter {
 
 		WayPoint WayPoint = (WayPoint) obj;
 
-		WayPointPresentation presentationNode = Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE
+		WayPointPresentation presentationNode = ApogyCommonTopologyAddonsPrimitivesUIFactory.eINSTANCE
 				.createWayPointPresentation();
 		presentationNode.setNode(WayPoint);
 

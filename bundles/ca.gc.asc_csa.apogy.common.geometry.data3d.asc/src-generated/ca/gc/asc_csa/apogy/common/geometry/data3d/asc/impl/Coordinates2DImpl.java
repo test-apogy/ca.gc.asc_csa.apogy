@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +18,8 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryD
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.Coordinates2DImpl#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.Coordinates2DImpl#getY <em>Y</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class Coordinates2DImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DASCPackage.Literals.COORDINATES2_D;
+		return ApogyCommonGeometryData3DASCPackage.Literals.COORDINATES2_D;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class Coordinates2DImpl extends MinimalEObjectImpl.Container implements C
 		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__X, oldX, x));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class Coordinates2DImpl extends MinimalEObjectImpl.Container implements C
 		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__Y, oldY, y));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class Coordinates2DImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__X:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__X:
 				return getX();
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__Y:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__Y:
 				return getY();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class Coordinates2DImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__X:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__X:
 				setX((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__Y:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__Y:
 				setY((Double)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class Coordinates2DImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__X:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__X:
 				setX(X_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__Y:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__Y:
 				setY(Y_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class Coordinates2DImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__X:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__X:
 				return x != X_EDEFAULT;
-			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__Y:
+			case ApogyCommonGeometryData3DASCPackage.COORDINATES2_D__Y:
 				return y != Y_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

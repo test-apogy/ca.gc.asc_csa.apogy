@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.preferences;
+package ca.gc.asc_csa.apogy.core.environment.ui.preferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-public class SymphonyEnvironmentUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyEnvironmentUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private StringFieldEditor mapMinimumXEditor;
 	private StringFieldEditor mapMaximumXEditor;
@@ -31,7 +31,7 @@ public class SymphonyEnvironmentUIPreferencesPage extends PreferencePage impleme
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonyEnvironmentUIPreferencesPage() {
+	public ApogyEnvironmentUIPreferencesPage() {
 	}
 
 	/**
@@ -50,16 +50,16 @@ public class SymphonyEnvironmentUIPreferencesPage extends PreferencePage impleme
 		grpDefaultMapSize.setLayout(new GridLayout(2, true));		
 		grpDefaultMapSize.setText("Map Default Size");	
 				
-		mapMinimumXEditor = createStringFieldEditor(grpDefaultMapSize, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_X_MIN_ID, "Minium X (m)");				
+		mapMinimumXEditor = createStringFieldEditor(grpDefaultMapSize, ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_X_MIN_ID, "Minium X (m)");				
 		editors.add(mapMinimumXEditor);
 		
-		mapMaximumXEditor = createStringFieldEditor(grpDefaultMapSize, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_X_MAX_ID, "Maximum X (m)");
+		mapMaximumXEditor = createStringFieldEditor(grpDefaultMapSize, ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_X_MAX_ID, "Maximum X (m)");
 		editors.add(mapMaximumXEditor);
 		
-		mapMinimumYEditor = createStringFieldEditor(grpDefaultMapSize, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_Y_MIN_ID, "Minium Y (m)");
+		mapMinimumYEditor = createStringFieldEditor(grpDefaultMapSize, ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_Y_MIN_ID, "Minium Y (m)");
 		editors.add(mapMinimumYEditor);
 		
-		mapMaximumYEditor = createStringFieldEditor(grpDefaultMapSize, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_Y_MAX_ID, "Maximum Y (m)");
+		mapMaximumYEditor = createStringFieldEditor(grpDefaultMapSize, ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_Y_MAX_ID, "Maximum Y (m)");
 		editors.add(mapMaximumYEditor);
 		
 		Group grpMapView = new Group(container, SWT.NONE);
@@ -67,10 +67,10 @@ public class SymphonyEnvironmentUIPreferencesPage extends PreferencePage impleme
 		grpMapView.setLayout(new GridLayout(1, true));		
 		grpMapView.setText("Map View Settings");	
 				
-		mapUpdatePeriodEditor = createStringFieldEditor(grpMapView, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_UPDATE_PERIOD_MILLISECONDS_ID, "Map View Update Period (milliseconds)");
+		mapUpdatePeriodEditor = createStringFieldEditor(grpMapView, ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_UPDATE_PERIOD_MILLISECONDS_ID, "Map View Update Period (milliseconds)");
 		editors.add(mapUpdatePeriodEditor);
 		
-		mapMaximumImageSizeEditor = createStringFieldEditor(grpMapView, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_IMAGE_MAXIMUM_NUMBER_OF_PIXELS_ID, "Maximum Image Size (pixels)");
+		mapMaximumImageSizeEditor = createStringFieldEditor(grpMapView, ApogyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_IMAGE_MAXIMUM_NUMBER_OF_PIXELS_ID, "Maximum Image Size (pixels)");
 		editors.add(mapMaximumImageSizeEditor);
 		
 		return container;

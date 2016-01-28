@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage
  * @generated
  */
-public interface Symphony__AddonsSensorsImagingCameraFactory extends EFactory
+public interface ApogyAddonsSensorsImagingCameraFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__AddonsSensorsImagingCameraFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsSensorsImagingCameraFactory eINSTANCE = org.eclipse.symphony.addons.sensors.imaging.camera.impl.Symphony__AddonsSensorsImagingCameraFactoryImpl.init();
+  ApogyAddonsSensorsImagingCameraFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.ApogyAddonsSensorsImagingCameraFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Camera View Utilities</em>'.
@@ -177,13 +177,13 @@ public interface Symphony__AddonsSensorsImagingCameraFactory extends EFactory
 	URLImageOverlay createURLImageOverlay();
 
 		/**
-	 * Returns a new object of class '<em>Symphony Logo Overlay</em>'.
+	 * Returns a new object of class '<em>Apogy Logo Overlay</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony Logo Overlay</em>'.
+	 * @return a new object of class '<em>Apogy Logo Overlay</em>'.
 	 * @generated
 	 */
-  SymphonyLogoOverlay createSymphonyLogoOverlay();
+  ApogyLogoOverlay createApogyLogoOverlay();
 
   /**
 	 * Returns a new object of class '<em>FOV Overlay</em>'.
@@ -264,6 +264,6 @@ public interface Symphony__AddonsSensorsImagingCameraFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsImagingCameraPackage getSymphony__AddonsSensorsImagingCameraPackage();
+	ApogyAddonsSensorsImagingCameraPackage getApogyAddonsSensorsImagingCameraPackage();
 
-} //Symphony__AddonsSensorsImagingCameraFactory
+} //ApogyAddonsSensorsImagingCameraFactory

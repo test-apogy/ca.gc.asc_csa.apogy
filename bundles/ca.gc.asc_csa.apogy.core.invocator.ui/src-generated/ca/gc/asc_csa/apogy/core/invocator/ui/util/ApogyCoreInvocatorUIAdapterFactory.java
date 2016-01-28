@@ -1,29 +1,29 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui.util;
+package ca.gc.asc_csa.apogy.core.invocator.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.invocator.ui.*;
+import ca.gc.asc_csa.apogy.core.invocator.ui.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIPackage
+ * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage
  * @generated
  */
-public class Symphony__CoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCoreInvocatorUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreInvocatorUIPackage modelPackage;
+	protected static ApogyCoreInvocatorUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -31,9 +31,9 @@ public class Symphony__CoreInvocatorUIAdapterFactory extends AdapterFactoryImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUIAdapterFactory() {
+	public ApogyCoreInvocatorUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreInvocatorUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreInvocatorUIPackage.eINSTANCE;
 		}
 	}
 
@@ -62,11 +62,11 @@ public class Symphony__CoreInvocatorUIAdapterFactory extends AdapterFactoryImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreInvocatorUISwitch<Adapter> modelSwitch =
-		new Symphony__CoreInvocatorUISwitch<Adapter>() {
+	protected ApogyCoreInvocatorUISwitch<Adapter> modelSwitch =
+		new ApogyCoreInvocatorUISwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__CoreInvocatorUIFacade(Symphony__CoreInvocatorUIFacade object) {
-				return createSymphony__CoreInvocatorUIFacadeAdapter();
+			public Adapter caseApogyCoreInvocatorUIFacade(ApogyCoreInvocatorUIFacade object) {
+				return createApogyCoreInvocatorUIFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -89,16 +89,16 @@ public class Symphony__CoreInvocatorUIAdapterFactory extends AdapterFactoryImpl 
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreInvocatorUIFacadeAdapter() {
+	public Adapter createApogyCoreInvocatorUIFacadeAdapter() {
 		return null;
 	}
 
@@ -114,4 +114,4 @@ public class Symphony__CoreInvocatorUIAdapterFactory extends AdapterFactoryImpl 
 		return null;
 	}
 
-} //Symphony__CoreInvocatorUIAdapterFactory
+} //ApogyCoreInvocatorUIAdapterFactory

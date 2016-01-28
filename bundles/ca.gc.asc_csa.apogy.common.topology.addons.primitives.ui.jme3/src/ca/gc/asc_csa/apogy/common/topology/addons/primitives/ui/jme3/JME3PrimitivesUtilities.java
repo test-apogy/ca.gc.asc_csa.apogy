@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

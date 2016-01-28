@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data;
+package ca.gc.asc_csa.apogy.common.geometry.data;
 
 import java.util.List;
 
@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getPoints <em>Points</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet#getPoints <em>Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSet()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getCoordinatesSet()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface CoordinatesSet<T extends Coordinates> extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSet_Points()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getCoordinatesSet_Points()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
@@ -54,14 +54,14 @@ public interface CoordinatesSet<T extends Coordinates> extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Normals</em>' attribute.
 	 * @see #setNormals(List)
-	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSet_Normals()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data.List<org.eclipse.symphony.common.geometry.data.Vector3d>" many="false" transient="true"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getCoordinatesSet_Normals()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data.List<ca.gc.asc_csa.apogy.common.geometry.data.Vector3d>" many="false" transient="true"
 	 * @generated
 	 */
 	List<Vector3d> getNormals();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Normals</em>' attribute.

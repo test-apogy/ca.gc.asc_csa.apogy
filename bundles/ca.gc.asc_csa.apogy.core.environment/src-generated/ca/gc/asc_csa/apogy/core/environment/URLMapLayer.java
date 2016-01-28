@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.URLMapLayer#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.URLMapLayer#getUrl <em>Url</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getURLMapLayer()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface URLMapLayer extends AbstractMapLayer
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLMapLayer_Url()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getURLMapLayer_Url()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='URL'"
 	 * @generated
@@ -44,7 +44,7 @@ public interface URLMapLayer extends AbstractMapLayer
   String getUrl();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.URLMapLayer#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.URLMapLayer#getUrl <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Url</em>' attribute.

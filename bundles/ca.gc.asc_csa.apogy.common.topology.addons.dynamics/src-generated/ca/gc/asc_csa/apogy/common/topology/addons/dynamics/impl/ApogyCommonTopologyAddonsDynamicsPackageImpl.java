@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__CommonTopologyAddonsDynamicsPackageImpl.java,v 1.29.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
+ * $Id: ApogyCommonTopologyAddonsDynamicsPackageImpl.java,v 1.29.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import java.util.Set;
 
@@ -18,36 +18,36 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade;
-import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Geometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest;
-import org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.Geometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl implements Symphony__CommonTopologyAddonsDynamicsPackage {
+public class ApogyCommonTopologyAddonsDynamicsPackageImpl extends EPackageImpl implements ApogyCommonTopologyAddonsDynamicsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -215,7 +215,7 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonTopologyAddonsDynamicsFacadeEClass = null;
+	private EClass apogy__CommonTopologyAddonsDynamicsFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -256,12 +256,12 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonTopologyAddonsDynamicsPackageImpl() {
-		super(eNS_URI, Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE);
+	private ApogyCommonTopologyAddonsDynamicsPackageImpl() {
+		super(eNS_URI, ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE);
 	}
 
 	/**
@@ -274,7 +274,7 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonTopologyAddonsDynamicsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonTopologyAddonsDynamicsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -283,30 +283,30 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyAddonsDynamicsPackage init() {
-		if (isInited) return (Symphony__CommonTopologyAddonsDynamicsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyAddonsDynamicsPackage.eNS_URI);
+	public static ApogyCommonTopologyAddonsDynamicsPackage init() {
+		if (isInited) return (ApogyCommonTopologyAddonsDynamicsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyAddonsDynamicsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonTopologyAddonsDynamicsPackageImpl theSymphony__CommonTopologyAddonsDynamicsPackage = (Symphony__CommonTopologyAddonsDynamicsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonTopologyAddonsDynamicsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonTopologyAddonsDynamicsPackageImpl());
+		ApogyCommonTopologyAddonsDynamicsPackageImpl theApogyCommonTopologyAddonsDynamicsPackage = (ApogyCommonTopologyAddonsDynamicsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonTopologyAddonsDynamicsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonTopologyAddonsDynamicsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonTopologyAddonsDynamicsPackage.createPackageContents();
+		theApogyCommonTopologyAddonsDynamicsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonTopologyAddonsDynamicsPackage.initializePackageContents();
+		theApogyCommonTopologyAddonsDynamicsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonTopologyAddonsDynamicsPackage.freeze();
+		theApogyCommonTopologyAddonsDynamicsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonTopologyAddonsDynamicsPackage.eNS_URI, theSymphony__CommonTopologyAddonsDynamicsPackage);
-		return theSymphony__CommonTopologyAddonsDynamicsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonTopologyAddonsDynamicsPackage.eNS_URI, theApogyCommonTopologyAddonsDynamicsPackage);
+		return theApogyCommonTopologyAddonsDynamicsPackage;
 	}
 
 	/**
@@ -944,8 +944,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonTopologyAddonsDynamicsFacade() {
-		return symphony__CommonTopologyAddonsDynamicsFacadeEClass;
+	public EClass getApogyCommonTopologyAddonsDynamicsFacade() {
+		return apogy__CommonTopologyAddonsDynamicsFacadeEClass;
 	}
 
 	/**
@@ -953,8 +953,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node() {
-		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node() {
+		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -962,8 +962,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node() {
-		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__FindTotalMass__Node() {
+		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -971,8 +971,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node() {
-		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node() {
+		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -980,8 +980,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class() {
-		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class() {
+		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -989,8 +989,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class() {
-		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(4);
+	public EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class() {
+		return apogy__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1106,8 +1106,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsFactory getSymphony__CommonTopologyAddonsDynamicsFactory() {
-		return (Symphony__CommonTopologyAddonsDynamicsFactory)getEFactoryInstance();
+	public ApogyCommonTopologyAddonsDynamicsFactory getApogyCommonTopologyAddonsDynamicsFactory() {
+		return (ApogyCommonTopologyAddonsDynamicsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -1235,12 +1235,12 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		sphereGeometryEClass = createEClass(SPHERE_GEOMETRY);
 		createEAttribute(sphereGeometryEClass, SPHERE_GEOMETRY__RADIUS);
 
-		symphony__CommonTopologyAddonsDynamicsFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE);
-		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE);
-		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE);
-		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE);
-		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS);
-		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS);
+		apogy__CommonTopologyAddonsDynamicsFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE);
+		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE);
+		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE);
+		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE);
+		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS);
+		createEOperation(apogy__CommonTopologyAddonsDynamicsFacadeEClass, APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS);
 
 		// Create data types
 		setEDataType = createEDataType(SET);
@@ -1270,9 +1270,9 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(setEDataType, "T");
@@ -1280,8 +1280,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		dynamicSystemPropertiesEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
-		physicalBodyEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		dynamicSystemPropertiesEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
+		physicalBodyEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		cylindricalConstraintEClass.getESuperTypes().add(this.getAbstractConstraint());
 		gearRatioConstraintEClass.getESuperTypes().add(this.getAbstractConstraint());
 		hingeConstraintEClass.getESuperTypes().add(this.getAbstractConstraint());
@@ -1314,8 +1314,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 
 		initEClass(physicalPropertiesEClass, PhysicalProperties.class, "PhysicalProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPhysicalProperties_Mass(), theEcorePackage.getEDouble(), "mass", null, 0, 1, PhysicalProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPhysicalProperties_InertiaMatrix(), theSymphony__CommonMathPackage.getMatrix3x3(), null, "inertiaMatrix", null, 1, 1, PhysicalProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPhysicalProperties_CenterOfMassLocation(), theSymphony__CommonMathPackage.getTuple3d(), null, "centerOfMassLocation", null, 1, 1, PhysicalProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPhysicalProperties_InertiaMatrix(), theApogyCommonMathPackage.getMatrix3x3(), null, "inertiaMatrix", null, 1, 1, PhysicalProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPhysicalProperties_CenterOfMassLocation(), theApogyCommonMathPackage.getTuple3d(), null, "centerOfMassLocation", null, 1, 1, PhysicalProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractPhysicalBodySimulationPropertiesEClass, AbstractPhysicalBodySimulationProperties.class, "AbstractPhysicalBodySimulationProperties", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1324,16 +1324,16 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		initEClass(abstractCollisionGeometrySimulationPropertiesEClass, AbstractCollisionGeometrySimulationProperties.class, "AbstractCollisionGeometrySimulationProperties", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pointOfInterestEClass, PointOfInterest.class, "PointOfInterest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPointOfInterest_Offset(), theSymphony__CommonMathPackage.getTuple3d(), null, "offset", null, 0, 1, PointOfInterest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointOfInterest_Offset(), theApogyCommonMathPackage.getTuple3d(), null, "offset", null, 0, 1, PointOfInterest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPointOfInterest_KinematicState(), this.getKinematicState(), null, "kinematicState", null, 0, 1, PointOfInterest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kinematicStateEClass, KinematicState.class, "KinematicState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getKinematicState_Position(), theSymphony__CommonMathPackage.getTuple3d(), null, "position", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKinematicState_Orientation(), theSymphony__CommonMathPackage.getTuple3d(), null, "orientation", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKinematicState_LinearVelocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "linearVelocity", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKinematicState_AngularVelocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularVelocity", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKinematicState_LinearAcceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "linearAcceleration", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKinematicState_AngularAcceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularAcceleration", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKinematicState_Position(), theApogyCommonMathPackage.getTuple3d(), null, "position", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKinematicState_Orientation(), theApogyCommonMathPackage.getTuple3d(), null, "orientation", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKinematicState_LinearVelocity(), theApogyCommonMathPackage.getTuple3d(), null, "linearVelocity", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKinematicState_AngularVelocity(), theApogyCommonMathPackage.getTuple3d(), null, "angularVelocity", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKinematicState_LinearAcceleration(), theApogyCommonMathPackage.getTuple3d(), null, "linearAcceleration", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKinematicState_AngularAcceleration(), theApogyCommonMathPackage.getTuple3d(), null, "angularAcceleration", null, 0, 1, KinematicState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintStateEClass, ConstraintState.class, "ConstraintState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConstraintState_Position(), theEcorePackage.getEDouble(), "position", null, 0, 1, ConstraintState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1361,8 +1361,8 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		initEReference(getPrismaticConstraint_LinearCurrentState(), this.getConstraintState(), null, "linearCurrentState", null, 1, 1, PrismaticConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rproConstraintEClass, RPROConstraint.class, "RPROConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRPROConstraint_LinearStrength(), theSymphony__CommonMathPackage.getTuple3d(), null, "linearStrength", null, 0, 1, RPROConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRPROConstraint_AngularStrength(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularStrength", null, 0, 1, RPROConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRPROConstraint_LinearStrength(), theApogyCommonMathPackage.getTuple3d(), null, "linearStrength", null, 0, 1, RPROConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRPROConstraint_AngularStrength(), theApogyCommonMathPackage.getTuple3d(), null, "angularStrength", null, 0, 1, RPROConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(universalConstraintEClass, UniversalConstraint.class, "UniversalConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUniversalConstraint_Angular0CurrentState(), this.getConstraintState(), null, "angular0CurrentState", null, 1, 1, UniversalConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1371,14 +1371,14 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		initEClass(constraintAttachmentPointEClass, ConstraintAttachmentPoint.class, "ConstraintAttachmentPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstraintAttachmentPoint_PhysicalBody(), this.getPhysicalBody(), this.getPhysicalBody_ConstraintAttachmentPoints(), "physicalBody", null, 0, 1, ConstraintAttachmentPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstraintAttachmentPoint_Constraint(), this.getAbstractConstraint(), this.getAbstractConstraint_AttachmentPoints(), "constraint", null, 0, 1, ConstraintAttachmentPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstraintAttachmentPoint_Transform(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, ConstraintAttachmentPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstraintAttachmentPoint_Transform(), theApogyCommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, ConstraintAttachmentPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraintAttachmentPoint_Description(), theEcorePackage.getEString(), "description", null, 0, 1, ConstraintAttachmentPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraintAttachmentPoint_PointId(), theEcorePackage.getEString(), "pointId", null, 0, 1, ConstraintAttachmentPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(collisionGeometryEClass, CollisionGeometry.class, "CollisionGeometry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCollisionGeometry_SimulationProperties(), this.getAbstractCollisionGeometrySimulationProperties(), null, "simulationProperties", null, 0, -1, CollisionGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollisionGeometry_Geometry(), this.getGeometry(), null, "geometry", null, 0, 1, CollisionGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCollisionGeometry_Transform(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, CollisionGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollisionGeometry_Transform(), theApogyCommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, CollisionGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollisionGeometry_Material(), this.getAbstractMaterial(), null, "material", null, 0, 1, CollisionGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollisionGeometry_Description(), theEcorePackage.getEString(), "description", null, 0, 1, CollisionGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollisionGeometry_GeometryId(), theEcorePackage.getEString(), "geometryId", null, 0, 1, CollisionGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1389,7 +1389,7 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		initEClass(geometryEClass, Geometry.class, "Geometry", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(boxGeometryEClass, BoxGeometry.class, "BoxGeometry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBoxGeometry_Dimension(), theSymphony__CommonMathPackage.getTuple3d(), null, "dimension", null, 0, 1, BoxGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoxGeometry_Dimension(), theApogyCommonMathPackage.getTuple3d(), null, "dimension", null, 0, 1, BoxGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(capsuleGeometryEClass, CapsuleGeometry.class, "CapsuleGeometry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCapsuleGeometry_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, CapsuleGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1402,22 +1402,22 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		initEClass(sphereGeometryEClass, SphereGeometry.class, "SphereGeometry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSphereGeometry_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, SphereGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__CommonTopologyAddonsDynamicsFacadeEClass, Symphony__CommonTopologyAddonsDynamicsFacade.class, "Symphony__CommonTopologyAddonsDynamicsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonTopologyAddonsDynamicsFacadeEClass, ApogyCommonTopologyAddonsDynamicsFacade.class, "ApogyCommonTopologyAddonsDynamicsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node(), theSymphony__CommonMathPackage.getTuple3d(), "findCenterOfMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node(), theApogyCommonMathPackage.getTuple3d(), "findCenterOfMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node(), theEcorePackage.getEDouble(), "findTotalMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyAddonsDynamicsFacade__FindTotalMass__Node(), theEcorePackage.getEDouble(), "findTotalMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node(), null, "getPhysicalBodies", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node(), null, "getPhysicalBodies", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getSet());
 		EGenericType g2 = createEGenericType(this.getPhysicalBody());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class(), null, "getPhysicalNodeSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class(), null, "getPhysicalNodeSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		ETypeParameter t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(this.getAbstractPhysicalBodySimulationProperties());
 		t1.getEBounds().add(g1);
@@ -1429,7 +1429,7 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		g1 = createEGenericType(t1);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class(), null, "getConstraintSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class(), null, "getConstraintSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(this.getAbstractConstraintSimulationProperties());
 		t1.getEBounds().add(g1);
@@ -1464,16 +1464,16 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonTopologyAddonsDynamics",
+			 "prefix", "ApogyCommonTopologyAddonsDynamics",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonTopologyAddonsDynamics",
+			 "modelName", "ApogyCommonTopologyAddonsDynamics",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.topology.addons.dynamics/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.topology.addons.dynamics.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.topology.addons"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.dynamics/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.topology.addons.dynamics.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.topology.addons"
 		   });	
 		addAnnotation
 		  (dynamicSystemPropertiesEClass, 
@@ -1564,7 +1564,7 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		   source, 
 		   new String[] {
 			 "documentation", "Defines the mass of the physical body, in kilograms.",
-			 "symphony_units", "kg"
+			 "apogy_units", "kg"
 		   });	
 		addAnnotation
 		  (getPhysicalProperties_InertiaMatrix(), 
@@ -1789,29 +1789,29 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 			 "documentation", "The sphere geometry is defined by its radius."
 		   });	
 		addAnnotation
-		  (symphony__CommonTopologyAddonsDynamicsFacadeEClass, 
+		  (apogy__CommonTopologyAddonsDynamicsFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "Helper class containing a variety of dynamic topology utilities methods."
 		   });	
 		addAnnotation
-		  (getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node(), 
+		  (getApogyCommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Given a node in a topology, traverse the tree and computes the location of the center of mass of the tree.\n@param root The root of the topology for which the position of the center of mass is to be computed."
 		   });	
 		addAnnotation
-		  (getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node(), 
+		  (getApogyCommonTopologyAddonsDynamicsFacade__FindTotalMass__Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Given a node in a topology, traverse the tree and compute the mass of the tree.\n@param root The root of the topology for which the total mass is to be computed."
 		   });	
 		addAnnotation
-		  (getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node(), 
+		  (getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Given a node in a topology, traverse the tree and extracts the Set of PhysicalBody defined in the topology."
 		   });
 	}
 
-} //Symphony__CommonTopologyAddonsDynamicsPackageImpl
+} //ApogyCommonTopologyAddonsDynamicsPackageImpl

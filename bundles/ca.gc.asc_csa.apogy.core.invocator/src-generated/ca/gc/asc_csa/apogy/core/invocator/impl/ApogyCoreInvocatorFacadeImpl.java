@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -18,48 +18,48 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.AbstractResultValue;
-import org.eclipse.symphony.core.invocator.AbstractType;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Activator;
-import org.eclipse.symphony.core.invocator.AttributeResultValue;
-import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.IVariableListener;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.LocalTypesList;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallsList;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
-import org.eclipse.symphony.core.invocator.RegisteredTypesList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.TypeMember;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
-import org.eclipse.symphony.core.invocator.TypesList;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementationsList;
-import org.eclipse.symphony.core.invocator.VariableListenerEventType;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.Watch;
-import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegate;
-import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegateRegistry;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.IVariableListener;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
+import ca.gc.asc_csa.apogy.core.invocator.TypesList;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
+import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.Watch;
+import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegate;
+import ca.gc.asc_csa.apogy.core.invocator.delegates.InvocatorDelegateRegistry;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -68,14 +68,14 @@ import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegateRegistry;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
-		implements Symphony__CoreInvocatorFacade {
+public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
+		implements ApogyCoreInvocatorFacade {
 	/**
 	 * The default value of the '{@link #getInitVariableInstancesDate() <em>Init Variable Instances Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -104,11 +104,11 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	 */
 	protected InvocatorSession activeInvocatorSession;
 	private HashSet<IVariableListener> variableListenersSet;
-	private static Symphony__CoreInvocatorFacade instance = null;
+	private static ApogyCoreInvocatorFacade instance = null;
 
-	public static Symphony__CoreInvocatorFacade getInstance() {
+	public static ApogyCoreInvocatorFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CoreInvocatorFacadeImpl();
+			instance = new ApogyCoreInvocatorFacadeImpl();
 		}
 		return instance;
 	}
@@ -117,7 +117,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreInvocatorFacadeImpl() {
+	protected ApogyCoreInvocatorFacadeImpl() {
 		super();
 	}
 
@@ -127,7 +127,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorPackage.Literals.SYMPHONY_CORE_INVOCATOR_FACADE;
+		return ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE;
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		Date oldInitVariableInstancesDate = initVariableInstancesDate;
 		initVariableInstancesDate = newInitVariableInstancesDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE, oldInitVariableInstancesDate, initVariableInstancesDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE, oldInitVariableInstancesDate, initVariableInstancesDate));
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 			activeInvocatorSession = (InvocatorSession)eResolveProxy(oldActiveInvocatorSession);
 			if (activeInvocatorSession != oldActiveInvocatorSession) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION, oldActiveInvocatorSession, activeInvocatorSession));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION, oldActiveInvocatorSession, activeInvocatorSession));
 			}
 		}
 		return activeInvocatorSession;
@@ -186,7 +186,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		InvocatorSession oldActiveInvocatorSession = activeInvocatorSession;
 		activeInvocatorSession = newActiveInvocatorSession;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION, oldActiveInvocatorSession, activeInvocatorSession));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION, oldActiveInvocatorSession, activeInvocatorSession));
 	}
 
 	/**
@@ -268,15 +268,15 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	 */
 	public AbstractResultValue createAbstractResultValue(Object value) {
 		if (value instanceof EObject && value != null) {
-			ReferenceResultValue resultValue = Symphony__CoreInvocatorFactory.eINSTANCE
+			ReferenceResultValue resultValue = ApogyCoreInvocatorFactory.eINSTANCE
 					.createReferenceResultValue();
 			resultValue.setValue((EObject) value);
 			return resultValue;
 		} else if (value instanceof Object || value == null) {
-			AttributeValue attributeValue = Symphony__CoreInvocatorFactory.eINSTANCE
+			AttributeValue attributeValue = ApogyCoreInvocatorFactory.eINSTANCE
 					.createAttributeValue();
 			attributeValue.setObject(value);
-			AttributeResultValue resultValue = Symphony__CoreInvocatorFactory.eINSTANCE
+			AttributeResultValue resultValue = ApogyCoreInvocatorFactory.eINSTANCE
 					.createAttributeResultValue();
 			resultValue.setValue(attributeValue);
 			return resultValue;
@@ -294,7 +294,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		Watch watch = null;
 
 		if (abstractFeatureNode != null) {
-			AbstractRootNode root = Symphony__CommonEMFFacade.INSTANCE
+			AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE
 					.getFeatureRoot(abstractFeatureNode);
 
 			if (root != null) {
@@ -341,25 +341,25 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	 */
 	public Object getValue(AbstractFeatureNode abstractFeatureNode) {
 		Object object = null;
-		AbstractRootNode root = Symphony__CommonEMFFacade.INSTANCE
+		AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE
 				.getFeatureRoot(abstractFeatureNode);
 
 		if (root.eContainer() instanceof Watch) {
 			Watch watch = (Watch) root.eContainer();
-			EObject sourceObject = Symphony__CoreInvocatorFacade.INSTANCE
+			EObject sourceObject = ApogyCoreInvocatorFacade.INSTANCE
 					.getInstance(watch.getVariable());
 			if (sourceObject != null) {
-				object = Symphony__CommonEMFFacade.INSTANCE.resolve(sourceObject,
+				object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceObject,
 						abstractFeatureNode);
 			}
 		} else if (root.eContainer() instanceof TypeMemberReferenceTreeElement) {
 			TypeMemberReferenceTreeElement element = (TypeMemberReferenceTreeElement) root
 					.eContainer();
-			EObject sourceObject = Symphony__CoreInvocatorFacade.INSTANCE
+			EObject sourceObject = ApogyCoreInvocatorFacade.INSTANCE
 					.getInstance(element);
 
 			if (sourceObject != null) {
-				object = Symphony__CommonEMFFacade.INSTANCE.resolve(sourceObject,
+				object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceObject,
 						abstractFeatureNode);
 			}
 		}
@@ -487,7 +487,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		
 		while(currentNode != null)
 		{
-			Object object = Symphony__CommonEMFFacade.INSTANCE.resolve(sourceEObject, currentNode);
+			Object object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceEObject, currentNode);
 			
 			if(object instanceof EObject)
 			{
@@ -631,7 +631,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 			
 			while(currentNode != null)
 			{
-				Object object = Symphony__CommonEMFFacade.INSTANCE.resolve(sourceEObject, currentNode);
+				Object object = ApogyCommonEMFFacade.INSTANCE.resolve(sourceEObject, currentNode);
 				
 				if(object instanceof EObject)
 				{
@@ -681,8 +681,8 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 			if (eObjectInstance != null){
 				if (variableFeatureReference.getFeatureRoot() != null) 
 				{
-					Object tmpObject = Symphony__CommonEMFFacade.INSTANCE.resolve(
-								eObjectInstance, Symphony__CommonEMFFacade.INSTANCE
+					Object tmpObject = ApogyCommonEMFFacade.INSTANCE.resolve(
+								eObjectInstance, ApogyCommonEMFFacade.INSTANCE
 										.getLeaf(variableFeatureReference
 												.getFeatureRoot()));
 					
@@ -757,8 +757,8 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 			}
 
 			if (eObject != null) {
-				featureValue = Symphony__CommonEMFFacade.INSTANCE.resolve(eObject,
-						Symphony__CommonEMFFacade.INSTANCE
+				featureValue = ApogyCommonEMFFacade.INSTANCE.resolve(eObject,
+						ApogyCommonEMFFacade.INSTANCE
 								.getLeaf(variableFeatureReference
 										.getFeatureRoot()));
 			}
@@ -777,7 +777,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		EClass eClass = null;
 		Variable variable = variableFeatureReference.getVariable();
 		TypeMemberReferenceListElement currentTypeMemberReferenceListElement = variableFeatureReference.getTypeMemberReferenceListElement();
-		AbstractFeatureListNode featureNode = Symphony__CommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
+		AbstractFeatureListNode featureNode = ApogyCommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
 		
 		if (featureNode != null && featureNode instanceof AbstractFeatureSpecifier){
 			AbstractFeatureSpecifier featureSpecifier = (AbstractFeatureSpecifier) featureNode;
@@ -921,7 +921,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		
 		while(currentNode != null)
 		{			
-			Object object = Symphony__CommonEMFFacade.INSTANCE.resolve(source, currentNode);
+			Object object = ApogyCommonEMFFacade.INSTANCE.resolve(source, currentNode);
 			
 			if(object instanceof EObject)
 			{
@@ -1049,7 +1049,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	public TypeMemberReferenceListElement createTypeMemberReferences(TypeMember[] typeMembers) {
 		TypeMemberReferenceListElement currentElement = null;
 		for (int i = 0; i < typeMembers.length; i++) {
-			TypeMemberReferenceListElement newElement = Symphony__CoreInvocatorFactory.eINSTANCE
+			TypeMemberReferenceListElement newElement = ApogyCoreInvocatorFactory.eINSTANCE
 					.createTypeMemberReferenceListElement();
 			newElement.setTypeMember(typeMembers[i]);
 			if (currentElement != null) {
@@ -1172,14 +1172,14 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	public String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode) {
 		if (abstractFeatureNode != null) {
 			String fullyQualifiedName = new String();
-			AbstractRootNode root = Symphony__CommonEMFFacade.INSTANCE
+			AbstractRootNode root = ApogyCommonEMFFacade.INSTANCE
 					.getFeatureRoot(abstractFeatureNode);
 
 			if (root.eContainer() instanceof Watch) {
 				Watch watch = (Watch) root.eContainer();
 				fullyQualifiedName += watch.getVariable().getName();
 				fullyQualifiedName += "."
-						+ Symphony__CommonEMFFacade.INSTANCE
+						+ ApogyCommonEMFFacade.INSTANCE
 								.getAncestriesString(abstractFeatureNode);
 
 			} else if (root.eContainer() instanceof TypeMemberReferenceTreeElement) {
@@ -1187,7 +1187,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 						.eContainer();
 				fullyQualifiedName = getFullyQualifiedName(typeMemberReferenceTreeElement);
 				fullyQualifiedName += "."
-						+ Symphony__CommonEMFFacade.INSTANCE
+						+ ApogyCommonEMFFacade.INSTANCE
 								.getAncestriesString(abstractFeatureNode);
 			}
 
@@ -1209,7 +1209,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		Iterator<TypeMember> typeMembers = variableType.getMembers().iterator();
 		while (typeMembers.hasNext()) {
 			TypeMember typeMember = typeMembers.next();
-			TypeMemberImplementation typeMemberImplementation = Symphony__CoreInvocatorFactory.eINSTANCE
+			TypeMemberImplementation typeMemberImplementation = ApogyCoreInvocatorFactory.eINSTANCE
 					.createTypeMemberImplementation();
 			typeMemberImplementation.setTypeMember(typeMember);
 
@@ -1448,9 +1448,9 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				return getInitVariableInstancesDate();
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				if (resolve) return getActiveInvocatorSession();
 				return basicGetActiveInvocatorSession();
 		}
@@ -1465,10 +1465,10 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				setInitVariableInstancesDate((Date)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				setActiveInvocatorSession((InvocatorSession)newValue);
 				return;
 		}
@@ -1483,10 +1483,10 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				setInitVariableInstancesDate(INIT_VARIABLE_INSTANCES_DATE_EDEFAULT);
 				return;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				setActiveInvocatorSession((InvocatorSession)null);
 				return;
 		}
@@ -1501,9 +1501,9 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				return INIT_VARIABLE_INSTANCES_DATE_EDEFAULT == null ? initVariableInstancesDate != null : !INIT_VARIABLE_INSTANCES_DATE_EDEFAULT.equals(initVariableInstancesDate);
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				return activeInvocatorSession != null;
 		}
 		return super.eIsSet(featureID);
@@ -1517,89 +1517,89 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL:
 				exec((OperationCall)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN:
 				exec((OperationCall)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST:
 				exec((OperationCallsList)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT:
 				return createAbstractResultValue(arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE:
 				return resolveWatch((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT:
 				return resolveWatch((TypeMemberReferenceTreeElement)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE:
 				return getValue((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE:
 				return getInstance((Variable)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE:
 				return getInstanceClass((Variable)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE:
 				return getTypeApiAdapter((VariableFeatureReference)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE:
 				return getInstance((VariableFeatureReference)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE:
 				return getTypeMemberInstance((VariableFeatureReference)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE:
 				return getEMFFeatureValue((VariableFeatureReference)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE:
 				return getInstanceClass((VariableFeatureReference)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT:
 				return getInstance((TypeMemberReferenceTreeElement)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL:
 				return getTypeImplementation((OperationCall)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE:
 				return getTypeImplementation((Variable)arguments.get(0), (AbstractType)arguments.get(1));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE:
 				return getTypeImplementation((Variable)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING:
 				return getVariableByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER:
 				return createTypeMemberReferences((TypeMember[])arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING:
 				return getTypeImplementation((Environment)arguments.get(0), (String)arguments.get(1));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT:
 				return getFullyQualifiedName((TypeMemberReferenceTreeElement)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE:
 				return getFullyQualifiedName((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE:
 				return createTypeMemberImplementations((Type)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT:
 				initVariableInstances((Environment)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT:
 				disposeVariableInstances((Environment)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT:
 				return getOperationCallContainer((TypeMemberReferenceListElement)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT:
 				applyInitializationData((Environment)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT:
 				collectInitializationData((Environment)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE:
 				applyInitializationData((Variable)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE:
 				collectInitializationData((Variable)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION:
 				loadRegisteredTypes((InvocatorSession)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT:
 				return getAllTypes((Environment)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER:
 				addVariableListener((IVariableListener)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER:
 				removeVariableListener((IVariableListener)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE:
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE:
 				notifyVariableListeners((Variable)arguments.get(0), (VariableListenerEventType)arguments.get(1));
 				return null;
 		}
@@ -1622,4 +1622,4 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 		return result.toString();
 	}
 
-} // Symphony__CoreInvocatorFacadeImpl
+} // ApogyCoreInvocatorFacadeImpl

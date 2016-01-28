@@ -8,11 +8,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_addons_mobility_controllers -->
+      <!-- @generated apogy_addons_mobility_controllers -->
       <package
-            uri="org.eclipse.symphony.addons.mobility.controllers"
-            class="org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage"
-            genModel="model/symphony_addons_mobility_controllers.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.mobility.controllers"
+            class="ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage"
+            genModel="model/apogy_addons_mobility_controllers.xcore"/>
    </extension>
 
 </plugin>

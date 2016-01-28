@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.ExceptionContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ExceptionContainerImpl#getException <em>Exception</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ExceptionContainerImpl#getException <em>Exception</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,7 +63,7 @@ public class ExceptionContainerImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.EXCEPTION_CONTAINER;
+		return ApogyCoreInvocatorPackage.Literals.EXCEPTION_CONTAINER;
 	}
 
   /**
@@ -86,7 +86,7 @@ public class ExceptionContainerImpl extends MinimalEObjectImpl.Container impleme
 		Throwable oldException = exception;
 		exception = newException;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION, oldException, exception));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION, oldException, exception));
 	}
 
   /**
@@ -98,7 +98,7 @@ public class ExceptionContainerImpl extends MinimalEObjectImpl.Container impleme
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
+			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
 				return getException();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class ExceptionContainerImpl extends MinimalEObjectImpl.Container impleme
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
+			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
 				setException((Throwable)newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class ExceptionContainerImpl extends MinimalEObjectImpl.Container impleme
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
+			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
 				setException(EXCEPTION_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public class ExceptionContainerImpl extends MinimalEObjectImpl.Container impleme
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
+			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
 				return EXCEPTION_EDEFAULT == null ? exception != null : !EXCEPTION_EDEFAULT.equals(exception);
 		}
 		return super.eIsSet(featureID);

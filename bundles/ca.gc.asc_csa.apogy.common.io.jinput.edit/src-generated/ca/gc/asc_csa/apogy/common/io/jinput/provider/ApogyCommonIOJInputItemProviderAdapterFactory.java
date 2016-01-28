@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.provider;
+package ca.gc.asc_csa.apogy.common.io.jinput.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
-import org.eclipse.symphony.common.io.jinput.util.Symphony__CommonIOJInputAdapterFactory;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.util.ApogyCommonIOJInputAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.io.jinput.util.Symphony__CommonIOJInputAdapte
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony__CommonIOJInputAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonIOJInputItemProviderAdapterFactory extends ApogyCommonIOJInputAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonIOJInputEditPlugin.INSTANCE, Symphony__CommonIOJInputPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonIOJInputEditPlugin.INSTANCE, ApogyCommonIOJInputPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonIOJInputItemProviderAdapterFactory() {
+	public ApogyCommonIOJInputItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EController} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EController} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EControllerItemProvider eControllerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EController}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EController}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,7 +108,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EControllerEnvironmentItemProvider eControllerEnvironmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EComponent} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EComponentItemProvider eComponentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EComponent}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,7 +154,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EComponents} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponents} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EComponentsItemProvider eComponentsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EComponents}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponents}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,7 +177,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EButton} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EButton} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -185,7 +185,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EButtonItemProvider eButtonItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EButton}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EButton}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -200,7 +200,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EAxis} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EAxis} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -208,7 +208,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EAxisItemProvider eAxisItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EAxis}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EAxis}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -223,7 +223,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EKey} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EKey} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -231,7 +231,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EKeyItemProvider eKeyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EKey}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EKey}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -246,7 +246,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EComponentQualifier} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -254,7 +254,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EComponentQualifierItemProvider eComponentQualifierItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EComponentQualifier}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -269,7 +269,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.io.jinput.EVirtualComponent} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -277,7 +277,7 @@ public class Symphony__CommonIOJInputItemProviderAdapterFactory extends Symphony
 	protected EVirtualComponentItemProvider eVirtualComponentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.io.jinput.EVirtualComponent}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

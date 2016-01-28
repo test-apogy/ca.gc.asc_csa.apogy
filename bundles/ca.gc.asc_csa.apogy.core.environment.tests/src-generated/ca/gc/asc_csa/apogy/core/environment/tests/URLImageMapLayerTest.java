@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class URLImageMapLayerTest extends ImageMapLayerTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer());
 	}
 
 	/**

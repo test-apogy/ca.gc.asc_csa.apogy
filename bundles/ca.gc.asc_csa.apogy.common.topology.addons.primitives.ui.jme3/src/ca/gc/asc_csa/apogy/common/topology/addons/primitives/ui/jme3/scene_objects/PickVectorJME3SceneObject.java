@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.addons.primitives.PickVector;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.Vector;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorSceneObject;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.Activator;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.collision.CollisionResult;
@@ -255,7 +255,7 @@ public class PickVectorJME3SceneObject extends DefaultJME3SceneObject<PickVector
 			        		absoluteIntersectionPosition = new Point3d(JME3Utilities.convertToJavaxVector3f(contact));
 			        		
 				        	// Transform the pick position in the node frame.
-					        Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
+					        Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
 					        m.invert();				         
 					        Point3d relativePosition = new Point3d(absoluteIntersectionPosition);				         
 					        m.transform(relativePosition);			        					        		
@@ -293,10 +293,10 @@ public class PickVectorJME3SceneObject extends DefaultJME3SceneObject<PickVector
 						int featureId = msg.getFeatureID(Vector.class);
 						switch (featureId) 
 						{
-							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
-							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
-							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
-							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:		
+							case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+							case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+							case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+							case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:		
 								updateGeometry();								
 							break;
 

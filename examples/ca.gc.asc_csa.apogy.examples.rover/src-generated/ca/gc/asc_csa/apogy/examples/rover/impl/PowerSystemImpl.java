@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.impl;
+package ca.gc.asc_csa.apogy.examples.rover.impl;
 
 import com.google.common.base.Objects;
 
@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.examples.rover.Battery;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
-import org.eclipse.symphony.examples.rover.PowerSystem;
+import ca.gc.asc_csa.apogy.examples.rover.Battery;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.examples.rover.PowerSystem;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,10 +29,10 @@ import org.eclipse.symphony.examples.rover.PowerSystem;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getBatteries <em>Batteries</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getActiveBattery <em>Active Battery</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getCurrentVoltage <em>Current Voltage</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getCurrentCurrent <em>Current Current</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl#getBatteries <em>Batteries</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl#getActiveBattery <em>Active Battery</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl#getCurrentVoltage <em>Current Voltage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.PowerSystemImpl#getCurrentCurrent <em>Current Current</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,7 +94,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM;
+		return ApogyExamplesRoverPackage.Literals.POWER_SYSTEM;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	 */
 	public EList<Battery> getBatteries() {
 		if (batteries == null) {
-			batteries = new EObjectContainmentEList<Battery>(Battery.class, this, Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES);
+			batteries = new EObjectContainmentEList<Battery>(Battery.class, this, ApogyExamplesRoverPackage.POWER_SYSTEM__BATTERIES);
 		}
 		return batteries;
 	}
@@ -120,7 +120,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 			activeBattery = (Battery)eResolveProxy(oldActiveBattery);
 			if (activeBattery != oldActiveBattery) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
 			}
 		}
 		return activeBattery;
@@ -144,7 +144,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 		Battery oldActiveBattery = activeBattery;
 		activeBattery = newActiveBattery;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
 	}
 
 	/**
@@ -227,7 +227,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				return ((InternalEList<?>)getBatteries()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -241,14 +241,14 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				return getBatteries();
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				if (resolve) return getActiveBattery();
 				return basicGetActiveBattery();
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
 				return getCurrentVoltage();
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
 				return getCurrentCurrent();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -263,11 +263,11 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				getBatteries().clear();
 				getBatteries().addAll((Collection<? extends Battery>)newValue);
 				return;
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				setActiveBattery((Battery)newValue);
 				return;
 		}
@@ -282,10 +282,10 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				getBatteries().clear();
 				return;
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				setActiveBattery((Battery)null);
 				return;
 		}
@@ -300,13 +300,13 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				return batteries != null && !batteries.isEmpty();
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				return activeBattery != null;
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
 				return getCurrentVoltage() != CURRENT_VOLTAGE_EDEFAULT;
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
 				return getCurrentCurrent() != CURRENT_CURRENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -320,7 +320,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM___CHANGE_ACTIVE_BATTERY_TO__INT:
+			case ApogyExamplesRoverPackage.POWER_SYSTEM___CHANGE_ACTIVE_BATTERY_TO__INT:
 				changeActiveBatteryTo((Integer)arguments.get(0));
 				return null;
 		}

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.NodePresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -89,7 +89,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_topologyPresentationSet_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_topologyPresentationSet_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET,
 				 true,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_color_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_color_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__COLOR,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__COLOR,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_visible_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__VISIBLE,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_useInBoundingCalculation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_useInBoundingCalculation_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION,
 				 false,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_centroid_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_centroid_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__CENTROID,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__CENTROID,
 				 false,
 				 false,
 				 false,
@@ -199,7 +199,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_min_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_min_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__MIN,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__MIN,
 				 false,
 				 false,
 				 false,
@@ -221,7 +221,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_max_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_max_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__MAX,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__MAX,
 				 false,
 				 false,
 				 false,
@@ -243,7 +243,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_xRange_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_xRange_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__XRANGE,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__XRANGE,
 				 false,
 				 false,
 				 false,
@@ -265,7 +265,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_yRange_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_yRange_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__YRANGE,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__YRANGE,
 				 false,
 				 false,
 				 false,
@@ -287,7 +287,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_zRange_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_zRange_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__ZRANGE,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__ZRANGE,
 				 false,
 				 false,
 				 false,
@@ -309,7 +309,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_sceneObject_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_sceneObject_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__SCENE_OBJECT,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__SCENE_OBJECT,
 				 false,
 				 false,
 				 false,
@@ -331,7 +331,7 @@ public class NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodePresentation_shadowMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_shadowMode_feature", "_UI_NodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION__SHADOW_MODE,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__SHADOW_MODE,
 				 true,
 				 false,
 				 false,
@@ -379,18 +379,18 @@ public class NodePresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NodePresentation.class)) {
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE:
-			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE:
+			case ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

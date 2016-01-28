@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,17 +14,17 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
 
 import junit.textui.TestRunner;
 
@@ -74,7 +74,7 @@ public class DelaunayMesherTest extends CartesianPositionCoordinatesMesherTest
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createDelaunayMesher());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createDelaunayMesher());
 	}
 
 	/**
@@ -97,12 +97,12 @@ public class DelaunayMesherTest extends CartesianPositionCoordinatesMesherTest
 			CartesianTriangularMesh originalMesh = Data3DIO.INSTANCE.loadTriangularMeshFromASCII(originalMeshFile);
 
 			// We generate a CartesianCoordinatesSet
-			CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+			CartesianCoordinatesSet points = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 			for (int i = 0; i < originalMesh.getPoints().size(); i++)
 			{
 				Point3d p  = originalMesh.getPoints().get(i).asPoint3d();
-				CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p.x,p.y,p.z);
+				CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p.x,p.y,p.z);
 				points.getPoints().add(point);
 			}
 
@@ -123,14 +123,14 @@ public class DelaunayMesherTest extends CartesianPositionCoordinatesMesherTest
 
 			System.out.println("DelaunayMesherTest.testMesh() triangles in original mesh: "	+ originalMesh.getPolygons().size());
 
-			GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode();
+			GroupNode root = ApogyCommonTopologyFactory.eINSTANCE.createGroupNode();
 
 			// We save it to a topology.
-			ContentNode<CartesianTriangularMesh> producedNode = Symphony__CommonTopologyFacade.INSTANCE.createContentNode(mesh);
+			ContentNode<CartesianTriangularMesh> producedNode = ApogyCommonTopologyFacade.INSTANCE.createContentNode(mesh);
 			producedNode.setDescription("Output");
 			root.getChildren().add(producedNode);
 
-			ContentNode<CartesianTriangularMesh> originalNode = Symphony__CommonTopologyFacade.INSTANCE.createContentNode(originalMesh);
+			ContentNode<CartesianTriangularMesh> originalNode = ApogyCommonTopologyFacade.INSTANCE.createContentNode(originalMesh);
 			originalNode.setDescription("Original mesh");
 			root.getChildren().add(originalNode);
 
@@ -160,7 +160,7 @@ public class DelaunayMesherTest extends CartesianPositionCoordinatesMesherTest
 
 		int n = 20000;
 
-		CartesianCoordinatesSet pointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet pointCloud = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 		int width = (int) Math.sqrt((double) n);
 		int height = (int) Math.sqrt((double) n);
@@ -170,7 +170,7 @@ public class DelaunayMesherTest extends CartesianPositionCoordinatesMesherTest
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
 				double z = rand.nextDouble() * maxValue;
-				CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates((double) x,
+				CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates((double) x,
 								(double) y, z);
 				pointCloud.getPoints().add(point);
 			}
@@ -212,13 +212,13 @@ public class DelaunayMesherTest extends CartesianPositionCoordinatesMesherTest
 
 		double[][] data = xyData;
 
-		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet points = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 		for (int i = 0; i < data.length; i++) {
 
 			double[] pointData = data[i];
 
-			CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(pointData[0],
+			CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(pointData[0],
 							pointData[1], pointData[2]);
 
 			points.getPoints().add(point);

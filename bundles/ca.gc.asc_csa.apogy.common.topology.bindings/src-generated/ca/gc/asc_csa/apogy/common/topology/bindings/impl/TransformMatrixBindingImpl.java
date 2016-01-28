@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Map;
 
@@ -12,14 +12,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.TransformMatrixBindingImpl#getTransformNode <em>Transform Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TransformMatrixBindingImpl#getTransformNode <em>Transform Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,7 +64,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING;
+		return ApogyCommonTopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING;
 	}
 
   /**
@@ -79,7 +79,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
 			transformNode = (TransformNode)eResolveProxy(oldTransformNode);
 			if (transformNode != oldTransformNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
 			}
 		}
 		return transformNode;
@@ -105,7 +105,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
 		TransformNode oldTransformNode = transformNode;
 		transformNode = newTransformNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
 	}
 
   /**
@@ -117,7 +117,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				if (resolve) return getTransformNode();
 				return basicGetTransformNode();
 		}
@@ -133,7 +133,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				setTransformNode((TransformNode)newValue);
 				return;
 		}
@@ -149,7 +149,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				setTransformNode((TransformNode)null);
 				return;
 		}
@@ -165,7 +165,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				return transformNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -189,7 +189,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
 			  @Override
 			  public void notifyChanged(Notification notification) 
 			  {
-				  if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+				  if(notification.getFeatureID(FeatureNodeAdapter.class) == ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 				  {		
 					  	if(notification.getOldValue() instanceof Matrix4x4)
 					  	{

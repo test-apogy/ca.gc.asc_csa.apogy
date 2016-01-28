@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.provider;
 
 
 import java.util.Collection;
@@ -12,15 +12,15 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConstellationSystemApiAdapterItemProvider extends SymphonySystemApiAdapterItemProvider {
+public class ConstellationSystemApiAdapterItemProvider extends ApogySystemApiAdapterItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

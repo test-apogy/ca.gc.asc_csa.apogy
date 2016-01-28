@@ -1,84 +1,84 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.util;
+package ca.gc.asc_csa.apogy.core.invocator.util;
 
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.invocator.AbstractChannel;
-import org.eclipse.symphony.core.invocator.AbstractDisplay;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.AbstractPlayer;
-import org.eclipse.symphony.core.invocator.AbstractRecorder;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.AbstractResultValue;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.AbstractType;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Argument;
-import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.AttributeResultValue;
-import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.BasicContext;
-import org.eclipse.symphony.core.invocator.ChannelsList;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.DisplaysList;
-import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
-import org.eclipse.symphony.core.invocator.EClassArgument;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.ExceptionContainer;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.LocalTypesList;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
-import org.eclipse.symphony.core.invocator.OperationCallsList;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.RecordingResultsList;
-import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
-import org.eclipse.symphony.core.invocator.RegisteredTypesList;
-import org.eclipse.symphony.core.invocator.ResultsList;
-import org.eclipse.symphony.core.invocator.ToolsList;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.TypeMember;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.TypeMemberReference;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
-import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
-import org.eclipse.symphony.core.invocator.TypesList;
-import org.eclipse.symphony.core.invocator.Value;
-import org.eclipse.symphony.core.invocator.ValuesList;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementationsList;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.Watch;
-import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
-import org.eclipse.symphony.core.invocator.WatchesList;
-import org.eclipse.symphony.core.invocator.WatchesListsContainer;
+import ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractChannel;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractType;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
+import ca.gc.asc_csa.apogy.core.invocator.BasicContext;
+import ca.gc.asc_csa.apogy.core.invocator.ChannelsList;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.DisplaysList;
+import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement;
+import ca.gc.asc_csa.apogy.core.invocator.TypesList;
+import ca.gc.asc_csa.apogy.core.invocator.Value;
+import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.Watch;
+import ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,10 +90,10 @@ import org.eclipse.symphony.core.invocator.WatchesListsContainer;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage
  * @generated
  */
-public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
+public class ApogyCoreInvocatorSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -101,7 +101,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreInvocatorPackage modelPackage;
+  protected static ApogyCoreInvocatorPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -109,10 +109,10 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreInvocatorSwitch()
+  public ApogyCoreInvocatorSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreInvocatorPackage.eINSTANCE;
+			modelPackage = ApogyCoreInvocatorPackage.eINSTANCE;
 		}
 	}
 
@@ -141,13 +141,13 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE: {
-				Symphony__CoreInvocatorFacade symphony__CoreInvocatorFacade = (Symphony__CoreInvocatorFacade)theEObject;
-				T result = caseSymphony__CoreInvocatorFacade(symphony__CoreInvocatorFacade);
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE: {
+				ApogyCoreInvocatorFacade apogy__CoreInvocatorFacade = (ApogyCoreInvocatorFacade)theEObject;
+				T result = caseApogyCoreInvocatorFacade(apogy__CoreInvocatorFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION: {
+			case ApogyCoreInvocatorPackage.INVOCATOR_SESSION: {
 				InvocatorSession invocatorSession = (InvocatorSession)theEObject;
 				T result = caseInvocatorSession(invocatorSession);
 				if (result == null) result = caseNamed(invocatorSession);
@@ -155,7 +155,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ENVIRONMENT: {
+			case ApogyCoreInvocatorPackage.ENVIRONMENT: {
 				Environment environment = (Environment)theEObject;
 				T result = caseEnvironment(environment);
 				if (result == null) result = caseNamed(environment);
@@ -163,7 +163,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER: {
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER: {
 				DataProductsListsContainer dataProductsListsContainer = (DataProductsListsContainer)theEObject;
 				T result = caseDataProductsListsContainer(dataProductsListsContainer);
 				if (result == null) result = caseNamed(dataProductsListsContainer);
@@ -171,7 +171,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST: {
+			case ApogyCoreInvocatorPackage.DATA_PRODUCTS_LIST: {
 				DataProductsList dataProductsList = (DataProductsList)theEObject;
 				T result = caseDataProductsList(dataProductsList);
 				if (result == null) result = caseNamed(dataProductsList);
@@ -179,7 +179,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TOOLS_LIST: {
+			case ApogyCoreInvocatorPackage.TOOLS_LIST: {
 				ToolsList toolsList = (ToolsList)theEObject;
 				T result = caseToolsList(toolsList);
 				if (result == null) result = caseNamed(toolsList);
@@ -187,37 +187,37 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER: {
 				AbstractToolsListContainer abstractToolsListContainer = (AbstractToolsListContainer)theEObject;
 				T result = caseAbstractToolsListContainer(abstractToolsListContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPES_LIST: {
+			case ApogyCoreInvocatorPackage.TYPES_LIST: {
 				TypesList typesList = (TypesList)theEObject;
 				T result = caseTypesList(typesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST: {
+			case ApogyCoreInvocatorPackage.LOCAL_TYPES_LIST: {
 				LocalTypesList localTypesList = (LocalTypesList)theEObject;
 				T result = caseLocalTypesList(localTypesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST: {
+			case ApogyCoreInvocatorPackage.REGISTERED_TYPES_LIST: {
 				RegisteredTypesList registeredTypesList = (RegisteredTypesList)theEObject;
 				T result = caseRegisteredTypesList(registeredTypesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE: {
 				AbstractType abstractType = (AbstractType)theEObject;
 				T result = caseAbstractType(abstractType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPE: {
+			case ApogyCoreInvocatorPackage.TYPE: {
 				Type type = (Type)theEObject;
 				T result = caseType(type);
 				if (result == null) result = caseNamed(type);
@@ -225,13 +225,13 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER: {
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER: {
 				TypeApiAdapter typeApiAdapter = (TypeApiAdapter)theEObject;
 				T result = caseTypeApiAdapter(typeApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER: {
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER: {
 				TypeMember typeMember = (TypeMember)theEObject;
 				T result = caseTypeMember(typeMember);
 				if (result == null) result = caseNamed(typeMember);
@@ -239,53 +239,53 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE: {
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE: {
 				TypeMemberReference typeMemberReference = (TypeMemberReference)theEObject;
 				T result = caseTypeMemberReference(typeMemberReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT: {
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT: {
 				TypeMemberReferenceListElement typeMemberReferenceListElement = (TypeMemberReferenceListElement)theEObject;
 				T result = caseTypeMemberReferenceListElement(typeMemberReferenceListElement);
 				if (result == null) result = caseTypeMemberReference(typeMemberReferenceListElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT: {
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT: {
 				TypeMemberReferenceTreeElement typeMemberReferenceTreeElement = (TypeMemberReferenceTreeElement)theEObject;
 				T result = caseTypeMemberReferenceTreeElement(typeMemberReferenceTreeElement);
 				if (result == null) result = caseTypeMemberReference(typeMemberReferenceTreeElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.VARIABLES_LIST: {
+			case ApogyCoreInvocatorPackage.VARIABLES_LIST: {
 				VariablesList variablesList = (VariablesList)theEObject;
 				T result = caseVariablesList(variablesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.VARIABLE: {
+			case ApogyCoreInvocatorPackage.VARIABLE: {
 				Variable variable = (Variable)theEObject;
 				T result = caseVariable(variable);
 				if (result == null) result = caseNamed(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST: {
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST: {
 				ContextsList contextsList = (ContextsList)theEObject;
 				T result = caseContextsList(contextsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.CONTEXT: {
+			case ApogyCoreInvocatorPackage.CONTEXT: {
 				Context context = (Context)theEObject;
 				T result = caseContext(context);
 				if (result == null) result = caseNamed(context);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.BASIC_CONTEXT: {
+			case ApogyCoreInvocatorPackage.BASIC_CONTEXT: {
 				BasicContext basicContext = (BasicContext)theEObject;
 				T result = caseBasicContext(basicContext);
 				if (result == null) result = caseContext(basicContext);
@@ -293,65 +293,65 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST: {
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST: {
 				VariableImplementationsList variableImplementationsList = (VariableImplementationsList)theEObject;
 				T result = caseVariableImplementationsList(variableImplementationsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA: {
 				AbstractInitializationData abstractInitializationData = (AbstractInitializationData)theEObject;
 				T result = caseAbstractInitializationData(abstractInitializationData);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.INITIALIZATION_DATA: {
+			case ApogyCoreInvocatorPackage.INITIALIZATION_DATA: {
 				InitializationData initializationData = (InitializationData)theEObject;
 				T result = caseInitializationData(initializationData);
 				if (result == null) result = caseAbstractInitializationData(initializationData);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION: {
 				AbstractTypeImplementation abstractTypeImplementation = (AbstractTypeImplementation)theEObject;
 				T result = caseAbstractTypeImplementation(abstractTypeImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION: {
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATION: {
 				VariableImplementation variableImplementation = (VariableImplementation)theEObject;
 				T result = caseVariableImplementation(variableImplementation);
 				if (result == null) result = caseAbstractTypeImplementation(variableImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION: {
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_IMPLEMENTATION: {
 				TypeMemberImplementation typeMemberImplementation = (TypeMemberImplementation)theEObject;
 				T result = caseTypeMemberImplementation(typeMemberImplementation);
 				if (result == null) result = caseAbstractTypeImplementation(typeMemberImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.VALUES_LIST: {
+			case ApogyCoreInvocatorPackage.VALUES_LIST: {
 				ValuesList valuesList = (ValuesList)theEObject;
 				T result = caseValuesList(valuesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.VALUE: {
+			case ApogyCoreInvocatorPackage.VALUE: {
 				Value value = (Value)theEObject;
 				T result = caseValue(value);
 				if (result == null) result = caseNamed(value);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST: {
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST: {
 				ProgramsList programsList = (ProgramsList)theEObject;
 				T result = caseProgramsList(programsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.PROGRAM: {
+			case ApogyCoreInvocatorPackage.PROGRAM: {
 				Program program = (Program)theEObject;
 				T result = caseProgram(program);
 				if (result == null) result = caseNamed(program);
@@ -359,13 +359,13 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER: {
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_CONTAINER: {
 				OperationCallContainer operationCallContainer = (OperationCallContainer)theEObject;
 				T result = caseOperationCallContainer(operationCallContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST: {
+			case ApogyCoreInvocatorPackage.OPERATION_CALLS_LIST: {
 				OperationCallsList operationCallsList = (OperationCallsList)theEObject;
 				T result = caseOperationCallsList(operationCallsList);
 				if (result == null) result = caseProgram(operationCallsList);
@@ -375,14 +375,14 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE: {
+			case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE: {
 				VariableFeatureReference variableFeatureReference = (VariableFeatureReference)theEObject;
 				T result = caseVariableFeatureReference(variableFeatureReference);
 				if (result == null) result = caseNamed(variableFeatureReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL: {
+			case ApogyCoreInvocatorPackage.OPERATION_CALL: {
 				OperationCall operationCall = (OperationCall)theEObject;
 				T result = caseOperationCall(operationCall);
 				if (result == null) result = caseVariableFeatureReference(operationCall);
@@ -391,40 +391,40 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST: {
+			case ApogyCoreInvocatorPackage.ARGUMENTS_LIST: {
 				ArgumentsList argumentsList = (ArgumentsList)theEObject;
 				T result = caseArgumentsList(argumentsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ARGUMENT: {
+			case ApogyCoreInvocatorPackage.ARGUMENT: {
 				Argument argument = (Argument)theEObject;
 				T result = caseArgument(argument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT: {
+			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT: {
 				EDataTypeArgument eDataTypeArgument = (EDataTypeArgument)theEObject;
 				T result = caseEDataTypeArgument(eDataTypeArgument);
 				if (result == null) result = caseArgument(eDataTypeArgument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT: {
+			case ApogyCoreInvocatorPackage.EENUM_ARGUMENT: {
 				EEnumArgument eEnumArgument = (EEnumArgument)theEObject;
 				T result = caseEEnumArgument(eEnumArgument);
 				if (result == null) result = caseArgument(eEnumArgument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT: {
+			case ApogyCoreInvocatorPackage.ECLASS_ARGUMENT: {
 				EClassArgument eClassArgument = (EClassArgument)theEObject;
 				T result = caseEClassArgument(eClassArgument);
 				if (result == null) result = caseArgument(eClassArgument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.RESULTS_LIST: {
+			case ApogyCoreInvocatorPackage.RESULTS_LIST: {
 				ResultsList resultsList = (ResultsList)theEObject;
 				T result = caseResultsList(resultsList);
 				if (result == null) result = caseNamed(resultsList);
@@ -432,7 +432,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: {
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST: {
 				OperationCallResultsList operationCallResultsList = (OperationCallResultsList)theEObject;
 				T result = caseOperationCallResultsList(operationCallResultsList);
 				if (result == null) result = caseResultsList(operationCallResultsList);
@@ -441,7 +441,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST: {
+			case ApogyCoreInvocatorPackage.RECORDING_RESULTS_LIST: {
 				RecordingResultsList recordingResultsList = (RecordingResultsList)theEObject;
 				T result = caseRecordingResultsList(recordingResultsList);
 				if (result == null) result = caseResultsList(recordingResultsList);
@@ -450,7 +450,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_RESULT: {
 				AbstractResult abstractResult = (AbstractResult)theEObject;
 				T result = caseAbstractResult(abstractResult);
 				if (result == null) result = caseTimed(abstractResult);
@@ -458,13 +458,13 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT_VALUE: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_RESULT_VALUE: {
 				AbstractResultValue abstractResultValue = (AbstractResultValue)theEObject;
 				T result = caseAbstractResultValue(abstractResultValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT: {
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULT: {
 				OperationCallResult operationCallResult = (OperationCallResult)theEObject;
 				T result = caseOperationCallResult(operationCallResult);
 				if (result == null) result = caseAbstractResult(operationCallResult);
@@ -474,40 +474,40 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER: {
+			case ApogyCoreInvocatorPackage.EXCEPTION_CONTAINER: {
 				ExceptionContainer exceptionContainer = (ExceptionContainer)theEObject;
 				T result = caseExceptionContainer(exceptionContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE: {
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE: {
 				AttributeResultValue attributeResultValue = (AttributeResultValue)theEObject;
 				T result = caseAttributeResultValue(attributeResultValue);
 				if (result == null) result = caseAbstractResultValue(attributeResultValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE: {
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE: {
 				AttributeValue attributeValue = (AttributeValue)theEObject;
 				T result = caseAttributeValue(attributeValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.REFERENCE_RESULT_VALUE: {
+			case ApogyCoreInvocatorPackage.REFERENCE_RESULT_VALUE: {
 				ReferenceResultValue referenceResultValue = (ReferenceResultValue)theEObject;
 				T result = caseReferenceResultValue(referenceResultValue);
 				if (result == null) result = caseAbstractResultValue(referenceResultValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER: {
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER: {
 				WatchesListsContainer watchesListsContainer = (WatchesListsContainer)theEObject;
 				T result = caseWatchesListsContainer(watchesListsContainer);
 				if (result == null) result = caseAbstractToolsListContainer(watchesListsContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.WATCHES_LIST: {
+			case ApogyCoreInvocatorPackage.WATCHES_LIST: {
 				WatchesList watchesList = (WatchesList)theEObject;
 				T result = caseWatchesList(watchesList);
 				if (result == null) result = caseNamed(watchesList);
@@ -515,7 +515,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.WATCH: {
+			case ApogyCoreInvocatorPackage.WATCH: {
 				Watch watch = (Watch)theEObject;
 				T result = caseWatch(watch);
 				if (result == null) result = caseNamed(watch);
@@ -523,20 +523,20 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER: {
+			case ApogyCoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER: {
 				WatchFeatureNodeAdapter watchFeatureNodeAdapter = (WatchFeatureNodeAdapter)theEObject;
 				T result = caseWatchFeatureNodeAdapter(watchFeatureNodeAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER: {
+			case ApogyCoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER: {
 				DisplaysListsContainer displaysListsContainer = (DisplaysListsContainer)theEObject;
 				T result = caseDisplaysListsContainer(displaysListsContainer);
 				if (result == null) result = caseAbstractToolsListContainer(displaysListsContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST: {
+			case ApogyCoreInvocatorPackage.DISPLAYS_LIST: {
 				DisplaysList displaysList = (DisplaysList)theEObject;
 				T result = caseDisplaysList(displaysList);
 				if (result == null) result = caseNamed(displaysList);
@@ -544,21 +544,21 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_DISPLAY: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_DISPLAY: {
 				AbstractDisplay abstractDisplay = (AbstractDisplay)theEObject;
 				T result = caseAbstractDisplay(abstractDisplay);
 				if (result == null) result = caseDescribed(abstractDisplay);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER: {
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER: {
 				RecordingToolsContainer recordingToolsContainer = (RecordingToolsContainer)theEObject;
 				T result = caseRecordingToolsContainer(recordingToolsContainer);
 				if (result == null) result = caseAbstractToolsListContainer(recordingToolsContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.CHANNELS_LIST: {
+			case ApogyCoreInvocatorPackage.CHANNELS_LIST: {
 				ChannelsList channelsList = (ChannelsList)theEObject;
 				T result = caseChannelsList(channelsList);
 				if (result == null) result = caseNamed(channelsList);
@@ -566,7 +566,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_CHANNEL: {
 				AbstractChannel abstractChannel = (AbstractChannel)theEObject;
 				T result = caseAbstractChannel(abstractChannel);
 				if (result == null) result = caseNamed(abstractChannel);
@@ -574,7 +574,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_RECORDER: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_RECORDER: {
 				AbstractRecorder abstractRecorder = (AbstractRecorder)theEObject;
 				T result = caseAbstractRecorder(abstractRecorder);
 				if (result == null) result = caseNamed(abstractRecorder);
@@ -582,7 +582,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER: {
+			case ApogyCoreInvocatorPackage.ABSTRACT_PLAYER: {
 				AbstractPlayer abstractPlayer = (AbstractPlayer)theEObject;
 				T result = caseAbstractPlayer(abstractPlayer);
 				if (result == null) result = caseNamed(abstractPlayer);
@@ -590,7 +590,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE: {
+			case ApogyCoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE: {
 				OperationCallResultsListTimeSource operationCallResultsListTimeSource = (OperationCallResultsListTimeSource)theEObject;
 				T result = caseOperationCallResultsListTimeSource(operationCallResultsListTimeSource);
 				if (result == null) result = caseCollectionTimedTimeSource(operationCallResultsListTimeSource);
@@ -618,7 +618,7 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreInvocatorFacade(Symphony__CoreInvocatorFacade object) {
+	public T caseApogyCoreInvocatorFacade(ApogyCoreInvocatorFacade object) {
 		return null;
 	}
 
@@ -1748,4 +1748,4 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CoreInvocatorSwitch
+} //ApogyCoreInvocatorSwitch

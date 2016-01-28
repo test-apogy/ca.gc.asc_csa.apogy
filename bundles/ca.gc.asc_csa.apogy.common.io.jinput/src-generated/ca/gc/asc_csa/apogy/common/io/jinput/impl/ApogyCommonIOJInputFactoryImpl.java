@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.impl;
+package ca.gc.asc_csa.apogy.common.io.jinput.impl;
 
 import net.java.games.input.Component;
 import net.java.games.input.Controller;
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.io.jinput.*;
+import ca.gc.asc_csa.apogy.common.io.jinput.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +21,24 @@ import org.eclipse.symphony.common.io.jinput.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonIOJInputFactoryImpl extends EFactoryImpl implements Symphony__CommonIOJInputFactory {
+public class ApogyCommonIOJInputFactoryImpl extends EFactoryImpl implements ApogyCommonIOJInputFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonIOJInputFactory init() {
+	public static ApogyCommonIOJInputFactory init() {
 		try {
-			Symphony__CommonIOJInputFactory theSymphony__CommonIOJInputFactory = (Symphony__CommonIOJInputFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonIOJInputPackage.eNS_URI);
-			if (theSymphony__CommonIOJInputFactory != null) {
-				return theSymphony__CommonIOJInputFactory;
+			ApogyCommonIOJInputFactory theApogyCommonIOJInputFactory = (ApogyCommonIOJInputFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonIOJInputPackage.eNS_URI);
+			if (theApogyCommonIOJInputFactory != null) {
+				return theApogyCommonIOJInputFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonIOJInputFactoryImpl();
+		return new ApogyCommonIOJInputFactoryImpl();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Symphony__CommonIOJInputFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonIOJInputFactoryImpl() {
+	public ApogyCommonIOJInputFactoryImpl() {
 		super();
 	}
 
@@ -59,15 +59,15 @@ public class Symphony__CommonIOJInputFactoryImpl extends EFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER: return createEController();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT: return createEControllerEnvironment();
-			case Symphony__CommonIOJInputPackage.ECOMPONENT: return createEComponent();
-			case Symphony__CommonIOJInputPackage.ECOMPONENTS: return createEComponents();
-			case Symphony__CommonIOJInputPackage.EBUTTON: return createEButton();
-			case Symphony__CommonIOJInputPackage.EAXIS: return createEAxis();
-			case Symphony__CommonIOJInputPackage.EKEY: return createEKey();
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER: return createEComponentQualifier();
-			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT: return createEVirtualComponent();
+			case ApogyCommonIOJInputPackage.ECONTROLLER: return createEController();
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT: return createEControllerEnvironment();
+			case ApogyCommonIOJInputPackage.ECOMPONENT: return createEComponent();
+			case ApogyCommonIOJInputPackage.ECOMPONENTS: return createEComponents();
+			case ApogyCommonIOJInputPackage.EBUTTON: return createEButton();
+			case ApogyCommonIOJInputPackage.EAXIS: return createEAxis();
+			case ApogyCommonIOJInputPackage.EKEY: return createEKey();
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER: return createEComponentQualifier();
+			case ApogyCommonIOJInputPackage.EVIRTUAL_COMPONENT: return createEVirtualComponent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,11 +81,11 @@ public class Symphony__CommonIOJInputFactoryImpl extends EFactoryImpl implements
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonIOJInputPackage.JOB:
+			case ApogyCommonIOJInputPackage.JOB:
 				return createJobFromString(eDataType, initialValue);
-			case Symphony__CommonIOJInputPackage.COMPONENT:
+			case ApogyCommonIOJInputPackage.COMPONENT:
 				return createComponentFromString(eDataType, initialValue);
-			case Symphony__CommonIOJInputPackage.CONTROLLER:
+			case ApogyCommonIOJInputPackage.CONTROLLER:
 				return createControllerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -100,11 +100,11 @@ public class Symphony__CommonIOJInputFactoryImpl extends EFactoryImpl implements
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonIOJInputPackage.JOB:
+			case ApogyCommonIOJInputPackage.JOB:
 				return convertJobToString(eDataType, instanceValue);
-			case Symphony__CommonIOJInputPackage.COMPONENT:
+			case ApogyCommonIOJInputPackage.COMPONENT:
 				return convertComponentToString(eDataType, instanceValue);
-			case Symphony__CommonIOJInputPackage.CONTROLLER:
+			case ApogyCommonIOJInputPackage.CONTROLLER:
 				return convertControllerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -228,8 +228,8 @@ public class Symphony__CommonIOJInputFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonIOJInputPackage getSymphony__CommonIOJInputPackage() {
-		return (Symphony__CommonIOJInputPackage)getEPackage();
+	public ApogyCommonIOJInputPackage getApogyCommonIOJInputPackage() {
+		return (ApogyCommonIOJInputPackage)getEPackage();
 	}
 
 	/**
@@ -275,8 +275,8 @@ public class Symphony__CommonIOJInputFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonIOJInputPackage getPackage() {
-		return Symphony__CommonIOJInputPackage.eINSTANCE;
+	public static ApogyCommonIOJInputPackage getPackage() {
+		return ApogyCommonIOJInputPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonIOJInputFactoryImpl
+} //ApogyCommonIOJInputFactoryImpl

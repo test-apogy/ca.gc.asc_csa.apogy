@@ -1,17 +1,17 @@
-package org.eclipse.symphony.core.invocator.ui.views;
+package ca.gc.asc_csa.apogy.core.invocator.ui.views;
 
 import java.util.List;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.ui.composites.VariableFeatureReferenceComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
 
 public class VariableFeatureReferenceView extends AbstractView {
 	private VariableFeatureReferenceComposite variableFeatureReferenceComposite;
@@ -29,10 +29,10 @@ public class VariableFeatureReferenceView extends AbstractView {
 
 	@Override
 	public void updateSelection(ISelection selection) {
-		List<Object> vfrs = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, VariableFeatureReference.class);
+		List<Object> vfrs = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, VariableFeatureReference.class);
 		if (!vfrs.isEmpty()) {
 			VariableFeatureReference vfr = (VariableFeatureReference) vfrs.get(0);
-			InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE
+			InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE
 					.getActiveInvocatorSession();
 			VariablesList variables = session.getEnvironment()
 					.getVariablesList();

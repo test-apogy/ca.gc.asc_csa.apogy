@@ -3,7 +3,7 @@
  *
  * $Id: SkidSteeredMobilePlatformItemProvider.java,v 1.3.4.2 2015/05/21 15:51:23 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -76,7 +76,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedRightWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedRightWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualRightWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualRightWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -122,7 +122,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedLeftWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedLeftWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -145,7 +145,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualLeftWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualLeftWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -168,7 +168,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedAngularVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -191,7 +191,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualAngularVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -214,7 +214,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedTranslationVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedTranslationVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -237,7 +237,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualTranslationVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualTranslationVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -260,7 +260,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_effectiveSteeringWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_effectiveSteeringWidth_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH,
+				 ApogyAddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -309,15 +309,15 @@ public class SkidSteeredMobilePlatformItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SkidSteeredMobilePlatform.class)) {
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

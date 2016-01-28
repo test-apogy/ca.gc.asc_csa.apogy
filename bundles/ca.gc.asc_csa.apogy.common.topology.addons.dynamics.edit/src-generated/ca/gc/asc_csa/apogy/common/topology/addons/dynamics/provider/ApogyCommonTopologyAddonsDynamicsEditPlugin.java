@@ -1,29 +1,29 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CommonTopologyAddonsDynamics edit plugin.
+ * This is the central singleton for the ApogyCommonTopologyAddonsDynamics edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonTopologyAddonsDynamicsEditPlugin extends EMFPlugin {
+public final class ApogyCommonTopologyAddonsDynamicsEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonTopologyAddonsDynamicsEditPlugin INSTANCE = new Symphony__CommonTopologyAddonsDynamicsEditPlugin();
+	public static final ApogyCommonTopologyAddonsDynamicsEditPlugin INSTANCE = new ApogyCommonTopologyAddonsDynamicsEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -39,11 +39,11 @@ public final class Symphony__CommonTopologyAddonsDynamicsEditPlugin extends EMFP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsEditPlugin() {
+	public ApogyCommonTopologyAddonsDynamicsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

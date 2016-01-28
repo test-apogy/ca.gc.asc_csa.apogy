@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.WatchesListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.WatchesListsContainer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class WatchesListsContainerItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.WATCHES_LISTS_CONTAINER__WATCHES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.WATCHES_LISTS_CONTAINER__WATCHES);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +121,7 @@ public class WatchesListsContainerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WatchesListsContainer.class)) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,8 +142,8 @@ public class WatchesListsContainerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.WATCHES_LISTS_CONTAINER__WATCHES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createWatchesList()));
+				(ApogyCoreInvocatorPackage.Literals.WATCHES_LISTS_CONTAINER__WATCHES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createWatchesList()));
 	}
 
 }

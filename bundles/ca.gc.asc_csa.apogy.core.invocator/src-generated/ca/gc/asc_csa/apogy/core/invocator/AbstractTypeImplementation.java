@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -16,15 +16,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementations <em>Type Member Implementations</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getImplementationClass <em>Implementation Class</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAbstractInitializationData <em>Abstract Initialization Data</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getInstance <em>Instance</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAdapterInstance <em>Adapter Instance</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getHandlingType <em>Handling Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getTypeMemberImplementations <em>Type Member Implementations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getImplementationClass <em>Implementation Class</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAbstractInitializationData <em>Abstract Initialization Data</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getInstance <em>Instance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAdapterInstance <em>Adapter Instance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getHandlingType <em>Handling Type</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation()
  * @model abstract="true"
  * @generated
  */
@@ -32,7 +32,7 @@ public interface AbstractTypeImplementation extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Type Member Implementations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.TypeMemberImplementation}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type Member Implementations</em>' containment reference list isn't clear,
@@ -40,7 +40,7 @@ public interface AbstractTypeImplementation extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member Implementations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_TypeMemberImplementations()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation_TypeMemberImplementations()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -56,14 +56,14 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implementation Class</em>' reference.
 	 * @see #setImplementationClass(EClass)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_ImplementationClass()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation_ImplementationClass()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
 	 */
   EClass getImplementationClass();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getImplementationClass <em>Implementation Class</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getImplementationClass <em>Implementation Class</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Implementation Class</em>' reference.
@@ -82,7 +82,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Initialization Data</em>' containment reference.
 	 * @see #setAbstractInitializationData(AbstractInitializationData)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_AbstractInitializationData()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation_AbstractInitializationData()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -90,7 +90,7 @@ public interface AbstractTypeImplementation extends EObject
   AbstractInitializationData getAbstractInitializationData();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAbstractInitializationData <em>Abstract Initialization Data</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAbstractInitializationData <em>Abstract Initialization Data</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Abstract Initialization Data</em>' containment reference.
@@ -109,7 +109,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instance</em>' reference.
 	 * @see #setInstance(EObject)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_Instance()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation_Instance()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -117,7 +117,7 @@ public interface AbstractTypeImplementation extends EObject
   EObject getInstance();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getInstance <em>Instance</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getInstance <em>Instance</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Instance</em>' reference.
@@ -136,7 +136,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Adapter Instance</em>' reference.
 	 * @see #setAdapterInstance(TypeApiAdapter)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_AdapterInstance()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation_AdapterInstance()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -144,7 +144,7 @@ public interface AbstractTypeImplementation extends EObject
   TypeApiAdapter getAdapterInstance();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAdapterInstance <em>Adapter Instance</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAdapterInstance <em>Adapter Instance</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Adapter Instance</em>' reference.
@@ -162,7 +162,7 @@ public interface AbstractTypeImplementation extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Handling Type</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_HandlingType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractTypeImplementation_HandlingType()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

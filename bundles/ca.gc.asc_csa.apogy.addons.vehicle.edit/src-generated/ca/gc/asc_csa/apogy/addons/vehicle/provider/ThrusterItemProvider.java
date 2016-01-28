@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,13 +14,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.common.topology.provider.NodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.Thruster} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -76,7 +76,7 @@ public class ThrusterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Thruster_minimumThrust_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_minimumThrust_feature", "_UI_Thruster_type"),
-				 Symphony__AddonsVehiclePackage.Literals.THRUSTER__MINIMUM_THRUST,
+				 ApogyAddonsVehiclePackage.Literals.THRUSTER__MINIMUM_THRUST,
 				 true,
 				 false,
 				 false,
@@ -98,7 +98,7 @@ public class ThrusterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Thruster_maximumThrust_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_maximumThrust_feature", "_UI_Thruster_type"),
-				 Symphony__AddonsVehiclePackage.Literals.THRUSTER__MAXIMUM_THRUST,
+				 ApogyAddonsVehiclePackage.Literals.THRUSTER__MAXIMUM_THRUST,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class ThrusterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Thruster_currentThrust_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_currentThrust_feature", "_UI_Thruster_type"),
-				 Symphony__AddonsVehiclePackage.Literals.THRUSTER__CURRENT_THRUST,
+				 ApogyAddonsVehiclePackage.Literals.THRUSTER__CURRENT_THRUST,
 				 true,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ public class ThrusterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Thruster_plumeAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_plumeAngle_feature", "_UI_Thruster_type"),
-				 Symphony__AddonsVehiclePackage.Literals.THRUSTER__PLUME_ANGLE,
+				 ApogyAddonsVehiclePackage.Literals.THRUSTER__PLUME_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -166,7 +166,7 @@ public class ThrusterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Thruster_thrustLevel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Thruster_thrustLevel_feature", "_UI_Thruster_type"),
-				 Symphony__AddonsVehiclePackage.Literals.THRUSTER__THRUST_LEVEL,
+				 ApogyAddonsVehiclePackage.Literals.THRUSTER__THRUST_LEVEL,
 				 false,
 				 false,
 				 false,
@@ -221,11 +221,11 @@ public class ThrusterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Thruster.class)) {
-			case Symphony__AddonsVehiclePackage.THRUSTER__MINIMUM_THRUST:
-			case Symphony__AddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
-			case Symphony__AddonsVehiclePackage.THRUSTER__CURRENT_THRUST:
-			case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
-			case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
+			case ApogyAddonsVehiclePackage.THRUSTER__MINIMUM_THRUST:
+			case ApogyAddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
+			case ApogyAddonsVehiclePackage.THRUSTER__CURRENT_THRUST:
+			case ApogyAddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
+			case ApogyAddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

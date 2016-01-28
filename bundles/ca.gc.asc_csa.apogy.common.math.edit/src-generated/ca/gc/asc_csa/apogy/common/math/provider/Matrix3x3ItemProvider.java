@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.provider;
+package ca.gc.asc_csa.apogy.common.math.provider;
 
 import java.text.DecimalFormat;
 import java.util.Collection;
@@ -27,12 +27,12 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.Matrix3x3} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.math.Matrix3x3} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
@@ -91,7 +91,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m00_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m00_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M00,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M00,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m01_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m01_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M01,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M01,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m02_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m02_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M02,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M02,
 				 true,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m10_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m10_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M10,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M10,
 				 true,
 				 false,
 				 false,
@@ -179,7 +179,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m11_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m11_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M11,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M11,
 				 true,
 				 false,
 				 false,
@@ -201,7 +201,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m12_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m12_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M12,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M12,
 				 true,
 				 false,
 				 false,
@@ -223,7 +223,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m20_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m20_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M20,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M20,
 				 true,
 				 false,
 				 false,
@@ -245,7 +245,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m21_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m21_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M21,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M21,
 				 true,
 				 false,
 				 false,
@@ -267,7 +267,7 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix3x3_m22_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix3x3_m22_feature", "_UI_Matrix3x3_type"),
-				 Symphony__CommonMathPackage.Literals.MATRIX3X3__M22,
+				 ApogyCommonMathPackage.Literals.MATRIX3X3__M22,
 				 true,
 				 false,
 				 false,
@@ -323,15 +323,15 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Matrix3x3.class)) {
-			case Symphony__CommonMathPackage.MATRIX3X3__M00:
-			case Symphony__CommonMathPackage.MATRIX3X3__M01:
-			case Symphony__CommonMathPackage.MATRIX3X3__M02:
-			case Symphony__CommonMathPackage.MATRIX3X3__M10:
-			case Symphony__CommonMathPackage.MATRIX3X3__M11:
-			case Symphony__CommonMathPackage.MATRIX3X3__M12:
-			case Symphony__CommonMathPackage.MATRIX3X3__M20:
-			case Symphony__CommonMathPackage.MATRIX3X3__M21:
-			case Symphony__CommonMathPackage.MATRIX3X3__M22:
+			case ApogyCommonMathPackage.MATRIX3X3__M00:
+			case ApogyCommonMathPackage.MATRIX3X3__M01:
+			case ApogyCommonMathPackage.MATRIX3X3__M02:
+			case ApogyCommonMathPackage.MATRIX3X3__M10:
+			case ApogyCommonMathPackage.MATRIX3X3__M11:
+			case ApogyCommonMathPackage.MATRIX3X3__M12:
+			case ApogyCommonMathPackage.MATRIX3X3__M20:
+			case ApogyCommonMathPackage.MATRIX3X3__M21:
+			case ApogyCommonMathPackage.MATRIX3X3__M22:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

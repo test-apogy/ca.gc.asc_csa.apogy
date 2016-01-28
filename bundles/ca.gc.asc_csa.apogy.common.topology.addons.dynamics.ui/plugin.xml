@@ -4,51 +4,51 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.KinematicsStateView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.KinematicsStateView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.KinematicsStateView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.KinematicsStateView"
             name="KinematicsState View">
       </view>
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.ConstraintStateView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.ConstraintStateView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.ConstraintStateView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.ConstraintStateView"
             name="Constraint State View">
       </view>
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.GearRatioConstraintView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.GearRatioConstraintView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.GearRatioConstraintView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.GearRatioConstraintView"
             name="Gear Ratio Constraint View">
       </view>
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.CylindricalConstraintView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.CylindricalConstraintView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.CylindricalConstraintView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.CylindricalConstraintView"
             name="Cylindrical Constraint View">
       </view>
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.RPROConstraintView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.RPROConstraintView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.RPROConstraintView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.RPROConstraintView"
             name="RPRO Constraint View">
       </view>
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"
             name="Prismatic Constraint View">
       </view>
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.HingeConstraintView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.HingeConstraintView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.HingeConstraintView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.HingeConstraintView"
             name="Hinge Constraint View">
       </view>
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.UniversalConstraintView"
-            id="org.eclipse.symphony.common.topology.addons.dynamics.ui.views.UniversalConstraintView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.UniversalConstraintView"
+            id="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.UniversalConstraintView"
             name="Universal Constraint View">
       </view>
    </extension>

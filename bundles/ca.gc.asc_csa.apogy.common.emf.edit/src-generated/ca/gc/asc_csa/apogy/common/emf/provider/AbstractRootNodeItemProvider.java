@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -19,11 +19,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.AbstractRootNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.AbstractRootNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class AbstractRootNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractRootNode_sourceClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractRootNode_sourceClass_feature", "_UI_AbstractRootNode_type"),
-				 Symphony__CommonEMFPackage.Literals.ABSTRACT_ROOT_NODE__SOURCE_CLASS,
+				 ApogyCommonEMFPackage.Literals.ABSTRACT_ROOT_NODE__SOURCE_CLASS,
 				 true,
 				 false,
 				 true,
@@ -113,7 +113,7 @@ public class AbstractRootNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractRootNode.class)) {
-			case Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
+			case ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

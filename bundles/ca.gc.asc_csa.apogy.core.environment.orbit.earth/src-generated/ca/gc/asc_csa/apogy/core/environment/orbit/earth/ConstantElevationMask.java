@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.core.environment.orbit.earth;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask#getConstantElevation <em>Constant Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask#getConstantElevation <em>Constant Elevation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getConstantElevationMask()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getConstantElevationMask()
  * @model
  * @generated
  */
@@ -35,15 +35,15 @@ public interface ConstantElevationMask extends ElevationMask {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constant Elevation</em>' attribute.
 	 * @see #setConstantElevation(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getConstantElevationMask_ConstantElevation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getConstantElevationMask_ConstantElevation()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' apogy_units='rad'"
 	 * @generated
 	 */
 	double getConstantElevation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask#getConstantElevation <em>Constant Elevation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask#getConstantElevation <em>Constant Elevation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Constant Elevation</em>' attribute.

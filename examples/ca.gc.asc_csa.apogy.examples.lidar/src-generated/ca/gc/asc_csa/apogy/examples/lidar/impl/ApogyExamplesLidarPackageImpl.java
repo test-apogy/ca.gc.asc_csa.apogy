@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.impl;
+package ca.gc.asc_csa.apogy.examples.lidar.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,13 +10,13 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarFactory;
-import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
-import org.eclipse.symphony.examples.lidar.Lidar;
-import org.eclipse.symphony.examples.lidar.LidarSimulated;
-import org.eclipse.symphony.examples.lidar.LidarStub;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarFactory;
+import ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage;
+import ca.gc.asc_csa.apogy.examples.lidar.Lidar;
+import ca.gc.asc_csa.apogy.examples.lidar.LidarSimulated;
+import ca.gc.asc_csa.apogy.examples.lidar.LidarStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.examples.lidar.LidarStub;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements Symphony__ExamplesLidarPackage
+public class ApogyExamplesLidarPackageImpl extends EPackageImpl implements ApogyExamplesLidarPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -58,13 +58,13 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesLidarPackageImpl()
+  private ApogyExamplesLidarPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesLidarFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesLidarFactory.eINSTANCE);
 	}
 
   /**
@@ -77,7 +77,7 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesLidarPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesLidarPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -86,31 +86,31 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesLidarPackage init()
+  public static ApogyExamplesLidarPackage init()
   {
-		if (isInited) return (Symphony__ExamplesLidarPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesLidarPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesLidarPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesLidarPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesLidarPackageImpl theSymphony__ExamplesLidarPackage = (Symphony__ExamplesLidarPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesLidarPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesLidarPackageImpl());
+		ApogyExamplesLidarPackageImpl theApogyExamplesLidarPackage = (ApogyExamplesLidarPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesLidarPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesLidarPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsFOVPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesLidarPackage.createPackageContents();
+		theApogyExamplesLidarPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesLidarPackage.initializePackageContents();
+		theApogyExamplesLidarPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesLidarPackage.freeze();
+		theApogyExamplesLidarPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesLidarPackage.eNS_URI, theSymphony__ExamplesLidarPackage);
-		return theSymphony__ExamplesLidarPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesLidarPackage.eNS_URI, theApogyExamplesLidarPackage);
+		return theApogyExamplesLidarPackage;
 	}
 
   /**
@@ -195,8 +195,8 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLidarFactory getSymphony__ExamplesLidarFactory() {
-		return (Symphony__ExamplesLidarFactory)getEFactoryInstance();
+	public ApogyExamplesLidarFactory getApogyExamplesLidarFactory() {
+		return (ApogyExamplesLidarFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -256,9 +256,9 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
+		ApogyAddonsSensorsFOVPackage theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -270,16 +270,16 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(lidarEClass, Lidar.class, "Lidar", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLidar_Fov(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Lidar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLidar_Fov(), theApogyAddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Lidar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLidar_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, Lidar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getLidar__Init(), theEcorePackage.getEBoolean(), "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = initEOperation(getLidar__AcquireScan__double_double(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), "acquireScan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getLidar__AcquireScan__double_double(), theApogyCommonGeometryData3DPackage.getCartesianCoordinatesSet(), "acquireScan", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "horizontalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "verticalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getLidar__AcquireScanNonBlocking__double_double(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), "acquireScanNonBlocking", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getLidar__AcquireScanNonBlocking__double_double(), theApogyCommonGeometryData3DPackage.getCartesianCoordinatesSet(), "acquireScanNonBlocking", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "horizontalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "verticalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -308,15 +308,15 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesLidar",
+			 "prefix", "ApogyExamplesLidar",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-			 "modelName", "Symphony__ExamplesLidar",
+			 "modelName", "ApogyExamplesLidar",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.lidar/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.lidar.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.lidar/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.lidar.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
 		  (lidarEClass, 
@@ -340,13 +340,13 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 		  ((getLidar__AcquireScan__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLidar__AcquireScan__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getLidar__AcquireScanNonBlocking__double_double(), 
@@ -358,13 +358,13 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 		  ((getLidar__AcquireScanNonBlocking__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLidar__AcquireScanNonBlocking__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getLidar_Fov(), 
@@ -400,4 +400,4 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 		   });
 	}
 
-} //Symphony__ExamplesLidarPackageImpl
+} //ApogyExamplesLidarPackageImpl

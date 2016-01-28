@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,13 +13,13 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPathBinding;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathBinding;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolNodeImpl#getTrajectory3DTool <em>Trajectory3 DTool</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolNodeImpl#getTrajectory3DTool <em>Trajectory3 DTool</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,7 +68,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL_NODE;
+		return ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL_NODE;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 			trajectory3DTool = (Trajectory3DTool)eResolveProxy(oldTrajectory3DTool);
 			if (trajectory3DTool != oldTrajectory3DTool) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, oldTrajectory3DTool, trajectory3DTool));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, oldTrajectory3DTool, trajectory3DTool));
 			}
 		}
 		return trajectory3DTool;
@@ -118,7 +118,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 		Trajectory3DTool oldTrajectory3DTool = trajectory3DTool;
 		trajectory3DTool = newTrajectory3DTool;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, oldTrajectory3DTool, newTrajectory3DTool);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, oldTrajectory3DTool, newTrajectory3DTool);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -146,14 +146,14 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 		if (newTrajectory3DTool != trajectory3DTool) {
 			NotificationChain msgs = null;
 			if (trajectory3DTool != null)
-				msgs = ((InternalEObject)trajectory3DTool).eInverseRemove(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, Trajectory3DTool.class, msgs);
+				msgs = ((InternalEObject)trajectory3DTool).eInverseRemove(this, ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, Trajectory3DTool.class, msgs);
 			if (newTrajectory3DTool != null)
-				msgs = ((InternalEObject)newTrajectory3DTool).eInverseAdd(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, Trajectory3DTool.class, msgs);
+				msgs = ((InternalEObject)newTrajectory3DTool).eInverseAdd(this, ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, Trajectory3DTool.class, msgs);
 			msgs = basicSetTrajectory3DTool(newTrajectory3DTool, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, newTrajectory3DTool, newTrajectory3DTool));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, newTrajectory3DTool, newTrajectory3DTool));
 	}
 
 	/**
@@ -164,9 +164,9 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
 				if (trajectory3DTool != null)
-					msgs = ((InternalEObject)trajectory3DTool).eInverseRemove(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, Trajectory3DTool.class, msgs);
+					msgs = ((InternalEObject)trajectory3DTool).eInverseRemove(this, ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, Trajectory3DTool.class, msgs);
 				return basicSetTrajectory3DTool((Trajectory3DTool)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -180,7 +180,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
 				return basicSetTrajectory3DTool(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -194,7 +194,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
 				if (resolve) return getTrajectory3DTool();
 				return basicGetTrajectory3DTool();
 		}
@@ -209,7 +209,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
 				setTrajectory3DTool((Trajectory3DTool)newValue);
 				return;
 		}
@@ -224,7 +224,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
 				setTrajectory3DTool((Trajectory3DTool)null);
 				return;
 		}
@@ -239,7 +239,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL:
 				return trajectory3DTool != null;
 		}
 		return super.eIsSet(featureID);
@@ -274,7 +274,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 	
 	private void addWayPointPath(WayPointPath wayPointPath)
 	{		
-		WayPointPath targetWayPointPath = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath targetWayPointPath = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		getChildren().add(targetWayPointPath);
 		sourceToTargetWayPointPath.put(wayPointPath, targetWayPointPath);
 		
@@ -317,7 +317,7 @@ public class Trajectory3DToolNodeImpl extends AggregateGroupNodeImpl implements 
 						
 						switch(featureId)
 						{
-							case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
+							case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 								switch(msg.getEventType())
 								{
 									case Notification.ADD:

@@ -1,12 +1,12 @@
-@GenModel(prefix="Symphony__CommonLog",
+@GenModel(prefix="ApogyCommonLog",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CommonLog")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.log/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.log.edit/src-generated")
+		  modelName="ApogyCommonLog")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.log/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.log.edit/src-generated")
 
-package org.eclipse.symphony.common.log
+package ca.gc.asc_csa.apogy.common.log
 
 type Throwable wraps java.lang.Throwable 
 type Bundle wraps org.osgi.framework.Bundle

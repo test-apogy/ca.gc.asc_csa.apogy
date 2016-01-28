@@ -1,9 +1,9 @@
-package org.eclipse.symphony.core.ui;
+package ca.gc.asc_csa.apogy.core.ui;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.core.ResultNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.core.ResultNode;
 
 public class ResultNodePresentationAdapter implements NodePresentationAdapter
 {
@@ -33,7 +33,7 @@ public class ResultNodePresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		ResultNodePresentation presentationNode = Symphony__CoreUIFactory.eINSTANCE.createResultNodePresentation();
+		ResultNodePresentation presentationNode = ApogyCoreUIFactory.eINSTANCE.createResultNodePresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

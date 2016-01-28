@@ -1,8 +1,8 @@
-package org.eclipse.symphony.core.ui.actions;
+package ca.gc.asc_csa.apogy.core.ui.actions;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
-import org.eclipse.symphony.core.ui.views.MovableTrajectoryView;
+import ca.gc.asc_csa.apogy.core.ui.views.MovableTrajectoryView;
 
 public class ClearTrajectoryDataAction extends Action {
 

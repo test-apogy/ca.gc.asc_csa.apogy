@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.textui.TestRunner;
 
@@ -60,7 +60,7 @@ public class CartesianCoordinatesSetTest extends AbstractCartesianCoordinatesSet
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet());
 	}
 
 	/**
@@ -80,8 +80,8 @@ public class CartesianCoordinatesSetTest extends AbstractCartesianCoordinatesSet
 	public void testAddCoordinates() 
 	{
 		System.out.println("CartesianCoordinatesSetTest.testAddCoordinates()");
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 2, 3);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(4, 5, 6);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 2, 3);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(4, 5, 6);
 
 		System.out.println("Number of points before: " + getFixture().getPoints().size());
 
@@ -102,10 +102,10 @@ public class CartesianCoordinatesSetTest extends AbstractCartesianCoordinatesSet
 
 		int nPts = 100000;
 		long t0 = System.currentTimeMillis();
-		CartesianCoordinatesSet pointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet pointCloud = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 		for (int i = 0; i < nPts; i++) {
-			CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE
+			CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE
 					.createCartesianPositionCoordinates(rand.nextDouble(), rand
 							.nextDouble(), rand.nextDouble());
 			pointCloud.getPoints().add(point);
@@ -121,7 +121,7 @@ public class CartesianCoordinatesSetTest extends AbstractCartesianCoordinatesSet
 		List<CartesianPositionCoordinates> points = new LinkedList<CartesianPositionCoordinates>();
 
 		for (int i = 0; i < nPts; i++) {
-			CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE
+			CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE
 					.createCartesianPositionCoordinates(rand.nextDouble(), rand
 							.nextDouble(), rand.nextDouble());
 			points.add(point);

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 
 /**
@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.emf.Timed;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getCoordinates <em>Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getAttitude <em>Attitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getCoordinates <em>Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getAttitude <em>Attitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftState()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface SpacecraftState extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Coordinates</em>' containment reference.
 	 * @see #setCoordinates(TimedStampedPVACoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState_Coordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftState_Coordinates()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -50,7 +50,7 @@ public interface SpacecraftState extends Timed {
 	TimedStampedPVACoordinates getCoordinates();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getCoordinates <em>Coordinates</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getCoordinates <em>Coordinates</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Coordinates</em>' containment reference.
@@ -72,7 +72,7 @@ public interface SpacecraftState extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attitude</em>' containment reference.
 	 * @see #setAttitude(TimedStampedAngularCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState_Attitude()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftState_Attitude()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -80,7 +80,7 @@ public interface SpacecraftState extends Timed {
 	TimedStampedAngularCoordinates getAttitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getAttitude <em>Attitude</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getAttitude <em>Attitude</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Attitude</em>' containment reference.
@@ -98,7 +98,7 @@ public interface SpacecraftState extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit</em>' containment reference.
 	 * @see #setOrbit(Orbit)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState_Orbit()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftState_Orbit()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -106,7 +106,7 @@ public interface SpacecraftState extends Timed {
 	Orbit getOrbit();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Orbit</em>' containment reference.

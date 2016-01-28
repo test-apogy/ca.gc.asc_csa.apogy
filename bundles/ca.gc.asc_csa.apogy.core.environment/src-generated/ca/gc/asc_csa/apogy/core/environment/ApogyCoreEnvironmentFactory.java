@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage
  * @generated
  */
-public interface Symphony__CoreEnvironmentFactory extends EFactory
+public interface ApogyCoreEnvironmentFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__CoreEnvironmentFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreEnvironmentFactory eINSTANCE = org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentFactoryImpl.init();
+  ApogyCoreEnvironmentFactory eINSTANCE = ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Earth Surface Worksite</em>'.
@@ -174,7 +174,7 @@ public interface Symphony__CoreEnvironmentFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentFacade createSymphony__CoreEnvironmentFacade();
+	ApogyCoreEnvironmentFacade createApogyCoreEnvironmentFacade();
 
 		/**
 	 * Returns a new object of class '<em>Star</em>'.
@@ -489,6 +489,6 @@ public interface Symphony__CoreEnvironmentFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentPackage getSymphony__CoreEnvironmentPackage();
+	ApogyCoreEnvironmentPackage getApogyCoreEnvironmentPackage();
 
-} //Symphony__CoreEnvironmentFactory
+} //ApogyCoreEnvironmentFactory

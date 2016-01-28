@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.math.provider;
+package ca.gc.asc_csa.apogy.common.math.provider;
 
 
 import java.util.Collection;
@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.MathIO} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.math.MathIO} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.views;
+package ca.gc.asc_csa.apogy.core.invocator.ui.views;
 
 import java.util.List;
 
@@ -8,14 +8,14 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.ui.composites.OperationCallComposite;
-import org.eclipse.symphony.core.invocator.ui.composites.VariableFeatureReferenceComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.OperationCallComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
 
 public class OperationCallView extends AbstractView {
 	private OperationCallComposite operationCallComposite;
@@ -45,11 +45,11 @@ public class OperationCallView extends AbstractView {
 
 	@Override
 	public void updateSelection(ISelection selection) {
-		List<Object> operationCalls = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, OperationCall.class);
+		List<Object> operationCalls = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, OperationCall.class);
 		
 		if (!operationCalls.isEmpty())
 		{
-			InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+			InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 			VariablesList variables = session.getEnvironment().getVariablesList();
 			OperationCall operationCall = (OperationCall) operationCalls.get(0);
 			variableFeatureReferenceComposite.set(variables, operationCall);

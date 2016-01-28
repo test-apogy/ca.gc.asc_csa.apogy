@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated eclipse_emf_ecore_invocator_ui -->
       <factory
-            uri="org.eclipse.symphony.core.invocator.ui"
-            class="org.eclipse.symphony.core.invocator.ui.provider.Symphony__CoreInvocatorUIItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.core.invocator.ui"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.provider.ApogyCoreInvocatorUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

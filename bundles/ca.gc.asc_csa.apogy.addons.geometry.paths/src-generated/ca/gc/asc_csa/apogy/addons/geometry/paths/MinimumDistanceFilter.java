@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.addons.geometry.paths;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter#getMinimumDistance <em>Minimum Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter#getMinimumDistance <em>Minimum Distance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getMinimumDistanceFilter()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getMinimumDistanceFilter()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface MinimumDistanceFilter extends WayPointPathFilter {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Distance</em>' attribute.
 	 * @see #setMinimumDistance(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getMinimumDistanceFilter_MinimumDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getMinimumDistanceFilter_MinimumDistance()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getMinimumDistance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter#getMinimumDistance <em>Minimum Distance</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter#getMinimumDistance <em>Minimum Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum Distance</em>' attribute.

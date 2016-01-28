@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
 
 import gov.nasa.worldwind.avlist.AVKey;
 import gov.nasa.worldwind.geom.Angle;
@@ -25,16 +25,16 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,11 +44,11 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnviro
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getOrbitModel <em>Orbit Model</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getTimeSource <em>Time Source</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#isShowGroundProjection <em>Show Ground Projection</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#isShowLatLon <em>Show Lat Lon</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getOrbitModel <em>Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getTimeSource <em>Time Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#isShowGroundProjection <em>Show Ground Projection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#isShowLatLon <em>Show Lat Lon</em>}</li>
  * </ul>
  *
  * @generated
@@ -154,7 +154,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER;
+		return ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_LOCATION_WORLD_WIND_LAYER;
 	}
 
 	/**
@@ -187,7 +187,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME, oldName, name));
 	}
 
 	/**
@@ -201,7 +201,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
 			}
 		}
 		return orbitModel;
@@ -225,7 +225,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
 	}
 
 	/**
@@ -239,7 +239,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 			timeSource = (Timed)eResolveProxy(oldTimeSource);
 			if (timeSource != oldTimeSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
 			}
 		}
 		return timeSource;
@@ -263,7 +263,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 		Timed oldTimeSource = timeSource;
 		timeSource = newTimeSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
 	}
 
 	/**
@@ -321,7 +321,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 		boolean oldShowGroundProjection = showGroundProjection;
 		showGroundProjection = newShowGroundProjection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION, oldShowGroundProjection, showGroundProjection));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION, oldShowGroundProjection, showGroundProjection));
 	}
 
 	/**
@@ -354,7 +354,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 		boolean oldShowLatLon = showLatLon;
 		showLatLon = newShowLatLon;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON, oldShowLatLon, showLatLon));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON, oldShowLatLon, showLatLon));
 	}
 
 	/**
@@ -365,17 +365,17 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
 				return getName();
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
 				if (resolve) return getOrbitModel();
 				return basicGetOrbitModel();
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
 				if (resolve) return getTimeSource();
 				return basicGetTimeSource();
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
 				return isShowGroundProjection();
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
 				return isShowLatLon();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -389,19 +389,19 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
 				setTimeSource((Timed)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
 				setShowGroundProjection((Boolean)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
 				setShowLatLon((Boolean)newValue);
 				return;
 		}
@@ -416,19 +416,19 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
 				setTimeSource((Timed)null);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
 				setShowGroundProjection(SHOW_GROUND_PROJECTION_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
 				setShowLatLon(SHOW_LAT_LON_EDEFAULT);
 				return;
 		}
@@ -443,15 +443,15 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__ORBIT_MODEL:
 				return orbitModel != null;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
 				return timeSource != null;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
 				return showGroundProjection != SHOW_GROUND_PROJECTION_EDEFAULT;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON:
 				return showLatLon != SHOW_LAT_LON_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -466,7 +466,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
+				case ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME: return ApogyCommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -482,7 +482,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.NAMED__NAME: return Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME;
+				case ApogyCommonEMFPackage.NAMED__NAME: return ApogyCoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME;
 				default: return -1;
 			}
 		}
@@ -528,7 +528,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 						try 
 						{				
 							SpacecraftState ss = getOrbitModel().getPropagator().propagate( getTimeSource().getTime());								
-							GeographicCoordinates coord = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
+							GeographicCoordinates coord = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 	
 							// Create latitude, longitude and elevation values.
 				            Angle latitude = Angle.fromRadiansLatitude(coord.getLatitude());
@@ -618,7 +618,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 						
 						switch (featureId) 
 						{
-							case Symphony__CommonEMFPackage.TIMED__TIME:
+							case ApogyCommonEMFPackage.TIMED__TIME:
 								if(isAutoUpdateEnabled()) update();
 							break;
 

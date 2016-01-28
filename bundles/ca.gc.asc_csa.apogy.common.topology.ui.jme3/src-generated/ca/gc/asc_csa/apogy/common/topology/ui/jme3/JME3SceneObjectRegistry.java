@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 
 
@@ -11,7 +11,7 @@ package org.eclipse.symphony.common.topology.ui.jme3;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package#getJME3SceneObjectRegistry()
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package#getJME3SceneObjectRegistry()
  * @model
  * @generated
  */

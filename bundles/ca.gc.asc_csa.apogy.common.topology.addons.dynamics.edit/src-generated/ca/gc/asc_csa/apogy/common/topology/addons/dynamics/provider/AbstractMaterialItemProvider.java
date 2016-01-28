@@ -4,7 +4,7 @@
  *
  * $Id: AbstractMaterialItemProvider.java,v 1.4.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class AbstractMaterialItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractMaterial_materialId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractMaterial_materialId_feature", "_UI_AbstractMaterial_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_MATERIAL__MATERIAL_ID,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_MATERIAL__MATERIAL_ID,
 				 true,
 				 false,
 				 false,
@@ -115,7 +115,7 @@ public class AbstractMaterialItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractMaterial.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class ControllerTriggerItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER);
+			childrenFeatures.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER);
 		}
 		return childrenFeatures;
 	}
@@ -112,7 +112,7 @@ public class ControllerTriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllerTrigger.class)) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -133,7 +133,7 @@ public class ControllerTriggerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER,
-				 Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier()));
+				(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER,
+				 ApogyCommonIOJInputFactory.eINSTANCE.createEComponentQualifier()));
 	}
 }

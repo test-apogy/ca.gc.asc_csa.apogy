@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.examples.rover.symphony.util.Symphony__ExamplesRoverSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.util.ApogyExamplesRoverApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -31,7 +31,7 @@ import org.eclipse.symphony.examples.rover.symphony.util.Symphony__ExamplesRover
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoverSymphonyItemProviderAdapterFactory extends Symphony__ExamplesRoverSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+public class ApogyExamplesRoverApogyItemProviderAdapterFactory extends ApogyExamplesRoverApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -63,7 +63,7 @@ public class Symphony__ExamplesRoverSymphonyItemProviderAdapterFactory extends S
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoverSymphonyItemProviderAdapterFactory()
+  public ApogyExamplesRoverApogyItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -73,31 +73,31 @@ public class Symphony__ExamplesRoverSymphonyItemProviderAdapterFactory extends S
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected RoverSymphonySystemApiAdapterItemProvider roverSymphonySystemApiAdapterItemProvider;
+  protected RoverApogySystemApiAdapterItemProvider roverApogySystemApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createRoverSymphonySystemApiAdapterAdapter()
+  public Adapter createRoverApogySystemApiAdapterAdapter()
   {
-		if (roverSymphonySystemApiAdapterItemProvider == null) {
-			roverSymphonySystemApiAdapterItemProvider = new RoverSymphonySystemApiAdapterItemProvider(this);
+		if (roverApogySystemApiAdapterItemProvider == null) {
+			roverApogySystemApiAdapterItemProvider = new RoverApogySystemApiAdapterItemProvider(this);
 		}
 
-		return roverSymphonySystemApiAdapterItemProvider;
+		return roverApogySystemApiAdapterItemProvider;
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.rover.symphony.RoverData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__ExamplesRoverSymphonyItemProviderAdapterFactory extends S
 	protected RoverDataItemProvider roverDataItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.rover.symphony.RoverData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,7 +227,7 @@ public class Symphony__ExamplesRoverSymphonyItemProviderAdapterFactory extends S
 	 */
   public void dispose()
   {
-		if (roverSymphonySystemApiAdapterItemProvider != null) roverSymphonySystemApiAdapterItemProvider.dispose();
+		if (roverApogySystemApiAdapterItemProvider != null) roverApogySystemApiAdapterItemProvider.dispose();
 		if (roverDataItemProvider != null) roverDataItemProvider.dispose();
 	}
 

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -28,7 +28,7 @@ public class Activator implements BundleActivator
 	private BundleContext context = null;
 	
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.symphony.core.environment.tests";
+	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.core.environment.tests";
 	
 	// Folder where the data files are.
 	public static final String DATA_FOLDER = "data";

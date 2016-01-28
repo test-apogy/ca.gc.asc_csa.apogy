@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.provider;
+package ca.gc.asc_csa.apogy.examples.rover.provider;
 
 
 
@@ -23,13 +23,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverFactory;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
-import org.eclipse.symphony.examples.rover.Rover;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverFactory;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.examples.rover.Rover;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.rover.Rover} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.rover.Rover} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -91,7 +91,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_roboticArm_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_roboticArm_feature", "_UI_Rover_type"),
-				 Symphony__ExamplesRoverPackage.Literals.ROVER__ROBOTIC_ARM,
+				 ApogyExamplesRoverPackage.Literals.ROVER__ROBOTIC_ARM,
 				 true,
 				 false,
 				 true,
@@ -114,7 +114,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_mobilePlatform_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_mobilePlatform_feature", "_UI_Rover_type"),
-				 Symphony__ExamplesRoverPackage.Literals.ROVER__MOBILE_PLATFORM,
+				 ApogyExamplesRoverPackage.Literals.ROVER__MOBILE_PLATFORM,
 				 true,
 				 false,
 				 true,
@@ -136,7 +136,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_armCamera_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_armCamera_feature", "_UI_Rover_type"),
-				 Symphony__ExamplesRoverPackage.Literals.ROVER__ARM_CAMERA,
+				 ApogyExamplesRoverPackage.Literals.ROVER__ARM_CAMERA,
 				 true,
 				 false,
 				 true,
@@ -158,7 +158,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_centerCamera_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_centerCamera_feature", "_UI_Rover_type"),
-				 Symphony__ExamplesRoverPackage.Literals.ROVER__CENTER_CAMERA,
+				 ApogyExamplesRoverPackage.Literals.ROVER__CENTER_CAMERA,
 				 true,
 				 false,
 				 true,
@@ -180,7 +180,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Rover_linearVelocity_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Rover_linearVelocity_feature", "_UI_Rover_type"),
-				Symphony__ExamplesRoverPackage.Literals.ROVER__LINEAR_VELOCITY,
+				ApogyExamplesRoverPackage.Literals.ROVER__LINEAR_VELOCITY,
 				false,
 				false,
 				false,
@@ -202,7 +202,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Rover_angularVelocity_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Rover_angularVelocity_feature", "_UI_Rover_type"),
-				Symphony__ExamplesRoverPackage.Literals.ROVER__ANGULAR_VELOCITY,
+				ApogyExamplesRoverPackage.Literals.ROVER__ANGULAR_VELOCITY,
 				false,
 				false,
 				false,
@@ -224,7 +224,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_initialized_feature", "_UI_Rover_type"),
-				 Symphony__ExamplesRoverPackage.Literals.ROVER__INITIALIZED,
+				 ApogyExamplesRoverPackage.Literals.ROVER__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -246,7 +246,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_disposed_feature", "_UI_Rover_type"),
-				 Symphony__ExamplesRoverPackage.Literals.ROVER__DISPOSED,
+				 ApogyExamplesRoverPackage.Literals.ROVER__DISPOSED,
 				 false,
 				 false,
 				 false,
@@ -267,11 +267,11 @@ public class RoverItemProvider extends ItemProviderAdapter
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__ROBOTIC_ARM);
-			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__MOBILE_PLATFORM);
-			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__ARM_CAMERA);
-			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__CENTER_CAMERA);
-			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__POWER_SYSTEM);
+			childrenFeatures.add(ApogyExamplesRoverPackage.Literals.ROVER__ROBOTIC_ARM);
+			childrenFeatures.add(ApogyExamplesRoverPackage.Literals.ROVER__MOBILE_PLATFORM);
+			childrenFeatures.add(ApogyExamplesRoverPackage.Literals.ROVER__ARM_CAMERA);
+			childrenFeatures.add(ApogyExamplesRoverPackage.Literals.ROVER__CENTER_CAMERA);
+			childrenFeatures.add(ApogyExamplesRoverPackage.Literals.ROVER__POWER_SYSTEM);
 		}
 		return childrenFeatures;
 	}
@@ -334,17 +334,17 @@ public class RoverItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Rover.class)) {
-			case Symphony__ExamplesRoverPackage.ROVER__LINEAR_VELOCITY:
-			case Symphony__ExamplesRoverPackage.ROVER__ANGULAR_VELOCITY:
-			case Symphony__ExamplesRoverPackage.ROVER__INITIALIZED:
-			case Symphony__ExamplesRoverPackage.ROVER__DISPOSED:
+			case ApogyExamplesRoverPackage.ROVER__LINEAR_VELOCITY:
+			case ApogyExamplesRoverPackage.ROVER__ANGULAR_VELOCITY:
+			case ApogyExamplesRoverPackage.ROVER__INITIALIZED:
+			case ApogyExamplesRoverPackage.ROVER__DISPOSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM:
-			case Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
-			case Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA:
-			case Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA:
-			case Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM:
+			case ApogyExamplesRoverPackage.ROVER__ROBOTIC_ARM:
+			case ApogyExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
+			case ApogyExamplesRoverPackage.ROVER__ARM_CAMERA:
+			case ApogyExamplesRoverPackage.ROVER__CENTER_CAMERA:
+			case ApogyExamplesRoverPackage.ROVER__POWER_SYSTEM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -365,8 +365,8 @@ public class RoverItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesRoverPackage.Literals.ROVER__POWER_SYSTEM,
-				 Symphony__ExamplesRoverFactory.eINSTANCE.createPowerSystem()));
+				(ApogyExamplesRoverPackage.Literals.ROVER__POWER_SYSTEM,
+				 ApogyExamplesRoverFactory.eINSTANCE.createPowerSystem()));
 	}
 
 	/**

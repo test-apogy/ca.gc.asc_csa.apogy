@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleSonar#isEchoDetected <em>Echo Detected</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar#isEchoDetected <em>Echo Detected</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleSonar()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getSimpleSonar()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface SimpleSonar extends SimpleRangeSensor {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Echo Detected</em>' attribute.
 	 * @see #setEchoDetected(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleSonar_EchoDetected()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getSimpleSonar_EchoDetected()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isEchoDetected();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.SimpleSonar#isEchoDetected <em>Echo Detected</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar#isEchoDetected <em>Echo Detected</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Echo Detected</em>' attribute.

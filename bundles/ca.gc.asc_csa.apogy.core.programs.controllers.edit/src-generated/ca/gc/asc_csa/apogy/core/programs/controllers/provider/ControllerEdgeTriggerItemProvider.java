@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.EdgeType;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.EdgeType;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class ControllerEdgeTriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ControllerEdgeTrigger_edgeType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerEdgeTrigger_edgeType_feature", "_UI_ControllerEdgeTrigger_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE,
+				 ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE,
 				 true,
 				 false,
 				 false,
@@ -161,7 +161,7 @@ public class ControllerEdgeTriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllerEdgeTrigger.class)) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

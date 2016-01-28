@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends Plugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.symphony.common.math";
+	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common.math";
 
 	// The shared instance
 	private static Activator plugin;

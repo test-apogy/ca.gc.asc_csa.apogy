@@ -1,22 +1,22 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CoreInvocator edit plugin. <!--
+ * This is the central singleton for the ApogyCoreInvocator edit plugin. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public final class Symphony__CoreInvocatorEditPlugin extends EMFPlugin {
+public final class ApogyCoreInvocatorEditPlugin extends EMFPlugin {
 	
-	public final static String ID = "org.eclipse.symphony.core.invocator.provider";
+	public final static String ID = "ca.gc.asc_csa.apogy.core.invocator.provider";
 	
 	/**
 	 * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc
@@ -24,7 +24,7 @@ public final class Symphony__CoreInvocatorEditPlugin extends EMFPlugin {
 	 * 
 	 * @generated
 	 */
-	public static final Symphony__CoreInvocatorEditPlugin INSTANCE = new Symphony__CoreInvocatorEditPlugin();
+	public static final ApogyCoreInvocatorEditPlugin INSTANCE = new ApogyCoreInvocatorEditPlugin();
 
 	/**
 	 * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc
@@ -40,11 +40,11 @@ public final class Symphony__CoreInvocatorEditPlugin extends EMFPlugin {
 	 * @generated
 	 */
 
-	public Symphony__CoreInvocatorEditPlugin() {
+	public ApogyCoreInvocatorEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		     EcoreEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		   });
 	}
 

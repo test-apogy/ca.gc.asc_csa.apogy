@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import javax.vecmath.Point3d;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -19,7 +19,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d() <em>As Point3d</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d() <em>As Point3d</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -81,7 +81,7 @@ public class CartesianPositionCoordinatesTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates());
 	}
 
 	/**
@@ -96,10 +96,10 @@ public class CartesianPositionCoordinatesTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d() <em>As Point3d</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d() <em>As Point3d</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d()
 	 * @generated_NOT
 	 */
 	public void testAsPoint3d() 
@@ -129,7 +129,7 @@ public class CartesianPositionCoordinatesTest extends TestCase {
 		assertTrue(getFixture().equals(getFixture()));
 		
 		// Should be equal to another point with the same coordinates.		
-		CartesianPositionCoordinates p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(getFixture());
+		CartesianPositionCoordinates p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(getFixture());
 		assertTrue(getFixture().equals(p));			
 		
 		// Should not be equal to this one.

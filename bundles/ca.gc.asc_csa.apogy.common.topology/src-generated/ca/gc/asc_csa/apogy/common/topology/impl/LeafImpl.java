@@ -4,11 +4,11 @@
  *
  * $Id: LeafImpl.java,v 1.2.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.topology.Leaf;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.Leaf;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -31,7 +31,7 @@ public class LeafImpl extends NodeImpl implements Leaf {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.LEAF;
+		return ApogyCommonTopologyPackage.Literals.LEAF;
 	}
 
 } // LeafImpl

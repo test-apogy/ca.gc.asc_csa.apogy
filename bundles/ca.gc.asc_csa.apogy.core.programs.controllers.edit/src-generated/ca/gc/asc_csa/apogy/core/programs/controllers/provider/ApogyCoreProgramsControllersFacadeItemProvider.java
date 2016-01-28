@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsControllersFacadeItemProvider
+public class ApogyCoreProgramsControllersFacadeItemProvider
   extends ItemProviderAdapter
   implements
     IEditingDomainItemProvider,
@@ -40,7 +40,7 @@ public class Symphony__CoreProgramsControllersFacadeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreProgramsControllersFacadeItemProvider(AdapterFactory adapterFactory)
+  public ApogyCoreProgramsControllersFacadeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -62,7 +62,7 @@ public class Symphony__CoreProgramsControllersFacadeItemProvider
 	}
 
   /**
-	 * This returns Symphony__CoreProgramsControllersFacade.gif.
+	 * This returns ApogyCoreProgramsControllersFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -70,7 +70,7 @@ public class Symphony__CoreProgramsControllersFacadeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreProgramsControllersFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreProgramsControllersFacade"));
 	}
 
   /**
@@ -82,7 +82,7 @@ public class Symphony__CoreProgramsControllersFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_Symphony__CoreProgramsControllersFacade_type");
+		return getString("_UI_ApogyCoreProgramsControllersFacade_type");
 	}
 
   /**

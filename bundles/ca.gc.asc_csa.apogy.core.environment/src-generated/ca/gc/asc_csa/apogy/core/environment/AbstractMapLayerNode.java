@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.AbstractMapLayerNode#getAbstractMapLayer <em>Abstract Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode#getAbstractMapLayer <em>Abstract Map Layer</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayerNode()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractMapLayerNode()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface AbstractMapLayerNode extends AggregateGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Map Layer</em>' reference.
 	 * @see #setAbstractMapLayer(AbstractMapLayer)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayerNode_AbstractMapLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractMapLayerNode_AbstractMapLayer()
 	 * @model transient="true"
 	 * @generated
 	 */
   AbstractMapLayer getAbstractMapLayer();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.AbstractMapLayerNode#getAbstractMapLayer <em>Abstract Map Layer</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode#getAbstractMapLayer <em>Abstract Map Layer</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Abstract Map Layer</em>' reference.

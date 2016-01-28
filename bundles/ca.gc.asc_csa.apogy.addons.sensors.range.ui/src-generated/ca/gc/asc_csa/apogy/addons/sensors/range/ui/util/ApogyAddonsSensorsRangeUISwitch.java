@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.ui.util;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
-import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
-import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,17 +21,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage
  * @generated
  */
-public class Symphony__AddonsSensorsRangeUISwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsRangeUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsRangeUIPackage modelPackage;
+	protected static ApogyAddonsSensorsRangeUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -39,9 +39,9 @@ public class Symphony__AddonsSensorsRangeUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeUISwitch() {
+	public ApogyAddonsSensorsRangeUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsRangeUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsRangeUIPackage.eINSTANCE;
 		}
 	}
 
@@ -68,14 +68,14 @@ public class Symphony__AddonsSensorsRangeUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION: {
+			case ApogyAddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION: {
 				RasterScanDataPresentation rasterScanDataPresentation = (RasterScanDataPresentation)theEObject;
 				T result = caseRasterScanDataPresentation(rasterScanDataPresentation);
 				if (result == null) result = caseNodePresentation(rasterScanDataPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION: {
+			case ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION: {
 				SimpleSonarPresentation simpleSonarPresentation = (SimpleSonarPresentation)theEObject;
 				T result = caseSimpleSonarPresentation(simpleSonarPresentation);
 				if (result == null) result = caseNodePresentation(simpleSonarPresentation);
@@ -147,4 +147,4 @@ public class Symphony__AddonsSensorsRangeUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsRangeUISwitch
+} //ApogyAddonsSensorsRangeUISwitch

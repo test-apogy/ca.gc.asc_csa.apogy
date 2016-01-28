@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
 
 import gov.nasa.worldwind.avlist.AVKey;
 import gov.nasa.worldwind.geom.Angle;
@@ -23,18 +23,18 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,8 +44,8 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.MultiEObjectsA
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getGroundStation <em>Ground Station</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getReferenceAltitude <em>Reference Altitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getGroundStation <em>Ground Station</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getReferenceAltitude <em>Reference Altitude</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,7 +100,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER;
+		return ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER;
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 			groundStation = (GroundStation)eResolveProxy(oldGroundStation);
 			if (groundStation != oldGroundStation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
 			}
 		}
 		return groundStation;
@@ -158,7 +158,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 		GroundStation oldGroundStation = groundStation;
 		groundStation = newGroundStation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
 	}	
 	
 	/**
@@ -190,7 +190,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 		double oldReferenceAltitude = referenceAltitude;
 		referenceAltitude = newReferenceAltitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE, oldReferenceAltitude, referenceAltitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE, oldReferenceAltitude, referenceAltitude));
 	}
 
 	@Override
@@ -207,10 +207,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				if (resolve) return getGroundStation();
 				return basicGetGroundStation();
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				return getReferenceAltitude();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -224,10 +224,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				setGroundStation((GroundStation)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				setReferenceAltitude((Double)newValue);
 				return;
 		}
@@ -242,10 +242,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				setGroundStation((GroundStation)null);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				setReferenceAltitude(REFERENCE_ALTITUDE_EDEFAULT);
 				return;
 		}
@@ -260,9 +260,9 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				return groundStation != null;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				return referenceAltitude != REFERENCE_ALTITUDE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -410,11 +410,11 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 						int featureId = msg.getFeatureID(GroundStation.class);
 						switch (featureId) 
 						{
-							case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__NAME:
+							case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION__NAME:
 								if(isAutoUpdateEnabled()) update();
 							break;
 
-							case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
+							case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 								
 								if(msg.getOldValue() instanceof ElevationMask)
 								{								
@@ -428,7 +428,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 								if(isAutoUpdateEnabled()) update();
 							break;
 							
-							case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__GEOGRAPHICAL_COORDINATES:
+							case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION__GEOGRAPHICAL_COORDINATES:
 								if(msg.getOldValue() instanceof GeographicCoordinates)
 								{				
 									((GeographicCoordinates) msg.getOldValue()).eAdapters().remove(this);							
@@ -459,7 +459,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 						
 						switch (featureId) 
 						{
-							case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:							
+							case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:							
 								if(msg.getOldValue() instanceof DistanceRange)
 								{
 									getGroundStationAdapter().unregisterFromEObject((DistanceRange) msg.getOldValue());

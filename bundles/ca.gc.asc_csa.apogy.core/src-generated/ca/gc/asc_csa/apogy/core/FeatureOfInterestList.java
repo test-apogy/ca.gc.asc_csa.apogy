@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.FeatureOfInterestList#getFeaturesOfInterest <em>Features Of Interest</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.FeatureOfInterestList#getFeaturesOfInterest <em>Features Of Interest</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestList()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getFeatureOfInterestList()
  * @model
  * @generated
  */
 public interface FeatureOfInterestList extends Named, Described {
 	/**
 	 * Returns the value of the '<em><b>Features Of Interest</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.FeatureOfInterest}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.FeatureOfInterest}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Features Of Interest</em>' containment reference list isn't clear,
@@ -38,7 +38,7 @@ public interface FeatureOfInterestList extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features Of Interest</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestList_FeaturesOfInterest()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getFeatureOfInterestList_FeaturesOfInterest()
 	 * @model containment="true"
 	 * @generated
 	 */

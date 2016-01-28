@@ -1,15 +1,15 @@
-@GenModel(prefix="Symphony__ExamplesAntenna",
+@GenModel(prefix="ApogyExamplesAntenna",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="Symphony__ExamplesAntenna",
+		  modelName="ApogyExamplesAntenna",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.antenna/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.antenna.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.antenna/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.antenna.edit/src-generated")
 
-package org.eclipse.symphony.examples.antenna
+package ca.gc.asc_csa.apogy.examples.antenna
 
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
 
 /*
  * This class represents the abstract concept of an antenna.
@@ -66,7 +66,7 @@ abstract class PTUDishAntenna extends DishAntenna
 	 */	
 	@GenModel(children="false",
 			  notify="true",
-			  symphony_units="rad",
+			  apogy_units="rad",
 			  property="Readonly",
 			  propertyCategory="PTU Angles")
 	double panAngle
@@ -77,7 +77,7 @@ abstract class PTUDishAntenna extends DishAntenna
 	 */
 	@GenModel(children="false",
 			  notify="true",
-			  symphony_units="rad",
+			  apogy_units="rad",
 			  property="Readonly",
 			  propertyCategory="PTU Angles")
 	double tiltAngle
@@ -99,8 +99,8 @@ abstract class PTUDishAntenna extends DishAntenna
 	 * @param panAngle The target pan angle for the PTU (given in radians.)
 	 * @param tiltAngle The target tilt angle for the PTU (given in radians.)
 	 */
-	op void moveTo(@GenModel(symphony_units="rad") double panAngle,
-				   @GenModel(symphony_units="rad") double tiltAngle)
+	op void moveTo(@GenModel(apogy_units="rad") double panAngle,
+				   @GenModel(apogy_units="rad") double tiltAngle)
 	
 	/*
 	 * This is used to toggle whether the PTU (and implicitly the
@@ -122,7 +122,7 @@ class PTUDishAntennaStub extends PTUDishAntenna
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaStubImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaStubImpl}
 	 */
 }
 
@@ -136,6 +136,6 @@ class PTUDishAntennaSimulated extends PTUDishAntenna
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaSimulatedImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaSimulatedImpl}
 	 */
 }

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -17,19 +17,19 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,12 +39,12 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getTime <em>Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getSurfaceWorksite <em>Surface Worksite</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getSkyNode <em>Sky Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getSun <em>Sun</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getStarField <em>Star Field</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl#getSurfaceWorksite <em>Surface Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl#getSkyNode <em>Sky Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl#getSun <em>Sun</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl#getStarField <em>Star Field</em>}</li>
  * </ul>
  *
  * @generated
@@ -131,7 +131,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.SKY;
+		return ApogyCoreEnvironmentPackage.Literals.SKY;
 	}
 
   /**
@@ -154,7 +154,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SKY__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY__TIME, oldTime, time));
 	}
 
   /**
@@ -164,7 +164,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	 */
   public SurfaceWorksite getSurfaceWorksite()
   {
-		if (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE) return null;
+		if (eContainerFeatureID() != ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE) return null;
 		return (SurfaceWorksite)eContainer();
 	}
 
@@ -175,7 +175,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	 */
   public SurfaceWorksite basicGetSurfaceWorksite()
   {
-		if (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE) return null;
+		if (eContainerFeatureID() != ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE) return null;
 		return (SurfaceWorksite)eInternalContainer();
 	}
 
@@ -208,7 +208,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	 */
   public NotificationChain basicSetSurfaceWorksiteGen(SurfaceWorksite newSurfaceWorksite, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newSurfaceWorksite, Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newSurfaceWorksite, ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE, msgs);
 		return msgs;
 	}
 
@@ -219,19 +219,19 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	 */
   public void setSurfaceWorksite(SurfaceWorksite newSurfaceWorksite)
   {
-		if (newSurfaceWorksite != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE && newSurfaceWorksite != null)) {
+		if (newSurfaceWorksite != eInternalContainer() || (eContainerFeatureID() != ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE && newSurfaceWorksite != null)) {
 			if (EcoreUtil.isAncestor(this, newSurfaceWorksite))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newSurfaceWorksite != null)
-				msgs = ((InternalEObject)newSurfaceWorksite).eInverseAdd(this, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, SurfaceWorksite.class, msgs);
+				msgs = ((InternalEObject)newSurfaceWorksite).eInverseAdd(this, ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY, SurfaceWorksite.class, msgs);
 			msgs = basicSetSurfaceWorksite(newSurfaceWorksite, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE, newSurfaceWorksite, newSurfaceWorksite));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE, newSurfaceWorksite, newSurfaceWorksite));
 	}
 
   /**
@@ -243,8 +243,8 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   {
 	  if(getSkyNodeGen() == null)
 	  {
-		  	skyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createSkyNode();			
-			Symphony__CoreEnvironmentFacade.INSTANCE.initializeSkyNode(this, skyNode);
+		  	skyNode = ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode();			
+			ApogyCoreEnvironmentFacade.INSTANCE.initializeSkyNode(this, skyNode);
 	  }
 	  
 	  return getSkyNodeGen();
@@ -262,7 +262,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 			skyNode = (SkyNode)eResolveProxy(oldSkyNode);
 			if (skyNode != oldSkyNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.SKY__SKY_NODE, oldSkyNode, skyNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, oldSkyNode, skyNode));
 			}
 		}
 		return skyNode;
@@ -347,7 +347,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   {
 		if(getSunHorizontalCoordinatesGen() == null)
 		{
-			HorizontalCoordinates newHorizontalCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
+			HorizontalCoordinates newHorizontalCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
 			setSunHorizontalCoordinates(newHorizontalCoordinates);
 		}
 		
@@ -366,7 +366,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 			sunHorizontalCoordinates = (HorizontalCoordinates)eResolveProxy(oldSunHorizontalCoordinates);
 			if (sunHorizontalCoordinates != oldSunHorizontalCoordinates) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES, oldSunHorizontalCoordinates, sunHorizontalCoordinates));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES, oldSunHorizontalCoordinates, sunHorizontalCoordinates));
 			}
 		}
 		return sunHorizontalCoordinates;
@@ -392,7 +392,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 		HorizontalCoordinates oldSunHorizontalCoordinates = sunHorizontalCoordinates;
 		sunHorizontalCoordinates = newSunHorizontalCoordinates;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES, oldSunHorizontalCoordinates, sunHorizontalCoordinates));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES, oldSunHorizontalCoordinates, sunHorizontalCoordinates));
 	}
 
   /**
@@ -490,7 +490,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+			case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetSurfaceWorksite((SurfaceWorksite)otherEnd, msgs);
@@ -507,7 +507,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+			case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
 				return basicSetSurfaceWorksite(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -522,8 +522,8 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, SurfaceWorksite.class, msgs);
+			case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__SKY, SurfaceWorksite.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -537,21 +537,21 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY__TIME:
+			case ApogyCoreEnvironmentPackage.SKY__TIME:
 				return getTime();
-			case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+			case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
 				if (resolve) return getSurfaceWorksite();
 				return basicGetSurfaceWorksite();
-			case Symphony__CoreEnvironmentPackage.SKY__SKY_NODE:
+			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
 				if (resolve) return getSkyNode();
 				return basicGetSkyNode();
-			case Symphony__CoreEnvironmentPackage.SKY__SUN:
+			case ApogyCoreEnvironmentPackage.SKY__SUN:
 				if (resolve) return getSun();
 				return basicGetSun();
-			case Symphony__CoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
 				if (resolve) return getSunHorizontalCoordinates();
 				return basicGetSunHorizontalCoordinates();
-			case Symphony__CoreEnvironmentPackage.SKY__STAR_FIELD:
+			case ApogyCoreEnvironmentPackage.SKY__STAR_FIELD:
 				if (resolve) return getStarField();
 				return basicGetStarField();
 		}
@@ -567,13 +567,13 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY__TIME:
+			case ApogyCoreEnvironmentPackage.SKY__TIME:
 				setTime((Date)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+			case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
 				setSurfaceWorksite((SurfaceWorksite)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
 				setSunHorizontalCoordinates((HorizontalCoordinates)newValue);
 				return;
 		}
@@ -589,13 +589,13 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY__TIME:
+			case ApogyCoreEnvironmentPackage.SKY__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+			case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
 				setSurfaceWorksite((SurfaceWorksite)null);
 				return;
-			case Symphony__CoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
 				setSunHorizontalCoordinates((HorizontalCoordinates)null);
 				return;
 		}
@@ -611,17 +611,17 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY__TIME:
+			case ApogyCoreEnvironmentPackage.SKY__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+			case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
 				return basicGetSurfaceWorksite() != null;
-			case Symphony__CoreEnvironmentPackage.SKY__SKY_NODE:
+			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
 				return skyNode != null;
-			case Symphony__CoreEnvironmentPackage.SKY__SUN:
+			case ApogyCoreEnvironmentPackage.SKY__SUN:
 				return sun != null;
-			case Symphony__CoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.SKY__SUN_HORIZONTAL_COORDINATES:
 				return sunHorizontalCoordinates != null;
-			case Symphony__CoreEnvironmentPackage.SKY__STAR_FIELD:
+			case ApogyCoreEnvironmentPackage.SKY__STAR_FIELD:
 				return starField != null;
 		}
 		return super.eIsSet(featureID);
@@ -636,7 +636,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.SKY___GET_SUN_ANGULAR_DIAMETER:
+			case ApogyCoreEnvironmentPackage.SKY___GET_SUN_ANGULAR_DIAMETER:
 				return getSunAngularDiameter();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -673,7 +673,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 					  int featureId = msg.getFeatureID(AbstractWorksite.class);
 					  
 					  // The Worksite time has changed, update the Sky time.
-					  if(featureId == Symphony__CorePackage.ABSTRACT_WORKSITE__TIME)
+					  if(featureId == ApogyCorePackage.ABSTRACT_WORKSITE__TIME)
 					  {							
 						  if(msg.getNewValue() instanceof Date)
 						  {
@@ -689,7 +689,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 					  switch (featureId) 
 					  {
 					  	// The worksite has changed, unregister from previous, register to new and update.
-					  	case Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
+					  	case ApogyCoreEnvironmentPackage.SKY__SURFACE_WORKSITE:
 					  	{
 					  		
 					  		if(msg.getOldValue() instanceof SurfaceWorksite)

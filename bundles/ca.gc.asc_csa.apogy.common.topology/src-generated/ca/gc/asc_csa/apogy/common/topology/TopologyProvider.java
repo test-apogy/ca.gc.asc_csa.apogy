@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.TopologyProvider#getTopologyRoot <em>Topology Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.TopologyProvider#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getTopologyProvider()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getTopologyProvider()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -31,7 +31,7 @@ public interface TopologyProvider extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topology Root</em>' reference.
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getTopologyProvider_TopologyRoot()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getTopologyProvider_TopologyRoot()
 	 * @model changeable="false"
 	 * @generated
 	 */

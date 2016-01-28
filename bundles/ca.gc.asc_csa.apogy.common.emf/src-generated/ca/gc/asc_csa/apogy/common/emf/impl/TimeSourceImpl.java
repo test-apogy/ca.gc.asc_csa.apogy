@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -10,11 +10,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.emf.Timed;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.TimeSourceImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.TimeSourceImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.TimeSourceImpl#getTime <em>Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.TimeSourceImpl#getOffset <em>Offset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.TimeSourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.TimeSourceImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.TimeSourceImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.TimeSourceImpl#getOffset <em>Offset</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,7 +129,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.TIME_SOURCE;
+		return ApogyCommonEMFPackage.Literals.TIME_SOURCE;
 	}
 
 	/**
@@ -150,7 +150,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.TIME_SOURCE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.TIME_SOURCE__NAME, oldName, name));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -210,7 +210,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.TIME_SOURCE__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.TIME_SOURCE__TIME, oldTime, time));
 	}
 
 	/**
@@ -231,7 +231,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		int oldOffset = offset;
 		offset = newOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.TIME_SOURCE__OFFSET, oldOffset, offset));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.TIME_SOURCE__OFFSET, oldOffset, offset));
 	}
 
 	/**
@@ -251,13 +251,13 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.TIME_SOURCE__NAME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__NAME:
 				return getName();
-			case Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION:
+			case ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION:
 				return getDescription();
-			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__TIME:
 				return getTime();
-			case Symphony__CommonEMFPackage.TIME_SOURCE__OFFSET:
+			case ApogyCommonEMFPackage.TIME_SOURCE__OFFSET:
 				return getOffset();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -271,16 +271,16 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.TIME_SOURCE__NAME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION:
+			case ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__TIME:
 				setTime((Date)newValue);
 				return;
-			case Symphony__CommonEMFPackage.TIME_SOURCE__OFFSET:
+			case ApogyCommonEMFPackage.TIME_SOURCE__OFFSET:
 				setOffset((Integer)newValue);
 				return;
 		}
@@ -295,16 +295,16 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.TIME_SOURCE__NAME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION:
+			case ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case Symphony__CommonEMFPackage.TIME_SOURCE__OFFSET:
+			case ApogyCommonEMFPackage.TIME_SOURCE__OFFSET:
 				setOffset(OFFSET_EDEFAULT);
 				return;
 		}
@@ -319,13 +319,13 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.TIME_SOURCE__NAME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION:
+			case ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
+			case ApogyCommonEMFPackage.TIME_SOURCE__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case Symphony__CommonEMFPackage.TIME_SOURCE__OFFSET:
+			case ApogyCommonEMFPackage.TIME_SOURCE__OFFSET:
 				return offset != OFFSET_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -340,13 +340,13 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CommonEMFPackage.TIME_SOURCE__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case ApogyCommonEMFPackage.TIME_SOURCE__TIME: return ApogyCommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -367,13 +367,13 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CommonEMFPackage.TIME_SOURCE__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCommonEMFPackage.TIME_SOURCE__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__CommonEMFPackage.TIME_SOURCE__TIME;
+				case ApogyCommonEMFPackage.TIMED__TIME: return ApogyCommonEMFPackage.TIME_SOURCE__TIME;
 				default: return -1;
 			}
 		}
@@ -404,7 +404,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		}
 		if (baseClass == Disposable.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE: return Symphony__CommonEMFPackage.TIME_SOURCE___DISPOSE;
+				case ApogyCommonEMFPackage.DISPOSABLE___DISPOSE: return ApogyCommonEMFPackage.TIME_SOURCE___DISPOSE;
 				default: return -1;
 			}
 		}
@@ -419,7 +419,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonEMFPackage.TIME_SOURCE___DISPOSE:
+			case ApogyCommonEMFPackage.TIME_SOURCE___DISPOSE:
 				dispose();
 				return null;
 		}

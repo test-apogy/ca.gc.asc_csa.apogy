@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency 2008.
  */
-package org.eclipse.symphony.addons.mobility.controllers.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class SkidSteeredWayPointPathFollowerImpl extends SkidSteeredPlatformPath
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityControllersPackage.Literals.SKID_STEERED_WAY_POINT_PATH_FOLLOWER;
+		return ApogyAddonsMobilityControllersPackage.Literals.SKID_STEERED_WAY_POINT_PATH_FOLLOWER;
 	}
 
 } //SkidSteeredWayPointPathFollowerImpl

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import java.util.List;
 
@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getPoints <em>Points</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getPoints <em>Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getNormalPointCloud()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getNormalPointCloud()
  * @model
  * @generated
  */
@@ -38,14 +38,14 @@ public interface NormalPointCloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' attribute.
 	 * @see #setPoints(List)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getNormalPointCloud_Points()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.Point3d>" many="false"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getNormalPointCloud_Points()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d>" many="false"
 	 * @generated
 	 */
 	List<Point3d> getPoints();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getPoints <em>Points</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getPoints <em>Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Points</em>' attribute.
@@ -64,14 +64,14 @@ public interface NormalPointCloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Normals</em>' attribute.
 	 * @see #setNormals(List)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getNormalPointCloud_Normals()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.Vector3d>" many="false"
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getNormalPointCloud_Normals()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d>" many="false"
 	 * @generated
 	 */
 	List<Vector3d> getNormals();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Normals</em>' attribute.

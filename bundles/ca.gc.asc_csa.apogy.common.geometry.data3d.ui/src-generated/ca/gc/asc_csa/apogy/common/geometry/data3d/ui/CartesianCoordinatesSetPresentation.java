@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,12 +15,12 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointCloud <em>Point Cloud</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointSize <em>Point Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getNumberOfPoints <em>Number Of Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointCloud <em>Point Cloud</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointSize <em>Point Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Cloud</em>' reference.
 	 * @see #setPointCloud(CartesianCoordinatesSet)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointCloud()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointCloud()
 	 * @model
 	 * @generated
 	 */
 	CartesianCoordinatesSet getPointCloud();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointCloud <em>Point Cloud</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointCloud <em>Point Cloud</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Point Cloud</em>' reference.
@@ -62,14 +62,14 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Size</em>' attribute.
 	 * @see #setPointSize(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointSize()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointSize()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
 	int getPointSize();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointSize <em>Point Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getPointSize <em>Point Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Point Size</em>' attribute.
@@ -87,7 +87,7 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Points</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_NumberOfPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_NumberOfPoints()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

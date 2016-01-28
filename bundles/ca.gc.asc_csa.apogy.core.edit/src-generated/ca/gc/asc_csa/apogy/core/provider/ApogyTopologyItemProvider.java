@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,17 +20,17 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyTopology;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.SymphonyTopology} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ApogyTopology} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
+public class ApogyTopologyItemProvider extends ItemProviderAdapter implements
 		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -39,7 +39,7 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 	 * 
 	 * @generated
 	 */
-	public SymphonyTopologyItemProvider(AdapterFactory adapterFactory) {
+	public ApogyTopologyItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -70,9 +70,9 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyTopology_rootNode_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyTopology_rootNode_feature", "_UI_SymphonyTopology_type"),
-				 Symphony__CorePackage.Literals.SYMPHONY_TOPOLOGY__ROOT_NODE,
+				 getString("_UI_ApogyTopology_rootNode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyTopology_rootNode_feature", "_UI_ApogyTopology_type"),
+				 ApogyCorePackage.Literals.APOGY_TOPOLOGY__ROOT_NODE,
 				 false,
 				 false,
 				 true,
@@ -93,7 +93,7 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_TOPOLOGY__ROOT_NODE);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_TOPOLOGY__ROOT_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -111,14 +111,14 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 	}
 
 	/**
-	 * This returns SymphonyTopology.gif.
+	 * This returns ApogyTopology.gif.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonyTopology"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyTopology"));
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_SymphonyTopology_type");
+		return getString("_UI_ApogyTopology_type");
 	}
 
 	/**
@@ -143,8 +143,8 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SymphonyTopology.class)) {
-			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+		switch (notification.getFeatureID(ApogyTopology.class)) {
+			case ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

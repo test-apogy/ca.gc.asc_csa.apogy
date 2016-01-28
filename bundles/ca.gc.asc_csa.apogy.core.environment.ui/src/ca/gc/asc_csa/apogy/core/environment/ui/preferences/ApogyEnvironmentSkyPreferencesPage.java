@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.preferences;
+package ca.gc.asc_csa.apogy.core.environment.ui.preferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-public class SymphonyEnvironmentSkyPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyEnvironmentSkyPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private StringFieldEditor starMagnitudeCutoffEditor;
 	
@@ -25,7 +25,7 @@ public class SymphonyEnvironmentSkyPreferencesPage extends PreferencePage implem
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonyEnvironmentSkyPreferencesPage() {
+	public ApogyEnvironmentSkyPreferencesPage() {
 	}
 
 	/**
@@ -43,7 +43,7 @@ public class SymphonyEnvironmentSkyPreferencesPage extends PreferencePage implem
 		grpStarField.setLayout(new GridLayout(1, true));		
 		grpStarField.setText("Star Field Settings");	
 		
-		starMagnitudeCutoffEditor = createStringFieldEditor(grpStarField, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID, "Star Magnitude Cutoff");
+		starMagnitudeCutoffEditor = createStringFieldEditor(grpStarField, ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID, "Star Magnitude Cutoff");
 		editors.add(starMagnitudeCutoffEditor);
 		
 		return container;

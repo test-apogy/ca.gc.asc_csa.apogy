@@ -1,9 +1,9 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui;
 
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class ImageSnapshotPresentationAdapter implements NodePresentationAdapter
 {
@@ -29,7 +29,7 @@ public class ImageSnapshotPresentationAdapter implements NodePresentationAdapter
 		}
 		
 		ImageSnapshot imageSnapshot = (ImageSnapshot) obj;
-		ImageSnapshotPresentation presentationNode = Symphony__AddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation();
+		ImageSnapshotPresentation presentationNode = ApogyAddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation();
 		presentationNode.setNode(imageSnapshot);
 		return presentationNode;
 	}

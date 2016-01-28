@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ArgumentsList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class ArgumentsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,7 @@ public class ArgumentsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ArgumentsList.class)) {
-			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case ApogyCoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -165,18 +165,18 @@ public class ArgumentsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createEDataTypeArgument()));
+				(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createEDataTypeArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createEEnumArgument()));
+				(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createEEnumArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createEClassArgument()));
+				(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createEClassArgument()));
 	}
 
   /**

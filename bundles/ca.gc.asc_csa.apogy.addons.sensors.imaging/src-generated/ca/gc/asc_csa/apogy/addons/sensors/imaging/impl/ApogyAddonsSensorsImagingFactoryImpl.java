@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.impl;
 
 import java.awt.Color;
 import org.eclipse.emf.ecore.EClass;
@@ -10,13 +10,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection;
-import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImagingUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsImagingFactory
+public class ApogyAddonsSensorsImagingFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsImagingFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -32,18 +32,18 @@ public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl impl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__AddonsSensorsImagingFactory init()
+  public static ApogyAddonsSensorsImagingFactory init()
   {
 		try {
-			Symphony__AddonsSensorsImagingFactory theSymphony__AddonsSensorsImagingFactory = (Symphony__AddonsSensorsImagingFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsImagingPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsImagingFactory != null) {
-				return theSymphony__AddonsSensorsImagingFactory;
+			ApogyAddonsSensorsImagingFactory theApogyAddonsSensorsImagingFactory = (ApogyAddonsSensorsImagingFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsImagingPackage.eNS_URI);
+			if (theApogyAddonsSensorsImagingFactory != null) {
+				return theApogyAddonsSensorsImagingFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsImagingFactoryImpl();
+		return new ApogyAddonsSensorsImagingFactoryImpl();
 	}
 
   /**
@@ -52,7 +52,7 @@ public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl impl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingFactoryImpl()
+  public ApogyAddonsSensorsImagingFactoryImpl()
   {
 		super();
 	}
@@ -66,9 +66,9 @@ public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl impl
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT: return createImageSnapshot();
-			case Symphony__AddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT: return createRectifiedImageSnapshot();
-			case Symphony__AddonsSensorsImagingPackage.IMAGING_UTILITIES: return createImagingUtilities();
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT: return createImageSnapshot();
+			case ApogyAddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT: return createRectifiedImageSnapshot();
+			case ApogyAddonsSensorsImagingPackage.IMAGING_UTILITIES: return createImagingUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,11 +82,11 @@ public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl impl
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsImagingPackage.AZIMUTH_DIRECTION:
+			case ApogyAddonsSensorsImagingPackage.AZIMUTH_DIRECTION:
 				return createAzimuthDirectionFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsImagingPackage.ELEVATION_DIRECTION:
+			case ApogyAddonsSensorsImagingPackage.ELEVATION_DIRECTION:
 				return createElevationDirectionFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsImagingPackage.COLOR:
+			case ApogyAddonsSensorsImagingPackage.COLOR:
 				return createColorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -101,11 +101,11 @@ public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl impl
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsImagingPackage.AZIMUTH_DIRECTION:
+			case ApogyAddonsSensorsImagingPackage.AZIMUTH_DIRECTION:
 				return convertAzimuthDirectionToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsImagingPackage.ELEVATION_DIRECTION:
+			case ApogyAddonsSensorsImagingPackage.ELEVATION_DIRECTION:
 				return convertElevationDirectionToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsImagingPackage.COLOR:
+			case ApogyAddonsSensorsImagingPackage.COLOR:
 				return convertColorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -207,8 +207,8 @@ public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsImagingPackage getSymphony__AddonsSensorsImagingPackage() {
-		return (Symphony__AddonsSensorsImagingPackage)getEPackage();
+	public ApogyAddonsSensorsImagingPackage getApogyAddonsSensorsImagingPackage() {
+		return (ApogyAddonsSensorsImagingPackage)getEPackage();
 	}
 
 		/**
@@ -218,9 +218,9 @@ public class Symphony__AddonsSensorsImagingFactoryImpl extends EFactoryImpl impl
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__AddonsSensorsImagingPackage getPackage()
+  public static ApogyAddonsSensorsImagingPackage getPackage()
   {
-		return Symphony__AddonsSensorsImagingPackage.eINSTANCE;
+		return ApogyAddonsSensorsImagingPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsImagingFactoryImpl
+} //ApogyAddonsSensorsImagingFactoryImpl

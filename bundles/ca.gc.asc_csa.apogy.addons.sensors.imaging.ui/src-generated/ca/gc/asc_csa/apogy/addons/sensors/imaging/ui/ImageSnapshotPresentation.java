@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui;
 
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,13 +15,13 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionVisible <em>Image Projection Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#getTransparency <em>Transparency</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionVisible <em>Image Projection Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage#getImageSnapshotPresentation()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
 
   /**
 	 * Returns the value of the '<em><b>Presentation Mode</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.ui.MeshPresentationMode}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Presentation Mode</em>' attribute isn't clear,
@@ -38,20 +38,20 @@ public interface ImageSnapshotPresentation extends NodePresentation
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_PresentationMode()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage#getImageSnapshotPresentation_PresentationMode()
 	 * @model unique="false"
 	 * @generated
 	 */
   MeshPresentationMode getPresentationMode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getPresentationMode <em>Presentation Mode</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#getPresentationMode <em>Presentation Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Presentation Mode</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
 	 * @see #getPresentationMode()
 	 * @generated
 	 */
@@ -67,14 +67,14 @@ public interface ImageSnapshotPresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transparency</em>' attribute.
 	 * @see #setTransparency(float)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_Transparency()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage#getImageSnapshotPresentation_Transparency()
 	 * @model unique="false"
 	 * @generated
 	 */
   float getTransparency();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getTransparency <em>Transparency</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#getTransparency <em>Transparency</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transparency</em>' attribute.
@@ -94,14 +94,14 @@ public interface ImageSnapshotPresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Projection Visible</em>' attribute.
 	 * @see #setImageProjectionVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionVisible()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
   boolean isImageProjectionVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionVisible <em>Image Projection Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionVisible <em>Image Projection Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Projection Visible</em>' attribute.
@@ -121,14 +121,14 @@ public interface ImageSnapshotPresentation extends NodePresentation
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Projection On FOV Visible</em>' attribute.
 	 * @see #setImageProjectionOnFOVVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionOnFOVVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionOnFOVVisible()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
 	boolean isImageProjectionOnFOVVisible();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Projection On FOV Visible</em>' attribute.

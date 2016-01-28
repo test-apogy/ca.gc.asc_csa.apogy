@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -22,14 +22,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.EClassArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.invocator.EClassArgument} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.invocator.EClassArgument} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
@@ -75,7 +75,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 						"_UI_PropertyDescriptor_description",
 						"_UI_EClassArgument_value_feature",
 						"_UI_EClassArgument_type"),
-				Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, true,
+				ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, true,
 				false, false, null, null, null) {
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
@@ -89,7 +89,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 				 * 
 				 * @see #createSetCommand
 				 */
-				List<EClass> eClasses = Symphony__CommonEMFFacade.INSTANCE
+				List<EClass> eClasses = ApogyCommonEMFFacade.INSTANCE
 						.getAllSubEClasses((EClass) eClassArgument
 								.getEParameter().getEType());
 				return eClasses;
@@ -107,7 +107,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 	protected Command createSetCommand(EditingDomain domain, EObject owner,
 			EStructuralFeature feature, Object value) {
 		
-		if (feature == Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE){			
+		if (feature == ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE){			
 			if (value instanceof EClass){
 				return new SetCommand(domain, owner, feature, EcoreUtil.create((EClass) value));
 			}							
@@ -127,7 +127,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -178,7 +178,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EClassArgument.class)) {
-			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
+			case ApogyCoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -198,7 +198,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
+				(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
 				 EcoreFactory.eINSTANCE.createEObject()));
 	}
 
@@ -211,20 +211,20 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 		collectNewChildDescriptorsGen(newChildDescriptors, object);
 
 		/** Remove Default EObject. */
-		Symphony__CommonEMFEditUtilsFacade.INSTANCE
+		ApogyCommonEMFEditUtilsFacade.INSTANCE
 		.removeChildDescriptor(
 				newChildDescriptors,
-				Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
+				ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
 		
 		EClassArgument eClassArgument = (EClassArgument) object;
 		EClassifier eClassifier = eClassArgument.getEParameter().getEType();
 		if (eClassifier instanceof EClass){
-			Iterator<EClass> eClasses = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses((EClass) eClassifier).iterator();
+			Iterator<EClass> eClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses((EClass) eClassifier).iterator();
 			while (eClasses.hasNext()){
 				EClass currentEClass = eClasses.next();
 					newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
+						(ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
 						 EcoreUtil.create(currentEClass)));					
 			}
 		}

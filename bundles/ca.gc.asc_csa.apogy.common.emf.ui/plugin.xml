@@ -3,7 +3,7 @@
 <plugin>
 
    <extension-point
-         id="org.eclipse.symphony.common.emf.ui.timeSourceCompositeProvider"
+         id="ca.gc.asc_csa.apogy.common.emf.ui.timeSourceCompositeProvider"
          name="Time Source Composite Provider"
          schema="schema/timeSourceCompositeProvider.exsd">
    </extension-point>
@@ -14,14 +14,14 @@
             allPopups="false"
             locationURI="popup:org.eclipse.ui.popup.any">
          <separator
-               name="org.eclipse.symphony.common.emf.ui"
+               name="ca.gc.asc_csa.apogy.common.emf.ui"
                visible="true">
          </separator>
          <separator
-               name="org.eclipse.symphony.common.emf.ui.additions">
+               name="ca.gc.asc_csa.apogy.common.emf.ui.additions">
          </separator>
          <separator
-               name="org.eclipse.symphony.common.emf.ui.end"
+               name="ca.gc.asc_csa.apogy.common.emf.ui.end"
                visible="true">
          </separator>
       </menuContribution>
@@ -29,37 +29,37 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="org.eclipse.symphony.common.emf.ui"></propertyCategory>
+               category="ca.gc.asc_csa.apogy.common.emf.ui"></propertyCategory>
       </propertyContributor>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="org.eclipse.symphony.common.emf.ui.properties.sections.NamedSection"
-               id="org.eclipse.symphony.common.emf.ui.properties.sections.NamedSection"
-               tab="org.eclipse.symphony.common.emf.ui.properties.tabs.General">
+               class="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.NamedSection"
+               id="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.NamedSection"
+               tab="ca.gc.asc_csa.apogy.common.emf.ui.properties.tabs.General">
             <input
-                  type="org.eclipse.symphony.common.emf.Named">
+                  type="ca.gc.asc_csa.apogy.common.emf.Named">
             </input>
          </propertySection>
          <propertySection
-               afterSection="org.eclipse.symphony.common.emf.ui.properties.sections.NamedSection"
-               class="org.eclipse.symphony.common.emf.ui.properties.sections.DescribedSection"
-               id="org.eclipse.symphony.common.emf.ui.properties.sections.DescribedSection"
-               tab="org.eclipse.symphony.common.emf.ui.properties.tabs.General">
+               afterSection="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.NamedSection"
+               class="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.DescribedSection"
+               id="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.DescribedSection"
+               tab="ca.gc.asc_csa.apogy.common.emf.ui.properties.tabs.General">
             <input
-                  type="org.eclipse.symphony.common.emf.Described">
+                  type="ca.gc.asc_csa.apogy.common.emf.Described">
             </input>
          </propertySection>
          
          <propertySection
-               class="org.eclipse.symphony.common.emf.ui.properties.sections.EClassDocumentationSection"
-               id="org.eclipse.symphony.common.emf.ui.properties.sections.EClassSection"
-               tab="org.eclipse.symphony.common.emf.ui.properties.tabs.Documentation">
+               class="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.EClassDocumentationSection"
+               id="ca.gc.asc_csa.apogy.common.emf.ui.properties.sections.EClassSection"
+               tab="ca.gc.asc_csa.apogy.common.emf.ui.properties.tabs.Documentation">
             <input
                   type="org.eclipse.emf.ecore.EObject">
             </input>
@@ -69,10 +69,10 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.common.emf.ui"
-               id="org.eclipse.symphony.common.emf.ui.properties.tabs.General"
+               category="ca.gc.asc_csa.apogy.common.emf.ui"
+               id="ca.gc.asc_csa.apogy.common.emf.ui.properties.tabs.General"
                label="General">
          </propertyTab>
       </propertyTabs>
@@ -81,10 +81,10 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.common.emf.ui"
-               id="org.eclipse.symphony.common.emf.ui.properties.tabs.Documentation"
+               category="ca.gc.asc_csa.apogy.common.emf.ui"
+               id="ca.gc.asc_csa.apogy.common.emf.ui.properties.tabs.Documentation"
                label="EMF Documentation">
          </propertyTab>
       </propertyTabs>
@@ -93,47 +93,47 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated eclipse_emf_ecore_ui -->
       <package
-            uri="org.eclipse.symphony.common.emf.ui"
-            class="org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage"
-            genModel="model/symphony_common_emf_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.emf.ui"
+            class="ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage"
+            genModel="model/apogy_common_emf_ui.xcore"/>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.common.emf.ui.preferences.InvocatorPreferenceInitializer">
+            class="ca.gc.asc_csa.apogy.common.emf.ui.preferences.InvocatorPreferenceInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
-            class="org.eclipse.symphony.common.emf.ui.preferences.InvocatorDisplayPreferencePage"
-            id="org.eclipse.symphony.common.emf.ui.preferences.InvocatorDisplayPreferencePage"
+            category="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.emf.ui.preferences.InvocatorDisplayPreferencePage"
+            id="ca.gc.asc_csa.apogy.common.emf.ui.preferences.InvocatorDisplayPreferencePage"
             name="Ranges">
       </page>
       <page
-            category="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
-            class="org.eclipse.symphony.common.emf.ui.preferences.InvocatorUnitsPreferencePage"
-            id="org.eclipse.symphony.common.emf.ui.page1"
+            category="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.emf.ui.preferences.InvocatorUnitsPreferencePage"
+            id="ca.gc.asc_csa.apogy.common.emf.ui.page1"
             name="Units">
       </page>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.emf.ui.timeSourceCompositeProvider">
+         point="ca.gc.asc_csa.apogy.common.emf.ui.timeSourceCompositeProvider">
       <Class
-            Class="org.eclipse.symphony.common.emf.ui.adapters.BrowseableTimeSourceTimeSourceCompositeProvider">
+            Class="ca.gc.asc_csa.apogy.common.emf.ui.adapters.BrowseableTimeSourceTimeSourceCompositeProvider">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.emf.ui.adapters.CurrentTimeSourceTimeSourceCompositeProvider">
+            Class="ca.gc.asc_csa.apogy.common.emf.ui.adapters.CurrentTimeSourceTimeSourceCompositeProvider">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.emf.ui.adapters.FixedTimeSourceTimeSourceCompositeProvider">
+            Class="ca.gc.asc_csa.apogy.common.emf.ui.adapters.FixedTimeSourceTimeSourceCompositeProvider">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.emf.ui.adapters.SelectionBasedTimeSourceTimeSourceCompositeProvider">
+            Class="ca.gc.asc_csa.apogy.common.emf.ui.adapters.SelectionBasedTimeSourceTimeSourceCompositeProvider">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.emf.ui.adapters.CollectionTimeSourceTimeSourceCompositeProvider">
+            Class="ca.gc.asc_csa.apogy.common.emf.ui.adapters.CollectionTimeSourceTimeSourceCompositeProvider">
       </Class>
    </extension>
 

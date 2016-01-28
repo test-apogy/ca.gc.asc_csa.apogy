@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,13 +20,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.ConnectionPoint} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ConnectionPoint} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
@@ -75,7 +75,7 @@ public class ConnectionPointItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -97,7 +97,7 @@ public class ConnectionPointItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class ConnectionPointItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_ConnectionPoint_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionPoint_node_feature", "_UI_ConnectionPoint_type"),
-				 Symphony__CorePackage.Literals.CONNECTION_POINT__NODE,
+				 ApogyCorePackage.Literals.CONNECTION_POINT__NODE,
 				 true,
 				 false,
 				 true,
@@ -170,8 +170,8 @@ public class ConnectionPointItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConnectionPoint.class)) {
-			case Symphony__CorePackage.CONNECTION_POINT__NAME:
-			case Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION:
+			case ApogyCorePackage.CONNECTION_POINT__NAME:
+			case ApogyCorePackage.CONNECTION_POINT__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

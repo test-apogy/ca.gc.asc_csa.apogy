@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class VectorPresentationItemProvider extends NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VectorPresentation_lineWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VectorPresentation_lineWidth_feature", "_UI_VectorPresentation_type"),
-				 Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.VECTOR_PRESENTATION__LINE_WIDTH,
+				 ApogyCommonTopologyAddonsPrimitivesUIPackage.Literals.VECTOR_PRESENTATION__LINE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class VectorPresentationItemProvider extends NodePresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VectorPresentation.class)) {
-			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
+			case ApogyCommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

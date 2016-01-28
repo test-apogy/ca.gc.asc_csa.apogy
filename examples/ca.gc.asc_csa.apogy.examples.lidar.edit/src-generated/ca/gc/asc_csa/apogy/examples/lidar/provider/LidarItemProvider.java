@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.provider;
+package ca.gc.asc_csa.apogy.examples.lidar.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
-import org.eclipse.symphony.examples.lidar.Lidar;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage;
+import ca.gc.asc_csa.apogy.examples.lidar.Lidar;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lidar.Lidar} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.lidar.Lidar} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -83,7 +83,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lidar_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lidar_fov_feature", "_UI_Lidar_type"),
-				 Symphony__ExamplesLidarPackage.Literals.LIDAR__FOV,
+				 ApogyExamplesLidarPackage.Literals.LIDAR__FOV,
 				 false,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lidar_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lidar_initialized_feature", "_UI_Lidar_type"),
-				 Symphony__ExamplesLidarPackage.Literals.LIDAR__INITIALIZED,
+				 ApogyExamplesLidarPackage.Literals.LIDAR__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesLidarPackage.Literals.LIDAR__FOV);
+			childrenFeatures.add(ApogyExamplesLidarPackage.Literals.LIDAR__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -185,10 +185,10 @@ public class LidarItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Lidar.class)) {
-			case Symphony__ExamplesLidarPackage.LIDAR__INITIALIZED:
+			case ApogyExamplesLidarPackage.LIDAR__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesLidarPackage.LIDAR__FOV:
+			case ApogyExamplesLidarPackage.LIDAR__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -209,8 +209,8 @@ public class LidarItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesLidarPackage.Literals.LIDAR__FOV,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				(ApogyExamplesLidarPackage.Literals.LIDAR__FOV,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
 	/**

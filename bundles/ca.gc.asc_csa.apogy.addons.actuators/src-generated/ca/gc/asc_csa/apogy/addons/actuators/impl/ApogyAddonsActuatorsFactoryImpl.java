@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators.impl;
+package ca.gc.asc_csa.apogy.addons.actuators.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.actuators.ActuatorStatus;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsFactory;
-import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
+import ca.gc.asc_csa.apogy.addons.actuators.ActuatorStatus;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsFactory;
+import ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsActuatorsFactoryImpl extends EFactoryImpl implements Symphony__AddonsActuatorsFactory
+public class ApogyAddonsActuatorsFactoryImpl extends EFactoryImpl implements ApogyAddonsActuatorsFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -27,18 +27,18 @@ public class Symphony__AddonsActuatorsFactoryImpl extends EFactoryImpl implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__AddonsActuatorsFactory init()
+  public static ApogyAddonsActuatorsFactory init()
   {
 		try {
-			Symphony__AddonsActuatorsFactory theSymphony__AddonsActuatorsFactory = (Symphony__AddonsActuatorsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsActuatorsPackage.eNS_URI);
-			if (theSymphony__AddonsActuatorsFactory != null) {
-				return theSymphony__AddonsActuatorsFactory;
+			ApogyAddonsActuatorsFactory theApogyAddonsActuatorsFactory = (ApogyAddonsActuatorsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsActuatorsPackage.eNS_URI);
+			if (theApogyAddonsActuatorsFactory != null) {
+				return theApogyAddonsActuatorsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsActuatorsFactoryImpl();
+		return new ApogyAddonsActuatorsFactoryImpl();
 	}
 
   /**
@@ -47,7 +47,7 @@ public class Symphony__AddonsActuatorsFactoryImpl extends EFactoryImpl implement
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsActuatorsFactoryImpl()
+  public ApogyAddonsActuatorsFactoryImpl()
   {
 		super();
 	}
@@ -75,7 +75,7 @@ public class Symphony__AddonsActuatorsFactoryImpl extends EFactoryImpl implement
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsActuatorsPackage.ACTUATOR_STATUS:
+			case ApogyAddonsActuatorsPackage.ACTUATOR_STATUS:
 				return createActuatorStatusFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -91,7 +91,7 @@ public class Symphony__AddonsActuatorsFactoryImpl extends EFactoryImpl implement
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsActuatorsPackage.ACTUATOR_STATUS:
+			case ApogyAddonsActuatorsPackage.ACTUATOR_STATUS:
 				return convertActuatorStatusToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -125,8 +125,8 @@ public class Symphony__AddonsActuatorsFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsActuatorsPackage getSymphony__AddonsActuatorsPackage() {
-		return (Symphony__AddonsActuatorsPackage)getEPackage();
+	public ApogyAddonsActuatorsPackage getApogyAddonsActuatorsPackage() {
+		return (ApogyAddonsActuatorsPackage)getEPackage();
 	}
 
 		/**
@@ -136,9 +136,9 @@ public class Symphony__AddonsActuatorsFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__AddonsActuatorsPackage getPackage()
+  public static ApogyAddonsActuatorsPackage getPackage()
   {
-		return Symphony__AddonsActuatorsPackage.eINSTANCE;
+		return ApogyAddonsActuatorsPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsActuatorsFactoryImpl
+} //ApogyAddonsActuatorsFactoryImpl

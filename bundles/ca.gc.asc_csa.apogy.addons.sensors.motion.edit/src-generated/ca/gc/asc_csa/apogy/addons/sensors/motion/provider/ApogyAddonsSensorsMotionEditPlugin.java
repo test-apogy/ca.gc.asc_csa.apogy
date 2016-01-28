@@ -1,31 +1,31 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.provider.ApogyAddonsSensorsEditPlugin;
 
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsSensorsMotion edit plugin.
+ * This is the central singleton for the ApogyAddonsSensorsMotion edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsSensorsMotionEditPlugin extends EMFPlugin {
+public final class ApogyAddonsSensorsMotionEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsSensorsMotionEditPlugin INSTANCE = new Symphony__AddonsSensorsMotionEditPlugin();
+	public static final ApogyAddonsSensorsMotionEditPlugin INSTANCE = new ApogyAddonsSensorsMotionEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -41,12 +41,12 @@ public final class Symphony__AddonsSensorsMotionEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsMotionEditPlugin() {
+	public ApogyAddonsSensorsMotionEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

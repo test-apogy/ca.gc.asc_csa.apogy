@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.commands;
+package ca.gc.asc_csa.apogy.core.ui.commands;
 
 import java.io.File;
 import java.util.Iterator;
@@ -11,8 +11,8 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 
@@ -46,7 +46,7 @@ public class SaveFeatureOfInterestToFile extends AbstractHandler implements IHan
 				{
 					try
 					{		
-						Symphony__CoreFacade.INSTANCE.saveFeatureOfInterestToFile(filePath, featureOfInterestList.getFeaturesOfInterest());												
+						ApogyCoreFacade.INSTANCE.saveFeatureOfInterestToFile(filePath, featureOfInterestList.getFeaturesOfInterest());												
 						path = filePath.substring(0, filePath.lastIndexOf(File.separator));						
 					}
 					catch(Throwable t)

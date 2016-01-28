@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.impl;
 
 import javax.vecmath.GVector;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.antenna.Activator;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.antenna.Activator;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,7 +86,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA_SIMULATED;
+		return ApogyExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA_SIMULATED;
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 		if(tmp == null)
 		{
 			// Create a conical field of view using the defaults
-			tmp = Symphony__AddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(FOV_DEF_MINIMUM_RANGE,
+			tmp = ApogyAddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(FOV_DEF_MINIMUM_RANGE,
 															  FOV_DEF_MAXIMUM_RANGE,
 															  FOV_DEF_ANGLE);
 
@@ -178,7 +178,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 		if (this.isInitialized() == false)
 		{
 			// Throw an exception to indicate this fact; will be
-			// logged by Symphony
+			// logged by Apogy
 			String message = LOG_PREFIX +
 								"Rejected; the PTU dish antenna "
 								+ "is not initialized (with init()).";			
@@ -189,7 +189,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 		else if (track == this.isTrackingSun())
 		{
 			// Throw an exception to indicate this fact; will be
-			// logged by Symphony
+			// logged by Apogy
 			String message = LOG_PREFIX +
 								"Ignored; the given tracking status is " +
 								"the same as the PTU antenna's current "
@@ -213,11 +213,11 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 			
 			/**
 			 * NOTE: The actual implementation of the sun tracker does
-			 *       not take place here as it requires Symphony; as
+			 *       not take place here as it requires Apogy; as
 			 *       such, the actual implementation is in the PTU dish
-			 *       antenna's Symphony API Adapter.  For more details,
+			 *       antenna's Apogy API Adapter.  For more details,
 			 *       please see
-			 *       {@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaSymphonySystemApiAdapterImpl}
+			 *       {@link ca.gc.asc_csa.apogy.examples.antenna.impl.PTUDishAntennaApogySystemApiAdapterImpl}
 			 */
 		}
 		
@@ -248,7 +248,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 		if (this.isInitialized() == false)
 		{
 			// Throw an exception to indicate the failure; this will
-			// be logged by Symphony
+			// be logged by Apogy
 			String message = LOG_PREFIX +
 								"Rejected; the PTU antenna is " +
 								"not initialized (with init()).";
@@ -258,7 +258,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 		else if (this.isTrackingSun() == true)
 		{
 			// Throw an exception to indicate the failure; this will
-			// be logged by Symphony
+			// be logged by Apogy
 			String message = LOG_PREFIX +
 								"Rejected; the PTU antenna is " +
 								"currently tracking the sun and " +
@@ -271,7 +271,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 				(this.getTiltAngle() == tiltAngle))
 		{
 			// Throw an exception to indicate the failure; this will
-			// be logged by Symphony
+			// be logged by Apogy
 			String message = LOG_PREFIX +
 								"Ignored; No move required as antenna's " +
 								"current angles match those provided.";

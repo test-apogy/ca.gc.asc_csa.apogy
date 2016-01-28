@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.topology.ui.converters;
+package ca.gc.asc_csa.apogy.common.topology.ui.converters;
 
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.Activator;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * Converter that converts from a Node to its NodePresentation.

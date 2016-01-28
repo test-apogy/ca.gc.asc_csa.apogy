@@ -1,24 +1,24 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.ecore.EFactory;
 
 /**
  * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a
  * create method for each non-abstract class of the model. <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.Symphony__CorePackage
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage
  * @generated
  */
-public interface Symphony__CoreFactory extends EFactory {
+public interface ApogyCoreFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CoreFactory eINSTANCE = org.eclipse.symphony.core.impl.Symphony__CoreFactoryImpl.init();
+	ApogyCoreFactory eINSTANCE = ca.gc.asc_csa.apogy.core.impl.ApogyCoreFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Facade</em>'.
@@ -27,16 +27,16 @@ public interface Symphony__CoreFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CoreFacade createSymphony__CoreFacade();
+	ApogyCoreFacade createApogyCoreFacade();
 
 	/**
-	 * Returns a new object of class '<em>Symphony Environment</em>'. <!--
+	 * Returns a new object of class '<em>Apogy Environment</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @return a new object of class '<em>Symphony Environment</em>'.
+	 * @return a new object of class '<em>Apogy Environment</em>'.
 	 * @generated
 	 */
-	SymphonyEnvironment createSymphonyEnvironment();
+	ApogyEnvironment createApogyEnvironment();
 
 	/**
 	 * Returns a new object of class '<em>Time Sources List</em>'.
@@ -48,31 +48,31 @@ public interface Symphony__CoreFactory extends EFactory {
 	TimeSourcesList createTimeSourcesList();
 
 	/**
-	 * Returns a new object of class '<em>Symphony Topology</em>'. <!--
+	 * Returns a new object of class '<em>Apogy Topology</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @return a new object of class '<em>Symphony Topology</em>'.
+	 * @return a new object of class '<em>Apogy Topology</em>'.
 	 * @generated
 	 */
-	SymphonyTopology createSymphonyTopology();
+	ApogyTopology createApogyTopology();
 
 	/**
-	 * Returns a new object of class '<em>Symphony System</em>'. <!--
+	 * Returns a new object of class '<em>Apogy System</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @return a new object of class '<em>Symphony System</em>'.
+	 * @return a new object of class '<em>Apogy System</em>'.
 	 * @generated
 	 */
-	SymphonySystem createSymphonySystem();
+	ApogySystem createApogySystem();
 
 	/**
-	 * Returns a new object of class '<em>Symphony System Api Adapter</em>'.
+	 * Returns a new object of class '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony System Api Adapter</em>'.
+	 * @return a new object of class '<em>Apogy System Api Adapter</em>'.
 	 * @generated
 	 */
-  SymphonySystemApiAdapter createSymphonySystemApiAdapter();
+  ApogySystemApiAdapter createApogySystemApiAdapter();
 
   /**
 	 * Returns a new object of class '<em>Connection Points List</em>'. <!--
@@ -129,12 +129,12 @@ public interface Symphony__CoreFactory extends EFactory {
 	AbsolutePoseProvider createAbsolutePoseProvider();
 
 		/**
-	 * Returns a new object of class '<em>Symphony Initialization Data</em>'.
+	 * Returns a new object of class '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony Initialization Data</em>'.
+	 * @return a new object of class '<em>Apogy Initialization Data</em>'.
 	 * @generated
 	 */
-	SymphonyInitializationData createSymphonyInitializationData();
+	ApogyInitializationData createApogyInitializationData();
 
 	/**
 	 * Returns a new object of class '<em>Worksites List</em>'. <!--
@@ -260,6 +260,6 @@ public interface Symphony__CoreFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CorePackage getSymphony__CorePackage();
+	ApogyCorePackage getApogyCorePackage();
 
-} // Symphony__CoreFactory
+} // ApogyCoreFactory

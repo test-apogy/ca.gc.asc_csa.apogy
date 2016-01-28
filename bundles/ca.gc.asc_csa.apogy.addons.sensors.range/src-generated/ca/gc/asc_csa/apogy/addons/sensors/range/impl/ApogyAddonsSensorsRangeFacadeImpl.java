@@ -2,21 +2,21 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsSensorsRangeFacadeImpl.java,v 1.4.4.2 2015/05/21 15:50:22 pallard Exp $
+ * $Id: ApogyAddonsSensorsRangeFacadeImpl.java,v 1.4.4.2 2015/05/21 15:50:22 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,15 +25,15 @@ import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFac
  *
  * @generated
  */
-public class Symphony__AddonsSensorsRangeFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__AddonsSensorsRangeFacade
+public class ApogyAddonsSensorsRangeFacadeImpl extends MinimalEObjectImpl.Container implements ApogyAddonsSensorsRangeFacade
 {
-	private static Symphony__AddonsSensorsRangeFacade instance = null;
+	private static ApogyAddonsSensorsRangeFacade instance = null;
 	
-	public static Symphony__AddonsSensorsRangeFacade getInstance()
+	public static ApogyAddonsSensorsRangeFacade getInstance()
 	{
 		if (instance == null)
 		{
-			instance = new Symphony__AddonsSensorsRangeFacadeImpl();
+			instance = new ApogyAddonsSensorsRangeFacadeImpl();
 		}
 		
 		return instance;
@@ -44,7 +44,7 @@ public class Symphony__AddonsSensorsRangeFacadeImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsRangeFacadeImpl()
+	protected ApogyAddonsSensorsRangeFacadeImpl()
 	{
 		super();
 	}
@@ -57,7 +57,7 @@ public class Symphony__AddonsSensorsRangeFacadeImpl extends MinimalEObjectImpl.C
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.SYMPHONY_ADDONS_SENSORS_RANGE_FACADE;
+		return ApogyAddonsSensorsRangePackage.Literals.APOGY_ADDONS_SENSORS_RANGE_FACADE;
 	}
 
 	/**
@@ -67,9 +67,9 @@ public class Symphony__AddonsSensorsRangeFacadeImpl extends MinimalEObjectImpl.C
 	 */
 	public RasterScanSettings createRasterScanSettings(double minimumDistance, double maximumDistance, double horizontalFieldOfViewAngle, double verticalFieldOfViewAngle, int horizontalResolution, int verticalResolution)
 	{
-		RasterScanSettings rasterScanSettings = Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
+		RasterScanSettings rasterScanSettings = ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
 		
-		DistanceRange distanceRange = Symphony__AddonsSensorsFOVFacade.INSTANCE.createDistanceRange(minimumDistance, maximumDistance);
+		DistanceRange distanceRange = ApogyAddonsSensorsFOVFacade.INSTANCE.createDistanceRange(minimumDistance, maximumDistance);
 		rasterScanSettings.setRange(distanceRange);
 		
 		rasterScanSettings.setHorizontalFieldOfViewAngle(horizontalFieldOfViewAngle);
@@ -88,11 +88,11 @@ public class Symphony__AddonsSensorsRangeFacadeImpl extends MinimalEObjectImpl.C
 	 */
 	public RasterScanSettings createRasterScanSettings(RasterScanSettings rasterScanSettings)
 	{
-		RasterScanSettings results = Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
+		RasterScanSettings results = ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
 		
 		if(rasterScanSettings.getRange() != null)
 		{
-			DistanceRange distanceRange = Symphony__AddonsSensorsFOVFacade.INSTANCE.createDistanceRange(rasterScanSettings.getRange());
+			DistanceRange distanceRange = ApogyAddonsSensorsFOVFacade.INSTANCE.createDistanceRange(rasterScanSettings.getRange());
 			results.setRange(distanceRange);
 		}
 		
@@ -113,12 +113,12 @@ public class Symphony__AddonsSensorsRangeFacadeImpl extends MinimalEObjectImpl.C
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsRangePackage.SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT:
+			case ApogyAddonsSensorsRangePackage.APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT:
 				return createRasterScanSettings((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Integer)arguments.get(4), (Integer)arguments.get(5));
-			case Symphony__AddonsSensorsRangePackage.SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS:
+			case ApogyAddonsSensorsRangePackage.APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS:
 				return createRasterScanSettings((RasterScanSettings)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__AddonsSensorsRangeFacadeImpl
+} //ApogyAddonsSensorsRangeFacadeImpl

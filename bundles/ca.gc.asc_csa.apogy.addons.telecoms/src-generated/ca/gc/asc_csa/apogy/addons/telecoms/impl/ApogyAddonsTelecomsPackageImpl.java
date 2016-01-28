@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import javax.vecmath.Color3f;
 
@@ -14,24 +14,24 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
-import org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.IsotropicAntenna;
-import org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomNode;
-import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
-import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
+import ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna;
+import ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
+import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements Symphony__AddonsTelecomsPackage {
+public class ApogyAddonsTelecomsPackageImpl extends EPackageImpl implements ApogyAddonsTelecomsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,12 +142,12 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsTelecomsPackageImpl() {
-		super(eNS_URI, Symphony__AddonsTelecomsFactory.eINSTANCE);
+	private ApogyAddonsTelecomsPackageImpl() {
+		super(eNS_URI, ApogyAddonsTelecomsFactory.eINSTANCE);
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsTelecomsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsTelecomsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -169,31 +169,31 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsTelecomsPackage init() {
-		if (isInited) return (Symphony__AddonsTelecomsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsTelecomsPackage.eNS_URI);
+	public static ApogyAddonsTelecomsPackage init() {
+		if (isInited) return (ApogyAddonsTelecomsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsTelecomsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsTelecomsPackageImpl theSymphony__AddonsTelecomsPackage = (Symphony__AddonsTelecomsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsTelecomsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsTelecomsPackageImpl());
+		ApogyAddonsTelecomsPackageImpl theApogyAddonsTelecomsPackage = (ApogyAddonsTelecomsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsTelecomsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsTelecomsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsPackage.eINSTANCE.eClass();
-		Symphony__CoreEnvironmentPackage.eINSTANCE.eClass();
+		ApogyAddonsPackage.eINSTANCE.eClass();
+		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsTelecomsPackage.createPackageContents();
+		theApogyAddonsTelecomsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsTelecomsPackage.initializePackageContents();
+		theApogyAddonsTelecomsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsTelecomsPackage.freeze();
+		theApogyAddonsTelecomsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsTelecomsPackage.eNS_URI, theSymphony__AddonsTelecomsPackage);
-		return theSymphony__AddonsTelecomsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsTelecomsPackage.eNS_URI, theApogyAddonsTelecomsPackage);
+		return theApogyAddonsTelecomsPackage;
 	}
 
 	/**
@@ -579,8 +579,8 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsFactory getSymphony__AddonsTelecomsFactory() {
-		return (Symphony__AddonsTelecomsFactory)getEFactoryInstance();
+	public ApogyAddonsTelecomsFactory getApogyAddonsTelecomsFactory() {
+		return (ApogyAddonsTelecomsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -685,26 +685,26 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CoreEnvironmentPackage theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
+		ApogyAddonsPackage theApogyAddonsPackage = (ApogyAddonsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		telecomStatusMonitorToolListEClass.getESuperTypes().add(theSymphony__AddonsPackage.getSimpleTool());
-		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
-		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		telecomStatusMonitorToolListEClass.getESuperTypes().add(theApogyAddonsPackage.getSimpleTool());
+		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
+		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		isotropicAntennaEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		dipoleAntennaRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		halfWaveDipoleAntennaRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		simpleConicalRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		simpleRectangularFrustumRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		uRlBasedAntennaRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
-		antennaRadiationPatternImageMapLayerEClass.getESuperTypes().add(theSymphony__CoreEnvironmentPackage.getLineOfSightImageMapLayer());
+		antennaRadiationPatternImageMapLayerEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getLineOfSightImageMapLayer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(telecomNodeEClass, TelecomNode.class, "TelecomNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -800,17 +800,17 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsTelecoms",
+			 "prefix", "ApogyAddonsTelecoms",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsTelecoms",
+			 "modelName", "ApogyAddonsTelecoms",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.telecoms/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.telecoms.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons"
 		   });	
 		addAnnotation
 		  (telecomNodeStatusEEnum, 
@@ -941,7 +941,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 			 "property", "Readonly",
 			 "notify", "true",
 			 "children", "false",
-			 "get", "<%org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool%> _statusMonitorTool = this.getStatusMonitorTool();\nboolean _isRunning = _statusMonitorTool.isRunning();\nboolean _equals = (_isRunning == false);\nif (_equals)\n{\n\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.NOT_STARTED;\n}\nelse\n{\n\tboolean _isEnabled = this.isEnabled();\n\tboolean _equals_1 = (_isEnabled == false);\n\tif (_equals_1)\n\t{\n\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.NOT_ENABLED;\n\t}\n\telse\n\t{\n\t\tdouble _packetLoss = this.getPacketLoss();\n\t\tboolean _greaterEqualsThan = (_packetLoss >= 100.0);\n\t\tif (_greaterEqualsThan)\n\t\t{\n\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.UNREACHABLE;\n\t\t}\n\t\telse\n\t\t{\n\t\t\tboolean _and = false;\n\t\t\tdouble _latency = this.getLatency();\n\t\t\tboolean _greaterEqualsThan_1 = (_latency >= 0);\n\t\t\tif (!_greaterEqualsThan_1)\n\t\t\t{\n\t\t\t\t_and = false;\n\t\t\t} else\n\t\t\t{\n\t\t\t\tdouble _latency_1 = this.getLatency();\n\t\t\t\tdouble _latencyWarning = this.getLatencyWarning();\n\t\t\t\tboolean _lessThan = (_latency_1 < _latencyWarning);\n\t\t\t\t_and = _lessThan;\n\t\t\t}\n\t\t\tif (_and)\n\t\t\t{\n\t\t\t\tdouble _packetLoss_1 = this.getPacketLoss();\n\t\t\t\tdouble _packetLossWarning = this.getPacketLossWarning();\n\t\t\t\tboolean _lessThan_1 = (_packetLoss_1 < _packetLossWarning);\n\t\t\t\tif (_lessThan_1)\n\t\t\t\t{\n\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.NORMAL;\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tboolean _and_1 = false;\n\t\t\t\t\tdouble _packetLoss_2 = this.getPacketLoss();\n\t\t\t\t\tdouble _packetLossWarning_1 = this.getPacketLossWarning();\n\t\t\t\t\tboolean _greaterEqualsThan_2 = (_packetLoss_2 >= _packetLossWarning_1);\n\t\t\t\t\tif (!_greaterEqualsThan_2)\n\t\t\t\t\t{\n\t\t\t\t\t\t_and_1 = false;\n\t\t\t\t\t} else\n\t\t\t\t\t{\n\t\t\t\t\t\tdouble _packetLoss_3 = this.getPacketLoss();\n\t\t\t\t\t\tdouble _packetLossAlarm = this.getPacketLossAlarm();\n\t\t\t\t\t\tboolean _lessThan_2 = (_packetLoss_3 < _packetLossAlarm);\n\t\t\t\t\t\t_and_1 = _lessThan_2;\n\t\t\t\t\t}\n\t\t\t\t\tif (_and_1)\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.PACKET_LOSS_WARNING;\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.PACKET_LOSS_ALARM;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tboolean _and_2 = false;\n\t\t\t\tdouble _latency_2 = this.getLatency();\n\t\t\t\tdouble _latencyWarning_1 = this.getLatencyWarning();\n\t\t\t\tboolean _greaterEqualsThan_3 = (_latency_2 >= _latencyWarning_1);\n\t\t\t\tif (!_greaterEqualsThan_3)\n\t\t\t\t{\n\t\t\t\t\t_and_2 = false;\n\t\t\t\t} else\n\t\t\t\t{\n\t\t\t\t\tdouble _latency_3 = this.getLatency();\n\t\t\t\t\tdouble _latencyAlarm = this.getLatencyAlarm();\n\t\t\t\t\tboolean _lessThan_3 = (_latency_3 < _latencyAlarm);\n\t\t\t\t\t_and_2 = _lessThan_3;\n\t\t\t\t}\n\t\t\t\tif (_and_2)\n\t\t\t\t{\n\t\t\t\t\tdouble _packetLoss_4 = this.getPacketLoss();\n\t\t\t\t\tdouble _packetLossWarning_2 = this.getPacketLossWarning();\n\t\t\t\t\tboolean _lessThan_4 = (_packetLoss_4 < _packetLossWarning_2);\n\t\t\t\t\tif (_lessThan_4)\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.LATENCY_WARNING;\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\tboolean _and_3 = false;\n\t\t\t\t\t\tdouble _packetLoss_5 = this.getPacketLoss();\n\t\t\t\t\t\tdouble _packetLossWarning_3 = this.getPacketLossWarning();\n\t\t\t\t\t\tboolean _greaterEqualsThan_4 = (_packetLoss_5 >= _packetLossWarning_3);\n\t\t\t\t\t\tif (!_greaterEqualsThan_4)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t_and_3 = false;\n\t\t\t\t\t\t} else\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tdouble _packetLoss_6 = this.getPacketLoss();\n\t\t\t\t\t\t\tdouble _packetLossAlarm_1 = this.getPacketLossAlarm();\n\t\t\t\t\t\t\tboolean _lessThan_5 = (_packetLoss_6 < _packetLossAlarm_1);\n\t\t\t\t\t\t\t_and_3 = _lessThan_5;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif (_and_3)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.BOTH_WARNING;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.BOTH_ALARM;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tdouble _packetLoss_7 = this.getPacketLoss();\n\t\t\t\t\tdouble _packetLossWarning_4 = this.getPacketLossWarning();\n\t\t\t\t\tboolean _lessThan_6 = (_packetLoss_7 < _packetLossWarning_4);\n\t\t\t\t\tif (_lessThan_6)\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.LATENCY_ALARM;\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\tboolean _and_4 = false;\n\t\t\t\t\t\tdouble _packetLoss_8 = this.getPacketLoss();\n\t\t\t\t\t\tdouble _packetLossWarning_5 = this.getPacketLossWarning();\n\t\t\t\t\t\tboolean _greaterEqualsThan_5 = (_packetLoss_8 >= _packetLossWarning_5);\n\t\t\t\t\t\tif (!_greaterEqualsThan_5)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t_and_4 = false;\n\t\t\t\t\t\t} else\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tdouble _packetLoss_9 = this.getPacketLoss();\n\t\t\t\t\t\t\tdouble _packetLossAlarm_2 = this.getPacketLossAlarm();\n\t\t\t\t\t\t\tboolean _lessThan_7 = (_packetLoss_9 < _packetLossAlarm_2);\n\t\t\t\t\t\t\t_and_4 = _lessThan_7;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif (_and_4)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.BOTH_ALARM;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%org.eclipse.symphony.addons.telecoms.TelecomNodeStatus%>.BOTH_ALARM;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+			 "get", "<%ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool%> _statusMonitorTool = this.getStatusMonitorTool();\nboolean _isRunning = _statusMonitorTool.isRunning();\nboolean _equals = (_isRunning == false);\nif (_equals)\n{\n\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.NOT_STARTED;\n}\nelse\n{\n\tboolean _isEnabled = this.isEnabled();\n\tboolean _equals_1 = (_isEnabled == false);\n\tif (_equals_1)\n\t{\n\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.NOT_ENABLED;\n\t}\n\telse\n\t{\n\t\tdouble _packetLoss = this.getPacketLoss();\n\t\tboolean _greaterEqualsThan = (_packetLoss >= 100.0);\n\t\tif (_greaterEqualsThan)\n\t\t{\n\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.UNREACHABLE;\n\t\t}\n\t\telse\n\t\t{\n\t\t\tboolean _and = false;\n\t\t\tdouble _latency = this.getLatency();\n\t\t\tboolean _greaterEqualsThan_1 = (_latency >= 0);\n\t\t\tif (!_greaterEqualsThan_1)\n\t\t\t{\n\t\t\t\t_and = false;\n\t\t\t} else\n\t\t\t{\n\t\t\t\tdouble _latency_1 = this.getLatency();\n\t\t\t\tdouble _latencyWarning = this.getLatencyWarning();\n\t\t\t\tboolean _lessThan = (_latency_1 < _latencyWarning);\n\t\t\t\t_and = _lessThan;\n\t\t\t}\n\t\t\tif (_and)\n\t\t\t{\n\t\t\t\tdouble _packetLoss_1 = this.getPacketLoss();\n\t\t\t\tdouble _packetLossWarning = this.getPacketLossWarning();\n\t\t\t\tboolean _lessThan_1 = (_packetLoss_1 < _packetLossWarning);\n\t\t\t\tif (_lessThan_1)\n\t\t\t\t{\n\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.NORMAL;\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tboolean _and_1 = false;\n\t\t\t\t\tdouble _packetLoss_2 = this.getPacketLoss();\n\t\t\t\t\tdouble _packetLossWarning_1 = this.getPacketLossWarning();\n\t\t\t\t\tboolean _greaterEqualsThan_2 = (_packetLoss_2 >= _packetLossWarning_1);\n\t\t\t\t\tif (!_greaterEqualsThan_2)\n\t\t\t\t\t{\n\t\t\t\t\t\t_and_1 = false;\n\t\t\t\t\t} else\n\t\t\t\t\t{\n\t\t\t\t\t\tdouble _packetLoss_3 = this.getPacketLoss();\n\t\t\t\t\t\tdouble _packetLossAlarm = this.getPacketLossAlarm();\n\t\t\t\t\t\tboolean _lessThan_2 = (_packetLoss_3 < _packetLossAlarm);\n\t\t\t\t\t\t_and_1 = _lessThan_2;\n\t\t\t\t\t}\n\t\t\t\t\tif (_and_1)\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.PACKET_LOSS_WARNING;\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.PACKET_LOSS_ALARM;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tboolean _and_2 = false;\n\t\t\t\tdouble _latency_2 = this.getLatency();\n\t\t\t\tdouble _latencyWarning_1 = this.getLatencyWarning();\n\t\t\t\tboolean _greaterEqualsThan_3 = (_latency_2 >= _latencyWarning_1);\n\t\t\t\tif (!_greaterEqualsThan_3)\n\t\t\t\t{\n\t\t\t\t\t_and_2 = false;\n\t\t\t\t} else\n\t\t\t\t{\n\t\t\t\t\tdouble _latency_3 = this.getLatency();\n\t\t\t\t\tdouble _latencyAlarm = this.getLatencyAlarm();\n\t\t\t\t\tboolean _lessThan_3 = (_latency_3 < _latencyAlarm);\n\t\t\t\t\t_and_2 = _lessThan_3;\n\t\t\t\t}\n\t\t\t\tif (_and_2)\n\t\t\t\t{\n\t\t\t\t\tdouble _packetLoss_4 = this.getPacketLoss();\n\t\t\t\t\tdouble _packetLossWarning_2 = this.getPacketLossWarning();\n\t\t\t\t\tboolean _lessThan_4 = (_packetLoss_4 < _packetLossWarning_2);\n\t\t\t\t\tif (_lessThan_4)\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.LATENCY_WARNING;\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\tboolean _and_3 = false;\n\t\t\t\t\t\tdouble _packetLoss_5 = this.getPacketLoss();\n\t\t\t\t\t\tdouble _packetLossWarning_3 = this.getPacketLossWarning();\n\t\t\t\t\t\tboolean _greaterEqualsThan_4 = (_packetLoss_5 >= _packetLossWarning_3);\n\t\t\t\t\t\tif (!_greaterEqualsThan_4)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t_and_3 = false;\n\t\t\t\t\t\t} else\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tdouble _packetLoss_6 = this.getPacketLoss();\n\t\t\t\t\t\t\tdouble _packetLossAlarm_1 = this.getPacketLossAlarm();\n\t\t\t\t\t\t\tboolean _lessThan_5 = (_packetLoss_6 < _packetLossAlarm_1);\n\t\t\t\t\t\t\t_and_3 = _lessThan_5;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif (_and_3)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.BOTH_WARNING;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.BOTH_ALARM;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tdouble _packetLoss_7 = this.getPacketLoss();\n\t\t\t\t\tdouble _packetLossWarning_4 = this.getPacketLossWarning();\n\t\t\t\t\tboolean _lessThan_6 = (_packetLoss_7 < _packetLossWarning_4);\n\t\t\t\t\tif (_lessThan_6)\n\t\t\t\t\t{\n\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.LATENCY_ALARM;\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\tboolean _and_4 = false;\n\t\t\t\t\t\tdouble _packetLoss_8 = this.getPacketLoss();\n\t\t\t\t\t\tdouble _packetLossWarning_5 = this.getPacketLossWarning();\n\t\t\t\t\t\tboolean _greaterEqualsThan_5 = (_packetLoss_8 >= _packetLossWarning_5);\n\t\t\t\t\t\tif (!_greaterEqualsThan_5)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t_and_4 = false;\n\t\t\t\t\t\t} else\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tdouble _packetLoss_9 = this.getPacketLoss();\n\t\t\t\t\t\t\tdouble _packetLossAlarm_2 = this.getPacketLossAlarm();\n\t\t\t\t\t\t\tboolean _lessThan_7 = (_packetLoss_9 < _packetLossAlarm_2);\n\t\t\t\t\t\t\t_and_4 = _lessThan_7;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif (_and_4)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.BOTH_ALARM;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\treturn <%ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus%>.BOTH_ALARM;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
 		   });	
 		addAnnotation
 		  (telecomStatusMonitorToolEClass, 
@@ -1020,19 +1020,19 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the gain of the antenna in the direction specified by a vector.\n@param theta The angle between the z axis and the direction vector, in radians.\n@param phi The angle between the x axis and the projection of the point in the x-y plane, in radians\n@return The gain, in dBi (decibels isotropic or dBi) associated with the radiation pattern in the specified direction.",
-			 "symphony_units", "dB"
+			 "apogy_units", "dB"
 		   });	
 		addAnnotation
 		  ((getAbstractAntennaRadiationPattern__ComputeGain__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAbstractAntennaRadiationPattern__ComputeGain__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (isotropicAntennaEClass, 
@@ -1063,7 +1063,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		   source, 
 		   new String[] {
 			 "documentation", "The apex angle of the cone. The cone is pointing toward +Z.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (simpleRectangularFrustumRadiationPatternEClass, 
@@ -1076,14 +1076,14 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		   source, 
 		   new String[] {
 			 "documentation", "Horizontal field of view angle.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Vertical field of view angle.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (uRlBasedAntennaRadiationPatternEClass, 
@@ -1112,7 +1112,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 			 "documentation", "Cutoff signal strength under which no signal is usuable.",
 			 "property", "Editable",
 			 "propertyCategory", "CUTOFF_SETTINGS",
-			 "symphony_units", "dB"
+			 "apogy_units", "dB"
 		   });	
 		addAnnotation
 		  (getAntennaRadiationPatternImageMapLayer_BellowCutoffColor(), 
@@ -1124,4 +1124,4 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		   });
 	}
 
-} //Symphony__AddonsTelecomsPackageImpl
+} //ApogyAddonsTelecomsPackageImpl

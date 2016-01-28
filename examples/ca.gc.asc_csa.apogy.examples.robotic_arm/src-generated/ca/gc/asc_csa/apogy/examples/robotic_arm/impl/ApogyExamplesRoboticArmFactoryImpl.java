@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.robotic_arm.*;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.examples.robotic_arm.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implements Symphony__ExamplesRoboticArmFactory
+public class ApogyExamplesRoboticArmFactoryImpl extends EFactoryImpl implements ApogyExamplesRoboticArmFactory
 {
 	/**
 	 * Creates the default factory implementation.
@@ -25,18 +25,18 @@ public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesRoboticArmFactory init()
+	public static ApogyExamplesRoboticArmFactory init()
 	{
 		try {
-			Symphony__ExamplesRoboticArmFactory theSymphony__ExamplesRoboticArmFactory = (Symphony__ExamplesRoboticArmFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesRoboticArmPackage.eNS_URI);
-			if (theSymphony__ExamplesRoboticArmFactory != null) {
-				return theSymphony__ExamplesRoboticArmFactory;
+			ApogyExamplesRoboticArmFactory theApogyExamplesRoboticArmFactory = (ApogyExamplesRoboticArmFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesRoboticArmPackage.eNS_URI);
+			if (theApogyExamplesRoboticArmFactory != null) {
+				return theApogyExamplesRoboticArmFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesRoboticArmFactoryImpl();
+		return new ApogyExamplesRoboticArmFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoboticArmFactoryImpl()
+	public ApogyExamplesRoboticArmFactoryImpl()
 	{
 		super();
 	}
@@ -59,8 +59,8 @@ public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implem
 	public EObject create(EClass eClass)
 	{
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM_STUB: return createRoboticArmStub();
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM_SIMULATED: return createRoboticArmSimulated();
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_STUB: return createRoboticArmStub();
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM_SIMULATED: return createRoboticArmSimulated();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -74,7 +74,7 @@ public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implem
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesRoboticArmPackage.MOVE_SPEED_LEVEL:
+			case ApogyExamplesRoboticArmPackage.MOVE_SPEED_LEVEL:
 				return createMoveSpeedLevelFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -89,7 +89,7 @@ public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implem
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesRoboticArmPackage.MOVE_SPEED_LEVEL:
+			case ApogyExamplesRoboticArmPackage.MOVE_SPEED_LEVEL:
 				return convertMoveSpeedLevelToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -173,8 +173,8 @@ public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoboticArmPackage getSymphony__ExamplesRoboticArmPackage() {
-		return (Symphony__ExamplesRoboticArmPackage)getEPackage();
+	public ApogyExamplesRoboticArmPackage getApogyExamplesRoboticArmPackage() {
+		return (ApogyExamplesRoboticArmPackage)getEPackage();
 	}
 
 	/**
@@ -184,8 +184,8 @@ public class Symphony__ExamplesRoboticArmFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesRoboticArmPackage getPackage()
+	public static ApogyExamplesRoboticArmPackage getPackage()
 	{
-		return Symphony__ExamplesRoboticArmPackage.eINSTANCE;
+		return ApogyExamplesRoboticArmPackage.eINSTANCE;
 	}
-} //Symphony__ExamplesRoboticArmFactoryImpl
+} //ApogyExamplesRoboticArmFactoryImpl

@@ -3,15 +3,15 @@
  *
  * $Id: PoseSensorPresentationImpl.java,v 1.1.4.2 2015/05/21 15:51:00 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
-import org.eclipse.symphony.addons.sensors.pose.ui.scene_objects.PoseSensorSceneObject;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PoseSensorPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.scene_objects.PoseSensorSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.ui.impl.PoseSensorPresentationImpl#isFrameVisible <em>Frame Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.impl.PoseSensorPresentationImpl#isFrameVisible <em>Frame Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class PoseSensorPresentationImpl extends NodePresentationImpl implements 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsPoseUIPackage.Literals.POSE_SENSOR_PRESENTATION;
+		return ApogyAddonsSensorsPoseUIPackage.Literals.POSE_SENSOR_PRESENTATION;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class PoseSensorPresentationImpl extends NodePresentationImpl implements 
 		boolean oldFrameVisible = frameVisible;
 		frameVisible = newFrameVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE, oldFrameVisible, frameVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE, oldFrameVisible, frameVisible));
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class PoseSensorPresentationImpl extends NodePresentationImpl implements 
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case ApogyAddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				return isFrameVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -116,7 +116,7 @@ public class PoseSensorPresentationImpl extends NodePresentationImpl implements 
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case ApogyAddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				setFrameVisible((Boolean)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class PoseSensorPresentationImpl extends NodePresentationImpl implements 
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case ApogyAddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				setFrameVisible(FRAME_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -148,7 +148,7 @@ public class PoseSensorPresentationImpl extends NodePresentationImpl implements 
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case ApogyAddonsSensorsPoseUIPackage.POSE_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				return frameVisible != FRAME_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -192,7 +192,7 @@ public class PoseSensorPresentationImpl extends NodePresentationImpl implements 
 	protected void updateSceneObject(Notification notification)
 	{
 		PoseSensorSceneObject j3dObject = (PoseSensorSceneObject) getSceneObject();		
-		if(notification.getFeatureID(OrientationSensorPresentationImpl.class) == Symphony__AddonsSensorsPoseUIPackage.ORIENTATION_SENSOR_PRESENTATION__FRAME_VISIBLE)
+		if(notification.getFeatureID(OrientationSensorPresentationImpl.class) == ApogyAddonsSensorsPoseUIPackage.ORIENTATION_SENSOR_PRESENTATION__FRAME_VISIBLE)
 		{			
 			j3dObject.setFrameVisible(notification.getNewBooleanValue());
 		}

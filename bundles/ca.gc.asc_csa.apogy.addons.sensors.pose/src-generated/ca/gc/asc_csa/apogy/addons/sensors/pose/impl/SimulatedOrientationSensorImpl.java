@@ -3,18 +3,18 @@
  *
  * $Id: SimulatedOrientationSensorImpl.java,v 1.2.4.2 2015/05/21 15:51:31 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import javax.vecmath.Matrix3d;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getUpdatePeriod <em>Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
  *
  * @generated
@@ -127,7 +127,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 
 	private void initialize()
 	{
-		if(getRotationMatrix()== null) setRotationMatrix(Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3());
+		if(getRotationMatrix()== null) setRotationMatrix(ApogyCommonMathFactory.eINSTANCE.createMatrix3x3());
 		
 		Thread t = new Thread()
     	{			
@@ -144,7 +144,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 																	  getUpdatePeriod() * getZAngularVelocity());							
 												
 						oldRotation.mul(newRotation);						
-						setRotationMatrix(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(oldRotation));
+						setRotationMatrix(ApogyCommonMathFacade.INSTANCE.createMatrix3x3(oldRotation));
 												
 						long delay = Math.round(getUpdatePeriod() * 1000.0);
 						Thread.sleep(delay);
@@ -168,7 +168,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_ORIENTATION_SENSOR;
+		return ApogyAddonsSensorsPosePackage.Literals.SIMULATED_ORIENTATION_SENSOR;
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 		double oldXAngularVelocity = xAngularVelocity;
 		xAngularVelocity = newXAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 		double oldYAngularVelocity = yAngularVelocity;
 		yAngularVelocity = newYAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
 	}
 
 	/**
@@ -237,7 +237,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 		double oldZAngularVelocity = zAngularVelocity;
 		zAngularVelocity = newZAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY, oldZAngularVelocity, zAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY, oldZAngularVelocity, zAngularVelocity));
 	}
 
 	/**
@@ -260,7 +260,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 		double oldUpdatePeriod = updatePeriod;
 		updatePeriod = newUpdatePeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
 	}
 
 	/**
@@ -272,13 +272,13 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
 				return getXAngularVelocity();
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
 				return getYAngularVelocity();
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
 				return getZAngularVelocity();
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
 				return getUpdatePeriod();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -293,16 +293,16 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
 				setXAngularVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
 				setYAngularVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
 				setZAngularVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
 				setUpdatePeriod((Double)newValue);
 				return;
 		}
@@ -318,16 +318,16 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
 				setXAngularVelocity(XANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
 				setYAngularVelocity(YANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
 				setZAngularVelocity(ZANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
 				setUpdatePeriod(UPDATE_PERIOD_EDEFAULT);
 				return;
 		}
@@ -343,13 +343,13 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
 				return xAngularVelocity != XANGULAR_VELOCITY_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
 				return yAngularVelocity != YANGULAR_VELOCITY_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
 				return zAngularVelocity != ZANGULAR_VELOCITY_EDEFAULT;
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
 				return updatePeriod != UPDATE_PERIOD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

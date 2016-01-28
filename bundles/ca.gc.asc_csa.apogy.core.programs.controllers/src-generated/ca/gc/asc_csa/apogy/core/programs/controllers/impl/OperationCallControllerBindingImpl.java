@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.impl.OperationCallImpl;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
-import org.eclipse.symphony.core.programs.controllers.Trigger;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.Trigger;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,9 +25,9 @@ import org.eclipse.symphony.core.programs.controllers.Trigger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.OperationCallControllerBindingImpl#isCreateResult <em>Create Result</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.OperationCallControllerBindingImpl#isActive <em>Active</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.OperationCallControllerBindingImpl#getTrigger <em>Trigger</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.OperationCallControllerBindingImpl#isCreateResult <em>Create Result</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.OperationCallControllerBindingImpl#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.OperationCallControllerBindingImpl#getTrigger <em>Trigger</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,7 +109,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING;
+		return ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING;
 	}
 
   /**
@@ -130,7 +130,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
 		boolean oldCreateResult = createResult;
 		createResult = newCreateResult;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT, oldCreateResult, createResult));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT, oldCreateResult, createResult));
 	}
 
 		/**
@@ -153,7 +153,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE, oldActive, active));
 	}
 
   /**
@@ -176,7 +176,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
 		Trigger oldTrigger = trigger;
 		trigger = newTrigger;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, oldTrigger, newTrigger);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, oldTrigger, newTrigger);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -192,14 +192,14 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
 		if (newTrigger != trigger) {
 			NotificationChain msgs = null;
 			if (trigger != null)
-				msgs = ((InternalEObject)trigger).eInverseRemove(this, Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, Trigger.class, msgs);
+				msgs = ((InternalEObject)trigger).eInverseRemove(this, ApogyCoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, Trigger.class, msgs);
 			if (newTrigger != null)
-				msgs = ((InternalEObject)newTrigger).eInverseAdd(this, Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, Trigger.class, msgs);
+				msgs = ((InternalEObject)newTrigger).eInverseAdd(this, ApogyCoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, Trigger.class, msgs);
 			msgs = basicSetTrigger(newTrigger, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, newTrigger, newTrigger));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, newTrigger, newTrigger));
 	}
 
   /**
@@ -212,7 +212,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
 	  // If the operation call is busy being executed.
 	  if(!busy)
 	  {
-		  Symphony__CoreInvocatorFacade.INSTANCE.exec(this, isCreateResult());
+		  ApogyCoreInvocatorFacade.INSTANCE.exec(this, isCreateResult());
 		  busy = false;
 	  }	  
   }
@@ -226,9 +226,9 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				if (trigger != null)
-					msgs = ((InternalEObject)trigger).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, null, msgs);
+					msgs = ((InternalEObject)trigger).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, null, msgs);
 				return basicSetTrigger((Trigger)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -243,7 +243,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				return basicSetTrigger(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -258,11 +258,11 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
 				return isCreateResult();
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
 				return isActive();
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				return getTrigger();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -277,13 +277,13 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
 				setCreateResult((Boolean)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				setTrigger((Trigger)newValue);
 				return;
 		}
@@ -299,13 +299,13 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
 				setCreateResult(CREATE_RESULT_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				setTrigger((Trigger)null);
 				return;
 		}
@@ -321,11 +321,11 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
 				return createResult != CREATE_RESULT_EDEFAULT;
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				return trigger != null;
 		}
 		return super.eIsSet(featureID);
@@ -340,7 +340,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING___UPDATE:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING___UPDATE:
 				update();
 				return null;
 		}

@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.geometry.data3d.ui;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 
 /**
  * 

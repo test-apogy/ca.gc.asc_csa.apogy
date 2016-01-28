@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.symphony.common.feature"
-      label="Symphony Common"
+      id="ca.gc.asc_csa.apogy.common.feature"
+      label="Apogy Common"
       version="0.5.0.qualifier"
       provider-name="Canadian Space Agency / Agence spatiale canadienne">
 

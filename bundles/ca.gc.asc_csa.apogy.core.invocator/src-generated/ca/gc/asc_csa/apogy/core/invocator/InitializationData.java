@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.invocator;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInitializationData()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getInitializationData()
  * @model
  * @generated
  */

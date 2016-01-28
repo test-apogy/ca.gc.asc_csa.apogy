@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_environment_orbit -->
+      <!-- @generated apogy_environment_orbit -->
       <factory
-            uri="org.eclipse.symphony.core.environment.orbit"
-            class="org.eclipse.symphony.core.environment.orbit.provider.Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.core.environment.orbit"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.provider.ApogyCoreEnvironmentOrbitItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,12 +21,12 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_core_environment_orbit -->
+      <!-- @generated apogy_core_environment_orbit -->
       <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.core.environment.orbit.provider.Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.provider.ApogyCoreEnvironmentOrbitItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.environment.orbit.provider.Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.core.environment.orbit.provider.ApogyCoreEnvironmentOrbitItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 </plugin>

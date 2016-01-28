@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.environment.ui.adapters;
+package ca.gc.asc_csa.apogy.core.environment.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.ui.SunPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
 
 public class SunPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class SunPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		SunPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSunPresentation();
+		SunPresentation presentationNode = ApogyCoreEnvironmentUIFactory.eINSTANCE.createSunPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

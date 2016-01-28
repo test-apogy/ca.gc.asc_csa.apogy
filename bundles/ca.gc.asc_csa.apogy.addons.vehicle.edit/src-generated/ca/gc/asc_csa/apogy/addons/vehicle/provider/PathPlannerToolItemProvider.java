@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.provider;
 
 
 import java.text.DecimalFormat;
@@ -15,14 +15,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
-import org.eclipse.symphony.addons.provider.AbstractTwoPoints3DToolItemProvider;
-import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFactory;
+import ca.gc.asc_csa.apogy.addons.provider.AbstractTwoPoints3DToolItemProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.PathPlannerTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -73,7 +73,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_busy_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_busy_feature", "_UI_PathPlannerTool_type"),
-				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__BUSY,
+				 ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__BUSY,
 				 false,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_autoPathPlanEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_autoPathPlanEnabled_feature", "_UI_PathPlannerTool_type"),
-				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED,
+				 ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_meshLayer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_meshLayer_feature", "_UI_PathPlannerTool_type"),
-				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__MESH_LAYER,
+				 ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__MESH_LAYER,
 				 true,
 				 false,
 				 true,
@@ -139,7 +139,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_plannedPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_plannedPath_feature", "_UI_PathPlannerTool_type"),
-				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
+				 ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
 				 false,
 				 false,
 				 false,
@@ -160,8 +160,8 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER);
-			childrenFeatures.add(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH);
+			childrenFeatures.add(ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER);
+			childrenFeatures.add(ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH);
 		}
 		return childrenFeatures;
 	}
@@ -260,13 +260,13 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PathPlannerTool.class)) {
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
-			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
+			case ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -286,13 +286,13 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER,
-				 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
+				(ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER,
+				 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
+				(ApogyAddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 }

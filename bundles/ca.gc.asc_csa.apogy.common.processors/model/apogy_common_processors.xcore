@@ -1,14 +1,14 @@
-@GenModel(prefix="Symphony__CommonProcessors",
+@GenModel(prefix="ApogyCommonProcessors",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__CommonProcessors",
+	      modelName="ApogyCommonProcessors",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.processors/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.processors.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.processors/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.processors.edit/src-generated")
 
-package org.eclipse.symphony.common.processors
+package ca.gc.asc_csa.apogy.common.processors
 
 type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
 type Exception wraps Exception

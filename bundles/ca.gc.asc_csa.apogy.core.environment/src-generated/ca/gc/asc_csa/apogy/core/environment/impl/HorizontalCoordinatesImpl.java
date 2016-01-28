@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +18,9 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.HorizontalCoordinatesImpl#getAltitude <em>Altitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.HorizontalCoordinatesImpl#getAzimuth <em>Azimuth</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.HorizontalCoordinatesImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.HorizontalCoordinatesImpl#getAltitude <em>Altitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.HorizontalCoordinatesImpl#getAzimuth <em>Azimuth</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.HorizontalCoordinatesImpl#getRadius <em>Radius</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,7 +100,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES;
+		return ApogyCoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES;
 	}
 
   /**
@@ -123,7 +123,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldAltitude = altitude;
 		altitude = newAltitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE, oldAltitude, altitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE, oldAltitude, altitude));
 	}
 
   /**
@@ -146,7 +146,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldAzimuth = azimuth;
 		azimuth = newAzimuth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH, oldAzimuth, azimuth));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH, oldAzimuth, azimuth));
 	}
 
   /**
@@ -169,7 +169,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -181,11 +181,11 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				return getAltitude();
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				return getAzimuth();
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				setAltitude((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				setAzimuth((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -222,13 +222,13 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				setAltitude(ALTITUDE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				setAzimuth(AZIMUTH_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -244,11 +244,11 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				return altitude != ALTITUDE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				return azimuth != AZIMUTH_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

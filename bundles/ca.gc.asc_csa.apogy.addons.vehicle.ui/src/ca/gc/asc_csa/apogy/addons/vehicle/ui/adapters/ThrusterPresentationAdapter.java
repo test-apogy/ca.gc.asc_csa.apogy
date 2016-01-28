@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.vehicle.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.adapters;
 
 
 
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class ThrusterPresentationAdapter implements NodePresentationAdapter
 {
@@ -32,7 +32,7 @@ public class ThrusterPresentationAdapter implements NodePresentationAdapter
 
 		Thruster thruster = (Thruster) obj;
 		
-		ThrusterPresentation presentationNode = Symphony__AddonsVehicleUIFactory.eINSTANCE.createThrusterPresentation();
+		ThrusterPresentation presentationNode = ApogyAddonsVehicleUIFactory.eINSTANCE.createThrusterPresentation();
 		presentationNode.setNode(thruster);			
 						
 		return presentationNode;

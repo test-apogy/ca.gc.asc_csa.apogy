@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility;
+package ca.gc.asc_csa.apogy.addons.mobility;
 
 
 /**
@@ -13,18 +13,18 @@ package org.eclipse.symphony.addons.mobility;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedRightWheelsVelocity <em>Commanded Right Wheels Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualRightWheelsVelocity <em>Actual Right Wheels Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedLeftWheelsVelocity <em>Commanded Left Wheels Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualLeftWheelsVelocity <em>Actual Left Wheels Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedAngularVelocity <em>Commanded Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualAngularVelocity <em>Actual Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedTranslationVelocity <em>Commanded Translation Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualTranslationVelocity <em>Actual Translation Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getEffectiveSteeringWidth <em>Effective Steering Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedRightWheelsVelocity <em>Commanded Right Wheels Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualRightWheelsVelocity <em>Actual Right Wheels Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedLeftWheelsVelocity <em>Commanded Left Wheels Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualLeftWheelsVelocity <em>Actual Left Wheels Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedAngularVelocity <em>Commanded Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualAngularVelocity <em>Actual Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedTranslationVelocity <em>Commanded Translation Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualTranslationVelocity <em>Actual Translation Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getEffectiveSteeringWidth <em>Effective Steering Width</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Commanded Right Wheels Velocity</em>' attribute.
 	 * @see #setCommandedRightWheelsVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedRightWheelsVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedRightWheelsVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedRightWheelsVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedRightWheelsVelocity <em>Commanded Right Wheels Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedRightWheelsVelocity <em>Commanded Right Wheels Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Commanded Right Wheels Velocity</em>' attribute.
@@ -65,14 +65,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actual Right Wheels Velocity</em>' attribute.
 	 * @see #setActualRightWheelsVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualRightWheelsVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualRightWheelsVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualRightWheelsVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualRightWheelsVelocity <em>Actual Right Wheels Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualRightWheelsVelocity <em>Actual Right Wheels Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Actual Right Wheels Velocity</em>' attribute.
@@ -91,14 +91,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Commanded Left Wheels Velocity</em>' attribute.
 	 * @see #setCommandedLeftWheelsVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedLeftWheelsVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedLeftWheelsVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedLeftWheelsVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedLeftWheelsVelocity <em>Commanded Left Wheels Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedLeftWheelsVelocity <em>Commanded Left Wheels Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Commanded Left Wheels Velocity</em>' attribute.
@@ -117,14 +117,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actual Left Wheels Velocity</em>' attribute.
 	 * @see #setActualLeftWheelsVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualLeftWheelsVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualLeftWheelsVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualLeftWheelsVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualLeftWheelsVelocity <em>Actual Left Wheels Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualLeftWheelsVelocity <em>Actual Left Wheels Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Actual Left Wheels Velocity</em>' attribute.
@@ -143,14 +143,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Commanded Angular Velocity</em>' attribute.
 	 * @see #setCommandedAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedAngularVelocity <em>Commanded Angular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedAngularVelocity <em>Commanded Angular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Commanded Angular Velocity</em>' attribute.
@@ -169,14 +169,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actual Angular Velocity</em>' attribute.
 	 * @see #setActualAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualAngularVelocity <em>Actual Angular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualAngularVelocity <em>Actual Angular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Actual Angular Velocity</em>' attribute.
@@ -195,14 +195,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Commanded Translation Velocity</em>' attribute.
 	 * @see #setCommandedTranslationVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedTranslationVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_CommandedTranslationVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedTranslationVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getCommandedTranslationVelocity <em>Commanded Translation Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getCommandedTranslationVelocity <em>Commanded Translation Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Commanded Translation Velocity</em>' attribute.
@@ -221,14 +221,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actual Translation Velocity</em>' attribute.
 	 * @see #setActualTranslationVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualTranslationVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_ActualTranslationVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualTranslationVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getActualTranslationVelocity <em>Actual Translation Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getActualTranslationVelocity <em>Actual Translation Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Actual Translation Velocity</em>' attribute.
@@ -248,14 +248,14 @@ public interface SkidSteeredMobilePlatform extends MobilePlatform {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Effective Steering Width</em>' attribute.
 	 * @see #setEffectiveSteeringWidth(double)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getSkidSteeredMobilePlatform_EffectiveSteeringWidth()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getSkidSteeredMobilePlatform_EffectiveSteeringWidth()
 	 * @model default="0.5" unique="false"
 	 * @generated
 	 */
 	double getEffectiveSteeringWidth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform#getEffectiveSteeringWidth <em>Effective Steering Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform#getEffectiveSteeringWidth <em>Effective Steering Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Effective Steering Width</em>' attribute.

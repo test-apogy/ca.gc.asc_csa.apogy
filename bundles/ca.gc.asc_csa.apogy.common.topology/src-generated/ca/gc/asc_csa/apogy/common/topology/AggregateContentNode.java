@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.common.topology;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.AggregateContentNode#getAggregateContent <em>Aggregate Content</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.AggregateContentNode#getAggregateContent <em>Aggregate Content</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateContentNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getAggregateContentNode()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface AggregateContentNode<T> extends ContentNode<T> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aggregate Content</em>' containment reference.
 	 * @see #setAggregateContent(Object)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateContentNode_AggregateContent()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getAggregateContentNode_AggregateContent()
 	 * @model kind="reference" containment="true"
 	 * @generated
 	 */
 	T getAggregateContent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.AggregateContentNode#getAggregateContent <em>Aggregate Content</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.AggregateContentNode#getAggregateContent <em>Aggregate Content</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Aggregate Content</em>' containment reference.

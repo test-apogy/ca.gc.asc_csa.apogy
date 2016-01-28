@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -6,15 +6,15 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallsList;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.ui.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
@@ -29,14 +29,14 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	private OperationCall operationCall;
 	
 	/**
-	 * Constructor for NewSymphonySessionWizard.
+	 * Constructor for NewApogySessionWizard.
 	 */
 	public NewOperationCallWizard() {
 		super();
 		setWindowTitle("New Operation Call");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
-				Activator.ID, "icons/wizban/symphony_new_operation_call.png");
+				Activator.ID, "icons/wizban/apogy_new_operation_call.png");
 		setDefaultPageImageDescriptor(image);		
 	}
 
@@ -131,7 +131,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 			AddCommand command = new AddCommand(
 					editingDomain,
 					operationCallsList,
-					Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
 					getOperationCall());
 			editingDomain.getCommandStack().execute(command);			
 		}
@@ -145,9 +145,9 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 * @return List of programs.
 	 */
 	protected ProgramsList getProgramsList(){
-		return Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? 
+		return ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? 
 				null : 
-				Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
+				ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
 	}
 	
 	/** 
@@ -157,7 +157,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 */
 	protected OperationCall getOperationCall(){
 		if (operationCall == null){		
-			operationCall = Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall();
+			operationCall = ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall();
 			operationCall.setName("New Operation Call");
 		}
 		return operationCall;
@@ -169,7 +169,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 */
 	protected VariablesList getVariablesList(){
 		VariablesList variablesList = null;
-		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if (session != null){
 			variablesList = session.getEnvironment() == null ? null : session.getEnvironment().getVariablesList();			
 		}

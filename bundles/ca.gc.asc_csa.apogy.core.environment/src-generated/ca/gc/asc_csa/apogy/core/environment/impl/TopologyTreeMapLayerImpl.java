@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.TopologyTreeMapLayerImpl#getTopologyTreeRoot <em>Topology Tree Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.TopologyTreeMapLayerImpl#getTopologyTreeRoot <em>Topology Tree Root</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER;
 	}
 	
 	/**
@@ -77,7 +77,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 		TopologyTreeMapLayerNode oldTopologyTreeRoot = topologyTreeRoot;
 		topologyTreeRoot = newTopologyTreeRoot;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, oldTopologyTreeRoot, newTopologyTreeRoot);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, oldTopologyTreeRoot, newTopologyTreeRoot);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -93,14 +93,14 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 		if (newTopologyTreeRoot != topologyTreeRoot) {
 			NotificationChain msgs = null;
 			if (topologyTreeRoot != null)
-				msgs = ((InternalEObject)topologyTreeRoot).eInverseRemove(this, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, TopologyTreeMapLayerNode.class, msgs);
+				msgs = ((InternalEObject)topologyTreeRoot).eInverseRemove(this, ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, TopologyTreeMapLayerNode.class, msgs);
 			if (newTopologyTreeRoot != null)
-				msgs = ((InternalEObject)newTopologyTreeRoot).eInverseAdd(this, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, TopologyTreeMapLayerNode.class, msgs);
+				msgs = ((InternalEObject)newTopologyTreeRoot).eInverseAdd(this, ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, TopologyTreeMapLayerNode.class, msgs);
 			msgs = basicSetTopologyTreeRoot(newTopologyTreeRoot, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, newTopologyTreeRoot, newTopologyTreeRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, newTopologyTreeRoot, newTopologyTreeRoot));
 	}
 	
 	/**
@@ -111,9 +111,9 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				if (topologyTreeRoot != null)
-					msgs = ((InternalEObject)topologyTreeRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, null, msgs);
+					msgs = ((InternalEObject)topologyTreeRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, null, msgs);
 				return basicSetTopologyTreeRoot((TopologyTreeMapLayerNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -127,7 +127,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				return basicSetTopologyTreeRoot(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -141,7 +141,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				return getTopologyTreeRoot();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -155,7 +155,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				setTopologyTreeRoot((TopologyTreeMapLayerNode)newValue);
 				return;
 		}
@@ -170,7 +170,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				setTopologyTreeRoot((TopologyTreeMapLayerNode)null);
 				return;
 		}
@@ -185,7 +185,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				return topologyTreeRoot != null;
 		}
 		return super.eIsSet(featureID);
@@ -196,9 +196,9 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 	{		
 		if(getAbstractMapLayerNodeGen() == null)
 		{
-			  abstractMapLayerNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode();	
+			  abstractMapLayerNode = ApogyCoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode();	
 			  
-//			  ReferencedGroupNode referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();			  
+//			  ReferencedGroupNode referencedGroupNode = ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode();			  
 //			  referencedGroupNode.setNodeId(getName());			  
 //			  
 //			  

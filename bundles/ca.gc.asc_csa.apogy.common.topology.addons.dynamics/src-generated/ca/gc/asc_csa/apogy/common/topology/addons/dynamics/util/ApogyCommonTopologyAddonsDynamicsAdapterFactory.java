@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.util;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,28 +10,28 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
-import org.eclipse.symphony.common.topology.addons.dynamics.*;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage
  * @generated
  */
-public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonTopologyAddonsDynamicsAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyAddonsDynamicsPackage modelPackage;
+	protected static ApogyCommonTopologyAddonsDynamicsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -39,9 +39,9 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsAdapterFactory() {
+	public ApogyCommonTopologyAddonsDynamicsAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyAddonsDynamicsPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyAddonsDynamicsPackage.eINSTANCE;
 		}
 	}
 
@@ -70,8 +70,8 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyAddonsDynamicsSwitch<Adapter> modelSwitch =
-		new Symphony__CommonTopologyAddonsDynamicsSwitch<Adapter>() {
+	protected ApogyCommonTopologyAddonsDynamicsSwitch<Adapter> modelSwitch =
+		new ApogyCommonTopologyAddonsDynamicsSwitch<Adapter>() {
 			@Override
 			public Adapter caseDynamicSystemProperties(DynamicSystemProperties object) {
 				return createDynamicSystemPropertiesAdapter();
@@ -173,8 +173,8 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 				return createSphereGeometryAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonTopologyAddonsDynamicsFacade(Symphony__CommonTopologyAddonsDynamicsFacade object) {
-				return createSymphony__CommonTopologyAddonsDynamicsFacadeAdapter();
+			public Adapter caseApogyCommonTopologyAddonsDynamicsFacade(ApogyCommonTopologyAddonsDynamicsFacade object) {
+				return createApogyCommonTopologyAddonsDynamicsFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -209,13 +209,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties <em>Dynamic System Properties</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties <em>Dynamic System Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties
 	 * @generated
 	 */
 	public Adapter createDynamicSystemPropertiesAdapter() {
@@ -223,13 +223,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine <em>Abstract Dynamics Engine</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine <em>Abstract Dynamics Engine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine
 	 * @generated
 	 */
 	public Adapter createAbstractDynamicsEngineAdapter() {
@@ -237,13 +237,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody <em>Physical Body</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody <em>Physical Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody
 	 * @generated
 	 */
 	public Adapter createPhysicalBodyAdapter() {
@@ -251,13 +251,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties <em>Physical Properties</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties <em>Physical Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties
 	 * @generated
 	 */
 	public Adapter createPhysicalPropertiesAdapter() {
@@ -265,13 +265,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties <em>Abstract Physical Body Simulation Properties</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties <em>Abstract Physical Body Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties
 	 * @generated
 	 */
 	public Adapter createAbstractPhysicalBodySimulationPropertiesAdapter() {
@@ -279,13 +279,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties <em>Abstract Constraint Simulation Properties</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraintSimulationProperties <em>Abstract Constraint Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraintSimulationProperties
 	 * @generated
 	 */
 	public Adapter createAbstractConstraintSimulationPropertiesAdapter() {
@@ -293,13 +293,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties <em>Abstract Collision Geometry Simulation Properties</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties <em>Abstract Collision Geometry Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties
 	 * @generated
 	 */
 	public Adapter createAbstractCollisionGeometrySimulationPropertiesAdapter() {
@@ -307,13 +307,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest <em>Point Of Interest</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest <em>Point Of Interest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest
 	 * @generated
 	 */
 	public Adapter createPointOfInterestAdapter() {
@@ -321,13 +321,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState <em>Kinematic State</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState <em>Kinematic State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState
 	 * @generated
 	 */
 	public Adapter createKinematicStateAdapter() {
@@ -335,13 +335,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState <em>Constraint State</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState <em>Constraint State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState
 	 * @generated
 	 */
 	public Adapter createConstraintStateAdapter() {
@@ -349,13 +349,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint <em>Abstract Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint <em>Abstract Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint
 	 * @generated
 	 */
 	public Adapter createAbstractConstraintAdapter() {
@@ -363,13 +363,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint <em>Cylindrical Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint <em>Cylindrical Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint
 	 * @generated
 	 */
 	public Adapter createCylindricalConstraintAdapter() {
@@ -377,13 +377,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint <em>Gear Ratio Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint <em>Gear Ratio Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint
 	 * @generated
 	 */
 	public Adapter createGearRatioConstraintAdapter() {
@@ -391,13 +391,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint <em>Hinge Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint <em>Hinge Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint
 	 * @generated
 	 */
 	public Adapter createHingeConstraintAdapter() {
@@ -405,13 +405,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint <em>Prismatic Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint <em>Prismatic Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint
 	 * @generated
 	 */
 	public Adapter createPrismaticConstraintAdapter() {
@@ -419,13 +419,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint <em>RPRO Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint <em>RPRO Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint
 	 * @generated
 	 */
 	public Adapter createRPROConstraintAdapter() {
@@ -433,13 +433,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint <em>Universal Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint <em>Universal Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint
 	 * @generated
 	 */
 	public Adapter createUniversalConstraintAdapter() {
@@ -447,13 +447,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint <em>Constraint Attachment Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint <em>Constraint Attachment Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint
 	 * @generated
 	 */
 	public Adapter createConstraintAttachmentPointAdapter() {
@@ -461,13 +461,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry <em>Collision Geometry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry <em>Collision Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry
 	 * @generated
 	 */
 	public Adapter createCollisionGeometryAdapter() {
@@ -475,13 +475,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial <em>Abstract Material</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial <em>Abstract Material</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial
 	 * @generated
 	 */
 	public Adapter createAbstractMaterialAdapter() {
@@ -489,13 +489,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.Geometry <em>Geometry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.Geometry <em>Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Geometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.Geometry
 	 * @generated
 	 */
 	public Adapter createGeometryAdapter() {
@@ -503,13 +503,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry <em>Box Geometry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry <em>Box Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry
 	 * @generated
 	 */
 	public Adapter createBoxGeometryAdapter() {
@@ -517,13 +517,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry <em>Capsule Geometry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry <em>Capsule Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry
 	 * @generated
 	 */
 	public Adapter createCapsuleGeometryAdapter() {
@@ -531,13 +531,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry <em>Cylinder Geometry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry <em>Cylinder Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry
 	 * @generated
 	 */
 	public Adapter createCylinderGeometryAdapter() {
@@ -545,13 +545,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry <em>Sphere Geometry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry <em>Sphere Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry
 	 * @generated
 	 */
 	public Adapter createSphereGeometryAdapter() {
@@ -559,27 +559,27 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonTopologyAddonsDynamicsFacadeAdapter() {
+	public Adapter createApogyCommonTopologyAddonsDynamicsFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -587,13 +587,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter() {
@@ -601,13 +601,13 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -626,4 +626,4 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 		return null;
 	}
 
-} //Symphony__CommonTopologyAddonsDynamicsAdapterFactory
+} //ApogyCommonTopologyAddonsDynamicsAdapterFactory

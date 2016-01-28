@@ -3,7 +3,7 @@
  *
  * $Id: CoordinatesSetItemProvider.java,v 1.5.4.2 2015/05/21 15:49:35 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data.provider;
 
 
 import java.util.Collection;
@@ -24,12 +24,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataFactory;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data.CoordinatesSet} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class CoordinatesSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CoordinatesSet_normals_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CoordinatesSet_normals_feature", "_UI_CoordinatesSet_type"),
-				 Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__NORMALS,
+				 ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__NORMALS,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class CoordinatesSetItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS);
+			childrenFeatures.add(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -167,10 +167,10 @@ public class CoordinatesSetItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CoordinatesSet.class)) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET__NORMALS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET__POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,8 +191,8 @@ public class CoordinatesSetItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryDataFactory.eINSTANCE.createCoordinates()));
+				(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 ApogyCommonGeometryDataFactory.eINSTANCE.createCoordinates()));
 	}
 
 	/**

@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.impl.Symphony__CoreFacadeImpl;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.impl.ApogyCoreFacadeImpl;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -18,29 +18,29 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
  * <!-- begin-model-doc -->
  *  -------------------------------------------------------------------------
  * 
- * Symphony Core Facade.
+ * Apogy Core Facade.
  * 
  * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphony__CoreFacade()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyCoreFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreFacade extends EObject {
+public interface ApogyCoreFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model unique="false" symphonySystemUnique="false" relativePoseUnique="false"
+	 * @model unique="false" apogySystemUnique="false" relativePoseUnique="false"
 	 * @generated
 	 */
-  Matrix4x4 computeAbsolutePoseMatrix(SymphonySystem symphonySystem, Matrix4x4 relativePose);
+  Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose);
 
   /**
 	 * @generated_NOT
 	 */
-	public static Symphony__CoreFacade INSTANCE = Symphony__CoreFacadeImpl
+	public static ApogyCoreFacade INSTANCE = ApogyCoreFacadeImpl
 			.getInstance();
 
 	/**
@@ -55,7 +55,7 @@ public interface Symphony__CoreFacade extends EObject {
 	 * @model unique="false" createEnvironmentUnique="false" createProgramsUnique="false" createDataProductsUnique="false" createToolsUnique="false"
 	 * @generated
 	 */
-	InvocatorSession createSymphonySession(boolean createEnvironment,
+	InvocatorSession createApogySession(boolean createEnvironment,
 			boolean createPrograms, boolean createDataProducts,
 			boolean createTools);
 
@@ -63,15 +63,15 @@ public interface Symphony__CoreFacade extends EObject {
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Searches and returns the {@link SymphonySystem} instance based on the specified fullyQualifiedName.
+	 * Searches and returns the {@link ApogySystem} instance based on the specified fullyQualifiedName.
 	 * @param environment Environment from which the search will be performed.
-	 * @param param fullyQualifiedName Fully qualified name that refers the {@link SymphonySystem} instance.
-	 * @return Reference to the {@link SymphonySystem} that matches the fully qualified name or null if not found.
+	 * @param param fullyQualifiedName Fully qualified name that refers the {@link ApogySystem} instance.
+	 * @return Reference to the {@link ApogySystem} that matches the fully qualified name or null if not found.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" environmentUnique="false" fullyQualifiedNameUnique="false"
 	 * @generated
 	 */
-  SymphonySystem getSymphonySystem(Environment environment, String fullyQualifiedName);
+  ApogySystem getApogySystem(Environment environment, String fullyQualifiedName);
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public interface Symphony__CoreFacade extends EObject {
 	 * @return The list of loaded FeatureOfInterest.
 	 * @throws An Exception if the file could not be loaded.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.List<org.eclipse.symphony.core.FeatureOfInterest>" unique="false" many="false" exceptions="org.eclipse.symphony.core.Exception" urlUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.List<ca.gc.asc_csa.apogy.core.FeatureOfInterest>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.Exception" urlUnique="false"
 	 * @generated
 	 */
 	List<FeatureOfInterest> loadFeatureOfInterestFromFile(String url) throws Exception;
@@ -96,9 +96,9 @@ public interface Symphony__CoreFacade extends EObject {
 	 * @param foiList The list of FeatureOfInterest.
 	 * @throws An Exception if the file could not be saved.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.core.Exception" pathUnique="false" foiListDataType="org.eclipse.symphony.core.List<org.eclipse.symphony.core.FeatureOfInterest>" foiListUnique="false" foiListMany="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.core.Exception" pathUnique="false" foiListDataType="ca.gc.asc_csa.apogy.core.List<ca.gc.asc_csa.apogy.core.FeatureOfInterest>" foiListUnique="false" foiListMany="false"
 	 * @generated
 	 */
 	void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception;
 
-} // Symphony__CoreFacade
+} // ApogyCoreFacade

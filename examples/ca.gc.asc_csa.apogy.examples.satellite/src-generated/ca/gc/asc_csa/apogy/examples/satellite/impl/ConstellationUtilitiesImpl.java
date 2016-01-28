@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.examples.satellite.AbstractConstellationRequest;
-import org.eclipse.symphony.examples.satellite.ConstellationUtilities;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class ConstellationUtilitiesImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_UTILITIES;
+		return ApogyExamplesSatellitePackage.Literals.CONSTELLATION_UTILITIES;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class ConstellationUtilitiesImpl extends MinimalEObjectImpl.Container imp
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST:
 				return sortByPriority((List<AbstractConstellationRequest>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

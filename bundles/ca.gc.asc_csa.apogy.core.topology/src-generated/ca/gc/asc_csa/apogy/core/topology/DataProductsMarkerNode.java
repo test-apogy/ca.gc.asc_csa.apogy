@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology;
+package ca.gc.asc_csa.apogy.core.topology;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.PositionedResult;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,12 +14,12 @@ import org.eclipse.symphony.core.PositionedResult;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.topology.DataProductsMarkerNode#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.DataProductsMarkerNode#getResult <em>Result</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.DataProductsMarkerNode#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.DataProductsMarkerNode#getResult <em>Result</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getDataProductsMarkerNode()
+ * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getDataProductsMarkerNode()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface DataProductsMarkerNode extends Node
    * <!-- end-user-doc -->
    * @return the value of the '<em>Visible</em>' attribute.
    * @see #setVisible(boolean)
-   * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getDataProductsMarkerNode_Visible()
+   * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getDataProductsMarkerNode_Visible()
    * @model unique="false"
    * @generated
    */
   boolean isVisible();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.topology.DataProductsMarkerNode#isVisible <em>Visible</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.DataProductsMarkerNode#isVisible <em>Visible</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Visible</em>' attribute.
@@ -61,14 +61,14 @@ public interface DataProductsMarkerNode extends Node
    * <!-- end-user-doc -->
    * @return the value of the '<em>Result</em>' reference.
    * @see #setResult(PositionedResult)
-   * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getDataProductsMarkerNode_Result()
+   * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getDataProductsMarkerNode_Result()
    * @model
    * @generated
    */
   PositionedResult getResult();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.topology.DataProductsMarkerNode#getResult <em>Result</em>}' reference.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.DataProductsMarkerNode#getResult <em>Result</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Result</em>' reference.

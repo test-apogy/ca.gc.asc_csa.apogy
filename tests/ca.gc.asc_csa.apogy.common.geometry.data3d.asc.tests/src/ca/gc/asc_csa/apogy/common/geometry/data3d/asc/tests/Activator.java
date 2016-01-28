@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.asc.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,7 +18,7 @@ import org.eclipse.core.runtime.Plugin;
 public class Activator extends Plugin 
 {
 	// The plug-in ID
-	public static final String PLUGIN_ID = " org.eclipse.symphony.common.geometry.data3d.asc.tests";
+	public static final String PLUGIN_ID = " ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests";
 	
 	// Folder where the tests inputs files are.
 	public static final String DATA_FOLDER = "data";

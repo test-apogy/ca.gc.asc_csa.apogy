@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage
  * @generated
  */
-public interface Symphony__AddonsSensorsFOVUIFactory extends EFactory {
+public interface ApogyAddonsSensorsFOVUIFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVUIFactory eINSTANCE = org.eclipse.symphony.addons.sensors.fov.ui.impl.Symphony__AddonsSensorsFOVUIFactoryImpl.init();
+	ApogyAddonsSensorsFOVUIFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl.ApogyAddonsSensorsFOVUIFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Field Of View Presentation</em>'.
@@ -65,6 +65,6 @@ public interface Symphony__AddonsSensorsFOVUIFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVUIPackage getSymphony__AddonsSensorsFOVUIPackage();
+	ApogyAddonsSensorsFOVUIPackage getApogyAddonsSensorsFOVUIPackage();
 
-} //Symphony__AddonsSensorsFOVUIFactory
+} //ApogyAddonsSensorsFOVUIFactory

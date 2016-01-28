@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.ui.util;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.telecoms.ui.*;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.*;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIPackage
  * @generated
  */
-public class Symphony__AddonsTelecomsUISwitch<T> extends Switch<T> {
+public class ApogyAddonsTelecomsUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsTelecomsUIPackage modelPackage;
+	protected static ApogyAddonsTelecomsUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class Symphony__AddonsTelecomsUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsUISwitch() {
+	public ApogyAddonsTelecomsUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsTelecomsUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsTelecomsUIPackage.eINSTANCE;
 		}
 	}
 
@@ -66,7 +66,7 @@ public class Symphony__AddonsTelecomsUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsTelecomsUIPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION: {
+			case ApogyAddonsTelecomsUIPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION: {
 				AbstractAntennaRadiationPatternPresentation abstractAntennaRadiationPatternPresentation = (AbstractAntennaRadiationPatternPresentation)theEObject;
 				T result = caseAbstractAntennaRadiationPatternPresentation(abstractAntennaRadiationPatternPresentation);
 				if (result == null) result = caseNodePresentation(abstractAntennaRadiationPatternPresentation);
@@ -123,4 +123,4 @@ public class Symphony__AddonsTelecomsUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsTelecomsUISwitch
+} //ApogyAddonsTelecomsUISwitch

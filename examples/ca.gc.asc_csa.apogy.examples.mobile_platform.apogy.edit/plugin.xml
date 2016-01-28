@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_mobile_platform -->
+      <!-- @generated apogy_examples_mobile_platform -->
       <factory
-            uri="org.eclipse.symphony.examples.mobile_platform.symphony"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,16 +21,16 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_mobile_platform_symphony -->
+      <!-- @generated apogy_examples_mobile_platform_apogy -->
       <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core.environment.ui"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory$Symphony__CoreEnvironmentUIChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.environment.ui"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory$ApogyCoreEnvironmentUIChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

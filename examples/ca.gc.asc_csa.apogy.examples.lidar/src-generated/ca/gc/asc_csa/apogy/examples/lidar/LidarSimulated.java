@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar;
+package ca.gc.asc_csa.apogy.examples.lidar;
 
 
 /**
@@ -18,7 +18,7 @@ package org.eclipse.symphony.examples.lidar;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidarSimulated()
+ * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage#getLidarSimulated()
  * @model
  * @generated
  */

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Collection;
 
@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.TreeRootNode;
-import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.FeatureRootsListImpl#getFeatureRoots <em>Feature Roots</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.FeatureRootsListImpl#getFeatureRoots <em>Feature Roots</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,7 +59,7 @@ public class FeatureRootsListImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST;
+		return ApogyCommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class FeatureRootsListImpl extends MinimalEObjectImpl.Container implement
   public EList<TreeRootNode> getFeatureRoots()
   {
 		if (featureRoots == null) {
-			featureRoots = new EObjectContainmentEList<TreeRootNode>(TreeRootNode.class, this, Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS);
+			featureRoots = new EObjectContainmentEList<TreeRootNode>(TreeRootNode.class, this, ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS);
 		}
 		return featureRoots;
 	}
@@ -84,7 +84,7 @@ public class FeatureRootsListImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				return ((InternalEList<?>)getFeatureRoots()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class FeatureRootsListImpl extends MinimalEObjectImpl.Container implement
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				return getFeatureRoots();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class FeatureRootsListImpl extends MinimalEObjectImpl.Container implement
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				getFeatureRoots().clear();
 				getFeatureRoots().addAll((Collection<? extends TreeRootNode>)newValue);
 				return;
@@ -132,7 +132,7 @@ public class FeatureRootsListImpl extends MinimalEObjectImpl.Container implement
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				getFeatureRoots().clear();
 				return;
 		}
@@ -148,7 +148,7 @@ public class FeatureRootsListImpl extends MinimalEObjectImpl.Container implement
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
+			case ApogyCommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				return featureRoots != null && !featureRoots.isEmpty();
 		}
 		return super.eIsSet(featureID);

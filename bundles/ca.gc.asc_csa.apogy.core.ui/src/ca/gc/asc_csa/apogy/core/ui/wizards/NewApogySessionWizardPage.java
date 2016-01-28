@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.wizards;
+package ca.gc.asc_csa.apogy.core.ui.wizards;
 
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.notify.Adapter;
@@ -8,33 +8,33 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
-import org.eclipse.symphony.core.ui.composites.NewSymphonySessionComposite;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
+import ca.gc.asc_csa.apogy.core.ui.composites.NewApogySessionComposite;
 
-public class NewSymphonySessionWizardPage extends WizardPage {
+public class NewApogySessionWizardPage extends WizardPage {
 
-	private NewSymphonySessionSettings sessionSettings;
+	private NewApogySessionSettings sessionSettings;
 	private Adapter sessionSettingsAdapter;
-	private SymphonyResourceSettings symphonyResourceSettings;
+	private ApogyResourceSettings apogyResourceSettings;
 	private boolean dataInitialized = false;
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.ui.wizards.NewSymphonySessionWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.ui.wizards.NewApogySessionWizardPage";
 
 	/**
 	 * Constructor for SampleNewWizardPage.
 	 * 
 	 * @param pageName
 	 */
-	public NewSymphonySessionWizardPage(
-			NewSymphonySessionSettings sessionSettings,
-			SymphonyResourceSettings symphonyResourceSettings) {
+	public NewApogySessionWizardPage(
+			NewApogySessionSettings sessionSettings,
+			ApogyResourceSettings apogyResourceSettings) {
 		super(WIZARD_PAGE_ID);
-		setTitle("New Symphony Session");
-		setDescription("This wizard creates a new Symphony Session File with *.sym extension.");
+		setTitle("New Apogy Session");
+		setDescription("This wizard creates a new Apogy Session File with *.sym extension.");
 		this.sessionSettings = sessionSettings;
 		sessionSettings.eAdapters().add(getSessionSettingsAdapter());
-		this.symphonyResourceSettings = symphonyResourceSettings;
-		sessionSettings.setDefaultValues(symphonyResourceSettings.getResourceContainer());
+		this.apogyResourceSettings = apogyResourceSettings;
+		sessionSettings.setDefaultValues(apogyResourceSettings.getResourceContainer());
 
 		String message = validate();
 		setErrorMessage(message);
@@ -45,9 +45,9 @@ public class NewSymphonySessionWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
-		NewSymphonySessionComposite sessionComposite = new NewSymphonySessionComposite(
+		NewApogySessionComposite sessionComposite = new NewApogySessionComposite(
 				parent, SWT.NONE, sessionSettings);
-		sessionComposite.setNewSymphonySessionSettings(sessionSettings);
+		sessionComposite.setNewApogySessionSettings(sessionSettings);
 		setControl(sessionComposite);
 	}
 
@@ -77,18 +77,18 @@ public class NewSymphonySessionWizardPage extends WizardPage {
 		
 		if (visible && !dataInitialized){
 			dataInitialized = true;			
-			sessionSettings.setDefaultValues(symphonyResourceSettings.getResourceContainer());
+			sessionSettings.setDefaultValues(apogyResourceSettings.getResourceContainer());
 		}
 	}
 	
 	private String validate() {
-		if (symphonyResourceSettings.getResourceContainer() != null) {
+		if (apogyResourceSettings.getResourceContainer() != null) {
 			
 			if (sessionSettings.getFilename() == null || sessionSettings.getFilename().isEmpty()) {
 				return "File name must be specified";
 			}
 			
-			if (symphonyResourceSettings.getResourceContainer().getFile(new Path(sessionSettings.getFilename())).exists()){
+			if (apogyResourceSettings.getResourceContainer().getFile(new Path(sessionSettings.getFilename())).exists()){
 				return "File name already used";
 			}
 

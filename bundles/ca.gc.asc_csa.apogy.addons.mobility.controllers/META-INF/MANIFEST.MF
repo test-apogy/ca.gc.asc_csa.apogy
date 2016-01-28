@@ -1,30 +1,30 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.mobility.controllers;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.mobility.controllers;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.symphony.addons.mobility.controllers,
- org.eclipse.symphony.addons.mobility.controllers.impl,
- org.eclipse.symphony.addons.mobility.controllers.util
-Require-Bundle: org.eclipse.symphony.addons.mobility;visibility:=reexport,
- org.eclipse.symphony.addons.geometry.paths;visibility:=reexport,
- org.eclipse.symphony.addons.sensors.pose;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.addons.sensors;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
+Export-Package: ca.gc.asc_csa.apogy.addons.mobility.controllers,
+ ca.gc.asc_csa.apogy.addons.mobility.controllers.impl,
+ ca.gc.asc_csa.apogy.addons.mobility.controllers.util
+Require-Bundle: ca.gc.asc_csa.apogy.addons.mobility;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.geometry.paths;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors.pose;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
  org.eclipse.core.runtime;bundle-version="3.4.0",
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
  javax.media;bundle-version="1.5.2";visibility:=reexport,
- org.eclipse.symphony.common.log;bundle-version="0.3.0",
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
  org.eclipse.xtend.lib;bundle-version="2.7.3"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.addons.mobility.controllers.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.mobility.controllers.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

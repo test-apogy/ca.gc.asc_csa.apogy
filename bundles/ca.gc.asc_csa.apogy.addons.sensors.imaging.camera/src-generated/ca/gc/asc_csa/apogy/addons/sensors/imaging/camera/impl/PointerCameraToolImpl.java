@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.DecimalFormat;
@@ -21,38 +21,38 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.core.AbsolutePoseProvider;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,10 +62,10 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureRefe
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getPoseTransform <em>Pose Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getVectorColor <em>Vector Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getIntersectionDistance <em>Intersection Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getPoseTransform <em>Pose Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getVectorColor <em>Vector Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getIntersectionDistance <em>Intersection Distance</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,7 +75,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	private AbstractVariableFeatureReferenceListener abstractVariableFeatureReferenceListener = null;
 
 	
-	private org.eclipse.symphony.common.topology.addons.primitives.PickVector vector;
+	private ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector vector;
 	private TransformNode vectorTransformNode = null;	
 	private ImageSnapshot imageSnapshot;	
 	private DecimalFormat distanceFormat = new DecimalFormat("0.00");	
@@ -110,7 +110,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f VECTOR_COLOR_EDEFAULT = (Color3f)Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFromString(Symphony__AddonsSensorsImagingCameraPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f VECTOR_COLOR_EDEFAULT = (Color3f)ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createFromString(ApogyAddonsSensorsImagingCameraPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 
 	/**
 	 * The cached value of the '{@link #getVectorColor() <em>Vector Color</em>}' attribute.
@@ -159,7 +159,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL;
 	}
 
 	/**
@@ -180,7 +180,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		Matrix4x4 oldPoseTransform = poseTransform;
 		poseTransform = newPoseTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -195,14 +195,14 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		if (newPoseTransform != poseTransform) {
 			NotificationChain msgs = null;
 			if (poseTransform != null)
-				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, null, msgs);
 			if (newPoseTransform != null)
-				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, null, msgs);
 			msgs = basicSetPoseTransform(newPoseTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 			fov = (RectangularFrustrumFieldOfView)eResolveProxy(oldFov);
 			if (fov != oldFov) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV, oldFov, fov));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV, oldFov, fov));
 			}
 		}
 		return fov;
@@ -267,7 +267,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		RectangularFrustrumFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV, oldFov, fov));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV, oldFov, fov));
 	}
 
 	/**
@@ -318,7 +318,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		Color3f oldVectorColor = vectorColor;
 		vectorColor = newVectorColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR, oldVectorColor, vectorColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR, oldVectorColor, vectorColor));
 	}
 
 	/**
@@ -339,7 +339,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		double oldIntersectionDistance = intersectionDistance;
 		intersectionDistance = newIntersectionDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE, oldIntersectionDistance, intersectionDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE, oldIntersectionDistance, intersectionDistance));
 	}
 
 	@Override
@@ -374,7 +374,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
 				return basicSetPoseTransform(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -388,14 +388,14 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
 				return getPoseTransform();
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
 				if (resolve) return getFov();
 				return basicGetFov();
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
 				return getVectorColor();
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
 				return getIntersectionDistance();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -409,16 +409,16 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
 				setFov((RectangularFrustrumFieldOfView)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
 				setVectorColor((Color3f)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
 				setIntersectionDistance((Double)newValue);
 				return;
 		}
@@ -433,16 +433,16 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)null);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
 				setFov((RectangularFrustrumFieldOfView)null);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
 				setVectorColor(VECTOR_COLOR_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
 				setIntersectionDistance(INTERSECTION_DISTANCE_EDEFAULT);
 				return;
 		}
@@ -457,13 +457,13 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
 				return poseTransform != null;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__FOV:
 				return fov != null;
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
 				return VECTOR_COLOR_EDEFAULT == null ? vectorColor != null : !VECTOR_COLOR_EDEFAULT.equals(vectorColor);
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
 				return intersectionDistance != INTERSECTION_DISTANCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -483,7 +483,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		}
 		if (baseClass == PoseProvider.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM: return Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM;
+				case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM: return ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -509,7 +509,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		}
 		if (baseClass == PoseProvider.class) {
 			switch (baseFeatureID) {
-				case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM: return Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM;
+				case ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM: return ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -530,7 +530,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ToolTipTextProvider.class) {
 			switch (baseOperationID) {
-				case Symphony__AddonsSensorsImagingCameraPackage.TOOL_TIP_TEXT_PROVIDER___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT: return Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT;
+				case ApogyAddonsSensorsImagingCameraPackage.TOOL_TIP_TEXT_PROVIDER___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT: return ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT;
 				default: return -1;
 			}
 		}
@@ -555,7 +555,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT:
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT:
 				return getToolTipText((AbstractCamera)arguments.get(0), (ImageSnapshot)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -637,7 +637,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	
 	protected void updateVectorColor(Color3f color)
 	{
-		NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());
+		NodePresentation nodePresentation = ca.gc.asc_csa.apogy.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());
 		if(nodePresentation != null)
 		{
 			nodePresentation.setColor(convert(color));
@@ -647,7 +647,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	protected void updateVectorVisibility(boolean visible)
 	{
 		// Sets the visibility of the Vector.
-		NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());				
+		NodePresentation nodePresentation = ca.gc.asc_csa.apogy.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());				
 		if(nodePresentation != null)
 		{
 			nodePresentation.setVisible(visible);
@@ -676,7 +676,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 			rotation.mul(yRot);
 			
 			// Updates rotation matrix.
-			getVectorTransformNode().setRotationMatrix(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotation));
+			getVectorTransformNode().setRotationMatrix(ApogyCommonMathFacade.INSTANCE.createMatrix3x3(rotation));
 			
 			// Force update of vector.
 			vector.setLength(100);
@@ -687,7 +687,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 				Matrix4d m = new Matrix4d();
 				m.setIdentity();
 				m.set(new Vector3d(vector.getAbsoluteIntersectionPosition()));	
-				Matrix4x4 pose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
+				Matrix4x4 pose = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m);
 				setPoseTransform(pose);			
 			}
 			else
@@ -709,7 +709,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		else
 		{
 			RectangularFrustrumFieldOfView fov = null;					
-			List<AbstractTopologyBinding> bindings = org.eclipse.symphony.common.topology.bindings.Activator.getBindedBindings();
+			List<AbstractTopologyBinding> bindings = ca.gc.asc_csa.apogy.common.topology.bindings.Activator.getBindedBindings();
 			Iterator<AbstractTopologyBinding> it = bindings.iterator();
 			 		
 			/*
@@ -752,21 +752,21 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 			Vector3d position = new Vector3d(0,0,0.01);
 			m.set(position);
 			
-			vectorTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(m);
+			vectorTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNode(m);
 			vectorTransformNode.setDescription("PointerCamera Vector Transform");						
 			vectorTransformNode.getChildren().add(getVector());
 		}
 		return vectorTransformNode;
 	}
 	
-	protected org.eclipse.symphony.common.topology.addons.primitives.PickVector getVector()
+	protected ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector getVector()
 	{
 		if(vector == null)
 		{
 			// Creates a vector of length 100 along the Z axis.
-			vector =  Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector();
-			vector.getNodeTypesInIntersection().add(Symphony__CommonGeometryData3DPackage.eINSTANCE.getCartesianCoordinatesMesh());
-			vector.getNodeTypesInIntersection().add(Symphony__CommonTopologyPackage.eINSTANCE.getContentNode());
+			vector =  ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector();
+			vector.getNodeTypesInIntersection().add(ApogyCommonGeometryData3DPackage.eINSTANCE.getCartesianCoordinatesMesh());
+			vector.getNodeTypesInIntersection().add(ApogyCommonTopologyPackage.eINSTANCE.getContentNode());
 			
 			vector.setLength(100);
 			vector.setXRotation(0);
@@ -774,7 +774,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 			vector.setZRotation(0);				
 			
 			// Exclude RectangularFrustrumFieldOfView from selected objects.
-			vector.getNodeTypesToExcludeFromIntersection().add(Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW);
+			vector.getNodeTypesToExcludeFromIntersection().add(ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW);
 			
 			
 			// Updates the Vector color.

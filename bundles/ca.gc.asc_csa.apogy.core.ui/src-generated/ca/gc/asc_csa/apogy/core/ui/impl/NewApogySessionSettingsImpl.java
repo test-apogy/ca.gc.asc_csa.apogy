@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.impl;
+package ca.gc.asc_csa.apogy.core.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,29 +11,29 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>New Symphony Session Settings</b></em>'.
+ * An implementation of the model object '<em><b>New Apogy Session Settings</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#getFolder <em>Folder</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#getFilename <em>Filename</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#isCreateEnvironment <em>Create Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#isCreatePrograms <em>Create Programs</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#isCreateDataProducts <em>Create Data Products</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#isCreateTools <em>Create Tools</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl#getFolder <em>Folder</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl#getFilename <em>Filename</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl#isCreateEnvironment <em>Create Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl#isCreatePrograms <em>Create Programs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl#isCreateDataProducts <em>Create Data Products</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySessionSettingsImpl#isCreateTools <em>Create Tools</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container implements NewSymphonySessionSettings
+public class NewApogySessionSettingsImpl extends MinimalEObjectImpl.Container implements NewApogySessionSettings
 {
   /**
 	 * The default value of the '{@link #getFolder() <em>Folder</em>}' attribute.
@@ -160,7 +160,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected NewSymphonySessionSettingsImpl()
+  protected NewApogySessionSettingsImpl()
   {
 		super();
 	}
@@ -173,7 +173,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS;
+		return ApogyCoreUIPackage.Literals.NEW_APOGY_SESSION_SETTINGS;
 	}
 
   /**
@@ -196,7 +196,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		String oldFolder = folder;
 		folder = newFolder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER, oldFolder, folder));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FOLDER, oldFolder, folder));
 	}
 
   /**
@@ -219,7 +219,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		String oldFilename = filename;
 		filename = newFilename;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME, oldFilename, filename));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FILENAME, oldFilename, filename));
 	}
 
   /**
@@ -242,7 +242,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreateEnvironment = createEnvironment;
 		createEnvironment = newCreateEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT, oldCreateEnvironment, createEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT, oldCreateEnvironment, createEnvironment));
 	}
 
   /**
@@ -265,7 +265,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreatePrograms = createPrograms;
 		createPrograms = newCreatePrograms;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS, oldCreatePrograms, createPrograms));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS, oldCreatePrograms, createPrograms));
 	}
 
   /**
@@ -288,7 +288,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreateDataProducts = createDataProducts;
 		createDataProducts = newCreateDataProducts;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS, oldCreateDataProducts, createDataProducts));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS, oldCreateDataProducts, createDataProducts));
 	}
 
   /**
@@ -311,7 +311,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreateTools = createTools;
 		createTools = newCreateTools;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS, oldCreateTools, createTools));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS, oldCreateTools, createTools));
 	}
 
   /**
@@ -321,8 +321,8 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 	 */
 	public String getDefaultFilename(IContainer resourceContainer) {
 		// Make up a unique new name here.
-		String defaultModelBaseFilename = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonySessionFilename();
-		String defaultModelFilenameExtension = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonySessionFilenameExtension();
+		String defaultModelBaseFilename = ApogyCoreUIFacade.INSTANCE.getDefaultApogySessionFilename();
+		String defaultModelFilenameExtension = ApogyCoreUIFacade.INSTANCE.getDefaultApogySessionFilenameExtension();
 
 		String modelFilename = defaultModelBaseFilename + "."
 				+ defaultModelFilenameExtension;
@@ -351,17 +351,17 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FOLDER:
 				return getFolder();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FILENAME:
 				return getFilename();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				return isCreateEnvironment();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				return isCreatePrograms();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				return isCreateDataProducts();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS:
 				return isCreateTools();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -376,22 +376,22 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FOLDER:
 				setFolder((String)newValue);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FILENAME:
 				setFilename((String)newValue);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				setCreateEnvironment((Boolean)newValue);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				setCreatePrograms((Boolean)newValue);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				setCreateDataProducts((Boolean)newValue);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS:
 				setCreateTools((Boolean)newValue);
 				return;
 		}
@@ -407,22 +407,22 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FOLDER:
 				setFolder(FOLDER_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FILENAME:
 				setFilename(FILENAME_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				setCreateEnvironment(CREATE_ENVIRONMENT_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				setCreatePrograms(CREATE_PROGRAMS_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				setCreateDataProducts(CREATE_DATA_PRODUCTS_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS:
 				setCreateTools(CREATE_TOOLS_EDEFAULT);
 				return;
 		}
@@ -438,17 +438,17 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FOLDER:
 				return FOLDER_EDEFAULT == null ? folder != null : !FOLDER_EDEFAULT.equals(folder);
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FILENAME:
 				return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				return createEnvironment != CREATE_ENVIRONMENT_EDEFAULT;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				return createPrograms != CREATE_PROGRAMS_EDEFAULT;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				return createDataProducts != CREATE_DATA_PRODUCTS_EDEFAULT;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS:
 				return createTools != CREATE_TOOLS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -462,9 +462,9 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER:
 				return getDefaultFilename((IContainer)arguments.get(0));
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER:
 				setDefaultValues((IContainer)arguments.get(0));
 				return null;
 		}
@@ -498,4 +498,4 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		return result.toString();
 	}
 
-} //NewSymphonySessionSettingsImpl
+} //NewApogySessionSettingsImpl

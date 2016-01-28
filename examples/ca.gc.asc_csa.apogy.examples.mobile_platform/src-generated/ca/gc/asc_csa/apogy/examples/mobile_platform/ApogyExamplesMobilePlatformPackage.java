@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformFactory
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesMobilePlatform' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='Symphony__ExamplesMobilePlatform' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.mobile_platform/src-generated' editDirectory='/org.eclipse.symphony.examples.mobile_platform.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesMobilePlatform' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='ApogyExamplesMobilePlatform' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.mobile_platform/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.mobile_platform.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
+public interface ApogyExamplesMobilePlatformPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -43,7 +43,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.mobile_platform";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.mobile_platform";
 
   /**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesMobilePlatformPackage eINSTANCE = org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl.init();
+  ApogyExamplesMobilePlatformPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl <em>Position</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.PositionImpl <em>Position</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.PositionImpl
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getPosition()
 	 * @generated
 	 */
   int POSITION = 0;
@@ -117,11 +117,11 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
   int POSITION_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.NamedPositionImpl <em>Named Position</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.NamedPositionImpl <em>Named Position</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.NamedPositionImpl
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getNamedPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.NamedPositionImpl
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getNamedPosition()
 	 * @generated
 	 */
   int NAMED_POSITION = 1;
@@ -181,11 +181,11 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
   int NAMED_POSITION_OPERATION_COUNT = POSITION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl <em>Mobile Platform</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl <em>Mobile Platform</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getMobilePlatform()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getMobilePlatform()
 	 * @generated
 	 */
   int MOBILE_PLATFORM = 2;
@@ -197,7 +197,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__INITIALIZED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
+	int MOBILE_PLATFORM__INITIALIZED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -206,7 +206,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__DISPOSED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
+	int MOBILE_PLATFORM__DISPOSED = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Position Error</b></em>' attribute.
@@ -215,7 +215,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__POSITION_ERROR = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
+  int MOBILE_PLATFORM__POSITION_ERROR = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Linear Velocity</b></em>' attribute.
@@ -224,7 +224,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__LINEAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
+	int MOBILE_PLATFORM__LINEAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Angular Velocity</b></em>' attribute.
@@ -233,7 +233,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__ANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
+	int MOBILE_PLATFORM__ANGULAR_VELOCITY = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Left Wheel Position</b></em>' attribute.
@@ -242,7 +242,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__LEFT_WHEEL_POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
+  int MOBILE_PLATFORM__LEFT_WHEEL_POSITION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
 
   /**
 	 * The feature id for the '<em><b>Right Wheel Position</b></em>' attribute.
@@ -251,7 +251,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__RIGHT_WHEEL_POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
+  int MOBILE_PLATFORM__RIGHT_WHEEL_POSITION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
 
   /**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -260,7 +260,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
+  int MOBILE_PLATFORM__POSITION = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
 
 		/**
 	 * The number of structural features of the '<em>Mobile Platform</em>' class.
@@ -269,7 +269,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM_FEATURE_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
+  int MOBILE_PLATFORM_FEATURE_COUNT = ApogyCommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -278,7 +278,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM___DISPOSE = Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE;
+  int MOBILE_PLATFORM___DISPOSE = ApogyCommonEMFPackage.DISPOSABLE___DISPOSE;
 
   /**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -287,7 +287,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM___INIT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
+  int MOBILE_PLATFORM___INIT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Reset Position</em>' operation.
@@ -296,7 +296,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___RESET_POSITION__POSITION = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
+	int MOBILE_PLATFORM___RESET_POSITION__POSITION = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Clear Position Error</em>' operation.
@@ -305,7 +305,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CLEAR_POSITION_ERROR = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
+	int MOBILE_PLATFORM___CLEAR_POSITION_ERROR = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Stop</em>' operation.
@@ -314,7 +314,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM___STOP = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
+  int MOBILE_PLATFORM___STOP = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
 
   /**
 	 * The operation id for the '<em>Move To</em>' operation.
@@ -323,7 +323,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___MOVE_TO__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
+	int MOBILE_PLATFORM___MOVE_TO__DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
 
 		/**
 	 * The operation id for the '<em>Cmd Linear Velocity</em>' operation.
@@ -332,7 +332,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CMD_LINEAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 5;
+	int MOBILE_PLATFORM___CMD_LINEAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 5;
 
 		/**
 	 * The operation id for the '<em>Cmd Angular Velocity</em>' operation.
@@ -341,7 +341,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CMD_ANGULAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 6;
+	int MOBILE_PLATFORM___CMD_ANGULAR_VELOCITY__DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 6;
 
 		/**
 	 * The operation id for the '<em>Cmd Velocities</em>' operation.
@@ -350,7 +350,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CMD_VELOCITIES__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 7;
+	int MOBILE_PLATFORM___CMD_VELOCITIES__DOUBLE_DOUBLE = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 7;
 
 		/**
 	 * The number of operations of the '<em>Mobile Platform</em>' class.
@@ -359,14 +359,14 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM_OPERATION_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 8;
+  int MOBILE_PLATFORM_OPERATION_COUNT = ApogyCommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 8;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformStubImpl <em>Mobile Platform Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformStubImpl <em>Mobile Platform Stub</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformStubImpl
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getMobilePlatformStub()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getMobilePlatformStub()
 	 * @generated
 	 */
   int MOBILE_PLATFORM_STUB = 3;
@@ -543,11 +543,11 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
   int MOBILE_PLATFORM_STUB_OPERATION_COUNT = MOBILE_PLATFORM_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformSimulatedImpl <em>Mobile Platform Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformSimulatedImpl <em>Mobile Platform Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformSimulatedImpl
-	 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getMobilePlatformSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getMobilePlatformSimulated()
 	 * @generated
 	 */
 	int MOBILE_PLATFORM_SIMULATED = 4;
@@ -724,263 +724,263 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	int MOBILE_PLATFORM_SIMULATED_OPERATION_COUNT = MOBILE_PLATFORM_OPERATION_COUNT + 0;
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.mobile_platform.Position <em>Position</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Position</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.Position
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.Position
 	 * @generated
 	 */
   EClass getPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.Position#getX <em>X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getX <em>X</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.Position#getX()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getX()
 	 * @see #getPosition()
 	 * @generated
 	 */
   EAttribute getPosition_X();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.Position#getY <em>Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getY <em>Y</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.Position#getY()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getY()
 	 * @see #getPosition()
 	 * @generated
 	 */
   EAttribute getPosition_Y();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.Position#getTheta <em>Theta</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getTheta <em>Theta</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Theta</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.Position#getTheta()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getTheta()
 	 * @see #getPosition()
 	 * @generated
 	 */
   EAttribute getPosition_Theta();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.mobile_platform.NamedPosition <em>Named Position</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition <em>Named Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Named Position</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.NamedPosition
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition
 	 * @generated
 	 */
   EClass getNamedPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.NamedPosition#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.NamedPosition#getName()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition#getName()
 	 * @see #getNamedPosition()
 	 * @generated
 	 */
   EAttribute getNamedPosition_Name();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform <em>Mobile Platform</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform <em>Mobile Platform</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mobile Platform</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform
 	 * @generated
 	 */
   EClass getMobilePlatform();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isInitialized()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
 	EAttribute getMobilePlatform_Initialized();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isDisposed <em>Disposed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isDisposed <em>Disposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Disposed</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isDisposed()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#isDisposed()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
 	EAttribute getMobilePlatform_Disposed();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPosition <em>Position</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPosition <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Position</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPosition()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
   EReference getMobilePlatform_Position();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPositionError <em>Position Error</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPositionError <em>Position Error</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Position Error</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPositionError()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getPositionError()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
   EAttribute getMobilePlatform_PositionError();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLinearVelocity <em>Linear Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLinearVelocity <em>Linear Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Linear Velocity</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLinearVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLinearVelocity()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
 	EAttribute getMobilePlatform_LinearVelocity();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getAngularVelocity <em>Angular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getAngularVelocity <em>Angular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Angular Velocity</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getAngularVelocity()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
 	EAttribute getMobilePlatform_AngularVelocity();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLeftWheelPosition <em>Left Wheel Position</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLeftWheelPosition <em>Left Wheel Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Left Wheel Position</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getLeftWheelPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getLeftWheelPosition()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
   EAttribute getMobilePlatform_LeftWheelPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getRightWheelPosition <em>Right Wheel Position</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getRightWheelPosition <em>Right Wheel Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Right Wheel Position</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getRightWheelPosition()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#getRightWheelPosition()
 	 * @see #getMobilePlatform()
 	 * @generated
 	 */
   EAttribute getMobilePlatform_RightWheelPosition();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#init() <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#init() <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#init()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#init()
 	 * @generated
 	 */
   EOperation getMobilePlatform__Init();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#resetPosition(org.eclipse.symphony.examples.mobile_platform.Position) <em>Reset Position</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#resetPosition(ca.gc.asc_csa.apogy.examples.mobile_platform.Position) <em>Reset Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Position</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#resetPosition(org.eclipse.symphony.examples.mobile_platform.Position)
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#resetPosition(ca.gc.asc_csa.apogy.examples.mobile_platform.Position)
 	 * @generated
 	 */
 	EOperation getMobilePlatform__ResetPosition__Position();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#clearPositionError() <em>Clear Position Error</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#clearPositionError() <em>Clear Position Error</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Clear Position Error</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#clearPositionError()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#clearPositionError()
 	 * @generated
 	 */
 	EOperation getMobilePlatform__ClearPositionError();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#stop()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#stop()
 	 * @generated
 	 */
   EOperation getMobilePlatform__Stop();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#moveTo(double, double) <em>Move To</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#moveTo(double, double) <em>Move To</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move To</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#moveTo(double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#moveTo(double, double)
 	 * @generated
 	 */
 	EOperation getMobilePlatform__MoveTo__double_double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#cmdLinearVelocity(double) <em>Cmd Linear Velocity</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#cmdLinearVelocity(double) <em>Cmd Linear Velocity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cmd Linear Velocity</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#cmdLinearVelocity(double)
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#cmdLinearVelocity(double)
 	 * @generated
 	 */
 	EOperation getMobilePlatform__CmdLinearVelocity__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#cmdAngularVelocity(double) <em>Cmd Angular Velocity</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#cmdAngularVelocity(double) <em>Cmd Angular Velocity</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cmd Angular Velocity</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#cmdAngularVelocity(double)
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#cmdAngularVelocity(double)
 	 * @generated
 	 */
 	EOperation getMobilePlatform__CmdAngularVelocity__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#cmdVelocities(double, double) <em>Cmd Velocities</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#cmdVelocities(double, double) <em>Cmd Velocities</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cmd Velocities</em>' operation.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatform#cmdVelocities(double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform#cmdVelocities(double, double)
 	 * @generated
 	 */
 	EOperation getMobilePlatform__CmdVelocities__double_double();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub <em>Mobile Platform Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub <em>Mobile Platform Stub</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mobile Platform Stub</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub
 	 * @generated
 	 */
   EClass getMobilePlatformStub();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated <em>Mobile Platform Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated <em>Mobile Platform Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mobile Platform Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformSimulated
 	 * @generated
 	 */
 	EClass getMobilePlatformSimulated();
@@ -992,7 +992,7 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesMobilePlatformFactory getSymphony__ExamplesMobilePlatformFactory();
+	ApogyExamplesMobilePlatformFactory getApogyExamplesMobilePlatformFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -1010,11 +1010,11 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl <em>Position</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.PositionImpl <em>Position</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getPosition()
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.PositionImpl
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getPosition()
 		 * @generated
 		 */
     EClass POSITION = eINSTANCE.getPosition();
@@ -1044,11 +1044,11 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
     EAttribute POSITION__THETA = eINSTANCE.getPosition_Theta();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.NamedPositionImpl <em>Named Position</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.NamedPositionImpl <em>Named Position</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.NamedPositionImpl
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getNamedPosition()
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.NamedPositionImpl
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getNamedPosition()
 		 * @generated
 		 */
     EClass NAMED_POSITION = eINSTANCE.getNamedPosition();
@@ -1062,11 +1062,11 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
     EAttribute NAMED_POSITION__NAME = eINSTANCE.getNamedPosition_Name();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl <em>Mobile Platform</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl <em>Mobile Platform</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getMobilePlatform()
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getMobilePlatform()
 		 * @generated
 		 */
     EClass MOBILE_PLATFORM = eINSTANCE.getMobilePlatform();
@@ -1200,25 +1200,25 @@ public interface Symphony__ExamplesMobilePlatformPackage extends EPackage
 		EOperation MOBILE_PLATFORM___CMD_VELOCITIES__DOUBLE_DOUBLE = eINSTANCE.getMobilePlatform__CmdVelocities__double_double();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformStubImpl <em>Mobile Platform Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformStubImpl <em>Mobile Platform Stub</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformStubImpl
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getMobilePlatformStub()
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getMobilePlatformStub()
 		 * @generated
 		 */
     EClass MOBILE_PLATFORM_STUB = eINSTANCE.getMobilePlatformStub();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformSimulatedImpl <em>Mobile Platform Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformSimulatedImpl <em>Mobile Platform Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformSimulatedImpl
-		 * @see org.eclipse.symphony.examples.mobile_platform.impl.Symphony__ExamplesMobilePlatformPackageImpl#getMobilePlatformSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.impl.ApogyExamplesMobilePlatformPackageImpl#getMobilePlatformSimulated()
 		 * @generated
 		 */
 		EClass MOBILE_PLATFORM_SIMULATED = eINSTANCE.getMobilePlatformSimulated();
 
   }
 
-} //Symphony__ExamplesMobilePlatformPackage
+} //ApogyExamplesMobilePlatformPackage

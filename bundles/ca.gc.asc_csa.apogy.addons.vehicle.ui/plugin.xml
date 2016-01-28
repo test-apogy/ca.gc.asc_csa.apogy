@@ -8,49 +8,49 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_tools_vehicle_ui -->
+      <!-- @generated apogy_tools_vehicle_ui -->
       <package
-            uri="org.eclipse.symphony.addons.vehicle.ui"
-            class="org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage"
-            genModel="model/symphony_addons_vehicle_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.vehicle.ui"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage"
+            genModel="model/apogy_addons_vehicle_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.addons.vehicle.ui.adapters.WheelPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.vehicle.ui.adapters.WheelPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.addons.vehicle.ui.adapters.LanderSphericalFootPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.vehicle.ui.adapters.LanderSphericalFootPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.addons.vehicle.ui.adapters.ThrusterPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.vehicle.ui.adapters.ThrusterPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences.VehicleUIPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesPage"
-            id="org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesPage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences.VehicleUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences.VehicleUIPreferencesPage"
             name="Vehicules">
       </page>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.addons.vehicle.ui.commands.ReInitializeWheeledVehiclePoseCorrectorCommand"
-            id="org.eclipse.symphony.addons.vehicle.ui.commands.ReInitializeWheeledVehiclePoseCorrectorCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.vehicle.ui.commands.ReInitializeWheeledVehiclePoseCorrectorCommand"
+            id="ca.gc.asc_csa.apogy.addons.vehicle.ui.commands.ReInitializeWheeledVehiclePoseCorrectorCommand"
             name="ReInitializeWheeledVehiclePoseCorrector">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.addons.vehicle.ui.commands.PathPlannerToolReplanCommand"
-            id="org.eclipse.symphony.addons.vehicle.ui.commands.PathPlannerToolReplanCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.vehicle.ui.commands.PathPlannerToolReplanCommand"
+            id="ca.gc.asc_csa.apogy.addons.vehicle.ui.commands.PathPlannerToolReplanCommand"
             name="Re-Plan Path">
       </command>
    </extension>
@@ -58,9 +58,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.addons.vehicle.ui.commands.ReInitializeWheeledVehiclePoseCorrectorCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.vehicle.ui.commands.ReInitializeWheeledVehiclePoseCorrectorCommand"
                label="Reinitialize Pose Corrector"
                style="push">
             <visibleWhen
@@ -71,14 +71,14 @@
                        ifEmpty="false"
                        operator="or">
                        <instanceof
-                            value="org.eclipse.symphony.addons.vehicle.WheeledVehiclePoseCorrector">
+                            value="ca.gc.asc_csa.apogy.addons.vehicle.WheeledVehiclePoseCorrector">
                        </instanceof>
                     </iterate>
                 </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.addons.vehicle.ui.commands.PathPlannerToolReplanCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.vehicle.ui.commands.PathPlannerToolReplanCommand"
                label="Re-Plan Path"
                style="push">
             <visibleWhen
@@ -89,7 +89,7 @@
                        ifEmpty="false"
                        operator="or">
                        <instanceof
-                            value="org.eclipse.symphony.addons.vehicle.PathPlannerTool">
+                            value="ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool">
                        </instanceof>
                    </iterate>
                 </with>

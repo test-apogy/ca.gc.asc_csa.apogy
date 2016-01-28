@@ -1,7 +1,7 @@
-package org.eclipse.symphony.addons.geometry.paths.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.preferences;
 
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode;
 
 public class MRTPathsPreferencesConstants 
 {

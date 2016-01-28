@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.symphony.common.emf.EClassFilter;
-import org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFFacadeImpl;
+import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
+import ca.gc.asc_csa.apogy.common.emf.impl.ApogyCommonEMFFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,18 +34,18 @@ import org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFFacadeImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getSymphony__CommonEMFFacade()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getApogyCommonEMFFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonEMFFacade extends EObject
+public interface ApogyCommonEMFFacade extends EObject
 {
-	public static Symphony__CommonEMFFacade INSTANCE = Symphony__CommonEMFFacadeImpl.getInstance();
+	public static ApogyCommonEMFFacade INSTANCE = ApogyCommonEMFFacadeImpl.getInstance();
 	
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false"
 	 * @generated
 	 */
   List<EClass> getAllAvailableEClasses();
@@ -59,7 +59,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * @param superClass Super type of the classes to be found.
 	 * @return List of sub classes.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false" superClassUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false" superClassUnique="false"
 	 * @generated
 	 */
   List<EClass> getAllSubEClasses(EClass superClass);
@@ -67,7 +67,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false" eClassesDataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EClass>" eClassesUnique="false" eClassesMany="false" filterDataType="org.eclipse.symphony.common.emf.EClassFilter" filterUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false" eClassesDataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" eClassesUnique="false" eClassesMany="false" filterDataType="ca.gc.asc_csa.apogy.common.emf.EClassFilter" filterUnique="false"
 	 * @generated
 	 */
   List<EClass> filterEClasses(List<EClass> eClasses, EClassFilter filter);
@@ -75,7 +75,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false" eClassesDataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EClass>" eClassesUnique="false" eClassesMany="false" filtersDataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.common.emf.EClassFilter>" filtersUnique="false" filtersMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" unique="false" many="false" eClassesDataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" eClassesUnique="false" eClassesMany="false" filtersDataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.common.emf.EClassFilter>" filtersUnique="false" filtersMany="false"
 	 * @generated
 	 */
   List<EClass> filterEClasses(List<EClass> eClasses, List<EClassFilter> filters);
@@ -96,7 +96,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.SortedSet<org.eclipse.emf.ecore.EClass>" unique="false" eClassesDataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EClass>" eClassesUnique="false" eClassesMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.SortedSet<org.eclipse.emf.ecore.EClass>" unique="false" eClassesDataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EClass>" eClassesUnique="false" eClassesMany="false"
 	 * @generated
 	 */
   SortedSet<EClass> sortAlphabetically(List<EClass> eClasses);
@@ -104,7 +104,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EOperation>" unique="false" many="false" eClassUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EOperation>" unique="false" many="false" eClassUnique="false"
 	 * @generated
 	 */
   List<EOperation> getAllAvailableEOperations(EClass eClass);
@@ -112,7 +112,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.SortedSet<org.eclipse.emf.ecore.EOperation>" unique="false" eOperationsDataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EOperation>" eOperationsUnique="false" eOperationsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.SortedSet<org.eclipse.emf.ecore.EOperation>" unique="false" eOperationsDataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EOperation>" eOperationsUnique="false" eOperationsMany="false"
 	 * @generated
 	 */
   SortedSet<EOperation> sortEOperationsAlphabetically(List<EOperation> eOperations);
@@ -144,7 +144,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * @param eTypedElement The specified ETypedElement.
 	 * @return the Unit, or null if none found.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.Unit" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.Unit" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Unit<?> getEngineeringUnits(ETypedElement eTypedElement);
@@ -184,7 +184,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.Number" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.Number" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Number getWarningMinValue(ETypedElement eTypedElement);
@@ -192,7 +192,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.Number" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.Number" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Number getWarningMaxValue(ETypedElement eTypedElement);
@@ -200,7 +200,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.Number" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.Number" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Number getAlarmMinValue(ETypedElement eTypedElement);
@@ -208,7 +208,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.Number" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.Number" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Number getAlarmMaxValue(ETypedElement eTypedElement);
@@ -216,7 +216,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.Number" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.Number" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Number getOutOfRangeMinValue(ETypedElement eTypedElement);
@@ -224,7 +224,7 @@ public interface Symphony__CommonEMFFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.Number" unique="false" eTypedElementUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.Number" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
   Number getOutOfRangeMaxValue(ETypedElement eTypedElement);
@@ -276,7 +276,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * specified AbstractFeatureNode, from FeatureRoot to
 	 * (and including) the specified AbstractFeatureNode.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.common.emf.AbstractFeatureNode>" unique="false" many="false" abstractFeatureNodeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode>" unique="false" many="false" abstractFeatureNodeUnique="false"
 	 * @generated
 	 */
   List<AbstractFeatureNode> getAncestries(AbstractFeatureNode abstractFeatureNode);
@@ -289,7 +289,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * specified AbstractFeatureNode, excluding the specified
 	 * AbstractFeatureNode.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.common.emf.AbstractFeatureNode>" unique="false" many="false" abstractFeatureNodeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode>" unique="false" many="false" abstractFeatureNodeUnique="false"
 	 * @generated
 	 */
   List<AbstractFeatureNode> getDescendants(AbstractFeatureNode abstractFeatureNode);
@@ -301,7 +301,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * Method that return the list of available child
 	 * EStructuralFeature type for a given Node.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EStructuralFeature>" unique="false" many="false" abstractFeatureNodeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.List<org.eclipse.emf.ecore.EStructuralFeature>" unique="false" many="false" abstractFeatureNodeUnique="false"
 	 * @generated
 	 */
   List<EStructuralFeature> getChildEStructuralFeatures(AbstractFeatureNode abstractFeatureNode);
@@ -353,7 +353,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Resource Support.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.IFile" unique="false" resourceDataType="org.eclipse.symphony.common.emf.Resource" resourceUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.IFile" unique="false" resourceDataType="ca.gc.asc_csa.apogy.common.emf.Resource" resourceUnique="false"
 	 * @generated
 	 */
   IFile getFile(Resource resource);
@@ -366,7 +366,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * @param uri Resource uri.
 	 * @return Reference to the content.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.EList<org.eclipse.emf.ecore.EObject>" unique="false" many="false" uriDataType="org.eclipse.symphony.common.emf.URI" uriUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.EList<org.eclipse.emf.ecore.EObject>" unique="false" many="false" uriDataType="ca.gc.asc_csa.apogy.common.emf.URI" uriUnique="false"
 	 * @generated
 	 */
 	EList<EObject> getContent(URI uri);
@@ -377,7 +377,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Timed Support
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.emf.SortedSet<org.eclipse.symphony.common.emf.Timed>" unique="false" timedCollectionDataType="org.eclipse.symphony.common.emf.Collection<org.eclipse.symphony.common.emf.Timed>" timedCollectionUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.SortedSet<ca.gc.asc_csa.apogy.common.emf.Timed>" unique="false" timedCollectionDataType="ca.gc.asc_csa.apogy.common.emf.Collection<ca.gc.asc_csa.apogy.common.emf.Timed>" timedCollectionUnique="false"
 	 * @generated
 	 */
 	SortedSet<Timed> sortTimed(Collection<Timed> timedCollection);
@@ -389,8 +389,8 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * Returns the time span of a collection
 	 * of Timed elements.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" timedCollectionDataType="org.eclipse.symphony.common.emf.Collection<org.eclipse.symphony.common.emf.Timed>" timedCollectionUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='s'"
+	 * @model unique="false" timedCollectionDataType="ca.gc.asc_csa.apogy.common.emf.Collection<ca.gc.asc_csa.apogy.common.emf.Timed>" timedCollectionUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='s'"
 	 * @generated
 	 */
 	double getTimeSpan(Collection<Timed> timedCollection);
@@ -408,4 +408,4 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 */
 	String getID(EObject eObject);
 
-} // Symphony__CommonEMFFacade
+} // ApogyCommonEMFFacade

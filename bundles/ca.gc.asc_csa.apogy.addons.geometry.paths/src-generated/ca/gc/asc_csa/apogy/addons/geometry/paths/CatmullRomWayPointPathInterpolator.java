@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 
 /**
@@ -19,12 +19,12 @@ package org.eclipse.symphony.addons.geometry.paths;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getTension <em>Tension</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getMaximumWayPointsDistance <em>Maximum Way Points Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getEndControlPointGenerationMode <em>End Control Point Generation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getTension <em>Tension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getMaximumWayPointsDistance <em>Maximum Way Points Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getEndControlPointGenerationMode <em>End Control Point Generation Mode</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator()
  * @model
  * @generated
  */
@@ -40,14 +40,14 @@ public interface CatmullRomWayPointPathInterpolator extends WayPointPathInterpol
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tension</em>' attribute.
 	 * @see #setTension(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_Tension()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_Tension()
 	 * @model default="0.5" unique="false"
 	 * @generated
 	 */
 	double getTension();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getTension <em>Tension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getTension <em>Tension</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tension</em>' attribute.
@@ -67,14 +67,14 @@ public interface CatmullRomWayPointPathInterpolator extends WayPointPathInterpol
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Way Points Distance</em>' attribute.
 	 * @see #setMaximumWayPointsDistance(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_MaximumWayPointsDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_MaximumWayPointsDistance()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getMaximumWayPointsDistance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getMaximumWayPointsDistance <em>Maximum Way Points Distance</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getMaximumWayPointsDistance <em>Maximum Way Points Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Way Points Distance</em>' attribute.
@@ -86,7 +86,7 @@ public interface CatmullRomWayPointPathInterpolator extends WayPointPathInterpol
 	/**
 	 * Returns the value of the '<em><b>End Control Point Generation Mode</b></em>' attribute.
 	 * The default value is <code>"AUTO_CTRL_POINTS_DUPLICATE_ENDNODES"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.geometry.paths.SplineEndControlPointGenerationMode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>End Control Point Generation Mode</em>' attribute isn't clear,
@@ -94,20 +94,20 @@ public interface CatmullRomWayPointPathInterpolator extends WayPointPathInterpol
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Control Point Generation Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.SplineEndControlPointGenerationMode
 	 * @see #setEndControlPointGenerationMode(SplineEndControlPointGenerationMode)
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_EndControlPointGenerationMode()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_EndControlPointGenerationMode()
 	 * @model default="AUTO_CTRL_POINTS_DUPLICATE_ENDNODES" unique="false"
 	 * @generated
 	 */
 	SplineEndControlPointGenerationMode getEndControlPointGenerationMode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getEndControlPointGenerationMode <em>End Control Point Generation Mode</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getEndControlPointGenerationMode <em>End Control Point Generation Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>End Control Point Generation Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.SplineEndControlPointGenerationMode
 	 * @see #getEndControlPointGenerationMode()
 	 * @generated
 	 */

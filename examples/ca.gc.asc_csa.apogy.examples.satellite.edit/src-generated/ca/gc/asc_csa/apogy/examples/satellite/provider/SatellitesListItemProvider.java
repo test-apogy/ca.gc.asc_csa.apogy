@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -24,12 +24,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.examples.satellite.SatellitesList;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.SatellitesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.SatellitesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class SatellitesListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITES_LIST__SATELLITES);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.SATELLITES_LIST__SATELLITES);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +132,7 @@ public class SatellitesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatellitesList.class)) {
-			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
+			case ApogyExamplesSatellitePackage.SATELLITES_LIST__SATELLITES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,8 +152,8 @@ public class SatellitesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.SATELLITES_LIST__SATELLITES,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatellite()));
+				(ApogyExamplesSatellitePackage.Literals.SATELLITES_LIST__SATELLITES,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellite()));
 	}
 
 	/**

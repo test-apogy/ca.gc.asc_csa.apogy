@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -10,10 +10,10 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -63,7 +63,7 @@ public class EarthSurfaceWorksiteNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksiteNode_skyTransformNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksiteNode_skyTransformNode_feature", "_UI_EarthSurfaceWorksiteNode_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE,
+				 ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE,
 				 true,
 				 false,
 				 true,

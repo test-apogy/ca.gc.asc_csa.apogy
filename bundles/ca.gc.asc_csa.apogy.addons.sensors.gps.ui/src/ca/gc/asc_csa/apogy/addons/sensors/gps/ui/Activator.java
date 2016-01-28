@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.gps.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.ui;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -10,7 +10,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.sensors.gps.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.sensors.gps.ui";
 
 	// The shared instance
 	private static Activator plugin;

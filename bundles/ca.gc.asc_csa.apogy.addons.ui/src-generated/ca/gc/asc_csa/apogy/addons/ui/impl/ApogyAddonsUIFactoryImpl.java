@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.impl;
+package ca.gc.asc_csa.apogy.addons.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.ui.*;
+import ca.gc.asc_csa.apogy.addons.ui.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,24 +16,24 @@ import org.eclipse.symphony.addons.ui.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsUIFactoryImpl extends EFactoryImpl implements Symphony__AddonsUIFactory {
+public class ApogyAddonsUIFactoryImpl extends EFactoryImpl implements ApogyAddonsUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsUIFactory init() {
+	public static ApogyAddonsUIFactory init() {
 		try {
-			Symphony__AddonsUIFactory theSymphony__AddonsUIFactory = (Symphony__AddonsUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsUIPackage.eNS_URI);
-			if (theSymphony__AddonsUIFactory != null) {
-				return theSymphony__AddonsUIFactory;
+			ApogyAddonsUIFactory theApogyAddonsUIFactory = (ApogyAddonsUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsUIPackage.eNS_URI);
+			if (theApogyAddonsUIFactory != null) {
+				return theApogyAddonsUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsUIFactoryImpl();
+		return new ApogyAddonsUIFactoryImpl();
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class Symphony__AddonsUIFactoryImpl extends EFactoryImpl implements Symph
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsUIFactoryImpl() {
+	public ApogyAddonsUIFactoryImpl() {
 		super();
 	}
 
@@ -54,9 +54,9 @@ public class Symphony__AddonsUIFactoryImpl extends EFactoryImpl implements Symph
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsUIPackage.RULER3D_TOOL_NODE_PRESENTATION: return createRuler3dToolNodePresentation();
-			case Symphony__AddonsUIPackage.SUN_VECTOR3_DTOOL_NODE_PRESENTATION: return createSunVector3DToolNodePresentation();
-			case Symphony__AddonsUIPackage.TRAJECTORY3_DTOOL_NODE_PRESENTATION: return createTrajectory3DToolNodePresentation();
+			case ApogyAddonsUIPackage.RULER3D_TOOL_NODE_PRESENTATION: return createRuler3dToolNodePresentation();
+			case ApogyAddonsUIPackage.SUN_VECTOR3_DTOOL_NODE_PRESENTATION: return createSunVector3DToolNodePresentation();
+			case ApogyAddonsUIPackage.TRAJECTORY3_DTOOL_NODE_PRESENTATION: return createTrajectory3DToolNodePresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,8 +97,8 @@ public class Symphony__AddonsUIFactoryImpl extends EFactoryImpl implements Symph
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsUIPackage getSymphony__AddonsUIPackage() {
-		return (Symphony__AddonsUIPackage)getEPackage();
+	public ApogyAddonsUIPackage getApogyAddonsUIPackage() {
+		return (ApogyAddonsUIPackage)getEPackage();
 	}
 
 	/**
@@ -108,8 +108,8 @@ public class Symphony__AddonsUIFactoryImpl extends EFactoryImpl implements Symph
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsUIPackage getPackage() {
-		return Symphony__AddonsUIPackage.eINSTANCE;
+	public static ApogyAddonsUIPackage getPackage() {
+		return ApogyAddonsUIPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsUIFactoryImpl
+} //ApogyAddonsUIFactoryImpl

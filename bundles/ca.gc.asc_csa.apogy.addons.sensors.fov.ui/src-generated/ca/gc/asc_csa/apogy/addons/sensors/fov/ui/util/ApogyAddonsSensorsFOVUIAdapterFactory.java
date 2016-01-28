@@ -1,35 +1,35 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.util;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage
  * @generated
  */
-public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsSensorsFOVUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsFOVUIPackage modelPackage;
+	protected static ApogyAddonsSensorsFOVUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -37,9 +37,9 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVUIAdapterFactory() {
+	public ApogyAddonsSensorsFOVUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsFOVUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsFOVUIPackage.eINSTANCE;
 		}
 	}
 
@@ -68,8 +68,8 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsFOVUISwitch<Adapter> modelSwitch =
-		new Symphony__AddonsSensorsFOVUISwitch<Adapter>() {
+	protected ApogyAddonsSensorsFOVUISwitch<Adapter> modelSwitch =
+		new ApogyAddonsSensorsFOVUISwitch<Adapter>() {
 			@Override
 			public Adapter caseFieldOfViewPresentation(FieldOfViewPresentation object) {
 				return createFieldOfViewPresentationAdapter();
@@ -111,13 +111,13 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation <em>Field Of View Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation <em>Field Of View Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation
 	 * @generated
 	 */
 	public Adapter createFieldOfViewPresentationAdapter() {
@@ -125,13 +125,13 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation <em>Circular Sector Field Of View Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation <em>Circular Sector Field Of View Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation
 	 * @generated
 	 */
 	public Adapter createCircularSectorFieldOfViewPresentationAdapter() {
@@ -139,13 +139,13 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation <em>Conical Field Of View Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation <em>Conical Field Of View Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation
 	 * @generated
 	 */
 	public Adapter createConicalFieldOfViewPresentationAdapter() {
@@ -153,13 +153,13 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation <em>Rectangular Frustrum Field Of View Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation <em>Rectangular Frustrum Field Of View Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation
 	 * @generated
 	 */
 	public Adapter createRectangularFrustrumFieldOfViewPresentationAdapter() {
@@ -167,13 +167,13 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -192,4 +192,4 @@ public class Symphony__AddonsSensorsFOVUIAdapterFactory extends AdapterFactoryIm
 		return null;
 	}
 
-} //Symphony__AddonsSensorsFOVUIAdapterFactory
+} //ApogyAddonsSensorsFOVUIAdapterFactory

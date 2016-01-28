@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__CommonTopologyAddonsDynamicsFactoryImpl.java,v 1.22.2.3 2015/02/03 20:01:36 rlarcheveque Exp $
+ * $Id: ApogyCommonTopologyAddonsDynamicsFactoryImpl.java,v 1.22.2.3 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
@@ -13,27 +13,27 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade;
-import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest;
-import org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,24 +41,24 @@ import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryImpl implements Symphony__CommonTopologyAddonsDynamicsFactory {
+public class ApogyCommonTopologyAddonsDynamicsFactoryImpl extends EFactoryImpl implements ApogyCommonTopologyAddonsDynamicsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyAddonsDynamicsFactory init() {
+	public static ApogyCommonTopologyAddonsDynamicsFactory init() {
 		try {
-			Symphony__CommonTopologyAddonsDynamicsFactory theSymphony__CommonTopologyAddonsDynamicsFactory = (Symphony__CommonTopologyAddonsDynamicsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonTopologyAddonsDynamicsPackage.eNS_URI);
-			if (theSymphony__CommonTopologyAddonsDynamicsFactory != null) {
-				return theSymphony__CommonTopologyAddonsDynamicsFactory;
+			ApogyCommonTopologyAddonsDynamicsFactory theApogyCommonTopologyAddonsDynamicsFactory = (ApogyCommonTopologyAddonsDynamicsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonTopologyAddonsDynamicsPackage.eNS_URI);
+			if (theApogyCommonTopologyAddonsDynamicsFactory != null) {
+				return theApogyCommonTopologyAddonsDynamicsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonTopologyAddonsDynamicsFactoryImpl();
+		return new ApogyCommonTopologyAddonsDynamicsFactoryImpl();
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsFactoryImpl() {
+	public ApogyCommonTopologyAddonsDynamicsFactoryImpl() {
 		super();
 	}
 
@@ -79,25 +79,25 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES: return createDynamicSystemProperties();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY: return createPhysicalBody();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES: return createPhysicalProperties();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST: return createPointOfInterest();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE: return createKinematicState();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE: return createConstraintState();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CYLINDRICAL_CONSTRAINT: return createCylindricalConstraint();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT: return createGearRatioConstraint();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.HINGE_CONSTRAINT: return createHingeConstraint();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT: return createPrismaticConstraint();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT: return createRPROConstraint();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT: return createUniversalConstraint();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT: return createConstraintAttachmentPoint();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY: return createCollisionGeometry();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.BOX_GEOMETRY: return createBoxGeometry();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CAPSULE_GEOMETRY: return createCapsuleGeometry();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY: return createCylinderGeometry();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY: return createSphereGeometry();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE: return createSymphony__CommonTopologyAddonsDynamicsFacade();
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES: return createDynamicSystemProperties();
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY: return createPhysicalBody();
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES: return createPhysicalProperties();
+			case ApogyCommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST: return createPointOfInterest();
+			case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE: return createKinematicState();
+			case ApogyCommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE: return createConstraintState();
+			case ApogyCommonTopologyAddonsDynamicsPackage.CYLINDRICAL_CONSTRAINT: return createCylindricalConstraint();
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT: return createGearRatioConstraint();
+			case ApogyCommonTopologyAddonsDynamicsPackage.HINGE_CONSTRAINT: return createHingeConstraint();
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT: return createPrismaticConstraint();
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT: return createRPROConstraint();
+			case ApogyCommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT: return createUniversalConstraint();
+			case ApogyCommonTopologyAddonsDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT: return createConstraintAttachmentPoint();
+			case ApogyCommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY: return createCollisionGeometry();
+			case ApogyCommonTopologyAddonsDynamicsPackage.BOX_GEOMETRY: return createBoxGeometry();
+			case ApogyCommonTopologyAddonsDynamicsPackage.CAPSULE_GEOMETRY: return createCapsuleGeometry();
+			case ApogyCommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY: return createCylinderGeometry();
+			case ApogyCommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY: return createSphereGeometry();
+			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE: return createApogyCommonTopologyAddonsDynamicsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -111,7 +111,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SET:
+			case ApogyCommonTopologyAddonsDynamicsPackage.SET:
 				return createSetFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -126,7 +126,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SET:
+			case ApogyCommonTopologyAddonsDynamicsPackage.SET:
 				return convertSetToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -298,9 +298,9 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsFacade createSymphony__CommonTopologyAddonsDynamicsFacade() {
-		Symphony__CommonTopologyAddonsDynamicsFacadeImpl symphony__CommonTopologyAddonsDynamicsFacade = new Symphony__CommonTopologyAddonsDynamicsFacadeImpl();
-		return symphony__CommonTopologyAddonsDynamicsFacade;
+	public ApogyCommonTopologyAddonsDynamicsFacade createApogyCommonTopologyAddonsDynamicsFacade() {
+		ApogyCommonTopologyAddonsDynamicsFacadeImpl apogy__CommonTopologyAddonsDynamicsFacade = new ApogyCommonTopologyAddonsDynamicsFacadeImpl();
+		return apogy__CommonTopologyAddonsDynamicsFacade;
 	}
 
 	/**
@@ -346,8 +346,8 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsPackage getSymphony__CommonTopologyAddonsDynamicsPackage() {
-		return (Symphony__CommonTopologyAddonsDynamicsPackage)getEPackage();
+	public ApogyCommonTopologyAddonsDynamicsPackage getApogyCommonTopologyAddonsDynamicsPackage() {
+		return (ApogyCommonTopologyAddonsDynamicsPackage)getEPackage();
 	}
 
 	/**
@@ -357,8 +357,8 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonTopologyAddonsDynamicsPackage getPackage() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.eINSTANCE;
+	public static ApogyCommonTopologyAddonsDynamicsPackage getPackage() {
+		return ApogyCommonTopologyAddonsDynamicsPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonTopologyAddonsDynamicsFactoryImpl
+} //ApogyCommonTopologyAddonsDynamicsFactoryImpl

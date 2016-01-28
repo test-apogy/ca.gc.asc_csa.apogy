@@ -1,26 +1,26 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.provider.ApogyAddonsSensorsFOVEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsSensorsFOVBindings edit plugin.
+ * This is the central singleton for the ApogyAddonsSensorsFOVBindings edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsSensorsFOVBindingsEditPlugin extends EMFPlugin
+public final class ApogyAddonsSensorsFOVBindingsEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -28,7 +28,7 @@ public final class Symphony__AddonsSensorsFOVBindingsEditPlugin extends EMFPlugi
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final Symphony__AddonsSensorsFOVBindingsEditPlugin INSTANCE = new Symphony__AddonsSensorsFOVBindingsEditPlugin();
+  public static final ApogyAddonsSensorsFOVBindingsEditPlugin INSTANCE = new ApogyAddonsSensorsFOVBindingsEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -44,18 +44,18 @@ public final class Symphony__AddonsSensorsFOVBindingsEditPlugin extends EMFPlugi
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsFOVBindingsEditPlugin()
+  public ApogyAddonsSensorsFOVBindingsEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsFOVEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

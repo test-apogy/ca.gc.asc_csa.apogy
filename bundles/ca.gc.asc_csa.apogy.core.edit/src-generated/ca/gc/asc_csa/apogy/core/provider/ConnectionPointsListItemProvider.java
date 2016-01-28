@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -19,13 +19,13 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.ConnectionPointsList;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.ConnectionPointsList} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ConnectionPointsList} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
@@ -70,7 +70,7 @@ public class ConnectionPointsListItemProvider extends ItemProviderAdapter
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS);
+			childrenFeatures.add(ApogyCorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +121,7 @@ public class ConnectionPointsListItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConnectionPointsList.class)) {
-			case Symphony__CorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS:
+			case ApogyCorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,8 +142,8 @@ public class ConnectionPointsListItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS,
-				 Symphony__CoreFactory.eINSTANCE.createConnectionPoint()));
+				(ApogyCorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS,
+				 ApogyCoreFactory.eINSTANCE.createConnectionPoint()));
 	}
 
 	/**

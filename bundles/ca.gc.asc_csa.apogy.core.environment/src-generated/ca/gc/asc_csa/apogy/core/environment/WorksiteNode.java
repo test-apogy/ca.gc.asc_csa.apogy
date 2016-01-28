@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.GroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.WorksiteNode#getWorksite <em>Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.WorksiteNode#getWorksite <em>Worksite</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksiteNode()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getWorksiteNode()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface WorksiteNode extends GroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksite</em>' reference.
 	 * @see #setWorksite(Worksite)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksiteNode_Worksite()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getWorksiteNode_Worksite()
 	 * @model transient="true"
 	 * @generated
 	 */
   Worksite getWorksite();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.WorksiteNode#getWorksite <em>Worksite</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.WorksiteNode#getWorksite <em>Worksite</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Worksite</em>' reference.

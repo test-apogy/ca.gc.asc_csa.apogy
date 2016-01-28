@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

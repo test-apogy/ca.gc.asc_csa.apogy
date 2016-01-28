@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
-import org.eclipse.symphony.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.topology.PositionNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getPositionNode <em>Position Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getPositionNode <em>Position Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTranslationBinding()
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getTranslationBinding()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface TranslationBinding extends AbstractTopologyBinding
   /**
 	 * Returns the value of the '<em><b>Translation Axis</b></em>' attribute.
 	 * The default value is <code>"X_AXIS"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.bindings.Axis}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.common.topology.bindings.Axis}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Translation Axis</em>' attribute isn't clear,
@@ -42,9 +42,9 @@ public interface TranslationBinding extends AbstractTopologyBinding
 	 * The axis along which the translation occurs.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Translation Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.Axis
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.Axis
 	 * @see #setTranslationAxis(Axis)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTranslationBinding_TranslationAxis()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getTranslationBinding_TranslationAxis()
 	 * @model default="X_AXIS" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
@@ -52,11 +52,11 @@ public interface TranslationBinding extends AbstractTopologyBinding
   Axis getTranslationAxis();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Translation Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.Axis
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.Axis
 	 * @see #getTranslationAxis()
 	 * @generated
 	 */
@@ -75,14 +75,14 @@ public interface TranslationBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position Node</em>' reference.
 	 * @see #setPositionNode(PositionNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTranslationBinding_PositionNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getTranslationBinding_PositionNode()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */
   PositionNode getPositionNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getPositionNode <em>Position Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding#getPositionNode <em>Position Node</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Position Node</em>' reference.

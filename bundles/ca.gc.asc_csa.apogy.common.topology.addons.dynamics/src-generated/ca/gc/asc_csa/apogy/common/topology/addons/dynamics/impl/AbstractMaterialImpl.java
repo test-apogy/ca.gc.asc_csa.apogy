@@ -4,14 +4,14 @@
  *
  * $Id: AbstractMaterialImpl.java,v 1.5.2.2 2015/02/03 20:01:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractMaterialImpl#getMaterialId <em>Material Id</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractMaterialImpl#getMaterialId <em>Material Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +61,7 @@ public abstract class AbstractMaterialImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_MATERIAL;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_MATERIAL;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public abstract class AbstractMaterialImpl extends MinimalEObjectImpl.Container 
 		String oldMaterialId = materialId;
 		materialId = newMaterialId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID, oldMaterialId, materialId));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID, oldMaterialId, materialId));
 	}
 
 	/**
@@ -93,7 +93,7 @@ public abstract class AbstractMaterialImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
 				return getMaterialId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public abstract class AbstractMaterialImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
 				setMaterialId((String)newValue);
 				return;
 		}
@@ -122,7 +122,7 @@ public abstract class AbstractMaterialImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
 				setMaterialId(MATERIAL_ID_EDEFAULT);
 				return;
 		}
@@ -137,7 +137,7 @@ public abstract class AbstractMaterialImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL__MATERIAL_ID:
 				return MATERIAL_ID_EDEFAULT == null ? materialId != null : !MATERIAL_ID_EDEFAULT.equals(materialId);
 		}
 		return super.eIsSet(featureID);

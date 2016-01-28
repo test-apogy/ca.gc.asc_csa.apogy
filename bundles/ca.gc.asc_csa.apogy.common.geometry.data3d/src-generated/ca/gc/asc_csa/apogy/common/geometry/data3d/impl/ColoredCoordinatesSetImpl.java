@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class ColoredCoordinatesSetImpl extends AbstractCartesianCoordinatesSetIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.COLORED_COORDINATES_SET;
+		return ApogyCommonGeometryData3DPackage.Literals.COLORED_COORDINATES_SET;
 	}
 
 } //ColoredCoordinatesSetImpl

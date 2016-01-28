@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import javax.vecmath.Matrix4d;
 
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.topology.*;
+import ca.gc.asc_csa.apogy.common.topology.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.common.topology.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements Symphony__CommonTopologyFactory {
+public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements ApogyCommonTopologyFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyFactory init() {
+	public static ApogyCommonTopologyFactory init() {
 		try {
-			Symphony__CommonTopologyFactory theSymphony__CommonTopologyFactory = (Symphony__CommonTopologyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonTopologyPackage.eNS_URI);
-			if (theSymphony__CommonTopologyFactory != null) {
-				return theSymphony__CommonTopologyFactory;
+			ApogyCommonTopologyFactory theApogyCommonTopologyFactory = (ApogyCommonTopologyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonTopologyPackage.eNS_URI);
+			if (theApogyCommonTopologyFactory != null) {
+				return theApogyCommonTopologyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonTopologyFactoryImpl();
+		return new ApogyCommonTopologyFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyFactoryImpl() {
+	public ApogyCommonTopologyFactoryImpl() {
 		super();
 	}
 
@@ -57,21 +57,21 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonTopologyPackage.LINK: return createLink();
-			case Symphony__CommonTopologyPackage.LEAF: return createLeaf();
-			case Symphony__CommonTopologyPackage.URL_NODE: return createURLNode();
-			case Symphony__CommonTopologyPackage.CAD_NODE: return createCADNode();
-			case Symphony__CommonTopologyPackage.CONTENT_NODE: return createContentNode();
-			case Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE: return createReferencedContentNode();
-			case Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE: return createAggregateContentNode();
-			case Symphony__CommonTopologyPackage.GROUP_NODE: return createGroupNode();
-			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE: return createReferencedGroupNode();
-			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE: return createAggregateGroupNode();
-			case Symphony__CommonTopologyPackage.POSITION_NODE: return createPositionNode();
-			case Symphony__CommonTopologyPackage.ROTATION_NODE: return createRotationNode();
-			case Symphony__CommonTopologyPackage.TRANSFORM_NODE: return createTransformNode();
-			case Symphony__CommonTopologyPackage.PICK_AND_PLACE_NODE: return createPickAndPlaceNode();
-			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE: return createSymphony__CommonTopologyFacade();
+			case ApogyCommonTopologyPackage.LINK: return createLink();
+			case ApogyCommonTopologyPackage.LEAF: return createLeaf();
+			case ApogyCommonTopologyPackage.URL_NODE: return createURLNode();
+			case ApogyCommonTopologyPackage.CAD_NODE: return createCADNode();
+			case ApogyCommonTopologyPackage.CONTENT_NODE: return createContentNode();
+			case ApogyCommonTopologyPackage.REFERENCED_CONTENT_NODE: return createReferencedContentNode();
+			case ApogyCommonTopologyPackage.AGGREGATE_CONTENT_NODE: return createAggregateContentNode();
+			case ApogyCommonTopologyPackage.GROUP_NODE: return createGroupNode();
+			case ApogyCommonTopologyPackage.REFERENCED_GROUP_NODE: return createReferencedGroupNode();
+			case ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE: return createAggregateGroupNode();
+			case ApogyCommonTopologyPackage.POSITION_NODE: return createPositionNode();
+			case ApogyCommonTopologyPackage.ROTATION_NODE: return createRotationNode();
+			case ApogyCommonTopologyPackage.TRANSFORM_NODE: return createTransformNode();
+			case ApogyCommonTopologyPackage.PICK_AND_PLACE_NODE: return createPickAndPlaceNode();
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE: return createApogyCommonTopologyFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,11 +85,11 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyPackage.MATRIX4D:
+			case ApogyCommonTopologyPackage.MATRIX4D:
 				return createMatrix4dFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyPackage.ECLASS:
+			case ApogyCommonTopologyPackage.ECLASS:
 				return createEClassFromString(eDataType, initialValue);
-			case Symphony__CommonTopologyPackage.INODE_VISITOR:
+			case ApogyCommonTopologyPackage.INODE_VISITOR:
 				return createINodeVisitorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -104,11 +104,11 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyPackage.MATRIX4D:
+			case ApogyCommonTopologyPackage.MATRIX4D:
 				return convertMatrix4dToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyPackage.ECLASS:
+			case ApogyCommonTopologyPackage.ECLASS:
 				return convertEClassToString(eDataType, instanceValue);
-			case Symphony__CommonTopologyPackage.INODE_VISITOR:
+			case ApogyCommonTopologyPackage.INODE_VISITOR:
 				return convertINodeVisitorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -260,9 +260,9 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyFacade createSymphony__CommonTopologyFacade() {
-		Symphony__CommonTopologyFacadeImpl symphony__CommonTopologyFacade = new Symphony__CommonTopologyFacadeImpl();
-		return symphony__CommonTopologyFacade;
+	public ApogyCommonTopologyFacade createApogyCommonTopologyFacade() {
+		ApogyCommonTopologyFacadeImpl apogy__CommonTopologyFacade = new ApogyCommonTopologyFacadeImpl();
+		return apogy__CommonTopologyFacade;
 	}
 
 	/**
@@ -324,8 +324,8 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyPackage getSymphony__CommonTopologyPackage() {
-		return (Symphony__CommonTopologyPackage)getEPackage();
+	public ApogyCommonTopologyPackage getApogyCommonTopologyPackage() {
+		return (ApogyCommonTopologyPackage)getEPackage();
 	}
 
 	/**
@@ -335,8 +335,8 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonTopologyPackage getPackage() {
-		return Symphony__CommonTopologyPackage.eINSTANCE;
+	public static ApogyCommonTopologyPackage getPackage() {
+		return ApogyCommonTopologyPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonTopologyFactoryImpl
+} //ApogyCommonTopologyFactoryImpl

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.provider;
+package ca.gc.asc_csa.apogy.common.images.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.ImagesAlbum} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.images.ImagesAlbum} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class ImagesAlbumItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImagesAlbum_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImagesAlbum_name_feature", "_UI_ImagesAlbum_type"),
-				 Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__NAME,
+				 ApogyCommonImagesPackage.Literals.IMAGES_ALBUM__NAME,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class ImagesAlbumItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES);
+			childrenFeatures.add(ApogyCommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES);
 		}
 		return childrenFeatures;
 	}
@@ -155,10 +155,10 @@ public class ImagesAlbumItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImagesAlbum.class)) {
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__NAME:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__IMAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -178,13 +178,13 @@ public class ImagesAlbumItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
-				 Symphony__CommonImagesFactory.eINSTANCE.createEImage()));
+				(ApogyCommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
+				 ApogyCommonImagesFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
-				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
+				(ApogyCommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
+				 ApogyCommonImagesFactory.eINSTANCE.createURLEImage()));
 	}
 
 	/**

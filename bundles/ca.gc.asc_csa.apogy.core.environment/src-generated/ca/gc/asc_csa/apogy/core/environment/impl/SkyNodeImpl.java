@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyNodeImpl#getSky <em>Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.SkyNodeImpl#getSky <em>Sky</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,7 +57,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.SKY_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.SKY_NODE;
 	}
 
   /**
@@ -72,7 +72,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
 			sky = (Sky)eResolveProxy(oldSky);
 			if (sky != oldSky) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
 			}
 		}
 		return sky;
@@ -98,7 +98,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
 		Sky oldSky = sky;
 		sky = newSky;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
 	}
 
   /**
@@ -110,7 +110,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
+			case ApogyCoreEnvironmentPackage.SKY_NODE__SKY:
 				if (resolve) return getSky();
 				return basicGetSky();
 		}
@@ -126,7 +126,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
+			case ApogyCoreEnvironmentPackage.SKY_NODE__SKY:
 				setSky((Sky)newValue);
 				return;
 		}
@@ -142,7 +142,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
+			case ApogyCoreEnvironmentPackage.SKY_NODE__SKY:
 				setSky((Sky)null);
 				return;
 		}
@@ -158,7 +158,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
+			case ApogyCoreEnvironmentPackage.SKY_NODE__SKY:
 				return sky != null;
 		}
 		return super.eIsSet(featureID);

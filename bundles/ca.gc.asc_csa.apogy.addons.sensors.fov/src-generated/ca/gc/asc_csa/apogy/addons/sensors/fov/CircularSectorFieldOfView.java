@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov;
+package ca.gc.asc_csa.apogy.addons.sensors.fov;
 
 
 /**
@@ -18,12 +18,12 @@ package org.eclipse.symphony.addons.sensors.fov;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getArea <em>Area</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getArea <em>Area</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getCircularSectorFieldOfView()
  * @model
  * @generated
  */
@@ -38,14 +38,14 @@ public interface CircularSectorFieldOfView extends FieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' containment reference.
 	 * @see #setRange(DistanceRange)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView_Range()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getCircularSectorFieldOfView_Range()
 	 * @model containment="true"
 	 * @generated
 	 */
 	DistanceRange getRange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Range</em>' containment reference.
@@ -64,14 +64,14 @@ public interface CircularSectorFieldOfView extends FieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Span</em>' containment reference.
 	 * @see #setAngularSpan(AngularSpan)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView_AngularSpan()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getCircularSectorFieldOfView_AngularSpan()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	AngularSpan getAngularSpan();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angular Span</em>' containment reference.
@@ -88,7 +88,7 @@ public interface CircularSectorFieldOfView extends FieldOfView {
 	 * The area of the circular sector.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Area</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView_Area()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getCircularSectorFieldOfView_Area()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

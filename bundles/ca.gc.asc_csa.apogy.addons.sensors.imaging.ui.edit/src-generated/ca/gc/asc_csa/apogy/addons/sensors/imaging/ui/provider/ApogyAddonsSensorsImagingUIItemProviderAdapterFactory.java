@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.ui.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,16 +26,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIFactory;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage;
-import org.eclipse.symphony.addons.sensors.imaging.ui.util.Symphony__AddonsSensorsImagingUIAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.util.Symphony__CommonTopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.util.ApogyAddonsSensorsImagingUIAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.util.ApogyCommonTopologyUISwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -46,7 +46,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends Symphony__AddonsSensorsImagingUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsSensorsImagingUIItemProviderAdapterFactory extends ApogyAddonsSensorsImagingUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -70,7 +70,7 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsSensorsImagingUIEditPlugin.INSTANCE, Symphony__AddonsSensorsImagingUIPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsSensorsImagingUIEditPlugin.INSTANCE, ApogyAddonsSensorsImagingUIPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -86,7 +86,7 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory()
+  public ApogyAddonsSensorsImagingUIItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -96,7 +96,7 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -104,7 +104,7 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
   protected ImageSnapshotPresentationItemProvider imageSnapshotPresentationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -261,19 +261,19 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * A child creation extender for the {@link Symphony__CommonTopologyUIPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyUIChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyUISwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -309,8 +309,8 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
 			public Object caseTopologyPresentationRegistry(TopologyPresentationRegistry object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation()));
 
 				return null;
 			}
@@ -343,24 +343,24 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsImagingUIEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsImagingUIEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -396,8 +396,8 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation()));
 
 				return null;
 			}
@@ -411,8 +411,8 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation()));
 
 				return null;
 			}
@@ -445,7 +445,7 @@ public class Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory extends 
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsImagingUIEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsImagingUIEditPlugin.INSTANCE;
 		}
 	}
 

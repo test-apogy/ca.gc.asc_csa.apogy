@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius;
+package ca.gc.asc_csa.apogy.core.ui.sirius;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
     // The plug-in ID
-    public static final String ID = "org.eclipse.symphony.core.ui.sirius";
+    public static final String ID = "ca.gc.asc_csa.apogy.core.ui.sirius";
 
     // The shared instance
     private static Activator plugin;
@@ -35,7 +35,7 @@ public class Activator extends AbstractUIPlugin {
       super.start(context);
 	  plugin = this;
 	  viewpoints = new HashSet<Viewpoint>();
-	  viewpoints.addAll(ViewpointRegistry.getInstance().registerFromPlugin(ID + "/description/symphony_core_ui_sirius.odesign")); 
+	  viewpoints.addAll(ViewpointRegistry.getInstance().registerFromPlugin(ID + "/description/apogy_core_ui_sirius.odesign")); 
     }
 
     /*

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.SensorStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.impl.SensorImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPackage.Literals.SENSOR;
+		return ApogyAddonsSensorsPackage.Literals.SENSOR;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPackage.SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPackage.SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
+			case ApogyAddonsSensorsPackage.SENSOR__STATUS:
 				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,7 +111,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
+			case ApogyAddonsSensorsPackage.SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
 		}
@@ -126,7 +126,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
+			case ApogyAddonsSensorsPackage.SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -141,7 +141,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
+			case ApogyAddonsSensorsPackage.SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

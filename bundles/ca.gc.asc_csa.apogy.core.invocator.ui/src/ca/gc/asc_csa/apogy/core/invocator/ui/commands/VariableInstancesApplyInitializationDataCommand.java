@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.commands;
+package ca.gc.asc_csa.apogy.core.invocator.ui.commands;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
@@ -12,9 +12,9 @@ import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -34,7 +34,7 @@ public class VariableInstancesApplyInitializationDataCommand extends AbstractHan
 			if (selection instanceof Environment) 
 			{						
 				applyInitializationData((Environment) selection);
-				// Symphony__CoreInvocatorFacade.INSTANCE.applyInitializationData((Environment) selection);
+				// ApogyCoreInvocatorFacade.INSTANCE.applyInitializationData((Environment) selection);
 			}
 		}
 		return null;
@@ -59,7 +59,7 @@ public class VariableInstancesApplyInitializationDataCommand extends AbstractHan
 					{						
 						monitor.subTask("Applying data on Variable <" + variable.getName() + ">...");
 						
-						Symphony__CoreInvocatorFacade.INSTANCE.applyInitializationData(variable);
+						ApogyCoreInvocatorFacade.INSTANCE.applyInitializationData(variable);
 						monitor.worked(1);
 						
 						if (monitor.isCanceled()) return;

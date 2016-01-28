@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.commands;
+package ca.gc.asc_csa.apogy.core.ui.commands;
 
 import java.util.Iterator;
 
@@ -11,8 +11,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.Activator;
-import org.eclipse.symphony.core.Updatable;
+import ca.gc.asc_csa.apogy.core.Activator;
+import ca.gc.asc_csa.apogy.core.Updatable;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class UpdatableUpdateCommandHandler extends AbstractHandler implements

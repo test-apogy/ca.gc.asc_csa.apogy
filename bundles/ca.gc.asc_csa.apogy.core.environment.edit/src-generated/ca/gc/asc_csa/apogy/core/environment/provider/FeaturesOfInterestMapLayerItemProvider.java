@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -61,7 +61,7 @@ public class FeaturesOfInterestMapLayerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES);
 		}
 		return childrenFeatures;
 	}
@@ -139,7 +139,7 @@ public class FeaturesOfInterestMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeaturesOfInterestMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
+			case ApogyCoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,8 +159,8 @@ public class FeaturesOfInterestMapLayerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestList()));
+				(ApogyCoreEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
 	}
 
 }

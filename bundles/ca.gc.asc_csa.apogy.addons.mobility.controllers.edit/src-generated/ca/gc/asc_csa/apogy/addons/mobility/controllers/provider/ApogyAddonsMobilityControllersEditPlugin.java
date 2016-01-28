@@ -2,29 +2,29 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsMobilityControllersEditPlugin.java,v 1.4.4.2 2015/05/21 15:50:54 pallard Exp $
+ * $Id: ApogyAddonsMobilityControllersEditPlugin.java,v 1.4.4.2 2015/05/21 15:50:54 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsEditPlugin;
-import org.eclipse.symphony.addons.mobility.provider.Symphony__AddonsMobilityEditPlugin;
-import org.eclipse.symphony.addons.sensors.pose.provider.Symphony__AddonsSensorsPoseEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.provider.ApogyAddonsGeometryPathsEditPlugin;
+import ca.gc.asc_csa.apogy.addons.mobility.provider.ApogyAddonsMobilityEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.provider.ApogyAddonsSensorsPoseEditPlugin;
+import ca.gc.asc_csa.apogy.addons.sensors.provider.ApogyAddonsSensorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsMobilityControllers edit plugin.
+ * This is the central singleton for the ApogyAddonsMobilityControllers edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsMobilityControllersEditPlugin extends EMFPlugin
+public final class ApogyAddonsMobilityControllersEditPlugin extends EMFPlugin
 {
 	/**
 	 * Keep track of the singleton.
@@ -32,7 +32,7 @@ public final class Symphony__AddonsMobilityControllersEditPlugin extends EMFPlug
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsMobilityControllersEditPlugin INSTANCE = new Symphony__AddonsMobilityControllersEditPlugin();
+	public static final ApogyAddonsMobilityControllersEditPlugin INSTANCE = new ApogyAddonsMobilityControllersEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -48,19 +48,19 @@ public final class Symphony__AddonsMobilityControllersEditPlugin extends EMFPlug
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityControllersEditPlugin()
+	public ApogyAddonsMobilityControllersEditPlugin()
 	{
 		super
 		  (new ResourceLocator [] {
-		     Symphony__AddonsMobilityEditPlugin.INSTANCE,
-		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsPoseEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyAddonsMobilityEditPlugin.INSTANCE,
+		     ApogyAddonsGeometryPathsEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsPoseEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
+		     ApogyAddonsSensorsEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

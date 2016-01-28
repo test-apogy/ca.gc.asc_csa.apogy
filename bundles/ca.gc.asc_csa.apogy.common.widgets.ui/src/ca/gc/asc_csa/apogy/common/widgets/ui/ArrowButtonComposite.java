@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.widgets.ui;
+package ca.gc.asc_csa.apogy.common.widgets.ui;
 
 import java.net.URL;
 
@@ -27,7 +27,7 @@ public class ArrowButtonComposite extends Composite  {
 	private static final int NB_MILLIS_BEFORE_AUTO_REPEAT = 400; //Time in millis before activate auto repeat effect.
 	
 	
-	private static final String IMAGES_FOLDER = "platform:/plugin/org.eclipse.symphony.common.widgets.ui/images/"; //Image path
+	private static final String IMAGES_FOLDER = "platform:/plugin/ca.gc.asc_csa.apogy.common.widgets.ui/images/"; //Image path
 	
 	private Image arrowImage; //Image of arrow.
 	private Image arrowImagePressed; //Image of pressed arrow.

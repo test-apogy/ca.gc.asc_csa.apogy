@@ -1,38 +1,38 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.vehicle;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.vehicle;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.addons.vehicle,
- org.eclipse.symphony.addons.vehicle.impl,
- org.eclipse.symphony.addons.vehicle.util
+Export-Package: ca.gc.asc_csa.apogy.addons.vehicle,
+ ca.gc.asc_csa.apogy.addons.vehicle.impl,
+ ca.gc.asc_csa.apogy.addons.vehicle.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.core;visibility:=reexport,
- org.eclipse.symphony.core.invocator;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.common.images;visibility:=reexport,
- org.eclipse.symphony.addons.geometry.paths;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
- org.eclipse.symphony.addons.mobility.pathplanners;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.topology.addons.dynamics;visibility:=reexport,
- org.eclipse.symphony.common.topology.bindings;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.core.environment;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.geometry.paths;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.mobility.pathplanners;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.addons.dynamics;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment;visibility:=reexport,
  org.jgrapht;bundle-version="0.8.2",
- org.eclipse.symphony.addons;visibility:=reexport,
- org.eclipse.symphony.addons.mobility.pathplanners.graph,
+ ca.gc.asc_csa.apogy.addons;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph,
  javax.vecmath,
- org.eclipse.symphony.common.topology.ui,
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ ca.gc.asc_csa.apogy.common.topology.ui,
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.addons.vehicle.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.vehicle.Activator

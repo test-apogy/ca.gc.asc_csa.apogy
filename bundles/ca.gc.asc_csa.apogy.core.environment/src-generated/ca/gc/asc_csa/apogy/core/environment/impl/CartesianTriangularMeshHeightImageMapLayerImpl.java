@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.awt.Color;
 
@@ -12,14 +12,14 @@ import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import edu.wlu.cs.levy.CG.KDTree;
 
 /**
@@ -30,9 +30,9 @@ import edu.wlu.cs.levy.CG.KDTree;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshHeightImageMapLayerImpl#isAutoScale <em>Auto Scale</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshHeightImageMapLayerImpl#getMinimumHeight <em>Minimum Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshHeightImageMapLayerImpl#getMaximumHeight <em>Maximum Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshHeightImageMapLayerImpl#isAutoScale <em>Auto Scale</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshHeightImageMapLayerImpl#getMinimumHeight <em>Minimum Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshHeightImageMapLayerImpl#getMaximumHeight <em>Maximum Height</em>}</li>
  * </ul>
  *
  * @generated
@@ -115,7 +115,7 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER;
 	}
 
 	/**
@@ -136,7 +136,7 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 		boolean oldAutoScale = autoScale;
 		autoScale = newAutoScale;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE, oldAutoScale, autoScale));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE, oldAutoScale, autoScale));
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 		double oldMinimumHeight = minimumHeight;
 		minimumHeight = newMinimumHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT, oldMinimumHeight, minimumHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT, oldMinimumHeight, minimumHeight));
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 		double oldMaximumHeight = maximumHeight;
 		maximumHeight = newMaximumHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT, oldMaximumHeight, maximumHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT, oldMaximumHeight, maximumHeight));
 	}
 
 	/**
@@ -189,11 +189,11 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
 				return isAutoScale();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
 				return getMinimumHeight();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
 				return getMaximumHeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -207,13 +207,13 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
 				setAutoScale((Boolean)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
 				setMinimumHeight((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
 				setMaximumHeight((Double)newValue);
 				return;
 		}
@@ -228,13 +228,13 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
 				setAutoScale(AUTO_SCALE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
 				setMinimumHeight(MINIMUM_HEIGHT_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
 				setMaximumHeight(MAXIMUM_HEIGHT_EDEFAULT);
 				return;
 		}
@@ -249,11 +249,11 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
 				return autoScale != AUTO_SCALE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
 				return minimumHeight != MINIMUM_HEIGHT_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
 				return maximumHeight != MAXIMUM_HEIGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

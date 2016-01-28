@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.ToggleValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,8 +17,8 @@ import org.eclipse.symphony.core.programs.controllers.ToggleValueSource;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ToggleValueSourceImpl#isInitialValue <em>Initial Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ToggleValueSourceImpl#isCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ToggleValueSourceImpl#isInitialValue <em>Initial Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ToggleValueSourceImpl#isCurrentValue <em>Current Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -85,7 +85,7 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE;
+		return ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE;
 	}
 
   /**
@@ -108,7 +108,7 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
 		boolean oldInitialValue = initialValue;
 		initialValue = newInitialValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE, oldInitialValue, initialValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE, oldInitialValue, initialValue));
 	}
 
   /**
@@ -136,7 +136,7 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
 		boolean oldCurrentValue = currentValue;
 		currentValue = newCurrentValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE, oldCurrentValue, currentValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE, oldCurrentValue, currentValue));
 	}
 
   /**
@@ -148,9 +148,9 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
 				return isInitialValue();
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
 				return isCurrentValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -165,10 +165,10 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
 				setInitialValue((Boolean)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
 				setCurrentValue((Boolean)newValue);
 				return;
 		}
@@ -184,10 +184,10 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
 				setInitialValue(INITIAL_VALUE_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
 				setCurrentValue(CURRENT_VALUE_EDEFAULT);
 				return;
 		}
@@ -203,9 +203,9 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
 				return initialValue != INITIAL_VALUE_EDEFAULT;
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
 				return currentValue != CURRENT_VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

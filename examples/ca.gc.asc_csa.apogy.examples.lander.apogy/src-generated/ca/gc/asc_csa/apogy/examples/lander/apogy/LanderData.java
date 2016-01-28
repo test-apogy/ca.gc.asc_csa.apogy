@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.symphony;
+package ca.gc.asc_csa.apogy.examples.lander.apogy;
 
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.examples.lander.LanderLegExtension;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,34 +12,34 @@ import org.eclipse.symphony.examples.lander.LanderLegExtension;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class specifies the initialization data that Symphony
+ * This class specifies the initialization data that Apogy
  * should be interested in when (re)initializing the PTU dish
  * antenna with the API Adapter (which in this case is
- * {@link org.eclipse.symphony.examples.antenna.PTUDishAntennaSymphonySystemApiAdapter})
+ * {@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaApogySystemApiAdapter})
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isDisposed <em>Disposed</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isFlyingEnabled <em>Flying Enabled</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getLegAExtension <em>Leg AExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getLegBExtension <em>Leg BExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getLegCExtension <em>Leg CExtension</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getCurrThrustLevel <em>Curr Thrust Level</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getMinThrustLevel <em>Min Thrust Level</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getMaxThrustLevel <em>Max Thrust Level</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getXAngularVelocity <em>XAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getYAngularVelocity <em>YAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#isFlyingEnabled <em>Flying Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getLegAExtension <em>Leg AExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getLegBExtension <em>Leg BExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getLegCExtension <em>Leg CExtension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getCurrThrustLevel <em>Curr Thrust Level</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getMinThrustLevel <em>Min Thrust Level</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getMaxThrustLevel <em>Max Thrust Level</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getXAngularVelocity <em>XAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData()
+ * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData()
  * @model
  * @generated
  */
-public interface LanderData extends SymphonyInitializationData {
+public interface LanderData extends ApogyInitializationData {
 	/**
 	 * Returns the value of the '<em><b>Initialized</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
@@ -50,7 +50,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -58,7 +58,7 @@ public interface LanderData extends SymphonyInitializationData {
 	boolean isInitialized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -77,7 +77,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_Disposed()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -85,7 +85,7 @@ public interface LanderData extends SymphonyInitializationData {
 	boolean isDisposed();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.
@@ -105,7 +105,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Flying Enabled</em>' attribute.
 	 * @see #setFlyingEnabled(boolean)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_FlyingEnabled()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_FlyingEnabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Flight'"
 	 * @generated
@@ -113,7 +113,7 @@ public interface LanderData extends SymphonyInitializationData {
 	boolean isFlyingEnabled();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isFlyingEnabled <em>Flying Enabled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#isFlyingEnabled <em>Flying Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Flying Enabled</em>' attribute.
@@ -124,7 +124,7 @@ public interface LanderData extends SymphonyInitializationData {
 
 	/**
 	 * Returns the value of the '<em><b>Leg AExtension</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.examples.lander.LanderLegExtension}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -132,9 +132,9 @@ public interface LanderData extends SymphonyInitializationData {
 	 * leg A.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg AExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #setLegAExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_LegAExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_LegAExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Legs'"
 	 * @generated
@@ -142,11 +142,11 @@ public interface LanderData extends SymphonyInitializationData {
 	LanderLegExtension getLegAExtension();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getLegAExtension <em>Leg AExtension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getLegAExtension <em>Leg AExtension</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg AExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #getLegAExtension()
 	 * @generated
 	 */
@@ -154,7 +154,7 @@ public interface LanderData extends SymphonyInitializationData {
 
 	/**
 	 * Returns the value of the '<em><b>Leg BExtension</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.examples.lander.LanderLegExtension}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -162,9 +162,9 @@ public interface LanderData extends SymphonyInitializationData {
 	 * leg B.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg BExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #setLegBExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_LegBExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_LegBExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Legs'"
 	 * @generated
@@ -172,11 +172,11 @@ public interface LanderData extends SymphonyInitializationData {
 	LanderLegExtension getLegBExtension();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getLegBExtension <em>Leg BExtension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getLegBExtension <em>Leg BExtension</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg BExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #getLegBExtension()
 	 * @generated
 	 */
@@ -184,7 +184,7 @@ public interface LanderData extends SymphonyInitializationData {
 
 	/**
 	 * Returns the value of the '<em><b>Leg CExtension</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.examples.lander.LanderLegExtension}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -192,9 +192,9 @@ public interface LanderData extends SymphonyInitializationData {
 	 * leg C.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg CExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #setLegCExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_LegCExtension()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_LegCExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Legs'"
 	 * @generated
@@ -202,11 +202,11 @@ public interface LanderData extends SymphonyInitializationData {
 	LanderLegExtension getLegCExtension();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getLegCExtension <em>Leg CExtension</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getLegCExtension <em>Leg CExtension</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Leg CExtension</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension
 	 * @see #getLegCExtension()
 	 * @generated
 	 */
@@ -222,15 +222,15 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Curr Thrust Level</em>' attribute.
 	 * @see #setCurrThrustLevel(double)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_CurrThrustLevel()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_CurrThrustLevel()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getCurrThrustLevel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getCurrThrustLevel <em>Curr Thrust Level</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getCurrThrustLevel <em>Curr Thrust Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Curr Thrust Level</em>' attribute.
@@ -249,15 +249,15 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Min Thrust Level</em>' attribute.
 	 * @see #setMinThrustLevel(double)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_MinThrustLevel()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_MinThrustLevel()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getMinThrustLevel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getMinThrustLevel <em>Min Thrust Level</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getMinThrustLevel <em>Min Thrust Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Min Thrust Level</em>' attribute.
@@ -276,15 +276,15 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Max Thrust Level</em>' attribute.
 	 * @see #setMaxThrustLevel(double)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_MaxThrustLevel()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_MaxThrustLevel()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getMaxThrustLevel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getMaxThrustLevel <em>Max Thrust Level</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getMaxThrustLevel <em>Max Thrust Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Max Thrust Level</em>' attribute.
@@ -304,15 +304,15 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XAngular Velocity</em>' attribute.
 	 * @see #setXAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_XAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_XAngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getXAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getXAngularVelocity <em>XAngular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getXAngularVelocity <em>XAngular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XAngular Velocity</em>' attribute.
@@ -332,15 +332,15 @@ public interface LanderData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YAngular Velocity</em>' attribute.
 	 * @see #setYAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_YAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#getLanderData_YAngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getYAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getYAngularVelocity <em>YAngular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData#getYAngularVelocity <em>YAngular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YAngular Velocity</em>' attribute.

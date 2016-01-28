@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
-import org.eclipse.symphony.common.geometry.data3d.asc.util.Symphony__CommonGeometryData3DASCAdapterFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.util.ApogyCommonGeometryData3DASCAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.geometry.data3d.asc.util.Symphony__CommonGeom
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends Symphony__CommonGeometryData3DASCAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonGeometryData3DASCItemProviderAdapterFactory extends ApogyCommonGeometryData3DASCAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonGeometryData3DASCEditPlugin.INSTANCE, Symphony__CommonGeometryData3DASCPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonGeometryData3DASCEditPlugin.INSTANCE, ApogyCommonGeometryData3DASCPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DASCItemProviderAdapterFactory() {
+	public ApogyCommonGeometryData3DASCItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	protected ASC3DIOItemProvider asc3DIOItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,7 +108,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	protected ASCHeaderDataItemProvider ascHeaderDataItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class Symphony__CommonGeometryData3DASCItemProviderAdapterFactory extends
 	protected Coordinates2DItemProvider coordinates2DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

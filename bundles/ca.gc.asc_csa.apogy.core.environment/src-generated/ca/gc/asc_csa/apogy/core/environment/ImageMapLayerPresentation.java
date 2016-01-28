@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation#getAlpha <em>Alpha</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation#getAlpha <em>Alpha</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayerPresentation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getImageMapLayerPresentation()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface ImageMapLayerPresentation extends MapLayerPresentation, Rectang
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Alpha</em>' attribute.
 	 * @see #setAlpha(float)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayerPresentation_Alpha()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getImageMapLayerPresentation_Alpha()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='PRESENTATION_SETTINGS'"
 	 * @generated
@@ -43,7 +43,7 @@ public interface ImageMapLayerPresentation extends MapLayerPresentation, Rectang
 	float getAlpha();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation#getAlpha <em>Alpha</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation#getAlpha <em>Alpha</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Alpha</em>' attribute.

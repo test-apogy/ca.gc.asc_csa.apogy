@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 
 import junit.textui.TestRunner;
 
@@ -54,7 +54,7 @@ public class EDataTypeArgumentTest extends ArgumentTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createEDataTypeArgument());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createEDataTypeArgument());
 	}
 
 	/**

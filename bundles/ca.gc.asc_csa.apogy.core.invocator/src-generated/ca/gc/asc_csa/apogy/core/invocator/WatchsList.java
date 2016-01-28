@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.WatchsList#getWatches <em>Watches</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.WatchsList#getWatches <em>Watches</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchsList()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchsList()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface WatchsList extends EObject
 {
   /**
    * Returns the value of the '<em><b>Watches</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.symphony.core.invocator.Watch}.
+   * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.Watch}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Watches</em>' containment reference list isn't clear,
@@ -40,7 +40,7 @@ public interface WatchsList extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Watches</em>' containment reference list.
-   * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchsList_Watches()
+   * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchsList_Watches()
    * @model containment="true"
    * @generated
    */

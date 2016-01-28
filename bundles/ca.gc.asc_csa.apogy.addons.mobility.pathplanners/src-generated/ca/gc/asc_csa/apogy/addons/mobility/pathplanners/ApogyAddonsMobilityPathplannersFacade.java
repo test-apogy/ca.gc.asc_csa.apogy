@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,11 +13,11 @@ import org.eclipse.symphony.common.topology.GroupNode;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getSymphony__AddonsMobilityPathplannersFacade()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage#getApogyAddonsMobilityPathplannersFacade()
  * @model
  * @generated
  */
-public interface Symphony__AddonsMobilityPathplannersFacade extends EObject {
+public interface ApogyAddonsMobilityPathplannersFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,4 +26,4 @@ public interface Symphony__AddonsMobilityPathplannersFacade extends EObject {
 	 */
 	CircularExclusionZone createCircularExclusionZone(double radius, GroupNode parent);
 
-} // Symphony__AddonsMobilityPathplannersFacade
+} // ApogyAddonsMobilityPathplannersFacade

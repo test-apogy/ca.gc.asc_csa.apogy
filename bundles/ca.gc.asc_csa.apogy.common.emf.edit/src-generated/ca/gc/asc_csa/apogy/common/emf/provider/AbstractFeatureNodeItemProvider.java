@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.AbstractFeatureNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

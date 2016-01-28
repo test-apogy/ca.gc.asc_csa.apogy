@@ -2,20 +2,20 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.emf.databinding;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.emf.databinding;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.common.emf.databinding.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.common.emf.databinding.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.databinding;bundle-version="1.3.100",
  org.eclipse.emf.ecore;bundle-version="2.6.1",
  org.eclipse.emf.databinding;bundle-version="1.2.0",
  org.eclipse.emf.edit;bundle-version="2.9.0",
- org.eclipse.symphony.common.emf,
+ ca.gc.asc_csa.apogy.common.emf,
  org.eclipse.swt,
- org.eclipse.symphony.common.emf.ui,
- org.eclipse.symphony.common.converters
+ ca.gc.asc_csa.apogy.common.emf.ui,
+ ca.gc.asc_csa.apogy.common.converters
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
-Export-Package: org.eclipse.symphony.common.emf.databinding,
- org.eclipse.symphony.common.emf.databinding.converters
+Export-Package: ca.gc.asc_csa.apogy.common.emf.databinding,
+ ca.gc.asc_csa.apogy.common.emf.databinding.converters

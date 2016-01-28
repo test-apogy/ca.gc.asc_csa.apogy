@@ -4,16 +4,16 @@
  *
  * $Id: LinkImpl.java,v 1.7.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Link;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Link;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.LinkImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.LinkImpl#getNode <em>Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,7 +51,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.LINK;
+		return ApogyCommonTopologyPackage.Literals.LINK;
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class LinkImpl extends NodeImpl implements Link {
 			node = (Node)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyPackage.LINK__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyPackage.LINK__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -95,7 +95,7 @@ public class LinkImpl extends NodeImpl implements Link {
 
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Symphony__CommonTopologyPackage.LINK__NODE, oldNode, node));
+					ApogyCommonTopologyPackage.LINK__NODE, oldNode, node));
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.LINK__NODE:
+			case ApogyCommonTopologyPackage.LINK__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
 		}
@@ -119,7 +119,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.LINK__NODE:
+			case ApogyCommonTopologyPackage.LINK__NODE:
 				setNode((Node)newValue);
 				return;
 		}
@@ -133,7 +133,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.LINK__NODE:
+			case ApogyCommonTopologyPackage.LINK__NODE:
 				setNode((Node)null);
 				return;
 		}
@@ -147,7 +147,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.LINK__NODE:
+			case ApogyCommonTopologyPackage.LINK__NODE:
 				return node != null;
 		}
 		return super.eIsSet(featureID);

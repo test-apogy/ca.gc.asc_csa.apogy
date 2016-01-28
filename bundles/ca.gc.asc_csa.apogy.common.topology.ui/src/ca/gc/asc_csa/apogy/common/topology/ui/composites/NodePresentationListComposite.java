@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.ui.composites;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 public class NodePresentationListComposite extends Composite 
 {

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.addons.geometry.paths;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getSegmentWayPointPathInterpolator()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getSegmentWayPointPathInterpolator()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface SegmentWayPointPathInterpolator extends WayPointPathInterpolato
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Distance Interval</em>' attribute.
 	 * @see #setMaximumDistanceInterval(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getSegmentWayPointPathInterpolator_MaximumDistanceInterval()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getSegmentWayPointPathInterpolator_MaximumDistanceInterval()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getMaximumDistanceInterval();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Distance Interval</em>' attribute.

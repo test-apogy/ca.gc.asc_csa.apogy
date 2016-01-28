@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.ui.composites;
 
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.swt.SWT;
@@ -7,8 +7,8 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
-import org.eclipse.symphony.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.math.ui.composites.Tuple3dComposite;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
 
 public class PositionNodeComposite extends Composite 
 {

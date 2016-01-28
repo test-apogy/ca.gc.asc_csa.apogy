@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_URLImageOverlay_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageOverlay_url_feature", "_UI_URLImageOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__URL,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__URL,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_URLImageOverlay_imageSizePolicy_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageOverlay_imageSizePolicy_feature", "_UI_URLImageOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_URLImageOverlay_image_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageOverlay_image_feature", "_UI_URLImageOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__IMAGE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__IMAGE,
 				 false,
 				 false,
 				 true,
@@ -154,8 +154,8 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLImageOverlay.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

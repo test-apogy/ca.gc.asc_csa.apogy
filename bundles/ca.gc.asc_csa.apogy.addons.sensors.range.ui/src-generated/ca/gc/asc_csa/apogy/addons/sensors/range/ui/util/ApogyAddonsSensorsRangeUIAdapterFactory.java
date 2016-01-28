@@ -1,33 +1,33 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.ui.util;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
-import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
-import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage
  * @generated
  */
-public class Symphony__AddonsSensorsRangeUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsSensorsRangeUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsRangeUIPackage modelPackage;
+	protected static ApogyAddonsSensorsRangeUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__AddonsSensorsRangeUIAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeUIAdapterFactory() {
+	public ApogyAddonsSensorsRangeUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsRangeUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsRangeUIPackage.eINSTANCE;
 		}
 	}
 
@@ -66,8 +66,8 @@ public class Symphony__AddonsSensorsRangeUIAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsRangeUISwitch<Adapter> modelSwitch =
-		new Symphony__AddonsSensorsRangeUISwitch<Adapter>() {
+	protected ApogyAddonsSensorsRangeUISwitch<Adapter> modelSwitch =
+		new ApogyAddonsSensorsRangeUISwitch<Adapter>() {
 			@Override
 			public Adapter caseRasterScanDataPresentation(RasterScanDataPresentation object) {
 				return createRasterScanDataPresentationAdapter();
@@ -101,13 +101,13 @@ public class Symphony__AddonsSensorsRangeUIAdapterFactory extends AdapterFactory
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation <em>Raster Scan Data Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation <em>Raster Scan Data Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation
 	 * @generated
 	 */
 	public Adapter createRasterScanDataPresentationAdapter() {
@@ -115,13 +115,13 @@ public class Symphony__AddonsSensorsRangeUIAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation <em>Simple Sonar Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation <em>Simple Sonar Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation
 	 * @generated
 	 */
 	public Adapter createSimpleSonarPresentationAdapter() {
@@ -129,13 +129,13 @@ public class Symphony__AddonsSensorsRangeUIAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -154,4 +154,4 @@ public class Symphony__AddonsSensorsRangeUIAdapterFactory extends AdapterFactory
 		return null;
 	}
 
-} //Symphony__AddonsSensorsRangeUIAdapterFactory
+} //ApogyAddonsSensorsRangeUIAdapterFactory

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 
 /**
@@ -18,10 +18,10 @@ package org.eclipse.symphony.common.geometry.data3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PositionMarker#getIdentifier <em>Identifier</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker#getIdentifier <em>Identifier</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPositionMarker()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getPositionMarker()
  * @model
  * @generated
  */
@@ -40,14 +40,14 @@ public interface PositionMarker extends CartesianPositionCoordinates {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Identifier</em>' attribute.
 	 * @see #setIdentifier(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPositionMarker_Identifier()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getPositionMarker_Identifier()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getIdentifier();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.PositionMarker#getIdentifier <em>Identifier</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker#getIdentifier <em>Identifier</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Identifier</em>' attribute.

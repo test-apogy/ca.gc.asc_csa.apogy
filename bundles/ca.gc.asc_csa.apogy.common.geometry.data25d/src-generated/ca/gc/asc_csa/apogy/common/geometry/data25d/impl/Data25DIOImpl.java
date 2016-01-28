@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2007.
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,12 +15,12 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Data25DIO;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -44,7 +44,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData25DPackage.Literals.DATA25_DIO;
+		return ApogyCommonGeometryData25DPackage.Literals.DATA25_DIO;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 	 */
 	public VolumetricCoordinatesSet25D loadXYZ(String fileName)
 			throws IOException {
-		VolumetricCoordinatesSet25D data = Symphony__CommonGeometryData25DFactory.eINSTANCE
+		VolumetricCoordinatesSet25D data = ApogyCommonGeometryData25DFactory.eINSTANCE
 				.createVolumetricCoordinatesSet25D();
 		// Disable point uniqueness for performance reasons.
 		data.setEnforceUniqueness(false);
@@ -130,7 +130,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 						double y = Double.parseDouble(cols[1]);
 						double z = Double.parseDouble(cols[2]);
 
-						Coordinates25D point = Symphony__CommonGeometryData25DFacade.INSTANCE
+						Coordinates25D point = ApogyCommonGeometryData25DFacade.INSTANCE
 								.createCoordinates25D(x, y, z);
 
 						data.getPoints().add(point);
@@ -161,7 +161,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData25DPackage.DATA25_DIO___SAVE_XYZ__VOLUMETRICCOORDINATESSET25D_STRING:
+			case ApogyCommonGeometryData25DPackage.DATA25_DIO___SAVE_XYZ__VOLUMETRICCOORDINATESSET25D_STRING:
 				try {
 					saveXYZ((VolumetricCoordinatesSet25D)arguments.get(0), (String)arguments.get(1));
 					return null;
@@ -169,7 +169,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData25DPackage.DATA25_DIO___LOAD_XYZ__STRING:
+			case ApogyCommonGeometryData25DPackage.DATA25_DIO___LOAD_XYZ__STRING:
 				try {
 					return loadXYZ((String)arguments.get(0));
 				}

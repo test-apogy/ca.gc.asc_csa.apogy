@@ -1,21 +1,21 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.net.URL;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.URLMapLayer;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.URLMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,8 +25,8 @@ import org.eclipse.symphony.core.environment.URLMapLayer;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshURLMapLayerImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshURLMapLayerImpl#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshURLMapLayerImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshURLMapLayerImpl#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER;
 	}
 
   /**
@@ -113,7 +113,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL, oldUrl, url));
 	}
 		
   /**
@@ -150,7 +150,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 		CartesianTriangularMesh oldMesh = mesh;
 		mesh = newMesh;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH, oldMesh, mesh));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH, oldMesh, mesh));
 	}
 
     /**
@@ -172,9 +172,9 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				return getUrl();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				if (resolve) return getMesh();
 				return basicGetMesh();
 		}
@@ -190,10 +190,10 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				setUrl((String)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				setMesh((CartesianTriangularMesh)newValue);
 				return;
 		}
@@ -209,10 +209,10 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				setUrl(URL_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				setMesh((CartesianTriangularMesh)null);
 				return;
 		}
@@ -228,9 +228,9 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				return mesh != null;
 		}
 		return super.eIsSet(featureID);
@@ -245,7 +245,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == URLMapLayer.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL: return Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL;
+				case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL: return ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL;
 				default: return -1;
 			}
 		}
@@ -261,7 +261,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == URLMapLayer.class) {
 			switch (baseFeatureID) {
-				case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL: return Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL;
+				case ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL: return ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL;
 				default: return -1;
 			}
 		}
@@ -316,7 +316,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	  try
 	  {
 		  URL url = resolveURLString(urlString);
-		  loadedMesh = (CartesianTriangularMesh) Symphony__CommonConvertersFacade.INSTANCE.convert(url, CartesianTriangularMesh.class);
+		  loadedMesh = (CartesianTriangularMesh) ApogyCommonConvertersFacade.INSTANCE.convert(url, CartesianTriangularMesh.class);
 		  
 		  if(loadedMesh != null)
 		  {				

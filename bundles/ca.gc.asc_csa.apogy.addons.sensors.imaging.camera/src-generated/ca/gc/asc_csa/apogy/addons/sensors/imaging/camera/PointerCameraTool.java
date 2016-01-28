@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import javax.vecmath.Color3f;
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +24,12 @@ import org.eclipse.symphony.core.AbsolutePoseProvider;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getPointerCameraTool()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fov</em>' reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool_Fov()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getPointerCameraTool_Fov()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TOOL_PROPERTIES'"
 	 * @generated
@@ -52,7 +52,7 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	RectangularFrustrumFieldOfView getFov();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov</em>' reference.
@@ -72,15 +72,15 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vector Color</em>' attribute.
 	 * @see #setVectorColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool_VectorColor()
-	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getPointerCameraTool_VectorColor()
+	 * @model default="0.0,1.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TOOL_PROPERTIES'"
 	 * @generated
 	 */
 	Color3f getVectorColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vector Color</em>' attribute.
@@ -99,7 +99,7 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Intersection Distance</em>' attribute.
 	 * @see #setIntersectionDistance(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool_IntersectionDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getPointerCameraTool_IntersectionDistance()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TOOL_PROPERTIES' sca_units='m'"
 	 * @generated
@@ -107,7 +107,7 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	double getIntersectionDistance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Intersection Distance</em>' attribute.

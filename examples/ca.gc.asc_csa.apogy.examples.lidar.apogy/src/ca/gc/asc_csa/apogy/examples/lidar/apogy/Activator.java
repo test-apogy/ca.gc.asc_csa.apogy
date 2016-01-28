@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.lidar.symphony;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

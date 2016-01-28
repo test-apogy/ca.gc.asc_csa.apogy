@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__CommonGeometryData25DPackageImpl.java,v 1.8.4.2 2015/05/21 15:51:20 pallard Exp $
+ * $Id: ApogyCommonGeometryData25DPackageImpl.java,v 1.8.4.2 2015/05/21 15:51:20 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -14,20 +14,20 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter;
-import org.eclipse.symphony.common.geometry.data25d.Data25DIO;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade;
-import org.eclipse.symphony.common.geometry.data25d.Mesh25D;
-import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25DFilter;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 import java.io.IOException;
 
 /**
@@ -36,7 +36,7 @@ import java.io.IOException;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl implements Symphony__CommonGeometryData25DPackage {
+public class ApogyCommonGeometryData25DPackageImpl extends EPackageImpl implements ApogyCommonGeometryData25DPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,7 +91,7 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonGeometryData25DFacadeEClass = null;
+	private EClass apogy__CommonGeometryData25DFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,12 +118,12 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonGeometryData25DPackageImpl() {
-		super(eNS_URI, Symphony__CommonGeometryData25DFactory.eINSTANCE);
+	private ApogyCommonGeometryData25DPackageImpl() {
+		super(eNS_URI, ApogyCommonGeometryData25DFactory.eINSTANCE);
 	}
 
 	/**
@@ -136,7 +136,7 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonGeometryData25DPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonGeometryData25DPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -145,30 +145,30 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData25DPackage init() {
-		if (isInited) return (Symphony__CommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData25DPackage.eNS_URI);
+	public static ApogyCommonGeometryData25DPackage init() {
+		if (isInited) return (ApogyCommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData25DPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonGeometryData25DPackageImpl theSymphony__CommonGeometryData25DPackage = (Symphony__CommonGeometryData25DPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonGeometryData25DPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonGeometryData25DPackageImpl());
+		ApogyCommonGeometryData25DPackageImpl theApogyCommonGeometryData25DPackage = (ApogyCommonGeometryData25DPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonGeometryData25DPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonGeometryData25DPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonGeometryData25DPackage.createPackageContents();
+		theApogyCommonGeometryData25DPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonGeometryData25DPackage.initializePackageContents();
+		theApogyCommonGeometryData25DPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonGeometryData25DPackage.freeze();
+		theApogyCommonGeometryData25DPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonGeometryData25DPackage.eNS_URI, theSymphony__CommonGeometryData25DPackage);
-		return theSymphony__CommonGeometryData25DPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonGeometryData25DPackage.eNS_URI, theApogyCommonGeometryData25DPackage);
+		return theApogyCommonGeometryData25DPackage;
 	}
 
 	/**
@@ -296,8 +296,8 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonGeometryData25DFacade() {
-		return symphony__CommonGeometryData25DFacadeEClass;
+	public EClass getApogyCommonGeometryData25DFacade() {
+		return apogy__CommonGeometryData25DFacadeEClass;
 	}
 
 	/**
@@ -305,8 +305,8 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D() {
-		return symphony__CommonGeometryData25DFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D() {
+		return apogy__CommonGeometryData25DFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -314,8 +314,8 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double() {
-		return symphony__CommonGeometryData25DFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCommonGeometryData25DFacade__CreateCoordinates25D__double_double_double() {
+		return apogy__CommonGeometryData25DFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -323,8 +323,8 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D() {
-		return symphony__CommonGeometryData25DFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D() {
+		return apogy__CommonGeometryData25DFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -368,8 +368,8 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DFactory getSymphony__CommonGeometryData25DFactory() {
-		return (Symphony__CommonGeometryData25DFactory)getEFactoryInstance();
+	public ApogyCommonGeometryData25DFactory getApogyCommonGeometryData25DFactory() {
+		return (ApogyCommonGeometryData25DFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -411,10 +411,10 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		coordinatesSet25DFilterEClass = createEClass(COORDINATES_SET25_DFILTER);
 		createEOperation(coordinatesSet25DFilterEClass, COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D);
 
-		symphony__CommonGeometryData25DFacadeEClass = createEClass(SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE);
-		createEOperation(symphony__CommonGeometryData25DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D);
-		createEOperation(symphony__CommonGeometryData25DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(symphony__CommonGeometryData25DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D);
+		apogy__CommonGeometryData25DFacadeEClass = createEClass(APOGY_COMMON_GEOMETRY_DATA25_DFACADE);
+		createEOperation(apogy__CommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D);
+		createEOperation(apogy__CommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogy__CommonGeometryData25DFacadeEClass, APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D);
 
 		data25DIOEClass = createEClass(DATA25_DIO);
 		createEOperation(data25DIOEClass, DATA25_DIO___SAVE_XYZ__VOLUMETRICCOORDINATESSET25D_STRING);
@@ -448,10 +448,10 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonGeometryDataPackage theSymphony__CommonGeometryDataPackage = (Symphony__CommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryDataPackage.eNS_URI);
+		ApogyCommonGeometryDataPackage theApogyCommonGeometryDataPackage = (ApogyCommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryDataPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
-		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonProcessorsPackage theApogyCommonProcessorsPackage = (ApogyCommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonProcessorsPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter coordinatesSet25DFilterEClass_T = addETypeParameter(coordinatesSet25DFilterEClass, "T");
@@ -461,24 +461,24 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		coordinatesSet25DFilterEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
-		coordinates25DEClass.getESuperTypes().add(theSymphony__CommonGeometryDataPackage.getCoordinates());
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getCoordinatesSet());
+		coordinates25DEClass.getESuperTypes().add(theApogyCommonGeometryDataPackage.getCoordinates());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getCoordinatesSet());
 		EGenericType g2 = createEGenericType(this.getCoordinates25D());
 		g1.getETypeArguments().add(g2);
 		coordinatesSet25DEClass.getEGenericSuperTypes().add(g1);
 		volumetricCoordinatesSet25DEClass.getESuperTypes().add(this.getCoordinatesSet25D());
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getPolygon());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getPolygon());
 		g2 = createEGenericType(this.getCoordinates25D());
 		g1.getETypeArguments().add(g2);
 		polygon25DEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getMesh());
+		g1 = createEGenericType(theApogyCommonGeometryDataPackage.getMesh());
 		g2 = createEGenericType(this.getCoordinates25D());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getPolygon25D());
 		g1.getETypeArguments().add(g2);
 		mesh25DEClass.getEGenericSuperTypes().add(g1);
 		volumetricMesh25DEClass.getESuperTypes().add(this.getMesh25D());
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(coordinatesSet25DFilterEClass_T);
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(coordinatesSet25DFilterEClass_T);
@@ -496,7 +496,7 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 
 		initEClass(volumetricCoordinatesSet25DEClass, VolumetricCoordinatesSet25D.class, "VolumetricCoordinatesSet25D", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getVolumetricCoordinatesSet25D__GetCartesianPositionCoordinates__Coordinates25D(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getVolumetricCoordinatesSet25D__GetCartesianPositionCoordinates__Coordinates25D(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates25D(), "coordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(polygon25DEClass, Polygon25D.class, "Polygon25D", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -511,17 +511,17 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		g1 = createEGenericType(coordinatesSet25DFilterEClass_T);
 		initEOperation(op, g1);
 
-		initEClass(symphony__CommonGeometryData25DFacadeEClass, Symphony__CommonGeometryData25DFacade.class, "Symphony__CommonGeometryData25DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonGeometryData25DFacadeEClass, ApogyCommonGeometryData25DFacade.class, "ApogyCommonGeometryData25DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates25D(), "coordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonGeometryData25DFacade__CreateCoordinates25D__double_double_double(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "u", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "v", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "w", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), "createCartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D(), theApogyCommonGeometryData3DPackage.getCartesianCoordinatesSet(), "createCartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		ETypeParameter t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(this.getVolumetricCoordinatesSet25D());
 		t1.getEBounds().add(g1);
@@ -562,16 +562,16 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonGeometryData25D",
+			 "prefix", "ApogyCommonGeometryData25D",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonGeometryData25D",
+			 "modelName", "ApogyCommonGeometryData25D",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data25d/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.geometry.data25d.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.geometry"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data25d/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.geometry.data25d.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.geometry"
 		   });	
 		addAnnotation
 		  (coordinates25DEClass, 
@@ -587,4 +587,4 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		   });
 	}
 
-} //Symphony__CommonGeometryData25DPackageImpl
+} //ApogyCommonGeometryData25DPackageImpl

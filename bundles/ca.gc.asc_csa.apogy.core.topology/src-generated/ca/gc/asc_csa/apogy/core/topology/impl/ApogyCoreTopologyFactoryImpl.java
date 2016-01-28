@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.impl;
+package ca.gc.asc_csa.apogy.core.topology.impl;
 
 import java.util.SortedSet;
 import org.eclipse.emf.ecore.EClass;
@@ -10,12 +10,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
-import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFactory;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
-import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements Symphony__CoreTopologyFactory
+public class ApogyCoreTopologyFactoryImpl extends EFactoryImpl implements ApogyCoreTopologyFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -31,18 +31,18 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CoreTopologyFactory init()
+  public static ApogyCoreTopologyFactory init()
   {
 		try {
-			Symphony__CoreTopologyFactory theSymphony__CoreTopologyFactory = (Symphony__CoreTopologyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreTopologyPackage.eNS_URI);
-			if (theSymphony__CoreTopologyFactory != null) {
-				return theSymphony__CoreTopologyFactory;
+			ApogyCoreTopologyFactory theApogyCoreTopologyFactory = (ApogyCoreTopologyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreTopologyPackage.eNS_URI);
+			if (theApogyCoreTopologyFactory != null) {
+				return theApogyCoreTopologyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreTopologyFactoryImpl();
+		return new ApogyCoreTopologyFactoryImpl();
 	}
 
   /**
@@ -51,7 +51,7 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreTopologyFactoryImpl()
+  public ApogyCoreTopologyFactoryImpl()
   {
 		super();
 	}
@@ -65,10 +65,10 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: return createSystemsTopologyAdapter();
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE: return createSymphonyEnvironmentNode();
-			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE: return createSymphonySystemAPIsNode();
-			case Symphony__CoreTopologyPackage.SYMPHONY_CORE_TOPOLOGY_FACADE: return createSymphony__CoreTopologyFacade();
+			case ApogyCoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: return createSystemsTopologyAdapter();
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE: return createApogyEnvironmentNode();
+			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE: return createApogySystemAPIsNode();
+			case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE: return createApogyCoreTopologyFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,7 +83,7 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreTopologyPackage.SORTED_SET:
+			case ApogyCoreTopologyPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -99,7 +99,7 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreTopologyPackage.SORTED_SET:
+			case ApogyCoreTopologyPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -122,10 +122,10 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyEnvironmentNode createSymphonyEnvironmentNode()
+  public ApogyEnvironmentNode createApogyEnvironmentNode()
   {
-		SymphonyEnvironmentNodeImpl symphonyEnvironmentNode = new SymphonyEnvironmentNodeImpl();
-		return symphonyEnvironmentNode;
+		ApogyEnvironmentNodeImpl apogyEnvironmentNode = new ApogyEnvironmentNodeImpl();
+		return apogyEnvironmentNode;
 	}
 
   /**
@@ -133,10 +133,10 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemAPIsNode createSymphonySystemAPIsNode()
+  public ApogySystemAPIsNode createApogySystemAPIsNode()
   {
-		SymphonySystemAPIsNodeImpl symphonySystemAPIsNode = new SymphonySystemAPIsNodeImpl();
-		return symphonySystemAPIsNode;
+		ApogySystemAPIsNodeImpl apogySystemAPIsNode = new ApogySystemAPIsNodeImpl();
+		return apogySystemAPIsNode;
 	}
 
   /**
@@ -144,9 +144,9 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreTopologyFacade createSymphony__CoreTopologyFacade() {
-		Symphony__CoreTopologyFacadeImpl symphony__CoreTopologyFacade = new Symphony__CoreTopologyFacadeImpl();
-		return symphony__CoreTopologyFacade;
+	public ApogyCoreTopologyFacade createApogyCoreTopologyFacade() {
+		ApogyCoreTopologyFacadeImpl apogy__CoreTopologyFacade = new ApogyCoreTopologyFacadeImpl();
+		return apogy__CoreTopologyFacade;
 	}
 
 		/**
@@ -174,8 +174,8 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreTopologyPackage getSymphony__CoreTopologyPackage() {
-		return (Symphony__CoreTopologyPackage)getEPackage();
+	public ApogyCoreTopologyPackage getApogyCoreTopologyPackage() {
+		return (ApogyCoreTopologyPackage)getEPackage();
 	}
 
 		/**
@@ -185,9 +185,9 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CoreTopologyPackage getPackage()
+  public static ApogyCoreTopologyPackage getPackage()
   {
-		return Symphony__CoreTopologyPackage.eINSTANCE;
+		return ApogyCoreTopologyPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreTopologyFactoryImpl
+} //ApogyCoreTopologyFactoryImpl

@@ -1,31 +1,31 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.controllers;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers;
 
 import org.eclipse.emf.ecore.EFactory;
 
-import org.eclipse.symphony.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
 
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage
  * @generated
  */
-public interface Symphony__AddonsMobilityControllersFactory extends EFactory {
+public interface ApogyAddonsMobilityControllersFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsMobilityControllersFactory eINSTANCE = org.eclipse.symphony.addons.mobility.controllers.impl.Symphony__AddonsMobilityControllersFactoryImpl.init();
+	ApogyAddonsMobilityControllersFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.ApogyAddonsMobilityControllersFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Path Follower</em>'.
@@ -88,6 +88,6 @@ public interface Symphony__AddonsMobilityControllersFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsMobilityControllersPackage getSymphony__AddonsMobilityControllersPackage();
+	ApogyAddonsMobilityControllersPackage getApogyAddonsMobilityControllersPackage();
 
-} //Symphony__AddonsMobilityControllersFactory
+} //ApogyAddonsMobilityControllersFactory

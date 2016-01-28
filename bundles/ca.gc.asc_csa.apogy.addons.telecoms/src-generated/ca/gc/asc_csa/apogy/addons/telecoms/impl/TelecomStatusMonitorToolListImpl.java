@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import java.util.Collection;
 
@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.impl.SimpleToolImpl;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
+import ca.gc.asc_csa.apogy.addons.impl.SimpleToolImpl;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolListImpl#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolListImpl#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +56,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST;
+		return ApogyAddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	 */
 	public EList<TelecomStatusMonitorTool> getTelecomStatusMonitors() {
 		if (telecomStatusMonitors == null) {
-			telecomStatusMonitors = new EObjectContainmentWithInverseEList<TelecomStatusMonitorTool>(TelecomStatusMonitorTool.class, this, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST);
+			telecomStatusMonitors = new EObjectContainmentWithInverseEList<TelecomStatusMonitorTool>(TelecomStatusMonitorTool.class, this, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST);
 		}
 		return telecomStatusMonitors;
 	}
@@ -80,7 +80,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTelecomStatusMonitors()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -94,7 +94,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return ((InternalEList<?>)getTelecomStatusMonitors()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -108,7 +108,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return getTelecomStatusMonitors();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,7 +123,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				getTelecomStatusMonitors().clear();
 				getTelecomStatusMonitors().addAll((Collection<? extends TelecomStatusMonitorTool>)newValue);
 				return;
@@ -139,7 +139,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				getTelecomStatusMonitors().clear();
 				return;
 		}
@@ -154,7 +154,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return telecomStatusMonitors != null && !telecomStatusMonitors.isEmpty();
 		}
 		return super.eIsSet(featureID);

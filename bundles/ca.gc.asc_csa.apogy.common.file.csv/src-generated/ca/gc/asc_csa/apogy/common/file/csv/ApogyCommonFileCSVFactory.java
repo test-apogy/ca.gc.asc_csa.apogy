@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv;
+package ca.gc.asc_csa.apogy.common.file.csv;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage
+ * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage
  * @generated
  */
-public interface Symphony__CommonFileCSVFactory extends EFactory {
+public interface ApogyCommonFileCSVFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonFileCSVFactory eINSTANCE = org.eclipse.symphony.common.file.csv.impl.Symphony__CommonFileCSVFactoryImpl.init();
+	ApogyCommonFileCSVFactory eINSTANCE = ca.gc.asc_csa.apogy.common.file.csv.impl.ApogyCommonFileCSVFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Csv Column</em>'.
@@ -56,6 +56,6 @@ public interface Symphony__CommonFileCSVFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonFileCSVPackage getMRTCsvPackage();
+	ApogyCommonFileCSVPackage getMRTCsvPackage();
 
-} //Symphony__CommonFileCSVFactory
+} //ApogyCommonFileCSVFactory

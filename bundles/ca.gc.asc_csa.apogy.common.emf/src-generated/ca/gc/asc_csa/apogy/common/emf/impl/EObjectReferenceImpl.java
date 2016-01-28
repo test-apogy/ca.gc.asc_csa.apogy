@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.common.emf.EObjectReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.EObjectReferenceImpl#getEObject <em>EObject</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl#getEObject <em>EObject</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,7 +54,7 @@ public class EObjectReferenceImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.EOBJECT_REFERENCE;
+		return ApogyCommonEMFPackage.Literals.EOBJECT_REFERENCE;
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class EObjectReferenceImpl extends MinimalEObjectImpl.Container implement
 			eObject = eResolveProxy(oldEObject);
 			if (eObject != oldEObject) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.EOBJECT_REFERENCE__EOBJECT, oldEObject, eObject));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonEMFPackage.EOBJECT_REFERENCE__EOBJECT, oldEObject, eObject));
 			}
 		}
 		return eObject;
@@ -92,7 +92,7 @@ public class EObjectReferenceImpl extends MinimalEObjectImpl.Container implement
 		EObject oldEObject = eObject;
 		eObject = newEObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.EOBJECT_REFERENCE__EOBJECT, oldEObject, eObject));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.EOBJECT_REFERENCE__EOBJECT, oldEObject, eObject));
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class EObjectReferenceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
+			case ApogyCommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
 				if (resolve) return getEObject();
 				return basicGetEObject();
 		}
@@ -118,7 +118,7 @@ public class EObjectReferenceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
+			case ApogyCommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
 				setEObject((EObject)newValue);
 				return;
 		}
@@ -133,7 +133,7 @@ public class EObjectReferenceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
+			case ApogyCommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
 				setEObject((EObject)null);
 				return;
 		}
@@ -148,7 +148,7 @@ public class EObjectReferenceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
+			case ApogyCommonEMFPackage.EOBJECT_REFERENCE__EOBJECT:
 				return eObject != null;
 		}
 		return super.eIsSet(featureID);

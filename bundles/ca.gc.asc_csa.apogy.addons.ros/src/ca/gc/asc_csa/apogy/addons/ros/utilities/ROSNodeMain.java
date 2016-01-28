@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ros.utilities;
+package ca.gc.asc_csa.apogy.addons.ros.utilities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,9 @@ import org.ros.RosRun;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
-import org.eclipse.symphony.addons.ros.Activator;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class ROSNodeMain extends AbstractNodeMain
 {

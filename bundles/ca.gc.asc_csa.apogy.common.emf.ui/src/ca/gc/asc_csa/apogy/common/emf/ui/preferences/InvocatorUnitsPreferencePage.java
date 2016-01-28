@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.preferences;
+package ca.gc.asc_csa.apogy.common.emf.ui.preferences;
 
 import java.util.Map;
 
@@ -10,9 +10,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.common.emf.ui.Activator;
-import org.eclipse.symphony.common.emf.ui.composites.AvailableUnitsComposite;
-import org.eclipse.symphony.common.emf.ui.composites.NativeToDisplayUnitsMapComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.AvailableUnitsComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.NativeToDisplayUnitsMapComposite;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 

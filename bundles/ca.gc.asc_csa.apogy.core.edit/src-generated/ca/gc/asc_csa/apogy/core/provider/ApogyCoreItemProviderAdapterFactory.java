@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,22 +27,22 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.LocalTypesList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
-import org.eclipse.symphony.core.util.Symphony__CoreAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsSwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.core.util.ApogyCoreAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -53,8 +53,8 @@ import org.eclipse.symphony.core.util.Symphony__CoreAdapterFactory;
  * end-user-doc -->
  * @generated
  */
-public class Symphony__CoreItemProviderAdapterFactory extends
-		Symphony__CoreAdapterFactory implements ComposeableAdapterFactory,
+public class ApogyCoreItemProviderAdapterFactory extends
+		ApogyCoreAdapterFactory implements ComposeableAdapterFactory,
 		IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -78,7 +78,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreEditPlugin.INSTANCE, Symphony__CorePackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreEditPlugin.INSTANCE, ApogyCorePackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -94,7 +94,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	 * 
 	 * @generated
 	 */
-	public Symphony__CoreItemProviderAdapterFactory() {
+	public ApogyCoreItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -104,55 +104,55 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.Symphony__CoreFacade} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	protected Symphony__CoreFacadeItemProvider symphony__CoreFacadeItemProvider;
+	protected ApogyCoreFacadeItemProvider apogy__CoreFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.Symphony__CoreFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ApogyCoreFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreFacadeAdapter() {
-		if (symphony__CoreFacadeItemProvider == null) {
-			symphony__CoreFacadeItemProvider = new Symphony__CoreFacadeItemProvider(this);
+	public Adapter createApogyCoreFacadeAdapter() {
+		if (apogy__CoreFacadeItemProvider == null) {
+			apogy__CoreFacadeItemProvider = new ApogyCoreFacadeItemProvider(this);
 		}
 
-		return symphony__CoreFacadeItemProvider;
+		return apogy__CoreFacadeItemProvider;
 	}
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.SymphonyEnvironment} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ApogyEnvironment} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	protected SymphonyEnvironmentItemProvider symphonyEnvironmentItemProvider;
+	protected ApogyEnvironmentItemProvider apogyEnvironmentItemProvider;
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.core.SymphonyEnvironment}. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ApogyEnvironment}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyEnvironmentAdapter() {
-		if (symphonyEnvironmentItemProvider == null) {
-			symphonyEnvironmentItemProvider = new SymphonyEnvironmentItemProvider(this);
+	public Adapter createApogyEnvironmentAdapter() {
+		if (apogyEnvironmentItemProvider == null) {
+			apogyEnvironmentItemProvider = new ApogyEnvironmentItemProvider(this);
 		}
 
-		return symphonyEnvironmentItemProvider;
+		return apogyEnvironmentItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.TimeSourcesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.TimeSourcesList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -160,7 +160,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected TimeSourcesListItemProvider timeSourcesListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.TimeSourcesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.TimeSourcesList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -176,79 +176,79 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.SymphonyTopology} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ApogyTopology} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	protected SymphonyTopologyItemProvider symphonyTopologyItemProvider;
+	protected ApogyTopologyItemProvider apogyTopologyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.SymphonyTopology}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ApogyTopology}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyTopologyAdapter() {
-		if (symphonyTopologyItemProvider == null) {
-			symphonyTopologyItemProvider = new SymphonyTopologyItemProvider(this);
+	public Adapter createApogyTopologyAdapter() {
+		if (apogyTopologyItemProvider == null) {
+			apogyTopologyItemProvider = new ApogyTopologyItemProvider(this);
 		}
 
-		return symphonyTopologyItemProvider;
+		return apogyTopologyItemProvider;
 	}
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.SymphonySystem} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ApogySystem} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	protected SymphonySystemItemProvider symphonySystemItemProvider;
+	protected ApogySystemItemProvider apogySystemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.SymphonySystem}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ApogySystem}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonySystemAdapter() {
-		if (symphonySystemItemProvider == null) {
-			symphonySystemItemProvider = new SymphonySystemItemProvider(this);
+	public Adapter createApogySystemAdapter() {
+		if (apogySystemItemProvider == null) {
+			apogySystemItemProvider = new ApogySystemItemProvider(this);
 		}
 
-		return symphonySystemItemProvider;
+		return apogySystemItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.SymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SymphonySystemApiAdapterItemProvider symphonySystemApiAdapterItemProvider;
+  protected ApogySystemApiAdapterItemProvider apogySystemApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.SymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createSymphonySystemApiAdapterAdapter()
+  public Adapter createApogySystemApiAdapterAdapter()
   {
-		if (symphonySystemApiAdapterItemProvider == null) {
-			symphonySystemApiAdapterItemProvider = new SymphonySystemApiAdapterItemProvider(this);
+		if (apogySystemApiAdapterItemProvider == null) {
+			apogySystemApiAdapterItemProvider = new ApogySystemApiAdapterItemProvider(this);
 		}
 
-		return symphonySystemApiAdapterItemProvider;
+		return apogySystemApiAdapterItemProvider;
 	}
 
   /**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.ConnectionPointsList} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ConnectionPointsList} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -257,7 +257,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.core.ConnectionPointsList}. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ConnectionPointsList}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -273,7 +273,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.ConnectionPoint} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ConnectionPoint} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -281,7 +281,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected ConnectionPointItemProvider connectionPointItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ConnectionPoint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ConnectionPoint}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -297,7 +297,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.AssemblyLink} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.AssemblyLink} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -305,7 +305,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected AssemblyLinkItemProvider assemblyLinkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.AssemblyLink}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.AssemblyLink}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -321,7 +321,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.AssemblyLinksList} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.AssemblyLinksList} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -330,7 +330,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.core.AssemblyLinksList}. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.AssemblyLinksList}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -345,7 +345,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.PoseProvider} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.PoseProvider} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -353,7 +353,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
   protected PoseProviderItemProvider poseProviderItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.PoseProvider}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.PoseProvider}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -369,7 +369,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.AbsolutePoseProvider} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.AbsolutePoseProvider} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -377,7 +377,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected AbsolutePoseProviderItemProvider absolutePoseProviderItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.AbsolutePoseProvider}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.AbsolutePoseProvider}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -392,31 +392,31 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.SymphonyInitializationData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ApogyInitializationData} instances.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyInitializationDataItemProvider symphonyInitializationDataItemProvider;
+	protected ApogyInitializationDataItemProvider apogyInitializationDataItemProvider;
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.core.SymphonyInitializationData}. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ApogyInitializationData}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyInitializationDataAdapter() {
-		if (symphonyInitializationDataItemProvider == null) {
-			symphonyInitializationDataItemProvider = new SymphonyInitializationDataItemProvider(this);
+	public Adapter createApogyInitializationDataAdapter() {
+		if (apogyInitializationDataItemProvider == null) {
+			apogyInitializationDataItemProvider = new ApogyInitializationDataItemProvider(this);
 		}
 
-		return symphonyInitializationDataItemProvider;
+		return apogyInitializationDataItemProvider;
 	}
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.WorksitesList} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.WorksitesList} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -424,7 +424,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected WorksitesListItemProvider worksitesListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.WorksitesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.WorksitesList}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -439,7 +439,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.OrbitModelsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.OrbitModelsList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -447,7 +447,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected OrbitModelsListItemProvider orbitModelsListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.OrbitModelsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.OrbitModelsList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -462,7 +462,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.Positioned} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.Positioned} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -470,7 +470,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected PositionedItemProvider positionedItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.Positioned}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.Positioned}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -486,7 +486,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.TopologyRoot} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.TopologyRoot} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -494,7 +494,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected TopologyRootItemProvider topologyRootItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.TopologyRoot}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.TopologyRoot}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -509,7 +509,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.FeatureOfInterestList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.FeatureOfInterestList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -517,7 +517,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected FeatureOfInterestListItemProvider featureOfInterestListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.FeatureOfInterestList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.FeatureOfInterestList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -532,7 +532,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.FeatureOfInterest} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.FeatureOfInterest} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -540,7 +540,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected FeatureOfInterestItemProvider featureOfInterestItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.FeatureOfInterest}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.FeatureOfInterest}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -556,7 +556,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.PositionedResult} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.PositionedResult} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -564,7 +564,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected PositionedResultItemProvider positionedResultItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.PositionedResult}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.PositionedResult}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -579,7 +579,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.OperationCallPositionedResult} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.OperationCallPositionedResult} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -587,7 +587,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected OperationCallPositionedResultItemProvider operationCallPositionedResultItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.OperationCallPositionedResult}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.OperationCallPositionedResult}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -602,7 +602,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.UserDefinedResult} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.UserDefinedResult} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -610,7 +610,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected UserDefinedResultItemProvider userDefinedResultItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.UserDefinedResult}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.UserDefinedResult}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -626,7 +626,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.ResultNode} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ResultNode} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -634,7 +634,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected ResultNodeItemProvider resultNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ResultNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ResultNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -650,7 +650,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.ResultsListNode} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.core.ResultsListNode} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -658,7 +658,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected ResultsListNodeItemProvider resultsListNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ResultsListNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ResultsListNode}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -673,7 +673,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.FeatureOfInterestNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.FeatureOfInterestNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -681,7 +681,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected FeatureOfInterestNodeItemProvider featureOfInterestNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.FeatureOfInterestNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.FeatureOfInterestNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -696,7 +696,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.FeatureOfInterestListNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -704,7 +704,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	protected FeatureOfInterestListNodeItemProvider featureOfInterestListNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.FeatureOfInterestListNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -839,19 +839,19 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphony__CoreFacadeItemProvider != null) symphony__CoreFacadeItemProvider.dispose();
-		if (symphonyEnvironmentItemProvider != null) symphonyEnvironmentItemProvider.dispose();
+		if (apogy__CoreFacadeItemProvider != null) apogy__CoreFacadeItemProvider.dispose();
+		if (apogyEnvironmentItemProvider != null) apogyEnvironmentItemProvider.dispose();
 		if (timeSourcesListItemProvider != null) timeSourcesListItemProvider.dispose();
-		if (symphonyTopologyItemProvider != null) symphonyTopologyItemProvider.dispose();
-		if (symphonySystemItemProvider != null) symphonySystemItemProvider.dispose();
-		if (symphonySystemApiAdapterItemProvider != null) symphonySystemApiAdapterItemProvider.dispose();
+		if (apogyTopologyItemProvider != null) apogyTopologyItemProvider.dispose();
+		if (apogySystemItemProvider != null) apogySystemItemProvider.dispose();
+		if (apogySystemApiAdapterItemProvider != null) apogySystemApiAdapterItemProvider.dispose();
 		if (connectionPointsListItemProvider != null) connectionPointsListItemProvider.dispose();
 		if (connectionPointItemProvider != null) connectionPointItemProvider.dispose();
 		if (assemblyLinkItemProvider != null) assemblyLinkItemProvider.dispose();
 		if (assemblyLinksListItemProvider != null) assemblyLinksListItemProvider.dispose();
 		if (poseProviderItemProvider != null) poseProviderItemProvider.dispose();
 		if (absolutePoseProviderItemProvider != null) absolutePoseProviderItemProvider.dispose();
-		if (symphonyInitializationDataItemProvider != null) symphonyInitializationDataItemProvider.dispose();
+		if (apogyInitializationDataItemProvider != null) apogyInitializationDataItemProvider.dispose();
 		if (worksitesListItemProvider != null) worksitesListItemProvider.dispose();
 		if (orbitModelsListItemProvider != null) orbitModelsListItemProvider.dispose();
 		if (positionedItemProvider != null) positionedItemProvider.dispose();
@@ -868,19 +868,19 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -916,8 +916,8 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 			public Object caseInvocatorSession(InvocatorSession object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyEnvironment()));
+						(ApogyCoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyEnvironment()));
 
 				return null;
 			}
@@ -931,8 +931,8 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 			public Object caseLocalTypesList(LocalTypesList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonySystem()));
+						(ApogyCoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES,
+						 ApogyCoreFactory.eINSTANCE.createApogySystem()));
 
 				return null;
 			}
@@ -946,8 +946,8 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 			public Object caseAbstractTypeImplementation(AbstractTypeImplementation object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyInitializationData()));
+						(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
+						 ApogyCoreFactory.eINSTANCE.createApogyInitializationData()));
 
 				return null;
 			}
@@ -980,24 +980,24 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEditPlugin.INSTANCE;
+			return ApogyCoreEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1033,133 +1033,133 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphony__CoreFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyCoreFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyEnvironment()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyEnvironment()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createTimeSourcesList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createTimeSourcesList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyTopology()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyTopology()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonySystem()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogySystem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonySystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createConnectionPointsList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createConnectionPointsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createConnectionPoint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createConnectionPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createAssemblyLink()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createAssemblyLink()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createAssemblyLinksList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createAssemblyLinksList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createPoseProvider()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createPoseProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createAbsolutePoseProvider()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createAbsolutePoseProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyInitializationData()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyInitializationData()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createWorksitesList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createWorksitesList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createOrbitModelsList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createPositioned()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createPositioned()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createTopologyRoot()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createTopologyRoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createPositionedResult()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createPositionedResult()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createOperationCallPositionedResult()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createOperationCallPositionedResult()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createUserDefinedResult()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createUserDefinedResult()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createResultNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createResultNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 				return null;
 			}
@@ -1173,133 +1173,133 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphony__CoreFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyCoreFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyEnvironment()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyEnvironment()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createTimeSourcesList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createTimeSourcesList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyTopology()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyTopology()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonySystem()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogySystem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonySystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createConnectionPointsList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createConnectionPointsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createConnectionPoint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createConnectionPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createAssemblyLink()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createAssemblyLink()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createAssemblyLinksList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createAssemblyLinksList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createPoseProvider()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createPoseProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createAbsolutePoseProvider()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createAbsolutePoseProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyInitializationData()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createApogyInitializationData()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createWorksitesList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createWorksitesList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createOrbitModelsList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createOrbitModelsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createPositioned()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createPositioned()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createTopologyRoot()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createTopologyRoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createPositionedResult()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createPositionedResult()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createOperationCallPositionedResult()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createOperationCallPositionedResult()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createUserDefinedResult()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createUserDefinedResult()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createResultNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createResultNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 				return null;
 			}
@@ -1313,23 +1313,23 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CoreFactory.eINSTANCE.createResultNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCoreFactory.eINSTANCE.createResultNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 				return null;
 			}
@@ -1362,24 +1362,24 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEditPlugin.INSTANCE;
+			return ApogyCoreEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1415,23 +1415,23 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__CoreFactory.eINSTANCE.createResultNode()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreFactory.eINSTANCE.createResultNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+						(ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 				return null;
 			}
@@ -1464,7 +1464,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CoreEditPlugin.INSTANCE;
+			return ApogyCoreEditPlugin.INSTANCE;
 		}
 	}
 

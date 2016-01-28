@@ -1,9 +1,9 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.Activator;
 
 
 

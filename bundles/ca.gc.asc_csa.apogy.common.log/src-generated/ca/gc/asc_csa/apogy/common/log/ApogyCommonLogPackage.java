@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log;
+package ca.gc.asc_csa.apogy.common.log;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.log.Symphony__CommonLogFactory
+ * @see ca.gc.asc_csa.apogy.common.log.ApogyCommonLogFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonLog' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonLog' modelDirectory='/org.eclipse.symphony.common.log/src-generated' editDirectory='/org.eclipse.symphony.common.log.edit/src-generated' basePackage='org.eclipse.symphony.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonLog' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonLog' modelDirectory='/ca.gc.asc_csa.apogy.common.log/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.log.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common'"
  * @generated
  */
-public interface Symphony__CommonLogPackage extends EPackage {
+public interface ApogyCommonLogPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.log";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.log";
 
 	/**
 	 * The package namespace name.
@@ -57,14 +57,14 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonLogPackage eINSTANCE = org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl.init();
+	ApogyCommonLogPackage eINSTANCE = ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.log.impl.LoggerImpl <em>Logger</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.log.impl.LoggerImpl <em>Logger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.log.impl.LoggerImpl
-	 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getLogger()
+	 * @see ca.gc.asc_csa.apogy.common.log.impl.LoggerImpl
+	 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getLogger()
 	 * @generated
 	 */
 	int LOGGER = 0;
@@ -133,11 +133,11 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	int LOGGER_OPERATION_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.log.EventSeverity <em>Event Severity</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.log.EventSeverity <em>Event Severity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.log.EventSeverity
-	 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getEventSeverity()
+	 * @see ca.gc.asc_csa.apogy.common.log.EventSeverity
+	 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getEventSeverity()
 	 * @generated
 	 */
 	int EVENT_SEVERITY = 1;
@@ -147,7 +147,7 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Throwable
-	 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getThrowable()
+	 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getThrowable()
 	 * @generated
 	 */
 	int THROWABLE = 2;
@@ -158,7 +158,7 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.osgi.framework.Bundle
-	 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getBundle()
+	 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getBundle()
 	 * @generated
 	 */
 	int BUNDLE = 3;
@@ -169,78 +169,78 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.osgi.framework.log.FrameworkLog
-	 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getFrameworkLog()
+	 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getFrameworkLog()
 	 * @generated
 	 */
 	int FRAMEWORK_LOG = 4;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.log.Logger <em>Logger</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.log.Logger <em>Logger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Logger</em>'.
-	 * @see org.eclipse.symphony.common.log.Logger
+	 * @see ca.gc.asc_csa.apogy.common.log.Logger
 	 * @generated
 	 */
 	EClass getLogger();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.String, org.eclipse.symphony.common.log.EventSeverity) <em>Log</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity) <em>Log</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Log</em>' operation.
-	 * @see org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.String, org.eclipse.symphony.common.log.EventSeverity)
+	 * @see ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity)
 	 * @generated
 	 */
 	EOperation getLogger__Log__String_String_EventSeverity();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, org.eclipse.symphony.common.log.EventSeverity) <em>Log</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity) <em>Log</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Log</em>' operation.
-	 * @see org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, org.eclipse.symphony.common.log.EventSeverity)
+	 * @see ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity)
 	 * @generated
 	 */
 	EOperation getLogger__Log__String_Object_String_EventSeverity();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.String, org.eclipse.symphony.common.log.EventSeverity, java.lang.Throwable) <em>Log</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity, java.lang.Throwable) <em>Log</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Log</em>' operation.
-	 * @see org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.String, org.eclipse.symphony.common.log.EventSeverity, java.lang.Throwable)
+	 * @see ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity, java.lang.Throwable)
 	 * @generated
 	 */
 	EOperation getLogger__Log__String_String_EventSeverity_Throwable();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, org.eclipse.symphony.common.log.EventSeverity, java.lang.Throwable) <em>Log</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity, java.lang.Throwable) <em>Log</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Log</em>' operation.
-	 * @see org.eclipse.symphony.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, org.eclipse.symphony.common.log.EventSeverity, java.lang.Throwable)
+	 * @see ca.gc.asc_csa.apogy.common.log.Logger#log(java.lang.String, java.lang.Object, java.lang.String, ca.gc.asc_csa.apogy.common.log.EventSeverity, java.lang.Throwable)
 	 * @generated
 	 */
 	EOperation getLogger__Log__String_Object_String_EventSeverity_Throwable();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.log.Logger#getLog() <em>Get Log</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.log.Logger#getLog() <em>Get Log</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Log</em>' operation.
-	 * @see org.eclipse.symphony.common.log.Logger#getLog()
+	 * @see ca.gc.asc_csa.apogy.common.log.Logger#getLog()
 	 * @generated
 	 */
 	EOperation getLogger__GetLog();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.log.EventSeverity <em>Event Severity</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.log.EventSeverity <em>Event Severity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Event Severity</em>'.
-	 * @see org.eclipse.symphony.common.log.EventSeverity
+	 * @see ca.gc.asc_csa.apogy.common.log.EventSeverity
 	 * @generated
 	 */
 	EEnum getEventSeverity();
@@ -285,7 +285,7 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonLogFactory getSymphony__CommonLogFactory();
+	ApogyCommonLogFactory getApogyCommonLogFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -302,11 +302,11 @@ public interface Symphony__CommonLogPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.log.impl.LoggerImpl <em>Logger</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.log.impl.LoggerImpl <em>Logger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.log.impl.LoggerImpl
-		 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getLogger()
+		 * @see ca.gc.asc_csa.apogy.common.log.impl.LoggerImpl
+		 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getLogger()
 		 * @generated
 		 */
 		EClass LOGGER = eINSTANCE.getLogger();
@@ -352,11 +352,11 @@ public interface Symphony__CommonLogPackage extends EPackage {
 		EOperation LOGGER___GET_LOG = eINSTANCE.getLogger__GetLog();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.log.EventSeverity <em>Event Severity</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.log.EventSeverity <em>Event Severity</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.log.EventSeverity
-		 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getEventSeverity()
+		 * @see ca.gc.asc_csa.apogy.common.log.EventSeverity
+		 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getEventSeverity()
 		 * @generated
 		 */
 		EEnum EVENT_SEVERITY = eINSTANCE.getEventSeverity();
@@ -366,7 +366,7 @@ public interface Symphony__CommonLogPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Throwable
-		 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getThrowable()
+		 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getThrowable()
 		 * @generated
 		 */
 		EDataType THROWABLE = eINSTANCE.getThrowable();
@@ -376,7 +376,7 @@ public interface Symphony__CommonLogPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.osgi.framework.Bundle
-		 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getBundle()
+		 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getBundle()
 		 * @generated
 		 */
 		EDataType BUNDLE = eINSTANCE.getBundle();
@@ -386,11 +386,11 @@ public interface Symphony__CommonLogPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.osgi.framework.log.FrameworkLog
-		 * @see org.eclipse.symphony.common.log.impl.Symphony__CommonLogPackageImpl#getFrameworkLog()
+		 * @see ca.gc.asc_csa.apogy.common.log.impl.ApogyCommonLogPackageImpl#getFrameworkLog()
 		 * @generated
 		 */
 		EDataType FRAMEWORK_LOG = eINSTANCE.getFrameworkLog();
 
 	}
 
-} //Symphony__CommonLogPackage
+} //ApogyCommonLogPackage

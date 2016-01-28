@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import javax.vecmath.Color3f;
 
@@ -18,12 +18,12 @@ import javax.vecmath.Color3f;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#isShapedFilled <em>Shaped Filled</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#getColor <em>Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#getRequiredResolution <em>Required Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer#isShapedFilled <em>Shaped Filled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer#getColor <em>Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer#getRequiredResolution <em>Required Resolution</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractShapeImageLayer()
  * @model abstract="true"
  * @generated
  */
@@ -38,7 +38,7 @@ public interface AbstractShapeImageLayer extends ImageMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Shaped Filled</em>' attribute.
 	 * @see #setShapedFilled(boolean)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer_ShapedFilled()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractShapeImageLayer_ShapedFilled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -46,7 +46,7 @@ public interface AbstractShapeImageLayer extends ImageMapLayer {
 	boolean isShapedFilled();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#isShapedFilled <em>Shaped Filled</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer#isShapedFilled <em>Shaped Filled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Shaped Filled</em>' attribute.
@@ -65,15 +65,15 @@ public interface AbstractShapeImageLayer extends ImageMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer_Color()
-	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.Color3f"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractShapeImageLayer_Color()
+	 * @model default="0.0,1.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
 	 */
 	Color3f getColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#getColor <em>Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer#getColor <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Color</em>' attribute.
@@ -92,15 +92,15 @@ public interface AbstractShapeImageLayer extends ImageMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Required Resolution</em>' attribute.
 	 * @see #setRequiredResolution(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer_RequiredResolution()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAbstractShapeImageLayer_RequiredResolution()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' symphony_units='m/pixel'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' apogy_units='m/pixel'"
 	 * @generated
 	 */
 	double getRequiredResolution();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#getRequiredResolution <em>Required Resolution</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer#getRequiredResolution <em>Required Resolution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Required Resolution</em>' attribute.

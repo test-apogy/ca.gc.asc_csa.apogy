@@ -4,7 +4,7 @@
  *
  * $Id: AmbientLightItemProvider.java,v 1.3.2.3 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 
 import java.util.Collection;
@@ -13,10 +13,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.addons.primitives.AmbientLight;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.AmbientLight} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 /**
@@ -22,14 +22,14 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getTypesList <em>Types List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getVariablesList <em>Variables List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getContextsList <em>Contexts List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getActiveContext <em>Active Context</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getTypesList <em>Types List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getVariablesList <em>Variables List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getContextsList <em>Contexts List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getActiveContext <em>Active Context</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Environment extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Invocator Session</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Invocator Session</em>' container reference isn't clear,
@@ -46,8 +46,8 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' container reference.
 	 * @see #setInvocatorSession(InvocatorSession)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_InvocatorSession()
-	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getEnvironment
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment_InvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getEnvironment
 	 * @model opposite="environment" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -55,7 +55,7 @@ public interface Environment extends Named, Described
   InvocatorSession getInvocatorSession();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Invocator Session</em>' container reference.
@@ -74,14 +74,14 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Types List</em>' containment reference.
 	 * @see #setTypesList(TypesList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_TypesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment_TypesList()
 	 * @model containment="true"
 	 * @generated
 	 */
   TypesList getTypesList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Environment#getTypesList <em>Types List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getTypesList <em>Types List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Types List</em>' containment reference.
@@ -92,7 +92,7 @@ public interface Environment extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Variables List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.VariablesList#getEnvironment <em>Environment</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.VariablesList#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Variables List</em>' containment reference isn't clear,
@@ -101,15 +101,15 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables List</em>' containment reference.
 	 * @see #setVariablesList(VariablesList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_VariablesList()
-	 * @see org.eclipse.symphony.core.invocator.VariablesList#getEnvironment
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment_VariablesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariablesList#getEnvironment
 	 * @model opposite="environment" containment="true"
 	 * @generated
 	 */
   VariablesList getVariablesList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Environment#getVariablesList <em>Variables List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getVariablesList <em>Variables List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variables List</em>' containment reference.
@@ -120,7 +120,7 @@ public interface Environment extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Contexts List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.ContextsList#getEnvironment <em>Environment</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ContextsList#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Contexts List</em>' containment reference isn't clear,
@@ -129,15 +129,15 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts List</em>' containment reference.
 	 * @see #setContextsList(ContextsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_ContextsList()
-	 * @see org.eclipse.symphony.core.invocator.ContextsList#getEnvironment
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment_ContextsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ContextsList#getEnvironment
 	 * @model opposite="environment" containment="true"
 	 * @generated
 	 */
   ContextsList getContextsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Environment#getContextsList <em>Contexts List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getContextsList <em>Contexts List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Contexts List</em>' containment reference.
@@ -156,7 +156,7 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Active Context</em>' reference.
 	 * @see #setActiveContext(Context)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_ActiveContext()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getEnvironment_ActiveContext()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -164,7 +164,7 @@ public interface Environment extends Named, Described
   Context getActiveContext();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Environment#getActiveContext <em>Active Context</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getActiveContext <em>Active Context</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Active Context</em>' reference.

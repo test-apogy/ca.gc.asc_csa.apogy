@@ -1,8 +1,8 @@
-package org.eclipse.symphony.core.invocator.edit;
+package ca.gc.asc_csa.apogy.core.invocator.edit;
 
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 
 public class EMFEcoreInvocatorEditUtilities {
 

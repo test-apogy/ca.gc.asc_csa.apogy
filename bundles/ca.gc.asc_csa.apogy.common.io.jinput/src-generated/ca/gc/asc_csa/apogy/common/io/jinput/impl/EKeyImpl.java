@@ -1,11 +1,11 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.impl;
+package ca.gc.asc_csa.apogy.common.io.jinput.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.io.jinput.EKey;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EKey;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EKeyImpl extends EComponentImpl implements EKey {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonIOJInputPackage.Literals.EKEY;
+		return ApogyCommonIOJInputPackage.Literals.EKEY;
 	}
 
 } //EKeyImpl

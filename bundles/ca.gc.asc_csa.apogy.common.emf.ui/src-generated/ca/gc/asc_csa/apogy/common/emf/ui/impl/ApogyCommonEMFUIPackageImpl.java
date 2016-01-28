@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui.impl;
+package ca.gc.asc_csa.apogy.common.emf.ui.impl;
 
 import javax.measure.unit.Unit;
 
@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.swt.graphics.Color;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFactory;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFactory;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +22,14 @@ import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Symphony__CommonEMFUIPackage
+public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCommonEMFUIPackage
 {
   /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonEMFUIFacadeEClass = null;
+	private EClass apogy__CommonEMFUIFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -56,13 +56,13 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__CommonEMFUIPackageImpl()
+  private ApogyCommonEMFUIPackageImpl()
   {
-		super(eNS_URI, Symphony__CommonEMFUIFactory.eINSTANCE);
+		super(eNS_URI, ApogyCommonEMFUIFactory.eINSTANCE);
 	}
 
   /**
@@ -75,7 +75,7 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonEMFUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonEMFUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -84,31 +84,31 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__CommonEMFUIPackage init()
+  public static ApogyCommonEMFUIPackage init()
   {
-		if (isInited) return (Symphony__CommonEMFUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFUIPackage.eNS_URI);
+		if (isInited) return (ApogyCommonEMFUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonEMFUIPackageImpl theSymphony__CommonEMFUIPackage = (Symphony__CommonEMFUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonEMFUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonEMFUIPackageImpl());
+		ApogyCommonEMFUIPackageImpl theApogyCommonEMFUIPackage = (ApogyCommonEMFUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonEMFUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonEMFUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonEMFPackage.eINSTANCE.eClass();
+		ApogyCommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonEMFUIPackage.createPackageContents();
+		theApogyCommonEMFUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonEMFUIPackage.initializePackageContents();
+		theApogyCommonEMFUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonEMFUIPackage.freeze();
+		theApogyCommonEMFUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonEMFUIPackage.eNS_URI, theSymphony__CommonEMFUIPackage);
-		return theSymphony__CommonEMFUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonEMFUIPackage.eNS_URI, theApogyCommonEMFUIPackage);
+		return theApogyCommonEMFUIPackage;
 	}
 
   /**
@@ -116,8 +116,8 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonEMFUIFacade() {
-		return symphony__CommonEMFUIFacadeEClass;
+	public EClass getApogyCommonEMFUIFacade() {
+		return apogy__CommonEMFUIFacadeEClass;
 	}
 
 		/**
@@ -125,8 +125,8 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges() {
-		return symphony__CommonEMFUIFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonEMFUIFacade__GetColorForRange__Ranges() {
+		return apogy__CommonEMFUIFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -134,8 +134,8 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement() {
-		return symphony__CommonEMFUIFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement() {
+		return apogy__CommonEMFUIFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -163,8 +163,8 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFUIFactory getSymphony__CommonEMFUIFactory() {
-		return (Symphony__CommonEMFUIFactory)getEFactoryInstance();
+	public ApogyCommonEMFUIFactory getApogyCommonEMFUIFactory() {
+		return (ApogyCommonEMFUIFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -187,9 +187,9 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 		isCreated = true;
 
 		// Create classes and their features
-		symphony__CommonEMFUIFacadeEClass = createEClass(SYMPHONY_COMMON_EMFUI_FACADE);
-		createEOperation(symphony__CommonEMFUIFacadeEClass, SYMPHONY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
-		createEOperation(symphony__CommonEMFUIFacadeEClass, SYMPHONY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
+		apogy__CommonEMFUIFacadeEClass = createEClass(APOGY_COMMON_EMFUI_FACADE);
+		createEOperation(apogy__CommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
+		createEOperation(apogy__CommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
 
 		// Create data types
 		colorEDataType = createEDataType(COLOR);
@@ -221,7 +221,7 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -231,12 +231,12 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(symphony__CommonEMFUIFacadeEClass, Symphony__CommonEMFUIFacade.class, "Symphony__CommonEMFUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonEMFUIFacadeEClass, ApogyCommonEMFUIFacade.class, "ApogyCommonEMFUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges(), this.getColor(), "getColorForRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonEMFPackage.getRanges(), "range", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCommonEMFUIFacade__GetColorForRange__Ranges(), this.getColor(), "getColorForRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonEMFPackage.getRanges(), "range", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement(), this.getUnit(), "getDisplayUnits", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement(), this.getUnit(), "getDisplayUnits", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getETypedElement(), "eTypedElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -247,4 +247,4 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonEMFUIPackageImpl
+} //ApogyCommonEMFUIPackageImpl

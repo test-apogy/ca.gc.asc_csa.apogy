@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage
  * @generated
  */
-public interface Symphony__AddonsSensorsGPSFactory extends EFactory {
+public interface ApogyAddonsSensorsGPSFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsGPSFactory eINSTANCE = org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSFactoryImpl.init();
+	ApogyAddonsSensorsGPSFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.gps.impl.ApogyAddonsSensorsGPSFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>GPS Reading</em>'.
@@ -65,7 +65,7 @@ public interface Symphony__AddonsSensorsGPSFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsGPSFacade createSymphony__AddonsSensorsGPSFacade();
+	ApogyAddonsSensorsGPSFacade createApogyAddonsSensorsGPSFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -74,6 +74,6 @@ public interface Symphony__AddonsSensorsGPSFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsGPSPackage getSymphony__AddonsSensorsGPSPackage();
+	ApogyAddonsSensorsGPSPackage getApogyAddonsSensorsGPSPackage();
 
-} //Symphony__AddonsSensorsGPSFactory
+} //ApogyAddonsSensorsGPSFactory

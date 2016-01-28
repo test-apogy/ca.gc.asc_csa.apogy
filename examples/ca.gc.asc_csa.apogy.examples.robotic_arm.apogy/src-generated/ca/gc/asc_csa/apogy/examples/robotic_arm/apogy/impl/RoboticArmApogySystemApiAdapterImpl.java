@@ -1,43 +1,43 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.impl;
 
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyFactory;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyFactory;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Robotic Arm Symphony System Api Adapter</b></em>'. <!-- end-user-doc
+ * <em><b>Robotic Arm Apogy System Api Adapter</b></em>'. <!-- end-user-doc
  * -->
  * <p>
  * </p>
  * 
  * @generated
  */
-public class RoboticArmSymphonySystemApiAdapterImpl extends
-		SymphonySystemApiAdapterImpl implements
-		RoboticArmSymphonySystemApiAdapter {
+public class RoboticArmApogySystemApiAdapterImpl extends
+		ApogySystemApiAdapterImpl implements
+		RoboticArmApogySystemApiAdapter {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoboticArmSymphonySystemApiAdapterImpl() {
+	protected RoboticArmApogySystemApiAdapterImpl() {
 		super();
 	}
 
@@ -47,7 +47,7 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_APOGY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -80,22 +80,22 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 	{
 		// If this is the moveTo() operation
 		if (operationCall.getEOperation().getOperationID() ==
-				Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM___MOVE_TO__DOUBLE_DOUBLE_DOUBLE_DOUBLE)
+				ApogyExamplesRoboticArmPackage.ROBOTIC_ARM___MOVE_TO__DOUBLE_DOUBLE_DOUBLE_DOUBLE)
 		{
 			// Get the topology node at the tip of the robotic arm's hand
-			Node tip = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_HAND_TIP",
-								 this.getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
+			Node tip = ApogyCommonTopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_HAND_TIP",
+								 this.getApogySystem().getTopologyRoot().getOriginNode()).get(0);
 			
 			// Get the topology node at the root of the robotic arm
-			Node root = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_ROOT",
-							  this.getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
+			Node root = ApogyCommonTopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_ROOT",
+							  this.getApogySystem().getTopologyRoot().getOriginNode()).get(0);
 			
 			// Get a composite transformation which encompasses all
 			// of the transformations between those two nodes
-			Matrix4d matrix4d = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(tip,	root);
+			Matrix4d matrix4d = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(tip,	root);
 			
 			// Create a EObject wrapper for the matrix and return it
-			return Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix4d);
+			return ApogyCommonMathFacade.INSTANCE.createMatrix4x4(matrix4d);
 		}
 		// Otherwise, this is some other operation
 		else
@@ -117,7 +117,7 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 	{
 		// Call the appropriate factory method for this package to get
 		// a RoboticArmData instance and then return it.
-		return Symphony__ExamplesRoboticArmSymphonyFactory.eINSTANCE.createRoboticArmData();
+		return ApogyExamplesRoboticArmApogyFactory.eINSTANCE.createRoboticArmData();
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 									 "it already is in that state.";
 					
 					// Throw an exception to indicate that the apply() has failed; this will
-					// be caught and logged by Symphony
+					// be caught and logged by Apogy
 					throw new RuntimeException(message);
 				}
 			}
@@ -227,4 +227,4 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 			roboticArmData.setWristAngle(this.getRoboticArm().getWristAngle());
 		}
 	}
-} // RoboticArmSymphonySystemApiAdapterImpl
+} // RoboticArmApogySystemApiAdapterImpl

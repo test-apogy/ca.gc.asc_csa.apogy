@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaFactory;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
-import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaFactory;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesAntennaFactoryImpl extends EFactoryImpl implements Symphony__ExamplesAntennaFactory
+public class ApogyExamplesAntennaFactoryImpl extends EFactoryImpl implements ApogyExamplesAntennaFactory
 {
 	/**
 	 * Creates the default factory implementation.
@@ -28,18 +28,18 @@ public class Symphony__ExamplesAntennaFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesAntennaFactory init()
+	public static ApogyExamplesAntennaFactory init()
 	{
 		try {
-			Symphony__ExamplesAntennaFactory theSymphony__ExamplesAntennaFactory = (Symphony__ExamplesAntennaFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesAntennaPackage.eNS_URI);
-			if (theSymphony__ExamplesAntennaFactory != null) {
-				return theSymphony__ExamplesAntennaFactory;
+			ApogyExamplesAntennaFactory theApogyExamplesAntennaFactory = (ApogyExamplesAntennaFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesAntennaPackage.eNS_URI);
+			if (theApogyExamplesAntennaFactory != null) {
+				return theApogyExamplesAntennaFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesAntennaFactoryImpl();
+		return new ApogyExamplesAntennaFactoryImpl();
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Symphony__ExamplesAntennaFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesAntennaFactoryImpl()
+	public ApogyExamplesAntennaFactoryImpl()
 	{
 		super();
 	}
@@ -62,8 +62,8 @@ public class Symphony__ExamplesAntennaFactoryImpl extends EFactoryImpl implement
 	public EObject create(EClass eClass)
 	{
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA_STUB: return createPTUDishAntennaStub();
-			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA_SIMULATED: return createPTUDishAntennaSimulated();
+			case ApogyExamplesAntennaPackage.PTU_DISH_ANTENNA_STUB: return createPTUDishAntennaStub();
+			case ApogyExamplesAntennaPackage.PTU_DISH_ANTENNA_SIMULATED: return createPTUDishAntennaSimulated();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,8 +125,8 @@ public class Symphony__ExamplesAntennaFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesAntennaPackage getSymphony__ExamplesAntennaPackage() {
-		return (Symphony__ExamplesAntennaPackage)getEPackage();
+	public ApogyExamplesAntennaPackage getApogyExamplesAntennaPackage() {
+		return (ApogyExamplesAntennaPackage)getEPackage();
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class Symphony__ExamplesAntennaFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesAntennaPackage getPackage()
+	public static ApogyExamplesAntennaPackage getPackage()
 	{
-		return Symphony__ExamplesAntennaPackage.eINSTANCE;
+		return ApogyExamplesAntennaPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesAntennaFactoryImpl
+} //ApogyExamplesAntennaFactoryImpl

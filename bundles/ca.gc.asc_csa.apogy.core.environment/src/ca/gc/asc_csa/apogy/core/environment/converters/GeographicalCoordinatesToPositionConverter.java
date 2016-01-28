@@ -1,12 +1,12 @@
-package org.eclipse.symphony.core.environment.converters;
+package ca.gc.asc_csa.apogy.core.environment.converters;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 public class GeographicalCoordinatesToPositionConverter implements IConverter{
 
@@ -69,9 +69,9 @@ public class GeographicalCoordinatesToPositionConverter implements IConverter{
 			{
 				InvocatorSession session = (InvocatorSession) container;
 				
-				if(session.getEnvironment() instanceof SymphonyEnvironment)
+				if(session.getEnvironment() instanceof ApogyEnvironment)
 				{
-					SymphonyEnvironment se = (SymphonyEnvironment) session.getEnvironment();
+					ApogyEnvironment se = (ApogyEnvironment) session.getEnvironment();
 					
 					if (se.getActiveWorksite() instanceof EarthSurfaceWorksite)
 					{

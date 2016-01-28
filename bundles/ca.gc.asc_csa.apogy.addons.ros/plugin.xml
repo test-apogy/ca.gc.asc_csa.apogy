@@ -9,9 +9,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.addons.ros"
-            class="org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage"
-            genModel="model/symphony_addons_ros.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.ros"
+            class="ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage"
+            genModel="model/apogy_addons_ros.xcore"/>
    </extension>
 
 </plugin>

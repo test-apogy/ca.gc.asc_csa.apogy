@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getVariablesList <em>Variables List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getVariableType <em>Variable Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getVariablesList <em>Variables List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getVariableType <em>Variable Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariable()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Variable extends Named
 {
   /**
 	 * Returns the value of the '<em><b>Variables List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.VariablesList#getVariables <em>Variables</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.VariablesList#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Variables List</em>' container reference isn't clear,
@@ -42,8 +42,8 @@ public interface Variable extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables List</em>' container reference.
 	 * @see #setVariablesList(VariablesList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable_VariablesList()
-	 * @see org.eclipse.symphony.core.invocator.VariablesList#getVariables
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariable_VariablesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariablesList#getVariables
 	 * @model opposite="variables" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -51,7 +51,7 @@ public interface Variable extends Named
   VariablesList getVariablesList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Variable#getVariablesList <em>Variables List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getVariablesList <em>Variables List</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variables List</em>' container reference.
@@ -70,14 +70,14 @@ public interface Variable extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Type</em>' reference.
 	 * @see #setVariableType(Type)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable_VariableType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariable_VariableType()
 	 * @model required="true"
 	 * @generated
 	 */
   Type getVariableType();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Variable#getVariableType <em>Variable Type</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getVariableType <em>Variable Type</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable Type</em>' reference.
@@ -95,9 +95,9 @@ public interface Variable extends Named
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable_Environment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getVariable_Environment()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='None' get='<%org.eclipse.symphony.core.invocator.VariablesList%> _variablesList = this.getVariablesList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_variablesList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.VariablesList%> _variablesList_1 = this.getVariablesList();\n\treturn _variablesList_1.getEnvironment();\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.VariablesList%> _variablesList = this.getVariablesList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_variablesList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.core.invocator.VariablesList%> _variablesList_1 = this.getVariablesList();\n\treturn _variablesList_1.getEnvironment();\n}'"
 	 * @generated
 	 */
   Environment getEnvironment();

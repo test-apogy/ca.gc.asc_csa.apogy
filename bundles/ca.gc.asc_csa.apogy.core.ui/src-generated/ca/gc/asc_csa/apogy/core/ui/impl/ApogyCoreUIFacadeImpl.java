@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.impl;
+package ca.gc.asc_csa.apogy.core.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -23,25 +23,25 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.core.Activator;
-import org.eclipse.symphony.core.ConnectionPointsList;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
-import org.eclipse.symphony.core.ui.natures.SymphonyProjectNature;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.core.Activator;
+import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.natures.ApogyProjectNature;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -50,104 +50,104 @@ import org.eclipse.symphony.core.ui.natures.SymphonyProjectNature;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl#getDefaultApogyProjectNamePrefix <em>Default Apogy Project Name Prefix</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl#getDefaultApogySessionFilename <em>Default Apogy Session Filename</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl#getDefaultApogySessionFilenameExtension <em>Default Apogy Session Filename Extension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl#getDefaultApogySessionFolderName <em>Default Apogy Session Folder Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
-		implements Symphony__CoreUIFacade {
+public class ApogyCoreUIFacadeImpl extends MinimalEObjectImpl.Container
+		implements ApogyCoreUIFacade {
 
 	/**
-	 * The default value of the '{@link #getDefaultSymphonyProjectNamePrefix()
-	 * <em>Default Symphony Project Name Prefix</em>}' attribute. <!--
+	 * The default value of the '{@link #getDefaultApogyProjectNamePrefix()
+	 * <em>Default Apogy Project Name Prefix</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonyProjectNamePrefix()
+	 * @see #getDefaultApogyProjectNamePrefix()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT = "Project";
+	protected static final String DEFAULT_APOGY_PROJECT_NAME_PREFIX_EDEFAULT = "Project";
 	/**
-	 * The cached value of the '{@link #getDefaultSymphonyProjectNamePrefix()
-	 * <em>Default Symphony Project Name Prefix</em>}' attribute. <!--
+	 * The cached value of the '{@link #getDefaultApogyProjectNamePrefix()
+	 * <em>Default Apogy Project Name Prefix</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonyProjectNamePrefix()
+	 * @see #getDefaultApogyProjectNamePrefix()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultSymphonyProjectNamePrefix = DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT;
+	protected String defaultApogyProjectNamePrefix = DEFAULT_APOGY_PROJECT_NAME_PREFIX_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getDefaultSymphonySessionFilename()
-	 * <em>Default Symphony Session Filename</em>}' attribute. <!--
+	 * The default value of the '{@link #getDefaultApogySessionFilename()
+	 * <em>Default Apogy Session Filename</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonySessionFilename()
+	 * @see #getDefaultApogySessionFilename()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT = "session";
+	protected static final String DEFAULT_APOGY_SESSION_FILENAME_EDEFAULT = "session";
 	/**
-	 * The cached value of the '{@link #getDefaultSymphonySessionFilename()
-	 * <em>Default Symphony Session Filename</em>}' attribute. <!--
+	 * The cached value of the '{@link #getDefaultApogySessionFilename()
+	 * <em>Default Apogy Session Filename</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonySessionFilename()
+	 * @see #getDefaultApogySessionFilename()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultSymphonySessionFilename = DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT;
+	protected String defaultApogySessionFilename = DEFAULT_APOGY_SESSION_FILENAME_EDEFAULT;
 	/**
 	 * The default value of the '
-	 * {@link #getDefaultSymphonySessionFilenameExtension()
-	 * <em>Default Symphony Session Filename Extension</em>}' attribute. <!--
+	 * {@link #getDefaultApogySessionFilenameExtension()
+	 * <em>Default Apogy Session Filename Extension</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonySessionFilenameExtension()
+	 * @see #getDefaultApogySessionFilenameExtension()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT = "sym";
+	protected static final String DEFAULT_APOGY_SESSION_FILENAME_EXTENSION_EDEFAULT = "sym";
 	/**
 	 * The cached value of the '
-	 * {@link #getDefaultSymphonySessionFilenameExtension()
-	 * <em>Default Symphony Session Filename Extension</em>}' attribute. <!--
+	 * {@link #getDefaultApogySessionFilenameExtension()
+	 * <em>Default Apogy Session Filename Extension</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonySessionFilenameExtension()
+	 * @see #getDefaultApogySessionFilenameExtension()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultSymphonySessionFilenameExtension = DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT;
+	protected String defaultApogySessionFilenameExtension = DEFAULT_APOGY_SESSION_FILENAME_EXTENSION_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getDefaultSymphonySessionFolderName()
-	 * <em>Default Symphony Session Folder Name</em>}' attribute. <!--
+	 * The default value of the '{@link #getDefaultApogySessionFolderName()
+	 * <em>Default Apogy Session Folder Name</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonySessionFolderName()
+	 * @see #getDefaultApogySessionFolderName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT = "Sessions";
+	protected static final String DEFAULT_APOGY_SESSION_FOLDER_NAME_EDEFAULT = "Sessions";
 	/**
-	 * The cached value of the '{@link #getDefaultSymphonySessionFolderName()
-	 * <em>Default Symphony Session Folder Name</em>}' attribute. <!--
+	 * The cached value of the '{@link #getDefaultApogySessionFolderName()
+	 * <em>Default Apogy Session Folder Name</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @see #getDefaultSymphonySessionFolderName()
+	 * @see #getDefaultApogySessionFolderName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultSymphonySessionFolderName = DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT;
-	private static Symphony__CoreUIFacade instance = null;
+	protected String defaultApogySessionFolderName = DEFAULT_APOGY_SESSION_FOLDER_NAME_EDEFAULT;
+	private static ApogyCoreUIFacade instance = null;
 
-	public static Symphony__CoreUIFacade getInstance() {
+	public static ApogyCoreUIFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CoreUIFacadeImpl();
+			instance = new ApogyCoreUIFacadeImpl();
 		}
 		return instance;
 	}
@@ -156,7 +156,7 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreUIFacadeImpl() {
+	protected ApogyCoreUIFacadeImpl() {
 		super();
 	}
 
@@ -166,39 +166,39 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE;
+		return ApogyCoreUIPackage.Literals.APOGY_CORE_UI_FACADE;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefaultSymphonyProjectNamePrefix() {
-		return defaultSymphonyProjectNamePrefix;
+	public String getDefaultApogyProjectNamePrefix() {
+		return defaultApogyProjectNamePrefix;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefaultSymphonySessionFilename() {
-		return defaultSymphonySessionFilename;
+	public String getDefaultApogySessionFilename() {
+		return defaultApogySessionFilename;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefaultSymphonySessionFilenameExtension() {
-		return defaultSymphonySessionFilenameExtension;
+	public String getDefaultApogySessionFilenameExtension() {
+		return defaultApogySessionFilenameExtension;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefaultSymphonySessionFolderName() {
-		return defaultSymphonySessionFolderName;
+	public String getDefaultApogySessionFolderName() {
+		return defaultApogySessionFolderName;
 	}
 
 	/**
@@ -206,7 +206,7 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public IProject createSymphonyProject(NewSymphonyProjectSettings settings) {
+	public IProject createApogyProject(NewApogyProjectSettings settings) {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot()
 				.getProject(settings.getName());
 		try {
@@ -221,7 +221,7 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 				String[] newNatures = new String[prevNatures.length + 1];
 				System.arraycopy(prevNatures, 0, newNatures, 0,
 						prevNatures.length);
-				newNatures[prevNatures.length] = SymphonyProjectNature.NATURE_ID;
+				newNatures[prevNatures.length] = ApogyProjectNature.NATURE_ID;
 				desc.setNatureIds(newNatures);
 				project.setDescription(desc, null);
 			}
@@ -237,8 +237,8 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public IFolder createSymphonySessionFolder(
-			NewSymphonyProjectSettings settings) {
+	public IFolder createApogySessionFolder(
+			NewApogyProjectSettings settings) {
 		IFolder folder = null;
 
 		try {
@@ -247,14 +247,14 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 			if (!project.isOpen()) {
 				project.open(null);
 			}
-			folder = project.getFolder(Symphony__CoreUIFacade.INSTANCE
-					.getDefaultSymphonySessionFolderName());
+			folder = project.getFolder(ApogyCoreUIFacade.INSTANCE
+					.getDefaultApogySessionFolderName());
 			if (!folder.exists()){
 				folder.create(true, true, null);
 			}
 		} catch (CoreException e) {
-			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating session folder <" + Symphony__CoreUIFacade.INSTANCE
-					.getDefaultSymphonySessionFolderName() + ">", EventSeverity.ERROR, e);
+			Logger.INSTANCE.log(Activator.ID, this, "Problems occured while creating session folder <" + ApogyCoreUIFacade.INSTANCE
+					.getDefaultApogySessionFolderName() + ">", EventSeverity.ERROR, e);
 		}
 		return folder;
 	}
@@ -264,10 +264,10 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public InvocatorSession createSymphonySession(
-			NewSymphonySessionSettings sessionSettings) {
-		InvocatorSession session = Symphony__CoreFacade.INSTANCE
-				.createSymphonySession(sessionSettings.isCreateEnvironment(),
+	public InvocatorSession createApogySession(
+			NewApogySessionSettings sessionSettings) {
+		InvocatorSession session = ApogyCoreFacade.INSTANCE
+				.createApogySession(sessionSettings.isCreateEnvironment(),
 						sessionSettings.isCreatePrograms(),
 						sessionSettings.isCreateDataProducts(),
 						sessionSettings.isCreateTools());
@@ -280,7 +280,7 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public IFile getSymphonySessionFile(IContainer resourceContainer,
+	public IFile getApogySessionFile(IContainer resourceContainer,
 			String filename) {
 		return resourceContainer.getFile(new Path(filename));
 	}
@@ -290,7 +290,7 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public IFile createSymphonySessionFile(IContainer resourceContainer,
+	public IFile createApogySessionFile(IContainer resourceContainer,
 			String filename, InvocatorSession session) throws Exception {
 		IFile modelFile = resourceContainer.getFile(new Path(filename));
 
@@ -319,9 +319,9 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated_NOT
 	 */
 	public InvocatorSession createInvocatorSession(
-			NewSymphonySessionSettings sessionSettings) {
-		InvocatorSession session = Symphony__CoreFacade.INSTANCE
-				.createSymphonySession(sessionSettings.isCreateEnvironment(),
+			NewApogySessionSettings sessionSettings) {
+		InvocatorSession session = ApogyCoreFacade.INSTANCE
+				.createApogySession(sessionSettings.isCreateEnvironment(),
 						sessionSettings.isCreatePrograms(),
 						sessionSettings.isCreateDataProducts(),
 						sessionSettings.isCreateTools());
@@ -334,30 +334,30 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated_NOT
 	 */
-	public SymphonySystem createSymphonySystem(
-			NewSymphonySystemSettings systemSettings) {
-		SymphonySystem symphonySystem = Symphony__CoreFactory.eINSTANCE
-				.createSymphonySystem();
+	public ApogySystem createApogySystem(
+			NewApogySystemSettings systemSettings) {
+		ApogySystem apogySystem = ApogyCoreFactory.eINSTANCE
+				.createApogySystem();
 
 		// Adds an empty TopologyRoot
-		AggregateGroupNode rootNode = Symphony__CommonTopologyFactory.eINSTANCE
+		AggregateGroupNode rootNode = ApogyCommonTopologyFactory.eINSTANCE
 				.createAggregateGroupNode();
-		TopologyRoot topologyRoot = Symphony__CoreFactory.eINSTANCE
+		TopologyRoot topologyRoot = ApogyCoreFactory.eINSTANCE
 				.createTopologyRoot();
 		topologyRoot.setOriginNode(rootNode);
-		symphonySystem.setTopologyRoot(topologyRoot);
+		apogySystem.setTopologyRoot(topologyRoot);
 
 		// Adds an empty BindingSet
-		BindingsSet bindingsSet = Symphony__CommonTopologyBindingsFactory.eINSTANCE
+		BindingsSet bindingsSet = ApogyCommonTopologyBindingsFactory.eINSTANCE
 				.createBindingsSet();
-		symphonySystem.setBindingSet(bindingsSet);
+		apogySystem.setBindingSet(bindingsSet);
 
 		// Adds an empty Connection Points List
-		ConnectionPointsList connectionPointsList = Symphony__CoreFactory.eINSTANCE
+		ConnectionPointsList connectionPointsList = ApogyCoreFactory.eINSTANCE
 				.createConnectionPointsList();
-		symphonySystem.setConnectionPointsList(connectionPointsList);
+		apogySystem.setConnectionPointsList(connectionPointsList);
 
-		return symphonySystem;
+		return apogySystem;
 	}
 
 	/**
@@ -367,14 +367,14 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
-				return getDefaultSymphonyProjectNamePrefix();
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
-				return getDefaultSymphonySessionFilename();
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
-				return getDefaultSymphonySessionFilenameExtension();
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
-				return getDefaultSymphonySessionFolderName();
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX:
+				return getDefaultApogyProjectNamePrefix();
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME:
+				return getDefaultApogySessionFilename();
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION:
+				return getDefaultApogySessionFilenameExtension();
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME:
+				return getDefaultApogySessionFolderName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -386,14 +386,14 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
-				return DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT == null ? defaultSymphonyProjectNamePrefix != null : !DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT.equals(defaultSymphonyProjectNamePrefix);
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
-				return DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT == null ? defaultSymphonySessionFilename != null : !DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT.equals(defaultSymphonySessionFilename);
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
-				return DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT == null ? defaultSymphonySessionFilenameExtension != null : !DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT.equals(defaultSymphonySessionFilenameExtension);
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
-				return DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT == null ? defaultSymphonySessionFolderName != null : !DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT.equals(defaultSymphonySessionFolderName);
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX:
+				return DEFAULT_APOGY_PROJECT_NAME_PREFIX_EDEFAULT == null ? defaultApogyProjectNamePrefix != null : !DEFAULT_APOGY_PROJECT_NAME_PREFIX_EDEFAULT.equals(defaultApogyProjectNamePrefix);
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME:
+				return DEFAULT_APOGY_SESSION_FILENAME_EDEFAULT == null ? defaultApogySessionFilename != null : !DEFAULT_APOGY_SESSION_FILENAME_EDEFAULT.equals(defaultApogySessionFilename);
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION:
+				return DEFAULT_APOGY_SESSION_FILENAME_EXTENSION_EDEFAULT == null ? defaultApogySessionFilenameExtension != null : !DEFAULT_APOGY_SESSION_FILENAME_EXTENSION_EDEFAULT.equals(defaultApogySessionFilenameExtension);
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME:
+				return DEFAULT_APOGY_SESSION_FOLDER_NAME_EDEFAULT == null ? defaultApogySessionFolderName != null : !DEFAULT_APOGY_SESSION_FOLDER_NAME_EDEFAULT.equals(defaultApogySessionFolderName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -406,23 +406,23 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS:
-				return createSymphonyProject((NewSymphonyProjectSettings)arguments.get(0));
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS:
-				return createSymphonySessionFolder((NewSymphonyProjectSettings)arguments.get(0));
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS:
-				return createSymphonySession((NewSymphonySessionSettings)arguments.get(0));
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_PROJECT__NEWSYMPHONYPROJECTSETTINGS:
+				return createApogyProject((NewApogyProjectSettings)arguments.get(0));
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS:
+				return createApogySessionFolder((NewApogyProjectSettings)arguments.get(0));
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION__NEWSYMPHONYSESSIONSETTINGS:
+				return createApogySession((NewApogySessionSettings)arguments.get(0));
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION:
 				try {
-					return createSymphonySessionFile((IContainer)arguments.get(0), (String)arguments.get(1), (InvocatorSession)arguments.get(2));
+					return createApogySessionFile((IContainer)arguments.get(0), (String)arguments.get(1), (InvocatorSession)arguments.get(2));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING:
-				return getSymphonySessionFile((IContainer)arguments.get(0), (String)arguments.get(1));
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS:
-				return createSymphonySystem((NewSymphonySystemSettings)arguments.get(0));
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___GET_APOGY_SESSION_FILE__ICONTAINER_STRING:
+				return getApogySessionFile((IContainer)arguments.get(0), (String)arguments.get(1));
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE___CREATE_APOGY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS:
+				return createApogySystem((NewApogySystemSettings)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -436,16 +436,16 @@ public class Symphony__CoreUIFacadeImpl extends MinimalEObjectImpl.Container
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (defaultSymphonyProjectNamePrefix: ");
-		result.append(defaultSymphonyProjectNamePrefix);
-		result.append(", defaultSymphonySessionFilename: ");
-		result.append(defaultSymphonySessionFilename);
-		result.append(", defaultSymphonySessionFilenameExtension: ");
-		result.append(defaultSymphonySessionFilenameExtension);
-		result.append(", defaultSymphonySessionFolderName: ");
-		result.append(defaultSymphonySessionFolderName);
+		result.append(" (defaultApogyProjectNamePrefix: ");
+		result.append(defaultApogyProjectNamePrefix);
+		result.append(", defaultApogySessionFilename: ");
+		result.append(defaultApogySessionFilename);
+		result.append(", defaultApogySessionFilenameExtension: ");
+		result.append(defaultApogySessionFilenameExtension);
+		result.append(", defaultApogySessionFolderName: ");
+		result.append(defaultApogySessionFolderName);
 		result.append(')');
 		return result.toString();
 	}
 
-} // Symphony__CoreUIFacadeImpl
+} // ApogyCoreUIFacadeImpl

@@ -3,7 +3,7 @@
  *
  * $Id: DistanceAndSlopesCostFunctionItemProvider.java,v 1.2.4.2 2015/05/21 15:51:33 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class DistanceAndSlopesCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndSlopesCostFunction_upSlopeCostFactor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndSlopesCostFunction_upSlopeCostFactor_feature", "_UI_DistanceAndSlopesCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class DistanceAndSlopesCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndSlopesCostFunction_downSlopeCostFactor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndSlopesCostFunction_downSlopeCostFactor_feature", "_UI_DistanceAndSlopesCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class DistanceAndSlopesCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndSlopesCostFunction_gravityAxis_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndSlopesCostFunction_gravityAxis_feature", "_UI_DistanceAndSlopesCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class DistanceAndSlopesCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndSlopesCostFunction_maximumUpSlope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndSlopesCostFunction_maximumUpSlope_feature", "_UI_DistanceAndSlopesCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE,
 				 true,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class DistanceAndSlopesCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndSlopesCostFunction_maximumDownSlope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndSlopesCostFunction_maximumDownSlope_feature", "_UI_DistanceAndSlopesCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE,
 				 true,
 				 false,
 				 false,
@@ -201,11 +201,11 @@ public class DistanceAndSlopesCostFunctionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DistanceAndSlopesCostFunction.class)) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

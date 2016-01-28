@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.EarthSurfaceEnvironment;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class EarthSurfaceEnvironmentImpl extends SurfaceEnvironmentImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_ENVIRONMENT;
+		return ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_ENVIRONMENT;
 	}
 
 } //EarthSurfaceEnvironmentImpl

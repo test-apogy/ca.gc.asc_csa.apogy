@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_lineWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_lineWidth_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__LINE_WIDTH,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__LINE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_positiveValuesColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_positiveValuesColor_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__POSITIVE_VALUES_COLOR,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__POSITIVE_VALUES_COLOR,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_negativeValueColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_negativeValueColor_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__NEGATIVE_VALUE_COLOR,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__NEGATIVE_VALUE_COLOR,
 				 true,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_angleInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_angleInterval_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__ANGLE_INTERVAL,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__ANGLE_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -158,7 +158,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_fontName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_fontName_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__FONT_NAME,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__FONT_NAME,
 				 true,
 				 false,
 				 false,
@@ -180,7 +180,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_fontSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_fontSize_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__FONT_SIZE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__FONT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -202,7 +202,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_azimuthDirection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_azimuthDirection_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__AZIMUTH_DIRECTION,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__AZIMUTH_DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -224,7 +224,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_elevationDirection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_elevationDirection_feature", "_UI_FOVOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__ELEVATION_DIRECTION,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__ELEVATION_DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -269,14 +269,14 @@ public class FOVOverlayItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FOVOverlay.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH:
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL:
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME:
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE:
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

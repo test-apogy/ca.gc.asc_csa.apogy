@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated emf_ecore_examples_mobile_platform -->
       <factory
-            uri="org.eclipse.symphony.examples.mobile_platform"
-            class="org.eclipse.symphony.examples.mobile_platform.provider.Symphony__ExamplesMobilePlatformItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.mobile_platform"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.provider.ApogyExamplesMobilePlatformItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -1,7 +1,7 @@
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.scene_objects;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.scene_objects;
 
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface CircularExclusionZoneSceneObject extends SceneObject {
 

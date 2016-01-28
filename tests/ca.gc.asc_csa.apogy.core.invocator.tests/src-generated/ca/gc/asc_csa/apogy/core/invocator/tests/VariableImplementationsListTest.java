@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.VariableImplementationsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,8 +16,8 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(org.eclipse.symphony.core.invocator.Variable) <em>Get Variable Implementation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String) <em>Get Variable Implementation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Get Variable Implementation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String) <em>Get Variable Implementation</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -79,7 +79,7 @@ public class VariableImplementationsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementationsList());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createVariableImplementationsList());
 	}
 
 	/**
@@ -94,10 +94,10 @@ public class VariableImplementationsListTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(org.eclipse.symphony.core.invocator.Variable) <em>Get Variable Implementation</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Get Variable Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(org.eclipse.symphony.core.invocator.Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
 	public void testGetVariableImplementation__Variable() {
@@ -107,10 +107,10 @@ public class VariableImplementationsListTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String) <em>Get Variable Implementation</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String) <em>Get Variable Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String)
 	 * @generated
 	 */
 	public void testGetVariableImplementation__String() {

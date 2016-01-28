@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -15,20 +15,20 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.emf.Activator;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.AbstractResultValue;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.ExceptionContainer;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.common.emf.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -37,9 +37,9 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl#getInstance <em>Instance</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl#getInstance <em>Instance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl#getElementType <em>Element Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,7 +86,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER;
+		return ApogyCoreInvocatorPackage.Literals.TYPE_API_ADAPTER;
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 			environment = (Environment)eResolveProxy(oldEnvironment);
 			if (environment != oldEnvironment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT, oldEnvironment, environment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT, oldEnvironment, environment));
 			}
 		}
 		return environment;
@@ -121,7 +121,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 		Environment oldEnvironment = environment;
 		environment = newEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT, oldEnvironment, environment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT, oldEnvironment, environment));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 			instance = eResolveProxy(oldInstance);
 			if (instance != oldInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE, oldInstance, instance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE, oldInstance, instance));
 			}
 		}
 		return instance;
@@ -156,7 +156,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 		EObject oldInstance = instance;
 		instance = newInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE, oldInstance, instance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE, oldInstance, instance));
 	}
 
 	/**
@@ -169,7 +169,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 			elementType = (Type)eResolveProxy(oldElementType);
 			if (elementType != oldElementType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE, oldElementType, elementType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE, oldElementType, elementType));
 			}
 		}
 		return elementType;
@@ -191,7 +191,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 		Type oldElementType = elementType;
 		elementType = newElementType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE, oldElementType, elementType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE, oldElementType, elementType));
 	}
 
 	/**
@@ -219,7 +219,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	 * @generated_NOT
 	 */
 	public AbstractInitializationData createInitializationData() {
-		return Symphony__CoreInvocatorFactory.eINSTANCE.createInitializationData();
+		return ApogyCoreInvocatorFactory.eINSTANCE.createInitializationData();
 	}
 
 	/**
@@ -236,7 +236,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	 * @generated_NOT
 	 */
 	public OperationCallResult createResult(OperationCall operationCall) {
-		return Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallResult();
+		return ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallResult();
 	}
 
 	/**
@@ -253,7 +253,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 		OperationCallResult result = createResult(operationCallCopy);
 
 		// Creates the result value with the value returned.
-		AbstractResultValue resultValueContainer = Symphony__CoreInvocatorFacade.INSTANCE
+		AbstractResultValue resultValueContainer = ApogyCoreInvocatorFacade.INSTANCE
 				.createAbstractResultValue(resultValue);
 		result.setResultValue(resultValueContainer);
 		result.setTime(new Date(invocationTime));
@@ -271,7 +271,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 		// Store the exception if required.
 		if (exception != null) 
 		{
-			ExceptionContainer container = Symphony__CoreInvocatorFactory.eINSTANCE.createExceptionContainer();
+			ExceptionContainer container = ApogyCoreInvocatorFactory.eINSTANCE.createExceptionContainer();
 			container.setException(exception);
 			result.setExceptionContainer(container);
 			exception.printStackTrace();
@@ -339,13 +339,13 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
 				if (resolve) return getEnvironment();
 				return basicGetEnvironment();
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
 				if (resolve) return getInstance();
 				return basicGetInstance();
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
 				if (resolve) return getElementType();
 				return basicGetElementType();
 		}
@@ -359,13 +359,13 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
 				setEnvironment((Environment)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
 				setInstance((EObject)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
 				setElementType((Type)newValue);
 				return;
 		}
@@ -379,13 +379,13 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
 				setEnvironment((Environment)null);
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
 				setInstance((EObject)null);
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
 				setElementType((Type)null);
 				return;
 		}
@@ -399,11 +399,11 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT:
 				return environment != null;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE:
 				return instance != null;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE:
 				return elementType != null;
 		}
 		return super.eIsSet(featureID);
@@ -417,25 +417,25 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT:
 				init((Environment)arguments.get(0), (Type)arguments.get(1), (EObject)arguments.get(2));
 				return null;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA:
 				apply((AbstractInitializationData)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_INITIALIZATION_DATA:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_INITIALIZATION_DATA:
 				return createInitializationData();
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA:
 				collect((AbstractInitializationData)arguments.get(0));
 				return null;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL:
 				return createResult((OperationCall)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION:
 				return createResult((OperationCall)arguments.get(0), (Long)arguments.get(1), arguments.get(2), (Exception)arguments.get(3));
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN:
 				invoke((EObject)arguments.get(0), (OperationCall)arguments.get(1), (Boolean)arguments.get(2));
 				return null;
-			case Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___DISPOSE:
+			case ApogyCoreInvocatorPackage.TYPE_API_ADAPTER___DISPOSE:
 				dispose();
 				return null;
 		}

@@ -1,6 +1,6 @@
-package org.eclipse.symphony.core.environment.ui.databindings.converters;
+package ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters;
 
-import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
+import ca.gc.asc_csa.apogy.common.databinding.converters.StringToDoubleConverter;
 
 public class DegreeStringToRadiansConverter extends StringToDoubleConverter 
 {

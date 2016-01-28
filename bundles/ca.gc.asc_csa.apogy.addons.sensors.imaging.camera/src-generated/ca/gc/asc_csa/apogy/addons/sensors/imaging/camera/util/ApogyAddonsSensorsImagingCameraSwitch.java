@@ -1,52 +1,52 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.util;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
-import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.AbsolutePoseProvider;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,10 +58,10 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage
  * @generated
  */
-public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
+public class ApogyAddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -69,7 +69,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsSensorsImagingCameraPackage modelPackage;
+  protected static ApogyAddonsSensorsImagingCameraPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -77,10 +77,10 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingCameraSwitch()
+  public ApogyAddonsSensorsImagingCameraSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsImagingCameraPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsImagingCameraPackage.eINSTANCE;
 		}
 	}
 
@@ -109,20 +109,20 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES: {
 				CameraViewUtilities cameraViewUtilities = (CameraViewUtilities)theEObject;
 				T result = caseCameraViewUtilities(cameraViewUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST: {
 				CameraViewConfigurationList cameraViewConfigurationList = (CameraViewConfigurationList)theEObject;
 				T result = caseCameraViewConfigurationList(cameraViewConfigurationList);
 				if (result == null) result = caseAbstractToolsListContainer(cameraViewConfigurationList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION: {
 				CameraViewConfiguration cameraViewConfiguration = (CameraViewConfiguration)theEObject;
 				T result = caseCameraViewConfiguration(cameraViewConfiguration);
 				if (result == null) result = caseVariableFeatureReference(cameraViewConfiguration);
@@ -132,13 +132,13 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.FILTER_LIST: {
+			case ApogyAddonsSensorsImagingCameraPackage.FILTER_LIST: {
 				FilterList filterList = (FilterList)theEObject;
 				T result = caseFilterList(filterList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FILTER: {
 				ImageFilter imageFilter = (ImageFilter)theEObject;
 				T result = caseImageFilter(imageFilter);
 				if (result == null) result = caseNamed(imageFilter);
@@ -146,7 +146,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.GRAY_SCALE_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.GRAY_SCALE_FILTER: {
 				GrayScaleFilter grayScaleFilter = (GrayScaleFilter)theEObject;
 				T result = caseGrayScaleFilter(grayScaleFilter);
 				if (result == null) result = caseImageFilter(grayScaleFilter);
@@ -155,7 +155,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.EDGE_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.EDGE_FILTER: {
 				EdgeFilter edgeFilter = (EdgeFilter)theEObject;
 				T result = caseEdgeFilter(edgeFilter);
 				if (result == null) result = caseImageFilter(edgeFilter);
@@ -164,7 +164,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER: {
 				ContrastAndBrightnessFilter contrastAndBrightnessFilter = (ContrastAndBrightnessFilter)theEObject;
 				T result = caseContrastAndBrightnessFilter(contrastAndBrightnessFilter);
 				if (result == null) result = caseImageFilter(contrastAndBrightnessFilter);
@@ -173,7 +173,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.EXPOSURE_FILTER: {
 				ExposureFilter exposureFilter = (ExposureFilter)theEObject;
 				T result = caseExposureFilter(exposureFilter);
 				if (result == null) result = caseImageFilter(exposureFilter);
@@ -182,7 +182,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER: {
 				GainFilter gainFilter = (GainFilter)theEObject;
 				T result = caseGainFilter(gainFilter);
 				if (result == null) result = caseImageFilter(gainFilter);
@@ -191,7 +191,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.INVERT_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.INVERT_FILTER: {
 				InvertFilter invertFilter = (InvertFilter)theEObject;
 				T result = caseInvertFilter(invertFilter);
 				if (result == null) result = caseImageFilter(invertFilter);
@@ -200,7 +200,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER: {
+			case ApogyAddonsSensorsImagingCameraPackage.RESCALE_FILTER: {
 				RescaleFilter rescaleFilter = (RescaleFilter)theEObject;
 				T result = caseRescaleFilter(rescaleFilter);
 				if (result == null) result = caseImageFilter(rescaleFilter);
@@ -209,7 +209,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION: {
 				CameraImageAnnotation cameraImageAnnotation = (CameraImageAnnotation)theEObject;
 				T result = caseCameraImageAnnotation(cameraImageAnnotation);
 				if (result == null) result = caseNamed(cameraImageAnnotation);
@@ -217,13 +217,13 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST: {
 				CameraOverlayList cameraOverlayList = (CameraOverlayList)theEObject;
 				T result = caseCameraOverlayList(cameraOverlayList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY: {
 				CameraOverlay cameraOverlay = (CameraOverlay)theEObject;
 				T result = caseCameraOverlay(cameraOverlay);
 				if (result == null) result = caseCameraImageAnnotation(cameraOverlay);
@@ -232,7 +232,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.DRAWN_CAMERA_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.DRAWN_CAMERA_OVERLAY: {
 				DrawnCameraOverlay drawnCameraOverlay = (DrawnCameraOverlay)theEObject;
 				T result = caseDrawnCameraOverlay(drawnCameraOverlay);
 				if (result == null) result = caseCameraOverlay(drawnCameraOverlay);
@@ -242,7 +242,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY: {
 				AbstractTextOverlay abstractTextOverlay = (AbstractTextOverlay)theEObject;
 				T result = caseAbstractTextOverlay(abstractTextOverlay);
 				if (result == null) result = caseDrawnCameraOverlay(abstractTextOverlay);
@@ -253,7 +253,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY: {
 				EMFFeatureOverlay emfFeatureOverlay = (EMFFeatureOverlay)theEObject;
 				T result = caseEMFFeatureOverlay(emfFeatureOverlay);
 				if (result == null) result = caseAbstractTextOverlay(emfFeatureOverlay);
@@ -265,7 +265,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_NAME_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_NAME_OVERLAY: {
 				CameraNameOverlay cameraNameOverlay = (CameraNameOverlay)theEObject;
 				T result = caseCameraNameOverlay(cameraNameOverlay);
 				if (result == null) result = caseAbstractTextOverlay(cameraNameOverlay);
@@ -277,7 +277,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY: {
 				ImageCountOverlay imageCountOverlay = (ImageCountOverlay)theEObject;
 				T result = caseImageCountOverlay(imageCountOverlay);
 				if (result == null) result = caseAbstractTextOverlay(imageCountOverlay);
@@ -289,7 +289,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY: {
 				ImageFrozenOverlay imageFrozenOverlay = (ImageFrozenOverlay)theEObject;
 				T result = caseImageFrozenOverlay(imageFrozenOverlay);
 				if (result == null) result = caseAbstractTextOverlay(imageFrozenOverlay);
@@ -301,7 +301,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_CAMERA_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_CAMERA_OVERLAY: {
 				ImageCameraOverlay imageCameraOverlay = (ImageCameraOverlay)theEObject;
 				T result = caseImageCameraOverlay(imageCameraOverlay);
 				if (result == null) result = caseCameraOverlay(imageCameraOverlay);
@@ -311,7 +311,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY: {
 				URLImageOverlay urlImageOverlay = (URLImageOverlay)theEObject;
 				T result = caseURLImageOverlay(urlImageOverlay);
 				if (result == null) result = caseImageCameraOverlay(urlImageOverlay);
@@ -322,18 +322,18 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.SYMPHONY_LOGO_OVERLAY: {
-				SymphonyLogoOverlay symphonyLogoOverlay = (SymphonyLogoOverlay)theEObject;
-				T result = caseSymphonyLogoOverlay(symphonyLogoOverlay);
-				if (result == null) result = caseImageCameraOverlay(symphonyLogoOverlay);
-				if (result == null) result = caseCameraOverlay(symphonyLogoOverlay);
-				if (result == null) result = caseCameraImageAnnotation(symphonyLogoOverlay);
-				if (result == null) result = caseNamed(symphonyLogoOverlay);
-				if (result == null) result = caseDescribed(symphonyLogoOverlay);
+			case ApogyAddonsSensorsImagingCameraPackage.APOGY_LOGO_OVERLAY: {
+				ApogyLogoOverlay apogyLogoOverlay = (ApogyLogoOverlay)theEObject;
+				T result = caseApogyLogoOverlay(apogyLogoOverlay);
+				if (result == null) result = caseImageCameraOverlay(apogyLogoOverlay);
+				if (result == null) result = caseCameraOverlay(apogyLogoOverlay);
+				if (result == null) result = caseCameraImageAnnotation(apogyLogoOverlay);
+				if (result == null) result = caseNamed(apogyLogoOverlay);
+				if (result == null) result = caseDescribed(apogyLogoOverlay);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.FOV_OVERLAY: {
 				FOVOverlay fovOverlay = (FOVOverlay)theEObject;
 				T result = caseFOVOverlay(fovOverlay);
 				if (result == null) result = caseDrawnCameraOverlay(fovOverlay);
@@ -345,7 +345,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.AZIMUTH_ELEVATION_FOV_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.AZIMUTH_ELEVATION_FOV_OVERLAY: {
 				AzimuthElevationFOVOverlay azimuthElevationFOVOverlay = (AzimuthElevationFOVOverlay)theEObject;
 				T result = caseAzimuthElevationFOVOverlay(azimuthElevationFOVOverlay);
 				if (result == null) result = caseFOVOverlay(azimuthElevationFOVOverlay);
@@ -358,7 +358,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY: {
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY: {
 				EMFFeatureAzimuthElevationFOVOverlay emfFeatureAzimuthElevationFOVOverlay = (EMFFeatureAzimuthElevationFOVOverlay)theEObject;
 				T result = caseEMFFeatureAzimuthElevationFOVOverlay(emfFeatureAzimuthElevationFOVOverlay);
 				if (result == null) result = caseAzimuthElevationFOVOverlay(emfFeatureAzimuthElevationFOVOverlay);
@@ -372,7 +372,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.AZIMUTH_FEATURE_REFERENCE: {
+			case ApogyAddonsSensorsImagingCameraPackage.AZIMUTH_FEATURE_REFERENCE: {
 				AzimuthFeatureReference azimuthFeatureReference = (AzimuthFeatureReference)theEObject;
 				T result = caseAzimuthFeatureReference(azimuthFeatureReference);
 				if (result == null) result = caseVariableFeatureReference(azimuthFeatureReference);
@@ -380,7 +380,7 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.ELEVATION_FEATURE_REFERENCE: {
+			case ApogyAddonsSensorsImagingCameraPackage.ELEVATION_FEATURE_REFERENCE: {
 				ElevationFeatureReference elevationFeatureReference = (ElevationFeatureReference)theEObject;
 				T result = caseElevationFeatureReference(elevationFeatureReference);
 				if (result == null) result = caseVariableFeatureReference(elevationFeatureReference);
@@ -388,13 +388,13 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.TOOL_TIP_TEXT_PROVIDER: {
+			case ApogyAddonsSensorsImagingCameraPackage.TOOL_TIP_TEXT_PROVIDER: {
 				ToolTipTextProvider toolTipTextProvider = (ToolTipTextProvider)theEObject;
 				T result = caseToolTipTextProvider(toolTipTextProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL: {
 				CameraTool cameraTool = (CameraTool)theEObject;
 				T result = caseCameraTool(cameraTool);
 				if (result == null) result = caseCameraImageAnnotation(cameraTool);
@@ -403,13 +403,13 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST: {
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST: {
 				CameraToolList cameraToolList = (CameraToolList)theEObject;
 				T result = caseCameraToolList(cameraToolList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL: {
+			case ApogyAddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL: {
 				PointerCameraTool pointerCameraTool = (PointerCameraTool)theEObject;
 				T result = casePointerCameraTool(pointerCameraTool);
 				if (result == null) result = caseCameraTool(pointerCameraTool);
@@ -790,17 +790,17 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Logo Overlay</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Logo Overlay</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Logo Overlay</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Logo Overlay</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonyLogoOverlay(SymphonyLogoOverlay object)
+  public T caseApogyLogoOverlay(ApogyLogoOverlay object)
   {
 		return null;
 	}
@@ -1067,4 +1067,4 @@ public class Symphony__AddonsSensorsImagingCameraSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsSensorsImagingCameraSwitch
+} //ApogyAddonsSensorsImagingCameraSwitch

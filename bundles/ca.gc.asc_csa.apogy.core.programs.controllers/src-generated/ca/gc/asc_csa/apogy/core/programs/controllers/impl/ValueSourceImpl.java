@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.ValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.programs.controllers.ValueSource;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ValueSourceImpl#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ValueSourceImpl#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,7 +50,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.VALUE_SOURCE;
+		return ApogyCoreProgramsControllersPackage.Literals.VALUE_SOURCE;
 	}
 
   /**
@@ -60,7 +60,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public BindedEDataTypeArgument getBindedEDataTypeArgument()
   {
-		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
+		if (eContainerFeatureID() != ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
 		return (BindedEDataTypeArgument)eContainer();
 	}
 
@@ -71,7 +71,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public BindedEDataTypeArgument basicGetBindedEDataTypeArgument()
   {
-		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
+		if (eContainerFeatureID() != ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
 		return (BindedEDataTypeArgument)eInternalContainer();
 	}
 
@@ -82,7 +82,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public NotificationChain basicSetBindedEDataTypeArgument(BindedEDataTypeArgument newBindedEDataTypeArgument, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newBindedEDataTypeArgument, Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newBindedEDataTypeArgument, ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, msgs);
 		return msgs;
 	}
 
@@ -93,19 +93,19 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public void setBindedEDataTypeArgument(BindedEDataTypeArgument newBindedEDataTypeArgument)
   {
-		if (newBindedEDataTypeArgument != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT && newBindedEDataTypeArgument != null)) {
+		if (newBindedEDataTypeArgument != eInternalContainer() || (eContainerFeatureID() != ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT && newBindedEDataTypeArgument != null)) {
 			if (EcoreUtil.isAncestor(this, newBindedEDataTypeArgument))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newBindedEDataTypeArgument != null)
-				msgs = ((InternalEObject)newBindedEDataTypeArgument).eInverseAdd(this, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
+				msgs = ((InternalEObject)newBindedEDataTypeArgument).eInverseAdd(this, ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
 			msgs = basicSetBindedEDataTypeArgument(newBindedEDataTypeArgument, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, newBindedEDataTypeArgument, newBindedEDataTypeArgument));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, newBindedEDataTypeArgument, newBindedEDataTypeArgument));
 	}
 
   /**
@@ -129,7 +129,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetBindedEDataTypeArgument((BindedEDataTypeArgument)otherEnd, msgs);
@@ -146,7 +146,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				return basicSetBindedEDataTypeArgument(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -161,8 +161,8 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -176,7 +176,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				if (resolve) return getBindedEDataTypeArgument();
 				return basicGetBindedEDataTypeArgument();
 		}
@@ -192,7 +192,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				setBindedEDataTypeArgument((BindedEDataTypeArgument)newValue);
 				return;
 		}
@@ -208,7 +208,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				setBindedEDataTypeArgument((BindedEDataTypeArgument)null);
 				return;
 		}
@@ -224,7 +224,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				return basicGetBindedEDataTypeArgument() != null;
 		}
 		return super.eIsSet(featureID);
@@ -239,7 +239,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE___GET_SOURCE_VALUE:
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE___GET_SOURCE_VALUE:
 				return getSourceValue();
 		}
 		return super.eInvoke(operationID, arguments);

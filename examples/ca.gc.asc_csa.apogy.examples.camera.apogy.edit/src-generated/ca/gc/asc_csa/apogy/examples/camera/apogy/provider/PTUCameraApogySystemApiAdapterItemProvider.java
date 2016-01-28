@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.camera.apogy.provider;
 
 
 import java.util.Collection;
@@ -11,16 +11,16 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PTUCameraSymphonySystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+public class PTUCameraApogySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -28,7 +28,7 @@ public class PTUCameraSymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public PTUCameraSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public PTUCameraApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -50,7 +50,7 @@ public class PTUCameraSymphonySystemApiAdapterItemProvider
 	}
 
   /**
-	 * This returns PTUCameraSymphonySystemApiAdapter.gif.
+	 * This returns PTUCameraApogySystemApiAdapter.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -58,7 +58,7 @@ public class PTUCameraSymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PTUCameraSymphonySystemApiAdapter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PTUCameraApogySystemApiAdapter"));
 	}
 
   /**
@@ -70,7 +70,7 @@ public class PTUCameraSymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_PTUCameraSymphonySystemApiAdapter_type");
+		return getString("_UI_PTUCameraApogySystemApiAdapter_type");
 	}
 
   /**
@@ -109,7 +109,7 @@ public class PTUCameraSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return Symphony__ExamplesCameraSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesCameraApogyEditPlugin.INSTANCE;
 	}
 
 }

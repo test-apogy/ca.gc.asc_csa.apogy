@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.Collection;
 
@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,8 +28,8 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramsListImpl#getPrograms <em>Programs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl#getPrograms <em>Programs</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,7 +64,7 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.PROGRAMS_LIST;
+		return ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST;
 	}
 
   /**
@@ -74,7 +74,7 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 	 */
   public InvocatorSession getInvocatorSession()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION) return null;
 		return (InvocatorSession)eContainer();
 	}
 
@@ -85,7 +85,7 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 	 */
   public InvocatorSession basicGetInvocatorSession()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION) return null;
 		return (InvocatorSession)eInternalContainer();
 	}
 
@@ -96,7 +96,7 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 	 */
   public NotificationChain basicSetInvocatorSession(InvocatorSession newInvocatorSession, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newInvocatorSession, Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newInvocatorSession, ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION, msgs);
 		return msgs;
 	}
 
@@ -107,19 +107,19 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
 	 */
   public void setInvocatorSession(InvocatorSession newInvocatorSession)
   {
-		if (newInvocatorSession != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION && newInvocatorSession != null)) {
+		if (newInvocatorSession != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION && newInvocatorSession != null)) {
 			if (EcoreUtil.isAncestor(this, newInvocatorSession))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newInvocatorSession != null)
-				msgs = ((InternalEObject)newInvocatorSession).eInverseAdd(this, Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST, InvocatorSession.class, msgs);
+				msgs = ((InternalEObject)newInvocatorSession).eInverseAdd(this, ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST, InvocatorSession.class, msgs);
 			msgs = basicSetInvocatorSession(newInvocatorSession, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION, newInvocatorSession, newInvocatorSession));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION, newInvocatorSession, newInvocatorSession));
 	}
 
   /**
@@ -130,7 +130,7 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public EList<Program> getPrograms()
   {
 		if (programs == null) {
-			programs = new EObjectContainmentWithInverseEList<Program>(Program.class, this, Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, Symphony__CoreInvocatorPackage.PROGRAM__PROGRAMS_LIST);
+			programs = new EObjectContainmentWithInverseEList<Program>(Program.class, this, ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS, ApogyCoreInvocatorPackage.PROGRAM__PROGRAMS_LIST);
 		}
 		return programs;
 	}
@@ -145,11 +145,11 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetInvocatorSession((InvocatorSession)otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPrograms()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -164,9 +164,9 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				return basicSetInvocatorSession(null, msgs);
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				return ((InternalEList<?>)getPrograms()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,8 +181,8 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST, InvocatorSession.class, msgs);
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST, InvocatorSession.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -196,10 +196,10 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				if (resolve) return getInvocatorSession();
 				return basicGetInvocatorSession();
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				return getPrograms();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,10 +215,10 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				getPrograms().clear();
 				getPrograms().addAll((Collection<? extends Program>)newValue);
 				return;
@@ -235,10 +235,10 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)null);
 				return;
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				getPrograms().clear();
 				return;
 		}
@@ -254,9 +254,9 @@ public class ProgramsListImpl extends MinimalEObjectImpl.Container implements Pr
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__INVOCATOR_SESSION:
 				return basicGetInvocatorSession() != null;
-			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case ApogyCoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				return programs != null && !programs.isEmpty();
 		}
 		return super.eIsSet(featureID);

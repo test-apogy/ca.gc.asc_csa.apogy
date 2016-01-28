@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.experimental.chart.swt.ChartComposite;
@@ -28,8 +28,8 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractTrajectoryToolImpl#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractTrajectoryToolImpl#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,7 +94,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_TRAJECTORY_TOOL;
+		return ApogyCoreEnvironmentUIPackage.Literals.ABSTRACT_TRAJECTORY_TOOL;
 	}
 
   /**
@@ -117,7 +117,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE, oldVisible, visible));
 	}
 
   /**
@@ -140,7 +140,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE, oldActive, active));
 	}
 
   /**
@@ -192,9 +192,9 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				return isVisible();
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,10 +209,10 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
 		}
@@ -228,10 +228,10 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
 		}
@@ -247,9 +247,9 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -265,7 +265,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   {
 		if (baseClass == MapViewItemPresentation.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE: return Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE;
+				case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE: return ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE;
 				default: return -1;
 			}
 		}
@@ -276,7 +276,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		}
 		if (baseClass == MapTool.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE: return Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE;
+				case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE: return ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE;
 				default: return -1;
 			}
 		}
@@ -293,7 +293,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   {
 		if (baseClass == MapViewItemPresentation.class) {
 			switch (baseFeatureID) {
-				case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE;
+				case ApogyCoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE: return ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE;
 				default: return -1;
 			}
 		}
@@ -304,7 +304,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		}
 		if (baseClass == MapTool.class) {
 			switch (baseFeatureID) {
-				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE;
+				case ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE: return ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE;
 				default: return -1;
 			}
 		}
@@ -326,15 +326,15 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		}
 		if (baseClass == MapAnnotation.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION;
+				case ApogyCoreEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION: return ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION;
 				default: return -1;
 			}
 		}
 		if (baseClass == MapTool.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART;
-				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___DISPOSE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE;
-				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE;
+				case ApogyCoreEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART: return ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART;
+				case ApogyCoreEnvironmentUIPackage.MAP_TOOL___DISPOSE: return ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE;
+				case ApogyCoreEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE: return ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE;
 				default: return -1;
 			}
 		}
@@ -350,16 +350,16 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
 				initialize((ChartComposite)arguments.get(0), (JFreeChart)arguments.get(1));
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE:
 				dispose();
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
 				positionSelected((Integer)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION:
 				return getXYShapeAnnotation();
 		}
 		return super.eInvoke(operationID, arguments);

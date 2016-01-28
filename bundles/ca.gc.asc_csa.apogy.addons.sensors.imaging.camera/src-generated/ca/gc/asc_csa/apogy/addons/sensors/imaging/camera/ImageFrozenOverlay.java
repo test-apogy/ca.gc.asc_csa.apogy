@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 
 /**
@@ -13,12 +13,12 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getImageFrozenOverlay()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Frozen</em>' attribute.
 	 * @see #setFrozen(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay_Frozen()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getImageFrozenOverlay_Frozen()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES' property='Readonly'"
 	 * @generated
@@ -42,7 +42,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	boolean isFrozen();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Frozen</em>' attribute.
@@ -62,15 +62,15 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Expected Image Update Period</em>' attribute.
 	 * @see #setExpectedImageUpdatePeriod(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay_ExpectedImageUpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getImageFrozenOverlay_ExpectedImageUpdatePeriod()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES' symphony_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES' apogy_units='s'"
 	 * @generated
 	 */
 	double getExpectedImageUpdatePeriod();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expected Image Update Period</em>' attribute.
@@ -94,7 +94,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Frozen Message</em>' attribute.
 	 * @see #setFrozenMessage(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay_FrozenMessage()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getImageFrozenOverlay_FrozenMessage()
 	 * @model default="Frozen" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES'"
 	 * @generated
@@ -102,7 +102,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	String getFrozenMessage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Frozen Message</em>' attribute.

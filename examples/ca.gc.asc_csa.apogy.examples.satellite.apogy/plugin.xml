@@ -8,14 +8,14 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_examples_satellite_symphony -->
+      <!-- @generated apogy_examples_satellite_apogy -->
       <package
-            uri="org.eclipse.symphony.examples.satellite.symphony"
-            class="org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage"
-            genModel="model/symphony_examples_satellite_symphony.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.satellite.apogy"
+            class="ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage"
+            genModel="model/apogy_examples_satellite_apogy.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.typeContributor">
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
       <Type
             URI="model/constellation.ss">
       </Type>

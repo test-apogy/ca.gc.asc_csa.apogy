@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.sensors.motion.*;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.addons.sensors.motion.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsMotionFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsMotionFactory {
+public class ApogyAddonsSensorsMotionFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsMotionFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsMotionFactory init() {
+	public static ApogyAddonsSensorsMotionFactory init() {
 		try {
-			Symphony__AddonsSensorsMotionFactory theSymphony__AddonsSensorsMotionFactory = (Symphony__AddonsSensorsMotionFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsMotionPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsMotionFactory != null) {
-				return theSymphony__AddonsSensorsMotionFactory;
+			ApogyAddonsSensorsMotionFactory theApogyAddonsSensorsMotionFactory = (ApogyAddonsSensorsMotionFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsMotionPackage.eNS_URI);
+			if (theApogyAddonsSensorsMotionFactory != null) {
+				return theApogyAddonsSensorsMotionFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsMotionFactoryImpl();
+		return new ApogyAddonsSensorsMotionFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__AddonsSensorsMotionFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsMotionFactoryImpl() {
+	public ApogyAddonsSensorsMotionFactoryImpl() {
 		super();
 	}
 
@@ -57,10 +57,10 @@ public class Symphony__AddonsSensorsMotionFactoryImpl extends EFactoryImpl imple
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsMotionPackage.SELF_MOTION_SENSOR: return createSelfMotionSensor();
-			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR: return createAngularVelocitySensor();
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR: return createLinearAccelerationSensor();
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR: return createLinearVelocitySensor();
+			case ApogyAddonsSensorsMotionPackage.SELF_MOTION_SENSOR: return createSelfMotionSensor();
+			case ApogyAddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR: return createAngularVelocitySensor();
+			case ApogyAddonsSensorsMotionPackage.LINEAR_ACCELERATION_SENSOR: return createLinearAccelerationSensor();
+			case ApogyAddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR: return createLinearVelocitySensor();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -111,8 +111,8 @@ public class Symphony__AddonsSensorsMotionFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsMotionPackage getSymphony__AddonsSensorsMotionPackage() {
-		return (Symphony__AddonsSensorsMotionPackage)getEPackage();
+	public ApogyAddonsSensorsMotionPackage getApogyAddonsSensorsMotionPackage() {
+		return (ApogyAddonsSensorsMotionPackage)getEPackage();
 	}
 
 	/**
@@ -122,8 +122,8 @@ public class Symphony__AddonsSensorsMotionFactoryImpl extends EFactoryImpl imple
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsSensorsMotionPackage getPackage() {
-		return Symphony__AddonsSensorsMotionPackage.eINSTANCE;
+	public static ApogyAddonsSensorsMotionPackage getPackage() {
+		return ApogyAddonsSensorsMotionPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsMotionFactoryImpl
+} //ApogyAddonsSensorsMotionFactoryImpl

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.preferences;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences;
 
 import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.ColorFieldEditor;
@@ -12,8 +12,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.geometry.data3d.ui.Activator;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 

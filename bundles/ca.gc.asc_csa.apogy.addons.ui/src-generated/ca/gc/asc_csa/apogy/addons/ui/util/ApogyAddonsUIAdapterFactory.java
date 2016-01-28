@@ -1,31 +1,31 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.util;
+package ca.gc.asc_csa.apogy.addons.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.ui.*;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.ui.*;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage
  * @generated
  */
-public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsUIPackage modelPackage;
+	protected static ApogyAddonsUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -33,9 +33,9 @@ public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsUIAdapterFactory() {
+	public ApogyAddonsUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsUIPackage.eINSTANCE;
 		}
 	}
 
@@ -64,8 +64,8 @@ public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsUISwitch<Adapter> modelSwitch =
-		new Symphony__AddonsUISwitch<Adapter>() {
+	protected ApogyAddonsUISwitch<Adapter> modelSwitch =
+		new ApogyAddonsUISwitch<Adapter>() {
 			@Override
 			public Adapter caseRuler3dToolNodePresentation(Ruler3dToolNodePresentation object) {
 				return createRuler3dToolNodePresentationAdapter();
@@ -103,13 +103,13 @@ public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation <em>Ruler3d Tool Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation <em>Ruler3d Tool Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation
 	 * @generated
 	 */
 	public Adapter createRuler3dToolNodePresentationAdapter() {
@@ -117,13 +117,13 @@ public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation <em>Sun Vector3 DTool Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation <em>Sun Vector3 DTool Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation
 	 * @generated
 	 */
 	public Adapter createSunVector3DToolNodePresentationAdapter() {
@@ -131,13 +131,13 @@ public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation <em>Trajectory3 DTool Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation <em>Trajectory3 DTool Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation
 	 * @generated
 	 */
 	public Adapter createTrajectory3DToolNodePresentationAdapter() {
@@ -145,13 +145,13 @@ public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -170,4 +170,4 @@ public class Symphony__AddonsUIAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__AddonsUIAdapterFactory
+} //ApogyAddonsUIAdapterFactory

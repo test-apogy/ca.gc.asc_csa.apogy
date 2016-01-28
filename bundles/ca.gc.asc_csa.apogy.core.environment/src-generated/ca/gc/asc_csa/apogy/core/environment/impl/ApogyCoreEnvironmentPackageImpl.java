@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.util.Date;
 import java.util.List;
@@ -20,77 +20,77 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.AbstractShapeImageLayer;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.Earth;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceEnvironment;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
-import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapLayerPresentation;
-import org.eclipse.symphony.core.environment.MapNode;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.MapsListNode;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionImage;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Region;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SurfaceEnvironment;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
-import org.eclipse.symphony.core.environment.URLImageMapLayer;
-import org.eclipse.symphony.core.environment.URLMapLayer;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.WorksiteNode;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.Atmosphere;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Earth;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.Environment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.MapNode;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.MapsListNode;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.Region;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.SlopeRange;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.URLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,7 +98,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implements Symphony__CoreEnvironmentPackage
+public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements ApogyCoreEnvironmentPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -230,7 +230,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CoreEnvironmentFacadeEClass = null;
+	private EClass apogy__CoreEnvironmentFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -586,13 +586,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__CoreEnvironmentPackageImpl()
+  private ApogyCoreEnvironmentPackageImpl()
   {
-		super(eNS_URI, Symphony__CoreEnvironmentFactory.eINSTANCE);
+		super(eNS_URI, ApogyCoreEnvironmentFactory.eINSTANCE);
 	}
 
   /**
@@ -605,7 +605,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CoreEnvironmentPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCoreEnvironmentPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -614,33 +614,33 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__CoreEnvironmentPackage init()
+  public static ApogyCoreEnvironmentPackage init()
   {
-		if (isInited) return (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
+		if (isInited) return (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CoreEnvironmentPackageImpl theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CoreEnvironmentPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CoreEnvironmentPackageImpl());
+		ApogyCoreEnvironmentPackageImpl theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCoreEnvironmentPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCoreEnvironmentPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CorePackage.eINSTANCE.eClass();
-		Symphony__CommonImagesPackage.eINSTANCE.eClass();
-		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
+		ApogyCorePackage.eINSTANCE.eClass();
+		ApogyCommonImagesPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CoreEnvironmentPackage.createPackageContents();
+		theApogyCoreEnvironmentPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CoreEnvironmentPackage.initializePackageContents();
+		theApogyCoreEnvironmentPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CoreEnvironmentPackage.freeze();
+		theApogyCoreEnvironmentPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CoreEnvironmentPackage.eNS_URI, theSymphony__CoreEnvironmentPackage);
-		return theSymphony__CoreEnvironmentPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCoreEnvironmentPackage.eNS_URI, theApogyCoreEnvironmentPackage);
+		return theApogyCoreEnvironmentPackage;
 	}
 
   /**
@@ -1323,8 +1323,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CoreEnvironmentFacade() {
-		return symphony__CoreEnvironmentFacadeEClass;
+	public EClass getApogyCoreEnvironmentFacade() {
+		return apogy__CoreEnvironmentFacadeEClass;
 	}
 
 		/**
@@ -1332,8 +1332,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeStars() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeStars() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -1341,8 +1341,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -1350,8 +1350,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -1359,8 +1359,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyCoreEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(3);
 	}
 
 		/**
@@ -1368,8 +1368,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetMarsYardGeographicalCoordinates() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(4);
+	public EOperation getApogyCoreEnvironmentFacade__GetMarsYardGeographicalCoordinates() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(4);
 	}
 
 		/**
@@ -1377,8 +1377,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__CreateStar__float_double_double() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(5);
+	public EOperation getApogyCoreEnvironmentFacade__CreateStar__float_double_double() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(5);
 	}
 
 		/**
@@ -1386,8 +1386,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetMarsYardTransformNode() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(6);
+	public EOperation getApogyCoreEnvironmentFacade__GetMarsYardTransformNode() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(6);
 	}
 
 		/**
@@ -1395,8 +1395,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(7);
+	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(7);
 	}
 
 		/**
@@ -1404,8 +1404,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(8);
+	public EOperation getApogyCoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(8);
 	}
 
 		/**
@@ -1413,8 +1413,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(9);
+	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(9);
 	}
 
 		/**
@@ -1422,8 +1422,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetSunVector__Node_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(10);
+	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(10);
 	}
 
 		/**
@@ -1431,8 +1431,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(11);
+	public EOperation getApogyCoreEnvironmentFacade__GetMoonVector__ApogySystem_String_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(11);
 	}
 
 		/**
@@ -1440,8 +1440,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetMoonVector__Node_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(12);
+	public EOperation getApogyCoreEnvironmentFacade__GetMoonVector__Node_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(12);
 	}
 
 		/**
@@ -1449,8 +1449,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(13);
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(13);
 	}
 
 		/**
@@ -1458,8 +1458,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(14);
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(14);
 	}
 
 		/**
@@ -1467,8 +1467,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(15);
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_String_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(15);
 	}
 
 		/**
@@ -1476,8 +1476,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(16);
+	public EOperation getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_String_String_Environment() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(16);
 	}
 
 		/**
@@ -1485,8 +1485,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__CreateEImage__List() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(17);
+	public EOperation getApogyCoreEnvironmentFacade__CreateEImage__List() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(17);
 	}
 
 		/**
@@ -1494,8 +1494,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(18);
+	public EOperation getApogyCoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(18);
 	}
 
 		/**
@@ -1503,8 +1503,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(19);
+	public EOperation getApogyCoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(19);
 	}
 
 		/**
@@ -1512,8 +1512,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(20);
+	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(20);
 	}
 
 		/**
@@ -1521,8 +1521,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(21);
+	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(21);
 	}
 
 		/**
@@ -1530,8 +1530,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(22);
+	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(22);
 	}
 
 		/**
@@ -1539,8 +1539,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(23);
+	public EOperation getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(23);
 	}
 
 		/**
@@ -1548,8 +1548,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(24);
+	public EOperation getApogyCoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(24);
 	}
 
 		/**
@@ -1557,8 +1557,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(25);
+	public EOperation getApogyCoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(25);
 	}
 
 		/**
@@ -1566,8 +1566,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(26);
+	public EOperation getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(26);
 	}
 
 		/**
@@ -1575,8 +1575,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(27);
+	public EOperation getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(27);
 	}
 
 		/**
@@ -1584,8 +1584,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationImage__List() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(28);
+	public EOperation getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationImage__List() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(28);
 	}
 
 		/**
@@ -1593,8 +1593,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetBestResolutionMapLayer__List() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(29);
+	public EOperation getApogyCoreEnvironmentFacade__GetBestResolutionMapLayer__List() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(29);
 	}
 
 		/**
@@ -1602,8 +1602,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(30);
+	public EOperation getApogyCoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(30);
 	}
 
 		/**
@@ -1611,8 +1611,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh() {
-		return symphony__CoreEnvironmentFacadeEClass.getEOperations().get(31);
+	public EOperation getApogyCoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh() {
+		return apogy__CoreEnvironmentFacadeEClass.getEOperations().get(31);
 	}
 
 		/**
@@ -3182,8 +3182,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentFactory getSymphony__CoreEnvironmentFactory() {
-		return (Symphony__CoreEnvironmentFactory)getEFactoryInstance();
+	public ApogyCoreEnvironmentFactory getApogyCoreEnvironmentFactory() {
+		return (ApogyCoreEnvironmentFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -3292,39 +3292,39 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		createEOperation(environmentUtilitiesEClass, ENVIRONMENT_UTILITIES___PARSE_DEG_MIN_SEC__STRING);
 		createEOperation(environmentUtilitiesEClass, ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST);
 
-		symphony__CoreEnvironmentFacadeEClass = createEClass(SYMPHONY_CORE_ENVIRONMENT_FACADE);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST);
-		createEOperation(symphony__CoreEnvironmentFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH);
+		apogy__CoreEnvironmentFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_FACADE);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST);
+		createEOperation(apogy__CoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH);
 
 		starEClass = createEClass(STAR);
 		createEAttribute(starEClass, STAR__MAGNITUDE);
@@ -3561,14 +3561,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
-		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
+		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -3577,25 +3577,25 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		worksiteEClass.getESuperTypes().add(theSymphony__CorePackage.getAbstractWorksite());
+		worksiteEClass.getESuperTypes().add(theApogyCorePackage.getAbstractWorksite());
 		surfaceWorksiteEClass.getESuperTypes().add(this.getWorksite());
 		earthSurfaceWorksiteEClass.getESuperTypes().add(this.getSurfaceWorksite());
-		environmentEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		environmentEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		environmentEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		environmentEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		surfaceEnvironmentEClass.getESuperTypes().add(this.getEnvironment());
 		earthSurfaceEnvironmentEClass.getESuperTypes().add(this.getSurfaceEnvironment());
-		skyEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		skyEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		earthSkyEClass.getESuperTypes().add(this.getSky());
-		sunEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
-		earthEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
-		moonEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
-		starFieldEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
-		mapEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		mapEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
-		abstractMapLayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		abstractMapLayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
-		mapLayerPresentationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		mapLayerPresentationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		sunEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		earthEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		moonEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		starFieldEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
+		mapEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		mapEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		abstractMapLayerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractMapLayerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		mapLayerPresentationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		mapLayerPresentationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		urlMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		rectangularRegionEClass.getESuperTypes().add(this.getRegion());
 		rectangularVolumeRegionEClass.getESuperTypes().add(this.getRectangularRegion());
@@ -3607,14 +3607,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		urlImageMapLayerEClass.getESuperTypes().add(this.getImageMapLayer());
 		urlImageMapLayerEClass.getESuperTypes().add(this.getURLMapLayer());
 		topologyTreeMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
-		topologyTreeMapLayerNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		topologyTreeMapLayerNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 		cartesianTriangularMeshMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		cartesianTriangularMeshDerivedImageMapLayerEClass.getESuperTypes().add(this.getImageMapLayer());
 		cartesianTriangularMeshSlopeImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshDerivedImageMapLayer());
 		cartesianTriangularMeshDiscreteSlopeImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshSlopeImageMapLayer());
 		cartesianTriangularMeshHeightImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshDerivedImageMapLayer());
-		slopeRangeEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		slopeRangeEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		slopeRangeEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		slopeRangeEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		lineOfSightImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshDerivedImageMapLayer());
 		abstractShapeImageLayerEClass.getESuperTypes().add(this.getImageMapLayer());
 		ellipseShapeImageLayerEClass.getESuperTypes().add(this.getAbstractShapeImageLayer());
@@ -3627,20 +3627,20 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		cartesianTriangularMeshURLMapLayerEClass.getESuperTypes().add(this.getURLMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getRectangularRegionProvider());
-		worksiteNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
+		worksiteNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
 		surfaceWorksiteNodeEClass.getESuperTypes().add(this.getWorksiteNode());
 		earthSurfaceWorksiteNodeEClass.getESuperTypes().add(this.getSurfaceWorksiteNode());
-		mapsListNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
-		mapNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getTransformNode());
-		abstractMapLayerNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
-		skyNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
+		mapsListNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
+		mapNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getTransformNode());
+		abstractMapLayerNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
+		skyNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
 		earthSkyNodeEClass.getESuperTypes().add(this.getSkyNode());
 		cartesianTriangularMeshMapLayerNodeEClass.getESuperTypes().add(this.getAbstractMapLayerNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(worksiteEClass, Worksite.class, "Worksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorksite_WorksiteNode(), this.getWorksiteNode(), null, "worksiteNode", null, 1, 1, Worksite.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getWorksite_OrbitsModels(), theSymphony__CorePackage.getAbstractOrbitModel(), null, "orbitsModels", null, 0, -1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorksite_OrbitsModels(), theApogyCorePackage.getAbstractOrbitModel(), null, "orbitsModels", null, 0, -1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorksite_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(surfaceWorksiteEClass, SurfaceWorksite.class, "SurfaceWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3653,16 +3653,16 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		initEReference(getEarthSurfaceWorksite_EarthSky(), this.getEarthSky(), null, "earthSky", null, 1, 1, EarthSurfaceWorksite.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getEarthSurfaceWorksite__ConvertToGeographicCoordinates__Tuple3d(), this.getGeographicCoordinates(), "convertToGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthSurfaceWorksite__ConvertToXYZPosition__GeographicCoordinates(), theSymphony__CommonMathPackage.getTuple3d(), "convertToXYZPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEarthSurfaceWorksite__ConvertToXYZPosition__GeographicCoordinates(), theApogyCommonMathPackage.getTuple3d(), "convertToXYZPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getGeographicCoordinates(), "geographicalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(environmentEClass, Environment.class, "Environment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(surfaceEnvironmentEClass, SurfaceEnvironment.class, "SurfaceEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSurfaceEnvironment_Atmosphere(), this.getAtmosphere(), null, "atmosphere", null, 0, 1, SurfaceEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSurfaceEnvironment_Gravity(), theSymphony__CommonMathPackage.getTuple3d(), null, "gravity", null, 0, 1, SurfaceEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSurfaceEnvironment_Gravity(), theApogyCommonMathPackage.getTuple3d(), null, "gravity", null, 0, 1, SurfaceEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceEnvironmentEClass, EarthSurfaceEnvironment.class, "EarthSurfaceEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3743,7 +3743,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 
 		op = initEOperation(getEnvironmentUtilities__ParseRightAscension__String(), theEcorePackage.getEFloat(), "parseRightAscension", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "rightAscensionString", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theSymphony__CommonEMFPackage.getException());
+		addEException(op, theApogyCommonEMFPackage.getException());
 
 		op = initEOperation(getEnvironmentUtilities__ParseDegMinSec__String(), theEcorePackage.getEFloat(), "parseDegMinSec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "degMinSecAngleString", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3758,79 +3758,79 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		initEClass(symphony__CoreEnvironmentFacadeEClass, Symphony__CoreEnvironmentFacade.class, "Symphony__CoreEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CoreEnvironmentFacadeEClass, ApogyCoreEnvironmentFacade.class, "ApogyCoreEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getSymphony__CoreEnvironmentFacade__CreateAndInitializeStars(), this.getStarField(), "createAndInitializeStars", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCoreEnvironmentFacade__CreateAndInitializeStars(), this.getStarField(), "createAndInitializeStars", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite(), this.getEarthSurfaceWorksite(), "createAndInitializeDefaultCSAWorksite", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite(), this.getEarthSurfaceWorksite(), "createAndInitializeDefaultCSAWorksite", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode(), null, "initializeSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode(), null, "initializeSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getSky(), "sky", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getSkyNode(), "skyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode(), null, "initializeEarthSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode(), null, "initializeEarthSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthSky(), "earthSky", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthSkyNode(), "earthSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CoreEnvironmentFacade__GetMarsYardGeographicalCoordinates(), this.getGeographicCoordinates(), "getMarsYardGeographicalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCoreEnvironmentFacade__GetMarsYardGeographicalCoordinates(), this.getGeographicCoordinates(), "getMarsYardGeographicalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__CreateStar__float_double_double(), this.getStar(), "createStar", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__CreateStar__float_double_double(), this.getStar(), "createStar", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "rightAscension", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "declination", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CoreEnvironmentFacade__GetMarsYardTransformNode(), theSymphony__CommonTopologyPackage.getTransformNode(), "getMarsYardTransformNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCoreEnvironmentFacade__GetMarsYardTransformNode(), theApogyCommonTopologyPackage.getTransformNode(), "getMarsYardTransformNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment(), this.getEarthSurfaceEnvironment(), "createAndInitializeEarthSurfaceEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCoreEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment(), this.getEarthSurfaceEnvironment(), "createAndInitializeEarthSurfaceEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere(), this.getAtmosphere(), "createAndInitializeEarthAtmosphere", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyCoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere(), this.getAtmosphere(), "createAndInitializeEarthAtmosphere", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "symphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment(), theApogyCommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "apogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetSunVector__Node_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment(), theApogyCommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "symphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetMoonVector__ApogySystem_String_Environment(), theApogyCommonMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "apogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetMoonVector__Node_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetMoonVector__Node_Environment(), theApogyCommonMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "targetSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getConnectionPoint(), "connectionPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment(), theApogyCommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "targetApogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getConnectionPoint(), "connectionPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "sourceSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_ConnectionPoint_Environment(), theApogyCommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "sourceApogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "targetSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getConnectionPoint(), "connectionPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "targetApogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getConnectionPoint(), "connectionPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "sourceSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_ApogySystem_String_Environment(), theApogyCommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "sourceApogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "targetSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "targetApogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "connectionPointName", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CorePackage.getSymphonySystem(), "sourceSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetVector__ApogySystem_String_String_String_Environment(), theApogyCommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCorePackage.getApogySystem(), "sourceApogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "targetSystemfullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "connectionPointName", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__CreateEImage__List(), theSymphony__CommonImagesPackage.getAbstractEImage(), "createEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__CreateEImage__List(), theApogyCommonImagesPackage.getAbstractEImage(), "createEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
@@ -3838,14 +3838,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		g2.setEUpperBound(g3);
 		addEParameter(op, g1, "rectangularRegionImages", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion(), null, "getAbsoluteRectangularRegionCorners", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion(), null, "getAbsoluteRectangularRegionCorners", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegion", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(theSymphony__CommonMathPackage.getTuple3d());
+		g2 = createEGenericType(theApogyCommonMathPackage.getTuple3d());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List(), this.getRectangularRegionImage(), "getBestResolutionRectangularRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List(), this.getRectangularRegionImage(), "getBestResolutionRectangularRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
@@ -3853,71 +3853,71 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		g2.setEUpperBound(g3);
 		addEParameter(op, g1, "rectangularRegionImages", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d(), null, "getRectangularRegionExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d(), null, "getRectangularRegionExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegionProvider(), "rectangularRegionProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d(), null, "getRectangularRegionImageExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d(), null, "getRectangularRegionImageExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegionImage(), "rectangularRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d(), null, "getRectangularRegionExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d(), null, "getRectangularRegionExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
 		g3 = createEGenericType(this.getRectangularRegionProvider());
 		g2.setEUpperBound(g3);
 		addEParameter(op, g1, "rectangularRegionProviders", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d(), null, "getRectangularRegionImageExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d(), null, "getRectangularRegionImageExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
 		g3 = createEGenericType(this.getRectangularRegionImage());
 		g2.setEUpperBound(g3);
 		addEParameter(op, g1, "rectangularRegionImages", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion(), theEcorePackage.getEBoolean(), "fitsInside", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion(), theEcorePackage.getEBoolean(), "fitsInside", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegionA", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegionB", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4(), theEcorePackage.getEBoolean(), "intersects", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4(), theEcorePackage.getEBoolean(), "intersects", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegionA", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegionB", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "transformAToB", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getMatrix4x4(), "transformAToB", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d(), null, "getImageMapLayerPresentationExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d(), null, "getImageMapLayerPresentationExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getImageMapLayerPresentation(), "imageMapLayerPresentation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d(), null, "getImageMapLayerPresentationExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d(), null, "getImageMapLayerPresentationExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getImageMapLayerPresentation());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "imageMapLayerPresentations", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationImage__List(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(this.getImageMapLayerPresentation());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "imageMapLayerPresentations", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetBestResolutionMapLayer__List(), this.getImageMapLayerPresentation(), "getBestResolutionMapLayer", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationImage__List(), theApogyCommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getImageMapLayerPresentation());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "imageMapLayerPresentations", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List(), null, "getVisibleImageMapLayerPresentation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetBestResolutionMapLayer__List(), this.getImageMapLayerPresentation(), "getBestResolutionMapLayer", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getImageMapLayerPresentation());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "imageMapLayerPresentations", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List(), null, "getVisibleImageMapLayerPresentation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getImageMapLayerPresentation());
 		g1.getETypeArguments().add(g2);
@@ -3927,8 +3927,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphony__CoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh(), this.getRectangularVolumeRegion(), "getRectangularVolumeRegion", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh(), this.getRectangularVolumeRegion(), "getRectangularVolumeRegion", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(starEClass, Star.class, "Star", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStar_Magnitude(), theEcorePackage.getEFloat(), "magnitude", null, 0, 1, Star.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4034,7 +4034,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		addEParameter(op, theEcorePackage.getEDouble(), "observerLatitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mapEClass, Map.class, "Map", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMap_Transformation(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Map.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMap_Transformation(), theApogyCommonMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Map.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMap_Layers(), this.getAbstractMapLayer(), this.getAbstractMapLayer_Map(), "layers", null, 0, -1, Map.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMap_MapNode(), this.getMapNode(), null, "mapNode", null, 1, 1, Map.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
@@ -4054,7 +4054,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		initEAttribute(getURLMapLayer_Url(), theEcorePackage.getEString(), "url", null, 0, 1, URLMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(regionEClass, Region.class, "Region", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRegion_Transformation(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRegion_Transformation(), theApogyCommonMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rectangularRegionEClass, RectangularRegion.class, "RectangularRegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRectangularRegion_XMin(), theEcorePackage.getEDouble(), "xMin", "0.0", 0, 1, RectangularRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4063,10 +4063,10 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		initEAttribute(getRectangularRegion_YMax(), theEcorePackage.getEDouble(), "yMax", "0.0", 0, 1, RectangularRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRectangularRegion_XDimension(), theEcorePackage.getEDouble(), "xDimension", null, 0, 1, RectangularRegion.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRectangularRegion_YDimension(), theEcorePackage.getEDouble(), "yDimension", null, 0, 1, RectangularRegion.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_LowerLeftCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "lowerLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_UpperLeftCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "upperLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_LowerRightCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "lowerRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_UpperRightCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "upperRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_LowerLeftCorner(), theApogyCommonMathPackage.getTuple3d(), null, "lowerLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_UpperLeftCorner(), theApogyCommonMathPackage.getTuple3d(), null, "upperLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_LowerRightCorner(), theApogyCommonMathPackage.getTuple3d(), null, "lowerRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_UpperRightCorner(), theApogyCommonMathPackage.getTuple3d(), null, "upperRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(rectangularVolumeRegionEClass, RectangularVolumeRegion.class, "RectangularVolumeRegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRectangularVolumeRegion_ZMin(), theEcorePackage.getEDouble(), "zMin", "0.0", 0, 1, RectangularVolumeRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4079,7 +4079,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 
 		initEClass(rectangularRegionImageEClass, RectangularRegionImage.class, "RectangularRegionImage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getRectangularRegionImage__GetRegionImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getRectangularRegionImage__GetRegionImage(), theApogyCommonImagesPackage.getAbstractEImage(), "getRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getRectangularRegionImage__GetResolution(), theEcorePackage.getEDouble(), "getResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -4087,8 +4087,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		initEAttribute(getImageMapLayer_Width(), theEcorePackage.getEDouble(), "width", "0.0", 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageMapLayer_Height(), theEcorePackage.getEDouble(), "height", "0.0", 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageMapLayer_Opaque(), theEcorePackage.getEBoolean(), "opaque", "true", 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageMapLayer_Image(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "image", null, 1, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageMapLayer_Legend(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "legend", null, 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageMapLayer_Image(), theApogyCommonImagesPackage.getAbstractEImage(), null, "image", null, 1, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageMapLayer_Legend(), theApogyCommonImagesPackage.getAbstractEImage(), null, "legend", null, 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageMapLayer_Resolution(), theEcorePackage.getEDouble(), "resolution", null, 0, 1, ImageMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getImageMapLayer__UpdateImage__IProgressMonitor(), null, "updateImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -4109,15 +4109,15 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 
 		initEClass(topologyTreeMapLayerNodeEClass, TopologyTreeMapLayerNode.class, "TopologyTreeMapLayerNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTopologyTreeMapLayerNode_TopologyTreeMapLayer(), this.getTopologyTreeMapLayer(), this.getTopologyTreeMapLayer_TopologyTreeRoot(), "topologyTreeMapLayer", null, 0, 1, TopologyTreeMapLayerNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTreeMapLayerNode_TransientParent(), theSymphony__CommonTopologyPackage.getNode(), null, "transientParent", null, 0, 1, TopologyTreeMapLayerNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyTreeMapLayerNode_TransientParent(), theApogyCommonTopologyPackage.getNode(), null, "transientParent", null, 0, 1, TopologyTreeMapLayerNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cartesianTriangularMeshMapLayerEClass, CartesianTriangularMeshMapLayer.class, "CartesianTriangularMeshMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCartesianTriangularMeshMapLayer_MeshIsDirty(), theEcorePackage.getEBoolean(), "meshIsDirty", "true", 0, 1, CartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCartesianTriangularMeshMapLayer_MapLayerPresentations(), this.getMapLayerPresentation(), null, "mapLayerPresentations", null, 0, -1, CartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCartesianTriangularMeshMapLayer_TextureImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "textureImage", null, 0, 1, CartesianTriangularMeshMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianTriangularMeshMapLayer_TextureImage(), theApogyCommonImagesPackage.getAbstractEImage(), null, "textureImage", null, 0, 1, CartesianTriangularMeshMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCartesianTriangularMeshMapLayer_CartesianTriangularMeshMapLayerNode(), this.getCartesianTriangularMeshMapLayerNode(), null, "cartesianTriangularMeshMapLayerNode", null, 0, 1, CartesianTriangularMeshMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getCartesianTriangularMeshMapLayer__GetCurrentMesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "getCurrentMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCartesianTriangularMeshMapLayer__GetCurrentMesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "getCurrentMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCartesianTriangularMeshMapLayer__ForceUpdateTextureImage(), null, "forceUpdateTextureImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -4146,7 +4146,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		initEClass(lineOfSightImageMapLayerEClass, LineOfSightImageMapLayer.class, "LineOfSightImageMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLineOfSightImageMapLayer_LineOfSightAvailableColor(), this.getColor3f(), "lineOfSightAvailableColor", "0.0,1.0,0.0", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLineOfSightImageMapLayer_LineOfSightNotAvailableColor(), this.getColor3f(), "lineOfSightNotAvailableColor", "1.0,0.0,0.0", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLineOfSightImageMapLayer_ObserverPose(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "observerPose", null, 1, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLineOfSightImageMapLayer_ObserverPose(), theApogyCommonMathPackage.getMatrix4x4(), null, "observerPose", null, 1, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLineOfSightImageMapLayer_TargetHeightAboveGround(), theEcorePackage.getEDouble(), "targetHeightAboveGround", "1.0", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLineOfSightImageMapLayer_UseHeightPerpendicularToGround(), theEcorePackage.getEBoolean(), "useHeightPerpendicularToGround", "false", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4169,24 +4169,24 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 
 		op = initEOperation(getPolygonShapeImageMapLayer__GetVertices(), null, "getVertices", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(theSymphony__CommonMathPackage.getTuple3d());
+		g2 = createEGenericType(theApogyCommonMathPackage.getTuple3d());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
 		initEClass(cartesianCoordinatesPolygonShapeImageMapLayerEClass, CartesianCoordinatesPolygonShapeImageMapLayer.class, "CartesianCoordinatesPolygonShapeImageMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices(), theSymphony__CommonMathPackage.getTuple3d(), null, "polygonVertices", null, 0, -1, CartesianCoordinatesPolygonShapeImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices(), theApogyCommonMathPackage.getTuple3d(), null, "polygonVertices", null, 0, -1, CartesianCoordinatesPolygonShapeImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geographicCoordinatesPolygonShapeImageMapLayerEClass, GeographicCoordinatesPolygonShapeImageMapLayer.class, "GeographicCoordinatesPolygonShapeImageMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeographicCoordinatesPolygonShapeImageMapLayer_PolygonVerticesGeographicCoordinates(), this.getGeographicCoordinates(), null, "polygonVerticesGeographicCoordinates", null, 0, -1, GeographicCoordinatesPolygonShapeImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(basicCartesianTriangularMeshMapLayerEClass, BasicCartesianTriangularMeshMapLayer.class, "BasicCartesianTriangularMeshMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBasicCartesianTriangularMeshMapLayer_Mesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, BasicCartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBasicCartesianTriangularMeshMapLayer_Mesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, BasicCartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cartesianTriangularMeshURLMapLayerEClass, CartesianTriangularMeshURLMapLayer.class, "CartesianTriangularMeshURLMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCartesianTriangularMeshURLMapLayer_Mesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, CartesianTriangularMeshURLMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianTriangularMeshURLMapLayer_Mesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, CartesianTriangularMeshURLMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featuresOfInterestMapLayerEClass, FeaturesOfInterestMapLayer.class, "FeaturesOfInterestMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeaturesOfInterestMapLayer_Features(), theSymphony__CorePackage.getFeatureOfInterestList(), null, "features", null, 1, 1, FeaturesOfInterestMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeaturesOfInterestMapLayer_Features(), theApogyCorePackage.getFeatureOfInterestList(), null, "features", null, 1, 1, FeaturesOfInterestMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(worksiteNodeEClass, WorksiteNode.class, "WorksiteNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorksiteNode_Worksite(), this.getWorksite(), null, "worksite", null, 0, 1, WorksiteNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4194,7 +4194,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		initEClass(surfaceWorksiteNodeEClass, SurfaceWorksiteNode.class, "SurfaceWorksiteNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(earthSurfaceWorksiteNodeEClass, EarthSurfaceWorksiteNode.class, "EarthSurfaceWorksiteNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthSurfaceWorksiteNode_SkyTransformNode(), theSymphony__CommonTopologyPackage.getTransformNode(), null, "skyTransformNode", null, 0, 1, EarthSurfaceWorksiteNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEarthSurfaceWorksiteNode_SkyTransformNode(), theApogyCommonTopologyPackage.getTransformNode(), null, "skyTransformNode", null, 0, 1, EarthSurfaceWorksiteNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapsListNodeEClass, MapsListNode.class, "MapsListNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMapsListNode_MapsList(), this.getMapsList(), null, "mapsList", null, 0, 1, MapsListNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4243,18 +4243,18 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CoreEnvironment",
+			 "prefix", "ApogyCoreEnvironment",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__CoreEnvironment",
+			 "modelName", "ApogyCoreEnvironment",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.core.environment/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.core.environment.edit/src-generated",
-			 "testsDirectory", "/org.eclipse.symphony.core.environment.tests/src-generated",
-			 "basePackage", "org.eclipse.symphony.core"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.edit/src-generated",
+			 "testsDirectory", "/ca.gc.asc_csa.apogy.core.environment.tests/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.core"
 		   });	
 		addAnnotation
 		  (getWorksite_WorksiteNode(), 
@@ -4309,7 +4309,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Azimuth, relative to true North, of the X axis of the worksite\ncoordinates system. Follows the right hand rule.\nNote that the Z axis is pointing up (toward zenith).",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksite_EarthSky(), 
@@ -4322,35 +4322,35 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "The wind surface speed, in m/s.",
-			 "symphony_units", "m/s"
+			 "apogy_units", "m/s"
 		   });	
 		addAnnotation
 		  (getAtmosphere_WindDirection(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The wind direction expressed relative to true north, in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAtmosphere_Temperature(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The atmosphere temperature, in degrees Celcius.",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getAtmosphere_SurfacePressure(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The atmosphere pressure at the reference altitude, in Pascals.",
-			 "symphony_units", "Pa"
+			 "apogy_units", "Pa"
 		   });	
 		addAnnotation
 		  (getAtmosphere_SurfaceDensity(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The atmosphere density at the reference altitude, in kg/m^3.",
-			 "symphony_units", "kg/m\u00b3"
+			 "apogy_units", "kg/m\u00b3"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetAirMass__double(), 
@@ -4362,45 +4362,45 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAtmosphereUtils__GetAirMass__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetDirectSunIntensity__double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Computes the intensity of the direct component of sunlight, in Watts/m^2.\n@param sunAltitudeAngle The sun elevation angle above the horizon, in radians.\n@param heightAboveSeaLevel Height above sea level, in meters.\n@see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM",
-			 "symphony_units", "W/m\u00b2"
+			 "apogy_units", "W/m\u00b2"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDirectSunIntensity__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDirectSunIntensity__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetDiffuseSunIntensity__double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Computes the intensity of the diffuse component of sunlight, in Watts/m^2.\n@param sunAltitudeAngle The sun elevation angle above the horizon, in radians.\n@param heightAboveSeaLevel Height above sea level, in meters.\n@see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM",
-			 "symphony_units", "W/m\u00b2"
+			 "apogy_units", "W/m\u00b2"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDiffuseSunIntensity__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDiffuseSunIntensity__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetAtmosphereRefractionCorrection__double(), 
@@ -4412,7 +4412,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAtmosphereUtils__GetAtmosphereRefractionCorrection__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (equatorialCoordinatesEClass, 
@@ -4431,21 +4431,21 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "The longitude, in radians. Longitude east of Greenwich, UK  are positive\nwhile those west of Greenwich are negative.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getGeographicCoordinates_Latitude(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The latitude, in radians. Latitude north of the equator are positive while those\nsouth of the equator are negative.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getGeographicCoordinates_Elevation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Height above the Earth\'s sea level, in meters.",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (horizontalCoordinatesEClass, 
@@ -4471,7 +4471,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Returns the Sun angular diameter, in radians.",
 			 "propertyCategory", "SUN",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getSky_SurfaceWorksite(), 
@@ -4521,7 +4521,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Returns the Moon angular diameter, in radians.",
 			 "propertyCategory", "MOON",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getEarthSky_Moon(), 
@@ -4547,14 +4547,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getSun__GetIrradiance__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getSun_Radius(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Sun radius, in meters.",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (earthEClass, 
@@ -4567,14 +4567,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Earth mean radius, in meters.",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getMoon_Radius(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Moon radius, in meters.",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (environmentUtilitiesEClass, 
@@ -4593,14 +4593,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Method that parses Right Ascension angle expressed in\nHH:mm:ss format and return an angle in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUtilities__ParseDegMinSec__String(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Method that parses an angle expressed in deg:mm:ss format\nand return an angle in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUtilities__SortByMagnitude__List(), 
@@ -4609,97 +4609,97 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Method that sorts a list of stars by magnitude."
 		   });	
 		addAnnotation
-		  (symphony__CoreEnvironmentFacadeEClass, 
+		  (apogy__CoreEnvironmentFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "A class providing utilities methods to create fully initialze object."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite(), 
+		  (getApogyCoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Create an empty EarthSurfaceWorksite with the CSA Mars Yard coordinates."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere(), 
+		  (getApogyCoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a International Standard Atmosphere at sea level.\n@see http://en.wikipedia.org/wiki/International_Standard_Atmosphere"
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__CreateEImage__List(), 
+		  (getApogyCoreEnvironmentFacade__CreateEImage__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Assembles a list of ImageMapLayer into a single eImage reference to the Worksite frame.\nNote that only X,Y and Rz are used in transformation applied between ImageMapLayer and the worksite\norigin."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion(), 
+		  (getApogyCoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return a list containing the position of the 4 corners of the specified ImageMapLayer\n@param imageMapLayer The specified ImageMapLayer.\n@return List containing the position (in the worksite frame) of the four corners of the ImageMapLayer.\nThe list contains : lowerLeftCorner, lowerRightCorner, upperRightCorner and upperLeftCorner."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List(), 
+		  (getApogyCoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the ImageMapLayer with the highest resolution (minimum meters/pixel).\n@return The ImageMapLayer with the highest resolution (minimum meters/pixel)"
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d(), 
+		  (getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the lower left and upper right corners of a specified RectangularRegionProvider.\n@param rectangularRegionProvider The specified RectangularRegionProvider.\n@param lowerLeftCorner The Tuple3d were to put the lower left coordinates.\n@param upperRightCorner The Tuple3d were to put the upper right coordinates."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d(), 
+		  (getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the lower left and upper right corners of a specified ImageMapLayer.\n@param imageMapLayer The specified ImageMapLayer.\n@param lowerLeftCorner The Tuple3d were to put the lower left coordinates.\n@param upperRightCorner The Tuple3d were to put the upper right coordinates.\nTODO DEPRECATE - REMOVE"
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d(), 
+		  (getApogyCoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return  the lower left and upper right corners of the region spanned by a list of RectangularRegionProviders.\n@param rectangularRegionProviders The list of RectangularRegionProviders.\n@param lowerLeftCorner The Tuple3d were to put the lower left coordinates.\n@param upperRightCorner The Tuple3d were to put the upper right coordinates."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d(), 
+		  (getApogyCoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return  the lower left and upper right corners of the region spanned by a list of a ImageMapLayer.\n@param The list of ImageMapLayer.\n@param lowerLeftCorner The Tuple3d were to put the lower left coordinates.\n@param upperRightCorner The Tuple3d were to put the upper right coordinates.\nTODO DEPRECATE - REMOVE"
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion(), 
+		  (getApogyCoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns whether rectangularRegionA fits entirely in rectangularRegionB.\nThe current implementation does not take into account the Transform.\n@param rectangularRegionA The first RectangularRegion.\n@param rectangularRegionB The second RectangularRegion.\n@return True if rectangularRegionA fits in rectangularRegionB, false otherwise."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4(), 
+		  (getApogyCoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns whether two RectangularRegion intersects.\nreference frame.\n@param rectangularRegionA The first RectangularRegion.\n@param transformAToB The transformation (expressed as a 4x4 matrix that expresses region A into region B)\n@param rectangularRegionB The second RectangularRegion.\n@return True if rectangularRegionA intersects rectangularRegionB, false otherwise."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationImage__List(), 
+		  (getApogyCoreEnvironmentFacade__GetImageMapLayerPresentationImage__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns an image representing the assembly of the specified list of ImageMapLayerPresentation.\n@param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.\n@return The image representing the specified list of ImageMapLayerPresentation."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetBestResolutionMapLayer__List(), 
+		  (getApogyCoreEnvironmentFacade__GetBestResolutionMapLayer__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the ImageMapLayerPresentation with the highest resolution (minimum meters/pixel).\n@return The ImageMapLayerPresentation with the highest resolution (minimum meters/pixel)"
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List(), 
+		  (getApogyCoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the list of visible ImageMapLayerPresentation from\"\" a specified imageMapLayerPresentations.\n@param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.\n@return The list of visible ImageMapLayerPresentation."
 		   });	
 		addAnnotation
-		  (getSymphony__CoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh(), 
+		  (getApogyCoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the RectangularVolumeRegion bounding a triangular mesh.\n@param mesh The triangular mesh.\n@return The RectangularVolumeRegion."
@@ -4746,13 +4746,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetHorizontalSunPosition__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetHorizontalSunPosition__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetMoonEquatorialPosition__double(), 
@@ -4770,13 +4770,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetMoonTopocentricEquatorialPosition__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetMoonTopocentricEquatorialPosition__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetHorizontalMoonPosition__Date_double_double(), 
@@ -4788,13 +4788,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetHorizontalMoonPosition__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetHorizontalMoonPosition__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetTimeSinceJ2000__double(), 
@@ -4812,7 +4812,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetLocalSideralTime__Date_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetUTCDecimalHours__Date(), 
@@ -4830,33 +4830,33 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__ConvertToHorizontalCoordinates__EquatorialCoordinates_double_double_Date()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__ConvertToHorizontalCoordinates__EquatorialCoordinates_double_double_Date()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ConvertTimeToAngle__int_int_int(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Convert a day\'s hour, minutes and seconds to an angle, in radians. 24 hours converts to 2\u03c0 (360 degrees).",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ClampAngleToZero2PI__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Clamps the specified angle between 0 and 2\u03c0 (360 degrees).",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__ClampAngleToZero2PI__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ConvertToEquatorialCoordinates__EclipticCoordinates(), 
@@ -4905,20 +4905,20 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Convert Astronomical Units (A.U.) to meters.",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetMaximumSunAltitude__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the maximum altitude angle that the sun could reach at the specified latitude, in radians.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetMaximumSunAltitude__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ConvertToHHmmssString__double(), 
@@ -4936,13 +4936,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetSunRiseTime__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetSunRiseTime__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetSunSetTime__Date_double_double(), 
@@ -4954,13 +4954,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetSunSetTime__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetSunSetTime__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetSunHighestElevationTime__Date_double_double(), 
@@ -4972,13 +4972,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetSunHighestElevationTime__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetSunHighestElevationTime__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getMapsList_MapsListNode(), 
@@ -5055,7 +5055,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Minimum X coordinate on the X axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_XMax(), 
@@ -5064,7 +5064,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Maximum X coordinate on the X axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_YMin(), 
@@ -5073,7 +5073,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Minimum X coordinate on the Y axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_YMax(), 
@@ -5082,7 +5082,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Maximum X coordinate on the Y axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_XDimension(), 
@@ -5090,7 +5090,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Dimension along the X axis.",
 			 "propertyCategory", "EXTENT_SIZES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_YDimension(), 
@@ -5098,7 +5098,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Dimension along the Y axis.",
 			 "propertyCategory", "EXTENT_SIZES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularVolumeRegion_ZMin(), 
@@ -5107,7 +5107,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Minimum Z coordinate on the Z axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularVolumeRegion_ZMax(), 
@@ -5116,7 +5116,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Maximum Z coordinate on the Z axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularVolumeRegion_ZDimension(), 
@@ -5124,7 +5124,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Dimension along the Z axis.",
 			 "propertyCategory", "EXTENT_SIZES",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (rectangularRegionProviderEClass, 
@@ -5155,7 +5155,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the image resolution.\n@return The resolution, in meters / pixel, or -1 if not defined.",
-			 "symphony_units", "m/pixel"
+			 "apogy_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (imageMapLayerEClass, 
@@ -5182,7 +5182,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The width of the region covered by the map, in meters.",
 			 "property", "Editable",
 			 "propertyCategory", "SIZE_AND_RESOLUTION",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getImageMapLayer_Height(), 
@@ -5191,7 +5191,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The height of the region covered by the map, in meters.",
 			 "property", "Editable",
 			 "propertyCategory", "SIZE_AND_RESOLUTION",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getImageMapLayer_Opaque(), 
@@ -5220,7 +5220,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The resolution, in meters / pixels",
 			 "property", "Readonly",
 			 "propertyCategory", "SIZE_AND_RESOLUTION",
-			 "symphony_units", "m/pixel"
+			 "apogy_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (imageMapLayerPresentationEClass, 
@@ -5335,7 +5335,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The required resolution, in meters / pixels",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "symphony_units", "m/pixel"
+			 "apogy_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (getCartesianTriangularMeshDerivedImageMapLayer_CartesianTriangularMeshMapLayer(), 
@@ -5366,7 +5366,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The minimum slope to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getCartesianTriangularMeshSlopeImageMapLayer_MaximumSlope(), 
@@ -5375,7 +5375,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The maximum slope to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (cartesianTriangularMeshDiscreteSlopeImageMapLayerEClass, 
@@ -5410,7 +5410,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The minimum height to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getCartesianTriangularMeshHeightImageMapLayer_MaximumHeight(), 
@@ -5419,7 +5419,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The maximum height to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (slopeRangeEClass, 
@@ -5433,7 +5433,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Lower bound of the slope range. Always positive",
 			 "property", "Editable",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getSlopeRange_SlopeUpperBound(), 
@@ -5441,7 +5441,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Upper bound of the slope range. Always positive, and should be larger than slopeLower.",
 			 "property", "Editable",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getSlopeRange_Color(), 
@@ -5487,7 +5487,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The height of target above ground.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getLineOfSightImageMapLayer_UseHeightPerpendicularToGround(), 
@@ -5526,7 +5526,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The required resolution, in meters / pixels",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "symphony_units", "m/pixel"
+			 "apogy_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (ellipseShapeImageLayerEClass, 
@@ -5540,7 +5540,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "ELLIPSE_SETTINGS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getEllipseShapeImageLayer_EllipseHeight(), 
@@ -5548,7 +5548,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "ELLIPSE_SETTINGS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getEllipseShapeImageLayer_ShowCenterLines(), 
@@ -5569,7 +5569,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "RECTANGLE_SETTINGS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangleShapeImageLayer_RectangleHeight(), 
@@ -5577,7 +5577,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "RECTANGLE_SETTINGS",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangleShapeImageLayer_ShowCenterLines(), 
@@ -5656,4 +5656,4 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   });
 	}
 
-} //Symphony__CoreEnvironmentPackageImpl
+} //ApogyCoreEnvironmentPackageImpl

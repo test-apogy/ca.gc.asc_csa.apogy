@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.impl;
+package ca.gc.asc_csa.apogy.examples.camera.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -9,14 +9,14 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.camera.Camera;
-import org.eclipse.symphony.examples.camera.CameraSimulated;
-import org.eclipse.symphony.examples.camera.CameraStub;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraFactory;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.PTUCamera;
-import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
-import org.eclipse.symphony.examples.camera.PTUCameraStub;
+import ca.gc.asc_csa.apogy.examples.camera.Camera;
+import ca.gc.asc_csa.apogy.examples.camera.CameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.CameraStub;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraFactory;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.examples.camera.PTUCameraStub;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements Symphony__ExamplesCameraFactory
+public class ApogyExamplesCameraFactoryImpl extends EFactoryImpl implements ApogyExamplesCameraFactory
 {
 	/**
 	 * Creates the default factory implementation.
@@ -32,18 +32,18 @@ public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesCameraFactory init()
+	public static ApogyExamplesCameraFactory init()
 	{
 		try {
-			Symphony__ExamplesCameraFactory theSymphony__ExamplesCameraFactory = (Symphony__ExamplesCameraFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesCameraPackage.eNS_URI);
-			if (theSymphony__ExamplesCameraFactory != null) {
-				return theSymphony__ExamplesCameraFactory;
+			ApogyExamplesCameraFactory theApogyExamplesCameraFactory = (ApogyExamplesCameraFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesCameraPackage.eNS_URI);
+			if (theApogyExamplesCameraFactory != null) {
+				return theApogyExamplesCameraFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesCameraFactoryImpl();
+		return new ApogyExamplesCameraFactoryImpl();
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesCameraFactoryImpl()
+	public ApogyExamplesCameraFactoryImpl()
 	{
 		super();
 	}
@@ -66,10 +66,10 @@ public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements
 	public EObject create(EClass eClass)
 	{
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesCameraPackage.CAMERA_STUB: return createCameraStub();
-			case Symphony__ExamplesCameraPackage.CAMERA_SIMULATED: return createCameraSimulated();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_STUB: return createPTUCameraStub();
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED: return createPTUCameraSimulated();
+			case ApogyExamplesCameraPackage.CAMERA_STUB: return createCameraStub();
+			case ApogyExamplesCameraPackage.CAMERA_SIMULATED: return createCameraSimulated();
+			case ApogyExamplesCameraPackage.PTU_CAMERA_STUB: return createPTUCameraStub();
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED: return createPTUCameraSimulated();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -84,7 +84,7 @@ public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements
 	public Object createFromString(EDataType eDataType, String initialValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesCameraPackage.THROWABLE:
+			case ApogyExamplesCameraPackage.THROWABLE:
 				return createThrowableFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -100,7 +100,7 @@ public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements
 	public String convertToString(EDataType eDataType, Object instanceValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesCameraPackage.THROWABLE:
+			case ApogyExamplesCameraPackage.THROWABLE:
 				return convertThrowableToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -234,8 +234,8 @@ public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesCameraPackage getSymphony__ExamplesCameraPackage() {
-		return (Symphony__ExamplesCameraPackage)getEPackage();
+	public ApogyExamplesCameraPackage getApogyExamplesCameraPackage() {
+		return (ApogyExamplesCameraPackage)getEPackage();
 	}
 
 	/**
@@ -245,9 +245,9 @@ public class Symphony__ExamplesCameraFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesCameraPackage getPackage()
+	public static ApogyExamplesCameraPackage getPackage()
 	{
-		return Symphony__ExamplesCameraPackage.eINSTANCE;
+		return ApogyExamplesCameraPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesCameraFactoryImpl
+} //ApogyExamplesCameraFactoryImpl

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ros.utilities;
+package ca.gc.asc_csa.apogy.addons.ros.utilities;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;

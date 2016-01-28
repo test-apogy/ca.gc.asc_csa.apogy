@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.ui.jme3.scene_objects;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
@@ -14,14 +14,14 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.ui.Ruler3dToolSceneObject;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -745,7 +745,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 					if(msg.getNotifier() instanceof Ruler3dToolNode)
 					{												
 						int featureId = msg.getFeatureID(Ruler3dToolNode.class);
-						if(featureId == Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL)
+						if(featureId == ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL)
 						{
 							if(msg.getOldValue() instanceof Ruler3dToolNode)
 							{
@@ -767,56 +767,56 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 						int featureId = msg.getFeatureID(Ruler3DTool.class);
 						switch(featureId)
 						{							
-							case Symphony__AddonsPackage.RULER3_DTOOL__FROM_ABSOLUTE_POSITION:
-							case Symphony__AddonsPackage.RULER3_DTOOL__TO_ABSOLUTE_POSITION:
+							case ApogyAddonsPackage.RULER3_DTOOL__FROM_ABSOLUTE_POSITION:
+							case ApogyAddonsPackage.RULER3_DTOOL__TO_ABSOLUTE_POSITION:
 								
 								updateGeometry();
 																	
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
+							case ApogyAddonsPackage.RULER3_DTOOL__RULER_COLOR:
 									if(msg.getNewValue() instanceof Color3f)
 									{
 										Color3f color = (Color3f) msg.getNewValue();
 										setRulerColor(color);								
 									}
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+							case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 									setMinorTickSpacing((float) msg.getNewDoubleValue());
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+							case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 									setMajorTickSpacing((float) msg.getNewDoubleValue());
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+							case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
 									setMinorTickLength((float) msg.getNewDoubleValue());
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+							case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 									setMajorTickLength((float) msg.getNewDoubleValue());		
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+							case ApogyAddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 									if(msg.getNewValue() instanceof Color3f)
 									{
 										Color3f color = (Color3f) msg.getNewValue();
 										setMinorTicksColor(color);								
 									}
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+							case ApogyAddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 									if(msg.getNewValue() instanceof Color3f)
 									{
 										Color3f color = (Color3f) msg.getNewValue();
 										setMajorTicksColor(color);								
 									}
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+							case ApogyAddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 							{
 								setExtremitiesRadius((float) msg.getNewDoubleValue());
 							}
 							break;
 							
-							case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:							
+							case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:							
 								setVisible(msg.getNewBooleanValue());
 							break;
 							
-							case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+							case ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 								
 								// Removes adapter if applicable.
 								if(getTopologyNode().getRuler3DTool() != null)
@@ -830,7 +830,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 								}
 							break;
 						
-							case Symphony__AddonsPackage.SIMPLE3_DTOOL___DISPOSE:	
+							case ApogyAddonsPackage.SIMPLE3_DTOOL___DISPOSE:	
 								dispose();
 							break;
 								

@@ -1,18 +1,18 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CommonEMF edit plugin.
+ * This is the central singleton for the ApogyCommonEMF edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonEMFEditPlugin extends EMFPlugin
+public final class ApogyCommonEMFEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -20,7 +20,7 @@ public final class Symphony__CommonEMFEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final Symphony__CommonEMFEditPlugin INSTANCE = new Symphony__CommonEMFEditPlugin();
+  public static final ApogyCommonEMFEditPlugin INSTANCE = new ApogyCommonEMFEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -36,7 +36,7 @@ public final class Symphony__CommonEMFEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFEditPlugin()
+  public ApogyCommonEMFEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {

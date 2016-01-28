@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.jme3.preferences;
+package ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences;
 
 import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.PreferencePage;
@@ -10,12 +10,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.core.environment.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 
-public class SymphonyEnvironmentUIJME3PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyEnvironmentUIJME3PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private BooleanFieldEditor earthSkyBloomEnableEditor;
 	private StringFieldEditor earthSkyShadowMapSizeEditor;	
@@ -26,7 +26,7 @@ public class SymphonyEnvironmentUIJME3PreferencesPage extends PreferencePage imp
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonyEnvironmentUIJME3PreferencesPage() {
+	public ApogyEnvironmentUIJME3PreferencesPage() {
 	}
 
 	/**
@@ -48,23 +48,23 @@ public class SymphonyEnvironmentUIJME3PreferencesPage extends PreferencePage imp
 		Label earthSkyBloomEnableLabel = new Label(earthSkyGroup, SWT.NONE);
 		earthSkyBloomEnableLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		earthSkyBloomEnableLabel.setText("Sun and Moon Bloom Enable");
-		earthSkyBloomEnableEditor = createBooleanFieldEditor(earthSkyGroup, SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID, "");
+		earthSkyBloomEnableEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID, "");
 		
 		Label earthSkyShadowMapSizeLabel = new Label(earthSkyGroup, SWT.NONE);
 		earthSkyShadowMapSizeLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		earthSkyShadowMapSizeLabel.setText("Shadow Map Size");
-		earthSkyShadowMapSizeEditor = createStringFieldEditor(earthSkyGroup, SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID, "");
+		earthSkyShadowMapSizeEditor = createStringFieldEditor(earthSkyGroup, ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID, "");
 
 
 		Label earthSkySunCastShadowsEnableLabel = new Label(earthSkyGroup, SWT.NONE);
 		earthSkySunCastShadowsEnableLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		earthSkySunCastShadowsEnableLabel.setText("Sun Cast Shadows Enable");
-		earthSkySunCastShadowsEnableEditor = createBooleanFieldEditor(earthSkyGroup, SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID, "");
+		earthSkySunCastShadowsEnableEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID, "");
 
 		Label earthSkyMoonCastShadowsEnableLabel = new Label(earthSkyGroup, SWT.NONE);
 		earthSkyMoonCastShadowsEnableLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		earthSkyMoonCastShadowsEnableLabel.setText("Moon Cast Shadows Enable");
-		earthSkyMoonCastShadowsEnableEditor = createBooleanFieldEditor(earthSkyGroup, SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID, "");
+		earthSkyMoonCastShadowsEnableEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID, "");
 		
 		return container;
 	}

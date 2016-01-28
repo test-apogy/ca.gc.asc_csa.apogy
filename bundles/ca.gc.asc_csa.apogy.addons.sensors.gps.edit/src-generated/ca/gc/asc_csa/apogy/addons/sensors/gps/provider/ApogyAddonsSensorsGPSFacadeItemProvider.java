@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.addons.sensors.gps.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.provider;
 
 
 import java.util.Collection;
@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsGPSFacadeItemProvider
+public class ApogyAddonsSensorsGPSFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -38,7 +38,7 @@ public class Symphony__AddonsSensorsGPSFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsGPSFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyAddonsSensorsGPSFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -58,14 +58,14 @@ public class Symphony__AddonsSensorsGPSFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsSensorsGPSFacade.gif.
+	 * This returns ApogyAddonsSensorsGPSFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsSensorsGPSFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsSensorsGPSFacade"));
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class Symphony__AddonsSensorsGPSFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__AddonsSensorsGPSFacade_type");
+		return getString("_UI_ApogyAddonsSensorsGPSFacade_type");
 	}
 
 	/**

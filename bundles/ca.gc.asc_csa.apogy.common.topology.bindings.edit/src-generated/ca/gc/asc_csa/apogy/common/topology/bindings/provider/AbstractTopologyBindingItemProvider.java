@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class AbstractTopologyBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTopologyBinding_binded_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTopologyBinding_binded_feature", "_UI_AbstractTopologyBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__BINDED,
+				 ApogyCommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__BINDED,
 				 false,
 				 false,
 				 false,
@@ -102,7 +102,7 @@ public class AbstractTopologyBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTopologyBinding_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTopologyBinding_description_feature", "_UI_AbstractTopologyBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION,
+				 ApogyCommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class AbstractTopologyBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTopologyBinding_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTopologyBinding_name_feature", "_UI_AbstractTopologyBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__NAME,
+				 ApogyCommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__NAME,
 				 true,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class AbstractTopologyBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTopologyBinding_featureNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTopologyBinding_featureNode_feature", "_UI_AbstractTopologyBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE,
+				 ApogyCommonTopologyBindingsPackage.Literals.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE,
 				 true,
 				 false,
 				 true,
@@ -183,9 +183,9 @@ public class AbstractTopologyBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTopologyBinding.class)) {
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
-			case Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION:
+			case ApogyCommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

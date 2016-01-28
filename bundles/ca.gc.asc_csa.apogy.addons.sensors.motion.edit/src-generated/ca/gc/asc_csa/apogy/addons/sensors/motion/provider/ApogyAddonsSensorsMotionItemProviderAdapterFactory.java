@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,17 +33,17 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionFactory;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage;
 
-import org.eclipse.symphony.addons.sensors.motion.util.Symphony__AddonsSensorsMotionAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.util.ApogyAddonsSensorsMotionAdapterFactory;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -54,7 +54,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Symphony__AddonsSensorsMotionAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsSensorsMotionItemProviderAdapterFactory extends ApogyAddonsSensorsMotionAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsSensorsMotionEditPlugin.INSTANCE, Symphony__AddonsSensorsMotionPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsSensorsMotionEditPlugin.INSTANCE, ApogyAddonsSensorsMotionPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -93,7 +93,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsMotionItemProviderAdapterFactory() {
+	public ApogyAddonsSensorsMotionItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -102,7 +102,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -110,7 +110,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	protected SelfMotionSensorItemProvider selfMotionSensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,7 +133,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	protected AngularVelocitySensorItemProvider angularVelocitySensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -156,7 +156,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	protected LinearAccelerationSensorItemProvider linearAccelerationSensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,7 +179,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	protected LinearVelocitySensorItemProvider linearVelocitySensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -326,19 +326,19 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -374,23 +374,23 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 
 				return null;
 			}
@@ -404,23 +404,23 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 
 				return null;
 			}
@@ -434,23 +434,23 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 
 				return null;
 			}
@@ -483,7 +483,7 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsMotionEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsMotionEditPlugin.INSTANCE;
 		}
 	}
 

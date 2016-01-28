@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Date;
 
@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.WorksitesList;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -26,10 +26,10 @@ import org.eclipse.symphony.core.WorksitesList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.AbstractWorksiteImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.AbstractWorksiteImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.AbstractWorksiteImpl#getTime <em>Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.AbstractWorksiteImpl#getWorksitesList <em>Worksites List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.AbstractWorksiteImpl#getWorksitesList <em>Worksites List</em>}</li>
  * </ul>
  *
  * @generated
@@ -106,7 +106,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.ABSTRACT_WORKSITE;
+		return ApogyCorePackage.Literals.ABSTRACT_WORKSITE;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_WORKSITE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.ABSTRACT_WORKSITE__NAME, oldName, name));
 	}
 
 	/**
@@ -144,7 +144,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -165,7 +165,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_WORKSITE__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.ABSTRACT_WORKSITE__TIME, oldTime, time));
 	}
 
 	/**
@@ -173,7 +173,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public WorksitesList getWorksitesList() {
-		if (eContainerFeatureID() != Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST) return null;
+		if (eContainerFeatureID() != ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST) return null;
 		return (WorksitesList)eContainer();
 	}
 
@@ -182,7 +182,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public WorksitesList basicGetWorksitesList() {
-		if (eContainerFeatureID() != Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST) return null;
+		if (eContainerFeatureID() != ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST) return null;
 		return (WorksitesList)eInternalContainer();
 	}
 
@@ -192,7 +192,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	 */
 	public NotificationChain basicSetWorksitesList(
 			WorksitesList newWorksitesList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newWorksitesList, Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newWorksitesList, ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST, msgs);
 		return msgs;
 	}
 
@@ -201,19 +201,19 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public void setWorksitesList(WorksitesList newWorksitesList) {
-		if (newWorksitesList != eInternalContainer() || (eContainerFeatureID() != Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST && newWorksitesList != null)) {
+		if (newWorksitesList != eInternalContainer() || (eContainerFeatureID() != ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST && newWorksitesList != null)) {
 			if (EcoreUtil.isAncestor(this, newWorksitesList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newWorksitesList != null)
-				msgs = ((InternalEObject)newWorksitesList).eInverseAdd(this, Symphony__CorePackage.WORKSITES_LIST__WORKSITES, WorksitesList.class, msgs);
+				msgs = ((InternalEObject)newWorksitesList).eInverseAdd(this, ApogyCorePackage.WORKSITES_LIST__WORKSITES, WorksitesList.class, msgs);
 			msgs = basicSetWorksitesList(newWorksitesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST, newWorksitesList, newWorksitesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST, newWorksitesList, newWorksitesList));
 	}
 
 	/**
@@ -224,7 +224,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetWorksitesList((WorksitesList)otherEnd, msgs);
@@ -240,7 +240,7 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
 				return basicSetWorksitesList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -254,8 +254,8 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	public NotificationChain eBasicRemoveFromContainerFeature(
 			NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
-				return eInternalContainer().eInverseRemove(this, Symphony__CorePackage.WORKSITES_LIST__WORKSITES, WorksitesList.class, msgs);
+			case ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyCorePackage.WORKSITES_LIST__WORKSITES, WorksitesList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -267,13 +267,13 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__NAME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__NAME:
 				return getName();
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
 				return getDescription();
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__TIME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__TIME:
 				return getTime();
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
 				if (resolve) return getWorksitesList();
 				return basicGetWorksitesList();
 		}
@@ -287,16 +287,16 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__NAME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__TIME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__TIME:
 				setTime((Date)newValue);
 				return;
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
 				setWorksitesList((WorksitesList)newValue);
 				return;
 		}
@@ -310,16 +310,16 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__NAME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__TIME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
 				setWorksitesList((WorksitesList)null);
 				return;
 		}
@@ -333,13 +333,13 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__NAME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__TIME:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case Symphony__CorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
+			case ApogyCorePackage.ABSTRACT_WORKSITE__WORKSITES_LIST:
 				return basicGetWorksitesList() != null;
 		}
 		return super.eIsSet(featureID);
@@ -353,13 +353,13 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.ABSTRACT_WORKSITE__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case ApogyCorePackage.ABSTRACT_WORKSITE__TIME: return ApogyCommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -374,13 +374,13 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__CorePackage.ABSTRACT_WORKSITE__TIME;
+				case ApogyCommonEMFPackage.TIMED__TIME: return ApogyCorePackage.ABSTRACT_WORKSITE__TIME;
 				default: return -1;
 			}
 		}

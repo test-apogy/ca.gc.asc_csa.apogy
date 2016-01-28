@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ui;
+package ca.gc.asc_csa.apogy.addons.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleActivator;
@@ -6,7 +6,7 @@ import org.osgi.framework.BundleContext;
 
 public class Activator extends AbstractUIPlugin implements BundleActivator 
 {
-	public static final String ID = "org.eclipse.symphony.addons.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.ui";
 	
 	// The shared instance
 	private static Activator plugin;	

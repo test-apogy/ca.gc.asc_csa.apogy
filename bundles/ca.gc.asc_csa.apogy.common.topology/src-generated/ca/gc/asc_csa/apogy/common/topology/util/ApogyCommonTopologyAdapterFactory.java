@@ -1,30 +1,30 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.util;
+package ca.gc.asc_csa.apogy.common.topology.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.*;
+import ca.gc.asc_csa.apogy.common.topology.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage
  * @generated
  */
-public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyPackage modelPackage;
+	protected static ApogyCommonTopologyPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -32,9 +32,9 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAdapterFactory() {
+	public ApogyCommonTopologyAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyPackage.eINSTANCE;
 		}
 	}
 
@@ -63,8 +63,8 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologySwitch<Adapter> modelSwitch =
-		new Symphony__CommonTopologySwitch<Adapter>() {
+	protected ApogyCommonTopologySwitch<Adapter> modelSwitch =
+		new ApogyCommonTopologySwitch<Adapter>() {
 			@Override
 			public Adapter caseTopologyProvider(TopologyProvider object) {
 				return createTopologyProviderAdapter();
@@ -130,8 +130,8 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 				return createPickAndPlaceNodeAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonTopologyFacade(Symphony__CommonTopologyFacade object) {
-				return createSymphony__CommonTopologyFacadeAdapter();
+			public Adapter caseApogyCommonTopologyFacade(ApogyCommonTopologyFacade object) {
+				return createApogyCommonTopologyFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -154,13 +154,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.TopologyProvider <em>Topology Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.TopologyProvider <em>Topology Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.TopologyProvider
+	 * @see ca.gc.asc_csa.apogy.common.topology.TopologyProvider
 	 * @generated
 	 */
 	public Adapter createTopologyProviderAdapter() {
@@ -168,13 +168,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -182,13 +182,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Link <em>Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Link <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Link
+	 * @see ca.gc.asc_csa.apogy.common.topology.Link
 	 * @generated
 	 */
 	public Adapter createLinkAdapter() {
@@ -196,13 +196,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Leaf <em>Leaf</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Leaf <em>Leaf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Leaf
+	 * @see ca.gc.asc_csa.apogy.common.topology.Leaf
 	 * @generated
 	 */
 	public Adapter createLeafAdapter() {
@@ -210,13 +210,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.URLNode <em>URL Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.URLNode <em>URL Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.URLNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.URLNode
 	 * @generated
 	 */
 	public Adapter createURLNodeAdapter() {
@@ -224,13 +224,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.CADNode <em>CAD Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.CADNode <em>CAD Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.CADNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.CADNode
 	 * @generated
 	 */
 	public Adapter createCADNodeAdapter() {
@@ -238,13 +238,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ContentNode <em>Content Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ContentNode <em>Content Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ContentNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ContentNode
 	 * @generated
 	 */
 	public Adapter createContentNodeAdapter() {
@@ -252,13 +252,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ReferencedContentNode <em>Referenced Content Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode <em>Referenced Content Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ReferencedContentNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode
 	 * @generated
 	 */
 	public Adapter createReferencedContentNodeAdapter() {
@@ -266,13 +266,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateContentNode <em>Aggregate Content Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateContentNode <em>Aggregate Content Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateContentNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateContentNode
 	 * @generated
 	 */
 	public Adapter createAggregateContentNodeAdapter() {
@@ -280,13 +280,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter() {
@@ -294,13 +294,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ReferencedGroupNode <em>Referenced Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode <em>Referenced Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ReferencedGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode
 	 * @generated
 	 */
 	public Adapter createReferencedGroupNodeAdapter() {
@@ -308,13 +308,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -322,13 +322,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.PositionNode <em>Position Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.PositionNode <em>Position Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.PositionNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.PositionNode
 	 * @generated
 	 */
 	public Adapter createPositionNodeAdapter() {
@@ -336,13 +336,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.RotationNode <em>Rotation Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.RotationNode <em>Rotation Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.RotationNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.RotationNode
 	 * @generated
 	 */
 	public Adapter createRotationNodeAdapter() {
@@ -350,13 +350,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.TransformNode <em>Transform Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.TransformNode <em>Transform Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.TransformNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.TransformNode
 	 * @generated
 	 */
 	public Adapter createTransformNodeAdapter() {
@@ -364,13 +364,13 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.PickAndPlaceNode <em>Pick And Place Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.PickAndPlaceNode <em>Pick And Place Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.PickAndPlaceNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.PickAndPlaceNode
 	 * @generated
 	 */
 	public Adapter createPickAndPlaceNodeAdapter() {
@@ -378,16 +378,16 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonTopologyFacadeAdapter() {
+	public Adapter createApogyCommonTopologyFacadeAdapter() {
 		return null;
 	}
 
@@ -403,4 +403,4 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__CommonTopologyAdapterFactory
+} //ApogyCommonTopologyAdapterFactory

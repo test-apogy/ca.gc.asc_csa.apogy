@@ -1,28 +1,28 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.util;
+package ca.gc.asc_csa.apogy.examples.lander.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Lander;
-import org.eclipse.symphony.examples.lander.LanderSimulated;
-import org.eclipse.symphony.examples.lander.LanderStub;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Lander;
+import ca.gc.asc_csa.apogy.examples.lander.LanderSimulated;
+import ca.gc.asc_csa.apogy.examples.lander.LanderStub;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage
+ * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage
  * @generated
  */
-public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesLanderAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -30,7 +30,7 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesLanderPackage modelPackage;
+  protected static ApogyExamplesLanderPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -38,10 +38,10 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLanderAdapterFactory()
+  public ApogyExamplesLanderAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesLanderPackage.eINSTANCE;
+			modelPackage = ApogyExamplesLanderPackage.eINSTANCE;
 		}
 	}
 
@@ -71,8 +71,8 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesLanderSwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesLanderSwitch<Adapter>() {
+  protected ApogyExamplesLanderSwitch<Adapter> modelSwitch =
+    new ApogyExamplesLanderSwitch<Adapter>() {
 			@Override
 			public Adapter casePosition(Position object) {
 				return createPositionAdapter();
@@ -115,13 +115,13 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.lander.Position <em>Position</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.lander.Position <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.lander.Position
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Position
 	 * @generated
 	 */
   public Adapter createPositionAdapter()
@@ -130,13 +130,13 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.lander.Lander <em>Lander</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.lander.Lander <em>Lander</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.lander.Lander
+	 * @see ca.gc.asc_csa.apogy.examples.lander.Lander
 	 * @generated
 	 */
   public Adapter createLanderAdapter()
@@ -145,13 +145,13 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.lander.LanderStub <em>Lander Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.lander.LanderStub <em>Lander Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.lander.LanderStub
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderStub
 	 * @generated
 	 */
 	public Adapter createLanderStubAdapter() {
@@ -159,13 +159,13 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.lander.LanderSimulated <em>Lander Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.lander.LanderSimulated <em>Lander Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.lander.LanderSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.lander.LanderSimulated
 	 * @generated
 	 */
 	public Adapter createLanderSimulatedAdapter() {
@@ -173,13 +173,13 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Disposable <em>Disposable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Disposable <em>Disposable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Disposable
+	 * @see ca.gc.asc_csa.apogy.common.emf.Disposable
 	 * @generated
 	 */
 	public Adapter createDisposableAdapter() {
@@ -199,4 +199,4 @@ public class Symphony__ExamplesLanderAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__ExamplesLanderAdapterFactory
+} //ApogyExamplesLanderAdapterFactory

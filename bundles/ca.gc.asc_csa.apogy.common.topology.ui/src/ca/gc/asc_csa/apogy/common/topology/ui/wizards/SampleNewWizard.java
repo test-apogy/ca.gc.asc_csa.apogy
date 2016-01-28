@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.wizards;
+package ca.gc.asc_csa.apogy.common.topology.ui.wizards;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -148,7 +148,7 @@ public class SampleNewWizard extends Wizard implements INewWizard {
 
 	private void throwCoreException(String message) throws CoreException {
 		IStatus status =
-			new Status(IStatus.ERROR, "org.eclipse.symphony.common.topology.ui", IStatus.OK, message, null);
+			new Status(IStatus.ERROR, "ca.gc.asc_csa.apogy.common.topology.ui", IStatus.OK, message, null);
 		throw new CoreException(status);
 	}
 

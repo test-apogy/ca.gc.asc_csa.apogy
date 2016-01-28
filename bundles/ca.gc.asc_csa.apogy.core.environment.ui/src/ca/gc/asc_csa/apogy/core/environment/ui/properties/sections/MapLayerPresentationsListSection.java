@@ -1,26 +1,26 @@
-package org.eclipse.symphony.core.environment.ui.properties.sections;
+package ca.gc.asc_csa.apogy.core.environment.ui.properties.sections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.IFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.ui.composites.MapLayerPresentationsListComposite;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.ui.properties.sections.AbstractExtendedPropertySection;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ui.composites.MapLayerPresentationsListComposite;
 
 public class MapLayerPresentationsListSection extends AbstractExtendedPropertySection implements IFilter
 {
 	@Override
 	public boolean select(Object toTest)
 	{
-		return (Symphony__CommonConvertersFacade.INSTANCE.convert(toTest, CartesianTriangularMeshMapLayer.class) != null);
+		return (ApogyCommonConvertersFacade.INSTANCE.convert(toTest, CartesianTriangularMeshMapLayer.class) != null);
 	}
 
 	@Override
 	protected void render(EObject eObject)
 	{
-		CartesianTriangularMeshMapLayer cartesianTriangularMeshMapLayer = (CartesianTriangularMeshMapLayer) Symphony__CommonConvertersFacade.INSTANCE.convert(eObject, CartesianTriangularMeshMapLayer.class);
+		CartesianTriangularMeshMapLayer cartesianTriangularMeshMapLayer = (CartesianTriangularMeshMapLayer) ApogyCommonConvertersFacade.INSTANCE.convert(eObject, CartesianTriangularMeshMapLayer.class);
 		
 		if (cartesianTriangularMeshMapLayer != null)
 		{

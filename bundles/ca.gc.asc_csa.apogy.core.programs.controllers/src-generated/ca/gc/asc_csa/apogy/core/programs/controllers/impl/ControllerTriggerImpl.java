@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -10,14 +10,14 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.io.jinput.Activator;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
-import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsCont
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerTriggerImpl#getComponentQualifier <em>Component Qualifier</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllerTriggerImpl#getComponentQualifier <em>Component Qualifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,7 +68,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER;
+		return ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER;
 	}
 
   /**
@@ -82,7 +82,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 	  
 	  if(eComponentQualifier == null)
 	  {
-		  eComponentQualifier = Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
+		  eComponentQualifier = ApogyCommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
 		  setComponentQualifier(eComponentQualifier);
 	  }
 	  
@@ -109,7 +109,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 		EComponentQualifier oldComponentQualifier = componentQualifier;
 		componentQualifier = newComponentQualifier;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, oldComponentQualifier, newComponentQualifier);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, oldComponentQualifier, newComponentQualifier);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -145,14 +145,14 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 		if (newComponentQualifier != componentQualifier) {
 			NotificationChain msgs = null;
 			if (componentQualifier != null)
-				msgs = ((InternalEObject)componentQualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)componentQualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
 			if (newComponentQualifier != null)
-				msgs = ((InternalEObject)newComponentQualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)newComponentQualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
 			msgs = basicSetComponentQualifier(newComponentQualifier, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, newComponentQualifier, newComponentQualifier));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, newComponentQualifier, newComponentQualifier));
 	}
 
   /**
@@ -164,7 +164,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				return basicSetComponentQualifier(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -179,7 +179,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				return getComponentQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -194,7 +194,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				setComponentQualifier((EComponentQualifier)newValue);
 				return;
 		}
@@ -210,7 +210,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				setComponentQualifier((EComponentQualifier)null);
 				return;
 		}
@@ -226,7 +226,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				return componentQualifier != null;
 		}
 		return super.eIsSet(featureID);
@@ -248,7 +248,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 			@Override
 			public void notifyChanged(Notification notification) 
 			{
-				if(notification.getFeatureID(EControllerEnvironment.class) == Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT)					
+				if(notification.getFeatureID(EControllerEnvironment.class) == ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT)					
 				{
 					EComponent component = Activator.getEControllerEnvironment().resolveEComponent(getComponentQualifier());
 					if(component != null)
@@ -282,7 +282,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 			@Override
 			public void notifyChanged(Notification notification) 
 			{
-				if(notification.getFeatureID(ControllerTrigger.class) == Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__OPERATION_CALL_CONTROLLER_BINDING)					
+				if(notification.getFeatureID(ControllerTrigger.class) == ApogyCoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__OPERATION_CALL_CONTROLLER_BINDING)					
 				{
 					if(notification.getNewValue() == null)
 					{

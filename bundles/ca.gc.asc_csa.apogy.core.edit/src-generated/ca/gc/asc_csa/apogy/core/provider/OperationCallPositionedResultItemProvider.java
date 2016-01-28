@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.OperationCallPositionedResult;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.provider.OperationCallResultItemProvider;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.OperationCallPositionedResult;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.provider.OperationCallResultItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.OperationCallPositionedResult} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.OperationCallPositionedResult} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class OperationCallPositionedResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Positioned_pose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Positioned_pose_feature", "_UI_Positioned_type"),
-				 Symphony__CorePackage.Literals.POSITIONED__POSE,
+				 ApogyCorePackage.Literals.POSITIONED__POSE,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class OperationCallPositionedResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallPositionedResult_relativePose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallPositionedResult_relativePose_feature", "_UI_OperationCallPositionedResult_type"),
-				 Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
+				 ApogyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
 				 false,
 				 false,
 				 false,
@@ -108,8 +108,8 @@ public class OperationCallPositionedResultItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.POSITIONED__POSE);
-			childrenFeatures.add(Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE);
+			childrenFeatures.add(ApogyCorePackage.Literals.POSITIONED__POSE);
+			childrenFeatures.add(ApogyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE);
 		}
 		return childrenFeatures;
 	}
@@ -212,8 +212,8 @@ public class OperationCallPositionedResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallPositionedResult.class)) {
-			case Symphony__CorePackage.OPERATION_CALL_POSITIONED_RESULT__POSE:
-			case Symphony__CorePackage.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE:
+			case ApogyCorePackage.OPERATION_CALL_POSITIONED_RESULT__POSE:
+			case ApogyCorePackage.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -233,13 +233,13 @@ public class OperationCallPositionedResultItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.POSITIONED__POSE,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCorePackage.Literals.POSITIONED__POSE,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 	/**
@@ -254,8 +254,8 @@ public class OperationCallPositionedResultItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CorePackage.Literals.POSITIONED__POSE ||
-			childFeature == Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE;
+			childFeature == ApogyCorePackage.Literals.POSITIONED__POSE ||
+			childFeature == ApogyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE;
 
 		if (qualify) {
 			return getString

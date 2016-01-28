@@ -3,7 +3,7 @@
  *
  * $Id: MeshLocaliserItemProvider.java,v 1.2.4.2 2015/05/21 15:50:27 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.MeshLocaliser} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocaliser} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -121,7 +121,7 @@ public class MeshLocaliserItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__CommonGeometryData3DEditPlugin.INSTANCE;
+		return ApogyCommonGeometryData3DEditPlugin.INSTANCE;
 	}
 
 }

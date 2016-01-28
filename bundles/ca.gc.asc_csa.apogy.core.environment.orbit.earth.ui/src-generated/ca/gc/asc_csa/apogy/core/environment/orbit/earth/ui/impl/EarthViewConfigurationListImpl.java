@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
 
 import java.util.Collection;
 
@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl#getEarthViewConfigurations <em>Earth View Configurations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl#getEarthViewConfigurations <em>Earth View Configurations</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +56,7 @@ public class EarthViewConfigurationListImpl extends AbstractToolsListContainerIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST;
+		return ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class EarthViewConfigurationListImpl extends AbstractToolsListContainerIm
 	 */
 	public EList<EarthViewConfiguration> getEarthViewConfigurations() {
 		if (earthViewConfigurations == null) {
-			earthViewConfigurations = new EObjectContainmentEList<EarthViewConfiguration>(EarthViewConfiguration.class, this, Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS);
+			earthViewConfigurations = new EObjectContainmentEList<EarthViewConfiguration>(EarthViewConfiguration.class, this, ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS);
 		}
 		return earthViewConfigurations;
 	}
@@ -79,7 +79,7 @@ public class EarthViewConfigurationListImpl extends AbstractToolsListContainerIm
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
 				return ((InternalEList<?>)getEarthViewConfigurations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -93,7 +93,7 @@ public class EarthViewConfigurationListImpl extends AbstractToolsListContainerIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
 				return getEarthViewConfigurations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class EarthViewConfigurationListImpl extends AbstractToolsListContainerIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
 				getEarthViewConfigurations().clear();
 				getEarthViewConfigurations().addAll((Collection<? extends EarthViewConfiguration>)newValue);
 				return;
@@ -124,7 +124,7 @@ public class EarthViewConfigurationListImpl extends AbstractToolsListContainerIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
 				getEarthViewConfigurations().clear();
 				return;
 		}
@@ -139,7 +139,7 @@ public class EarthViewConfigurationListImpl extends AbstractToolsListContainerIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
 				return earthViewConfigurations != null && !earthViewConfigurations.isEmpty();
 		}
 		return super.eIsSet(featureID);

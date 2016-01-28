@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_tools_vehicle -->
+      <!-- @generated apogy_tools_vehicle -->
       <factory
-            uri="org.eclipse.symphony.addons.vehicle"
-            class="org.eclipse.symphony.addons.vehicle.provider.Symphony__AddonsVehicleItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.vehicle"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.provider.ApogyAddonsVehicleItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,19 +21,19 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_vehicle -->
+      <!-- @generated apogy_addons_vehicle -->
       <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.addons.vehicle.provider.Symphony__AddonsVehicleItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.provider.ApogyAddonsVehicleItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.vehicle.provider.Symphony__AddonsVehicleItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.provider.ApogyAddonsVehicleItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.vehicle.provider.Symphony__AddonsVehicleItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.bindings"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.provider.ApogyAddonsVehicleItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.addons"
-            class="org.eclipse.symphony.addons.vehicle.provider.Symphony__AddonsVehicleItemProviderAdapterFactory$Symphony__AddonsChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.addons"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.provider.ApogyAddonsVehicleItemProviderAdapterFactory$ApogyAddonsChildCreationExtender"/>
    </extension>
 
 </plugin>

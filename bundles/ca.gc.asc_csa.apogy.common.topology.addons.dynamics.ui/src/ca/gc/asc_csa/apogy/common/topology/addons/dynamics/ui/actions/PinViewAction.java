@@ -1,16 +1,16 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.actions;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.actions;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuCreator;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.widgets.Event;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.Activator;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.views.AbstractPinableView;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.AbstractPinableView;
 
 public class PinViewAction extends Action {
 
-	private static final String ID ="org.eclipse.symphony.common.topology.addons.dynamics.ui.actions.PinViewAction";
+	private static final String ID ="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.actions.PinViewAction";
 	private String description = "Pins the current selection.";
 	private String toolTipText = "Pins the current selection.";
 	private String text = "Pins the current selection.";	

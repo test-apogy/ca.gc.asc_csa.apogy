@@ -1,33 +1,33 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonGeometryData3DUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DUIPackage modelPackage;
+	protected static ApogyCommonGeometryData3DUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__CommonGeometryData3DUIAdapterFactory extends AdapterFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DUIAdapterFactory() {
+	public ApogyCommonGeometryData3DUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DUIPackage.eINSTANCE;
 		}
 	}
 
@@ -66,8 +66,8 @@ public class Symphony__CommonGeometryData3DUIAdapterFactory extends AdapterFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DUISwitch<Adapter> modelSwitch =
-		new Symphony__CommonGeometryData3DUISwitch<Adapter>() {
+	protected ApogyCommonGeometryData3DUISwitch<Adapter> modelSwitch =
+		new ApogyCommonGeometryData3DUISwitch<Adapter>() {
 			@Override
 			public Adapter caseCartesianCoordinatesSetPresentation(CartesianCoordinatesSetPresentation object) {
 				return createCartesianCoordinatesSetPresentationAdapter();
@@ -101,13 +101,13 @@ public class Symphony__CommonGeometryData3DUIAdapterFactory extends AdapterFacto
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation <em>Cartesian Coordinates Set Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation <em>Cartesian Coordinates Set Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesSetPresentationAdapter() {
@@ -115,13 +115,13 @@ public class Symphony__CommonGeometryData3DUIAdapterFactory extends AdapterFacto
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation <em>Triangular Mesh Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation <em>Triangular Mesh Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation
 	 * @generated
 	 */
 	public Adapter createTriangularMeshPresentationAdapter() {
@@ -129,13 +129,13 @@ public class Symphony__CommonGeometryData3DUIAdapterFactory extends AdapterFacto
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -154,4 +154,4 @@ public class Symphony__CommonGeometryData3DUIAdapterFactory extends AdapterFacto
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DUIAdapterFactory
+} //ApogyCommonGeometryData3DUIAdapterFactory

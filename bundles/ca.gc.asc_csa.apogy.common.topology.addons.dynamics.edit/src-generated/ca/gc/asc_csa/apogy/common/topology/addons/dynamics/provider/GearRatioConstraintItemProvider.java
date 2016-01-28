@@ -4,7 +4,7 @@
  *
  * $Id: GearRatioConstraintItemProvider.java,v 1.3.2.2 2015/02/03 20:01:27 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class GearRatioConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GearRatioConstraint_force_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GearRatioConstraint_force_feature", "_UI_GearRatioConstraint_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.GEAR_RATIO_CONSTRAINT__FORCE,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.GEAR_RATIO_CONSTRAINT__FORCE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class GearRatioConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GearRatioConstraint.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

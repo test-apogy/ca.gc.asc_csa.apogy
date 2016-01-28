@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.ui;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIFactory
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData25DUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData25DUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.geometry.data25d.ui/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data25d.ui.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry.data25d'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData25DUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonGeometryData25DUI' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data25d.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data25d.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry.data25d'"
  * @generated
  */
-public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
+public interface ApogyCommonGeometryData25DUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.geometry.data25d.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.geometry.data25d.ui";
 
 	/**
 	 * The package namespace name.
@@ -56,14 +56,14 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData25DUIPackage eINSTANCE = org.eclipse.symphony.common.geometry.data25d.ui.impl.Symphony__CommonGeometryData25DUIPackageImpl.init();
+	ApogyCommonGeometryData25DUIPackage eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.ApogyCommonGeometryData25DUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl <em>Volumetric Coordinates Set25 DPresentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl <em>Volumetric Coordinates Set25 DPresentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.impl.Symphony__CommonGeometryData25DUIPackageImpl#getVolumetricCoordinatesSet25DPresentation()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.ApogyCommonGeometryData25DUIPackageImpl#getVolumetricCoordinatesSet25DPresentation()
 	 * @generated
 	 */
 	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION = 0;
@@ -75,7 +75,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -84,7 +84,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -93,7 +93,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -120,7 +120,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -129,7 +129,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -138,7 +138,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -147,7 +147,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -165,7 +165,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -174,7 +174,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -183,7 +183,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Points Cloud</b></em>' reference.
@@ -192,7 +192,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__POINTS_CLOUD = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__POINTS_CLOUD = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Volumetric Coordinates Set25 DPresentation</em>' class.
@@ -201,7 +201,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Volumetric Coordinates Set25 DPresentation</em>' class.
@@ -210,25 +210,25 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation <em>Volumetric Coordinates Set25 DPresentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation <em>Volumetric Coordinates Set25 DPresentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Volumetric Coordinates Set25 DPresentation</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation
 	 * @generated
 	 */
 	EClass getVolumetricCoordinatesSet25DPresentation();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud <em>Points Cloud</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud <em>Points Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Points Cloud</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud()
 	 * @see #getVolumetricCoordinatesSet25DPresentation()
 	 * @generated
 	 */
@@ -241,7 +241,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData25DUIFactory getSymphony__CommonGeometryData25DUIFactory();
+	ApogyCommonGeometryData25DUIFactory getApogyCommonGeometryData25DUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,11 +258,11 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl <em>Volumetric Coordinates Set25 DPresentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl <em>Volumetric Coordinates Set25 DPresentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.ui.impl.Symphony__CommonGeometryData25DUIPackageImpl#getVolumetricCoordinatesSet25DPresentation()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl.ApogyCommonGeometryData25DUIPackageImpl#getVolumetricCoordinatesSet25DPresentation()
 		 * @generated
 		 */
 		EClass VOLUMETRIC_COORDINATES_SET25_DPRESENTATION = eINSTANCE.getVolumetricCoordinatesSet25DPresentation();
@@ -277,4 +277,4 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 
 	}
 
-} //Symphony__CommonGeometryData25DUIPackage
+} //ApogyCommonGeometryData25DUIPackage

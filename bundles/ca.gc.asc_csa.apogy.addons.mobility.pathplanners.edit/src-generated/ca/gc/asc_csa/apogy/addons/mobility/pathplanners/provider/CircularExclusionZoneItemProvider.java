@@ -3,7 +3,7 @@
  *
  * $Id: CircularExclusionZoneItemProvider.java,v 1.2.4.3 2015/09/22 19:39:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class CircularExclusionZoneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CircularExclusionZone_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularExclusionZone_radius_feature", "_UI_CircularExclusionZone_type"),
-				 Symphony__AddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__RADIUS,
+				 ApogyAddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class CircularExclusionZoneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CircularExclusionZone_invertSamplingShape_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularExclusionZone_invertSamplingShape_feature", "_UI_CircularExclusionZone_type"),
-				 Symphony__AddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE,
+				 ApogyAddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE,
 				 true,
 				 false,
 				 false,
@@ -141,8 +141,8 @@ public class CircularExclusionZoneItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CircularExclusionZone.class)) {
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

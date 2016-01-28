@@ -1,8 +1,8 @@
-package org.eclipse.symphony.core.invocator.ui.converters;
+package ca.gc.asc_csa.apogy.core.invocator.ui.converters;
 
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 
 public class AbstractResultToReferenceResultValue implements IConverter {
 

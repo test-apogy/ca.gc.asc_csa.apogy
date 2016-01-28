@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -25,12 +25,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class ConstellationCommandPlanItemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstellationCommandPlanItem_request_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstellationCommandPlanItem_request_feature", "_UI_ConstellationCommandPlanItem_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST,
+				 ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST,
 				 true,
 				 false,
 				 true,
@@ -103,7 +103,7 @@ public class ConstellationCommandPlanItemItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND);
 		}
 		return childrenFeatures;
 	}
@@ -156,7 +156,7 @@ public class ConstellationCommandPlanItemItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstellationCommandPlanItem.class)) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -176,13 +176,13 @@ public class ConstellationCommandPlanItemItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+				(ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 	}
 
 	/**

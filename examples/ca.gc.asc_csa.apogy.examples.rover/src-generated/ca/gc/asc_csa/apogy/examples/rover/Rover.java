@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover;
+package ca.gc.asc_csa.apogy.examples.rover;
 
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.examples.camera.PTUCamera;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,18 +23,18 @@ import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getRoboticArm <em>Robotic Arm</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getMobilePlatform <em>Mobile Platform</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getArmCamera <em>Arm Camera</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getCenterCamera <em>Center Camera</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getPowerSystem <em>Power System</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getLinearVelocity <em>Linear Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getAngularVelocity <em>Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.Rover#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getRoboticArm <em>Robotic Arm</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getMobilePlatform <em>Mobile Platform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getArmCamera <em>Arm Camera</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getCenterCamera <em>Center Camera</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getPowerSystem <em>Power System</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getLinearVelocity <em>Linear Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getAngularVelocity <em>Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.Rover#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover()
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover()
  * @model abstract="true"
  * @generated
  */
@@ -55,7 +55,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Robotic Arm</em>' reference.
 	 * @see #setRoboticArm(RoboticArm)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_RoboticArm()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_RoboticArm()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -63,7 +63,7 @@ public interface Rover extends Disposable
   RoboticArm getRoboticArm();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Rover#getRoboticArm <em>Robotic Arm</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getRoboticArm <em>Robotic Arm</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Robotic Arm</em>' reference.
@@ -86,7 +86,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mobile Platform</em>' reference.
 	 * @see #setMobilePlatform(MobilePlatform)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_MobilePlatform()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_MobilePlatform()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -94,7 +94,7 @@ public interface Rover extends Disposable
   MobilePlatform getMobilePlatform();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Rover#getMobilePlatform <em>Mobile Platform</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getMobilePlatform <em>Mobile Platform</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mobile Platform</em>' reference.
@@ -114,7 +114,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Arm Camera</em>' reference.
 	 * @see #setArmCamera(PTUCamera)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_ArmCamera()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_ArmCamera()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -122,7 +122,7 @@ public interface Rover extends Disposable
 	PTUCamera getArmCamera();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Rover#getArmCamera <em>Arm Camera</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getArmCamera <em>Arm Camera</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Arm Camera</em>' reference.
@@ -142,7 +142,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center Camera</em>' reference.
 	 * @see #setCenterCamera(PTUCamera)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_CenterCamera()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_CenterCamera()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -150,7 +150,7 @@ public interface Rover extends Disposable
 	PTUCamera getCenterCamera();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Rover#getCenterCamera <em>Center Camera</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getCenterCamera <em>Center Camera</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Center Camera</em>' reference.
@@ -168,7 +168,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Power System</em>' containment reference.
 	 * @see #setPowerSystem(PowerSystem)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_PowerSystem()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_PowerSystem()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents'"
 	 * @generated
@@ -176,7 +176,7 @@ public interface Rover extends Disposable
 	PowerSystem getPowerSystem();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Rover#getPowerSystem <em>Power System</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#getPowerSystem <em>Power System</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Power System</em>' containment reference.
@@ -199,9 +199,9 @@ public interface Rover extends Disposable
 	 * is the speed backwards.  Zero means there is no movement.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Linear Velocity</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_LinearVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_LinearVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='m/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='m/s' property='Readonly' propertyCategory='Velocities' get='<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getLinearVelocity();
@@ -222,9 +222,9 @@ public interface Rover extends Disposable
 	 * there is no rotation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_AngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_AngularVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='rad/s' property='Readonly' propertyCategory='Velocities' get='<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getAngularVelocity();
@@ -241,7 +241,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -249,7 +249,7 @@ public interface Rover extends Disposable
 	boolean isInitialized();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Rover#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -270,7 +270,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_Disposed()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRover_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -278,7 +278,7 @@ public interface Rover extends Disposable
 	boolean isDisposed();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.Rover#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.Rover#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.
@@ -319,7 +319,7 @@ public interface Rover extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m/s'"
 	 * @generated
 	 */
 	void cmdLinearVelocity(double linearVelocity);
@@ -342,7 +342,7 @@ public interface Rover extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s'"
 	 * @generated
 	 */
 	void cmdAngularVelocity(double angularVelocity);
@@ -372,8 +372,8 @@ public interface Rover extends Disposable
 	 * @see #cmdAngularVelocity(double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'" angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m/s'" angularVelocityUnique="false"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad/s'"
 	 * @generated
 	 */
 	void cmdVelocities(double linearVelocity, double angularVelocity);

@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator 
 {
-	public static final String ID = "org.eclipse.symphony.core.environment.orbit.earth";
+	public static final String ID = "ca.gc.asc_csa.apogy.core.environment.orbit.earth";
 	
 	// The shared instance
 	private static Activator plugin;

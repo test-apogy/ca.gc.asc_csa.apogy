@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.databinding;
+package ca.gc.asc_csa.apogy.common.emf.databinding;
 
 import org.eclipse.core.databinding.observable.value.AbstractObservableValue;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
@@ -10,11 +10,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
 
 public class FeatureNodeObservableValue extends AbstractObservableValue 
 {
@@ -121,7 +121,7 @@ public class FeatureNodeObservableValue extends AbstractObservableValue
 	{
 		if(featureNodeAdapter == null)
 		{
-			featureNodeAdapter = Symphony__CommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();	
+			featureNodeAdapter = ApogyCommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();	
 			featureNodeAdapter.eAdapters().add(getAdapter());
 		}
 		
@@ -137,7 +137,7 @@ public class FeatureNodeObservableValue extends AbstractObservableValue
 					@Override
 					public void notifyChanged(Notification notification) 
 					{
-						if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+						if(notification.getFeatureID(FeatureNodeAdapter.class) == ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 						{						
 							final Object oldValue = notification.getOldValue();
 							final Object newValue = notification.getNewValue();
@@ -153,7 +153,7 @@ public class FeatureNodeObservableValue extends AbstractObservableValue
 								}
 							});							
 						}
-						else if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED)
+						else if(notification.getFeatureID(FeatureNodeAdapter.class) == ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED)
 						{							
 							if(notification.getOldBooleanValue() != notification.getNewBooleanValue())
 							{

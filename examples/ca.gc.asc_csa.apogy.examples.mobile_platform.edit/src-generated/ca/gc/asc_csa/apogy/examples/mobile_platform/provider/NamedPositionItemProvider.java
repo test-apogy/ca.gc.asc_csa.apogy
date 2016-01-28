@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.NamedPosition;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.mobile_platform.NamedPosition} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ extends PositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NamedPosition_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NamedPosition_name_feature", "_UI_NamedPosition_type"),
-				 Symphony__ExamplesMobilePlatformPackage.Literals.NAMED_POSITION__NAME,
+				 ApogyExamplesMobilePlatformPackage.Literals.NAMED_POSITION__NAME,
 				 false,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ extends PositionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NamedPosition.class)) {
-			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION__NAME:
+			case ApogyExamplesMobilePlatformPackage.NAMED_POSITION__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,14 +14,14 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordID <em>Record ID</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordID <em>Record ID</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getVariableLengthRecord()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reserved</em>' attribute.
 	 * @see #setReserved(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_Reserved()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getVariableLengthRecord_Reserved()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getReserved();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Reserved</em>' attribute.
@@ -62,14 +62,14 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User ID</em>' attribute.
 	 * @see #setUserID(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_UserID()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getVariableLengthRecord_UserID()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getUserID();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>User ID</em>' attribute.
@@ -88,14 +88,14 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Record ID</em>' attribute.
 	 * @see #setRecordID(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_RecordID()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getVariableLengthRecord_RecordID()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getRecordID();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordID <em>Record ID</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordID <em>Record ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Record ID</em>' attribute.
@@ -114,14 +114,14 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Record Length After Header</em>' attribute.
 	 * @see #setRecordLengthAfterHeader(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_RecordLengthAfterHeader()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getVariableLengthRecord_RecordLengthAfterHeader()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getRecordLengthAfterHeader();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Record Length After Header</em>' attribute.
@@ -140,14 +140,14 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_Description()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage#getVariableLengthRecord_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.

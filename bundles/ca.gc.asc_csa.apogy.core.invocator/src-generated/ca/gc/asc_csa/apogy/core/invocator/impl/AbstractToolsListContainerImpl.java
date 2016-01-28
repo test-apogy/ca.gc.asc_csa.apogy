@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.invocator.ToolsList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl#getToolsList <em>Tools List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl#getToolsList <em>Tools List</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,7 +47,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TOOLS_LIST_CONTAINER;
+		return ApogyCoreInvocatorPackage.Literals.ABSTRACT_TOOLS_LIST_CONTAINER;
 	}
 
   /**
@@ -57,7 +57,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public ToolsList getToolsList()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
 		return (ToolsList)eContainer();
 	}
 
@@ -68,7 +68,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public ToolsList basicGetToolsList()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
 		return (ToolsList)eInternalContainer();
 	}
 
@@ -79,7 +79,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public NotificationChain basicSetToolsList(ToolsList newToolsList, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newToolsList, Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newToolsList, ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, msgs);
 		return msgs;
 	}
 
@@ -90,19 +90,19 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public void setToolsList(ToolsList newToolsList)
   {
-		if (newToolsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST && newToolsList != null)) {
+		if (newToolsList != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST && newToolsList != null)) {
 			if (EcoreUtil.isAncestor(this, newToolsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newToolsList != null)
-				msgs = ((InternalEObject)newToolsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
+				msgs = ((InternalEObject)newToolsList).eInverseAdd(this, ApogyCoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
 			msgs = basicSetToolsList(newToolsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, newToolsList, newToolsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, newToolsList, newToolsList));
 	}
 
   /**
@@ -114,7 +114,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetToolsList((ToolsList)otherEnd, msgs);
@@ -131,7 +131,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				return basicSetToolsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -146,8 +146,8 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -161,7 +161,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				if (resolve) return getToolsList();
 				return basicGetToolsList();
 		}
@@ -177,7 +177,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				setToolsList((ToolsList)newValue);
 				return;
 		}
@@ -193,7 +193,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				setToolsList((ToolsList)null);
 				return;
 		}
@@ -209,7 +209,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				return basicGetToolsList() != null;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
-package org.eclipse.symphony.core.environment.ui.jme3.preferences;
+package ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences;
 
 
-public class SymphonyEnvironmentUIJME3PreferencesConstants 
+public class ApogyEnvironmentUIJME3PreferencesConstants 
 {
 	
 	// Earth Sky Constants.

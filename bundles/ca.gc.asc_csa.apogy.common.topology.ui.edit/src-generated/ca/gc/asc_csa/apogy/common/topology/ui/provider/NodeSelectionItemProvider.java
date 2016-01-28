@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.provider;
 
 
 import java.util.Collection;
@@ -23,11 +23,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.NodeSelection} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_topologyPresentationSet_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_topologyPresentationSet_feature", "_UI_NodeSelection_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET,
 				 true,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_selectedNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_selectedNode_feature", "_UI_NodeSelection_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__SELECTED_NODE,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_SELECTION__SELECTED_NODE,
 				 true,
 				 false,
 				 true,
@@ -129,7 +129,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_nodePresentation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_nodePresentation_feature", "_UI_NodeSelection_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__NODE_PRESENTATION,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_SELECTION__NODE_PRESENTATION,
 				 true,
 				 false,
 				 true,
@@ -151,7 +151,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_relativeIntersectionPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_relativeIntersectionPoint_feature", "_UI_NodeSelection_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_POINT,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_POINT,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_absoluteIntersectionPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_absoluteIntersectionPoint_feature", "_UI_NodeSelection_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT,
 				 true,
 				 false,
 				 false,
@@ -195,7 +195,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_relativeIntersectionNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_relativeIntersectionNormal_feature", "_UI_NodeSelection_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL,
 				 true,
 				 false,
 				 false,
@@ -217,7 +217,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_absoluteIntersectionNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_absoluteIntersectionNormal_feature", "_UI_NodeSelection_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL,
+				 ApogyCommonTopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL,
 				 true,
 				 false,
 				 false,
@@ -265,10 +265,10 @@ public class NodeSelectionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NodeSelection.class)) {
-			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
-			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
-			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
-			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
+			case ApogyCommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
+			case ApogyCommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
+			case ApogyCommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
+			case ApogyCommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

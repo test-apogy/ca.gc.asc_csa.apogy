@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,18 +15,18 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleToolList()
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleToolList()
  * @model
  * @generated
  */
 public interface SimpleToolList extends AbstractToolsListContainer {
 	/**
 	 * Returns the value of the '<em><b>Simple Tools</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.SimpleTool}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.SimpleTool#getToolList <em>Tool List</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.SimpleTool}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.SimpleTool#getToolList <em>Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Simple Tools</em>' containment reference list isn't clear,
@@ -34,8 +34,8 @@ public interface SimpleToolList extends AbstractToolsListContainer {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Simple Tools</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleToolList_SimpleTools()
-	 * @see org.eclipse.symphony.addons.SimpleTool#getToolList
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSimpleToolList_SimpleTools()
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool#getToolList
 	 * @model opposite="toolList" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated

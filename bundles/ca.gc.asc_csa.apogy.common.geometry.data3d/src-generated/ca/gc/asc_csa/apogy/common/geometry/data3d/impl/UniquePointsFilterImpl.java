@@ -3,16 +3,16 @@
  *
  * $Id: UniquePointsFilterImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.UniquePointsFilter;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 import edu.wlu.cs.levy.CG.KDTree;
 
@@ -39,7 +39,7 @@ public class UniquePointsFilterImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.UNIQUE_POINTS_FILTER;
+		return ApogyCommonGeometryData3DPackage.Literals.UNIQUE_POINTS_FILTER;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class UniquePointsFilterImpl extends
 
 		KDTree kdTree = new KDTree(3);		
 		
-		CartesianCoordinatesSet output = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet output = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 		for (CartesianPositionCoordinates point : input.getPoints()) 
 		{
@@ -83,7 +83,7 @@ public class UniquePointsFilterImpl extends
 
 			if (kdTree.search(key) == null) 
 			{
-				CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
+				CartesianPositionCoordinates pointCopy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 				output.getPoints().add(pointCopy);
 				kdTree.insert(key, pointCopy);
 			}

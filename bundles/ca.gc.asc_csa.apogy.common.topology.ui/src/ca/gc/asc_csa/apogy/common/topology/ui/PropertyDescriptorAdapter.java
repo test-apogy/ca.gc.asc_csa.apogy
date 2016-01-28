@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import org.eclipse.ui.views.properties.IPropertyDescriptor;
 

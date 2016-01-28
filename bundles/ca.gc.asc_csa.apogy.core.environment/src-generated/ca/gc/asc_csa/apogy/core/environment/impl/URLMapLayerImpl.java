@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.URLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.URLMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.environment.URLMapLayer;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.URLMapLayerImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.URLMapLayerImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,7 +62,7 @@ public abstract class URLMapLayerImpl extends AbstractMapLayerImpl implements UR
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.URL_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.URL_MAP_LAYER;
 	}
 
   /**
@@ -85,7 +85,7 @@ public abstract class URLMapLayerImpl extends AbstractMapLayerImpl implements UR
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL, oldUrl, url));
 	}
 
   /**
@@ -97,7 +97,7 @@ public abstract class URLMapLayerImpl extends AbstractMapLayerImpl implements UR
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL:
 				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +112,7 @@ public abstract class URLMapLayerImpl extends AbstractMapLayerImpl implements UR
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL:
 				setUrl((String)newValue);
 				return;
 		}
@@ -128,7 +128,7 @@ public abstract class URLMapLayerImpl extends AbstractMapLayerImpl implements UR
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL:
 				setUrl(URL_EDEFAULT);
 				return;
 		}
@@ -144,7 +144,7 @@ public abstract class URLMapLayerImpl extends AbstractMapLayerImpl implements UR
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);

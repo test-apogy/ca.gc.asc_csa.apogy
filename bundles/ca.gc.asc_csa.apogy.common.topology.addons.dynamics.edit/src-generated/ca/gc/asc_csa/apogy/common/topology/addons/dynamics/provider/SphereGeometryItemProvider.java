@@ -4,7 +4,7 @@
  *
  * $Id: SphereGeometryItemProvider.java,v 1.5.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class SphereGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereGeometry_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereGeometry_radius_feature", "_UI_SphereGeometry_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.SPHERE_GEOMETRY__RADIUS,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.SPHERE_GEOMETRY__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class SphereGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SphereGeometry.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

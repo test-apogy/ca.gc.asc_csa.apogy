@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,14 +13,14 @@ import org.eclipse.symphony.common.emf.Timed;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getAzimuth <em>Azimuth</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getElevation <em>Elevation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getRange <em>Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getRangeRate <em>Range Rate</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getAzimuth <em>Azimuth</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getElevation <em>Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getRange <em>Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getRangeRate <em>Range Rate</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition()
  * @model
  * @generated
  */
@@ -35,15 +35,15 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth</em>' attribute.
 	 * @see #setAzimuth(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Azimuth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Azimuth()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='rad'"
 	 * @generated
 	 */
 	double getAzimuth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getAzimuth <em>Azimuth</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getAzimuth <em>Azimuth</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth</em>' attribute.
@@ -62,15 +62,15 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
 	 * @see #setElevation(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Elevation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Elevation()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='rad'"
 	 * @generated
 	 */
 	double getElevation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getElevation <em>Elevation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getElevation <em>Elevation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation</em>' attribute.
@@ -89,15 +89,15 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Range</em>' attribute.
 	 * @see #setRange(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Range()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Range()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='m'"
 	 * @generated
 	 */
 	double getRange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getRange <em>Range</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getRange <em>Range</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Range</em>' attribute.
@@ -116,15 +116,15 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Range Rate</em>' attribute.
 	 * @see #setRangeRate(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_RangeRate()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_RangeRate()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='m/s'"
 	 * @generated
 	 */
 	double getRangeRate();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassPosition#getRangeRate <em>Range Rate</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassPosition#getRangeRate <em>Range Rate</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Range Rate</em>' attribute.

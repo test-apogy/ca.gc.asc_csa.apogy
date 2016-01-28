@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,19 +10,19 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
-import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
-import org.eclipse.symphony.common.geometry.data3d.Pose;
-import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -34,35 +34,35 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Create Pose</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createTransformedMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Create Transformed Mesh</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List) <em>Concatenate Triangular Meshes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose) <em>Create Pose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createDigitalElevationMap(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPolygon(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createTransformedMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Create Transformed Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#updateCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List) <em>Concatenate Triangular Meshes</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
+public class ApogyCommonGeometryData3DFacadeTest extends TestCase {
 
 	/**
 	 * The fixture for this Facade test case.
@@ -70,7 +70,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DFacade fixture = null;
+	protected ApogyCommonGeometryData3DFacade fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,7 +78,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(Symphony__CommonGeometryData3DFacadeTest.class);
+		TestRunner.run(ApogyCommonGeometryData3DFacadeTest.class);
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DFacadeTest(String name) {
+	public ApogyCommonGeometryData3DFacadeTest(String name) {
 		super(name);
 	}
 
@@ -97,7 +97,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(Symphony__CommonGeometryData3DFacade fixture) {
+	protected void setFixture(ApogyCommonGeometryData3DFacade fixture) {
 		this.fixture = fixture;
 	}
 
@@ -107,7 +107,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DFacade getFixture() {
+	protected ApogyCommonGeometryData3DFacade getFixture() {
 		return fixture;
 	}
 
@@ -119,7 +119,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createSymphony__CommonGeometryData3DFacade());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createApogyCommonGeometryData3DFacade());
 	}
 
 	/**
@@ -134,10 +134,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianPositionCoordinates__double_double_double() 
@@ -151,10 +151,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianOrientationCoordinates__double_double_double() 
@@ -168,10 +168,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createSphericalCoordinates(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createSphericalCoordinates(double, double, double)
 	 * @generated_NOT
 	 */
 	public void testCreateSphericalCoordinates__double_double_double() 
@@ -185,10 +185,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(double, double, double, double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(double, double, double, double, double, double)
 	 * @generated_NOT
 	 */
 	public void testCreatePose__double_double_double_double_double_double() 
@@ -206,10 +206,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Create Pose</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose)
 	 * @generated_NOT
 	 */
 	public void testCreatePose__Pose() 
@@ -229,10 +229,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated_NOT
 	 */
 	public void testCreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates() 
@@ -253,10 +253,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createDigitalElevationMap(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createDigitalElevationMap(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet)
 	 * @generated_NOT
 	 */
 	public void testCreateDigitalElevationMap__CartesianCoordinatesSet() 
@@ -270,10 +270,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPolygon(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPolygon(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() 
@@ -289,15 +289,15 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianPositionCoordinates__CartesianPositionCoordinates() 
 	{
-		CartesianPositionCoordinates original = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
+		CartesianPositionCoordinates original = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 		original.setX(10);
 		original.setY(20);
 		original.setZ(30);
@@ -311,15 +311,15 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() 
 	{
-		CartesianOrientationCoordinates original = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates();
+		CartesianOrientationCoordinates original = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates();
 		original.setXRotation(Math.toRadians(10.0));
 		original.setYRotation(Math.toRadians(20.0));
 		original.setZRotation(Math.toRadians(30.0));
@@ -333,10 +333,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() 
@@ -350,10 +350,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() 
@@ -369,10 +369,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianTriangle__CartesianPolygon() 
@@ -390,10 +390,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianCoordinatesMesh__List() 
@@ -414,10 +414,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianCoordinatesMesh__CartesianTriangularMesh() 
@@ -431,10 +431,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianTriangularMesh__List() 
@@ -455,10 +455,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated_NOT
 	 */
 	public void testCreateCartesianTriangularMesh__CartesianTriangularMesh() 
@@ -472,10 +472,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d)
 	 * @generated_NOT
 	 */
 	public void testApplyTransform__CartesianCoordinatesSet_Matrix4d() 
@@ -484,7 +484,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 		matrix.setIdentity();
 		matrix.rotX(Math.toRadians(90));
 		
-		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet points = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
 		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
 		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(1, 0, 0);
@@ -516,10 +516,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d)
 	 * @generated_NOT
 	 */
 	public void testApplyTransform__List_Matrix4d() 
@@ -560,15 +560,15 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createTransformedMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Create Transformed Mesh</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createTransformedMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Create Transformed Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createTransformedMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createTransformedMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated_NOT
 	 */
 	public void testCreateTransformedMesh__CartesianTriangularMesh_Matrix4d() 
 	{
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
 		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(1, 0, 0);
@@ -611,15 +611,15 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated_NOT
 	 */
 	public void testApplyTransform__CartesianTriangularMesh_Matrix4d() 
 	{
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 				
 		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
 		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(1, 0, 0);
@@ -661,15 +661,15 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d)
 	 * @generated_NOT
 	 */
 	public void testApplyTransform__NormalPointCloud_Matrix4d() 
 	{
-		NormalPointCloud normalPointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE.createNormalPointCloud();
+		NormalPointCloud normalPointCloud = ApogyCommonGeometryData3DFactory.eINSTANCE.createNormalPointCloud();
 		
 		CartesianPositionCoordinates p0 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
 		CartesianPositionCoordinates p1 = getFixture().createCartesianPositionCoordinates(1, 0, 0);
@@ -733,15 +733,15 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#updateCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][])
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#updateCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, double[][])
 	 * @generated_NOT
 	 */
 	public void testUpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() 
 	{
-		CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 				
 		// Start with a case where the CartesianCoordinatesSet contains more points than the xyzData.
 		cartesianCoordinatesSet.getPoints().add(getFixture().createCartesianPositionCoordinates(0, 0, 0));
@@ -807,10 +807,10 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList) <em>Concatenate Triangular Meshes</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList) <em>Concatenate Triangular Meshes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList)
 	 * @generated_NOT
 	 */
 	public void testConcatenateTriangularMeshes__List() 
@@ -836,7 +836,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	
 	private CartesianTriangularMesh createCartesianTriangularMesh()
 	{
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 	
 		CartesianPositionCoordinates p00 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
 		CartesianPositionCoordinates p10 = getFixture().createCartesianPositionCoordinates(1, 0, 0.5);
@@ -898,7 +898,7 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 	
 	private CartesianCoordinatesSet createGrid()
 	{
-		CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet cartesianCoordinatesSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
 		CartesianPositionCoordinates p00 = getFixture().createCartesianPositionCoordinates(0, 0, 0);
 		CartesianPositionCoordinates p10 = getFixture().createCartesianPositionCoordinates(1, 0, 0.5);
@@ -928,4 +928,4 @@ public class Symphony__CommonGeometryData3DFacadeTest extends TestCase {
 		
 		return cartesianCoordinatesSet;
 	}
-} //Symphony__CommonGeometryData3DFacadeTest
+} //ApogyCommonGeometryData3DFacadeTest

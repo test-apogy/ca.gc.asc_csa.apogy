@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui;
+package ca.gc.asc_csa.apogy.core.ui;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.ui.impl.ApogyCoreUIFacadeImpl;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -20,93 +20,93 @@ import org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogyProjectNamePrefix <em>Default Apogy Project Name Prefix</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFilename <em>Default Apogy Session Filename</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFilenameExtension <em>Default Apogy Session Filename Extension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade#getDefaultApogySessionFolderName <em>Default Apogy Session Folder Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphony__CoreUIFacade()
+ * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getApogyCoreUIFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreUIFacade extends EObject {
+public interface ApogyCoreUIFacade extends EObject {
 
 	/**
-	 * Returns the value of the '<em><b>Default Symphony Project Name Prefix</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Apogy Project Name Prefix</b></em>' attribute.
 	 * The default value is <code>"Project"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Default Symphony Project Name Prefix.
+	 * Default Apogy Project Name Prefix.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Default Symphony Project Name Prefix</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphony__CoreUIFacade_DefaultSymphonyProjectNamePrefix()
+	 * @return the value of the '<em>Default Apogy Project Name Prefix</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getApogyCoreUIFacade_DefaultApogyProjectNamePrefix()
 	 * @model default="Project" unique="false" changeable="false"
 	 * @generated
 	 */
-	String getDefaultSymphonyProjectNamePrefix();
+	String getDefaultApogyProjectNamePrefix();
 
 	/**
-	 * Returns the value of the '<em><b>Default Symphony Session Filename</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Apogy Session Filename</b></em>' attribute.
 	 * The default value is <code>"session"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Default Symphony Session Filename Prefix.
+	 * Default Apogy Session Filename Prefix.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Default Symphony Session Filename</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphony__CoreUIFacade_DefaultSymphonySessionFilename()
+	 * @return the value of the '<em>Default Apogy Session Filename</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getApogyCoreUIFacade_DefaultApogySessionFilename()
 	 * @model default="session" unique="false" changeable="false"
 	 * @generated
 	 */
-	String getDefaultSymphonySessionFilename();
+	String getDefaultApogySessionFilename();
 
 	/**
-	 * Returns the value of the '<em><b>Default Symphony Session Filename Extension</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Apogy Session Filename Extension</b></em>' attribute.
 	 * The default value is <code>"sym"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Default Symphony Session Filename Extension Prefix.
+	 * Default Apogy Session Filename Extension Prefix.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Default Symphony Session Filename Extension</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphony__CoreUIFacade_DefaultSymphonySessionFilenameExtension()
+	 * @return the value of the '<em>Default Apogy Session Filename Extension</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getApogyCoreUIFacade_DefaultApogySessionFilenameExtension()
 	 * @model default="sym" unique="false" changeable="false"
 	 * @generated
 	 */
-	String getDefaultSymphonySessionFilenameExtension();
+	String getDefaultApogySessionFilenameExtension();
 
 	/**
-	 * Returns the value of the '<em><b>Default Symphony Session Folder Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Apogy Session Folder Name</b></em>' attribute.
 	 * The default value is <code>"Sessions"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Default Symphony Sessions Directory.
+	 * Default Apogy Sessions Directory.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Default Symphony Session Folder Name</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphony__CoreUIFacade_DefaultSymphonySessionFolderName()
+	 * @return the value of the '<em>Default Apogy Session Folder Name</em>' attribute.
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getApogyCoreUIFacade_DefaultApogySessionFolderName()
 	 * @model default="Sessions" unique="false" changeable="false"
 	 * @generated
 	 */
-	String getDefaultSymphonySessionFolderName();
+	String getDefaultApogySessionFolderName();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.ui.IProject" unique="false" settingsUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.ui.IProject" unique="false" settingsUnique="false"
 	 * @generated
 	 */
-	IProject createSymphonyProject(NewSymphonyProjectSettings settings);
+	IProject createApogyProject(NewApogyProjectSettings settings);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.ui.IFolder" unique="false" settingsUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.ui.IFolder" unique="false" settingsUnique="false"
 	 * @generated
 	 */
-	IFolder createSymphonySessionFolder(NewSymphonyProjectSettings settings);
+	IFolder createApogySessionFolder(NewApogyProjectSettings settings);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,28 +114,28 @@ public interface Symphony__CoreUIFacade extends EObject {
 	 * @model unique="false" sessionSettingsUnique="false"
 	 * @generated
 	 */
-	InvocatorSession createSymphonySession(NewSymphonySessionSettings sessionSettings);
+	InvocatorSession createApogySession(NewApogySessionSettings sessionSettings);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.ui.IFile" unique="false" exceptions="org.eclipse.symphony.common.emf.Exception" resourceContainerDataType="org.eclipse.symphony.core.ui.IContainer" resourceContainerUnique="false" filenameUnique="false" sessionUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.ui.IFile" unique="false" exceptions="ca.gc.asc_csa.apogy.common.emf.Exception" resourceContainerDataType="ca.gc.asc_csa.apogy.core.ui.IContainer" resourceContainerUnique="false" filenameUnique="false" sessionUnique="false"
 	 * @generated
 	 */
-	IFile createSymphonySessionFile(IContainer resourceContainer, String filename, InvocatorSession session) throws Exception;
+	IFile createApogySessionFile(IContainer resourceContainer, String filename, InvocatorSession session) throws Exception;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.ui.IFile" unique="false" resourceContainerDataType="org.eclipse.symphony.core.ui.IContainer" resourceContainerUnique="false" filenameUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.ui.IFile" unique="false" resourceContainerDataType="ca.gc.asc_csa.apogy.core.ui.IContainer" resourceContainerUnique="false" filenameUnique="false"
 	 * @generated
 	 */
-	IFile getSymphonySessionFile(IContainer resourceContainer, String filename);
+	IFile getApogySessionFile(IContainer resourceContainer, String filename);
 
 	/**
 	 * @generated_NOT
 	 */
-	public static Symphony__CoreUIFacade INSTANCE = Symphony__CoreUIFacadeImpl
+	public static ApogyCoreUIFacade INSTANCE = ApogyCoreUIFacadeImpl
 			.getInstance();
 
 	/**
@@ -144,5 +144,5 @@ public interface Symphony__CoreUIFacade extends EObject {
 	 * @model unique="false" systemSettingsUnique="false"
 	 * @generated
 	 */
-	SymphonySystem createSymphonySystem(NewSymphonySystemSettings systemSettings);
-} // Symphony__CoreUIFacade
+	ApogySystem createApogySystem(NewApogySystemSettings systemSettings);
+} // ApogyCoreUIFacade

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,13 +9,13 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIFactory;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DUIPackageImpl extends EPackageImpl implements Symphony__CommonGeometryData3DUIPackage {
+public class ApogyCommonGeometryData3DUIPackageImpl extends EPackageImpl implements ApogyCommonGeometryData3DUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,12 +49,12 @@ public class Symphony__CommonGeometryData3DUIPackageImpl extends EPackageImpl im
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonGeometryData3DUIPackageImpl() {
-		super(eNS_URI, Symphony__CommonGeometryData3DUIFactory.eINSTANCE);
+	private ApogyCommonGeometryData3DUIPackageImpl() {
+		super(eNS_URI, ApogyCommonGeometryData3DUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class Symphony__CommonGeometryData3DUIPackageImpl extends EPackageImpl im
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonGeometryData3DUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonGeometryData3DUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,32 +76,32 @@ public class Symphony__CommonGeometryData3DUIPackageImpl extends EPackageImpl im
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData3DUIPackage init() {
-		if (isInited) return (Symphony__CommonGeometryData3DUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DUIPackage.eNS_URI);
+	public static ApogyCommonGeometryData3DUIPackage init() {
+		if (isInited) return (ApogyCommonGeometryData3DUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonGeometryData3DUIPackageImpl theSymphony__CommonGeometryData3DUIPackage = (Symphony__CommonGeometryData3DUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonGeometryData3DUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonGeometryData3DUIPackageImpl());
+		ApogyCommonGeometryData3DUIPackageImpl theApogyCommonGeometryData3DUIPackage = (ApogyCommonGeometryData3DUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonGeometryData3DUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonGeometryData3DUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
-		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
-		Symphony__CommonImagesPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData3DPackage.eINSTANCE.eClass();
+		ApogyCommonImagesPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonGeometryData3DUIPackage.createPackageContents();
+		theApogyCommonGeometryData3DUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonGeometryData3DUIPackage.initializePackageContents();
+		theApogyCommonGeometryData3DUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonGeometryData3DUIPackage.freeze();
+		theApogyCommonGeometryData3DUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonGeometryData3DUIPackage.eNS_URI, theSymphony__CommonGeometryData3DUIPackage);
-		return theSymphony__CommonGeometryData3DUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonGeometryData3DUIPackage.eNS_URI, theApogyCommonGeometryData3DUIPackage);
+		return theApogyCommonGeometryData3DUIPackage;
 	}
 
 	/**
@@ -226,8 +226,8 @@ public class Symphony__CommonGeometryData3DUIPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DUIFactory getSymphony__CommonGeometryData3DUIFactory() {
-		return (Symphony__CommonGeometryData3DUIFactory)getEFactoryInstance();
+	public ApogyCommonGeometryData3DUIFactory getApogyCommonGeometryData3DUIFactory() {
+		return (ApogyCommonGeometryData3DUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -289,37 +289,37 @@ public class Symphony__CommonGeometryData3DUIPackageImpl extends EPackageImpl im
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
+		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		cartesianCoordinatesSetPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		triangularMeshPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		cartesianCoordinatesSetPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		triangularMeshPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cartesianCoordinatesSetPresentationEClass, CartesianCoordinatesSetPresentation.class, "CartesianCoordinatesSetPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCartesianCoordinatesSetPresentation_PointCloud(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), null, "pointCloud", null, 0, 1, CartesianCoordinatesSetPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianCoordinatesSetPresentation_PointCloud(), theApogyCommonGeometryData3DPackage.getCartesianCoordinatesSet(), null, "pointCloud", null, 0, 1, CartesianCoordinatesSetPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCartesianCoordinatesSetPresentation_PointSize(), theEcorePackage.getEInt(), "pointSize", "1", 0, 1, CartesianCoordinatesSetPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCartesianCoordinatesSetPresentation_NumberOfPoints(), theEcorePackage.getEInt(), "numberOfPoints", null, 0, 1, CartesianCoordinatesSetPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(triangularMeshPresentationEClass, TriangularMeshPresentation.class, "TriangularMeshPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTriangularMeshPresentation_Mesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getTriangularMeshPresentation_Mesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTriangularMeshPresentation_PointSize(), theEcorePackage.getEInt(), "pointSize", "1", 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTriangularMeshPresentation_NumberOfPoints(), theEcorePackage.getEInt(), "numberOfPoints", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTriangularMeshPresentation_NumberOfPolygons(), theEcorePackage.getEInt(), "numberOfPolygons", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTriangularMeshPresentation_PresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTriangularMeshPresentation_PresentationMode(), theApogyCommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTriangularMeshPresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTriangularMeshPresentation_UseShading(), theEcorePackage.getEBoolean(), "useShading", "true", 0, 1, TriangularMeshPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTriangularMeshPresentation_TextureImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "textureImage", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTriangularMeshPresentation_TextureImage(), theApogyCommonImagesPackage.getAbstractEImage(), null, "textureImage", null, 0, 1, TriangularMeshPresentation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonGeometryData3DUIPackageImpl
+} //ApogyCommonGeometryData3DUIPackageImpl

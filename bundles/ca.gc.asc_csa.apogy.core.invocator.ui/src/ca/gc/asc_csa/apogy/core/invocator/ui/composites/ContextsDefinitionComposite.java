@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.jface.viewers.ISelection;
@@ -9,8 +9,8 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 

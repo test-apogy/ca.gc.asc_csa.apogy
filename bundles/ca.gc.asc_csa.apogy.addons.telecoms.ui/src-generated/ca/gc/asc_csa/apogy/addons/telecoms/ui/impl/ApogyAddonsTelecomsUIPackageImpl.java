@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.ui.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
-import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIFactory;
-import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIFactory;
+import ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implements Symphony__AddonsTelecomsUIPackage {
+public class ApogyAddonsTelecomsUIPackageImpl extends EPackageImpl implements ApogyAddonsTelecomsUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,12 +35,12 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsTelecomsUIPackageImpl() {
-		super(eNS_URI, Symphony__AddonsTelecomsUIFactory.eINSTANCE);
+	private ApogyAddonsTelecomsUIPackageImpl() {
+		super(eNS_URI, ApogyAddonsTelecomsUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsTelecomsUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsTelecomsUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,30 +62,30 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsTelecomsUIPackage init() {
-		if (isInited) return (Symphony__AddonsTelecomsUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsTelecomsUIPackage.eNS_URI);
+	public static ApogyAddonsTelecomsUIPackage init() {
+		if (isInited) return (ApogyAddonsTelecomsUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsTelecomsUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsTelecomsUIPackageImpl theSymphony__AddonsTelecomsUIPackage = (Symphony__AddonsTelecomsUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsTelecomsUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsTelecomsUIPackageImpl());
+		ApogyAddonsTelecomsUIPackageImpl theApogyAddonsTelecomsUIPackage = (ApogyAddonsTelecomsUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsTelecomsUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsTelecomsUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsTelecomsUIPackage.createPackageContents();
+		theApogyAddonsTelecomsUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsTelecomsUIPackage.initializePackageContents();
+		theApogyAddonsTelecomsUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsTelecomsUIPackage.freeze();
+		theApogyAddonsTelecomsUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsTelecomsUIPackage.eNS_URI, theSymphony__AddonsTelecomsUIPackage);
-		return theSymphony__AddonsTelecomsUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsTelecomsUIPackage.eNS_URI, theApogyAddonsTelecomsUIPackage);
+		return theApogyAddonsTelecomsUIPackage;
 	}
 
 	/**
@@ -102,8 +102,8 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsUIFactory getSymphony__AddonsTelecomsUIFactory() {
-		return (Symphony__AddonsTelecomsUIFactory)getEFactoryInstance();
+	public ApogyAddonsTelecomsUIFactory getApogyAddonsTelecomsUIFactory() {
+		return (ApogyAddonsTelecomsUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -152,14 +152,14 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		abstractAntennaRadiationPatternPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		abstractAntennaRadiationPatternPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractAntennaRadiationPatternPresentationEClass, AbstractAntennaRadiationPatternPresentation.class, "AbstractAntennaRadiationPatternPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -184,18 +184,18 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsTelecomsUI",
+			 "prefix", "ApogyAddonsTelecomsUI",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsTelecomsUI",
+			 "modelName", "ApogyAddonsTelecomsUI",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.telecoms.ui/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.telecoms.ui.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons.telecoms"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms.ui/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.telecoms.ui.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons.telecoms"
 		   });
 	}
 
-} //Symphony__AddonsTelecomsUIPackageImpl
+} //ApogyAddonsTelecomsUIPackageImpl

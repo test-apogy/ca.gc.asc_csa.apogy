@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -22,16 +22,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorFacadeItemProvider
+public class ApogyCoreInvocatorFacadeItemProvider
   extends ItemProviderAdapter
   implements
     IEditingDomainItemProvider,
@@ -46,7 +46,7 @@ public class Symphony__CoreInvocatorFacadeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreInvocatorFacadeItemProvider(AdapterFactory adapterFactory)
+  public ApogyCoreInvocatorFacadeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -80,9 +80,9 @@ public class Symphony__CoreInvocatorFacadeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreInvocatorFacade_initVariableInstancesDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreInvocatorFacade_initVariableInstancesDate_feature", "_UI_Symphony__CoreInvocatorFacade_type"),
-				 Symphony__CoreInvocatorPackage.Literals.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE,
+				 getString("_UI_ApogyCoreInvocatorFacade_initVariableInstancesDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreInvocatorFacade_initVariableInstancesDate_feature", "_UI_ApogyCoreInvocatorFacade_type"),
+				 ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE,
 				 true,
 				 false,
 				 false,
@@ -102,9 +102,9 @@ public class Symphony__CoreInvocatorFacadeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreInvocatorFacade_activeInvocatorSession_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreInvocatorFacade_activeInvocatorSession_feature", "_UI_Symphony__CoreInvocatorFacade_type"),
-				 Symphony__CoreInvocatorPackage.Literals.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
+				 getString("_UI_ApogyCoreInvocatorFacade_activeInvocatorSession_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreInvocatorFacade_activeInvocatorSession_feature", "_UI_ApogyCoreInvocatorFacade_type"),
+				 ApogyCoreInvocatorPackage.Literals.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
 				 true,
 				 false,
 				 true,
@@ -114,7 +114,7 @@ public class Symphony__CoreInvocatorFacadeItemProvider
 	}
 
 		/**
-	 * This returns Symphony__CoreInvocatorFacade.gif.
+	 * This returns ApogyCoreInvocatorFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -122,7 +122,7 @@ public class Symphony__CoreInvocatorFacadeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreInvocatorFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreInvocatorFacade"));
 	}
 
   /**
@@ -134,11 +134,11 @@ public class Symphony__CoreInvocatorFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		Date labelValue = ((Symphony__CoreInvocatorFacade)object).getInitVariableInstancesDate();
+		Date labelValue = ((ApogyCoreInvocatorFacade)object).getInitVariableInstancesDate();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Symphony__CoreInvocatorFacade_type") :
-			getString("_UI_Symphony__CoreInvocatorFacade_type") + " " + label;
+			getString("_UI_ApogyCoreInvocatorFacade_type") :
+			getString("_UI_ApogyCoreInvocatorFacade_type") + " " + label;
 	}
 
   /**
@@ -153,8 +153,8 @@ public class Symphony__CoreInvocatorFacadeItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Symphony__CoreInvocatorFacade.class)) {
-			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+		switch (notification.getFeatureID(ApogyCoreInvocatorFacade.class)) {
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

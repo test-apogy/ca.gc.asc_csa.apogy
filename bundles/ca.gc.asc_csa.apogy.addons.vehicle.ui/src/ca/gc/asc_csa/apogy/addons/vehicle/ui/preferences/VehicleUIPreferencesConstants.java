@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.vehicle.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences;
 
 import org.eclipse.swt.graphics.RGB;
 

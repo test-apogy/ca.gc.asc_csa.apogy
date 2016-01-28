@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.addons.ros.ROSPublisher;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ROSPublisher;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ros.ROSPublisher} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class ROSPublisherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSPublisher_launched_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSPublisher_launched_feature", "_UI_ROSPublisher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_PUBLISHER__LAUNCHED,
+				 ApogyAddonsROSPackage.Literals.ROS_PUBLISHER__LAUNCHED,
 				 false,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class ROSPublisherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSPublisher_topicName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSPublisher_topicName_feature", "_UI_ROSPublisher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_PUBLISHER__TOPIC_NAME,
+				 ApogyAddonsROSPackage.Literals.ROS_PUBLISHER__TOPIC_NAME,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class ROSPublisherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSPublisher_messageType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSPublisher_messageType_feature", "_UI_ROSPublisher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_PUBLISHER__MESSAGE_TYPE,
+				 ApogyAddonsROSPackage.Literals.ROS_PUBLISHER__MESSAGE_TYPE,
 				 true,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class ROSPublisherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSPublisher_publisher_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSPublisher_publisher_feature", "_UI_ROSPublisher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_PUBLISHER__PUBLISHER,
+				 ApogyAddonsROSPackage.Literals.ROS_PUBLISHER__PUBLISHER,
 				 true,
 				 false,
 				 false,
@@ -170,7 +170,7 @@ public class ROSPublisherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ROSPublisher_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSPublisher_node_feature", "_UI_ROSPublisher_type"),
-				 Symphony__AddonsROSPackage.Literals.ROS_PUBLISHER__NODE,
+				 ApogyAddonsROSPackage.Literals.ROS_PUBLISHER__NODE,
 				 true,
 				 false,
 				 true,
@@ -239,10 +239,10 @@ public class ROSPublisherItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ROSPublisher.class)) {
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER__LAUNCHED:
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER__TOPIC_NAME:
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER__MESSAGE_TYPE:
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER__PUBLISHER:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER__LAUNCHED:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER__TOPIC_NAME:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER__MESSAGE_TYPE:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER__PUBLISHER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

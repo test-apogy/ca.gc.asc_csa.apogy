@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander;
+package ca.gc.asc_csa.apogy.examples.lander;
 
 
 /**
@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.lander;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLanderSimulated()
+ * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLanderSimulated()
  * @model
  * @generated
  */

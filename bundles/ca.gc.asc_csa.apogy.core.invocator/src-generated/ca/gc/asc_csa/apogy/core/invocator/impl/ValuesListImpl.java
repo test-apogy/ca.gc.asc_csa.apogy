@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.Collection;
 
@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Value;
-import org.eclipse.symphony.core.invocator.ValuesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Value;
+import ca.gc.asc_csa.apogy.core.invocator.ValuesList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.invocator.ValuesList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ValuesListImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ValuesListImpl#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,7 +59,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.VALUES_LIST;
+		return ApogyCoreInvocatorPackage.Literals.VALUES_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public EList<Value> getValues()
   {
 		if (values == null) {
-			values = new EObjectContainmentEList<Value>(Value.class, this, Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES);
+			values = new EObjectContainmentEList<Value>(Value.class, this, ApogyCoreInvocatorPackage.VALUES_LIST__VALUES);
 		}
 		return values;
 	}
@@ -84,7 +84,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
+			case ApogyCoreInvocatorPackage.VALUES_LIST__VALUES:
 				return ((InternalEList<?>)getValues()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
+			case ApogyCoreInvocatorPackage.VALUES_LIST__VALUES:
 				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
+			case ApogyCoreInvocatorPackage.VALUES_LIST__VALUES:
 				getValues().clear();
 				getValues().addAll((Collection<? extends Value>)newValue);
 				return;
@@ -132,7 +132,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
+			case ApogyCoreInvocatorPackage.VALUES_LIST__VALUES:
 				getValues().clear();
 				return;
 		}
@@ -148,7 +148,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
+			case ApogyCoreInvocatorPackage.VALUES_LIST__VALUES:
 				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);

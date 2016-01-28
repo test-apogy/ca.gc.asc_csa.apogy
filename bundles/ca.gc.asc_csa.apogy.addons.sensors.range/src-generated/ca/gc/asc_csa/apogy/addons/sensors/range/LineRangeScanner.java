@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.LineRangeScanner#getAngularResolution <em>Angular Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner#getAngularResolution <em>Angular Resolution</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getLineRangeScanner()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getLineRangeScanner()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface LineRangeScanner extends RangeSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Resolution</em>' attribute.
 	 * @see #setAngularResolution(int)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getLineRangeScanner_AngularResolution()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getLineRangeScanner_AngularResolution()
 	 * @model unique="false"
 	 * @generated
 	 */
 	int getAngularResolution();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.LineRangeScanner#getAngularResolution <em>Angular Resolution</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner#getAngularResolution <em>Angular Resolution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Angular Resolution</em>' attribute.

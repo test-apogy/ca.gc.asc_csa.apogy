@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -19,16 +19,16 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,8 +38,8 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.StarFieldImpl#getStars <em>Stars</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.StarFieldImpl#getStarFieldFileName <em>Star Field File Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.StarFieldImpl#getStars <em>Stars</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.StarFieldImpl#getStarFieldFileName <em>Star Field File Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -95,7 +95,7 @@ public class StarFieldImpl extends NodeImpl implements StarField
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.STAR_FIELD;
+		return ApogyCoreEnvironmentPackage.Literals.STAR_FIELD;
 	}
 
   /**
@@ -131,7 +131,7 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public EList<Star> getStarsGen()
   {
 		if (stars == null) {
-			stars = new EObjectResolvingEList<Star>(Star.class, this, Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS);
+			stars = new EObjectResolvingEList<Star>(Star.class, this, ApogyCoreEnvironmentPackage.STAR_FIELD__STARS);
 		}
 		return stars;
 	}
@@ -168,7 +168,7 @@ public class StarFieldImpl extends NodeImpl implements StarField
 		String oldStarFieldFileName = starFieldFileName;
 		starFieldFileName = newStarFieldFileName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME, oldStarFieldFileName, starFieldFileName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME, oldStarFieldFileName, starFieldFileName));
 	}
 
   /**
@@ -180,9 +180,9 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STARS:
 				return getStars();
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				return getStarFieldFileName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -198,11 +198,11 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STARS:
 				getStars().clear();
 				getStars().addAll((Collection<? extends Star>)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				setStarFieldFileName((String)newValue);
 				return;
 		}
@@ -218,10 +218,10 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STARS:
 				getStars().clear();
 				return;
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				setStarFieldFileName(STAR_FIELD_FILE_NAME_EDEFAULT);
 				return;
 		}
@@ -237,9 +237,9 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STARS:
 				return stars != null && !stars.isEmpty();
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case ApogyCoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				return STAR_FIELD_FILE_NAME_EDEFAULT == null ? starFieldFileName != null : !STAR_FIELD_FILE_NAME_EDEFAULT.equals(starFieldFileName);
 		}
 		return super.eIsSet(featureID);
@@ -328,8 +328,8 @@ public class StarFieldImpl extends NodeImpl implements StarField
 			float declination = EnvironmentUtilities.INSTANCE.parseDegMinSec(entries[2]);
 			float magnitude = Float.parseFloat( entries[6]);						
 			
-			star = Symphony__CoreEnvironmentFactory.eINSTANCE.createStar();
-			EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+			star = ApogyCoreEnvironmentFactory.eINSTANCE.createStar();
+			EquatorialCoordinates equatorialCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 			
 			equatorialCoordinates.setRightAscension(rightAscension);
 			equatorialCoordinates.setDeclination(declination);

@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
-import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData;
-import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.impl.ApogyInitializationDataImpl;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,15 +18,15 @@ import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__Examples
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#isDisposed <em>Disposed</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#getLinearVelocity <em>Linear Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl.MobilePlatformDataImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl.MobilePlatformDataImpl#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl.MobilePlatformDataImpl#getLinearVelocity <em>Linear Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl.MobilePlatformDataImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl implements MobilePlatformData {
+public class MobilePlatformDataImpl extends ApogyInitializationDataImpl implements MobilePlatformData {
 	/**
 	 * The default value of the '{@link #isInitialized() <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA;
+		return ApogyExamplesMobilePlatformApogyPackage.Literals.MOBILE_PLATFORM_DATA;
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 		double oldLinearVelocity = linearVelocity;
 		linearVelocity = newLinearVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY, oldLinearVelocity, linearVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY, oldLinearVelocity, linearVelocity));
 	}
 
 	/**
@@ -207,7 +207,7 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 		double oldAngularVelocity = angularVelocity;
 		angularVelocity = newAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY, oldAngularVelocity, angularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY, oldAngularVelocity, angularVelocity));
 	}
 
 	/**
@@ -218,13 +218,13 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
 				return isInitialized();
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
 				return isDisposed();
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
 				return getLinearVelocity();
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
 				return getAngularVelocity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -238,16 +238,16 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
 				setLinearVelocity((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
 				setAngularVelocity((Double)newValue);
 				return;
 		}
@@ -262,16 +262,16 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
 				setLinearVelocity(LINEAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
 				setAngularVelocity(ANGULAR_VELOCITY_EDEFAULT);
 				return;
 		}
@@ -286,13 +286,13 @@ public class MobilePlatformDataImpl extends SymphonyInitializationDataImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
 				return linearVelocity != LINEAR_VELOCITY_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
 				return angularVelocity != ANGULAR_VELOCITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

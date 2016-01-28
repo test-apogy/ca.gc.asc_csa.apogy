@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.LinearInputConditioning;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +18,8 @@ import org.eclipse.symphony.core.programs.controllers.LinearInputConditioning;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.LinearInputConditioningImpl#getMinimum <em>Minimum</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.LinearInputConditioningImpl#getMaximum <em>Maximum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.LinearInputConditioningImpl#getMinimum <em>Minimum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.LinearInputConditioningImpl#getMaximum <em>Maximum</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class LinearInputConditioningImpl extends AbstractInputConditioningImpl i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING;
+		return ApogyCoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class LinearInputConditioningImpl extends AbstractInputConditioningImpl i
 		float oldMinimum = minimum;
 		minimum = newMinimum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM, oldMinimum, minimum));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM, oldMinimum, minimum));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class LinearInputConditioningImpl extends AbstractInputConditioningImpl i
 		float oldMaximum = maximum;
 		maximum = newMaximum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM, oldMaximum, maximum));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM, oldMaximum, maximum));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class LinearInputConditioningImpl extends AbstractInputConditioningImpl i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
 				return getMinimum();
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
 				return getMaximum();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class LinearInputConditioningImpl extends AbstractInputConditioningImpl i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
 				setMinimum((Float)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
 				setMaximum((Float)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class LinearInputConditioningImpl extends AbstractInputConditioningImpl i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
 				setMinimum(MINIMUM_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
 				setMaximum(MAXIMUM_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class LinearInputConditioningImpl extends AbstractInputConditioningImpl i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
 				return minimum != MINIMUM_EDEFAULT;
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
 				return maximum != MAXIMUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

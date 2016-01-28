@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractMapLayerNodeImpl#getAbstractMapLayer <em>Abstract Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.AbstractMapLayerNodeImpl#getAbstractMapLayer <em>Abstract Map Layer</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,7 +57,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.ABSTRACT_MAP_LAYER_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.ABSTRACT_MAP_LAYER_NODE;
 	}
 
   /**
@@ -72,7 +72,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
 			abstractMapLayer = (AbstractMapLayer)eResolveProxy(oldAbstractMapLayer);
 			if (abstractMapLayer != oldAbstractMapLayer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
 			}
 		}
 		return abstractMapLayer;
@@ -98,7 +98,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
 		AbstractMapLayer oldAbstractMapLayer = abstractMapLayer;
 		abstractMapLayer = newAbstractMapLayer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
 	}
 
   /**
@@ -110,7 +110,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				if (resolve) return getAbstractMapLayer();
 				return basicGetAbstractMapLayer();
 		}
@@ -126,7 +126,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				setAbstractMapLayer((AbstractMapLayer)newValue);
 				return;
 		}
@@ -142,7 +142,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				setAbstractMapLayer((AbstractMapLayer)null);
 				return;
 		}
@@ -158,7 +158,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				return abstractMapLayer != null;
 		}
 		return super.eIsSet(featureID);

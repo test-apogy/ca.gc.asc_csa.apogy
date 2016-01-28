@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.examples.satellite.AbstractConstellationRequest;
-import org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,8 +25,8 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl#getRequest <em>Request</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl#getSatelliteCommand <em>Satellite Command</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanItemImpl#getRequest <em>Request</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationCommandPlanItemImpl#getSatelliteCommand <em>Satellite Command</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,7 +68,7 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM;
+		return ApogyExamplesSatellitePackage.Literals.CONSTELLATION_COMMAND_PLAN_ITEM;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 			request = (AbstractConstellationRequest)eResolveProxy(oldRequest);
 			if (request != oldRequest) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST, oldRequest, request));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST, oldRequest, request));
 			}
 		}
 		return request;
@@ -106,7 +106,7 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 		AbstractConstellationRequest oldRequest = request;
 		request = newRequest;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST, oldRequest, request));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST, oldRequest, request));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 		AbstractSatelliteCommand oldSatelliteCommand = satelliteCommand;
 		satelliteCommand = newSatelliteCommand;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, oldSatelliteCommand, newSatelliteCommand);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, oldSatelliteCommand, newSatelliteCommand);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -142,14 +142,14 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 		if (newSatelliteCommand != satelliteCommand) {
 			NotificationChain msgs = null;
 			if (satelliteCommand != null)
-				msgs = ((InternalEObject)satelliteCommand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, null, msgs);
+				msgs = ((InternalEObject)satelliteCommand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, null, msgs);
 			if (newSatelliteCommand != null)
-				msgs = ((InternalEObject)newSatelliteCommand).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, null, msgs);
+				msgs = ((InternalEObject)newSatelliteCommand).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, null, msgs);
 			msgs = basicSetSatelliteCommand(newSatelliteCommand, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, newSatelliteCommand, newSatelliteCommand));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND, newSatelliteCommand, newSatelliteCommand));
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
 				return basicSetSatelliteCommand(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -174,10 +174,10 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
 				if (resolve) return getRequest();
 				return basicGetRequest();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
 				return getSatelliteCommand();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -191,10 +191,10 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
 				setRequest((AbstractConstellationRequest)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
 				setSatelliteCommand((AbstractSatelliteCommand)newValue);
 				return;
 		}
@@ -209,10 +209,10 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
 				setRequest((AbstractConstellationRequest)null);
 				return;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
 				setSatelliteCommand((AbstractSatelliteCommand)null);
 				return;
 		}
@@ -227,9 +227,9 @@ public class ConstellationCommandPlanItemImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST:
 				return request != null;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND:
 				return satelliteCommand != null;
 		}
 		return super.eIsSet(featureID);

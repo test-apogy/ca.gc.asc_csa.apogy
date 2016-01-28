@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui;
+package ca.gc.asc_csa.apogy.addons.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage
  * @generated
  */
-public interface Symphony__AddonsUIFactory extends EFactory {
+public interface ApogyAddonsUIFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsUIFactory eINSTANCE = org.eclipse.symphony.addons.ui.impl.Symphony__AddonsUIFactoryImpl.init();
+	ApogyAddonsUIFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Ruler3d Tool Node Presentation</em>'.
@@ -56,6 +56,6 @@ public interface Symphony__AddonsUIFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsUIPackage getSymphony__AddonsUIPackage();
+	ApogyAddonsUIPackage getApogyAddonsUIPackage();
 
-} //Symphony__AddonsUIFactory
+} //ApogyAddonsUIFactory

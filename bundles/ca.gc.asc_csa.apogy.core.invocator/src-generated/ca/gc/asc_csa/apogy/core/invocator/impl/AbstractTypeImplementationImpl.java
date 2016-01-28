@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -17,13 +17,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.TypeMember;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -32,12 +32,12 @@ import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getTypeMemberImplementations <em>Type Member Implementations</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getImplementationClass <em>Implementation Class</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getAbstractInitializationData <em>Abstract Initialization Data</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getInstance <em>Instance</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getAdapterInstance <em>Adapter Instance</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getHandlingType <em>Handling Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl#getTypeMemberImplementations <em>Type Member Implementations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl#getImplementationClass <em>Implementation Class</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl#getAbstractInitializationData <em>Abstract Initialization Data</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl#getInstance <em>Instance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl#getAdapterInstance <em>Adapter Instance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl#getHandlingType <em>Handling Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,7 +109,7 @@ public abstract class AbstractTypeImplementationImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION;
+		return ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public abstract class AbstractTypeImplementationImpl extends
 	 */
 	public EList<TypeMemberImplementation> getTypeMemberImplementations() {
 		if (typeMemberImplementations == null) {
-			typeMemberImplementations = new EObjectContainmentEList<TypeMemberImplementation>(TypeMemberImplementation.class, this, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS);
+			typeMemberImplementations = new EObjectContainmentEList<TypeMemberImplementation>(TypeMemberImplementation.class, this, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS);
 		}
 		return typeMemberImplementations;
 	}
@@ -133,7 +133,7 @@ public abstract class AbstractTypeImplementationImpl extends
 			implementationClass = (EClass)eResolveProxy(oldImplementationClass);
 			if (implementationClass != oldImplementationClass) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS, oldImplementationClass, implementationClass));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS, oldImplementationClass, implementationClass));
 			}
 		}
 		return implementationClass;
@@ -155,7 +155,7 @@ public abstract class AbstractTypeImplementationImpl extends
 		EClass oldImplementationClass = implementationClass;
 		implementationClass = newImplementationClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS, oldImplementationClass, implementationClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS, oldImplementationClass, implementationClass));
 	}
 
 	/**
@@ -176,7 +176,7 @@ public abstract class AbstractTypeImplementationImpl extends
 		AbstractInitializationData oldAbstractInitializationData = abstractInitializationData;
 		abstractInitializationData = newAbstractInitializationData;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, oldAbstractInitializationData, newAbstractInitializationData);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, oldAbstractInitializationData, newAbstractInitializationData);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -191,14 +191,14 @@ public abstract class AbstractTypeImplementationImpl extends
 		if (newAbstractInitializationData != abstractInitializationData) {
 			NotificationChain msgs = null;
 			if (abstractInitializationData != null)
-				msgs = ((InternalEObject)abstractInitializationData).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, null, msgs);
+				msgs = ((InternalEObject)abstractInitializationData).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, null, msgs);
 			if (newAbstractInitializationData != null)
-				msgs = ((InternalEObject)newAbstractInitializationData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, null, msgs);
+				msgs = ((InternalEObject)newAbstractInitializationData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, null, msgs);
 			msgs = basicSetAbstractInitializationData(newAbstractInitializationData, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, newAbstractInitializationData, newAbstractInitializationData));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA, newAbstractInitializationData, newAbstractInitializationData));
 	}
 
 	/**
@@ -211,7 +211,7 @@ public abstract class AbstractTypeImplementationImpl extends
 			instance = eResolveProxy(oldInstance);
 			if (instance != oldInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE, oldInstance, instance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE, oldInstance, instance));
 			}
 		}
 		return instance;
@@ -233,7 +233,7 @@ public abstract class AbstractTypeImplementationImpl extends
 		EObject oldInstance = instance;
 		instance = newInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE, oldInstance, instance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE, oldInstance, instance));
 	}
 
 	/**
@@ -246,7 +246,7 @@ public abstract class AbstractTypeImplementationImpl extends
 			adapterInstance = (TypeApiAdapter)eResolveProxy(oldAdapterInstance);
 			if (adapterInstance != oldAdapterInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE, oldAdapterInstance, adapterInstance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE, oldAdapterInstance, adapterInstance));
 			}
 		}
 		return adapterInstance;
@@ -268,7 +268,7 @@ public abstract class AbstractTypeImplementationImpl extends
 		TypeApiAdapter oldAdapterInstance = adapterInstance;
 		adapterInstance = newAdapterInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE, oldAdapterInstance, adapterInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE, oldAdapterInstance, adapterInstance));
 	}
 
 	/**
@@ -338,9 +338,9 @@ public abstract class AbstractTypeImplementationImpl extends
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
 				return ((InternalEList<?>)getTypeMemberImplementations()).basicRemove(otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
 				return basicSetAbstractInitializationData(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -353,20 +353,20 @@ public abstract class AbstractTypeImplementationImpl extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
 				return getTypeMemberImplementations();
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
 				if (resolve) return getImplementationClass();
 				return basicGetImplementationClass();
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
 				return getAbstractInitializationData();
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
 				if (resolve) return getInstance();
 				return basicGetInstance();
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
 				if (resolve) return getAdapterInstance();
 				return basicGetAdapterInstance();
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE:
 				if (resolve) return getHandlingType();
 				return basicGetHandlingType();
 		}
@@ -381,20 +381,20 @@ public abstract class AbstractTypeImplementationImpl extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
 				getTypeMemberImplementations().clear();
 				getTypeMemberImplementations().addAll((Collection<? extends TypeMemberImplementation>)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
 				setImplementationClass((EClass)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
 				setAbstractInitializationData((AbstractInitializationData)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
 				setInstance((EObject)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
 				setAdapterInstance((TypeApiAdapter)newValue);
 				return;
 		}
@@ -408,19 +408,19 @@ public abstract class AbstractTypeImplementationImpl extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
 				getTypeMemberImplementations().clear();
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
 				setImplementationClass((EClass)null);
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
 				setAbstractInitializationData((AbstractInitializationData)null);
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
 				setInstance((EObject)null);
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
 				setAdapterInstance((TypeApiAdapter)null);
 				return;
 		}
@@ -434,17 +434,17 @@ public abstract class AbstractTypeImplementationImpl extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
 				return typeMemberImplementations != null && !typeMemberImplementations.isEmpty();
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
 				return implementationClass != null;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
 				return abstractInitializationData != null;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
 				return instance != null;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
 				return adapterInstance != null;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE:
 				return basicGetHandlingType() != null;
 		}
 		return super.eIsSet(featureID);
@@ -458,9 +458,9 @@ public abstract class AbstractTypeImplementationImpl extends
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION___GET_TYPE_MEMBER_IMPLEMENTATION__STRING:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION___GET_TYPE_MEMBER_IMPLEMENTATION__STRING:
 				return getTypeMemberImplementation((String)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION___GET_TYPE_MEMBER_IMPLEMENTATION__TYPEMEMBER:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION___GET_TYPE_MEMBER_IMPLEMENTATION__TYPEMEMBER:
 				return getTypeMemberImplementation((TypeMember)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

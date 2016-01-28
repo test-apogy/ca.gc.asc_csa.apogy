@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 
 import junit.framework.TestCase;
 
@@ -14,7 +14,7 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallContainer#getInvocatorSession() <em>Get Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getInvocatorSession() <em>Get Invocator Session</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -60,10 +60,10 @@ public abstract class OperationCallContainerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.OperationCallContainer#getInvocatorSession() <em>Get Invocator Session</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getInvocatorSession() <em>Get Invocator Session</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getInvocatorSession()
 	 * @generated
 	 */
 	public void testGetInvocatorSession() {

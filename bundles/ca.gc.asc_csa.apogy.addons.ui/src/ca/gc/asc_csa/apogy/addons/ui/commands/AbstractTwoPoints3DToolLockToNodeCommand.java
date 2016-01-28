@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ui.commands;
+package ca.gc.asc_csa.apogy.addons.ui.commands;
 
 import java.util.Iterator;
 
@@ -11,8 +11,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class AbstractTwoPoints3DToolLockToNodeCommand extends AbstractHandler implements IHandler 

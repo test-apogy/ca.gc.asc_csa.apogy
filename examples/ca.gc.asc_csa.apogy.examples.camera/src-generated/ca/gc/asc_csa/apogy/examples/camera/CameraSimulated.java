@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera;
+package ca.gc.asc_csa.apogy.examples.camera;
 
 
 /**
@@ -18,7 +18,7 @@ package org.eclipse.symphony.examples.camera;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCameraSimulated()
+ * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage#getCameraSimulated()
  * @model
  * @generated
  */

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="org.eclipse.symphony.common.topology.bindings" xmlns:topology="org.eclipse.symphony.common.topology" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="org.eclipse.symphony.addons.vehicle" xmi:id="_aD78wArNEeW4-_ONWXXiAw" name="MobilePlatformSymphonySystem">
-  <interfaceClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform"/>
-  <typeApiAdapterClass href="org.eclipse.symphony.examples.mobile_platform.symphony#//MobilePlatformSymphonySystemApiAdapter"/>
+<core:ApogySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.apogy.common.topology.bindings" xmlns:topology="ca.gc.asc_csa.apogy.common.topology" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:ecore="ca.gc.asc_csa.apogy.common.emf" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="ca.gc.asc_csa.apogy.addons.vehicle" xmi:id="_aD78wArNEeW4-_ONWXXiAw" name="MobilePlatformApogySystem">
+  <interfaceClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform"/>
+  <typeApiAdapterClass href="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy#//MobilePlatformApogySystemApiAdapter"/>
   <topologyRoot xmi:id="_aD78wQrNEeW4-_ONWXXiAw">
     <originNode xsi:type="topology:AggregateGroupNode" xmi:id="_aD78wgrNEeW4-_ONWXXiAw" description="The root node of the mobile platform's topology" nodeId="MOBILE_PLATFORM_SYM_SYS_ROOT">
       <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD78wwrNEeW4-_ONWXXiAw" parent="_aD78wgrNEeW4-_ONWXXiAw" description="The required transform to get from the root to the right front wheel axle" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_FRONT_WHEEL_AXLE">
         <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD78xArNEeW4-_ONWXXiAw" parent="_aD78wwrNEeW4-_ONWXXiAw" description="The required transformation to get from the mobile platform's front right wheel axle to its respective wheel joint" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_FRONT_WHEEL_JOINT">
           <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD78xQrNEeW4-_ONWXXiAw" parent="_aD78xArNEeW4-_ONWXXiAw" description="The required transformation to get from the right front wheel joint to the its respective CAD" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_FRONT_WHEEL_CAD_TRANSFORM">
-            <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD78xgrNEeW4-_ONWXXiAw" parent="_aD78xQrNEeW4-_ONWXXiAw" description="The CAD for the right front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_FRONT_WHEEL_CAD" url="platform:/plugin/org.eclipse.symphony.examples.mobile_platform.symphony/vrml/CSA_Wheel_Symphony_Scaled.wrl"/>
+            <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD78xgrNEeW4-_ONWXXiAw" parent="_aD78xQrNEeW4-_ONWXXiAw" description="The CAD for the right front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_FRONT_WHEEL_CAD" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/vrml/CSA_Wheel_Apogy_Scaled.wrl"/>
             <position xmi:id="_aD78xwrNEeW4-_ONWXXiAw"/>
             <rotationMatrix xmi:id="_aD78yArNEeW4-_ONWXXiAw" m00="-1.0" m01="-1.2246467991473532E-16" m10="1.2246467991473532E-16" m11="-1.0"/>
           </aggregatedChildren>
@@ -26,7 +26,7 @@
       </aggregatedChildren>
       <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j1wrNEeW4-_ONWXXiAw" parent="_aD78wgrNEeW4-_ONWXXiAw" description="The required transformation to get from the root to the mobile platform's left front wheel axle" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_FRONT_WHEEL_AXLE">
         <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j2ArNEeW4-_ONWXXiAw" parent="_aD8j1wrNEeW4-_ONWXXiAw" description="The required transformation to get from the mobile platform's left front wheel axle to its respective wheel joint" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_FRONT_WHEEL_JOINT">
-          <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD8j2QrNEeW4-_ONWXXiAw" parent="_aD8j2ArNEeW4-_ONWXXiAw" description="The CAD for the left front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_FRONT_WHEEL_CAD" url="platform:/plugin/org.eclipse.symphony.examples.mobile_platform.symphony/vrml/CSA_Wheel_Symphony_Scaled.wrl"/>
+          <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD8j2QrNEeW4-_ONWXXiAw" parent="_aD8j2ArNEeW4-_ONWXXiAw" description="The CAD for the left front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_FRONT_WHEEL_CAD" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/vrml/CSA_Wheel_Apogy_Scaled.wrl"/>
           <position xmi:id="_aD8j2grNEeW4-_ONWXXiAw"/>
           <rotationMatrix xmi:id="_aD8j2wrNEeW4-_ONWXXiAw"/>
         </aggregatedChildren>
@@ -43,7 +43,7 @@
       <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j4wrNEeW4-_ONWXXiAw" parent="_aD78wgrNEeW4-_ONWXXiAw" description="The required transformation to get from the root to the right rear wheel axle" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_REAR_WHEEL_AXLE">
         <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j5ArNEeW4-_ONWXXiAw" parent="_aD8j4wrNEeW4-_ONWXXiAw" description="The required transformation to get from the right rear wheel's axle to its respective wheel joint" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_REAR_WHEEL_JOINT">
           <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j5QrNEeW4-_ONWXXiAw" parent="_aD8j5ArNEeW4-_ONWXXiAw" description="The required transformation to get from the right rear wheel joint to its respective CAD" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_REAR_WHEEL_CAD_TRANSFORM">
-            <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD8j5grNEeW4-_ONWXXiAw" parent="_aD8j5QrNEeW4-_ONWXXiAw" description="The CAD for the right rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_REAR_WHEEL_CAD" url="platform:/plugin/org.eclipse.symphony.examples.mobile_platform.symphony/vrml/CSA_Wheel_Symphony_Scaled.wrl"/>
+            <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD8j5grNEeW4-_ONWXXiAw" parent="_aD8j5QrNEeW4-_ONWXXiAw" description="The CAD for the right rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_REAR_WHEEL_CAD" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/vrml/CSA_Wheel_Apogy_Scaled.wrl"/>
             <position xmi:id="_aD8j5wrNEeW4-_ONWXXiAw"/>
             <rotationMatrix xmi:id="_aD8j6ArNEeW4-_ONWXXiAw" m00="-1.0" m01="-1.2246467991473532E-16" m10="1.2246467991473532E-16" m11="-1.0"/>
           </aggregatedChildren>
@@ -62,7 +62,7 @@
       </aggregatedChildren>
       <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j8grNEeW4-_ONWXXiAw" parent="_aD78wgrNEeW4-_ONWXXiAw" description="The required transformation to go from the root to the left rear wheel axle" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_REAR_WHEEL_AXLE">
         <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j8wrNEeW4-_ONWXXiAw" parent="_aD8j8grNEeW4-_ONWXXiAw" description="The required transformation to go from the left rear wheel axle to its respective wheel joint" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_REAR_WHEEL_JOINT">
-          <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD8j9ArNEeW4-_ONWXXiAw" parent="_aD8j8wrNEeW4-_ONWXXiAw" description="The CAD for the left rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_REAR_WHEEL_CAD" url="platform:/plugin/org.eclipse.symphony.examples.mobile_platform.symphony/vrml/CSA_Wheel_Symphony_Scaled.wrl"/>
+          <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD8j9ArNEeW4-_ONWXXiAw" parent="_aD8j8wrNEeW4-_ONWXXiAw" description="The CAD for the left rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_REAR_WHEEL_CAD" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/vrml/CSA_Wheel_Apogy_Scaled.wrl"/>
           <position xmi:id="_aD8j9QrNEeW4-_ONWXXiAw"/>
           <rotationMatrix xmi:id="_aD8j9grNEeW4-_ONWXXiAw"/>
         </aggregatedChildren>
@@ -77,7 +77,7 @@
         <rotationMatrix xmi:id="_aD8j_QrNEeW4-_ONWXXiAw"/>
       </aggregatedChildren>
       <aggregatedChildren xsi:type="topology:TransformNode" xmi:id="_aD8j_grNEeW4-_ONWXXiAw" parent="_aD78wgrNEeW4-_ONWXXiAw" description="The transformation required to go from the root node to the body's CAD" nodeId="MOBILE_PLATFORM_SYM_SYS_BODY_CAD_TRANSFORM">
-        <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD9K4ArNEeW4-_ONWXXiAw" parent="_aD8j_grNEeW4-_ONWXXiAw" description="The CAD of the mobile platform's body" nodeId="MOBILE_PLATFORM_SYM_SYS_BODY_CAD" url="platform:/plugin/org.eclipse.symphony.examples.mobile_platform.symphony/vrml/CSA_Rover_Body_Symphony_scaled.wrl"/>
+        <aggregatedChildren xsi:type="topology:URLNode" xmi:id="_aD9K4ArNEeW4-_ONWXXiAw" parent="_aD8j_grNEeW4-_ONWXXiAw" description="The CAD of the mobile platform's body" nodeId="MOBILE_PLATFORM_SYM_SYS_BODY_CAD" url="platform:/plugin/ca.gc.asc_csa.apogy.examples.mobile_platform.apogy/vrml/CSA_Rover_Body_Apogy_scaled.wrl"/>
         <position xmi:id="_aD9K4QrNEeW4-_ONWXXiAw"/>
         <rotationMatrix xmi:id="_aD9K4grNEeW4-_ONWXXiAw"/>
       </aggregatedChildren>
@@ -103,12 +103,12 @@
     <featureRootsList xmi:id="_aD9K8ArNEeW4-_ONWXXiAw">
       <featureRoots xmi:id="_aD9K8QrNEeW4-_ONWXXiAw">
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_aD9K8grNEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/leftWheelPosition"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/leftWheelPosition"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_aD9K8wrNEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/rightWheelPosition"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform/rightWheelPosition"/>
         </children>
-        <sourceClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform"/>
+        <sourceClass href="ca.gc.asc_csa.apogy.examples.mobile_platform#//MobilePlatform"/>
       </featureRoots>
     </featureRootsList>
     <bindingsList xmi:id="_aD9K9ArNEeW4-_ONWXXiAw">
@@ -125,4 +125,4 @@
     <connectionPoints xmi:id="_aD9K_QrNEeW4-_ONWXXiAw" name="MOBILE_PLATFORM_SYM_SYS_CONNECT_MAST_RIGHT_FLAT" description="The mobile platform's mast right flat connection point" node="_aD9K7ArNEeW4-_ONWXXiAw"/>
   </connectionPointsList>
   <assemblyLinksList xmi:id="_aD9K_grNEeW4-_ONWXXiAw"/>
-</core:SymphonySystem>
+</core:ApogySystem>

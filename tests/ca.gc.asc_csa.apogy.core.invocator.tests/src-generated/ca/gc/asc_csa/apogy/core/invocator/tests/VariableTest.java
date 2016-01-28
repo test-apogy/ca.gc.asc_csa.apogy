@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,7 +16,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getEnvironment() <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getEnvironment() <em>Environment</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -78,7 +78,7 @@ public class VariableTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createVariable());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createVariable());
 	}
 
 	/**
@@ -93,10 +93,10 @@ public class VariableTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.Variable#getEnvironment() <em>Environment</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getEnvironment() <em>Environment</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.Variable#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Variable#getEnvironment()
 	 * @generated
 	 */
 	public void testGetEnvironment() {

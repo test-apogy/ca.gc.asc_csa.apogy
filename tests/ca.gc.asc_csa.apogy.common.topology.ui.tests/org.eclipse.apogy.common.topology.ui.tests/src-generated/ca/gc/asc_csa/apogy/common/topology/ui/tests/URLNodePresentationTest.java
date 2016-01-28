@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.tests;
+package ca.gc.asc_csa.apogy.common.topology.ui.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class URLNodePresentationTest extends NodePresentationTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createURLNodePresentation());
+		setFixture(ApogyCommonTopologyUIFactory.eINSTANCE.createURLNodePresentation());
 	}
 
 	/**

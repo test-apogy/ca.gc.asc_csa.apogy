@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.impl;
+package ca.gc.asc_csa.apogy.common.images.impl;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -15,11 +15,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.images.Activator;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.images.URLEImage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.images.Activator;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.URLEImage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,9 +29,9 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.images.impl.URLEImageImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.impl.URLEImageImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.impl.URLEImageImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.URLEImageImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.URLEImageImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.URLEImageImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -117,7 +117,7 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonImagesPackage.Literals.URLE_IMAGE;
+		return ApogyCommonImagesPackage.Literals.URLE_IMAGE;
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.URLE_IMAGE__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.URLE_IMAGE__URL, oldUrl, url));
 	}
 
 	/**
@@ -190,7 +190,7 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.URLE_IMAGE__WIDTH, oldWidth, width));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.URLE_IMAGE__WIDTH, oldWidth, width));
 	}
 
 	@Override
@@ -215,7 +215,7 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 		int oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.URLE_IMAGE__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.URLE_IMAGE__HEIGHT, oldHeight, height));
 	}	
 	
 	protected BufferedImage loadBufferedImage()
@@ -246,11 +246,11 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.URLE_IMAGE__WIDTH:
+			case ApogyCommonImagesPackage.URLE_IMAGE__WIDTH:
 				return getWidth();
-			case Symphony__CommonImagesPackage.URLE_IMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.URLE_IMAGE__HEIGHT:
 				return getHeight();
-			case Symphony__CommonImagesPackage.URLE_IMAGE__URL:
+			case ApogyCommonImagesPackage.URLE_IMAGE__URL:
 				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -264,13 +264,13 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.URLE_IMAGE__WIDTH:
+			case ApogyCommonImagesPackage.URLE_IMAGE__WIDTH:
 				setWidth((Integer)newValue);
 				return;
-			case Symphony__CommonImagesPackage.URLE_IMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.URLE_IMAGE__HEIGHT:
 				setHeight((Integer)newValue);
 				return;
-			case Symphony__CommonImagesPackage.URLE_IMAGE__URL:
+			case ApogyCommonImagesPackage.URLE_IMAGE__URL:
 				setUrl((String)newValue);
 				return;
 		}
@@ -285,13 +285,13 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.URLE_IMAGE__WIDTH:
+			case ApogyCommonImagesPackage.URLE_IMAGE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
-			case Symphony__CommonImagesPackage.URLE_IMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.URLE_IMAGE__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
-			case Symphony__CommonImagesPackage.URLE_IMAGE__URL:
+			case ApogyCommonImagesPackage.URLE_IMAGE__URL:
 				setUrl(URL_EDEFAULT);
 				return;
 		}
@@ -306,11 +306,11 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.URLE_IMAGE__WIDTH:
+			case ApogyCommonImagesPackage.URLE_IMAGE__WIDTH:
 				return width != WIDTH_EDEFAULT;
-			case Symphony__CommonImagesPackage.URLE_IMAGE__HEIGHT:
+			case ApogyCommonImagesPackage.URLE_IMAGE__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
-			case Symphony__CommonImagesPackage.URLE_IMAGE__URL:
+			case ApogyCommonImagesPackage.URLE_IMAGE__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);
@@ -324,7 +324,7 @@ public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEI
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonImagesPackage.URLE_IMAGE___AS_BUFFERED_IMAGE:
+			case ApogyCommonImagesPackage.URLE_IMAGE___AS_BUFFERED_IMAGE:
 				return asBufferedImage();
 		}
 		return super.eInvoke(operationID, arguments);

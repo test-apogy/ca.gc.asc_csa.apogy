@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage
  * @generated
  */
-public interface Symphony__ExamplesLidarSymphonyFactory extends EFactory
+public interface ApogyExamplesLidarApogyFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,16 +21,16 @@ public interface Symphony__ExamplesLidarSymphonyFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesLidarSymphonyFactory eINSTANCE = org.eclipse.symphony.examples.lidar.symphony.impl.Symphony__ExamplesLidarSymphonyFactoryImpl.init();
+  ApogyExamplesLidarApogyFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.ApogyExamplesLidarApogyFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Lidar Symphony System Api Adapter</em>'.
+	 * Returns a new object of class '<em>Lidar Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lidar Symphony System Api Adapter</em>'.
+	 * @return a new object of class '<em>Lidar Apogy System Api Adapter</em>'.
 	 * @generated
 	 */
-	LidarSymphonySystemApiAdapter createLidarSymphonySystemApiAdapter();
+	LidarApogySystemApiAdapter createLidarApogySystemApiAdapter();
 
 		/**
 	 * Returns a new object of class '<em>Lidar Data</em>'.
@@ -48,6 +48,6 @@ public interface Symphony__ExamplesLidarSymphonyFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesLidarSymphonyPackage getSymphony__ExamplesLidarSymphonyPackage();
+	ApogyExamplesLidarApogyPackage getApogyExamplesLidarApogyPackage();
 
-} //Symphony__ExamplesLidarSymphonyFactory
+} //ApogyExamplesLidarApogyFactory

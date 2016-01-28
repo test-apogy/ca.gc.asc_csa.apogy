@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.util.Collection;
 
@@ -11,13 +11,13 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.MapsListNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.MapsListNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.MapsListNodeImpl#getMapsList <em>Maps List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.MapsListNodeImpl#getMapsList <em>Maps List</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.MAPS_LIST_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.MAPS_LIST_NODE;
 	}
 
   /**
@@ -80,7 +80,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 			mapsList = (MapsList)eResolveProxy(oldMapsList);
 			if (mapsList != oldMapsList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 			}
 		}
 		return mapsList;
@@ -106,7 +106,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 		MapsList oldMapsList = mapsList;
 		mapsList = newMapsList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 	}
 
   /**
@@ -118,7 +118,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				if (resolve) return getMapsList();
 				return basicGetMapsList();
 		}
@@ -134,7 +134,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				setMapsList((MapsList)newValue);
 				return;
 		}
@@ -150,7 +150,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				setMapsList((MapsList)null);
 				return;
 		}
@@ -166,7 +166,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case ApogyCoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				return mapsList != null;
 		}
 		return super.eIsSet(featureID);
@@ -222,7 +222,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 	
 					if(notification.getNotifier() instanceof MapsListNode)
 					{
-						if(notification.getFeatureID(MapsListNode.class) == Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST)
+						if(notification.getFeatureID(MapsListNode.class) == ApogyCoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST)
 						{
 							clearTopology();
 							

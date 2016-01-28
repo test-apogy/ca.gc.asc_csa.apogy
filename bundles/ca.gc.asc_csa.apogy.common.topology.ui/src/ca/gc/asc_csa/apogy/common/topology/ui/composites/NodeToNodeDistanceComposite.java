@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.ui.composites;
 
 import java.text.DecimalFormat;
 
@@ -19,12 +19,12 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ui.composites.Tuple3dComposite;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import org.eclipse.ui.progress.UIJob;
 
 public class NodeToNodeDistanceComposite extends Composite 
@@ -314,7 +314,7 @@ public class NodeToNodeDistanceComposite extends Composite
 		double distance = 0.0;
 		if(fromNode != null && this.toNode != null)
 		{
-			distance = Symphony__CommonTopologyFacade.INSTANCE.getEuclideanDistance(fromNode, toNode);
+			distance = ApogyCommonTopologyFacade.INSTANCE.getEuclideanDistance(fromNode, toNode);
 		}
 		
 		return distance;
@@ -330,7 +330,7 @@ public class NodeToNodeDistanceComposite extends Composite
 		double distance = 0.0;
 		if(fromNode != null && this.toNode != null)
 		{
-			distance = Symphony__CommonTopologyFacade.INSTANCE.getGeodesicDistance(fromNode, toNode);
+			distance = ApogyCommonTopologyFacade.INSTANCE.getGeodesicDistance(fromNode, toNode);
 		}
 		
 		return distance;
@@ -394,11 +394,11 @@ public class NodeToNodeDistanceComposite extends Composite
 						geodesicDistanceValueLabel.setText(distanceFormat.format(getGeodesicDistanceBetweenNodes()));
 	
 						// Updates relative position.
-						Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(fromNode, toNode);
+						Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(fromNode, toNode);
 						Vector3d position = new Vector3d();
 						m.get(position);
 		 				
-						positionTupleComposite.setTuple3d(Symphony__CommonMathFacade.INSTANCE.createTuple3d(position));
+						positionTupleComposite.setTuple3d(ApogyCommonMathFacade.INSTANCE.createTuple3d(position));
 						
 						// Update relative rotation.
 						Matrix3d rotation = new Matrix3d();
@@ -407,7 +407,7 @@ public class NodeToNodeDistanceComposite extends Composite
 						
 						Vector3d rotationVectorRad = GeometricUtils.extractRotationFromXYZRotMatrix(rotation);
 						Vector3d rotationVectorDeg = new Vector3d(Math.toDegrees(rotationVectorRad.x), Math.toDegrees(rotationVectorRad.y), Math.toDegrees(rotationVectorRad.z));
-						orientationTupleComposite.setTuple3d(Symphony__CommonMathFacade.INSTANCE.createTuple3d(rotationVectorDeg));
+						orientationTupleComposite.setTuple3d(ApogyCommonMathFacade.INSTANCE.createTuple3d(rotationVectorDeg));
 					}
 					catch(Exception e)
 					{						

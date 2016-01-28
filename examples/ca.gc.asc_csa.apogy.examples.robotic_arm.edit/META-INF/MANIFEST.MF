@@ -1,19 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.examples.robotic_arm.edit;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.examples.robotic_arm.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.examples.robotic_arm.provider.Symphony__ExamplesRoboticArmEditPlugin$Implementation
+Bundle-Activator: ca.gc.asc_csa.apogy.examples.robotic_arm.provider.ApogyExamplesRoboticArmEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.examples.robotic_arm.provider
+Export-Package: ca.gc.asc_csa.apogy.examples.robotic_arm.provider
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.symphony.examples.robotic_arm;visibility:=reexport,
+ ca.gc.asc_csa.apogy.examples.robotic_arm;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
- org.eclipse.symphony.common.emf.ui;bundle-version="0.2.0"
+ ca.gc.asc_csa.apogy.common.emf.ui;bundle-version="0.2.0"
 Bundle-ActivationPolicy: lazy

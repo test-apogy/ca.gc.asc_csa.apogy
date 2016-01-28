@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.ui.impl;
+package ca.gc.asc_csa.apogy.common.converters.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.jface.viewers.ISelection;
 
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersPackage;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersPackage;
 
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFactory;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIPackage;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFactory;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,13 +26,13 @@ import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIPac
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implements Symphony__CommonConvertersUIPackage {
+public class ApogyCommonConvertersUIPackageImpl extends EPackageImpl implements ApogyCommonConvertersUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonConvertersUIFacadeEClass = null;
+	private EClass apogy__CommonConvertersUIFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -52,12 +52,12 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonConvertersUIPackageImpl() {
-		super(eNS_URI, Symphony__CommonConvertersUIFactory.eINSTANCE);
+	private ApogyCommonConvertersUIPackageImpl() {
+		super(eNS_URI, ApogyCommonConvertersUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonConvertersUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonConvertersUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,27 +79,27 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonConvertersUIPackage init() {
-		if (isInited) return (Symphony__CommonConvertersUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonConvertersUIPackage.eNS_URI);
+	public static ApogyCommonConvertersUIPackage init() {
+		if (isInited) return (ApogyCommonConvertersUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonConvertersUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonConvertersUIPackageImpl theSymphony__CommonConvertersUIPackage = (Symphony__CommonConvertersUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonConvertersUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonConvertersUIPackageImpl());
+		ApogyCommonConvertersUIPackageImpl theApogyCommonConvertersUIPackage = (ApogyCommonConvertersUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonConvertersUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonConvertersUIPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theSymphony__CommonConvertersUIPackage.createPackageContents();
+		theApogyCommonConvertersUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonConvertersUIPackage.initializePackageContents();
+		theApogyCommonConvertersUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonConvertersUIPackage.freeze();
+		theApogyCommonConvertersUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonConvertersUIPackage.eNS_URI, theSymphony__CommonConvertersUIPackage);
-		return theSymphony__CommonConvertersUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonConvertersUIPackage.eNS_URI, theApogyCommonConvertersUIPackage);
+		return theApogyCommonConvertersUIPackage;
 	}
 
 	/**
@@ -107,8 +107,8 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonConvertersUIFacade() {
-		return symphony__CommonConvertersUIFacadeEClass;
+	public EClass getApogyCommonConvertersUIFacade() {
+		return apogy__CommonConvertersUIFacadeEClass;
 	}
 
 	/**
@@ -116,8 +116,8 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonConvertersUIFacade__Convert__ISelection_Class() {
-		return symphony__CommonConvertersUIFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonConvertersUIFacade__Convert__ISelection_Class() {
+		return apogy__CommonConvertersUIFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -134,8 +134,8 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersUIFactory getSymphony__CommonConvertersUIFactory() {
-		return (Symphony__CommonConvertersUIFactory)getEFactoryInstance();
+	public ApogyCommonConvertersUIFactory getApogyCommonConvertersUIFactory() {
+		return (ApogyCommonConvertersUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -157,8 +157,8 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 		isCreated = true;
 
 		// Create classes and their features
-		symphony__CommonConvertersUIFacadeEClass = createEClass(SYMPHONY_COMMON_CONVERTERS_UI_FACADE);
-		createEOperation(symphony__CommonConvertersUIFacadeEClass, SYMPHONY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS);
+		apogy__CommonConvertersUIFacadeEClass = createEClass(APOGY_COMMON_CONVERTERS_UI_FACADE);
+		createEOperation(apogy__CommonConvertersUIFacadeEClass, APOGY_COMMON_CONVERTERS_UI_FACADE___CONVERT__ISELECTION_CLASS);
 
 		// Create data types
 		iSelectionEDataType = createEDataType(ISELECTION);
@@ -188,7 +188,7 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonConvertersPackage theSymphony__CommonConvertersPackage = (Symphony__CommonConvertersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonConvertersPackage.eNS_URI);
+		ApogyCommonConvertersPackage theApogyCommonConvertersPackage = (ApogyCommonConvertersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonConvertersPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -198,15 +198,15 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(symphony__CommonConvertersUIFacadeEClass, Symphony__CommonConvertersUIFacade.class, "Symphony__CommonConvertersUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonConvertersUIFacadeEClass, ApogyCommonConvertersUIFacade.class, "ApogyCommonConvertersUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__CommonConvertersUIFacade__Convert__ISelection_Class(), null, "convert", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCommonConvertersUIFacade__Convert__ISelection_Class(), null, "convert", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getISelection(), "selection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(theEcorePackage.getEJavaClass());
 		EGenericType g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "targetType", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(theSymphony__CommonConvertersPackage.getList());
+		g1 = createEGenericType(theApogyCommonConvertersPackage.getList());
 		g2 = createEGenericType(theEcorePackage.getEJavaObject());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
@@ -218,4 +218,4 @@ public class Symphony__CommonConvertersUIPackageImpl extends EPackageImpl implem
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonConvertersUIPackageImpl
+} //ApogyCommonConvertersUIPackageImpl

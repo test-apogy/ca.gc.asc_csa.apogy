@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,8 +10,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.antenna.Antenna;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.Antenna;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.antenna.impl.AntennaImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.antenna.impl.AntennaImpl#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public abstract class AntennaImpl extends MinimalEObjectImpl.Container implement
   	@Override
   	protected EClass eStaticClass()
   	{
-		return Symphony__ExamplesAntennaPackage.Literals.ANTENNA;
+		return ApogyExamplesAntennaPackage.Literals.ANTENNA;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public abstract class AntennaImpl extends MinimalEObjectImpl.Container implement
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.ANTENNA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesAntennaPackage.ANTENNA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -105,7 +105,7 @@ public abstract class AntennaImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.ANTENNA__INITIALIZED:
+			case ApogyExamplesAntennaPackage.ANTENNA__INITIALIZED:
 				return isInitialized();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -119,7 +119,7 @@ public abstract class AntennaImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.ANTENNA__INITIALIZED:
+			case ApogyExamplesAntennaPackage.ANTENNA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
 		}
@@ -134,7 +134,7 @@ public abstract class AntennaImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.ANTENNA__INITIALIZED:
+			case ApogyExamplesAntennaPackage.ANTENNA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
 		}
@@ -149,7 +149,7 @@ public abstract class AntennaImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesAntennaPackage.ANTENNA__INITIALIZED:
+			case ApogyExamplesAntennaPackage.ANTENNA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -163,7 +163,7 @@ public abstract class AntennaImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__ExamplesAntennaPackage.ANTENNA___INIT:
+			case ApogyExamplesAntennaPackage.ANTENNA___INIT:
 				return init();
 		}
 		return super.eInvoke(operationID, arguments);

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.Date;
 
@@ -18,13 +18,13 @@ import java.util.Date;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getStartTime <em>Start Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getUpdatePeriod <em>Update Period</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getTimeAcceration <em>Time Acceration</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getTimeDirection <em>Time Direction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getUpdatePeriod <em>Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getTimeAcceration <em>Time Acceration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getTimeDirection <em>Time Direction</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getBrowseableTimeSource()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_StartTime()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getBrowseableTimeSource_StartTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -47,7 +47,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	Date getStartTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getStartTime <em>Start Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getStartTime <em>Start Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Start Time</em>' attribute.
@@ -66,15 +66,15 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(int)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_UpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getBrowseableTimeSource_UpdatePeriod()
 	 * @model default="1000" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='ms' notify='true' property='Editable'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='ms' notify='true' property='Editable'"
 	 * @generated
 	 */
 	int getUpdatePeriod();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getUpdatePeriod <em>Update Period</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getUpdatePeriod <em>Update Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Update Period</em>' attribute.
@@ -93,7 +93,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Acceration</em>' attribute.
 	 * @see #setTimeAcceration(float)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_TimeAcceration()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getBrowseableTimeSource_TimeAcceration()
 	 * @model default="10.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -101,7 +101,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	float getTimeAcceration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getTimeAcceration <em>Time Acceration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getTimeAcceration <em>Time Acceration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Acceration</em>' attribute.
@@ -112,16 +112,16 @@ public interface BrowseableTimeSource extends TimeSource {
 
 	/**
 	 * Returns the value of the '<em><b>Time Direction</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.common.emf.TimeDirection}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.common.emf.TimeDirection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The time direction.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Direction</em>' attribute.
-	 * @see org.eclipse.symphony.common.emf.TimeDirection
+	 * @see ca.gc.asc_csa.apogy.common.emf.TimeDirection
 	 * @see #setTimeDirection(TimeDirection)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_TimeDirection()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getBrowseableTimeSource_TimeDirection()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -129,11 +129,11 @@ public interface BrowseableTimeSource extends TimeSource {
 	TimeDirection getTimeDirection();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getTimeDirection <em>Time Direction</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource#getTimeDirection <em>Time Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Direction</em>' attribute.
-	 * @see org.eclipse.symphony.common.emf.TimeDirection
+	 * @see ca.gc.asc_csa.apogy.common.emf.TimeDirection
 	 * @see #getTimeDirection()
 	 * @generated
 	 */

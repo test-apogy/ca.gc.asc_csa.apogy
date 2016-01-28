@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov;
+package ca.gc.asc_csa.apogy.addons.sensors.fov;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMinimumAngle <em>Minimum Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMaximumAngle <em>Maximum Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getSpanningAngle <em>Spanning Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getCenterAngle <em>Center Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMinimumAngle <em>Minimum Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMaximumAngle <em>Maximum Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getSpanningAngle <em>Spanning Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getCenterAngle <em>Center Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getAngularSpan()
  * @model
  * @generated
  */
@@ -40,15 +40,15 @@ public interface AngularSpan extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Angle</em>' attribute.
 	 * @see #setMinimumAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_MinimumAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getAngularSpan_MinimumAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getMinimumAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMinimumAngle <em>Minimum Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMinimumAngle <em>Minimum Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum Angle</em>' attribute.
@@ -68,15 +68,15 @@ public interface AngularSpan extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Angle</em>' attribute.
 	 * @see #setMaximumAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_MaximumAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getAngularSpan_MaximumAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getMaximumAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMaximumAngle <em>Maximum Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan#getMaximumAngle <em>Maximum Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Angle</em>' attribute.
@@ -93,9 +93,9 @@ public interface AngularSpan extends EObject {
 	 * The total angular span, in radians.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Spanning Angle</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_SpanningAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getAngularSpan_SpanningAngle()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getSpanningAngle();
@@ -108,9 +108,9 @@ public interface AngularSpan extends EObject {
 	 * The center of the angular span, in radians.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center Angle</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_CenterAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getAngularSpan_CenterAngle()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getCenterAngle();

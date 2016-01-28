@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ros.ui.wizards;
+package ca.gc.asc_csa.apogy.addons.ros.ui.wizards;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;

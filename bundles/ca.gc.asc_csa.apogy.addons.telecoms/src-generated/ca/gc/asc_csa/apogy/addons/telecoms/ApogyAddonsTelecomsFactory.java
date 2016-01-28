@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage
  * @generated
  */
-public interface Symphony__AddonsTelecomsFactory extends EFactory {
+public interface ApogyAddonsTelecomsFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsTelecomsFactory eINSTANCE = org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsFactoryImpl.init();
+	ApogyAddonsTelecomsFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Telecom Node</em>'.
@@ -119,6 +119,6 @@ public interface Symphony__AddonsTelecomsFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsTelecomsPackage getSymphony__AddonsTelecomsPackage();
+	ApogyAddonsTelecomsPackage getApogyAddonsTelecomsPackage();
 
-} //Symphony__AddonsTelecomsFactory
+} //ApogyAddonsTelecomsFactory

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.preferences;
+package ca.gc.asc_csa.apogy.core.ui.preferences;
 
 import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.PreferencePage;
@@ -10,11 +10,11 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.core.ui.Activator;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-public class SymphonyCoreNodesPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyCoreNodesPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private BooleanFieldEditor resultNodeFlagVisibilityBooleanFieldEditor;	
 	private StringFieldEditor resultNodeFlagPoleHeight;
@@ -22,7 +22,7 @@ public class SymphonyCoreNodesPreferencesPage extends PreferencePage implements 
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonyCoreNodesPreferencesPage() {
+	public ApogyCoreNodesPreferencesPage() {
 	}
 
 	/**
@@ -45,13 +45,13 @@ public class SymphonyCoreNodesPreferencesPage extends PreferencePage implements 
 		resultNodeFlagVisibilityLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		resultNodeFlagVisibilityLabel.setText("Flag Visibility");
 		
-		resultNodeFlagVisibilityBooleanFieldEditor = createBooleanFieldEditor(grpResultNode, SymphonyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_VISIBILITY_ID, "");		
+		resultNodeFlagVisibilityBooleanFieldEditor = createBooleanFieldEditor(grpResultNode, ApogyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_VISIBILITY_ID, "");		
 
 		Label resultNodeFlagPoleHeightLabel = new Label(grpResultNode, SWT.NONE);
 		resultNodeFlagPoleHeightLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		resultNodeFlagPoleHeightLabel.setText("Flag Height (m)");
 		
-		resultNodeFlagPoleHeight = createStringFieldEditor(grpResultNode, SymphonyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_POLE_HEIGHT_ID, "");		
+		resultNodeFlagPoleHeight = createStringFieldEditor(grpResultNode, ApogyCorePreferencesConstants.DEFAULT_RESULT_NODE_FLAG_POLE_HEIGHT_ID, "");		
 
 		
 		return container;

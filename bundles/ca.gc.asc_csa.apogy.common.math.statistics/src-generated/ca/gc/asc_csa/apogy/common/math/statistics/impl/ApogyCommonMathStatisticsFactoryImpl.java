@@ -3,14 +3,14 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.statistics.impl;
+package ca.gc.asc_csa.apogy.common.math.statistics.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.math.statistics.*;
+import ca.gc.asc_csa.apogy.common.math.statistics.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,24 +18,24 @@ import org.eclipse.symphony.common.math.statistics.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonMathStatisticsFactoryImpl extends EFactoryImpl implements Symphony__CommonMathStatisticsFactory {
+public class ApogyCommonMathStatisticsFactoryImpl extends EFactoryImpl implements ApogyCommonMathStatisticsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonMathStatisticsFactory init() {
+	public static ApogyCommonMathStatisticsFactory init() {
 		try {
-			Symphony__CommonMathStatisticsFactory theSymphony__CommonMathStatisticsFactory = (Symphony__CommonMathStatisticsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonMathStatisticsPackage.eNS_URI);
-			if (theSymphony__CommonMathStatisticsFactory != null) {
-				return theSymphony__CommonMathStatisticsFactory;
+			ApogyCommonMathStatisticsFactory theApogyCommonMathStatisticsFactory = (ApogyCommonMathStatisticsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonMathStatisticsPackage.eNS_URI);
+			if (theApogyCommonMathStatisticsFactory != null) {
+				return theApogyCommonMathStatisticsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonMathStatisticsFactoryImpl();
+		return new ApogyCommonMathStatisticsFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Symphony__CommonMathStatisticsFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathStatisticsFactoryImpl() {
+	public ApogyCommonMathStatisticsFactoryImpl() {
 		super();
 	}
 
@@ -56,7 +56,7 @@ public class Symphony__CommonMathStatisticsFactoryImpl extends EFactoryImpl impl
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonMathStatisticsPackage.POPULATION: return createPopulation();
+			case ApogyCommonMathStatisticsPackage.POPULATION: return createPopulation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,8 +77,8 @@ public class Symphony__CommonMathStatisticsFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathStatisticsPackage getSymphony__CommonMathStatisticsPackage() {
-		return (Symphony__CommonMathStatisticsPackage)getEPackage();
+	public ApogyCommonMathStatisticsPackage getApogyCommonMathStatisticsPackage() {
+		return (ApogyCommonMathStatisticsPackage)getEPackage();
 	}
 
 	/**
@@ -88,8 +88,8 @@ public class Symphony__CommonMathStatisticsFactoryImpl extends EFactoryImpl impl
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonMathStatisticsPackage getPackage() {
-		return Symphony__CommonMathStatisticsPackage.eINSTANCE;
+	public static ApogyCommonMathStatisticsPackage getPackage() {
+		return ApogyCommonMathStatisticsPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonMathStatisticsFactoryImpl
+} //ApogyCommonMathStatisticsFactoryImpl

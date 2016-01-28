@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils;
 
 import java.awt.image.BufferedImage;
 
@@ -6,13 +6,13 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;
@@ -58,7 +58,7 @@ public class CircularSectorFieldOfViewImageProjectorControl extends AbstractFiel
 	@Override
 	protected Quaternion getProjectorRotation() 
 	{
-		Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
+		Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
 		Matrix3d rot = new Matrix3d();
 		m.get(rot);
 		

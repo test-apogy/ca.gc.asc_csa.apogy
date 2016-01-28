@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.Named#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.Named#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getNamed()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getNamed()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -36,14 +36,14 @@ public interface Named extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getNamed_Name()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getNamed_Name()
 	 * @model unique="false"
 	 * @generated
 	 */
   String getName();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.Named#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.Named#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.

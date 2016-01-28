@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui;
+package ca.gc.asc_csa.apogy.common.emf.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage
+ * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage
  * @generated
  */
-public interface Symphony__CommonEMFUIFactory extends EFactory
+public interface ApogyCommonEMFUIFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -20,7 +20,7 @@ public interface Symphony__CommonEMFUIFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CommonEMFUIFactory eINSTANCE = org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFactoryImpl.init();
+  ApogyCommonEMFUIFactory eINSTANCE = ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Facade</em>'.
@@ -29,7 +29,7 @@ public interface Symphony__CommonEMFUIFactory extends EFactory
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CommonEMFUIFacade createSymphony__CommonEMFUIFacade();
+	ApogyCommonEMFUIFacade createApogyCommonEMFUIFacade();
 
 		/**
 	 * Returns the package supported by this factory.
@@ -38,6 +38,6 @@ public interface Symphony__CommonEMFUIFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonEMFUIPackage getSymphony__CommonEMFUIPackage();
+	ApogyCommonEMFUIPackage getApogyCommonEMFUIPackage();
 
-} //Symphony__CommonEMFUIFactory
+} //ApogyCommonEMFUIFactory

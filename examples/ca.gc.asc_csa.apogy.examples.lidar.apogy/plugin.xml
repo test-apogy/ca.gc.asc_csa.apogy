@@ -8,20 +8,20 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_examples_lidar -->
+      <!-- @generated apogy_examples_lidar -->
       <package
-            uri="org.eclipse.symphony.examples.lidar.symphony"
-            class="org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage"
-            genModel="model/symphony_examples_lidar_symphony.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.lidar.apogy"
+            class="ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage"
+            genModel="model/apogy_examples_lidar_apogy.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.typeContributor">
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
       <Type
-            URI="model/LidarSymphonySystem.ss">
+            URI="model/LidarApogySystem.ss">
       </Type>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.sessionProvider">
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
       <SessionProvider
             Description="Session showing the use of the Lidar example system."
             Name="Lidar Example"

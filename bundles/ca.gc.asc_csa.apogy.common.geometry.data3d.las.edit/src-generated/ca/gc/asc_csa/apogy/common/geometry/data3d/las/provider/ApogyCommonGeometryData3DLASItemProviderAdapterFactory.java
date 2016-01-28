@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,9 +29,9 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
 
-import org.eclipse.symphony.common.geometry.data3d.las.util.Symphony__CommonGeometryData3DLASAdapterFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.util.ApogyCommonGeometryData3DLASAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -42,7 +42,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.util.Symphony__CommonGeom
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends Symphony__CommonGeometryData3DLASAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonGeometryData3DLASItemProviderAdapterFactory extends ApogyCommonGeometryData3DLASAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonGeometryData3DLASEditPlugin.INSTANCE, Symphony__CommonGeometryData3DLASPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonGeometryData3DLASEditPlugin.INSTANCE, ApogyCommonGeometryData3DLASPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -81,7 +81,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASItemProviderAdapterFactory() {
+	public ApogyCommonGeometryData3DLASItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -90,7 +90,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -98,7 +98,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	protected LASHeaderItemProvider lasHeaderItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -113,7 +113,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	protected VariableLengthRecordItemProvider variableLengthRecordItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,7 +136,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.LASReader} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -144,7 +144,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	protected LASReaderItemProvider lasReaderItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASReader}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -159,7 +159,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -167,7 +167,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	protected LASPointItemProvider lasPointItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -182,30 +182,30 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DLASFacadeItemProvider symphony__CommonGeometryData3DLASFacadeItemProvider;
+	protected ApogyCommonGeometryData3DLASFacadeItemProvider apogy__CommonGeometryData3DLASFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonGeometryData3DLASFacadeAdapter() {
-		if (symphony__CommonGeometryData3DLASFacadeItemProvider == null) {
-			symphony__CommonGeometryData3DLASFacadeItemProvider = new Symphony__CommonGeometryData3DLASFacadeItemProvider(this);
+	public Adapter createApogyCommonGeometryData3DLASFacadeAdapter() {
+		if (apogy__CommonGeometryData3DLASFacadeItemProvider == null) {
+			apogy__CommonGeometryData3DLASFacadeItemProvider = new ApogyCommonGeometryData3DLASFacadeItemProvider(this);
 		}
 
-		return symphony__CommonGeometryData3DLASFacadeItemProvider;
+		return apogy__CommonGeometryData3DLASFacadeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -213,7 +213,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	protected LASWriterItemProvider lasWriterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -357,7 +357,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 		if (variableLengthRecordItemProvider != null) variableLengthRecordItemProvider.dispose();
 		if (lasReaderItemProvider != null) lasReaderItemProvider.dispose();
 		if (lasPointItemProvider != null) lasPointItemProvider.dispose();
-		if (symphony__CommonGeometryData3DLASFacadeItemProvider != null) symphony__CommonGeometryData3DLASFacadeItemProvider.dispose();
+		if (apogy__CommonGeometryData3DLASFacadeItemProvider != null) apogy__CommonGeometryData3DLASFacadeItemProvider.dispose();
 		if (lasWriterItemProvider != null) lasWriterItemProvider.dispose();
 	}
 

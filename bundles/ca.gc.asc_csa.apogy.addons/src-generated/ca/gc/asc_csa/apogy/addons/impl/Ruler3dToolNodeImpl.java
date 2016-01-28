@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
+import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3dToolNodeImpl#getRuler3DTool <em>Ruler3 DTool</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Ruler3dToolNodeImpl#getRuler3DTool <em>Ruler3 DTool</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,7 +53,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.RULER3D_TOOL_NODE;
+		return ApogyAddonsPackage.Literals.RULER3D_TOOL_NODE;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 			ruler3DTool = (Ruler3DTool)eResolveProxy(oldRuler3DTool);
 			if (ruler3DTool != oldRuler3DTool) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, oldRuler3DTool, ruler3DTool));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, oldRuler3DTool, ruler3DTool));
 			}
 		}
 		return ruler3DTool;
@@ -91,7 +91,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 		Ruler3DTool oldRuler3DTool = ruler3DTool;
 		ruler3DTool = newRuler3DTool;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, oldRuler3DTool, newRuler3DTool);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, oldRuler3DTool, newRuler3DTool);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -106,14 +106,14 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 		if (newRuler3DTool != ruler3DTool) {
 			NotificationChain msgs = null;
 			if (ruler3DTool != null)
-				msgs = ((InternalEObject)ruler3DTool).eInverseRemove(this, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, Ruler3DTool.class, msgs);
+				msgs = ((InternalEObject)ruler3DTool).eInverseRemove(this, ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, Ruler3DTool.class, msgs);
 			if (newRuler3DTool != null)
-				msgs = ((InternalEObject)newRuler3DTool).eInverseAdd(this, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, Ruler3DTool.class, msgs);
+				msgs = ((InternalEObject)newRuler3DTool).eInverseAdd(this, ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, Ruler3DTool.class, msgs);
 			msgs = basicSetRuler3DTool(newRuler3DTool, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, newRuler3DTool, newRuler3DTool));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, newRuler3DTool, newRuler3DTool));
 	}
 
 	/**
@@ -124,9 +124,9 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
 				if (ruler3DTool != null)
-					msgs = ((InternalEObject)ruler3DTool).eInverseRemove(this, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, Ruler3DTool.class, msgs);
+					msgs = ((InternalEObject)ruler3DTool).eInverseRemove(this, ApogyAddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, Ruler3DTool.class, msgs);
 				return basicSetRuler3DTool((Ruler3DTool)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -140,7 +140,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
 				return basicSetRuler3DTool(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -154,7 +154,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
 				if (resolve) return getRuler3DTool();
 				return basicGetRuler3DTool();
 		}
@@ -169,7 +169,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
 				setRuler3DTool((Ruler3DTool)newValue);
 				return;
 		}
@@ -184,7 +184,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
 				setRuler3DTool((Ruler3DTool)null);
 				return;
 		}
@@ -199,7 +199,7 @@ public class Ruler3dToolNodeImpl extends NodeImpl implements Ruler3dToolNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
+			case ApogyAddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL:
 				return ruler3DTool != null;
 		}
 		return super.eIsSet(featureID);

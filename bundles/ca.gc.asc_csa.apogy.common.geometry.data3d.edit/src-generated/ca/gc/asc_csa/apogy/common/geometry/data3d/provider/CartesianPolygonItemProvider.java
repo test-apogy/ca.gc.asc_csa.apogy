@@ -3,7 +3,7 @@
  *
  * $Id: CartesianPolygonItemProvider.java,v 1.2.4.2 2015/05/21 15:50:28 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.provider.PolygonItemProvider;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.PolygonItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class CartesianPolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPolygon_surface_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPolygon_surface_feature", "_UI_CartesianPolygon_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__SURFACE,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__SURFACE,
 				 false,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class CartesianPolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPolygon_normal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPolygon_normal_feature", "_UI_CartesianPolygon_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__NORMAL,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__NORMAL,
 				 false,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class CartesianPolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPolygon_centroid_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPolygon_centroid_feature", "_UI_CartesianPolygon_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__CENTROID,
+				 ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__CENTROID,
 				 false,
 				 false,
 				 false,
@@ -156,8 +156,8 @@ public class CartesianPolygonItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianPolygon.class)) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

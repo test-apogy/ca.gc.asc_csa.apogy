@@ -4,7 +4,7 @@
  *
  * $Id: RasterScanSettingsItemProvider.java,v 1.2.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.provider.RectangularFrustrumFieldOfViewItemProvider;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.provider.RectangularFrustrumFieldOfViewItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class RasterScanSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterScanSettings_verticalResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanSettings_verticalResolution_feature", "_UI_RasterScanSettings_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION,
+				 ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class RasterScanSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterScanSettings_horizontalResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanSettings_horizontalResolution_feature", "_UI_RasterScanSettings_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION,
+				 ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class RasterScanSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterScanSettings_numberOfPoints_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanSettings_numberOfPoints_feature", "_UI_RasterScanSettings_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS,
+				 ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS,
 				 false,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class RasterScanSettingsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RasterScanSettings.class)) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

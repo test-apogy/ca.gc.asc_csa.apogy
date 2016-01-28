@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated topology_viewer -->
       <factory
-            uri="org.eclipse.symphony.common.topology.ui.viewer"
-            class="org.eclipse.symphony.common.topology.ui.viewer.provider.Symphony__CommonTopologyUIViewerItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.common.topology.ui.viewer"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.viewer.provider.ApogyCommonTopologyUIViewerItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,10 +21,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_common_topology_ui_viewer -->
+      <!-- @generated apogy_common_topology_ui_viewer -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.ui.viewer.provider.Symphony__CommonTopologyUIViewerItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.viewer.provider.ApogyCommonTopologyUIViewerItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

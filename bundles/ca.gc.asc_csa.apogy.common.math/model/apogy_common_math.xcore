@@ -1,14 +1,14 @@
-@GenModel(prefix="Symphony__CommonMath",
+@GenModel(prefix="ApogyCommonMath",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__CommonMath",
+	      modelName="ApogyCommonMath",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.math/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.math.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.math/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.math.edit/src-generated")
 		  
-package org.eclipse.symphony.common.math
+package ca.gc.asc_csa.apogy.common.math
 
 type EDoubleArray wraps double[]
 type Matrix3d wraps javax.vecmath.Matrix3d
@@ -85,7 +85,7 @@ class Polynomial
 	readonly transient derived EDoubleArray imaginaryRoots
 }
 
-class Symphony__CommonMathFacade
+class ApogyCommonMathFacade
 {
 	op Matrix4x4 createMatrix4x4(Matrix4d matrix)
 	

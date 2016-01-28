@@ -3,7 +3,7 @@
  *
  * $Id: DigitalElevationMapSamplerImpl.java,v 1.2.4.7 2015/09/23 12:45:14 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,22 +20,22 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.Activator;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 import edu.wlu.cs.levy.CG.KDTree;
 import edu.wlu.cs.levy.CG.KeySizeException;
@@ -48,7 +48,7 @@ import edu.wlu.cs.levy.CG.KeySizeException;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl#getTargetResolution <em>Target Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl#getTargetResolution <em>Target Resolution</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,7 +94,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP_SAMPLER;
+		return ApogyCommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP_SAMPLER;
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 		double oldTargetResolution = targetResolution;
 		targetResolution = newTargetResolution;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION, oldTargetResolution, targetResolution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION, oldTargetResolution, targetResolution));
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
 				return getTargetResolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -162,7 +162,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
 				setTargetResolution((Double)newValue);
 				return;
 		}
@@ -177,7 +177,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
 				setTargetResolution(TARGET_RESOLUTION_EDEFAULT);
 				return;
 		}
@@ -192,7 +192,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION:
 				return targetResolution != TARGET_RESOLUTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -220,7 +220,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 		setInput(input);		
 					
 		// Meshes the original DEM.
-		DigitalElevationMapMesher mesher = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();
+		DigitalElevationMapMesher mesher = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();
 		CartesianTriangularMesh mesh = mesher.process(getInput());		
 		
 		List<CartesianPositionCoordinates> gridPoints = createSamplingGrid(getInput(), getTargetResolution());
@@ -246,7 +246,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 			for(int j = 0; j < yDim; j++)
 			{
 				y = minY + j * getTargetResolution();
-				result.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, 0));
+				result.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, 0));
 			}			
 		}				
 		
@@ -255,7 +255,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 
 	private DigitalElevationMap sample(CartesianTriangularMesh mesh, List<CartesianPositionCoordinates> samplingGrid)
 	{				
-		DigitalElevationMap result = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();		
+		DigitalElevationMap result = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();		
 		
 		SubMonitor subMonitor = SubMonitor.convert(progressMonitor, 4);
 		
@@ -278,7 +278,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 				Point3d point = pixelsIntersectionPoints[i][j];						
 				if(point != null)
 				{							
-					CartesianPositionCoordinates p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
+					CartesianPositionCoordinates p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
 					result.getPoints().add(p);
 				}
 			}	
@@ -292,7 +292,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 	
 //	private DigitalElevationMap sample(CartesianTriangularMesh mesh, List<CartesianPositionCoordinates> samplingGrid)
 //	{
-//		DigitalElevationMap result = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();
+//		DigitalElevationMap result = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();
 //		
 //		System.out.println("Getting projections....");
 //		CartesianPositionCoordinates[] projections = Geometry3DUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, samplingGrid, mesh.getPolygons());
@@ -313,7 +313,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 //			{
 //				System.err.println("(projections[" +  i + "] is null ! " + x + " " + y );
 //			}
-//			points.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z));					
+//			points.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z));					
 //		}
 //		result.getPoints().addAll(points);
 //		result.setXDimension(getTargetDEMXDimension());

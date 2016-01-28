@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.satellite.ui.parts;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.parts;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -10,18 +10,18 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.IVariableListener;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableListenerEventType;
-import org.eclipse.symphony.core.invocator.listeners.VariableListener;
-import org.eclipse.symphony.examples.satellite.AbstractConstellation;
-import org.eclipse.symphony.examples.satellite.ui.Activator;
-import org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade;
-import org.eclipse.symphony.examples.satellite.ui.composites.ConstellationDashboardComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.IVariableListener;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType;
+import ca.gc.asc_csa.apogy.core.invocator.listeners.VariableListener;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.Activator;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.composites.ConstellationDashboardComposite;
 import org.eclipse.ui.progress.UIJob;
 
 public class ConstellationDashboardView extends AbstractView implements IEditingDomainProvider {
@@ -29,7 +29,7 @@ public class ConstellationDashboardView extends AbstractView implements IEditing
 	/*
 	 * The ID of the view as specified by the extension.
 	 */
-	public static final String ID = "org.eclipse.symphony.examples.satellite.ui.parts.ConstellationDashboardView";
+	public static final String ID = "ca.gc.asc_csa.apogy.examples.satellite.ui.parts.ConstellationDashboardView";
 
 	/*
 	 * Reference to the composite.
@@ -61,19 +61,19 @@ public class ConstellationDashboardView extends AbstractView implements IEditing
 		constellationDashboardComposite = new ConstellationDashboardComposite(parent, SWT.NONE);
 
 		/* Get the constellation variable. */
-		variable = Symphony__ExamplesSatelliteUiFacade.INSTANCE.getConstellationVariable();
+		variable = ApogyExamplesSatelliteUiFacade.INSTANCE.getConstellationVariable();
 
 		if (variable == null) {
 			Logger.INSTANCE.log(Activator.PLUGIN_ID,
 					"You must define a variable named <"
-							+ Symphony__ExamplesSatelliteUiFacade.INSTANCE.getConstellationVariableName()
+							+ ApogyExamplesSatelliteUiFacade.INSTANCE.getConstellationVariableName()
 							+ "> in the session.",
 					EventSeverity.ERROR);
 		} else {
 			updateConstellationInput(variable);
 
 			/* Listens to active constellation. */
-			Symphony__CoreInvocatorFacade.INSTANCE.addVariableListener(getVariableListener());
+			ApogyCoreInvocatorFacade.INSTANCE.addVariableListener(getVariableListener());
 		}
 	}
 
@@ -101,7 +101,7 @@ public class ConstellationDashboardView extends AbstractView implements IEditing
 	private void updateConstellationInput(Variable variable) {
 		if (variable != null) {
 			/* Displays the active constellation. */
-			EObject instance = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(variable);
+			EObject instance = ApogyCoreInvocatorFacade.INSTANCE.getInstance(variable);
 			final AbstractConstellation constellation = 
 					instance instanceof AbstractConstellation ? 
 							(AbstractConstellation) instance : 
@@ -111,7 +111,7 @@ public class ConstellationDashboardView extends AbstractView implements IEditing
 				@Override
 				public IStatus runInUIThread(IProgressMonitor monitor) {
 					constellationDashboardComposite.setConstellation(constellation,
-							Symphony__ExamplesSatelliteUiFacade.INSTANCE.getOperationCallResultsList());
+							ApogyExamplesSatelliteUiFacade.INSTANCE.getOperationCallResultsList());
 					return Status.OK_STATUS;
 				}
 			}.schedule();
@@ -135,12 +135,12 @@ public class ConstellationDashboardView extends AbstractView implements IEditing
 	@Override
 	public EditingDomain getEditingDomain() {
 		return AdapterFactoryEditingDomain
-				.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+				.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 
 	@Override
 	public void dispose() {
-		Symphony__CoreInvocatorFacade.INSTANCE.removeVariableListener(getVariableListener());
+		ApogyCoreInvocatorFacade.INSTANCE.removeVariableListener(getVariableListener());
 		super.dispose();
 	}
 }

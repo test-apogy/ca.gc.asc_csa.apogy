@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage
  * @generated
  */
-public interface Symphony__ExamplesMobilePlatformSymphonyFactory extends EFactory
+public interface ApogyExamplesMobilePlatformApogyFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,16 +21,16 @@ public interface Symphony__ExamplesMobilePlatformSymphonyFactory extends EFactor
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesMobilePlatformSymphonyFactory eINSTANCE = org.eclipse.symphony.examples.mobile_platform.symphony.impl.Symphony__ExamplesMobilePlatformSymphonyFactoryImpl.init();
+  ApogyExamplesMobilePlatformApogyFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl.ApogyExamplesMobilePlatformApogyFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Mobile Platform Symphony System Api Adapter</em>'.
+	 * Returns a new object of class '<em>Mobile Platform Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Mobile Platform Symphony System Api Adapter</em>'.
+	 * @return a new object of class '<em>Mobile Platform Apogy System Api Adapter</em>'.
 	 * @generated
 	 */
-	MobilePlatformSymphonySystemApiAdapter createMobilePlatformSymphonySystemApiAdapter();
+	MobilePlatformApogySystemApiAdapter createMobilePlatformApogySystemApiAdapter();
 
 		/**
 	 * Returns a new object of class '<em>Mobile Platform Data</em>'.
@@ -42,13 +42,13 @@ public interface Symphony__ExamplesMobilePlatformSymphonyFactory extends EFactor
 	MobilePlatformData createMobilePlatformData();
 
 		/**
-	 * Returns a new object of class '<em>Mobile Platform Symphony System Annotation</em>'.
+	 * Returns a new object of class '<em>Mobile Platform Apogy System Annotation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Mobile Platform Symphony System Annotation</em>'.
+	 * @return a new object of class '<em>Mobile Platform Apogy System Annotation</em>'.
 	 * @generated
 	 */
-	MobilePlatformSymphonySystemAnnotation createMobilePlatformSymphonySystemAnnotation();
+	MobilePlatformApogySystemAnnotation createMobilePlatformApogySystemAnnotation();
 
 		/**
 	 * Returns the package supported by this factory.
@@ -57,6 +57,6 @@ public interface Symphony__ExamplesMobilePlatformSymphonyFactory extends EFactor
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesMobilePlatformSymphonyPackage getSymphony__ExamplesMobilePlatformSymphonyPackage();
+	ApogyExamplesMobilePlatformApogyPackage getApogyExamplesMobilePlatformApogyPackage();
 
-} //Symphony__ExamplesMobilePlatformSymphonyFactory
+} //ApogyExamplesMobilePlatformApogyFactory

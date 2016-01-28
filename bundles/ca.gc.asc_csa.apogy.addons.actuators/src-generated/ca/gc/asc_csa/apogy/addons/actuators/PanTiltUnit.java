@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.actuators;
+package ca.gc.asc_csa.apogy.addons.actuators;
 
 
 /**
@@ -13,13 +13,13 @@ package org.eclipse.symphony.addons.actuators;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentPanAngle <em>Current Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentTiltAngle <em>Current Tilt Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentPanAngle <em>Current Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentTiltAngle <em>Current Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit()
+ * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getPanTiltUnit()
  * @model abstract="true"
  * @generated
  */
@@ -40,15 +40,15 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Pan Angle</em>' attribute.
 	 * @see #setCurrentPanAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CurrentPanAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getPanTiltUnit_CurrentPanAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' apogy_units='rad'"
 	 * @generated
 	 */
   double getCurrentPanAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentPanAngle <em>Current Pan Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentPanAngle <em>Current Pan Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Pan Angle</em>' attribute.
@@ -71,15 +71,15 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Tilt Angle</em>' attribute.
 	 * @see #setCurrentTiltAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CurrentTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getPanTiltUnit_CurrentTiltAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' apogy_units='rad'"
 	 * @generated
 	 */
   double getCurrentTiltAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentTiltAngle <em>Current Tilt Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCurrentTiltAngle <em>Current Tilt Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Tilt Angle</em>' attribute.
@@ -102,15 +102,15 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Commanded Pan Angle</em>' attribute.
 	 * @see #setCommandedPanAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CommandedPanAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getPanTiltUnit_CommandedPanAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' apogy_units='rad'"
 	 * @generated
 	 */
   double getCommandedPanAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedPanAngle <em>Commanded Pan Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedPanAngle <em>Commanded Pan Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Commanded Pan Angle</em>' attribute.
@@ -133,15 +133,15 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Commanded Tilt Angle</em>' attribute.
 	 * @see #setCommandedTiltAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CommandedTiltAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.actuators.ApogyAddonsActuatorsPackage#getPanTiltUnit_CommandedTiltAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' apogy_units='rad'"
 	 * @generated
 	 */
   double getCommandedTiltAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Commanded Tilt Angle</em>' attribute.
@@ -158,7 +158,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return The maximum pan angle,in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getMaximumPanAngle();
@@ -171,7 +171,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return The minimum pan angle,in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getMinimumPanAngle();
@@ -184,7 +184,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return The maximum tilt angle,in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getMaximumTiltAngle();
@@ -197,7 +197,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return The minimum tilt angle,in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getMinimumTiltAngle();
@@ -212,8 +212,8 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return True of successful, false otherwise.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" panAngleUnique="false"
-	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" tiltAngleUnique="false"
-	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" tiltAngleUnique="false"
+	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   boolean moveToPanTilt(double panAngle, double tiltAngle);
@@ -227,7 +227,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return True of successful, false otherwise.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" panAngleUnique="false"
-	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   boolean moveToPan(double panAngle);
@@ -241,7 +241,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return True of successful, false otherwise.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" tiltAngleUnique="false"
-	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   boolean moveToTilt(double tiltAngle);
@@ -256,8 +256,8 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return True of successful, false otherwise.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" panAngleDeltaUnique="false"
-	 *        panAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" tiltAngleDeltaUnique="false"
-	 *        tiltAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        panAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" tiltAngleDeltaUnique="false"
+	 *        tiltAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   boolean moveByPanTilt(double panAngleDelta, double tiltAngleDelta);
@@ -271,7 +271,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return True of successful, false otherwise.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" panAngleDeltaUnique="false"
-	 *        panAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        panAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   boolean moveByPan(double panAngleDelta);
@@ -285,7 +285,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * @return True of successful, false otherwise.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" tiltAngleDeltaUnique="false"
-	 *        tiltAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        tiltAngleDeltaAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   boolean moveByTilt(double tiltAngleDelta);

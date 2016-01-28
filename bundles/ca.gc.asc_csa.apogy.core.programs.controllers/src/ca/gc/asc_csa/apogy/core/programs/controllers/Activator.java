@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator 
 {
-	public static final String ID = "org.eclipse.symphony.core.programs.controllers";
+	public static final String ID = "ca.gc.asc_csa.apogy.core.programs.controllers";
 	
 	private static BundleContext context;
 

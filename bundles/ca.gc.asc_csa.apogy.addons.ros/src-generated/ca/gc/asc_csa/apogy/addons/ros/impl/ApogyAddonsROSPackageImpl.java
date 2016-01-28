@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.util.HashMap;
 
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.ros.ROSInterface;
-import org.eclipse.symphony.addons.ros.ROSListener;
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.addons.ros.ROSPublisher;
-import org.eclipse.symphony.addons.ros.ROSPublisherManager;
-import org.eclipse.symphony.addons.ros.ROSService;
-import org.eclipse.symphony.addons.ros.ROSServiceManager;
-import org.eclipse.symphony.addons.ros.ROSTopicLauncher;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFactory;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.utilities.NullRequestHandler;
-import org.eclipse.symphony.addons.ros.utilities.NullResponseHandler;
-import org.eclipse.symphony.addons.ros.utilities.ResponseLogger;
+import ca.gc.asc_csa.apogy.addons.ros.ROSInterface;
+import ca.gc.asc_csa.apogy.addons.ros.ROSListener;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ROSPublisher;
+import ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager;
+import ca.gc.asc_csa.apogy.addons.ros.ROSService;
+import ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager;
+import ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger;
 import org.ros.exception.ServiceNotFoundException;
 
 import org.ros.internal.message.Message;
@@ -50,7 +50,7 @@ import org.ros.node.topic.Subscriber;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symphony__AddonsROSPackage {
+public class ApogyAddonsROSPackageImpl extends EPackageImpl implements ApogyAddonsROSPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,7 +112,7 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsROSFacadeEClass = null;
+	private EClass apogy__AddonsROSFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,12 +216,12 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsROSPackageImpl() {
-		super(eNS_URI, Symphony__AddonsROSFactory.eINSTANCE);
+	private ApogyAddonsROSPackageImpl() {
+		super(eNS_URI, ApogyAddonsROSFactory.eINSTANCE);
 	}
 
 	/**
@@ -234,7 +234,7 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsROSPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsROSPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -243,11 +243,11 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsROSPackage init() {
-		if (isInited) return (Symphony__AddonsROSPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsROSPackage.eNS_URI);
+	public static ApogyAddonsROSPackage init() {
+		if (isInited) return (ApogyAddonsROSPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsROSPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsROSPackageImpl theSymphony__AddonsROSPackage = (Symphony__AddonsROSPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsROSPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsROSPackageImpl());
+		ApogyAddonsROSPackageImpl theApogyAddonsROSPackage = (ApogyAddonsROSPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsROSPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsROSPackageImpl());
 
 		isInited = true;
 
@@ -255,18 +255,18 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsROSPackage.createPackageContents();
+		theApogyAddonsROSPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsROSPackage.initializePackageContents();
+		theApogyAddonsROSPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsROSPackage.freeze();
+		theApogyAddonsROSPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsROSPackage.eNS_URI, theSymphony__AddonsROSPackage);
-		return theSymphony__AddonsROSPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsROSPackage.eNS_URI, theApogyAddonsROSPackage);
+		return theApogyAddonsROSPackage;
 	}
 
 	/**
@@ -1147,8 +1147,8 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsROSFacade() {
-		return symphony__AddonsROSFacadeEClass;
+	public EClass getApogyAddonsROSFacade() {
+		return apogy__AddonsROSFacadeEClass;
 	}
 
 	/**
@@ -1156,8 +1156,8 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSFacade__GetNodeNamePrefix() {
-		return symphony__AddonsROSFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsROSFacade__GetNodeNamePrefix() {
+		return apogy__AddonsROSFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1165,8 +1165,8 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSFacade__GetROSMasterURI() {
-		return symphony__AddonsROSFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyAddonsROSFacade__GetROSMasterURI() {
+		return apogy__AddonsROSFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1174,8 +1174,8 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSFacade__GetROSHostname() {
-		return symphony__AddonsROSFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyAddonsROSFacade__GetROSHostname() {
+		return apogy__AddonsROSFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1183,8 +1183,8 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsROSFacade__GetROSIp() {
-		return symphony__AddonsROSFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyAddonsROSFacade__GetROSIp() {
+		return apogy__AddonsROSFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1309,8 +1309,8 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSFactory getSymphony__AddonsROSFactory() {
-		return (Symphony__AddonsROSFactory)getEFactoryInstance();
+	public ApogyAddonsROSFactory getApogyAddonsROSFactory() {
+		return (ApogyAddonsROSFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -1437,11 +1437,11 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 		createEOperation(rosListenerEClass, ROS_LISTENER___CONNECT_SUBSCRIBER__CONNECTEDNODE);
 		createEOperation(rosListenerEClass, ROS_LISTENER___STOP);
 
-		symphony__AddonsROSFacadeEClass = createEClass(SYMPHONY_ADDONS_ROS_FACADE);
-		createEOperation(symphony__AddonsROSFacadeEClass, SYMPHONY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX);
-		createEOperation(symphony__AddonsROSFacadeEClass, SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI);
-		createEOperation(symphony__AddonsROSFacadeEClass, SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME);
-		createEOperation(symphony__AddonsROSFacadeEClass, SYMPHONY_ADDONS_ROS_FACADE___GET_ROS_IP);
+		apogy__AddonsROSFacadeEClass = createEClass(APOGY_ADDONS_ROS_FACADE);
+		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_NODE_NAME_PREFIX);
+		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_MASTER_URI);
+		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_HOSTNAME);
+		createEOperation(apogy__AddonsROSFacadeEClass, APOGY_ADDONS_ROS_FACADE___GET_ROS_IP);
 
 		// Create data types
 		responseLoggerEDataType = createEDataType(RESPONSE_LOGGER);
@@ -1834,15 +1834,15 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 
 		initEOperation(getROSListener__Stop(), null, "stop", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(symphony__AddonsROSFacadeEClass, Symphony__AddonsROSFacade.class, "Symphony__AddonsROSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsROSFacadeEClass, ApogyAddonsROSFacade.class, "ApogyAddonsROSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getSymphony__AddonsROSFacade__GetNodeNamePrefix(), theEcorePackage.getEString(), "getNodeNamePrefix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyAddonsROSFacade__GetNodeNamePrefix(), theEcorePackage.getEString(), "getNodeNamePrefix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__AddonsROSFacade__GetROSMasterURI(), theEcorePackage.getEString(), "getROSMasterURI", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyAddonsROSFacade__GetROSMasterURI(), theEcorePackage.getEString(), "getROSMasterURI", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__AddonsROSFacade__GetROSHostname(), theEcorePackage.getEString(), "getROSHostname", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyAddonsROSFacade__GetROSHostname(), theEcorePackage.getEString(), "getROSHostname", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSymphony__AddonsROSFacade__GetROSIp(), theEcorePackage.getEString(), "getROSIp", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getApogyAddonsROSFacade__GetROSIp(), theEcorePackage.getEString(), "getROSIp", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(responseLoggerEDataType, ResponseLogger.class, "ResponseLogger", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1879,17 +1879,17 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsROS",
-			 "modelName", "Symphony__AddonsROS",
+			 "prefix", "ApogyAddonsROS",
+			 "modelName", "ApogyAddonsROS",
 			 "operationReflection", "true",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.ros/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.ros.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.ros/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.ros.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons"
 		   });	
 		addAnnotation
 		  (getROSNode__Start(), 
@@ -2481,29 +2481,29 @@ public class Symphony__AddonsROSPackageImpl extends EPackageImpl implements Symp
 			 "documentation", "The underlying ROS message listener"
 		   });	
 		addAnnotation
-		  (getSymphony__AddonsROSFacade__GetNodeNamePrefix(), 
+		  (getApogyAddonsROSFacade__GetNodeNamePrefix(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns a prefix for a Node name (typically used for client node)\nthat contains the user and machine name.\n@return The node name prefix."
 		   });	
 		addAnnotation
-		  (getSymphony__AddonsROSFacade__GetROSMasterURI(), 
+		  (getApogyAddonsROSFacade__GetROSMasterURI(), 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nReturns the ROS Master URI value.\n@return The ROS_MASTER_URI environment variable value."
 		   });	
 		addAnnotation
-		  (getSymphony__AddonsROSFacade__GetROSHostname(), 
+		  (getApogyAddonsROSFacade__GetROSHostname(), 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nReturns the ROS Host Name value.\n@return The ROS_HOSTNAME environment variable value."
 		   });	
 		addAnnotation
-		  (getSymphony__AddonsROSFacade__GetROSIp(), 
+		  (getApogyAddonsROSFacade__GetROSIp(), 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nReturns the ROS IP value.\n@return The ROS_IP environment variable value."
 		   });
 	}
 
-} //Symphony__AddonsROSPackageImpl
+} //ApogyAddonsROSPackageImpl

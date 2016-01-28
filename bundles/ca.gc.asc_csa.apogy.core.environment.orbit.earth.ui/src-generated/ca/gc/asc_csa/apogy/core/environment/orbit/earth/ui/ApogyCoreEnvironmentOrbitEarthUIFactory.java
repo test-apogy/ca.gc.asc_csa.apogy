@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage
  * @generated
  */
-public interface Symphony__CoreEnvironmentOrbitEarthUIFactory extends EFactory {
+public interface ApogyCoreEnvironmentOrbitEarthUIFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitEarthUIFactory eINSTANCE = org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIFactoryImpl.init();
+	ApogyCoreEnvironmentOrbitEarthUIFactory eINSTANCE = ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Earth View Configuration List</em>'.
@@ -110,6 +110,6 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitEarthUIPackage getSymphony__CoreEnvironmentOrbitEarthUIPackage();
+	ApogyCoreEnvironmentOrbitEarthUIPackage getApogyCoreEnvironmentOrbitEarthUIPackage();
 
-} //Symphony__CoreEnvironmentOrbitEarthUIFactory
+} //ApogyCoreEnvironmentOrbitEarthUIFactory

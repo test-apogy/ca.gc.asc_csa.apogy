@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.ui.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
-import org.eclipse.symphony.addons.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.ui.Activator;
 
-public class SymphonyToolsUIPreferencesInitializer extends AbstractPreferenceInitializer {
+public class ApogyToolsUIPreferencesInitializer extends AbstractPreferenceInitializer {
 
 	@Override
 	public void initializeDefaultPreferences() 
@@ -13,7 +13,7 @@ public class SymphonyToolsUIPreferencesInitializer extends AbstractPreferenceIni
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		
 		// Initialize default Result Node flag visibility.
-		PreferenceConverter.setDefault(store, SymphonyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID, SymphonyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR);
+		PreferenceConverter.setDefault(store, ApogyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID, ApogyToolsUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR);
 						
 	}
 }

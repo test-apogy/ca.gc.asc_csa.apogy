@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
-import org.eclipse.symphony.examples.lidar.symphony.LidarData;
-import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.core.impl.ApogyInitializationDataImpl;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,13 +21,13 @@ import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymph
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarDataImpl#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lidar.apogy.impl.LidarDataImpl#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LidarDataImpl extends SymphonyInitializationDataImpl implements LidarData {
+public class LidarDataImpl extends ApogyInitializationDataImpl implements LidarData {
 	/**
 	 * The cached value of the '{@link #getFov() <em>Fov</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA;
+		return ApogyExamplesLidarApogyPackage.Literals.LIDAR_DATA;
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 		RectangularFrustrumFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV, oldFov, newFov);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV, oldFov, newFov);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -109,14 +109,14 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 		if (newFov != fov) {
 			NotificationChain msgs = null;
 			if (fov != null)
-				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV, null, msgs);
+				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV, null, msgs);
 			if (newFov != null)
-				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV, null, msgs);
+				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV, null, msgs);
 			msgs = basicSetFov(newFov, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV, newFov, newFov));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV, newFov, newFov));
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLidarApogyPackage.LIDAR_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV:
 				return basicSetFov(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -162,9 +162,9 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV:
 				return getFov();
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__INITIALIZED:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__INITIALIZED:
 				return isInitialized();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -178,10 +178,10 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV:
 				setFov((RectangularFrustrumFieldOfView)newValue);
 				return;
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__INITIALIZED:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
 		}
@@ -196,10 +196,10 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV:
 				setFov((RectangularFrustrumFieldOfView)null);
 				return;
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__INITIALIZED:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
 		}
@@ -214,9 +214,9 @@ public class LidarDataImpl extends SymphonyInitializationDataImpl implements Lid
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV:
 				return fov != null;
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__INITIALIZED:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

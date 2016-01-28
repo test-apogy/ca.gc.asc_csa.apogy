@@ -1,6 +1,6 @@
-package org.eclipse.symphony.core.ui;
+package ca.gc.asc_csa.apogy.core.ui;
 
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface ResultNodeSceneObject extends SceneObject
 {

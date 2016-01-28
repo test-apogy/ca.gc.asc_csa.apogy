@@ -8,11 +8,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_tools_vehicle -->
+      <!-- @generated apogy_tools_vehicle -->
       <package
-            uri="org.eclipse.symphony.addons.vehicle"
-            class="org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage"
-            genModel="model/symphony_addons_vehicle.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.vehicle"
+            class="ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage"
+            genModel="model/apogy_addons_vehicle.xcore"/>
    </extension>
 
 </plugin>

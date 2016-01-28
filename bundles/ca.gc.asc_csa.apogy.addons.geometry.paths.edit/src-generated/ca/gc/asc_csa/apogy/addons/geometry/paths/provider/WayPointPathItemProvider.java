@@ -3,7 +3,7 @@
  *
  * $Id: WayPointPathItemProvider.java,v 1.7.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 
 import java.text.DecimalFormat;
@@ -16,15 +16,15 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data3d.provider.CartesianCoordinatesSetItemProvider;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.CartesianCoordinatesSetItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.WayPointPath} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_parent_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__PARENT,
+				 ApogyCommonTopologyPackage.Literals.NODE__PARENT,
 				 true,
 				 false,
 				 true,
@@ -102,7 +102,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_description_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__DESCRIPTION,
+				 ApogyCommonTopologyPackage.Literals.NODE__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_nodeId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_nodeId_feature", "_UI_Node_type"),
-				 Symphony__CommonTopologyPackage.Literals.NODE__NODE_ID,
+				 ApogyCommonTopologyPackage.Literals.NODE__NODE_ID,
 				 true,
 				 false,
 				 false,
@@ -146,7 +146,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WayPointPath_length_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPath_length_feature", "_UI_WayPointPath_type"),
-				 Symphony__AddonsGeometryPathsPackage.Literals.WAY_POINT_PATH__LENGTH,
+				 ApogyAddonsGeometryPathsPackage.Literals.WAY_POINT_PATH__LENGTH,
 				 false,
 				 false,
 				 false,
@@ -202,9 +202,9 @@ public class WayPointPathItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPointPath.class)) {
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__DESCRIPTION:
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__NODE_ID:
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__LENGTH:
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__DESCRIPTION:
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__NODE_ID:
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH__LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -225,8 +225,8 @@ public class WayPointPathItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
+				(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 	}
 
 }

@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.ui.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIFactory;
-import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage;
-import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,24 +18,24 @@ import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet2
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData25DUIFactoryImpl extends EFactoryImpl implements Symphony__CommonGeometryData25DUIFactory {
+public class ApogyCommonGeometryData25DUIFactoryImpl extends EFactoryImpl implements ApogyCommonGeometryData25DUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData25DUIFactory init() {
+	public static ApogyCommonGeometryData25DUIFactory init() {
 		try {
-			Symphony__CommonGeometryData25DUIFactory theSymphony__CommonGeometryData25DUIFactory = (Symphony__CommonGeometryData25DUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonGeometryData25DUIPackage.eNS_URI);
-			if (theSymphony__CommonGeometryData25DUIFactory != null) {
-				return theSymphony__CommonGeometryData25DUIFactory;
+			ApogyCommonGeometryData25DUIFactory theApogyCommonGeometryData25DUIFactory = (ApogyCommonGeometryData25DUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonGeometryData25DUIPackage.eNS_URI);
+			if (theApogyCommonGeometryData25DUIFactory != null) {
+				return theApogyCommonGeometryData25DUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonGeometryData25DUIFactoryImpl();
+		return new ApogyCommonGeometryData25DUIFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Symphony__CommonGeometryData25DUIFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DUIFactoryImpl() {
+	public ApogyCommonGeometryData25DUIFactoryImpl() {
 		super();
 	}
 
@@ -56,7 +56,7 @@ public class Symphony__CommonGeometryData25DUIFactoryImpl extends EFactoryImpl i
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonGeometryData25DUIPackage.VOLUMETRIC_COORDINATES_SET25_DPRESENTATION: return createVolumetricCoordinatesSet25DPresentation();
+			case ApogyCommonGeometryData25DUIPackage.VOLUMETRIC_COORDINATES_SET25_DPRESENTATION: return createVolumetricCoordinatesSet25DPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,8 +77,8 @@ public class Symphony__CommonGeometryData25DUIFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DUIPackage getSymphony__CommonGeometryData25DUIPackage() {
-		return (Symphony__CommonGeometryData25DUIPackage)getEPackage();
+	public ApogyCommonGeometryData25DUIPackage getApogyCommonGeometryData25DUIPackage() {
+		return (ApogyCommonGeometryData25DUIPackage)getEPackage();
 	}
 
 	/**
@@ -88,8 +88,8 @@ public class Symphony__CommonGeometryData25DUIFactoryImpl extends EFactoryImpl i
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonGeometryData25DUIPackage getPackage() {
-		return Symphony__CommonGeometryData25DUIPackage.eINSTANCE;
+	public static ApogyCommonGeometryData25DUIPackage getPackage() {
+		return ApogyCommonGeometryData25DUIPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonGeometryData25DUIFactoryImpl
+} //ApogyCommonGeometryData25DUIFactoryImpl

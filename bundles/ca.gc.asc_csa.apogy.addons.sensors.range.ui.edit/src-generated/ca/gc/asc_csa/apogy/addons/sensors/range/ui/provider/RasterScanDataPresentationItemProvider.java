@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.ui.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
-import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_RasterScanDataPresentation_fovPresentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanDataPresentation_fovPresentationMode_feature", "_UI_RasterScanDataPresentation_type"),
-				 Symphony__AddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE,
+				 ApogyAddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_RasterScanDataPresentation_fovVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanDataPresentation_fovVisible_feature", "_UI_RasterScanDataPresentation_type"),
-				 Symphony__AddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE,
+				 ApogyAddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_RasterScanDataPresentation_dataVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanDataPresentation_dataVisible_feature", "_UI_RasterScanDataPresentation_type"),
-				 Symphony__AddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE,
+				 ApogyAddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -158,9 +158,9 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RasterScanDataPresentation.class)) {
-			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
-			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
-			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
+			case ApogyAddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
+			case ApogyAddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
+			case ApogyAddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

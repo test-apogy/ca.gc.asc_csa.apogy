@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.common.io.jinput"
-            class="org.eclipse.symphony.common.io.jinput.provider.Symphony__CommonIOJInputItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.common.io.jinput"
+            class="ca.gc.asc_csa.apogy.common.io.jinput.provider.ApogyCommonIOJInputItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

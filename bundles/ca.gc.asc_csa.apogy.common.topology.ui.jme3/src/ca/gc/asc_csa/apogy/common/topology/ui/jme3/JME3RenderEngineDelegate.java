@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -16,15 +16,15 @@ import javax.vecmath.Tuple3d;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.viewer.IRenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.IRenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer;
 
 import com.jme3.math.Quaternion;
 import com.jme3.math.Transform;
@@ -71,7 +71,7 @@ public class JME3RenderEngineDelegate  implements IRenderEngineDelegate
 			Node node = nodePresentation.getNode();
 			
 			// Gets the JME3Adapter for the added Node.
-			JME3Adapter jme3Adapter = org.eclipse.symphony.common.topology.ui.jme3.Activator.getDefault().getJME3AdapterFactory().getAdapterFor(node);
+			JME3Adapter jme3Adapter = ca.gc.asc_csa.apogy.common.topology.ui.jme3.Activator.getDefault().getJME3AdapterFactory().getAdapterFor(node);
 			
 			if(jme3Adapter != null)
 			{
@@ -138,7 +138,7 @@ public class JME3RenderEngineDelegate  implements IRenderEngineDelegate
 			Node node = nodePresentation.getNode();
 			
 			// Gets the JME3Adapter for the added Node.
-			JME3Adapter jme3Adapter = org.eclipse.symphony.common.topology.ui.jme3.Activator.getDefault().getJME3AdapterFactory().getAdapterFor(node);
+			JME3Adapter jme3Adapter = ca.gc.asc_csa.apogy.common.topology.ui.jme3.Activator.getDefault().getJME3AdapterFactory().getAdapterFor(node);
 
 			if(jme3Adapter != null)
 			{
@@ -320,10 +320,10 @@ public class JME3RenderEngineDelegate  implements IRenderEngineDelegate
 		try
 		{
 			// First, get the extent of the scene and its center.
-			org.eclipse.symphony.common.math.Tuple3d min = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
-			org.eclipse.symphony.common.math.Tuple3d max = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
+			ca.gc.asc_csa.apogy.common.math.Tuple3d min = ApogyCommonMathFactory.eINSTANCE.createTuple3d(); 
+			ca.gc.asc_csa.apogy.common.math.Tuple3d max = ApogyCommonMathFactory.eINSTANCE.createTuple3d(); 
 			
-			Symphony__CommonTopologyUIFacade.INSTANCE.findExtent(topologyPresentationSet.getGraphicsContext().getTopology(), topologyPresentationSet, min, max);
+			ApogyCommonTopologyUIFacade.INSTANCE.findExtent(topologyPresentationSet.getGraphicsContext().getTopology(), topologyPresentationSet, min, max);
 					
 			Tuple3d center = new Point3d( (max.getX() + min.getX()) / 2.0, (max.getY() + min.getY())/ 2.0, (max.getZ() + min.getZ()) / 2.0);
 						

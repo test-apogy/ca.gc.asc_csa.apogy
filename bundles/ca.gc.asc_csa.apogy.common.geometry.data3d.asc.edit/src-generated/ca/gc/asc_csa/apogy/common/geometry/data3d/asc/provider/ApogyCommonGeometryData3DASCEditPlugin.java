@@ -1,31 +1,31 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
 
-import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CommonGeometryData3DASC edit plugin.
+ * This is the central singleton for the ApogyCommonGeometryData3DASC edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonGeometryData3DASCEditPlugin extends EMFPlugin {
+public final class ApogyCommonGeometryData3DASCEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonGeometryData3DASCEditPlugin INSTANCE = new Symphony__CommonGeometryData3DASCEditPlugin();
+	public static final ApogyCommonGeometryData3DASCEditPlugin INSTANCE = new ApogyCommonGeometryData3DASCEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -41,12 +41,12 @@ public final class Symphony__CommonGeometryData3DASCEditPlugin extends EMFPlugin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DASCEditPlugin() {
+	public ApogyCommonGeometryData3DASCEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

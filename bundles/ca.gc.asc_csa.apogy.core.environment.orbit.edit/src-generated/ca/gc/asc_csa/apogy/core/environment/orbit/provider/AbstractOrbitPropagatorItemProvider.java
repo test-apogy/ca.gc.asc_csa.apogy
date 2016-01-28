@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -83,7 +83,7 @@ public class AbstractOrbitPropagatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class AbstractOrbitPropagatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class AbstractOrbitPropagatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractOrbitPropagator_initialOrbit_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitPropagator_initialOrbit_feature", "_UI_AbstractOrbitPropagator_type"),
-				 Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT,
+				 ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT,
 				 true,
 				 false,
 				 true,
@@ -149,7 +149,7 @@ public class AbstractOrbitPropagatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractOrbitPropagator_validFromDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitPropagator_validFromDate_feature", "_UI_AbstractOrbitPropagator_type"),
-				 Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE,
+				 ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE,
 				 true,
 				 false,
 				 false,
@@ -171,7 +171,7 @@ public class AbstractOrbitPropagatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractOrbitPropagator_validToDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitPropagator_validToDate_feature", "_UI_AbstractOrbitPropagator_type"),
-				 Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE,
+				 ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE,
 				 true,
 				 false,
 				 false,
@@ -192,8 +192,8 @@ public class AbstractOrbitPropagatorItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER);
 		}
 		return childrenFeatures;
 	}
@@ -238,14 +238,14 @@ public class AbstractOrbitPropagatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractOrbitPropagator.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

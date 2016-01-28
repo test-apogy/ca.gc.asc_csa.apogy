@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReference#getTypeMember <em>Type Member</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference#getTypeMember <em>Type Member</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReference()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReference()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface TypeMemberReference extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member</em>' reference.
 	 * @see #setTypeMember(TypeMember)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReference_TypeMember()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReference_TypeMember()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -42,7 +42,7 @@ public interface TypeMemberReference extends EObject
   TypeMember getTypeMember();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMemberReference#getTypeMember <em>Type Member</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference#getTypeMember <em>Type Member</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type Member</em>' reference.

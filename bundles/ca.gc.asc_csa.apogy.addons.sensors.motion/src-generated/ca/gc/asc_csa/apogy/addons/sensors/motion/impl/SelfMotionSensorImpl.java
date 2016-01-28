@@ -4,12 +4,12 @@
  *
  * $Id: SelfMotionSensorImpl.java,v 1.2.4.2 2015/05/21 15:50:25 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.motion.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
-import org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class SelfMotionSensorImpl extends SensorImpl implements SelfMotionSensor
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsMotionPackage.Literals.SELF_MOTION_SENSOR;
+		return ApogyAddonsSensorsMotionPackage.Literals.SELF_MOTION_SENSOR;
 	}
 
 } //SelfMotionSensorImpl

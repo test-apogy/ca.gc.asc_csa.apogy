@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import javax.measure.unit.Unit;
 
@@ -11,18 +11,18 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +32,8 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getAzimuthFeatureReference <em>Azimuth Feature Reference</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getElevationFeatureReference <em>Elevation Feature Reference</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getAzimuthFeatureReference <em>Azimuth Feature Reference</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getElevationFeatureReference <em>Elevation Feature Reference</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,7 +78,7 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY;
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		AzimuthFeatureReference oldAzimuthFeatureReference = azimuthFeatureReference;
 		azimuthFeatureReference = newAzimuthFeatureReference;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, oldAzimuthFeatureReference, newAzimuthFeatureReference);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, oldAzimuthFeatureReference, newAzimuthFeatureReference);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -114,14 +114,14 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		if (newAzimuthFeatureReference != azimuthFeatureReference) {
 			NotificationChain msgs = null;
 			if (azimuthFeatureReference != null)
-				msgs = ((InternalEObject)azimuthFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)azimuthFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
 			if (newAzimuthFeatureReference != null)
-				msgs = ((InternalEObject)newAzimuthFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)newAzimuthFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
 			msgs = basicSetAzimuthFeatureReference(newAzimuthFeatureReference, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, newAzimuthFeatureReference, newAzimuthFeatureReference));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, newAzimuthFeatureReference, newAzimuthFeatureReference));
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		ElevationFeatureReference oldElevationFeatureReference = elevationFeatureReference;
 		elevationFeatureReference = newElevationFeatureReference;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, oldElevationFeatureReference, newElevationFeatureReference);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, oldElevationFeatureReference, newElevationFeatureReference);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -157,14 +157,14 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		if (newElevationFeatureReference != elevationFeatureReference) {
 			NotificationChain msgs = null;
 			if (elevationFeatureReference != null)
-				msgs = ((InternalEObject)elevationFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)elevationFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
 			if (newElevationFeatureReference != null)
-				msgs = ((InternalEObject)newElevationFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)newElevationFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
 			msgs = basicSetElevationFeatureReference(newElevationFeatureReference, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, newElevationFeatureReference, newElevationFeatureReference));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, newElevationFeatureReference, newElevationFeatureReference));
 	}
 
 	/**
@@ -175,9 +175,9 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				return basicSetAzimuthFeatureReference(null, msgs);
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				return basicSetElevationFeatureReference(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -191,9 +191,9 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				return getAzimuthFeatureReference();
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				return getElevationFeatureReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -207,10 +207,10 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				setAzimuthFeatureReference((AzimuthFeatureReference)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				setElevationFeatureReference((ElevationFeatureReference)newValue);
 				return;
 		}
@@ -225,10 +225,10 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				setAzimuthFeatureReference((AzimuthFeatureReference)null);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				setElevationFeatureReference((ElevationFeatureReference)null);
 				return;
 		}
@@ -243,9 +243,9 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				return azimuthFeatureReference != null;
-			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case ApogyAddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				return elevationFeatureReference != null;
 		}
 		return super.eIsSet(featureID);
@@ -283,15 +283,15 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	
 	protected double getValue(VariableFeatureReference variableFeatureReference)
 	{
-		Number featureValue = (Number) Symphony__CoreInvocatorFacade.INSTANCE.getEMFFeatureValue(variableFeatureReference);
+		Number featureValue = (Number) ApogyCoreInvocatorFacade.INSTANCE.getEMFFeatureValue(variableFeatureReference);
 		
 		// Gets the feature associated with the azimuth.
-		AbstractFeatureListNode abstractFeatureListNode = Symphony__CommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
+		AbstractFeatureListNode abstractFeatureListNode = ApogyCommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
 		AbstractFeatureSpecifier abstractFeatureSpecifier = (AbstractFeatureSpecifier) abstractFeatureListNode;
 		ETypedElement eTypedElement = abstractFeatureSpecifier.getStructuralFeature();
 				
 		// Gets the units associated with the feature
-		Unit<?> units = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
+		Unit<?> units = ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
 		
 		double value = featureValue.doubleValue();				
 		if(units != null)

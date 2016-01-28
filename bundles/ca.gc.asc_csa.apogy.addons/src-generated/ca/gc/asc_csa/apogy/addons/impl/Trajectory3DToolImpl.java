@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,23 +20,23 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.Symphony__AddonsFactory;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,13 +46,13 @@ import org.eclipse.symphony.core.invocator.Variable;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#isPenDown <em>Pen Down</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getDistanceThreshold <em>Distance Threshold</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getTotalDistance <em>Total Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getPaths <em>Paths</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getPoseProvider <em>Pose Provider</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl#isPenDown <em>Pen Down</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl#getDistanceThreshold <em>Distance Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl#getTotalDistance <em>Total Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl#getPaths <em>Paths</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl#getPoseProvider <em>Pose Provider</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.Trajectory3DToolImpl#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -176,7 +176,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL;
+		return ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL;
 	}
 		
 	@Override
@@ -244,7 +244,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		boolean oldPenDown = penDown;
 		penDown = newPenDown;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN, oldPenDown, penDown));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN, oldPenDown, penDown));
 	}
 	
 	/**
@@ -258,7 +258,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -282,7 +282,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -303,7 +303,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		double oldDistanceThreshold = distanceThreshold;
 		distanceThreshold = newDistanceThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
 	}
 
 	/**
@@ -343,7 +343,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		double oldTotalDistance = totalDistance;
 		totalDistance = newTotalDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
 	}
 
 	/**
@@ -353,7 +353,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 */
 	public EList<WayPointPath> getPaths() {
 		if (paths == null) {
-			paths = new EObjectContainmentEList<WayPointPath>(WayPointPath.class, this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS);
+			paths = new EObjectContainmentEList<WayPointPath>(WayPointPath.class, this, ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS);
 		}
 		return paths;
 	}
@@ -369,7 +369,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			poseProvider = (PoseProvider)eResolveProxy(oldPoseProvider);
 			if (poseProvider != oldPoseProvider) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
 			}
 		}
 		return poseProvider;
@@ -414,7 +414,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		PoseProvider oldPoseProvider = poseProvider;
 		poseProvider = newPoseProvider;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
 	}
 
 	/**
@@ -428,7 +428,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 		if(node == null)
 		{
-			node = Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode();
+			node = ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode();
 			setTrajectory3DToolNode(node);
 		}
 		
@@ -446,7 +446,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			trajectory3DToolNode = (Trajectory3DToolNode)eResolveProxy(oldTrajectory3DToolNode);
 			if (trajectory3DToolNode != oldTrajectory3DToolNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, trajectory3DToolNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, trajectory3DToolNode));
 			}
 		}
 		return trajectory3DToolNode;
@@ -470,7 +470,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		Trajectory3DToolNode oldTrajectory3DToolNode = trajectory3DToolNode;
 		trajectory3DToolNode = newTrajectory3DToolNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, newTrajectory3DToolNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, newTrajectory3DToolNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -485,14 +485,14 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		if (newTrajectory3DToolNode != trajectory3DToolNode) {
 			NotificationChain msgs = null;
 			if (trajectory3DToolNode != null)
-				msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
+				msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
 			if (newTrajectory3DToolNode != null)
-				msgs = ((InternalEObject)newTrajectory3DToolNode).eInverseAdd(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
+				msgs = ((InternalEObject)newTrajectory3DToolNode).eInverseAdd(this, ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
 			msgs = basicSetTrajectory3DToolNode(newTrajectory3DToolNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, newTrajectory3DToolNode, newTrajectory3DToolNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, newTrajectory3DToolNode, newTrajectory3DToolNode));
 	}
 
 	/**
@@ -503,9 +503,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				if (trajectory3DToolNode != null)
-					msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
+					msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, ApogyAddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
 				return basicSetTrajectory3DToolNode((Trajectory3DToolNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -519,9 +519,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				return ((InternalEList<?>)getPaths()).basicRemove(otherEnd, msgs);
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				return basicSetTrajectory3DToolNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -535,21 +535,21 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				return isPenDown();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				return getDistanceThreshold();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				return getTotalDistance();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				return getPaths();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				if (resolve) return getPoseProvider();
 				return basicGetPoseProvider();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				if (resolve) return getTrajectory3DToolNode();
 				return basicGetTrajectory3DToolNode();
 		}
@@ -565,26 +565,26 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				setPenDown((Boolean)newValue);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				setDistanceThreshold((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				setTotalDistance((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				getPaths().clear();
 				getPaths().addAll((Collection<? extends WayPointPath>)newValue);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				setPoseProvider((PoseProvider)newValue);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				setTrajectory3DToolNode((Trajectory3DToolNode)newValue);
 				return;
 		}
@@ -599,25 +599,25 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				setPenDown(PEN_DOWN_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				setVariable((Variable)null);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				setDistanceThreshold(DISTANCE_THRESHOLD_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				setTotalDistance(TOTAL_DISTANCE_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				getPaths().clear();
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				setPoseProvider((PoseProvider)null);
 				return;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				setTrajectory3DToolNode((Trajectory3DToolNode)null);
 				return;
 		}
@@ -632,19 +632,19 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				return penDown != PEN_DOWN_EDEFAULT;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				return variable != null;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				return distanceThreshold != DISTANCE_THRESHOLD_EDEFAULT;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				return totalDistance != TOTAL_DISTANCE_EDEFAULT;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				return paths != null && !paths.isEmpty();
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				return poseProvider != null;
-			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case ApogyAddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				return trajectory3DToolNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -705,19 +705,19 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 		 try
 		 {
-			  AbstractTypeImplementation abstractTypeImplementation = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());			  
-			  if(abstractTypeImplementation.getAdapterInstance() instanceof SymphonySystemApiAdapter)
+			  AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());			  
+			  if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
 			  {
-				  SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
-				  setPoseProvider(symphonySystemApiAdapter);
+				  ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
+				  setPoseProvider(apogySystemApiAdapter);
 				  
 				  // Resets pose.						 
 				  lastPoseAdded = null;
 				  currentWayPointPath = null;
 				  
-				  if(symphonySystemApiAdapter.getPoseTransform() != null)
+				  if(apogySystemApiAdapter.getPoseTransform() != null)
 				  {					 
-					  updatePose(symphonySystemApiAdapter.getPoseTransform());
+					  updatePose(apogySystemApiAdapter.getPoseTransform());
 				  }				  				
 			  }
 			  
@@ -738,7 +738,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	private void penDown()
 	{
 		// Adds a new path to the list
-		WayPointPath newWayPointPath = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath(); 
+		WayPointPath newWayPointPath = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath(); 
 		getPaths().add(newWayPointPath);
 		currentWayPointPath = newWayPointPath;
 	}
@@ -784,7 +784,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	private void addPoint(Point3d point)
 	{		
 		// Adds the point to the current WayPointPath		
-		getCurrentWayPointPath().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
+		getCurrentWayPointPath().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
 		
 		// Update last pose.
 		lastPoseAdded = new Point3d(point);
@@ -803,7 +803,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		{
 			if(getPaths().isEmpty())
 			{
-				currentWayPointPath = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+				currentWayPointPath = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 				getPaths().add(currentWayPointPath);
 			}
 			else
@@ -837,7 +837,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+				  if(msg.getFeatureID(PoseProvider.class) == ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 				  {		
 					  if(isPenDown())
 					  {

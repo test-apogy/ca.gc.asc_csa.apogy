@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -15,15 +15,15 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
-import org.eclipse.symphony.core.environment.provider.GeographicCoordinatesItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.provider.GeographicCoordinatesItemProvider;
 
-import org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class AbstractSatelliteCommandItemProvider extends GeographicCoordinatesI
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class AbstractSatelliteCommandItemProvider extends GeographicCoordinatesI
 				 getResourceLocator(),
 				 getString("_UI_AbstractSatelliteCommand_satellite_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractSatelliteCommand_satellite_feature", "_UI_AbstractSatelliteCommand_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_SATELLITE_COMMAND__SATELLITE,
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_SATELLITE_COMMAND__SATELLITE,
 				 true,
 				 false,
 				 true,
@@ -114,7 +114,7 @@ public class AbstractSatelliteCommandItemProvider extends GeographicCoordinatesI
 				 getResourceLocator(),
 				 getString("_UI_AbstractSatelliteCommand_constellationRequest_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractSatelliteCommand_constellationRequest_feature", "_UI_AbstractSatelliteCommand_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST,
+				 ApogyExamplesSatellitePackage.Literals.ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST,
 				 true,
 				 false,
 				 true,
@@ -159,7 +159,7 @@ public class AbstractSatelliteCommandItemProvider extends GeographicCoordinatesI
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractSatelliteCommand.class)) {
-			case Symphony__ExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
+			case ApogyExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

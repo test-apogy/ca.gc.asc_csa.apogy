@@ -4,15 +4,15 @@
  *
  * $Id: RPROConstraintImpl.java,v 1.3.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +22,8 @@ import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.RPROConstraintImpl#getLinearStrength <em>Linear Strength</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.RPROConstraintImpl#getAngularStrength <em>Angular Strength</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.RPROConstraintImpl#getLinearStrength <em>Linear Strength</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.RPROConstraintImpl#getAngularStrength <em>Angular Strength</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 			linearStrength = (Tuple3d)eResolveProxy(oldLinearStrength);
 			if (linearStrength != oldLinearStrength) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH, oldLinearStrength, linearStrength));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH, oldLinearStrength, linearStrength));
 			}
 		}
 		return linearStrength;
@@ -103,7 +103,7 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 		Tuple3d oldLinearStrength = linearStrength;
 		linearStrength = newLinearStrength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH, oldLinearStrength, linearStrength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH, oldLinearStrength, linearStrength));
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 			angularStrength = (Tuple3d)eResolveProxy(oldAngularStrength);
 			if (angularStrength != oldAngularStrength) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH, oldAngularStrength, angularStrength));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH, oldAngularStrength, angularStrength));
 			}
 		}
 		return angularStrength;
@@ -141,7 +141,7 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 		Tuple3d oldAngularStrength = angularStrength;
 		angularStrength = newAngularStrength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH, oldAngularStrength, angularStrength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH, oldAngularStrength, angularStrength));
 	}
 
 	/**
@@ -152,10 +152,10 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
 				if (resolve) return getLinearStrength();
 				return basicGetLinearStrength();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
 				if (resolve) return getAngularStrength();
 				return basicGetAngularStrength();
 		}
@@ -170,10 +170,10 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
 				setLinearStrength((Tuple3d)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
 				setAngularStrength((Tuple3d)newValue);
 				return;
 		}
@@ -188,10 +188,10 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
 				setLinearStrength((Tuple3d)null);
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
 				setAngularStrength((Tuple3d)null);
 				return;
 		}
@@ -206,9 +206,9 @@ public class RPROConstraintImpl extends AbstractConstraintImpl implements RPROCo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__LINEAR_STRENGTH:
 				return linearStrength != null;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT__ANGULAR_STRENGTH:
 				return angularStrength != null;
 		}
 		return super.eIsSet(featureID);

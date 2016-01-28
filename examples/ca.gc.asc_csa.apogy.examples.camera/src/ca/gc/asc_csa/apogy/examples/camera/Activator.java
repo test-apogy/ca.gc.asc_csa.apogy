@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.camera;
+package ca.gc.asc_csa.apogy.examples.camera;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -14,7 +14,7 @@ public class Activator implements BundleActivator
 	 * This is the ID of the current bundle, which is required to
 	 * create path to the 
 	 */
-	public final static String ID = "org.eclipse.symphony.examples.camera";
+	public final static String ID = "ca.gc.asc_csa.apogy.examples.camera";
 	
 	/**
 	 * This is a single activator instance which is shared

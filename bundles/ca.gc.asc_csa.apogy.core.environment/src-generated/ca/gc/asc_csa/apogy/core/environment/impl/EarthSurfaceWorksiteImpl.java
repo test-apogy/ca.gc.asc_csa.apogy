@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -12,20 +12,20 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GeodeticCalculator;
 import org.gavaghan.geodesy.GeodeticCurve;
@@ -39,9 +39,9 @@ import org.gavaghan.geodesy.GlobalCoordinates;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteImpl#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteImpl#getXAxisAzimuth <em>XAxis Azimuth</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteImpl#getEarthSky <em>Earth Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.EarthSurfaceWorksiteImpl#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.EarthSurfaceWorksiteImpl#getXAxisAzimuth <em>XAxis Azimuth</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.EarthSurfaceWorksiteImpl#getEarthSky <em>Earth Sky</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,7 +94,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE;
+		return ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE;
 	}
 
   @Override
@@ -102,7 +102,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
   	{
 	  if(!(super.getWorksiteNode() instanceof EarthSurfaceWorksiteNode))
 		{
-			worksiteNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
+			worksiteNode = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
 			worksiteNode.setWorksite(this);  			
 		}
 		
@@ -120,7 +120,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	  GeographicCoordinates coords = getGeographicalCoordinatesGen();
 	  if(coords == null)
 	  {
-		  coords = Symphony__CoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();		  
+		  coords = ApogyCoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();		  
 		  setGeographicalCoordinates(coords);
 	  }
 	  
@@ -147,7 +147,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 		GeographicCoordinates oldGeographicalCoordinates = geographicalCoordinates;
 		geographicalCoordinates = newGeographicalCoordinates;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, oldGeographicalCoordinates, newGeographicalCoordinates);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, oldGeographicalCoordinates, newGeographicalCoordinates);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -163,14 +163,14 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 		if (newGeographicalCoordinates != geographicalCoordinates) {
 			NotificationChain msgs = null;
 			if (geographicalCoordinates != null)
-				msgs = ((InternalEObject)geographicalCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, null, msgs);
+				msgs = ((InternalEObject)geographicalCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, null, msgs);
 			if (newGeographicalCoordinates != null)
-				msgs = ((InternalEObject)newGeographicalCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, null, msgs);
+				msgs = ((InternalEObject)newGeographicalCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, null, msgs);
 			msgs = basicSetGeographicalCoordinates(newGeographicalCoordinates, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, newGeographicalCoordinates, newGeographicalCoordinates));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, newGeographicalCoordinates, newGeographicalCoordinates));
 	}
 
   /**
@@ -193,7 +193,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 		double oldXAxisAzimuth = xAxisAzimuth;
 		xAxisAzimuth = newXAxisAzimuth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH, oldXAxisAzimuth, xAxisAzimuth));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH, oldXAxisAzimuth, xAxisAzimuth));
 	}
 
   /**
@@ -207,7 +207,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	  
 	  if(es == null)
 	  {
-		  es = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSky();		  
+		  es = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSky();		  
 		  setSky(es);
 	  }
 	  
@@ -268,7 +268,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 		GeodeticCalculator geoCalc = new GeodeticCalculator();
 		GlobalCoordinates endGlobalCoordinates = geoCalc.calculateEndingGlobalCoordinates(reference, origin, startBearing, distance);
 						
-		GeographicCoordinates result = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+		GeographicCoordinates result = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 		
 		double latitude = Math.toRadians(endGlobalCoordinates.getLatitude());
 		double longitude = Math.toRadians(endGlobalCoordinates.getLongitude());
@@ -288,7 +288,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	 */
 	public Tuple3d convertToXYZPosition(GeographicCoordinates geographicalCoordinates) 
 	{
-		Tuple3d result = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
+		Tuple3d result = ApogyCommonMathFactory.eINSTANCE.createTuple3d();
 		
 		GlobalCoordinates origin = new GlobalCoordinates(Math.toDegrees(getGeographicalCoordinates().getLatitude()), 
 														 Math.toDegrees(getGeographicalCoordinates().getLongitude()));
@@ -331,7 +331,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 				return basicSetGeographicalCoordinates(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -346,11 +346,11 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 				return getGeographicalCoordinates();
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
 				return getXAxisAzimuth();
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
 				if (resolve) return getEarthSky();
 				return basicGetEarthSky();
 		}
@@ -366,13 +366,13 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 				setGeographicalCoordinates((GeographicCoordinates)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
 				setXAxisAzimuth((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
 				setEarthSky((EarthSky)newValue);
 				return;
 		}
@@ -388,13 +388,13 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 				setGeographicalCoordinates((GeographicCoordinates)null);
 				return;
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
 				setXAxisAzimuth(XAXIS_AZIMUTH_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
 				setEarthSky((EarthSky)null);
 				return;
 		}
@@ -410,11 +410,11 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 				return geographicalCoordinates != null;
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
 				return xAxisAzimuth != XAXIS_AZIMUTH_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__EARTH_SKY:
 				return basicGetEarthSky() != null;
 		}
 		return super.eIsSet(featureID);
@@ -428,9 +428,9 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE___CONVERT_TO_GEOGRAPHIC_COORDINATES__TUPLE3D:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE___CONVERT_TO_GEOGRAPHIC_COORDINATES__TUPLE3D:
 				return convertToGeographicCoordinates((Tuple3d)arguments.get(0));
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE___CONVERT_TO_XYZ_POSITION__GEOGRAPHICCOORDINATES:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE___CONVERT_TO_XYZ_POSITION__GEOGRAPHICCOORDINATES:
 				return convertToXYZPosition((GeographicCoordinates)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

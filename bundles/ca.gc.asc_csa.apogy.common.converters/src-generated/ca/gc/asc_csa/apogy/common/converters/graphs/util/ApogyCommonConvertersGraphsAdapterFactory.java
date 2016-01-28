@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.graphs.util;
+package ca.gc.asc_csa.apogy.common.converters.graphs.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,24 +10,24 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.converters.graphs.*;
+import ca.gc.asc_csa.apogy.common.converters.graphs.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsPackage
+ * @see ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage
  * @generated
  */
-public class Symphony__CommonConvertersGraphsAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonConvertersGraphsAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonConvertersGraphsPackage modelPackage;
+	protected static ApogyCommonConvertersGraphsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__CommonConvertersGraphsAdapterFactory extends AdapterFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersGraphsAdapterFactory() {
+	public ApogyCommonConvertersGraphsAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonConvertersGraphsPackage.eINSTANCE;
+			modelPackage = ApogyCommonConvertersGraphsPackage.eINSTANCE;
 		}
 	}
 
@@ -66,11 +66,11 @@ public class Symphony__CommonConvertersGraphsAdapterFactory extends AdapterFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonConvertersGraphsSwitch<Adapter> modelSwitch =
-		new Symphony__CommonConvertersGraphsSwitch<Adapter>() {
+	protected ApogyCommonConvertersGraphsSwitch<Adapter> modelSwitch =
+		new ApogyCommonConvertersGraphsSwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__CommonConvertersGraphsFacade(Symphony__CommonConvertersGraphsFacade object) {
-				return createSymphony__CommonConvertersGraphsFacadeAdapter();
+			public Adapter caseApogyCommonConvertersGraphsFacade(ApogyCommonConvertersGraphsFacade object) {
+				return createApogyCommonConvertersGraphsFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -93,16 +93,16 @@ public class Symphony__CommonConvertersGraphsAdapterFactory extends AdapterFacto
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade
+	 * @see ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonConvertersGraphsFacadeAdapter() {
+	public Adapter createApogyCommonConvertersGraphsFacadeAdapter() {
 		return null;
 	}
 
@@ -118,4 +118,4 @@ public class Symphony__CommonConvertersGraphsAdapterFactory extends AdapterFacto
 		return null;
 	}
 
-} //Symphony__CommonConvertersGraphsAdapterFactory
+} //ApogyCommonConvertersGraphsAdapterFactory

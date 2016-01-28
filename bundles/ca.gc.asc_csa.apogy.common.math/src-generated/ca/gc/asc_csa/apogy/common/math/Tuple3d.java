@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.Tuple3d#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Tuple3d#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Tuple3d#getZ <em>Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getZ <em>Z</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d()
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getTuple3d()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface Tuple3d extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d_X()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getTuple3d_X()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getX();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Tuple3d#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getX <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>X</em>' attribute.
@@ -60,14 +60,14 @@ public interface Tuple3d extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d_Y()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getTuple3d_Y()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getY();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Tuple3d#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getY <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Y</em>' attribute.
@@ -86,14 +86,14 @@ public interface Tuple3d extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d_Z()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getTuple3d_Z()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getZ();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Tuple3d#getZ <em>Z</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getZ <em>Z</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Z</em>' attribute.
@@ -105,7 +105,7 @@ public interface Tuple3d extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.math.VecmathTuple3d" unique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.math.VecmathTuple3d" unique="false"
 	 * @generated
 	 */
 	javax.vecmath.Tuple3d asTuple3d();

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.DisplaysListsContainer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class DisplaysListsContainerItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +121,7 @@ public class DisplaysListsContainerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DisplaysListsContainer.class)) {
-			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case ApogyCoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,8 +142,8 @@ public class DisplaysListsContainerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createDisplaysList()));
+				(ApogyCoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createDisplaysList()));
 	}
 
 }

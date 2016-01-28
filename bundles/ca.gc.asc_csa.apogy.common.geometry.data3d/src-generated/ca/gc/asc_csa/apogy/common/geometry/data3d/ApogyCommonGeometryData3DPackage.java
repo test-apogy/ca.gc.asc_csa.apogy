@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,12 +25,12 @@ import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData3D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData3D' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.edit/src-generated' testsDirectory='/org.eclipse.symphony.common.geometry.data3d.tests/src-generated' basePackage='org.eclipse.symphony.common.geometry'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData3D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonGeometryData3D' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.edit/src-generated' testsDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.tests/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry'"
  * @generated
  */
-public interface Symphony__CommonGeometryData3DPackage extends EPackage {
+public interface ApogyCommonGeometryData3DPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -45,7 +45,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.geometry.data3d";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.geometry.data3d";
 
 	/**
 	 * The package namespace name.
@@ -61,14 +61,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DPackage eINSTANCE = org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl.init();
+	ApogyCommonGeometryData3DPackage eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl <em>Cartesian Polygon</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPolygonImpl <em>Cartesian Polygon</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPolygon()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPolygonImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPolygon()
 	 * @generated
 	 */
 	int CARTESIAN_POLYGON = 0;
@@ -80,7 +80,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POLYGON__VERTICES = Symphony__CommonGeometryDataPackage.POLYGON__VERTICES;
+	int CARTESIAN_POLYGON__VERTICES = ApogyCommonGeometryDataPackage.POLYGON__VERTICES;
 
 	/**
 	 * The feature id for the '<em><b>Surface</b></em>' attribute.
@@ -89,7 +89,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POLYGON__SURFACE = Symphony__CommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 0;
+	int CARTESIAN_POLYGON__SURFACE = ApogyCommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Normal</b></em>' attribute.
@@ -98,7 +98,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POLYGON__NORMAL = Symphony__CommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 1;
+	int CARTESIAN_POLYGON__NORMAL = ApogyCommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -107,7 +107,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POLYGON__CENTROID = Symphony__CommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 2;
+	int CARTESIAN_POLYGON__CENTROID = ApogyCommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Polygon</em>' class.
@@ -116,7 +116,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POLYGON_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 3;
+	int CARTESIAN_POLYGON_FEATURE_COUNT = ApogyCommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Polygon</em>' class.
@@ -125,14 +125,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POLYGON_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.POLYGON_OPERATION_COUNT + 0;
+	int CARTESIAN_POLYGON_OPERATION_COUNT = ApogyCommonGeometryDataPackage.POLYGON_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangleImpl <em>Cartesian Triangle</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangleImpl <em>Cartesian Triangle</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangleImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangle()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangleImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangle()
 	 * @generated
 	 */
 	int CARTESIAN_TRIANGLE = 1;
@@ -192,11 +192,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_TRIANGLE_OPERATION_COUNT = CARTESIAN_POLYGON_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalPolygonImpl <em>Spherical Polygon</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalPolygonImpl <em>Spherical Polygon</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalPolygonImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalPolygon()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalPolygonImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalPolygon()
 	 * @generated
 	 */
 	int SPHERICAL_POLYGON = 2;
@@ -208,7 +208,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_POLYGON__VERTICES = Symphony__CommonGeometryDataPackage.POLYGON__VERTICES;
+	int SPHERICAL_POLYGON__VERTICES = ApogyCommonGeometryDataPackage.POLYGON__VERTICES;
 
 	/**
 	 * The number of structural features of the '<em>Spherical Polygon</em>' class.
@@ -217,7 +217,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_POLYGON_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 0;
+	int SPHERICAL_POLYGON_FEATURE_COUNT = ApogyCommonGeometryDataPackage.POLYGON_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spherical Polygon</em>' class.
@@ -226,14 +226,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_POLYGON_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.POLYGON_OPERATION_COUNT + 0;
+	int SPHERICAL_POLYGON_OPERATION_COUNT = ApogyCommonGeometryDataPackage.POLYGON_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangleImpl <em>Spherical Triangle</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangleImpl <em>Spherical Triangle</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangleImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalTriangle()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangleImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalTriangle()
 	 * @generated
 	 */
 	int SPHERICAL_TRIANGLE = 3;
@@ -266,11 +266,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int SPHERICAL_TRIANGLE_OPERATION_COUNT = SPHERICAL_POLYGON_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl <em>Cartesian Position Coordinates</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl <em>Cartesian Position Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPositionCoordinates()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPositionCoordinates()
 	 * @generated
 	 */
 	int CARTESIAN_POSITION_COORDINATES = 4;
@@ -282,7 +282,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES__X = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
+	int CARTESIAN_POSITION_COORDINATES__X = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -291,7 +291,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES__Y = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
+	int CARTESIAN_POSITION_COORDINATES__Y = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Z</b></em>' attribute.
@@ -300,7 +300,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES__Z = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
+	int CARTESIAN_POSITION_COORDINATES__Z = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Position Coordinates</em>' class.
@@ -309,7 +309,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
+	int CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>As Point3d</em>' operation.
@@ -318,7 +318,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES___AS_POINT3D = Symphony__CommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
+	int CARTESIAN_POSITION_COORDINATES___AS_POINT3D = ApogyCommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Position Coordinates</em>' class.
@@ -327,14 +327,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 1;
+	int CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl <em>Colored Cartesian Position Coordinates</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl <em>Colored Cartesian Position Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCartesianPositionCoordinates()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
 	int COLORED_CARTESIAN_POSITION_COORDINATES = 5;
@@ -421,11 +421,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int COLORED_CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT = CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianOrientationCoordinates()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianOrientationCoordinates()
 	 * @generated
 	 */
 	int CARTESIAN_ORIENTATION_COORDINATES = 6;
@@ -437,7 +437,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_ORIENTATION_COORDINATES__XROTATION = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
+	int CARTESIAN_ORIENTATION_COORDINATES__XROTATION = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>YRotation</b></em>' attribute.
@@ -446,7 +446,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_ORIENTATION_COORDINATES__YROTATION = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
+	int CARTESIAN_ORIENTATION_COORDINATES__YROTATION = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>ZRotation</b></em>' attribute.
@@ -455,7 +455,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_ORIENTATION_COORDINATES__ZROTATION = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
+	int CARTESIAN_ORIENTATION_COORDINATES__ZROTATION = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Orientation Coordinates</em>' class.
@@ -464,7 +464,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_ORIENTATION_COORDINATES_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
+	int CARTESIAN_ORIENTATION_COORDINATES_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Orientation Coordinates</em>' class.
@@ -473,14 +473,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_ORIENTATION_COORDINATES_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
+	int CARTESIAN_ORIENTATION_COORDINATES_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
 	 * @generated
 	 */
 	int ABSTRACT_CARTESIAN_COORDINATES_SET = 7;
@@ -492,7 +492,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS = ApogyCommonGeometryDataPackage.COORDINATES_SET__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -501,7 +501,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CARTESIAN_COORDINATES_SET__NORMALS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET__NORMALS = ApogyCommonGeometryDataPackage.COORDINATES_SET__NORMALS;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Cartesian Coordinates Set</em>' class.
@@ -510,7 +510,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CARTESIAN_COORDINATES_SET_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Extent</em>' operation.
@@ -519,7 +519,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT = ApogyCommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Abstract Cartesian Coordinates Set</em>' class.
@@ -528,14 +528,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 1;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
 	 * @generated
 	 */
 	int CARTESIAN_COORDINATES_SET = 8;
@@ -586,11 +586,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_COORDINATES_SET_OPERATION_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
 	 * @generated
 	 */
 	int COLORED_COORDINATES_SET = 9;
@@ -641,11 +641,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int COLORED_COORDINATES_SET_OPERATION_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSetExtent()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	int CARTESIAN_COORDINATES_SET_EXTENT = 10;
@@ -750,11 +750,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_COORDINATES_SET_EXTENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapImpl <em>Digital Elevation Map</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl <em>Digital Elevation Map</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMap()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMap()
 	 * @generated
 	 */
 	int DIGITAL_ELEVATION_MAP = 11;
@@ -823,11 +823,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int DIGITAL_ELEVATION_MAP_OPERATION_COUNT = CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl <em>Cartesian Coordinates Mesh</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl <em>Cartesian Coordinates Mesh</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMesh()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMesh()
 	 * @generated
 	 */
 	int CARTESIAN_COORDINATES_MESH = 12;
@@ -839,7 +839,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH__POINTS = Symphony__CommonGeometryDataPackage.MESH__POINTS;
+	int CARTESIAN_COORDINATES_MESH__POINTS = ApogyCommonGeometryDataPackage.MESH__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -848,7 +848,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH__NORMALS = Symphony__CommonGeometryDataPackage.MESH__NORMALS;
+	int CARTESIAN_COORDINATES_MESH__NORMALS = ApogyCommonGeometryDataPackage.MESH__NORMALS;
 
 	/**
 	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
@@ -857,7 +857,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH__POLYGONS = Symphony__CommonGeometryDataPackage.MESH__POLYGONS;
+	int CARTESIAN_COORDINATES_MESH__POLYGONS = ApogyCommonGeometryDataPackage.MESH__POLYGONS;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Coordinates Mesh</em>' class.
@@ -866,7 +866,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
+	int CARTESIAN_COORDINATES_MESH_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
@@ -875,7 +875,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
+	int CARTESIAN_COORDINATES_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = ApogyCommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
 
 	/**
 	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
@@ -884,7 +884,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH___GET_POINT_NEIGHBOURS__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
+	int CARTESIAN_COORDINATES_MESH___GET_POINT_NEIGHBOURS__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
@@ -893,7 +893,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
+	int CARTESIAN_COORDINATES_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Get Extent</em>' operation.
@@ -902,7 +902,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH___GET_EXTENT = Symphony__CommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
+	int CARTESIAN_COORDINATES_MESH___GET_EXTENT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Coordinates Mesh</em>' class.
@@ -911,14 +911,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_OPERATION_COUNT + 1;
+	int CARTESIAN_COORDINATES_MESH_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshImpl <em>Cartesian Triangular Mesh</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl <em>Cartesian Triangular Mesh</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMesh()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMesh()
 	 * @generated
 	 */
 	int CARTESIAN_TRIANGULAR_MESH = 13;
@@ -930,7 +930,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH__POINTS = Symphony__CommonGeometryDataPackage.MESH__POINTS;
+	int CARTESIAN_TRIANGULAR_MESH__POINTS = ApogyCommonGeometryDataPackage.MESH__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -939,7 +939,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH__NORMALS = Symphony__CommonGeometryDataPackage.MESH__NORMALS;
+	int CARTESIAN_TRIANGULAR_MESH__NORMALS = ApogyCommonGeometryDataPackage.MESH__NORMALS;
 
 	/**
 	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
@@ -948,7 +948,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH__POLYGONS = Symphony__CommonGeometryDataPackage.MESH__POLYGONS;
+	int CARTESIAN_TRIANGULAR_MESH__POLYGONS = ApogyCommonGeometryDataPackage.MESH__POLYGONS;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Triangular Mesh</em>' class.
@@ -957,7 +957,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
+	int CARTESIAN_TRIANGULAR_MESH_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
@@ -966,7 +966,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
+	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = ApogyCommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
 
 	/**
 	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
@@ -975,7 +975,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
+	int CARTESIAN_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
@@ -984,7 +984,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
+	int CARTESIAN_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Get Extent</em>' operation.
@@ -993,7 +993,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH___GET_EXTENT = Symphony__CommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
+	int CARTESIAN_TRIANGULAR_MESH___GET_EXTENT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Triangular Mesh</em>' class.
@@ -1002,14 +1002,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_OPERATION_COUNT + 1;
+	int CARTESIAN_TRIANGULAR_MESH_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesImpl <em>Spherical Coordinates</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesImpl <em>Spherical Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinates()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinates()
 	 * @generated
 	 */
 	int SPHERICAL_COORDINATES = 14;
@@ -1021,7 +1021,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES__PHI = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
+	int SPHERICAL_COORDINATES__PHI = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Theta</b></em>' attribute.
@@ -1030,7 +1030,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES__THETA = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
+	int SPHERICAL_COORDINATES__THETA = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>R</b></em>' attribute.
@@ -1039,7 +1039,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES__R = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
+	int SPHERICAL_COORDINATES__R = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Spherical Coordinates</em>' class.
@@ -1048,7 +1048,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
+	int SPHERICAL_COORDINATES_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Spherical Coordinates</em>' class.
@@ -1057,14 +1057,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
+	int SPHERICAL_COORDINATES_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesSetImpl <em>Spherical Coordinates Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesSetImpl <em>Spherical Coordinates Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesSetImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinatesSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesSetImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinatesSet()
 	 * @generated
 	 */
 	int SPHERICAL_COORDINATES_SET = 15;
@@ -1076,7 +1076,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_SET__POINTS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS;
+	int SPHERICAL_COORDINATES_SET__POINTS = ApogyCommonGeometryDataPackage.COORDINATES_SET__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -1085,7 +1085,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_SET__NORMALS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS;
+	int SPHERICAL_COORDINATES_SET__NORMALS = ApogyCommonGeometryDataPackage.COORDINATES_SET__NORMALS;
 
 	/**
 	 * The number of structural features of the '<em>Spherical Coordinates Set</em>' class.
@@ -1094,7 +1094,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_SET_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
+	int SPHERICAL_COORDINATES_SET_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spherical Coordinates Set</em>' class.
@@ -1103,14 +1103,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_SET_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
+	int SPHERICAL_COORDINATES_SET_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl <em>Spherical Coordinates Mesh</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl <em>Spherical Coordinates Mesh</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinatesMesh()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinatesMesh()
 	 * @generated
 	 */
 	int SPHERICAL_COORDINATES_MESH = 16;
@@ -1122,7 +1122,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH__POINTS = Symphony__CommonGeometryDataPackage.MESH__POINTS;
+	int SPHERICAL_COORDINATES_MESH__POINTS = ApogyCommonGeometryDataPackage.MESH__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -1131,7 +1131,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH__NORMALS = Symphony__CommonGeometryDataPackage.MESH__NORMALS;
+	int SPHERICAL_COORDINATES_MESH__NORMALS = ApogyCommonGeometryDataPackage.MESH__NORMALS;
 
 	/**
 	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
@@ -1140,7 +1140,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH__POLYGONS = Symphony__CommonGeometryDataPackage.MESH__POLYGONS;
+	int SPHERICAL_COORDINATES_MESH__POLYGONS = ApogyCommonGeometryDataPackage.MESH__POLYGONS;
 
 	/**
 	 * The number of structural features of the '<em>Spherical Coordinates Mesh</em>' class.
@@ -1149,7 +1149,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
+	int SPHERICAL_COORDINATES_MESH_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
@@ -1158,7 +1158,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
+	int SPHERICAL_COORDINATES_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = ApogyCommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
 
 	/**
 	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
@@ -1167,7 +1167,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH___GET_POINT_NEIGHBOURS__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
+	int SPHERICAL_COORDINATES_MESH___GET_POINT_NEIGHBOURS__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
@@ -1176,7 +1176,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
+	int SPHERICAL_COORDINATES_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
 
 	/**
 	 * The number of operations of the '<em>Spherical Coordinates Mesh</em>' class.
@@ -1185,14 +1185,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_COORDINATES_MESH_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
+	int SPHERICAL_COORDINATES_MESH_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangularMeshImpl <em>Spherical Triangular Mesh</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangularMeshImpl <em>Spherical Triangular Mesh</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangularMeshImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalTriangularMesh()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangularMeshImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalTriangularMesh()
 	 * @generated
 	 */
 	int SPHERICAL_TRIANGULAR_MESH = 17;
@@ -1204,7 +1204,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH__POINTS = Symphony__CommonGeometryDataPackage.MESH__POINTS;
+	int SPHERICAL_TRIANGULAR_MESH__POINTS = ApogyCommonGeometryDataPackage.MESH__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -1213,7 +1213,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH__NORMALS = Symphony__CommonGeometryDataPackage.MESH__NORMALS;
+	int SPHERICAL_TRIANGULAR_MESH__NORMALS = ApogyCommonGeometryDataPackage.MESH__NORMALS;
 
 	/**
 	 * The feature id for the '<em><b>Polygons</b></em>' containment reference list.
@@ -1222,7 +1222,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH__POLYGONS = Symphony__CommonGeometryDataPackage.MESH__POLYGONS;
+	int SPHERICAL_TRIANGULAR_MESH__POLYGONS = ApogyCommonGeometryDataPackage.MESH__POLYGONS;
 
 	/**
 	 * The number of structural features of the '<em>Spherical Triangular Mesh</em>' class.
@@ -1231,7 +1231,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
+	int SPHERICAL_TRIANGULAR_MESH_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Polygon Neighbours</em>' operation.
@@ -1240,7 +1240,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
+	int SPHERICAL_TRIANGULAR_MESH___GET_POLYGON_NEIGHBOURS__POLYGON = ApogyCommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON;
 
 	/**
 	 * The operation id for the '<em>Get Point Neighbours</em>' operation.
@@ -1249,7 +1249,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
+	int SPHERICAL_TRIANGULAR_MESH___GET_POINT_NEIGHBOURS__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Get Polygons Sharing Point</em>' operation.
@@ -1258,7 +1258,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = Symphony__CommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
+	int SPHERICAL_TRIANGULAR_MESH___GET_POLYGONS_SHARING_POINT__COORDINATES = ApogyCommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES;
 
 	/**
 	 * The number of operations of the '<em>Spherical Triangular Mesh</em>' class.
@@ -1267,14 +1267,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERICAL_TRIANGULAR_MESH_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
+	int SPHERICAL_TRIANGULAR_MESH_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl <em>Pose</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PoseImpl <em>Pose</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPose()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PoseImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPose()
 	 * @generated
 	 */
 	int POSE = 18;
@@ -1361,11 +1361,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int POSE_OPERATION_COUNT = CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl <em>Sphere Sampling Shape</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphereSamplingShapeImpl <em>Sphere Sampling Shape</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphereSamplingShape()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphereSamplingShapeImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphereSamplingShape()
 	 * @generated
 	 */
 	int SPHERE_SAMPLING_SHAPE = 19;
@@ -1377,7 +1377,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_SAMPLING_SHAPE__RADIUS = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
+	int SPHERE_SAMPLING_SHAPE__RADIUS = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Center</b></em>' reference.
@@ -1386,7 +1386,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_SAMPLING_SHAPE__CENTER = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
+	int SPHERE_SAMPLING_SHAPE__CENTER = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Include Just Touching</b></em>' attribute.
@@ -1395,7 +1395,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
+	int SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Sphere Sampling Shape</em>' class.
@@ -1404,7 +1404,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_SAMPLING_SHAPE_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 3;
+	int SPHERE_SAMPLING_SHAPE_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Is Inside</em>' operation.
@@ -1413,7 +1413,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
+	int SPHERE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Is Polygon Inside</em>' operation.
@@ -1422,7 +1422,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
+	int SPHERE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Sphere Sampling Shape</em>' class.
@@ -1431,14 +1431,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_SAMPLING_SHAPE_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
+	int SPHERE_SAMPLING_SHAPE_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CubeSamplingShapeImpl <em>Cube Sampling Shape</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CubeSamplingShapeImpl <em>Cube Sampling Shape</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CubeSamplingShapeImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCubeSamplingShape()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CubeSamplingShapeImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCubeSamplingShape()
 	 * @generated
 	 */
 	int CUBE_SAMPLING_SHAPE = 20;
@@ -1450,7 +1450,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUBE_SAMPLING_SHAPE__CORNER1 = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
+	int CUBE_SAMPLING_SHAPE__CORNER1 = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Corner2</b></em>' reference.
@@ -1459,7 +1459,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUBE_SAMPLING_SHAPE__CORNER2 = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
+	int CUBE_SAMPLING_SHAPE__CORNER2 = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Include Just Touching</b></em>' attribute.
@@ -1468,7 +1468,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
+	int CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Cube Sampling Shape</em>' class.
@@ -1477,7 +1477,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUBE_SAMPLING_SHAPE_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 3;
+	int CUBE_SAMPLING_SHAPE_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Is Inside</em>' operation.
@@ -1486,7 +1486,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUBE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
+	int CUBE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Is Polygon Inside</em>' operation.
@@ -1495,7 +1495,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUBE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
+	int CUBE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Cube Sampling Shape</em>' class.
@@ -1504,14 +1504,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUBE_SAMPLING_SHAPE_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
+	int CUBE_SAMPLING_SHAPE_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl <em>Cartesian Coordinates Set Shape Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl <em>Cartesian Coordinates Set Shape Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSetShapeSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSetShapeSampler()
 	 * @generated
 	 */
 	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER = 21;
@@ -1523,7 +1523,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__PROGRESS_MONITOR = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__PROGRESS_MONITOR;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__PROGRESS_MONITOR = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1532,7 +1532,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__INPUT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__INPUT;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__INPUT = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -1541,7 +1541,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__OUTPUT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__OUTPUT;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__OUTPUT = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates Sampling Shapes</b></em>' reference list.
@@ -1550,7 +1550,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__COORDINATES_SAMPLING_SHAPES = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__COORDINATES_SAMPLING_SHAPES = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -1559,7 +1559,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Coordinates Set Shape Sampler</em>' class.
@@ -1568,7 +1568,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER_FEATURE_COUNT + 0;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER_FEATURE_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -1577,7 +1577,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER___PROCESS__OBJECT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER___PROCESS__OBJECT;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER___PROCESS__OBJECT = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Coordinates Set Shape Sampler</em>' class.
@@ -1586,14 +1586,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER_OPERATION_COUNT + 0;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER_OPERATION_COUNT = ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl <em>Cartesian Coordinates Mesh Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl <em>Cartesian Coordinates Mesh Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshSampler()
 	 * @generated
 	 */
 	int CARTESIAN_COORDINATES_MESH_SAMPLER = 22;
@@ -1605,7 +1605,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER__PROGRESS_MONITOR = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__PROGRESS_MONITOR;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER__PROGRESS_MONITOR = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1614,7 +1614,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER__INPUT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__INPUT;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER__INPUT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -1623,7 +1623,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER__OUTPUT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__OUTPUT;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER__OUTPUT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates Sampling Shapes</b></em>' reference list.
@@ -1632,7 +1632,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER__COORDINATES_SAMPLING_SHAPES = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER__COORDINATES_SAMPLING_SHAPES = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -1641,7 +1641,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Polygon Sampling Mode</b></em>' attribute.
@@ -1650,7 +1650,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER__POLYGON_SAMPLING_MODE = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER__POLYGON_SAMPLING_MODE = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Coordinates Mesh Sampler</em>' class.
@@ -1659,7 +1659,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_FEATURE_COUNT + 0;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -1668,7 +1668,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER___PROCESS__OBJECT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER___PROCESS__OBJECT;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER___PROCESS__OBJECT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Coordinates Mesh Sampler</em>' class.
@@ -1677,14 +1677,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_OPERATION_COUNT + 0;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl <em>Cartesian Coordinates Mesh Polygon Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl <em>Cartesian Coordinates Mesh Polygon Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshPolygonSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshPolygonSampler()
 	 * @generated
 	 */
 	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER = 23;
@@ -1696,7 +1696,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__PROGRESS_MONITOR = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__PROGRESS_MONITOR;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__PROGRESS_MONITOR = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1705,7 +1705,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__INPUT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__INPUT;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__INPUT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -1714,7 +1714,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__OUTPUT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__OUTPUT;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__OUTPUT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Polygon Sampling Shapes</b></em>' reference list.
@@ -1723,7 +1723,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__POLYGON_SAMPLING_SHAPES = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__POLYGON_SAMPLING_SHAPES = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -1732,7 +1732,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Coordinates Mesh Polygon Sampler</em>' class.
@@ -1741,7 +1741,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_FEATURE_COUNT + 0;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -1750,7 +1750,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER___PROCESS__OBJECT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER___PROCESS__OBJECT;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER___PROCESS__OBJECT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Coordinates Mesh Polygon Sampler</em>' class.
@@ -1759,14 +1759,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_OPERATION_COUNT + 0;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl <em>Cartesian Triangular Mesh Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl <em>Cartesian Triangular Mesh Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMeshSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshSampler()
 	 * @generated
 	 */
 	int CARTESIAN_TRIANGULAR_MESH_SAMPLER = 24;
@@ -1778,7 +1778,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__PROGRESS_MONITOR = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__PROGRESS_MONITOR;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__PROGRESS_MONITOR = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1787,7 +1787,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__INPUT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__INPUT;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__INPUT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -1796,7 +1796,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__OUTPUT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__OUTPUT;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__OUTPUT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates Sampling Shapes</b></em>' reference list.
@@ -1805,7 +1805,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__COORDINATES_SAMPLING_SHAPES = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__COORDINATES_SAMPLING_SHAPES = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -1814,7 +1814,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Polygon Sampling Mode</b></em>' attribute.
@@ -1823,7 +1823,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__POLYGON_SAMPLING_MODE = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER__POLYGON_SAMPLING_MODE = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Triangular Mesh Sampler</em>' class.
@@ -1832,7 +1832,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_FEATURE_COUNT + 0;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -1841,7 +1841,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER___PROCESS__OBJECT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER___PROCESS__OBJECT;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER___PROCESS__OBJECT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Triangular Mesh Sampler</em>' class.
@@ -1850,14 +1850,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_OPERATION_COUNT + 0;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl <em>Cartesian Triangular Mesh Polygon Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl <em>Cartesian Triangular Mesh Polygon Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMeshPolygonSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshPolygonSampler()
 	 * @generated
 	 */
 	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER = 25;
@@ -1869,7 +1869,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__PROGRESS_MONITOR = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__PROGRESS_MONITOR;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__PROGRESS_MONITOR = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1878,7 +1878,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__INPUT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__INPUT;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__INPUT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -1887,7 +1887,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__OUTPUT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__OUTPUT;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__OUTPUT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Polygon Sampling Shapes</b></em>' reference list.
@@ -1896,7 +1896,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__POLYGON_SAMPLING_SHAPES = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__POLYGON_SAMPLING_SHAPES = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES;
 
 	/**
 	 * The feature id for the '<em><b>Shape Sampling Mode</b></em>' attribute.
@@ -1905,7 +1905,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__SHAPE_SAMPLING_MODE = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER__SHAPE_SAMPLING_MODE = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Triangular Mesh Polygon Sampler</em>' class.
@@ -1914,7 +1914,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_FEATURE_COUNT + 0;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER_FEATURE_COUNT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -1923,7 +1923,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER___PROCESS__OBJECT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER___PROCESS__OBJECT;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER___PROCESS__OBJECT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Triangular Mesh Polygon Sampler</em>' class.
@@ -1932,14 +1932,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_OPERATION_COUNT + 0;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER_OPERATION_COUNT = ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl <em>Cartesian Position Coordinates Mesher</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl <em>Cartesian Position Coordinates Mesher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPositionCoordinatesMesher()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPositionCoordinatesMesher()
 	 * @generated
 	 */
 	int CARTESIAN_POSITION_COORDINATES_MESHER = 26;
@@ -1951,7 +1951,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int CARTESIAN_POSITION_COORDINATES_MESHER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1960,7 +1960,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int CARTESIAN_POSITION_COORDINATES_MESHER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -1969,7 +1969,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int CARTESIAN_POSITION_COORDINATES_MESHER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Position Coordinates Mesher</em>' class.
@@ -1978,7 +1978,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -1987,7 +1987,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int CARTESIAN_POSITION_COORDINATES_MESHER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Position Coordinates Mesher</em>' class.
@@ -1996,14 +1996,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int CARTESIAN_POSITION_COORDINATES_MESHER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl <em>Normal Point Cloud</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.NormalPointCloudImpl <em>Normal Point Cloud</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getNormalPointCloud()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.NormalPointCloudImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getNormalPointCloud()
 	 * @generated
 	 */
 	int NORMAL_POINT_CLOUD = 27;
@@ -2045,11 +2045,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int NORMAL_POINT_CLOUD_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PointLocatorImpl <em>Point Locator</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PointLocatorImpl <em>Point Locator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.PointLocatorImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointLocator()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PointLocatorImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPointLocator()
 	 * @generated
 	 */
 	int POINT_LOCATOR = 28;
@@ -2154,11 +2154,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int POINT_LOCATOR_OPERATION_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl <em>KD Tree Based Point Locator</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl <em>KD Tree Based Point Locator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getKDTreeBasedPointLocator()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getKDTreeBasedPointLocator()
 	 * @generated
 	 */
 	int KD_TREE_BASED_POINT_LOCATOR = 29;
@@ -2263,11 +2263,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int KD_TREE_BASED_POINT_LOCATOR_OPERATION_COUNT = POINT_LOCATOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshLocalizerImpl <em>Mesh Localizer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshLocalizerImpl <em>Mesh Localizer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.MeshLocalizerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshLocalizer()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshLocalizerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMeshLocalizer()
 	 * @generated
 	 */
 	int MESH_LOCALIZER = 30;
@@ -2300,11 +2300,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int MESH_LOCALIZER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl <em>Delaunay Mesher</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DelaunayMesherImpl <em>Delaunay Mesher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDelaunayMesher()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DelaunayMesherImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDelaunayMesher()
 	 * @generated
 	 */
 	int DELAUNAY_MESHER = 31;
@@ -2364,11 +2364,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int DELAUNAY_MESHER_OPERATION_COUNT = CARTESIAN_POSITION_COORDINATES_MESHER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapMesherImpl <em>Digital Elevation Map Mesher</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapMesherImpl <em>Digital Elevation Map Mesher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapMesherImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapMesher()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapMesherImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMapMesher()
 	 * @generated
 	 */
 	int DIGITAL_ELEVATION_MAP_MESHER = 32;
@@ -2380,7 +2380,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int DIGITAL_ELEVATION_MAP_MESHER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2389,7 +2389,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int DIGITAL_ELEVATION_MAP_MESHER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2398,7 +2398,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int DIGITAL_ELEVATION_MAP_MESHER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Digital Elevation Map Mesher</em>' class.
@@ -2407,7 +2407,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int DIGITAL_ELEVATION_MAP_MESHER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2416,7 +2416,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int DIGITAL_ELEVATION_MAP_MESHER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Digital Elevation Map Mesher</em>' class.
@@ -2425,14 +2425,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int DIGITAL_ELEVATION_MAP_MESHER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl <em>Digital Elevation Map Sampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl <em>Digital Elevation Map Sampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapSampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMapSampler()
 	 * @generated
 	 */
 	int DIGITAL_ELEVATION_MAP_SAMPLER = 33;
@@ -2444,7 +2444,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int DIGITAL_ELEVATION_MAP_SAMPLER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2453,7 +2453,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int DIGITAL_ELEVATION_MAP_SAMPLER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2462,7 +2462,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int DIGITAL_ELEVATION_MAP_SAMPLER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Target Resolution</b></em>' attribute.
@@ -2471,7 +2471,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Digital Elevation Map Sampler</em>' class.
@@ -2480,7 +2480,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int DIGITAL_ELEVATION_MAP_SAMPLER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2489,7 +2489,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int DIGITAL_ELEVATION_MAP_SAMPLER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Digital Elevation Map Sampler</em>' class.
@@ -2498,14 +2498,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int DIGITAL_ELEVATION_MAP_SAMPLER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl <em>Triangular Mesh Normals Calculator</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl <em>Triangular Mesh Normals Calculator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshNormalsCalculator()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangularMeshNormalsCalculator()
 	 * @generated
 	 */
 	int TRIANGULAR_MESH_NORMALS_CALCULATOR = 34;
@@ -2517,7 +2517,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2526,7 +2526,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2535,7 +2535,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Triangular Mesh Normals Calculator</em>' class.
@@ -2544,7 +2544,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2553,7 +2553,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Triangular Mesh Normals Calculator</em>' class.
@@ -2562,14 +2562,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl <em>Triangular Mesh To Normal Point Cloud</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl <em>Triangular Mesh To Normal Point Cloud</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshToNormalPointCloud()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangularMeshToNormalPointCloud()
 	 * @generated
 	 */
 	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = 35;
@@ -2581,7 +2581,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2590,7 +2590,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2599,7 +2599,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Triangular Mesh To Normal Point Cloud</em>' class.
@@ -2608,7 +2608,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2617,7 +2617,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Triangular Mesh To Normal Point Cloud</em>' class.
@@ -2626,14 +2626,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.UniquePointsFilterImpl <em>Unique Points Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.UniquePointsFilterImpl <em>Unique Points Filter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.UniquePointsFilterImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getUniquePointsFilter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.UniquePointsFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getUniquePointsFilter()
 	 * @generated
 	 */
 	int UNIQUE_POINTS_FILTER = 36;
@@ -2645,7 +2645,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIQUE_POINTS_FILTER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int UNIQUE_POINTS_FILTER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2654,7 +2654,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIQUE_POINTS_FILTER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int UNIQUE_POINTS_FILTER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2663,7 +2663,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIQUE_POINTS_FILTER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int UNIQUE_POINTS_FILTER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Unique Points Filter</em>' class.
@@ -2672,7 +2672,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIQUE_POINTS_FILTER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int UNIQUE_POINTS_FILTER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2681,7 +2681,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIQUE_POINTS_FILTER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int UNIQUE_POINTS_FILTER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Unique Points Filter</em>' class.
@@ -2690,14 +2690,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIQUE_POINTS_FILTER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int UNIQUE_POINTS_FILTER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl <em>Triangle Edge Length Triangular Mesh Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl <em>Triangle Edge Length Triangular Mesh Filter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangleEdgeLengthTriangularMeshFilter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangleEdgeLengthTriangularMeshFilter()
 	 * @generated
 	 */
 	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = 37;
@@ -2757,11 +2757,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.OutlierFilterImpl <em>Outlier Filter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.OutlierFilterImpl <em>Outlier Filter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.OutlierFilterImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutlierFilter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.OutlierFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getOutlierFilter()
 	 * @generated
 	 */
 	int OUTLIER_FILTER = 38;
@@ -2773,7 +2773,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTLIER_FILTER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int OUTLIER_FILTER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2782,7 +2782,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTLIER_FILTER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int OUTLIER_FILTER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2791,7 +2791,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTLIER_FILTER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int OUTLIER_FILTER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Max Distance</b></em>' attribute.
@@ -2800,7 +2800,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTLIER_FILTER__MAX_DISTANCE = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int OUTLIER_FILTER__MAX_DISTANCE = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Outlier Filter</em>' class.
@@ -2809,7 +2809,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTLIER_FILTER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int OUTLIER_FILTER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2818,7 +2818,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTLIER_FILTER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int OUTLIER_FILTER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Outlier Filter</em>' class.
@@ -2827,14 +2827,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTLIER_FILTER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int OUTLIER_FILTER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl <em>Mesh Smoother</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshSmootherImpl <em>Mesh Smoother</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshSmoother()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshSmootherImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMeshSmoother()
 	 * @generated
 	 */
 	int MESH_SMOOTHER = 39;
@@ -2846,7 +2846,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_SMOOTHER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int MESH_SMOOTHER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2855,7 +2855,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_SMOOTHER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int MESH_SMOOTHER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2864,7 +2864,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_SMOOTHER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int MESH_SMOOTHER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Iterations</b></em>' attribute.
@@ -2873,7 +2873,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_SMOOTHER__NUMBER_OF_ITERATIONS = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int MESH_SMOOTHER__NUMBER_OF_ITERATIONS = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Mesh Smoother</em>' class.
@@ -2882,7 +2882,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_SMOOTHER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int MESH_SMOOTHER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2891,7 +2891,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_SMOOTHER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int MESH_SMOOTHER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Mesh Smoother</em>' class.
@@ -2900,14 +2900,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESH_SMOOTHER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int MESH_SMOOTHER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl <em>Voxel Based3 DPoint Cloud Resampler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl <em>Voxel Based3 DPoint Cloud Resampler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVoxelBased3DPointCloudResampler()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
 	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = 40;
@@ -2919,7 +2919,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__PROGRESS_MONITOR = ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -2928,7 +2928,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__INPUT = ApogyCommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -2937,7 +2937,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__OUTPUT = ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Resolution X</b></em>' attribute.
@@ -2946,7 +2946,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Resolution Y</b></em>' attribute.
@@ -2955,7 +2955,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Resolution Z</b></em>' attribute.
@@ -2964,7 +2964,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Minimum Number Of Point Per Voxel</b></em>' attribute.
@@ -2973,7 +2973,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 3;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Tile Resolution</b></em>' attribute.
@@ -2982,7 +2982,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 4;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Voxel Based3 DPoint Cloud Resampler</em>' class.
@@ -2991,7 +2991,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 5;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER_FEATURE_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -3000,7 +3000,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER___PROCESS__OBJECT = ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Voxel Based3 DPoint Cloud Resampler</em>' class.
@@ -3009,24 +3009,24 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER_OPERATION_COUNT = ApogyCommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl <em>Rigid Body Pose Tracker</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl <em>Rigid Body Pose Tracker</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRigidBodyPoseTracker()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getRigidBodyPoseTracker()
 	 * @generated
 	 */
 	int RIGID_BODY_POSE_TRACKER = 42;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl <em>Position Marker</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PositionMarkerImpl <em>Position Marker</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPositionMarker()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PositionMarkerImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPositionMarker()
 	 * @generated
 	 */
 	int POSITION_MARKER = 41;
@@ -3158,14 +3158,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int RIGID_BODY_POSE_TRACKER_OPERATION_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSymphony__CommonGeometryData3DFacade()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getApogyCommonGeometryData3DFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = 43;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE = 43;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -3174,7 +3174,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Position Coordinates</em>' operation.
@@ -3183,7 +3183,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 0;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
@@ -3192,7 +3192,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 1;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Spherical Coordinates</em>' operation.
@@ -3201,7 +3201,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 2;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 2;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3210,7 +3210,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 3;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 3;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3219,7 +3219,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = 4;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3228,7 +3228,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = 5;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = 5;
 
 	/**
 	 * The operation id for the '<em>Create Digital Elevation Map</em>' operation.
@@ -3237,7 +3237,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 6;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 6;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Polygon</em>' operation.
@@ -3246,7 +3246,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 7;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 7;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Position Coordinates</em>' operation.
@@ -3255,7 +3255,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 8;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 8;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
@@ -3264,7 +3264,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 9;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 9;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3273,7 +3273,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 10;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 10;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3282,7 +3282,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 11;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 11;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3291,7 +3291,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 12;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 12;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3300,7 +3300,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 13;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 13;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3309,7 +3309,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 14;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 14;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3318,7 +3318,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 15;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 15;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3327,7 +3327,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 16;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 16;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3336,7 +3336,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 17;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 17;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3345,7 +3345,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 18;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 18;
 
 	/**
 	 * The operation id for the '<em>Create Transformed Mesh</em>' operation.
@@ -3354,7 +3354,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = 19;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = 19;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3363,7 +3363,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = 20;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = 20;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3372,7 +3372,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 21;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 21;
 
 	/**
 	 * The operation id for the '<em>Update Cartesian Coordinates Set</em>' operation.
@@ -3381,7 +3381,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 22;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 22;
 
 	/**
 	 * The operation id for the '<em>Concatenate Triangular Meshes</em>' operation.
@@ -3390,7 +3390,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = 23;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = 23;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -3399,14 +3399,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 24;
+	int APOGY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 24;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DIO()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getData3DIO()
 	 * @generated
 	 */
 	int DATA3_DIO = 44;
@@ -3547,11 +3547,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int DATA3_DIO_OPERATION_COUNT = 13;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DUtilsImpl <em>Data3 DUtils</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DUtilsImpl <em>Data3 DUtils</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Data3DUtilsImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DUtils()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DUtilsImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getData3DUtils()
 	 * @generated
 	 */
 	int DATA3_DUTILS = 45;
@@ -3629,21 +3629,21 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int DATA3_DUTILS_OPERATION_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianAxis <em>Cartesian Axis</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis <em>Cartesian Axis</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianAxis
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianAxis()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianAxis()
 	 * @generated
 	 */
 	int CARTESIAN_AXIS = 46;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPlane
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPlane()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPlane()
 	 * @generated
 	 */
 	int CARTESIAN_PLANE = 47;
@@ -3653,7 +3653,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Vector2d
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector2d()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVector2d()
 	 * @generated
 	 */
 	int VECTOR2D = 48;
@@ -3663,7 +3663,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Vector3d
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector3d()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVector3d()
 	 * @generated
 	 */
 	int VECTOR3D = 49;
@@ -3673,7 +3673,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Point3d
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPoint3d()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPoint3d()
 	 * @generated
 	 */
 	int POINT3D = 50;
@@ -3683,7 +3683,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Matrix4d
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMatrix4d()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMatrix4d()
 	 * @generated
 	 */
 	int MATRIX4D = 51;
@@ -3693,7 +3693,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.GVector
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getGVector()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getGVector()
 	 * @generated
 	 */
 	int GVECTOR = 52;
@@ -3703,7 +3703,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getList()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getList()
 	 * @generated
 	 */
 	int LIST = 53;
@@ -3713,7 +3713,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.Map
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMap()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMap()
 	 * @generated
 	 */
 	int MAP = 54;
@@ -3723,7 +3723,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.Set
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSet()
 	 * @generated
 	 */
 	int SET = 55;
@@ -3733,7 +3733,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.SortedSet
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSortedSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSortedSet()
 	 * @generated
 	 */
 	int SORTED_SET = 56;
@@ -3743,7 +3743,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.Collection
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCollection()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCollection()
 	 * @generated
 	 */
 	int COLLECTION = 57;
@@ -3753,7 +3753,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.EList
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getEList()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getEList()
 	 * @generated
 	 */
 	int ELIST = 58;
@@ -3763,7 +3763,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.runtime.IProgressMonitor
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIProgressMonitor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIProgressMonitor()
 	 * @generated
 	 */
 	int IPROGRESS_MONITOR = 59;
@@ -3773,7 +3773,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.OutputStream
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutputStream()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getOutputStream()
 	 * @generated
 	 */
 	int OUTPUT_STREAM = 60;
@@ -3783,7 +3783,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.InputStream
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getInputStream()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getInputStream()
 	 * @generated
 	 */
 	int INPUT_STREAM = 61;
@@ -3793,7 +3793,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.IOException
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIOException()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIOException()
 	 * @generated
 	 */
 	int IO_EXCEPTION = 62;
@@ -3803,7 +3803,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 63;
@@ -3813,7 +3813,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.IllegalArgumentException
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIllegalArgumentException()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIllegalArgumentException()
 	 * @generated
 	 */
 	int ILLEGAL_ARGUMENT_EXCEPTION = 64;
@@ -3822,7 +3822,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * The meta object id for the '<em>Double Array Of Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDoubleArrayOfArray()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDoubleArrayOfArray()
 	 * @generated
 	 */
 	int DOUBLE_ARRAY_OF_ARRAY = 65;
@@ -3831,1605 +3831,1605 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * The meta object id for the '<em>Int Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIntArray()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIntArray()
 	 * @generated
 	 */
 	int INT_ARRAY = 66;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon <em>Cartesian Polygon</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon <em>Cartesian Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Polygon</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon
 	 * @generated
 	 */
 	EClass getCartesianPolygon();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getSurface <em>Surface</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getSurface <em>Surface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Surface</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getSurface()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getSurface()
 	 * @see #getCartesianPolygon()
 	 * @generated
 	 */
 	EAttribute getCartesianPolygon_Surface();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getNormal <em>Normal</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getNormal <em>Normal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Normal</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getNormal()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getNormal()
 	 * @see #getCartesianPolygon()
 	 * @generated
 	 */
 	EAttribute getCartesianPolygon_Normal();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid <em>Centroid</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getCentroid <em>Centroid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Centroid</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon#getCentroid()
 	 * @see #getCartesianPolygon()
 	 * @generated
 	 */
 	EReference getCartesianPolygon_Centroid();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangle <em>Cartesian Triangle</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle <em>Cartesian Triangle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Triangle</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangle
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle
 	 * @generated
 	 */
 	EClass getCartesianTriangle();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalPolygon <em>Spherical Polygon</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon <em>Spherical Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spherical Polygon</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalPolygon
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon
 	 * @generated
 	 */
 	EClass getSphericalPolygon();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangle <em>Spherical Triangle</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangle <em>Spherical Triangle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spherical Triangle</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalTriangle
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangle
 	 * @generated
 	 */
 	EClass getSphericalTriangle();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates <em>Cartesian Position Coordinates</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates <em>Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Position Coordinates</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
 	 * @generated
 	 */
 	EClass getCartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getX <em>X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getX <em>X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getX()
 	 * @see #getCartesianPositionCoordinates()
 	 * @generated
 	 */
 	EAttribute getCartesianPositionCoordinates_X();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getY <em>Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getY <em>Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getY()
 	 * @see #getCartesianPositionCoordinates()
 	 * @generated
 	 */
 	EAttribute getCartesianPositionCoordinates_Y();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getZ()
 	 * @see #getCartesianPositionCoordinates()
 	 * @generated
 	 */
 	EAttribute getCartesianPositionCoordinates_Z();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d() <em>As Point3d</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d() <em>As Point3d</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>As Point3d</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#asPoint3d()
 	 * @generated
 	 */
 	EOperation getCartesianPositionCoordinates__AsPoint3d();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates <em>Colored Cartesian Position Coordinates</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates <em>Colored Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Colored Cartesian Position Coordinates</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates
 	 * @generated
 	 */
 	EClass getColoredCartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getRed <em>Red</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getRed <em>Red</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Red</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getRed()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getRed()
 	 * @see #getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
 	EAttribute getColoredCartesianPositionCoordinates_Red();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getGreen <em>Green</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getGreen <em>Green</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Green</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getGreen()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getGreen()
 	 * @see #getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
 	EAttribute getColoredCartesianPositionCoordinates_Green();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getBlue <em>Blue</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getBlue <em>Blue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Blue</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getBlue()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates#getBlue()
 	 * @see #getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
 	EAttribute getColoredCartesianPositionCoordinates_Blue();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates <em>Cartesian Orientation Coordinates</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates <em>Cartesian Orientation Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Orientation Coordinates</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates
 	 * @generated
 	 */
 	EClass getCartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation <em>XRotation</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation <em>XRotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XRotation</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation()
 	 * @see #getCartesianOrientationCoordinates()
 	 * @generated
 	 */
 	EAttribute getCartesianOrientationCoordinates_XRotation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation <em>YRotation</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation <em>YRotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YRotation</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation()
 	 * @see #getCartesianOrientationCoordinates()
 	 * @generated
 	 */
 	EAttribute getCartesianOrientationCoordinates_YRotation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZRotation</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation()
 	 * @see #getCartesianOrientationCoordinates()
 	 * @generated
 	 */
 	EAttribute getCartesianOrientationCoordinates_ZRotation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Cartesian Coordinates Set</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet
 	 * @generated
 	 */
 	EClass getAbstractCartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent() <em>Get Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent() <em>Get Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Extent</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent()
 	 * @generated
 	 */
 	EOperation getAbstractCartesianCoordinatesSet__GetExtent();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Coordinates Set</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
 	 * @generated
 	 */
 	EClass getCartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Colored Coordinates Set</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet
 	 * @generated
 	 */
 	EClass getColoredCoordinatesSet();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent <em>Cartesian Coordinates Set Extent</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent <em>Cartesian Coordinates Set Extent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Coordinates Set Extent</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent
 	 * @generated
 	 */
 	EClass getCartesianCoordinatesSetExtent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin <em>XMin</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin <em>XMin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XMin</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_XMin();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax <em>XMax</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax <em>XMax</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XMax</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_XMax();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin <em>YMin</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin <em>YMin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YMin</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMin()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_YMin();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax <em>YMax</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax <em>YMax</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YMax</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYMax()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_YMax();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin <em>ZMin</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin <em>ZMin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZMin</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMin()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_ZMin();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax <em>ZMax</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax <em>ZMax</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZMax</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZMax()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_ZMax();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension <em>XDimension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension <em>XDimension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XDimension</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_XDimension();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension <em>YDimension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension <em>YDimension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YDimension</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_YDimension();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension <em>ZDimension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension <em>ZDimension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZDimension</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension()
 	 * @see #getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
 	EAttribute getCartesianCoordinatesSetExtent_ZDimension();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap <em>Digital Elevation Map</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap <em>Digital Elevation Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Digital Elevation Map</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap
 	 * @generated
 	 */
 	EClass getDigitalElevationMap();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getXDimension <em>XDimension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getXDimension <em>XDimension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XDimension</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getXDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getXDimension()
 	 * @see #getDigitalElevationMap()
 	 * @generated
 	 */
 	EAttribute getDigitalElevationMap_XDimension();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YDimension</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getYDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap#getYDimension()
 	 * @see #getDigitalElevationMap()
 	 * @generated
 	 */
 	EAttribute getDigitalElevationMap_YDimension();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh <em>Cartesian Coordinates Mesh</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh <em>Cartesian Coordinates Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Coordinates Mesh</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh
 	 * @generated
 	 */
 	EClass getCartesianCoordinatesMesh();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh <em>Cartesian Triangular Mesh</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh <em>Cartesian Triangular Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Triangular Mesh</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
 	 * @generated
 	 */
 	EClass getCartesianTriangularMesh();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates <em>Spherical Coordinates</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates <em>Spherical Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spherical Coordinates</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates
 	 * @generated
 	 */
 	EClass getSphericalCoordinates();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getPhi <em>Phi</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getPhi <em>Phi</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Phi</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getPhi()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getPhi()
 	 * @see #getSphericalCoordinates()
 	 * @generated
 	 */
 	EAttribute getSphericalCoordinates_Phi();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getTheta <em>Theta</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getTheta <em>Theta</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Theta</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getTheta()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getTheta()
 	 * @see #getSphericalCoordinates()
 	 * @generated
 	 */
 	EAttribute getSphericalCoordinates_Theta();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>R</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getR()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates#getR()
 	 * @see #getSphericalCoordinates()
 	 * @generated
 	 */
 	EAttribute getSphericalCoordinates_R();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesSet <em>Spherical Coordinates Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesSet <em>Spherical Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spherical Coordinates Set</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesSet
 	 * @generated
 	 */
 	EClass getSphericalCoordinatesSet();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesMesh <em>Spherical Coordinates Mesh</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesMesh <em>Spherical Coordinates Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spherical Coordinates Mesh</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesMesh
 	 * @generated
 	 */
 	EClass getSphericalCoordinatesMesh();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh <em>Spherical Triangular Mesh</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangularMesh <em>Spherical Triangular Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spherical Triangular Mesh</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangularMesh
 	 * @generated
 	 */
 	EClass getSphericalTriangularMesh();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Pose <em>Pose</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Pose <em>Pose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pose</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Pose
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
 	 * @generated
 	 */
 	EClass getPose();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape <em>Sphere Sampling Shape</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape <em>Sphere Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sphere Sampling Shape</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape
 	 * @generated
 	 */
 	EClass getSphereSamplingShape();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getRadius <em>Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getRadius <em>Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Radius</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getRadius()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getRadius()
 	 * @see #getSphereSamplingShape()
 	 * @generated
 	 */
 	EAttribute getSphereSamplingShape_Radius();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getCenter <em>Center</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getCenter <em>Center</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Center</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#getCenter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#getCenter()
 	 * @see #getSphereSamplingShape()
 	 * @generated
 	 */
 	EReference getSphereSamplingShape_Center();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Include Just Touching</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching()
 	 * @see #getSphereSamplingShape()
 	 * @generated
 	 */
 	EAttribute getSphereSamplingShape_IncludeJustTouching();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape <em>Cube Sampling Shape</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape <em>Cube Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cube Sampling Shape</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape
 	 * @generated
 	 */
 	EClass getCubeSamplingShape();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner1 <em>Corner1</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner1 <em>Corner1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Corner1</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner1()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner1()
 	 * @see #getCubeSamplingShape()
 	 * @generated
 	 */
 	EReference getCubeSamplingShape_Corner1();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner2 <em>Corner2</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner2 <em>Corner2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Corner2</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner2()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner2()
 	 * @see #getCubeSamplingShape()
 	 * @generated
 	 */
 	EReference getCubeSamplingShape_Corner2();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Include Just Touching</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching()
 	 * @see #getCubeSamplingShape()
 	 * @generated
 	 */
 	EAttribute getCubeSamplingShape_IncludeJustTouching();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler <em>Cartesian Coordinates Set Shape Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetShapeSampler <em>Cartesian Coordinates Set Shape Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Coordinates Set Shape Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetShapeSampler
 	 * @generated
 	 */
 	EClass getCartesianCoordinatesSetShapeSampler();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler <em>Cartesian Coordinates Mesh Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler <em>Cartesian Coordinates Mesh Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Coordinates Mesh Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler
 	 * @generated
 	 */
 	EClass getCartesianCoordinatesMeshSampler();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler <em>Cartesian Coordinates Mesh Polygon Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler <em>Cartesian Coordinates Mesh Polygon Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Coordinates Mesh Polygon Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler
 	 * @generated
 	 */
 	EClass getCartesianCoordinatesMeshPolygonSampler();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler <em>Cartesian Triangular Mesh Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler <em>Cartesian Triangular Mesh Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Triangular Mesh Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler
 	 * @generated
 	 */
 	EClass getCartesianTriangularMeshSampler();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler <em>Cartesian Triangular Mesh Polygon Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler <em>Cartesian Triangular Mesh Polygon Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Triangular Mesh Polygon Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler
 	 * @generated
 	 */
 	EClass getCartesianTriangularMeshPolygonSampler();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinatesMesher <em>Cartesian Position Coordinates Mesher</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher <em>Cartesian Position Coordinates Mesher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cartesian Position Coordinates Mesher</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinatesMesher
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher
 	 * @generated
 	 */
 	EClass getCartesianPositionCoordinatesMesher();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud <em>Normal Point Cloud</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud <em>Normal Point Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Normal Point Cloud</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.NormalPointCloud
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud
 	 * @generated
 	 */
 	EClass getNormalPointCloud();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getPoints <em>Points</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getPoints <em>Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Points</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getPoints()
 	 * @see #getNormalPointCloud()
 	 * @generated
 	 */
 	EAttribute getNormalPointCloud_Points();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Normals</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getNormals()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud#getNormals()
 	 * @see #getNormalPointCloud()
 	 * @generated
 	 */
 	EAttribute getNormalPointCloud_Normals();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator <em>Point Locator</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator <em>Point Locator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Point Locator</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator
 	 * @generated
 	 */
 	EClass getPointLocator();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#getPoints() <em>Get Points</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#getPoints() <em>Get Points</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Points</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#getPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#getPoints()
 	 * @generated
 	 */
 	EOperation getPointLocator__GetPoints();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Add Point</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#addPoint(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Add Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#addPoint(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getPointLocator__AddPoint__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoints(java.util.List) <em>Add Points</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#addPoints(java.util.List) <em>Add Points</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Points</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoints(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#addPoints(java.util.List)
 	 * @generated
 	 */
 	EOperation getPointLocator__AddPoints__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Remove Point</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#removePoint(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Remove Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#removePoint(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getPointLocator__RemovePoint__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoints(java.util.List) <em>Remove Points</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#removePoints(java.util.List) <em>Remove Points</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Points</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoints(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#removePoints(java.util.List)
 	 * @generated
 	 */
 	EOperation getPointLocator__RemovePoints__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#clearPoints() <em>Clear Points</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#clearPoints() <em>Clear Points</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Clear Points</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#clearPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#clearPoints()
 	 * @generated
 	 */
 	EOperation getPointLocator__ClearPoints();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#findClosestPoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Find Closest Point</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#findClosestPoint(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Find Closest Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Closest Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#findClosestPoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#findClosestPoint(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getPointLocator__FindClosestPoint__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#findClosestPoints(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, int) <em>Find Closest Points</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#findClosestPoints(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, int) <em>Find Closest Points</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Closest Points</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#findClosestPoints(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, int)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#findClosestPoints(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, int)
 	 * @generated
 	 */
 	EOperation getPointLocator__FindClosestPoints__CartesianPositionCoordinates_int();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#findPointsWithinRadius(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, double) <em>Find Points Within Radius</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#findPointsWithinRadius(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, double) <em>Find Points Within Radius</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Points Within Radius</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#findPointsWithinRadius(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator#findPointsWithinRadius(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, double)
 	 * @generated
 	 */
 	EOperation getPointLocator__FindPointsWithinRadius__CartesianPositionCoordinates_double();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator <em>KD Tree Based Point Locator</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator <em>KD Tree Based Point Locator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>KD Tree Based Point Locator</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator
 	 * @generated
 	 */
 	EClass getKDTreeBasedPointLocator();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer <em>Mesh Localizer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer <em>Mesh Localizer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mesh Localizer</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.MeshLocalizer
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer
 	 * @generated
 	 */
 	EClass getMeshLocalizer();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer#localize(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Localize</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer#localize(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Localize</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Localize</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.MeshLocalizer#localize(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer#localize(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
 	EOperation getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher <em>Delaunay Mesher</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher <em>Delaunay Mesher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Delaunay Mesher</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DelaunayMesher
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher
 	 * @generated
 	 */
 	EClass getDelaunayMesher();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher <em>Digital Elevation Map Mesher</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher <em>Digital Elevation Map Mesher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Digital Elevation Map Mesher</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher
 	 * @generated
 	 */
 	EClass getDigitalElevationMapMesher();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler <em>Digital Elevation Map Sampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler <em>Digital Elevation Map Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Digital Elevation Map Sampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler
 	 * @generated
 	 */
 	EClass getDigitalElevationMapSampler();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler#getTargetResolution <em>Target Resolution</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler#getTargetResolution <em>Target Resolution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Target Resolution</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler#getTargetResolution()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler#getTargetResolution()
 	 * @see #getDigitalElevationMapSampler()
 	 * @generated
 	 */
 	EAttribute getDigitalElevationMapSampler_TargetResolution();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator <em>Triangular Mesh Normals Calculator</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshNormalsCalculator <em>Triangular Mesh Normals Calculator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Triangular Mesh Normals Calculator</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshNormalsCalculator
 	 * @generated
 	 */
 	EClass getTriangularMeshNormalsCalculator();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud <em>Triangular Mesh To Normal Point Cloud</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshToNormalPointCloud <em>Triangular Mesh To Normal Point Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Triangular Mesh To Normal Point Cloud</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshToNormalPointCloud
 	 * @generated
 	 */
 	EClass getTriangularMeshToNormalPointCloud();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter <em>Unique Points Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.UniquePointsFilter <em>Unique Points Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unique Points Filter</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.UniquePointsFilter
 	 * @generated
 	 */
 	EClass getUniquePointsFilter();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter <em>Triangle Edge Length Triangular Mesh Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter <em>Triangle Edge Length Triangular Mesh Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Triangle Edge Length Triangular Mesh Filter</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter
 	 * @generated
 	 */
 	EClass getTriangleEdgeLengthTriangularMeshFilter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange <em>Minimum Range</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange <em>Minimum Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minimum Range</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMinimumRange()
 	 * @see #getTriangleEdgeLengthTriangularMeshFilter()
 	 * @generated
 	 */
 	EAttribute getTriangleEdgeLengthTriangularMeshFilter_MinimumRange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange <em>Maximum Range</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange <em>Maximum Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Range</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumRange()
 	 * @see #getTriangleEdgeLengthTriangularMeshFilter()
 	 * @generated
 	 */
 	EAttribute getTriangleEdgeLengthTriangularMeshFilter_MaximumRange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength <em>Maximum Edge Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength <em>Maximum Edge Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Maximum Edge Length</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength()
 	 * @see #getTriangleEdgeLengthTriangularMeshFilter()
 	 * @generated
 	 */
 	EAttribute getTriangleEdgeLengthTriangularMeshFilter_MaximumEdgeLength();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#filter(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Filter</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#filter(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Filter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Filter</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#filter(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#filter(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
 	EOperation getTriangleEdgeLengthTriangularMeshFilter__Filter__CartesianTriangularMesh();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.OutlierFilter <em>Outlier Filter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter <em>Outlier Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Outlier Filter</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.OutlierFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter
 	 * @generated
 	 */
 	EClass getOutlierFilter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.OutlierFilter#getMaxDistance <em>Max Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter#getMaxDistance <em>Max Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max Distance</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.OutlierFilter#getMaxDistance()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter#getMaxDistance()
 	 * @see #getOutlierFilter()
 	 * @generated
 	 */
 	EAttribute getOutlierFilter_MaxDistance();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother <em>Mesh Smoother</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother <em>Mesh Smoother</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Mesh Smoother</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.MeshSmoother
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother
 	 * @generated
 	 */
 	EClass getMeshSmoother();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother#getNumberOfIterations <em>Number Of Iterations</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother#getNumberOfIterations <em>Number Of Iterations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Of Iterations</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.MeshSmoother#getNumberOfIterations()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother#getNumberOfIterations()
 	 * @see #getMeshSmoother()
 	 * @generated
 	 */
 	EAttribute getMeshSmoother_NumberOfIterations();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler <em>Voxel Based3 DPoint Cloud Resampler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler <em>Voxel Based3 DPoint Cloud Resampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Voxel Based3 DPoint Cloud Resampler</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler
 	 * @generated
 	 */
 	EClass getVoxelBased3DPointCloudResampler();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX <em>Resolution X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX <em>Resolution X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Resolution X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX()
 	 * @see #getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
 	EAttribute getVoxelBased3DPointCloudResampler_ResolutionX();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY <em>Resolution Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY <em>Resolution Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Resolution Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY()
 	 * @see #getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
 	EAttribute getVoxelBased3DPointCloudResampler_ResolutionY();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ <em>Resolution Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ <em>Resolution Z</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Resolution Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ()
 	 * @see #getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
 	EAttribute getVoxelBased3DPointCloudResampler_ResolutionZ();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Minimum Number Of Point Per Voxel</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel()
 	 * @see #getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
 	EAttribute getVoxelBased3DPointCloudResampler_MinimumNumberOfPointPerVoxel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tile Resolution</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution()
 	 * @see #getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
 	EAttribute getVoxelBased3DPointCloudResampler_TileResolution();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker <em>Rigid Body Pose Tracker</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker <em>Rigid Body Pose Tracker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rigid Body Pose Tracker</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker
 	 * @generated
 	 */
 	EClass getRigidBodyPoseTracker();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin <em>Position Markers At Origin</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin <em>Position Markers At Origin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Position Markers At Origin</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin()
 	 * @see #getRigidBodyPoseTracker()
 	 * @generated
 	 */
 	EReference getRigidBodyPoseTracker_PositionMarkersAtOrigin();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList) <em>Compute Transformation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList) <em>Compute Transformation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Transformation</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
 	EOperation getRigidBodyPoseTracker__ComputeTransformation__EList();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List) <em>Compute Transformation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List) <em>Compute Transformation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Transformation</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#computeTransformation(java.util.List)
 	 * @generated
 	 */
 	EOperation getRigidBodyPoseTracker__ComputeTransformation__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List) <em>Add Position Markers</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List) <em>Add Position Markers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Position Markers</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#addPositionMarkers(java.util.List)
 	 * @generated
 	 */
 	EOperation getRigidBodyPoseTracker__AddPositionMarkers__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List) <em>Remove Position Markers</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List) <em>Remove Position Markers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Position Markers</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#removePositionMarkers(java.util.List)
 	 * @generated
 	 */
 	EOperation getRigidBodyPoseTracker__RemovePositionMarkers__List();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.PositionMarker <em>Position Marker</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker <em>Position Marker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Position Marker</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PositionMarker
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker
 	 * @generated
 	 */
 	EClass getPositionMarker();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PositionMarker#getIdentifier <em>Identifier</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker#getIdentifier <em>Identifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Identifier</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PositionMarker#getIdentifier()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker#getIdentifier()
 	 * @see #getPositionMarker()
 	 * @generated
 	 */
 	EAttribute getPositionMarker_Identifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonGeometryData3DFacade();
+	EClass getApogyCommonGeometryData3DFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Position Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spherical Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createSphericalCoordinates(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createSphericalCoordinates(double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double();
+	EOperation getApogyCommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Pose</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(double, double, double, double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(double, double, double, double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double();
+	EOperation getApogyCommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Create Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Pose</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__Pose();
+	EOperation getApogyCommonGeometryData3DFacade__CreatePose__Pose();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Pose</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createPose(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
+	EOperation getApogyCommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createDigitalElevationMap(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Digital Elevation Map</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createDigitalElevationMap(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
+	EOperation getApogyCommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPolygon(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Polygon</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPolygon(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Position Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianPositionCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianOrientationCoordinates(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangle</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangle</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangle(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianCoordinatesMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createCartesianTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
+	EOperation getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
+	EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
+	EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createTransformedMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Create Transformed Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createTransformedMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Create Transformed Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Transformed Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createTransformedMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#createTransformedMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d();
+	EOperation getApogyCommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
+	EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#applyTransform(ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d();
+	EOperation getApogyCommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#updateCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Cartesian Coordinates Set</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][])
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#updateCartesianCoordinatesSet(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, double[][])
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
+	EOperation getApogyCommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List) <em>Concatenate Triangular Meshes</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List) <em>Concatenate Triangular Meshes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Concatenate Triangular Meshes</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
+	EOperation getApogyCommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO <em>Data3 DIO</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO <em>Data3 DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Data3 DIO</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO
 	 * @generated
 	 */
 	EClass getData3DIO();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String) <em>Load Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__LoadTriangularMesh__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream) <em>Load Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMesh(java.io.InputStream)
 	 * @generated
 	 */
 	EOperation getData3DIO__LoadTriangularMesh__InputStream();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__SaveTriangularMesh__CartesianTriangularMesh_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream) <em>Save Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream) <em>Save Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMesh(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.io.OutputStream)
 	 * @generated
 	 */
 	EOperation getData3DIO__SaveTriangularMesh__CartesianTriangularMesh_OutputStream();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String) <em>Load Triangular Mesh From ASCII As Normal Point Cloud</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String) <em>Load Triangular Mesh From ASCII As Normal Point Cloud</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh From ASCII As Normal Point Cloud</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCIIAsNormalPointCloud(java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__LoadTriangularMeshFromASCIIAsNormalPointCloud__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String) <em>Load Triangular Mesh From ASCII</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String) <em>Load Triangular Mesh From ASCII</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh From ASCII</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromASCII(java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__LoadTriangularMeshFromASCII__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh As ASCII</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String) <em>Save Triangular Mesh As ASCII</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Triangular Mesh As ASCII</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveTriangularMeshAsASCII(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh, java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__SaveTriangularMeshAsASCII__CartesianTriangularMesh_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String) <em>Load XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadXYZ(java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__LoadXYZ__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String) <em>Load Triangular Mesh From Tri XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String) <em>Load Triangular Mesh From Tri XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh From Tri XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#loadTriangularMeshFromTriXYZ(java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__LoadTriangularMeshFromTriXYZ__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Coordinates Set To XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__SaveCoordinatesSetToXYZ__CartesianCoordinatesSet_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Coordinates Set To XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToXYZ(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
 	 * @generated
 	 */
 	EOperation getData3DIO__SaveCoordinatesSetToXYZ__CartesianCoordinatesSet_OutputStream();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To CSV</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String) <em>Save Coordinates Set To CSV</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Coordinates Set To CSV</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.lang.String)
 	 * @generated
 	 */
 	EOperation getData3DIO__SaveCoordinatesSetToCSV__CartesianCoordinatesSet_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To CSV</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream) <em>Save Coordinates Set To CSV</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Coordinates Set To CSV</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO#saveCoordinatesSetToCSV(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet, java.io.OutputStream)
 	 * @generated
 	 */
 	EOperation getData3DIO__SaveCoordinatesSetToCSV__CartesianCoordinatesSet_OutputStream();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils <em>Data3 DUtils</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils <em>Data3 DUtils</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Data3 DUtils</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils
 	 * @generated
 	 */
 	EClass getData3DUtils();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeNormals(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Compute Normals</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormals(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Compute Normals</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Normals</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeNormals(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormals(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
 	EOperation getData3DUtils__ComputeNormals__CartesianTriangularMesh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Centroid</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List)
 	 * @generated
 	 */
 	EOperation getData3DUtils__ComputeCentroid__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Centroid</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet)
 	 * @generated
 	 */
 	EOperation getData3DUtils__ComputeCentroid__CartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Min Max Values</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Min Max Values</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Min Max Values</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet)
 	 * @generated
 	 */
 	EOperation getData3DUtils__ComputeMinMaxValues__Point3d_Point3d_CartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCurvatureChange(org.eclipse.symphony.common.geometry.data3d.PointLocator, int, double) <em>Compute Curvature Change</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCurvatureChange(ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator, int, double) <em>Compute Curvature Change</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Curvature Change</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCurvatureChange(org.eclipse.symphony.common.geometry.data3d.PointLocator, int, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCurvatureChange(ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator, int, double)
 	 * @generated
 	 */
 	EOperation getData3DUtils__ComputeCurvatureChange__PointLocator_int_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#extrude(java.util.List, org.eclipse.symphony.common.geometry.data3d.CartesianAxis, double, boolean) <em>Extrude</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#extrude(java.util.List, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis, double, boolean) <em>Extrude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Extrude</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#extrude(java.util.List, org.eclipse.symphony.common.geometry.data3d.CartesianAxis, double, boolean)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#extrude(java.util.List, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis, double, boolean)
 	 * @generated
 	 */
 	EOperation getData3DUtils__Extrude__List_CartesianAxis_double_boolean();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data3d.CartesianAxis <em>Cartesian Axis</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis <em>Cartesian Axis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Cartesian Axis</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianAxis
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis
 	 * @generated
 	 */
 	EEnum getCartesianAxis();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Cartesian Plane</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPlane
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane
 	 * @generated
 	 */
 	EEnum getCartesianPlane();
@@ -5648,7 +5648,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DFactory getSymphony__CommonGeometryData3DFactory();
+	ApogyCommonGeometryData3DFactory getApogyCommonGeometryData3DFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -5665,11 +5665,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl <em>Cartesian Polygon</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPolygonImpl <em>Cartesian Polygon</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPolygon()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPolygonImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPolygon()
 		 * @generated
 		 */
 		EClass CARTESIAN_POLYGON = eINSTANCE.getCartesianPolygon();
@@ -5699,41 +5699,41 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EReference CARTESIAN_POLYGON__CENTROID = eINSTANCE.getCartesianPolygon_Centroid();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangleImpl <em>Cartesian Triangle</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangleImpl <em>Cartesian Triangle</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangleImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangle()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangleImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangle()
 		 * @generated
 		 */
 		EClass CARTESIAN_TRIANGLE = eINSTANCE.getCartesianTriangle();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalPolygonImpl <em>Spherical Polygon</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalPolygonImpl <em>Spherical Polygon</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalPolygonImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalPolygon()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalPolygonImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalPolygon()
 		 * @generated
 		 */
 		EClass SPHERICAL_POLYGON = eINSTANCE.getSphericalPolygon();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangleImpl <em>Spherical Triangle</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangleImpl <em>Spherical Triangle</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangleImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalTriangle()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangleImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalTriangle()
 		 * @generated
 		 */
 		EClass SPHERICAL_TRIANGLE = eINSTANCE.getSphericalTriangle();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl <em>Cartesian Position Coordinates</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl <em>Cartesian Position Coordinates</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPositionCoordinates()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPositionCoordinates()
 		 * @generated
 		 */
 		EClass CARTESIAN_POSITION_COORDINATES = eINSTANCE.getCartesianPositionCoordinates();
@@ -5771,11 +5771,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation CARTESIAN_POSITION_COORDINATES___AS_POINT3D = eINSTANCE.getCartesianPositionCoordinates__AsPoint3d();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl <em>Colored Cartesian Position Coordinates</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl <em>Colored Cartesian Position Coordinates</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCartesianPositionCoordinates()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCartesianPositionCoordinates()
 		 * @generated
 		 */
 		EClass COLORED_CARTESIAN_POSITION_COORDINATES = eINSTANCE.getColoredCartesianPositionCoordinates();
@@ -5805,11 +5805,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute COLORED_CARTESIAN_POSITION_COORDINATES__BLUE = eINSTANCE.getColoredCartesianPositionCoordinates_Blue();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianOrientationCoordinates()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianOrientationCoordinates()
 		 * @generated
 		 */
 		EClass CARTESIAN_ORIENTATION_COORDINATES = eINSTANCE.getCartesianOrientationCoordinates();
@@ -5839,11 +5839,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute CARTESIAN_ORIENTATION_COORDINATES__ZROTATION = eINSTANCE.getCartesianOrientationCoordinates_ZRotation();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
 		 * @generated
 		 */
 		EClass ABSTRACT_CARTESIAN_COORDINATES_SET = eINSTANCE.getAbstractCartesianCoordinatesSet();
@@ -5857,31 +5857,31 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT = eINSTANCE.getAbstractCartesianCoordinatesSet__GetExtent();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
 		 * @generated
 		 */
 		EClass CARTESIAN_COORDINATES_SET = eINSTANCE.getCartesianCoordinatesSet();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
 		 * @generated
 		 */
 		EClass COLORED_COORDINATES_SET = eINSTANCE.getColoredCoordinatesSet();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSetExtent()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSetExtent()
 		 * @generated
 		 */
 		EClass CARTESIAN_COORDINATES_SET_EXTENT = eINSTANCE.getCartesianCoordinatesSetExtent();
@@ -5959,11 +5959,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION = eINSTANCE.getCartesianCoordinatesSetExtent_ZDimension();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapImpl <em>Digital Elevation Map</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl <em>Digital Elevation Map</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMap()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMap()
 		 * @generated
 		 */
 		EClass DIGITAL_ELEVATION_MAP = eINSTANCE.getDigitalElevationMap();
@@ -5985,31 +5985,31 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute DIGITAL_ELEVATION_MAP__YDIMENSION = eINSTANCE.getDigitalElevationMap_YDimension();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl <em>Cartesian Coordinates Mesh</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl <em>Cartesian Coordinates Mesh</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMesh()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMesh()
 		 * @generated
 		 */
 		EClass CARTESIAN_COORDINATES_MESH = eINSTANCE.getCartesianCoordinatesMesh();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshImpl <em>Cartesian Triangular Mesh</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl <em>Cartesian Triangular Mesh</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMesh()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMesh()
 		 * @generated
 		 */
 		EClass CARTESIAN_TRIANGULAR_MESH = eINSTANCE.getCartesianTriangularMesh();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesImpl <em>Spherical Coordinates</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesImpl <em>Spherical Coordinates</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinates()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinates()
 		 * @generated
 		 */
 		EClass SPHERICAL_COORDINATES = eINSTANCE.getSphericalCoordinates();
@@ -6039,51 +6039,51 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute SPHERICAL_COORDINATES__R = eINSTANCE.getSphericalCoordinates_R();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesSetImpl <em>Spherical Coordinates Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesSetImpl <em>Spherical Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesSetImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinatesSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesSetImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinatesSet()
 		 * @generated
 		 */
 		EClass SPHERICAL_COORDINATES_SET = eINSTANCE.getSphericalCoordinatesSet();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl <em>Spherical Coordinates Mesh</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl <em>Spherical Coordinates Mesh</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinatesMesh()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalCoordinatesMeshImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalCoordinatesMesh()
 		 * @generated
 		 */
 		EClass SPHERICAL_COORDINATES_MESH = eINSTANCE.getSphericalCoordinatesMesh();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangularMeshImpl <em>Spherical Triangular Mesh</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangularMeshImpl <em>Spherical Triangular Mesh</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphericalTriangularMeshImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalTriangularMesh()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphericalTriangularMeshImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphericalTriangularMesh()
 		 * @generated
 		 */
 		EClass SPHERICAL_TRIANGULAR_MESH = eINSTANCE.getSphericalTriangularMesh();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl <em>Pose</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PoseImpl <em>Pose</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPose()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PoseImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPose()
 		 * @generated
 		 */
 		EClass POSE = eINSTANCE.getPose();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl <em>Sphere Sampling Shape</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphereSamplingShapeImpl <em>Sphere Sampling Shape</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphereSamplingShape()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphereSamplingShapeImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSphereSamplingShape()
 		 * @generated
 		 */
 		EClass SPHERE_SAMPLING_SHAPE = eINSTANCE.getSphereSamplingShape();
@@ -6113,11 +6113,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING = eINSTANCE.getSphereSamplingShape_IncludeJustTouching();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CubeSamplingShapeImpl <em>Cube Sampling Shape</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CubeSamplingShapeImpl <em>Cube Sampling Shape</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CubeSamplingShapeImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCubeSamplingShape()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CubeSamplingShapeImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCubeSamplingShape()
 		 * @generated
 		 */
 		EClass CUBE_SAMPLING_SHAPE = eINSTANCE.getCubeSamplingShape();
@@ -6147,71 +6147,71 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING = eINSTANCE.getCubeSamplingShape_IncludeJustTouching();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl <em>Cartesian Coordinates Set Shape Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl <em>Cartesian Coordinates Set Shape Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSetShapeSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesSetShapeSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesSetShapeSampler()
 		 * @generated
 		 */
 		EClass CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER = eINSTANCE.getCartesianCoordinatesSetShapeSampler();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl <em>Cartesian Coordinates Mesh Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl <em>Cartesian Coordinates Mesh Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshSampler()
 		 * @generated
 		 */
 		EClass CARTESIAN_COORDINATES_MESH_SAMPLER = eINSTANCE.getCartesianCoordinatesMeshSampler();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl <em>Cartesian Coordinates Mesh Polygon Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl <em>Cartesian Coordinates Mesh Polygon Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshPolygonSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianCoordinatesMeshPolygonSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshPolygonSampler()
 		 * @generated
 		 */
 		EClass CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER = eINSTANCE.getCartesianCoordinatesMeshPolygonSampler();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl <em>Cartesian Triangular Mesh Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl <em>Cartesian Triangular Mesh Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMeshSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshSampler()
 		 * @generated
 		 */
 		EClass CARTESIAN_TRIANGULAR_MESH_SAMPLER = eINSTANCE.getCartesianTriangularMeshSampler();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl <em>Cartesian Triangular Mesh Polygon Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl <em>Cartesian Triangular Mesh Polygon Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMeshPolygonSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianTriangularMeshPolygonSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianTriangularMeshPolygonSampler()
 		 * @generated
 		 */
 		EClass CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER = eINSTANCE.getCartesianTriangularMeshPolygonSampler();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl <em>Cartesian Position Coordinates Mesher</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl <em>Cartesian Position Coordinates Mesher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPositionCoordinatesMesher()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPositionCoordinatesMesherImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPositionCoordinatesMesher()
 		 * @generated
 		 */
 		EClass CARTESIAN_POSITION_COORDINATES_MESHER = eINSTANCE.getCartesianPositionCoordinatesMesher();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl <em>Normal Point Cloud</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.NormalPointCloudImpl <em>Normal Point Cloud</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getNormalPointCloud()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.NormalPointCloudImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getNormalPointCloud()
 		 * @generated
 		 */
 		EClass NORMAL_POINT_CLOUD = eINSTANCE.getNormalPointCloud();
@@ -6233,11 +6233,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute NORMAL_POINT_CLOUD__NORMALS = eINSTANCE.getNormalPointCloud_Normals();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PointLocatorImpl <em>Point Locator</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PointLocatorImpl <em>Point Locator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.PointLocatorImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointLocator()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PointLocatorImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPointLocator()
 		 * @generated
 		 */
 		EClass POINT_LOCATOR = eINSTANCE.getPointLocator();
@@ -6315,21 +6315,21 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE = eINSTANCE.getPointLocator__FindPointsWithinRadius__CartesianPositionCoordinates_double();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl <em>KD Tree Based Point Locator</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl <em>KD Tree Based Point Locator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getKDTreeBasedPointLocator()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getKDTreeBasedPointLocator()
 		 * @generated
 		 */
 		EClass KD_TREE_BASED_POINT_LOCATOR = eINSTANCE.getKDTreeBasedPointLocator();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshLocalizerImpl <em>Mesh Localizer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshLocalizerImpl <em>Mesh Localizer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.MeshLocalizerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshLocalizer()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshLocalizerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMeshLocalizer()
 		 * @generated
 		 */
 		EClass MESH_LOCALIZER = eINSTANCE.getMeshLocalizer();
@@ -6343,31 +6343,31 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation MESH_LOCALIZER___LOCALIZE__CARTESIANTRIANGULARMESH_MATRIX4D_CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl <em>Delaunay Mesher</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DelaunayMesherImpl <em>Delaunay Mesher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDelaunayMesher()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DelaunayMesherImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDelaunayMesher()
 		 * @generated
 		 */
 		EClass DELAUNAY_MESHER = eINSTANCE.getDelaunayMesher();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapMesherImpl <em>Digital Elevation Map Mesher</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapMesherImpl <em>Digital Elevation Map Mesher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapMesherImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapMesher()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapMesherImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMapMesher()
 		 * @generated
 		 */
 		EClass DIGITAL_ELEVATION_MAP_MESHER = eINSTANCE.getDigitalElevationMapMesher();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl <em>Digital Elevation Map Sampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl <em>Digital Elevation Map Sampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapSampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDigitalElevationMapSampler()
 		 * @generated
 		 */
 		EClass DIGITAL_ELEVATION_MAP_SAMPLER = eINSTANCE.getDigitalElevationMapSampler();
@@ -6381,41 +6381,41 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute DIGITAL_ELEVATION_MAP_SAMPLER__TARGET_RESOLUTION = eINSTANCE.getDigitalElevationMapSampler_TargetResolution();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl <em>Triangular Mesh Normals Calculator</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl <em>Triangular Mesh Normals Calculator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshNormalsCalculator()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshNormalsCalculatorImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangularMeshNormalsCalculator()
 		 * @generated
 		 */
 		EClass TRIANGULAR_MESH_NORMALS_CALCULATOR = eINSTANCE.getTriangularMeshNormalsCalculator();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl <em>Triangular Mesh To Normal Point Cloud</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl <em>Triangular Mesh To Normal Point Cloud</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshToNormalPointCloud()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangularMeshToNormalPointCloudImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangularMeshToNormalPointCloud()
 		 * @generated
 		 */
 		EClass TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = eINSTANCE.getTriangularMeshToNormalPointCloud();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.UniquePointsFilterImpl <em>Unique Points Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.UniquePointsFilterImpl <em>Unique Points Filter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.UniquePointsFilterImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getUniquePointsFilter()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.UniquePointsFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getUniquePointsFilter()
 		 * @generated
 		 */
 		EClass UNIQUE_POINTS_FILTER = eINSTANCE.getUniquePointsFilter();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl <em>Triangle Edge Length Triangular Mesh Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl <em>Triangle Edge Length Triangular Mesh Filter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangleEdgeLengthTriangularMeshFilter()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getTriangleEdgeLengthTriangularMeshFilter()
 		 * @generated
 		 */
 		EClass TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = eINSTANCE.getTriangleEdgeLengthTriangularMeshFilter();
@@ -6453,11 +6453,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER___FILTER__CARTESIANTRIANGULARMESH = eINSTANCE.getTriangleEdgeLengthTriangularMeshFilter__Filter__CartesianTriangularMesh();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.OutlierFilterImpl <em>Outlier Filter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.OutlierFilterImpl <em>Outlier Filter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.OutlierFilterImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutlierFilter()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.OutlierFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getOutlierFilter()
 		 * @generated
 		 */
 		EClass OUTLIER_FILTER = eINSTANCE.getOutlierFilter();
@@ -6471,11 +6471,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute OUTLIER_FILTER__MAX_DISTANCE = eINSTANCE.getOutlierFilter_MaxDistance();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl <em>Mesh Smoother</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshSmootherImpl <em>Mesh Smoother</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshSmoother()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshSmootherImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMeshSmoother()
 		 * @generated
 		 */
 		EClass MESH_SMOOTHER = eINSTANCE.getMeshSmoother();
@@ -6489,11 +6489,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute MESH_SMOOTHER__NUMBER_OF_ITERATIONS = eINSTANCE.getMeshSmoother_NumberOfIterations();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl <em>Voxel Based3 DPoint Cloud Resampler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl <em>Voxel Based3 DPoint Cloud Resampler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVoxelBased3DPointCloudResampler()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVoxelBased3DPointCloudResampler()
 		 * @generated
 		 */
 		EClass VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = eINSTANCE.getVoxelBased3DPointCloudResampler();
@@ -6539,11 +6539,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION = eINSTANCE.getVoxelBased3DPointCloudResampler_TileResolution();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl <em>Rigid Body Pose Tracker</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl <em>Rigid Body Pose Tracker</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRigidBodyPoseTracker()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getRigidBodyPoseTracker()
 		 * @generated
 		 */
 		EClass RIGID_BODY_POSE_TRACKER = eINSTANCE.getRigidBodyPoseTracker();
@@ -6589,11 +6589,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation RIGID_BODY_POSE_TRACKER___REMOVE_POSITION_MARKERS__LIST = eINSTANCE.getRigidBodyPoseTracker__RemovePositionMarkers__List();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl <em>Position Marker</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PositionMarkerImpl <em>Position Marker</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPositionMarker()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PositionMarkerImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPositionMarker()
 		 * @generated
 		 */
 		EClass POSITION_MARKER = eINSTANCE.getPositionMarker();
@@ -6607,14 +6607,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute POSITION_MARKER__IDENTIFIER = eINSTANCE.getPositionMarker_Identifier();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSymphony__CommonGeometryData3DFacade()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getApogyCommonGeometryData3DFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = eINSTANCE.getSymphony__CommonGeometryData3DFacade();
+		EClass APOGY_COMMON_GEOMETRY_DATA3_DFACADE = eINSTANCE.getApogyCommonGeometryData3DFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Position Coordinates</b></em>' operation.
@@ -6622,7 +6622,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Orientation Coordinates</b></em>' operation.
@@ -6630,7 +6630,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Spherical Coordinates</b></em>' operation.
@@ -6638,7 +6638,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Pose</b></em>' operation.
@@ -6646,7 +6646,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyCommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Pose</b></em>' operation.
@@ -6654,7 +6654,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePose__Pose();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = eINSTANCE.getApogyCommonGeometryData3DFacade__CreatePose__Pose();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Pose</b></em>' operation.
@@ -6662,7 +6662,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getApogyCommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Digital Elevation Map</b></em>' operation.
@@ -6670,7 +6670,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Polygon</b></em>' operation.
@@ -6678,7 +6678,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Position Coordinates</b></em>' operation.
@@ -6686,7 +6686,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Orientation Coordinates</b></em>' operation.
@@ -6694,7 +6694,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Mesh</b></em>' operation.
@@ -6702,7 +6702,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangle</b></em>' operation.
@@ -6710,7 +6710,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangle</b></em>' operation.
@@ -6718,7 +6718,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Mesh</b></em>' operation.
@@ -6726,7 +6726,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Mesh</b></em>' operation.
@@ -6734,7 +6734,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangular Mesh</b></em>' operation.
@@ -6742,7 +6742,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangular Mesh</b></em>' operation.
@@ -6750,7 +6750,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -6758,7 +6758,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = eINSTANCE.getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -6766,7 +6766,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = eINSTANCE.getApogyCommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Transformed Mesh</b></em>' operation.
@@ -6774,7 +6774,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getApogyCommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -6782,7 +6782,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getApogyCommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -6790,7 +6790,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = eINSTANCE.getApogyCommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Update Cartesian Coordinates Set</b></em>' operation.
@@ -6798,7 +6798,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = eINSTANCE.getApogyCommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Concatenate Triangular Meshes</b></em>' operation.
@@ -6806,14 +6806,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = eINSTANCE.getApogyCommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DIO()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DIOImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getData3DIO()
 		 * @generated
 		 */
 		EClass DATA3_DIO = eINSTANCE.getData3DIO();
@@ -6923,11 +6923,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation DATA3_DIO___SAVE_COORDINATES_SET_TO_CSV__CARTESIANCOORDINATESSET_OUTPUTSTREAM = eINSTANCE.getData3DIO__SaveCoordinatesSetToCSV__CartesianCoordinatesSet_OutputStream();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DUtilsImpl <em>Data3 DUtils</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DUtilsImpl <em>Data3 DUtils</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Data3DUtilsImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DUtils()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.Data3DUtilsImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getData3DUtils()
 		 * @generated
 		 */
 		EClass DATA3_DUTILS = eINSTANCE.getData3DUtils();
@@ -6981,21 +6981,21 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation DATA3_DUTILS___EXTRUDE__LIST_CARTESIANAXIS_DOUBLE_BOOLEAN = eINSTANCE.getData3DUtils__Extrude__List_CartesianAxis_double_boolean();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianAxis <em>Cartesian Axis</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis <em>Cartesian Axis</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.CartesianAxis
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianAxis()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianAxis()
 		 * @generated
 		 */
 		EEnum CARTESIAN_AXIS = eINSTANCE.getCartesianAxis();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPlane
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPlane()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCartesianPlane()
 		 * @generated
 		 */
 		EEnum CARTESIAN_PLANE = eINSTANCE.getCartesianPlane();
@@ -7005,7 +7005,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Vector2d
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector2d()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVector2d()
 		 * @generated
 		 */
 		EDataType VECTOR2D = eINSTANCE.getVector2d();
@@ -7015,7 +7015,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Vector3d
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector3d()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getVector3d()
 		 * @generated
 		 */
 		EDataType VECTOR3D = eINSTANCE.getVector3d();
@@ -7025,7 +7025,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Point3d
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPoint3d()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getPoint3d()
 		 * @generated
 		 */
 		EDataType POINT3D = eINSTANCE.getPoint3d();
@@ -7035,7 +7035,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Matrix4d
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMatrix4d()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMatrix4d()
 		 * @generated
 		 */
 		EDataType MATRIX4D = eINSTANCE.getMatrix4d();
@@ -7045,7 +7045,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.GVector
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getGVector()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getGVector()
 		 * @generated
 		 */
 		EDataType GVECTOR = eINSTANCE.getGVector();
@@ -7055,7 +7055,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getList()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getList()
 		 * @generated
 		 */
 		EDataType LIST = eINSTANCE.getList();
@@ -7065,7 +7065,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.Map
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMap()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getMap()
 		 * @generated
 		 */
 		EDataType MAP = eINSTANCE.getMap();
@@ -7075,7 +7075,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.Set
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSet()
 		 * @generated
 		 */
 		EDataType SET = eINSTANCE.getSet();
@@ -7085,7 +7085,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.SortedSet
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSortedSet()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getSortedSet()
 		 * @generated
 		 */
 		EDataType SORTED_SET = eINSTANCE.getSortedSet();
@@ -7095,7 +7095,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.Collection
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCollection()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getCollection()
 		 * @generated
 		 */
 		EDataType COLLECTION = eINSTANCE.getCollection();
@@ -7105,7 +7105,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.EList
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getEList()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getEList()
 		 * @generated
 		 */
 		EDataType ELIST = eINSTANCE.getEList();
@@ -7115,7 +7115,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.runtime.IProgressMonitor
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIProgressMonitor()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIProgressMonitor()
 		 * @generated
 		 */
 		EDataType IPROGRESS_MONITOR = eINSTANCE.getIProgressMonitor();
@@ -7125,7 +7125,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.OutputStream
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutputStream()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getOutputStream()
 		 * @generated
 		 */
 		EDataType OUTPUT_STREAM = eINSTANCE.getOutputStream();
@@ -7135,7 +7135,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.InputStream
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getInputStream()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getInputStream()
 		 * @generated
 		 */
 		EDataType INPUT_STREAM = eINSTANCE.getInputStream();
@@ -7145,7 +7145,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.IOException
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIOException()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIOException()
 		 * @generated
 		 */
 		EDataType IO_EXCEPTION = eINSTANCE.getIOException();
@@ -7155,7 +7155,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
@@ -7165,7 +7165,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.IllegalArgumentException
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIllegalArgumentException()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIllegalArgumentException()
 		 * @generated
 		 */
 		EDataType ILLEGAL_ARGUMENT_EXCEPTION = eINSTANCE.getIllegalArgumentException();
@@ -7174,7 +7174,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * The meta object literal for the '<em>Double Array Of Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDoubleArrayOfArray()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getDoubleArrayOfArray()
 		 * @generated
 		 */
 		EDataType DOUBLE_ARRAY_OF_ARRAY = eINSTANCE.getDoubleArrayOfArray();
@@ -7183,11 +7183,11 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * The meta object literal for the '<em>Int Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIntArray()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DPackageImpl#getIntArray()
 		 * @generated
 		 */
 		EDataType INT_ARRAY = eINSTANCE.getIntArray();
 
 	}
 
-} //Symphony__CommonGeometryData3DPackage
+} //ApogyCommonGeometryData3DPackage

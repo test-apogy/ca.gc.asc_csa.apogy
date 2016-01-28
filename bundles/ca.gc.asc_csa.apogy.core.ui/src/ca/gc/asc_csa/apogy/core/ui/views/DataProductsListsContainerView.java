@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.views;
+package ca.gc.asc_csa.apogy.core.ui.views;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -9,11 +9,11 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.ui.composites.DataProductsListsContainerComposite;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.ui.composites.DataProductsListsContainerComposite;
 
 public class DataProductsListsContainerView extends AbstractView implements IEditingDomainProvider{
 
@@ -21,7 +21,7 @@ public class DataProductsListsContainerView extends AbstractView implements IEdi
 	private Adapter activeSessionAdapter;
 
 	public DataProductsListsContainerView() {
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
@@ -60,14 +60,14 @@ public class DataProductsListsContainerView extends AbstractView implements IEdi
 	@Override
 	public void dispose() {
 		super.dispose();
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 	}
 
 	/**
 	 * Sets the Data Products Lists Container of the composite.
 	 */
 	private void setCompositeDataProductsListsContainer() {
-		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		DataProductsListsContainer dataProductsListsContainer = 
 				session == null ?
 					null :
@@ -78,6 +78,6 @@ public class DataProductsListsContainerView extends AbstractView implements IEdi
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

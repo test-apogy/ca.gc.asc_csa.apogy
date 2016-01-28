@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl;
 
 import javax.vecmath.Matrix4d;
 
@@ -10,34 +10,34 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformFactory;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
-import org.eclipse.symphony.examples.mobile_platform.Position;
-import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData;
-import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyFactory;
-import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Position;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Mobile Platform Symphony System Api Adapter</b></em>'.
+ * An implementation of the model object '<em><b>Mobile Platform Apogy System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterImpl
-														implements MobilePlatformSymphonySystemApiAdapter
+public class MobilePlatformApogySystemApiAdapterImpl extends ApogySystemApiAdapterImpl
+														implements MobilePlatformApogySystemApiAdapter
 {
 	/**
 	 * This is the adapter used to receive notifications to the
@@ -50,7 +50,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobilePlatformSymphonySystemApiAdapterImpl() {
+	protected MobilePlatformApogySystemApiAdapterImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyExamplesMobilePlatformApogyPackage.Literals.MOBILE_PLATFORM_APOGY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -77,9 +77,9 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	
 	/**
 	 * This is the callback method that is called by the API adapter
-	 * when the mobile platform instance is being initialized by Symphony.
+	 * when the mobile platform instance is being initialized by Apogy.
 	 * 
-	 * @param environment The environment in which Symphony and its components are operating.
+	 * @param environment The environment in which Apogy and its components are operating.
 	 * @param elementType The type (e.g. class) of the given instance.
 	 * @param instance The instance which is being handled by this API adapter.
 	 */
@@ -97,10 +97,10 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 
 		// Create a vehicle pose corrector to perform the required changes
 		// to update the pose of the lander
-		VehiclePoseCorrector corrector = Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector();
+		VehiclePoseCorrector corrector = ApogyAddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector();
 		
 		// Indicate that the corrector is using wheels when determining contact points
-		corrector.setContactProvider(Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider());
+		corrector.setContactProvider(ApogyAddonsVehicleFactory.eINSTANCE.createWheelContactProvider());
 		
 		// Set the pose corrector for the mobile platform
 		setPoseCorrector(corrector);		
@@ -109,7 +109,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	/**
 	 * This is the callback method that is called by the API adapter
 	 * when the mobile platform instance is being disposed (i.e. shutdown /
-	 * destroyed) by Symphony
+	 * destroyed) by Apogy
 	 */
 	@Override
 	public void dispose()
@@ -151,7 +151,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 		// Use the relevant factor method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of MobilePlatformData
-		return Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformData();
+		return ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformData();
 	}
 	
 	/**
@@ -190,7 +190,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 								 "it already is in that state.";
 				
 				// Throw an exception to indicate that the apply() has failed; this will
-				// be caught and logged by Symphony
+				// be caught and logged by Apogy
 				throw new RuntimeException(message);
 			}
 			
@@ -211,11 +211,11 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 				// Note: The angles in the orientation are NOT unique; 
 				//       an infinite number of solutions (e.g. +- 2*Pi)
 				//		 could be match the given matrix.  
-				Tuple3d position = Symphony__CommonMathFacade.INSTANCE.extractPosition(matrix);
-				Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(matrix);
+				Tuple3d position = ApogyCommonMathFacade.INSTANCE.extractPosition(matrix);
+				Tuple3d orientation = ApogyCommonMathFacade.INSTANCE.extractOrientation(matrix);
 
 				// Create a new position object filled with that extracted information
-				Position newPlatformPosition = Symphony__ExamplesMobilePlatformFactory.eINSTANCE.createPosition();
+				Position newPlatformPosition = ApogyExamplesMobilePlatformFactory.eINSTANCE.createPosition();
 				newPlatformPosition.setX(position.getX());
 				newPlatformPosition.setY(position.getY());
 				newPlatformPosition.setTheta(orientation.getZ());
@@ -273,11 +273,11 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 			mobilePlatformData.setAngularVelocity(this.getMobilePlatform().getAngularVelocity());
 			
 			// The collect() for the power system subcomponent
-			// will be automatically be called by Symphony
+			// will be automatically be called by Apogy
 		}
 	}
 	
-} //MobilePlatformSymphonySystemApiAdapterImpl
+} //MobilePlatformApogySystemApiAdapterImpl
 
 /**
  * This class is an adapter which is specialized to check
@@ -293,7 +293,7 @@ class PositionAdapter extends AdapterImpl
 	 * Used to keep track of the API adapter whose instance is
 	 * being listened to by the adapter.
 	 */
-	private MobilePlatformSymphonySystemApiAdapterImpl apiAdapter;
+	private MobilePlatformApogySystemApiAdapterImpl apiAdapter;
 	
 	/**
 	 * This is the constructor for the PositionAdapter class
@@ -302,7 +302,7 @@ class PositionAdapter extends AdapterImpl
 	 * 
 	 * @param apiAdapter The API adapter whose instance is being monitored by this adapter
 	 */
-	public PositionAdapter(MobilePlatformSymphonySystemApiAdapterImpl apiAdapter)
+	public PositionAdapter(MobilePlatformApogySystemApiAdapterImpl apiAdapter)
 	{
 		// Keep track of the relevant API adapter
 		this.apiAdapter = apiAdapter;
@@ -326,7 +326,7 @@ class PositionAdapter extends AdapterImpl
 			{
 				// If the feature being changed was the position
 				if (msg.getFeatureID(MobilePlatform.class) ==
-						Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION)
+						ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION)
 				{
 					// If there was a previous Position object
 					if (msg.getOldValue() instanceof Position)
@@ -389,7 +389,7 @@ class PositionAdapter extends AdapterImpl
 											position.getTheta());
 		
 		// Create a EObject wrapper for the matrix
-		Matrix4x4 matrix = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
+		Matrix4x4 matrix = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(m);
 		
 		// Update the API Adapter's pose transform accordingly,
 		// which is ultimately the transform at the root of the

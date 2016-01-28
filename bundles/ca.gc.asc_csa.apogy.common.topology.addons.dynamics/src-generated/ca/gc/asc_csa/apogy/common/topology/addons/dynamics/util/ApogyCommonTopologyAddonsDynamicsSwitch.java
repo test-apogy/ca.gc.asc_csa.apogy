@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.util;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
-import org.eclipse.symphony.common.topology.addons.dynamics.*;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,17 +24,17 @@ import org.eclipse.symphony.common.topology.addons.dynamics.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage
  * @generated
  */
-public class Symphony__CommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
+public class ApogyCommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyAddonsDynamicsPackage modelPackage;
+	protected static ApogyCommonTopologyAddonsDynamicsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -42,9 +42,9 @@ public class Symphony__CommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsSwitch() {
+	public ApogyCommonTopologyAddonsDynamicsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyAddonsDynamicsPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyAddonsDynamicsPackage.eINSTANCE;
 		}
 	}
 
@@ -71,7 +71,7 @@ public class Symphony__CommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES: {
 				DynamicSystemProperties dynamicSystemProperties = (DynamicSystemProperties)theEObject;
 				T result = caseDynamicSystemProperties(dynamicSystemProperties);
 				if (result == null) result = caseAggregateGroupNode(dynamicSystemProperties);
@@ -80,13 +80,13 @@ public class Symphony__CommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE: {
 				AbstractDynamicsEngine abstractDynamicsEngine = (AbstractDynamicsEngine)theEObject;
 				T result = caseAbstractDynamicsEngine(abstractDynamicsEngine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY: {
 				PhysicalBody physicalBody = (PhysicalBody)theEObject;
 				T result = casePhysicalBody(physicalBody);
 				if (result == null) result = caseAggregateGroupNode(physicalBody);
@@ -95,151 +95,151 @@ public class Symphony__CommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.PHYSICAL_PROPERTIES: {
 				PhysicalProperties physicalProperties = (PhysicalProperties)theEObject;
 				T result = casePhysicalProperties(physicalProperties);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_PHYSICAL_BODY_SIMULATION_PROPERTIES: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_PHYSICAL_BODY_SIMULATION_PROPERTIES: {
 				AbstractPhysicalBodySimulationProperties abstractPhysicalBodySimulationProperties = (AbstractPhysicalBodySimulationProperties)theEObject;
 				T result = caseAbstractPhysicalBodySimulationProperties(abstractPhysicalBodySimulationProperties);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_CONSTRAINT_SIMULATION_PROPERTIES: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_CONSTRAINT_SIMULATION_PROPERTIES: {
 				AbstractConstraintSimulationProperties abstractConstraintSimulationProperties = (AbstractConstraintSimulationProperties)theEObject;
 				T result = caseAbstractConstraintSimulationProperties(abstractConstraintSimulationProperties);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_COLLISION_GEOMETRY_SIMULATION_PROPERTIES: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_COLLISION_GEOMETRY_SIMULATION_PROPERTIES: {
 				AbstractCollisionGeometrySimulationProperties abstractCollisionGeometrySimulationProperties = (AbstractCollisionGeometrySimulationProperties)theEObject;
 				T result = caseAbstractCollisionGeometrySimulationProperties(abstractCollisionGeometrySimulationProperties);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST: {
 				PointOfInterest pointOfInterest = (PointOfInterest)theEObject;
 				T result = casePointOfInterest(pointOfInterest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE: {
 				KinematicState kinematicState = (KinematicState)theEObject;
 				T result = caseKinematicState(kinematicState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.CONSTRAINT_STATE: {
 				ConstraintState constraintState = (ConstraintState)theEObject;
 				T result = caseConstraintState(constraintState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_CONSTRAINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_CONSTRAINT: {
 				AbstractConstraint abstractConstraint = (AbstractConstraint)theEObject;
 				T result = caseAbstractConstraint(abstractConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CYLINDRICAL_CONSTRAINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.CYLINDRICAL_CONSTRAINT: {
 				CylindricalConstraint cylindricalConstraint = (CylindricalConstraint)theEObject;
 				T result = caseCylindricalConstraint(cylindricalConstraint);
 				if (result == null) result = caseAbstractConstraint(cylindricalConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEAR_RATIO_CONSTRAINT: {
 				GearRatioConstraint gearRatioConstraint = (GearRatioConstraint)theEObject;
 				T result = caseGearRatioConstraint(gearRatioConstraint);
 				if (result == null) result = caseAbstractConstraint(gearRatioConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.HINGE_CONSTRAINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.HINGE_CONSTRAINT: {
 				HingeConstraint hingeConstraint = (HingeConstraint)theEObject;
 				T result = caseHingeConstraint(hingeConstraint);
 				if (result == null) result = caseAbstractConstraint(hingeConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT: {
 				PrismaticConstraint prismaticConstraint = (PrismaticConstraint)theEObject;
 				T result = casePrismaticConstraint(prismaticConstraint);
 				if (result == null) result = caseAbstractConstraint(prismaticConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.RPRO_CONSTRAINT: {
 				RPROConstraint rproConstraint = (RPROConstraint)theEObject;
 				T result = caseRPROConstraint(rproConstraint);
 				if (result == null) result = caseAbstractConstraint(rproConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT: {
 				UniversalConstraint universalConstraint = (UniversalConstraint)theEObject;
 				T result = caseUniversalConstraint(universalConstraint);
 				if (result == null) result = caseAbstractConstraint(universalConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT: {
 				ConstraintAttachmentPoint constraintAttachmentPoint = (ConstraintAttachmentPoint)theEObject;
 				T result = caseConstraintAttachmentPoint(constraintAttachmentPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY: {
 				CollisionGeometry collisionGeometry = (CollisionGeometry)theEObject;
 				T result = caseCollisionGeometry(collisionGeometry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_MATERIAL: {
 				AbstractMaterial abstractMaterial = (AbstractMaterial)theEObject;
 				T result = caseAbstractMaterial(abstractMaterial);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.GEOMETRY: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.GEOMETRY: {
 				Geometry geometry = (Geometry)theEObject;
 				T result = caseGeometry(geometry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.BOX_GEOMETRY: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.BOX_GEOMETRY: {
 				BoxGeometry boxGeometry = (BoxGeometry)theEObject;
 				T result = caseBoxGeometry(boxGeometry);
 				if (result == null) result = caseGeometry(boxGeometry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CAPSULE_GEOMETRY: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.CAPSULE_GEOMETRY: {
 				CapsuleGeometry capsuleGeometry = (CapsuleGeometry)theEObject;
 				T result = caseCapsuleGeometry(capsuleGeometry);
 				if (result == null) result = caseGeometry(capsuleGeometry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY: {
 				CylinderGeometry cylinderGeometry = (CylinderGeometry)theEObject;
 				T result = caseCylinderGeometry(cylinderGeometry);
 				if (result == null) result = caseGeometry(cylinderGeometry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY: {
+			case ApogyCommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY: {
 				SphereGeometry sphereGeometry = (SphereGeometry)theEObject;
 				T result = caseSphereGeometry(sphereGeometry);
 				if (result == null) result = caseGeometry(sphereGeometry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE: {
-				Symphony__CommonTopologyAddonsDynamicsFacade symphony__CommonTopologyAddonsDynamicsFacade = (Symphony__CommonTopologyAddonsDynamicsFacade)theEObject;
-				T result = caseSymphony__CommonTopologyAddonsDynamicsFacade(symphony__CommonTopologyAddonsDynamicsFacade);
+			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE: {
+				ApogyCommonTopologyAddonsDynamicsFacade apogy__CommonTopologyAddonsDynamicsFacade = (ApogyCommonTopologyAddonsDynamicsFacade)theEObject;
+				T result = caseApogyCommonTopologyAddonsDynamicsFacade(apogy__CommonTopologyAddonsDynamicsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -633,7 +633,7 @@ public class Symphony__CommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonTopologyAddonsDynamicsFacade(Symphony__CommonTopologyAddonsDynamicsFacade object) {
+	public T caseApogyCommonTopologyAddonsDynamicsFacade(ApogyCommonTopologyAddonsDynamicsFacade object) {
 		return null;
 	}
 
@@ -698,4 +698,4 @@ public class Symphony__CommonTopologyAddonsDynamicsSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonTopologyAddonsDynamicsSwitch
+} //ApogyCommonTopologyAddonsDynamicsSwitch

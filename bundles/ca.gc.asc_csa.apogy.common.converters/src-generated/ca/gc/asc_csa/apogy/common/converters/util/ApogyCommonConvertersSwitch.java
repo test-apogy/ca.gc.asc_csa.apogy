@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.util;
+package ca.gc.asc_csa.apogy.common.converters.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.common.converters.*;
+import ca.gc.asc_csa.apogy.common.converters.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.common.converters.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.converters.Symphony__CommonConvertersPackage
+ * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersPackage
  * @generated
  */
-public class Symphony__CommonConvertersSwitch<T> extends Switch<T> {
+public class ApogyCommonConvertersSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonConvertersPackage modelPackage;
+	protected static ApogyCommonConvertersPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__CommonConvertersSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersSwitch() {
+	public ApogyCommonConvertersSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonConvertersPackage.eINSTANCE;
+			modelPackage = ApogyCommonConvertersPackage.eINSTANCE;
 		}
 	}
 
@@ -67,9 +67,9 @@ public class Symphony__CommonConvertersSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonConvertersPackage.SYMPHONY_COMMON_CONVERTERS_FACADE: {
-				Symphony__CommonConvertersFacade symphony__CommonConvertersFacade = (Symphony__CommonConvertersFacade)theEObject;
-				T result = caseSymphony__CommonConvertersFacade(symphony__CommonConvertersFacade);
+			case ApogyCommonConvertersPackage.APOGY_COMMON_CONVERTERS_FACADE: {
+				ApogyCommonConvertersFacade apogy__CommonConvertersFacade = (ApogyCommonConvertersFacade)theEObject;
+				T result = caseApogyCommonConvertersFacade(apogy__CommonConvertersFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,7 +88,7 @@ public class Symphony__CommonConvertersSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonConvertersFacade(Symphony__CommonConvertersFacade object) {
+	public T caseApogyCommonConvertersFacade(ApogyCommonConvertersFacade object) {
 		return null;
 	}
 
@@ -108,4 +108,4 @@ public class Symphony__CommonConvertersSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonConvertersSwitch
+} //ApogyCommonConvertersSwitch

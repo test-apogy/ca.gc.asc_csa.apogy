@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint#getInputValue <em>Input Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint#getOutputValue <em>Output Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint#getInputValue <em>Input Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint#getOutputValue <em>Output Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCustomInputConditioningPoint()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getCustomInputConditioningPoint()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface CustomInputConditioningPoint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Value</em>' attribute.
 	 * @see #setInputValue(double)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCustomInputConditioningPoint_InputValue()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getCustomInputConditioningPoint_InputValue()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
 	double getInputValue();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint#getInputValue <em>Input Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint#getInputValue <em>Input Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Input Value</em>' attribute.
@@ -61,14 +61,14 @@ public interface CustomInputConditioningPoint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Value</em>' attribute.
 	 * @see #setOutputValue(double)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCustomInputConditioningPoint_OutputValue()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getCustomInputConditioningPoint_OutputValue()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
 	double getOutputValue();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint#getOutputValue <em>Output Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint#getOutputValue <em>Output Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Output Value</em>' attribute.

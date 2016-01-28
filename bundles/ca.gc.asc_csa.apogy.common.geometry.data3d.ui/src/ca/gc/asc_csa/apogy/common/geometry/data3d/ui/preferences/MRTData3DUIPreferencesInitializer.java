@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.preferences;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
-import org.eclipse.symphony.common.geometry.data3d.ui.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.Activator;
 
 public class MRTData3DUIPreferencesInitializer extends AbstractPreferenceInitializer {
 

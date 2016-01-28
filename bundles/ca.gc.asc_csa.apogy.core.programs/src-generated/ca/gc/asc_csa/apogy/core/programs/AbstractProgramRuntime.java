@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs;
+package ca.gc.asc_csa.apogy.core.programs;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,10 +15,10 @@ import org.eclipse.symphony.core.invocator.Program;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getAbstractProgramRuntime()
+ * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage#getAbstractProgramRuntime()
  * @model abstract="true"
  * @generated
  */
@@ -33,14 +33,14 @@ public interface AbstractProgramRuntime extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Program</em>' reference.
 	 * @see #setProgram(Program)
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getAbstractProgramRuntime_Program()
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage#getAbstractProgramRuntime_Program()
 	 * @model
 	 * @generated
 	 */
 	Program getProgram();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Program</em>' reference.

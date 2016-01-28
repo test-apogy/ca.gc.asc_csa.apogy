@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.camera.symphony;
+package ca.gc.asc_csa.apogy.examples.camera.apogy;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

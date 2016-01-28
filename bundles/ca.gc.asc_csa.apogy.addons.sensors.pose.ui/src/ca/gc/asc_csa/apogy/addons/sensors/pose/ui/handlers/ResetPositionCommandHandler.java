@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.ui.handlers;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui.handlers;
 
 import java.util.Iterator;
 
@@ -7,8 +7,8 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.addons.sensors.pose.ui.dialogs.ResetPositionDialog;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ui.dialogs.ResetPositionDialog;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
 

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.util.List;
 import java.util.TreeSet;
@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.programs.controllers.*;
+import ca.gc.asc_csa.apogy.core.programs.controllers.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.programs.controllers.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl implements Symphony__CoreProgramsControllersFactory
+public class ApogyCoreProgramsControllersFactoryImpl extends EFactoryImpl implements ApogyCoreProgramsControllersFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -28,18 +28,18 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CoreProgramsControllersFactory init()
+  public static ApogyCoreProgramsControllersFactory init()
   {
 		try {
-			Symphony__CoreProgramsControllersFactory theSymphony__CoreProgramsControllersFactory = (Symphony__CoreProgramsControllersFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreProgramsControllersPackage.eNS_URI);
-			if (theSymphony__CoreProgramsControllersFactory != null) {
-				return theSymphony__CoreProgramsControllersFactory;
+			ApogyCoreProgramsControllersFactory theApogyCoreProgramsControllersFactory = (ApogyCoreProgramsControllersFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreProgramsControllersPackage.eNS_URI);
+			if (theApogyCoreProgramsControllersFactory != null) {
+				return theApogyCoreProgramsControllersFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreProgramsControllersFactoryImpl();
+		return new ApogyCoreProgramsControllersFactoryImpl();
 	}
 
   /**
@@ -48,7 +48,7 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreProgramsControllersFactoryImpl()
+  public ApogyCoreProgramsControllersFactoryImpl()
   {
 		super();
 	}
@@ -62,22 +62,22 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreProgramsControllersPackage.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE: return createSymphony__CoreProgramsControllersFacade();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION: return createControllersConfiguration();
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING: return createOperationCallControllerBinding();
-			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER: return createTimeTrigger();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER: return createControllerEdgeTrigger();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER: return createControllerStateTrigger();
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT: return createBindedEDataTypeArgument();
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE: return createFixedValueSource();
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE: return createToggleValueSource();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE: return createControllerValueSource();
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING: return createLinearInputConditioning();
-			case Symphony__CoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING: return createCenteredLinearInputConditioning();
-			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING: return createParabolicInputConditioning();
-			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING: return createCenteredParabolicInputConditioning();
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING: return createUserDefinedInputConditioning();
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT: return createCustomInputConditioningPoint();
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE: return createApogyCoreProgramsControllersFacade();
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION: return createControllersConfiguration();
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING: return createOperationCallControllerBinding();
+			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER: return createTimeTrigger();
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER: return createControllerEdgeTrigger();
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER: return createControllerStateTrigger();
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT: return createBindedEDataTypeArgument();
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE: return createFixedValueSource();
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE: return createToggleValueSource();
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE: return createControllerValueSource();
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING: return createLinearInputConditioning();
+			case ApogyCoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING: return createCenteredLinearInputConditioning();
+			case ApogyCoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING: return createParabolicInputConditioning();
+			case ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING: return createCenteredParabolicInputConditioning();
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING: return createUserDefinedInputConditioning();
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT: return createCustomInputConditioningPoint();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,11 +92,11 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreProgramsControllersPackage.EDGE_TYPE:
+			case ApogyCoreProgramsControllersPackage.EDGE_TYPE:
 				return createEdgeTypeFromString(eDataType, initialValue);
-			case Symphony__CoreProgramsControllersPackage.LIST:
+			case ApogyCoreProgramsControllersPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CoreProgramsControllersPackage.TREE_SET:
+			case ApogyCoreProgramsControllersPackage.TREE_SET:
 				return createTreeSetFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -112,11 +112,11 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreProgramsControllersPackage.EDGE_TYPE:
+			case ApogyCoreProgramsControllersPackage.EDGE_TYPE:
 				return convertEdgeTypeToString(eDataType, instanceValue);
-			case Symphony__CoreProgramsControllersPackage.LIST:
+			case ApogyCoreProgramsControllersPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CoreProgramsControllersPackage.TREE_SET:
+			case ApogyCoreProgramsControllersPackage.TREE_SET:
 				return convertTreeSetToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -128,9 +128,9 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsControllersFacade createSymphony__CoreProgramsControllersFacade() {
-		Symphony__CoreProgramsControllersFacadeImpl symphony__CoreProgramsControllersFacade = new Symphony__CoreProgramsControllersFacadeImpl();
-		return symphony__CoreProgramsControllersFacade;
+	public ApogyCoreProgramsControllersFacade createApogyCoreProgramsControllersFacade() {
+		ApogyCoreProgramsControllersFacadeImpl apogy__CoreProgramsControllersFacade = new ApogyCoreProgramsControllersFacadeImpl();
+		return apogy__CoreProgramsControllersFacade;
 	}
 
 		/**
@@ -355,8 +355,8 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsControllersPackage getSymphony__CoreProgramsControllersPackage() {
-		return (Symphony__CoreProgramsControllersPackage)getEPackage();
+	public ApogyCoreProgramsControllersPackage getApogyCoreProgramsControllersPackage() {
+		return (ApogyCoreProgramsControllersPackage)getEPackage();
 	}
 
 		/**
@@ -366,9 +366,9 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CoreProgramsControllersPackage getPackage()
+  public static ApogyCoreProgramsControllersPackage getPackage()
   {
-		return Symphony__CoreProgramsControllersPackage.eINSTANCE;
+		return ApogyCoreProgramsControllersPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreProgramsControllersFactoryImpl
+} //ApogyCoreProgramsControllersFactoryImpl

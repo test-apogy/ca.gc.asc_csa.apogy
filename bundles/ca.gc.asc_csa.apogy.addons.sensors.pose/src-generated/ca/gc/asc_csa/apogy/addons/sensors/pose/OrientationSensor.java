@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates;
 
-import org.eclipse.symphony.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 
-import org.eclipse.symphony.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.topology.RotationNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.OrientationSensor#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getOrientationSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getOrientationSensor()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface OrientationSensor extends RotationNode, SelfPlaceSensor {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orientation Coordinates</em>' reference.
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getOrientationSensor_OrientationCoordinates()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getOrientationSensor_OrientationCoordinates()
 	 * @model transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -44,7 +44,7 @@ public interface OrientationSensor extends RotationNode, SelfPlaceSensor {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.sensors.pose.Exception" newOrientationUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.sensors.pose.Exception" newOrientationUnique="false"
 	 * @generated
 	 */
 	void resetOrientation(CartesianOrientationCoordinates newOrientation) throws Exception;

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.provider.ArgumentItemProvider;
-import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ArgumentItemProvider;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class BindedEDataTypeArgumentItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
+			childrenFeatures.add(ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
 		}
 		return childrenFeatures;
 	}
@@ -127,7 +127,7 @@ public class BindedEDataTypeArgumentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BindedEDataTypeArgument.class)) {
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,22 +150,22 @@ public class BindedEDataTypeArgumentItemProvider
     
     newChildDescriptors.add
       (createChildParameter
-        (Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-         Symphony__CoreProgramsControllersFactory.eINSTANCE.createFixedValueSource()));
+        (ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
+         ApogyCoreProgramsControllersFactory.eINSTANCE.createFixedValueSource()));
 
     // Check if the argument is boolean.
     if(arg.getEParameter().getEType().getInstanceClass().isAssignableFrom(boolean.class))
     {
 	    newChildDescriptors.add
 	      (createChildParameter
-	        (Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-	         Symphony__CoreProgramsControllersFactory.eINSTANCE.createToggleValueSource()));
+	        (ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
+	         ApogyCoreProgramsControllersFactory.eINSTANCE.createToggleValueSource()));
     }
     
     newChildDescriptors.add
       (createChildParameter
-        (Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-         Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllerValueSource()));
+        (ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
+         ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerValueSource()));
   }
   
 }

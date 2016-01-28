@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
-import org.eclipse.symphony.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
 
 
 /**
@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.emf.Timed;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude#getOrientation <em>Orientation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude#getReferenceFrame <em>Reference Frame</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude#getOrientation <em>Orientation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftAttitude()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftAttitude()
  * @model
  * @generated
  */
@@ -40,14 +40,14 @@ public interface SpacecraftAttitude extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orientation</em>' containment reference.
 	 * @see #setOrientation(TimedStampedAngularCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftAttitude_Orientation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftAttitude_Orientation()
 	 * @model containment="true"
 	 * @generated
 	 */
 	TimedStampedAngularCoordinates getOrientation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude#getOrientation <em>Orientation</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude#getOrientation <em>Orientation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Orientation</em>' containment reference.
@@ -66,14 +66,14 @@ public interface SpacecraftAttitude extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reference Frame</em>' containment reference.
 	 * @see #setReferenceFrame(AbstractFrame)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftAttitude_ReferenceFrame()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getSpacecraftAttitude_ReferenceFrame()
 	 * @model containment="true"
 	 * @generated
 	 */
 	AbstractFrame getReferenceFrame();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude#getReferenceFrame <em>Reference Frame</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude#getReferenceFrame <em>Reference Frame</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Reference Frame</em>' containment reference.

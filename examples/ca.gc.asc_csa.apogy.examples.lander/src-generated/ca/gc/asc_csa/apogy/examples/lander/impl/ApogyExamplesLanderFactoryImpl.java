@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.impl;
+package ca.gc.asc_csa.apogy.examples.lander.impl;
 
 import javax.vecmath.Matrix3d;
 import org.eclipse.emf.ecore.EClass;
@@ -10,13 +10,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderFactory;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Lander;
-import org.eclipse.symphony.examples.lander.LanderLegExtension;
-import org.eclipse.symphony.examples.lander.LanderSimulated;
-import org.eclipse.symphony.examples.lander.LanderStub;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderFactory;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Lander;
+import ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension;
+import ca.gc.asc_csa.apogy.examples.lander.LanderSimulated;
+import ca.gc.asc_csa.apogy.examples.lander.LanderStub;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.examples.lander.Position;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements Symphony__ExamplesLanderFactory
+public class ApogyExamplesLanderFactoryImpl extends EFactoryImpl implements ApogyExamplesLanderFactory
 {
 	/**
 	 * Creates the default factory implementation.
@@ -32,18 +32,18 @@ public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesLanderFactory init()
+	public static ApogyExamplesLanderFactory init()
 	{
 		try {
-			Symphony__ExamplesLanderFactory theSymphony__ExamplesLanderFactory = (Symphony__ExamplesLanderFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesLanderPackage.eNS_URI);
-			if (theSymphony__ExamplesLanderFactory != null) {
-				return theSymphony__ExamplesLanderFactory;
+			ApogyExamplesLanderFactory theApogyExamplesLanderFactory = (ApogyExamplesLanderFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesLanderPackage.eNS_URI);
+			if (theApogyExamplesLanderFactory != null) {
+				return theApogyExamplesLanderFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesLanderFactoryImpl();
+		return new ApogyExamplesLanderFactoryImpl();
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLanderFactoryImpl()
+	public ApogyExamplesLanderFactoryImpl()
 	{
 		super();
 	}
@@ -66,9 +66,9 @@ public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements
 	public EObject create(EClass eClass)
 	{
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesLanderPackage.POSITION: return createPosition();
-			case Symphony__ExamplesLanderPackage.LANDER_STUB: return createLanderStub();
-			case Symphony__ExamplesLanderPackage.LANDER_SIMULATED: return createLanderSimulated();
+			case ApogyExamplesLanderPackage.POSITION: return createPosition();
+			case ApogyExamplesLanderPackage.LANDER_STUB: return createLanderStub();
+			case ApogyExamplesLanderPackage.LANDER_SIMULATED: return createLanderSimulated();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,9 +83,9 @@ public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements
 	public Object createFromString(EDataType eDataType, String initialValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesLanderPackage.LANDER_LEG_EXTENSION:
+			case ApogyExamplesLanderPackage.LANDER_LEG_EXTENSION:
 				return createLanderLegExtensionFromString(eDataType, initialValue);
-			case Symphony__ExamplesLanderPackage.MATRIX3D:
+			case ApogyExamplesLanderPackage.MATRIX3D:
 				return createMatrix3dFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -101,9 +101,9 @@ public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements
 	public String convertToString(EDataType eDataType, Object instanceValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__ExamplesLanderPackage.LANDER_LEG_EXTENSION:
+			case ApogyExamplesLanderPackage.LANDER_LEG_EXTENSION:
 				return convertLanderLegExtensionToString(eDataType, instanceValue);
-			case Symphony__ExamplesLanderPackage.MATRIX3D:
+			case ApogyExamplesLanderPackage.MATRIX3D:
 				return convertMatrix3dToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -219,8 +219,8 @@ public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLanderPackage getSymphony__ExamplesLanderPackage() {
-		return (Symphony__ExamplesLanderPackage)getEPackage();
+	public ApogyExamplesLanderPackage getApogyExamplesLanderPackage() {
+		return (ApogyExamplesLanderPackage)getEPackage();
 	}
 
 	/**
@@ -230,9 +230,9 @@ public class Symphony__ExamplesLanderFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesLanderPackage getPackage()
+	public static ApogyExamplesLanderPackage getPackage()
 	{
-		return Symphony__ExamplesLanderPackage.eINSTANCE;
+		return ApogyExamplesLanderPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesLanderFactoryImpl
+} //ApogyExamplesLanderFactoryImpl

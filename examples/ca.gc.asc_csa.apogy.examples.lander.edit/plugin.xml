@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated emf_ecore_examples_lander -->
       <factory
-            uri="org.eclipse.symphony.examples.lander"
-            class="org.eclipse.symphony.examples.lander.provider.Symphony__ExamplesLanderItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.lander"
+            class="ca.gc.asc_csa.apogy.examples.lander.provider.ApogyExamplesLanderItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,10 +21,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_lander -->
+      <!-- @generated apogy_examples_lander -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.lander.provider.Symphony__ExamplesLanderItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.examples.lander.provider.ApogyExamplesLanderItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

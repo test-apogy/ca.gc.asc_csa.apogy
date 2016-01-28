@@ -1,19 +1,19 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsFactory;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
-import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsFOVBindingsPackage
+public class ApogyAddonsSensorsFOVBindingsPackageImpl extends EPackageImpl implements ApogyAddonsSensorsFOVBindingsPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -53,13 +53,13 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__AddonsSensorsFOVBindingsPackageImpl()
+  private ApogyAddonsSensorsFOVBindingsPackageImpl()
   {
-		super(eNS_URI, Symphony__AddonsSensorsFOVBindingsFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsSensorsFOVBindingsFactory.eINSTANCE);
 	}
 
   /**
@@ -72,7 +72,7 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsFOVBindingsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsFOVBindingsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -81,32 +81,32 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__AddonsSensorsFOVBindingsPackage init()
+  public static ApogyAddonsSensorsFOVBindingsPackage init()
   {
-		if (isInited) return (Symphony__AddonsSensorsFOVBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVBindingsPackage.eNS_URI);
+		if (isInited) return (ApogyAddonsSensorsFOVBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVBindingsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsFOVBindingsPackageImpl theSymphony__AddonsSensorsFOVBindingsPackage = (Symphony__AddonsSensorsFOVBindingsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsFOVBindingsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsFOVBindingsPackageImpl());
+		ApogyAddonsSensorsFOVBindingsPackageImpl theApogyAddonsSensorsFOVBindingsPackage = (ApogyAddonsSensorsFOVBindingsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsFOVBindingsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsFOVBindingsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyBindingsPackage.eINSTANCE.eClass();
-		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyBindingsPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsFOVPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsFOVBindingsPackage.createPackageContents();
+		theApogyAddonsSensorsFOVBindingsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsFOVBindingsPackage.initializePackageContents();
+		theApogyAddonsSensorsFOVBindingsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsFOVBindingsPackage.freeze();
+		theApogyAddonsSensorsFOVBindingsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsFOVBindingsPackage.eNS_URI, theSymphony__AddonsSensorsFOVBindingsPackage);
-		return theSymphony__AddonsSensorsFOVBindingsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsFOVBindingsPackage.eNS_URI, theApogyAddonsSensorsFOVBindingsPackage);
+		return theApogyAddonsSensorsFOVBindingsPackage;
 	}
 
   /**
@@ -174,8 +174,8 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVBindingsFactory getSymphony__AddonsSensorsFOVBindingsFactory() {
-		return (Symphony__AddonsSensorsFOVBindingsFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsFOVBindingsFactory getApogyAddonsSensorsFOVBindingsFactory() {
+		return (ApogyAddonsSensorsFOVBindingsFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -233,30 +233,30 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyBindingsPackage theSymphony__CommonTopologyBindingsPackage = (Symphony__CommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyBindingsPackage.eNS_URI);
-		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
+		ApogyCommonTopologyBindingsPackage theApogyCommonTopologyBindingsPackage = (ApogyCommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyBindingsPackage.eNS_URI);
+		ApogyAddonsSensorsFOVPackage theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		circularSectorFieldOfViewBindingEClass.getESuperTypes().add(theSymphony__CommonTopologyBindingsPackage.getAbstractTopologyBinding());
-		conicalFieldOfViewBindingEClass.getESuperTypes().add(theSymphony__CommonTopologyBindingsPackage.getAbstractTopologyBinding());
-		rectangularFrustrumFieldOfViewBindingEClass.getESuperTypes().add(theSymphony__CommonTopologyBindingsPackage.getAbstractTopologyBinding());
+		circularSectorFieldOfViewBindingEClass.getESuperTypes().add(theApogyCommonTopologyBindingsPackage.getAbstractTopologyBinding());
+		conicalFieldOfViewBindingEClass.getESuperTypes().add(theApogyCommonTopologyBindingsPackage.getAbstractTopologyBinding());
+		rectangularFrustrumFieldOfViewBindingEClass.getESuperTypes().add(theApogyCommonTopologyBindingsPackage.getAbstractTopologyBinding());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(circularSectorFieldOfViewBindingEClass, CircularSectorFieldOfViewBinding.class, "CircularSectorFieldOfViewBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCircularSectorFieldOfViewBinding_Fov(), theSymphony__AddonsSensorsFOVPackage.getCircularSectorFieldOfView(), null, "fov", null, 0, 1, CircularSectorFieldOfViewBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCircularSectorFieldOfViewBinding_Fov(), theApogyAddonsSensorsFOVPackage.getCircularSectorFieldOfView(), null, "fov", null, 0, 1, CircularSectorFieldOfViewBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conicalFieldOfViewBindingEClass, ConicalFieldOfViewBinding.class, "ConicalFieldOfViewBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConicalFieldOfViewBinding_Fov(), theSymphony__AddonsSensorsFOVPackage.getConicalFieldOfView(), null, "fov", null, 0, 1, ConicalFieldOfViewBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConicalFieldOfViewBinding_Fov(), theApogyAddonsSensorsFOVPackage.getConicalFieldOfView(), null, "fov", null, 0, 1, ConicalFieldOfViewBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rectangularFrustrumFieldOfViewBindingEClass, RectangularFrustrumFieldOfViewBinding.class, "RectangularFrustrumFieldOfViewBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRectangularFrustrumFieldOfViewBinding_Fov(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 0, 1, RectangularFrustrumFieldOfViewBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularFrustrumFieldOfViewBinding_Fov(), theApogyAddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 0, 1, RectangularFrustrumFieldOfViewBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsSensorsFOVBindingsPackageImpl
+} //ApogyAddonsSensorsFOVBindingsPackageImpl

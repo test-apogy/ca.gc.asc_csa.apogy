@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -14,20 +14,20 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage.Literals;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage.Literals;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-public class NewSymphonyProjectComposite extends Composite {
+public class NewApogyProjectComposite extends Composite {
 	private DataBindingContext m_bindingContext;
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 	private Text textFolder;
-	private NewSymphonyProjectSettings settings;
+	private NewApogyProjectSettings settings;
 	private Button btnCheckButton;
 	
 	
-	public NewSymphonyProjectComposite(Composite parent, int style, NewSymphonyProjectSettings settings) {
+	public NewApogyProjectComposite(Composite parent, int style, NewApogyProjectSettings settings) {
 		this(parent, style);
 		this.settings = settings;
 	}
@@ -37,7 +37,7 @@ public class NewSymphonyProjectComposite extends Composite {
 	 * @param parent
 	 * @param style
 	 */
-	public NewSymphonyProjectComposite(Composite parent, int style) {
+	public NewApogyProjectComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -62,22 +62,22 @@ public class NewSymphonyProjectComposite extends Composite {
 		gd_btnCheckButton.widthHint = 117;
 		btnCheckButton.setLayoutData(gd_btnCheckButton);
 		toolkit.adapt(btnCheckButton, true, true);
-		btnCheckButton.setText("Import Registered Symphony Project");
+		btnCheckButton.setText("Import Registered Apogy Project");
 		
 		if (settings!=null){
 			m_bindingContext = initDataBindings();
 		}
 	}
 	
-	public NewSymphonyProjectSettings getNewSymphonyProjectSettings() {
+	public NewApogyProjectSettings getNewApogyProjectSettings() {
 		return settings;
 	}
 
-	public void setNewSymphonyProjectSettings(NewSymphonyProjectSettings settings) {
-		setNewSymphonyProjectSettings(settings, true);
+	public void setNewApogyProjectSettings(NewApogyProjectSettings settings) {
+		setNewApogyProjectSettings(settings, true);
 	}
 
-	public void setNewSymphonyProjectSettings(NewSymphonyProjectSettings settings,
+	public void setNewApogyProjectSettings(NewApogyProjectSettings settings,
 			boolean update) {
 		this.settings = settings;
 		if (update) {
@@ -94,11 +94,11 @@ public class NewSymphonyProjectComposite extends Composite {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
 		IObservableValue observeSelectionBtnCheckButtonObserveWidget = WidgetProperties.selection().observe(btnCheckButton);
-		IObservableValue createSessionSettingsObserveValue = EMFObservables.observeValue(settings, Literals.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT);
+		IObservableValue createSessionSettingsObserveValue = EMFObservables.observeValue(settings, Literals.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT);
 		bindingContext.bindValue(observeSelectionBtnCheckButtonObserveWidget, createSessionSettingsObserveValue, null, null);
 		//
 		IObservableValue observeTextTextFolderObserveWidget_1 = WidgetProperties.text(SWT.Modify).observeDelayed(100, textFolder);
-		IObservableValue settingsNameObserveValue = EMFObservables.observeValue(settings, Literals.NEW_SYMPHONY_PROJECT_SETTINGS__NAME);
+		IObservableValue settingsNameObserveValue = EMFObservables.observeValue(settings, Literals.NEW_APOGY_PROJECT_SETTINGS__NAME);
 		bindingContext.bindValue(observeTextTextFolderObserveWidget_1, settingsNameObserveValue, null, null);
 		//
 		return bindingContext;

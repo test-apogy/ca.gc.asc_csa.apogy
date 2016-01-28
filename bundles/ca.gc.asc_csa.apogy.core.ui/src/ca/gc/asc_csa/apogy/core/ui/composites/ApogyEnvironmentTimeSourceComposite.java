@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.composites;
+package ca.gc.asc_csa.apogy.core.ui.composites;
 
 import java.text.SimpleDateFormat;
 
@@ -20,33 +20,33 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DateToStringConverter;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.AbstractTimeSourceComposite;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 
-public class SymphonyEnvironmentTimeSourceComposite extends Composite 
+public class ApogyEnvironmentTimeSourceComposite extends Composite 
 {
 	protected DataBindingContext bindingContext;	
 	private Adapter activeTimeSourceAdapter = null;
-	protected SymphonyEnvironment symphonyEnvironment;
+	protected ApogyEnvironment apogyEnvironment;
 				
 	protected TimeSourcesListComposite timeSourcesListComposite;
 	protected Label currentTimeValueLabel;
 	protected Combo activeTimeSourceCombo;
 	
 	
-	public SymphonyEnvironmentTimeSourceComposite(Composite parent, int style) 
+	public ApogyEnvironmentTimeSourceComposite(Composite parent, int style) 
 	{
 		this(parent, style, null);
 	}
 
-	public SymphonyEnvironmentTimeSourceComposite(Composite parent, int style, SymphonyEnvironment symphonyEnvironment) 
+	public ApogyEnvironmentTimeSourceComposite(Composite parent, int style, ApogyEnvironment apogyEnvironment) 
 	{
 		super(parent, style);
-		setSymphonyEnvironment(symphonyEnvironment);
+		setApogyEnvironment(apogyEnvironment);
 		setLayout(new FillLayout());				
 		
 		Composite top = new Composite(this, SWT.BORDER);			
@@ -88,31 +88,31 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 		timeSourcesListComposite.setLayoutData(timeSourcesListCompositeGridData);										
 	}
 	
-	public SymphonyEnvironment getSymphonyEnvironment() 
+	public ApogyEnvironment getApogyEnvironment() 
 	{
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 
-	public void setSymphonyEnvironment(SymphonyEnvironment symphonyEnvironment) 
+	public void setApogyEnvironment(ApogyEnvironment apogyEnvironment) 
 	{
-		setSymphonyEnvironment(symphonyEnvironment, true);
+		setApogyEnvironment(apogyEnvironment, true);
 	}
 	
-	public void setSymphonyEnvironment(SymphonyEnvironment symphonyEnvironment, boolean update) 
+	public void setApogyEnvironment(ApogyEnvironment apogyEnvironment, boolean update) 
 	{
-		if(this.symphonyEnvironment != null)
+		if(this.apogyEnvironment != null)
 		{
-			symphonyEnvironment.eAdapters().remove(getActiveTimeSourceAdapter());
+			apogyEnvironment.eAdapters().remove(getActiveTimeSourceAdapter());
 		}
 		
-		this.symphonyEnvironment = symphonyEnvironment;
+		this.apogyEnvironment = apogyEnvironment;
 		
-		if(symphonyEnvironment != null)
+		if(apogyEnvironment != null)
 		{
-			symphonyEnvironment.eAdapters().add(getActiveTimeSourceAdapter());
+			apogyEnvironment.eAdapters().add(getActiveTimeSourceAdapter());
 			
 			// Sets the list of time source.
-			if(timeSourcesListComposite != null) timeSourcesListComposite.setTimeSourcesList(symphonyEnvironment.getTimeSourcesList());
+			if(timeSourcesListComposite != null) timeSourcesListComposite.setTimeSourcesList(apogyEnvironment.getTimeSourcesList());
 		}
 		
 		if(update)
@@ -132,15 +132,15 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 					bindingContext = null;
 				}
 				
-				if(symphonyEnvironment != null)
+				if(apogyEnvironment != null)
 				{
 					// Clears Active Time Source Combo
 					populateActiveTimeSourceCombo(activeTimeSourceCombo);
 					
 					// Sets the TimeSourceList.
-					timeSourcesListComposite.setTimeSourcesList(symphonyEnvironment.getTimeSourcesList());
+					timeSourcesListComposite.setTimeSourcesList(apogyEnvironment.getTimeSourcesList());
 					
-					setActiveTimeSource(symphonyEnvironment.getActiveTimeSource());
+					setActiveTimeSource(apogyEnvironment.getActiveTimeSource());
 					bindingContext = initDataBindings();
 				}
 			}
@@ -163,10 +163,10 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 				{
 					int index = combo.getSelectionIndex();
 					
-					if(getSymphonyEnvironment() != null && getSymphonyEnvironment().getTimeSourcesList() != null)
+					if(getApogyEnvironment() != null && getApogyEnvironment().getTimeSourcesList() != null)
 					{
-						TimeSource timeSource =  getSymphonyEnvironment().getTimeSourcesList().getTimeSources().get(index);
-						getSymphonyEnvironment().setActiveTimeSource(timeSource);
+						TimeSource timeSource =  getApogyEnvironment().getTimeSourcesList().getTimeSources().get(index);
+						getApogyEnvironment().setActiveTimeSource(timeSource);
 					}
 				}
 				catch(Throwable t)
@@ -182,9 +182,9 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 		});
 		
 		
-		if(getSymphonyEnvironment() != null && getSymphonyEnvironment().getActiveTimeSource() != null)
+		if(getApogyEnvironment() != null && getApogyEnvironment().getActiveTimeSource() != null)
 		{
-			combo.select(getSymphonyEnvironment().getTimeSourcesList().getTimeSources().indexOf(getSymphonyEnvironment().getActiveTimeSource()));
+			combo.select(getApogyEnvironment().getTimeSourcesList().getTimeSources().indexOf(getApogyEnvironment().getActiveTimeSource()));
 		}
 		
 		return combo;
@@ -192,14 +192,14 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 		
 	protected void populateActiveTimeSourceCombo(Combo combo)
 	{
-		if(getSymphonyEnvironment() != null)
+		if(getApogyEnvironment() != null)
 		{
-			int size = getSymphonyEnvironment().getTimeSourcesList().getTimeSources().size();
+			int size = getApogyEnvironment().getTimeSourcesList().getTimeSources().size();
 			String[] items = new String[size];
 			
 			for(int i = 0; i < size; i++)
 			{
-				TimeSource timeSource = getSymphonyEnvironment().getTimeSourcesList().getTimeSources().get(i);
+				TimeSource timeSource = getApogyEnvironment().getTimeSourcesList().getTimeSources().get(i);
 				String timeSourceText = getTimeSourceText(timeSource);
 				items[i] = timeSourceText;									
 			}
@@ -222,7 +222,7 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 		{
 			if(activeTimeSource!= null)
 			{
-				activeTimeSourceCombo.select(getSymphonyEnvironment().getTimeSourcesList().getTimeSources().indexOf(activeTimeSource));
+				activeTimeSourceCombo.select(getApogyEnvironment().getTimeSourcesList().getTimeSources().indexOf(activeTimeSource));
 			}
 			else
 			{
@@ -236,9 +236,9 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 	{
 		DataBindingContext bindingContext = new DataBindingContext();
 		
-		// Bind SymphonyEnvironment current time to currentTimeLabel.	
+		// Bind ApogyEnvironment current time to currentTimeLabel.	
 		IObservableValue currentTimeLabelValue = PojoProperties.value("text").observe(currentTimeValueLabel);		
-		IObservableValue currentTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getSymphonyEnvironment());			
+		IObservableValue currentTimeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.TIMED__TIME)).observe(getApogyEnvironment());			
 		UpdateValueStrategy currentTimeValueStrategy = new UpdateValueStrategy();
 		currentTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(AbstractTimeSourceComposite.DATE_FORMAT_STRING)));
 		bindingContext.bindValue(currentTimeLabelValue, currentTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), currentTimeValueStrategy);
@@ -255,11 +255,11 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 				@Override
 				public void notifyChanged(Notification msg) 
 				{
-					if(msg.getNotifier() instanceof SymphonyEnvironment)
+					if(msg.getNotifier() instanceof ApogyEnvironment)
 					{
-						int featureId = msg.getFeatureID(SymphonyEnvironment.class);
+						int featureId = msg.getFeatureID(ApogyEnvironment.class);
 						
-						if(featureId == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE)
+						if(featureId == ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE)
 						{
 							TimeSource newActiveTimeSource = (TimeSource) msg.getNewValue();
 							setActiveTimeSource(newActiveTimeSource);

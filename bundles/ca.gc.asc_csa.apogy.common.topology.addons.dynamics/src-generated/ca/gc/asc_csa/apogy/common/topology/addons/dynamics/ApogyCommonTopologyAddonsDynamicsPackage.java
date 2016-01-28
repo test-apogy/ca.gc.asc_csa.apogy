@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonTopologyAddonsDynamics' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonTopologyAddonsDynamics' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.addons.dynamics/src-generated' editDirectory='/org.eclipse.symphony.common.topology.addons.dynamics.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonTopologyAddonsDynamics' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonTopologyAddonsDynamics' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.topology.addons.dynamics/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.topology.addons.dynamics.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.topology.addons'"
  * @generated
  */
-public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage {
+public interface ApogyCommonTopologyAddonsDynamicsPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.topology.addons.dynamics";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.topology.addons.dynamics";
 
 	/**
 	 * The package namespace name.
@@ -60,14 +60,14 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonTopologyAddonsDynamicsPackage eINSTANCE = org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl.init();
+	ApogyCommonTopologyAddonsDynamicsPackage eINSTANCE = ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl <em>Dynamic System Properties</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl <em>Dynamic System Properties</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getDynamicSystemProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getDynamicSystemProperties()
 	 * @generated
 	 */
 	int DYNAMIC_SYSTEM_PROPERTIES = 0;
@@ -79,7 +79,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int DYNAMIC_SYSTEM_PROPERTIES__PARENT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -88,7 +88,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int DYNAMIC_SYSTEM_PROPERTIES__DESCRIPTION = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -97,7 +97,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int DYNAMIC_SYSTEM_PROPERTIES__NODE_ID = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -106,7 +106,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int DYNAMIC_SYSTEM_PROPERTIES__CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -115,7 +115,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int DYNAMIC_SYSTEM_PROPERTIES__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -124,7 +124,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Materials</b></em>' containment reference list.
@@ -133,7 +133,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES__MATERIALS = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int DYNAMIC_SYSTEM_PROPERTIES__MATERIALS = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Dynamic System Properties</em>' class.
@@ -142,7 +142,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 2;
+	int DYNAMIC_SYSTEM_PROPERTIES_FEATURE_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -151,7 +151,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int DYNAMIC_SYSTEM_PROPERTIES___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Dynamic System Properties</em>' class.
@@ -160,14 +160,14 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMIC_SYSTEM_PROPERTIES_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int DYNAMIC_SYSTEM_PROPERTIES_OPERATION_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl <em>Abstract Dynamics Engine</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl <em>Abstract Dynamics Engine</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractDynamicsEngine()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractDynamicsEngine()
 	 * @generated
 	 */
 	int ABSTRACT_DYNAMICS_ENGINE = 1;
@@ -209,11 +209,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int ABSTRACT_DYNAMICS_ENGINE_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl <em>Physical Body</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalBodyImpl <em>Physical Body</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPhysicalBody()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalBodyImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPhysicalBody()
 	 * @generated
 	 */
 	int PHYSICAL_BODY = 2;
@@ -225,7 +225,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int PHYSICAL_BODY__PARENT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -234,7 +234,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int PHYSICAL_BODY__DESCRIPTION = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -243,7 +243,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int PHYSICAL_BODY__NODE_ID = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -252,7 +252,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int PHYSICAL_BODY__CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -261,7 +261,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int PHYSICAL_BODY__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Physical Properties</b></em>' containment reference.
@@ -270,7 +270,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__PHYSICAL_PROPERTIES = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int PHYSICAL_BODY__PHYSICAL_PROPERTIES = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Constraint Attachment Points</b></em>' reference list.
@@ -279,7 +279,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Simulation Properties</b></em>' containment reference list.
@@ -288,7 +288,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__SIMULATION_PROPERTIES = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 2;
+	int PHYSICAL_BODY__SIMULATION_PROPERTIES = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Center Of Mass Kinematic State</b></em>' containment reference.
@@ -297,7 +297,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 3;
+	int PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Points Of Interest</b></em>' containment reference list.
@@ -306,7 +306,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__POINTS_OF_INTEREST = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 4;
+	int PHYSICAL_BODY__POINTS_OF_INTEREST = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Collision Geometry</b></em>' containment reference list.
@@ -315,7 +315,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY__COLLISION_GEOMETRY = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 5;
+	int PHYSICAL_BODY__COLLISION_GEOMETRY = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Physical Body</em>' class.
@@ -324,7 +324,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 6;
+	int PHYSICAL_BODY_FEATURE_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -333,7 +333,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int PHYSICAL_BODY___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Physical Body</em>' class.
@@ -342,14 +342,14 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_BODY_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int PHYSICAL_BODY_OPERATION_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl <em>Physical Properties</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl <em>Physical Properties</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPhysicalProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPhysicalProperties()
 	 * @generated
 	 */
 	int PHYSICAL_PROPERTIES = 3;
@@ -400,11 +400,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int PHYSICAL_PROPERTIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl <em>Abstract Physical Body Simulation Properties</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl <em>Abstract Physical Body Simulation Properties</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractPhysicalBodySimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractPhysicalBodySimulationProperties()
 	 * @generated
 	 */
 	int ABSTRACT_PHYSICAL_BODY_SIMULATION_PROPERTIES = 4;
@@ -428,11 +428,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int ABSTRACT_PHYSICAL_BODY_SIMULATION_PROPERTIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl <em>Abstract Constraint Simulation Properties</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl <em>Abstract Constraint Simulation Properties</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraintSimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraintSimulationProperties()
 	 * @generated
 	 */
 	int ABSTRACT_CONSTRAINT_SIMULATION_PROPERTIES = 5;
@@ -456,11 +456,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int ABSTRACT_CONSTRAINT_SIMULATION_PROPERTIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl <em>Abstract Collision Geometry Simulation Properties</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl <em>Abstract Collision Geometry Simulation Properties</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractCollisionGeometrySimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractCollisionGeometrySimulationProperties()
 	 * @generated
 	 */
 	int ABSTRACT_COLLISION_GEOMETRY_SIMULATION_PROPERTIES = 6;
@@ -484,11 +484,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int ABSTRACT_COLLISION_GEOMETRY_SIMULATION_PROPERTIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PointOfInterestImpl <em>Point Of Interest</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PointOfInterestImpl <em>Point Of Interest</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PointOfInterestImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPointOfInterest()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PointOfInterestImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPointOfInterest()
 	 * @generated
 	 */
 	int POINT_OF_INTEREST = 7;
@@ -530,11 +530,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int POINT_OF_INTEREST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl <em>Kinematic State</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.KinematicStateImpl <em>Kinematic State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getKinematicState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.KinematicStateImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getKinematicState()
 	 * @generated
 	 */
 	int KINEMATIC_STATE = 8;
@@ -612,11 +612,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int KINEMATIC_STATE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintStateImpl <em>Constraint State</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintStateImpl <em>Constraint State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintStateImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getConstraintState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintStateImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getConstraintState()
 	 * @generated
 	 */
 	int CONSTRAINT_STATE = 9;
@@ -667,11 +667,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int CONSTRAINT_STATE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl <em>Abstract Constraint</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintImpl <em>Abstract Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraint()
 	 * @generated
 	 */
 	int ABSTRACT_CONSTRAINT = 10;
@@ -740,11 +740,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int ABSTRACT_CONSTRAINT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CylindricalConstraintImpl <em>Cylindrical Constraint</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylindricalConstraintImpl <em>Cylindrical Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CylindricalConstraintImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCylindricalConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylindricalConstraintImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCylindricalConstraint()
 	 * @generated
 	 */
 	int CYLINDRICAL_CONSTRAINT = 11;
@@ -831,11 +831,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int CYLINDRICAL_CONSTRAINT_OPERATION_COUNT = ABSTRACT_CONSTRAINT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.GearRatioConstraintImpl <em>Gear Ratio Constraint</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GearRatioConstraintImpl <em>Gear Ratio Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.GearRatioConstraintImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getGearRatioConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GearRatioConstraintImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getGearRatioConstraint()
 	 * @generated
 	 */
 	int GEAR_RATIO_CONSTRAINT = 12;
@@ -913,11 +913,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int GEAR_RATIO_CONSTRAINT_OPERATION_COUNT = ABSTRACT_CONSTRAINT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.HingeConstraintImpl <em>Hinge Constraint</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.HingeConstraintImpl <em>Hinge Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.HingeConstraintImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getHingeConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.HingeConstraintImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getHingeConstraint()
 	 * @generated
 	 */
 	int HINGE_CONSTRAINT = 13;
@@ -995,11 +995,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int HINGE_CONSTRAINT_OPERATION_COUNT = ABSTRACT_CONSTRAINT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PrismaticConstraintImpl <em>Prismatic Constraint</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PrismaticConstraintImpl <em>Prismatic Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PrismaticConstraintImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPrismaticConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PrismaticConstraintImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPrismaticConstraint()
 	 * @generated
 	 */
 	int PRISMATIC_CONSTRAINT = 14;
@@ -1077,11 +1077,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int PRISMATIC_CONSTRAINT_OPERATION_COUNT = ABSTRACT_CONSTRAINT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.RPROConstraintImpl <em>RPRO Constraint</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.RPROConstraintImpl <em>RPRO Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.RPROConstraintImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getRPROConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.RPROConstraintImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getRPROConstraint()
 	 * @generated
 	 */
 	int RPRO_CONSTRAINT = 15;
@@ -1168,11 +1168,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int RPRO_CONSTRAINT_OPERATION_COUNT = ABSTRACT_CONSTRAINT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.UniversalConstraintImpl <em>Universal Constraint</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.UniversalConstraintImpl <em>Universal Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.UniversalConstraintImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getUniversalConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.UniversalConstraintImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getUniversalConstraint()
 	 * @generated
 	 */
 	int UNIVERSAL_CONSTRAINT = 16;
@@ -1259,11 +1259,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int UNIVERSAL_CONSTRAINT_OPERATION_COUNT = ABSTRACT_CONSTRAINT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl <em>Constraint Attachment Point</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl <em>Constraint Attachment Point</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getConstraintAttachmentPoint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getConstraintAttachmentPoint()
 	 * @generated
 	 */
 	int CONSTRAINT_ATTACHMENT_POINT = 17;
@@ -1332,11 +1332,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int CONSTRAINT_ATTACHMENT_POINT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl <em>Collision Geometry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CollisionGeometryImpl <em>Collision Geometry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCollisionGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CollisionGeometryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCollisionGeometry()
 	 * @generated
 	 */
 	int COLLISION_GEOMETRY = 18;
@@ -1414,11 +1414,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int COLLISION_GEOMETRY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractMaterialImpl <em>Abstract Material</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractMaterialImpl <em>Abstract Material</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractMaterialImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractMaterial()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractMaterialImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractMaterial()
 	 * @generated
 	 */
 	int ABSTRACT_MATERIAL = 19;
@@ -1451,11 +1451,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int ABSTRACT_MATERIAL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.GeometryImpl <em>Geometry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GeometryImpl <em>Geometry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.GeometryImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GeometryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getGeometry()
 	 * @generated
 	 */
 	int GEOMETRY = 20;
@@ -1479,11 +1479,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int GEOMETRY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.BoxGeometryImpl <em>Box Geometry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.BoxGeometryImpl <em>Box Geometry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.BoxGeometryImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getBoxGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.BoxGeometryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getBoxGeometry()
 	 * @generated
 	 */
 	int BOX_GEOMETRY = 21;
@@ -1516,11 +1516,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int BOX_GEOMETRY_OPERATION_COUNT = GEOMETRY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CapsuleGeometryImpl <em>Capsule Geometry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CapsuleGeometryImpl <em>Capsule Geometry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CapsuleGeometryImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCapsuleGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CapsuleGeometryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCapsuleGeometry()
 	 * @generated
 	 */
 	int CAPSULE_GEOMETRY = 22;
@@ -1562,11 +1562,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int CAPSULE_GEOMETRY_OPERATION_COUNT = GEOMETRY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CylinderGeometryImpl <em>Cylinder Geometry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylinderGeometryImpl <em>Cylinder Geometry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CylinderGeometryImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCylinderGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylinderGeometryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCylinderGeometry()
 	 * @generated
 	 */
 	int CYLINDER_GEOMETRY = 23;
@@ -1608,11 +1608,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int CYLINDER_GEOMETRY_OPERATION_COUNT = GEOMETRY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.SphereGeometryImpl <em>Sphere Geometry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.SphereGeometryImpl <em>Sphere Geometry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.SphereGeometryImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSphereGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.SphereGeometryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getSphereGeometry()
 	 * @generated
 	 */
 	int SPHERE_GEOMETRY = 24;
@@ -1645,14 +1645,14 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int SPHERE_GEOMETRY_OPERATION_COUNT = GEOMETRY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSymphony__CommonTopologyAddonsDynamicsFacade()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getApogyCommonTopologyAddonsDynamicsFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE = 25;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE = 25;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -1661,7 +1661,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Find Center Of Mass</em>' operation.
@@ -1670,7 +1670,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = 0;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = 0;
 
 	/**
 	 * The operation id for the '<em>Find Total Mass</em>' operation.
@@ -1679,7 +1679,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = 1;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = 1;
 
 	/**
 	 * The operation id for the '<em>Get Physical Bodies</em>' operation.
@@ -1688,7 +1688,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = 2;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = 2;
 
 	/**
 	 * The operation id for the '<em>Get Physical Node Simulation Property</em>' operation.
@@ -1697,7 +1697,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = 3;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = 3;
 
 	/**
 	 * The operation id for the '<em>Get Constraint Simulation Property</em>' operation.
@@ -1706,7 +1706,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = 4;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = 4;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1715,942 +1715,942 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE_OPERATION_COUNT = 5;
+	int APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '<em>Set</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.Set
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSet()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getSet()
 	 * @generated
 	 */
 	int SET = 26;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties <em>Dynamic System Properties</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties <em>Dynamic System Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Dynamic System Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties
 	 * @generated
 	 */
 	EClass getDynamicSystemProperties();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties#getConstraints <em>Constraints</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties#getConstraints <em>Constraints</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties#getConstraints()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties#getConstraints()
 	 * @see #getDynamicSystemProperties()
 	 * @generated
 	 */
 	EReference getDynamicSystemProperties_Constraints();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties#getMaterials <em>Materials</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties#getMaterials <em>Materials</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Materials</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties#getMaterials()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties#getMaterials()
 	 * @see #getDynamicSystemProperties()
 	 * @generated
 	 */
 	EReference getDynamicSystemProperties_Materials();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine <em>Abstract Dynamics Engine</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine <em>Abstract Dynamics Engine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Dynamics Engine</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine
 	 * @generated
 	 */
 	EClass getAbstractDynamicsEngine();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine#startSimulation() <em>Start Simulation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine#startSimulation() <em>Start Simulation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start Simulation</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine#startSimulation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine#startSimulation()
 	 * @generated
 	 */
 	EOperation getAbstractDynamicsEngine__StartSimulation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine#stopSimulation() <em>Stop Simulation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine#stopSimulation() <em>Stop Simulation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop Simulation</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine#stopSimulation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine#stopSimulation()
 	 * @generated
 	 */
 	EOperation getAbstractDynamicsEngine__StopSimulation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody <em>Physical Body</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody <em>Physical Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Physical Body</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody
 	 * @generated
 	 */
 	EClass getPhysicalBody();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties <em>Physical Properties</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties <em>Physical Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Physical Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties()
 	 * @see #getPhysicalBody()
 	 * @generated
 	 */
 	EReference getPhysicalBody_PhysicalProperties();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Constraint Attachment Points</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints()
 	 * @see #getPhysicalBody()
 	 * @generated
 	 */
 	EReference getPhysicalBody_ConstraintAttachmentPoints();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getSimulationProperties <em>Simulation Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getSimulationProperties <em>Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Simulation Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getSimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getSimulationProperties()
 	 * @see #getPhysicalBody()
 	 * @generated
 	 */
 	EReference getPhysicalBody_SimulationProperties();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState <em>Center Of Mass Kinematic State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState <em>Center Of Mass Kinematic State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Center Of Mass Kinematic State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState()
 	 * @see #getPhysicalBody()
 	 * @generated
 	 */
 	EReference getPhysicalBody_CenterOfMassKinematicState();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPointsOfInterest <em>Points Of Interest</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getPointsOfInterest <em>Points Of Interest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Points Of Interest</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPointsOfInterest()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getPointsOfInterest()
 	 * @see #getPhysicalBody()
 	 * @generated
 	 */
 	EReference getPhysicalBody_PointsOfInterest();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry <em>Collision Geometry</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry <em>Collision Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Collision Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry()
 	 * @see #getPhysicalBody()
 	 * @generated
 	 */
 	EReference getPhysicalBody_CollisionGeometry();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties <em>Physical Properties</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties <em>Physical Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Physical Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties
 	 * @generated
 	 */
 	EClass getPhysicalProperties();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getMass <em>Mass</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties#getMass <em>Mass</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mass</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getMass()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties#getMass()
 	 * @see #getPhysicalProperties()
 	 * @generated
 	 */
 	EAttribute getPhysicalProperties_Mass();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getInertiaMatrix <em>Inertia Matrix</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties#getInertiaMatrix <em>Inertia Matrix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Inertia Matrix</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getInertiaMatrix()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties#getInertiaMatrix()
 	 * @see #getPhysicalProperties()
 	 * @generated
 	 */
 	EReference getPhysicalProperties_InertiaMatrix();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getCenterOfMassLocation <em>Center Of Mass Location</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties#getCenterOfMassLocation <em>Center Of Mass Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Center Of Mass Location</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getCenterOfMassLocation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties#getCenterOfMassLocation()
 	 * @see #getPhysicalProperties()
 	 * @generated
 	 */
 	EReference getPhysicalProperties_CenterOfMassLocation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties <em>Abstract Physical Body Simulation Properties</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties <em>Abstract Physical Body Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Physical Body Simulation Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties
 	 * @generated
 	 */
 	EClass getAbstractPhysicalBodySimulationProperties();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties <em>Abstract Constraint Simulation Properties</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraintSimulationProperties <em>Abstract Constraint Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Constraint Simulation Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraintSimulationProperties
 	 * @generated
 	 */
 	EClass getAbstractConstraintSimulationProperties();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties <em>Abstract Collision Geometry Simulation Properties</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties <em>Abstract Collision Geometry Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Collision Geometry Simulation Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties
 	 * @generated
 	 */
 	EClass getAbstractCollisionGeometrySimulationProperties();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest <em>Point Of Interest</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest <em>Point Of Interest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Point Of Interest</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest
 	 * @generated
 	 */
 	EClass getPointOfInterest();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getOffset <em>Offset</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getOffset <em>Offset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Offset</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getOffset()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getOffset()
 	 * @see #getPointOfInterest()
 	 * @generated
 	 */
 	EReference getPointOfInterest_Offset();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getKinematicState <em>Kinematic State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getKinematicState <em>Kinematic State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Kinematic State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getKinematicState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getKinematicState()
 	 * @see #getPointOfInterest()
 	 * @generated
 	 */
 	EReference getPointOfInterest_KinematicState();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState <em>Kinematic State</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState <em>Kinematic State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Kinematic State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState
 	 * @generated
 	 */
 	EClass getKinematicState();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getPosition <em>Position</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getPosition <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Position</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getPosition()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getPosition()
 	 * @see #getKinematicState()
 	 * @generated
 	 */
 	EReference getKinematicState_Position();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getOrientation <em>Orientation</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getOrientation <em>Orientation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Orientation</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getOrientation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getOrientation()
 	 * @see #getKinematicState()
 	 * @generated
 	 */
 	EReference getKinematicState_Orientation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getLinearVelocity <em>Linear Velocity</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getLinearVelocity <em>Linear Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Linear Velocity</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getLinearVelocity()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getLinearVelocity()
 	 * @see #getKinematicState()
 	 * @generated
 	 */
 	EReference getKinematicState_LinearVelocity();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getAngularVelocity <em>Angular Velocity</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getAngularVelocity <em>Angular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular Velocity</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getAngularVelocity()
 	 * @see #getKinematicState()
 	 * @generated
 	 */
 	EReference getKinematicState_AngularVelocity();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getLinearAcceleration <em>Linear Acceleration</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getLinearAcceleration <em>Linear Acceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Linear Acceleration</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getLinearAcceleration()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getLinearAcceleration()
 	 * @see #getKinematicState()
 	 * @generated
 	 */
 	EReference getKinematicState_LinearAcceleration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getAngularAcceleration <em>Angular Acceleration</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getAngularAcceleration <em>Angular Acceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular Acceleration</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getAngularAcceleration()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState#getAngularAcceleration()
 	 * @see #getKinematicState()
 	 * @generated
 	 */
 	EReference getKinematicState_AngularAcceleration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState <em>Constraint State</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState <em>Constraint State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constraint State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState
 	 * @generated
 	 */
 	EClass getConstraintState();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getPosition <em>Position</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState#getPosition <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Position</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getPosition()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState#getPosition()
 	 * @see #getConstraintState()
 	 * @generated
 	 */
 	EAttribute getConstraintState_Position();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getVelocity <em>Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState#getVelocity <em>Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Velocity</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getVelocity()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState#getVelocity()
 	 * @see #getConstraintState()
 	 * @generated
 	 */
 	EAttribute getConstraintState_Velocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getForce <em>Force</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState#getForce <em>Force</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Force</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getForce()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState#getForce()
 	 * @see #getConstraintState()
 	 * @generated
 	 */
 	EAttribute getConstraintState_Force();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint <em>Abstract Constraint</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint <em>Abstract Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint
 	 * @generated
 	 */
 	EClass getAbstractConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints <em>Attachment Points</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints <em>Attachment Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Attachment Points</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints()
 	 * @see #getAbstractConstraint()
 	 * @generated
 	 */
 	EReference getAbstractConstraint_AttachmentPoints();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getSimulationProperties <em>Simulation Properties</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getSimulationProperties <em>Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Simulation Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getSimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getSimulationProperties()
 	 * @see #getAbstractConstraint()
 	 * @generated
 	 */
 	EReference getAbstractConstraint_SimulationProperties();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getDescription()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getDescription()
 	 * @see #getAbstractConstraint()
 	 * @generated
 	 */
 	EAttribute getAbstractConstraint_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getConstaintId <em>Constaint Id</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getConstaintId <em>Constaint Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Constaint Id</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getConstaintId()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getConstaintId()
 	 * @see #getAbstractConstraint()
 	 * @generated
 	 */
 	EAttribute getAbstractConstraint_ConstaintId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#isEnabled <em>Enabled</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#isEnabled <em>Enabled</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Enabled</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#isEnabled()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#isEnabled()
 	 * @see #getAbstractConstraint()
 	 * @generated
 	 */
 	EAttribute getAbstractConstraint_Enabled();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint <em>Cylindrical Constraint</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint <em>Cylindrical Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cylindrical Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint
 	 * @generated
 	 */
 	EClass getCylindricalConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint#getAngularCurrentState <em>Angular Current State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint#getAngularCurrentState <em>Angular Current State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular Current State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint#getAngularCurrentState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint#getAngularCurrentState()
 	 * @see #getCylindricalConstraint()
 	 * @generated
 	 */
 	EReference getCylindricalConstraint_AngularCurrentState();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint#getLinearCurrentState <em>Linear Current State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint#getLinearCurrentState <em>Linear Current State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Linear Current State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint#getLinearCurrentState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint#getLinearCurrentState()
 	 * @see #getCylindricalConstraint()
 	 * @generated
 	 */
 	EReference getCylindricalConstraint_LinearCurrentState();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint <em>Gear Ratio Constraint</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint <em>Gear Ratio Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Gear Ratio Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint
 	 * @generated
 	 */
 	EClass getGearRatioConstraint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint#getForce <em>Force</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint#getForce <em>Force</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Force</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint#getForce()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint#getForce()
 	 * @see #getGearRatioConstraint()
 	 * @generated
 	 */
 	EAttribute getGearRatioConstraint_Force();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint <em>Hinge Constraint</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint <em>Hinge Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Hinge Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint
 	 * @generated
 	 */
 	EClass getHingeConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState <em>Angular Current State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState <em>Angular Current State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular Current State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState()
 	 * @see #getHingeConstraint()
 	 * @generated
 	 */
 	EReference getHingeConstraint_AngularCurrentState();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint <em>Prismatic Constraint</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint <em>Prismatic Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Prismatic Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint
 	 * @generated
 	 */
 	EClass getPrismaticConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint#getLinearCurrentState <em>Linear Current State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint#getLinearCurrentState <em>Linear Current State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Linear Current State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint#getLinearCurrentState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint#getLinearCurrentState()
 	 * @see #getPrismaticConstraint()
 	 * @generated
 	 */
 	EReference getPrismaticConstraint_LinearCurrentState();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint <em>RPRO Constraint</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint <em>RPRO Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>RPRO Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint
 	 * @generated
 	 */
 	EClass getRPROConstraint();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getLinearStrength <em>Linear Strength</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getLinearStrength <em>Linear Strength</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Linear Strength</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getLinearStrength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getLinearStrength()
 	 * @see #getRPROConstraint()
 	 * @generated
 	 */
 	EReference getRPROConstraint_LinearStrength();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Angular Strength</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getAngularStrength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint#getAngularStrength()
 	 * @see #getRPROConstraint()
 	 * @generated
 	 */
 	EReference getRPROConstraint_AngularStrength();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint <em>Universal Constraint</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint <em>Universal Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Universal Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint
 	 * @generated
 	 */
 	EClass getUniversalConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint#getAngular0CurrentState <em>Angular0 Current State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint#getAngular0CurrentState <em>Angular0 Current State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular0 Current State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint#getAngular0CurrentState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint#getAngular0CurrentState()
 	 * @see #getUniversalConstraint()
 	 * @generated
 	 */
 	EReference getUniversalConstraint_Angular0CurrentState();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint#getAngular1CurrentState <em>Angular1 Current State</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint#getAngular1CurrentState <em>Angular1 Current State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular1 Current State</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint#getAngular1CurrentState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint#getAngular1CurrentState()
 	 * @see #getUniversalConstraint()
 	 * @generated
 	 */
 	EReference getUniversalConstraint_Angular1CurrentState();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint <em>Constraint Attachment Point</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint <em>Constraint Attachment Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constraint Attachment Point</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint
 	 * @generated
 	 */
 	EClass getConstraintAttachmentPoint();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Physical Body</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody()
 	 * @see #getConstraintAttachmentPoint()
 	 * @generated
 	 */
 	EReference getConstraintAttachmentPoint_PhysicalBody();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint <em>Constraint</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Constraint</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint()
 	 * @see #getConstraintAttachmentPoint()
 	 * @generated
 	 */
 	EReference getConstraintAttachmentPoint_Constraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform <em>Transform</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform <em>Transform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Transform</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform()
 	 * @see #getConstraintAttachmentPoint()
 	 * @generated
 	 */
 	EReference getConstraintAttachmentPoint_Transform();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription()
 	 * @see #getConstraintAttachmentPoint()
 	 * @generated
 	 */
 	EAttribute getConstraintAttachmentPoint_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Point Id</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId()
 	 * @see #getConstraintAttachmentPoint()
 	 * @generated
 	 */
 	EAttribute getConstraintAttachmentPoint_PointId();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry <em>Collision Geometry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry <em>Collision Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Collision Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry
 	 * @generated
 	 */
 	EClass getCollisionGeometry();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getSimulationProperties <em>Simulation Properties</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getSimulationProperties <em>Simulation Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Simulation Properties</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getSimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getSimulationProperties()
 	 * @see #getCollisionGeometry()
 	 * @generated
 	 */
 	EReference getCollisionGeometry_SimulationProperties();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometry <em>Geometry</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometry <em>Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometry()
 	 * @see #getCollisionGeometry()
 	 * @generated
 	 */
 	EReference getCollisionGeometry_Geometry();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getTransform <em>Transform</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getTransform <em>Transform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Transform</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getTransform()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getTransform()
 	 * @see #getCollisionGeometry()
 	 * @generated
 	 */
 	EReference getCollisionGeometry_Transform();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getMaterial <em>Material</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getMaterial <em>Material</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Material</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getMaterial()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getMaterial()
 	 * @see #getCollisionGeometry()
 	 * @generated
 	 */
 	EReference getCollisionGeometry_Material();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getDescription()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getDescription()
 	 * @see #getCollisionGeometry()
 	 * @generated
 	 */
 	EAttribute getCollisionGeometry_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Geometry Id</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometryId()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry#getGeometryId()
 	 * @see #getCollisionGeometry()
 	 * @generated
 	 */
 	EAttribute getCollisionGeometry_GeometryId();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial <em>Abstract Material</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial <em>Abstract Material</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Material</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial
 	 * @generated
 	 */
 	EClass getAbstractMaterial();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial#getMaterialId <em>Material Id</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial#getMaterialId <em>Material Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Material Id</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial#getMaterialId()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial#getMaterialId()
 	 * @see #getAbstractMaterial()
 	 * @generated
 	 */
 	EAttribute getAbstractMaterial_MaterialId();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.Geometry <em>Geometry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.Geometry <em>Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Geometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.Geometry
 	 * @generated
 	 */
 	EClass getGeometry();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry <em>Box Geometry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry <em>Box Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Box Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry
 	 * @generated
 	 */
 	EClass getBoxGeometry();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry#getDimension <em>Dimension</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry#getDimension <em>Dimension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Dimension</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry#getDimension()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry#getDimension()
 	 * @see #getBoxGeometry()
 	 * @generated
 	 */
 	EReference getBoxGeometry_Dimension();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry <em>Capsule Geometry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry <em>Capsule Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Capsule Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry
 	 * @generated
 	 */
 	EClass getCapsuleGeometry();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry#getRadius <em>Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry#getRadius <em>Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Radius</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry#getRadius()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry#getRadius()
 	 * @see #getCapsuleGeometry()
 	 * @generated
 	 */
 	EAttribute getCapsuleGeometry_Radius();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry#getLength <em>Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry#getLength <em>Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Length</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry#getLength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry#getLength()
 	 * @see #getCapsuleGeometry()
 	 * @generated
 	 */
 	EAttribute getCapsuleGeometry_Length();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry <em>Cylinder Geometry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry <em>Cylinder Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cylinder Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry
 	 * @generated
 	 */
 	EClass getCylinderGeometry();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry#getRadius <em>Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry#getRadius <em>Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Radius</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry#getRadius()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry#getRadius()
 	 * @see #getCylinderGeometry()
 	 * @generated
 	 */
 	EAttribute getCylinderGeometry_Radius();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry#getLength <em>Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry#getLength <em>Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Length</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry#getLength()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry#getLength()
 	 * @see #getCylinderGeometry()
 	 * @generated
 	 */
 	EAttribute getCylinderGeometry_Length();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry <em>Sphere Geometry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry <em>Sphere Geometry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sphere Geometry</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry
 	 * @generated
 	 */
 	EClass getSphereGeometry();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Radius</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry#getRadius()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry#getRadius()
 	 * @see #getSphereGeometry()
 	 * @generated
 	 */
 	EAttribute getSphereGeometry_Radius();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonTopologyAddonsDynamicsFacade();
+	EClass getApogyCommonTopologyAddonsDynamicsFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findCenterOfMass(org.eclipse.symphony.common.topology.Node) <em>Find Center Of Mass</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#findCenterOfMass(ca.gc.asc_csa.apogy.common.topology.Node) <em>Find Center Of Mass</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Center Of Mass</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findCenterOfMass(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#findCenterOfMass(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node();
+	EOperation getApogyCommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findTotalMass(org.eclipse.symphony.common.topology.Node) <em>Find Total Mass</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#findTotalMass(ca.gc.asc_csa.apogy.common.topology.Node) <em>Find Total Mass</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Total Mass</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findTotalMass(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#findTotalMass(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node();
+	EOperation getApogyCommonTopologyAddonsDynamicsFacade__FindTotalMass__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalBodies(org.eclipse.symphony.common.topology.Node) <em>Get Physical Bodies</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#getPhysicalBodies(ca.gc.asc_csa.apogy.common.topology.Node) <em>Get Physical Bodies</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Physical Bodies</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalBodies(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#getPhysicalBodies(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node();
+	EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalNodeSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, java.lang.Class) <em>Get Physical Node Simulation Property</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#getPhysicalNodeSimulationProperty(ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody, java.lang.Class) <em>Get Physical Node Simulation Property</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Physical Node Simulation Property</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalNodeSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, java.lang.Class)
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#getPhysicalNodeSimulationProperty(ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody, java.lang.Class)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
+	EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getConstraintSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class) <em>Get Constraint Simulation Property</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#getConstraintSimulationProperty(ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class) <em>Get Constraint Simulation Property</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Constraint Simulation Property</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getConstraintSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class)
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade#getConstraintSimulationProperty(ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
+	EOperation getApogyCommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.Set <em>Set</em>}'.
@@ -2670,7 +2670,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonTopologyAddonsDynamicsFactory getSymphony__CommonTopologyAddonsDynamicsFactory();
+	ApogyCommonTopologyAddonsDynamicsFactory getApogyCommonTopologyAddonsDynamicsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2687,11 +2687,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl <em>Dynamic System Properties</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl <em>Dynamic System Properties</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getDynamicSystemProperties()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getDynamicSystemProperties()
 		 * @generated
 		 */
 		EClass DYNAMIC_SYSTEM_PROPERTIES = eINSTANCE.getDynamicSystemProperties();
@@ -2713,11 +2713,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference DYNAMIC_SYSTEM_PROPERTIES__MATERIALS = eINSTANCE.getDynamicSystemProperties_Materials();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl <em>Abstract Dynamics Engine</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl <em>Abstract Dynamics Engine</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractDynamicsEngine()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractDynamicsEngineImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractDynamicsEngine()
 		 * @generated
 		 */
 		EClass ABSTRACT_DYNAMICS_ENGINE = eINSTANCE.getAbstractDynamicsEngine();
@@ -2739,11 +2739,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EOperation ABSTRACT_DYNAMICS_ENGINE___STOP_SIMULATION = eINSTANCE.getAbstractDynamicsEngine__StopSimulation();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl <em>Physical Body</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalBodyImpl <em>Physical Body</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPhysicalBody()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalBodyImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPhysicalBody()
 		 * @generated
 		 */
 		EClass PHYSICAL_BODY = eINSTANCE.getPhysicalBody();
@@ -2797,11 +2797,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference PHYSICAL_BODY__COLLISION_GEOMETRY = eINSTANCE.getPhysicalBody_CollisionGeometry();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl <em>Physical Properties</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl <em>Physical Properties</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPhysicalProperties()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPhysicalProperties()
 		 * @generated
 		 */
 		EClass PHYSICAL_PROPERTIES = eINSTANCE.getPhysicalProperties();
@@ -2831,41 +2831,41 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION = eINSTANCE.getPhysicalProperties_CenterOfMassLocation();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl <em>Abstract Physical Body Simulation Properties</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl <em>Abstract Physical Body Simulation Properties</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractPhysicalBodySimulationProperties()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractPhysicalBodySimulationPropertiesImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractPhysicalBodySimulationProperties()
 		 * @generated
 		 */
 		EClass ABSTRACT_PHYSICAL_BODY_SIMULATION_PROPERTIES = eINSTANCE.getAbstractPhysicalBodySimulationProperties();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl <em>Abstract Constraint Simulation Properties</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl <em>Abstract Constraint Simulation Properties</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraintSimulationProperties()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintSimulationPropertiesImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraintSimulationProperties()
 		 * @generated
 		 */
 		EClass ABSTRACT_CONSTRAINT_SIMULATION_PROPERTIES = eINSTANCE.getAbstractConstraintSimulationProperties();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl <em>Abstract Collision Geometry Simulation Properties</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl <em>Abstract Collision Geometry Simulation Properties</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractCollisionGeometrySimulationProperties()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractCollisionGeometrySimulationPropertiesImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractCollisionGeometrySimulationProperties()
 		 * @generated
 		 */
 		EClass ABSTRACT_COLLISION_GEOMETRY_SIMULATION_PROPERTIES = eINSTANCE.getAbstractCollisionGeometrySimulationProperties();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PointOfInterestImpl <em>Point Of Interest</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PointOfInterestImpl <em>Point Of Interest</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PointOfInterestImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPointOfInterest()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PointOfInterestImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPointOfInterest()
 		 * @generated
 		 */
 		EClass POINT_OF_INTEREST = eINSTANCE.getPointOfInterest();
@@ -2887,11 +2887,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference POINT_OF_INTEREST__KINEMATIC_STATE = eINSTANCE.getPointOfInterest_KinematicState();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl <em>Kinematic State</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.KinematicStateImpl <em>Kinematic State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getKinematicState()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.KinematicStateImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getKinematicState()
 		 * @generated
 		 */
 		EClass KINEMATIC_STATE = eINSTANCE.getKinematicState();
@@ -2945,11 +2945,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference KINEMATIC_STATE__ANGULAR_ACCELERATION = eINSTANCE.getKinematicState_AngularAcceleration();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintStateImpl <em>Constraint State</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintStateImpl <em>Constraint State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintStateImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getConstraintState()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintStateImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getConstraintState()
 		 * @generated
 		 */
 		EClass CONSTRAINT_STATE = eINSTANCE.getConstraintState();
@@ -2979,11 +2979,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute CONSTRAINT_STATE__FORCE = eINSTANCE.getConstraintState_Force();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl <em>Abstract Constraint</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintImpl <em>Abstract Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractConstraintImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractConstraint()
 		 * @generated
 		 */
 		EClass ABSTRACT_CONSTRAINT = eINSTANCE.getAbstractConstraint();
@@ -3029,11 +3029,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute ABSTRACT_CONSTRAINT__ENABLED = eINSTANCE.getAbstractConstraint_Enabled();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CylindricalConstraintImpl <em>Cylindrical Constraint</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylindricalConstraintImpl <em>Cylindrical Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CylindricalConstraintImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCylindricalConstraint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylindricalConstraintImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCylindricalConstraint()
 		 * @generated
 		 */
 		EClass CYLINDRICAL_CONSTRAINT = eINSTANCE.getCylindricalConstraint();
@@ -3055,11 +3055,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE = eINSTANCE.getCylindricalConstraint_LinearCurrentState();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.GearRatioConstraintImpl <em>Gear Ratio Constraint</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GearRatioConstraintImpl <em>Gear Ratio Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.GearRatioConstraintImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getGearRatioConstraint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GearRatioConstraintImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getGearRatioConstraint()
 		 * @generated
 		 */
 		EClass GEAR_RATIO_CONSTRAINT = eINSTANCE.getGearRatioConstraint();
@@ -3073,11 +3073,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute GEAR_RATIO_CONSTRAINT__FORCE = eINSTANCE.getGearRatioConstraint_Force();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.HingeConstraintImpl <em>Hinge Constraint</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.HingeConstraintImpl <em>Hinge Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.HingeConstraintImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getHingeConstraint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.HingeConstraintImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getHingeConstraint()
 		 * @generated
 		 */
 		EClass HINGE_CONSTRAINT = eINSTANCE.getHingeConstraint();
@@ -3091,11 +3091,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference HINGE_CONSTRAINT__ANGULAR_CURRENT_STATE = eINSTANCE.getHingeConstraint_AngularCurrentState();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PrismaticConstraintImpl <em>Prismatic Constraint</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PrismaticConstraintImpl <em>Prismatic Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.PrismaticConstraintImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getPrismaticConstraint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PrismaticConstraintImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getPrismaticConstraint()
 		 * @generated
 		 */
 		EClass PRISMATIC_CONSTRAINT = eINSTANCE.getPrismaticConstraint();
@@ -3109,11 +3109,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE = eINSTANCE.getPrismaticConstraint_LinearCurrentState();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.RPROConstraintImpl <em>RPRO Constraint</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.RPROConstraintImpl <em>RPRO Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.RPROConstraintImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getRPROConstraint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.RPROConstraintImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getRPROConstraint()
 		 * @generated
 		 */
 		EClass RPRO_CONSTRAINT = eINSTANCE.getRPROConstraint();
@@ -3135,11 +3135,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference RPRO_CONSTRAINT__ANGULAR_STRENGTH = eINSTANCE.getRPROConstraint_AngularStrength();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.UniversalConstraintImpl <em>Universal Constraint</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.UniversalConstraintImpl <em>Universal Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.UniversalConstraintImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getUniversalConstraint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.UniversalConstraintImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getUniversalConstraint()
 		 * @generated
 		 */
 		EClass UNIVERSAL_CONSTRAINT = eINSTANCE.getUniversalConstraint();
@@ -3161,11 +3161,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE = eINSTANCE.getUniversalConstraint_Angular1CurrentState();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl <em>Constraint Attachment Point</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl <em>Constraint Attachment Point</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getConstraintAttachmentPoint()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getConstraintAttachmentPoint()
 		 * @generated
 		 */
 		EClass CONSTRAINT_ATTACHMENT_POINT = eINSTANCE.getConstraintAttachmentPoint();
@@ -3211,11 +3211,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute CONSTRAINT_ATTACHMENT_POINT__POINT_ID = eINSTANCE.getConstraintAttachmentPoint_PointId();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl <em>Collision Geometry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CollisionGeometryImpl <em>Collision Geometry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCollisionGeometry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CollisionGeometryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCollisionGeometry()
 		 * @generated
 		 */
 		EClass COLLISION_GEOMETRY = eINSTANCE.getCollisionGeometry();
@@ -3269,11 +3269,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute COLLISION_GEOMETRY__GEOMETRY_ID = eINSTANCE.getCollisionGeometry_GeometryId();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractMaterialImpl <em>Abstract Material</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractMaterialImpl <em>Abstract Material</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractMaterialImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getAbstractMaterial()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.AbstractMaterialImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getAbstractMaterial()
 		 * @generated
 		 */
 		EClass ABSTRACT_MATERIAL = eINSTANCE.getAbstractMaterial();
@@ -3287,21 +3287,21 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute ABSTRACT_MATERIAL__MATERIAL_ID = eINSTANCE.getAbstractMaterial_MaterialId();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.GeometryImpl <em>Geometry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GeometryImpl <em>Geometry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.GeometryImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getGeometry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.GeometryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getGeometry()
 		 * @generated
 		 */
 		EClass GEOMETRY = eINSTANCE.getGeometry();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.BoxGeometryImpl <em>Box Geometry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.BoxGeometryImpl <em>Box Geometry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.BoxGeometryImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getBoxGeometry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.BoxGeometryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getBoxGeometry()
 		 * @generated
 		 */
 		EClass BOX_GEOMETRY = eINSTANCE.getBoxGeometry();
@@ -3315,11 +3315,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EReference BOX_GEOMETRY__DIMENSION = eINSTANCE.getBoxGeometry_Dimension();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CapsuleGeometryImpl <em>Capsule Geometry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CapsuleGeometryImpl <em>Capsule Geometry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CapsuleGeometryImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCapsuleGeometry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CapsuleGeometryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCapsuleGeometry()
 		 * @generated
 		 */
 		EClass CAPSULE_GEOMETRY = eINSTANCE.getCapsuleGeometry();
@@ -3341,11 +3341,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute CAPSULE_GEOMETRY__LENGTH = eINSTANCE.getCapsuleGeometry_Length();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CylinderGeometryImpl <em>Cylinder Geometry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylinderGeometryImpl <em>Cylinder Geometry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.CylinderGeometryImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getCylinderGeometry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.CylinderGeometryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getCylinderGeometry()
 		 * @generated
 		 */
 		EClass CYLINDER_GEOMETRY = eINSTANCE.getCylinderGeometry();
@@ -3367,11 +3367,11 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute CYLINDER_GEOMETRY__LENGTH = eINSTANCE.getCylinderGeometry_Length();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.SphereGeometryImpl <em>Sphere Geometry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.SphereGeometryImpl <em>Sphere Geometry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.SphereGeometryImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSphereGeometry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.SphereGeometryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getSphereGeometry()
 		 * @generated
 		 */
 		EClass SPHERE_GEOMETRY = eINSTANCE.getSphereGeometry();
@@ -3385,14 +3385,14 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute SPHERE_GEOMETRY__RADIUS = eINSTANCE.getSphereGeometry_Radius();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSymphony__CommonTopologyAddonsDynamicsFacade()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getApogyCommonTopologyAddonsDynamicsFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade();
+		EClass APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE = eINSTANCE.getApogyCommonTopologyAddonsDynamicsFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Center Of Mass</b></em>' operation.
@@ -3400,7 +3400,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node();
+		EOperation APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = eINSTANCE.getApogyCommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Total Mass</b></em>' operation.
@@ -3408,7 +3408,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node();
+		EOperation APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = eINSTANCE.getApogyCommonTopologyAddonsDynamicsFacade__FindTotalMass__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Physical Bodies</b></em>' operation.
@@ -3416,7 +3416,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node();
+		EOperation APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = eINSTANCE.getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Physical Node Simulation Property</b></em>' operation.
@@ -3424,7 +3424,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
+		EOperation APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = eINSTANCE.getApogyCommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Constraint Simulation Property</b></em>' operation.
@@ -3432,18 +3432,18 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
+		EOperation APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = eINSTANCE.getApogyCommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
 
 		/**
 		 * The meta object literal for the '<em>Set</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.Set
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSet()
+		 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsPackageImpl#getSet()
 		 * @generated
 		 */
 		EDataType SET = eINSTANCE.getSet();
 
 	}
 
-} //Symphony__CommonTopologyAddonsDynamicsPackage
+} //ApogyCommonTopologyAddonsDynamicsPackage

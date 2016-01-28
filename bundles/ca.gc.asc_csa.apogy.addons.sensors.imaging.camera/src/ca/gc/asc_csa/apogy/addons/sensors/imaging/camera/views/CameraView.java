@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.camera.views;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.views;
 
 import java.util.List;
 
@@ -13,23 +13,23 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.camera.actions.NewCameraViewAction;
-import org.eclipse.symphony.addons.sensors.imaging.camera.composites.CameraViewConfigurationComposite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.actions.NewCameraViewAction;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.composites.CameraViewConfigurationComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.progress.UIJob;
 
-import org.eclipse.symphony.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 
 public class CameraView extends AbstractView implements ISelectionListener 
 {	
@@ -62,8 +62,8 @@ public class CameraView extends AbstractView implements ISelectionListener
 		// Attempts to initialize the CameraViewConfiguration.				
 		setCameraViewConfiguration(CameraViewUtilities.INSTANCE.getActiveCameraViewConfiguration(cameraViewConfigurationId));
 				
-		// Register to Symphony__CoreInvocatorFacade to listen for change on Active Session.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		// Register to ApogyCoreInvocatorFacade to listen for change on Active Session.
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
@@ -96,7 +96,7 @@ public class CameraView extends AbstractView implements ISelectionListener
 	@Override
 	public void updateSelection(ISelection selection) 
 	{		
-		List<Object> cameraViewConfigurations = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, CameraViewConfiguration.class);
+		List<Object> cameraViewConfigurations = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, CameraViewConfiguration.class);
 		
 		if(cameraViewConfigurations.size() > 0)
 		{
@@ -158,8 +158,8 @@ public class CameraView extends AbstractView implements ISelectionListener
 	@Override
 	public void dispose() 
 	{
-		// Unregister to Symphony__CoreInvocatorFacade.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		// Unregister to ApogyCoreInvocatorFacade.
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 		
 		cameraComposite.dispose();		
 		super.dispose();
@@ -173,7 +173,7 @@ public class CameraView extends AbstractView implements ISelectionListener
 //		{
 //			if (previousSelection != selection)
 //			{
-//				List images = org.eclipse.symphony.common.converters.Activator.convert(selection, CameraViewConfiguration.class);
+//				List images = ca.gc.asc_csa.apogy.common.converters.Activator.convert(selection, CameraViewConfiguration.class);
 //				if(images.size() > 0)
 //				{
 //					try
@@ -254,11 +254,11 @@ public class CameraView extends AbstractView implements ISelectionListener
 				@Override
 				public void notifyChanged(Notification msg) 
 				{				
-					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
+					if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
 						
-						if(featureId == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
+						if(featureId == ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
 						{
 							// Tries to update the CameraViewConfiguration being displayed.
 							setCameraViewConfiguration(CameraViewUtilities.INSTANCE.getActiveCameraViewConfiguration(cameraViewConfigurationId));

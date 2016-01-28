@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.impl;
+package ca.gc.asc_csa.apogy.examples.lander.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.lander.Activator;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.LanderLegExtension;
-import org.eclipse.symphony.examples.lander.LanderStub;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.lander.Activator;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension;
+import ca.gc.asc_csa.apogy.examples.lander.LanderStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public class LanderStubImpl extends LanderImpl implements LanderStub
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesLanderPackage.Literals.LANDER_STUB;
+		return ApogyExamplesLanderPackage.Literals.LANDER_STUB;
 	}
 	
 	/**

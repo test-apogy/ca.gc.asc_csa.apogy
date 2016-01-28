@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,21 +16,21 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.jme3.Activator;
-import org.eclipse.symphony.common.geometry.data3d.ui.jme3.Data3dJME3Utilities;
-import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
-import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.jme3.Data3dJME3Utilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -397,7 +397,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 	{
 		ColorRGBA rgba = null;
 		
-		IPreferenceStore store = org.eclipse.symphony.common.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
+		IPreferenceStore store = ca.gc.asc_csa.apogy.common.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
 		
 		// Change color.
 		RGB rgb = PreferenceConverter.getColor(store, MRTData3DUIPreferencesConstants.DEFAULT_TRIANGULAR_MESH_COLOR_ID);
@@ -422,7 +422,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 					int featureId = msg
 							.getFeatureID(CartesianTriangularMesh.class);
 
-					if (featureId == Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POINTS) {
+					if (featureId == ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POINTS) {
 						if (msg.getEventType() == Notification.ADD_MANY
 								|| msg.getEventType() == Notification.REMOVE_MANY) {
 							updateGeometry();
@@ -446,7 +446,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 					int featureId = msg
 							.getFeatureID(CartesianTriangularMesh.class);
 
-					if (featureId == Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS) {
+					if (featureId == ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS) {
 						if (msg.getEventType() == Notification.ADD_MANY
 								|| msg.getEventType() == Notification.REMOVE_MANY) {
 							updateGeometry();
@@ -473,7 +473,7 @@ public class TriangularMeshJM3SceneObject extends DefaultJME3SceneObject<Content
 				{
 					int featureId = msg.getFeatureID(ContentNode.class);
 
-					if (featureId == Symphony__CommonTopologyPackage.CONTENT_NODE__CONTENT) 
+					if (featureId == ApogyCommonTopologyPackage.CONTENT_NODE__CONTENT) 
 					{
 						try 
 						{

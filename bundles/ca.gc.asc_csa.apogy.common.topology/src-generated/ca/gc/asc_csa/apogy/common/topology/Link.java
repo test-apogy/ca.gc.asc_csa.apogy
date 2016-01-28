@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.common.topology;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.Link#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.Link#getNode <em>Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getLink()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getLink()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface Link extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(Node)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getLink_Node()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getLink_Node()
 	 * @model
 	 * @generated
 	 */
 	Node getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.Link#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.Link#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.

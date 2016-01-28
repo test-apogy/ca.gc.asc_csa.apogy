@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
 import gov.nasa.worldwind.layers.RenderableLayer;
 
-import org.eclipse.symphony.core.Updatable;
+import ca.gc.asc_csa.apogy.core.Updatable;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.Updatable;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer()
  * @model abstract="true"
  * @generated
  */
@@ -44,7 +44,7 @@ public interface AbstractWorldWindLayer extends Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer_Visible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer_Visible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -52,7 +52,7 @@ public interface AbstractWorldWindLayer extends Updatable {
 	boolean isVisible();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible <em>Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible <em>Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Visible</em>' attribute.
@@ -70,15 +70,15 @@ public interface AbstractWorldWindLayer extends Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Renderable Layer</em>' attribute.
 	 * @see #setRenderableLayer(RenderableLayer)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer_RenderableLayer()
-	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.orbit.earth.ui.RenderableLayer" transient="true"
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer_RenderableLayer()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.RenderableLayer" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='false' property='None'"
 	 * @generated
 	 */
 	RenderableLayer getRenderableLayer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Renderable Layer</em>' attribute.

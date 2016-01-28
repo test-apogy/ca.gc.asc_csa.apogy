@@ -1,14 +1,14 @@
-@GenModel(prefix="Symphony__AddonsVehicleUI",
+@GenModel(prefix="ApogyAddonsVehicleUI",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__AddonsVehicleUI") 
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.vehicle.ui/src-generated")
-@GenModel(editDirectory= "/org.eclipse.symphony.addons.vehicle.ui.edit/src-generated")
+		  modelName="ApogyAddonsVehicleUI") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.vehicle.ui/src-generated")
+@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.addons.vehicle.ui.edit/src-generated")
 
-package org.eclipse.symphony.addons.vehicle.ui
+package ca.gc.asc_csa.apogy.addons.vehicle.ui
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 
 class PhysicalWheelPresentation extends NodePresentation
 {

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -17,12 +17,12 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#getRectangleWidth <em>Rectangle Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#getRectangleHeight <em>Rectangle Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer#getRectangleWidth <em>Rectangle Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer#getRectangleHeight <em>Rectangle Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangleShapeImageLayer()
  * @model
  * @generated
  */
@@ -38,15 +38,15 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rectangle Width</em>' attribute.
 	 * @see #setRectangleWidth(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleWidth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleWidth()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' apogy_units='m'"
 	 * @generated
 	 */
 	double getRectangleWidth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#getRectangleWidth <em>Rectangle Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer#getRectangleWidth <em>Rectangle Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rectangle Width</em>' attribute.
@@ -66,15 +66,15 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rectangle Height</em>' attribute.
 	 * @see #setRectangleHeight(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleHeight()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleHeight()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' apogy_units='m'"
 	 * @generated
 	 */
 	double getRectangleHeight();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#getRectangleHeight <em>Rectangle Height</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer#getRectangleHeight <em>Rectangle Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rectangle Height</em>' attribute.
@@ -94,7 +94,7 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Show Center Lines</em>' attribute.
 	 * @see #setShowCenterLines(boolean)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_ShowCenterLines()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangleShapeImageLayer_ShowCenterLines()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS'"
 	 * @generated
@@ -102,7 +102,7 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	boolean isShowCenterLines();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Show Center Lines</em>' attribute.

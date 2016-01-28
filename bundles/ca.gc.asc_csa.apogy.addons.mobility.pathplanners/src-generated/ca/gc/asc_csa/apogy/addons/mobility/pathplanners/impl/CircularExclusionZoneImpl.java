@@ -3,7 +3,7 @@
  *
  * $Id: CircularExclusionZoneImpl.java,v 1.4.4.2 2015/05/21 15:50:52 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -15,20 +15,20 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,15 +38,15 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.CircularExclusionZoneImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.CircularExclusionZoneImpl#isInvertSamplingShape <em>Invert Sampling Shape</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl.CircularExclusionZoneImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl.CircularExclusionZoneImpl#isInvertSamplingShape <em>Invert Sampling Shape</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements CircularExclusionZone {
 
-	private static CartesianPositionCoordinates center = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
+	private static CartesianPositionCoordinates center = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 	
 	/**
 	 * The default value of the '{@link #getRadius() <em>Radius</em>}' attribute.
@@ -103,7 +103,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE;
+		return ApogyAddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE;
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		boolean oldInvertSamplingShape = invertSamplingShape;
 		invertSamplingShape = newInvertSamplingShape;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE, oldInvertSamplingShape, invertSamplingShape));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE, oldInvertSamplingShape, invertSamplingShape));
 	}
 
 	/**
@@ -168,11 +168,11 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		boolean inside = false;		
 		
 		// First checks if the center of the exclusion zones falls onto the polygon.
-		Matrix4d centerTransform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(this);
+		Matrix4d centerTransform = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(this);
 		Vector3d centerPosition = new Vector3d();
 		centerTransform.get(centerPosition);						
 		
-		CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centerPosition.x, centerPosition.y, centerPosition.z);		
+		CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centerPosition.x, centerPosition.y, centerPosition.z);		
 		inside = Geometry3DUtilities.isInsidePolygon(point, polygon);
 
 		if(!inside)
@@ -217,9 +217,9 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				return getRadius();
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				return isInvertSamplingShape();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -233,10 +233,10 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				setRadius((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				setInvertSamplingShape((Boolean)newValue);
 				return;
 		}
@@ -251,10 +251,10 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				setInvertSamplingShape(INVERT_SAMPLING_SHAPE_EDEFAULT);
 				return;
 		}
@@ -269,9 +269,9 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				return radius != RADIUS_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				return invertSamplingShape != INVERT_SAMPLING_SHAPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -291,13 +291,13 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		}
 		if (baseClass == CoordinatesSamplingShape.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_INSIDE__COORDINATES;
+				case ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES: return ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_INSIDE__COORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == PolygonSamplingShape.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON;
+				case ApogyCommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON;
 				default: return -1;
 			}
 		}
@@ -313,7 +313,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON:
+			case ApogyAddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON:
 				return isPolygonInside((CartesianTriangle)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -343,10 +343,10 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	 */
 	private CartesianPositionCoordinates projectOntoExclusionZone(CartesianPositionCoordinates point)
 	{				
-		Matrix4d matrix = Symphony__CommonTopologyFacade.INSTANCE.expressRootInNodeFrame(this);							
+		Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressRootInNodeFrame(this);							
 		Point3d projected = new Point3d();
 		matrix.transform(point.asPoint3d(), projected);		
-		CartesianPositionCoordinates projectedPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(projected.x, projected.y, projected.z);
+		CartesianPositionCoordinates projectedPoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(projected.x, projected.y, projected.z);
 		
 		return Geometry3DUtilities.getFlattenCoordinate(CartesianPlane.XY, projectedPoint);		
 	}
@@ -380,7 +380,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		else
 		{
 			// Gets the centre's flattened coordinates.
-			CartesianPositionCoordinates flattenedCenter = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
+			CartesianPositionCoordinates flattenedCenter = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 			
 			// Gets the point's flattened coordinates of the line.
 			CartesianPositionCoordinates flattenedFrom = projectOntoExclusionZone(from);

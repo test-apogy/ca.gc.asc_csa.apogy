@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.views;
+package ca.gc.asc_csa.apogy.core.ui.views;
 
 import java.util.List;
 
@@ -11,23 +11,23 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.ui.Activator;
-import org.eclipse.symphony.core.ui.composites.SymphonyEnvironmentTimeSourceComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
+import ca.gc.asc_csa.apogy.core.ui.composites.ApogyEnvironmentTimeSourceComposite;
 
-public class SymphonyEnvironmentTimeSourcesView extends AbstractView 
+public class ApogyEnvironmentTimeSourcesView extends AbstractView 
 {
 	private Adapter activeSessionAdapter = null;
 	
 	public static final String PART_NAME = "Time Source";
-	private SymphonyEnvironment symphonyEnvironment;
+	private ApogyEnvironment apogyEnvironment;
 	
-	private SymphonyEnvironmentTimeSourceComposite symphonyEnvironmentTimeSourceComposite;
+	private ApogyEnvironmentTimeSourceComposite apogyEnvironmentTimeSourceComposite;
 	
 	@Override
 	public void createPartControl(Composite parent) 
@@ -48,25 +48,25 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 		scrolledContentcomposite.setLayout(new FillLayout());					
 		
 		// Add composite
-		symphonyEnvironmentTimeSourceComposite = new SymphonyEnvironmentTimeSourceComposite(scrolledContentcomposite, SWT.NONE);
+		apogyEnvironmentTimeSourceComposite = new ApogyEnvironmentTimeSourceComposite(scrolledContentcomposite, SWT.NONE);
 		
 		scrolledComposite.setContent(scrolledContentcomposite);
 		scrolledComposite.setMinSize(scrolledContentcomposite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 		
 		// Gets the current Active Session if one exists.
-		setSymphonyEnvironment(getActiveSymphonyEnvironment());
+		setApogyEnvironment(getActiveApogyEnvironment());
 				
 		// Register to the active session.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
 	public void dispose() 
 	{
 		// Un-Register to the active session.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 	
-		setSymphonyEnvironment(null);	
+		setApogyEnvironment(null);	
 		
 		super.dispose();
 	}
@@ -82,48 +82,48 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 	{		
 		Activator.getDefault();
 		
-		List<Object> ses = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SymphonyEnvironment.class);
+		List<Object> ses = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, ApogyEnvironment.class);
 		
 		if(!ses.isEmpty())
 		{
-			SymphonyEnvironment se = (SymphonyEnvironment) ses.get(0);
+			ApogyEnvironment se = (ApogyEnvironment) ses.get(0);
 			
-			if(se != getSymphonyEnvironment())
+			if(se != getApogyEnvironment())
 			{
-				setSymphonyEnvironment(se);
+				setApogyEnvironment(se);
 			}
 		}
 	}
 	
-	public SymphonyEnvironment getSymphonyEnvironment() 
+	public ApogyEnvironment getApogyEnvironment() 
 	{
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 
-	public void setSymphonyEnvironment(SymphonyEnvironment symphonyEnvironment) 
+	public void setApogyEnvironment(ApogyEnvironment apogyEnvironment) 
 	{				
-		this.symphonyEnvironment = symphonyEnvironment;
+		this.apogyEnvironment = apogyEnvironment;
 		
-		if(symphonyEnvironmentTimeSourceComposite != null && !symphonyEnvironmentTimeSourceComposite.isDisposed())
+		if(apogyEnvironmentTimeSourceComposite != null && !apogyEnvironmentTimeSourceComposite.isDisposed())
 		{
-			symphonyEnvironmentTimeSourceComposite.setSymphonyEnvironment(symphonyEnvironment);
+			apogyEnvironmentTimeSourceComposite.setApogyEnvironment(apogyEnvironment);
 		}
 	}	
 	
-	protected SymphonyEnvironment getActiveSymphonyEnvironment()
+	protected ApogyEnvironment getActiveApogyEnvironment()
 	{
-		SymphonyEnvironment symphonyEnvironment = null;
+		ApogyEnvironment apogyEnvironment = null;
 		
-		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null)
 		{
-			if(session.getEnvironment() instanceof SymphonyEnvironment)
+			if(session.getEnvironment() instanceof ApogyEnvironment)
 			{
-				symphonyEnvironment = (SymphonyEnvironment) session.getEnvironment();
+				apogyEnvironment = (ApogyEnvironment) session.getEnvironment();
 			}
 		}
 		
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 	
 	private Adapter getActiveSessionAdapter() 
@@ -135,16 +135,16 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 				@Override
 				public void notifyChanged(Notification msg) 
 				{
-					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
+					if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
 						switch (featureId) 
 						{
-							case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+							case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 								if(msg.getNewValue() instanceof InvocatorSession)
 								{																		
 									// Gets the current Active Session if one exists.
-									setSymphonyEnvironment(getActiveSymphonyEnvironment());
+									setApogyEnvironment(getActiveApogyEnvironment());
 								}
 								
 							break;

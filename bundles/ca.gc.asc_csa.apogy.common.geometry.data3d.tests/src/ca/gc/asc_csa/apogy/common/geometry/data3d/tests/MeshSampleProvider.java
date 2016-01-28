@@ -1,21 +1,21 @@
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 public class MeshSampleProvider {
 
-	protected static Symphony__CommonGeometryData3DFacade data3dFacade = Symphony__CommonGeometryData3DFacade.INSTANCE;
+	protected static ApogyCommonGeometryData3DFacade data3dFacade = ApogyCommonGeometryData3DFacade.INSTANCE;
 	
 	public static CartesianTriangularMesh getSquare()
 	{
-		CartesianTriangularMesh mesh =  Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh =  ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		CartesianPositionCoordinates v0 = data3dFacade.createCartesianPositionCoordinates(0,0,0);
 		mesh.getPoints().add(v0);
@@ -30,25 +30,25 @@ public class MeshSampleProvider {
 		CartesianPositionCoordinates v5 = data3dFacade.createCartesianPositionCoordinates(0,2,0);
 		mesh.getPoints().add(v5);
 		
-		CartesianTriangle p1 =  Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
+		CartesianTriangle p1 =  ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 		p1.getVertices().add(v0);
 		p1.getVertices().add(v1);
 		p1.getVertices().add(v2);
 		mesh.getPolygons().add(p1);
 		
-		CartesianTriangle p2 =  Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
+		CartesianTriangle p2 =  ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 		p2.getVertices().add(v2);
 		p2.getVertices().add(v3);
 		p2.getVertices().add(v0);
 		mesh.getPolygons().add(p2);
 		
-		CartesianTriangle p3 =  Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
+		CartesianTriangle p3 =  ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 		p3.getVertices().add(v2);
 		p3.getVertices().add(v4);
 		p3.getVertices().add(v3);
 		mesh.getPolygons().add(p3);
 		
-		CartesianTriangle p4 =  Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
+		CartesianTriangle p4 =  ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 		p4.getVertices().add(v4);
 		p4.getVertices().add(v5);
 		p4.getVertices().add(v3);
@@ -59,7 +59,7 @@ public class MeshSampleProvider {
 	
 	public static CartesianCoordinatesMesh getSquareMeshWithDuplicate(int numberOfGridSquare, double sizeOfGridSquare)
 	{
-		CartesianCoordinatesMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
+		CartesianCoordinatesMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
 		
 		for(int i = 0; i < numberOfGridSquare; i++)
 		{			
@@ -101,7 +101,7 @@ public class MeshSampleProvider {
 	
 	public static CartesianCoordinatesMesh getSquareWithBump(int numberOfGridSquare, double sizeOfGridSquare)
 	{
-		CartesianCoordinatesMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
+		CartesianCoordinatesMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
 				
 		double xcenter = (numberOfGridSquare * sizeOfGridSquare) / 2.0;	
 		double ycenter = xcenter;		
@@ -153,7 +153,7 @@ public class MeshSampleProvider {
 	 */
 	public static CartesianCoordinatesMesh getCube(double sideLenght)
 	{
-		CartesianCoordinatesMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
+		CartesianCoordinatesMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
 		
 		double d = sideLenght/2.0;
 		

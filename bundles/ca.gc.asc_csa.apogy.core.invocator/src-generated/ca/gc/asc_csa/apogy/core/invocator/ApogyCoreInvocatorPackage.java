@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreInvocator' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)' modelName='Symphony__CoreInvocator' fileExtensions='sym' resource='XMI' modelDirectory='/org.eclipse.symphony.core.invocator/src-generated' editDirectory='/org.eclipse.symphony.core.invocator.edit/src-generated' editorDirectory='/org.eclipse.symphony.core.invocator.editor/src-generated' basePackage='org.eclipse.symphony.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreInvocator' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)' modelName='ApogyCoreInvocator' fileExtensions='sym' resource='XMI' modelDirectory='/ca.gc.asc_csa.apogy.core.invocator/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.invocator.edit/src-generated' editorDirectory='/ca.gc.asc_csa.apogy.core.invocator.editor/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
  * @generated
  */
-public interface Symphony__CoreInvocatorPackage extends EPackage
+public interface ApogyCoreInvocatorPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -45,7 +45,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.core.invocator";
+  String eNS_URI = "ca.gc.asc_csa.apogy.core.invocator";
 
   /**
 	 * The package namespace name.
@@ -61,17 +61,17 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreInvocatorPackage eINSTANCE = org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl.init();
+  ApogyCoreInvocatorPackage eINSTANCE = ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getSymphony__CoreInvocatorFacade()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getApogyCoreInvocatorFacade()
 	 * @generated
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE = 0;
+	int APOGY_CORE_INVOCATOR_FACADE = 0;
 
 		/**
 	 * The feature id for the '<em><b>Init Variable Instances Date</b></em>' attribute.
@@ -80,7 +80,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = 0;
+	int APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = 0;
 
 		/**
 	 * The feature id for the '<em><b>Active Invocator Session</b></em>' reference.
@@ -89,7 +89,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 1;
+	int APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 1;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -98,7 +98,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 2;
+	int APOGY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 2;
 
 		/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -107,7 +107,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = 0;
+	int APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = 0;
 
 		/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -116,7 +116,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = 1;
+	int APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = 1;
 
 		/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -125,7 +125,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = 2;
+	int APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = 2;
 
 		/**
 	 * The operation id for the '<em>Create Abstract Result Value</em>' operation.
@@ -134,7 +134,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = 3;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = 3;
 
 		/**
 	 * The operation id for the '<em>Resolve Watch</em>' operation.
@@ -143,7 +143,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = 4;
+	int APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = 4;
 
 		/**
 	 * The operation id for the '<em>Resolve Watch</em>' operation.
@@ -152,7 +152,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = 5;
+	int APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = 5;
 
 		/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -161,7 +161,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = 6;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = 6;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
@@ -170,7 +170,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 7;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 7;
 
 		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
@@ -179,7 +179,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 8;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 8;
 
 		/**
 	 * The operation id for the '<em>Get Type Api Adapter</em>' operation.
@@ -188,7 +188,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 9;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 9;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
@@ -197,7 +197,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 10;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 10;
 
 		/**
 	 * The operation id for the '<em>Get Type Member Instance</em>' operation.
@@ -206,7 +206,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 11;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 11;
 
 		/**
 	 * The operation id for the '<em>Get EMF Feature Value</em>' operation.
@@ -215,7 +215,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 12;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 12;
 
 		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
@@ -224,7 +224,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 13;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 13;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
@@ -233,7 +233,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = 14;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = 14;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -242,7 +242,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 15;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 15;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -251,7 +251,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 16;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 16;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -260,7 +260,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 17;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 17;
 
 		/**
 	 * The operation id for the '<em>Get Variable By Name</em>' operation.
@@ -269,7 +269,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = 18;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = 18;
 
 		/**
 	 * The operation id for the '<em>Create Type Member References</em>' operation.
@@ -278,7 +278,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 19;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 19;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -287,7 +287,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 20;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 20;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -296,7 +296,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 21;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 21;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -305,7 +305,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 22;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 22;
 
 		/**
 	 * The operation id for the '<em>Create Type Member Implementations</em>' operation.
@@ -314,7 +314,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 23;
+	int APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 23;
 
 		/**
 	 * The operation id for the '<em>Init Variable Instances</em>' operation.
@@ -323,7 +323,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 24;
+	int APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 24;
 
 		/**
 	 * The operation id for the '<em>Dispose Variable Instances</em>' operation.
@@ -332,7 +332,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 25;
+	int APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 25;
 
 		/**
 	 * The operation id for the '<em>Get Operation Call Container</em>' operation.
@@ -341,7 +341,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 26;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 26;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -350,7 +350,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 27;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 27;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -359,7 +359,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 28;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 28;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -368,7 +368,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 29;
+	int APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 29;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -377,7 +377,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 30;
+	int APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 30;
 
 		/**
 	 * The operation id for the '<em>Load Registered Types</em>' operation.
@@ -386,7 +386,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 31;
+	int APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 31;
 
 		/**
 	 * The operation id for the '<em>Get All Types</em>' operation.
@@ -395,7 +395,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 32;
+	int APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 32;
 
 		/**
 	 * The operation id for the '<em>Add Variable Listener</em>' operation.
@@ -404,7 +404,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 33;
+	int APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 33;
 
 		/**
 	 * The operation id for the '<em>Remove Variable Listener</em>' operation.
@@ -413,7 +413,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 34;
+	int APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 34;
 
 		/**
 	 * The operation id for the '<em>Notify Variable Listeners</em>' operation.
@@ -422,7 +422,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 35;
+	int APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 35;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -431,14 +431,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 36;
+	int APOGY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 36;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getInvocatorSession()
 	 * @generated
 	 */
   int INVOCATOR_SESSION = 1;
@@ -450,7 +450,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int INVOCATOR_SESSION__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -459,7 +459,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int INVOCATOR_SESSION__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
@@ -468,7 +468,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__ENVIRONMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int INVOCATOR_SESSION__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Programs List</b></em>' containment reference.
@@ -477,7 +477,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__PROGRAMS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int INVOCATOR_SESSION__PROGRAMS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Data Products List Container</b></em>' containment reference.
@@ -486,7 +486,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Tools List</b></em>' containment reference.
@@ -495,7 +495,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__TOOLS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int INVOCATOR_SESSION__TOOLS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Invocator Session</em>' class.
@@ -504,7 +504,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int INVOCATOR_SESSION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Invocator Session</em>' class.
@@ -513,14 +513,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int INVOCATOR_SESSION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl <em>Environment</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl <em>Environment</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.EnvironmentImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEnvironment()
 	 * @generated
 	 */
   int ENVIRONMENT = 2;
@@ -532,7 +532,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int ENVIRONMENT__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -541,7 +541,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int ENVIRONMENT__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
@@ -550,7 +550,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int ENVIRONMENT__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Types List</b></em>' containment reference.
@@ -559,7 +559,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__TYPES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int ENVIRONMENT__TYPES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Variables List</b></em>' containment reference.
@@ -568,7 +568,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__VARIABLES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int ENVIRONMENT__VARIABLES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Contexts List</b></em>' containment reference.
@@ -577,7 +577,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__CONTEXTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int ENVIRONMENT__CONTEXTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Active Context</b></em>' reference.
@@ -586,7 +586,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__ACTIVE_CONTEXT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int ENVIRONMENT__ACTIVE_CONTEXT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of structural features of the '<em>Environment</em>' class.
@@ -595,7 +595,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
+  int ENVIRONMENT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
   /**
 	 * The number of operations of the '<em>Environment</em>' class.
@@ -604,14 +604,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int ENVIRONMENT_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl <em>Data Products Lists Container</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListsContainerImpl <em>Data Products Lists Container</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDataProductsListsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListsContainerImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDataProductsListsContainer()
 	 * @generated
 	 */
   int DATA_PRODUCTS_LISTS_CONTAINER = 3;
@@ -623,7 +623,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int DATA_PRODUCTS_LISTS_CONTAINER__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -632,7 +632,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
@@ -641,7 +641,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Data Products List</b></em>' containment reference list.
@@ -650,7 +650,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Data Products Lists Container</em>' class.
@@ -659,7 +659,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int DATA_PRODUCTS_LISTS_CONTAINER_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Data Products Lists Container</em>' class.
@@ -668,14 +668,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int DATA_PRODUCTS_LISTS_CONTAINER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl <em>Data Products List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl <em>Data Products List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.DataProductsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDataProductsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDataProductsList()
 	 * @generated
 	 */
   int DATA_PRODUCTS_LIST = 4;
@@ -687,7 +687,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int DATA_PRODUCTS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -696,7 +696,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int DATA_PRODUCTS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Data Products Lists Container</b></em>' container reference.
@@ -705,7 +705,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Operation Call Results List</b></em>' containment reference.
@@ -714,7 +714,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Recording Results List</b></em>' containment reference.
@@ -723,7 +723,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -732,7 +732,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_PRODUCTS_LIST__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+	int DATA_PRODUCTS_LIST__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 		/**
 	 * The number of structural features of the '<em>Data Products List</em>' class.
@@ -741,7 +741,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int DATA_PRODUCTS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Data Products List</em>' class.
@@ -750,14 +750,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int DATA_PRODUCTS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ToolsListImpl <em>Tools List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ToolsListImpl <em>Tools List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ToolsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getToolsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ToolsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getToolsList()
 	 * @generated
 	 */
   int TOOLS_LIST = 5;
@@ -769,7 +769,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int TOOLS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -778,7 +778,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int TOOLS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
@@ -787,7 +787,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int TOOLS_LIST__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Tools List Containers</b></em>' containment reference list.
@@ -796,7 +796,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__TOOLS_LIST_CONTAINERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int TOOLS_LIST__TOOLS_LIST_CONTAINERS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Tools List</em>' class.
@@ -805,7 +805,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int TOOLS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Tools List</em>' class.
@@ -814,14 +814,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int TOOLS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl <em>Abstract Tools List Container</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl <em>Abstract Tools List Container</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractToolsListContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractToolsListContainer()
 	 * @generated
 	 */
   int ABSTRACT_TOOLS_LIST_CONTAINER = 6;
@@ -854,11 +854,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypesListImpl <em>Types List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypesListImpl <em>Types List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypesListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypesListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypesList()
 	 * @generated
 	 */
   int TYPES_LIST = 7;
@@ -900,11 +900,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int TYPES_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.LocalTypesListImpl <em>Local Types List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.LocalTypesListImpl <em>Local Types List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.LocalTypesListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getLocalTypesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.LocalTypesListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getLocalTypesList()
 	 * @generated
 	 */
   int LOCAL_TYPES_LIST = 8;
@@ -937,11 +937,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int LOCAL_TYPES_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.RegisteredTypesListImpl <em>Registered Types List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl <em>Registered Types List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.RegisteredTypesListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getRegisteredTypesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRegisteredTypesList()
 	 * @generated
 	 */
   int REGISTERED_TYPES_LIST = 9;
@@ -974,11 +974,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int REGISTERED_TYPES_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.AbstractType <em>Abstract Type</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractType <em>Abstract Type</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.AbstractType
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractType
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractType()
 	 * @generated
 	 */
   int ABSTRACT_TYPE = 10;
@@ -1002,11 +1002,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ABSTRACT_TYPE_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeImpl <em>Type</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeImpl <em>Type</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypeImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getType()
 	 * @generated
 	 */
   int TYPE = 11;
@@ -1018,7 +1018,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int TYPE__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -1027,7 +1027,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__MEMBERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int TYPE__MEMBERS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Interface Class</b></em>' reference.
@@ -1036,7 +1036,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__INTERFACE_CLASS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int TYPE__INTERFACE_CLASS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Type Api Adapter Class</b></em>' reference.
@@ -1045,7 +1045,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__TYPE_API_ADAPTER_CLASS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int TYPE__TYPE_API_ADAPTER_CLASS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -1054,7 +1054,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int TYPE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Type</em>' class.
@@ -1063,14 +1063,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int TYPE_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl <em>Type Api Adapter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl <em>Type Api Adapter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeApiAdapter()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeApiAdapter()
 	 * @generated
 	 */
   int TYPE_API_ADAPTER = 12;
@@ -1193,11 +1193,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int TYPE_API_ADAPTER_OPERATION_COUNT = 8;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImpl <em>Type Member</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImpl <em>Type Member</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMember()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMember()
 	 * @generated
 	 */
   int TYPE_MEMBER = 13;
@@ -1209,7 +1209,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int TYPE_MEMBER__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Member Type</b></em>' reference.
@@ -1218,7 +1218,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER__MEMBER_TYPE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int TYPE_MEMBER__MEMBER_TYPE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Type Feature Root Node</b></em>' containment reference.
@@ -1227,7 +1227,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Type Member</em>' class.
@@ -1236,7 +1236,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int TYPE_MEMBER_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Type Member</em>' class.
@@ -1245,14 +1245,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int TYPE_MEMBER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceImpl <em>Type Member Reference</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceImpl <em>Type Member Reference</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberReference()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberReference()
 	 * @generated
 	 */
   int TYPE_MEMBER_REFERENCE = 14;
@@ -1285,11 +1285,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int TYPE_MEMBER_REFERENCE_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl <em>Type Member Reference List Element</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceListElementImpl <em>Type Member Reference List Element</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberReferenceListElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceListElementImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberReferenceListElement()
 	 * @generated
 	 */
   int TYPE_MEMBER_REFERENCE_LIST_ELEMENT = 15;
@@ -1385,11 +1385,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int TYPE_MEMBER_REFERENCE_LIST_ELEMENT_OPERATION_COUNT = TYPE_MEMBER_REFERENCE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl <em>Type Member Reference Tree Element</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceTreeElementImpl <em>Type Member Reference Tree Element</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberReferenceTreeElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceTreeElementImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberReferenceTreeElement()
 	 * @generated
 	 */
   int TYPE_MEMBER_REFERENCE_TREE_ELEMENT = 16;
@@ -1476,11 +1476,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int TYPE_MEMBER_REFERENCE_TREE_ELEMENT_OPERATION_COUNT = TYPE_MEMBER_REFERENCE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.VariablesListImpl <em>Variables List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariablesListImpl <em>Variables List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.VariablesListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariablesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariablesListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariablesList()
 	 * @generated
 	 */
   int VARIABLES_LIST = 17;
@@ -1522,11 +1522,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int VARIABLES_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.VariableImpl <em>Variable</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl <em>Variable</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.VariableImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariable()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariable()
 	 * @generated
 	 */
   int VARIABLE = 18;
@@ -1538,7 +1538,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int VARIABLE__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Variables List</b></em>' container reference.
@@ -1547,7 +1547,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__VARIABLES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int VARIABLE__VARIABLES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Variable Type</b></em>' reference.
@@ -1556,7 +1556,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__VARIABLE_TYPE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int VARIABLE__VARIABLE_TYPE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1565,7 +1565,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__ENVIRONMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int VARIABLE__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -1574,7 +1574,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int VARIABLE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -1583,14 +1583,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int VARIABLE_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ContextsListImpl <em>Contexts List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextsListImpl <em>Contexts List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ContextsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getContextsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ContextsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getContextsList()
 	 * @generated
 	 */
   int CONTEXTS_LIST = 19;
@@ -1632,11 +1632,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int CONTEXTS_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ContextImpl <em>Context</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl <em>Context</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ContextImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getContext()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getContext()
 	 * @generated
 	 */
   int CONTEXT = 20;
@@ -1648,7 +1648,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int CONTEXT__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Contexts List</b></em>' container reference.
@@ -1657,7 +1657,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__CONTEXTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int CONTEXT__CONTEXTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Variable Implementations List</b></em>' containment reference.
@@ -1666,7 +1666,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1675,7 +1675,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__ENVIRONMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int CONTEXT__ENVIRONMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Data Products List</b></em>' reference.
@@ -1684,7 +1684,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__DATA_PRODUCTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int CONTEXT__DATA_PRODUCTS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Instances Creation Date</b></em>' attribute.
@@ -1693,7 +1693,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_CREATION_DATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int CONTEXT__INSTANCES_CREATION_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Instances Disposal Date</b></em>' attribute.
@@ -1702,7 +1702,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_DISPOSAL_DATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int CONTEXT__INSTANCES_DISPOSAL_DATE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of structural features of the '<em>Context</em>' class.
@@ -1711,7 +1711,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
+  int CONTEXT_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
   /**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -1720,14 +1720,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int CONTEXT_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.BasicContextImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getBasicContext()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBasicContext()
 	 * @generated
 	 */
   int BASIC_CONTEXT = 21;
@@ -1814,11 +1814,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int BASIC_CONTEXT_OPERATION_COUNT = CONTEXT_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.VariableImplementationsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableImplementationsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableImplementationsList()
 	 * @generated
 	 */
   int VARIABLE_IMPLEMENTATIONS_LIST = 22;
@@ -1869,11 +1869,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int VARIABLE_IMPLEMENTATIONS_LIST_OPERATION_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractInitializationDataImpl <em>Abstract Initialization Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractInitializationDataImpl <em>Abstract Initialization Data</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractInitializationDataImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractInitializationData()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractInitializationDataImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractInitializationData()
 	 * @generated
 	 */
   int ABSTRACT_INITIALIZATION_DATA = 23;
@@ -1897,11 +1897,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ABSTRACT_INITIALIZATION_DATA_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.InitializationDataImpl <em>Initialization Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InitializationDataImpl <em>Initialization Data</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.InitializationDataImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getInitializationData()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.InitializationDataImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getInitializationData()
 	 * @generated
 	 */
   int INITIALIZATION_DATA = 24;
@@ -1925,11 +1925,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int INITIALIZATION_DATA_OPERATION_COUNT = ABSTRACT_INITIALIZATION_DATA_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl <em>Abstract Type Implementation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl <em>Abstract Type Implementation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractTypeImplementation()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractTypeImplementation()
 	 * @generated
 	 */
   int ABSTRACT_TYPE_IMPLEMENTATION = 25;
@@ -2025,11 +2025,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ABSTRACT_TYPE_IMPLEMENTATION_OPERATION_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationImpl <em>Variable Implementation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationImpl <em>Variable Implementation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.VariableImplementationImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableImplementation()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableImplementation()
 	 * @generated
 	 */
   int VARIABLE_IMPLEMENTATION = 26;
@@ -2143,11 +2143,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int VARIABLE_IMPLEMENTATION_OPERATION_COUNT = ABSTRACT_TYPE_IMPLEMENTATION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImplementationImpl <em>Type Member Implementation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImplementationImpl <em>Type Member Implementation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberImplementationImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberImplementation()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImplementationImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementation()
 	 * @generated
 	 */
   int TYPE_MEMBER_IMPLEMENTATION = 27;
@@ -2252,11 +2252,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int TYPE_MEMBER_IMPLEMENTATION_OPERATION_COUNT = ABSTRACT_TYPE_IMPLEMENTATION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ValuesListImpl <em>Values List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ValuesListImpl <em>Values List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ValuesListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getValuesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ValuesListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getValuesList()
 	 * @generated
 	 */
   int VALUES_LIST = 28;
@@ -2289,11 +2289,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int VALUES_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ValueImpl <em>Value</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ValueImpl <em>Value</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ValueImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ValueImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getValue()
 	 * @generated
 	 */
   int VALUE = 29;
@@ -2305,7 +2305,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int VALUE__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2314,7 +2314,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE__VALUE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int VALUE__VALUE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Value</em>' class.
@@ -2323,7 +2323,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int VALUE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Value</em>' class.
@@ -2332,14 +2332,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int VALUE_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ProgramsListImpl <em>Programs List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl <em>Programs List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ProgramsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getProgramsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramsList()
 	 * @generated
 	 */
   int PROGRAMS_LIST = 30;
@@ -2381,11 +2381,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int PROGRAMS_LIST_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ProgramImpl <em>Program</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl <em>Program</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ProgramImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getProgram()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgram()
 	 * @generated
 	 */
   int PROGRAM = 31;
@@ -2397,7 +2397,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int PROGRAM__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2406,7 +2406,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int PROGRAM__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Programs List</b></em>' container reference.
@@ -2415,7 +2415,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__PROGRAMS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int PROGRAM__PROGRAMS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -2424,7 +2424,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int PROGRAM__INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Values List</b></em>' containment reference.
@@ -2433,7 +2433,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__VALUES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int PROGRAM__VALUES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 		/**
 	 * The number of structural features of the '<em>Program</em>' class.
@@ -2442,7 +2442,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int PROGRAM_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of operations of the '<em>Program</em>' class.
@@ -2451,14 +2451,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int PROGRAM_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.OperationCallContainer <em>Operation Call Container</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer <em>Operation Call Container</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallContainer()
 	 * @generated
 	 */
   int OPERATION_CALL_CONTAINER = 32;
@@ -2500,11 +2500,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int OPERATION_CALL_CONTAINER_OPERATION_COUNT = 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallsListImpl <em>Operation Calls List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallsListImpl <em>Operation Calls List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.OperationCallsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallsList()
 	 * @generated
 	 */
   int OPERATION_CALLS_LIST = 33;
@@ -2591,11 +2591,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int OPERATION_CALLS_LIST_OPERATION_COUNT = PROGRAM_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl <em>Variable Feature Reference</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl <em>Variable Feature Reference</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableFeatureReference()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableFeatureReference()
 	 * @generated
 	 */
   int VARIABLE_FEATURE_REFERENCE = 34;
@@ -2607,7 +2607,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_REFERENCE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int VARIABLE_FEATURE_REFERENCE__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -2616,7 +2616,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE__VARIABLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int VARIABLE_FEATURE_REFERENCE__VARIABLE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -2625,7 +2625,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -2634,7 +2634,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Variable Feature Reference</em>' class.
@@ -2643,7 +2643,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Variable Feature Reference</em>' class.
@@ -2652,14 +2652,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallImpl <em>Operation Call</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl <em>Operation Call</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.OperationCallImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCall()
 	 * @generated
 	 */
   int OPERATION_CALL = 35;
@@ -2773,11 +2773,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int OPERATION_CALL_OPERATION_COUNT = VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ArgumentsListImpl <em>Arguments List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentsListImpl <em>Arguments List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ArgumentsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getArgumentsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getArgumentsList()
 	 * @generated
 	 */
   int ARGUMENTS_LIST = 36;
@@ -2828,11 +2828,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ARGUMENTS_LIST_OPERATION_COUNT = 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ArgumentImpl <em>Argument</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentImpl <em>Argument</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ArgumentImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getArgument()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getArgument()
 	 * @generated
 	 */
   int ARGUMENT = 37;
@@ -2892,11 +2892,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ARGUMENT_OPERATION_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl <em>EData Type Argument</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EDataTypeArgumentImpl <em>EData Type Argument</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEDataTypeArgument()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EDataTypeArgumentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEDataTypeArgument()
 	 * @generated
 	 */
   int EDATA_TYPE_ARGUMENT = 38;
@@ -2965,11 +2965,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int EDATA_TYPE_ARGUMENT_OPERATION_COUNT = ARGUMENT_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.EEnumArgumentImpl <em>EEnum Argument</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EEnumArgumentImpl <em>EEnum Argument</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.EEnumArgumentImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEEnumArgument()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EEnumArgumentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEEnumArgument()
 	 * @generated
 	 */
   int EENUM_ARGUMENT = 39;
@@ -3047,11 +3047,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int EENUM_ARGUMENT_OPERATION_COUNT = ARGUMENT_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.EClassArgumentImpl <em>EClass Argument</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EClassArgumentImpl <em>EClass Argument</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.EClassArgumentImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEClassArgument()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EClassArgumentImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEClassArgument()
 	 * @generated
 	 */
   int ECLASS_ARGUMENT = 40;
@@ -3120,11 +3120,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ECLASS_ARGUMENT_OPERATION_COUNT = ARGUMENT_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.ResultsList <em>Results List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList <em>Results List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.ResultsList
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ResultsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getResultsList()
 	 * @generated
 	 */
   int RESULTS_LIST = 41;
@@ -3136,7 +3136,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int RESULTS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3145,7 +3145,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int RESULTS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
@@ -3154,7 +3154,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST__RESULTS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int RESULTS_LIST__RESULTS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Results List</em>' class.
@@ -3163,7 +3163,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int RESULTS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Get Invocator Session</em>' operation.
@@ -3172,7 +3172,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST___GET_INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int RESULTS_LIST___GET_INVOCATOR_SESSION = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Results List</em>' class.
@@ -3181,14 +3181,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
+  int RESULTS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListImpl <em>Operation Call Results List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListImpl <em>Operation Call Results List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.OperationCallResultsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsList()
 	 * @generated
 	 */
   int OPERATION_CALL_RESULTS_LIST = 42;
@@ -3266,11 +3266,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int OPERATION_CALL_RESULTS_LIST_OPERATION_COUNT = RESULTS_LIST_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl <em>Recording Results List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl <em>Recording Results List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getRecordingResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingResultsList()
 	 * @generated
 	 */
   int RECORDING_RESULTS_LIST = 43;
@@ -3348,11 +3348,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int RECORDING_RESULTS_LIST_OPERATION_COUNT = RESULTS_LIST_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl <em>Abstract Result</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultImpl <em>Abstract Result</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractResultImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractResult()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResult()
 	 * @generated
 	 */
   int ABSTRACT_RESULT = 44;
@@ -3364,7 +3364,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT__TIME = Symphony__CommonEMFPackage.TIMED__TIME;
+  int ABSTRACT_RESULT__TIME = ApogyCommonEMFPackage.TIMED__TIME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3373,7 +3373,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RESULT__DESCRIPTION = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 0;
+	int ABSTRACT_RESULT__DESCRIPTION = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Results List</b></em>' container reference.
@@ -3382,7 +3382,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RESULT__RESULTS_LIST = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 1;
+	int ABSTRACT_RESULT__RESULTS_LIST = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -3391,7 +3391,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RESULT__INVOCATOR_SESSION = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 2;
+	int ABSTRACT_RESULT__INVOCATOR_SESSION = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -3400,7 +3400,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT__CONTEXT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 3;
+  int ABSTRACT_RESULT__CONTEXT = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Result Value</b></em>' containment reference.
@@ -3409,7 +3409,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT__RESULT_VALUE = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 4;
+  int ABSTRACT_RESULT__RESULT_VALUE = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Abstract Result</em>' class.
@@ -3418,7 +3418,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT_FEATURE_COUNT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 5;
+  int ABSTRACT_RESULT_FEATURE_COUNT = ApogyCommonEMFPackage.TIMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Abstract Result</em>' class.
@@ -3427,14 +3427,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT_OPERATION_COUNT = Symphony__CommonEMFPackage.TIMED_OPERATION_COUNT + 0;
+  int ABSTRACT_RESULT_OPERATION_COUNT = ApogyCommonEMFPackage.TIMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractResultValueImpl <em>Abstract Result Value</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultValueImpl <em>Abstract Result Value</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractResultValueImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractResultValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultValueImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResultValue()
 	 * @generated
 	 */
   int ABSTRACT_RESULT_VALUE = 45;
@@ -3467,11 +3467,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ABSTRACT_RESULT_VALUE_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl <em>Operation Call Result</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultImpl <em>Operation Call Result</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallResult()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResult()
 	 * @generated
 	 */
   int OPERATION_CALL_RESULT = 46;
@@ -3585,11 +3585,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int OPERATION_CALL_RESULT_OPERATION_COUNT = ABSTRACT_RESULT_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ExceptionContainerImpl <em>Exception Container</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ExceptionContainerImpl <em>Exception Container</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ExceptionContainerImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getExceptionContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ExceptionContainerImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getExceptionContainer()
 	 * @generated
 	 */
   int EXCEPTION_CONTAINER = 47;
@@ -3622,11 +3622,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int EXCEPTION_CONTAINER_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AttributeResultValueImpl <em>Attribute Result Value</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AttributeResultValueImpl <em>Attribute Result Value</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AttributeResultValueImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAttributeResultValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AttributeResultValueImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeResultValue()
 	 * @generated
 	 */
   int ATTRIBUTE_RESULT_VALUE = 48;
@@ -3668,11 +3668,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ATTRIBUTE_RESULT_VALUE_OPERATION_COUNT = ABSTRACT_RESULT_VALUE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AttributeValueImpl <em>Attribute Value</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AttributeValueImpl <em>Attribute Value</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AttributeValueImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAttributeValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AttributeValueImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeValue()
 	 * @generated
 	 */
   int ATTRIBUTE_VALUE = 49;
@@ -3705,11 +3705,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int ATTRIBUTE_VALUE_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ReferenceResultValueImpl <em>Reference Result Value</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ReferenceResultValueImpl <em>Reference Result Value</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ReferenceResultValueImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getReferenceResultValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ReferenceResultValueImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getReferenceResultValue()
 	 * @generated
 	 */
   int REFERENCE_RESULT_VALUE = 50;
@@ -3751,11 +3751,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int REFERENCE_RESULT_VALUE_OPERATION_COUNT = ABSTRACT_RESULT_VALUE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.WatchesListsContainerImpl <em>Watches Lists Container</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl <em>Watches Lists Container</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.WatchesListsContainerImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatchesListsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesListsContainer()
 	 * @generated
 	 */
   int WATCHES_LISTS_CONTAINER = 51;
@@ -3797,11 +3797,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int WATCHES_LISTS_CONTAINER_OPERATION_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.WatchesListImpl <em>Watches List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl <em>Watches List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.WatchesListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatchesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesList()
 	 * @generated
 	 */
   int WATCHES_LIST = 52;
@@ -3813,7 +3813,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int WATCHES_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3822,7 +3822,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int WATCHES_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Watches Lists Container</b></em>' container reference.
@@ -3831,7 +3831,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__WATCHES_LISTS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int WATCHES_LIST__WATCHES_LISTS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Watches</b></em>' containment reference list.
@@ -3840,7 +3840,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__WATCHES = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int WATCHES_LIST__WATCHES = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Watches List</em>' class.
@@ -3849,7 +3849,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int WATCHES_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Watches List</em>' class.
@@ -3858,14 +3858,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int WATCHES_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.WatchImpl <em>Watch</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl <em>Watch</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.WatchImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatch()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatch()
 	 * @generated
 	 */
   int WATCH = 53;
@@ -3877,7 +3877,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int WATCH__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int WATCH__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3886,7 +3886,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int WATCH__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Watches List</b></em>' container reference.
@@ -3895,7 +3895,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__WATCHES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int WATCH__WATCHES_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -3904,7 +3904,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__VARIABLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int WATCH__VARIABLE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Type Member Reference Tree Element</b></em>' containment reference.
@@ -3913,7 +3913,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Tree Root Node</b></em>' containment reference.
@@ -3922,7 +3922,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__TREE_ROOT_NODE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+  int WATCH__TREE_ROOT_NODE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Watch</em>' class.
@@ -3931,7 +3931,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int WATCH_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Watch</em>' class.
@@ -3940,14 +3940,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int WATCH_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl <em>Watch Feature Node Adapter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl <em>Watch Feature Node Adapter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatchFeatureNodeAdapter()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchFeatureNodeAdapter()
 	 * @generated
 	 */
   int WATCH_FEATURE_NODE_ADAPTER = 54;
@@ -4007,11 +4007,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int WATCH_FEATURE_NODE_ADAPTER_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.DisplaysListsContainerImpl <em>Displays Lists Container</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl <em>Displays Lists Container</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.DisplaysListsContainerImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDisplaysListsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysListsContainer()
 	 * @generated
 	 */
   int DISPLAYS_LISTS_CONTAINER = 55;
@@ -4053,11 +4053,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   int DISPLAYS_LISTS_CONTAINER_OPERATION_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl <em>Displays List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl <em>Displays List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.DisplaysListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDisplaysList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysList()
 	 * @generated
 	 */
   int DISPLAYS_LIST = 56;
@@ -4069,7 +4069,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int DISPLAYS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4078,7 +4078,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int DISPLAYS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Displays Lists Container</b></em>' container reference.
@@ -4087,7 +4087,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Displays</b></em>' containment reference list.
@@ -4096,7 +4096,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__DISPLAYS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int DISPLAYS_LIST__DISPLAYS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Displays List</em>' class.
@@ -4105,7 +4105,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int DISPLAYS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Displays List</em>' class.
@@ -4114,14 +4114,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int DISPLAYS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl <em>Abstract Display</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl <em>Abstract Display</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractDisplay()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractDisplay()
 	 * @generated
 	 */
   int ABSTRACT_DISPLAY = 57;
@@ -4133,7 +4133,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY__DESCRIPTION = Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+  int ABSTRACT_DISPLAY__DESCRIPTION = ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Displays List</b></em>' container reference.
@@ -4142,7 +4142,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY__DISPLAYS_LIST = Symphony__CommonEMFPackage.DESCRIBED_FEATURE_COUNT + 0;
+  int ABSTRACT_DISPLAY__DISPLAYS_LIST = ApogyCommonEMFPackage.DESCRIBED_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Abstract Display</em>' class.
@@ -4151,7 +4151,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY_FEATURE_COUNT = Symphony__CommonEMFPackage.DESCRIBED_FEATURE_COUNT + 1;
+  int ABSTRACT_DISPLAY_FEATURE_COUNT = ApogyCommonEMFPackage.DESCRIBED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Abstract Display</em>' class.
@@ -4160,14 +4160,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY_OPERATION_COUNT = Symphony__CommonEMFPackage.DESCRIBED_OPERATION_COUNT + 0;
+  int ABSTRACT_DISPLAY_OPERATION_COUNT = ApogyCommonEMFPackage.DESCRIBED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getRecordingToolsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
 	 * @generated
 	 */
 	int RECORDING_TOOLS_CONTAINER = 58;
@@ -4227,11 +4227,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	int RECORDING_TOOLS_CONTAINER_OPERATION_COUNT = ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ChannelsListImpl <em>Channels List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl <em>Channels List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.ChannelsListImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getChannelsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
 	 * @generated
 	 */
 	int CHANNELS_LIST = 59;
@@ -4243,7 +4243,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int CHANNELS_LIST__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4252,7 +4252,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int CHANNELS_LIST__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Channels</b></em>' containment reference list.
@@ -4261,7 +4261,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__CHANNELS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int CHANNELS_LIST__CHANNELS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
@@ -4270,7 +4270,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__RECORDING_TOOLS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int CHANNELS_LIST__RECORDING_TOOLS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of structural features of the '<em>Channels List</em>' class.
@@ -4279,7 +4279,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int CHANNELS_LIST_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 		/**
 	 * The number of operations of the '<em>Channels List</em>' class.
@@ -4288,14 +4288,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int CHANNELS_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractChannelImpl <em>Abstract Channel</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl <em>Abstract Channel</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractChannelImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractChannel()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
 	 * @generated
 	 */
 	int ABSTRACT_CHANNEL = 60;
@@ -4307,7 +4307,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int ABSTRACT_CHANNEL__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4316,7 +4316,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int ABSTRACT_CHANNEL__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Channels List</b></em>' container reference.
@@ -4325,7 +4325,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL__CHANNELS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_CHANNEL__CHANNELS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Abstract Channel</em>' class.
@@ -4334,7 +4334,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int ABSTRACT_CHANNEL_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of operations of the '<em>Abstract Channel</em>' class.
@@ -4343,14 +4343,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int ABSTRACT_CHANNEL_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl <em>Abstract Recorder</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl <em>Abstract Recorder</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractRecorder()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
 	 * @generated
 	 */
   int ABSTRACT_RECORDER = 61;
@@ -4362,7 +4362,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int ABSTRACT_RECORDER__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4371,7 +4371,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int ABSTRACT_RECORDER__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
@@ -4380,7 +4380,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Abstract Recorder</em>' class.
@@ -4389,7 +4389,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int ABSTRACT_RECORDER_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Abstract Recorder</em>' class.
@@ -4398,14 +4398,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int ABSTRACT_RECORDER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractPlayerImpl <em>Abstract Player</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl <em>Abstract Player</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.AbstractPlayerImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractPlayer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
 	 * @generated
 	 */
   int ABSTRACT_PLAYER = 62;
@@ -4417,7 +4417,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int ABSTRACT_PLAYER__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4426,7 +4426,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int ABSTRACT_PLAYER__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
@@ -4435,7 +4435,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Abstract Player</em>' class.
@@ -4444,7 +4444,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int ABSTRACT_PLAYER_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Abstract Player</em>' class.
@@ -4453,14 +4453,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+  int ABSTRACT_PLAYER_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl <em>Operation Call Results List Time Source</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListTimeSourceImpl <em>Operation Call Results List Time Source</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListTimeSourceImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
 	 * @generated
 	 */
 	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 63;
@@ -4472,7 +4472,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__NAME = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__NAME;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__NAME = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4481,7 +4481,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__DESCRIPTION = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__DESCRIPTION;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__DESCRIPTION = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -4490,7 +4490,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME;
 
 		/**
 	 * The feature id for the '<em><b>Offset</b></em>' attribute.
@@ -4499,7 +4499,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OFFSET = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__OFFSET;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OFFSET = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__OFFSET;
 
 		/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -4508,7 +4508,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__START_TIME = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__START_TIME;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__START_TIME = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__START_TIME;
 
 		/**
 	 * The feature id for the '<em><b>Update Period</b></em>' attribute.
@@ -4517,7 +4517,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__UPDATE_PERIOD = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__UPDATE_PERIOD;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__UPDATE_PERIOD = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__UPDATE_PERIOD;
 
 		/**
 	 * The feature id for the '<em><b>Time Acceration</b></em>' attribute.
@@ -4526,7 +4526,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_ACCERATION = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME_ACCERATION;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_ACCERATION = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME_ACCERATION;
 
 		/**
 	 * The feature id for the '<em><b>Time Direction</b></em>' attribute.
@@ -4535,7 +4535,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_DIRECTION = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME_DIRECTION;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_DIRECTION = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME_DIRECTION;
 
 		/**
 	 * The feature id for the '<em><b>Loop Enable</b></em>' attribute.
@@ -4544,7 +4544,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LOOP_ENABLE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LOOP_ENABLE = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE;
 
 		/**
 	 * The feature id for the '<em><b>Timeds List</b></em>' reference list.
@@ -4553,7 +4553,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIMEDS_LIST = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIMEDS_LIST = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST;
 
 		/**
 	 * The feature id for the '<em><b>Current Timed Element</b></em>' reference.
@@ -4562,7 +4562,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__CURRENT_TIMED_ELEMENT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__CURRENT_TIMED_ELEMENT = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Earliest Date</b></em>' attribute.
@@ -4571,7 +4571,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__EARLIEST_DATE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__EARLIEST_DATE = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE;
 
 		/**
 	 * The feature id for the '<em><b>Latest Date</b></em>' attribute.
@@ -4580,7 +4580,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LATEST_DATE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LATEST_DATE = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE;
 
 		/**
 	 * The feature id for the '<em><b>Ops Call List</b></em>' reference.
@@ -4589,7 +4589,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 0;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Operation Call Results List Time Source</em>' class.
@@ -4598,7 +4598,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_FEATURE_COUNT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 1;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_FEATURE_COUNT = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -4607,7 +4607,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___DISPOSE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___DISPOSE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___DISPOSE = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Play Forward</em>' operation.
@@ -4616,7 +4616,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_FORWARD = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_FORWARD;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_FORWARD = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_FORWARD;
 
 		/**
 	 * The operation id for the '<em>Play Reverse</em>' operation.
@@ -4625,7 +4625,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_REVERSE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_REVERSE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_REVERSE = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_REVERSE;
 
 		/**
 	 * The operation id for the '<em>Pause</em>' operation.
@@ -4634,7 +4634,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PAUSE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PAUSE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PAUSE = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PAUSE;
 
 		/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -4643,7 +4643,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___RESET = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___RESET;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___RESET = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___RESET;
 
 		/**
 	 * The operation id for the '<em>Jump To Next</em>' operation.
@@ -4652,7 +4652,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_NEXT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_NEXT = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT;
 
 		/**
 	 * The operation id for the '<em>Jump To Previous</em>' operation.
@@ -4661,7 +4661,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_PREVIOUS = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_PREVIOUS = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS;
 
 		/**
 	 * The number of operations of the '<em>Operation Call Results List Time Source</em>' class.
@@ -4670,14 +4670,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_OPERATION_COUNT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_OPERATION_COUNT + 0;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_OPERATION_COUNT = ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.VariableListenerEventType
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableListenerEventType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
 	 * @generated
 	 */
 	int VARIABLE_LISTENER_EVENT_TYPE = 64;
@@ -4687,7 +4687,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see java.lang.Throwable
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getThrowable()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
   int THROWABLE = 65;
@@ -4697,7 +4697,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.notify.Notification
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getNotification()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
   int NOTIFICATION = 66;
@@ -4708,7 +4708,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.EList
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
   int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 67;
@@ -4718,7 +4718,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * The meta object id for the '<em>Type Members Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMembersArray()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
 	int TYPE_MEMBERS_ARRAY = 68;
@@ -4728,2652 +4728,2652 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * The meta object id for the '<em>IVariable Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.IVariableListener
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getIVariableListener()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.IVariableListener
+	 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 	 * @generated
 	 */
 	int IVARIABLE_LISTENER = 69;
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade
 	 * @generated
 	 */
-	EClass getSymphony__CoreInvocatorFacade();
+	EClass getApogyCoreInvocatorFacade();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Init Variable Instances Date</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate()
-	 * @see #getSymphony__CoreInvocatorFacade()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInitVariableInstancesDate()
+	 * @see #getApogyCoreInvocatorFacade()
 	 * @generated
 	 */
-	EAttribute getSymphony__CoreInvocatorFacade_InitVariableInstancesDate();
+	EAttribute getApogyCoreInvocatorFacade_InitVariableInstancesDate();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Active Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession()
-	 * @see #getSymphony__CoreInvocatorFacade()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getActiveInvocatorSession()
+	 * @see #getApogyCoreInvocatorFacade()
 	 * @generated
 	 */
-	EReference getSymphony__CoreInvocatorFacade_ActiveInvocatorSession();
+	EReference getApogyCoreInvocatorFacade_ActiveInvocatorSession();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall) <em>Exec</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCall();
+	EOperation getApogyCoreInvocatorFacade__Exec__OperationCall();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall, boolean) <em>Exec</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall, boolean)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCall_boolean();
+	EOperation getApogyCoreInvocatorFacade__Exec__OperationCall_boolean();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCallsList) <em>Exec</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCallsList) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCallsList)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCallsList)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCallsList();
+	EOperation getApogyCoreInvocatorFacade__Exec__OperationCallsList();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createAbstractResultValue(java.lang.Object) <em>Create Abstract Result Value</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createAbstractResultValue(java.lang.Object) <em>Create Abstract Result Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Abstract Result Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createAbstractResultValue(java.lang.Object)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createAbstractResultValue(java.lang.Object)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__CreateAbstractResultValue__Object();
+	EOperation getApogyCoreInvocatorFacade__CreateAbstractResultValue__Object();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve Watch</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
+	EOperation getApogyCoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Resolve Watch</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement) <em>Resolve Watch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve Watch</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
+	EOperation getApogyCoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Value</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getValue(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode) <em>Get Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getValue(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetValue__AbstractFeatureNode();
+	EOperation getApogyCoreInvocatorFacade__GetValue__AbstractFeatureNode();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetInstance__Variable();
+	EOperation getApogyCoreInvocatorFacade__GetInstance__Variable();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance Class</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstanceClass(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Get Instance Class</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance Class</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstanceClass(ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetInstanceClass__Variable();
+	EOperation getApogyCoreInvocatorFacade__GetInstanceClass__Variable();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeApiAdapter(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Type Api Adapter</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeApiAdapter(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference) <em>Get Type Api Adapter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Api Adapter</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeApiAdapter(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeApiAdapter(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
+	EOperation getApogyCoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Instance</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference) <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetInstance__VariableFeatureReference();
+	EOperation getApogyCoreInvocatorFacade__GetInstance__VariableFeatureReference();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeMemberInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Type Member Instance</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeMemberInstance(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference) <em>Get Type Member Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Member Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeMemberInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeMemberInstance(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
+	EOperation getApogyCoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getEMFFeatureValue(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get EMF Feature Value</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getEMFFeatureValue(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference) <em>Get EMF Feature Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get EMF Feature Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getEMFFeatureValue(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getEMFFeatureValue(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
+	EOperation getApogyCoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Instance Class</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstanceClass(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference) <em>Get Instance Class</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance Class</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstanceClass(ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
+	EOperation getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Get Instance</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement) <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getInstance(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
+	EOperation getApogyCoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.OperationCall) <em>Get Type Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.OperationCall)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__OperationCall();
+	EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__OperationCall();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.AbstractType) <em>Get Type Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable, ca.gc.asc_csa.apogy.core.invocator.AbstractType) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.AbstractType)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable, ca.gc.asc_csa.apogy.core.invocator.AbstractType)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
+	EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable) <em>Get Type Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable();
+	EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Variable();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getVariableByName(org.eclipse.symphony.core.invocator.InvocatorSession, java.lang.String) <em>Get Variable By Name</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getVariableByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String) <em>Get Variable By Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Variable By Name</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getVariableByName(org.eclipse.symphony.core.invocator.InvocatorSession, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getVariableByName(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession, java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetVariableByName__InvocatorSession_String();
+	EOperation getApogyCoreInvocatorFacade__GetVariableByName__InvocatorSession_String();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[]) <em>Create Type Member References</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createTypeMemberReferences(ca.gc.asc_csa.apogy.core.invocator.TypeMember[]) <em>Create Type Member References</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Type Member References</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[])
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createTypeMemberReferences(ca.gc.asc_csa.apogy.core.invocator.TypeMember[])
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
+	EOperation getApogyCoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Environment, java.lang.String) <em>Get Type Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.Environment, java.lang.String) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Environment, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getTypeImplementation(ca.gc.asc_csa.apogy.core.invocator.Environment, java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String();
+	EOperation getApogyCoreInvocatorFacade__GetTypeImplementation__Environment_String();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Get Fully Qualified Name</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement) <em>Get Fully Qualified Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Fully Qualified Name</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
+	EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Fully Qualified Name</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
+	EOperation getApogyCoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberImplementations(org.eclipse.symphony.core.invocator.Type) <em>Create Type Member Implementations</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createTypeMemberImplementations(ca.gc.asc_csa.apogy.core.invocator.Type) <em>Create Type Member Implementations</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Type Member Implementations</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberImplementations(org.eclipse.symphony.core.invocator.Type)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#createTypeMemberImplementations(ca.gc.asc_csa.apogy.core.invocator.Type)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type();
+	EOperation getApogyCoreInvocatorFacade__CreateTypeMemberImplementations__Type();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#initVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Init Variable Instances</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#initVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Init Variable Instances</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init Variable Instances</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#initVariableInstances(org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#initVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment();
+	EOperation getApogyCoreInvocatorFacade__InitVariableInstances__Environment();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#disposeVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Dispose Variable Instances</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#disposeVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Dispose Variable Instances</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose Variable Instances</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#disposeVariableInstances(org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#disposeVariableInstances(ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment();
+	EOperation getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getOperationCallContainer(org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement) <em>Get Operation Call Container</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getOperationCallContainer(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement) <em>Get Operation Call Container</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Operation Call Container</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getOperationCallContainer(org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getOperationCallContainer(ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
+	EOperation getApogyCoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Environment) <em>Apply Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#applyInitializationData(ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Apply Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#applyInitializationData(ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment();
+	EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Environment();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Environment) <em>Collect Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#collectInitializationData(ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Collect Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Collect Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#collectInitializationData(ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment();
+	EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Environment();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Variable) <em>Apply Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#applyInitializationData(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Apply Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#applyInitializationData(ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable();
+	EOperation getApogyCoreInvocatorFacade__ApplyInitializationData__Variable();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Variable) <em>Collect Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#collectInitializationData(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Collect Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Collect Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#collectInitializationData(ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable();
+	EOperation getApogyCoreInvocatorFacade__CollectInitializationData__Variable();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#loadRegisteredTypes(org.eclipse.symphony.core.invocator.InvocatorSession) <em>Load Registered Types</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#loadRegisteredTypes(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession) <em>Load Registered Types</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Registered Types</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#loadRegisteredTypes(org.eclipse.symphony.core.invocator.InvocatorSession)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#loadRegisteredTypes(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
+	EOperation getApogyCoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getAllTypes(org.eclipse.symphony.core.invocator.Environment) <em>Get All Types</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getAllTypes(ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get All Types</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Types</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getAllTypes(org.eclipse.symphony.core.invocator.Environment)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#getAllTypes(ca.gc.asc_csa.apogy.core.invocator.Environment)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__GetAllTypes__Environment();
+	EOperation getApogyCoreInvocatorFacade__GetAllTypes__Environment();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#addVariableListener(org.eclipse.symphony.core.invocator.IVariableListener) <em>Add Variable Listener</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#addVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener) <em>Add Variable Listener</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Variable Listener</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#addVariableListener(org.eclipse.symphony.core.invocator.IVariableListener)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#addVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__AddVariableListener__IVariableListener();
+	EOperation getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#removeVariableListener(org.eclipse.symphony.core.invocator.IVariableListener) <em>Remove Variable Listener</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#removeVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener) <em>Remove Variable Listener</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Variable Listener</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#removeVariableListener(org.eclipse.symphony.core.invocator.IVariableListener)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#removeVariableListener(ca.gc.asc_csa.apogy.core.invocator.IVariableListener)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__RemoveVariableListener__IVariableListener();
+	EOperation getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#notifyVariableListeners(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.VariableListenerEventType) <em>Notify Variable Listeners</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#notifyVariableListeners(ca.gc.asc_csa.apogy.core.invocator.Variable, ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType) <em>Notify Variable Listeners</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Notify Variable Listeners</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#notifyVariableListeners(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.VariableListenerEventType)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade#notifyVariableListeners(ca.gc.asc_csa.apogy.core.invocator.Variable, ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
+	EOperation getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.InvocatorSession
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
 	 * @generated
 	 */
   EClass getInvocatorSession();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getEnvironment()
 	 * @see #getInvocatorSession()
 	 * @generated
 	 */
   EReference getInvocatorSession_Environment();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getProgramsList <em>Programs List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramsList <em>Programs List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Programs List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getProgramsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getProgramsList()
 	 * @see #getInvocatorSession()
 	 * @generated
 	 */
   EReference getInvocatorSession_ProgramsList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getDataProductsListContainer <em>Data Products List Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Data Products List Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getDataProductsListContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getDataProductsListContainer()
 	 * @see #getInvocatorSession()
 	 * @generated
 	 */
   EReference getInvocatorSession_DataProductsListContainer();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Tools List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getToolsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InvocatorSession#getToolsList()
 	 * @see #getInvocatorSession()
 	 * @generated
 	 */
   EReference getInvocatorSession_ToolsList();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Environment <em>Environment</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Environment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Environment
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment
 	 * @generated
 	 */
   EClass getEnvironment();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Environment#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment#getInvocatorSession()
 	 * @see #getEnvironment()
 	 * @generated
 	 */
   EReference getEnvironment_InvocatorSession();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Environment#getTypesList <em>Types List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getTypesList <em>Types List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Types List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Environment#getTypesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment#getTypesList()
 	 * @see #getEnvironment()
 	 * @generated
 	 */
   EReference getEnvironment_TypesList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Environment#getVariablesList <em>Variables List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getVariablesList <em>Variables List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Variables List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Environment#getVariablesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment#getVariablesList()
 	 * @see #getEnvironment()
 	 * @generated
 	 */
   EReference getEnvironment_VariablesList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Environment#getContextsList <em>Contexts List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getContextsList <em>Contexts List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Contexts List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Environment#getContextsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment#getContextsList()
 	 * @see #getEnvironment()
 	 * @generated
 	 */
   EReference getEnvironment_ContextsList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Environment#getActiveContext <em>Active Context</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Environment#getActiveContext <em>Active Context</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Active Context</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Environment#getActiveContext()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Environment#getActiveContext()
 	 * @see #getEnvironment()
 	 * @generated
 	 */
   EReference getEnvironment_ActiveContext();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.DataProductsListsContainer <em>Data Products Lists Container</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer <em>Data Products Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Data Products Lists Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsListsContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer
 	 * @generated
 	 */
   EClass getDataProductsListsContainer();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.DataProductsListsContainer#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsListsContainer#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getInvocatorSession()
 	 * @see #getDataProductsListsContainer()
 	 * @generated
 	 */
   EReference getDataProductsListsContainer_InvocatorSession();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.DataProductsListsContainer#getDataProductsList <em>Data Products List</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getDataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Data Products List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsListsContainer#getDataProductsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getDataProductsList()
 	 * @see #getDataProductsListsContainer()
 	 * @generated
 	 */
   EReference getDataProductsListsContainer_DataProductsList();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.DataProductsList <em>Data Products List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Data Products List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsList
 	 * @generated
 	 */
   EClass getDataProductsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.DataProductsList#getDataProductsListsContainer <em>Data Products Lists Container</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getDataProductsListsContainer <em>Data Products Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Data Products Lists Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getDataProductsListsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getDataProductsListsContainer()
 	 * @see #getDataProductsList()
 	 * @generated
 	 */
   EReference getDataProductsList_DataProductsListsContainer();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.DataProductsList#getOperationCallResultsList <em>Operation Call Results List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getOperationCallResultsList <em>Operation Call Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Operation Call Results List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getOperationCallResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getOperationCallResultsList()
 	 * @see #getDataProductsList()
 	 * @generated
 	 */
   EReference getDataProductsList_OperationCallResultsList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Recording Results List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getRecordingResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getRecordingResultsList()
 	 * @see #getDataProductsList()
 	 * @generated
 	 */
   EReference getDataProductsList_RecordingResultsList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.DataProductsList#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getInvocatorSession()
 	 * @see #getDataProductsList()
 	 * @generated
 	 */
 	EReference getDataProductsList_InvocatorSession();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ToolsList <em>Tools List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ToolsList <em>Tools List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Tools List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ToolsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ToolsList
 	 * @generated
 	 */
   EClass getToolsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.ToolsList#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.ToolsList#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ToolsList#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ToolsList#getInvocatorSession()
 	 * @see #getToolsList()
 	 * @generated
 	 */
   EReference getToolsList_InvocatorSession();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.ToolsList#getToolsListContainers <em>Tools List Containers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ToolsList#getToolsListContainers <em>Tools List Containers</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Tools List Containers</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ToolsList#getToolsListContainers()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ToolsList#getToolsListContainers()
 	 * @see #getToolsList()
 	 * @generated
 	 */
   EReference getToolsList_ToolsListContainers();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Tools List Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
 	 * @generated
 	 */
   EClass getAbstractToolsListContainer();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.AbstractToolsListContainer#getToolsList <em>Tools List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer#getToolsList <em>Tools List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Tools List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractToolsListContainer#getToolsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer#getToolsList()
 	 * @see #getAbstractToolsListContainer()
 	 * @generated
 	 */
   EReference getAbstractToolsListContainer_ToolsList();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.TypesList <em>Types List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypesList <em>Types List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Types List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypesList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesList
 	 * @generated
 	 */
   EClass getTypesList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.TypesList#getLocalTypes <em>Local Types</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypesList#getLocalTypes <em>Local Types</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Local Types</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypesList#getLocalTypes()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesList#getLocalTypes()
 	 * @see #getTypesList()
 	 * @generated
 	 */
   EReference getTypesList_LocalTypes();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.TypesList#getRegisteredTypes <em>Registered Types</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypesList#getRegisteredTypes <em>Registered Types</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Registered Types</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypesList#getRegisteredTypes()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypesList#getRegisteredTypes()
 	 * @see #getTypesList()
 	 * @generated
 	 */
   EReference getTypesList_RegisteredTypes();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.LocalTypesList <em>Local Types List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.LocalTypesList <em>Local Types List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Local Types List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.LocalTypesList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.LocalTypesList
 	 * @generated
 	 */
   EClass getLocalTypesList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.LocalTypesList#getTypes <em>Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.LocalTypesList#getTypes <em>Types</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Types</em>'.
-	 * @see org.eclipse.symphony.core.invocator.LocalTypesList#getTypes()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.LocalTypesList#getTypes()
 	 * @see #getLocalTypesList()
 	 * @generated
 	 */
   EReference getLocalTypesList_Types();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.RegisteredTypesList <em>Registered Types List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList <em>Registered Types List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Registered Types List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RegisteredTypesList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList
 	 * @generated
 	 */
   EClass getRegisteredTypesList();
 
   /**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.core.invocator.RegisteredTypesList#getTypes <em>Types</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList#getTypes <em>Types</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Types</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RegisteredTypesList#getTypes()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList#getTypes()
 	 * @see #getRegisteredTypesList()
 	 * @generated
 	 */
   EReference getRegisteredTypesList_Types();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractType <em>Abstract Type</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractType <em>Abstract Type</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Type</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractType
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractType
 	 * @generated
 	 */
   EClass getAbstractType();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Type <em>Type</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Type
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Type
 	 * @generated
 	 */
   EClass getType();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.Type#getMembers <em>Members</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.Type#getMembers <em>Members</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Members</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Type#getMembers()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Type#getMembers()
 	 * @see #getType()
 	 * @generated
 	 */
   EReference getType_Members();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Type#getInterfaceClass <em>Interface Class</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Type#getInterfaceClass <em>Interface Class</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Interface Class</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Type#getInterfaceClass()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Type#getInterfaceClass()
 	 * @see #getType()
 	 * @generated
 	 */
   EReference getType_InterfaceClass();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type Api Adapter Class</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Type#getTypeApiAdapterClass()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Type#getTypeApiAdapterClass()
 	 * @see #getType()
 	 * @generated
 	 */
   EReference getType_TypeApiAdapterClass();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Api Adapter</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter
 	 * @generated
 	 */
   EClass getTypeApiAdapter();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getEnvironment()
 	 * @see #getTypeApiAdapter()
 	 * @generated
 	 */
   EReference getTypeApiAdapter_Environment();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getInstance <em>Instance</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getInstance <em>Instance</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Instance</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#getInstance()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getInstance()
 	 * @see #getTypeApiAdapter()
 	 * @generated
 	 */
   EReference getTypeApiAdapter_Instance();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Element Type</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#getElementType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getElementType()
 	 * @see #getTypeApiAdapter()
 	 * @generated
 	 */
   EReference getTypeApiAdapter_ElementType();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#init(org.eclipse.symphony.core.invocator.Environment, org.eclipse.symphony.core.invocator.Type, org.eclipse.emf.ecore.EObject) <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#init(ca.gc.asc_csa.apogy.core.invocator.Environment, ca.gc.asc_csa.apogy.core.invocator.Type, org.eclipse.emf.ecore.EObject) <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#init(org.eclipse.symphony.core.invocator.Environment, org.eclipse.symphony.core.invocator.Type, org.eclipse.emf.ecore.EObject)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#init(ca.gc.asc_csa.apogy.core.invocator.Environment, ca.gc.asc_csa.apogy.core.invocator.Type, org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
   EOperation getTypeApiAdapter__Init__Environment_Type_EObject();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#apply(org.eclipse.symphony.core.invocator.AbstractInitializationData) <em>Apply</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#apply(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData) <em>Apply</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#apply(org.eclipse.symphony.core.invocator.AbstractInitializationData)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#apply(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData)
 	 * @generated
 	 */
   EOperation getTypeApiAdapter__Apply__AbstractInitializationData();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createInitializationData() <em>Create Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createInitializationData() <em>Create Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#createInitializationData()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createInitializationData()
 	 * @generated
 	 */
   EOperation getTypeApiAdapter__CreateInitializationData();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#collect(org.eclipse.symphony.core.invocator.AbstractInitializationData) <em>Collect</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#collect(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData) <em>Collect</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Collect</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#collect(org.eclipse.symphony.core.invocator.AbstractInitializationData)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#collect(ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData)
 	 * @generated
 	 */
   EOperation getTypeApiAdapter__Collect__AbstractInitializationData();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall) <em>Create Result</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Create Result</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Result</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall)
 	 * @generated
 	 */
   EOperation getTypeApiAdapter__CreateResult__OperationCall();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception) <em>Create Result</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception) <em>Create Result</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Result</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#createResult(org.eclipse.symphony.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#createResult(ca.gc.asc_csa.apogy.core.invocator.OperationCall, long, java.lang.Object, java.lang.Exception)
 	 * @generated
 	 */
   EOperation getTypeApiAdapter__CreateResult__OperationCall_long_Object_Exception();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.core.invocator.OperationCall, boolean) <em>Invoke</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean) <em>Invoke</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Invoke</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.core.invocator.OperationCall, boolean)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#invoke(org.eclipse.emf.ecore.EObject, ca.gc.asc_csa.apogy.core.invocator.OperationCall, boolean)
 	 * @generated
 	 */
 	EOperation getTypeApiAdapter__Invoke__EObject_OperationCall_boolean();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter#dispose()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#dispose()
 	 * @generated
 	 */
   EOperation getTypeApiAdapter__Dispose();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.TypeMember <em>Type Member</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMember <em>Type Member</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Member</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMember
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMember
 	 * @generated
 	 */
   EClass getTypeMember();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeMember#getMemberType <em>Member Type</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMember#getMemberType <em>Member Type</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Member Type</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMember#getMemberType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMember#getMemberType()
 	 * @see #getTypeMember()
 	 * @generated
 	 */
   EReference getTypeMember_MemberType();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type Feature Root Node</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMember#getTypeFeatureRootNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMember#getTypeFeatureRootNode()
 	 * @see #getTypeMember()
 	 * @generated
 	 */
   EReference getTypeMember_TypeFeatureRootNode();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.TypeMemberReference <em>Type Member Reference</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference <em>Type Member Reference</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Member Reference</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReference
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference
 	 * @generated
 	 */
   EClass getTypeMemberReference();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReference#getTypeMember <em>Type Member</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference#getTypeMember <em>Type Member</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type Member</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReference#getTypeMember()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference#getTypeMember()
 	 * @see #getTypeMemberReference()
 	 * @generated
 	 */
   EReference getTypeMemberReference_TypeMember();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement <em>Type Member Reference List Element</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement <em>Type Member Reference List Element</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Member Reference List Element</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement
 	 * @generated
 	 */
   EClass getTypeMemberReferenceListElement();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getChild <em>Child</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getChild <em>Child</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Child</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getChild()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getChild()
 	 * @see #getTypeMemberReferenceListElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceListElement_Child();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getParent()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getParent()
 	 * @see #getTypeMemberReferenceListElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceListElement_Parent();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isRoot <em>Root</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isRoot <em>Root</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Root</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isRoot()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isRoot()
 	 * @see #getTypeMemberReferenceListElement()
 	 * @generated
 	 */
   EAttribute getTypeMemberReferenceListElement_Root();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getRootElement <em>Root Element</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getRootElement <em>Root Element</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Root Element</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getRootElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getRootElement()
 	 * @see #getTypeMemberReferenceListElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceListElement_RootElement();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getLeafElement <em>Leaf Element</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getLeafElement <em>Leaf Element</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Leaf Element</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getLeafElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getLeafElement()
 	 * @see #getTypeMemberReferenceListElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceListElement_LeafElement();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isLeaf <em>Leaf</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isLeaf <em>Leaf</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leaf</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isLeaf()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#isLeaf()
 	 * @see #getTypeMemberReferenceListElement()
 	 * @generated
 	 */
   EAttribute getTypeMemberReferenceListElement_Leaf();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount <em>Sub Segments Count</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount <em>Sub Segments Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Sub Segments Count</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount()
 	 * @see #getTypeMemberReferenceListElement()
 	 * @generated
 	 */
 	EAttribute getTypeMemberReferenceListElement_SubSegmentsCount();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Member Reference Tree Element</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement
 	 * @generated
 	 */
   EClass getTypeMemberReferenceTreeElement();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Child</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getChild()
 	 * @see #getTypeMemberReferenceTreeElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceTreeElement_Child();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getParent()
 	 * @see #getTypeMemberReferenceTreeElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceTreeElement_Parent();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode <em>Feature Root Node</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode <em>Feature Root Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Feature Root Node</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode()
 	 * @see #getTypeMemberReferenceTreeElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceTreeElement_FeatureRootNode();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isRoot <em>Root</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#isRoot <em>Root</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Root</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isRoot()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#isRoot()
 	 * @see #getTypeMemberReferenceTreeElement()
 	 * @generated
 	 */
   EAttribute getTypeMemberReferenceTreeElement_Root();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getRootElement <em>Root Element</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getRootElement <em>Root Element</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Root Element</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getRootElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getRootElement()
 	 * @see #getTypeMemberReferenceTreeElement()
 	 * @generated
 	 */
   EReference getTypeMemberReferenceTreeElement_RootElement();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isLeaf <em>Leaf</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#isLeaf <em>Leaf</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Leaf</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isLeaf()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#isLeaf()
 	 * @see #getTypeMemberReferenceTreeElement()
 	 * @generated
 	 */
   EAttribute getTypeMemberReferenceTreeElement_Leaf();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.VariablesList <em>Variables List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.VariablesList <em>Variables List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variables List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariablesList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariablesList
 	 * @generated
 	 */
   EClass getVariablesList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.VariablesList#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.VariablesList#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariablesList#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariablesList#getEnvironment()
 	 * @see #getVariablesList()
 	 * @generated
 	 */
   EReference getVariablesList_Environment();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.VariablesList#getVariables <em>Variables</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.VariablesList#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Variables</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariablesList#getVariables()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariablesList#getVariables()
 	 * @see #getVariablesList()
 	 * @generated
 	 */
   EReference getVariablesList_Variables();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Variable <em>Variable</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Variable
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Variable
 	 * @generated
 	 */
   EClass getVariable();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.Variable#getVariablesList <em>Variables List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getVariablesList <em>Variables List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Variables List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Variable#getVariablesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Variable#getVariablesList()
 	 * @see #getVariable()
 	 * @generated
 	 */
   EReference getVariable_VariablesList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Variable#getVariableType <em>Variable Type</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getVariableType <em>Variable Type</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable Type</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Variable#getVariableType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Variable#getVariableType()
 	 * @see #getVariable()
 	 * @generated
 	 */
   EReference getVariable_VariableType();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Variable#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Variable#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Variable#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Variable#getEnvironment()
 	 * @see #getVariable()
 	 * @generated
 	 */
   EReference getVariable_Environment();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ContextsList <em>Contexts List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ContextsList <em>Contexts List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Contexts List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ContextsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ContextsList
 	 * @generated
 	 */
   EClass getContextsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.ContextsList#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.ContextsList#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ContextsList#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ContextsList#getEnvironment()
 	 * @see #getContextsList()
 	 * @generated
 	 */
   EReference getContextsList_Environment();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.ContextsList#getContexts <em>Contexts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ContextsList#getContexts <em>Contexts</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Contexts</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ContextsList#getContexts()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ContextsList#getContexts()
 	 * @see #getContextsList()
 	 * @generated
 	 */
   EReference getContextsList_Contexts();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Context <em>Context</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Context <em>Context</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Context</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Context
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context
 	 * @generated
 	 */
   EClass getContext();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.Context#getContextsList <em>Contexts List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList <em>Contexts List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Contexts List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Context#getContextsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList()
 	 * @see #getContext()
 	 * @generated
 	 */
   EReference getContext_ContextsList();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Variable Implementations List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Context#getVariableImplementationsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#getVariableImplementationsList()
 	 * @see #getContext()
 	 * @generated
 	 */
   EReference getContext_VariableImplementationsList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Context#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Context#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#getEnvironment()
 	 * @see #getContext()
 	 * @generated
 	 */
   EReference getContext_Environment();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Context#getDataProductsList <em>Data Products List</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getDataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Data Products List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Context#getDataProductsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#getDataProductsList()
 	 * @see #getContext()
 	 * @generated
 	 */
   EReference getContext_DataProductsList();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Instances Creation Date</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Context#getInstancesCreationDate()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesCreationDate()
 	 * @see #getContext()
 	 * @generated
 	 */
   EAttribute getContext_InstancesCreationDate();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Instances Disposal Date</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Context#getInstancesDisposalDate()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesDisposalDate()
 	 * @see #getContext()
 	 * @generated
 	 */
   EAttribute getContext_InstancesDisposalDate();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.BasicContext <em>Basic Context</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.BasicContext <em>Basic Context</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Basic Context</em>'.
-	 * @see org.eclipse.symphony.core.invocator.BasicContext
+	 * @see ca.gc.asc_csa.apogy.core.invocator.BasicContext
 	 * @generated
 	 */
   EClass getBasicContext();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.VariableImplementationsList <em>Variable Implementations List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList <em>Variable Implementations List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Implementations List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementationsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList
 	 * @generated
 	 */
   EClass getVariableImplementationsList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementations <em>Variable Implementations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementations <em>Variable Implementations</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Variable Implementations</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementations()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementations()
 	 * @see #getVariableImplementationsList()
 	 * @generated
 	 */
   EReference getVariableImplementationsList_VariableImplementations();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(org.eclipse.symphony.core.invocator.Variable) <em>Get Variable Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable) <em>Get Variable Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Variable Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(org.eclipse.symphony.core.invocator.Variable)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(ca.gc.asc_csa.apogy.core.invocator.Variable)
 	 * @generated
 	 */
   EOperation getVariableImplementationsList__GetVariableImplementation__Variable();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String) <em>Get Variable Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String) <em>Get Variable Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Variable Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList#getVariableImplementation(java.lang.String)
 	 * @generated
 	 */
   EOperation getVariableImplementationsList__GetVariableImplementation__String();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Initialization Data</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData
 	 * @generated
 	 */
   EClass getAbstractInitializationData();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.InitializationData <em>Initialization Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.InitializationData <em>Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Initialization Data</em>'.
-	 * @see org.eclipse.symphony.core.invocator.InitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InitializationData
 	 * @generated
 	 */
   EClass getInitializationData();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation <em>Abstract Type Implementation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation <em>Abstract Type Implementation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Type Implementation</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation
 	 * @generated
 	 */
   EClass getAbstractTypeImplementation();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementations <em>Type Member Implementations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getTypeMemberImplementations <em>Type Member Implementations</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Type Member Implementations</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementations()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getTypeMemberImplementations()
 	 * @see #getAbstractTypeImplementation()
 	 * @generated
 	 */
   EReference getAbstractTypeImplementation_TypeMemberImplementations();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getImplementationClass <em>Implementation Class</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getImplementationClass <em>Implementation Class</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Implementation Class</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getImplementationClass()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getImplementationClass()
 	 * @see #getAbstractTypeImplementation()
 	 * @generated
 	 */
   EReference getAbstractTypeImplementation_ImplementationClass();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Abstract Initialization Data</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAbstractInitializationData()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAbstractInitializationData()
 	 * @see #getAbstractTypeImplementation()
 	 * @generated
 	 */
   EReference getAbstractTypeImplementation_AbstractInitializationData();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getInstance <em>Instance</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getInstance <em>Instance</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Instance</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getInstance()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getInstance()
 	 * @see #getAbstractTypeImplementation()
 	 * @generated
 	 */
   EReference getAbstractTypeImplementation_Instance();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAdapterInstance <em>Adapter Instance</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAdapterInstance <em>Adapter Instance</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Adapter Instance</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAdapterInstance()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getAdapterInstance()
 	 * @see #getAbstractTypeImplementation()
 	 * @generated
 	 */
   EReference getAbstractTypeImplementation_AdapterInstance();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getHandlingType <em>Handling Type</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getHandlingType <em>Handling Type</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Handling Type</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getHandlingType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getHandlingType()
 	 * @see #getAbstractTypeImplementation()
 	 * @generated
 	 */
   EReference getAbstractTypeImplementation_HandlingType();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(java.lang.String) <em>Get Type Member Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(java.lang.String) <em>Get Type Member Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Member Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(java.lang.String)
 	 * @generated
 	 */
   EOperation getAbstractTypeImplementation__GetTypeMemberImplementation__String();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(org.eclipse.symphony.core.invocator.TypeMember) <em>Get Type Member Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(ca.gc.asc_csa.apogy.core.invocator.TypeMember) <em>Get Type Member Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Member Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(org.eclipse.symphony.core.invocator.TypeMember)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation#getTypeMemberImplementation(ca.gc.asc_csa.apogy.core.invocator.TypeMember)
 	 * @generated
 	 */
   EOperation getAbstractTypeImplementation__GetTypeMemberImplementation__TypeMember();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.VariableImplementation <em>Variable Implementation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation <em>Variable Implementation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Implementation</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementation
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementation
 	 * @generated
 	 */
   EClass getVariableImplementation();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.VariableImplementation#getVariableImplementationsList <em>Variable Implementations List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation#getVariableImplementationsList <em>Variable Implementations List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Variable Implementations List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementation#getVariableImplementationsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementation#getVariableImplementationsList()
 	 * @see #getVariableImplementation()
 	 * @generated
 	 */
   EReference getVariableImplementation_VariableImplementationsList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.VariableImplementation#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableImplementation#getVariable()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableImplementation#getVariable()
 	 * @see #getVariableImplementation()
 	 * @generated
 	 */
   EReference getVariableImplementation_Variable();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.TypeMemberImplementation <em>Type Member Implementation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation <em>Type Member Implementation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Member Implementation</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberImplementation
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation
 	 * @generated
 	 */
   EClass getTypeMemberImplementation();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.TypeMemberImplementation#getTypeMember <em>Type Member</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation#getTypeMember <em>Type Member</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type Member</em>'.
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberImplementation#getTypeMember()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation#getTypeMember()
 	 * @see #getTypeMemberImplementation()
 	 * @generated
 	 */
   EReference getTypeMemberImplementation_TypeMember();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ValuesList <em>Values List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ValuesList <em>Values List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Values List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ValuesList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ValuesList
 	 * @generated
 	 */
   EClass getValuesList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.ValuesList#getValues <em>Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ValuesList#getValues <em>Values</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Values</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ValuesList#getValues()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ValuesList#getValues()
 	 * @see #getValuesList()
 	 * @generated
 	 */
   EReference getValuesList_Values();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Value <em>Value</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Value <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Value
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Value
 	 * @generated
 	 */
   EClass getValue();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Value#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Value#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Value#getValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Value#getValue()
 	 * @see #getValue()
 	 * @generated
 	 */
   EReference getValue_Value();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ProgramsList <em>Programs List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList <em>Programs List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Programs List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ProgramsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsList
 	 * @generated
 	 */
   EClass getProgramsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.ProgramsList#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ProgramsList#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getInvocatorSession()
 	 * @see #getProgramsList()
 	 * @generated
 	 */
   EReference getProgramsList_InvocatorSession();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.ProgramsList#getPrograms <em>Programs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getPrograms <em>Programs</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Programs</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ProgramsList#getPrograms()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getPrograms()
 	 * @see #getProgramsList()
 	 * @generated
 	 */
   EReference getProgramsList_Programs();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Program <em>Program</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Program</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Program
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Program
 	 * @generated
 	 */
   EClass getProgram();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.Program#getProgramsList <em>Programs List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Program#getProgramsList <em>Programs List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Programs List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Program#getProgramsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Program#getProgramsList()
 	 * @see #getProgram()
 	 * @generated
 	 */
   EReference getProgram_ProgramsList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Program#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Program#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Program#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Program#getInvocatorSession()
 	 * @see #getProgram()
 	 * @generated
 	 */
   EReference getProgram_InvocatorSession();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Program#getValuesList <em>Values List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Program#getValuesList <em>Values List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Values List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Program#getValuesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Program#getValuesList()
 	 * @see #getProgram()
 	 * @generated
 	 */
 	EReference getProgram_ValuesList();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Operation Call Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
 	 * @generated
 	 */
   EClass getOperationCallContainer();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.OperationCallContainer#getOperationCalls <em>Operation Calls</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getOperationCalls <em>Operation Calls</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Operation Calls</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer#getOperationCalls()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getOperationCalls()
 	 * @see #getOperationCallContainer()
 	 * @generated
 	 */
   EReference getOperationCallContainer_OperationCalls();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.OperationCallContainer#getInvocatorSession() <em>Get Invocator Session</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getInvocatorSession() <em>Get Invocator Session</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Invocator Session</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer#getInvocatorSession()
 	 * @generated
 	 */
   EOperation getOperationCallContainer__GetInvocatorSession();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.OperationCallsList <em>Operation Calls List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsList <em>Operation Calls List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Operation Calls List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallsList
 	 * @generated
 	 */
   EClass getOperationCallsList();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Feature Reference</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableFeatureReference
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference
 	 * @generated
 	 */
   EClass getVariableFeatureReference();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableFeatureReference#getVariable()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getVariable()
 	 * @see #getVariableFeatureReference()
 	 * @generated
 	 */
   EReference getVariableFeatureReference_Variable();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type Member Reference List Element</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getTypeMemberReferenceListElement()
 	 * @see #getVariableFeatureReference()
 	 * @generated
 	 */
   EReference getVariableFeatureReference_TypeMemberReferenceListElement();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Feature Root</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableFeatureReference#getFeatureRoot()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference#getFeatureRoot()
 	 * @see #getVariableFeatureReference()
 	 * @generated
 	 */
   EReference getVariableFeatureReference_FeatureRoot();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.OperationCall <em>Operation Call</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Operation Call</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCall
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall
 	 * @generated
 	 */
   EClass getOperationCall();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.OperationCall#getEOperation <em>EOperation</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getEOperation <em>EOperation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>EOperation</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCall#getEOperation()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall#getEOperation()
 	 * @see #getOperationCall()
 	 * @generated
 	 */
   EReference getOperationCall_EOperation();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Arguments List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall#getArgumentsList()
 	 * @see #getOperationCall()
 	 * @generated
 	 */
   EReference getOperationCall_ArgumentsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.OperationCall#getOperationCallContainer <em>Operation Call Container</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getOperationCallContainer <em>Operation Call Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Operation Call Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCall#getOperationCallContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall#getOperationCallContainer()
 	 * @see #getOperationCall()
 	 * @generated
 	 */
   EReference getOperationCall_OperationCallContainer();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.OperationCall#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCall#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall#getInvocatorSession()
 	 * @see #getOperationCall()
 	 * @generated
 	 */
   EReference getOperationCall_InvocatorSession();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.OperationCall#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Environment</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCall#getEnvironment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall#getEnvironment()
 	 * @see #getOperationCall()
 	 * @generated
 	 */
   EReference getOperationCall_Environment();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ArgumentsList <em>Arguments List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList <em>Arguments List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Arguments List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ArgumentsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ArgumentsList
 	 * @generated
 	 */
   EClass getArgumentsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Operation Call</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ArgumentsList#getOperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getOperationCall()
 	 * @see #getArgumentsList()
 	 * @generated
 	 */
   EReference getArgumentsList_OperationCall();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.ArgumentsList#getArguments <em>Arguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ArgumentsList#getArguments()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArguments()
 	 * @see #getArgumentsList()
 	 * @generated
 	 */
   EReference getArgumentsList_Arguments();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ArgumentsList#getArgumentValues() <em>Get Argument Values</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArgumentValues() <em>Get Argument Values</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Argument Values</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.ArgumentsList#getArgumentValues()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArgumentValues()
 	 * @generated
 	 */
   EOperation getArgumentsList__GetArgumentValues();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Argument <em>Argument</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Argument <em>Argument</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Argument</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Argument
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument
 	 * @generated
 	 */
   EClass getArgument();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.Argument#getArgumentsList <em>Arguments List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getArgumentsList <em>Arguments List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Arguments List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Argument#getArgumentsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getArgumentsList()
 	 * @see #getArgument()
 	 * @generated
 	 */
   EReference getArgument_ArgumentsList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Argument#getOperationCall <em>Operation Call</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getOperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Operation Call</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Argument#getOperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getOperationCall()
 	 * @see #getArgument()
 	 * @generated
 	 */
   EReference getArgument_OperationCall();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Argument#getEParameter() <em>Get EParameter</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getEParameter() <em>Get EParameter</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get EParameter</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Argument#getEParameter()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getEParameter()
 	 * @generated
 	 */
   EOperation getArgument__GetEParameter();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Argument#getParameterValue() <em>Get Parameter Value</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getParameterValue() <em>Get Parameter Value</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Parameter Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.Argument#getParameterValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getParameterValue()
 	 * @generated
 	 */
   EOperation getArgument__GetParameterValue();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.EDataTypeArgument <em>EData Type Argument</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument <em>EData Type Argument</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EData Type Argument</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EDataTypeArgument
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument
 	 * @generated
 	 */
   EClass getEDataTypeArgument();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.EDataTypeArgument#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EDataTypeArgument#getValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument#getValue()
 	 * @see #getEDataTypeArgument()
 	 * @generated
 	 */
   EAttribute getEDataTypeArgument_Value();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.EEnumArgument <em>EEnum Argument</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument <em>EEnum Argument</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EEnum Argument</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EEnumArgument
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EEnumArgument
 	 * @generated
 	 */
   EClass getEEnumArgument();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnumLiteral <em>EEnum Literal</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnumLiteral <em>EEnum Literal</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>EEnum Literal</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EEnumArgument#getEEnumLiteral()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnumLiteral()
 	 * @see #getEEnumArgument()
 	 * @generated
 	 */
   EReference getEEnumArgument_EEnumLiteral();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>EEnum</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EEnumArgument#getEEnum()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EEnumArgument#getEEnum()
 	 * @see #getEEnumArgument()
 	 * @generated
 	 */
   EReference getEEnumArgument_EEnum();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.EClassArgument <em>EClass Argument</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.EClassArgument <em>EClass Argument</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EClass Argument</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EClassArgument
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EClassArgument
 	 * @generated
 	 */
   EClass getEClassArgument();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.EClassArgument#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.EClassArgument#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EClassArgument#getValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.EClassArgument#getValue()
 	 * @see #getEClassArgument()
 	 * @generated
 	 */
   EReference getEClassArgument_Value();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ResultsList <em>Results List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList <em>Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Results List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ResultsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ResultsList
 	 * @generated
 	 */
   EClass getResultsList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.ResultsList#getResults <em>Results</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList#getResults <em>Results</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Results</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ResultsList#getResults()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ResultsList#getResults()
 	 * @see #getResultsList()
 	 * @generated
 	 */
   EReference getResultsList_Results();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ResultsList#getInvocatorSession() <em>Get Invocator Session</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList#getInvocatorSession() <em>Get Invocator Session</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Invocator Session</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.ResultsList#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ResultsList#getInvocatorSession()
 	 * @generated
 	 */
 	EOperation getResultsList__GetInvocatorSession();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.OperationCallResultsList <em>Operation Call Results List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList <em>Operation Call Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Operation Call Results List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResultsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList
 	 * @generated
 	 */
   EClass getOperationCallResultsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.OperationCallResultsList#getDataProductsList <em>Data Products List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList#getDataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Data Products List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResultsList#getDataProductsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList#getDataProductsList()
 	 * @see #getOperationCallResultsList()
 	 * @generated
 	 */
 	EReference getOperationCallResultsList_DataProductsList();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.OperationCallResultsList#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResultsList#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList#getInvocatorSession()
 	 * @see #getOperationCallResultsList()
 	 * @generated
 	 */
 	EReference getOperationCallResultsList_InvocatorSession();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.RecordingResultsList <em>Recording Results List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList <em>Recording Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Recording Results List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RecordingResultsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList
 	 * @generated
 	 */
   EClass getRecordingResultsList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.RecordingResultsList#getDataProductsList <em>Data Products List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getDataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Data Products List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RecordingResultsList#getDataProductsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getDataProductsList()
 	 * @see #getRecordingResultsList()
 	 * @generated
 	 */
 	EReference getRecordingResultsList_DataProductsList();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.RecordingResultsList#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RecordingResultsList#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getInvocatorSession()
 	 * @see #getRecordingResultsList()
 	 * @generated
 	 */
 	EReference getRecordingResultsList_InvocatorSession();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractResult <em>Abstract Result</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult <em>Abstract Result</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Result</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractResult
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResult
 	 * @generated
 	 */
   EClass getAbstractResult();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.AbstractResult#getResultsList <em>Results List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getResultsList <em>Results List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Results List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractResult#getResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getResultsList()
 	 * @see #getAbstractResult()
 	 * @generated
 	 */
 	EReference getAbstractResult_ResultsList();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.AbstractResult#getInvocatorSession <em>Invocator Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getInvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractResult#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getInvocatorSession()
 	 * @see #getAbstractResult()
 	 * @generated
 	 */
 	EReference getAbstractResult_InvocatorSession();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.AbstractResult#getContext <em>Context</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getContext <em>Context</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Context</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractResult#getContext()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getContext()
 	 * @see #getAbstractResult()
 	 * @generated
 	 */
   EReference getAbstractResult_Context();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.AbstractResult#getResultValue <em>Result Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getResultValue <em>Result Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Result Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractResult#getResultValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getResultValue()
 	 * @see #getAbstractResult()
 	 * @generated
 	 */
   EReference getAbstractResult_ResultValue();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractResultValue <em>Abstract Result Value</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue <em>Abstract Result Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Result Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractResultValue
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue
 	 * @generated
 	 */
   EClass getAbstractResultValue();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.AbstractResultValue#getResult <em>Result</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue#getResult <em>Result</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Result</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractResultValue#getResult()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue#getResult()
 	 * @see #getAbstractResultValue()
 	 * @generated
 	 */
   EReference getAbstractResultValue_Result();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.OperationCallResult <em>Operation Call Result</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult <em>Operation Call Result</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Operation Call Result</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResult
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResult
 	 * @generated
 	 */
   EClass getOperationCallResult();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.OperationCallResult#getOperationCall <em>Operation Call</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getOperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Operation Call</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResult#getOperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getOperationCall()
 	 * @see #getOperationCallResult()
 	 * @generated
 	 */
   EReference getOperationCallResult_OperationCall();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.OperationCallResult#getExceptionContainer <em>Exception Container</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getExceptionContainer <em>Exception Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exception Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResult#getExceptionContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResult#getExceptionContainer()
 	 * @see #getOperationCallResult()
 	 * @generated
 	 */
   EReference getOperationCallResult_ExceptionContainer();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ExceptionContainer <em>Exception Container</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer <em>Exception Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Exception Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ExceptionContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer
 	 * @generated
 	 */
   EClass getExceptionContainer();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.ExceptionContainer#getException <em>Exception</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Exception</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ExceptionContainer#getException()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer#getException()
 	 * @see #getExceptionContainer()
 	 * @generated
 	 */
   EAttribute getExceptionContainer_Exception();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AttributeResultValue <em>Attribute Result Value</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue <em>Attribute Result Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Attribute Result Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AttributeResultValue
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue
 	 * @generated
 	 */
   EClass getAttributeResultValue();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.AttributeResultValue#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AttributeResultValue#getValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue#getValue()
 	 * @see #getAttributeResultValue()
 	 * @generated
 	 */
   EReference getAttributeResultValue_Value();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AttributeValue <em>Attribute Value</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AttributeValue <em>Attribute Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Attribute Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AttributeValue
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AttributeValue
 	 * @generated
 	 */
   EClass getAttributeValue();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.AttributeValue#getObject <em>Object</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.AttributeValue#getObject <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Object</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AttributeValue#getObject()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AttributeValue#getObject()
 	 * @see #getAttributeValue()
 	 * @generated
 	 */
   EAttribute getAttributeValue_Object();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ReferenceResultValue <em>Reference Result Value</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue <em>Reference Result Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Reference Result Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ReferenceResultValue
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue
 	 * @generated
 	 */
   EClass getReferenceResultValue();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.ReferenceResultValue#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ReferenceResultValue#getValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue#getValue()
 	 * @see #getReferenceResultValue()
 	 * @generated
 	 */
   EReference getReferenceResultValue_Value();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.WatchesListsContainer <em>Watches Lists Container</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer <em>Watches Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Watches Lists Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchesListsContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer
 	 * @generated
 	 */
   EClass getWatchesListsContainer();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.WatchesListsContainer#getWatches <em>Watches</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer#getWatches <em>Watches</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Watches</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchesListsContainer#getWatches()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer#getWatches()
 	 * @see #getWatchesListsContainer()
 	 * @generated
 	 */
   EReference getWatchesListsContainer_Watches();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.WatchesList <em>Watches List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList <em>Watches List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Watches List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchesList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList
 	 * @generated
 	 */
   EClass getWatchesList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.WatchesList#getWatchesListsContainer <em>Watches Lists Container</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatchesListsContainer <em>Watches Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Watches Lists Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchesList#getWatchesListsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatchesListsContainer()
 	 * @see #getWatchesList()
 	 * @generated
 	 */
   EReference getWatchesList_WatchesListsContainer();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.WatchesList#getWatches <em>Watches</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatches <em>Watches</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Watches</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchesList#getWatches()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatches()
 	 * @see #getWatchesList()
 	 * @generated
 	 */
   EReference getWatchesList_Watches();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Watch <em>Watch</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.Watch <em>Watch</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Watch</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Watch
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch
 	 * @generated
 	 */
   EClass getWatch();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.Watch#getWatchesList <em>Watches List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getWatchesList <em>Watches List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Watches List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Watch#getWatchesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getWatchesList()
 	 * @see #getWatch()
 	 * @generated
 	 */
   EReference getWatch_WatchesList();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Watch#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Watch#getVariable()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getVariable()
 	 * @see #getWatch()
 	 * @generated
 	 */
   EReference getWatch_Variable();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type Member Reference Tree Element</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Watch#getTypeMemberReferenceTreeElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getTypeMemberReferenceTreeElement()
 	 * @see #getWatch()
 	 * @generated
 	 */
   EReference getWatch_TypeMemberReferenceTreeElement();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Tree Root Node</em>'.
-	 * @see org.eclipse.symphony.core.invocator.Watch#getTreeRootNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Watch#getTreeRootNode()
 	 * @see #getWatch()
 	 * @generated
 	 */
   EReference getWatch_TreeRootNode();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter <em>Watch Feature Node Adapter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter <em>Watch Feature Node Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Watch Feature Node Adapter</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter
 	 * @generated
 	 */
   EClass getWatchFeatureNodeAdapter();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source Object</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getSourceObject()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getSourceObject()
 	 * @see #getWatchFeatureNodeAdapter()
 	 * @generated
 	 */
   EReference getWatchFeatureNodeAdapter_SourceObject();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Feature Node</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getFeatureNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getFeatureNode()
 	 * @see #getWatchFeatureNodeAdapter()
 	 * @generated
 	 */
   EReference getWatchFeatureNodeAdapter_FeatureNode();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Value</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getCurrentValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#getCurrentValue()
 	 * @see #getWatchFeatureNodeAdapter()
 	 * @generated
 	 */
   EAttribute getWatchFeatureNodeAdapter_CurrentValue();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Resolved</em>'.
-	 * @see org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#isResolved()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter#isResolved()
 	 * @see #getWatchFeatureNodeAdapter()
 	 * @generated
 	 */
   EAttribute getWatchFeatureNodeAdapter_Resolved();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.DisplaysListsContainer <em>Displays Lists Container</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer <em>Displays Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Displays Lists Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DisplaysListsContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer
 	 * @generated
 	 */
   EClass getDisplaysListsContainer();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.DisplaysListsContainer#getDisplays <em>Displays</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer#getDisplays <em>Displays</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Displays</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DisplaysListsContainer#getDisplays()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer#getDisplays()
 	 * @see #getDisplaysListsContainer()
 	 * @generated
 	 */
   EReference getDisplaysListsContainer_Displays();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.DisplaysList <em>Displays List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList <em>Displays List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Displays List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DisplaysList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList
 	 * @generated
 	 */
   EClass getDisplaysList();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.DisplaysList#getDisplaysListsContainer <em>Displays Lists Container</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplaysListsContainer <em>Displays Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Displays Lists Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DisplaysList#getDisplaysListsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplaysListsContainer()
 	 * @see #getDisplaysList()
 	 * @generated
 	 */
   EReference getDisplaysList_DisplaysListsContainer();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.DisplaysList#getDisplays <em>Displays</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplays <em>Displays</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Displays</em>'.
-	 * @see org.eclipse.symphony.core.invocator.DisplaysList#getDisplays()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DisplaysList#getDisplays()
 	 * @see #getDisplaysList()
 	 * @generated
 	 */
   EReference getDisplaysList_Displays();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractDisplay <em>Abstract Display</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay <em>Abstract Display</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Display</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractDisplay
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay
 	 * @generated
 	 */
   EClass getAbstractDisplay();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Displays List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractDisplay#getDisplaysList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractDisplay#getDisplaysList()
 	 * @see #getAbstractDisplay()
 	 * @generated
 	 */
   EReference getAbstractDisplay_DisplaysList();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer <em>Recording Tools Container</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer <em>Recording Tools Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Recording Tools Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer
 	 * @generated
 	 */
 	EClass getRecordingToolsContainer();
 
 		/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getRecorder <em>Recorder</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getRecorder <em>Recorder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Recorder</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer#getRecorder()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getRecorder()
 	 * @see #getRecordingToolsContainer()
 	 * @generated
 	 */
 	EReference getRecordingToolsContainer_Recorder();
 
 		/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getPlayer <em>Player</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getPlayer <em>Player</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Player</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer#getPlayer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getPlayer()
 	 * @see #getRecordingToolsContainer()
 	 * @generated
 	 */
 	EReference getRecordingToolsContainer_Player();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getChannelsLists <em>Channels Lists</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getChannelsLists <em>Channels Lists</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Channels Lists</em>'.
-	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer#getChannelsLists()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getChannelsLists()
 	 * @see #getRecordingToolsContainer()
 	 * @generated
 	 */
 	EReference getRecordingToolsContainer_ChannelsLists();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ChannelsList <em>Channels List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList <em>Channels List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Channels List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ChannelsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ChannelsList
 	 * @generated
 	 */
 	EClass getChannelsList();
 
 		/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.invocator.ChannelsList#getChannels <em>Channels</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getChannels <em>Channels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Channels</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ChannelsList#getChannels()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getChannels()
 	 * @see #getChannelsList()
 	 * @generated
 	 */
 	EReference getChannelsList_Channels();
 
 		/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.ChannelsList#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Recording Tools Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ChannelsList#getRecordingToolsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getRecordingToolsContainer()
 	 * @see #getChannelsList()
 	 * @generated
 	 */
 	EReference getChannelsList_RecordingToolsContainer();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractChannel <em>Abstract Channel</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractChannel <em>Abstract Channel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Channel</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractChannel
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractChannel
 	 * @generated
 	 */
 	EClass getAbstractChannel();
 
 		/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.AbstractChannel#getChannelsList <em>Channels List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractChannel#getChannelsList <em>Channels List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Channels List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractChannel#getChannelsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractChannel#getChannelsList()
 	 * @see #getAbstractChannel()
 	 * @generated
 	 */
 	EReference getAbstractChannel_ChannelsList();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractRecorder <em>Abstract Recorder</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder <em>Abstract Recorder</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Recorder</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractRecorder
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder
 	 * @generated
 	 */
   EClass getAbstractRecorder();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.AbstractRecorder#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Recording Tools Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractRecorder#getRecordingToolsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractRecorder#getRecordingToolsContainer()
 	 * @see #getAbstractRecorder()
 	 * @generated
 	 */
 	EReference getAbstractRecorder_RecordingToolsContainer();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.AbstractPlayer <em>Abstract Player</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer <em>Abstract Player</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Player</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractPlayer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer
 	 * @generated
 	 */
   EClass getAbstractPlayer();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Recording Tools Container</em>'.
-	 * @see org.eclipse.symphony.core.invocator.AbstractPlayer#getRecordingToolsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer#getRecordingToolsContainer()
 	 * @see #getAbstractPlayer()
 	 * @generated
 	 */
 	EReference getAbstractPlayer_RecordingToolsContainer();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource <em>Operation Call Results List Time Source</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource <em>Operation Call Results List Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Operation Call Results List Time Source</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource
 	 * @generated
 	 */
 	EClass getOperationCallResultsListTimeSource();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ops Call List</em>'.
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource#getOpsCallList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource#getOpsCallList()
 	 * @see #getOperationCallResultsListTimeSource()
 	 * @generated
 	 */
 	EReference getOperationCallResultsListTimeSource_OpsCallList();
 
 		/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Variable Listener Event Type</em>'.
-	 * @see org.eclipse.symphony.core.invocator.VariableListenerEventType
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType
 	 * @generated
 	 */
 	EEnum getVariableListenerEventType();
@@ -7406,7 +7406,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Type Member Implementations EList</em>'.
 	 * @see org.eclipse.emf.common.util.EList
-	 * @model instanceClass="org.eclipse.emf.common.util.EList<org.eclipse.symphony.core.invocator.TypeMemberImplementation>"
+	 * @model instanceClass="org.eclipse.emf.common.util.EList<ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation>"
 	 * @generated
 	 */
   EDataType getTypeMemberImplementationsEList();
@@ -7416,18 +7416,18 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Type Members Array</em>'.
-	 * @model instanceClass="org.eclipse.symphony.core.invocator.TypeMember[]"
+	 * @model instanceClass="ca.gc.asc_csa.apogy.core.invocator.TypeMember[]"
 	 * @generated
 	 */
 	EDataType getTypeMembersArray();
 
 		/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.core.invocator.IVariableListener <em>IVariable Listener</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.core.invocator.IVariableListener <em>IVariable Listener</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>IVariable Listener</em>'.
-	 * @see org.eclipse.symphony.core.invocator.IVariableListener
-	 * @model instanceClass="org.eclipse.symphony.core.invocator.IVariableListener"
+	 * @see ca.gc.asc_csa.apogy.core.invocator.IVariableListener
+	 * @model instanceClass="ca.gc.asc_csa.apogy.core.invocator.IVariableListener"
 	 * @generated
 	 */
 	EDataType getIVariableListener();
@@ -7439,7 +7439,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CoreInvocatorFactory getSymphony__CoreInvocatorFactory();
+	ApogyCoreInvocatorFactory getApogyCoreInvocatorFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -7457,14 +7457,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getSymphony__CoreInvocatorFacade()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getApogyCoreInvocatorFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_CORE_INVOCATOR_FACADE = eINSTANCE.getSymphony__CoreInvocatorFacade();
+		EClass APOGY_CORE_INVOCATOR_FACADE = eINSTANCE.getApogyCoreInvocatorFacade();
 
 			/**
 		 * The meta object literal for the '<em><b>Init Variable Instances Date</b></em>' attribute feature.
@@ -7472,7 +7472,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = eINSTANCE.getSymphony__CoreInvocatorFacade_InitVariableInstancesDate();
+		EAttribute APOGY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = eINSTANCE.getApogyCoreInvocatorFacade_InitVariableInstancesDate();
 
 			/**
 		 * The meta object literal for the '<em><b>Active Invocator Session</b></em>' reference feature.
@@ -7480,7 +7480,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = eINSTANCE.getSymphony__CoreInvocatorFacade_ActiveInvocatorSession();
+		EReference APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = eINSTANCE.getApogyCoreInvocatorFacade_ActiveInvocatorSession();
 
 			/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
@@ -7488,7 +7488,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getSymphony__CoreInvocatorFacade__Exec__OperationCall();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getApogyCoreInvocatorFacade__Exec__OperationCall();
 
 			/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
@@ -7496,7 +7496,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = eINSTANCE.getSymphony__CoreInvocatorFacade__Exec__OperationCall_boolean();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = eINSTANCE.getApogyCoreInvocatorFacade__Exec__OperationCall_boolean();
 
 			/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
@@ -7504,7 +7504,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = eINSTANCE.getSymphony__CoreInvocatorFacade__Exec__OperationCallsList();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = eINSTANCE.getApogyCoreInvocatorFacade__Exec__OperationCallsList();
 
 			/**
 		 * The meta object literal for the '<em><b>Create Abstract Result Value</b></em>' operation.
@@ -7512,7 +7512,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = eINSTANCE.getSymphony__CoreInvocatorFacade__CreateAbstractResultValue__Object();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = eINSTANCE.getApogyCoreInvocatorFacade__CreateAbstractResultValue__Object();
 
 			/**
 		 * The meta object literal for the '<em><b>Resolve Watch</b></em>' operation.
@@ -7520,7 +7520,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = eINSTANCE.getApogyCoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
 
 			/**
 		 * The meta object literal for the '<em><b>Resolve Watch</b></em>' operation.
@@ -7528,7 +7528,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getApogyCoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
@@ -7536,7 +7536,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetValue__AbstractFeatureNode();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = eINSTANCE.getApogyCoreInvocatorFacade__GetValue__AbstractFeatureNode();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
@@ -7544,7 +7544,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstance__Variable();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__GetInstance__Variable();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Instance Class</b></em>' operation.
@@ -7552,7 +7552,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstanceClass__Variable();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__GetInstanceClass__Variable();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Type Api Adapter</b></em>' operation.
@@ -7560,7 +7560,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = eINSTANCE.getApogyCoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
@@ -7568,7 +7568,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstance__VariableFeatureReference();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getApogyCoreInvocatorFacade__GetInstance__VariableFeatureReference();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Type Member Instance</b></em>' operation.
@@ -7576,7 +7576,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getApogyCoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
 
 			/**
 		 * The meta object literal for the '<em><b>Get EMF Feature Value</b></em>' operation.
@@ -7584,7 +7584,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = eINSTANCE.getApogyCoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Instance Class</b></em>' operation.
@@ -7592,7 +7592,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = eINSTANCE.getApogyCoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
@@ -7600,7 +7600,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getApogyCoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
@@ -7608,7 +7608,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__OperationCall();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = eINSTANCE.getApogyCoreInvocatorFacade__GetTypeImplementation__OperationCall();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
@@ -7616,7 +7616,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = eINSTANCE.getApogyCoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
@@ -7624,7 +7624,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__GetTypeImplementation__Variable();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Variable By Name</b></em>' operation.
@@ -7632,7 +7632,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = eINSTANCE.getSymphony__CoreInvocatorFacade__GetVariableByName__InvocatorSession_String();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = eINSTANCE.getApogyCoreInvocatorFacade__GetVariableByName__InvocatorSession_String();
 
 			/**
 		 * The meta object literal for the '<em><b>Create Type Member References</b></em>' operation.
@@ -7640,7 +7640,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = eINSTANCE.getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = eINSTANCE.getApogyCoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
@@ -7648,7 +7648,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = eINSTANCE.getApogyCoreInvocatorFacade__GetTypeImplementation__Environment_String();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Fully Qualified Name</b></em>' operation.
@@ -7656,7 +7656,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getApogyCoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Fully Qualified Name</b></em>' operation.
@@ -7664,7 +7664,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = eINSTANCE.getApogyCoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
 
 			/**
 		 * The meta object literal for the '<em><b>Create Type Member Implementations</b></em>' operation.
@@ -7672,7 +7672,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = eINSTANCE.getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = eINSTANCE.getApogyCoreInvocatorFacade__CreateTypeMemberImplementations__Type();
 
 			/**
 		 * The meta object literal for the '<em><b>Init Variable Instances</b></em>' operation.
@@ -7680,7 +7680,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getApogyCoreInvocatorFacade__InitVariableInstances__Environment();
 
 			/**
 		 * The meta object literal for the '<em><b>Dispose Variable Instances</b></em>' operation.
@@ -7688,7 +7688,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getApogyCoreInvocatorFacade__DisposeVariableInstances__Environment();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Operation Call Container</b></em>' operation.
@@ -7696,7 +7696,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = eINSTANCE.getApogyCoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
 
 			/**
 		 * The meta object literal for the '<em><b>Apply Initialization Data</b></em>' operation.
@@ -7704,7 +7704,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getApogyCoreInvocatorFacade__ApplyInitializationData__Environment();
 
 			/**
 		 * The meta object literal for the '<em><b>Collect Initialization Data</b></em>' operation.
@@ -7712,7 +7712,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getApogyCoreInvocatorFacade__CollectInitializationData__Environment();
 
 			/**
 		 * The meta object literal for the '<em><b>Apply Initialization Data</b></em>' operation.
@@ -7720,7 +7720,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__ApplyInitializationData__Variable();
 
 			/**
 		 * The meta object literal for the '<em><b>Collect Initialization Data</b></em>' operation.
@@ -7728,7 +7728,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getApogyCoreInvocatorFacade__CollectInitializationData__Variable();
 
 			/**
 		 * The meta object literal for the '<em><b>Load Registered Types</b></em>' operation.
@@ -7736,7 +7736,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = eINSTANCE.getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = eINSTANCE.getApogyCoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
 
 			/**
 		 * The meta object literal for the '<em><b>Get All Types</b></em>' operation.
@@ -7744,7 +7744,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetAllTypes__Environment();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = eINSTANCE.getApogyCoreInvocatorFacade__GetAllTypes__Environment();
 
 				/**
 		 * The meta object literal for the '<em><b>Add Variable Listener</b></em>' operation.
@@ -7752,7 +7752,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getSymphony__CoreInvocatorFacade__AddVariableListener__IVariableListener();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getApogyCoreInvocatorFacade__AddVariableListener__IVariableListener();
 
 			/**
 		 * The meta object literal for the '<em><b>Remove Variable Listener</b></em>' operation.
@@ -7760,7 +7760,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getSymphony__CoreInvocatorFacade__RemoveVariableListener__IVariableListener();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getApogyCoreInvocatorFacade__RemoveVariableListener__IVariableListener();
 
 				/**
 		 * The meta object literal for the '<em><b>Notify Variable Listeners</b></em>' operation.
@@ -7768,14 +7768,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = eINSTANCE.getSymphony__CoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
+		EOperation APOGY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = eINSTANCE.getApogyCoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getInvocatorSession()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.InvocatorSessionImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getInvocatorSession()
 		 * @generated
 		 */
     EClass INVOCATOR_SESSION = eINSTANCE.getInvocatorSession();
@@ -7813,11 +7813,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference INVOCATOR_SESSION__TOOLS_LIST = eINSTANCE.getInvocatorSession_ToolsList();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl <em>Environment</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl <em>Environment</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.EnvironmentImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEnvironment()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEnvironment()
 		 * @generated
 		 */
     EClass ENVIRONMENT = eINSTANCE.getEnvironment();
@@ -7863,11 +7863,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference ENVIRONMENT__ACTIVE_CONTEXT = eINSTANCE.getEnvironment_ActiveContext();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl <em>Data Products Lists Container</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListsContainerImpl <em>Data Products Lists Container</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDataProductsListsContainer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListsContainerImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDataProductsListsContainer()
 		 * @generated
 		 */
     EClass DATA_PRODUCTS_LISTS_CONTAINER = eINSTANCE.getDataProductsListsContainer();
@@ -7889,11 +7889,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST = eINSTANCE.getDataProductsListsContainer_DataProductsList();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl <em>Data Products List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl <em>Data Products List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.DataProductsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDataProductsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DataProductsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDataProductsList()
 		 * @generated
 		 */
     EClass DATA_PRODUCTS_LIST = eINSTANCE.getDataProductsList();
@@ -7931,11 +7931,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference DATA_PRODUCTS_LIST__INVOCATOR_SESSION = eINSTANCE.getDataProductsList_InvocatorSession();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ToolsListImpl <em>Tools List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ToolsListImpl <em>Tools List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ToolsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getToolsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ToolsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getToolsList()
 		 * @generated
 		 */
     EClass TOOLS_LIST = eINSTANCE.getToolsList();
@@ -7957,11 +7957,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference TOOLS_LIST__TOOLS_LIST_CONTAINERS = eINSTANCE.getToolsList_ToolsListContainers();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl <em>Abstract Tools List Container</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl <em>Abstract Tools List Container</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractToolsListContainer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractToolsListContainer()
 		 * @generated
 		 */
     EClass ABSTRACT_TOOLS_LIST_CONTAINER = eINSTANCE.getAbstractToolsListContainer();
@@ -7975,11 +7975,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST = eINSTANCE.getAbstractToolsListContainer_ToolsList();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypesListImpl <em>Types List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypesListImpl <em>Types List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypesListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypesListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypesList()
 		 * @generated
 		 */
     EClass TYPES_LIST = eINSTANCE.getTypesList();
@@ -8001,11 +8001,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference TYPES_LIST__REGISTERED_TYPES = eINSTANCE.getTypesList_RegisteredTypes();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.LocalTypesListImpl <em>Local Types List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.LocalTypesListImpl <em>Local Types List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.LocalTypesListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getLocalTypesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.LocalTypesListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getLocalTypesList()
 		 * @generated
 		 */
     EClass LOCAL_TYPES_LIST = eINSTANCE.getLocalTypesList();
@@ -8019,11 +8019,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference LOCAL_TYPES_LIST__TYPES = eINSTANCE.getLocalTypesList_Types();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.RegisteredTypesListImpl <em>Registered Types List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl <em>Registered Types List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.RegisteredTypesListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getRegisteredTypesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RegisteredTypesListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRegisteredTypesList()
 		 * @generated
 		 */
     EClass REGISTERED_TYPES_LIST = eINSTANCE.getRegisteredTypesList();
@@ -8037,21 +8037,21 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference REGISTERED_TYPES_LIST__TYPES = eINSTANCE.getRegisteredTypesList_Types();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.AbstractType <em>Abstract Type</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractType <em>Abstract Type</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.AbstractType
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractType()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractType
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractType()
 		 * @generated
 		 */
     EClass ABSTRACT_TYPE = eINSTANCE.getAbstractType();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypeImpl <em>Type</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeImpl <em>Type</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypeImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getType()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getType()
 		 * @generated
 		 */
     EClass TYPE = eINSTANCE.getType();
@@ -8081,11 +8081,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference TYPE__TYPE_API_ADAPTER_CLASS = eINSTANCE.getType_TypeApiAdapterClass();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl <em>Type Api Adapter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl <em>Type Api Adapter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeApiAdapter()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeApiAdapterImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeApiAdapter()
 		 * @generated
 		 */
     EClass TYPE_API_ADAPTER = eINSTANCE.getTypeApiAdapter();
@@ -8179,11 +8179,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EOperation TYPE_API_ADAPTER___DISPOSE = eINSTANCE.getTypeApiAdapter__Dispose();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImpl <em>Type Member</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImpl <em>Type Member</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMember()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMember()
 		 * @generated
 		 */
     EClass TYPE_MEMBER = eINSTANCE.getTypeMember();
@@ -8205,11 +8205,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE = eINSTANCE.getTypeMember_TypeFeatureRootNode();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceImpl <em>Type Member Reference</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceImpl <em>Type Member Reference</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberReference()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberReference()
 		 * @generated
 		 */
     EClass TYPE_MEMBER_REFERENCE = eINSTANCE.getTypeMemberReference();
@@ -8223,11 +8223,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference TYPE_MEMBER_REFERENCE__TYPE_MEMBER = eINSTANCE.getTypeMemberReference_TypeMember();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl <em>Type Member Reference List Element</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceListElementImpl <em>Type Member Reference List Element</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberReferenceListElement()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceListElementImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberReferenceListElement()
 		 * @generated
 		 */
     EClass TYPE_MEMBER_REFERENCE_LIST_ELEMENT = eINSTANCE.getTypeMemberReferenceListElement();
@@ -8289,11 +8289,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EAttribute TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT = eINSTANCE.getTypeMemberReferenceListElement_SubSegmentsCount();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl <em>Type Member Reference Tree Element</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceTreeElementImpl <em>Type Member Reference Tree Element</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberReferenceTreeElement()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberReferenceTreeElementImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberReferenceTreeElement()
 		 * @generated
 		 */
     EClass TYPE_MEMBER_REFERENCE_TREE_ELEMENT = eINSTANCE.getTypeMemberReferenceTreeElement();
@@ -8347,11 +8347,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EAttribute TYPE_MEMBER_REFERENCE_TREE_ELEMENT__LEAF = eINSTANCE.getTypeMemberReferenceTreeElement_Leaf();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.VariablesListImpl <em>Variables List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariablesListImpl <em>Variables List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.VariablesListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariablesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariablesListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariablesList()
 		 * @generated
 		 */
     EClass VARIABLES_LIST = eINSTANCE.getVariablesList();
@@ -8373,11 +8373,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference VARIABLES_LIST__VARIABLES = eINSTANCE.getVariablesList_Variables();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.VariableImpl <em>Variable</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl <em>Variable</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.VariableImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariable()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariable()
 		 * @generated
 		 */
     EClass VARIABLE = eINSTANCE.getVariable();
@@ -8407,11 +8407,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference VARIABLE__ENVIRONMENT = eINSTANCE.getVariable_Environment();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ContextsListImpl <em>Contexts List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextsListImpl <em>Contexts List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ContextsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getContextsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ContextsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getContextsList()
 		 * @generated
 		 */
     EClass CONTEXTS_LIST = eINSTANCE.getContextsList();
@@ -8433,11 +8433,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference CONTEXTS_LIST__CONTEXTS = eINSTANCE.getContextsList_Contexts();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ContextImpl <em>Context</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl <em>Context</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ContextImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getContext()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ContextImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getContext()
 		 * @generated
 		 */
     EClass CONTEXT = eINSTANCE.getContext();
@@ -8491,21 +8491,21 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EAttribute CONTEXT__INSTANCES_DISPOSAL_DATE = eINSTANCE.getContext_InstancesDisposalDate();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.BasicContextImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getBasicContext()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.BasicContextImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getBasicContext()
 		 * @generated
 		 */
     EClass BASIC_CONTEXT = eINSTANCE.getBasicContext();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl <em>Variable Implementations List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.VariableImplementationsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableImplementationsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableImplementationsList()
 		 * @generated
 		 */
     EClass VARIABLE_IMPLEMENTATIONS_LIST = eINSTANCE.getVariableImplementationsList();
@@ -8535,31 +8535,31 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EOperation VARIABLE_IMPLEMENTATIONS_LIST___GET_VARIABLE_IMPLEMENTATION__STRING = eINSTANCE.getVariableImplementationsList__GetVariableImplementation__String();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractInitializationDataImpl <em>Abstract Initialization Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractInitializationDataImpl <em>Abstract Initialization Data</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractInitializationDataImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractInitializationData()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractInitializationDataImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractInitializationData()
 		 * @generated
 		 */
     EClass ABSTRACT_INITIALIZATION_DATA = eINSTANCE.getAbstractInitializationData();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.InitializationDataImpl <em>Initialization Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.InitializationDataImpl <em>Initialization Data</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.InitializationDataImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getInitializationData()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.InitializationDataImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getInitializationData()
 		 * @generated
 		 */
     EClass INITIALIZATION_DATA = eINSTANCE.getInitializationData();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl <em>Abstract Type Implementation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl <em>Abstract Type Implementation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractTypeImplementation()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractTypeImplementationImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractTypeImplementation()
 		 * @generated
 		 */
     EClass ABSTRACT_TYPE_IMPLEMENTATION = eINSTANCE.getAbstractTypeImplementation();
@@ -8629,11 +8629,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EOperation ABSTRACT_TYPE_IMPLEMENTATION___GET_TYPE_MEMBER_IMPLEMENTATION__TYPEMEMBER = eINSTANCE.getAbstractTypeImplementation__GetTypeMemberImplementation__TypeMember();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationImpl <em>Variable Implementation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationImpl <em>Variable Implementation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.VariableImplementationImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableImplementation()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableImplementation()
 		 * @generated
 		 */
     EClass VARIABLE_IMPLEMENTATION = eINSTANCE.getVariableImplementation();
@@ -8655,11 +8655,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference VARIABLE_IMPLEMENTATION__VARIABLE = eINSTANCE.getVariableImplementation_Variable();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImplementationImpl <em>Type Member Implementation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImplementationImpl <em>Type Member Implementation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.TypeMemberImplementationImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberImplementation()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.TypeMemberImplementationImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementation()
 		 * @generated
 		 */
     EClass TYPE_MEMBER_IMPLEMENTATION = eINSTANCE.getTypeMemberImplementation();
@@ -8673,11 +8673,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER = eINSTANCE.getTypeMemberImplementation_TypeMember();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ValuesListImpl <em>Values List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ValuesListImpl <em>Values List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ValuesListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getValuesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ValuesListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getValuesList()
 		 * @generated
 		 */
     EClass VALUES_LIST = eINSTANCE.getValuesList();
@@ -8691,11 +8691,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference VALUES_LIST__VALUES = eINSTANCE.getValuesList_Values();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ValueImpl <em>Value</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ValueImpl <em>Value</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ValueImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getValue()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ValueImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getValue()
 		 * @generated
 		 */
     EClass VALUE = eINSTANCE.getValue();
@@ -8709,11 +8709,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference VALUE__VALUE = eINSTANCE.getValue_Value();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ProgramsListImpl <em>Programs List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl <em>Programs List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ProgramsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getProgramsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ProgramsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgramsList()
 		 * @generated
 		 */
     EClass PROGRAMS_LIST = eINSTANCE.getProgramsList();
@@ -8735,11 +8735,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference PROGRAMS_LIST__PROGRAMS = eINSTANCE.getProgramsList_Programs();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ProgramImpl <em>Program</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl <em>Program</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ProgramImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getProgram()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ProgramImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getProgram()
 		 * @generated
 		 */
     EClass PROGRAM = eINSTANCE.getProgram();
@@ -8769,11 +8769,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference PROGRAM__VALUES_LIST = eINSTANCE.getProgram_ValuesList();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.OperationCallContainer <em>Operation Call Container</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer <em>Operation Call Container</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.OperationCallContainer
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallContainer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallContainer()
 		 * @generated
 		 */
     EClass OPERATION_CALL_CONTAINER = eINSTANCE.getOperationCallContainer();
@@ -8795,21 +8795,21 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EOperation OPERATION_CALL_CONTAINER___GET_INVOCATOR_SESSION = eINSTANCE.getOperationCallContainer__GetInvocatorSession();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallsListImpl <em>Operation Calls List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallsListImpl <em>Operation Calls List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.OperationCallsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallsList()
 		 * @generated
 		 */
     EClass OPERATION_CALLS_LIST = eINSTANCE.getOperationCallsList();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl <em>Variable Feature Reference</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl <em>Variable Feature Reference</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableFeatureReference()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.VariableFeatureReferenceImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableFeatureReference()
 		 * @generated
 		 */
     EClass VARIABLE_FEATURE_REFERENCE = eINSTANCE.getVariableFeatureReference();
@@ -8839,11 +8839,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT = eINSTANCE.getVariableFeatureReference_FeatureRoot();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallImpl <em>Operation Call</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl <em>Operation Call</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.OperationCallImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCall()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCall()
 		 * @generated
 		 */
     EClass OPERATION_CALL = eINSTANCE.getOperationCall();
@@ -8889,11 +8889,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference OPERATION_CALL__ENVIRONMENT = eINSTANCE.getOperationCall_Environment();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ArgumentsListImpl <em>Arguments List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentsListImpl <em>Arguments List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ArgumentsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getArgumentsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getArgumentsList()
 		 * @generated
 		 */
     EClass ARGUMENTS_LIST = eINSTANCE.getArgumentsList();
@@ -8923,11 +8923,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EOperation ARGUMENTS_LIST___GET_ARGUMENT_VALUES = eINSTANCE.getArgumentsList__GetArgumentValues();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ArgumentImpl <em>Argument</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentImpl <em>Argument</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ArgumentImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getArgument()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ArgumentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getArgument()
 		 * @generated
 		 */
     EClass ARGUMENT = eINSTANCE.getArgument();
@@ -8965,11 +8965,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EOperation ARGUMENT___GET_PARAMETER_VALUE = eINSTANCE.getArgument__GetParameterValue();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl <em>EData Type Argument</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EDataTypeArgumentImpl <em>EData Type Argument</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEDataTypeArgument()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EDataTypeArgumentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEDataTypeArgument()
 		 * @generated
 		 */
     EClass EDATA_TYPE_ARGUMENT = eINSTANCE.getEDataTypeArgument();
@@ -8983,11 +8983,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EAttribute EDATA_TYPE_ARGUMENT__VALUE = eINSTANCE.getEDataTypeArgument_Value();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.EEnumArgumentImpl <em>EEnum Argument</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EEnumArgumentImpl <em>EEnum Argument</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.EEnumArgumentImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEEnumArgument()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EEnumArgumentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEEnumArgument()
 		 * @generated
 		 */
     EClass EENUM_ARGUMENT = eINSTANCE.getEEnumArgument();
@@ -9009,11 +9009,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference EENUM_ARGUMENT__EENUM = eINSTANCE.getEEnumArgument_EEnum();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.EClassArgumentImpl <em>EClass Argument</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.EClassArgumentImpl <em>EClass Argument</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.EClassArgumentImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEClassArgument()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.EClassArgumentImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getEClassArgument()
 		 * @generated
 		 */
     EClass ECLASS_ARGUMENT = eINSTANCE.getEClassArgument();
@@ -9027,11 +9027,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference ECLASS_ARGUMENT__VALUE = eINSTANCE.getEClassArgument_Value();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.ResultsList <em>Results List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList <em>Results List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.ResultsList
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getResultsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ResultsList
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getResultsList()
 		 * @generated
 		 */
     EClass RESULTS_LIST = eINSTANCE.getResultsList();
@@ -9053,11 +9053,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EOperation RESULTS_LIST___GET_INVOCATOR_SESSION = eINSTANCE.getResultsList__GetInvocatorSession();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListImpl <em>Operation Call Results List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListImpl <em>Operation Call Results List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.OperationCallResultsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallResultsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsList()
 		 * @generated
 		 */
     EClass OPERATION_CALL_RESULTS_LIST = eINSTANCE.getOperationCallResultsList();
@@ -9079,11 +9079,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference OPERATION_CALL_RESULTS_LIST__INVOCATOR_SESSION = eINSTANCE.getOperationCallResultsList_InvocatorSession();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl <em>Recording Results List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl <em>Recording Results List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getRecordingResultsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RecordingResultsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingResultsList()
 		 * @generated
 		 */
     EClass RECORDING_RESULTS_LIST = eINSTANCE.getRecordingResultsList();
@@ -9105,11 +9105,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference RECORDING_RESULTS_LIST__INVOCATOR_SESSION = eINSTANCE.getRecordingResultsList_InvocatorSession();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl <em>Abstract Result</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultImpl <em>Abstract Result</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractResultImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractResult()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResult()
 		 * @generated
 		 */
     EClass ABSTRACT_RESULT = eINSTANCE.getAbstractResult();
@@ -9147,11 +9147,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference ABSTRACT_RESULT__RESULT_VALUE = eINSTANCE.getAbstractResult_ResultValue();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractResultValueImpl <em>Abstract Result Value</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultValueImpl <em>Abstract Result Value</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractResultValueImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractResultValue()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractResultValueImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractResultValue()
 		 * @generated
 		 */
     EClass ABSTRACT_RESULT_VALUE = eINSTANCE.getAbstractResultValue();
@@ -9165,11 +9165,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference ABSTRACT_RESULT_VALUE__RESULT = eINSTANCE.getAbstractResultValue_Result();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl <em>Operation Call Result</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultImpl <em>Operation Call Result</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallResult()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResult()
 		 * @generated
 		 */
     EClass OPERATION_CALL_RESULT = eINSTANCE.getOperationCallResult();
@@ -9191,11 +9191,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference OPERATION_CALL_RESULT__EXCEPTION_CONTAINER = eINSTANCE.getOperationCallResult_ExceptionContainer();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ExceptionContainerImpl <em>Exception Container</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ExceptionContainerImpl <em>Exception Container</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ExceptionContainerImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getExceptionContainer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ExceptionContainerImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getExceptionContainer()
 		 * @generated
 		 */
     EClass EXCEPTION_CONTAINER = eINSTANCE.getExceptionContainer();
@@ -9209,11 +9209,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EAttribute EXCEPTION_CONTAINER__EXCEPTION = eINSTANCE.getExceptionContainer_Exception();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AttributeResultValueImpl <em>Attribute Result Value</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AttributeResultValueImpl <em>Attribute Result Value</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AttributeResultValueImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAttributeResultValue()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AttributeResultValueImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeResultValue()
 		 * @generated
 		 */
     EClass ATTRIBUTE_RESULT_VALUE = eINSTANCE.getAttributeResultValue();
@@ -9227,11 +9227,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference ATTRIBUTE_RESULT_VALUE__VALUE = eINSTANCE.getAttributeResultValue_Value();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AttributeValueImpl <em>Attribute Value</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AttributeValueImpl <em>Attribute Value</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AttributeValueImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAttributeValue()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AttributeValueImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAttributeValue()
 		 * @generated
 		 */
     EClass ATTRIBUTE_VALUE = eINSTANCE.getAttributeValue();
@@ -9245,11 +9245,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EAttribute ATTRIBUTE_VALUE__OBJECT = eINSTANCE.getAttributeValue_Object();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ReferenceResultValueImpl <em>Reference Result Value</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ReferenceResultValueImpl <em>Reference Result Value</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ReferenceResultValueImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getReferenceResultValue()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ReferenceResultValueImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getReferenceResultValue()
 		 * @generated
 		 */
     EClass REFERENCE_RESULT_VALUE = eINSTANCE.getReferenceResultValue();
@@ -9263,11 +9263,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference REFERENCE_RESULT_VALUE__VALUE = eINSTANCE.getReferenceResultValue_Value();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.WatchesListsContainerImpl <em>Watches Lists Container</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl <em>Watches Lists Container</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.WatchesListsContainerImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatchesListsContainer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesListsContainer()
 		 * @generated
 		 */
     EClass WATCHES_LISTS_CONTAINER = eINSTANCE.getWatchesListsContainer();
@@ -9281,11 +9281,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference WATCHES_LISTS_CONTAINER__WATCHES = eINSTANCE.getWatchesListsContainer_Watches();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.WatchesListImpl <em>Watches List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl <em>Watches List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.WatchesListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatchesList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchesList()
 		 * @generated
 		 */
     EClass WATCHES_LIST = eINSTANCE.getWatchesList();
@@ -9307,11 +9307,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference WATCHES_LIST__WATCHES = eINSTANCE.getWatchesList_Watches();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.WatchImpl <em>Watch</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl <em>Watch</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.WatchImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatch()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatch()
 		 * @generated
 		 */
     EClass WATCH = eINSTANCE.getWatch();
@@ -9349,11 +9349,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference WATCH__TREE_ROOT_NODE = eINSTANCE.getWatch_TreeRootNode();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl <em>Watch Feature Node Adapter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl <em>Watch Feature Node Adapter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getWatchFeatureNodeAdapter()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.WatchFeatureNodeAdapterImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getWatchFeatureNodeAdapter()
 		 * @generated
 		 */
     EClass WATCH_FEATURE_NODE_ADAPTER = eINSTANCE.getWatchFeatureNodeAdapter();
@@ -9391,11 +9391,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EAttribute WATCH_FEATURE_NODE_ADAPTER__RESOLVED = eINSTANCE.getWatchFeatureNodeAdapter_Resolved();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.DisplaysListsContainerImpl <em>Displays Lists Container</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl <em>Displays Lists Container</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.DisplaysListsContainerImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDisplaysListsContainer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListsContainerImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysListsContainer()
 		 * @generated
 		 */
     EClass DISPLAYS_LISTS_CONTAINER = eINSTANCE.getDisplaysListsContainer();
@@ -9409,11 +9409,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference DISPLAYS_LISTS_CONTAINER__DISPLAYS = eINSTANCE.getDisplaysListsContainer_Displays();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl <em>Displays List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl <em>Displays List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.DisplaysListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getDisplaysList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.DisplaysListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getDisplaysList()
 		 * @generated
 		 */
     EClass DISPLAYS_LIST = eINSTANCE.getDisplaysList();
@@ -9435,11 +9435,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference DISPLAYS_LIST__DISPLAYS = eINSTANCE.getDisplaysList_Displays();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl <em>Abstract Display</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl <em>Abstract Display</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractDisplay()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractDisplayImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractDisplay()
 		 * @generated
 		 */
     EClass ABSTRACT_DISPLAY = eINSTANCE.getAbstractDisplay();
@@ -9453,11 +9453,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
     EReference ABSTRACT_DISPLAY__DISPLAYS_LIST = eINSTANCE.getAbstractDisplay_DisplaysList();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getRecordingToolsContainer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.RecordingToolsContainerImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getRecordingToolsContainer()
 		 * @generated
 		 */
 		EClass RECORDING_TOOLS_CONTAINER = eINSTANCE.getRecordingToolsContainer();
@@ -9487,11 +9487,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS = eINSTANCE.getRecordingToolsContainer_ChannelsLists();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.ChannelsListImpl <em>Channels List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl <em>Channels List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.ChannelsListImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getChannelsList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ChannelsListImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getChannelsList()
 		 * @generated
 		 */
 		EClass CHANNELS_LIST = eINSTANCE.getChannelsList();
@@ -9513,11 +9513,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference CHANNELS_LIST__RECORDING_TOOLS_CONTAINER = eINSTANCE.getChannelsList_RecordingToolsContainer();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractChannelImpl <em>Abstract Channel</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl <em>Abstract Channel</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractChannelImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractChannel()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractChannelImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractChannel()
 		 * @generated
 		 */
 		EClass ABSTRACT_CHANNEL = eINSTANCE.getAbstractChannel();
@@ -9531,11 +9531,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference ABSTRACT_CHANNEL__CHANNELS_LIST = eINSTANCE.getAbstractChannel_ChannelsList();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl <em>Abstract Recorder</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl <em>Abstract Recorder</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractRecorder()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractRecorderImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractRecorder()
 		 * @generated
 		 */
     EClass ABSTRACT_RECORDER = eINSTANCE.getAbstractRecorder();
@@ -9549,11 +9549,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER = eINSTANCE.getAbstractRecorder_RecordingToolsContainer();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractPlayerImpl <em>Abstract Player</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl <em>Abstract Player</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.AbstractPlayerImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getAbstractPlayer()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.AbstractPlayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getAbstractPlayer()
 		 * @generated
 		 */
     EClass ABSTRACT_PLAYER = eINSTANCE.getAbstractPlayer();
@@ -9567,11 +9567,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER = eINSTANCE.getAbstractPlayer_RecordingToolsContainer();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl <em>Operation Call Results List Time Source</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListTimeSourceImpl <em>Operation Call Results List Time Source</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.OperationCallResultsListTimeSourceImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getOperationCallResultsListTimeSource()
 		 * @generated
 		 */
 		EClass OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = eINSTANCE.getOperationCallResultsListTimeSource();
@@ -9585,11 +9585,11 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST = eINSTANCE.getOperationCallResultsListTimeSource_OpsCallList();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.VariableListenerEventType
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableListenerEventType()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.VariableListenerEventType
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getVariableListenerEventType()
 		 * @generated
 		 */
 		EEnum VARIABLE_LISTENER_EVENT_TYPE = eINSTANCE.getVariableListenerEventType();
@@ -9599,7 +9599,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see java.lang.Throwable
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getThrowable()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getThrowable()
 		 * @generated
 		 */
     EDataType THROWABLE = eINSTANCE.getThrowable();
@@ -9609,7 +9609,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.notify.Notification
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getNotification()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getNotification()
 		 * @generated
 		 */
     EDataType NOTIFICATION = eINSTANCE.getNotification();
@@ -9619,7 +9619,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.util.EList
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 		 * @generated
 		 */
     EDataType TYPE_MEMBER_IMPLEMENTATIONS_ELIST = eINSTANCE.getTypeMemberImplementationsEList();
@@ -9628,7 +9628,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * The meta object literal for the '<em>Type Members Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMembersArray()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getTypeMembersArray()
 		 * @generated
 		 */
 		EDataType TYPE_MEMBERS_ARRAY = eINSTANCE.getTypeMembersArray();
@@ -9637,12 +9637,12 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * The meta object literal for the '<em>IVariable Listener</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.IVariableListener
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getIVariableListener()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.IVariableListener
+		 * @see ca.gc.asc_csa.apogy.core.invocator.impl.ApogyCoreInvocatorPackageImpl#getIVariableListener()
 		 * @generated
 		 */
 		EDataType IVARIABLE_LISTENER = eINSTANCE.getIVariableListener();
 
   }
 
-} //Symphony__CoreInvocatorPackage
+} //ApogyCoreInvocatorPackage

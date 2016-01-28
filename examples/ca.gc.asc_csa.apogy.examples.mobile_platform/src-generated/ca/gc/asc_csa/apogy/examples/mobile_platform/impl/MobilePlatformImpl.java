@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
@@ -9,10 +9,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformFactory;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
-import org.eclipse.symphony.examples.mobile_platform.Position;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +22,14 @@ import org.eclipse.symphony.examples.mobile_platform.Position;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#isDisposed <em>Disposed</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getPositionError <em>Position Error</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getLinearVelocity <em>Linear Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getLeftWheelPosition <em>Left Wheel Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getRightWheelPosition <em>Right Wheel Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#getPositionError <em>Position Error</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#getLinearVelocity <em>Linear Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#getLeftWheelPosition <em>Left Wheel Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#getRightWheelPosition <em>Right Wheel Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.impl.MobilePlatformImpl#getPosition <em>Position</em>}</li>
  * </ul>
  *
  * @generated
@@ -204,7 +204,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM;
+		return ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM;
 	}
 
 	/**
@@ -225,7 +225,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -246,7 +246,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -257,7 +257,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 	public Position getPosition()
 	{
 		if (this.position == null){
-			setPosition(Symphony__ExamplesMobilePlatformFactory.eINSTANCE.createPosition());
+			setPosition(ApogyExamplesMobilePlatformFactory.eINSTANCE.createPosition());
 		}
 		return position;
 	}
@@ -281,7 +281,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		Position oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION, oldPosition, position));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION, oldPosition, position));
 	}
 
 	/**
@@ -304,7 +304,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		double oldPositionError = positionError;
 		positionError = newPositionError;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR, oldPositionError, positionError));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR, oldPositionError, positionError));
 	}
 
 	/**
@@ -325,7 +325,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		double oldLinearVelocity = linearVelocity;
 		linearVelocity = newLinearVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY, oldLinearVelocity, linearVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY, oldLinearVelocity, linearVelocity));
 	}
 
 	/**
@@ -346,7 +346,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		double oldAngularVelocity = angularVelocity;
 		angularVelocity = newAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY, oldAngularVelocity, angularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY, oldAngularVelocity, angularVelocity));
 	}
 
 	/**
@@ -369,7 +369,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		double oldLeftWheelPosition = leftWheelPosition;
 		leftWheelPosition = newLeftWheelPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION, oldLeftWheelPosition, leftWheelPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION, oldLeftWheelPosition, leftWheelPosition));
 	}
 
 	/**
@@ -392,7 +392,7 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 		double oldRightWheelPosition = rightWheelPosition;
 		rightWheelPosition = newRightWheelPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION, oldRightWheelPosition, rightWheelPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION, oldRightWheelPosition, rightWheelPosition));
 	}
 
 	/**
@@ -518,21 +518,21 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
 				return isInitialized();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
 				return isDisposed();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
 				return getPositionError();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
 				return getLinearVelocity();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
 				return getAngularVelocity();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
 				return getLeftWheelPosition();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
 				return getRightWheelPosition();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
 				if (resolve) return getPosition();
 				return basicGetPosition();
 		}
@@ -548,28 +548,28 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
 				setPositionError((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
 				setLinearVelocity((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
 				setAngularVelocity((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
 				setLeftWheelPosition((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
 				setRightWheelPosition((Double)newValue);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
 				setPosition((Position)newValue);
 				return;
 		}
@@ -585,28 +585,28 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
 				setPositionError(POSITION_ERROR_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
 				setLinearVelocity(LINEAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
 				setAngularVelocity(ANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
 				setLeftWheelPosition(LEFT_WHEEL_POSITION_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
 				setRightWheelPosition(RIGHT_WHEEL_POSITION_EDEFAULT);
 				return;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
 				setPosition((Position)null);
 				return;
 		}
@@ -622,21 +622,21 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
 				return positionError != POSITION_ERROR_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
 				return linearVelocity != LINEAR_VELOCITY_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
 				return angularVelocity != ANGULAR_VELOCITY_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
 				return leftWheelPosition != LEFT_WHEEL_POSITION_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
 				return rightWheelPosition != RIGHT_WHEEL_POSITION_EDEFAULT;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
 				return position != null;
 		}
 		return super.eIsSet(featureID);
@@ -651,30 +651,30 @@ public abstract class MobilePlatformImpl extends MinimalEObjectImpl.Container im
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___INIT:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___INIT:
 				return init();
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___RESET_POSITION__POSITION:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___RESET_POSITION__POSITION:
 				resetPosition((Position)arguments.get(0));
 				return null;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___CLEAR_POSITION_ERROR:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___CLEAR_POSITION_ERROR:
 				clearPositionError();
 				return null;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___STOP:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___STOP:
 				stop();
 				return null;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___MOVE_TO__DOUBLE_DOUBLE:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___MOVE_TO__DOUBLE_DOUBLE:
 				moveTo((Double)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___CMD_LINEAR_VELOCITY__DOUBLE:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___CMD_LINEAR_VELOCITY__DOUBLE:
 				cmdLinearVelocity((Double)arguments.get(0));
 				return null;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___CMD_ANGULAR_VELOCITY__DOUBLE:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___CMD_ANGULAR_VELOCITY__DOUBLE:
 				cmdAngularVelocity((Double)arguments.get(0));
 				return null;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___CMD_VELOCITIES__DOUBLE_DOUBLE:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___CMD_VELOCITIES__DOUBLE_DOUBLE:
 				cmdVelocities((Double)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM___DISPOSE:
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM___DISPOSE:
 				dispose();
 				return null;
 		}

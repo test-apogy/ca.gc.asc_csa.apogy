@@ -8,7 +8,7 @@
  * Contributors:
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.symphony.common.topology.ui.viewer.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.internal;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -18,7 +18,7 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.symphony.common.topology.ui.viewer.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator;
 
 /**
  * The images provided by the debug plugin.

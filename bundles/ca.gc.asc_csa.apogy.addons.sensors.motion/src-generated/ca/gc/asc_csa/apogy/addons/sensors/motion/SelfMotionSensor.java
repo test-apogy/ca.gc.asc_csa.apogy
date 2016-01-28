@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion;
+package ca.gc.asc_csa.apogy.addons.sensors.motion;
 
-import org.eclipse.symphony.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.sensors.Sensor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getSelfMotionSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#getSelfMotionSensor()
  * @model
  * @generated
  */

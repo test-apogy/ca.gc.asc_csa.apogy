@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.examples.lidar.symphony.util.Symphony__ExamplesLidarSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.util.ApogyExamplesLidarApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -31,7 +31,7 @@ import org.eclipse.symphony.examples.lidar.symphony.util.Symphony__ExamplesLidar
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLidarSymphonyItemProviderAdapterFactory extends Symphony__ExamplesLidarSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+public class ApogyExamplesLidarApogyItemProviderAdapterFactory extends ApogyExamplesLidarApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -63,7 +63,7 @@ public class Symphony__ExamplesLidarSymphonyItemProviderAdapterFactory extends S
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLidarSymphonyItemProviderAdapterFactory()
+  public ApogyExamplesLidarApogyItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -73,30 +73,30 @@ public class Symphony__ExamplesLidarSymphonyItemProviderAdapterFactory extends S
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LidarSymphonySystemApiAdapterItemProvider lidarSymphonySystemApiAdapterItemProvider;
+	protected LidarApogySystemApiAdapterItemProvider lidarApogySystemApiAdapterItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLidarSymphonySystemApiAdapterAdapter() {
-		if (lidarSymphonySystemApiAdapterItemProvider == null) {
-			lidarSymphonySystemApiAdapterItemProvider = new LidarSymphonySystemApiAdapterItemProvider(this);
+	public Adapter createLidarApogySystemApiAdapterAdapter() {
+		if (lidarApogySystemApiAdapterItemProvider == null) {
+			lidarApogySystemApiAdapterItemProvider = new LidarApogySystemApiAdapterItemProvider(this);
 		}
 
-		return lidarSymphonySystemApiAdapterItemProvider;
+		return lidarApogySystemApiAdapterItemProvider;
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.lidar.symphony.LidarData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,7 +104,7 @@ public class Symphony__ExamplesLidarSymphonyItemProviderAdapterFactory extends S
 	protected LidarDataItemProvider lidarDataItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.lidar.symphony.LidarData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -226,7 +226,7 @@ public class Symphony__ExamplesLidarSymphonyItemProviderAdapterFactory extends S
 	 */
   public void dispose()
   {
-		if (lidarSymphonySystemApiAdapterItemProvider != null) lidarSymphonySystemApiAdapterItemProvider.dispose();
+		if (lidarApogySystemApiAdapterItemProvider != null) lidarApogySystemApiAdapterItemProvider.dispose();
 		if (lidarDataItemProvider != null) lidarDataItemProvider.dispose();
 	}
 

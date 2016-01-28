@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.impl;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -9,41 +9,41 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyFactory;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyFactory;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>PTU Dish Antenna Symphony System Api Adapter</b></em>'. <!--
+ * <em><b>PTU Dish Antenna Apogy System Api Adapter</b></em>'. <!--
  * end-user-doc -->
  *
  * @generated
  */
-public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterImpl
+public class PTUDishAntennaApogySystemApiAdapterImpl extends ApogySystemApiAdapterImpl
 														implements
-														PTUDishAntennaSymphonySystemApiAdapter
+														PTUDishAntennaApogySystemApiAdapter
 {
 	/**
-	 * This is the environment in which the Symphony system operates
+	 * This is the environment in which the Apogy system operates
 	 */
 	protected Environment environment;
 	
 	/**
-	 * This is the core Symphony system and the utilities it provides.
+	 * This is the core Apogy system and the utilities it provides.
 	 */
-	protected SymphonySystem symphonySystem;
+	protected ApogySystem apogySystem;
 	
 	/**
 	 * This is the sun tracker job, which may be available, depending
@@ -55,7 +55,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PTUDishAntennaSymphonySystemApiAdapterImpl()
+	protected PTUDishAntennaApogySystemApiAdapterImpl()
 	{
 		super();
 	}
@@ -67,13 +67,13 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
 	 * This is the callback method that is called by the API adapter
-	 * when the PTU dish antenna instance is being initialized by Symphony.
-	 * @param environment The environment in which Symphony and its components are operating.
+	 * when the PTU dish antenna instance is being initialized by Apogy.
+	 * @param environment The environment in which Apogy and its components are operating.
 	 * @param elementType The type (e.g. class) of the given instance.
 	 * @param instance The instance which is being handled by this API adapter.
 	 */
@@ -93,7 +93,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	/**
 	 * This is the callback method that is called by the API adapter
 	 * when the PTU dish antenna instance is being disposed (i.e. shutdown /
-	 * destroyed) by Symphony
+	 * destroyed) by Apogy
 	 */
 	@Override
 	public void dispose()
@@ -133,7 +133,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 		// Use the relevant factory method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of PTUDishAntennaData
-		return Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE.createPTUDishAntennaData();
+		return ApogyExamplesAntennaApogyFactory.eINSTANCE.createPTUDishAntennaData();
 	}
 	
 	/**
@@ -179,7 +179,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 				if (ptuDishAntennaData.getFov() != null)
 				{
 					// Create a copy of that field of view object
-					ConicalFieldOfView fov = Symphony__AddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(ptuDishAntennaData.getFov());
+					ConicalFieldOfView fov = ApogyAddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(ptuDishAntennaData.getFov());
 					
 					// Update the FOV accordingly
 					this.getPTUDishAntenna().setFov(fov);
@@ -204,7 +204,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 									 "it already is in that state.";
 					
 					// Throw an exception to indicate that the apply() has failed; this will
-					// be caught and logged by Symphony
+					// be caught and logged by Apogy
 					throw new RuntimeException(message);
 				}
 			}
@@ -238,7 +238,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 			if (this.getPTUDishAntenna().getFov() != null)
 			{
 				// Store a copy of it in the initialization data object
-				ptuDishAntennaData.setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(this.getPTUDishAntenna().getFov()));
+				ptuDishAntennaData.setFov(ApogyAddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(this.getPTUDishAntenna().getFov()));
 			}
 			// Otherwise
 			else
@@ -254,7 +254,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 			ptuDishAntennaData.setTrackingSun(this.getPTUDishAntenna().isTrackingSun());
 		}
 	}
-} // PTUDishAntennaSymphonySystemApiAdapterImpl
+} // PTUDishAntennaApogySystemApiAdapterImpl
 
 /**
  * This class is used to implement the sun tracking
@@ -271,14 +271,14 @@ class SunTrackerJob extends Job
 	/**
 	 * This is used to keep track of the relevant API adapter
 	 */
-	private PTUDishAntennaSymphonySystemApiAdapterImpl apiAdapter; 
+	private PTUDishAntennaApogySystemApiAdapterImpl apiAdapter; 
 	
 	/**
 	 * This is the constructor for the SunTrackerJob class
 	 * and as such, performs the required initialization
 	 * and creation operations.
 	 */
-	protected SunTrackerJob(PTUDishAntennaSymphonySystemApiAdapterImpl apiAdapter,
+	protected SunTrackerJob(PTUDishAntennaApogySystemApiAdapterImpl apiAdapter,
 						    String jobName)
 	{
 		// Just call the constructor for the superclass
@@ -306,7 +306,7 @@ class SunTrackerJob extends Job
 				(this.apiAdapter.getPTUDishAntenna().isTrackingSun() == true))
 			{
 				// Get a vector pointing to the sun
-				Tuple3d sunVector = Symphony__CoreEnvironmentFacade.INSTANCE.getSunVector(this.apiAdapter.getSymphonySystem(),
+				Tuple3d sunVector = ApogyCoreEnvironmentFacade.INSTANCE.getSunVector(this.apiAdapter.getApogySystem(),
 																	    	"PTU_DISH_ANTENNA_SYM_SYS_ROOT",
 																	    	this.apiAdapter.getEnvironment());
 			

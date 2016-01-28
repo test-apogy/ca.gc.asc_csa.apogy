@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -24,13 +24,13 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
-import org.eclipse.symphony.examples.satellite.Satellite;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.Satellite} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.Satellite} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class SatelliteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class SatelliteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Satellite_orbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_orbitModel_feature", "_UI_Satellite_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE__ORBIT_MODEL,
+				 ApogyExamplesSatellitePackage.Literals.SATELLITE__ORBIT_MODEL,
 				 true,
 				 false,
 				 true,
@@ -129,7 +129,7 @@ public class SatelliteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Satellite_maximumRollRate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRollRate_feature", "_UI_Satellite_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL_RATE,
+				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL_RATE,
 				 true,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class SatelliteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Satellite_maximumRoll_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRoll_feature", "_UI_Satellite_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL,
+				 ApogyExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL,
 				 true,
 				 false,
 				 false,
@@ -198,9 +198,9 @@ public class SatelliteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Satellite.class)) {
-			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
-			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case ApogyExamplesSatellitePackage.SATELLITE__NAME:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case ApogyExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

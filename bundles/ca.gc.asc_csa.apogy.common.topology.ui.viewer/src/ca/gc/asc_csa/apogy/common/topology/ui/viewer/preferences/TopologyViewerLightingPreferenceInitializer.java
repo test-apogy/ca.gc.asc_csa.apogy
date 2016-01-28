@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.viewer.preferences;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 

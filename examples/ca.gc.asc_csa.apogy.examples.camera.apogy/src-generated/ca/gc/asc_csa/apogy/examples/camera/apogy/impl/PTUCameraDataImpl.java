@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.camera.apogy.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
-import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,8 +17,8 @@ import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSym
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.camera.symphony.impl.PTUCameraDataImpl#getPanAngle <em>Pan Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.symphony.impl.PTUCameraDataImpl#getTiltAngle <em>Tilt Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.apogy.impl.PTUCameraDataImpl#getPanAngle <em>Pan Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.apogy.impl.PTUCameraDataImpl#getTiltAngle <em>Tilt Angle</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,7 +83,7 @@ public class PTUCameraDataImpl extends CameraDataImpl implements PTUCameraData
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesCameraSymphonyPackage.Literals.PTU_CAMERA_DATA;
+		return ApogyExamplesCameraApogyPackage.Literals.PTU_CAMERA_DATA;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class PTUCameraDataImpl extends CameraDataImpl implements PTUCameraData
 		double oldPanAngle = panAngle;
 		panAngle = newPanAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__PAN_ANGLE, oldPanAngle, panAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__PAN_ANGLE, oldPanAngle, panAngle));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class PTUCameraDataImpl extends CameraDataImpl implements PTUCameraData
 		double oldTiltAngle = tiltAngle;
 		tiltAngle = newTiltAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__TILT_ANGLE, oldTiltAngle, tiltAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__TILT_ANGLE, oldTiltAngle, tiltAngle));
 	}
 
 	/**
@@ -137,9 +137,9 @@ public class PTUCameraDataImpl extends CameraDataImpl implements PTUCameraData
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
 				return getPanAngle();
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
 				return getTiltAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -154,10 +154,10 @@ public class PTUCameraDataImpl extends CameraDataImpl implements PTUCameraData
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
 				setPanAngle((Double)newValue);
 				return;
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
 				setTiltAngle((Double)newValue);
 				return;
 		}
@@ -173,10 +173,10 @@ public class PTUCameraDataImpl extends CameraDataImpl implements PTUCameraData
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
 				setPanAngle(PAN_ANGLE_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
 				setTiltAngle(TILT_ANGLE_EDEFAULT);
 				return;
 		}
@@ -192,9 +192,9 @@ public class PTUCameraDataImpl extends CameraDataImpl implements PTUCameraData
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
 				return panAngle != PAN_ANGLE_EDEFAULT;
-			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
+			case ApogyExamplesCameraApogyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
 				return tiltAngle != TILT_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

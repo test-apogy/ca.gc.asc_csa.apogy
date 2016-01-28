@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class HalfWaveDipoleAntennaRadiationPatternImpl extends AbstractAntennaRa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsPackage.Literals.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN;
+		return ApogyAddonsTelecomsPackage.Literals.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN;
 	}
 
 	@Override

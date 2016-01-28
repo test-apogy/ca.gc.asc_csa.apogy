@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,15 +18,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow <em>Number Of Row</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns <em>Number Of Columns</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getXllCenter <em>Xll Center</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getYllCenter <em>Yll Center</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getCellSize <em>Cell Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow <em>Number Of Row</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns <em>Number Of Columns</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getXllCenter <em>Xll Center</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getYllCenter <em>Yll Center</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getCellSize <em>Cell Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASCHeaderData()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Row</em>' attribute.
 	 * @see #setNumberOfRow(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_NumberOfRow()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASCHeaderData_NumberOfRow()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
 	int getNumberOfRow();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow <em>Number Of Row</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow <em>Number Of Row</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Number Of Row</em>' attribute.
@@ -69,14 +69,14 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Columns</em>' attribute.
 	 * @see #setNumberOfColumns(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_NumberOfColumns()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASCHeaderData_NumberOfColumns()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
 	int getNumberOfColumns();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns <em>Number Of Columns</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns <em>Number Of Columns</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Number Of Columns</em>' attribute.
@@ -96,14 +96,14 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xll Center</em>' attribute.
 	 * @see #setXllCenter(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_XllCenter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASCHeaderData_XllCenter()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getXllCenter();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getXllCenter <em>Xll Center</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getXllCenter <em>Xll Center</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Xll Center</em>' attribute.
@@ -123,14 +123,14 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Yll Center</em>' attribute.
 	 * @see #setYllCenter(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_YllCenter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASCHeaderData_YllCenter()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getYllCenter();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getYllCenter <em>Yll Center</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getYllCenter <em>Yll Center</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Yll Center</em>' attribute.
@@ -150,15 +150,15 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cell Size</em>' attribute.
 	 * @see #setCellSize(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_CellSize()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASCHeaderData_CellSize()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getCellSize();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getCellSize <em>Cell Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getCellSize <em>Cell Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cell Size</em>' attribute.
@@ -178,14 +178,14 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>No Data Value</em>' attribute.
 	 * @see #setNoDataValue(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_NoDataValue()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage#getASCHeaderData_NoDataValue()
 	 * @model default="-9999" unique="false"
 	 * @generated
 	 */
 	double getNoDataValue();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>No Data Value</em>' attribute.

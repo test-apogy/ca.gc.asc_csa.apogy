@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -13,34 +13,34 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.environment.orbit.earth.*;
-import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
-import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
-import org.eclipse.symphony.core.environment.orbit.earth.EphemerisType;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationList;
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.TLE;
-import org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EphemerisType;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 import org.orekit.attitudes.AttitudeProvider;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
@@ -65,24 +65,24 @@ import org.orekit.utils.TimeStampedPVCoordinates;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl implements Symphony__CoreEnvironmentOrbitEarthFactory {
+public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl implements ApogyCoreEnvironmentOrbitEarthFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CoreEnvironmentOrbitEarthFactory init() {
+	public static ApogyCoreEnvironmentOrbitEarthFactory init() {
 		try {
-			Symphony__CoreEnvironmentOrbitEarthFactory theSymphony__CoreEnvironmentOrbitEarthFactory = (Symphony__CoreEnvironmentOrbitEarthFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreEnvironmentOrbitEarthPackage.eNS_URI);
-			if (theSymphony__CoreEnvironmentOrbitEarthFactory != null) {
-				return theSymphony__CoreEnvironmentOrbitEarthFactory;
+			ApogyCoreEnvironmentOrbitEarthFactory theApogyCoreEnvironmentOrbitEarthFactory = (ApogyCoreEnvironmentOrbitEarthFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
+			if (theApogyCoreEnvironmentOrbitEarthFactory != null) {
+				return theApogyCoreEnvironmentOrbitEarthFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreEnvironmentOrbitEarthFactoryImpl();
+		return new ApogyCoreEnvironmentOrbitEarthFactoryImpl();
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthFactoryImpl() {
+	public ApogyCoreEnvironmentOrbitEarthFactoryImpl() {
 		super();
 	}
 
@@ -103,31 +103,31 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE: return createOreKitBackedSpacecraftState();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_FRAME: return createOreKitBackedFrame();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.NADIR_POINTING_ATTITUDE_PROVIDER: return createNadirPointingAttitudeProvider();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE: return createEarthOrbitWorksite();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY: return createEarthOrbitSky();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT: return createKeplerianEarthOrbit();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT: return createCartesianEarthOrbit();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK: return createConstantElevationMask();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT_PROPAGATOR: return createKeplerianEarthOrbitPropagator();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR: return createTLEEarthOrbitPropagator();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: return createURLBasedTLEEarthOrbitPropagator();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE: return createTLE();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: return createEarthSurfaceLocationList();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: return createGroundStationReferencesList();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION: return createGroundStation();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: return createGroundStationList();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS: return createVisibilityPass();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY: return createVisibilityPassSpacecraftPositionHistory();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION: return createVisibilityPassSpacecraftPosition();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET: return createSpacecraftsVisibilitySet();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT: return createCorridorPoint();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR: return createCorridor();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR: return createSpacecraftSwathCorridor();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: return createSymphony__CoreEnvironmentOrbitEarthFacade();
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE: return createOreKitBackedSpacecraftState();
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_FRAME: return createOreKitBackedFrame();
+			case ApogyCoreEnvironmentOrbitEarthPackage.NADIR_POINTING_ATTITUDE_PROVIDER: return createNadirPointingAttitudeProvider();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE: return createEarthOrbitWorksite();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY: return createEarthOrbitSky();
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT: return createKeplerianEarthOrbit();
+			case ApogyCoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT: return createCartesianEarthOrbit();
+			case ApogyCoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK: return createConstantElevationMask();
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT_PROPAGATOR: return createKeplerianEarthOrbitPropagator();
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR: return createTLEEarthOrbitPropagator();
+			case ApogyCoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: return createURLBasedTLEEarthOrbitPropagator();
+			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: return createTLE();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: return createEarthSurfaceLocationList();
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: return createGroundStationReferencesList();
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION: return createGroundStation();
+			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: return createGroundStationList();
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS: return createVisibilityPass();
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY: return createVisibilityPassSpacecraftPositionHistory();
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION: return createVisibilityPassSpacecraftPosition();
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET: return createSpacecraftsVisibilitySet();
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT: return createCorridorPoint();
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR: return createCorridor();
+			case ApogyCoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR: return createSpacecraftSwathCorridor();
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: return createApogyCoreEnvironmentOrbitEarthFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -141,53 +141,53 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
 				return createEphemerisTypeFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.LIST:
+			case ApogyCoreEnvironmentOrbitEarthPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.MAP:
+			case ApogyCoreEnvironmentOrbitEarthPackage.MAP:
 				return createMapFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EXCEPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SORTED_SET:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ROTATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ROTATION:
 				return createRotationFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
 				return createOreKitFrameFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES:
 				return createOreKitTimeStampedAngularCoordinatesFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_PV_COORDINATES:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_PV_COORDINATES:
 				return createOreKitTimeStampedPVCoordinatesFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_SPACECRAFT_STATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_SPACECRAFT_STATE:
 				return createOreKitSpacecraftStateFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ABSOLUTE_DATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ABSOLUTE_DATE:
 				return createAbsoluteDateFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ORBIT:
 				return createOreKitOrbitFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_ORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_ORBIT:
 				return createOreKitKeplerianOrbitFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_CARTESIAN_ORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_CARTESIAN_ORBIT:
 				return createOreKitCartesianOrbitFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ELEVATION_MASK:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ELEVATION_MASK:
 				return createOreKitElevationMaskFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ATTITUDE_PROVIDER:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ATTITUDE_PROVIDER:
 				return createOreKitAttitudeProviderFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_PROPAGATOR:
 				return createOreKitPropagatorFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_DSST_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_DSST_PROPAGATOR:
 				return createOreKitDSSTPropagatorFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR:
 				return createOreKitEcksteinHechlerPropagatorFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_EPHEMERIS_PROGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_EPHEMERIS_PROGATOR:
 				return createOreKitEphemerisProgatorFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_PROPAGATOR:
 				return createOreKitKeplerianPropagatorFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_NUMERICAL_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_NUMERICAL_PROPAGATOR:
 				return createOreKitNumericalPropagatorFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE_PROPAGATOR:
 				return createOreKitTLEPropagatorFromString(eDataType, initialValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE:
 				return createOreKitTLEFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -202,53 +202,53 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EPHEMERIS_TYPE:
 				return convertEphemerisTypeToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.LIST:
+			case ApogyCoreEnvironmentOrbitEarthPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.MAP:
+			case ApogyCoreEnvironmentOrbitEarthPackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EXCEPTION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SORTED_SET:
+			case ApogyCoreEnvironmentOrbitEarthPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ROTATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ROTATION:
 				return convertRotationToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_FRAME:
 				return convertOreKitFrameToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES:
 				return convertOreKitTimeStampedAngularCoordinatesToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_PV_COORDINATES:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TIME_STAMPED_PV_COORDINATES:
 				return convertOreKitTimeStampedPVCoordinatesToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_SPACECRAFT_STATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_SPACECRAFT_STATE:
 				return convertOreKitSpacecraftStateToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ABSOLUTE_DATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ABSOLUTE_DATE:
 				return convertAbsoluteDateToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ORBIT:
 				return convertOreKitOrbitToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_ORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_ORBIT:
 				return convertOreKitKeplerianOrbitToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_CARTESIAN_ORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_CARTESIAN_ORBIT:
 				return convertOreKitCartesianOrbitToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ELEVATION_MASK:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ELEVATION_MASK:
 				return convertOreKitElevationMaskToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ATTITUDE_PROVIDER:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ATTITUDE_PROVIDER:
 				return convertOreKitAttitudeProviderToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_PROPAGATOR:
 				return convertOreKitPropagatorToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_DSST_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_DSST_PROPAGATOR:
 				return convertOreKitDSSTPropagatorToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR:
 				return convertOreKitEcksteinHechlerPropagatorToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_EPHEMERIS_PROGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_EPHEMERIS_PROGATOR:
 				return convertOreKitEphemerisProgatorToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_KEPLERIAN_PROPAGATOR:
 				return convertOreKitKeplerianPropagatorToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_NUMERICAL_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_NUMERICAL_PROPAGATOR:
 				return convertOreKitNumericalPropagatorToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE_PROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE_PROPAGATOR:
 				return convertOreKitTLEPropagatorToString(eDataType, instanceValue);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_TLE:
 				return convertOreKitTLEToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -500,9 +500,9 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthFacade createSymphony__CoreEnvironmentOrbitEarthFacade() {
-		Symphony__CoreEnvironmentOrbitEarthFacadeImpl symphony__CoreEnvironmentOrbitEarthFacade = new Symphony__CoreEnvironmentOrbitEarthFacadeImpl();
-		return symphony__CoreEnvironmentOrbitEarthFacade;
+	public ApogyCoreEnvironmentOrbitEarthFacade createApogyCoreEnvironmentOrbitEarthFacade() {
+		ApogyCoreEnvironmentOrbitEarthFacadeImpl apogy__CoreEnvironmentOrbitEarthFacade = new ApogyCoreEnvironmentOrbitEarthFacadeImpl();
+		return apogy__CoreEnvironmentOrbitEarthFacade;
 	}
 
 	/**
@@ -944,8 +944,8 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthPackage getSymphony__CoreEnvironmentOrbitEarthPackage() {
-		return (Symphony__CoreEnvironmentOrbitEarthPackage)getEPackage();
+	public ApogyCoreEnvironmentOrbitEarthPackage getApogyCoreEnvironmentOrbitEarthPackage() {
+		return (ApogyCoreEnvironmentOrbitEarthPackage)getEPackage();
 	}
 
 	/**
@@ -955,8 +955,8 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CoreEnvironmentOrbitEarthPackage getPackage() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.eINSTANCE;
+	public static ApogyCoreEnvironmentOrbitEarthPackage getPackage() {
+		return ApogyCoreEnvironmentOrbitEarthPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreEnvironmentOrbitEarthFactoryImpl
+} //ApogyCoreEnvironmentOrbitEarthFactoryImpl

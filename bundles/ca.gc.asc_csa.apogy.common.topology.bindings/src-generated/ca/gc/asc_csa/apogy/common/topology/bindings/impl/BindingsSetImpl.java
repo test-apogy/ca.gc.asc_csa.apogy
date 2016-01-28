@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 
 /**
@@ -28,8 +28,8 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl#getFeatureRootsList <em>Feature Roots List</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl#getBindingsList <em>Bindings List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsSetImpl#getFeatureRootsList <em>Feature Roots List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsSetImpl#getBindingsList <em>Bindings List</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,7 +72,7 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET;
+		return ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_SET;
 	}
 
   /**
@@ -85,7 +85,7 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
 	  FeatureRootsList tmp = getFeatureRootsListGen();	  
 	  if(tmp == null)
 	  {
-		  tmp = Symphony__CommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList();
+		  tmp = ApogyCommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList();
 		  setFeatureRootsList(tmp);
 	  }
 	  return tmp;
@@ -111,7 +111,7 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
 		FeatureRootsList oldFeatureRootsList = featureRootsList;
 		featureRootsList = newFeatureRootsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, oldFeatureRootsList, newFeatureRootsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, oldFeatureRootsList, newFeatureRootsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -127,14 +127,14 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
 		if (newFeatureRootsList != featureRootsList) {
 			NotificationChain msgs = null;
 			if (featureRootsList != null)
-				msgs = ((InternalEObject)featureRootsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, null, msgs);
+				msgs = ((InternalEObject)featureRootsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, null, msgs);
 			if (newFeatureRootsList != null)
-				msgs = ((InternalEObject)newFeatureRootsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, null, msgs);
+				msgs = ((InternalEObject)newFeatureRootsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, null, msgs);
 			msgs = basicSetFeatureRootsList(newFeatureRootsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, newFeatureRootsList, newFeatureRootsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST, newFeatureRootsList, newFeatureRootsList));
 	}
 
   /**
@@ -147,7 +147,7 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
 	  BindingsList tmp = getBindingsListGen();
 	  if(tmp == null)
 	  {
-		  tmp = Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsList();
+		  tmp = ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsList();
 		  setBindingsList(tmp);
 	  }
 			  
@@ -174,7 +174,7 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
 		BindingsList oldBindingsList = bindingsList;
 		bindingsList = newBindingsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, oldBindingsList, newBindingsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, oldBindingsList, newBindingsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -190,14 +190,14 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
 		if (newBindingsList != bindingsList) {
 			NotificationChain msgs = null;
 			if (bindingsList != null)
-				msgs = ((InternalEObject)bindingsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, null, msgs);
+				msgs = ((InternalEObject)bindingsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, null, msgs);
 			if (newBindingsList != null)
-				msgs = ((InternalEObject)newBindingsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, null, msgs);
+				msgs = ((InternalEObject)newBindingsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, null, msgs);
 			msgs = basicSetBindingsList(newBindingsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, newBindingsList, newBindingsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST, newBindingsList, newBindingsList));
 	}
 
   /**
@@ -250,9 +250,9 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
 				return basicSetFeatureRootsList(null, msgs);
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
 				return basicSetBindingsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -267,9 +267,9 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
 				return getFeatureRootsList();
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
 				return getBindingsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -284,10 +284,10 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
 				setFeatureRootsList((FeatureRootsList)newValue);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
 				setBindingsList((BindingsList)newValue);
 				return;
 		}
@@ -303,10 +303,10 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
 				setFeatureRootsList((FeatureRootsList)null);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
 				setBindingsList((BindingsList)null);
 				return;
 		}
@@ -322,9 +322,9 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
 				return featureRootsList != null;
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
 				return bindingsList != null;
 		}
 		return super.eIsSet(featureID);
@@ -339,10 +339,10 @@ public class BindingsSetImpl extends MinimalEObjectImpl.Container implements Bin
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET___BIND:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET___BIND:
 				bind();
 				return null;
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET___UNBIND:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET___UNBIND:
 				unbind();
 				return null;
 		}

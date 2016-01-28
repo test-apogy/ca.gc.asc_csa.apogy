@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.impl;
+package ca.gc.asc_csa.apogy.examples.lander.impl;
 
 import javax.vecmath.Matrix3d;
 
@@ -9,8 +9,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,10 +20,10 @@ import org.eclipse.symphony.examples.lander.Position;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getZ <em>Z</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getAttitude <em>Attitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl#getZ <em>Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.lander.impl.PositionImpl#getAttitude <em>Attitude</em>}</li>
  * </ul>
  *
  * @generated
@@ -128,7 +128,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__ExamplesLanderPackage.Literals.POSITION;
+		return ApogyExamplesLanderPackage.Literals.POSITION;
 	}
 
   /**
@@ -151,7 +151,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.POSITION__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.POSITION__X, oldX, x));
 	}
 
   /**
@@ -174,7 +174,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.POSITION__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.POSITION__Y, oldY, y));
 	}
 
   /**
@@ -197,7 +197,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldZ = z;
 		z = newZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.POSITION__Z, oldZ, z));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.POSITION__Z, oldZ, z));
 	}
 
   /**
@@ -238,7 +238,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		Matrix3d oldAttitude = attitude;
 		attitude = newAttitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderPackage.POSITION__ATTITUDE, oldAttitude, attitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesLanderPackage.POSITION__ATTITUDE, oldAttitude, attitude));
 	}
 
   /**
@@ -250,13 +250,13 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.POSITION__X:
+			case ApogyExamplesLanderPackage.POSITION__X:
 				return getX();
-			case Symphony__ExamplesLanderPackage.POSITION__Y:
+			case ApogyExamplesLanderPackage.POSITION__Y:
 				return getY();
-			case Symphony__ExamplesLanderPackage.POSITION__Z:
+			case ApogyExamplesLanderPackage.POSITION__Z:
 				return getZ();
-			case Symphony__ExamplesLanderPackage.POSITION__ATTITUDE:
+			case ApogyExamplesLanderPackage.POSITION__ATTITUDE:
 				return getAttitude();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -271,16 +271,16 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.POSITION__X:
+			case ApogyExamplesLanderPackage.POSITION__X:
 				setX((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.POSITION__Y:
+			case ApogyExamplesLanderPackage.POSITION__Y:
 				setY((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.POSITION__Z:
+			case ApogyExamplesLanderPackage.POSITION__Z:
 				setZ((Double)newValue);
 				return;
-			case Symphony__ExamplesLanderPackage.POSITION__ATTITUDE:
+			case ApogyExamplesLanderPackage.POSITION__ATTITUDE:
 				setAttitude((Matrix3d)newValue);
 				return;
 		}
@@ -296,16 +296,16 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.POSITION__X:
+			case ApogyExamplesLanderPackage.POSITION__X:
 				setX(X_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.POSITION__Y:
+			case ApogyExamplesLanderPackage.POSITION__Y:
 				setY(Y_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.POSITION__Z:
+			case ApogyExamplesLanderPackage.POSITION__Z:
 				setZ(Z_EDEFAULT);
 				return;
-			case Symphony__ExamplesLanderPackage.POSITION__ATTITUDE:
+			case ApogyExamplesLanderPackage.POSITION__ATTITUDE:
 				setAttitude(ATTITUDE_EDEFAULT);
 				return;
 		}
@@ -321,13 +321,13 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__ExamplesLanderPackage.POSITION__X:
+			case ApogyExamplesLanderPackage.POSITION__X:
 				return x != X_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.POSITION__Y:
+			case ApogyExamplesLanderPackage.POSITION__Y:
 				return y != Y_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.POSITION__Z:
+			case ApogyExamplesLanderPackage.POSITION__Z:
 				return z != Z_EDEFAULT;
-			case Symphony__ExamplesLanderPackage.POSITION__ATTITUDE:
+			case ApogyExamplesLanderPackage.POSITION__ATTITUDE:
 				return ATTITUDE_EDEFAULT == null ? attitude != null : !ATTITUDE_EDEFAULT.equals(attitude);
 		}
 		return super.eIsSet(featureID);

@@ -1,24 +1,24 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.util;
+package ca.gc.asc_csa.apogy.examples.rover.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.examples.rover.*;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.examples.rover.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage
  * @generated
  */
-public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesRoverAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -26,7 +26,7 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesRoverPackage modelPackage;
+  protected static ApogyExamplesRoverPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -34,10 +34,10 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoverAdapterFactory()
+  public ApogyExamplesRoverAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesRoverPackage.eINSTANCE;
+			modelPackage = ApogyExamplesRoverPackage.eINSTANCE;
 		}
 	}
 
@@ -67,8 +67,8 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesRoverSwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesRoverSwitch<Adapter>() {
+  protected ApogyExamplesRoverSwitch<Adapter> modelSwitch =
+    new ApogyExamplesRoverSwitch<Adapter>() {
 			@Override
 			public Adapter caseBattery(Battery object) {
 				return createBatteryAdapter();
@@ -115,13 +115,13 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.rover.Battery <em>Battery</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.rover.Battery <em>Battery</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.rover.Battery
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Battery
 	 * @generated
 	 */
 	public Adapter createBatteryAdapter() {
@@ -129,13 +129,13 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.rover.PowerSystem <em>Power System</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.rover.PowerSystem <em>Power System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.rover.PowerSystem
+	 * @see ca.gc.asc_csa.apogy.examples.rover.PowerSystem
 	 * @generated
 	 */
 	public Adapter createPowerSystemAdapter() {
@@ -143,13 +143,13 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.rover.Rover <em>Rover</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.rover.Rover <em>Rover</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.rover.Rover
+	 * @see ca.gc.asc_csa.apogy.examples.rover.Rover
 	 * @generated
 	 */
   public Adapter createRoverAdapter()
@@ -158,13 +158,13 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.rover.RoverStub <em>Rover Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.rover.RoverStub <em>Rover Stub</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.rover.RoverStub
+	 * @see ca.gc.asc_csa.apogy.examples.rover.RoverStub
 	 * @generated
 	 */
   public Adapter createRoverStubAdapter()
@@ -173,13 +173,13 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.rover.RoverSimulated <em>Rover Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.rover.RoverSimulated <em>Rover Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.rover.RoverSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.rover.RoverSimulated
 	 * @generated
 	 */
 	public Adapter createRoverSimulatedAdapter() {
@@ -187,13 +187,13 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Disposable <em>Disposable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Disposable <em>Disposable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Disposable
+	 * @see ca.gc.asc_csa.apogy.common.emf.Disposable
 	 * @generated
 	 */
 	public Adapter createDisposableAdapter() {
@@ -213,4 +213,4 @@ public class Symphony__ExamplesRoverAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__ExamplesRoverAdapterFactory
+} //ApogyExamplesRoverAdapterFactory

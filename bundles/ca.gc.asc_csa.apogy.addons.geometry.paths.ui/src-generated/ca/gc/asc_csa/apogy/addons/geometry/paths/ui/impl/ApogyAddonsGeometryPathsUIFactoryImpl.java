@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIFactory;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +21,24 @@ import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsGeometryPathsUIFactoryImpl extends EFactoryImpl implements Symphony__AddonsGeometryPathsUIFactory {
+public class ApogyAddonsGeometryPathsUIFactoryImpl extends EFactoryImpl implements ApogyAddonsGeometryPathsUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsGeometryPathsUIFactory init() {
+	public static ApogyAddonsGeometryPathsUIFactory init() {
 		try {
-			Symphony__AddonsGeometryPathsUIFactory theSymphony__AddonsGeometryPathsUIFactory = (Symphony__AddonsGeometryPathsUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsGeometryPathsUIPackage.eNS_URI);
-			if (theSymphony__AddonsGeometryPathsUIFactory != null) {
-				return theSymphony__AddonsGeometryPathsUIFactory;
+			ApogyAddonsGeometryPathsUIFactory theApogyAddonsGeometryPathsUIFactory = (ApogyAddonsGeometryPathsUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsGeometryPathsUIPackage.eNS_URI);
+			if (theApogyAddonsGeometryPathsUIFactory != null) {
+				return theApogyAddonsGeometryPathsUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsGeometryPathsUIFactoryImpl();
+		return new ApogyAddonsGeometryPathsUIFactoryImpl();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Symphony__AddonsGeometryPathsUIFactoryImpl extends EFactoryImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsUIFactoryImpl() {
+	public ApogyAddonsGeometryPathsUIFactoryImpl() {
 		super();
 	}
 
@@ -59,8 +59,8 @@ public class Symphony__AddonsGeometryPathsUIFactoryImpl extends EFactoryImpl imp
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION: return createWayPointPathPresentation();
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PRESENTATION: return createWayPointPresentation();
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION: return createWayPointPathPresentation();
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PRESENTATION: return createWayPointPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -74,7 +74,7 @@ public class Symphony__AddonsGeometryPathsUIFactoryImpl extends EFactoryImpl imp
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsGeometryPathsUIPackage.PATH_PRESENTATION_MODE:
+			case ApogyAddonsGeometryPathsUIPackage.PATH_PRESENTATION_MODE:
 				return createPathPresentationModeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -89,7 +89,7 @@ public class Symphony__AddonsGeometryPathsUIFactoryImpl extends EFactoryImpl imp
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsGeometryPathsUIPackage.PATH_PRESENTATION_MODE:
+			case ApogyAddonsGeometryPathsUIPackage.PATH_PRESENTATION_MODE:
 				return convertPathPresentationModeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -141,8 +141,8 @@ public class Symphony__AddonsGeometryPathsUIFactoryImpl extends EFactoryImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsUIPackage getSymphony__AddonsGeometryPathsUIPackage() {
-		return (Symphony__AddonsGeometryPathsUIPackage)getEPackage();
+	public ApogyAddonsGeometryPathsUIPackage getApogyAddonsGeometryPathsUIPackage() {
+		return (ApogyAddonsGeometryPathsUIPackage)getEPackage();
 	}
 
 	/**
@@ -152,8 +152,8 @@ public class Symphony__AddonsGeometryPathsUIFactoryImpl extends EFactoryImpl imp
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsGeometryPathsUIPackage getPackage() {
-		return Symphony__AddonsGeometryPathsUIPackage.eINSTANCE;
+	public static ApogyAddonsGeometryPathsUIPackage getPackage() {
+		return ApogyAddonsGeometryPathsUIPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsGeometryPathsUIFactoryImpl
+} //ApogyAddonsGeometryPathsUIFactoryImpl

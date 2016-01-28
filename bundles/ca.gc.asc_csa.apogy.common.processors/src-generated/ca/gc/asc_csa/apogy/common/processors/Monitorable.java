@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors;
+package ca.gc.asc_csa.apogy.common.processors;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 
@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.processors.Monitorable#getProgressMonitor <em>Progress Monitor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.Monitorable#getProgressMonitor <em>Progress Monitor</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getMonitorable()
+ * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getMonitorable()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -38,15 +38,15 @@ public interface Monitorable extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Progress Monitor</em>' attribute.
 	 * @see #setProgressMonitor(IProgressMonitor)
-	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getMonitorable_ProgressMonitor()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.processors.IProgressMonitor" transient="true"
+	 * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getMonitorable_ProgressMonitor()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.processors.IProgressMonitor" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	IProgressMonitor getProgressMonitor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.processors.Monitorable#getProgressMonitor <em>Progress Monitor</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable#getProgressMonitor <em>Progress Monitor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Progress Monitor</em>' attribute.

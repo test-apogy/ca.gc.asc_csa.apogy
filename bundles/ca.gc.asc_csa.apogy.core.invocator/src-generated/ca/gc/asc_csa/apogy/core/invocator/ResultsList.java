@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +22,10 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.ResultsList#getResults <em>Results</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList#getResults <em>Results</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsList()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getResultsList()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -33,8 +33,8 @@ public interface ResultsList extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Results</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.AbstractResult}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.AbstractResult#getResultsList <em>Results List</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getResultsList <em>Results List</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Results</em>' containment reference list isn't clear,
@@ -42,8 +42,8 @@ public interface ResultsList extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Results</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsList_Results()
-	 * @see org.eclipse.symphony.core.invocator.AbstractResult#getResultsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getResultsList_Results()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractResult#getResultsList
 	 * @model opposite="resultsList" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' createChild='false'"
 	 * @generated

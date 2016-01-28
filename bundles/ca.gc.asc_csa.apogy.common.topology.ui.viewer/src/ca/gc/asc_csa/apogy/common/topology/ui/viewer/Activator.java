@@ -4,15 +4,15 @@
  *
  * $Id: Activator.java,v 1.6.2.4.2.5 2015/09/22 18:18:46 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.ui.viewer;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer;
 
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerFactory;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
-import org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -25,7 +25,7 @@ import org.osgi.framework.BundleContext;
  */
 public final class Activator extends AbstractUIPlugin implements BundleActivator, IPropertyChangeListener 
 {
-	public static final String ID = "org.eclipse.symphony.common.topology.ui.viewer";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.ui.viewer";
 
 	private static BundleContext context;
 
@@ -81,7 +81,7 @@ public final class Activator extends AbstractUIPlugin implements BundleActivator
 	{
 		if(topologyViewerRegistry == null)
 		{
-			topologyViewerRegistry = Symphony__CommonTopologyUIViewerFactory.eINSTANCE.createTopologyViewerRegistry();
+			topologyViewerRegistry = ApogyCommonTopologyUIViewerFactory.eINSTANCE.createTopologyViewerRegistry();
 			topologyViewerRegistry.setVerbose(true);
 		}
 		return topologyViewerRegistry;

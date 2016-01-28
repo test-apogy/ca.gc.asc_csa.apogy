@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 /**
@@ -22,10 +22,10 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractPlayer()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractPlayer()
  * @model abstract="true"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface AbstractPlayer extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Recording Tools Container</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getPlayer <em>Player</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getPlayer <em>Player</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Recording Tools Container</em>' container reference isn't clear,
@@ -42,15 +42,15 @@ public interface AbstractPlayer extends Named, Described
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recording Tools Container</em>' container reference.
 	 * @see #setRecordingToolsContainer(RecordingToolsContainer)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractPlayer_RecordingToolsContainer()
-	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer#getPlayer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAbstractPlayer_RecordingToolsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getPlayer
 	 * @model opposite="player" transient="false"
 	 * @generated
 	 */
 	RecordingToolsContainer getRecordingToolsContainer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Recording Tools Container</em>' container reference.

@@ -1,30 +1,30 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.util;
+package ca.gc.asc_csa.apogy.common.processors.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.processors.*;
+import ca.gc.asc_csa.apogy.common.processors.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage
+ * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage
  * @generated
  */
-public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonProcessorsAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonProcessorsPackage modelPackage;
+	protected static ApogyCommonProcessorsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -32,9 +32,9 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonProcessorsAdapterFactory() {
+	public ApogyCommonProcessorsAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonProcessorsPackage.eINSTANCE;
+			modelPackage = ApogyCommonProcessorsPackage.eINSTANCE;
 		}
 	}
 
@@ -63,8 +63,8 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonProcessorsSwitch<Adapter> modelSwitch =
-		new Symphony__CommonProcessorsSwitch<Adapter>() {
+	protected ApogyCommonProcessorsSwitch<Adapter> modelSwitch =
+		new ApogyCommonProcessorsSwitch<Adapter>() {
 			@Override
 			public Adapter caseVerboseProvider(VerboseProvider object) {
 				return createVerboseProviderAdapter();
@@ -106,13 +106,13 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -120,13 +120,13 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -134,13 +134,13 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.ProcessorsChain <em>Processors Chain</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain <em>Processors Chain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.ProcessorsChain
+	 * @see ca.gc.asc_csa.apogy.common.processors.ProcessorsChain
 	 * @generated
 	 */
 	public Adapter createProcessorsChainAdapter() {
@@ -148,13 +148,13 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.JobProcessorsChain <em>Job Processors Chain</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain <em>Job Processors Chain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.JobProcessorsChain
+	 * @see ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain
 	 * @generated
 	 */
 	public Adapter createJobProcessorsChainAdapter() {
@@ -162,13 +162,13 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.VerboseProvider
+	 * @see ca.gc.asc_csa.apogy.common.processors.VerboseProvider
 	 * @generated
 	 */
 	public Adapter createVerboseProviderAdapter() {
@@ -187,4 +187,4 @@ public class Symphony__CommonProcessorsAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__CommonProcessorsAdapterFactory
+} //ApogyCommonProcessorsAdapterFactory

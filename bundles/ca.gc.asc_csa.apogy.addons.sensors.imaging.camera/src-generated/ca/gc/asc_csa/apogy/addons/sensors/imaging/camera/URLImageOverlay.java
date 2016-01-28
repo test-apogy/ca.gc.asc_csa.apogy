@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 
 /**
@@ -15,12 +15,12 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getURLImageOverlay()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay_Url()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getURLImageOverlay_Url()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getUrl();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Url</em>' attribute.
@@ -57,7 +57,7 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 
 	/**
 	 * Returns the value of the '<em><b>Image Size Policy</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Image Size Policy</em>' attribute isn't clear,
@@ -68,20 +68,20 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 	 * The image resize policy.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image Size Policy</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy
 	 * @see #setImageSizePolicy(ImageSizePolicy)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay_ImageSizePolicy()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getURLImageOverlay_ImageSizePolicy()
 	 * @model unique="false"
 	 * @generated
 	 */
 	ImageSizePolicy getImageSizePolicy();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Size Policy</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageSizePolicy
 	 * @see #getImageSizePolicy()
 	 * @generated
 	 */
@@ -97,7 +97,7 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image</em>' reference.
 	 * @see #setImage(AbstractEImage)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay_Image()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getURLImageOverlay_Image()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel child='true' property='Readonly'"
 	 * @generated
@@ -105,7 +105,7 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 	AbstractEImage getImage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image</em>' reference.

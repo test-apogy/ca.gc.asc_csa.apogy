@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -8,14 +8,14 @@ import javax.vecmath.Vector2d;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPlane;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.Graph;
 import org.jgrapht.alg.DijkstraShortestPath;
@@ -103,7 +103,7 @@ public class GraphUtilities
 	 */
 	public static WayPointPath getPathThroughPolygonsCentroid(List <CartesianPolygon> polygons)
 	{
-		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
 		Iterator <CartesianPolygon> it = polygons.iterator();
 		while(it.hasNext())
@@ -134,10 +134,10 @@ public class GraphUtilities
 			throw new UnsupportedOperationException("getSimplifiedPathThroughPolygonsCentroid only supported for XY plane !");
 		}
 		
-		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 	
 		// Always add the start of the path to the path.
-		path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(start));
+		path.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(start));
 				
 		// Simplify only if there are enough polygons to work with.
 		if(polygons.size() >= 2)
@@ -151,7 +151,7 @@ public class GraphUtilities
 			polygonsSubPath.add(p1);
 			
 			// Initialize the segment start and end points.						
-			CartesianPositionCoordinates segmentStart = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(start);
+			CartesianPositionCoordinates segmentStart = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(start);
 			CartesianPositionCoordinates segmentEnd = p1.getCentroid();				
 				
 			while(it.hasNext())
@@ -185,7 +185,7 @@ public class GraphUtilities
 		}
 		
 		// Always adds the destination of the path to the path.
-		path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(destination));
+		path.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(destination));
 		
 		return path;
 	}

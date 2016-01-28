@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,9 +17,9 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularVolumeRegionImpl#getZMin <em>ZMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularVolumeRegionImpl#getZMax <em>ZMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularVolumeRegionImpl#getZDimension <em>ZDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularVolumeRegionImpl#getZMin <em>ZMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularVolumeRegionImpl#getZMax <em>ZMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularVolumeRegionImpl#getZDimension <em>ZDimension</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,7 +91,7 @@ public class RectangularVolumeRegionImpl extends RectangularRegionImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_VOLUME_REGION;
+		return ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_VOLUME_REGION;
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class RectangularVolumeRegionImpl extends RectangularRegionImpl implement
 		double oldZMin = zMin;
 		zMin = newZMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN, oldZMin, zMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN, oldZMin, zMin));
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class RectangularVolumeRegionImpl extends RectangularRegionImpl implement
 		double oldZMax = zMax;
 		zMax = newZMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX, oldZMax, zMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX, oldZMax, zMax));
 	}
 
 	/**
@@ -154,11 +154,11 @@ public class RectangularVolumeRegionImpl extends RectangularRegionImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
 				return getZMin();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
 				return getZMax();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZDIMENSION:
 				return getZDimension();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -172,10 +172,10 @@ public class RectangularVolumeRegionImpl extends RectangularRegionImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
 				setZMin((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
 				setZMax((Double)newValue);
 				return;
 		}
@@ -190,10 +190,10 @@ public class RectangularVolumeRegionImpl extends RectangularRegionImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
 				setZMin(ZMIN_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
 				setZMax(ZMAX_EDEFAULT);
 				return;
 		}
@@ -208,11 +208,11 @@ public class RectangularVolumeRegionImpl extends RectangularRegionImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMIN:
 				return zMin != ZMIN_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZMAX:
 				return zMax != ZMAX_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION__ZDIMENSION:
 				return getZDimension() != ZDIMENSION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -3,7 +3,7 @@
  *
  * $Id: OutlierFilterItemProvider.java,v 1.3.4.2 2015/05/21 15:50:28 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.OutlierFilter;
-import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter;
+import ca.gc.asc_csa.apogy.common.processors.provider.ProcessorItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.OutlierFilter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class OutlierFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OutlierFilter_maxDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OutlierFilter_maxDistance_feature", "_UI_OutlierFilter_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.OUTLIER_FILTER__MAX_DISTANCE,
+				 ApogyCommonGeometryData3DPackage.Literals.OUTLIER_FILTER__MAX_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class OutlierFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OutlierFilter.class)) {
-			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
+			case ApogyCommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

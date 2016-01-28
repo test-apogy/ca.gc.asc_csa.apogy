@@ -1,18 +1,18 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.util;
+package ca.gc.asc_csa.apogy.core.environment.orbit.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.AbstractOrbitModel;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.orbit.*;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,17 +24,17 @@ import org.eclipse.symphony.core.environment.orbit.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
+public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreEnvironmentOrbitPackage modelPackage;
+	protected static ApogyCoreEnvironmentOrbitPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -42,9 +42,9 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitSwitch() {
+	public ApogyCoreEnvironmentOrbitSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentOrbitPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentOrbitPackage.eINSTANCE;
 		}
 	}
 
@@ -71,7 +71,7 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE: {
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE: {
 				OrbitWorksite orbitWorksite = (OrbitWorksite)theEObject;
 				T result = caseOrbitWorksite(orbitWorksite);
 				if (result == null) result = caseWorksite(orbitWorksite);
@@ -82,7 +82,7 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME: {
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME: {
 				AbstractFrame abstractFrame = (AbstractFrame)theEObject;
 				T result = caseAbstractFrame(abstractFrame);
 				if (result == null) result = caseNamed(abstractFrame);
@@ -90,13 +90,13 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES: {
+			case ApogyCoreEnvironmentOrbitPackage.PVA_COORDINATES: {
 				PVACoordinates pvaCoordinates = (PVACoordinates)theEObject;
 				T result = casePVACoordinates(pvaCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_PVA_COORDINATES: {
+			case ApogyCoreEnvironmentOrbitPackage.TIMED_STAMPED_PVA_COORDINATES: {
 				TimedStampedPVACoordinates timedStampedPVACoordinates = (TimedStampedPVACoordinates)theEObject;
 				T result = caseTimedStampedPVACoordinates(timedStampedPVACoordinates);
 				if (result == null) result = casePVACoordinates(timedStampedPVACoordinates);
@@ -104,19 +104,19 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.PV_COORDINATES_PROVIDER_PROVIDER: {
+			case ApogyCoreEnvironmentOrbitPackage.PV_COORDINATES_PROVIDER_PROVIDER: {
 				PVCoordinatesProviderProvider pvCoordinatesProviderProvider = (PVCoordinatesProviderProvider)theEObject;
 				T result = casePVCoordinatesProviderProvider(pvCoordinatesProviderProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES: {
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES: {
 				AngularCoordinates angularCoordinates = (AngularCoordinates)theEObject;
 				T result = caseAngularCoordinates(angularCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES: {
+			case ApogyCoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES: {
 				TimedStampedAngularCoordinates timedStampedAngularCoordinates = (TimedStampedAngularCoordinates)theEObject;
 				T result = caseTimedStampedAngularCoordinates(timedStampedAngularCoordinates);
 				if (result == null) result = caseAngularCoordinates(timedStampedAngularCoordinates);
@@ -124,27 +124,27 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE: {
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE: {
 				SpacecraftAttitude spacecraftAttitude = (SpacecraftAttitude)theEObject;
 				T result = caseSpacecraftAttitude(spacecraftAttitude);
 				if (result == null) result = caseTimed(spacecraftAttitude);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.ATTITUDE_PROVIDER: {
+			case ApogyCoreEnvironmentOrbitPackage.ATTITUDE_PROVIDER: {
 				AttitudeProvider attitudeProvider = (AttitudeProvider)theEObject;
 				T result = caseAttitudeProvider(attitudeProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE: {
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE: {
 				SpacecraftState spacecraftState = (SpacecraftState)theEObject;
 				T result = caseSpacecraftState(spacecraftState);
 				if (result == null) result = caseTimed(spacecraftState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT: {
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT: {
 				Orbit orbit = (Orbit)theEObject;
 				T result = caseOrbit(orbit);
 				if (result == null) result = caseNamed(orbit);
@@ -153,7 +153,7 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR: {
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR: {
 				AbstractOrbitPropagator abstractOrbitPropagator = (AbstractOrbitPropagator)theEObject;
 				T result = caseAbstractOrbitPropagator(abstractOrbitPropagator);
 				if (result == null) result = caseNamed(abstractOrbitPropagator);
@@ -161,7 +161,7 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL: {
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_MODEL: {
 				OrbitModel orbitModel = (OrbitModel)theEObject;
 				T result = caseOrbitModel(orbitModel);
 				if (result == null) result = caseAbstractOrbitModel(orbitModel);
@@ -170,9 +170,9 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE: {
-				Symphony__CoreEnvironmentOrbitFacade symphony__CoreEnvironmentOrbitFacade = (Symphony__CoreEnvironmentOrbitFacade)theEObject;
-				T result = caseSymphony__CoreEnvironmentOrbitFacade(symphony__CoreEnvironmentOrbitFacade);
+			case ApogyCoreEnvironmentOrbitPackage.APOGY_CORE_ENVIRONMENT_ORBIT_FACADE: {
+				ApogyCoreEnvironmentOrbitFacade apogy__CoreEnvironmentOrbitFacade = (ApogyCoreEnvironmentOrbitFacade)theEObject;
+				T result = caseApogyCoreEnvironmentOrbitFacade(apogy__CoreEnvironmentOrbitFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -386,7 +386,7 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreEnvironmentOrbitFacade(Symphony__CoreEnvironmentOrbitFacade object) {
+	public T caseApogyCoreEnvironmentOrbitFacade(ApogyCoreEnvironmentOrbitFacade object) {
 		return null;
 	}
 
@@ -496,4 +496,4 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentOrbitSwitch
+} //ApogyCoreEnvironmentOrbitSwitch

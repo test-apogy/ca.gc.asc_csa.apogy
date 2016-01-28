@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.MoonImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.MoonImpl#getRadius <em>Radius</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,7 +63,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.MOON;
+		return ApogyCoreEnvironmentPackage.Literals.MOON;
 	}
 
   /**
@@ -86,7 +86,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MOON__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.MOON__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -98,7 +98,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
+			case ApogyCoreEnvironmentPackage.MOON__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
+			case ApogyCoreEnvironmentPackage.MOON__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
+			case ApogyCoreEnvironmentPackage.MOON__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
+			case ApogyCoreEnvironmentPackage.MOON__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

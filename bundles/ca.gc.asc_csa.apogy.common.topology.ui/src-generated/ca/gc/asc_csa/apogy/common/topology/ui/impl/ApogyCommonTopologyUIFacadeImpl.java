@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,18 +13,18 @@ import javax.vecmath.Vector3f;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.Activator;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.AbstractNodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,15 +33,15 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory
  *
  * @generated
  */
-public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonTopologyUIFacade 
+public class ApogyCommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonTopologyUIFacade 
 {
-	private static Symphony__CommonTopologyUIFacade instance = null;
+	private static ApogyCommonTopologyUIFacade instance = null;
 
-	public static Symphony__CommonTopologyUIFacade getInstance() 
+	public static ApogyCommonTopologyUIFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CommonTopologyUIFacadeImpl();
+			instance = new ApogyCommonTopologyUIFacadeImpl();
 		}
 		return instance;
 	}
@@ -52,7 +52,7 @@ public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyUIFacadeImpl() {
+	protected ApogyCommonTopologyUIFacadeImpl() {
 		super();
 	}
 
@@ -63,7 +63,7 @@ public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Con
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyUIPackage.Literals.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE;
+		return ApogyCommonTopologyUIPackage.Literals.APOGY_COMMON_TOPOLOGY_UI_FACADE;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Con
 	 */
 	public GraphicsContext createGraphicsContext(Node topologyRoot) 
 	{
-		GraphicsContext graphicsContext = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
+		GraphicsContext graphicsContext = ApogyCommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 		graphicsContext.setTopology(topologyRoot);
 		
 		TopologyPresentationSet topologyPresentationSet = Activator.getTopologyPresentationRegistry().createTopologyPresentationSet(topologyRoot);
@@ -112,7 +112,7 @@ public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Con
 					Tuple3d nodeMin = nodePresentation.getMin();
 					Tuple3d nodeMax = nodePresentation.getMax();
 					
-					Matrix4d m = org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(node, root);
+					Matrix4d m = ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade.INSTANCE.expressInFrame(node, root);
 					
 					if(nodeMin != null)
 					{
@@ -173,7 +173,7 @@ public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Con
 	 */
 	public NodeSelection createNodeSelection(TopologyPresentationSet topologyPresentationSet, NodePresentation nodePresentation, Point3d relativePosition) 
 	{
-		NodeSelection nodeSelection = Symphony__CommonTopologyUIFactory.eINSTANCE.createNodeSelection();
+		NodeSelection nodeSelection = ApogyCommonTopologyUIFactory.eINSTANCE.createNodeSelection();
 		
 		nodeSelection.setTopologyPresentationSet(topologyPresentationSet);
 		nodeSelection.setSelectedNode(nodePresentation.getNode());
@@ -191,7 +191,7 @@ public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Con
 	 */
 	public NodeSelection createNodeSelection(TopologyPresentationSet topologyPresentationSet, Node node, Point3d relativePosition, Vector3f relativeNormal) 
 	{
-		NodeSelection nodeSelection = Symphony__CommonTopologyUIFactory.eINSTANCE.createNodeSelection();
+		NodeSelection nodeSelection = ApogyCommonTopologyUIFactory.eINSTANCE.createNodeSelection();
 		
 		nodeSelection.setTopologyPresentationSet(topologyPresentationSet);
 		nodeSelection.setSelectedNode(node);
@@ -209,17 +209,17 @@ public class Symphony__CommonTopologyUIFacadeImpl extends MinimalEObjectImpl.Con
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE:
+			case ApogyCommonTopologyUIPackage.APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE:
 				return createGraphicsContext((Node)arguments.get(0));
-			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D:
+			case ApogyCommonTopologyUIPackage.APOGY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D:
 				findExtent((Node)arguments.get(0), (TopologyPresentationSet)arguments.get(1), (Tuple3d)arguments.get(2), (Tuple3d)arguments.get(3));
 				return null;
-			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D:
+			case ApogyCommonTopologyUIPackage.APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D:
 				return createNodeSelection((TopologyPresentationSet)arguments.get(0), (NodePresentation)arguments.get(1), (Point3d)arguments.get(2));
-			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F:
+			case ApogyCommonTopologyUIPackage.APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F:
 				return createNodeSelection((TopologyPresentationSet)arguments.get(0), (Node)arguments.get(1), (Point3d)arguments.get(2), (Vector3f)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CommonTopologyUIFacadeImpl
+} //ApogyCommonTopologyUIFacadeImpl

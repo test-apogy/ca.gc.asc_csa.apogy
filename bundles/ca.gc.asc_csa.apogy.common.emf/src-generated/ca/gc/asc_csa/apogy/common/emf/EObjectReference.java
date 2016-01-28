@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.EObjectReference#getEObject <em>EObject</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference#getEObject <em>EObject</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getEObjectReference()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getEObjectReference()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface EObjectReference extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>EObject</em>' reference.
 	 * @see #setEObject(EObject)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getEObjectReference_EObject()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getEObjectReference_EObject()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated
 	 */
 	EObject getEObject();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.EObjectReference#getEObject <em>EObject</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference#getEObject <em>EObject</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>EObject</em>' reference.

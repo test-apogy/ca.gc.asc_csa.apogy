@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.provider;
+package ca.gc.asc_csa.apogy.core.ui.provider;
 
 
 import java.util.Collection;
@@ -20,16 +20,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class NewSymphonyProjectSettingsItemProvider 
+public class NewApogyProjectSettingsItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -43,7 +43,7 @@ public class NewSymphonyProjectSettingsItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NewSymphonyProjectSettingsItemProvider(AdapterFactory adapterFactory) {
+	public NewApogyProjectSettingsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -75,9 +75,9 @@ public class NewSymphonyProjectSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonyProjectSettings_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonyProjectSettings_name_feature", "_UI_NewSymphonyProjectSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_PROJECT_SETTINGS__NAME,
+				 getString("_UI_NewApogyProjectSettings_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogyProjectSettings_name_feature", "_UI_NewApogyProjectSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_PROJECT_SETTINGS__NAME,
 				 true,
 				 false,
 				 false,
@@ -97,9 +97,9 @@ public class NewSymphonyProjectSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonyProjectSettings_importRegisteredProject_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonyProjectSettings_importRegisteredProject_feature", "_UI_NewSymphonyProjectSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT,
+				 getString("_UI_NewApogyProjectSettings_importRegisteredProject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogyProjectSettings_importRegisteredProject_feature", "_UI_NewApogyProjectSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT,
 				 true,
 				 false,
 				 false,
@@ -109,14 +109,14 @@ public class NewSymphonyProjectSettingsItemProvider
 	}
 
 	/**
-	 * This returns NewSymphonyProjectSettings.gif.
+	 * This returns NewApogyProjectSettings.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/NewSymphonyProjectSettings"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/NewApogyProjectSettings"));
 	}
 
 	/**
@@ -127,10 +127,10 @@ public class NewSymphonyProjectSettingsItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((NewSymphonyProjectSettings)object).getName();
+		String label = ((NewApogyProjectSettings)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_NewSymphonyProjectSettings_type") :
-			getString("_UI_NewSymphonyProjectSettings_type") + " " + label;
+			getString("_UI_NewApogyProjectSettings_type") :
+			getString("_UI_NewApogyProjectSettings_type") + " " + label;
 	}
 	
 
@@ -145,9 +145,9 @@ public class NewSymphonyProjectSettingsItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(NewSymphonyProjectSettings.class)) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME:
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
+		switch (notification.getFeatureID(NewApogyProjectSettings.class)) {
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__NAME:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -174,7 +174,7 @@ public class NewSymphonyProjectSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__CoreUIEditPlugin.INSTANCE;
+		return ApogyCoreUIEditPlugin.INSTANCE;
 	}
 
 }

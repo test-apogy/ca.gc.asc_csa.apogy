@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 
 /**
@@ -16,11 +16,11 @@ package org.eclipse.symphony.common.emf;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.CurrentTimeSource#getUpdatePeriod <em>Update Period</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.CurrentTimeSource#isPaused <em>Paused</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource#getUpdatePeriod <em>Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource#isPaused <em>Paused</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCurrentTimeSource()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCurrentTimeSource()
  * @model
  * @generated
  */
@@ -35,15 +35,15 @@ public interface CurrentTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(int)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCurrentTimeSource_UpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCurrentTimeSource_UpdatePeriod()
 	 * @model default="1000" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='ms' notify='true' property='Editable'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='ms' notify='true' property='Editable'"
 	 * @generated
 	 */
 	int getUpdatePeriod();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.CurrentTimeSource#getUpdatePeriod <em>Update Period</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource#getUpdatePeriod <em>Update Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Update Period</em>' attribute.
@@ -62,7 +62,7 @@ public interface CurrentTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Paused</em>' attribute.
 	 * @see #setPaused(boolean)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCurrentTimeSource_Paused()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getCurrentTimeSource_Paused()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -70,7 +70,7 @@ public interface CurrentTimeSource extends TimeSource {
 	boolean isPaused();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.CurrentTimeSource#isPaused <em>Paused</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource#isPaused <em>Paused</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Paused</em>' attribute.

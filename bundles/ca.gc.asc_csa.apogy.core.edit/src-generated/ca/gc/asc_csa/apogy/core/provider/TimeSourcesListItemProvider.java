@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -23,15 +23,15 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.TimeSourcesList;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.TimeSourcesList;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.TimeSourcesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.TimeSourcesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -81,7 +81,7 @@ public class TimeSourcesListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES);
+			childrenFeatures.add(ApogyCorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +134,7 @@ public class TimeSourcesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimeSourcesList.class)) {
-			case Symphony__CorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
+			case ApogyCorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -154,33 +154,33 @@ public class TimeSourcesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallResultsListTimeSource()));
+				(ApogyCorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createOperationCallResultsListTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 Symphony__CommonEMFFactory.eINSTANCE.createFixedTimeSource()));
+				(ApogyCorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 ApogyCommonEMFFactory.eINSTANCE.createFixedTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 Symphony__CommonEMFFactory.eINSTANCE.createCurrentTimeSource()));
+				(ApogyCorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 ApogyCommonEMFFactory.eINSTANCE.createCurrentTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 Symphony__CommonEMFFactory.eINSTANCE.createBrowseableTimeSource()));
+				(ApogyCorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 ApogyCommonEMFFactory.eINSTANCE.createBrowseableTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 Symphony__CommonEMFFactory.eINSTANCE.createSelectionBasedTimeSource()));
+				(ApogyCorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 ApogyCommonEMFFactory.eINSTANCE.createSelectionBasedTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 Symphony__CommonEMFFactory.eINSTANCE.createCollectionTimedTimeSource()));
+				(ApogyCorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 ApogyCommonEMFFactory.eINSTANCE.createCollectionTimedTimeSource()));
 	}
 
 	/**

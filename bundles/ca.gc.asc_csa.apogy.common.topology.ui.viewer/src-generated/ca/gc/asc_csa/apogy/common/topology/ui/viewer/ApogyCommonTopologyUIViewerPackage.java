@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.viewer;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerFactory
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonTopologyUIViewer' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonTopologyUIViewer' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.ui.viewer/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.viewer.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.ui'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonTopologyUIViewer' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonTopologyUIViewer' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.common.topology.ui.viewer/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.topology.ui.viewer.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.topology.ui'"
  * @generated
  */
-public interface Symphony__CommonTopologyUIViewerPackage extends EPackage {
+public interface ApogyCommonTopologyUIViewerPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public interface Symphony__CommonTopologyUIViewerPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.topology.ui.viewer";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.topology.ui.viewer";
 
 	/**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__CommonTopologyUIViewerPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIViewerPackage eINSTANCE = org.eclipse.symphony.common.topology.ui.viewer.impl.Symphony__CommonTopologyUIViewerPackageImpl.init();
+	ApogyCommonTopologyUIViewerPackage eINSTANCE = ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.ApogyCommonTopologyUIViewerPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl <em>Topology Viewer Registry</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl <em>Topology Viewer Registry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.impl.Symphony__CommonTopologyUIViewerPackageImpl#getTopologyViewerRegistry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.ApogyCommonTopologyUIViewerPackageImpl#getTopologyViewerRegistry()
 	 * @generated
 	 */
 	int TOPOLOGY_VIEWER_REGISTRY = 0;
@@ -137,83 +137,83 @@ public interface Symphony__CommonTopologyUIViewerPackage extends EPackage {
 	 * The meta object id for the '<em>ITopology Viewer</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.impl.Symphony__CommonTopologyUIViewerPackageImpl#getITopologyViewer()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.ApogyCommonTopologyUIViewerPackageImpl#getITopologyViewer()
 	 * @generated
 	 */
 	int ITOPOLOGY_VIEWER = 1;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry <em>Topology Viewer Registry</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry <em>Topology Viewer Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Topology Viewer Registry</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry
 	 * @generated
 	 */
 	EClass getTopologyViewerRegistry();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#isVerbose <em>Verbose</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#isVerbose <em>Verbose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Verbose</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#isVerbose()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#isVerbose()
 	 * @see #getTopologyViewerRegistry()
 	 * @generated
 	 */
 	EAttribute getTopologyViewerRegistry_Verbose();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#getITopologyViewers <em>ITopology Viewers</em>}'.
+	 * Returns the meta object for the attribute list '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#getITopologyViewers <em>ITopology Viewers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute list '<em>ITopology Viewers</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#getITopologyViewers()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#getITopologyViewers()
 	 * @see #getTopologyViewerRegistry()
 	 * @generated
 	 */
 	EAttribute getTopologyViewerRegistry_ITopologyViewers();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#getLatestNodeSelection <em>Latest Node Selection</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#getLatestNodeSelection <em>Latest Node Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Latest Node Selection</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#getLatestNodeSelection()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#getLatestNodeSelection()
 	 * @see #getTopologyViewerRegistry()
 	 * @generated
 	 */
 	EReference getTopologyViewerRegistry_LatestNodeSelection();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#registerITopologyViewer(org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer) <em>Register ITopology Viewer</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#registerITopologyViewer(ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer) <em>Register ITopology Viewer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register ITopology Viewer</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#registerITopologyViewer(org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#registerITopologyViewer(ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer)
 	 * @generated
 	 */
 	EOperation getTopologyViewerRegistry__RegisterITopologyViewer__ITopologyViewer();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#unRegisterITopologyViewer(org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer) <em>Un Register ITopology Viewer</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#unRegisterITopologyViewer(ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer) <em>Un Register ITopology Viewer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Un Register ITopology Viewer</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#unRegisterITopologyViewer(org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry#unRegisterITopologyViewer(ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer)
 	 * @generated
 	 */
 	EOperation getTopologyViewerRegistry__UnRegisterITopologyViewer__ITopologyViewer();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer <em>ITopology Viewer</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer <em>ITopology Viewer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>ITopology Viewer</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer
-	 * @model instanceClass="org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer
+	 * @model instanceClass="ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer"
 	 * @generated
 	 */
 	EDataType getITopologyViewer();
@@ -225,7 +225,7 @@ public interface Symphony__CommonTopologyUIViewerPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIViewerFactory getSymphony__CommonTopologyUIViewerFactory();
+	ApogyCommonTopologyUIViewerFactory getApogyCommonTopologyUIViewerFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,11 +242,11 @@ public interface Symphony__CommonTopologyUIViewerPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl <em>Topology Viewer Registry</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl <em>Topology Viewer Registry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl
-		 * @see org.eclipse.symphony.common.topology.ui.viewer.impl.Symphony__CommonTopologyUIViewerPackageImpl#getTopologyViewerRegistry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.ApogyCommonTopologyUIViewerPackageImpl#getTopologyViewerRegistry()
 		 * @generated
 		 */
 		EClass TOPOLOGY_VIEWER_REGISTRY = eINSTANCE.getTopologyViewerRegistry();
@@ -295,12 +295,12 @@ public interface Symphony__CommonTopologyUIViewerPackage extends EPackage {
 		 * The meta object literal for the '<em>ITopology Viewer</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer
-		 * @see org.eclipse.symphony.common.topology.ui.viewer.impl.Symphony__CommonTopologyUIViewerPackageImpl#getITopologyViewer()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl.ApogyCommonTopologyUIViewerPackageImpl#getITopologyViewer()
 		 * @generated
 		 */
 		EDataType ITOPOLOGY_VIEWER = eINSTANCE.getITopologyViewer();
 
 	}
 
-} //Symphony__CommonTopologyUIViewerPackage
+} //ApogyCommonTopologyUIViewerPackage

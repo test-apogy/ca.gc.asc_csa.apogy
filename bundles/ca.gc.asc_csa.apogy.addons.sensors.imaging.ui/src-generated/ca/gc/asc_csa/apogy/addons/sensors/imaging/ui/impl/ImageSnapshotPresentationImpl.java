@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -11,13 +11,13 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation;
-import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotSceneObject;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage;
-import org.eclipse.symphony.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesConstants;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotSceneObject;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,10 +27,10 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#isImageProjectionVisible <em>Image Projection Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#getTransparency <em>Transparency</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#isImageProjectionVisible <em>Image Projection Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -138,7 +138,7 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION;
+		return ApogyAddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION;
 	}
 
   /**
@@ -161,7 +161,7 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
 		MeshPresentationMode oldPresentationMode = presentationMode;
 		presentationMode = newPresentationMode == null ? PRESENTATION_MODE_EDEFAULT : newPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
 	}
 
   /**
@@ -184,7 +184,7 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
 		float oldTransparency = transparency;
 		transparency = newTransparency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
 	}
 
   /**
@@ -207,7 +207,7 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
 		boolean oldImageProjectionVisible = imageProjectionVisible;
 		imageProjectionVisible = newImageProjectionVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE, oldImageProjectionVisible, imageProjectionVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE, oldImageProjectionVisible, imageProjectionVisible));
 	}
 
   /**
@@ -228,7 +228,7 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
 		boolean oldImageProjectionOnFOVVisible = imageProjectionOnFOVVisible;
 		imageProjectionOnFOVVisible = newImageProjectionOnFOVVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE, oldImageProjectionOnFOVVisible, imageProjectionOnFOVVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE, oldImageProjectionOnFOVVisible, imageProjectionOnFOVVisible));
 	}
 
 		/**
@@ -240,13 +240,13 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
 				return getTransparency();
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
 				return isImageProjectionVisible();
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
 				return isImageProjectionOnFOVVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -261,16 +261,16 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((MeshPresentationMode)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
 				setTransparency((Float)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
 				setImageProjectionVisible((Boolean)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
 				setImageProjectionOnFOVVisible((Boolean)newValue);
 				return;
 		}
@@ -286,16 +286,16 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
 				setTransparency(TRANSPARENCY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
 				setImageProjectionVisible(IMAGE_PROJECTION_VISIBLE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
 				setImageProjectionOnFOVVisible(IMAGE_PROJECTION_ON_FOV_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -311,13 +311,13 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
 				return transparency != TRANSPARENCY_EDEFAULT;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
 				return imageProjectionVisible != IMAGE_PROJECTION_VISIBLE_EDEFAULT;
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
 				return imageProjectionOnFOVVisible != IMAGE_PROJECTION_ON_FOV_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -369,19 +369,19 @@ public class ImageSnapshotPresentationImpl extends NodePresentationImpl implemen
 			
 			switch (featureId) 
 			{
-				case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
+				case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
 					imageSnapshotSceneObject.setPresentationMode(this.getPresentationMode());
 				break;
 				
-				case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
+				case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
 					imageSnapshotSceneObject.setTransparency(this.getTransparency());
 				break;
 
-				case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
+				case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
 					imageSnapshotSceneObject.setImageProjectionEnabled(this.isImageProjectionVisible());
 				break;
 				
-				case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
+				case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
 					imageSnapshotSceneObject.setImageProjectionOnFOVEnabled(this.isImageProjectionOnFOVVisible());
 				break;
 				

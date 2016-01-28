@@ -3,12 +3,12 @@
  *
  * $Id: PathImpl.java,v 1.4.4.2 2015/05/21 15:50:36 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -31,7 +31,7 @@ public class PathImpl extends NodeImpl implements Path {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsGeometryPathsPackage.Literals.PATH;
+		return ApogyAddonsGeometryPathsPackage.Literals.PATH;
 	}
 
 } // PathImpl

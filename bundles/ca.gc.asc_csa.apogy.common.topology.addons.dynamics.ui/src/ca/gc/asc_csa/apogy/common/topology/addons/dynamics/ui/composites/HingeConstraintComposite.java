@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -14,20 +14,20 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage.Literals;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage.Literals;
 
 public class HingeConstraintComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint hingeConstraint;
+	private ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint hingeConstraint;
 	private Button enabledButton;
 	private ConstraintStateComposite currentAngularStateComposite;
 	private Adapter constraintStatesAdapter;
 
 	public HingeConstraintComposite(Composite parent, int style,
-			org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint newHingeConstraint) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint newHingeConstraint) {
 		this(parent, style);
 		setHingeConstraint(newHingeConstraint);
 	}
@@ -102,7 +102,7 @@ public class HingeConstraintComposite extends Composite {
 	}
 
 	public void setHingeConstraint(
-			org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint newHingeConstraint,
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint newHingeConstraint,
 			boolean update) {
 		hingeConstraint = newHingeConstraint;
 		if (update) {

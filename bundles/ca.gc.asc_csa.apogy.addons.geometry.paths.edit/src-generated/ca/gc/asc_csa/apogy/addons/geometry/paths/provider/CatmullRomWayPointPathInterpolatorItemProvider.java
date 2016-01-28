@@ -3,7 +3,7 @@
  *
  * $Id: CatmullRomWayPointPathInterpolatorItemProvider.java,v 1.3.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class CatmullRomWayPointPathInterpolatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CatmullRomWayPointPathInterpolator_tension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CatmullRomWayPointPathInterpolator_tension_feature", "_UI_CatmullRomWayPointPathInterpolator_type"),
-				 Symphony__AddonsGeometryPathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION,
+				 ApogyAddonsGeometryPathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class CatmullRomWayPointPathInterpolatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CatmullRomWayPointPathInterpolator_maximumWayPointsDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CatmullRomWayPointPathInterpolator_maximumWayPointsDistance_feature", "_UI_CatmullRomWayPointPathInterpolator_type"),
-				 Symphony__AddonsGeometryPathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE,
+				 ApogyAddonsGeometryPathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class CatmullRomWayPointPathInterpolatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CatmullRomWayPointPathInterpolator_endControlPointGenerationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CatmullRomWayPointPathInterpolator_endControlPointGenerationMode_feature", "_UI_CatmullRomWayPointPathInterpolator_type"),
-				 Symphony__AddonsGeometryPathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE,
+				 ApogyAddonsGeometryPathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class CatmullRomWayPointPathInterpolatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CatmullRomWayPointPathInterpolator.class)) {
-			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
-			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
-			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
+			case ApogyAddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
+			case ApogyAddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
+			case ApogyAddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

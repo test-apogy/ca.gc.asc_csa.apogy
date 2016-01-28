@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,19 +16,19 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.ChannelsList#getChannels <em>Channels</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.ChannelsList#getRecordingToolsContainer <em>Recording Tools Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getChannels <em>Channels</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getRecordingToolsContainer <em>Recording Tools Container</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getChannelsList()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getChannelsList()
  * @model
  * @generated
  */
 public interface ChannelsList extends Named, Described {
 	/**
 	 * Returns the value of the '<em><b>Channels</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.AbstractChannel}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.AbstractChannel#getChannelsList <em>Channels List</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.AbstractChannel}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractChannel#getChannelsList <em>Channels List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Channels</em>' containment reference list isn't clear,
@@ -36,8 +36,8 @@ public interface ChannelsList extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Channels</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getChannelsList_Channels()
-	 * @see org.eclipse.symphony.core.invocator.AbstractChannel#getChannelsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getChannelsList_Channels()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractChannel#getChannelsList
 	 * @model opposite="channelsList" containment="true"
 	 * @generated
 	 */
@@ -45,7 +45,7 @@ public interface ChannelsList extends Named, Described {
 
 	/**
 	 * Returns the value of the '<em><b>Recording Tools Container</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getChannelsLists <em>Channels Lists</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getChannelsLists <em>Channels Lists</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Recording Tools Container</em>' container reference isn't clear,
@@ -54,15 +54,15 @@ public interface ChannelsList extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recording Tools Container</em>' container reference.
 	 * @see #setRecordingToolsContainer(RecordingToolsContainer)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getChannelsList_RecordingToolsContainer()
-	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer#getChannelsLists
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getChannelsList_RecordingToolsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer#getChannelsLists
 	 * @model opposite="channelsLists" transient="false"
 	 * @generated
 	 */
 	RecordingToolsContainer getRecordingToolsContainer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.ChannelsList#getRecordingToolsContainer <em>Recording Tools Container</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList#getRecordingToolsContainer <em>Recording Tools Container</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Recording Tools Container</em>' container reference.

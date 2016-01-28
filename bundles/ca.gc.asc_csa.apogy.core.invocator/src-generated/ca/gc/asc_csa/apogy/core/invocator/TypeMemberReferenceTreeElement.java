@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.TreeRootNode;
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,15 +15,15 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode <em>Feature Root Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isRoot <em>Root</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getRootElement <em>Root Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isLeaf <em>Leaf</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode <em>Feature Root Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#isRoot <em>Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getRootElement <em>Root Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#isLeaf <em>Leaf</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReferenceTreeElement()
  * @model
  * @generated
  */
@@ -31,8 +31,8 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
 {
   /**
 	 * Returns the value of the '<em><b>Child</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Child</em>' containment reference list isn't clear,
@@ -40,8 +40,8 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Child</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Child()
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReferenceTreeElement_Child()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getParent
 	 * @model opposite="parent" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -50,7 +50,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
 
   /**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Parent</em>' container reference isn't clear,
@@ -59,8 +59,8 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' container reference.
 	 * @see #setParent(TypeMemberReferenceTreeElement)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Parent()
-	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReferenceTreeElement_Parent()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getChild
 	 * @model opposite="child" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
   TypeMemberReferenceTreeElement getParent();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parent</em>' container reference.
@@ -87,14 +87,14 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Root Node</em>' containment reference.
 	 * @see #setFeatureRootNode(TreeRootNode)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_FeatureRootNode()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReferenceTreeElement_FeatureRootNode()
 	 * @model containment="true"
 	 * @generated
 	 */
   TreeRootNode getFeatureRootNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode <em>Feature Root Node</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode <em>Feature Root Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Root Node</em>' containment reference.
@@ -112,9 +112,9 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root</em>' attribute.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Root()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReferenceTreeElement_Root()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%> _parent = this.getParent();\nreturn <%com.google.common.base.Objects%>.equal(_parent, null);'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement%> _parent = this.getParent();\nreturn <%com.google.common.base.Objects%>.equal(_parent, null);'"
 	 * @generated
 	 */
   boolean isRoot();
@@ -128,9 +128,9 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root Element</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_RootElement()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReferenceTreeElement_RootElement()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%> _xifexpression = null;\nboolean _isRoot = this.isRoot();\nif (_isRoot)\n{\n\treturn this;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%> _parent = this.getParent();\n\t_xifexpression = _parent.getRootElement();\n}\nreturn _xifexpression;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement%> _xifexpression = null;\nboolean _isRoot = this.isRoot();\nif (_isRoot)\n{\n\treturn this;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement%> _parent = this.getParent();\n\t_xifexpression = _parent.getRootElement();\n}\nreturn _xifexpression;'"
 	 * @generated
 	 */
   TypeMemberReferenceTreeElement getRootElement();
@@ -144,9 +144,9 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Leaf</em>' attribute.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Leaf()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberReferenceTreeElement_Leaf()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.emf.common.util.EList%><<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%>> _child = this.getChild();\nreturn <%com.google.common.base.Objects%>.equal(_child, null);'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.emf.common.util.EList%><<%ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement%>> _child = this.getChild();\nreturn <%com.google.common.base.Objects%>.equal(_child, null);'"
 	 * @generated
 	 */
   boolean isLeaf();

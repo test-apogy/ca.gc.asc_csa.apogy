@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -20,17 +20,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.ConstellationDownlink#getDownlinkItems <em>Downlink Items</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink#getDownlinkItems <em>Downlink Items</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationDownlink()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationDownlink()
  * @model
  * @generated
  */
 public interface ConstellationDownlink extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Downlink Items</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Downlink Items</em>' containment reference list isn't clear,
@@ -38,7 +38,7 @@ public interface ConstellationDownlink extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Downlink Items</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationDownlink_DownlinkItems()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationDownlink_DownlinkItems()
 	 * @model containment="true"
 	 * @generated
 	 */

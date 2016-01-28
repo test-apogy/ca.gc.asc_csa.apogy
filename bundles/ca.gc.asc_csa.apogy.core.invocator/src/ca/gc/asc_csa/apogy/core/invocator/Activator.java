@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator 
 {
-	public static final String ID = "org.eclipse.symphony.core.invocator";
+	public static final String ID = "ca.gc.asc_csa.apogy.core.invocator";
 	
 	private static SessionContributorsRegistry sessionContributorsRegistry = new SessionContributorsRegistry(false);
 	private static BundleContext context;

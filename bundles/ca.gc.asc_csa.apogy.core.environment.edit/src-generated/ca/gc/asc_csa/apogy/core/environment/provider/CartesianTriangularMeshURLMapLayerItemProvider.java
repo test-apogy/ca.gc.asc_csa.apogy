@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class CartesianTriangularMeshURLMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLMapLayer_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLMapLayer_url_feature", "_UI_URLMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
+				 ApogyCoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class CartesianTriangularMeshURLMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshURLMapLayer_mesh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshURLMapLayer_mesh_feature", "_UI_CartesianTriangularMeshURLMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH,
+				 ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH,
 				 false,
 				 false,
 				 true,
@@ -145,7 +145,7 @@ public class CartesianTriangularMeshURLMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianTriangularMeshURLMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

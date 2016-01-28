@@ -3,22 +3,22 @@
  *
  * $Id: CartesianTriangularMeshImpl.java,v 1.2.4.5 2015/09/22 19:39:41 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
-import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -43,7 +43,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGULAR_MESH;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGULAR_MESH;
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	@Override
 	public EList<CartesianTriangle> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<CartesianTriangle>(CartesianTriangle.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS);
+			polygons = new EObjectContainmentEList<CartesianTriangle>(CartesianTriangle.class, this, ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS);
 		}
 		return polygons;
 	}
@@ -79,7 +79,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == AbstractCartesianCoordinatesSet.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT: return Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT;
+				case ApogyCommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT: return ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT;
 				default: return -1;
 			}
 		}
@@ -99,7 +99,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT:
 				return getExtent();
 		}
 		return super.eInvoke(operationID, arguments);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFactory
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData3DLAS' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData3DLAS' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d.las/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.las.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry.data3d'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData3DLAS' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonGeometryData3DLAS' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.las/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.las.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry.data3d'"
  * @generated
  */
-public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
+public interface ApogyCommonGeometryData3DLASPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.geometry.data3d.las";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.geometry.data3d.las";
 
 	/**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DLASPackage eINSTANCE = org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl.init();
+	ApogyCommonGeometryData3DLASPackage eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl <em>LAS Header</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASHeaderImpl <em>LAS Header</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASHeader()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASHeaderImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASHeader()
 	 * @generated
 	 */
 	int LAS_HEADER = 0;
@@ -387,11 +387,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	int LAS_HEADER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl <em>Variable Length Record</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl <em>Variable Length Record</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getVariableLengthRecord()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getVariableLengthRecord()
 	 * @generated
 	 */
 	int VARIABLE_LENGTH_RECORD = 1;
@@ -460,11 +460,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	int VARIABLE_LENGTH_RECORD_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl <em>LAS Reader</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl <em>LAS Reader</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASReader()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASReader()
 	 * @generated
 	 */
 	int LAS_READER = 2;
@@ -551,11 +551,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	int LAS_READER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl <em>LAS Point</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASPointImpl <em>LAS Point</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASPoint()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASPointImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASPoint()
 	 * @generated
 	 */
 	int LAS_POINT = 3;
@@ -723,14 +723,14 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	int LAS_POINT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getSymphony__CommonGeometryData3DLASFacade()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getApogyCommonGeometryData3DLASFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE = 4;
+	int APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -739,7 +739,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Point</em>' operation.
@@ -748,7 +748,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE = 0;
+	int APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE = 0;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -757,14 +757,14 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE_OPERATION_COUNT = 1;
+	int APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASWriter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASWriterImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASWriter()
 	 * @generated
 	 */
 	int LAS_WRITER = 5;
@@ -896,21 +896,21 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	int LAS_WRITER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.ScanDirection
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getScanDirection()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getScanDirection()
 	 * @generated
 	 */
 	int SCAN_DIRECTION = 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine <em>Edge Of Flight Line</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine <em>Edge Of Flight Line</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getEdgeOfFlightLine()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getEdgeOfFlightLine()
 	 * @generated
 	 */
 	int EDGE_OF_FLIGHT_LINE = 7;
@@ -920,7 +920,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.runtime.IProgressMonitor
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getIProgressMonitor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getIProgressMonitor()
 	 * @generated
 	 */
 	int IPROGRESS_MONITOR = 8;
@@ -929,7 +929,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * The meta object id for the '<em>Char Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getCharArray()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getCharArray()
 	 * @generated
 	 */
 	int CHAR_ARRAY = 9;
@@ -938,7 +938,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * The meta object id for the '<em>Long Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLongArray()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLongArray()
 	 * @generated
 	 */
 	int LONG_ARRAY = 10;
@@ -948,7 +948,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.InputStream
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getInputStream()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getInputStream()
 	 * @generated
 	 */
 	int INPUT_STREAM = 11;
@@ -958,7 +958,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.IOException
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getIOException()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getIOException()
 	 * @generated
 	 */
 	int IO_EXCEPTION = 12;
@@ -968,7 +968,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.OutputStream
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getOutputStream()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getOutputStream()
 	 * @generated
 	 */
 	int OUTPUT_STREAM = 13;
@@ -978,899 +978,899 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 14;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader <em>LAS Header</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader <em>LAS Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>LAS Header</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader
 	 * @generated
 	 */
 	EClass getLASHeader();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileSignature <em>File Signature</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileSignature <em>File Signature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>File Signature</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileSignature()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileSignature()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_FileSignature();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileSourceID <em>File Source ID</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileSourceID <em>File Source ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>File Source ID</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileSourceID()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileSourceID()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_FileSourceID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getGlobalEncoding <em>Global Encoding</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getGlobalEncoding <em>Global Encoding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Global Encoding</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getGlobalEncoding()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getGlobalEncoding()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_GlobalEncoding();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_1 <em>Project ID GUID data 1</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_1 <em>Project ID GUID data 1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Project ID GUID data 1</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_1()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_1()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_ProjectID_GUID_data_1();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_2 <em>Project ID GUID data 2</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_2 <em>Project ID GUID data 2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Project ID GUID data 2</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_2()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_2()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_ProjectID_GUID_data_2();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_3 <em>Project ID GUID data 3</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_3 <em>Project ID GUID data 3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Project ID GUID data 3</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_3()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_3()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_ProjectID_GUID_data_3();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_4 <em>Project ID GUID data 4</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_4 <em>Project ID GUID data 4</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Project ID GUID data 4</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_4()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getProjectID_GUID_data_4()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_ProjectID_GUID_data_4();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getVersionMajor <em>Version Major</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getVersionMajor <em>Version Major</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Version Major</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getVersionMajor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getVersionMajor()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_VersionMajor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getVersionMinor <em>Version Minor</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getVersionMinor <em>Version Minor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Version Minor</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getVersionMinor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getVersionMinor()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_VersionMinor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getSystemIdentifier <em>System Identifier</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getSystemIdentifier <em>System Identifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>System Identifier</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getSystemIdentifier()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getSystemIdentifier()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_SystemIdentifier();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getGeneratingSoftware <em>Generating Software</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getGeneratingSoftware <em>Generating Software</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Generating Software</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getGeneratingSoftware()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getGeneratingSoftware()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_GeneratingSoftware();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileCreationDayOfYear <em>File Creation Day Of Year</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileCreationDayOfYear <em>File Creation Day Of Year</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>File Creation Day Of Year</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileCreationDayOfYear()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileCreationDayOfYear()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_FileCreationDayOfYear();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileCreationYear <em>File Creation Year</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileCreationYear <em>File Creation Year</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>File Creation Year</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileCreationYear()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getFileCreationYear()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_FileCreationYear();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getHeaderSize <em>Header Size</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getHeaderSize <em>Header Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Header Size</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getHeaderSize()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getHeaderSize()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_HeaderSize();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getOffsetToPointData <em>Offset To Point Data</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getOffsetToPointData <em>Offset To Point Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Offset To Point Data</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getOffsetToPointData()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getOffsetToPointData()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_OffsetToPointData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getNVariableLengthRecords <em>NVariable Length Records</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getNVariableLengthRecords <em>NVariable Length Records</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>NVariable Length Records</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getNVariableLengthRecords()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getNVariableLengthRecords()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_NVariableLengthRecords();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getPointDataFormatID <em>Point Data Format ID</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getPointDataFormatID <em>Point Data Format ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Point Data Format ID</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getPointDataFormatID()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getPointDataFormatID()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_PointDataFormatID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getPointDataRecordLength <em>Point Data Record Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getPointDataRecordLength <em>Point Data Record Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Point Data Record Length</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getPointDataRecordLength()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getPointDataRecordLength()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_PointDataRecordLength();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getNumberOfPointRecords <em>Number Of Point Records</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getNumberOfPointRecords <em>Number Of Point Records</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Of Point Records</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getNumberOfPointRecords()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getNumberOfPointRecords()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_NumberOfPointRecords();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getNumberOfPointsByReturn <em>Number Of Points By Return</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getNumberOfPointsByReturn <em>Number Of Points By Return</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Of Points By Return</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getNumberOfPointsByReturn()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getNumberOfPointsByReturn()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_NumberOfPointsByReturn();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getXScaleFactor <em>XScale Factor</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getXScaleFactor <em>XScale Factor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XScale Factor</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getXScaleFactor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getXScaleFactor()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_XScaleFactor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getYScaleFactor <em>YScale Factor</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getYScaleFactor <em>YScale Factor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YScale Factor</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getYScaleFactor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getYScaleFactor()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_YScaleFactor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getZScaleFactor <em>ZScale Factor</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getZScaleFactor <em>ZScale Factor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZScale Factor</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getZScaleFactor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getZScaleFactor()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_ZScaleFactor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getXOffset <em>XOffset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getXOffset <em>XOffset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XOffset</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getXOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getXOffset()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_XOffset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getYOffset <em>YOffset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getYOffset <em>YOffset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YOffset</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getYOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getYOffset()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_YOffset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getZOffset <em>ZOffset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getZOffset <em>ZOffset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZOffset</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getZOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getZOffset()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_ZOffset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMaxX <em>Max X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMaxX <em>Max X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMaxX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMaxX()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_MaxX();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMinX <em>Min X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMinX <em>Min X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Min X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMinX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMinX()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_MinX();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMaxY <em>Max Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMaxY <em>Max Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMaxY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMaxY()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_MaxY();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMinY <em>Min Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMinY <em>Min Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Min Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMinY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMinY()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_MinY();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMaxZ <em>Max Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMaxZ <em>Max Z</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMaxZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMaxZ()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_MaxZ();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMinZ <em>Min Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMinZ <em>Min Z</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Min Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMinZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getMinZ()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_MinZ();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getStartOfWaveformDataPacketRecord <em>Start Of Waveform Data Packet Record</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getStartOfWaveformDataPacketRecord <em>Start Of Waveform Data Packet Record</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Start Of Waveform Data Packet Record</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getStartOfWaveformDataPacketRecord()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader#getStartOfWaveformDataPacketRecord()
 	 * @see #getLASHeader()
 	 * @generated
 	 */
 	EAttribute getLASHeader_StartOfWaveformDataPacketRecord();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord <em>Variable Length Record</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord <em>Variable Length Record</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Length Record</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord
 	 * @generated
 	 */
 	EClass getVariableLengthRecord();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Reserved</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getReserved()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getReserved()
 	 * @see #getVariableLengthRecord()
 	 * @generated
 	 */
 	EAttribute getVariableLengthRecord_Reserved();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>User ID</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getUserID()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getUserID()
 	 * @see #getVariableLengthRecord()
 	 * @generated
 	 */
 	EAttribute getVariableLengthRecord_UserID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordID <em>Record ID</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordID <em>Record ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Record ID</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordID()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordID()
 	 * @see #getVariableLengthRecord()
 	 * @generated
 	 */
 	EAttribute getVariableLengthRecord_RecordID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Record Length After Header</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader()
 	 * @see #getVariableLengthRecord()
 	 * @generated
 	 */
 	EAttribute getVariableLengthRecord_RecordLengthAfterHeader();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord#getDescription()
 	 * @see #getVariableLengthRecord()
 	 * @generated
 	 */
 	EAttribute getVariableLengthRecord_Description();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader <em>LAS Reader</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader <em>LAS Reader</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>LAS Reader</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader
 	 * @generated
 	 */
 	EClass getLASReader();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getFile <em>File</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getFile <em>File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>File</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#getFile()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getFile()
 	 * @see #getLASReader()
 	 * @generated
 	 */
 	EAttribute getLASReader_File();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Input Stream</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#getInputStream()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getInputStream()
 	 * @see #getLASReader()
 	 * @generated
 	 */
 	EAttribute getLASReader_InputStream();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getVlrs <em>Vlrs</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getVlrs <em>Vlrs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Vlrs</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#getVlrs()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getVlrs()
 	 * @see #getLASReader()
 	 * @generated
 	 */
 	EReference getLASReader_Vlrs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getProgressMonitor <em>Progress Monitor</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getProgressMonitor <em>Progress Monitor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Progress Monitor</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#getProgressMonitor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getProgressMonitor()
 	 * @see #getLASReader()
 	 * @generated
 	 */
 	EAttribute getLASReader_ProgressMonitor();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Header</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getHeader()
 	 * @see #getLASReader()
 	 * @generated
 	 */
 	EReference getLASReader_Header();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getPoints <em>Points</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getPoints <em>Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Points</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#getPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#getPoints()
 	 * @see #getLASReader()
 	 * @generated
 	 */
 	EReference getLASReader_Points();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#read() <em>Read</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#read() <em>Read</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Read</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#read()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader#read()
 	 * @generated
 	 */
 	EOperation getLASReader__Read();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint <em>LAS Point</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint <em>LAS Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>LAS Point</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint
 	 * @generated
 	 */
 	EClass getLASPoint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getX <em>X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getX <em>X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getX()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_X();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getY <em>Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getY <em>Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getY()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_Y();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getZ <em>Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getZ <em>Z</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getZ()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_Z();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getIntensity <em>Intensity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getIntensity <em>Intensity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Intensity</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getIntensity()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getIntensity()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_Intensity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getReturnNumber <em>Return Number</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getReturnNumber <em>Return Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Return Number</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getReturnNumber()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getReturnNumber()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_ReturnNumber();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getNumberOfReturns <em>Number Of Returns</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getNumberOfReturns <em>Number Of Returns</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Of Returns</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getNumberOfReturns()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getNumberOfReturns()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_NumberOfReturns();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getScanDirection <em>Scan Direction</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getScanDirection <em>Scan Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Scan Direction</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getScanDirection()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getScanDirection()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_ScanDirection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getEdgeOfFlightLine <em>Edge Of Flight Line</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getEdgeOfFlightLine <em>Edge Of Flight Line</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Edge Of Flight Line</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getEdgeOfFlightLine()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getEdgeOfFlightLine()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_EdgeOfFlightLine();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getClassification <em>Classification</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getClassification <em>Classification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Classification</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getClassification()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getClassification()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_Classification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getScanAngleRank <em>Scan Angle Rank</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getScanAngleRank <em>Scan Angle Rank</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Scan Angle Rank</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getScanAngleRank()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getScanAngleRank()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_ScanAngleRank();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getUserData <em>User Data</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getUserData <em>User Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>User Data</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getUserData()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getUserData()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_UserData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getPointSourceId <em>Point Source Id</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getPointSourceId <em>Point Source Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Point Source Id</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getPointSourceId()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getPointSourceId()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_PointSourceId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getGpsTime <em>Gps Time</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getGpsTime <em>Gps Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Gps Time</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getGpsTime()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getGpsTime()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_GpsTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getRed <em>Red</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getRed <em>Red</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Red</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getRed()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getRed()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_Red();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getGreen <em>Green</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getGreen <em>Green</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Green</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getGreen()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getGreen()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_Green();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getBlue <em>Blue</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getBlue <em>Blue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Blue</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getBlue()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint#getBlue()
 	 * @see #getLASPoint()
 	 * @generated
 	 */
 	EAttribute getLASPoint_Blue();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonGeometryData3DLASFacade();
+	EClass getApogyCommonGeometryData3DLASFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade#createPoint(int, byte[]) <em>Create Point</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade#createPoint(int, byte[]) <em>Create Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade#createPoint(int, byte[])
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade#createPoint(int, byte[])
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte();
+	EOperation getApogyCommonGeometryData3DLASFacade__CreatePoint__int_byte();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter <em>LAS Writer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter <em>LAS Writer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>LAS Writer</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter
 	 * @generated
 	 */
 	EClass getLASWriter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getFileName <em>File Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getFileName <em>File Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>File Name</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getFileName()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getFileName()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_FileName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getProgressMonitor <em>Progress Monitor</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getProgressMonitor <em>Progress Monitor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Progress Monitor</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getProgressMonitor()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getProgressMonitor()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_ProgressMonitor();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getPoints <em>Points</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getPoints <em>Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Points</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getPoints()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getPoints()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EReference getLASWriter_Points();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleX <em>Scale X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleX <em>Scale X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Scale X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleX()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_ScaleX();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleY <em>Scale Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleY <em>Scale Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Scale Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleY()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_ScaleY();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleZ <em>Scale Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleZ <em>Scale Z</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Scale Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getScaleZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getScaleZ()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_ScaleZ();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getHeader <em>Header</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getHeader <em>Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Header</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getHeader()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getHeader()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EReference getLASWriter_Header();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getXOffset <em>XOffset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getXOffset <em>XOffset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XOffset</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getXOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getXOffset()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_XOffset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getYOffset <em>YOffset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getYOffset <em>YOffset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YOffset</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getYOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getYOffset()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_YOffset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getZOffset <em>ZOffset</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getZOffset <em>ZOffset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZOffset</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getZOffset()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getZOffset()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_ZOffset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Output Stream</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getOutputStream()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#getOutputStream()
 	 * @see #getLASWriter()
 	 * @generated
 	 */
 	EAttribute getLASWriter_OutputStream();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#write() <em>Write</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#write() <em>Write</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Write</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#write()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter#write()
 	 * @generated
 	 */
 	EOperation getLASWriter__Write();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Scan Direction</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.ScanDirection
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection
 	 * @generated
 	 */
 	EEnum getScanDirection();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine <em>Edge Of Flight Line</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine <em>Edge Of Flight Line</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Edge Of Flight Line</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine
 	 * @generated
 	 */
 	EEnum getEdgeOfFlightLine();
@@ -1957,7 +1957,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DLASFactory getSymphony__CommonGeometryData3DLASFactory();
+	ApogyCommonGeometryData3DLASFactory getApogyCommonGeometryData3DLASFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1974,11 +1974,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl <em>LAS Header</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASHeaderImpl <em>LAS Header</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASHeader()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASHeaderImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASHeader()
 		 * @generated
 		 */
 		EClass LAS_HEADER = eINSTANCE.getLASHeader();
@@ -2248,11 +2248,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		EAttribute LAS_HEADER__START_OF_WAVEFORM_DATA_PACKET_RECORD = eINSTANCE.getLASHeader_StartOfWaveformDataPacketRecord();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl <em>Variable Length Record</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl <em>Variable Length Record</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getVariableLengthRecord()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.VariableLengthRecordImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getVariableLengthRecord()
 		 * @generated
 		 */
 		EClass VARIABLE_LENGTH_RECORD = eINSTANCE.getVariableLengthRecord();
@@ -2298,11 +2298,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		EAttribute VARIABLE_LENGTH_RECORD__DESCRIPTION = eINSTANCE.getVariableLengthRecord_Description();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl <em>LAS Reader</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl <em>LAS Reader</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASReader()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASReader()
 		 * @generated
 		 */
 		EClass LAS_READER = eINSTANCE.getLASReader();
@@ -2364,11 +2364,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		EOperation LAS_READER___READ = eINSTANCE.getLASReader__Read();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl <em>LAS Point</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASPointImpl <em>LAS Point</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASPoint()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASPointImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASPoint()
 		 * @generated
 		 */
 		EClass LAS_POINT = eINSTANCE.getLASPoint();
@@ -2502,14 +2502,14 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		EAttribute LAS_POINT__BLUE = eINSTANCE.getLASPoint_Blue();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getSymphony__CommonGeometryData3DLASFacade()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getApogyCommonGeometryData3DLASFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE = eINSTANCE.getSymphony__CommonGeometryData3DLASFacade();
+		EClass APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE = eINSTANCE.getApogyCommonGeometryData3DLASFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Point</b></em>' operation.
@@ -2517,14 +2517,14 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE = eINSTANCE.getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte();
+		EOperation APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE = eINSTANCE.getApogyCommonGeometryData3DLASFacade__CreatePoint__int_byte();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASWriter()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASWriterImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLASWriter()
 		 * @generated
 		 */
 		EClass LAS_WRITER = eINSTANCE.getLASWriter();
@@ -2626,21 +2626,21 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		EOperation LAS_WRITER___WRITE = eINSTANCE.getLASWriter__Write();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.ScanDirection
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getScanDirection()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getScanDirection()
 		 * @generated
 		 */
 		EEnum SCAN_DIRECTION = eINSTANCE.getScanDirection();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine <em>Edge Of Flight Line</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine <em>Edge Of Flight Line</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getEdgeOfFlightLine()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getEdgeOfFlightLine()
 		 * @generated
 		 */
 		EEnum EDGE_OF_FLIGHT_LINE = eINSTANCE.getEdgeOfFlightLine();
@@ -2650,7 +2650,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.runtime.IProgressMonitor
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getIProgressMonitor()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getIProgressMonitor()
 		 * @generated
 		 */
 		EDataType IPROGRESS_MONITOR = eINSTANCE.getIProgressMonitor();
@@ -2659,7 +2659,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * The meta object literal for the '<em>Char Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getCharArray()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getCharArray()
 		 * @generated
 		 */
 		EDataType CHAR_ARRAY = eINSTANCE.getCharArray();
@@ -2668,7 +2668,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * The meta object literal for the '<em>Long Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLongArray()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getLongArray()
 		 * @generated
 		 */
 		EDataType LONG_ARRAY = eINSTANCE.getLongArray();
@@ -2678,7 +2678,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.InputStream
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getInputStream()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getInputStream()
 		 * @generated
 		 */
 		EDataType INPUT_STREAM = eINSTANCE.getInputStream();
@@ -2688,7 +2688,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.IOException
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getIOException()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getIOException()
 		 * @generated
 		 */
 		EDataType IO_EXCEPTION = eINSTANCE.getIOException();
@@ -2698,7 +2698,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.OutputStream
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getOutputStream()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getOutputStream()
 		 * @generated
 		 */
 		EDataType OUTPUT_STREAM = eINSTANCE.getOutputStream();
@@ -2708,11 +2708,11 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.ApogyCommonGeometryData3DLASPackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
 
 	}
 
-} //Symphony__CommonGeometryData3DLASPackage
+} //ApogyCommonGeometryData3DLASPackage

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.utils;
+package ca.gc.asc_csa.apogy.common.emf.ui.utils;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
+import ca.gc.asc_csa.apogy.common.emf.ui.TimeSourceCompositeProvider;
 
 @SuppressWarnings("rawtypes")
 public class TimeSourceCompositeProviderFactory {

@@ -4,7 +4,7 @@
  *
  * $Id: DirectionalLightItemProvider.java,v 1.3.2.3 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class DirectionalLightItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION);
+			childrenFeatures.add(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +119,7 @@ public class DirectionalLightItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DirectionalLight.class)) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,8 +139,8 @@ public class DirectionalLightItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**
@@ -155,8 +155,8 @@ public class DirectionalLightItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR ||
-			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION;
+			childFeature == ApogyCommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR ||
+			childFeature == ApogyCommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION;
 
 		if (qualify) {
 			return getString

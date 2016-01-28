@@ -1,25 +1,25 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonTopologyUIJME3 edit plugin.
+ * This is the central singleton for the ApogyCommonTopologyUIJME3 edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonTopologyUIJME3EditPlugin extends EMFPlugin {
+public final class ApogyCommonTopologyUIJME3EditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonTopologyUIJME3EditPlugin INSTANCE = new Symphony__CommonTopologyUIJME3EditPlugin();
+	public static final ApogyCommonTopologyUIJME3EditPlugin INSTANCE = new ApogyCommonTopologyUIJME3EditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -35,7 +35,7 @@ public final class Symphony__CommonTopologyUIJME3EditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIJME3EditPlugin() {
+	public ApogyCommonTopologyUIJME3EditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

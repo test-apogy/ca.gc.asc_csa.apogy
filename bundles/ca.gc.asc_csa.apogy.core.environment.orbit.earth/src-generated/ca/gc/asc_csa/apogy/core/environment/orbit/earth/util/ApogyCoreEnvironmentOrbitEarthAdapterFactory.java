@@ -1,72 +1,72 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.util;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
-import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.*;
-import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
-import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationList;
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.TLE;
-import org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.*;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreEnvironmentOrbitEarthPackage modelPackage;
+	protected static ApogyCoreEnvironmentOrbitEarthPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -74,9 +74,9 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthAdapterFactory() {
+	public ApogyCoreEnvironmentOrbitEarthAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentOrbitEarthPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentOrbitEarthPackage.eINSTANCE;
 		}
 	}
 
@@ -105,8 +105,8 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentOrbitEarthSwitch<Adapter> modelSwitch =
-		new Symphony__CoreEnvironmentOrbitEarthSwitch<Adapter>() {
+	protected ApogyCoreEnvironmentOrbitEarthSwitch<Adapter> modelSwitch =
+		new ApogyCoreEnvironmentOrbitEarthSwitch<Adapter>() {
 			@Override
 			public Adapter caseOreKitBackedSpacecraftState(OreKitBackedSpacecraftState object) {
 				return createOreKitBackedSpacecraftStateAdapter();
@@ -220,8 +220,8 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 				return createSpacecraftSwathCorridorAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CoreEnvironmentOrbitEarthFacade(Symphony__CoreEnvironmentOrbitEarthFacade object) {
-				return createSymphony__CoreEnvironmentOrbitEarthFacadeAdapter();
+			public Adapter caseApogyCoreEnvironmentOrbitEarthFacade(ApogyCoreEnvironmentOrbitEarthFacade object) {
+				return createApogyCoreEnvironmentOrbitEarthFacadeAdapter();
 			}
 			@Override
 			public Adapter caseTimed(Timed object) {
@@ -296,13 +296,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState <em>Ore Kit Backed Spacecraft State</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState <em>Ore Kit Backed Spacecraft State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState
 	 * @generated
 	 */
 	public Adapter createOreKitBackedSpacecraftStateAdapter() {
@@ -310,13 +310,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame <em>Ore Kit Backed Frame</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame <em>Ore Kit Backed Frame</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame
 	 * @generated
 	 */
 	public Adapter createOreKitBackedFrameAdapter() {
@@ -324,13 +324,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider <em>Ore Kit Backed Attitude Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedAttitudeProvider <em>Ore Kit Backed Attitude Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedAttitudeProvider
 	 * @generated
 	 */
 	public Adapter createOreKitBackedAttitudeProviderAdapter() {
@@ -338,13 +338,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider <em>Nadir Pointing Attitude Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider <em>Nadir Pointing Attitude Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.NadirPointingAttitudeProvider
 	 * @generated
 	 */
 	public Adapter createNadirPointingAttitudeProviderAdapter() {
@@ -352,13 +352,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite <em>Earth Orbit Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite <em>Earth Orbit Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite
 	 * @generated
 	 */
 	public Adapter createEarthOrbitWorksiteAdapter() {
@@ -366,13 +366,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky <em>Earth Orbit Sky</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky <em>Earth Orbit Sky</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky
 	 * @generated
 	 */
 	public Adapter createEarthOrbitSkyAdapter() {
@@ -380,13 +380,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit <em>Earth Orbit</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit <em>Earth Orbit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit
 	 * @generated
 	 */
 	public Adapter createEarthOrbitAdapter() {
@@ -394,13 +394,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit <em>Keplerian Earth Orbit</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit <em>Keplerian Earth Orbit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit
 	 * @generated
 	 */
 	public Adapter createKeplerianEarthOrbitAdapter() {
@@ -408,13 +408,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit <em>Cartesian Earth Orbit</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit <em>Cartesian Earth Orbit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit
 	 * @generated
 	 */
 	public Adapter createCartesianEarthOrbitAdapter() {
@@ -422,13 +422,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ElevationMask <em>Elevation Mask</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask <em>Elevation Mask</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ElevationMask
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask
 	 * @generated
 	 */
 	public Adapter createElevationMaskAdapter() {
@@ -436,13 +436,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask <em>Constant Elevation Mask</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask <em>Constant Elevation Mask</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
 	 * @generated
 	 */
 	public Adapter createConstantElevationMaskAdapter() {
@@ -450,13 +450,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator <em>Earth Orbit Propagator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator <em>Earth Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator
 	 * @generated
 	 */
 	public Adapter createEarthOrbitPropagatorAdapter() {
@@ -464,13 +464,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbitPropagator <em>Keplerian Earth Orbit Propagator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator <em>Keplerian Earth Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbitPropagator
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbitPropagator
 	 * @generated
 	 */
 	public Adapter createKeplerianEarthOrbitPropagatorAdapter() {
@@ -478,13 +478,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator <em>TLE Earth Orbit Propagator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator <em>TLE Earth Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator
 	 * @generated
 	 */
 	public Adapter createTLEEarthOrbitPropagatorAdapter() {
@@ -492,13 +492,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator <em>URL Based TLE Earth Orbit Propagator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator <em>URL Based TLE Earth Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator
 	 * @generated
 	 */
 	public Adapter createURLBasedTLEEarthOrbitPropagatorAdapter() {
@@ -506,13 +506,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.TLE <em>TLE</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE <em>TLE</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.TLE
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE
 	 * @generated
 	 */
 	public Adapter createTLEAdapter() {
@@ -520,13 +520,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation <em>Earth Surface Location</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation <em>Earth Surface Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
 	 * @generated
 	 */
 	public Adapter createEarthSurfaceLocationAdapter() {
@@ -534,13 +534,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList <em>Earth Surface Location List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList <em>Earth Surface Location List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocationList
 	 * @generated
 	 */
 	public Adapter createEarthSurfaceLocationListAdapter() {
@@ -548,13 +548,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList <em>Ground Station References List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList <em>Ground Station References List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
 	 * @generated
 	 */
 	public Adapter createGroundStationReferencesListAdapter() {
@@ -562,13 +562,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation <em>Ground Station</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation <em>Ground Station</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.GroundStation
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation
 	 * @generated
 	 */
 	public Adapter createGroundStationAdapter() {
@@ -576,13 +576,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationList <em>Ground Station List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList <em>Ground Station List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.GroundStationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationList
 	 * @generated
 	 */
 	public Adapter createGroundStationListAdapter() {
@@ -590,13 +590,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass <em>Visibility Pass</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass <em>Visibility Pass</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass
 	 * @generated
 	 */
 	public Adapter createVisibilityPassAdapter() {
@@ -604,13 +604,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory <em>Visibility Pass Spacecraft Position History</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory <em>Visibility Pass Spacecraft Position History</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory
 	 * @generated
 	 */
 	public Adapter createVisibilityPassSpacecraftPositionHistoryAdapter() {
@@ -618,13 +618,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition <em>Visibility Pass Spacecraft Position</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition <em>Visibility Pass Spacecraft Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition
 	 * @generated
 	 */
 	public Adapter createVisibilityPassSpacecraftPositionAdapter() {
@@ -632,13 +632,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet <em>Spacecrafts Visibility Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet <em>Spacecrafts Visibility Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet
 	 * @generated
 	 */
 	public Adapter createSpacecraftsVisibilitySetAdapter() {
@@ -646,13 +646,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint <em>Corridor Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint <em>Corridor Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint
 	 * @generated
 	 */
 	public Adapter createCorridorPointAdapter() {
@@ -660,13 +660,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.Corridor <em>Corridor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor <em>Corridor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Corridor
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor
 	 * @generated
 	 */
 	public Adapter createCorridorAdapter() {
@@ -674,13 +674,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor <em>Spacecraft Swath Corridor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor <em>Spacecraft Swath Corridor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor
 	 * @generated
 	 */
 	public Adapter createSpacecraftSwathCorridorAdapter() {
@@ -688,27 +688,27 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreEnvironmentOrbitEarthFacadeAdapter() {
+	public Adapter createApogyCoreEnvironmentOrbitEarthFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {
@@ -716,13 +716,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
@@ -730,13 +730,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.AbstractFrame <em>Abstract Frame</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame <em>Abstract Frame</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.AbstractFrame
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame
 	 * @generated
 	 */
 	public Adapter createAbstractFrameAdapter() {
@@ -744,13 +744,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.AttitudeProvider <em>Attitude Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider <em>Attitude Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.AttitudeProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider
 	 * @generated
 	 */
 	public Adapter createAttitudeProviderAdapter() {
@@ -758,13 +758,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite <em>Abstract Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.AbstractWorksite
+	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite
 	 * @generated
 	 */
 	public Adapter createAbstractWorksiteAdapter() {
@@ -772,13 +772,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Timed
+	 * @see ca.gc.asc_csa.apogy.common.emf.Timed
 	 * @generated
 	 */
 	public Adapter createTimedAdapter() {
@@ -786,13 +786,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState <em>Spacecraft State</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState <em>Spacecraft State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.SpacecraftState
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState
 	 * @generated
 	 */
 	public Adapter createSpacecraftStateAdapter() {
@@ -800,13 +800,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Worksite <em>Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Worksite <em>Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Worksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.Worksite
 	 * @generated
 	 */
 	public Adapter createWorksiteAdapter() {
@@ -814,13 +814,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.OrbitWorksite <em>Orbit Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite <em>Orbit Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.OrbitWorksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite
 	 * @generated
 	 */
 	public Adapter createOrbitWorksiteAdapter() {
@@ -828,13 +828,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Sky <em>Sky</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Sky <em>Sky</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Sky
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky
 	 * @generated
 	 */
 	public Adapter createSkyAdapter() {
@@ -842,13 +842,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.Orbit <em>Orbit</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.Orbit <em>Orbit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.Orbit
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.Orbit
 	 * @generated
 	 */
 	public Adapter createOrbitAdapter() {
@@ -856,13 +856,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator <em>Abstract Orbit Propagator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator <em>Abstract Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator
 	 * @generated
 	 */
 	public Adapter createAbstractOrbitPropagatorAdapter() {
@@ -870,13 +870,13 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.Updatable <em>Updatable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.Updatable <em>Updatable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.Updatable
+	 * @see ca.gc.asc_csa.apogy.core.Updatable
 	 * @generated
 	 */
 	public Adapter createUpdatableAdapter() {
@@ -895,4 +895,4 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentOrbitEarthAdapterFactory
+} //ApogyCoreEnvironmentOrbitEarthAdapterFactory

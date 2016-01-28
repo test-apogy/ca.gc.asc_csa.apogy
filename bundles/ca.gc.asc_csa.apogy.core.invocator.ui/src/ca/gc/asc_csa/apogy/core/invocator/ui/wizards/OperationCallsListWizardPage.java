@@ -1,18 +1,18 @@
-package org.eclipse.symphony.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.invocator.OperationCallsList;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.invocator.ProgramsList;
-import org.eclipse.symphony.core.invocator.ui.composites.ProgramsListComposite;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.ProgramsListComposite;
 
 public class OperationCallsListWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.OperationCallsListWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallsListWizardPage";
 	private ProgramsList programsList;
 	private ProgramsListComposite programsListComposite; 
 	

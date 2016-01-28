@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.provider;
+package ca.gc.asc_csa.apogy.core.ui.provider;
 
 
 import java.util.Collection;
@@ -20,16 +20,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreUIFacadeItemProvider 
+public class ApogyCoreUIFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -43,7 +43,7 @@ public class Symphony__CoreUIFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreUIFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCoreUIFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -58,28 +58,28 @@ public class Symphony__CoreUIFacadeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDefaultSymphonyProjectNamePrefixPropertyDescriptor(object);
-			addDefaultSymphonySessionFilenamePropertyDescriptor(object);
-			addDefaultSymphonySessionFilenameExtensionPropertyDescriptor(object);
-			addDefaultSymphonySessionFolderNamePropertyDescriptor(object);
+			addDefaultApogyProjectNamePrefixPropertyDescriptor(object);
+			addDefaultApogySessionFilenamePropertyDescriptor(object);
+			addDefaultApogySessionFilenameExtensionPropertyDescriptor(object);
+			addDefaultApogySessionFolderNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Symphony Project Name Prefix feature.
+	 * This adds a property descriptor for the Default Apogy Project Name Prefix feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultSymphonyProjectNamePrefixPropertyDescriptor(Object object) {
+	protected void addDefaultApogyProjectNamePrefixPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreUIFacade_defaultSymphonyProjectNamePrefix_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreUIFacade_defaultSymphonyProjectNamePrefix_feature", "_UI_Symphony__CoreUIFacade_type"),
-				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX,
+				 getString("_UI_ApogyCoreUIFacade_defaultApogyProjectNamePrefix_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreUIFacade_defaultApogyProjectNamePrefix_feature", "_UI_ApogyCoreUIFacade_type"),
+				 ApogyCoreUIPackage.Literals.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX,
 				 false,
 				 false,
 				 false,
@@ -89,19 +89,19 @@ public class Symphony__CoreUIFacadeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Symphony Session Filename feature.
+	 * This adds a property descriptor for the Default Apogy Session Filename feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultSymphonySessionFilenamePropertyDescriptor(Object object) {
+	protected void addDefaultApogySessionFilenamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreUIFacade_defaultSymphonySessionFilename_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreUIFacade_defaultSymphonySessionFilename_feature", "_UI_Symphony__CoreUIFacade_type"),
-				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME,
+				 getString("_UI_ApogyCoreUIFacade_defaultApogySessionFilename_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreUIFacade_defaultApogySessionFilename_feature", "_UI_ApogyCoreUIFacade_type"),
+				 ApogyCoreUIPackage.Literals.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME,
 				 false,
 				 false,
 				 false,
@@ -111,19 +111,19 @@ public class Symphony__CoreUIFacadeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Symphony Session Filename Extension feature.
+	 * This adds a property descriptor for the Default Apogy Session Filename Extension feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultSymphonySessionFilenameExtensionPropertyDescriptor(Object object) {
+	protected void addDefaultApogySessionFilenameExtensionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreUIFacade_defaultSymphonySessionFilenameExtension_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreUIFacade_defaultSymphonySessionFilenameExtension_feature", "_UI_Symphony__CoreUIFacade_type"),
-				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION,
+				 getString("_UI_ApogyCoreUIFacade_defaultApogySessionFilenameExtension_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreUIFacade_defaultApogySessionFilenameExtension_feature", "_UI_ApogyCoreUIFacade_type"),
+				 ApogyCoreUIPackage.Literals.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION,
 				 false,
 				 false,
 				 false,
@@ -133,19 +133,19 @@ public class Symphony__CoreUIFacadeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Symphony Session Folder Name feature.
+	 * This adds a property descriptor for the Default Apogy Session Folder Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultSymphonySessionFolderNamePropertyDescriptor(Object object) {
+	protected void addDefaultApogySessionFolderNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreUIFacade_defaultSymphonySessionFolderName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreUIFacade_defaultSymphonySessionFolderName_feature", "_UI_Symphony__CoreUIFacade_type"),
-				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME,
+				 getString("_UI_ApogyCoreUIFacade_defaultApogySessionFolderName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreUIFacade_defaultApogySessionFolderName_feature", "_UI_ApogyCoreUIFacade_type"),
+				 ApogyCoreUIPackage.Literals.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME,
 				 false,
 				 false,
 				 false,
@@ -155,14 +155,14 @@ public class Symphony__CoreUIFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CoreUIFacade.gif.
+	 * This returns ApogyCoreUIFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreUIFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreUIFacade"));
 	}
 
 	/**
@@ -173,10 +173,10 @@ public class Symphony__CoreUIFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Symphony__CoreUIFacade)object).getDefaultSymphonySessionFilename();
+		String label = ((ApogyCoreUIFacade)object).getDefaultApogySessionFilename();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Symphony__CoreUIFacade_type") :
-			getString("_UI_Symphony__CoreUIFacade_type") + " " + label;
+			getString("_UI_ApogyCoreUIFacade_type") :
+			getString("_UI_ApogyCoreUIFacade_type") + " " + label;
 	}
 	
 
@@ -191,11 +191,11 @@ public class Symphony__CoreUIFacadeItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Symphony__CoreUIFacade.class)) {
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
+		switch (notification.getFeatureID(ApogyCoreUIFacade.class)) {
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_PROJECT_NAME_PREFIX:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FILENAME_EXTENSION:
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE__DEFAULT_APOGY_SESSION_FOLDER_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -222,7 +222,7 @@ public class Symphony__CoreUIFacadeItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__CoreUIEditPlugin.INSTANCE;
+		return ApogyCoreUIEditPlugin.INSTANCE;
 	}
 
 }

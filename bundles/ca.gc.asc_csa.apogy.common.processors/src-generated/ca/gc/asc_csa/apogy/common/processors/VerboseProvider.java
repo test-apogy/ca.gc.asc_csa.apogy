@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors;
+package ca.gc.asc_csa.apogy.common.processors;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.processors.VerboseProvider#isVerbose <em>Verbose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider#isVerbose <em>Verbose</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getVerboseProvider()
+ * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getVerboseProvider()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -32,14 +32,14 @@ public interface VerboseProvider extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verbose</em>' attribute.
 	 * @see #setVerbose(boolean)
-	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getVerboseProvider_Verbose()
+	 * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#getVerboseProvider_Verbose()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isVerbose();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.processors.VerboseProvider#isVerbose <em>Verbose</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider#isVerbose <em>Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Verbose</em>' attribute.

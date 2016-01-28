@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.impl;
+package ca.gc.asc_csa.apogy.common.io.jinput.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -23,13 +23,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.io.jinput.Activator;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.EController;
-import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.EController;
+import ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,12 +39,12 @@ import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#isSupported <em>Supported</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#getControllers <em>Controllers</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#isRefreshRequested <em>Refresh Requested</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#getPollingCount <em>Polling Count</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#getPollingJob <em>Polling Job</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#isPollingProblem <em>Polling Problem</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl#isSupported <em>Supported</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl#getControllers <em>Controllers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl#isRefreshRequested <em>Refresh Requested</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl#getPollingCount <em>Polling Count</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl#getPollingJob <em>Polling Job</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EControllerEnvironmentImpl#isPollingProblem <em>Polling Problem</em>}</li>
  * </ul>
  *
  * @generated
@@ -170,7 +170,7 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT;
+		return ApogyCommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT;
 	}
 
 	/**
@@ -190,7 +190,7 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public EList<EController> getControllersGen() {
 		if (controllers == null) {
-			controllers = new EObjectContainmentEList<EController>(EController.class, this, Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS);
+			controllers = new EObjectContainmentEList<EController>(EController.class, this, ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS);
 		}
 		return controllers;
 	}
@@ -213,7 +213,7 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 			{
 				if(c.poll()) 
 				{
-					EController ec = Symphony__CommonIOJInputFactory.eINSTANCE.createEController();
+					EController ec = ApogyCommonIOJInputFactory.eINSTANCE.createEController();
 					ec.setPojoController(c);
 					returnList.add(ec);
 				}
@@ -272,7 +272,7 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 		boolean oldRefreshRequested = refreshRequested;
 		refreshRequested = newRefreshRequested;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED, oldRefreshRequested, refreshRequested));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED, oldRefreshRequested, refreshRequested));
 	}
 
 	/**
@@ -293,7 +293,7 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 		long oldPollingCount = pollingCount;
 		pollingCount = newPollingCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT, oldPollingCount, pollingCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT, oldPollingCount, pollingCount));
 	}
 
 	/**
@@ -363,7 +363,7 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 		boolean oldPollingProblem = pollingProblem;
 		pollingProblem = newPollingProblem;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM, oldPollingProblem, pollingProblem));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM, oldPollingProblem, pollingProblem));
 	}
 
 	/**
@@ -471,7 +471,7 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
 				return ((InternalEList<?>)getControllers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -485,17 +485,17 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
 				return isSupported();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
 				return getControllers();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
 				return isRefreshRequested();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
 				return getPollingCount();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
 				return getPollingJob();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
 				return isPollingProblem();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -509,13 +509,13 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
 				setRefreshRequested((Boolean)newValue);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
 				setPollingCount((Long)newValue);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
 				setPollingProblem((Boolean)newValue);
 				return;
 		}
@@ -530,13 +530,13 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
 				setRefreshRequested(REFRESH_REQUESTED_EDEFAULT);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
 				setPollingCount(POLLING_COUNT_EDEFAULT);
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
 				setPollingProblem(POLLING_PROBLEM_EDEFAULT);
 				return;
 		}
@@ -551,17 +551,17 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
 				return isSupported() != SUPPORTED_EDEFAULT;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
 				return controllers != null && !controllers.isEmpty();
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
 				return refreshRequested != REFRESH_REQUESTED_EDEFAULT;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
 				return pollingCount != POLLING_COUNT_EDEFAULT;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
 				return POLLING_JOB_EDEFAULT == null ? pollingJob != null : !POLLING_JOB_EDEFAULT.equals(pollingJob);
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
 				return pollingProblem != POLLING_PROBLEM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -575,20 +575,20 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___REFRESH:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___REFRESH:
 				refresh();
 				return null;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___START_POLLING:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___START_POLLING:
 				startPolling();
 				return null;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___STOP_POLLING:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___STOP_POLLING:
 				stopPolling();
 				return null;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___RESOLVE_CONTROLLER__STRING:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___RESOLVE_CONTROLLER__STRING:
 				return resolveController((String)arguments.get(0));
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___RESOLVE_ECOMPONENT__STRING_ECONTROLLER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___RESOLVE_ECOMPONENT__STRING_ECONTROLLER:
 				return resolveEComponent((String)arguments.get(0), (EController)arguments.get(1));
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___RESOLVE_ECOMPONENT__ECOMPONENTQUALIFIER:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT___RESOLVE_ECOMPONENT__ECOMPONENTQUALIFIER:
 				return resolveEComponent((EComponentQualifier)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

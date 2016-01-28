@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.core.environment.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -15,15 +15,15 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
-import org.eclipse.symphony.core.environment.ui.StarFieldSceneObject;
-import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldSceneObject;
+import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -61,7 +61,7 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 				updateGeometry();	
 				
 				IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-				float magnitudeCutoff = (float) store.getDouble(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID);				
+				float magnitudeCutoff = (float) store.getDouble(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID);				
 				setCutOffMagnitude(magnitudeCutoff);
 				return Status.OK_STATUS;
 			}

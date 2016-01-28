@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Wheel#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Wheel#getLength <em>Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel#getLength <em>Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getWheel()
  * @model
  * @generated
  */
@@ -39,15 +39,15 @@ public interface Wheel extends PhysicalBody
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel_Radius()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getWheel_Radius()
 	 * @model default="0.25" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
   double getRadius();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Wheel#getRadius <em>Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel#getRadius <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Radius</em>' attribute.
@@ -67,15 +67,15 @@ public interface Wheel extends PhysicalBody
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Length</em>' attribute.
 	 * @see #setLength(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel_Length()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getWheel_Length()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getLength();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Wheel#getLength <em>Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel#getLength <em>Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Length</em>' attribute.

@@ -7,7 +7,7 @@
          point="org.eclipse.core.runtime.applications">
       <application>
          <run
-               class="org.eclipse.symphony.addons.sensors.gps.ui.Application">
+               class="ca.gc.asc_csa.apogy.addons.sensors.gps.ui.Application">
          </run>
       </application>
    </extension>
@@ -15,16 +15,16 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="RCP Perspective"
-            class="org.eclipse.symphony.addons.sensors.gps.ui.Perspective"
-            id="org.eclipse.symphony.addons.sensors.gps.ui.perspective">
+            class="ca.gc.asc_csa.apogy.addons.sensors.gps.ui.Perspective"
+            id="ca.gc.asc_csa.apogy.addons.sensors.gps.ui.perspective">
       </perspective>
    </extension>
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.addons.ui.category"
-            class="org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView"
-            id="org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView"
+            category="ca.gc.asc_csa.apogy.addons.ui.category"
+            class="ca.gc.asc_csa.apogy.addons.sensors.gps.ui.views.GPSView"
+            id="ca.gc.asc_csa.apogy.addons.sensors.gps.ui.views.GPSView"
             name="GPS View"
             restorable="true">
       </view>
@@ -33,7 +33,7 @@
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="org.eclipse.symphony.addons.sensors.gps.ui.application"
+            application="ca.gc.asc_csa.apogy.addons.sensors.gps.ui.application"
             name="GPS">
          <property
                name="appName"

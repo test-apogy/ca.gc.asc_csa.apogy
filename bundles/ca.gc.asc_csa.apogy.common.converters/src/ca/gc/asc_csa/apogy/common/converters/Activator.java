@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.converters;
+package ca.gc.asc_csa.apogy.common.converters;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.common.converters"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.converters"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

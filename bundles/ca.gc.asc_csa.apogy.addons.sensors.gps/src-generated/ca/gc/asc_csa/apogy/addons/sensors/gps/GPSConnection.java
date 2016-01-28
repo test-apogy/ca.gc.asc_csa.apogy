@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSConnection#getInput <em>Input</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSConnection#getOutput <em>Output</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSConnection#getInput <em>Input</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSConnection#getOutput <em>Output</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSConnection()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSConnection()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -36,8 +36,8 @@ public interface GPSConnection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSConnection_Input()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.gps.InputStream" required="true" changeable="false"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSConnection_Input()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.gps.InputStream" required="true" changeable="false"
 	 * @generated
 	 */
 	InputStream getInput();
@@ -51,8 +51,8 @@ public interface GPSConnection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSConnection_Output()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.gps.OutputStream" required="true" changeable="false"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSConnection_Output()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.gps.OutputStream" required="true" changeable="false"
 	 * @generated
 	 */
 	OutputStream getOutput();
@@ -64,7 +64,7 @@ public interface GPSConnection extends EObject {
 	 * Resets the connection: closesand opens the connection again.
 	 * Once this method completes, new 'input' and 'output' objects are available.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.sensors.gps.IOException"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.sensors.gps.IOException"
 	 * @generated
 	 */
 	void reset() throws IOException;

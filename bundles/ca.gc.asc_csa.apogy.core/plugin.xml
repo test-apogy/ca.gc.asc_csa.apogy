@@ -15,26 +15,26 @@
    
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.core.Symphony__CorePackage"
-            genModel="model/symphony_core.xcore"/>
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.core.ApogyCorePackage"
+            genModel="model/apogy_core.xcore"/>
    </extension>
    
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="ss"
-            class="org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceFactoryImpl"/>
+            class="ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.invocatorDelegate">
+         point="ca.gc.asc_csa.apogy.core.invocator.invocatorDelegate">
       <element
-            invocatorDelegateClass="org.eclipse.symphony.core.invocator.SymphonyInvocatorDelegate">
+            invocatorDelegateClass="ca.gc.asc_csa.apogy.core.invocator.ApogyInvocatorDelegate">
       </element>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.converters">
+         point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-            Class="org.eclipse.symphony.core.converters.SymphonyEnvironmentToTimeSourcesListConverter">
+            Class="ca.gc.asc_csa.apogy.core.converters.ApogyEnvironmentToTimeSourcesListConverter">
       </new_element>
    </extension>
 </plugin>

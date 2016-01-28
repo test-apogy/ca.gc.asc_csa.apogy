@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_lKQRkLugEeWeYcTmr4NtjQ" selectedViews="_nAHnALugEeWeYcTmr4NtjQ _nAUbULugEeWeYcTmr4NtjQ _nAezYLugEeWeYcTmr4NtjQ _nArAoLugEeWeYcTmr4NtjQ" version="10.1.0.201509162000">
-  <semanticResources>symphony_examples_satellite.xcore</semanticResources>
+  <semanticResources>apogy_examples_satellite.xcore</semanticResources>
   <semanticResources>platform:/resource/org.eclipse.emf.ecore.xcore.lib/model/XcoreLang.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.emf/model/symphony_common_emf.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.images/model/symphony_common_images.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.core.environment/model/symphony_core_environment.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.core.environment.orbit/model/symphony_core_environment_orbit.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.core.environment.orbit.earth/model/symphony_core_environment_orbit_earth.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.emf/model/apogy_common_emf.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.images/model/apogy_common_images.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.core.environment/model/apogy_core_environment.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.core.environment.orbit/model/apogy_core_environment_orbit.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.core.environment.orbit.earth/model/apogy_core_environment_orbit_earth.xcore</semanticResources>
   <semanticResources>java:/Objects/java.util.List</semanticResources>
   <semanticResources>java:/Objects/java.util.SortedSet</semanticResources>
   <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.core/model/symphony_core.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.math/model/symphony_common_math.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.topology/model/symphony_common_topology.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.core.invocator/model/symphony_core_invocator.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.geometry.data3d/model/symphony_common_geometry_data3d.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.topology.bindings/model/symphony_common_topology_bindings.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.geometry.data/model/symphony_common_geometry_data.xcore</semanticResources>
-  <semanticResources>platform:/resource/org.eclipse.symphony.common.processors/model/symphony_common_processors.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.core/model/apogy_core.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.math/model/apogy_common_math.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.topology/model/apogy_common_topology.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.core.invocator/model/apogy_core_invocator.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.geometry.data3d/model/apogy_common_geometry_data3d.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.topology.bindings/model/apogy_common_topology_bindings.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.geometry.data/model/apogy_common_geometry_data.xcore</semanticResources>
+  <semanticResources>platform:/resource/ca.gc.asc_csa.apogy.common.processors/model/apogy_common_processors.xcore</semanticResources>
   <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore</semanticResources>
   <semanticResources>java:/Objects/org.eclipse.emf.ecore.EPackage</semanticResources>
   <semanticResources>java:/Objects/org.eclipse.emf.ecore.EClass</semanticResources>
@@ -44,7 +44,7 @@
   <semanticResources>java:/Objects/org.eclipse.emf.ecore.resource.Resource</semanticResources>
   <semanticResources>java:/Objects/org.eclipse.emf.common.util.URI</semanticResources>
   <semanticResources>java:/Objects/java.lang.Exception</semanticResources>
-  <semanticResources>java:/Objects/org.eclipse.symphony.common.emf.EClassFilter</semanticResources>
+  <semanticResources>java:/Objects/ca.gc.asc_csa.apogy.common.emf.EClassFilter</semanticResources>
   <semanticResources>java:/Objects/java.lang.Number</semanticResources>
   <semanticResources>java:/Objects/javax.measure.unit.Unit</semanticResources>
   <semanticResources>java:/Objects/java.util.Collection</semanticResources>
@@ -1194,7 +1194,7 @@
   <semanticResources>java:/Objects/javax.vecmath.Matrix4f</semanticResources>
   <semanticResources>java:/Objects/javax.vecmath.Vector4f</semanticResources>
   <semanticResources>java:/Objects/javax.vecmath.Vector4d</semanticResources>
-  <semanticResources>java:/Objects/org.eclipse.symphony.common.topology.INodeVisitor</semanticResources>
+  <semanticResources>java:/Objects/ca.gc.asc_csa.apogy.common.topology.INodeVisitor</semanticResources>
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>java:/Objects/org.eclipse.xtext.xbase.lib.ObjectExtensions</semanticResources>
   <semanticResources>java:/Objects/org.eclipse.xtext.xbase.lib.IntegerExtensions</semanticResources>
@@ -1815,8 +1815,8 @@
         </data>
       </ownedAnnotationEntries>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PK10LugEeWeYcTmr4NtjQ" name="AbstractConstellation" tooltipText="" outgoingEdges="_6QXIoLugEeWeYcTmr4NtjQ _6QaL8LugEeWeYcTmr4NtjQ _6QbaELugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1826,75 +1826,75 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6P_VMLugEeWeYcTmr4NtjQ" name="plan(startDate EDate, endDate EDate) : ConstellationCommandPlan" tooltipText="plan(startDate, endDate) : ConstellationCommandPlan">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan/endDate"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan/startDate"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan/endDate"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan/startDate"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QBxcLugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QCYgLugEeWeYcTmr4NtjQ" name="plan(requests List, startDate EDate, endDate EDate) : ConstellationCommandPlan" tooltipText="plan(requests, startDate, endDate) : ConstellationCommandPlan">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1/endDate"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1/requests"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1/startDate"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1/endDate"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1/requests"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/plan.1/startDate"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QCYgbugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QCYgrugEeWeYcTmr4NtjQ" name="commit(satelliteCommands List)" tooltipText="commit(satelliteCommands)">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/commit"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/commit"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/commit/satelliteCommands"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/commit"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/commit"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/commit/satelliteCommands"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QC_kLugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QC_kbugEeWeYcTmr4NtjQ" name="apply(downlink ConstellationDownlink)" tooltipText="apply(downlink)">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/apply"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/apply"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/apply/downlink"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/apply"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/apply"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/apply/downlink"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QDmoLugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QDmobugEeWeYcTmr4NtjQ" name="add(request AbstractConstellationRequest)" tooltipText="add(request)">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/add"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/add"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/add/request"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/add"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/add"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/add/request"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QENsLugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QENsbugEeWeYcTmr4NtjQ" name="addAll(requests List)" tooltipText="addAll(requests)">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/addAll"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/addAll"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/addAll/requests"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/addAll"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/addAll"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/addAll/requests"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QENsrugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QE0wLugEeWeYcTmr4NtjQ" name="remove(request AbstractConstellationRequest)" tooltipText="remove(request)">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/remove"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/remove"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/remove/request"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/remove"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/remove"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/remove/request"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QE0wbugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QE0wrugEeWeYcTmr4NtjQ" name="removeAll(requests List)" tooltipText="removeAll(requests)">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/removeAll"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/removeAll"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/removeAll/requests"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/removeAll"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/removeAll"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/removeAll/requests"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QFb0LugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
@@ -1902,8 +1902,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PSKkLugEeWeYcTmr4NtjQ" name="AbstractConstellationDownlinkItem" tooltipText="" incomingEdges="_6QedY7ugEeWeYcTmr4NtjQ _6QlLELugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1913,8 +1913,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QGC4LugEeWeYcTmr4NtjQ" name="requestUID : ELong = 0" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem/requestUID"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem/requestUID"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem/requestUID"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationDownlinkItem/requestUID"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QHRALugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
@@ -1922,8 +1922,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PT_wLugEeWeYcTmr4NtjQ" name="AbstractConstellationRequest" tooltipText="" outgoingEdges="_6QlyILugEeWeYcTmr4NtjQ" incomingEdges="_6QdPQLugEeWeYcTmr4NtjQ _6Qfrg7ugEeWeYcTmr4NtjQ _6QkkArugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1933,24 +1933,24 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QHRAbugEeWeYcTmr4NtjQ" name="uid : ELong = 0" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/uid"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/uid"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/uid"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/uid"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QH4ELugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QH4EbugEeWeYcTmr4NtjQ" name="orderPriority : ConstellationRequestPriority = NORMAL" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderPriority"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderPriority"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderPriority"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderPriority"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QIfILugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QIfIbugEeWeYcTmr4NtjQ" name="orderStatus : ConstellationRequestStatus = NEW" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderStatus"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderStatus"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderStatus"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/orderStatus"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QIfIrugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
@@ -1958,8 +1958,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PVN4LugEeWeYcTmr4NtjQ" name="AbstractSatelliteCommand" tooltipText="" outgoingEdges="_6QcBILugEeWeYcTmr4NtjQ" incomingEdges="_6Qd2VrugEeWeYcTmr4NtjQ _6QjV4LugEeWeYcTmr4NtjQ _6QlyILugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1969,8 +1969,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PWcALugEeWeYcTmr4NtjQ" name="AcquireImageSatelliteCommand" tooltipText="" outgoingEdges="_6QjV4LugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1979,8 +1979,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QJGMLugEeWeYcTmr4NtjQ" name="rollAngle : EDouble = 0.0" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand/rollAngle"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand/rollAngle"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand/rollAngle"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand/rollAngle"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QJtQLugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
@@ -1988,8 +1988,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PXqILugEeWeYcTmr4NtjQ" name="ConstellationCommandPlan" tooltipText="" outgoingEdges="_6QcoMLugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlan"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlan"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlan"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlan"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1999,8 +1999,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PY4QLugEeWeYcTmr4NtjQ" name="ConstellationCommandPlanItem" tooltipText="" outgoingEdges="_6QdPQLugEeWeYcTmr4NtjQ _6Qd2VrugEeWeYcTmr4NtjQ" incomingEdges="_6QcoMLugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2010,8 +2010,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PZfULugEeWeYcTmr4NtjQ" name="ConstellationDownlink" tooltipText="" outgoingEdges="_6QedY7ugEeWeYcTmr4NtjQ" incomingEdges="_6QfEc7ugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlink"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlink"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlink"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlink"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2021,8 +2021,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PatcLugEeWeYcTmr4NtjQ" name="ConstellationDownlinksList" tooltipText="" outgoingEdges="_6QfEc7ugEeWeYcTmr4NtjQ" incomingEdges="_6QaL8LugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlinksList"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlinksList"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlinksList"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlinksList"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2032,31 +2032,31 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6Pb7kLugEeWeYcTmr4NtjQ" name="ConstellationRequestPriority" tooltipText="" width="12" height="10">
-        <target xmi:type="ecore:EEnum" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority"/>
-        <semanticElements xmi:type="ecore:EEnum" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority"/>
+        <target xmi:type="ecore:EEnum" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority"/>
+        <semanticElements xmi:type="ecore:EEnum" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_6Pb7kbugEeWeYcTmr4NtjQ" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="221,236,202">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QOlwLugEeWeYcTmr4NtjQ" name="LOW" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/LOW"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/LOW"/>
+          <target xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/LOW"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/LOW"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QOlwbugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QOlwrugEeWeYcTmr4NtjQ" name="NORMAL" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/NORMAL"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/NORMAL"/>
+          <target xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/NORMAL"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/NORMAL"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QOlw7ugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QPM0LugEeWeYcTmr4NtjQ" name="HIGH" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/HIGH"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/HIGH"/>
+          <target xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/HIGH"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestPriority/HIGH"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QPM0bugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
@@ -2064,8 +2064,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PcioLugEeWeYcTmr4NtjQ" name="ConstellationRequestsList" tooltipText="" outgoingEdges="_6Qfrg7ugEeWeYcTmr4NtjQ" incomingEdges="_6QbaELugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestsList"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestsList"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestsList"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestsList"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2075,39 +2075,39 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PeX0LugEeWeYcTmr4NtjQ" name="ConstellationRequestStatus" tooltipText="" width="12" height="10">
-        <target xmi:type="ecore:EEnum" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus"/>
-        <semanticElements xmi:type="ecore:EEnum" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus"/>
+        <target xmi:type="ecore:EEnum" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus"/>
+        <semanticElements xmi:type="ecore:EEnum" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_6PeX0bugEeWeYcTmr4NtjQ" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="221,236,202">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QPM0rugEeWeYcTmr4NtjQ" name="NEW" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/NEW"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/NEW"/>
+          <target xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/NEW"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/NEW"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QPz4LugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QPz4bugEeWeYcTmr4NtjQ" name="COMMITTED" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMMITTED"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMMITTED"/>
+          <target xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMMITTED"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMMITTED"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QPz4rugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QPz47ugEeWeYcTmr4NtjQ" name="COMPLETED" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMPLETED"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMPLETED"/>
+          <target xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMPLETED"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/COMPLETED"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QQa8LugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QQa8bugEeWeYcTmr4NtjQ" name="FAILED" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/FAILED"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/FAILED"/>
+          <target xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/FAILED"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestStatus/FAILED"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QQa8rugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
@@ -2115,16 +2115,16 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6Pfl8LugEeWeYcTmr4NtjQ" name="ConstellationUtilities" tooltipText="" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationUtilities"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ConstellationUtilities"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationUtilities"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ConstellationUtilities"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_6PgNALugEeWeYcTmr4NtjQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QKUULugEeWeYcTmr4NtjQ" name="sortByPriority(requests List) : SortedSet" tooltipText="sortByPriority(requests) : SortedSet">
-          <target xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/ConstellationUtilities/sortByPriority"/>
-          <semanticElements xmi:type="ecore:EOperation" href="symphony_examples_satellite.xcore#/EPackage/ConstellationUtilities/sortByPriority"/>
-          <semanticElements xmi:type="ecore:EParameter" href="symphony_examples_satellite.xcore#/EPackage/ConstellationUtilities/sortByPriority/requests"/>
+          <target xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/ConstellationUtilities/sortByPriority"/>
+          <semanticElements xmi:type="ecore:EOperation" href="apogy_examples_satellite.xcore#/EPackage/ConstellationUtilities/sortByPriority"/>
+          <semanticElements xmi:type="ecore:EParameter" href="apogy_examples_satellite.xcore#/EPackage/ConstellationUtilities/sortByPriority/requests"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QK7YLugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
           </ownedStyle>
@@ -2132,8 +2132,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PiCMLugEeWeYcTmr4NtjQ" name="ImageConstellationRequest" tooltipText="" outgoingEdges="_6Qg5oLugEeWeYcTmr4NtjQ _6QkkArugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ImageConstellationRequest"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ImageConstellationRequest"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ImageConstellationRequest"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ImageConstellationRequest"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2143,8 +2143,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PkecLugEeWeYcTmr4NtjQ" name="OrbitalImage" tooltipText="" incomingEdges="_6Qg5oLugEeWeYcTmr4NtjQ _6QhgsLugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImage"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImage"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImage"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImage"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2153,8 +2153,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QLicLugEeWeYcTmr4NtjQ" name="rollAngle : EDouble = 0.0" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImage/rollAngle"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImage/rollAngle"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImage/rollAngle"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImage/rollAngle"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QLicbugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
@@ -2162,8 +2162,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6PlskLugEeWeYcTmr4NtjQ" name="OrbitalImageConstellationDownlinkItem" tooltipText="" outgoingEdges="_6QhgsLugEeWeYcTmr4NtjQ _6QlLELugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2173,8 +2173,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6Pm6sLugEeWeYcTmr4NtjQ" name="Satellite" tooltipText="" incomingEdges="_6QcBILugEeWeYcTmr4NtjQ _6QiHwLugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/Satellite"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/Satellite"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/Satellite"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/Satellite"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2183,16 +2183,16 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QMJgLugEeWeYcTmr4NtjQ" name="maximumRollRate : EDouble = 0.017452778" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/Satellite/maximumRollRate"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/Satellite/maximumRollRate"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/Satellite/maximumRollRate"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/Satellite/maximumRollRate"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QMJgbugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6QMwkLugEeWeYcTmr4NtjQ" name="maximumRoll : EDouble = 0.087" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/Satellite/maximumRoll"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="symphony_examples_satellite.xcore#/EPackage/Satellite/maximumRoll"/>
+          <target xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/Satellite/maximumRoll"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="apogy_examples_satellite.xcore#/EPackage/Satellite/maximumRoll"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6QMwkbugEeWeYcTmr4NtjQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
@@ -2200,8 +2200,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_6Pov4LugEeWeYcTmr4NtjQ" name="SatellitesList" tooltipText="" outgoingEdges="_6QiHwLugEeWeYcTmr4NtjQ" incomingEdges="_6QXIoLugEeWeYcTmr4NtjQ" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/SatellitesList"/>
-        <semanticElements xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/SatellitesList"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/SatellitesList"/>
+        <semanticElements xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/SatellitesList"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2211,8 +2211,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QXIoLugEeWeYcTmr4NtjQ" name="[0..1] satellitesList" sourceNode="_6PK10LugEeWeYcTmr4NtjQ" targetNode="_6Pov4LugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/satellitesList"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/satellitesList"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/satellitesList"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/satellitesList"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QZk4LugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QZk4bugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2224,8 +2224,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QaL8LugEeWeYcTmr4NtjQ" name="[0..1] downlinksLists" sourceNode="_6PK10LugEeWeYcTmr4NtjQ" targetNode="_6PatcLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/downlinksLists"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/downlinksLists"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/downlinksLists"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/downlinksLists"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QazALugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QazAbugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2237,8 +2237,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QbaELugEeWeYcTmr4NtjQ" name="[0..1] constellationRequestsList" sourceNode="_6PK10LugEeWeYcTmr4NtjQ" targetNode="_6PcioLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/constellationRequestsList"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellation/constellationRequestsList"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/constellationRequestsList"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellation/constellationRequestsList"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QbaEbugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QbaErugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2250,8 +2250,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QcBILugEeWeYcTmr4NtjQ" name="[0..1] satellite" sourceNode="_6PVN4LugEeWeYcTmr4NtjQ" targetNode="_6Pm6sLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand/satellite"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand/satellite"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand/satellite"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand/satellite"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QcBIbugEeWeYcTmr4NtjQ" routingStyle="manhattan" strokeColor="0,0,0">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QcBIrugEeWeYcTmr4NtjQ" showIcon="false">
@@ -2264,8 +2264,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QcoMLugEeWeYcTmr4NtjQ" name="[0..*] constellationCommandPlanItems" sourceNode="_6PXqILugEeWeYcTmr4NtjQ" targetNode="_6PY4QLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlan/constellationCommandPlanItems"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlan/constellationCommandPlanItems"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlan/constellationCommandPlanItems"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlan/constellationCommandPlanItems"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QcoMbugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QcoMrugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2277,8 +2277,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QdPQLugEeWeYcTmr4NtjQ" name="[1..1] request" sourceNode="_6PY4QLugEeWeYcTmr4NtjQ" targetNode="_6PT_wLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/request"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/request"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/request"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/request"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6Qd2U7ugEeWeYcTmr4NtjQ" description="_6Qd2ULugEeWeYcTmr4NtjQ" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6Qd2VLugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2290,8 +2290,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6Qd2VrugEeWeYcTmr4NtjQ" name="[0..1] satelliteCommand" sourceNode="_6PY4QLugEeWeYcTmr4NtjQ" targetNode="_6PVN4LugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/satelliteCommand"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/satelliteCommand"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/satelliteCommand"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationCommandPlanItem/satelliteCommand"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QedYLugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QedYbugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2303,8 +2303,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QedY7ugEeWeYcTmr4NtjQ" name="[0..*] downlinkItems" sourceNode="_6PZfULugEeWeYcTmr4NtjQ" targetNode="_6PSKkLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlink/downlinkItems"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlink/downlinkItems"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlink/downlinkItems"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlink/downlinkItems"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QfEcLugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QfEcbugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2316,8 +2316,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QfEc7ugEeWeYcTmr4NtjQ" name="[0..*] downlinks" sourceNode="_6PatcLugEeWeYcTmr4NtjQ" targetNode="_6PZfULugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlinksList/downlinks"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationDownlinksList/downlinks"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlinksList/downlinks"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationDownlinksList/downlinks"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QfrgLugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QfrgbugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2329,8 +2329,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6Qfrg7ugEeWeYcTmr4NtjQ" name="[0..*] constellationRequests" sourceNode="_6PcioLugEeWeYcTmr4NtjQ" targetNode="_6PT_wLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestsList/constellationRequests"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ConstellationRequestsList/constellationRequests"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestsList/constellationRequests"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ConstellationRequestsList/constellationRequests"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QgSkLugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QgSkbugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2342,8 +2342,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6Qg5oLugEeWeYcTmr4NtjQ" name="[0..1] image" sourceNode="_6PiCMLugEeWeYcTmr4NtjQ" targetNode="_6PkecLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ImageConstellationRequest/image"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/ImageConstellationRequest/image"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ImageConstellationRequest/image"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/ImageConstellationRequest/image"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6Qg5obugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6Qg5orugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2355,8 +2355,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QhgsLugEeWeYcTmr4NtjQ" name="[0..1] image" sourceNode="_6PlskLugEeWeYcTmr4NtjQ" targetNode="_6PkecLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem/image"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem/image"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem/image"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem/image"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QhgsbugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6QhgsrugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2368,8 +2368,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QiHwLugEeWeYcTmr4NtjQ" name="[0..*] satellites" sourceNode="_6Pov4LugEeWeYcTmr4NtjQ" targetNode="_6Pm6sLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/SatellitesList/satellites"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/SatellitesList/satellites"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/SatellitesList/satellites"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/SatellitesList/satellites"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6Qiu0LugEeWeYcTmr4NtjQ" description="_6QY90LugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6Qiu0bugEeWeYcTmr4NtjQ" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -2381,8 +2381,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QjV4LugEeWeYcTmr4NtjQ" sourceNode="_6PWcALugEeWeYcTmr4NtjQ" targetNode="_6PVN4LugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand"/>
-        <semanticElements xmi:type="ecore:EGenericType" href="symphony_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand/@eGenericSuperTypes.0"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="apogy_examples_satellite.xcore#/EPackage/AcquireImageSatelliteCommand/@eGenericSuperTypes.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6Qj88LugEeWeYcTmr4NtjQ" targetArrow="InputClosedArrow" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
           <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_6Qj88bugEeWeYcTmr4NtjQ" showIcon="false">
@@ -2393,9 +2393,9 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QkkArugEeWeYcTmr4NtjQ" sourceNode="_6PiCMLugEeWeYcTmr4NtjQ" targetNode="_6PT_wLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/ImageConstellationRequest"/>
-        <semanticElements xmi:type="ecore:EGenericType" href="symphony_examples_satellite.xcore#/EPackage/ImageConstellationRequest/@eGenericSuperTypes.0"/>
-        <semanticElements xmi:type="ecore:EGenericType" href="symphony_examples_satellite.xcore#/EPackage/ImageConstellationRequest/@eGenericSuperTypes.1"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/ImageConstellationRequest"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="apogy_examples_satellite.xcore#/EPackage/ImageConstellationRequest/@eGenericSuperTypes.0"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="apogy_examples_satellite.xcore#/EPackage/ImageConstellationRequest/@eGenericSuperTypes.1"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QkkA7ugEeWeYcTmr4NtjQ" targetArrow="InputClosedArrow" routingStyle="tree">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
           <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_6QkkBLugEeWeYcTmr4NtjQ" showIcon="false">
@@ -2406,8 +2406,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QlLELugEeWeYcTmr4NtjQ" sourceNode="_6PlskLugEeWeYcTmr4NtjQ" targetNode="_6PSKkLugEeWeYcTmr4NtjQ">
-        <target xmi:type="ecore:EClass" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem"/>
-        <semanticElements xmi:type="ecore:EGenericType" href="symphony_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem/@eGenericSuperTypes.0"/>
+        <target xmi:type="ecore:EClass" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="apogy_examples_satellite.xcore#/EPackage/OrbitalImageConstellationDownlinkItem/@eGenericSuperTypes.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QlLEbugEeWeYcTmr4NtjQ" targetArrow="InputClosedArrow" routingStyle="manhattan">
           <customFeatures>routingStyle</customFeatures>
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -2419,9 +2419,9 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6QlyILugEeWeYcTmr4NtjQ" sourceNode="_6PT_wLugEeWeYcTmr4NtjQ" targetNode="_6PVN4LugEeWeYcTmr4NtjQ" beginLabel="[0..1] constellationRequest" endLabel="[0..1] satelliteCommand">
-        <target xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/satelliteCommand"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand/constellationRequest"/>
-        <semanticElements xmi:type="ecore:EReference" href="symphony_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/satelliteCommand"/>
+        <target xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/satelliteCommand"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractSatelliteCommand/constellationRequest"/>
+        <semanticElements xmi:type="ecore:EReference" href="apogy_examples_satellite.xcore#/EPackage/AbstractConstellationRequest/satelliteCommand"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6QmZM7ugEeWeYcTmr4NtjQ" description="_6QmZMLugEeWeYcTmr4NtjQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_6QmZNLugEeWeYcTmr4NtjQ" showIcon="false"/>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_6QmZNbugEeWeYcTmr4NtjQ" showIcon="false"/>
@@ -2434,7 +2434,7 @@
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']/@ownedRepresentationExtensions[name='Entities%20With%20Archetypes']/@layers[name='Archetypes']"/>
-      <target xmi:type="ecore:EPackage" href="symphony_examples_satellite.xcore#/EPackage"/>
+      <target xmi:type="ecore:EPackage" href="apogy_examples_satellite.xcore#/EPackage"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
   </ownedViews>

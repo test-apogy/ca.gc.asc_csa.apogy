@@ -1,28 +1,28 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.core.environment.tests;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.environment.tests;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.eclipse.symphony.core.environment.tests
+Export-Package: ca.gc.asc_csa.apogy.core.environment.tests
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.symphony.core.environment;visibility:=reexport,
- org.eclipse.symphony.core;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.core.invocator;visibility:=reexport,
- org.eclipse.symphony.common.images;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.topology.bindings;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport,
  org.eclipse.core.resources;bundle-version="3.10.1"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.core.environment.tests.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.tests.Activator

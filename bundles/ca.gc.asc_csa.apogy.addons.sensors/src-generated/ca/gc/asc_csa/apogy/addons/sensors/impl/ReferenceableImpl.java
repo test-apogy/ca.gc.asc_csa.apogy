@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.symphony.addons.sensors.Referenceable;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.Referenceable;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.impl.ReferenceableImpl#getReferenceFrame <em>Reference Frame</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.impl.ReferenceableImpl#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +56,7 @@ public class ReferenceableImpl extends MinimalEObjectImpl.Container implements R
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPackage.Literals.REFERENCEABLE;
+		return ApogyAddonsSensorsPackage.Literals.REFERENCEABLE;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class ReferenceableImpl extends MinimalEObjectImpl.Container implements R
 			referenceFrame = (Node)eResolveProxy(oldReferenceFrame);
 			if (referenceFrame != oldReferenceFrame) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME, oldReferenceFrame, referenceFrame));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME, oldReferenceFrame, referenceFrame));
 			}
 		}
 		return referenceFrame;
@@ -94,7 +94,7 @@ public class ReferenceableImpl extends MinimalEObjectImpl.Container implements R
 		Node oldReferenceFrame = referenceFrame;
 		referenceFrame = newReferenceFrame;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME, oldReferenceFrame, referenceFrame));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME, oldReferenceFrame, referenceFrame));
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class ReferenceableImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
+			case ApogyAddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
 				if (resolve) return getReferenceFrame();
 				return basicGetReferenceFrame();
 		}
@@ -120,7 +120,7 @@ public class ReferenceableImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
+			case ApogyAddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
 				setReferenceFrame((Node)newValue);
 				return;
 		}
@@ -135,7 +135,7 @@ public class ReferenceableImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
+			case ApogyAddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
 				setReferenceFrame((Node)null);
 				return;
 		}
@@ -150,7 +150,7 @@ public class ReferenceableImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
+			case ApogyAddonsSensorsPackage.REFERENCEABLE__REFERENCE_FRAME:
 				return referenceFrame != null;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -12,11 +12,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class AbstractTrajectoryToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewItemPresentation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewItemPresentation_visible_feature", "_UI_MapViewItemPresentation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION__VISIBLE,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class AbstractTrajectoryToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapTool_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapTool_active_feature", "_UI_MapTool_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
 				 true,
 				 false,
 				 false,
@@ -158,8 +158,8 @@ public class AbstractTrajectoryToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTrajectoryTool.class)) {
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
-			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case ApogyCoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

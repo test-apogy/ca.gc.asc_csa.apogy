@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class WayPointPresentationImpl extends NodePresentationImpl implements Wa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.WAY_POINT_PRESENTATION;
+		return ApogyCommonTopologyAddonsPrimitivesUIPackage.Literals.WAY_POINT_PRESENTATION;
 	}
 
 } //WayPointPresentationImpl

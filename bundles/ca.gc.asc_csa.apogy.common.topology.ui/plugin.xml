@@ -3,113 +3,113 @@
 <plugin>
 
    <extension-point
-   		id="org.eclipse.symphony.common.topology.ui.presentation"
+   		id="ca.gc.asc_csa.apogy.common.topology.ui.presentation"
    		name="Presentation Adapter"
    		schema="schema/presentation.exsd">
    </extension-point>
    
    <extension-point
-   		id="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter"
+   		id="ca.gc.asc_csa.apogy.common.topology.ui.graphicsContextAdapter"
    		name="Graphics Context Adapter"
    		schema="schema/graphicsContextAdapter.exsd">
    </extension-point>
    
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.GroupNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.GroupNodePresentationAdapter">
       </Class>
             <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.TransformNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.TransformNodePresentationAdapter">
       </Class>
             <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.DefaultNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.DefaultNodePresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.RotationNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.RotationNodePresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.PositionNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.PositionNodePresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.ReferencedGroupNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.ReferencedGroupNodePresentationAdapter">
       </Class> 
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.URLNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.URLNodePresentationAdapter">
       </Class>     
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.graphicsContextAdapter">
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.VRMLGraphicsContextAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.VRMLGraphicsContextAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.OBJGraphicsContextAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.OBJGraphicsContextAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.TopoFileGraphicsContextAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.TopoFileGraphicsContextAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.common.topology.ui.adapters.GraphicsContextGraphicsContextAdapter">
+            Class="ca.gc.asc_csa.apogy.common.topology.ui.adapters.GraphicsContextGraphicsContextAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.converters">
+         point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-         Class="org.eclipse.symphony.common.topology.ui.converters.NodeToNodePresentationConverter">
+         Class="ca.gc.asc_csa.apogy.common.topology.ui.converters.NodeToNodePresentationConverter">
       </new_element>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.common.topology.ui.preferences.TopologyUIPreferencesPage"
-            id="org.eclipse.symphony.common.topology.ui.preferences.TopologyUIPreferencesPage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyUIPreferencesPage"
             name="Transforms and URL Nodes">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.common.topology.ui.preferences.TopologyUIPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.common.topology.ui.preferences.TopologyUIPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="org.eclipse.symphony.common.topology.ui.property.category.Default">
+               category="ca.gc.asc_csa.apogy.common.topology.ui.property.category.Default">
          </propertyCategory>
       </propertyContributor>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="org.eclipse.symphony.common.topology.ui.properties.sections.PositionNodePropertySection"
-               id="org.eclipse.symphony.common.topology.ui.property.section.PositionNode"
-               tab="org.eclipse.symphony.common.topology.ui.property.tab.PositionNode">
+               class="ca.gc.asc_csa.apogy.common.topology.ui.properties.sections.PositionNodePropertySection"
+               id="ca.gc.asc_csa.apogy.common.topology.ui.property.section.PositionNode"
+               tab="ca.gc.asc_csa.apogy.common.topology.ui.property.tab.PositionNode">
             <input
-                  type="org.eclipse.symphony.common.topology.PositionNode">
+                  type="ca.gc.asc_csa.apogy.common.topology.PositionNode">
             </input>
          </propertySection>
          <propertySection
-               class="org.eclipse.symphony.common.topology.ui.properties.sections.RotationNodePropertySection"
-               id="org.eclipse.symphony.common.topology.ui.property.section.RotationNode"
-               tab="org.eclipse.symphony.common.topology.ui.property.tab.RotationNode">
+               class="ca.gc.asc_csa.apogy.common.topology.ui.properties.sections.RotationNodePropertySection"
+               id="ca.gc.asc_csa.apogy.common.topology.ui.property.section.RotationNode"
+               tab="ca.gc.asc_csa.apogy.common.topology.ui.property.tab.RotationNode">
             <input
-                  type="org.eclipse.symphony.common.topology.RotationNode">
+                  type="ca.gc.asc_csa.apogy.common.topology.RotationNode">
             </input>
          </propertySection>
          <propertySection
-               class="org.eclipse.symphony.common.topology.ui.properties.sections.NodePresentationPropertySection"
-               filter="org.eclipse.symphony.common.topology.ui.properties.sections.NodePresentationPropertySection"
-               id="org.eclipse.symphony.common.topology.ui.property.section.NodePresentation"
-               tab="org.eclipse.symphony.common.topology.ui.property.tab.NodePresentation">
+               class="ca.gc.asc_csa.apogy.common.topology.ui.properties.sections.NodePresentationPropertySection"
+               filter="ca.gc.asc_csa.apogy.common.topology.ui.properties.sections.NodePresentationPropertySection"
+               id="ca.gc.asc_csa.apogy.common.topology.ui.property.section.NodePresentation"
+               tab="ca.gc.asc_csa.apogy.common.topology.ui.property.tab.NodePresentation">
             <input
-                  type="org.eclipse.symphony.common.topology.Node">
+                  type="ca.gc.asc_csa.apogy.common.topology.Node">
             </input>
          </propertySection>
       </propertySections>
@@ -117,20 +117,20 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.common.topology.ui.property.category.Default"
-               id="org.eclipse.symphony.common.topology.ui.property.tab.PositionNode"
+               category="ca.gc.asc_csa.apogy.common.topology.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.common.topology.ui.property.tab.PositionNode"
                label="Position">
          </propertyTab>
          <propertyTab
-               category="org.eclipse.symphony.common.topology.ui.property.category.Default"
-               id="org.eclipse.symphony.common.topology.ui.property.tab.RotationNode"
+               category="ca.gc.asc_csa.apogy.common.topology.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.common.topology.ui.property.tab.RotationNode"
                label="Rotation">
          </propertyTab>
          <propertyTab
-               category="org.eclipse.symphony.common.topology.ui.property.category.Default"
-               id="org.eclipse.symphony.common.topology.ui.property.tab.NodePresentation"
+               category="ca.gc.asc_csa.apogy.common.topology.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.common.topology.ui.property.tab.NodePresentation"
                label="Presentation">
          </propertyTab>
       </propertyTabs>
@@ -138,17 +138,17 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.common.topology.ui.views.NodesDistanceView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.views.NodesDistanceView"
             icon="icons/NodesDistanceView.gif"
-            id="org.eclipse.symphony.common.topology.ui.views.NodesDistanceView"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.views.NodesDistanceView"
             name="NodesDistanceView"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.common.topology.ui.views.TopologyPresentationRegistryView"
-            id="org.eclipse.symphony.common.topology.ui.views.TopologyPresentationRegistryView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.views.TopologyPresentationRegistryView"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.views.TopologyPresentationRegistryView"
             name="TopologyPresentationRegistryView"
             restorable="true">
       </view>
@@ -156,15 +156,15 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.common.topology.ui.commands.ToggleNodeVisibilityCommand"
-            id="org.eclipse.symphony.common.topology.ui.commands.ToggleNodeVisibilityCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.common.topology.ui.commands.ToggleNodeVisibilityCommand"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.commands.ToggleNodeVisibilityCommand"
             name="Toggle Node Visibility">
       </command>
    </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage"
-            genModel="model/symphony_common_topology_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.ui"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage"
+            genModel="model/apogy_common_topology_ui.xcore"/>
    </extension>
 </plugin>

@@ -1,16 +1,16 @@
-@GenModel(prefix="Symphony__AddonsSensorsMotion",
+@GenModel(prefix="ApogyAddonsSensorsMotion",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsSensorsMotion",
+	      modelName="ApogyAddonsSensorsMotion",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.motion/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.motion.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.motion/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.motion.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.motion
+package ca.gc.asc_csa.apogy.addons.sensors.motion
 
-import org.eclipse.symphony.addons.sensors.Sensor
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor
 
 class SelfMotionSensor extends Sensor
 {

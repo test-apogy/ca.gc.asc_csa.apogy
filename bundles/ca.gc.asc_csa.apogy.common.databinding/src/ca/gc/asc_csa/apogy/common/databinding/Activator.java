@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.databinding;
+package ca.gc.asc_csa.apogy.common.databinding;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

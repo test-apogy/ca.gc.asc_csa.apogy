@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.robotic_arm.Activator;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
-import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArmStub;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.Activator;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class RoboticArmStubImpl extends RoboticArmImpl implements RoboticArmStub
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_STUB;
+		return ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_STUB;
 	}
 
 	/**

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.MeshSmoother;
-import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother;
+import ca.gc.asc_csa.apogy.common.processors.provider.ProcessorItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class MeshSmootherItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_MeshSmoother_numberOfIterations_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshSmoother_numberOfIterations_feature", "_UI_MeshSmoother_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.MESH_SMOOTHER__NUMBER_OF_ITERATIONS,
+				 ApogyCommonGeometryData3DPackage.Literals.MESH_SMOOTHER__NUMBER_OF_ITERATIONS,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class MeshSmootherItemProvider extends ProcessorItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MeshSmoother.class)) {
-			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
+			case ApogyCommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

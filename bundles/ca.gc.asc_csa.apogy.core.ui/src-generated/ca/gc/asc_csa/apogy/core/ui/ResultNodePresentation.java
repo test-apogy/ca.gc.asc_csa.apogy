@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui;
+package ca.gc.asc_csa.apogy.core.ui;
 
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.ResultNodePresentation#getPoleHeight <em>Pole Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#getPoleHeight <em>Pole Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getResultNodePresentation()
+ * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getResultNodePresentation()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface ResultNodePresentation extends TransformNodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pole Height</em>' attribute.
 	 * @see #setPoleHeight(float)
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getResultNodePresentation_PoleHeight()
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getResultNodePresentation_PoleHeight()
 	 * @model default="1.0f" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Flag Visuals'"
 	 * @generated
@@ -43,7 +43,7 @@ public interface ResultNodePresentation extends TransformNodePresentation
   float getPoleHeight();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.ui.ResultNodePresentation#getPoleHeight <em>Pole Height</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#getPoleHeight <em>Pole Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pole Height</em>' attribute.
@@ -63,7 +63,7 @@ public interface ResultNodePresentation extends TransformNodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Flag Visible</em>' attribute.
 	 * @see #setFlagVisible(boolean)
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getResultNodePresentation_FlagVisible()
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage#getResultNodePresentation_FlagVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Flag Visuals'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface ResultNodePresentation extends TransformNodePresentation
   boolean isFlagVisible();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Flag Visible</em>' attribute.

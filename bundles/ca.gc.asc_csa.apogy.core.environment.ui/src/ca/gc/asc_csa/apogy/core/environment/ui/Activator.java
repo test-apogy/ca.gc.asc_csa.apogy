@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import java.net.URL;
 
@@ -14,7 +14,7 @@ public class Activator extends AbstractUIPlugin implements BundleActivator {
 	private static BundleContext context;
 
 	
-	public static final String ID = "org.eclipse.symphony.core.environment.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.core.environment.ui";
 	
 	// The shared instance
 	private static Activator plugin;	

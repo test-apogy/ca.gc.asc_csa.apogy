@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2007.
  */
-package org.eclipse.symphony.addons.sensors.pose.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsPoseFacadeItemProvider
+public class ApogyAddonsSensorsPoseFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -39,7 +39,7 @@ public class Symphony__AddonsSensorsPoseFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPoseFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyAddonsSensorsPoseFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,14 +59,14 @@ public class Symphony__AddonsSensorsPoseFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsSensorsPoseFacade.gif.
+	 * This returns ApogyAddonsSensorsPoseFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsSensorsPoseFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsSensorsPoseFacade"));
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class Symphony__AddonsSensorsPoseFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__AddonsSensorsPoseFacade_type");
+		return getString("_UI_ApogyAddonsSensorsPoseFacade_type");
 	}
 
 	/**

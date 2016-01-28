@@ -5,7 +5,7 @@
 * which accompanies this distribution, and is available at
 * http://www.eclipse.org/legal/cpl-v10.html
 *******************************************************************************/
-package org.eclipse.symphony.common.images.ui.composites;
+package ca.gc.asc_csa.apogy.common.images.ui.composites;
 
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,12 +26,12 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFactory
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsSensorsPose' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__AddonsSensorsPose' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.pose/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.pose.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensorsPose' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyAddonsSensorsPose' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors.pose/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.pose.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.sensors'"
  * @generated
  */
-public interface Symphony__AddonsSensorsPosePackage extends EPackage {
+public interface ApogyAddonsSensorsPosePackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.sensors.pose";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.sensors.pose";
 
 	/**
 	 * The package namespace name.
@@ -62,14 +62,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsPosePackage eINSTANCE = org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl.init();
+	ApogyAddonsSensorsPosePackage eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SelfPlaceSensorImpl <em>Self Place Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SelfPlaceSensorImpl <em>Self Place Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.SelfPlaceSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSelfPlaceSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SelfPlaceSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSelfPlaceSensor()
 	 * @generated
 	 */
 	int SELF_PLACE_SENSOR = 0;
@@ -81,7 +81,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR__PARENT = Symphony__AddonsSensorsPackage.SENSOR__PARENT;
+	int SELF_PLACE_SENSOR__PARENT = ApogyAddonsSensorsPackage.SENSOR__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -90,7 +90,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR__DESCRIPTION = Symphony__AddonsSensorsPackage.SENSOR__DESCRIPTION;
+	int SELF_PLACE_SENSOR__DESCRIPTION = ApogyAddonsSensorsPackage.SENSOR__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -99,7 +99,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR__NODE_ID = Symphony__AddonsSensorsPackage.SENSOR__NODE_ID;
+	int SELF_PLACE_SENSOR__NODE_ID = ApogyAddonsSensorsPackage.SENSOR__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -108,7 +108,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR__CHILDREN = Symphony__AddonsSensorsPackage.SENSOR__CHILDREN;
+	int SELF_PLACE_SENSOR__CHILDREN = ApogyAddonsSensorsPackage.SENSOR__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -117,7 +117,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR__AGGREGATED_CHILDREN = Symphony__AddonsSensorsPackage.SENSOR__AGGREGATED_CHILDREN;
+	int SELF_PLACE_SENSOR__AGGREGATED_CHILDREN = ApogyAddonsSensorsPackage.SENSOR__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -126,7 +126,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR__STATUS = Symphony__AddonsSensorsPackage.SENSOR__STATUS;
+	int SELF_PLACE_SENSOR__STATUS = ApogyAddonsSensorsPackage.SENSOR__STATUS;
 
 	/**
 	 * The number of structural features of the '<em>Self Place Sensor</em>' class.
@@ -135,7 +135,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR_FEATURE_COUNT = Symphony__AddonsSensorsPackage.SENSOR_FEATURE_COUNT + 0;
+	int SELF_PLACE_SENSOR_FEATURE_COUNT = ApogyAddonsSensorsPackage.SENSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -144,7 +144,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsPackage.SENSOR___ACCEPT__INODEVISITOR;
+	int SELF_PLACE_SENSOR___ACCEPT__INODEVISITOR = ApogyAddonsSensorsPackage.SENSOR___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Self Place Sensor</em>' class.
@@ -153,14 +153,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_PLACE_SENSOR_OPERATION_COUNT = Symphony__AddonsSensorsPackage.SENSOR_OPERATION_COUNT + 0;
+	int SELF_PLACE_SENSOR_OPERATION_COUNT = ApogyAddonsSensorsPackage.SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl <em>Position Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PositionSensorImpl <em>Position Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPositionSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PositionSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getPositionSensor()
 	 * @generated
 	 */
 	int POSITION_SENSOR = 1;
@@ -172,7 +172,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__PARENT = Symphony__CommonTopologyPackage.POSITION_NODE__PARENT;
+	int POSITION_SENSOR__PARENT = ApogyCommonTopologyPackage.POSITION_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -181,7 +181,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.POSITION_NODE__DESCRIPTION;
+	int POSITION_SENSOR__DESCRIPTION = ApogyCommonTopologyPackage.POSITION_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -190,7 +190,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__NODE_ID = Symphony__CommonTopologyPackage.POSITION_NODE__NODE_ID;
+	int POSITION_SENSOR__NODE_ID = ApogyCommonTopologyPackage.POSITION_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -199,7 +199,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__CHILDREN = Symphony__CommonTopologyPackage.POSITION_NODE__CHILDREN;
+	int POSITION_SENSOR__CHILDREN = ApogyCommonTopologyPackage.POSITION_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -208,7 +208,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.POSITION_NODE__AGGREGATED_CHILDREN;
+	int POSITION_SENSOR__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.POSITION_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -217,7 +217,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__POSITION = Symphony__CommonTopologyPackage.POSITION_NODE__POSITION;
+	int POSITION_SENSOR__POSITION = ApogyCommonTopologyPackage.POSITION_NODE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -226,7 +226,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__STATUS = Symphony__CommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 0;
+	int POSITION_SENSOR__STATUS = ApogyCommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Position Coordinates</b></em>' reference.
@@ -235,7 +235,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__POSITION_COORDINATES = Symphony__CommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 1;
+	int POSITION_SENSOR__POSITION_COORDINATES = ApogyCommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Position Sensor</em>' class.
@@ -244,7 +244,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 2;
+	int POSITION_SENSOR_FEATURE_COUNT = ApogyCommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -253,7 +253,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.POSITION_NODE___ACCEPT__INODEVISITOR;
+	int POSITION_SENSOR___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.POSITION_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Reset Position</em>' operation.
@@ -262,7 +262,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = Symphony__CommonTopologyPackage.POSITION_NODE_OPERATION_COUNT + 0;
+	int POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = ApogyCommonTopologyPackage.POSITION_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Position Sensor</em>' class.
@@ -271,14 +271,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.POSITION_NODE_OPERATION_COUNT + 1;
+	int POSITION_SENSOR_OPERATION_COUNT = ApogyCommonTopologyPackage.POSITION_NODE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl <em>Simulated Position Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl <em>Simulated Position Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSimulatedPositionSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSimulatedPositionSensor()
 	 * @generated
 	 */
 	int SIMULATED_POSITION_SENSOR = 2;
@@ -428,11 +428,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	int SIMULATED_POSITION_SENSOR_OPERATION_COUNT = POSITION_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl <em>Orientation Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.OrientationSensorImpl <em>Orientation Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getOrientationSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.OrientationSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getOrientationSensor()
 	 * @generated
 	 */
 	int ORIENTATION_SENSOR = 3;
@@ -444,7 +444,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__PARENT = Symphony__CommonTopologyPackage.ROTATION_NODE__PARENT;
+	int ORIENTATION_SENSOR__PARENT = ApogyCommonTopologyPackage.ROTATION_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -453,7 +453,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.ROTATION_NODE__DESCRIPTION;
+	int ORIENTATION_SENSOR__DESCRIPTION = ApogyCommonTopologyPackage.ROTATION_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -462,7 +462,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__NODE_ID = Symphony__CommonTopologyPackage.ROTATION_NODE__NODE_ID;
+	int ORIENTATION_SENSOR__NODE_ID = ApogyCommonTopologyPackage.ROTATION_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -471,7 +471,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__CHILDREN = Symphony__CommonTopologyPackage.ROTATION_NODE__CHILDREN;
+	int ORIENTATION_SENSOR__CHILDREN = ApogyCommonTopologyPackage.ROTATION_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -480,7 +480,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.ROTATION_NODE__AGGREGATED_CHILDREN;
+	int ORIENTATION_SENSOR__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.ROTATION_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Rotation Matrix</b></em>' containment reference.
@@ -489,7 +489,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__ROTATION_MATRIX = Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX;
+	int ORIENTATION_SENSOR__ROTATION_MATRIX = ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -498,7 +498,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__STATUS = Symphony__CommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 0;
+	int ORIENTATION_SENSOR__STATUS = ApogyCommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Orientation Coordinates</b></em>' reference.
@@ -507,7 +507,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__ORIENTATION_COORDINATES = Symphony__CommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 1;
+	int ORIENTATION_SENSOR__ORIENTATION_COORDINATES = ApogyCommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Orientation Sensor</em>' class.
@@ -516,7 +516,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 2;
+	int ORIENTATION_SENSOR_FEATURE_COUNT = ApogyCommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -525,7 +525,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.ROTATION_NODE___ACCEPT__INODEVISITOR;
+	int ORIENTATION_SENSOR___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.ROTATION_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Reset Orientation</em>' operation.
@@ -534,7 +534,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = Symphony__CommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 0;
+	int ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = ApogyCommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Extract Orientation From Matrix</em>' operation.
@@ -543,7 +543,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = Symphony__CommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 1;
+	int ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = ApogyCommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Orientation Sensor</em>' class.
@@ -552,14 +552,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 2;
+	int ORIENTATION_SENSOR_OPERATION_COUNT = ApogyCommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl <em>Inertial Measurement Unit</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.InertialMeasurementUnitImpl <em>Inertial Measurement Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getInertialMeasurementUnit()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.InertialMeasurementUnitImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getInertialMeasurementUnit()
 	 * @generated
 	 */
 	int INERTIAL_MEASUREMENT_UNIT = 4;
@@ -700,11 +700,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	int INERTIAL_MEASUREMENT_UNIT_OPERATION_COUNT = ORIENTATION_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl <em>Simulated Orientation Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl <em>Simulated Orientation Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSimulatedOrientationSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSimulatedOrientationSensor()
 	 * @generated
 	 */
 	int SIMULATED_ORIENTATION_SENSOR = 5;
@@ -863,11 +863,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	int SIMULATED_ORIENTATION_SENSOR_OPERATION_COUNT = ORIENTATION_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl <em>Pose Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl <em>Pose Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPoseSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getPoseSensor()
 	 * @generated
 	 */
 	int POSE_SENSOR = 6;
@@ -879,7 +879,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__PARENT = Symphony__CommonTopologyPackage.TRANSFORM_NODE__PARENT;
+	int POSE_SENSOR__PARENT = ApogyCommonTopologyPackage.TRANSFORM_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -888,7 +888,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.TRANSFORM_NODE__DESCRIPTION;
+	int POSE_SENSOR__DESCRIPTION = ApogyCommonTopologyPackage.TRANSFORM_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -897,7 +897,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__NODE_ID = Symphony__CommonTopologyPackage.TRANSFORM_NODE__NODE_ID;
+	int POSE_SENSOR__NODE_ID = ApogyCommonTopologyPackage.TRANSFORM_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -906,7 +906,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__CHILDREN = Symphony__CommonTopologyPackage.TRANSFORM_NODE__CHILDREN;
+	int POSE_SENSOR__CHILDREN = ApogyCommonTopologyPackage.TRANSFORM_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -915,7 +915,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.TRANSFORM_NODE__AGGREGATED_CHILDREN;
+	int POSE_SENSOR__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.TRANSFORM_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -924,7 +924,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__POSITION = Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION;
+	int POSE_SENSOR__POSITION = ApogyCommonTopologyPackage.TRANSFORM_NODE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Rotation Matrix</b></em>' containment reference.
@@ -933,7 +933,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__ROTATION_MATRIX = Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
+	int POSE_SENSOR__ROTATION_MATRIX = ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -942,7 +942,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__STATUS = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 0;
+	int POSE_SENSOR__STATUS = ApogyCommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Position Coordinates</b></em>' reference.
@@ -951,7 +951,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__POSITION_COORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 1;
+	int POSE_SENSOR__POSITION_COORDINATES = ApogyCommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Orientation Coordinates</b></em>' reference.
@@ -960,7 +960,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__ORIENTATION_COORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 2;
+	int POSE_SENSOR__ORIENTATION_COORDINATES = ApogyCommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Pose</b></em>' reference.
@@ -969,7 +969,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__POSE = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 3;
+	int POSE_SENSOR__POSE = ApogyCommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Data Logger</b></em>' containment reference.
@@ -978,7 +978,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__DATA_LOGGER = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 4;
+	int POSE_SENSOR__DATA_LOGGER = ApogyCommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Pose Sensor</em>' class.
@@ -987,7 +987,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 5;
+	int POSE_SENSOR_FEATURE_COUNT = ApogyCommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -996,7 +996,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.TRANSFORM_NODE___ACCEPT__INODEVISITOR;
+	int POSE_SENSOR___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.TRANSFORM_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>As Matrix4d</em>' operation.
@@ -1005,7 +1005,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___AS_MATRIX4D = Symphony__CommonTopologyPackage.TRANSFORM_NODE___AS_MATRIX4D;
+	int POSE_SENSOR___AS_MATRIX4D = ApogyCommonTopologyPackage.TRANSFORM_NODE___AS_MATRIX4D;
 
 	/**
 	 * The operation id for the '<em>Set Transformation</em>' operation.
@@ -1014,7 +1014,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___SET_TRANSFORMATION__MATRIX4D = Symphony__CommonTopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D;
+	int POSE_SENSOR___SET_TRANSFORMATION__MATRIX4D = ApogyCommonTopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D;
 
 	/**
 	 * The operation id for the '<em>Reset Position</em>' operation.
@@ -1023,7 +1023,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 0;
+	int POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = ApogyCommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Reset Orientation</em>' operation.
@@ -1032,7 +1032,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 1;
+	int POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = ApogyCommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Extract Orientation From Matrix</em>' operation.
@@ -1041,7 +1041,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 2;
+	int POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = ApogyCommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Reset Pose</em>' operation.
@@ -1050,7 +1050,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___RESET_POSE__POSE = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 3;
+	int POSE_SENSOR___RESET_POSE__POSE = ApogyCommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Pose Sensor</em>' class.
@@ -1059,14 +1059,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 4;
+	int POSE_SENSOR_OPERATION_COUNT = ApogyCommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl <em>Simulated Pose Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPoseSensorImpl <em>Simulated Pose Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSimulatedPoseSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPoseSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSimulatedPoseSensor()
 	 * @generated
 	 */
 	int SIMULATED_POSE_SENSOR = 7;
@@ -1324,11 +1324,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	int SIMULATED_POSE_SENSOR_OPERATION_COUNT = POSE_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseDataLoggerImpl <em>Pose Data Logger</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseDataLoggerImpl <em>Pose Data Logger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.PoseDataLoggerImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPoseDataLogger()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseDataLoggerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getPoseDataLogger()
 	 * @generated
 	 */
 	int POSE_DATA_LOGGER = 8;
@@ -1370,11 +1370,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	int POSE_DATA_LOGGER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.CSVDataLoggerImpl <em>CSV Data Logger</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.CSVDataLoggerImpl <em>CSV Data Logger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.CSVDataLoggerImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getCSVDataLogger()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.CSVDataLoggerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getCSVDataLogger()
 	 * @generated
 	 */
 	int CSV_DATA_LOGGER = 9;
@@ -1416,14 +1416,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	int CSV_DATA_LOGGER_OPERATION_COUNT = POSE_DATA_LOGGER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPoseFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSymphony__AddonsSensorsPoseFacade()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPoseFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getApogyAddonsSensorsPoseFacade()
 	 * @generated
 	 */
-	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE = 10;
+	int APOGY_ADDONS_SENSORS_POSE_FACADE = 10;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -1432,7 +1432,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE_FEATURE_COUNT = 0;
+	int APOGY_ADDONS_SENSORS_POSE_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create CSV Data Logger</em>' operation.
@@ -1441,7 +1441,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = 0;
+	int APOGY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = 0;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1450,14 +1450,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE_OPERATION_COUNT = 1;
+	int APOGY_ADDONS_SENSORS_POSE_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 11;
@@ -1467,423 +1467,423 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.io.IOException
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getIOException()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getIOException()
 	 * @generated
 	 */
 	int IO_EXCEPTION = 12;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor <em>Self Place Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor <em>Self Place Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Self Place Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor
 	 * @generated
 	 */
 	EClass getSelfPlaceSensor();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.PositionSensor <em>Position Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor <em>Position Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Position Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PositionSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor
 	 * @generated
 	 */
 	EClass getPositionSensor();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.pose.PositionSensor#getPositionCoordinates <em>Position Coordinates</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor#getPositionCoordinates <em>Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Position Coordinates</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PositionSensor#getPositionCoordinates()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor#getPositionCoordinates()
 	 * @see #getPositionSensor()
 	 * @generated
 	 */
 	EReference getPositionSensor_PositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.PositionSensor#resetPosition(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Reset Position</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor#resetPosition(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates) <em>Reset Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Position</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PositionSensor#resetPosition(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor#resetPosition(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getPositionSensor__ResetPosition__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor <em>Simulated Position Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor <em>Simulated Position Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simulated Position Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor
 	 * @generated
 	 */
 	EClass getSimulatedPositionSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getXVelocity <em>XVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getXVelocity <em>XVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getXVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getXVelocity()
 	 * @see #getSimulatedPositionSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPositionSensor_XVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getYVelocity <em>YVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getYVelocity <em>YVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getYVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getYVelocity()
 	 * @see #getSimulatedPositionSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPositionSensor_YVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getZVelocity <em>ZVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getZVelocity <em>ZVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getZVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getZVelocity()
 	 * @see #getSimulatedPositionSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPositionSensor_ZVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod <em>Update Period</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod <em>Update Period</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Update Period</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod()
 	 * @see #getSimulatedPositionSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPositionSensor_UpdatePeriod();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.OrientationSensor <em>Orientation Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor <em>Orientation Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Orientation Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.OrientationSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor
 	 * @generated
 	 */
 	EClass getOrientationSensor();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.pose.OrientationSensor#getOrientationCoordinates <em>Orientation Coordinates</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor#getOrientationCoordinates <em>Orientation Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Orientation Coordinates</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.OrientationSensor#getOrientationCoordinates()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor#getOrientationCoordinates()
 	 * @see #getOrientationSensor()
 	 * @generated
 	 */
 	EReference getOrientationSensor_OrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.OrientationSensor#resetOrientation(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Reset Orientation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor#resetOrientation(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates) <em>Reset Orientation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Orientation</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.pose.OrientationSensor#resetOrientation(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor#resetOrientation(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated
 	 */
 	EOperation getOrientationSensor__ResetOrientation__CartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.OrientationSensor#extractOrientationFromMatrix(org.eclipse.symphony.common.math.Matrix3x3) <em>Extract Orientation From Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor#extractOrientationFromMatrix(ca.gc.asc_csa.apogy.common.math.Matrix3x3) <em>Extract Orientation From Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Extract Orientation From Matrix</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.pose.OrientationSensor#extractOrientationFromMatrix(org.eclipse.symphony.common.math.Matrix3x3)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor#extractOrientationFromMatrix(ca.gc.asc_csa.apogy.common.math.Matrix3x3)
 	 * @generated
 	 */
 	EOperation getOrientationSensor__ExtractOrientationFromMatrix__Matrix3x3();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit <em>Inertial Measurement Unit</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit <em>Inertial Measurement Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Inertial Measurement Unit</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit
 	 * @generated
 	 */
 	EClass getInertialMeasurementUnit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity <em>Angular Velocity</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity <em>Angular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Angular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity()
 	 * @see #getInertialMeasurementUnit()
 	 * @generated
 	 */
 	EReference getInertialMeasurementUnit_AngularVelocity();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration <em>Linear Acceleration</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration <em>Linear Acceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Linear Acceleration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration()
 	 * @see #getInertialMeasurementUnit()
 	 * @generated
 	 */
 	EReference getInertialMeasurementUnit_LinearAcceleration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor <em>Simulated Orientation Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor <em>Simulated Orientation Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simulated Orientation Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor
 	 * @generated
 	 */
 	EClass getSimulatedOrientationSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity()
 	 * @see #getSimulatedOrientationSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedOrientationSensor_XAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity()
 	 * @see #getSimulatedOrientationSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedOrientationSensor_YAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity()
 	 * @see #getSimulatedOrientationSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedOrientationSensor_ZAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Update Period</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod()
 	 * @see #getSimulatedOrientationSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedOrientationSensor_UpdatePeriod();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor <em>Pose Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor <em>Pose Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pose Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor
 	 * @generated
 	 */
 	EClass getPoseSensor();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getPose <em>Pose</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#getPose <em>Pose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pose</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseSensor#getPose()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#getPose()
 	 * @see #getPoseSensor()
 	 * @generated
 	 */
 	EReference getPoseSensor_Pose();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Data Logger</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseSensor#getDataLogger()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#getDataLogger()
 	 * @see #getPoseSensor()
 	 * @generated
 	 */
 	EReference getPoseSensor_DataLogger();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#resetPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Reset Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#resetPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose) <em>Reset Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Pose</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseSensor#resetPose(org.eclipse.symphony.common.geometry.data3d.Pose)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor#resetPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose)
 	 * @generated
 	 */
 	EOperation getPoseSensor__ResetPose__Pose();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor <em>Simulated Pose Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor <em>Simulated Pose Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simulated Pose Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor
 	 * @generated
 	 */
 	EClass getSimulatedPoseSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getXVelocity <em>XVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getXVelocity <em>XVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getXVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getXVelocity()
 	 * @see #getSimulatedPoseSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPoseSensor_XVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getYVelocity <em>YVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getYVelocity <em>YVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getYVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getYVelocity()
 	 * @see #getSimulatedPoseSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPoseSensor_YVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getZVelocity <em>ZVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getZVelocity <em>ZVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getZVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getZVelocity()
 	 * @see #getSimulatedPoseSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPoseSensor_ZVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getXAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getXAngularVelocity()
 	 * @see #getSimulatedPoseSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPoseSensor_XAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getYAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getYAngularVelocity()
 	 * @see #getSimulatedPoseSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPoseSensor_YAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getZAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getZAngularVelocity()
 	 * @see #getSimulatedPoseSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPoseSensor_ZAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getUpdatePeriod <em>Update Period</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getUpdatePeriod <em>Update Period</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Update Period</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getUpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor#getUpdatePeriod()
 	 * @see #getSimulatedPoseSensor()
 	 * @generated
 	 */
 	EAttribute getSimulatedPoseSensor_UpdatePeriod();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger <em>Pose Data Logger</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger <em>Pose Data Logger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pose Data Logger</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseDataLogger
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger
 	 * @generated
 	 */
 	EClass getPoseDataLogger();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Output File</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#getOutputFile()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger#getOutputFile()
 	 * @see #getPoseDataLogger()
 	 * @generated
 	 */
 	EAttribute getPoseDataLogger_OutputFile();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#logPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Log Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger#logPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose) <em>Log Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Log Pose</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#logPose(org.eclipse.symphony.common.geometry.data3d.Pose)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger#logPose(ca.gc.asc_csa.apogy.common.geometry.data3d.Pose)
 	 * @generated
 	 */
 	EOperation getPoseDataLogger__LogPose__Pose();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.CSVDataLogger <em>CSV Data Logger</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.CSVDataLogger <em>CSV Data Logger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>CSV Data Logger</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.CSVDataLogger
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.CSVDataLogger
 	 * @generated
 	 */
 	EClass getCSVDataLogger();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade
 	 * @generated
 	 */
-	EClass getSymphony__AddonsSensorsPoseFacade();
+	EClass getApogyAddonsSensorsPoseFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade#createCSVDataLogger(java.lang.String) <em>Create CSV Data Logger</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade#createCSVDataLogger(java.lang.String) <em>Create CSV Data Logger</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create CSV Data Logger</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade#createCSVDataLogger(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade#createCSVDataLogger(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String();
+	EOperation getApogyAddonsSensorsPoseFacade__CreateCSVDataLogger__String();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.Exception <em>Exception</em>}'.
@@ -1914,7 +1914,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsPoseFactory getSymphony__AddonsSensorsPoseFactory();
+	ApogyAddonsSensorsPoseFactory getApogyAddonsSensorsPoseFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1931,21 +1931,21 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SelfPlaceSensorImpl <em>Self Place Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SelfPlaceSensorImpl <em>Self Place Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.SelfPlaceSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSelfPlaceSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SelfPlaceSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSelfPlaceSensor()
 		 * @generated
 		 */
 		EClass SELF_PLACE_SENSOR = eINSTANCE.getSelfPlaceSensor();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl <em>Position Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PositionSensorImpl <em>Position Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPositionSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PositionSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getPositionSensor()
 		 * @generated
 		 */
 		EClass POSITION_SENSOR = eINSTANCE.getPositionSensor();
@@ -1967,11 +1967,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EOperation POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getPositionSensor__ResetPosition__CartesianPositionCoordinates();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl <em>Simulated Position Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl <em>Simulated Position Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSimulatedPositionSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPositionSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSimulatedPositionSensor()
 		 * @generated
 		 */
 		EClass SIMULATED_POSITION_SENSOR = eINSTANCE.getSimulatedPositionSensor();
@@ -2009,11 +2009,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EAttribute SIMULATED_POSITION_SENSOR__UPDATE_PERIOD = eINSTANCE.getSimulatedPositionSensor_UpdatePeriod();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl <em>Orientation Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.OrientationSensorImpl <em>Orientation Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getOrientationSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.OrientationSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getOrientationSensor()
 		 * @generated
 		 */
 		EClass ORIENTATION_SENSOR = eINSTANCE.getOrientationSensor();
@@ -2043,11 +2043,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EOperation ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = eINSTANCE.getOrientationSensor__ExtractOrientationFromMatrix__Matrix3x3();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl <em>Inertial Measurement Unit</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.InertialMeasurementUnitImpl <em>Inertial Measurement Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getInertialMeasurementUnit()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.InertialMeasurementUnitImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getInertialMeasurementUnit()
 		 * @generated
 		 */
 		EClass INERTIAL_MEASUREMENT_UNIT = eINSTANCE.getInertialMeasurementUnit();
@@ -2069,11 +2069,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EReference INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION = eINSTANCE.getInertialMeasurementUnit_LinearAcceleration();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl <em>Simulated Orientation Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl <em>Simulated Orientation Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSimulatedOrientationSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedOrientationSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSimulatedOrientationSensor()
 		 * @generated
 		 */
 		EClass SIMULATED_ORIENTATION_SENSOR = eINSTANCE.getSimulatedOrientationSensor();
@@ -2111,11 +2111,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EAttribute SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD = eINSTANCE.getSimulatedOrientationSensor_UpdatePeriod();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl <em>Pose Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl <em>Pose Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPoseSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getPoseSensor()
 		 * @generated
 		 */
 		EClass POSE_SENSOR = eINSTANCE.getPoseSensor();
@@ -2145,11 +2145,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EOperation POSE_SENSOR___RESET_POSE__POSE = eINSTANCE.getPoseSensor__ResetPose__Pose();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl <em>Simulated Pose Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPoseSensorImpl <em>Simulated Pose Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSimulatedPoseSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.SimulatedPoseSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getSimulatedPoseSensor()
 		 * @generated
 		 */
 		EClass SIMULATED_POSE_SENSOR = eINSTANCE.getSimulatedPoseSensor();
@@ -2211,11 +2211,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EAttribute SIMULATED_POSE_SENSOR__UPDATE_PERIOD = eINSTANCE.getSimulatedPoseSensor_UpdatePeriod();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseDataLoggerImpl <em>Pose Data Logger</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseDataLoggerImpl <em>Pose Data Logger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.PoseDataLoggerImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPoseDataLogger()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.PoseDataLoggerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getPoseDataLogger()
 		 * @generated
 		 */
 		EClass POSE_DATA_LOGGER = eINSTANCE.getPoseDataLogger();
@@ -2237,24 +2237,24 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EOperation POSE_DATA_LOGGER___LOG_POSE__POSE = eINSTANCE.getPoseDataLogger__LogPose__Pose();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.CSVDataLoggerImpl <em>CSV Data Logger</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.CSVDataLoggerImpl <em>CSV Data Logger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.CSVDataLoggerImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getCSVDataLogger()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.CSVDataLoggerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getCSVDataLogger()
 		 * @generated
 		 */
 		EClass CSV_DATA_LOGGER = eINSTANCE.getCSVDataLogger();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPoseFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSymphony__AddonsSensorsPoseFacade()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPoseFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getApogyAddonsSensorsPoseFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_ADDONS_SENSORS_POSE_FACADE = eINSTANCE.getSymphony__AddonsSensorsPoseFacade();
+		EClass APOGY_ADDONS_SENSORS_POSE_FACADE = eINSTANCE.getApogyAddonsSensorsPoseFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create CSV Data Logger</b></em>' operation.
@@ -2262,14 +2262,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = eINSTANCE.getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String();
+		EOperation APOGY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = eINSTANCE.getApogyAddonsSensorsPoseFacade__CreateCSVDataLogger__String();
 
 		/**
 		 * The meta object literal for the '<em>Exception</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
@@ -2279,11 +2279,11 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.io.IOException
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getIOException()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.impl.ApogyAddonsSensorsPosePackageImpl#getIOException()
 		 * @generated
 		 */
 		EDataType IO_EXCEPTION = eINSTANCE.getIOException();
 
 	}
 
-} //Symphony__AddonsSensorsPosePackage
+} //ApogyAddonsSensorsPosePackage

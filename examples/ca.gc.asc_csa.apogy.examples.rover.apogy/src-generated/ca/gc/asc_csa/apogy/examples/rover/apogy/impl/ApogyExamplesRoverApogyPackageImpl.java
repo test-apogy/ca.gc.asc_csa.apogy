@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.examples.rover.symphony.RoverData;
-import org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyFactory;
-import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyFactory;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,14 +20,14 @@ import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymph
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl implements Symphony__ExamplesRoverSymphonyPackage
+public class ApogyExamplesRoverApogyPackageImpl extends EPackageImpl implements ApogyExamplesRoverApogyPackage
 {
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass roverSymphonySystemApiAdapterEClass = null;
+  private EClass roverApogySystemApiAdapterEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -47,13 +47,13 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesRoverSymphonyPackageImpl()
+  private ApogyExamplesRoverApogyPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesRoverSymphonyFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesRoverApogyFactory.eINSTANCE);
 	}
 
   /**
@@ -66,7 +66,7 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesRoverSymphonyPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesRoverApogyPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -75,31 +75,31 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesRoverSymphonyPackage init()
+  public static ApogyExamplesRoverApogyPackage init()
   {
-		if (isInited) return (Symphony__ExamplesRoverSymphonyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesRoverSymphonyPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesRoverApogyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesRoverApogyPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesRoverSymphonyPackageImpl theSymphony__ExamplesRoverSymphonyPackage = (Symphony__ExamplesRoverSymphonyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesRoverSymphonyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesRoverSymphonyPackageImpl());
+		ApogyExamplesRoverApogyPackageImpl theApogyExamplesRoverApogyPackage = (ApogyExamplesRoverApogyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesRoverApogyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesRoverApogyPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CorePackage.eINSTANCE.eClass();
+		ApogyCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesRoverSymphonyPackage.createPackageContents();
+		theApogyExamplesRoverApogyPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesRoverSymphonyPackage.initializePackageContents();
+		theApogyExamplesRoverApogyPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesRoverSymphonyPackage.freeze();
+		theApogyExamplesRoverApogyPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesRoverSymphonyPackage.eNS_URI, theSymphony__ExamplesRoverSymphonyPackage);
-		return theSymphony__ExamplesRoverSymphonyPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesRoverApogyPackage.eNS_URI, theApogyExamplesRoverApogyPackage);
+		return theApogyExamplesRoverApogyPackage;
 	}
 
   /**
@@ -107,9 +107,9 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getRoverSymphonySystemApiAdapter()
+  public EClass getRoverApogySystemApiAdapter()
   {
-		return roverSymphonySystemApiAdapterEClass;
+		return roverApogySystemApiAdapterEClass;
 	}
 
   /**
@@ -144,8 +144,8 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesRoverSymphonyFactory getSymphony__ExamplesRoverSymphonyFactory() {
-		return (Symphony__ExamplesRoverSymphonyFactory)getEFactoryInstance();
+	public ApogyExamplesRoverApogyFactory getApogyExamplesRoverApogyFactory() {
+		return (ApogyExamplesRoverApogyFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -168,7 +168,7 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
 		isCreated = true;
 
 		// Create classes and their features
-		roverSymphonySystemApiAdapterEClass = createEClass(ROVER_SYMPHONY_SYSTEM_API_ADAPTER);
+		roverApogySystemApiAdapterEClass = createEClass(ROVER_APOGY_SYSTEM_API_ADAPTER);
 
 		roverDataEClass = createEClass(ROVER_DATA);
 		createEAttribute(roverDataEClass, ROVER_DATA__INITIALIZED);
@@ -200,7 +200,7 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -208,11 +208,11 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		roverSymphonySystemApiAdapterEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonySystemApiAdapter());
-		roverDataEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonyInitializationData());
+		roverApogySystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
+		roverDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(roverSymphonySystemApiAdapterEClass, RoverSymphonySystemApiAdapter.class, "RoverSymphonySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(roverApogySystemApiAdapterEClass, RoverApogySystemApiAdapter.class, "RoverApogySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(roverDataEClass, RoverData.class, "RoverData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoverData_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, RoverData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -222,4 +222,4 @@ public class Symphony__ExamplesRoverSymphonyPackageImpl extends EPackageImpl imp
 		createResource(eNS_URI);
 	}
 
-} //Symphony__ExamplesRoverSymphonyPackageImpl
+} //ApogyExamplesRoverApogyPackageImpl

@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.impl;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.mobile_platform.Activator;
-import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub;
-import org.eclipse.symphony.examples.mobile_platform.Position;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Activator;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatformStub;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.Position;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -42,7 +42,7 @@ public class MobilePlatformStubImpl extends MobilePlatformImpl implements Mobile
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM_STUB;
+		return ApogyExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM_STUB;
 	}
 
 	/**

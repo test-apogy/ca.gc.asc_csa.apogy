@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.impl;
+package ca.gc.asc_csa.apogy.core.topology.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,21 +12,21 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.impl.ReferencedGroupNodeImpl;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.WorksiteNode;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ResultsList;
-import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
-import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFactory;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.ReferencedGroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.ResultsListNode;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,25 +36,25 @@ import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getWorksiteNode <em>Worksite Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getResultsListNode <em>Results List Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getSymphonySystemAPIsNode <em>Symphony System AP Is Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getApogyEnvironment <em>Apogy Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getWorksiteNode <em>Worksite Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getResultsListNode <em>Results List Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getApogySystemAPIsNode <em>Apogy System AP Is Node</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements SymphonyEnvironmentNode
+public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements ApogyEnvironmentNode
 {
 	/**
-	 * The cached value of the '{@link #getSymphonyEnvironment() <em>Symphony Environment</em>}' reference.
+	 * The cached value of the '{@link #getApogyEnvironment() <em>Apogy Environment</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getSymphonyEnvironment()
+	 * @see #getApogyEnvironment()
 	 * @generated
 	 * @ordered
 	 */
-  protected SymphonyEnvironment symphonyEnvironment;
+  protected ApogyEnvironment apogyEnvironment;
 
   private Adapter adapter = null;
 	
@@ -79,21 +79,21 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   protected ResultsListNode resultsListNode;
 
   /**
-	 * The cached value of the '{@link #getSymphonySystemAPIsNode() <em>Symphony System AP Is Node</em>}' reference.
+	 * The cached value of the '{@link #getApogySystemAPIsNode() <em>Apogy System AP Is Node</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getSymphonySystemAPIsNode()
+	 * @see #getApogySystemAPIsNode()
 	 * @generated
 	 * @ordered
 	 */
-  protected SymphonySystemAPIsNode symphonySystemAPIsNode;
+  protected ApogySystemAPIsNode apogySystemAPIsNode;
 
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SymphonyEnvironmentNodeImpl()
+  protected ApogyEnvironmentNodeImpl()
   {
 		super();
 	}
@@ -106,7 +106,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreTopologyPackage.Literals.SYMPHONY_ENVIRONMENT_NODE;
+		return ApogyCoreTopologyPackage.Literals.APOGY_ENVIRONMENT_NODE;
 	}
 
   /**
@@ -114,17 +114,17 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyEnvironment getSymphonyEnvironment()
+  public ApogyEnvironment getApogyEnvironment()
   {
-		if (symphonyEnvironment != null && symphonyEnvironment.eIsProxy()) {
-			InternalEObject oldSymphonyEnvironment = (InternalEObject)symphonyEnvironment;
-			symphonyEnvironment = (SymphonyEnvironment)eResolveProxy(oldSymphonyEnvironment);
-			if (symphonyEnvironment != oldSymphonyEnvironment) {
+		if (apogyEnvironment != null && apogyEnvironment.eIsProxy()) {
+			InternalEObject oldApogyEnvironment = (InternalEObject)apogyEnvironment;
+			apogyEnvironment = (ApogyEnvironment)eResolveProxy(oldApogyEnvironment);
+			if (apogyEnvironment != oldApogyEnvironment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment, apogyEnvironment));
 			}
 		}
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 
   /**
@@ -132,9 +132,9 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyEnvironment basicGetSymphonyEnvironment()
+  public ApogyEnvironment basicGetApogyEnvironment()
   {
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 
   /**
@@ -142,10 +142,10 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public void setSymphonyEnvironment(SymphonyEnvironment newSymphonyEnvironment)
+  public void setApogyEnvironment(ApogyEnvironment newApogyEnvironment)
   {
-	  updateSymphonyEnvironment(getSymphonyEnvironment(), newSymphonyEnvironment);
-	  setSymphonyEnvironmentGen(newSymphonyEnvironment);
+	  updateApogyEnvironment(getApogyEnvironment(), newApogyEnvironment);
+	  setApogyEnvironmentGen(newApogyEnvironment);
   }
   
   /**
@@ -153,12 +153,12 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setSymphonyEnvironmentGen(SymphonyEnvironment newSymphonyEnvironment)
+  public void setApogyEnvironmentGen(ApogyEnvironment newApogyEnvironment)
   {
-		SymphonyEnvironment oldSymphonyEnvironment = symphonyEnvironment;
-		symphonyEnvironment = newSymphonyEnvironment;
+		ApogyEnvironment oldApogyEnvironment = apogyEnvironment;
+		apogyEnvironment = newApogyEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment, apogyEnvironment));
 	}
   
   /**
@@ -173,7 +173,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			worksiteNode = (WorksiteNode)eResolveProxy(oldWorksiteNode);
 			if (worksiteNode != oldWorksiteNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 			}
 		}
 		return worksiteNode;
@@ -191,7 +191,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			worksiteNode = (WorksiteNode)eResolveProxy(oldWorksiteNode);
 			if (worksiteNode != oldWorksiteNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 			}
 		}
 		return worksiteNode;
@@ -233,7 +233,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 		WorksiteNode oldWorksiteNode = worksiteNode;
 		worksiteNode = newWorksiteNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 	}
 
   /**
@@ -245,7 +245,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   {
 	  if(getResultsListNodeGen() == null)
 	  {
-		  resultsListNode = Symphony__CoreFactory.eINSTANCE.createResultsListNode();
+		  resultsListNode = ApogyCoreFactory.eINSTANCE.createResultsListNode();
 		  resultsListNode.setDescription("Results" + getNodeId());
 		  resultsListNode.setNodeId("RESULTS");
 		    
@@ -269,7 +269,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			resultsListNode = (ResultsListNode)eResolveProxy(oldResultsListNode);
 			if (resultsListNode != oldResultsListNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE, oldResultsListNode, resultsListNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE, oldResultsListNode, resultsListNode));
 			}
 		}
 		return resultsListNode;
@@ -290,21 +290,21 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public SymphonySystemAPIsNode getSymphonySystemAPIsNode()
+  public ApogySystemAPIsNode getApogySystemAPIsNode()
   {
-	  if(getSymphonySystemAPIsNodeGen() == null)
+	  if(getApogySystemAPIsNodeGen() == null)
 	  {
-		  symphonySystemAPIsNode = Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode();
-		  symphonySystemAPIsNode.setNodeId("SYSTEMS" + getNodeId());
-		  symphonySystemAPIsNode.setDescription("Systems");
+		  apogySystemAPIsNode = ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode();
+		  apogySystemAPIsNode.setNodeId("SYSTEMS" + getNodeId());
+		  apogySystemAPIsNode.setDescription("Systems");
 		  
 		  // Attaches the Systems		  
-		  getChildren().add(symphonySystemAPIsNode);
+		  getChildren().add(apogySystemAPIsNode);
 		  		  
-		  symphonySystemAPIsNode.setSymphonyEnvironment(getSymphonyEnvironment());
+		  apogySystemAPIsNode.setApogyEnvironment(getApogyEnvironment());
 	  }
 	  
-	  return getSymphonySystemAPIsNodeGen();
+	  return getApogySystemAPIsNodeGen();
   }
   
   /**
@@ -312,17 +312,17 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemAPIsNode getSymphonySystemAPIsNodeGen()
+  public ApogySystemAPIsNode getApogySystemAPIsNodeGen()
   {
-		if (symphonySystemAPIsNode != null && symphonySystemAPIsNode.eIsProxy()) {
-			InternalEObject oldSymphonySystemAPIsNode = (InternalEObject)symphonySystemAPIsNode;
-			symphonySystemAPIsNode = (SymphonySystemAPIsNode)eResolveProxy(oldSymphonySystemAPIsNode);
-			if (symphonySystemAPIsNode != oldSymphonySystemAPIsNode) {
+		if (apogySystemAPIsNode != null && apogySystemAPIsNode.eIsProxy()) {
+			InternalEObject oldApogySystemAPIsNode = (InternalEObject)apogySystemAPIsNode;
+			apogySystemAPIsNode = (ApogySystemAPIsNode)eResolveProxy(oldApogySystemAPIsNode);
+			if (apogySystemAPIsNode != oldApogySystemAPIsNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE, oldSymphonySystemAPIsNode, symphonySystemAPIsNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE, oldApogySystemAPIsNode, apogySystemAPIsNode));
 			}
 		}
-		return symphonySystemAPIsNode;
+		return apogySystemAPIsNode;
 	}
 
   /**
@@ -330,9 +330,9 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemAPIsNode basicGetSymphonySystemAPIsNode()
+  public ApogySystemAPIsNode basicGetApogySystemAPIsNode()
   {
-		return symphonySystemAPIsNode;
+		return apogySystemAPIsNode;
 	}
 
   /**
@@ -342,14 +342,14 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
    */
   public void dispose()
   {	 
-	  setSymphonyEnvironment(null);	  
+	  setApogyEnvironment(null);	  
 	  
 	  getWorksiteNode().setWorksite(null);
 	  setWorksiteNode(null);
 	  
 	  getResultsListNode().setResultsList(null);
 	  
-	  getSymphonySystemAPIsNode().setSymphonyEnvironment(null);
+	  getApogySystemAPIsNode().setApogyEnvironment(null);
 	  
 	  getChildren().clear();
 	  
@@ -364,18 +364,18 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
-				if (resolve) return getSymphonyEnvironment();
-				return basicGetSymphonyEnvironment();
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				if (resolve) return getApogyEnvironment();
+				return basicGetApogyEnvironment();
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				if (resolve) return getWorksiteNode();
 				return basicGetWorksiteNode();
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
 				if (resolve) return getResultsListNode();
 				return basicGetResultsListNode();
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE:
-				if (resolve) return getSymphonySystemAPIsNode();
-				return basicGetSymphonySystemAPIsNode();
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE:
+				if (resolve) return getApogySystemAPIsNode();
+				return basicGetApogySystemAPIsNode();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -389,10 +389,10 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
-				setSymphonyEnvironment((SymphonyEnvironment)newValue);
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				setApogyEnvironment((ApogyEnvironment)newValue);
 				return;
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				setWorksiteNode((WorksiteNode)newValue);
 				return;
 		}
@@ -408,10 +408,10 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
-				setSymphonyEnvironment((SymphonyEnvironment)null);
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				setApogyEnvironment((ApogyEnvironment)null);
 				return;
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				setWorksiteNode((WorksiteNode)null);
 				return;
 		}
@@ -427,14 +427,14 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
-				return symphonyEnvironment != null;
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				return apogyEnvironment != null;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				return worksiteNode != null;
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
 				return resultsListNode != null;
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE:
-				return symphonySystemAPIsNode != null;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE:
+				return apogySystemAPIsNode != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -448,14 +448,14 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE___DISPOSE:
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE___DISPOSE:
 				dispose();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-  private void updateSymphonyEnvironment(SymphonyEnvironment oldSymphonyEnvironment, SymphonyEnvironment newSymphonyEnvironment)
+  private void updateApogyEnvironment(ApogyEnvironment oldApogyEnvironment, ApogyEnvironment newApogyEnvironment)
   {	 
 	  ResultsList oldResultsList = null;
 	  ResultsList newResultsList = null;
@@ -463,44 +463,44 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 	  AbstractWorksite oldWorksite = null;
 	  AbstractWorksite newWorksite = null;
 	  
-	  if(oldSymphonyEnvironment != null) 
+	  if(oldApogyEnvironment != null) 
 	  {
 		  // Unregister from old environment, if applicable.
-		  oldSymphonyEnvironment.eAdapters().remove(getAdapter());
+		  oldApogyEnvironment.eAdapters().remove(getAdapter());
 		  
 		  // Gets the old worksite.
-		  oldWorksite = oldSymphonyEnvironment.getActiveWorksite();
+		  oldWorksite = oldApogyEnvironment.getActiveWorksite();
 		  
 		  // If the Context was set
-		  if(oldSymphonyEnvironment.getActiveContext() != null)
+		  if(oldApogyEnvironment.getActiveContext() != null)
 		  { 
-			  if(oldSymphonyEnvironment.getActiveContext().getDataProductsList() != null)
+			  if(oldApogyEnvironment.getActiveContext().getDataProductsList() != null)
 			  {
-				  oldResultsList = oldSymphonyEnvironment.getActiveContext().getDataProductsList().getOperationCallResultsList();
+				  oldResultsList = oldApogyEnvironment.getActiveContext().getDataProductsList().getOperationCallResultsList();
 			  }
 		  }
 	  }
 	  		
 	  // Sets up the newEnvironement	  	  
-	  if(newSymphonyEnvironment != null) 
+	  if(newApogyEnvironment != null) 
 	  {
-		  if(newSymphonyEnvironment.getName() != null)
+		  if(newApogyEnvironment.getName() != null)
 		  {
-			  setNodeId(newSymphonyEnvironment.getName());
+			  setNodeId(newApogyEnvironment.getName());
 		  }
 		  
-		  setDescription("Symphony Environment Node");
+		  setDescription("Apogy Environment Node");
 		  
 		  // Gets the new Worksite.
-		  newWorksite = newSymphonyEnvironment.getActiveWorksite();
+		  newWorksite = newApogyEnvironment.getActiveWorksite();
 			  
-		  // Register listener to the new SymphonyEnvironment.
-		  newSymphonyEnvironment.eAdapters().add(getAdapter());	 
+		  // Register listener to the new ApogyEnvironment.
+		  newApogyEnvironment.eAdapters().add(getAdapter());	 
 		  
 		  // If the context is set.
-		  if(newSymphonyEnvironment.getActiveContext() != null)
+		  if(newApogyEnvironment.getActiveContext() != null)
 		  {
-			  newResultsList = newSymphonyEnvironment.getActiveContext().getDataProductsList().getOperationCallResultsList();
+			  newResultsList = newApogyEnvironment.getActiveContext().getDataProductsList().getOperationCallResultsList();
 		  }
 	  }
 	  
@@ -511,7 +511,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 	  updateWorksite(oldWorksite, newWorksite);
 	  
 	  // Updates the Systems.
-	  updateSystems(oldSymphonyEnvironment, newSymphonyEnvironment);
+	  updateSystems(oldApogyEnvironment, newApogyEnvironment);
 	  
   }
   
@@ -548,9 +548,9 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 	  updateResultLists(oldResultsList, newResultsList);
   }
   
-  private void updateSystems(SymphonyEnvironment oldSymphonyEnvironment, SymphonyEnvironment newSymphonyEnvironment)
+  private void updateSystems(ApogyEnvironment oldApogyEnvironment, ApogyEnvironment newApogyEnvironment)
   {
-	  getSymphonySystemAPIsNode().setSymphonyEnvironment(newSymphonyEnvironment);
+	  getApogySystemAPIsNode().setApogyEnvironment(newApogyEnvironment);
   }
   
   private void updateResultLists(ResultsList oldResultsList, ResultsList newResultsList)
@@ -591,16 +591,16 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 				{				
 					super.notifyChanged(msg);										
 					
-					if(msg.getNotifier() instanceof SymphonyEnvironment)
+					if(msg.getNotifier() instanceof ApogyEnvironment)
 					{
-						if(msg.getFeatureID(SymphonyEnvironment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_CONTEXT)
+						if(msg.getFeatureID(ApogyEnvironment.class) == ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_CONTEXT)
 						{
 							// Active Context has changed.
 							Context oldContext = (Context) msg.getOldValue();
 							Context newContext = (Context) msg.getOldValue();
 							updateContext(oldContext, newContext);							
 						}
-						else if(msg.getFeatureID(SymphonyEnvironment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE)							
+						else if(msg.getFeatureID(ApogyEnvironment.class) == ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE)							
 						{
 							// Active Worksite has changed.								
 							AbstractWorksite oldWorksite = (AbstractWorksite) msg.getOldValue();
@@ -610,7 +610,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 					}
 					else if(msg.getNotifier() instanceof Context)
 					{
-						if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.BASIC_CONTEXT__DATA_PRODUCTS_LIST)						
+						if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.BASIC_CONTEXT__DATA_PRODUCTS_LIST)						
 						{
 							// ResultsList has changed.								
 							ResultsList oldResultsList = (ResultsList) msg.getOldValue();

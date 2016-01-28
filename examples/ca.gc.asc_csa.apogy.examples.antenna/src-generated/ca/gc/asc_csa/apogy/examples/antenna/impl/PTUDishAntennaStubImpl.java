@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.antenna.Activator;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.antenna.Activator;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class PTUDishAntennaStubImpl extends PTUDishAntennaImpl implements PTUDis
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA_STUB;
+		return ApogyExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA_STUB;
 	}
 
 	/**

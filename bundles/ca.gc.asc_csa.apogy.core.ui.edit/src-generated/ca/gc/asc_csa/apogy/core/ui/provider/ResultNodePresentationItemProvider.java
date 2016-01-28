@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.provider;
+package ca.gc.asc_csa.apogy.core.ui.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.provider.TransformNodePresentationItemProvider;
-import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.TransformNodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.ResultNodePresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 				 getResourceLocator(),
 				 getString("_UI_ResultNodePresentation_poleHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ResultNodePresentation_poleHeight_feature", "_UI_ResultNodePresentation_type"),
-				 Symphony__CoreUIPackage.Literals.RESULT_NODE_PRESENTATION__POLE_HEIGHT,
+				 ApogyCoreUIPackage.Literals.RESULT_NODE_PRESENTATION__POLE_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 				 getResourceLocator(),
 				 getString("_UI_ResultNodePresentation_flagVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ResultNodePresentation_flagVisible_feature", "_UI_ResultNodePresentation_type"),
-				 Symphony__CoreUIPackage.Literals.RESULT_NODE_PRESENTATION__FLAG_VISIBLE,
+				 ApogyCoreUIPackage.Literals.RESULT_NODE_PRESENTATION__FLAG_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -136,8 +136,8 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ResultNodePresentation.class)) {
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -164,7 +164,7 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__CoreUIEditPlugin.INSTANCE;
+		return ApogyCoreUIEditPlugin.INSTANCE;
 	}
 
 }

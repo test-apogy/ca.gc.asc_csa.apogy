@@ -1,20 +1,20 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.util;
+package ca.gc.asc_csa.apogy.core.programs.controllers.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.invocator.Argument;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.programs.controllers.*;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.programs.controllers.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,17 +26,17 @@ import org.eclipse.symphony.core.programs.controllers.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage
  * @generated
  */
-public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
+public class ApogyCoreProgramsControllersSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreProgramsControllersPackage modelPackage;
+	protected static ApogyCoreProgramsControllersPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -44,9 +44,9 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsControllersSwitch() {
+	public ApogyCoreProgramsControllersSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreProgramsControllersPackage.eINSTANCE;
+			modelPackage = ApogyCoreProgramsControllersPackage.eINSTANCE;
 		}
 	}
 
@@ -73,13 +73,13 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreProgramsControllersPackage.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE: {
-				Symphony__CoreProgramsControllersFacade symphony__CoreProgramsControllersFacade = (Symphony__CoreProgramsControllersFacade)theEObject;
-				T result = caseSymphony__CoreProgramsControllersFacade(symphony__CoreProgramsControllersFacade);
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE: {
+				ApogyCoreProgramsControllersFacade apogy__CoreProgramsControllersFacade = (ApogyCoreProgramsControllersFacade)theEObject;
+				T result = caseApogyCoreProgramsControllersFacade(apogy__CoreProgramsControllersFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION: {
+			case ApogyCoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION: {
 				ControllersConfiguration controllersConfiguration = (ControllersConfiguration)theEObject;
 				T result = caseControllersConfiguration(controllersConfiguration);
 				if (result == null) result = caseProgram(controllersConfiguration);
@@ -89,7 +89,7 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING: {
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING: {
 				OperationCallControllerBinding operationCallControllerBinding = (OperationCallControllerBinding)theEObject;
 				T result = caseOperationCallControllerBinding(operationCallControllerBinding);
 				if (result == null) result = caseOperationCall(operationCallControllerBinding);
@@ -99,7 +99,7 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.TRIGGER: {
+			case ApogyCoreProgramsControllersPackage.TRIGGER: {
 				Trigger trigger = (Trigger)theEObject;
 				T result = caseTrigger(trigger);
 				if (result == null) result = caseNamed(trigger);
@@ -107,7 +107,7 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER: {
+			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER: {
 				TimeTrigger timeTrigger = (TimeTrigger)theEObject;
 				T result = caseTimeTrigger(timeTrigger);
 				if (result == null) result = caseTrigger(timeTrigger);
@@ -116,7 +116,7 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER: {
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_TRIGGER: {
 				ControllerTrigger controllerTrigger = (ControllerTrigger)theEObject;
 				T result = caseControllerTrigger(controllerTrigger);
 				if (result == null) result = caseTrigger(controllerTrigger);
@@ -125,7 +125,7 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER: {
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER: {
 				ControllerEdgeTrigger controllerEdgeTrigger = (ControllerEdgeTrigger)theEObject;
 				T result = caseControllerEdgeTrigger(controllerEdgeTrigger);
 				if (result == null) result = caseControllerTrigger(controllerEdgeTrigger);
@@ -135,7 +135,7 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER: {
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER: {
 				ControllerStateTrigger controllerStateTrigger = (ControllerStateTrigger)theEObject;
 				T result = caseControllerStateTrigger(controllerStateTrigger);
 				if (result == null) result = caseControllerTrigger(controllerStateTrigger);
@@ -145,20 +145,20 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT: {
+			case ApogyCoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT: {
 				BindedEDataTypeArgument bindedEDataTypeArgument = (BindedEDataTypeArgument)theEObject;
 				T result = caseBindedEDataTypeArgument(bindedEDataTypeArgument);
 				if (result == null) result = caseArgument(bindedEDataTypeArgument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE: {
+			case ApogyCoreProgramsControllersPackage.VALUE_SOURCE: {
 				ValueSource valueSource = (ValueSource)theEObject;
 				T result = caseValueSource(valueSource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.FIXED_VALUE_SOURCE: {
+			case ApogyCoreProgramsControllersPackage.FIXED_VALUE_SOURCE: {
 				FixedValueSource fixedValueSource = (FixedValueSource)theEObject;
 				T result = caseFixedValueSource(fixedValueSource);
 				if (result == null) result = caseEDataTypeArgument(fixedValueSource);
@@ -167,34 +167,34 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE: {
+			case ApogyCoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE: {
 				ToggleValueSource toggleValueSource = (ToggleValueSource)theEObject;
 				T result = caseToggleValueSource(toggleValueSource);
 				if (result == null) result = caseValueSource(toggleValueSource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE: {
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE: {
 				ControllerValueSource controllerValueSource = (ControllerValueSource)theEObject;
 				T result = caseControllerValueSource(controllerValueSource);
 				if (result == null) result = caseValueSource(controllerValueSource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.ABSTRACT_INPUT_CONDITIONING: {
+			case ApogyCoreProgramsControllersPackage.ABSTRACT_INPUT_CONDITIONING: {
 				AbstractInputConditioning abstractInputConditioning = (AbstractInputConditioning)theEObject;
 				T result = caseAbstractInputConditioning(abstractInputConditioning);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING: {
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING: {
 				LinearInputConditioning linearInputConditioning = (LinearInputConditioning)theEObject;
 				T result = caseLinearInputConditioning(linearInputConditioning);
 				if (result == null) result = caseAbstractInputConditioning(linearInputConditioning);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING: {
+			case ApogyCoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING: {
 				CenteredLinearInputConditioning centeredLinearInputConditioning = (CenteredLinearInputConditioning)theEObject;
 				T result = caseCenteredLinearInputConditioning(centeredLinearInputConditioning);
 				if (result == null) result = caseLinearInputConditioning(centeredLinearInputConditioning);
@@ -202,14 +202,14 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING: {
+			case ApogyCoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING: {
 				ParabolicInputConditioning parabolicInputConditioning = (ParabolicInputConditioning)theEObject;
 				T result = caseParabolicInputConditioning(parabolicInputConditioning);
 				if (result == null) result = caseAbstractInputConditioning(parabolicInputConditioning);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING: {
+			case ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING: {
 				CenteredParabolicInputConditioning centeredParabolicInputConditioning = (CenteredParabolicInputConditioning)theEObject;
 				T result = caseCenteredParabolicInputConditioning(centeredParabolicInputConditioning);
 				if (result == null) result = caseParabolicInputConditioning(centeredParabolicInputConditioning);
@@ -217,14 +217,14 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING: {
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING: {
 				UserDefinedInputConditioning userDefinedInputConditioning = (UserDefinedInputConditioning)theEObject;
 				T result = caseUserDefinedInputConditioning(userDefinedInputConditioning);
 				if (result == null) result = caseAbstractInputConditioning(userDefinedInputConditioning);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT: {
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT: {
 				CustomInputConditioningPoint customInputConditioningPoint = (CustomInputConditioningPoint)theEObject;
 				T result = caseCustomInputConditioningPoint(customInputConditioningPoint);
 				if (result == null) result = defaultCase(theEObject);
@@ -245,7 +245,7 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreProgramsControllersFacade(Symphony__CoreProgramsControllersFacade object) {
+	public T caseApogyCoreProgramsControllersFacade(ApogyCoreProgramsControllersFacade object) {
 		return null;
 	}
 
@@ -670,4 +670,4 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CoreProgramsControllersSwitch
+} //ApogyCoreProgramsControllersSwitch

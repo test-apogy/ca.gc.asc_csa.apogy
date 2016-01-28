@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__CommonGeometryData25DFacadeImpl.java,v 1.5.4.3 2015/09/22 19:39:38 rlarcheveque Exp $
+ * $Id: ApogyCommonGeometryData25DFacadeImpl.java,v 1.5.4.3 2015/09/22 19:39:38 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -12,15 +12,15 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade;
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,13 +29,13 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  *
  * @generated
  */
-public class Symphony__CommonGeometryData25DFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonGeometryData25DFacade
+public class ApogyCommonGeometryData25DFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonGeometryData25DFacade
 {
-	private static Symphony__CommonGeometryData25DFacade instance;
+	private static ApogyCommonGeometryData25DFacade instance;
 
-	public static Symphony__CommonGeometryData25DFacade getInstance() {
+	public static ApogyCommonGeometryData25DFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CommonGeometryData25DFacadeImpl();
+			instance = new ApogyCommonGeometryData25DFacadeImpl();
 		}
 
 		return instance;
@@ -46,7 +46,7 @@ public class Symphony__CommonGeometryData25DFacadeImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData25DFacadeImpl()
+	protected ApogyCommonGeometryData25DFacadeImpl()
 	{
 		super();
 	}
@@ -59,7 +59,7 @@ public class Symphony__CommonGeometryData25DFacadeImpl extends MinimalEObjectImp
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryData25DPackage.Literals.SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE;
+		return ApogyCommonGeometryData25DPackage.Literals.APOGY_COMMON_GEOMETRY_DATA25_DFACADE;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Symphony__CommonGeometryData25DFacadeImpl extends MinimalEObjectImp
 	 */
 	public Coordinates25D createCoordinates25D(double u, double v, double w)
 	{
-		Coordinates25D coord = Symphony__CommonGeometryData25DFactory.eINSTANCE.createCoordinates25D();
+		Coordinates25D coord = ApogyCommonGeometryData25DFactory.eINSTANCE.createCoordinates25D();
 		
 		coord.setU(u);
 		coord.setV(v);
@@ -101,12 +101,12 @@ public class Symphony__CommonGeometryData25DFacadeImpl extends MinimalEObjectImp
 		{
 			Coordinates25D point25D = volumetricCoordinatesSet25D.getPoints().get(i);
 		
-			CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(volumetricCoordinatesSet25D.getCartesianPositionCoordinates(point25D));
+			CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(volumetricCoordinatesSet25D.getCartesianPositionCoordinates(point25D));
 			pointList.add(point);						
 		}
 		
 		// Adds all the point to the set in one shot.
-		CartesianCoordinatesSet coordinateSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet coordinateSet = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		coordinateSet.getPoints().addAll(pointList);
 		
 		return coordinateSet;
@@ -121,14 +121,14 @@ public class Symphony__CommonGeometryData25DFacadeImpl extends MinimalEObjectImp
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData25DPackage.SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D:
+			case ApogyCommonGeometryData25DPackage.APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D:
 				return createCoordinates25D((Coordinates25D)arguments.get(0));
-			case Symphony__CommonGeometryData25DPackage.SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCommonGeometryData25DPackage.APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE:
 				return createCoordinates25D((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonGeometryData25DPackage.SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D:
+			case ApogyCommonGeometryData25DPackage.APOGY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D:
 				return createCartesianCoordinatesSet((VolumetricCoordinatesSet25D)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CommonGeometryData25DFacadeImpl
+} //ApogyCommonGeometryData25DFacadeImpl

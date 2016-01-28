@@ -1,15 +1,15 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.ListFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,9 +19,9 @@ import org.eclipse.symphony.common.emf.ListFeatureNode;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.ListFeatureNodeImpl#getStructuralFeature <em>Structural Feature</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.ListFeatureNodeImpl#isMultiValued <em>Multi Valued</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.ListFeatureNodeImpl#getIndex <em>Index</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.ListFeatureNodeImpl#getStructuralFeature <em>Structural Feature</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.ListFeatureNodeImpl#isMultiValued <em>Multi Valued</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.ListFeatureNodeImpl#getIndex <em>Index</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,7 +86,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonEMFPackage.Literals.LIST_FEATURE_NODE;
+		return ApogyCommonEMFPackage.Literals.LIST_FEATURE_NODE;
 	}
 
   /**
@@ -101,7 +101,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
 			structuralFeature = (EStructuralFeature)eResolveProxy(oldStructuralFeature);
 			if (structuralFeature != oldStructuralFeature) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
 			}
 		}
 		return structuralFeature;
@@ -127,7 +127,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
 		EStructuralFeature oldStructuralFeature = structuralFeature;
 		structuralFeature = newStructuralFeature;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
 	}
 
   /**
@@ -167,7 +167,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
 		int oldIndex = index;
 		index = newIndex;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX, oldIndex, index));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.LIST_FEATURE_NODE__INDEX, oldIndex, index));
 	}
 
   /**
@@ -179,12 +179,12 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				if (resolve) return getStructuralFeature();
 				return basicGetStructuralFeature();
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED:
 				return isMultiValued();
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				return getIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -199,10 +199,10 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				setStructuralFeature((EStructuralFeature)newValue);
 				return;
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				setIndex((Integer)newValue);
 				return;
 		}
@@ -218,10 +218,10 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				setStructuralFeature((EStructuralFeature)null);
 				return;
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				setIndex(INDEX_EDEFAULT);
 				return;
 		}
@@ -237,11 +237,11 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				return structuralFeature != null;
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED:
 				return isMultiValued() != MULTI_VALUED_EDEFAULT;
-			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
+			case ApogyCommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				return index != INDEX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -257,9 +257,9 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   {
 		if (baseClass == AbstractFeatureSpecifier.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE: return Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE;
-				case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED: return Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED;
-				case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX: return Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX;
+				case ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE: return ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE;
+				case ApogyCommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED: return ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED;
+				case ApogyCommonEMFPackage.LIST_FEATURE_NODE__INDEX: return ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX;
 				default: return -1;
 			}
 		}
@@ -276,9 +276,9 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   {
 		if (baseClass == AbstractFeatureSpecifier.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE: return Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE;
-				case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED: return Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED;
-				case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX: return Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX;
+				case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE: return ApogyCommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE;
+				case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED: return ApogyCommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED;
+				case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX: return ApogyCommonEMFPackage.LIST_FEATURE_NODE__INDEX;
 				default: return -1;
 			}
 		}

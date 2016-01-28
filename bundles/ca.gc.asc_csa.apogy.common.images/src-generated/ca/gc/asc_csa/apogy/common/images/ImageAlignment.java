@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.images;
+package ca.gc.asc_csa.apogy.common.images;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Image Alignment</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImageAlignment()
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getImageAlignment()
  * @model
  * @generated
  */

@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * <!-- begin-model-doc -->
  *  -------------------------------------------------------------------------
  * 
- * Symphony System API.
+ * Apogy System API.
  * 
  * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.PoseProvider#getPoseTransform <em>Pose Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.PoseProvider#getPoseTransform <em>Pose Transform</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getPoseProvider()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getPoseProvider()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface PoseProvider extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose Transform</em>' containment reference.
 	 * @see #setPoseTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getPoseProvider_PoseTransform()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getPoseProvider_PoseTransform()
 	 * @model containment="true"
 	 * @generated
 	 */
   Matrix4x4 getPoseTransform();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.PoseProvider#getPoseTransform <em>Pose Transform</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.PoseProvider#getPoseTransform <em>Pose Transform</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pose Transform</em>' containment reference.

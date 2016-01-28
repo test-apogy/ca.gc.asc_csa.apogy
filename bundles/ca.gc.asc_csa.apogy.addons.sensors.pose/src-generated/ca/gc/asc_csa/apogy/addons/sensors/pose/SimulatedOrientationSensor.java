@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
 
 /**
@@ -13,13 +13,13 @@ package org.eclipse.symphony.addons.sensors.pose;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedOrientationSensor()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XAngular Velocity</em>' attribute.
 	 * @see #setXAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_XAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedOrientationSensor_XAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getXAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XAngular Velocity</em>' attribute.
@@ -60,14 +60,14 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YAngular Velocity</em>' attribute.
 	 * @see #setYAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_YAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedOrientationSensor_YAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getYAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YAngular Velocity</em>' attribute.
@@ -86,14 +86,14 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZAngular Velocity</em>' attribute.
 	 * @see #setZAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_ZAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedOrientationSensor_ZAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getZAngularVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZAngular Velocity</em>' attribute.
@@ -113,14 +113,14 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_UpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedOrientationSensor_UpdatePeriod()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getUpdatePeriod();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Update Period</em>' attribute.

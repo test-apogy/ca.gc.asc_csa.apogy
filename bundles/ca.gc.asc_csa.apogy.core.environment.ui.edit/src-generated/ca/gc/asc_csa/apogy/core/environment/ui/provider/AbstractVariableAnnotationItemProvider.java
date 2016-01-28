@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -48,7 +48,7 @@ public class AbstractVariableAnnotationItemProvider
 
 			addVariablePropertyDescriptor(object);
 			addVariableInstancePropertyDescriptor(object);
-			addSymphonySystemApiAdapterPropertyDescriptor(object);
+			addApogySystemApiAdapterPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -67,7 +67,7 @@ public class AbstractVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractVariableAnnotation_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractVariableAnnotation_variable_feature", "_UI_AbstractVariableAnnotation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE,
+				 ApogyCoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -90,7 +90,7 @@ public class AbstractVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractVariableAnnotation_variableInstance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractVariableAnnotation_variableInstance_feature", "_UI_AbstractVariableAnnotation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE,
+				 ApogyCoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -100,20 +100,20 @@ public class AbstractVariableAnnotationItemProvider
 	}
 
   /**
-	 * This adds a property descriptor for the Symphony System Api Adapter feature.
+	 * This adds a property descriptor for the Apogy System Api Adapter feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addSymphonySystemApiAdapterPropertyDescriptor(Object object)
+  protected void addApogySystemApiAdapterPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_AbstractVariableAnnotation_symphonySystemApiAdapter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractVariableAnnotation_symphonySystemApiAdapter_feature", "_UI_AbstractVariableAnnotation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER,
+				 getString("_UI_AbstractVariableAnnotation_apogySystemApiAdapter_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractVariableAnnotation_apogySystemApiAdapter_feature", "_UI_AbstractVariableAnnotation_type"),
+				 ApogyCoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER,
 				 true,
 				 false,
 				 true,

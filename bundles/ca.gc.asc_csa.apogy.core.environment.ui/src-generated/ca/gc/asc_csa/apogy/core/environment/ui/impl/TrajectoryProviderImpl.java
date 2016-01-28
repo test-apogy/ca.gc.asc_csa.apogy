@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -15,9 +15,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
 
@@ -29,10 +29,10 @@ import org.jfree.data.xy.XYSeries;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getLatestPosition <em>Latest Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getAzimuthAngle <em>Azimuth Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getTrajectoryLength <em>Trajectory Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getTrajectoryColor <em>Trajectory Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl#getLatestPosition <em>Latest Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl#getAzimuthAngle <em>Azimuth Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl#getTrajectoryLength <em>Trajectory Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl#getTrajectoryColor <em>Trajectory Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,7 +104,7 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Color3f TRAJECTORY_COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+  protected static final Color3f TRAJECTORY_COLOR_EDEFAULT = (Color3f)ApogyCoreEnvironmentUIFactory.eINSTANCE.createFromString(ApogyCoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
   /**
 	 * The cached value of the '{@link #getTrajectoryColor() <em>Trajectory Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -132,7 +132,7 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER;
+		return ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER;
 	}
   
   /**
@@ -155,7 +155,7 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
 		XYDataItem oldLatestPosition = latestPosition;
 		latestPosition = newLatestPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION, oldLatestPosition, latestPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION, oldLatestPosition, latestPosition));
 	}
 
   /**
@@ -178,7 +178,7 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
 		double oldAzimuthAngle = azimuthAngle;
 		azimuthAngle = newAzimuthAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE, oldAzimuthAngle, azimuthAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE, oldAzimuthAngle, azimuthAngle));
 	}
 
   /**
@@ -201,7 +201,7 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
 		double oldTrajectoryLength = trajectoryLength;
 		trajectoryLength = newTrajectoryLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH, oldTrajectoryLength, trajectoryLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH, oldTrajectoryLength, trajectoryLength));
 	}
 
   /**
@@ -224,7 +224,7 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
 		Color3f oldTrajectoryColor = trajectoryColor;
 		trajectoryColor = newTrajectoryColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR, oldTrajectoryColor, trajectoryColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR, oldTrajectoryColor, trajectoryColor));
 	}
 
   /**
@@ -305,13 +305,13 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
 				return getLatestPosition();
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
 				return getAzimuthAngle();
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
 				return getTrajectoryLength();
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
 				return getTrajectoryColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -326,16 +326,16 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
 				setLatestPosition((XYDataItem)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
 				setAzimuthAngle((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
 				setTrajectoryLength((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
 				setTrajectoryColor((Color3f)newValue);
 				return;
 		}
@@ -351,16 +351,16 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
 				setLatestPosition(LATEST_POSITION_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
 				setAzimuthAngle(AZIMUTH_ANGLE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
 				setTrajectoryLength(TRAJECTORY_LENGTH_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
 				setTrajectoryColor(TRAJECTORY_COLOR_EDEFAULT);
 				return;
 		}
@@ -376,13 +376,13 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION:
 				return LATEST_POSITION_EDEFAULT == null ? latestPosition != null : !LATEST_POSITION_EDEFAULT.equals(latestPosition);
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE:
 				return azimuthAngle != AZIMUTH_ANGLE_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH:
 				return trajectoryLength != TRAJECTORY_LENGTH_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR:
 				return TRAJECTORY_COLOR_EDEFAULT == null ? trajectoryColor != null : !TRAJECTORY_COLOR_EDEFAULT.equals(trajectoryColor);
 		}
 		return super.eIsSet(featureID);
@@ -397,15 +397,15 @@ public abstract class TrajectoryProviderImpl extends MinimalEObjectImpl.Containe
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___INITIALIZE:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___INITIALIZE:
 				initialize();
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___CLEAR:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___CLEAR:
 				clear();
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___AS_LIST_OF_POINT2D:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___AS_LIST_OF_POINT2D:
 				return asListOfPoint2d();
-			case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___GET_XY_SERIES:
+			case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___GET_XY_SERIES:
 				return getXYSeries();
 		}
 		return super.eInvoke(operationID, arguments);

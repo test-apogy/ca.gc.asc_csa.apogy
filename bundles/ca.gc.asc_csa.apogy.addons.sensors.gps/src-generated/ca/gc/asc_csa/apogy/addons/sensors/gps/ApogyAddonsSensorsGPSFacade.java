@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSFacadeImpl;
-import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.impl.ApogyAddonsSensorsGPSFacadeImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,13 +13,13 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getSymphony__AddonsSensorsGPSFacade()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getApogyAddonsSensorsGPSFacade()
  * @model
  * @generated
  */
-public interface Symphony__AddonsSensorsGPSFacade extends EObject {
+public interface ApogyAddonsSensorsGPSFacade extends EObject {
 
-	public static final Symphony__AddonsSensorsGPSFacade INSTANCE = Symphony__AddonsSensorsGPSFacadeImpl.getInstance();
+	public static final ApogyAddonsSensorsGPSFacade INSTANCE = ApogyAddonsSensorsGPSFacadeImpl.getInstance();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,4 +37,4 @@ public interface Symphony__AddonsSensorsGPSFacade extends EObject {
 	 */
 	MarkedGPS createMarkedGPS(PositionMarker marker);
 
-} // Symphony__AddonsSensorsGPSFacade
+} // ApogyAddonsSensorsGPSFacade

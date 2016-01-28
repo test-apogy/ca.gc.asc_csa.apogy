@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,19 +12,19 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.RectangularFrustrumFieldOfViewImageProjectorControl;
-import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.RectangularFrustrumFieldOfViewSceneObject;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.RectangularFrustrumFieldOfViewImageProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.scene_objects.RectangularFrustrumFieldOfViewSceneObject;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;
@@ -298,15 +298,15 @@ public class RectangularFrustumFieldOfViewJME3Object extends AbstractFieldOfView
 					{
 						int featureId = notification.getFeatureID(RectangularFrustrumFieldOfView.class);
 						
-						if (featureId == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE || 
-							featureId == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE)
+						if (featureId == ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE || 
+							featureId == ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE)
 						{
 							updateGeometry();
 							
 							// Updates the FOV Settings of the projector.
 							getRectangularFrustrumFieldOfViewImageProjectorControl().updateProjectorFOVSettings();
 						} 					
-						else if(featureId == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE)
+						else if(featureId == ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE)
 						{
 							if(notification.getOldValue() instanceof DistanceRange)
 							{
@@ -343,8 +343,8 @@ public class RectangularFrustumFieldOfViewJME3Object extends AbstractFieldOfView
 					if(notification.getNotifier() instanceof DistanceRange)
 					{
 						int featureId = notification.getFeatureID(DistanceRange.class);
-						if (featureId == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE || 
-							featureId == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE )
+						if (featureId == ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE || 
+							featureId == ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE )
 						{
 							updateGeometry();
 						} 

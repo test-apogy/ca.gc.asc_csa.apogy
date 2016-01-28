@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,13 +27,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsAdapterFactory;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.util.ApogyCommonTopologyBindingsAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -44,7 +44,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends Symphony__CommonTopologyBindingsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonTopologyBindingsItemProviderAdapterFactory extends ApogyCommonTopologyBindingsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonTopologyBindingsEditPlugin.INSTANCE, Symphony__CommonTopologyBindingsPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonTopologyBindingsEditPlugin.INSTANCE, ApogyCommonTopologyBindingsPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -83,7 +83,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyBindingsItemProviderAdapterFactory() {
+	public ApogyCommonTopologyBindingsItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -92,7 +92,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.RotationBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -100,7 +100,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	protected RotationBindingItemProvider rotationBindingItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.RotationBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -115,7 +115,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.TranslationBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -123,7 +123,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	protected TranslationBindingItemProvider translationBindingItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.TranslationBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -138,7 +138,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -146,7 +146,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
   protected TransformMatrixBindingItemProvider transformMatrixBindingItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -170,7 +170,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
   protected EnumerationSwitchBindingItemProvider enumerationSwitchBindingItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.EnumerationCase} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
   protected EnumerationCaseItemProvider enumerationCaseItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationCase}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -210,7 +210,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.BindingsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -218,7 +218,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
   protected BindingsListItemProvider bindingsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.BindingsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -234,7 +234,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -242,7 +242,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
   protected FeatureRootsListItemProvider featureRootsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -258,30 +258,30 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyBindingsFacadeItemProvider symphony__CommonTopologyBindingsFacadeItemProvider;
+	protected ApogyCommonTopologyBindingsFacadeItemProvider apogy__CommonTopologyBindingsFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonTopologyBindingsFacadeAdapter() {
-		if (symphony__CommonTopologyBindingsFacadeItemProvider == null) {
-			symphony__CommonTopologyBindingsFacadeItemProvider = new Symphony__CommonTopologyBindingsFacadeItemProvider(this);
+	public Adapter createApogyCommonTopologyBindingsFacadeAdapter() {
+		if (apogy__CommonTopologyBindingsFacadeItemProvider == null) {
+			apogy__CommonTopologyBindingsFacadeItemProvider = new ApogyCommonTopologyBindingsFacadeItemProvider(this);
 		}
 
-		return symphony__CommonTopologyBindingsFacadeItemProvider;
+		return apogy__CommonTopologyBindingsFacadeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.bindings.BindingsSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -289,7 +289,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 	protected BindingsSetItemProvider bindingsSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.bindings.BindingsSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -437,23 +437,23 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 		if (bindingsListItemProvider != null) bindingsListItemProvider.dispose();
 		if (featureRootsListItemProvider != null) featureRootsListItemProvider.dispose();
 		if (bindingsSetItemProvider != null) bindingsSetItemProvider.dispose();
-		if (symphony__CommonTopologyBindingsFacadeItemProvider != null) symphony__CommonTopologyBindingsFacadeItemProvider.dispose();
+		if (apogy__CommonTopologyBindingsFacadeItemProvider != null) apogy__CommonTopologyBindingsFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -489,48 +489,48 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createRotationBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createRotationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsSet()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createSymphony__CommonTopologyBindingsFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createApogyCommonTopologyBindingsFacade()));
 
 				return null;
 			}
@@ -544,48 +544,48 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createRotationBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createRotationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsSet()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createSymphony__CommonTopologyBindingsFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyBindingsFactory.eINSTANCE.createApogyCommonTopologyBindingsFacade()));
 
 				return null;
 			}
@@ -618,7 +618,7 @@ public class Symphony__CommonTopologyBindingsItemProviderAdapterFactory extends 
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CommonTopologyBindingsEditPlugin.INSTANCE;
+			return ApogyCommonTopologyBindingsEditPlugin.INSTANCE;
 		}
 	}
 

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.preferences;
+package ca.gc.asc_csa.apogy.core.ui.preferences;
 
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
@@ -6,16 +6,16 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.core.ui.Activator;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-public class SymphonyCorePreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyCorePreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonyCorePreferencesPage() {
+	public ApogyCorePreferencesPage() {
 	}
 
 	/**

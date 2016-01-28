@@ -1,26 +1,26 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
-import org.eclipse.symphony.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Symphony Type</b></em>'. <!-- end-user-doc -->
+ * <em><b>Apogy Type</b></em>'. <!-- end-user-doc -->
  * 
  * <!-- begin-model-doc -->
  * -------------------------------------------------------------------------
  * 
- * List of registered Symphony Systems.
+ * List of registered Apogy Systems.
  * 
  * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
  * 
  * 
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyType()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyType()
  * @model abstract="true"
  * @generated
  */
-public interface SymphonyType extends Type {
-} // SymphonyType
+public interface ApogyType extends Type {
+} // ApogyType

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm;
+package ca.gc.asc_csa.apogy.examples.robotic_arm;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmFactory
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesRoboticArm' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='Symphony__ExamplesRoboticArm' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.robotic_arm/src-generated' editDirectory='/org.eclipse.symphony.examples.robotic_arm.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRoboticArm' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='ApogyExamplesRoboticArm' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.robotic_arm.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesRoboticArmPackage extends EPackage
+public interface ApogyExamplesRoboticArmPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -42,7 +42,7 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.robotic_arm";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.robotic_arm";
 
   /**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesRoboticArmPackage eINSTANCE = org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl.init();
+  ApogyExamplesRoboticArmPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl <em>Robotic Arm</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmImpl <em>Robotic Arm</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl
-	 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getRoboticArm()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmImpl
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getRoboticArm()
 	 * @generated
 	 */
   int ROBOTIC_ARM = 0;
@@ -188,11 +188,11 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
   int ROBOTIC_ARM_OPERATION_COUNT = 4;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmStubImpl <em>Robotic Arm Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmStubImpl <em>Robotic Arm Stub</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmStubImpl
-	 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getRoboticArmStub()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getRoboticArmStub()
 	 * @generated
 	 */
 	int ROBOTIC_ARM_STUB = 1;
@@ -315,11 +315,11 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
 	int ROBOTIC_ARM_STUB_OPERATION_COUNT = ROBOTIC_ARM_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmSimulatedImpl <em>Robotic Arm Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmSimulatedImpl <em>Robotic Arm Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmSimulatedImpl
-	 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getRoboticArmSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getRoboticArmSimulated()
 	 * @generated
 	 */
   int ROBOTIC_ARM_SIMULATED = 2;
@@ -442,168 +442,168 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
   int ROBOTIC_ARM_SIMULATED_OPERATION_COUNT = ROBOTIC_ARM_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel <em>Move Speed Level</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel <em>Move Speed Level</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
-	 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getMoveSpeedLevel()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getMoveSpeedLevel()
 	 * @generated
 	 */
 	int MOVE_SPEED_LEVEL = 3;
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm <em>Robotic Arm</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm <em>Robotic Arm</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Robotic Arm</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm
 	 * @generated
 	 */
   EClass getRoboticArm();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Speed</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#getSpeed()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getSpeed()
 	 * @see #getRoboticArm()
 	 * @generated
 	 */
 	EAttribute getRoboticArm_Speed();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#init() <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#init() <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#init()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#init()
 	 * @generated
 	 */
 	EOperation getRoboticArm__Init();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getTurretAngle <em>Turret Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getTurretAngle <em>Turret Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Turret Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#getTurretAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getTurretAngle()
 	 * @see #getRoboticArm()
 	 * @generated
 	 */
 	EAttribute getRoboticArm_TurretAngle();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getShoulderAngle <em>Shoulder Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getShoulderAngle <em>Shoulder Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Shoulder Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#getShoulderAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getShoulderAngle()
 	 * @see #getRoboticArm()
 	 * @generated
 	 */
   EAttribute getRoboticArm_ShoulderAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getElbowAngle <em>Elbow Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getElbowAngle <em>Elbow Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Elbow Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#getElbowAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getElbowAngle()
 	 * @see #getRoboticArm()
 	 * @generated
 	 */
   EAttribute getRoboticArm_ElbowAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getWristAngle <em>Wrist Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getWristAngle <em>Wrist Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Wrist Angle</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#getWristAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#getWristAngle()
 	 * @see #getRoboticArm()
 	 * @generated
 	 */
   EAttribute getRoboticArm_WristAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isInitialized()
 	 * @see #getRoboticArm()
 	 * @generated
 	 */
 	EAttribute getRoboticArm_Initialized();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#isArmMoving <em>Arm Moving</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isArmMoving <em>Arm Moving</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Arm Moving</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#isArmMoving()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#isArmMoving()
 	 * @see #getRoboticArm()
 	 * @generated
 	 */
 	EAttribute getRoboticArm_ArmMoving();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#moveTo(double, double, double, double) <em>Move To</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#moveTo(double, double, double, double) <em>Move To</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Move To</em>' operation.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#moveTo(double, double, double, double)
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#moveTo(double, double, double, double)
 	 * @generated
 	 */
   EOperation getRoboticArm__MoveTo__double_double_double_double();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#stow() <em>Stow</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#stow() <em>Stow</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stow</em>' operation.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#stow()
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#stow()
 	 * @generated
 	 */
 	EOperation getRoboticArm__Stow();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#cmdMoveSpeedLevel(org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel) <em>Cmd Move Speed Level</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#cmdMoveSpeedLevel(ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel) <em>Cmd Move Speed Level</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cmd Move Speed Level</em>' operation.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm#cmdMoveSpeedLevel(org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel)
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm#cmdMoveSpeedLevel(ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel)
 	 * @generated
 	 */
 	EOperation getRoboticArm__CmdMoveSpeedLevel__MoveSpeedLevel();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArmStub <em>Robotic Arm Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub <em>Robotic Arm Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Robotic Arm Stub</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArmStub
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub
 	 * @generated
 	 */
 	EClass getRoboticArmStub();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated <em>Robotic Arm Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated <em>Robotic Arm Simulated</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Robotic Arm Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated
 	 * @generated
 	 */
   EClass getRoboticArmSimulated();
 
   /**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel <em>Move Speed Level</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel <em>Move Speed Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Move Speed Level</em>'.
-	 * @see org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel
 	 * @generated
 	 */
 	EEnum getMoveSpeedLevel();
@@ -615,7 +615,7 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesRoboticArmFactory getSymphony__ExamplesRoboticArmFactory();
+	ApogyExamplesRoboticArmFactory getApogyExamplesRoboticArmFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -633,11 +633,11 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl <em>Robotic Arm</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmImpl <em>Robotic Arm</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl
-		 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getRoboticArm()
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmImpl
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getRoboticArm()
 		 * @generated
 		 */
     EClass ROBOTIC_ARM = eINSTANCE.getRoboticArm();
@@ -731,35 +731,35 @@ public interface Symphony__ExamplesRoboticArmPackage extends EPackage
 		EOperation ROBOTIC_ARM___CMD_MOVE_SPEED_LEVEL__MOVESPEEDLEVEL = eINSTANCE.getRoboticArm__CmdMoveSpeedLevel__MoveSpeedLevel();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmStubImpl <em>Robotic Arm Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmStubImpl <em>Robotic Arm Stub</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmStubImpl
-		 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getRoboticArmStub()
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getRoboticArmStub()
 		 * @generated
 		 */
 		EClass ROBOTIC_ARM_STUB = eINSTANCE.getRoboticArmStub();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmSimulatedImpl <em>Robotic Arm Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmSimulatedImpl <em>Robotic Arm Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmSimulatedImpl
-		 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getRoboticArmSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.RoboticArmSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getRoboticArmSimulated()
 		 * @generated
 		 */
     EClass ROBOTIC_ARM_SIMULATED = eINSTANCE.getRoboticArmSimulated();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel <em>Move Speed Level</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel <em>Move Speed Level</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
-		 * @see org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmPackageImpl#getMoveSpeedLevel()
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel
+		 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmPackageImpl#getMoveSpeedLevel()
 		 * @generated
 		 */
 		EEnum MOVE_SPEED_LEVEL = eINSTANCE.getMoveSpeedLevel();
 
   }
 
-} //Symphony__ExamplesRoboticArmPackage
+} //ApogyExamplesRoboticArmPackage

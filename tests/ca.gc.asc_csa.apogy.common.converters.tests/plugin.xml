@@ -2,21 +2,21 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.symphony.common.converters">
+         point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-            Class="org.eclipse.symphony.common.converters.tests.converters.ConverterAtoB">
+            Class="ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterAtoB">
       </new_element>
       <new_element
-            Class="org.eclipse.symphony.common.converters.tests.converters.ConverterBtoC">
+            Class="ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterBtoC">
       </new_element>
       <new_element
-            Class="org.eclipse.symphony.common.converters.tests.converters.BadConverterWithNoInputType">
+            Class="ca.gc.asc_csa.apogy.common.converters.tests.converters.BadConverterWithNoInputType">
       </new_element>
       <new_element
-            Class="org.eclipse.symphony.common.converters.tests.converters.BadConverterWithNoOutputType">
+            Class="ca.gc.asc_csa.apogy.common.converters.tests.converters.BadConverterWithNoOutputType">
       </new_element>
       <new_element
-            Class="org.eclipse.symphony.common.converters.tests.converters.ConverterBtoA">
+            Class="ca.gc.asc_csa.apogy.common.converters.tests.converters.ConverterBtoA">
       </new_element>
    </extension>
 

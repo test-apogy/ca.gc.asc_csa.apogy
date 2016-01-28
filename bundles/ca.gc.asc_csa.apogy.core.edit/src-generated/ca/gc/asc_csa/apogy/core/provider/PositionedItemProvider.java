@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.Positioned;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.Positioned} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.Positioned} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class PositionedItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Positioned_pose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Positioned_pose_feature", "_UI_Positioned_type"),
-				 Symphony__CorePackage.Literals.POSITIONED__POSE,
+				 ApogyCorePackage.Literals.POSITIONED__POSE,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class PositionedItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.POSITIONED__POSE);
+			childrenFeatures.add(ApogyCorePackage.Literals.POSITIONED__POSE);
 		}
 		return childrenFeatures;
 	}
@@ -152,7 +152,7 @@ public class PositionedItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Positioned.class)) {
-			case Symphony__CorePackage.POSITIONED__POSE:
+			case ApogyCorePackage.POSITIONED__POSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -172,8 +172,8 @@ public class PositionedItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.POSITIONED__POSE,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCorePackage.Literals.POSITIONED__POSE,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 	/**

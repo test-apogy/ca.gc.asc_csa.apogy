@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose;
+package ca.gc.asc_csa.apogy.addons.sensors.pose;
 
 
 /**
@@ -13,13 +13,13 @@ package org.eclipse.symphony.addons.sensors.pose;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getXVelocity <em>XVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getYVelocity <em>YVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getZVelocity <em>ZVelocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod <em>Update Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getXVelocity <em>XVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getYVelocity <em>YVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getZVelocity <em>ZVelocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedPositionSensor()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XVelocity</em>' attribute.
 	 * @see #setXVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_XVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedPositionSensor_XVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getXVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getXVelocity <em>XVelocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getXVelocity <em>XVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XVelocity</em>' attribute.
@@ -60,14 +60,14 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YVelocity</em>' attribute.
 	 * @see #setYVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_YVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedPositionSensor_YVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getYVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getYVelocity <em>YVelocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getYVelocity <em>YVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YVelocity</em>' attribute.
@@ -86,14 +86,14 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZVelocity</em>' attribute.
 	 * @see #setZVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_ZVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedPositionSensor_ZVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getZVelocity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getZVelocity <em>ZVelocity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getZVelocity <em>ZVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZVelocity</em>' attribute.
@@ -113,14 +113,14 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_UpdatePeriod()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#getSimulatedPositionSensor_UpdatePeriod()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getUpdatePeriod();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod <em>Update Period</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod <em>Update Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Update Period</em>' attribute.

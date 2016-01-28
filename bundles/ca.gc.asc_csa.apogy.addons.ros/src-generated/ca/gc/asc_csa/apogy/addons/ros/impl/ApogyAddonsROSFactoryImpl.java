@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.util.HashMap;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.ros.*;
-import org.eclipse.symphony.addons.ros.utilities.NullRequestHandler;
-import org.eclipse.symphony.addons.ros.utilities.NullResponseHandler;
-import org.eclipse.symphony.addons.ros.utilities.ResponseLogger;
+import ca.gc.asc_csa.apogy.addons.ros.*;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger;
 import org.ros.exception.ServiceNotFoundException;
 
 import org.ros.internal.message.Message;
@@ -38,24 +38,24 @@ import org.ros.node.topic.Subscriber;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symphony__AddonsROSFactory {
+public class ApogyAddonsROSFactoryImpl extends EFactoryImpl implements ApogyAddonsROSFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsROSFactory init() {
+	public static ApogyAddonsROSFactory init() {
 		try {
-			Symphony__AddonsROSFactory theSymphony__AddonsROSFactory = (Symphony__AddonsROSFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsROSPackage.eNS_URI);
-			if (theSymphony__AddonsROSFactory != null) {
-				return theSymphony__AddonsROSFactory;
+			ApogyAddonsROSFactory theApogyAddonsROSFactory = (ApogyAddonsROSFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsROSPackage.eNS_URI);
+			if (theApogyAddonsROSFactory != null) {
+				return theApogyAddonsROSFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsROSFactoryImpl();
+		return new ApogyAddonsROSFactoryImpl();
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSFactoryImpl() {
+	public ApogyAddonsROSFactoryImpl() {
 		super();
 	}
 
@@ -76,14 +76,14 @@ public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symp
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsROSPackage.ROS_NODE: return createROSNode();
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER: return createROSPublisherManager();
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER: return createROSPublisher();
-			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER: return createROSServiceManager();
-			case Symphony__AddonsROSPackage.ROS_SERVICE: return createROSService();
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER: return createROSTopicLauncher();
-			case Symphony__AddonsROSPackage.ROS_LISTENER: return createROSListener();
-			case Symphony__AddonsROSPackage.SYMPHONY_ADDONS_ROS_FACADE: return createSymphony__AddonsROSFacade();
+			case ApogyAddonsROSPackage.ROS_NODE: return createROSNode();
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER: return createROSPublisherManager();
+			case ApogyAddonsROSPackage.ROS_PUBLISHER: return createROSPublisher();
+			case ApogyAddonsROSPackage.ROS_SERVICE_MANAGER: return createROSServiceManager();
+			case ApogyAddonsROSPackage.ROS_SERVICE: return createROSService();
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER: return createROSTopicLauncher();
+			case ApogyAddonsROSPackage.ROS_LISTENER: return createROSListener();
+			case ApogyAddonsROSPackage.APOGY_ADDONS_ROS_FACADE: return createApogyAddonsROSFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,31 +97,31 @@ public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symp
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsROSPackage.RESPONSE_LOGGER:
+			case ApogyAddonsROSPackage.RESPONSE_LOGGER:
 				return createResponseLoggerFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.NULL_RESPONSE_HANDLER:
+			case ApogyAddonsROSPackage.NULL_RESPONSE_HANDLER:
 				return createNullResponseHandlerFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.NULL_REQUEST_HANDLER:
+			case ApogyAddonsROSPackage.NULL_REQUEST_HANDLER:
 				return createNullRequestHandlerFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.CONNECTED_NODE:
+			case ApogyAddonsROSPackage.CONNECTED_NODE:
 				return createConnectedNodeFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.SERVICE_NOT_FOUND_EXCEPTION:
+			case ApogyAddonsROSPackage.SERVICE_NOT_FOUND_EXCEPTION:
 				return createServiceNotFoundExceptionFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.MESSAGE:
+			case ApogyAddonsROSPackage.MESSAGE:
 				return createMessageFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.MESSAGE_LISTENER:
+			case ApogyAddonsROSPackage.MESSAGE_LISTENER:
 				return createMessageListenerFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.ABSTRACT_NODE_MAIN:
+			case ApogyAddonsROSPackage.ABSTRACT_NODE_MAIN:
 				return createAbstractNodeMainFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.SERVICE_CLIENT:
+			case ApogyAddonsROSPackage.SERVICE_CLIENT:
 				return createServiceClientFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.PUBLISHER:
+			case ApogyAddonsROSPackage.PUBLISHER:
 				return createPublisherFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.SUBSCRIBER:
+			case ApogyAddonsROSPackage.SUBSCRIBER:
 				return createSubscriberFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.EXCEPTION:
+			case ApogyAddonsROSPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
-			case Symphony__AddonsROSPackage.HASH_MAP:
+			case ApogyAddonsROSPackage.HASH_MAP:
 				return createHashMapFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -136,31 +136,31 @@ public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symp
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsROSPackage.RESPONSE_LOGGER:
+			case ApogyAddonsROSPackage.RESPONSE_LOGGER:
 				return convertResponseLoggerToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.NULL_RESPONSE_HANDLER:
+			case ApogyAddonsROSPackage.NULL_RESPONSE_HANDLER:
 				return convertNullResponseHandlerToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.NULL_REQUEST_HANDLER:
+			case ApogyAddonsROSPackage.NULL_REQUEST_HANDLER:
 				return convertNullRequestHandlerToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.CONNECTED_NODE:
+			case ApogyAddonsROSPackage.CONNECTED_NODE:
 				return convertConnectedNodeToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.SERVICE_NOT_FOUND_EXCEPTION:
+			case ApogyAddonsROSPackage.SERVICE_NOT_FOUND_EXCEPTION:
 				return convertServiceNotFoundExceptionToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.MESSAGE:
+			case ApogyAddonsROSPackage.MESSAGE:
 				return convertMessageToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.MESSAGE_LISTENER:
+			case ApogyAddonsROSPackage.MESSAGE_LISTENER:
 				return convertMessageListenerToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.ABSTRACT_NODE_MAIN:
+			case ApogyAddonsROSPackage.ABSTRACT_NODE_MAIN:
 				return convertAbstractNodeMainToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.SERVICE_CLIENT:
+			case ApogyAddonsROSPackage.SERVICE_CLIENT:
 				return convertServiceClientToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.PUBLISHER:
+			case ApogyAddonsROSPackage.PUBLISHER:
 				return convertPublisherToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.SUBSCRIBER:
+			case ApogyAddonsROSPackage.SUBSCRIBER:
 				return convertSubscriberToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.EXCEPTION:
+			case ApogyAddonsROSPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
-			case Symphony__AddonsROSPackage.HASH_MAP:
+			case ApogyAddonsROSPackage.HASH_MAP:
 				return convertHashMapToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -242,9 +242,9 @@ public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSFacade createSymphony__AddonsROSFacade() {
-		Symphony__AddonsROSFacadeImpl symphony__AddonsROSFacade = new Symphony__AddonsROSFacadeImpl();
-		return symphony__AddonsROSFacade;
+	public ApogyAddonsROSFacade createApogyAddonsROSFacade() {
+		ApogyAddonsROSFacadeImpl apogy__AddonsROSFacade = new ApogyAddonsROSFacadeImpl();
+		return apogy__AddonsROSFacade;
 	}
 
 	/**
@@ -486,8 +486,8 @@ public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSPackage getSymphony__AddonsROSPackage() {
-		return (Symphony__AddonsROSPackage)getEPackage();
+	public ApogyAddonsROSPackage getApogyAddonsROSPackage() {
+		return (ApogyAddonsROSPackage)getEPackage();
 	}
 
 	/**
@@ -497,8 +497,8 @@ public class Symphony__AddonsROSFactoryImpl extends EFactoryImpl implements Symp
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsROSPackage getPackage() {
-		return Symphony__AddonsROSPackage.eINSTANCE;
+	public static ApogyAddonsROSPackage getPackage() {
+		return ApogyAddonsROSPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsROSFactoryImpl
+} //ApogyAddonsROSFactoryImpl

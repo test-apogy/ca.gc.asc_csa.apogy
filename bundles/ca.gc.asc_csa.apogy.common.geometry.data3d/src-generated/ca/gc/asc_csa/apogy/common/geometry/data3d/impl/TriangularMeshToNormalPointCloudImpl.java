@@ -3,7 +3,7 @@
  *
  * $Id: TriangularMeshToNormalPointCloudImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,14 +12,14 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
-import org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator;
-import org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshNormalsCalculator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshToNormalPointCloud;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -44,7 +44,7 @@ public class TriangularMeshToNormalPointCloudImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD;
+		return ApogyCommonGeometryData3DPackage.Literals.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class TriangularMeshToNormalPointCloudImpl extends
 	public NormalPointCloud process(CartesianTriangularMesh input)
 			throws Exception {
 
-		NormalPointCloud output = Symphony__CommonGeometryData3DFactory.eINSTANCE
+		NormalPointCloud output = ApogyCommonGeometryData3DFactory.eINSTANCE
 				.createNormalPointCloud();
 
 		List<Vector3d> normals = null;
@@ -89,7 +89,7 @@ public class TriangularMeshToNormalPointCloudImpl extends
 		if (input.getNormals() == null
 				|| input.getNormals().size() != input.getPoints().size()) {
 			// We compute the normals.
-			TriangularMeshNormalsCalculator normalsCalculator = Symphony__CommonGeometryData3DFactory.eINSTANCE
+			TriangularMeshNormalsCalculator normalsCalculator = ApogyCommonGeometryData3DFactory.eINSTANCE
 					.createTriangularMeshNormalsCalculator();
 			input = normalsCalculator.process(input);
 		}

@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.adapters;
 
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class CircularSectorFieldOfViewPresentationAdapter implements NodePresentationAdapter
 {
@@ -36,7 +36,7 @@ public class CircularSectorFieldOfViewPresentationAdapter implements NodePresent
 
 		CircularSectorFieldOfView circularSectorFieldOfView = (CircularSectorFieldOfView) obj;
 		
-		CircularSectorFieldOfViewPresentation presentationNode = Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation();
+		CircularSectorFieldOfViewPresentation presentationNode = ApogyAddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation();
 		presentationNode.setNode(circularSectorFieldOfView);			
 						
 		return presentationNode;

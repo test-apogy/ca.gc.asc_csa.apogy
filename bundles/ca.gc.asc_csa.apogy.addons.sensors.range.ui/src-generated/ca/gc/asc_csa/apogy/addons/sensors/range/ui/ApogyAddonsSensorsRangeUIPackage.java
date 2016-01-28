@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsSensorsRangeUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsSensorsRangeUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.sensors.range.ui/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.range.ui.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors.range'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensorsRangeUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsSensorsRangeUI' complianceLevel='6.0' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors.range.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.range.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.sensors.range'"
  * @generated
  */
-public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
+public interface ApogyAddonsSensorsRangeUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.sensors.range.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.sensors.range.ui";
 
 	/**
 	 * The package namespace name.
@@ -56,14 +56,14 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsRangeUIPackage eINSTANCE = org.eclipse.symphony.addons.sensors.range.ui.impl.Symphony__AddonsSensorsRangeUIPackageImpl.init();
+	ApogyAddonsSensorsRangeUIPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.ApogyAddonsSensorsRangeUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl <em>Raster Scan Data Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl <em>Raster Scan Data Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.Symphony__AddonsSensorsRangeUIPackageImpl#getRasterScanDataPresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.ApogyAddonsSensorsRangeUIPackageImpl#getRasterScanDataPresentation()
 	 * @generated
 	 */
 	int RASTER_SCAN_DATA_PRESENTATION = 0;
@@ -75,7 +75,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int RASTER_SCAN_DATA_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -84,7 +84,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int RASTER_SCAN_DATA_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -93,7 +93,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int RASTER_SCAN_DATA_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int RASTER_SCAN_DATA_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int RASTER_SCAN_DATA_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -120,7 +120,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int RASTER_SCAN_DATA_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -129,7 +129,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int RASTER_SCAN_DATA_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -138,7 +138,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int RASTER_SCAN_DATA_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -147,7 +147,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int RASTER_SCAN_DATA_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int RASTER_SCAN_DATA_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -165,7 +165,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int RASTER_SCAN_DATA_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -174,7 +174,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int RASTER_SCAN_DATA_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -183,7 +183,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int RASTER_SCAN_DATA_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Fov Presentation Mode</b></em>' attribute.
@@ -192,7 +192,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Fov Visible</b></em>' attribute.
@@ -201,7 +201,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Data Visible</b></em>' attribute.
@@ -210,7 +210,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+	int RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Raster Scan Data Presentation</em>' class.
@@ -219,7 +219,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
+	int RASTER_SCAN_DATA_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Raster Scan Data Presentation</em>' class.
@@ -228,14 +228,14 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int RASTER_SCAN_DATA_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl <em>Simple Sonar Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl <em>Simple Sonar Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.Symphony__AddonsSensorsRangeUIPackageImpl#getSimpleSonarPresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.ApogyAddonsSensorsRangeUIPackageImpl#getSimpleSonarPresentation()
 	 * @generated
 	 */
 	int SIMPLE_SONAR_PRESENTATION = 1;
@@ -247,7 +247,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int SIMPLE_SONAR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -256,7 +256,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int SIMPLE_SONAR_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -265,7 +265,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int SIMPLE_SONAR_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -274,7 +274,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int SIMPLE_SONAR_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -283,7 +283,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int SIMPLE_SONAR_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -292,7 +292,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int SIMPLE_SONAR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -301,7 +301,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int SIMPLE_SONAR_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -310,7 +310,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int SIMPLE_SONAR_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -319,7 +319,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int SIMPLE_SONAR_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -328,7 +328,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int SIMPLE_SONAR_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -337,7 +337,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int SIMPLE_SONAR_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -346,7 +346,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int SIMPLE_SONAR_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -355,7 +355,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int SIMPLE_SONAR_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Detected Range Visible</b></em>' attribute.
@@ -364,7 +364,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Simple Sonar Presentation</em>' class.
@@ -373,7 +373,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int SIMPLE_SONAR_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Simple Sonar Presentation</em>' class.
@@ -382,68 +382,68 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int SIMPLE_SONAR_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation <em>Raster Scan Data Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation <em>Raster Scan Data Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Raster Scan Data Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation
 	 * @generated
 	 */
 	EClass getRasterScanDataPresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#getFovPresentationMode <em>Fov Presentation Mode</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation#getFovPresentationMode <em>Fov Presentation Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Fov Presentation Mode</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#getFovPresentationMode()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation#getFovPresentationMode()
 	 * @see #getRasterScanDataPresentation()
 	 * @generated
 	 */
 	EAttribute getRasterScanDataPresentation_FovPresentationMode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isFovVisible <em>Fov Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation#isFovVisible <em>Fov Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Fov Visible</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isFovVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation#isFovVisible()
 	 * @see #getRasterScanDataPresentation()
 	 * @generated
 	 */
 	EAttribute getRasterScanDataPresentation_FovVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isDataVisible <em>Data Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation#isDataVisible <em>Data Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Data Visible</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isDataVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation#isDataVisible()
 	 * @see #getRasterScanDataPresentation()
 	 * @generated
 	 */
 	EAttribute getRasterScanDataPresentation_DataVisible();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation <em>Simple Sonar Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation <em>Simple Sonar Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simple Sonar Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation
 	 * @generated
 	 */
 	EClass getSimpleSonarPresentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation#isDetectedRangeVisible <em>Detected Range Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation#isDetectedRangeVisible <em>Detected Range Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Detected Range Visible</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation#isDetectedRangeVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation#isDetectedRangeVisible()
 	 * @see #getSimpleSonarPresentation()
 	 * @generated
 	 */
@@ -456,7 +456,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsRangeUIFactory getSymphony__AddonsSensorsRangeUIFactory();
+	ApogyAddonsSensorsRangeUIFactory getApogyAddonsSensorsRangeUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -473,11 +473,11 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl <em>Raster Scan Data Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl <em>Raster Scan Data Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl
-		 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.Symphony__AddonsSensorsRangeUIPackageImpl#getRasterScanDataPresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.ApogyAddonsSensorsRangeUIPackageImpl#getRasterScanDataPresentation()
 		 * @generated
 		 */
 		EClass RASTER_SCAN_DATA_PRESENTATION = eINSTANCE.getRasterScanDataPresentation();
@@ -507,11 +507,11 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 		EAttribute RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE = eINSTANCE.getRasterScanDataPresentation_DataVisible();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl <em>Simple Sonar Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl <em>Simple Sonar Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl
-		 * @see org.eclipse.symphony.addons.sensors.range.ui.impl.Symphony__AddonsSensorsRangeUIPackageImpl#getSimpleSonarPresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.ApogyAddonsSensorsRangeUIPackageImpl#getSimpleSonarPresentation()
 		 * @generated
 		 */
 		EClass SIMPLE_SONAR_PRESENTATION = eINSTANCE.getSimpleSonarPresentation();
@@ -526,4 +526,4 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 
 	}
 
-} //Symphony__AddonsSensorsRangeUIPackage
+} //ApogyAddonsSensorsRangeUIPackage

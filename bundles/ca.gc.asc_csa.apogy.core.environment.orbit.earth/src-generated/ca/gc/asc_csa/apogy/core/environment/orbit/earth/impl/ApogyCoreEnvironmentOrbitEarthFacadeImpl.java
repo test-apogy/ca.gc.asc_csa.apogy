@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,31 +25,31 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
-import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
-import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
-import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.TLE;
-import org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLE;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.TLEEarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -77,14 +77,14 @@ import org.orekit.utils.TimeStampedPVCoordinates;
  *
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CoreEnvironmentOrbitEarthFacade 
+public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreEnvironmentOrbitEarthFacade 
 {	
-	private static Symphony__CoreEnvironmentOrbitEarthFacade instance = null;
-	public static Symphony__CoreEnvironmentOrbitEarthFacade getInstance() 
+	private static ApogyCoreEnvironmentOrbitEarthFacade instance = null;
+	public static ApogyCoreEnvironmentOrbitEarthFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CoreEnvironmentOrbitEarthFacadeImpl();
+			instance = new ApogyCoreEnvironmentOrbitEarthFacadeImpl();
 		}
 		return instance;
 	}
@@ -95,7 +95,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentOrbitEarthFacadeImpl() {
+	protected ApogyCoreEnvironmentOrbitEarthFacadeImpl() {
 		super();
 	}
 
@@ -106,7 +106,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE;
 	}
 
 	/**
@@ -168,11 +168,11 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, double longitude, double latitude, double elevation) 
 	{
-		EarthSurfaceLocation loc = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation();
+		EarthSurfaceLocation loc = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation();
 		loc.setName(name);
 		loc.setDescription(description);
 		
-		GeographicCoordinates coord = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+		GeographicCoordinates coord = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 		coord.setLatitude(latitude);
 		coord.setLongitude(longitude);
 		coord.setElevation(elevation);
@@ -217,7 +217,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
         GeodeticPoint centerPoint = earth.getIntersectionPoint(centerLine, p, earth.getBodyFrame(), date);
 
         // Creates the GeographicCoordinates.
-        GeographicCoordinates geographicCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+        GeographicCoordinates geographicCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
         geographicCoordinates.setLongitude(centerPoint.getLongitude());
         geographicCoordinates.setLatitude(centerPoint.getLatitude());
         geographicCoordinates.setElevation(0);
@@ -308,7 +308,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public SpacecraftState createSpacecraftState(Orbit orbit, org.orekit.propagation.SpacecraftState oreKitSpacecraftState) 
 	{
-		OreKitBackedSpacecraftState ss = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedSpacecraftState();
+		OreKitBackedSpacecraftState ss = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedSpacecraftState();
 		
 		// Sets Coordinates.
 		TimedStampedPVACoordinates timedStampedPVACoordinates = createTimedStampedPVACoordinates(oreKitSpacecraftState.getPVCoordinates());
@@ -339,7 +339,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public OreKitBackedSpacecraftState createOreKitBackedSpacecraftState(Orbit orbit, org.orekit.propagation.SpacecraftState oreKitSpacecraftState) 
 	{	
-		OreKitBackedSpacecraftState ss = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedSpacecraftState();
+		OreKitBackedSpacecraftState ss = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedSpacecraftState();
 		
 		// Sets Coordinates.
 		TimedStampedPVACoordinates timedStampedPVACoordinates = createTimedStampedPVACoordinates(oreKitSpacecraftState.getPVCoordinates());
@@ -369,26 +369,26 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public TimedStampedPVACoordinates createTimedStampedPVACoordinates(TimeStampedPVCoordinates oreKitTimeStampedPVCoordinates) 
 	{
-		TimedStampedPVACoordinates coord = Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates();
+		TimedStampedPVACoordinates coord = ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates();
 		
 		// Sets date.
 		Date date = createDate(oreKitTimeStampedPVCoordinates.getDate());
 		coord.setTime(date);
 		
 		// Position
-		Tuple3d position = Symphony__CommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getPosition().getX(), oreKitTimeStampedPVCoordinates.getPosition().getY(), oreKitTimeStampedPVCoordinates.getPosition().getZ());
+		Tuple3d position = ApogyCommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getPosition().getX(), oreKitTimeStampedPVCoordinates.getPosition().getY(), oreKitTimeStampedPVCoordinates.getPosition().getZ());
 		coord.setPosition(position);
 		
 		// Velocity
-		Tuple3d velocity = Symphony__CommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getVelocity().getX(), oreKitTimeStampedPVCoordinates.getVelocity().getY(), oreKitTimeStampedPVCoordinates.getVelocity().getZ());
+		Tuple3d velocity = ApogyCommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getVelocity().getX(), oreKitTimeStampedPVCoordinates.getVelocity().getY(), oreKitTimeStampedPVCoordinates.getVelocity().getZ());
 		coord.setVelocity(velocity);
 		
 		// Acceleration
-		Tuple3d acceleration = Symphony__CommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getAcceleration().getX(), oreKitTimeStampedPVCoordinates.getAcceleration().getY(), oreKitTimeStampedPVCoordinates.getAcceleration().getZ());
+		Tuple3d acceleration = ApogyCommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getAcceleration().getX(), oreKitTimeStampedPVCoordinates.getAcceleration().getY(), oreKitTimeStampedPVCoordinates.getAcceleration().getZ());
 		coord.setAcceleration(acceleration);
 		
 		// Angular Velocity
-		Tuple3d angularVelocity = Symphony__CommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getAngularVelocity().getX(), oreKitTimeStampedPVCoordinates.getAngularVelocity().getY(), oreKitTimeStampedPVCoordinates.getAngularVelocity().getZ());
+		Tuple3d angularVelocity = ApogyCommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedPVCoordinates.getAngularVelocity().getX(), oreKitTimeStampedPVCoordinates.getAngularVelocity().getY(), oreKitTimeStampedPVCoordinates.getAngularVelocity().getZ());
 		coord.setAngularVelocity(angularVelocity);
 		
 		return coord;
@@ -402,14 +402,14 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public TimedStampedAngularCoordinates createTimedStampedAngularCoordinates(TimeStampedAngularCoordinates oreKitTimeStampedAngularCoordinates) 
 	{
-		TimedStampedAngularCoordinates timedStampedAngularCoordinates =  Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates();
+		TimedStampedAngularCoordinates timedStampedAngularCoordinates =  ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates();
 		
 		// Sets date.
 		Date date = createDate(oreKitTimeStampedAngularCoordinates.getDate());
 		timedStampedAngularCoordinates.setTime(date);
 		
 		// Sets angular acceleration.
-		Tuple3d angularAcceleration = Symphony__CommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedAngularCoordinates.getRotationAcceleration().getX(), oreKitTimeStampedAngularCoordinates.getRotationAcceleration().getY(), oreKitTimeStampedAngularCoordinates.getRotationAcceleration().getZ());
+		Tuple3d angularAcceleration = ApogyCommonMathFacade.INSTANCE.createTuple3d(oreKitTimeStampedAngularCoordinates.getRotationAcceleration().getX(), oreKitTimeStampedAngularCoordinates.getRotationAcceleration().getY(), oreKitTimeStampedAngularCoordinates.getRotationAcceleration().getZ());
 		timedStampedAngularCoordinates.setAngularAcceleration(angularAcceleration);
 		
 		// Sets rotation.
@@ -426,7 +426,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public Matrix3x3 createMatrix3x3(Rotation rotation) 
 	{
-		Matrix3x3 matrix3x3 = Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3();		
+		Matrix3x3 matrix3x3 = ApogyCommonMathFactory.eINSTANCE.createMatrix3x3();		
 		
 		Matrix3d rot = new Matrix3d();
 		double[][] m = rotation.getMatrix();
@@ -486,7 +486,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 			
 			KeplerianOrbit ko = new KeplerianOrbit(ss.getPVCoordinates(), ss.getFrame(), startDate, getMu());
 			
-			// Creates and return the Symphony KeplerianEarthOrbit.
+			// Creates and return the Apogy KeplerianEarthOrbit.
 			return createKeplerianOrbit(ko);
 		}
 		else if(earthOrbitPropagator.getInitialOrbit() instanceof EarthOrbit)
@@ -496,7 +496,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 			// Creates the OreKit KeplerianOrbit.
 			KeplerianOrbit ko = new KeplerianOrbit(eo.getOreKitOrbit());
 			
-			// Creates and return the Symphony KeplerianEarthOrbit.
+			// Creates and return the Apogy KeplerianEarthOrbit.
 			return createKeplerianOrbit(ko);
 		}
 		else
@@ -521,7 +521,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 		// Creates the OreKit CartesianOrbit.
 		CartesianOrbit co = new CartesianOrbit(ko);
 		
-		// Creates and return the Symphony CartesianOrbit.
+		// Creates and return the Apogy CartesianOrbit.
 		return createCartesianEarthOrbit(co);
 	}
 
@@ -533,7 +533,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public KeplerianEarthOrbit createKeplerianOrbit(KeplerianOrbit oreKitKeplerianOrbit) 
 	{
-		KeplerianEarthOrbit keo = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit();
+		KeplerianEarthOrbit keo = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit();
 		
 		keo.setTime(createDate(oreKitKeplerianOrbit.getDate()));
 		keo.setEccentricity(oreKitKeplerianOrbit.getE());
@@ -555,7 +555,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	 */
 	public CartesianEarthOrbit createCartesianEarthOrbit(CartesianOrbit oreKitCartesianOrbit) 
 	{
-		CartesianEarthOrbit ceo = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit();	
+		CartesianEarthOrbit ceo = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit();	
 		TimedStampedPVACoordinates pva = createTimedStampedPVACoordinates(oreKitCartesianOrbit.getPVCoordinates());		
 		ceo.setPvaCoordinates(pva);
 		ceo.setTime(createDate(oreKitCartesianOrbit.getDate()));
@@ -584,7 +584,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
         //Vector3D      v       = t.transformVector(pvInert.getVelocity());
         GeodeticPoint center  = earth.transform(p, earth.getBodyFrame(), date);
         
-        geographicCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+        geographicCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
         geographicCoordinates.setLongitude(center.getLongitude());
         geographicCoordinates.setLatitude(center.getLatitude());
         geographicCoordinates.setElevation(center.getAltitude());                                   
@@ -670,7 +670,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 		br.close();				
 		
 		// Create the TLE.
-		tle = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLE();
+		tle = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLE();
 		tle.setLine1(lines[0]);
 		tle.setLine2(lines[1]);
 		
@@ -686,7 +686,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	public TLEEarthOrbitPropagator createTLEEarthOrbitPropagator(TLE tle) throws Exception 
 	{
 		// Create a new TLEEarthOrbitPropagator
-		TLEEarthOrbitPropagator propagator = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitPropagator();
+		TLEEarthOrbitPropagator propagator = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitPropagator();
 		
 		// Sets TLE.
 		propagator.setTle(tle);
@@ -704,107 +704,107 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_MU:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_MU:
 				return getMu();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ABSOLUTE_DATE__DATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ABSOLUTE_DATE__DATE:
 				return createAbsoluteDate((Date)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE:
 				return createDate((AbsoluteDate)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE:
 				return createEarthSurfaceLocation((String)arguments.get(0), (String)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME:
 				return createOreKitBackedFrame((Frame)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE:
 				try {
 					return getSpacecraftEarthSubPoint((OreKitBackedSpacecraftState)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION:
 				try {
 					return getSpacecraftElevationAngle((SpacecraftState)arguments.get(0), (EarthSurfaceLocation)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION:
 				try {
 					return getSpacecraftAzimuthAngle((SpacecraftState)arguments.get(0), (EarthSurfaceLocation)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION:
 				try {
 					return getRange((SpacecraftState)arguments.get(0), (EarthSurfaceLocation)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE:
 				return createSpacecraftState((Orbit)arguments.get(0), (org.orekit.propagation.SpacecraftState)arguments.get(1));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE:
 				return createOreKitBackedSpacecraftState((Orbit)arguments.get(0), (org.orekit.propagation.SpacecraftState)arguments.get(1));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES:
 				return createTimedStampedPVACoordinates((TimeStampedPVCoordinates)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES:
 				return createTimedStampedAngularCoordinates((TimeStampedAngularCoordinates)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_MATRIX3X3__ROTATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_MATRIX3X3__ROTATION:
 				return createMatrix3x3((Rotation)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ROTATION__MATRIX3X3:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ROTATION__MATRIX3X3:
 				return createRotation((Matrix3x3)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR:
 				try {
 					return createKeplerianOrbit((EarthOrbitPropagator)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR:
 				try {
 					return createCartesianEarthOrbit((EarthOrbitPropagator)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT:
 				try {
 					return createKeplerianOrbit((KeplerianOrbit)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT:
 				try {
 					return createCartesianEarthOrbit((CartesianOrbit)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE:
 				try {
 					return convertToGeographicCoordinates((OreKitBackedSpacecraftState)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST:
 				return getVisibilityPassSortedByStartDate((List<VisibilityPass>)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST:
 				return getVisibilityPassSortedByDuration((List<VisibilityPass>)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST:
 				return getVisibilityPassSpacecraftPositionSortedByElevation((List<VisibilityPassSpacecraftPosition>)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST:
 				return getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle((List<VisibilityPassSpacecraftPosition>)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING:
 				try {
 					return loadTLE((String)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				try {
 					return createTLEEarthOrbitPropagator((TLE)arguments.get(0));
 				}
@@ -994,4 +994,4 @@ public class Symphony__CoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjec
 		
 		return tempFile;
 	}
-} //Symphony__CoreEnvironmentOrbitEarthFacadeImpl
+} //ApogyCoreEnvironmentOrbitEarthFacadeImpl

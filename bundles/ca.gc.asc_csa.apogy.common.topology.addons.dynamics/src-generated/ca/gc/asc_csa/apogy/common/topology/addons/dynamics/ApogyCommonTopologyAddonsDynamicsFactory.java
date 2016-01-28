@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage
  * @generated
  */
-public interface Symphony__CommonTopologyAddonsDynamicsFactory extends EFactory {
+public interface ApogyCommonTopologyAddonsDynamicsFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonTopologyAddonsDynamicsFactory eINSTANCE = org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFactoryImpl.init();
+	ApogyCommonTopologyAddonsDynamicsFactory eINSTANCE = ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Dynamic System Properties</em>'.
@@ -191,7 +191,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsFactory extends EFactory 
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CommonTopologyAddonsDynamicsFacade createSymphony__CommonTopologyAddonsDynamicsFacade();
+	ApogyCommonTopologyAddonsDynamicsFacade createApogyCommonTopologyAddonsDynamicsFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -200,6 +200,6 @@ public interface Symphony__CommonTopologyAddonsDynamicsFactory extends EFactory 
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonTopologyAddonsDynamicsPackage getSymphony__CommonTopologyAddonsDynamicsPackage();
+	ApogyCommonTopologyAddonsDynamicsPackage getApogyCommonTopologyAddonsDynamicsPackage();
 
-} //Symphony__CommonTopologyAddonsDynamicsFactory
+} //ApogyCommonTopologyAddonsDynamicsFactory

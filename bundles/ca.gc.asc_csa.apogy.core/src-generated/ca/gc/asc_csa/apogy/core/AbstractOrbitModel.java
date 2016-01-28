@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,17 +15,17 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.AbstractOrbitModel#getOrbitModelsList <em>Orbit Models List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel#getOrbitModelsList <em>Orbit Models List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractOrbitModel()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getAbstractOrbitModel()
  * @model abstract="true"
  * @generated
  */
 public interface AbstractOrbitModel extends Named, Described {
 	/**
 	 * Returns the value of the '<em><b>Orbit Models List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.OrbitModelsList#getOrbitModels <em>Orbit Models</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.OrbitModelsList#getOrbitModels <em>Orbit Models</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Orbit Models List</em>' container reference isn't clear,
@@ -34,8 +34,8 @@ public interface AbstractOrbitModel extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbit Models List</em>' container reference.
 	 * @see #setOrbitModelsList(OrbitModelsList)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractOrbitModel_OrbitModelsList()
-	 * @see org.eclipse.symphony.core.OrbitModelsList#getOrbitModels
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getAbstractOrbitModel_OrbitModelsList()
+	 * @see ca.gc.asc_csa.apogy.core.OrbitModelsList#getOrbitModels
 	 * @model opposite="orbitModels" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -43,7 +43,7 @@ public interface AbstractOrbitModel extends Named, Described {
 	OrbitModelsList getOrbitModelsList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.AbstractOrbitModel#getOrbitModelsList <em>Orbit Models List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel#getOrbitModelsList <em>Orbit Models List</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Orbit Models List</em>' container reference.

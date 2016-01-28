@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.ResultsListsContainer#getDataProductsList <em>Data Products List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.ResultsListsContainer#getResultsList <em>Results List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ResultsListsContainer#getDataProductsList <em>Data Products List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ResultsListsContainer#getResultsList <em>Results List</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsListsContainer()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getResultsListsContainer()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface ResultsListsContainer extends EObject
 {
   /**
    * Returns the value of the '<em><b>Data Products List</b></em>' container reference.
-   * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.DataProductsList#getResultsListsContainer <em>Results Lists Container</em>}'.
+   * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getResultsListsContainer <em>Results Lists Container</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Data Products List</em>' container reference isn't clear,
@@ -42,8 +42,8 @@ public interface ResultsListsContainer extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Data Products List</em>' container reference.
    * @see #setDataProductsList(DataProductsList)
-   * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsListsContainer_DataProductsList()
-   * @see org.eclipse.symphony.core.invocator.DataProductsList#getResultsListsContainer
+   * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getResultsListsContainer_DataProductsList()
+   * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getResultsListsContainer
    * @model opposite="resultsListsContainer" transient="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
    * @generated
@@ -51,7 +51,7 @@ public interface ResultsListsContainer extends EObject
   DataProductsList getDataProductsList();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.invocator.ResultsListsContainer#getDataProductsList <em>Data Products List</em>}' container reference.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsListsContainer#getDataProductsList <em>Data Products List</em>}' container reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Data Products List</em>' container reference.
@@ -62,8 +62,8 @@ public interface ResultsListsContainer extends EObject
 
   /**
    * Returns the value of the '<em><b>Results List</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.symphony.core.invocator.ResultsList}.
-   * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.ResultsList#getResultsListsContainer <em>Results Lists Container</em>}'.
+   * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.ResultsList}.
+   * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ResultsList#getResultsListsContainer <em>Results Lists Container</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Results List</em>' containment reference list isn't clear,
@@ -71,8 +71,8 @@ public interface ResultsListsContainer extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Results List</em>' containment reference list.
-   * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsListsContainer_ResultsList()
-   * @see org.eclipse.symphony.core.invocator.ResultsList#getResultsListsContainer
+   * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getResultsListsContainer_ResultsList()
+   * @see ca.gc.asc_csa.apogy.core.invocator.ResultsList#getResultsListsContainer
    * @model opposite="resultsListsContainer" containment="true"
    * @generated
    */

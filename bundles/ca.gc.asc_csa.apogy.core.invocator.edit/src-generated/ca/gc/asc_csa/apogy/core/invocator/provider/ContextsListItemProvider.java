@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ContextsList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ContextsList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class ContextsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +134,7 @@ public class ContextsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContextsList.class)) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -155,8 +155,8 @@ public class ContextsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createBasicContext()));
+				(ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createBasicContext()));
 	}
 
   /**

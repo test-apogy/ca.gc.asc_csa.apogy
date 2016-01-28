@@ -3,16 +3,16 @@
  *
  * $Id: CartesianCoordinatesMeshSamplerImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,25 +39,25 @@ public class CartesianCoordinatesMeshSamplerImpl extends MeshCoordinatesShapesSa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_MESH_SAMPLER;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_MESH_SAMPLER;
 	}
 
 	@Override
 	protected CartesianPositionCoordinates copyCoordinates(CartesianPositionCoordinates point)
 	{
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 	}
 
 	@Override
-	protected org.eclipse.symphony.common.geometry.data.Mesh<CartesianPositionCoordinates, CartesianPolygon> createMesh()
+	protected ca.gc.asc_csa.apogy.common.geometry.data.Mesh<CartesianPositionCoordinates, CartesianPolygon> createMesh()
 	{
-		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
+		return ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
 	}
 
 	@Override
 	protected CartesianPolygon createPolygon()
 	{
-		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
+		return ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
 	}
 	
 } //CartesianCoordinatesMeshSamplerImpl

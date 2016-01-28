@@ -3,15 +3,15 @@
  *
  * $Id: SphericalPolygonImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectEList;
-import org.eclipse.symphony.common.geometry.data.impl.PolygonImpl;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.SphericalPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.PolygonImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class SphericalPolygonImpl extends PolygonImpl<SphericalCoordinates> impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_POLYGON;
+		return ApogyCommonGeometryData3DPackage.Literals.SPHERICAL_POLYGON;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class SphericalPolygonImpl extends PolygonImpl<SphericalCoordinates> impl
 	@Override
 	public EList<SphericalCoordinates> getVertices() {
 		if (vertices == null) {
-			vertices = new EObjectEList<SphericalCoordinates>(SphericalCoordinates.class, this, Symphony__CommonGeometryData3DPackage.SPHERICAL_POLYGON__VERTICES);
+			vertices = new EObjectEList<SphericalCoordinates>(SphericalCoordinates.class, this, ApogyCommonGeometryData3DPackage.SPHERICAL_POLYGON__VERTICES);
 		}
 		return vertices;
 	}

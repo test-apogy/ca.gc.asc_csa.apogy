@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.RectangularRegion} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -77,7 +77,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_xMin_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_xMin_feature", "_UI_RectangularRegion_type"),
-         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XMIN,
+         ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XMIN,
          false,
          false,
          false,
@@ -100,7 +100,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_xMax_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_xMax_feature", "_UI_RectangularRegion_type"),
-         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XMAX,
+         ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XMAX,
          false,
          false,
          false,
@@ -123,7 +123,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_yMin_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_yMin_feature", "_UI_RectangularRegion_type"),
-         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YMIN,
+         ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YMIN,
          false,
          false,
          false,
@@ -146,7 +146,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_yMax_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_yMax_feature", "_UI_RectangularRegion_type"),
-         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YMAX,
+         ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YMAX,
          false,
          false,
          false,
@@ -169,7 +169,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_xDimension_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_xDimension_feature", "_UI_RectangularRegion_type"),
-         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XDIMENSION,
+         ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XDIMENSION,
          false,
          false,
          false,
@@ -192,7 +192,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_yDimension_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_yDimension_feature", "_UI_RectangularRegion_type"),
-         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YDIMENSION,
+         ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YDIMENSION,
          false,
          false,
          false,
@@ -215,7 +215,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_lowerLeftCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_lowerLeftCorner_feature", "_UI_RectangularRegion_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_LEFT_CORNER,
+				 ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_LEFT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_upperLeftCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_upperLeftCorner_feature", "_UI_RectangularRegion_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_LEFT_CORNER,
+				 ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_LEFT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -261,7 +261,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_lowerRightCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_lowerRightCorner_feature", "_UI_RectangularRegion_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_RIGHT_CORNER,
+				 ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_RIGHT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -284,7 +284,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_upperRightCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_upperRightCorner_feature", "_UI_RectangularRegion_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_RIGHT_CORNER,
+				 ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_RIGHT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -336,12 +336,12 @@ public class RectangularRegionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RectangularRegion.class)) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

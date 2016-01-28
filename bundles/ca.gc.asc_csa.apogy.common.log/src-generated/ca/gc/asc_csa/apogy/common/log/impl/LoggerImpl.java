@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log.impl;
+package ca.gc.asc_csa.apogy.common.log.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.osgi.framework.log.FrameworkLog;
 import org.eclipse.osgi.framework.log.FrameworkLogEntry;
-import org.eclipse.symphony.common.log.Activator;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.log.Symphony__CommonLogPackage;
+import ca.gc.asc_csa.apogy.common.log.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage;
 import org.osgi.framework.ServiceReference;
 
 /**
@@ -58,7 +58,7 @@ public class LoggerImpl extends MinimalEObjectImpl.Container implements Logger {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonLogPackage.Literals.LOGGER;
+		return ApogyCommonLogPackage.Literals.LOGGER;
 	}
 
 	/**
@@ -124,19 +124,19 @@ public class LoggerImpl extends MinimalEObjectImpl.Container implements Logger {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY:
+			case ApogyCommonLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY:
 				log((String)arguments.get(0), (String)arguments.get(1), (EventSeverity)arguments.get(2));
 				return null;
-			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY:
+			case ApogyCommonLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY:
 				log((String)arguments.get(0), arguments.get(1), (String)arguments.get(2), (EventSeverity)arguments.get(3));
 				return null;
-			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY_THROWABLE:
+			case ApogyCommonLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY_THROWABLE:
 				log((String)arguments.get(0), (String)arguments.get(1), (EventSeverity)arguments.get(2), (Throwable)arguments.get(3));
 				return null;
-			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY_THROWABLE:
+			case ApogyCommonLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY_THROWABLE:
 				log((String)arguments.get(0), arguments.get(1), (String)arguments.get(2), (EventSeverity)arguments.get(3), (Throwable)arguments.get(4));
 				return null;
-			case Symphony__CommonLogPackage.LOGGER___GET_LOG:
+			case ApogyCommonLogPackage.LOGGER___GET_LOG:
 				return getLog();
 		}
 		return super.eInvoke(operationID, arguments);

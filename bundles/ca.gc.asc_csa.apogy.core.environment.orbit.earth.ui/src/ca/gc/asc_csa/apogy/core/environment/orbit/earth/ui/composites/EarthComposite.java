@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites;
 
 import gov.nasa.worldwind.BasicModel;
 import gov.nasa.worldwind.Configuration;
@@ -20,9 +20,9 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.awt.SWT_AWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 
 public class EarthComposite extends Composite 
 {
@@ -193,7 +193,7 @@ public class EarthComposite extends Composite
 						
 						switch(featureId)
 						{
-							case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+							case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 							{
 								int eventType = msg.getEventType();
 								switch(eventType)

@@ -11,17 +11,17 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.addons.sensors.range.ui"
-            class="org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage"
-            genModel="model/symphony_addons_sensors_range_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.sensors.range.ui"
+            class="ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage"
+            genModel="model/apogy_addons_sensors_range_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.addons.sensors.range.ui.adapters.RasterScanDataPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.sensors.range.ui.adapters.RasterScanDataPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.addons.sensors.range.ui.adapters.SimpleSonarPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.sensors.range.ui.adapters.SimpleSonarPresentationAdapter">
       </Class>
    </extension>
 

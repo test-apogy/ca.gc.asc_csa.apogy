@@ -1,24 +1,24 @@
-package org.eclipse.symphony.core.environment.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.ui.views;
 
 import java.util.List;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.composites.EarthSkyComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.composites.EarthSkyComposite;
 
 public class EarthSkyView extends AbstractView
 {		
 	public static final String PART_NAME = "Earth Sky View";
 	private EarthSky earthSky;
 	
-	private GeographicCoordinates marsYardCoordinates = Symphony__CoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();
+	private GeographicCoordinates marsYardCoordinates = ApogyCoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();
 	
 	// Default values are the ones for Mars Yard.
 	public double defaultObserverLongitude =  marsYardCoordinates.getLongitude();
@@ -44,7 +44,7 @@ public class EarthSkyView extends AbstractView
 	{		
 		Activator.getDefault();
 		
-		List<Object> earthSkies = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, EarthSky.class);
+		List<Object> earthSkies = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, EarthSky.class);
 		
 		if(!earthSkies.isEmpty())
 		{				

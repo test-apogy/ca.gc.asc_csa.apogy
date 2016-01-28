@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public abstract class AbstractInputConditioningImpl extends MinimalEObjectImpl.C
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.ABSTRACT_INPUT_CONDITIONING;
+		return ApogyCoreProgramsControllersPackage.Literals.ABSTRACT_INPUT_CONDITIONING;
 	}
 
   /**
@@ -63,7 +63,7 @@ public abstract class AbstractInputConditioningImpl extends MinimalEObjectImpl.C
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreProgramsControllersPackage.ABSTRACT_INPUT_CONDITIONING___CONDITION_INPUT__ECOMPONENT:
+			case ApogyCoreProgramsControllersPackage.ABSTRACT_INPUT_CONDITIONING___CONDITION_INPUT__ECOMPONENT:
 				return conditionInput((EComponent)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

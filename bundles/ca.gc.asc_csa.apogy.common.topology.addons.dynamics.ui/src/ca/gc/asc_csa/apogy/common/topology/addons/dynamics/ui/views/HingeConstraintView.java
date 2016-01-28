@@ -1,18 +1,18 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.views;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.Activator;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.composites.HingeConstraintComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites.HingeConstraintComposite;
 
 public class HingeConstraintView extends AbstractPinableView<HingeConstraint>
 {
 	private HingeConstraint hingeConstraint;
-	public static final String ID = "org.eclipse.symphony.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.PrismaticConstraintView"; //$NON-NLS-1$
 
 	private HingeConstraintComposite hingeConstraintComposite = null;
 	

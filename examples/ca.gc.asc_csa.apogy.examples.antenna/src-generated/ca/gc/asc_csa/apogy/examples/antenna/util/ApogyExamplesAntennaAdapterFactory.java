@@ -1,28 +1,28 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.util;
+package ca.gc.asc_csa.apogy.examples.antenna.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.examples.antenna.Antenna;
-import org.eclipse.symphony.examples.antenna.DishAntenna;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
-import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
-import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
+import ca.gc.asc_csa.apogy.examples.antenna.Antenna;
+import ca.gc.asc_csa.apogy.examples.antenna.DishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated;
+import ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage
  * @generated
  */
-public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesAntennaAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -30,7 +30,7 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesAntennaPackage modelPackage;
+  protected static ApogyExamplesAntennaPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -38,10 +38,10 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesAntennaAdapterFactory()
+  public ApogyExamplesAntennaAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesAntennaPackage.eINSTANCE;
+			modelPackage = ApogyExamplesAntennaPackage.eINSTANCE;
 		}
 	}
 
@@ -71,8 +71,8 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesAntennaSwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesAntennaSwitch<Adapter>() {
+  protected ApogyExamplesAntennaSwitch<Adapter> modelSwitch =
+    new ApogyExamplesAntennaSwitch<Adapter>() {
 			@Override
 			public Adapter caseAntenna(Antenna object) {
 				return createAntennaAdapter();
@@ -115,13 +115,13 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.antenna.Antenna <em>Antenna</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.antenna.Antenna <em>Antenna</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.antenna.Antenna
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.Antenna
 	 * @generated
 	 */
   public Adapter createAntennaAdapter()
@@ -130,13 +130,13 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.antenna.DishAntenna <em>Dish Antenna</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.antenna.DishAntenna <em>Dish Antenna</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.antenna.DishAntenna
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.DishAntenna
 	 * @generated
 	 */
   public Adapter createDishAntennaAdapter()
@@ -145,13 +145,13 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna <em>PTU Dish Antenna</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna <em>PTU Dish Antenna</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntenna
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna
 	 * @generated
 	 */
   public Adapter createPTUDishAntennaAdapter()
@@ -160,13 +160,13 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.antenna.PTUDishAntennaStub <em>PTU Dish Antenna Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub <em>PTU Dish Antenna Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntennaStub
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaStub
 	 * @generated
 	 */
 	public Adapter createPTUDishAntennaStubAdapter() {
@@ -174,13 +174,13 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated <em>PTU Dish Antenna Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated <em>PTU Dish Antenna Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntennaSimulated
 	 * @generated
 	 */
 	public Adapter createPTUDishAntennaSimulatedAdapter() {
@@ -200,4 +200,4 @@ public class Symphony__ExamplesAntennaAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__ExamplesAntennaAdapterFactory
+} //ApogyExamplesAntennaAdapterFactory

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 import javax.vecmath.Color3f;
 
@@ -19,16 +19,16 @@ import javax.vecmath.Color3f;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getEndPointRadius <em>End Point Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getSunIntensity <em>Sun Intensity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getEndPointRadius <em>End Point Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunIntensity <em>Sun Intensity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool()
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool()
  * @model
  * @generated
  */
@@ -43,15 +43,15 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vector Color</em>' attribute.
 	 * @see #setVectorColor(Color3f)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_VectorColor()
-	 * @model default="1.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.Color3f"
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool_VectorColor()
+	 * @model default="1.0,1.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.addons.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
 	 */
 	Color3f getVectorColor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vector Color</em>' attribute.
@@ -70,15 +70,15 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vector Length</em>' attribute.
 	 * @see #setVectorLength(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_VectorLength()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool_VectorLength()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
 	 */
 	double getVectorLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vector Length</em>' attribute.
@@ -97,15 +97,15 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Point Radius</em>' attribute.
 	 * @see #setEndPointRadius(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_EndPointRadius()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool_EndPointRadius()
 	 * @model default="0.01" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
 	 */
 	double getEndPointRadius();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SunVector3DTool#getEndPointRadius <em>End Point Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getEndPointRadius <em>End Point Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>End Point Radius</em>' attribute.
@@ -128,15 +128,15 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sun Intensity</em>' attribute.
 	 * @see #setSunIntensity(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_SunIntensity()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool_SunIntensity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
 	 */
 	double getSunIntensity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SunVector3DTool#getSunIntensity <em>Sun Intensity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunIntensity <em>Sun Intensity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Sun Intensity</em>' attribute.
@@ -155,15 +155,15 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Day Maximum Sun Intensity</em>' attribute.
 	 * @see #setCurrentDayMaximumSunIntensity(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_CurrentDayMaximumSunIntensity()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool_CurrentDayMaximumSunIntensity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
 	 */
 	double getCurrentDayMaximumSunIntensity();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentDayMaximumSunIntensity <em>Current Day Maximum Sun Intensity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Day Maximum Sun Intensity</em>' attribute.
@@ -182,15 +182,15 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Sun Intensity Percentage</em>' attribute.
 	 * @see #setCurrentSunIntensityPercentage(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_CurrentSunIntensityPercentage()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool_CurrentSunIntensityPercentage()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='%' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='%' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
 	 */
 	double getCurrentSunIntensityPercentage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Sun Intensity Percentage</em>' attribute.
@@ -201,7 +201,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 
 	/**
 	 * Returns the value of the '<em><b>Sun Vector3 DTool Node</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.SunVector3DToolNode#getSunVector3DTool <em>Sun Vector3 DTool</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.SunVector3DToolNode#getSunVector3DTool <em>Sun Vector3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -209,8 +209,8 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sun Vector3 DTool Node</em>' reference.
 	 * @see #setSunVector3DToolNode(SunVector3DToolNode)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_SunVector3DToolNode()
-	 * @see org.eclipse.symphony.addons.SunVector3DToolNode#getSunVector3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getSunVector3DTool_SunVector3DToolNode()
+	 * @see ca.gc.asc_csa.apogy.addons.SunVector3DToolNode#getSunVector3DTool
 	 * @model opposite="sunVector3DTool" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='true' property='Readonly' propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
@@ -218,7 +218,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	SunVector3DToolNode getSunVector3DToolNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Sun Vector3 DTool Node</em>' reference.

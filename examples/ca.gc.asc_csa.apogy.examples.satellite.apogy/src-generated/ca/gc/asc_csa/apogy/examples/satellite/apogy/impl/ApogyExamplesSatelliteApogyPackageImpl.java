@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -9,14 +9,14 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
-import org.eclipse.symphony.examples.satellite.symphony.ConstellationData;
-import org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter;
-import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyFactory;
-import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatell
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl implements Symphony__ExamplesSatelliteSymphonyPackage {
+public class ApogyExamplesSatelliteApogyPackageImpl extends EPackageImpl implements ApogyExamplesSatelliteApogyPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,12 +50,12 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__ExamplesSatelliteSymphonyPackageImpl() {
-		super(eNS_URI, Symphony__ExamplesSatelliteSymphonyFactory.eINSTANCE);
+	private ApogyExamplesSatelliteApogyPackageImpl() {
+		super(eNS_URI, ApogyExamplesSatelliteApogyFactory.eINSTANCE);
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesSatelliteSymphonyPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesSatelliteApogyPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,30 +77,30 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__ExamplesSatelliteSymphonyPackage init() {
-		if (isInited) return (Symphony__ExamplesSatelliteSymphonyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesSatelliteSymphonyPackage.eNS_URI);
+	public static ApogyExamplesSatelliteApogyPackage init() {
+		if (isInited) return (ApogyExamplesSatelliteApogyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesSatelliteApogyPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesSatelliteSymphonyPackageImpl theSymphony__ExamplesSatelliteSymphonyPackage = (Symphony__ExamplesSatelliteSymphonyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesSatelliteSymphonyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesSatelliteSymphonyPackageImpl());
+		ApogyExamplesSatelliteApogyPackageImpl theApogyExamplesSatelliteApogyPackage = (ApogyExamplesSatelliteApogyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesSatelliteApogyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesSatelliteApogyPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__ExamplesSatellitePackage.eINSTANCE.eClass();
+		ApogyExamplesSatellitePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesSatelliteSymphonyPackage.createPackageContents();
+		theApogyExamplesSatelliteApogyPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesSatelliteSymphonyPackage.initializePackageContents();
+		theApogyExamplesSatelliteApogyPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesSatelliteSymphonyPackage.freeze();
+		theApogyExamplesSatelliteApogyPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesSatelliteSymphonyPackage.eNS_URI, theSymphony__ExamplesSatelliteSymphonyPackage);
-		return theSymphony__ExamplesSatelliteSymphonyPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesSatelliteApogyPackage.eNS_URI, theApogyExamplesSatelliteApogyPackage);
+		return theApogyExamplesSatelliteApogyPackage;
 	}
 
 	/**
@@ -162,8 +162,8 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteSymphonyFactory getSymphony__ExamplesSatelliteSymphonyFactory() {
-		return (Symphony__ExamplesSatelliteSymphonyFactory)getEFactoryInstance();
+	public ApogyExamplesSatelliteApogyFactory getApogyExamplesSatelliteApogyFactory() {
+		return (ApogyExamplesSatelliteApogyFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -218,26 +218,26 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
-		Symphony__ExamplesSatellitePackage theSymphony__ExamplesSatellitePackage = (Symphony__ExamplesSatellitePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesSatellitePackage.eNS_URI);
-		Symphony__CoreEnvironmentOrbitEarthPackage theSymphony__CoreEnvironmentOrbitEarthPackage = (Symphony__CoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentOrbitEarthPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyExamplesSatellitePackage theApogyExamplesSatellitePackage = (ApogyExamplesSatellitePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesSatellitePackage.eNS_URI);
+		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		constellationSystemApiAdapterEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonySystemApiAdapter());
-		constellationDataEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonyInitializationData());
+		constellationSystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
+		constellationDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(constellationSystemApiAdapterEClass, ConstellationSystemApiAdapter.class, "ConstellationSystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constellationDataEClass, ConstellationData.class, "ConstellationData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstellationData_SatellitesList(), theSymphony__ExamplesSatellitePackage.getSatellitesList(), null, "satellitesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationData_GroundStationsReferencesList(), theSymphony__CoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationData_DownlinksLists(), theSymphony__ExamplesSatellitePackage.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstellationData_ConstellationRequestsList(), theSymphony__ExamplesSatellitePackage.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationData_SatellitesList(), theApogyExamplesSatellitePackage.getSatellitesList(), null, "satellitesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationData_GroundStationsReferencesList(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationData_DownlinksLists(), theApogyExamplesSatellitePackage.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationData_ConstellationRequestsList(), theApogyExamplesSatellitePackage.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -259,27 +259,27 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesSatelliteSymphony",
+			 "prefix", "ApogyExamplesSatelliteApogy",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016",
-			 "modelName", "Symphony__ExamplesSatelliteSymphony",
+			 "modelName", "ApogyExamplesSatelliteApogy",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.satellite.symphony/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.satellite.symphony.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples.satellite"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.apogy/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.apogy.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples.satellite"
 		   });	
 		addAnnotation
 		  (constellationSystemApiAdapterEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "This class is the specialized Symphony API adapter, used for connecting\nthe existing constellation example, located at\n{@link org.eclipse.symphony.examples.satellite.AbstractConstellation},\nto Symphony; one can override the well-known callback functions to make\nSymphony perform a variety of useful functions, including initialization,\ndisposal and other features."
+			 "documentation", "This class is the specialized Apogy API adapter, used for connecting\nthe existing constellation example, located at\n{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation},\nto Apogy; one can override the well-known callback functions to make\nApogy perform a variety of useful functions, including initialization,\ndisposal and other features."
 		   });	
 		addAnnotation
 		  (constellationDataEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "This class is the specialized data structure which is used to essentially\nsave and later restore the state of the component; this functionality is\nimplemented by the apply() (load) and collect() (save) methods of the constellation\'s\nAPI adapter,\nwhich is {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSymphonySystemApiAdapter}."
+			 "documentation", "This class is the specialized data structure which is used to essentially\nsave and later restore the state of the component; this functionality is\nimplemented by the apply() (load) and collect() (save) methods of the constellation\'s\nAPI adapter,\nwhich is {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationApogySystemApiAdapter}."
 		   });	
 		addAnnotation
 		  (getConstellationData_SatellitesList(), 
@@ -307,4 +307,4 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 		   });
 	}
 
-} //Symphony__ExamplesSatelliteSymphonyPackageImpl
+} //ApogyExamplesSatelliteApogyPackageImpl

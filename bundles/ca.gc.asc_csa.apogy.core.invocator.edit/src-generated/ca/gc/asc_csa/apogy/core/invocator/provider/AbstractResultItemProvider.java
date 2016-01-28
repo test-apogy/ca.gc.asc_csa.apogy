@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -23,13 +23,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractResult} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.AbstractResult} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -87,7 +87,7 @@ public class AbstractResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class AbstractResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -132,7 +132,7 @@ public class AbstractResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractResult_context_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractResult_context_feature", "_UI_AbstractResult_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__CONTEXT,
+				 ApogyCoreInvocatorPackage.Literals.ABSTRACT_RESULT__CONTEXT,
 				 true,
 				 false,
 				 true,
@@ -154,7 +154,7 @@ public class AbstractResultItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -202,11 +202,11 @@ public class AbstractResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractResult.class)) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__TIME:
-			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.ABSTRACT_RESULT__TIME:
+			case ApogyCoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -227,13 +227,13 @@ public class AbstractResultItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createAttributeResultValue()));
+				(ApogyCoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createAttributeResultValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createReferenceResultValue()));
+				(ApogyCoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createReferenceResultValue()));
 	}
 
   /**

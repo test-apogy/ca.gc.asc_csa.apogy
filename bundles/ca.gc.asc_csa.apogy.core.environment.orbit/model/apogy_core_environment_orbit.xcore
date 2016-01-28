@@ -1,29 +1,29 @@
-@GenModel(prefix="Symphony__CoreEnvironmentOrbit",
+@GenModel(prefix="ApogyCoreEnvironmentOrbit",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CoreEnvironmentOrbit",
+		  modelName="ApogyCoreEnvironmentOrbit",
 		  complianceLevel="8.0",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.core.environment.orbit/src-generated")
-@GenModel(editDirectory= "/org.eclipse.symphony.core.environment.orbit.edit/src-generated")
-//@GenModel(testsDirectory="/org.eclipse.symphony.core.environment.orbit.tests/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.orbit/src-generated")
+@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.core.environment.orbit.edit/src-generated")
+//@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.environment.orbit.tests/src-generated")
 
-package org.eclipse.symphony.core.environment.orbit
+package ca.gc.asc_csa.apogy.core.environment.orbit
 
 import org.eclipse.emf.ecore.EDate
 
-import org.eclipse.symphony.common.emf.Timed
-import org.eclipse.symphony.common.emf.Named
-import org.eclipse.symphony.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Described
 
-import org.eclipse.symphony.common.math.Tuple3d
-import org.eclipse.symphony.common.math.Matrix3x3
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
 
-import org.eclipse.symphony.core.AbstractOrbitModel
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel
 
-import org.eclipse.symphony.core.environment.Worksite
+import ca.gc.asc_csa.apogy.core.environment.Worksite
 
 // Basic Types
 // Basics Types
@@ -51,25 +51,25 @@ class PVACoordinates
 	/*
 	 * The position.
 	 */
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	contains Tuple3d[1] position
 	
 	/*
 	 * The velocity.
 	 */
-	@GenModel(symphony_units="m/s")
+	@GenModel(apogy_units="m/s")
 	contains Tuple3d[1] velocity
 	
 	/*
 	 * The acceleration.
 	 */
-	@GenModel(symphony_units="m/s²")
+	@GenModel(apogy_units="m/s²")
 	contains Tuple3d[1] acceleration
 	
 	/*
 	 * The angular velocity (spin) of this point as seen from the origin.
 	 */
-	@GenModel(symphony_units="rad/s")
+	@GenModel(apogy_units="rad/s")
 	contains Tuple3d[1] angularVelocity
 }
 
@@ -197,7 +197,7 @@ abstract class AbstractOrbitPropagator extends Named, Described
 	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
 	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 */
-	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(symphony_units="s") double timeInterval) throws Exception
+	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(apogy_units="s") double timeInterval) throws Exception
 	
 	/*
 	 * Defines the earliest data for which the propagator is valid.
@@ -228,7 +228,7 @@ class OrbitModel extends AbstractOrbitModel
 /*
  * A class providing utilities methods for Orbits.
  */
-class Symphony__CoreEnvironmentOrbitFacade
+class ApogyCoreEnvironmentOrbitFacade
 {
 	op OrbitModel createOrbitModelCopy(OrbitModel originalOrbitModel)
 }

@@ -1,31 +1,31 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package
  * @generated
  */
-public class Symphony__CommonTopologyUIJME3AdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonTopologyUIJME3AdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyUIJME3Package modelPackage;
+	protected static ApogyCommonTopologyUIJME3Package modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -33,9 +33,9 @@ public class Symphony__CommonTopologyUIJME3AdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIJME3AdapterFactory() {
+	public ApogyCommonTopologyUIJME3AdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyUIJME3Package.eINSTANCE;
+			modelPackage = ApogyCommonTopologyUIJME3Package.eINSTANCE;
 		}
 	}
 
@@ -64,8 +64,8 @@ public class Symphony__CommonTopologyUIJME3AdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyUIJME3Switch<Adapter> modelSwitch =
-		new Symphony__CommonTopologyUIJME3Switch<Adapter>() {
+	protected ApogyCommonTopologyUIJME3Switch<Adapter> modelSwitch =
+		new ApogyCommonTopologyUIJME3Switch<Adapter>() {
 			@Override
 			public Adapter caseJME3TypeFactory(JME3TypeFactory object) {
 				return createJME3TypeFactoryAdapter();
@@ -91,13 +91,13 @@ public class Symphony__CommonTopologyUIJME3AdapterFactory extends AdapterFactory
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory <em>JME3 Type Factory</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory <em>JME3 Type Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory
 	 * @generated
 	 */
 	public Adapter createJME3TypeFactoryAdapter() {
@@ -116,4 +116,4 @@ public class Symphony__CommonTopologyUIJME3AdapterFactory extends AdapterFactory
 		return null;
 	}
 
-} //Symphony__CommonTopologyUIJME3AdapterFactory
+} //ApogyCommonTopologyUIJME3AdapterFactory

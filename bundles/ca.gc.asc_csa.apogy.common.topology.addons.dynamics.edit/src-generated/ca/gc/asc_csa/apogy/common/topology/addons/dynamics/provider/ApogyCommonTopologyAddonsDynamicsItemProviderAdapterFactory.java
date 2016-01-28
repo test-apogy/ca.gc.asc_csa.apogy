@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,17 +33,17 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
-import org.eclipse.symphony.common.topology.addons.dynamics.util.Symphony__CommonTopologyAddonsDynamicsAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.util.ApogyCommonTopologyAddonsDynamicsAdapterFactory;
 
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -54,7 +54,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory extends Symphony__CommonTopologyAddonsDynamicsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonTopologyAddonsDynamicsItemProviderAdapterFactory extends ApogyCommonTopologyAddonsDynamicsAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonTopologyAddonsDynamicsEditPlugin.INSTANCE, Symphony__CommonTopologyAddonsDynamicsPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonTopologyAddonsDynamicsEditPlugin.INSTANCE, ApogyCommonTopologyAddonsDynamicsPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -93,7 +93,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory() {
+	public ApogyCommonTopologyAddonsDynamicsItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -102,7 +102,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -110,7 +110,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected DynamicSystemPropertiesItemProvider dynamicSystemPropertiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,7 +133,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected PhysicalBodyItemProvider physicalBodyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -156,7 +156,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected PhysicalPropertiesItemProvider physicalPropertiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalProperties}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,7 +179,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected PointOfInterestItemProvider pointOfInterestItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -202,7 +202,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected KinematicStateItemProvider kinematicStateItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.KinematicState}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -225,7 +225,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected ConstraintStateItemProvider constraintStateItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -248,7 +248,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected CylindricalConstraintItemProvider cylindricalConstraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -263,7 +263,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -271,7 +271,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected GearRatioConstraintItemProvider gearRatioConstraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,7 +286,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -294,7 +294,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected HingeConstraintItemProvider hingeConstraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.HingeConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -309,7 +309,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -317,7 +317,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected PrismaticConstraintItemProvider prismaticConstraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -332,7 +332,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -340,7 +340,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected RPROConstraintItemProvider rproConstraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.RPROConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -355,7 +355,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -363,7 +363,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected UniversalConstraintItemProvider universalConstraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -378,7 +378,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -386,7 +386,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected ConstraintAttachmentPointItemProvider constraintAttachmentPointItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -401,7 +401,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -409,7 +409,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected CollisionGeometryItemProvider collisionGeometryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -424,7 +424,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -432,7 +432,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected BoxGeometryItemProvider boxGeometryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -447,7 +447,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -455,7 +455,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected CapsuleGeometryItemProvider capsuleGeometryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CapsuleGeometry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -470,7 +470,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -478,7 +478,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected CylinderGeometryItemProvider cylinderGeometryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylinderGeometry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -493,7 +493,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -501,7 +501,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	protected SphereGeometryItemProvider sphereGeometryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.SphereGeometry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -516,26 +516,26 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider symphony__CommonTopologyAddonsDynamicsFacadeItemProvider;
+	protected ApogyCommonTopologyAddonsDynamicsFacadeItemProvider apogy__CommonTopologyAddonsDynamicsFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonTopologyAddonsDynamicsFacadeAdapter() {
-		if (symphony__CommonTopologyAddonsDynamicsFacadeItemProvider == null) {
-			symphony__CommonTopologyAddonsDynamicsFacadeItemProvider = new Symphony__CommonTopologyAddonsDynamicsFacadeItemProvider(this);
+	public Adapter createApogyCommonTopologyAddonsDynamicsFacadeAdapter() {
+		if (apogy__CommonTopologyAddonsDynamicsFacadeItemProvider == null) {
+			apogy__CommonTopologyAddonsDynamicsFacadeItemProvider = new ApogyCommonTopologyAddonsDynamicsFacadeItemProvider(this);
 		}
 
-		return symphony__CommonTopologyAddonsDynamicsFacadeItemProvider;
+		return apogy__CommonTopologyAddonsDynamicsFacadeItemProvider;
 	}
 
 	/**
@@ -682,23 +682,23 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 		if (capsuleGeometryItemProvider != null) capsuleGeometryItemProvider.dispose();
 		if (cylinderGeometryItemProvider != null) cylinderGeometryItemProvider.dispose();
 		if (sphereGeometryItemProvider != null) sphereGeometryItemProvider.dispose();
-		if (symphony__CommonTopologyAddonsDynamicsFacadeItemProvider != null) symphony__CommonTopologyAddonsDynamicsFacadeItemProvider.dispose();
+		if (apogy__CommonTopologyAddonsDynamicsFacadeItemProvider != null) apogy__CommonTopologyAddonsDynamicsFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -734,98 +734,98 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalProperties()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalProperties()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPointOfInterest()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPointOfInterest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createKinematicState()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createKinematicState()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createHingeConstraint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createHingeConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createRPROConstraint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createRPROConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createUniversalConstraint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createUniversalConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintAttachmentPoint()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintAttachmentPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCollisionGeometry()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCollisionGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createBoxGeometry()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createBoxGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylinderGeometry()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylinderGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createSphereGeometry()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createSphereGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createSymphony__CommonTopologyAddonsDynamicsFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createApogyCommonTopologyAddonsDynamicsFacade()));
 
 				return null;
 			}
@@ -839,98 +839,98 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalProperties()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalProperties()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPointOfInterest()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPointOfInterest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createKinematicState()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createKinematicState()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createHingeConstraint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createHingeConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createRPROConstraint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createRPROConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createUniversalConstraint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createUniversalConstraint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintAttachmentPoint()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintAttachmentPoint()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCollisionGeometry()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCollisionGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createBoxGeometry()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createBoxGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylinderGeometry()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylinderGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createSphereGeometry()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createSphereGeometry()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createSymphony__CommonTopologyAddonsDynamicsFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createApogyCommonTopologyAddonsDynamicsFacade()));
 
 				return null;
 			}
@@ -944,13 +944,13 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 				return null;
 			}
@@ -983,7 +983,7 @@ public class Symphony__CommonTopologyAddonsDynamicsItemProviderAdapterFactory ex
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CommonTopologyAddonsDynamicsEditPlugin.INSTANCE;
+			return ApogyCommonTopologyAddonsDynamicsEditPlugin.INSTANCE;
 		}
 	}
 

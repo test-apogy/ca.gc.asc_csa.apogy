@@ -1,54 +1,54 @@
-= Symphony Examples & Tutorials =
+= Apogy Examples & Tutorials =
 
 == Table Of Contents ==
 __TOC__
 
 == Examples ==
 
-Symphony provides a series of built-in example ''Systems'' to illustrate and highlight its numerous capabilities and features.  These ''Systems'', while fairly basic simulations of their real-world counterparts, show at a high level to design a ''System'' and integrate it into Symphony.  There are a large amount of variety in the examples, which include articulated and composite ''Systems''.  In addition, the examples leverage their respective ''Environment'' to facilitate the simulation.  As suggested in the guidelines, each of the example ''Systems'' have their EMF meta-models separate and distinct from their Symphony (System) plug-ins.  More than anything else, the examples highlight the recommended way to ''symphonynize'' any new ''System''.
+Apogy provides a series of built-in example ''Systems'' to illustrate and highlight its numerous capabilities and features.  These ''Systems'', while fairly basic simulations of their real-world counterparts, show at a high level to design a ''System'' and integrate it into Apogy.  There are a large amount of variety in the examples, which include articulated and composite ''Systems''.  In addition, the examples leverage their respective ''Environment'' to facilitate the simulation.  As suggested in the guidelines, each of the example ''Systems'' have their EMF meta-models separate and distinct from their Apogy (System) plug-ins.  More than anything else, the examples highlight the recommended way to ''apogynize'' any new ''System''.
 
-The following examples are currently available in Symphony:
+The following examples are currently available in Apogy:
 
 {| border="1" cellpadding="2"
-! Symphony System
+! Apogy System
 ! Description
 ! Plugin
 |-
-| '''''PTUDishAntennaSymphonySystem'''''
+| '''''PTUDishAntennaApogySystem'''''
 | A simulated antenna dish mount on a pan-tilt unit (PTU).  Antenna is made to track the Sun based on the '''Worksite'' sky.
-| ''org.eclipse.symphony.examples.antenna''
+| ''ca.gc.asc_csa.apogy.examples.antenna''
 |-
-| '''''CameraSymphonySystem'''''
+| '''''CameraApogySystem'''''
 | A simulated camera.
-| rowspan="2" | ''org.eclipse.symphony.examples.camera''
+| rowspan="2" | ''ca.gc.asc_csa.apogy.examples.camera''
 |-
-| '''''PTUCameraSymphonySystem'''''
+| '''''PTUCameraApogySystem'''''
 | A simulated camera mounted on a pan-tilt unit (PTU).
 |-
-| '''''LanderSymphonySystem'''''
+| '''''LanderApogySystem'''''
 | A simulated lander.
-| ''org.eclipse.symphony.examples.lander''
+| ''ca.gc.asc_csa.apogy.examples.lander''
 |-
-| '''''LidarSymphonySystem'''''
+| '''''LidarApogySystem'''''
 | A simulated raster scan Lidar.
-| ''org.eclipse.symphony.examples.lidar''
+| ''ca.gc.asc_csa.apogy.examples.lidar''
 |-
-| '''''MobilePlatformSymphonySystem'''''
+| '''''MobilePlatformApogySystem'''''
 | A simulated four-wheeled, skid-steered mobile platform.
-| ''org.eclipse.symphony.examples.mobile_platform''
+| ''ca.gc.asc_csa.apogy.examples.mobile_platform''
 |-
-| '''''RoboticArmSymphonySystem'''''
+| '''''RoboticArmApogySystem'''''
 | A simulated robotic arm with four rotatable joints
-| ''org.eclipse.symphony.examples.robotic_arm''
+| ''ca.gc.asc_csa.apogy.examples.robotic_arm''
 |-
-| '''''RoverSymphonySystem'''''
+| '''''RoverApogySystem'''''
 | A simulated rover, which is a complex ''System'', composed of a ''Mobile Platform'', ''Robotic Arm'' and two ''Camera'' sub-<i>Systems</i>.
-| ''org.eclipse.symphony.examples.rover''
+| ''ca.gc.asc_csa.apogy.examples.rover''
 |}
 
 === Example Specifics === 
 
-Note: It is important to note that while all of the above example ''Systems'' only provide simulations, given Symphony's flexibility, it would be a simple matter to add a real-world implementation for all of them.
+Note: It is important to note that while all of the above example ''Systems'' only provide simulations, given Apogy's flexibility, it would be a simple matter to add a real-world implementation for all of them.
 
 ==== <i>PTU Dish Antenna</i> ====
 
@@ -108,9 +108,9 @@ The ''Rover'' combines all of these ''Systems'' to leverage all of their capabil
 
 <!-- TODO! -->
 
-=== <i>Registered Symphony Projects</i> ===
+=== <i>Registered Apogy Projects</i> ===
 
-In order to make it simpler to get started, Symphony provide a '''Registered Symphony Project''' for each of the examples.  The primary component of each of these ''Symphony Projects'' is the '''session.sym''' file; this defines a sample ''Session'' that highlights the various features of that example.  Each of these ''Sessions'' is designed to be fully usable as is; this allowing one to literally use it and see the example in action without having to add or change anything.  In particular, they already have the following specified:
+In order to make it simpler to get started, Apogy provide a '''Registered Apogy Project''' for each of the examples.  The primary component of each of these ''Apogy Projects'' is the '''session.sym''' file; this defines a sample ''Session'' that highlights the various features of that example.  Each of these ''Sessions'' is designed to be fully usable as is; this allowing one to literally use it and see the example in action without having to add or change anything.  In particular, they already have the following specified:
 
 * ''Variable(s)''
 * ''Contexts''
@@ -122,59 +122,59 @@ In order to make it simpler to get started, Symphony provide a '''Registered Sym
 
 These ''Projects'' not only make it easy to use the examples, they are also valuable references when developing and using new ''Systems''.
 
-==== Importing a <i>Symphony Project</i> ==== 
+==== Importing a <i>Apogy Project</i> ==== 
 
-In order to import a ''Registered Symphony Project'', one can simply:
+In order to import a ''Registered Apogy Project'', one can simply:
 
 # Right-click on the ''Project Explorer'' and select "''New > Project...''";
-# Select "''Symphony > New Symphony Project''" and click "''Next >''";
+# Select "''Apogy > New Apogy Project''" and click "''Next >''";
 # In the wizard that appears:
 #* Enter the desired name for the new project ;
-#* Check the "'''Import Registered Symphony Project'''" check box;
+#* Check the "'''Import Registered Apogy Project'''" check box;
 #* Click "''Next >''";
-# Select the desired ''Sample Registered Project'' (e.g. '''Mobile Platform Example''' to highlight the usage of the ''MobilePlatformSymphonySystem'');
+# Select the desired ''Sample Registered Project'' (e.g. '''Mobile Platform Example''' to highlight the usage of the ''MobilePlatformApogySystem'');
 # Click "''Finish''" to complete the import process.
 
 ----
 
 == Tutorials ==
 
-The following tutorials provide hands-on training of Symphony.  The goal of the training is to give the first-hand experience of Symphony as both a user and a developer; this will give a far deeper grasp of how best Symphony can be applied in various scenarios. 
+The following tutorials provide hands-on training of Apogy.  The goal of the training is to give the first-hand experience of Apogy as both a user and a developer; this will give a far deeper grasp of how best Apogy can be applied in various scenarios. 
 
 === Simplest Way To Start ===
 
-The examples are a simple way to get started interacting with Symphony and seeing what it can do.  As laid out in the ''Registered Symphony Projects'' section above, it's easy to start using Symphony ''Systems''; by doing so, one can gain a foundation for the material and better understanding for how Symphony and its various components operate.
+The examples are a simple way to get started interacting with Apogy and seeing what it can do.  As laid out in the ''Registered Apogy Projects'' section above, it's easy to start using Apogy ''Systems''; by doing so, one can gain a foundation for the material and better understanding for how Apogy and its various components operate.
 
 === Getting Started Exercises ===
 
-The following user-oriented exercises are geared towards providing a providing familiarity with Symphony ''Sessions''.  By the end of the session, one should be able to:
+The following user-oriented exercises are geared towards providing a providing familiarity with Apogy ''Sessions''.  By the end of the session, one should be able to:
 
-* set up a complete ''Symphony Environment'';
+* set up a complete ''Apogy Environment'';
 * issue commands to a ''System'';
 * work with Composite ''Types'';
 * set up the ''Camera View''
 * set up the ''Map View''
 
-==== Setting Up A <i>Symphony Environment</i> ====
+==== Setting Up A <i>Apogy Environment</i> ====
 
-The following exercises are focused on the creating and fully setting up a ''Session'' and in particular, the ''Symphony Environment''.  By the end of this session, one should be able to:
+The following exercises are focused on the creating and fully setting up a ''Session'' and in particular, the ''Apogy Environment''.  By the end of this session, one should be able to:
 
-* create a Symphony ''Session''
+* create a Apogy ''Session''
 * create a ''Worksite''
 * create ''Map Layers''
 * create ''Variables'' & ''Contexts''
 * create ''Data Product Sets''
 
-===== Creating A Symphony <i>Session</i> =====
+===== Creating A Apogy <i>Session</i> =====
 
 <ol>
 	<li> Right-click on the ''Project Explorer'' and select "''New > Project...''";</li>
-	<li> Select "''Symphony > New Symphony Project''" and click "''Next >''";</li>
+	<li> Select "''Apogy > New Apogy Project''" and click "''Next >''";</li>
 	<li> In the wizard that appears:</li>
 	<ol type="i">
-		<li> Enter '''SymphonyTraining''' for the name of the new project;</li>
+		<li> Enter '''ApogyTraining''' for the name of the new project;</li>
 		<ul>
-			<li> Ensure that the "'''Import Registered Symphony Project'''" check box is '''not''' checked;</li>
+			<li> Ensure that the "'''Import Registered Apogy Project'''" check box is '''not''' checked;</li>
 		</ul>
 		<li> Click "''Next >''";</li>
 		<li> Uncheck all of the check boxes on the following screen;</li>
@@ -185,12 +185,12 @@ The following exercises are focused on the creating and fully setting up a ''Ses
 
 ===== Creating A <i>Worksite</i> =====
 
-# Under ''Symphony Environment'', create a new ''Worksites'';
+# Under ''Apogy Environment'', create a new ''Worksites'';
 # Under ''Worksites'', create a new ''Earth Surface Worksite'' named '''TrainingSite''';
 # Delete the elements under ''Maps List'';
 # Sets the ''X Axis Azimth'' to '''179.4 degrees''';
-# Select the ''Symphony Environment'' and set its ''Active Worksite'' to '''TrainingSite''';
-# Open the ''Symphony 3D Viewer'' and select the ''Symphony Environment''; 
+# Select the ''Apogy Environment'' and set its ''Active Worksite'' to '''TrainingSite''';
+# Open the ''Apogy 3D Viewer'' and select the ''Apogy Environment''; 
 
 ===== Creating <i>Map Layers</i> =====
 
@@ -204,7 +204,7 @@ The following exercises are focused on the creating and fully setting up a ''Ses
 ! Value
 |-
 | ''Url''
-| '''platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri'''
+| '''platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri'''
 |}
 
 <ol start="3">
@@ -216,7 +216,7 @@ The following exercises are focused on the creating and fully setting up a ''Ses
 ! Value
 |-
 | ''Url''
-| '''platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png'''
+| '''platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png'''
 |-
 | ''Height (m)''
 | '''120.0'''
@@ -245,7 +245,7 @@ The following exercises are focused on the creating and fully setting up a ''Ses
 ===== Creating <i>Variables</i> & <i>Contexts</i> =====
 
 <ol>
-	<li> In Session ''My First Session'', define a ''Variable'' named '''myRover''' of type ''SymphonySystemMobilePlatform''.</li>
+	<li> In Session ''My First Session'', define a ''Variable'' named '''myRover''' of type ''ApogySystemMobilePlatform''.</li>
 	<li> Create two ''Contexts'':</li>
 	<ol type="i">
 		<li> Context '''Simulated'''</li>
@@ -254,7 +254,7 @@ The following exercises are focused on the creating and fully setting up a ''Ses
 	<li> Set '''myRover''' to be implemented using '''MobilePlatformStub''' in the ''Simulated'' ''Context'';</li>
 	<li> Set '''myRover''' to be implemented using '''MobilePlatformReal''' in the ''Real'' ''Context'';</li>
 	<li> Set the session's ''activeContext'' to '''Simulated''';</li>
-	<li> Instantiate the '''Variables''' (by using "Symphony > Reset Instances".)</li>
+	<li> Instantiate the '''Variables''' (by using "Apogy > Reset Instances".)</li>
 </ol>
 
 ===== Creating <i>Data Products Sets</i> =====
@@ -267,7 +267,7 @@ The following exercises are focused on the creating and fully setting up a ''Ses
 
 ==== Issuing Commands ====
 
-The following exercises deal with issuing commands on a Symphony ''System''. By the end of the session, one should be able to:
+The following exercises deal with issuing commands on a Apogy ''System''. By the end of the session, one should be able to:
 
 * invoke operations on simple ''Systems''
 * use ''Pose Correctors''
@@ -279,9 +279,9 @@ The following exercises deal with issuing commands on a Symphony ''System''. By 
 # Create a call named '''Init''' to operation '''init()''' on ''myRover'';
 # Create a call named '''Move''' to operation '''cmdLinearVelocity'''() on ''myRover'' with ''Parameter'' '''speed''' set to '''0.25''';
 # Create a call named '''Stop''' to operation '''cmdLinearVelocity'''() on ''myRover'' with ''Parameter'' '''speed''' set to '''0.0''';
-# Invoke '''Init''' by selecting it, right clicking and choosing "''Symphony > Invoke''"
-# Invoke '''Move''' ("''Symphony > Invoke''") - the rover should start moving forward;
-# Invoke '''Stop''' ("''Symphony > Invoke''") when you want to stop the rover.
+# Invoke '''Init''' by selecting it, right clicking and choosing "''Apogy > Invoke''"
+# Invoke '''Move''' ("''Apogy > Invoke''") - the rover should start moving forward;
+# Invoke '''Stop''' ("''Apogy > Invoke''") when you want to stop the rover.
 
 ===== Using The <i>Pose Corrector</i> =====
 
@@ -319,8 +319,8 @@ The following exercises deal with issuing commands on a Symphony ''System''. By 
 	<li> In the ''Session Editor'', expand the ''Active Context'' (''Simulated'');</li>
 	<li> Expand the ''Variable Implementations'';</li>
 	<li> Expand '''myRover''';</li>
-	<li> Expand the ''API Adapter'' (''MobilePlatformSymphonySystemApiAdapter'');</li>
-	<li> Right-click on the ''Vehicle Pose Corrector'' and select "''Symphony > Enable / Disable Pose Corrector''";</li>
+	<li> Expand the ''API Adapter'' (''MobilePlatformApogySystemApiAdapter'');</li>
+	<li> Right-click on the ''Vehicle Pose Corrector'' and select "''Apogy > Enable / Disable Pose Corrector''";</li>
 	<li> Invoke '''CommandVel''' to move the rover;</li>
 	<li> When ready, invoke '''AllStop''' to stop it.</li>
 </ol>
@@ -461,12 +461,12 @@ This should yield a composite ''System'' that looks like this:
 ===== Defining A Composite <i>System</i> =====
 
 <ol>
-	<li> Create a new ''Symphony System'' in ''Local Type'' named '''MyFirstAssembly'''</li>
+	<li> Create a new ''Apogy System'' in ''Local Type'' named '''MyFirstAssembly'''</li>
 	<li> Add three (3) ''Type Members'':</li>
 	<ol type="i">
-		<li> '''rover''' of type ''MobilePlatformSymphonySystem'';</li>
-		<li> '''camera''' of type ''PTUCameraSymphonySystem'';</li>
-		<li> '''arm''' of type ''RoboticArmSymphonySystem''</li>
+		<li> '''rover''' of type ''MobilePlatformApogySystem'';</li>
+		<li> '''camera''' of type ''PTUCameraApogySystem'';</li>
+		<li> '''arm''' of type ''RoboticArmApogySystem''</li>
 	</ol>
 	<li> Add a ''Topology Root'' with a ''Transform Node'' child with its ''Node Id'' set to '''myFirstAssemblyRoot'''</li>
 	<li> Under '''MyFirstAssembly''', create a ''Connection Points List''</li>
@@ -501,7 +501,7 @@ This should yield a composite ''System'' that looks like this:
 			<li> '''arm''' -> '''RoboticArmSimulated'''</li>
 		</ul>
 	</ol>	
-	<li> Right click on the ''Symphony Environment'' and select "Symphony > Reset Instances".</li>
+	<li> Right click on the ''Apogy Environment'' and select "Apogy > Reset Instances".</li>
 </ol>
 
 ===== Invoking <i>Operations</i> on Composite System <i>Type Members</i> =====
@@ -581,13 +581,13 @@ The following exercises demonstrate how the ''Map View'' operates and how it is 
 
 ----
 
-=== Creating & Symphonyzing A Pan-Tilt Unit (PTU) Camera <i>System</i> ===
+=== Creating & Apogyzing A Pan-Tilt Unit (PTU) Camera <i>System</i> ===
 
 The following exercises go step-by-step through the process of creating a ''System'' for a camera mounted on a pan-tilt unit (PTU).  Through the process of creating the final '''''PTUCamera''''' ''System'', one should learn how to:
 
 * Create the Eclipse Modeling Framework (EMF) Model for the ''System''
-* Create the Symphony plug-in and required specialized subclasses
-* Create the appropriate ''Symphony System Model'' and register it with Symphony 
+* Create the Apogy plug-in and required specialized subclasses
+* Create the appropriate ''Apogy System Model'' and register it with Apogy 
 * Test the ''System'' throughout the development process 
 
 ==== An Overview Of The Desired <i>System</i> ====
@@ -832,13 +832,13 @@ The following exercises go through the process of creating the required EMF meta
  	public ''ImageSnapshot'' '''takeSnapshot'''()
  	{
  		// Create an image snapshot
- 		''ImageSnapshot'' imageSnapshot = ''Symphony__AddonsSensorsImagingPackage''.eINSTANCE.createImageSnapshot();
+ 		''ImageSnapshot'' imageSnapshot = ''ApogyAddonsSensorsImagingPackage''.eINSTANCE.createImageSnapshot();
  		
  		// Set the time of the snapshot
  		imageSnapshot.setTime(new Date());
  		
  		// Save a copy of the current field of view
- 		imageSnapshot.setFieldOfView(''Symphony__AddonsSensorsFOVFacade''.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
+ 		imageSnapshot.setFieldOfView(''ApogyAddonsSensorsFOVFacade''.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
  		
  		// Save the image in the snapshot
  		imageSnapshot.setImage(null);
@@ -1100,13 +1100,13 @@ The following exercises go through the process of creating the required EMF meta
 
 # Create a new ''Eclipse Application'' under ''Run Configuration''. Name it '''TEST''';
 # Click ''Run'' to launch another instance of Eclipse with your plugins;
-# In the ''Project Explorer View'', create a new Symphony Project (by clicking on ''New > Other... > Symphony > New Symphony Project'').  Name it '''my_tests''';
-# Create a new Symphony Session named '''MySession.sym''' in the newly create project.
+# In the ''Project Explorer View'', create a new Apogy Project (by clicking on ''New > Other... > Apogy > New Apogy Project'').  Name it '''my_tests''';
+# Create a new Apogy Session named '''MySession.sym''' in the newly create project.
 # In the ''Types'', under ''Local'', create a ''Type'' named '''PTUCamera''';
 # Set the type's ''Interface Class'' to ''<org_prefix>.ptu.PTUCamera'';
 # Under ''Variables'', create a ''Variable'' named '''ptuCamera''' and specify its type as '''PTUCamera''';
 # In the '''Default''' ''Context'', add a ''Variable Implementation'' that maps variable '''ptuCamera''' to a ''<org_prefix>.ptu.SimulatedPTUCamera'' implementation;
-# Select the ''Symphony Environment'' and right-click, selecting ''Symphony > Reset Instances'' to initialize instances;
+# Select the ''Apogy Environment'' and right-click, selecting ''Apogy > Reset Instances'' to initialize instances;
 # Under ''Programs'', create an ''Operation Call List'' named '''ptuCmd''';
 # Under ''ptuCmd'', create an ''Operation Call'' named '''Init''' referencing '''ptuCamera.initialize'''();
 # Invoke the '''Init''' ''Operation Call'' and verify that the command has been executed;
@@ -1117,93 +1117,93 @@ The following exercises go through the process of creating the required EMF meta
 # Under ''ptuCmd'', create an ''Operation Call'' named '''SnapShot''' referencing '''ptuCamera.takeSnapshot'''()
 # Invoke the '''SnapShot''' ''Operation Call'' and verify that the command has been executed.
 
-==== 2. Creating the <i>PTUCamera</i>'s Symphony Plug-in ====
+==== 2. Creating the <i>PTUCamera</i>'s Apogy Plug-in ====
 
-The following exercises focus on creating the Symphony plugin for the new ''PTUCamera'' ''System''.  By the end of this section, one should be able to:
+The following exercises focus on creating the Apogy plugin for the new ''PTUCamera'' ''System''.  By the end of this section, one should be able to:
 
-* Create Symphony plug-in projects
-* Develop Symphony EMF meta-model for a ''System''
-* Specialize both ''SymphonyInitializationData'' and ''SymphonySystemApiAdapter'' classes for a given ''System''
+* Create Apogy plug-in projects
+* Develop Apogy EMF meta-model for a ''System''
+* Specialize both ''ApogyInitializationData'' and ''ApogySystemApiAdapter'' classes for a given ''System''
 
 ===== i. Creating The <i>PTUCamera</i>'s Plug-in Project =====
 
 <ol>
-	<li> Create a new ''Xcore Project'' named '''<org_prefix>.ptu.symphony''';</li>
+	<li> Create a new ''Xcore Project'' named '''<org_prefix>.ptu.apogy''';</li>
 	<li> Rename the '''/src-gen''' folder to '''/src-generated''';</li>
 	<li> Open the '''MANIFEST.MF'''.  Go to the ''Dependencies'' tab;</li>
 	<li> In the ''Required Plug-ins'' section:</li>
 	<ol type="i">
 		<li> Add your ''<org_prefix>.ptu'' plugin to the dependencies;</li>
-		<li> Add the ''org.eclipse.symphony.core'' plugin to the dependencies;</li>
+		<li> Add the ''ca.gc.asc_csa.apogy.core'' plugin to the dependencies;</li>
 	</ol>
 	<li> Save the '''MANIFEST.MF'''</li>
 </ol>
 
-===== ii. Developing the <i>PTUCamera</i>'s Symphony Xcore (.xcore) model =====
+===== ii. Developing the <i>PTUCamera</i>'s Apogy Xcore (.xcore) model =====
 
 <ol>
-	<li>In the /model folder, create an Xcore model named '''ptu_symphony.xcore'''</li>
+	<li>In the /model folder, create an Xcore model named '''ptu_apogy.xcore'''</li>
 	<li>Copy the following to the start of the empty Xcore model, replacing <org_prefix> where required:</li>
 </ol>
 
- 	@GenModel(prefix="PTUCameraSymphony",
- 			   modelName="PTUCameraSymphony",
+ 	@GenModel(prefix="PTUCameraApogy",
+ 			   modelName="PTUCameraApogy",
  			   childCreationExtenders="true",
  			   extensibleProviderFactory="true",
  			   multipleEditorPages="false",
  			   operationReflection="true",
  			   suppressGenModelAnnotations="false")
- 	@GenModel(modelDirectory="/<org_prefix>.ptu.symphony/src-generated")
- 	@GenModel(editDirectory="/<org_prefix>.ptu.symphony.edit/src-generated")
+ 	@GenModel(modelDirectory="/<org_prefix>.ptu.apogy/src-generated")
+ 	@GenModel(editDirectory="/<org_prefix>.ptu.apogy.edit/src-generated")
  	
- 	package <org_prefix>.ptu.symphony
+ 	package <org_prefix>.ptu.apogy
 
 <ol start="3">
-	<li>Save '''ptu_symphony.xcore''' to trigger an initial build for both the ''<org_prefix>.ptu.symphony'' and ''<org_prefix>.ptu.symphony'' plug-ins.</li>
+	<li>Save '''ptu_apogy.xcore''' to trigger an initial build for both the ''<org_prefix>.ptu.apogy'' and ''<org_prefix>.ptu.apogy'' plug-ins.</li>
 </ol>
 
-===== iii. Specializing <i>SymphonyInitializationData</i> for the <i>PTUCamera</i> =====
+===== iii. Specializing <i>ApogyInitializationData</i> for the <i>PTUCamera</i> =====
 
 <ol>
-	<li> Open the '''ptu_symphony.xcore''' model;</li>
-	<li> Define a new class named '''''PTUCameraSymphonyInitializationData''''' that extends ''SymphonyInitializationData'';</li>
+	<li> Open the '''ptu_apogy.xcore''' model;</li>
+	<li> Define a new class named '''''PTUCameraApogyInitializationData''''' that extends ''ApogyInitializationData'';</li>
 	<li> Add the required attributes:</li>
 	<ol type="i">required minimum / maximum value
 		<li> ''double'' '''panAngle''';</li>
 		<li> ''double'' '''tiltAngle''';</li>
 		<li> ''double'' '''zoomFactor''' (with a default value of '''1.0''')</li>
 	</ol>
-	<li> Save the '''ptu_symphony.xcore''' model.</li>
+	<li> Save the '''ptu_apogy.xcore''' model.</li>
 </ol>
 
-===== iv. Specializing <i>SymphonySystemApiAdapter</i> for the <i>PTUCamera</i> =====
+===== iv. Specializing <i>ApogySystemApiAdapter</i> for the <i>PTUCamera</i> =====
 
-# Open the '''ptu_symphony.xcore''' model;
-# Define a new class named '''''PTUCameraSymphonySystemApiAdapter''''' that extends ''SymphonySystemApiAdapter''';
-# Save the '''ptu_symphony.xcore''' model;
-# Implement the following methods in ''<org_prefix>.ptu.symphony.impl.PTUCameraSymphonySystemApiAdapterImpl'' as specified below:
+# Open the '''ptu_apogy.xcore''' model;
+# Define a new class named '''''PTUCameraApogySystemApiAdapter''''' that extends ''ApogySystemApiAdapter''';
+# Save the '''ptu_apogy.xcore''' model;
+# Implement the following methods in ''<org_prefix>.ptu.apogy.impl.PTUCameraApogySystemApiAdapterImpl'' as specified below:
 
  	/**
- 	 * Create a new instance of ''PTUCameraSymphonyInitializationData'',
- 	 * which is the relevant subclass of ''SymphonyInitializationData''
+ 	 * Create a new instance of ''PTUCameraApogyInitializationData'',
+ 	 * which is the relevant subclass of ''ApogyInitializationData''
  	 * for the ''PTUCamera'' ''System''.
  	 * 
- 	 * @return The newly created ''PTUCameraSymphonyInitializationData'' object
+ 	 * @return The newly created ''PTUCameraApogyInitializationData'' object
  	 * '''@generated_NOT'''
  	 */
  	@Override
  	public ''AbstractInitializationData'' '''createInitializationData'''()
  	{
- 		// Create and return a ''PTUCameraSymphonyInitializationData'' 
- 		return PTUCameraFactory.createPTUCameraSymphonyInitializationData();
+ 		// Create and return a ''PTUCameraApogyInitializationData'' 
+ 		return PTUCameraFactory.createPTUCameraApogyInitializationData();
  	}
  
  	/**
- 	 * Sets the attributes of the given ''SymphonyInitializationData'' object
+ 	 * Sets the attributes of the given ''ApogyInitializationData'' object
  	 * to the corresponding values of the ''PTUCamera'' ''System''' instance's
  	 * state.  In this case, it simply gets the values of '''pan''', '''tilt'''
  	 * and '''zoom''' from the ''System'' instance and stores them in the provided
- 	 * ''SymphonyInitializationData'' object, given that it has the correct type.
+ 	 * ''ApogyInitializationData'' object, given that it has the correct type.
  	 * 
  	 * @param initData The initialization data object that is supposed to collect the state of the ''System''
  	 * '''@generated_NOT'''
@@ -1215,10 +1215,10 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  		super.collect(initData);
  		
  		// If the initialization data object has the correct type
- 		if (initData instanceof ''PTUCameraSymphonyInitializationData'')
+ 		if (initData instanceof ''PTUCameraApogyInitializationData'')
  		{
  			// Cast down
- 			''PTUCameraSymphonyInitializationData'' ptuCameraInitData = (''PTUCameraSymphonyInitializationData'') initData;
+ 			''PTUCameraApogyInitializationData'' ptuCameraInitData = (''PTUCameraApogyInitializationData'') initData;
  			''PTUCamera'' ptuCamera = (''PTUCamera'') this.getInstance();
  		
  			// Store the ''System'' instance's state in the initialization data object
@@ -1229,7 +1229,7 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  	}
  
  	/**
- 	 * Applies the values in the provided ''SymphonyInitializationData'' to this
+ 	 * Applies the values in the provided ''ApogyInitializationData'' to this
  	 * ''PTUCamera'' ''System'' instance.  In this case, it will call the appropriate
  	 * methods to set the instance's state correctly.
  	 *
@@ -1243,10 +1243,10 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  		super.apply(initData);
  		
  		// If the initialization data object has the correct type
- 		if (initData instanceof ''PTUCameraSymphonyInitializationData'')
+ 		if (initData instanceof ''PTUCameraApogyInitializationData'')
  		{
  			// Cast down
- 			''PTUCameraSymphonyInitializationData'' ptuCameraInitData = (''PTUCameraSymphonyInitializationData'') initData;
+ 			''PTUCameraApogyInitializationData'' ptuCameraInitData = (''PTUCameraApogyInitializationData'') initData;
  			''PTUCamera'' ptuCamera = (''PTUCamera'') this.getInstance();
  		
  			// Apply the values
@@ -1277,9 +1277,9 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  		{
  			// Extract the camera lens and root nodes
  			''Node'' tip = TopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_FOV",
- 			                                                 getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
+ 			                                                 getApogySystem().getTopologyRoot().getOriginNode()).get(0);
  			''Node'' root = TopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_ROOT",
- 			                                                  getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
+ 			                                                  getApogySystem().getTopologyRoot().getOriginNode()).get(0);
 			
  			// Determine the series of transformations that have taken place
  			''Matrix4d'' matrix4d = TopologyFacade.INSTANCE.expressInFrame(tip,	root);
@@ -1295,38 +1295,38 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  		}
  	}
 
-==== 3. Creating the <i>PTUCamera</i>'s Complete <i>Symphony System</i> Model ====
+==== 3. Creating the <i>PTUCamera</i>'s Complete <i>Apogy System</i> Model ====
 
-The following exercises highlight how to create the ''PTUCamera'' System's complete ''Symphony System'' model.  By the end of this section, one should be able to:
+The following exercises highlight how to create the ''PTUCamera'' System's complete ''Apogy System'' model.  By the end of this section, one should be able to:
  
-* Create a ''Symphony System'' model (.ss file)
-* Specify the topology for a new ''Symphony System'' model
-* Create the bindings for a new ''Symphony System'' model
-* Register the new ''Symphony System'' model with Symphony 
+* Create a ''Apogy System'' model (.ss file)
+* Specify the topology for a new ''Apogy System'' model
+* Create the bindings for a new ''Apogy System'' model
+* Register the new ''Apogy System'' model with Apogy 
 
-===== i. Creating the <i>PTUCamera</i>'s <i>Symphony System</i> Model (.ss file) =====
+===== i. Creating the <i>PTUCamera</i>'s <i>Apogy System</i> Model (.ss file) =====
 
 # Launch the ''Run Configuration'' used for testing ''PTUCamera'' in the previous exercises;
 # In the ''Project Explorer'', right click and then select "''Import...''";
 # In the ''Import'' pop-up, select "''General -> Existing Projects into Workspace''", then click "''Next >''";
-# Select your workspace root directory; the ''Projects'' list will get populated with your plugins. ''De-select'' all of them, except '''<org_prefix>.ptu.symphony''';
-# Click ''Finish''.  You now have a reference to your Symphony plugin in your new Eclipse instance;
-# Create a Symphony System Model named '''MyPTUCameraSymphonySystem.ss''' in the '''/model''' folder of your '''<org_prefix>.ptu.symphony''' plugin (use the ''New Symphony System'' wizard plugin);
-# Set the name of the Symphony System Model to '''MyPTUCameraSymphonySystem''';
+# Select your workspace root directory; the ''Projects'' list will get populated with your plugins. ''De-select'' all of them, except '''<org_prefix>.ptu.apogy''';
+# Click ''Finish''.  You now have a reference to your Apogy plugin in your new Eclipse instance;
+# Create a Apogy System Model named '''MyPTUCameraApogySystem.ss''' in the '''/model''' folder of your '''<org_prefix>.ptu.apogy''' plugin (use the ''New Apogy System'' wizard plugin);
+# Set the name of the Apogy System Model to '''MyPTUCameraApogySystem''';
 # Set the ''Interface Class'' to '''<org_prefix>.ptu.PTUCamera''';
-# Set the ''Type Api Adapter Class'' to '''<org_prefix>.ptu.symphony.PTUCameraSymphonySystemApiAdapter''';
+# Set the ''Type Api Adapter Class'' to '''<org_prefix>.ptu.apogy.PTUCameraApogySystemApiAdapter''';
 # Save the model (*.ss) file.
 
-===== ii. Specifying the Topology for the <i>PTUCamera</i>'s <i>Symphony System</i> Model=====
+===== ii. Specifying the Topology for the <i>PTUCamera</i>'s <i>Apogy System</i> Model=====
 
-The following exercises show how to specify the topology for the ''PTUCamera'''s ''Symphony System'' model.  By the end of this section, one should be able to: 
+The following exercises show how to specify the topology for the ''PTUCamera'''s ''Apogy System'' model.  By the end of this section, one should be able to: 
 
-* Understand basic geometry files and how to incorporate them into Symphony
+* Understand basic geometry files and how to incorporate them into Apogy
 * Generate a topology to reflect a given target hierarchy
  
 ====== Target Topology Hierarchy ======
 
-The desired final topology for ''MyPTUCameraSymphonySystem'' should have be as following: 
+The desired final topology for ''MyPTUCameraApogySystem'' should have be as following: 
 
 [[File:../resources/tutorials/ptu_camera_topology.svg]]
 
@@ -1334,7 +1334,7 @@ It's important that you set a node's ID / description as soon as it's created; t
 
 ====== Target Transformations ======
 
-The desired final transformation for the components of ''MyPTUCameraSymphonySystem'' should be as follows:
+The desired final transformation for the components of ''MyPTUCameraApogySystem'' should be as follows:
 
 [[File:../resources/tutorials/ptu_camera_transforms.svg]]
 
@@ -1342,21 +1342,21 @@ Recall that the ''RectangularFrustrumFieldOfView'' component of the ''MyPTUCamer
 
 [[File:../resources/tutorials/rectangular_frustrum_fov.svg]]
 
-Once all of the topology in '''MyPTUCameraSymphonySystem.ss''' has been fully populated, the result should look like:
+Once all of the topology in '''MyPTUCameraApogySystem.ss''' has been fully populated, the result should look like:
 
 [[File:../resources/tutorials/ptu_camera_transforms_result.png]]
 
 ====== Creating the Geometry Folder======
 
-# In your '''<org_prefix>.ptu.symphony''' plugin, create a folder named '''/geommodels'''.  This folder will hold the CAD files containing the geometry of your ''System'';
-# Open the '''MANIFEST.MF''' for your '''<org_prefix>.ptu.symphony''' plugin;
+# In your '''<org_prefix>.ptu.apogy''' plugin, create a folder named '''/geommodels'''.  This folder will hold the CAD files containing the geometry of your ''System'';
+# Open the '''MANIFEST.MF''' for your '''<org_prefix>.ptu.apogy''' plugin;
 # Go to the ''Build'' tab;
 # In the ''Binary Build'' section, select the '''/geommodels''' folder; this will ensure that it will be included in the binary plugin when installed.
 # Save the '''MANIFEST.MF'''
 
 ====== Creating the Geometry Files ======
 
-In Symphony, and 3D computer graphics in general, a common way to specify the geometry of a component is actually by providing two separate files.  The first, the Material file (*.mtl), specifies the various materials (i.e. surfaces) used by a component and their graphical properties (e.g. ambient/diffuse/specular colour, transparency, etc.)  The second, the Object file (*.obj), which can refer to multiple Material files, specifies actual component geometry, including the various object vertices, vertex normals, UV mapping, etc.
+In Apogy, and 3D computer graphics in general, a common way to specify the geometry of a component is actually by providing two separate files.  The first, the Material file (*.mtl), specifies the various materials (i.e. surfaces) used by a component and their graphical properties (e.g. ambient/diffuse/specular colour, transparency, etc.)  The second, the Object file (*.obj), which can refer to multiple Material files, specifies actual component geometry, including the various object vertices, vertex normals, UV mapping, etc.
 
 As the ''PTUCamera'' ''System'' is comprised of five different components, there needs to be a .obj and .mtl file for each of these elements in order for them to be displayed properly.
 
@@ -1676,11 +1676,11 @@ In the '''/cadmodels''' folder, add the following ten (10) files with the specif
 ====== Populating the topology ======
 
 # Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
-# Open your '''PTUCameraSymphonySystem.ss''' file with the editor;
-# Open the ''Symphony System 3D Viewer'', then select the ''Symphony System'' in the editor;
+# Open your '''PTUCameraApogySystem.ss''' file with the editor;
+# Open the ''Apogy System 3D Viewer'', then select the ''Apogy System'' in the editor;
 # Under ''Topology Root'', create the topology for the ''PTUCamera'', replicating the structure specified in '''Target Topology Hierarchy''' above;
 # For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in the '''Target Transformations''' section above;
-# For the ''URLNodes'' that are providing a link to the geometry file for their parent node, they should have a URL in the following format: ''platform:/plugin/'''''<org_prefix>.ptu.symphony/cadmodels'''''/filename.ext''
+# For the ''URLNodes'' that are providing a link to the geometry file for their parent node, they should have a URL in the following format: ''platform:/plugin/'''''<org_prefix>.ptu.apogy/cadmodels'''''/filename.ext''
 # Save the file.
 
 ===== iii. Making the Camera's Bindings =====
@@ -1688,7 +1688,7 @@ In the '''/cadmodels''' folder, add the following ten (10) files with the specif
 ====== Defining the <i>Feature Nodes</i> ======
 
 <ol>
-	<li> Open your '''PTUCameraSymphonySystem.ss''' file with the editor</li> 
+	<li> Open your '''PTUCameraApogySystem.ss''' file with the editor</li> 
 	<li> Under "''Binding Sets -> Feature Roots List''", create a new ''Tree Root Node'', select it and set its ''Source Class'' to '''<org_prefix>.ptu.PTUCamera''';</li>
 	<li> Under the new ''Tree Root Node'', create three new ''Tree Feature Nodes'':</li>
 	<ol type="i">
@@ -1696,13 +1696,13 @@ In the '''/cadmodels''' folder, add the following ten (10) files with the specif
 		<li> Set the ''Structural Feature'' for the second to '''currentTiltAngle''';</li>
 		<li> Set the ''Structural Feature'' for the third to '''fov''';</li>
 	</ol>
-	<li> Save the ''Symphony System Model'' (*.ss) file;</li>
+	<li> Save the ''Apogy System Model'' (*.ss) file;</li>
 </ol>
 
 ====== Making the Bindings themselves ======
 
 <ol>
-	<li> Open your '''PTUCameraSymphonySystem.ss''' file with the editor</li>
+	<li> Open your '''PTUCameraApogySystem.ss''' file with the editor</li>
 	<li> Under "''Binding Sets-> Bindings List''", create the following ''Rotation Bindings'':</li>
 </ol>
 
@@ -1744,27 +1744,27 @@ In the '''/cadmodels''' folder, add the following ten (10) files with the specif
 	<li> Save the .ss file</li>
 </ol>
 
-===== iv. Registering the Camera's <i>Symphony System Model</i> =====
+===== iv. Registering the Camera's <i>Apogy System Model</i> =====
 
-# Open the '''MANIFEST.MF''' of your '''<org_prefix>.ptu.symphony''' plugin;
+# Open the '''MANIFEST.MF''' of your '''<org_prefix>.ptu.apogy''' plugin;
 # In the ''Extensions'' tab, click ''Add...'';
 # Ensure the ''Show only extension points from the required plug-ins'' is '''NOT''' selected;
-# Select the '''org.eclipse.symphony.core.invocator.typeContributor''';
+# Select the '''ca.gc.asc_csa.apogy.core.invocator.typeContributor''';
 # Click ''Finish'';
 # Select the newly added extension and then click on ''Browse'' for the '''URI''' field;
-# Browse to your Symphony System Model ('''MyPTUCameraSymphonySystem.ss''') file and then click ''OK'';
+# Browse to your Apogy System Model ('''MyPTUCameraApogySystem.ss''') file and then click ''OK'';
 # Save the '''MANIFEST.MF'''
 
-==== 4. Testing the completed PTU Camera in Symphony ====
+==== 4. Testing the completed PTU Camera in Apogy ====
 
 # Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
 # Open '''MySession.sym''';
-# Expand ''Session -> Symphony Environment -> Types -> Registered'': the '''MyPTUCameraSymphonySystem''' should be present;
-# Open the ''Symphony 3D Viewer'', then select the ''Symphony Environment''; this will make the ''3D Viewer'' display your environment;
-# Under ''Symphony Environment'', create a new ''Worksites'';
+# Expand ''Session -> Apogy Environment -> Types -> Registered'': the '''MyPTUCameraApogySystem''' should be present;
+# Open the ''Apogy 3D Viewer'', then select the ''Apogy Environment''; this will make the ''3D Viewer'' display your environment;
+# Under ''Apogy Environment'', create a new ''Worksites'';
 # Under ''Worksites'', create a new ''Earth Surface Worksite'';
-# Set the '''Active Worksite''' of the ''Symphony Environment'' to the new ''Earth Surface Worksite'';
-# Select the '''ptuCamera''' ''Variable'' and set its ''Variable Type'' to ''MyPTUCameraSymphonySystem'';
+# Set the '''Active Worksite''' of the ''Apogy Environment'' to the new ''Earth Surface Worksite'';
+# Select the '''ptuCamera''' ''Variable'' and set its ''Variable Type'' to ''MyPTUCameraApogySystem'';
 # Reset Instances: Your ''PTUCamera'' should appear in the 3D Viewer;
 # Invoke the ''Operation Calls'' defined in the previous exercises and confirm that the ''System'' responds correctly;
 # Done!

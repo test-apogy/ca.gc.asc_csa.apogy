@@ -4,7 +4,7 @@
  *
  * $Id: RasterScanDataItemProvider.java,v 1.4.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,19 +15,19 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RasterScanData;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFactory;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.addons.sensors.range.RasterScanData} object. <!--
+ * {@link ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
@@ -72,7 +72,7 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -93,8 +93,8 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS);
-			childrenFeatures.add(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA);
+			childrenFeatures.add(ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS);
+			childrenFeatures.add(ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA);
 		}
 		return childrenFeatures;
 	}
@@ -148,11 +148,11 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RasterScanData.class)) {
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -173,98 +173,98 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeSensor()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createContactSensor()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createContactSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRangeSensor()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleSonar()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleSonar()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createLineRangeScanner()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeScanner()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanRangeSensor()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanData()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanData()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsSensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS,
-				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
+				(ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS,
+				 ApogyAddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA,
-				 Symphony__CommonGeometryData25DFactory.eINSTANCE.createVolumetricCoordinatesSet25D()));
+				(ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA,
+				 ApogyCommonGeometryData25DFactory.eINSTANCE.createVolumetricCoordinatesSet25D()));
 	}
 
 	/**
@@ -281,8 +281,8 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS;
+			childFeature == ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
+			childFeature == ApogyAddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS;
 
 		if (qualify) {
 			return getString

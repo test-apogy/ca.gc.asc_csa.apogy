@@ -1,31 +1,31 @@
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.invocator.delegates.DefaultInvocatorDelegate;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.core.invocator.delegates.DefaultInvocatorDelegate;
 
-public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
+public class ApogyInvocatorDelegate extends DefaultInvocatorDelegate {
 
-	private Map<AbstractTypeImplementation, SymphonySystem> symphonySystemInstancesMap;
-	private Map<SymphonySystem, AbstractTypeImplementation> symphonySystemToTypeImplementationsMap;
+	private Map<AbstractTypeImplementation, ApogySystem> apogySystemInstancesMap;
+	private Map<ApogySystem, AbstractTypeImplementation> apogySystemToTypeImplementationsMap;
 	static private int counter;
 
 	@Override
@@ -33,14 +33,14 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 	{
 		super.newInstance(environment, variable);
 
-		/** Binds Symphony System Instance with the SymphonySystem Definition. */
+		/** Binds Apogy System Instance with the ApogySystem Definition. */
 		VariableImplementation variableImplementation = environment.getActiveContext().getVariableImplementationsList().getVariableImplementation(variable);
 
-		initializeSymphonySystems(variableImplementation, getSymphonySystemInstancesMap());
+		initializeApogySystems(variableImplementation, getApogySystemInstancesMap());
 
 		// Clears the map for next variable.
-		getSymphonySystemInstancesMap().clear();
-		getSymphonySystemToTypeImplementationsMap().clear();
+		getApogySystemInstancesMap().clear();
+		getApogySystemToTypeImplementationsMap().clear();
 	}
 
 	@Override
@@ -48,69 +48,69 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 		
 		super.newInstance(environment, typeImplementation);
 				
-		SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) typeImplementation.getAdapterInstance();
+		ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) typeImplementation.getAdapterInstance();
 		
 		/**
-		 * Map the referred Type and the SymphonySystemInstance. The instance if use in runtime.
+		 * Map the referred Type and the ApogySystemInstance. The instance if use in runtime.
 		 */
-		SymphonySystem symphonySystem = (SymphonySystem) typeImplementation.getHandlingType();
-		SymphonySystem symphonySystemInstance = Symphony__CoreFactory.eINSTANCE.createSymphonySystem();
+		ApogySystem apogySystem = (ApogySystem) typeImplementation.getHandlingType();
+		ApogySystem apogySystemInstance = ApogyCoreFactory.eINSTANCE.createApogySystem();
 
-		// Binds the SymphonySystemApiAdapter with its copy of the SymphonySystem instance.
-		symphonySystemApiAdapter.setSymphonySystem(symphonySystemInstance);
+		// Binds the ApogySystemApiAdapter with its copy of the ApogySystem instance.
+		apogySystemApiAdapter.setApogySystem(apogySystemInstance);
 
 		// FIXME Temporary Feature. Remove the following line.
 		String name = "null";
-		if (symphonySystem.getName() != null) 
+		if (apogySystem.getName() != null) 
 		{
-			name = symphonySystem.getName();
+			name = apogySystem.getName();
 		}
-		symphonySystemInstance.setName("Copy_" + name + " " + counter++);
+		apogySystemInstance.setName("Copy_" + name + " " + counter++);
 
 		// Register the original system with the type implementation.
-		getSymphonySystemToTypeImplementationsMap().put(symphonySystem, typeImplementation);
+		getApogySystemToTypeImplementationsMap().put(apogySystem, typeImplementation);
 
 		// Register the Instance to the type.
-		getSymphonySystemInstancesMap().put(typeImplementation, symphonySystemInstance);
+		getApogySystemInstancesMap().put(typeImplementation, apogySystemInstance);
 	}
 
-	private Map<AbstractTypeImplementation, SymphonySystem> getSymphonySystemInstancesMap() {
-		if (symphonySystemInstancesMap == null) {
-			symphonySystemInstancesMap = new HashMap<AbstractTypeImplementation, SymphonySystem>();
+	private Map<AbstractTypeImplementation, ApogySystem> getApogySystemInstancesMap() {
+		if (apogySystemInstancesMap == null) {
+			apogySystemInstancesMap = new HashMap<AbstractTypeImplementation, ApogySystem>();
 		}
-		return symphonySystemInstancesMap;
+		return apogySystemInstancesMap;
 	}
 
-	private Map<SymphonySystem, AbstractTypeImplementation> getSymphonySystemToTypeImplementationsMap() {
-		if (symphonySystemToTypeImplementationsMap == null) {
-			symphonySystemToTypeImplementationsMap = new HashMap<SymphonySystem, AbstractTypeImplementation>();
+	private Map<ApogySystem, AbstractTypeImplementation> getApogySystemToTypeImplementationsMap() {
+		if (apogySystemToTypeImplementationsMap == null) {
+			apogySystemToTypeImplementationsMap = new HashMap<ApogySystem, AbstractTypeImplementation>();
 		}
-		return symphonySystemToTypeImplementationsMap;
+		return apogySystemToTypeImplementationsMap;
 	}
 
 	@Override
 	public void dispose(Environment environment, Variable variable) {
 		super.dispose(environment, variable);
-		getSymphonySystemInstancesMap().clear();
-		symphonySystemInstancesMap = null;
+		getApogySystemInstancesMap().clear();
+		apogySystemInstancesMap = null;
 	}
 	
 	@Override
 	public Class<? extends Type> getHandledTypeClass() {
-		return SymphonySystem.class;
+		return ApogySystem.class;
 	}
 
-	private void initializeSymphonySystems(
+	private void initializeApogySystems(
 			VariableImplementation variableImplementation,
-			Map<AbstractTypeImplementation, SymphonySystem> implementationToSymphonySystemMap) {
-		Map<AbstractTypeImplementation, SymphonySystemInitializer> implementationToInitializerMap = new HashMap<AbstractTypeImplementation, SymphonyInvocatorDelegate.SymphonySystemInitializer>();
-		Map<Object, SymphonySystemInitializer> typeMemberToInitializerMap = new HashMap<Object, SymphonyInvocatorDelegate.SymphonySystemInitializer>();
+			Map<AbstractTypeImplementation, ApogySystem> implementationToApogySystemMap) {
+		Map<AbstractTypeImplementation, ApogySystemInitializer> implementationToInitializerMap = new HashMap<AbstractTypeImplementation, ApogyInvocatorDelegate.ApogySystemInitializer>();
+		Map<Object, ApogySystemInitializer> typeMemberToInitializerMap = new HashMap<Object, ApogyInvocatorDelegate.ApogySystemInitializer>();
 
-		// Creates a SymphonySystemInitializer for each
+		// Creates a ApogySystemInitializer for each
 		// AbstractTypeImplementation.
-		for (AbstractTypeImplementation abstractTypeImplementation : implementationToSymphonySystemMap
+		for (AbstractTypeImplementation abstractTypeImplementation : implementationToApogySystemMap
 				.keySet()) {
-			SymphonySystemInitializer initializer = new SymphonySystemInitializer(
+			ApogySystemInitializer initializer = new ApogySystemInitializer(
 					abstractTypeImplementation);
 			implementationToInitializerMap.put(abstractTypeImplementation,
 					initializer);
@@ -127,9 +127,9 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 		}
 
 		// Assembles links
-		for (AbstractTypeImplementation abstractTypeImplementation : implementationToSymphonySystemMap
+		for (AbstractTypeImplementation abstractTypeImplementation : implementationToApogySystemMap
 				.keySet()) {
-			SymphonySystemInitializer initializer = implementationToInitializerMap
+			ApogySystemInitializer initializer = implementationToInitializerMap
 					.get(abstractTypeImplementation);
 
 			String linkSuffix = "_COPY";
@@ -155,11 +155,11 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 							.getSubSystemTypeMember();
 
 					// Gets the copy associated with the source.
-					SymphonySystemInitializer sourceInitializer = typeMemberToInitializerMap
+					ApogySystemInitializer sourceInitializer = typeMemberToInitializerMap
 							.get(originalSource);
 
 					// Gets the copy associated to the destination.
-					SymphonySystemInitializer destinationInitializer = typeMemberToInitializerMap
+					ApogySystemInitializer destinationInitializer = typeMemberToInitializerMap
 							.get(originalDestination);
 
 					TypeMember copySource = null;
@@ -176,15 +176,15 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 						copyDestination = tmi.getTypeMember();
 					}
 
-					// Gets the source SymphonySystem (copy).
-					SymphonySystem source = sourceInitializer.getCopy();
+					// Gets the source ApogySystem (copy).
+					ApogySystem source = sourceInitializer.getCopy();
 
-					// Gets the destination SymphonySystem (copy).
-					SymphonySystem destination = destinationInitializer
+					// Gets the destination ApogySystem (copy).
+					ApogySystem destination = destinationInitializer
 							.getCopy();
 
 					// Creates a link
-					AssemblyLink linkCopy = Symphony__CoreFactory.eINSTANCE
+					AssemblyLink linkCopy = ApogyCoreFactory.eINSTANCE
 							.createAssemblyLink();
 					if (linkSuffix != null)
 						linkCopy.setName(link.getName() + linkSuffix);
@@ -212,14 +212,14 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 								.getTransformationMatrix()));
 					}
 
-					// Sets the link SymphonySystems instances.
+					// Sets the link ApogySystems instances.
 					linkCopy.setParentInstance(source);
 					linkCopy.setSubSystemInstance(destination);
 
-					// Adds the link copy to the destination Symphony System.
+					// Adds the link copy to the destination Apogy System.
 					if (initializer.getCopy().getAssemblyLinksList() == null)
 						initializer.getCopy().setAssemblyLinksList(
-								Symphony__CoreFactory.eINSTANCE
+								ApogyCoreFactory.eINSTANCE
 										.createAssemblyLinksList());
 					initializer.getCopy().getAssemblyLinksList()
 							.getAssemblyLinks().add(linkCopy);
@@ -228,39 +228,39 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 		}
 	}
 	
-	private class SymphonySystemInitializer 
+	private class ApogySystemInitializer 
 	{
 		private AbstractTypeImplementation abstractTypeImplementation = null;
 
 		private Map<ConnectionPoint, ConnectionPoint> connectionPointsMap = null;
 		private Map<Node, Node> originalToCopyNodesMap = null;
 
-		private SymphonySystem original = null;
-		private SymphonySystem copy = null;
+		private ApogySystem original = null;
+		private ApogySystem copy = null;
 	
-		public SymphonySystemInitializer(AbstractTypeImplementation abstractTypeImplementation) 
+		public ApogySystemInitializer(AbstractTypeImplementation abstractTypeImplementation) 
 		{
 			this.abstractTypeImplementation = abstractTypeImplementation;
 
-			SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
+			ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
 			
 			String suffix = null;
 
-			// Gets the original SymphonySystem.
+			// Gets the original ApogySystem.
 			if (abstractTypeImplementation instanceof TypeMemberImplementation) 
 			{
 				TypeMemberImplementation tmi = (TypeMemberImplementation) abstractTypeImplementation;
-				original = (SymphonySystem) tmi.getTypeMember().getMemberType();
+				original = (ApogySystem) tmi.getTypeMember().getMemberType();
 				suffix = "_" + tmi.getTypeMember().getName();
 			} 
 			else if (abstractTypeImplementation instanceof VariableImplementation) 
 			{
 				VariableImplementation vi = (VariableImplementation) abstractTypeImplementation;
-				original = (SymphonySystem) vi.getVariable().getVariableType();
+				original = (ApogySystem) vi.getVariable().getVariableType();
 				suffix = "_" + vi.getVariable().getName();
 			}
 			
-			copy = symphonySystemApiAdapter.getSymphonySystem();
+			copy = apogySystemApiAdapter.getApogySystem();
 			
 			// Adds the suffix if applicable.
 			if (suffix != null)
@@ -268,7 +268,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 
 			// Copies the topology
 			if (copy.getTopologyRoot() == null)
-				copy.setTopologyRoot(Symphony__CoreFactory.eINSTANCE
+				copy.setTopologyRoot(ApogyCoreFactory.eINSTANCE
 						.createTopologyRoot());
 			Map<Node, Node> nodesMap = copyTopology(original.getTopologyRoot(),
 					copy.getTopologyRoot());
@@ -276,7 +276,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 
 			// Copies the Connection Points.
 			if (copy.getConnectionPointsList() == null)
-				copy.setConnectionPointsList(Symphony__CoreFactory.eINSTANCE
+				copy.setConnectionPointsList(ApogyCoreFactory.eINSTANCE
 						.createConnectionPointsList());
 			
 			// Map<ConnectionPoint, ConnectionPoint> pointsMap = copyConnectionPoints(original, copy, originalToCopyNodesMap, suffix);
@@ -286,7 +286,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 			// Copies Bindings
 			if (copy.getBindingSet() == null)
 			{
-				copy.setBindingSet(Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet());
+				copy.setBindingSet(ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsSet());
 			}
 			
 			// Copies the Pose Provider
@@ -299,7 +299,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 					AbstractType typeMember = original.getPoseProvider();							
 					
 					VariableImplementation vi = (VariableImplementation) abstractTypeImplementation;
-					AbstractTypeImplementation tmi = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(vi.getVariable(), typeMember);
+					AbstractTypeImplementation tmi = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(vi.getVariable(), typeMember);
 					
 					
 					// If the implementation is itself a PoseProvider.
@@ -332,7 +332,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 				}
 			}
 			
-			copyBindingsSet(original, copy, originalToCopyNodesMap, symphonySystemApiAdapter.getInstance());
+			copyBindingsSet(original, copy, originalToCopyNodesMap, apogySystemApiAdapter.getInstance());
 
 			// Initialize the Bindings.
 			try 
@@ -345,11 +345,11 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 			}						
 		}
 
-		public SymphonySystem getOriginal() {
+		public ApogySystem getOriginal() {
 			return original;
 		}
 
-		public SymphonySystem getCopy() {
+		public ApogySystem getCopy() {
 			return copy;
 		}
 
@@ -424,7 +424,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 					CartesianTriangularMesh originalMesh = (CartesianTriangularMesh) originalContentNode.getContent();
 					
 					// Copies the original mesh to the copied node.
-					CartesianTriangularMesh meshCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(originalMesh);
+					CartesianTriangularMesh meshCopy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(originalMesh);
 					
 					@SuppressWarnings("unchecked")
 					ContentNode<CartesianTriangularMesh> copiedContentNode = (ContentNode<CartesianTriangularMesh>) copy;
@@ -434,13 +434,13 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 		}
 		
 		/**
-		 * Copy the ConnectionPoints of a source SymphonySystem to a target
-		 * SymphonySystem.
+		 * Copy the ConnectionPoints of a source ApogySystem to a target
+		 * ApogySystem.
 		 * 
 		 * @param source
-		 *            The SymphonySystem to copy the ConnectionPoints from.
+		 *            The ApogySystem to copy the ConnectionPoints from.
 		 * @param target
-		 *            The SymphonySystem to copy the ConnectionPoints to.
+		 *            The ApogySystem to copy the ConnectionPoints to.
 		 * @param originalToCopyNodesMap
 		 *            The map that maps topology Node in the source to Node in
 		 *            the target.
@@ -451,14 +451,14 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 		 *         ConnectionPoint. Never null.
 		 */
 		private Map<ConnectionPoint, ConnectionPoint> copyConnectionPoints(
-				SymphonySystem source, SymphonySystem target,
+				ApogySystem source, ApogySystem target,
 				Map<Node, Node> originalToCopyNodesMap, String nameSuffix) {
 			Map<ConnectionPoint, ConnectionPoint> originalToCopyConnectionPointMap = new HashMap<ConnectionPoint, ConnectionPoint>();
 
 			if (source.getConnectionPointsList() != null) {
 				// Ensure a list of connection points is present in the target
 				if (target.getConnectionPointsList() == null)
-					target.setConnectionPointsList(Symphony__CoreFactory.eINSTANCE
+					target.setConnectionPointsList(ApogyCoreFactory.eINSTANCE
 							.createConnectionPointsList());
 
 				for (ConnectionPoint connectionPoint : source
@@ -491,33 +491,33 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 		}
 
 		/**
-		 * Copy the binding set of a source SymphonySystem to a target
-		 * SymphonySystem.
+		 * Copy the binding set of a source ApogySystem to a target
+		 * ApogySystem.
 		 * 
 		 * @param source
-		 *            The SymphonySystem to copy the BindinSet from.
+		 *            The ApogySystem to copy the BindinSet from.
 		 * @param target
-		 *            The SymphonySystem to copy the BindinSet to.
+		 *            The ApogySystem to copy the BindinSet to.
 		 * @param originalToCopyMap
 		 *            The map that maps topology Node in the source to Node in
 		 *            the target.
 		 * @param bindingSource
 		 *            The source object to which to bind the copied bindings.
 		 */
-		private void copyBindingsSet(SymphonySystem source,	SymphonySystem target, Map<Node, Node> originalToCopyMap, EObject bindingSource) 
+		private void copyBindingsSet(ApogySystem source,	ApogySystem target, Map<Node, Node> originalToCopyMap, EObject bindingSource) 
 		{
 			if (source.getBindingSet() != null) 
 			{
 				// Ensure targets has a BindingSet
 				if (target.getBindingSet() == null)
 				{
-					target.setBindingSet(Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet());
+					target.setBindingSet(ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsSet());
 				}
 				
 				for (AbstractTopologyBinding binding : source.getBindingSet().getBindingsList().getBindings()) 
 				{
 					// Copies the binding.
-					AbstractTopologyBinding bindingCopy = Symphony__CommonTopologyBindingsFacade.INSTANCE.copy(binding, originalToCopyMap);
+					AbstractTopologyBinding bindingCopy = ApogyCommonTopologyBindingsFacade.INSTANCE.copy(binding, originalToCopyMap);
 
 					// Sets the source.
 					bindingCopy.setSource(bindingSource);
@@ -532,6 +532,6 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 	@Override
 	public TypeApiAdapter newDefaultTypeApiAdapter() 
 	{
-		return Symphony__CoreFactory.eINSTANCE.createSymphonySystemApiAdapter();
+		return ApogyCoreFactory.eINSTANCE.createApogySystemApiAdapter();
 	}
 }

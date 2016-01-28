@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.addons.sensors.gps.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.provider;
 
 
 import java.util.Collection;
@@ -20,11 +20,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.GPSReading} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_latitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_latitude_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__LATITUDE,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__LATITUDE,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_longitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_longitude_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__LONGITUDE,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__LONGITUDE,
 				 true,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_elevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_elevation_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__ELEVATION,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__ELEVATION,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_quality_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_quality_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__QUALITY,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__QUALITY,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_timeStamp_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_timeStamp_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__TIME_STAMP,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__TIME_STAMP,
 				 true,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_numberOfSatellites_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_numberOfSatellites_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__NUMBER_OF_SATELLITES,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__NUMBER_OF_SATELLITES,
 				 true,
 				 false,
 				 false,
@@ -216,7 +216,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_horizontalDilutionPos_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_horizontalDilutionPos_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__HORIZONTAL_DILUTION_POS,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__HORIZONTAL_DILUTION_POS,
 				 true,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_meanSeaLevel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_meanSeaLevel_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__MEAN_SEA_LEVEL,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__MEAN_SEA_LEVEL,
 				 true,
 				 false,
 				 false,
@@ -260,7 +260,7 @@ public class GPSReadingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSReading_checkSum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSReading_checkSum_feature", "_UI_GPSReading_type"),
-				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_READING__CHECK_SUM,
+				 ApogyAddonsSensorsGPSPackage.Literals.GPS_READING__CHECK_SUM,
 				 true,
 				 false,
 				 false,
@@ -304,15 +304,15 @@ public class GPSReadingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GPSReading.class)) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LATITUDE:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__ELEVATION:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__QUALITY:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LATITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__LONGITUDE:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__ELEVATION:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__QUALITY:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__TIME_STAMP:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__NUMBER_OF_SATELLITES:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__HORIZONTAL_DILUTION_POS:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__MEAN_SEA_LEVEL:
+			case ApogyAddonsSensorsGPSPackage.GPS_READING__CHECK_SUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

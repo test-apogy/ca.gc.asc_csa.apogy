@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.images.converters;
+package ca.gc.asc_csa.apogy.common.images.converters;
 
 import java.io.File;
 import java.util.Date;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
 
 public class EImageToFileConverter implements IConverter 
 {

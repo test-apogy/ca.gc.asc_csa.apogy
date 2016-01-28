@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,14 +18,14 @@ import org.eclipse.symphony.common.processors.Processor;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX <em>Resolution X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY <em>Resolution Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ <em>Resolution Z</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX <em>Resolution X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY <em>Resolution Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ <em>Resolution Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler()
  * @model
  * @generated
  */
@@ -45,15 +45,15 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolution X</em>' attribute.
 	 * @see #setResolutionX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionX()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getResolutionX();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX <em>Resolution X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX <em>Resolution X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Resolution X</em>' attribute.
@@ -77,15 +77,15 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolution Y</em>' attribute.
 	 * @see #setResolutionY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionY()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getResolutionY();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY <em>Resolution Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY <em>Resolution Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Resolution Y</em>' attribute.
@@ -109,15 +109,15 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolution Z</em>' attribute.
 	 * @see #setResolutionZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionZ()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionZ()
 	 * @model default="0.05" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getResolutionZ();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ <em>Resolution Z</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionZ <em>Resolution Z</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Resolution Z</em>' attribute.
@@ -141,14 +141,14 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Number Of Point Per Voxel</em>' attribute.
 	 * @see #setMinimumNumberOfPointPerVoxel(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_MinimumNumberOfPointPerVoxel()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_MinimumNumberOfPointPerVoxel()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
 	int getMinimumNumberOfPointPerVoxel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum Number Of Point Per Voxel</em>' attribute.
@@ -172,15 +172,15 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tile Resolution</em>' attribute.
 	 * @see #setTileResolution(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_TileResolution()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_TileResolution()
 	 * @model default="5.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getTileResolution();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tile Resolution</em>' attribute.

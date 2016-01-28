@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -22,15 +22,15 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Variable} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Variable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -87,7 +87,7 @@ public class VariableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class VariableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Variable_variableType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Variable_variableType_feature", "_UI_Variable_type"),
-				 Symphony__CoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
+				 ApogyCoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
 				 true,
 				 false,
 				 true,
@@ -132,7 +132,7 @@ public class VariableItemProvider
 									return o1.getName().compareTo(o2.getName());
 								}
 							};
-							types = Symphony__CoreInvocatorFacade.INSTANCE.getAllTypes(environment);
+							types = ApogyCoreInvocatorFacade.INSTANCE.getAllTypes(environment);
 							Collections.sort(types, comparator);
 						}
 						return types;
@@ -180,8 +180,8 @@ public class VariableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Variable.class)) {
-			case Symphony__CoreInvocatorPackage.VARIABLE__NAME:
-			case Symphony__CoreInvocatorPackage.VARIABLE__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.VARIABLE__NAME:
+			case ApogyCoreInvocatorPackage.VARIABLE__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

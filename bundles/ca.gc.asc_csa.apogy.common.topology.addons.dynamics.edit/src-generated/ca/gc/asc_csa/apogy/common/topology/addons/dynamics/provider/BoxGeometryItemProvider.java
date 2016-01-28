@@ -4,7 +4,7 @@
  *
  * $Id: BoxGeometryItemProvider.java,v 1.5.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.BoxGeometry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class BoxGeometryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION);
+			childrenFeatures.add(ApogyCommonTopologyAddonsDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION);
 		}
 		return childrenFeatures;
 	}
@@ -116,7 +116,7 @@ public class BoxGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BoxGeometry.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.BOX_GEOMETRY__DIMENSION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.BOX_GEOMETRY__DIMENSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -136,8 +136,8 @@ public class BoxGeometryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 }

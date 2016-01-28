@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.preferences;
+package ca.gc.asc_csa.apogy.core.environment.ui.preferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +13,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.symphony.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyEnvironmentWorksitePreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private BooleanFieldEditor earthSurfaceWorksiteAxisVisibleEditor;
 	private StringFieldEditor earthSurfaceWorksiteAxisLengthEditor;
@@ -37,7 +37,7 @@ public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage i
 	/**
 	 * Create the preference page.
 	 */
-	public SymphonyEnvironmentWorksitePreferencesPage() {
+	public ApogyEnvironmentWorksitePreferencesPage() {
 	}
 
 	/**
@@ -55,10 +55,10 @@ public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage i
 		grpAxis.setLayout(new GridLayout(1, true));		
 		grpAxis.setText("Axis");	
 						
-		earthSurfaceWorksiteAxisVisibleEditor = createBooleanFieldEditor(grpAxis, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE_ID, "Axis Visible");
+		earthSurfaceWorksiteAxisVisibleEditor = createBooleanFieldEditor(grpAxis, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE_ID, "Axis Visible");
 		editors.add(earthSurfaceWorksiteAxisVisibleEditor);
 		
-		earthSurfaceWorksiteAxisLengthEditor = createStringFieldEditor(grpAxis, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH_ID, "Axis Length (m)");				
+		earthSurfaceWorksiteAxisLengthEditor = createStringFieldEditor(grpAxis, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH_ID, "Axis Length (m)");				
 		editors.add(earthSurfaceWorksiteAxisLengthEditor);
 		
 		Group grpAzimuth = new Group(container, SWT.NONE);
@@ -66,10 +66,10 @@ public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage i
 		grpAzimuth.setLayout(new GridLayout(1, true));		
 		grpAzimuth.setText("Azimuth Displays");	
 
-		earthSurfaceWorksiteAzimuthVisibleEditor = createBooleanFieldEditor(grpAzimuth, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AZIMUTH_VISIBLE_ID, "Azimuth Visible");
+		earthSurfaceWorksiteAzimuthVisibleEditor = createBooleanFieldEditor(grpAzimuth, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AZIMUTH_VISIBLE_ID, "Azimuth Visible");
 		editors.add(earthSurfaceWorksiteAzimuthVisibleEditor);
 		
-		earthSurfaceWorksiteAzimuthLinesVisibleEditor = createBooleanFieldEditor(grpAzimuth, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AZIMUTH_LINES_VISIBLE_ID, "Azimuth Lines Visible");
+		earthSurfaceWorksiteAzimuthLinesVisibleEditor = createBooleanFieldEditor(grpAzimuth, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AZIMUTH_LINES_VISIBLE_ID, "Azimuth Lines Visible");
 		editors.add(earthSurfaceWorksiteAzimuthLinesVisibleEditor);
 		
 		Group grpElevation = new Group(container, SWT.NONE);
@@ -77,7 +77,7 @@ public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage i
 		grpElevation.setLayout(new GridLayout(1, true));		
 		grpElevation.setText("Elevation Displays");	
 		
-		earthSurfaceWorksiteElevationLinesVisibleEditor = createBooleanFieldEditor(grpElevation, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_ELEVATION_LINES_VISIBLE_ID, "Elevation Lines Visible");
+		earthSurfaceWorksiteElevationLinesVisibleEditor = createBooleanFieldEditor(grpElevation, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_ELEVATION_LINES_VISIBLE_ID, "Elevation Lines Visible");
 		editors.add(earthSurfaceWorksiteElevationLinesVisibleEditor);
 		
 		Group grpPlane = new Group(container, SWT.NONE);
@@ -85,13 +85,13 @@ public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage i
 		grpPlane.setLayout(new GridLayout(1, true));				
 		grpPlane.setText("Plane");	
 		
-		earthSurfaceWorksitePlaneVisibleEditor = createBooleanFieldEditor(grpPlane, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_VISIBLE_ID, "Plane Visible");		
+		earthSurfaceWorksitePlaneVisibleEditor = createBooleanFieldEditor(grpPlane, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_VISIBLE_ID, "Plane Visible");		
 		editors.add(earthSurfaceWorksitePlaneVisibleEditor);
 		
-		earthSurfaceWorksitePlaneSizeEditor = createStringFieldEditor(grpPlane, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_SIZE_ID,  "Plane Size");
+		earthSurfaceWorksitePlaneSizeEditor = createStringFieldEditor(grpPlane, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_SIZE_ID,  "Plane Size");
 		editors.add(earthSurfaceWorksitePlaneSizeEditor);
 		
-		earthSurfaceWorksitePlaneGridSizeEditor = createStringFieldEditor(grpPlane, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_GRID_SIZE_ID,  "Grid Size");
+		earthSurfaceWorksitePlaneGridSizeEditor = createStringFieldEditor(grpPlane, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_PLANE_GRID_SIZE_ID,  "Grid Size");
 		editors.add(earthSurfaceWorksitePlaneGridSizeEditor);
 		
 		return container;

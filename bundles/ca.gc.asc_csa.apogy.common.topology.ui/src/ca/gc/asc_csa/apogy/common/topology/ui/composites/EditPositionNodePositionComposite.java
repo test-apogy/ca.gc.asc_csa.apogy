@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.ui.composites;
 
 
 import org.eclipse.swt.SWT;
@@ -8,9 +8,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
 
 public class EditPositionNodePositionComposite extends Composite
 {
@@ -70,14 +70,14 @@ public class EditPositionNodePositionComposite extends Composite
 	
 	public Tuple3d getNewValues()
 	{		
-		Tuple3d tuple = Symphony__CommonMathFacade.INSTANCE.createTuple3d(this.positionNode.getPosition().asTuple3d());	
+		Tuple3d tuple = ApogyCommonMathFacade.INSTANCE.createTuple3d(this.positionNode.getPosition().asTuple3d());	
 		try
 		{
 			double x = Double.parseDouble(xValueText.getText());
 			double y = Double.parseDouble(yValueText.getText());
 			double z = Double.parseDouble(zValueText.getText());
 			
-			tuple = Symphony__CommonMathFacade.INSTANCE.createTuple3d(x,y,z);		
+			tuple = ApogyCommonMathFacade.INSTANCE.createTuple3d(x,y,z);		
 		}
 		catch(Exception e)
 		{			

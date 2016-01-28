@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -20,11 +20,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMemberReference;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberReference} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class TypeMemberReferenceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeMemberReference_typeMember_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberReference_typeMember_feature", "_UI_TypeMemberReference_type"),
-				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
+				 ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
 				 true,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class TypeMemberReferenceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMemberReference.class)) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

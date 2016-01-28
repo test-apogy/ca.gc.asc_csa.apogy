@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.core.environment.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,20 +16,20 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
-import org.eclipse.symphony.core.environment.ui.jme3.Activator;
-import org.eclipse.symphony.core.environment.ui.jme3.preferences.SymphonyEnvironmentUIJME3PreferencesConstants;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences.ApogyEnvironmentUIJME3PreferencesConstants;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;
@@ -132,16 +132,16 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 						updateGeometry();	
 						
 						// Blooming
-						enableBloom(org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID));										
+						enableBloom(ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID));										
 					   						
 						// Shadow map.
-						setShadowMapSize(org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getInt(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID));
+						setShadowMapSize(ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getInt(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID));
 						
 					    // Shadows from Sun				
-						setSunShadowsEnabled(org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID));
+						setSunShadowsEnabled(ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID));
 		
 						// Shadows from Moon.
-						setMoonShadowsEnabled(org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID));
+						setMoonShadowsEnabled(ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID));
 		
 						// Updates Visibility and Shadows.
 						updateSunMoonVisibilityAndShadows();		
@@ -158,7 +158,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 		};
 		job.schedule();
 		
-		org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);		
+		ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);		
 	}
 	
 	@Override
@@ -196,24 +196,24 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 			@Override
 			public Object call() throws Exception 
 			{
-				if(event.getProperty().compareTo(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID) == 0)
+				if(event.getProperty().compareTo(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID) == 0)
 				{
-					boolean value = org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID);
+					boolean value = ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID);
 					enableBloom(value);
 					updateSun();
 				}
-				else if(event.getProperty().compareTo(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID) == 0)
+				else if(event.getProperty().compareTo(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID) == 0)
 				{
-					setShadowMapSize(org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getInt(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID));
+					setShadowMapSize(ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getInt(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID));
 				}
-				else if(event.getProperty().compareTo(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID) == 0)
+				else if(event.getProperty().compareTo(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID) == 0)
 				{
-					boolean value = org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID);
+					boolean value = ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_SUN_CAST_SHADOWS_ENABLED_ID);
 					setSunShadowsEnabled(value);
 				}
-				else if(event.getProperty().compareTo(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID) == 0)
+				else if(event.getProperty().compareTo(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID) == 0)
 				{
-					boolean value = org.eclipse.symphony.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(SymphonyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID);
+					boolean value = ca.gc.asc_csa.apogy.core.environment.ui.jme3.Activator.getDefault().getPreferenceStore().getBoolean(ApogyEnvironmentUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID);
 					setMoonShadowsEnabled(value);
 				}
 				
@@ -332,7 +332,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	{
 		// Computes Sun Visibility
 		TransformNode sunTranformNode = (TransformNode) earthSky.getSun().getParent();		
-		Matrix4d mSun = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);		
+		Matrix4d mSun = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);		
 		Vector3d vSun = new Vector3d();
 		mSun.get(vSun);
 		vSun.normalize();
@@ -348,7 +348,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 		
 		// Computes Moon Visibility
 		TransformNode moonTranformNode = (TransformNode) earthSky.getMoon().getParent();		
-		Matrix4d mMoon = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);		
+		Matrix4d mMoon = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);		
 		Vector3d vMoon = new Vector3d();
 		mMoon.get(vMoon);
 		vMoon.normalize();
@@ -729,7 +729,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	private void updateSunLight()
 	{
 		TransformNode sunTranformNode = (TransformNode) earthSky.getSun().getParent();		
-		Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);
+		Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);
 		
 		Vector3d v = new Vector3d();
 		m.get(v);
@@ -805,7 +805,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	{
 		TransformNode moonTranformNode = (TransformNode) earthSky.getMoon().getParent();
 		
-		Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);
+		Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);
 		
 		Vector3d v = new Vector3d();
 		m.get(v);

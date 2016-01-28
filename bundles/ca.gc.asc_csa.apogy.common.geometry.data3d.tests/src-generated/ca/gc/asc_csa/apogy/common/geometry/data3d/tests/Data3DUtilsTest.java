@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,16 +14,16 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -35,12 +35,12 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeNormals(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Compute Normals</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Min Max Values</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCurvatureChange(org.eclipse.symphony.common.geometry.data3d.PointLocator, int, double) <em>Compute Curvature Change</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#extrude(java.util.List, org.eclipse.symphony.common.geometry.data3d.CartesianAxis, double, boolean) <em>Extrude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormals(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Compute Normals</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Min Max Values</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCurvatureChange(ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator, int, double) <em>Compute Curvature Change</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#extrude(java.util.List, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis, double, boolean) <em>Extrude</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -102,7 +102,7 @@ public class Data3DUtilsTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3DUtils());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createData3DUtils());
 	}
 
 	/**
@@ -117,10 +117,10 @@ public class Data3DUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeNormals(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Compute Normals</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormals(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh) <em>Compute Normals</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeNormals(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeNormals(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
 	public void testComputeNormals__CartesianTriangularMesh() {
@@ -130,23 +130,23 @@ public class Data3DUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List)
 	 * @generated_NOT
 	 */
 	public void testComputeCentroid__List() 
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 	
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1, 0, 0);
-		CartesianPositionCoordinates p5 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, -1, 0);
-		CartesianPositionCoordinates p6 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 10);
-		CartesianPositionCoordinates p7 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, -10);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1, 0, 0);
+		CartesianPositionCoordinates p5 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, -1, 0);
+		CartesianPositionCoordinates p6 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 10);
+		CartesianPositionCoordinates p7 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, -10);
 		
 		points.add(p1);
 		points.add(p2);
@@ -164,23 +164,23 @@ public class Data3DUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCentroid(ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet)
 	 * @generated_NOT
 	 */
 	public void testComputeCentroid__CartesianCoordinatesSet() 
 	{
-		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet points = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1, 0, 0);
-		CartesianPositionCoordinates p5 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, -1, 0);
-		CartesianPositionCoordinates p6 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 10);
-		CartesianPositionCoordinates p7 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, -10);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 1, 0);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1, 0, 0);
+		CartesianPositionCoordinates p5 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, -1, 0);
+		CartesianPositionCoordinates p6 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 10);
+		CartesianPositionCoordinates p7 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, -10);
 		
 		points.getPoints().add(p1);
 		points.getPoints().add(p2);
@@ -198,21 +198,21 @@ public class Data3DUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Min Max Values</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Min Max Values</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeMinMaxValues(javax.vecmath.Point3d, javax.vecmath.Point3d, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet)
 	 * @generated_NOT
 	 */
 	public void testComputeMinMaxValues__Point3d_Point3d_CartesianCoordinatesSet() 
 	{
-		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet points = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 		
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 2, 0);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1, 0, 0);
-		CartesianPositionCoordinates p5 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, -5, 0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1, 0, 0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 2, 0);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1, 0, 0);
+		CartesianPositionCoordinates p5 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, -5, 0);
 		
 		points.getPoints().add(p1);
 		points.getPoints().add(p2);
@@ -237,10 +237,10 @@ public class Data3DUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCurvatureChange(org.eclipse.symphony.common.geometry.data3d.PointLocator, int, double) <em>Compute Curvature Change</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCurvatureChange(ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator, int, double) <em>Compute Curvature Change</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCurvatureChange(org.eclipse.symphony.common.geometry.data3d.PointLocator, int, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#computeCurvatureChange(ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator, int, double)
 	 * @generated
 	 */
 	public void testComputeCurvatureChange__PointLocator_int_double() {
@@ -250,25 +250,25 @@ public class Data3DUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#extrude(java.util.List, org.eclipse.symphony.common.geometry.data3d.CartesianAxis, double, boolean) <em>Extrude</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#extrude(java.util.List, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis, double, boolean) <em>Extrude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#extrude(java.util.List, org.eclipse.symphony.common.geometry.data3d.CartesianAxis, double, boolean)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils#extrude(java.util.List, ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis, double, boolean)
 	 * @generated_NOT
 	 */
 	public void testExtrude__List_CartesianAxis_double_boolean() 
 	{
 		List<CartesianPositionCoordinates> profilePoints = new ArrayList<CartesianPositionCoordinates>();
-		profilePoints.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-10, 99, 10));
-		profilePoints.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 99, 0));
-		profilePoints.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 99, 10));
-		profilePoints.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(20, 99, 15));
-		profilePoints.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(30, 99, 0));
+		profilePoints.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-10, 99, 10));
+		profilePoints.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 99, 0));
+		profilePoints.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10, 99, 10));
+		profilePoints.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(20, 99, 15));
+		profilePoints.add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(30, 99, 0));
 		
 		CartesianTriangularMesh mesh = getFixture().extrude(profilePoints, CartesianAxis.Y, 10.0, true);
 		
-		TransformNode root = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);			
-		ContentNode<CartesianTriangularMesh> meshNode = Symphony__CommonTopologyFacade.INSTANCE.createContentNode(mesh);
+		TransformNode root = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);			
+		ContentNode<CartesianTriangularMesh> meshNode = ApogyCommonTopologyFacade.INSTANCE.createContentNode(mesh);
 		root.getChildren().add(meshNode);
 		
 		Resource resource = null;

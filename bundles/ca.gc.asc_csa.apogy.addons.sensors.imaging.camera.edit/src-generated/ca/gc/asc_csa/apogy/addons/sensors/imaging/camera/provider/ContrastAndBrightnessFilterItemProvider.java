@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class ContrastAndBrightnessFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ContrastAndBrightnessFilter_contrast_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContrastAndBrightnessFilter_contrast_feature", "_UI_ContrastAndBrightnessFilter_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class ContrastAndBrightnessFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ContrastAndBrightnessFilter_brightness_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContrastAndBrightnessFilter_brightness_feature", "_UI_ContrastAndBrightnessFilter_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS,
 				 true,
 				 false,
 				 false,
@@ -137,8 +137,8 @@ public class ContrastAndBrightnessFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContrastAndBrightnessFilter.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
-			case Symphony__AddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__CONTRAST:
+			case ApogyAddonsSensorsImagingCameraPackage.CONTRAST_AND_BRIGHTNESS_FILTER__BRIGHTNESS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

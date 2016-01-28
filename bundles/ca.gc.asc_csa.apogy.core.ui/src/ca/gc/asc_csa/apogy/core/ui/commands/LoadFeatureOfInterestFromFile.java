@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.commands;
+package ca.gc.asc_csa.apogy.core.ui.commands;
 
 import java.io.File;
 import java.util.Iterator;
@@ -12,12 +12,12 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.ui.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 
@@ -56,7 +56,7 @@ public class LoadFeatureOfInterestFromFile extends AbstractHandler implements IH
 						
 						if(filePath.endsWith(".csv"))
 						{																																		
-							List<FeatureOfInterest> foiList = Symphony__CoreFacade.INSTANCE.loadFeatureOfInterestFromFile(urlString);
+							List<FeatureOfInterest> foiList = ApogyCoreFacade.INSTANCE.loadFeatureOfInterestFromFile(urlString);
 																
 							if(foiList.size() > 0)
 							{

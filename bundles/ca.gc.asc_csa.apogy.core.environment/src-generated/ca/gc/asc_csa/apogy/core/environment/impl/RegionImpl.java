@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.environment.Region;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.environment.Region;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RegionImpl#getTransformation <em>Transformation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RegionImpl#getTransformation <em>Transformation</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +56,7 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.REGION;
+		return ApogyCoreEnvironmentPackage.Literals.REGION;
 	}
 
   /**
@@ -79,7 +79,7 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
 		Matrix4x4 oldTransformation = transformation;
 		transformation = newTransformation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION, oldTransformation, newTransformation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION, oldTransformation, newTransformation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -95,14 +95,14 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
 		if (newTransformation != transformation) {
 			NotificationChain msgs = null;
 			if (transformation != null)
-				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION, null, msgs);
 			if (newTransformation != null)
-				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION, null, msgs);
 			msgs = basicSetTransformation(newTransformation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION, newTransformation, newTransformation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION, newTransformation, newTransformation));
 	}
 
   /**
@@ -114,7 +114,7 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION:
+			case ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION:
 				return basicSetTransformation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -129,7 +129,7 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION:
+			case ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION:
 				return getTransformation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -144,7 +144,7 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION:
+			case ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION:
 				setTransformation((Matrix4x4)newValue);
 				return;
 		}
@@ -160,7 +160,7 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION:
+			case ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION:
 				setTransformation((Matrix4x4)null);
 				return;
 		}
@@ -176,7 +176,7 @@ public abstract class RegionImpl extends MinimalEObjectImpl.Container implements
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION:
+			case ApogyCoreEnvironmentPackage.REGION__TRANSFORMATION:
 				return transformation != null;
 		}
 		return super.eIsSet(featureID);

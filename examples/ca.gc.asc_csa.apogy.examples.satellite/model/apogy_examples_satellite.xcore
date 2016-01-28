@@ -1,21 +1,21 @@
-@GenModel(prefix="Symphony__ExamplesSatellite",
+@GenModel(prefix="ApogyExamplesSatellite",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-		  modelName="Symphony__ExamplesSatellite",
+		  modelName="ApogyExamplesSatellite",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.satellite/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.satellite.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.satellite/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated")
 
-package org.eclipse.symphony.examples.satellite
+package ca.gc.asc_csa.apogy.examples.satellite
 
-import org.eclipse.symphony.common.emf.Described
-import org.eclipse.symphony.common.emf.Named
-import org.eclipse.symphony.common.emf.Timed
-import org.eclipse.symphony.common.images.EImage
-import org.eclipse.symphony.core.environment.GeographicCoordinates
-import org.eclipse.symphony.core.environment.orbit.OrbitModel
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.images.EImage
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
 
 /*
  * Basic Types.
@@ -221,13 +221,13 @@ class Satellite extends Named{
 	/*
 	 * The satellite maximum roll rate.
 	 */
-	@GenModel(symphony_units="rad/s")
+	@GenModel(apogy_units="rad/s")
 	double maximumRollRate = "0.017452778"
 	
 	/*
 	 * The satellite maximum roll.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double maximumRoll = "0.087"	
 }
 

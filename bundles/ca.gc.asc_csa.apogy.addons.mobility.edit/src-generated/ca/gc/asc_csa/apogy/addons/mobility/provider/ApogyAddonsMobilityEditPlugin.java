@@ -1,22 +1,22 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityEditPlugin.java,v 1.3.4.2 2015/05/21 15:51:23 pallard Exp $
+ * $Id: ApogyAddonsMobilityEditPlugin.java,v 1.3.4.2 2015/05/21 15:51:23 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
+import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__AddonsMobility edit plugin.
+ * This is the central singleton for the ApogyAddonsMobility edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsMobilityEditPlugin extends EMFPlugin
+public final class ApogyAddonsMobilityEditPlugin extends EMFPlugin
 {
 	/**
 	 * Keep track of the singleton.
@@ -24,7 +24,7 @@ public final class Symphony__AddonsMobilityEditPlugin extends EMFPlugin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsMobilityEditPlugin INSTANCE = new Symphony__AddonsMobilityEditPlugin();
+	public static final ApogyAddonsMobilityEditPlugin INSTANCE = new ApogyAddonsMobilityEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -40,12 +40,12 @@ public final class Symphony__AddonsMobilityEditPlugin extends EMFPlugin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityEditPlugin()
+	public ApogyAddonsMobilityEditPlugin()
 	{
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     ApogyCommonTopologyEditPlugin.INSTANCE,
+		     ApogyCommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

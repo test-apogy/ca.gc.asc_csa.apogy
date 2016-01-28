@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.io.File;
 import java.util.Collections;
@@ -10,19 +10,19 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -90,7 +90,7 @@ public class CartesianTriangularMeshPolygonSamplerTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMeshPolygonSampler());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMeshPolygonSampler());
 	}
 
 	/**
@@ -108,9 +108,9 @@ public class CartesianTriangularMeshPolygonSamplerTest extends TestCase {
 	public void testProcess() 
 	{
 		String terrainFileName = Activator.getDefault().getDataPath() + File.separator + "CSAMarsYardDEM100cm";
-		TransformNode root = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0,	0, 0);
+		TransformNode root = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0,	0, 0);
 		double radius = 5.0;
-		CartesianPositionCoordinates center = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
+		CartesianPositionCoordinates center = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0, 0, 0);
 
 		CartesianTriangularMesh terrain = null;
 		try 
@@ -119,7 +119,7 @@ public class CartesianTriangularMeshPolygonSamplerTest extends TestCase {
 			terrain = Data3DIO.INSTANCE.loadTriangularMeshFromASCII(terrainFileName);
 			System.out.println(this.getName() + " : Terrain " + terrainFileName	+ " loaded.");
 			
-			ContentNode<CartesianTriangularMesh> node = Symphony__CommonTopologyFactory.eINSTANCE.createContentNode();
+			ContentNode<CartesianTriangularMesh> node = ApogyCommonTopologyFactory.eINSTANCE.createContentNode();
 			node.setContent(terrain);
 			
 			root.getChildren().add(node);
@@ -129,21 +129,21 @@ public class CartesianTriangularMeshPolygonSamplerTest extends TestCase {
 			fail(e.getMessage());
 		}
 
-		SphereSamplingShape samplingShape = Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
+		SphereSamplingShape samplingShape = ApogyCommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
 		samplingShape.setCenter(center);
 		samplingShape.setRadius(radius);
 		getFixture().getPolygonSamplingShapes().add(samplingShape);
 
-		SpherePrimitive sphere1 = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive();
+		SpherePrimitive sphere1 = ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive();
 		sphere1.setRadius(radius);
-		TransformNode sphere1TransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(center.getX(), center.getY(), center.getZ(), 0, 0, 0);
+		TransformNode sphere1TransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(center.getX(), center.getY(), center.getZ(), 0, 0, 0);
 		sphere1TransformNode.getChildren().add(sphere1);
 		root.getChildren().add(sphere1TransformNode);
 
 		try 
 		{
 			CartesianTriangularMesh croppedMesh = (CartesianTriangularMesh) getFixture().process(terrain);
-			ContentNode<CartesianTriangularMesh> croppedTerrain = Symphony__CommonTopologyFacade.INSTANCE.createContentNode(croppedMesh);
+			ContentNode<CartesianTriangularMesh> croppedTerrain = ApogyCommonTopologyFacade.INSTANCE.createContentNode(croppedMesh);
 			croppedTerrain
 					.setDescription("Cropped Terrain centered at ("
 							+ center.asPoint3d().toString() + ") with radius "
@@ -158,16 +158,16 @@ public class CartesianTriangularMeshPolygonSamplerTest extends TestCase {
 		center.setX(10);
 		center.setY(15);
 
-		SpherePrimitive sphere2 = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive();
+		SpherePrimitive sphere2 = ApogyCommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive();
 		sphere2.setRadius(radius);
 
-		TransformNode sphere2TransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(center.getX(), center.getY(), center.getZ(), 0, 0, 0);
+		TransformNode sphere2TransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(center.getX(), center.getY(), center.getZ(), 0, 0, 0);
 		sphere2TransformNode.getChildren().add(sphere2);
 		root.getChildren().add(sphere2TransformNode);
 
 		try {
 			CartesianTriangularMesh croppedMesh = (CartesianTriangularMesh) getFixture().process(terrain);
-			ContentNode<CartesianTriangularMesh> croppedTerrain = Symphony__CommonTopologyFacade.INSTANCE.createContentNode(croppedMesh);
+			ContentNode<CartesianTriangularMesh> croppedTerrain = ApogyCommonTopologyFacade.INSTANCE.createContentNode(croppedMesh);
 			croppedTerrain
 					.setDescription("Cropped Terrain centered at ("
 							+ center.asPoint3d().toString() + ") with radius "

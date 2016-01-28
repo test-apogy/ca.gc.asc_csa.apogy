@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.widgets.ui;
+package ca.gc.asc_csa.apogy.common.widgets.ui;
 
 /**
  * This composite need to have square dimension. For exemple, if you have a width of 300px, the height should be 300px.
@@ -28,8 +28,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 
 public class MeterComposite extends Composite {
-	private static final String IMAGES_FOLDER = "platform:/plugin/org.eclipse.symphony.common.widgets.ui/images/"; //Images path.
-	private static final String FONTS_FOLDER = "platform:/plugin/org.eclipse.symphony.common.widgets.ui/fonts/"; //Fonts path.
+	private static final String IMAGES_FOLDER = "platform:/plugin/ca.gc.asc_csa.apogy.common.widgets.ui/images/"; //Images path.
+	private static final String FONTS_FOLDER = "platform:/plugin/ca.gc.asc_csa.apogy.common.widgets.ui/fonts/"; //Fonts path.
 	
 	private static final int RADIAL_RADIUS = 130; //Adjusted value for a meter of 300x300 px.
 	private static final float MAX_ANGLE = 260f; //This is the maximum angle where the needle can go.

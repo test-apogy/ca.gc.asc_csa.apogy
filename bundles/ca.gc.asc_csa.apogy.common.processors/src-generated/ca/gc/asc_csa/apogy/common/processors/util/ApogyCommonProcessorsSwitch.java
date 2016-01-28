@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.util;
+package ca.gc.asc_csa.apogy.common.processors.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.processors.*;
+import ca.gc.asc_csa.apogy.common.processors.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,17 +18,17 @@ import org.eclipse.symphony.common.processors.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage
+ * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage
  * @generated
  */
-public class Symphony__CommonProcessorsSwitch<T> extends Switch<T> {
+public class ApogyCommonProcessorsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonProcessorsPackage modelPackage;
+	protected static ApogyCommonProcessorsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -36,9 +36,9 @@ public class Symphony__CommonProcessorsSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonProcessorsSwitch() {
+	public ApogyCommonProcessorsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonProcessorsPackage.eINSTANCE;
+			modelPackage = ApogyCommonProcessorsPackage.eINSTANCE;
 		}
 	}
 
@@ -65,26 +65,26 @@ public class Symphony__CommonProcessorsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonProcessorsPackage.VERBOSE_PROVIDER: {
+			case ApogyCommonProcessorsPackage.VERBOSE_PROVIDER: {
 				VerboseProvider verboseProvider = (VerboseProvider)theEObject;
 				T result = caseVerboseProvider(verboseProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonProcessorsPackage.MONITORABLE: {
+			case ApogyCommonProcessorsPackage.MONITORABLE: {
 				Monitorable monitorable = (Monitorable)theEObject;
 				T result = caseMonitorable(monitorable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonProcessorsPackage.PROCESSOR: {
+			case ApogyCommonProcessorsPackage.PROCESSOR: {
 				Processor<?, ?> processor = (Processor<?, ?>)theEObject;
 				T result = caseProcessor(processor);
 				if (result == null) result = caseMonitorable(processor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN: {
+			case ApogyCommonProcessorsPackage.PROCESSORS_CHAIN: {
 				ProcessorsChain<?, ?> processorsChain = (ProcessorsChain<?, ?>)theEObject;
 				T result = caseProcessorsChain(processorsChain);
 				if (result == null) result = caseProcessor(processorsChain);
@@ -92,7 +92,7 @@ public class Symphony__CommonProcessorsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonProcessorsPackage.JOB_PROCESSORS_CHAIN: {
+			case ApogyCommonProcessorsPackage.JOB_PROCESSORS_CHAIN: {
 				JobProcessorsChain<?, ?> jobProcessorsChain = (JobProcessorsChain<?, ?>)theEObject;
 				T result = caseJobProcessorsChain(jobProcessorsChain);
 				if (result == null) result = caseProcessorsChain(jobProcessorsChain);
@@ -196,4 +196,4 @@ public class Symphony__CommonProcessorsSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonProcessorsSwitch
+} //ApogyCommonProcessorsSwitch

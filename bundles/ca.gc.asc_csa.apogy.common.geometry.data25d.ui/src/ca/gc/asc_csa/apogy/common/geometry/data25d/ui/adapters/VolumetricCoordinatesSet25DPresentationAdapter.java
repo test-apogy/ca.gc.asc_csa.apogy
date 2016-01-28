@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.geometry.data25d.ui.adapters;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui.adapters;
 
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIFactory;
-import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class VolumetricCoordinatesSet25DPresentationAdapter implements NodePresentationAdapter
 {
@@ -44,7 +44,7 @@ public class VolumetricCoordinatesSet25DPresentationAdapter implements NodePrese
 
 		ContentNode<VolumetricCoordinatesSet25D> cNode = (ContentNode<VolumetricCoordinatesSet25D>) obj;
 
-		VolumetricCoordinatesSet25DPresentation presentationNode = Symphony__CommonGeometryData25DUIFactory.eINSTANCE.createVolumetricCoordinatesSet25DPresentation();
+		VolumetricCoordinatesSet25DPresentation presentationNode = ApogyCommonGeometryData25DUIFactory.eINSTANCE.createVolumetricCoordinatesSet25DPresentation();
 		presentationNode.setNode(cNode);
 		
 		presentationNode.setPointsCloud(cNode.getContent());

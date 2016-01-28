@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +22,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensor
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayImpl#getCameraOverlayList <em>Camera Overlay List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayImpl#getOverlayAlignment <em>Overlay Alignment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayImpl#getCameraOverlayList <em>Camera Overlay List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraOverlayImpl#getOverlayAlignment <em>Overlay Alignment</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,7 +68,7 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY;
 	}
 
   /**
@@ -77,7 +77,7 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 	 * @generated
 	 */
 	public CameraOverlayList getCameraOverlayList() {
-		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST) return null;
+		if (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST) return null;
 		return (CameraOverlayList)eContainer();
 	}
 
@@ -87,7 +87,7 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 	 * @generated
 	 */
 	public CameraOverlayList basicGetCameraOverlayList() {
-		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST) return null;
+		if (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST) return null;
 		return (CameraOverlayList)eInternalContainer();
 	}
 
@@ -97,7 +97,7 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 	 * @generated
 	 */
 	public NotificationChain basicSetCameraOverlayList(CameraOverlayList newCameraOverlayList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newCameraOverlayList, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newCameraOverlayList, ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST, msgs);
 		return msgs;
 	}
 
@@ -107,19 +107,19 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 	 * @generated
 	 */
 	public void setCameraOverlayList(CameraOverlayList newCameraOverlayList) {
-		if (newCameraOverlayList != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST && newCameraOverlayList != null)) {
+		if (newCameraOverlayList != eInternalContainer() || (eContainerFeatureID() != ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST && newCameraOverlayList != null)) {
 			if (EcoreUtil.isAncestor(this, newCameraOverlayList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newCameraOverlayList != null)
-				msgs = ((InternalEObject)newCameraOverlayList).eInverseAdd(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS, CameraOverlayList.class, msgs);
+				msgs = ((InternalEObject)newCameraOverlayList).eInverseAdd(this, ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS, CameraOverlayList.class, msgs);
 			msgs = basicSetCameraOverlayList(newCameraOverlayList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST, newCameraOverlayList, newCameraOverlayList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST, newCameraOverlayList, newCameraOverlayList));
 	}
 
 		/**
@@ -142,7 +142,7 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 		OverlayAlignment oldOverlayAlignment = overlayAlignment;
 		overlayAlignment = newOverlayAlignment == null ? OVERLAY_ALIGNMENT_EDEFAULT : newOverlayAlignment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT, oldOverlayAlignment, overlayAlignment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT, oldOverlayAlignment, overlayAlignment));
 	}
 
   /**
@@ -153,7 +153,7 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetCameraOverlayList((CameraOverlayList)otherEnd, msgs);
@@ -169,7 +169,7 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
 				return basicSetCameraOverlayList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -183,8 +183,8 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
-				return eInternalContainer().eInverseRemove(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS, CameraOverlayList.class, msgs);
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
+				return eInternalContainer().eInverseRemove(this, ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS, CameraOverlayList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -198,10 +198,10 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
 				if (resolve) return getCameraOverlayList();
 				return basicGetCameraOverlayList();
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
 				return getOverlayAlignment();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -216,10 +216,10 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
 				setCameraOverlayList((CameraOverlayList)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
 				setOverlayAlignment((OverlayAlignment)newValue);
 				return;
 		}
@@ -235,10 +235,10 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
 				setCameraOverlayList((CameraOverlayList)null);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
 				setOverlayAlignment(OVERLAY_ALIGNMENT_EDEFAULT);
 				return;
 		}
@@ -254,9 +254,9 @@ public abstract class CameraOverlayImpl extends CameraImageAnnotationImpl implem
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST:
 				return basicGetCameraOverlayList() != null;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
 				return overlayAlignment != OVERLAY_ALIGNMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

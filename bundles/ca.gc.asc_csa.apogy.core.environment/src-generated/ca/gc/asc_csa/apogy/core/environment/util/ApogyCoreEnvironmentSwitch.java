@@ -1,84 +1,84 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.util;
+package ca.gc.asc_csa.apogy.core.environment.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.AbstractShapeImageLayer;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.Earth;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceEnvironment;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
-import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapLayerPresentation;
-import org.eclipse.symphony.core.environment.MapNode;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.MapsListNode;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionImage;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Region;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SurfaceEnvironment;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
-import org.eclipse.symphony.core.environment.URLImageMapLayer;
-import org.eclipse.symphony.core.environment.URLMapLayer;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.Atmosphere;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Earth;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.Environment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.MapNode;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.MapsListNode;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.Region;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.SlopeRange;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.URLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,10 +90,10 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
+public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -101,7 +101,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreEnvironmentPackage modelPackage;
+  protected static ApogyCoreEnvironmentPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -109,10 +109,10 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentSwitch()
+  public ApogyCoreEnvironmentSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentPackage.eINSTANCE;
 		}
 	}
 
@@ -141,7 +141,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CoreEnvironmentPackage.WORKSITE: {
+			case ApogyCoreEnvironmentPackage.WORKSITE: {
 				Worksite worksite = (Worksite)theEObject;
 				T result = caseWorksite(worksite);
 				if (result == null) result = caseAbstractWorksite(worksite);
@@ -151,7 +151,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE: {
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE: {
 				SurfaceWorksite surfaceWorksite = (SurfaceWorksite)theEObject;
 				T result = caseSurfaceWorksite(surfaceWorksite);
 				if (result == null) result = caseWorksite(surfaceWorksite);
@@ -162,7 +162,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE: {
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE: {
 				EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite)theEObject;
 				T result = caseEarthSurfaceWorksite(earthSurfaceWorksite);
 				if (result == null) result = caseSurfaceWorksite(earthSurfaceWorksite);
@@ -174,7 +174,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ENVIRONMENT: {
+			case ApogyCoreEnvironmentPackage.ENVIRONMENT: {
 				Environment environment = (Environment)theEObject;
 				T result = caseEnvironment(environment);
 				if (result == null) result = caseNamed(environment);
@@ -182,7 +182,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT: {
+			case ApogyCoreEnvironmentPackage.SURFACE_ENVIRONMENT: {
 				SurfaceEnvironment surfaceEnvironment = (SurfaceEnvironment)theEObject;
 				T result = caseSurfaceEnvironment(surfaceEnvironment);
 				if (result == null) result = caseEnvironment(surfaceEnvironment);
@@ -191,7 +191,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_ENVIRONMENT: {
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_ENVIRONMENT: {
 				EarthSurfaceEnvironment earthSurfaceEnvironment = (EarthSurfaceEnvironment)theEObject;
 				T result = caseEarthSurfaceEnvironment(earthSurfaceEnvironment);
 				if (result == null) result = caseSurfaceEnvironment(earthSurfaceEnvironment);
@@ -201,50 +201,50 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ATMOSPHERE: {
+			case ApogyCoreEnvironmentPackage.ATMOSPHERE: {
 				Atmosphere atmosphere = (Atmosphere)theEObject;
 				T result = caseAtmosphere(atmosphere);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ATMOSPHERE_UTILS: {
+			case ApogyCoreEnvironmentPackage.ATMOSPHERE_UTILS: {
 				AtmosphereUtils atmosphereUtils = (AtmosphereUtils)theEObject;
 				T result = caseAtmosphereUtils(atmosphereUtils);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES: {
+			case ApogyCoreEnvironmentPackage.EQUATORIAL_COORDINATES: {
 				EquatorialCoordinates equatorialCoordinates = (EquatorialCoordinates)theEObject;
 				T result = caseEquatorialCoordinates(equatorialCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES: {
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES: {
 				GeographicCoordinates geographicCoordinates = (GeographicCoordinates)theEObject;
 				T result = caseGeographicCoordinates(geographicCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES: {
+			case ApogyCoreEnvironmentPackage.HORIZONTAL_COORDINATES: {
 				HorizontalCoordinates horizontalCoordinates = (HorizontalCoordinates)theEObject;
 				T result = caseHorizontalCoordinates(horizontalCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES: {
+			case ApogyCoreEnvironmentPackage.ECLIPTIC_COORDINATES: {
 				EclipticCoordinates eclipticCoordinates = (EclipticCoordinates)theEObject;
 				T result = caseEclipticCoordinates(eclipticCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SKY: {
+			case ApogyCoreEnvironmentPackage.SKY: {
 				Sky sky = (Sky)theEObject;
 				T result = caseSky(sky);
 				if (result == null) result = caseTimed(sky);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY: {
+			case ApogyCoreEnvironmentPackage.EARTH_SKY: {
 				EarthSky earthSky = (EarthSky)theEObject;
 				T result = caseEarthSky(earthSky);
 				if (result == null) result = caseSky(earthSky);
@@ -252,7 +252,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SUN: {
+			case ApogyCoreEnvironmentPackage.SUN: {
 				Sun sun = (Sun)theEObject;
 				T result = caseSun(sun);
 				if (result == null) result = caseGroupNode(sun);
@@ -260,7 +260,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.EARTH: {
+			case ApogyCoreEnvironmentPackage.EARTH: {
 				Earth earth = (Earth)theEObject;
 				T result = caseEarth(earth);
 				if (result == null) result = caseGroupNode(earth);
@@ -268,7 +268,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.MOON: {
+			case ApogyCoreEnvironmentPackage.MOON: {
 				Moon moon = (Moon)theEObject;
 				T result = caseMoon(moon);
 				if (result == null) result = caseGroupNode(moon);
@@ -276,38 +276,38 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES: {
+			case ApogyCoreEnvironmentPackage.ENVIRONMENT_UTILITIES: {
 				EnvironmentUtilities environmentUtilities = (EnvironmentUtilities)theEObject;
 				T result = caseEnvironmentUtilities(environmentUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE: {
-				Symphony__CoreEnvironmentFacade symphony__CoreEnvironmentFacade = (Symphony__CoreEnvironmentFacade)theEObject;
-				T result = caseSymphony__CoreEnvironmentFacade(symphony__CoreEnvironmentFacade);
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE: {
+				ApogyCoreEnvironmentFacade apogy__CoreEnvironmentFacade = (ApogyCoreEnvironmentFacade)theEObject;
+				T result = caseApogyCoreEnvironmentFacade(apogy__CoreEnvironmentFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.STAR: {
+			case ApogyCoreEnvironmentPackage.STAR: {
 				Star star = (Star)theEObject;
 				T result = caseStar(star);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.STAR_FIELD: {
+			case ApogyCoreEnvironmentPackage.STAR_FIELD: {
 				StarField starField = (StarField)theEObject;
 				T result = caseStarField(starField);
 				if (result == null) result = caseNode(starField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS: {
+			case ApogyCoreEnvironmentPackage.ASTRONOMY_UTILS: {
 				AstronomyUtils astronomyUtils = (AstronomyUtils)theEObject;
 				T result = caseAstronomyUtils(astronomyUtils);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.MAP: {
+			case ApogyCoreEnvironmentPackage.MAP: {
 				Map map = (Map)theEObject;
 				T result = caseMap(map);
 				if (result == null) result = caseNamed(map);
@@ -315,13 +315,13 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST: {
+			case ApogyCoreEnvironmentPackage.MAPS_LIST: {
 				MapsList mapsList = (MapsList)theEObject;
 				T result = caseMapsList(mapsList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER: {
 				AbstractMapLayer abstractMapLayer = (AbstractMapLayer)theEObject;
 				T result = caseAbstractMapLayer(abstractMapLayer);
 				if (result == null) result = caseNamed(abstractMapLayer);
@@ -329,7 +329,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION: {
+			case ApogyCoreEnvironmentPackage.MAP_LAYER_PRESENTATION: {
 				MapLayerPresentation mapLayerPresentation = (MapLayerPresentation)theEObject;
 				T result = caseMapLayerPresentation(mapLayerPresentation);
 				if (result == null) result = caseNamed(mapLayerPresentation);
@@ -337,7 +337,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.URL_MAP_LAYER: {
 				URLMapLayer urlMapLayer = (URLMapLayer)theEObject;
 				T result = caseURLMapLayer(urlMapLayer);
 				if (result == null) result = caseAbstractMapLayer(urlMapLayer);
@@ -346,20 +346,20 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.REGION: {
+			case ApogyCoreEnvironmentPackage.REGION: {
 				Region region = (Region)theEObject;
 				T result = caseRegion(region);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION: {
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION: {
 				RectangularRegion rectangularRegion = (RectangularRegion)theEObject;
 				T result = caseRectangularRegion(rectangularRegion);
 				if (result == null) result = caseRegion(rectangularRegion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION: {
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_VOLUME_REGION: {
 				RectangularVolumeRegion rectangularVolumeRegion = (RectangularVolumeRegion)theEObject;
 				T result = caseRectangularVolumeRegion(rectangularVolumeRegion);
 				if (result == null) result = caseRectangularRegion(rectangularVolumeRegion);
@@ -367,20 +367,20 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER: {
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER: {
 				RectangularRegionProvider rectangularRegionProvider = (RectangularRegionProvider)theEObject;
 				T result = caseRectangularRegionProvider(rectangularRegionProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE: {
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE: {
 				RectangularRegionImage rectangularRegionImage = (RectangularRegionImage)theEObject;
 				T result = caseRectangularRegionImage(rectangularRegionImage);
 				if (result == null) result = caseRectangularRegionProvider(rectangularRegionImage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER: {
 				ImageMapLayer imageMapLayer = (ImageMapLayer)theEObject;
 				T result = caseImageMapLayer(imageMapLayer);
 				if (result == null) result = caseAbstractMapLayer(imageMapLayer);
@@ -391,7 +391,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION: {
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION: {
 				ImageMapLayerPresentation imageMapLayerPresentation = (ImageMapLayerPresentation)theEObject;
 				T result = caseImageMapLayerPresentation(imageMapLayerPresentation);
 				if (result == null) result = caseMapLayerPresentation(imageMapLayerPresentation);
@@ -402,7 +402,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.URL_IMAGE_MAP_LAYER: {
 				URLImageMapLayer urlImageMapLayer = (URLImageMapLayer)theEObject;
 				T result = caseURLImageMapLayer(urlImageMapLayer);
 				if (result == null) result = caseImageMapLayer(urlImageMapLayer);
@@ -415,7 +415,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER: {
 				TopologyTreeMapLayer topologyTreeMapLayer = (TopologyTreeMapLayer)theEObject;
 				T result = caseTopologyTreeMapLayer(topologyTreeMapLayer);
 				if (result == null) result = caseAbstractMapLayer(topologyTreeMapLayer);
@@ -424,7 +424,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE: {
+			case ApogyCoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE: {
 				TopologyTreeMapLayerNode topologyTreeMapLayerNode = (TopologyTreeMapLayerNode)theEObject;
 				T result = caseTopologyTreeMapLayerNode(topologyTreeMapLayerNode);
 				if (result == null) result = caseAggregateGroupNode(topologyTreeMapLayerNode);
@@ -433,7 +433,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: {
 				CartesianTriangularMeshMapLayer cartesianTriangularMeshMapLayer = (CartesianTriangularMeshMapLayer)theEObject;
 				T result = caseCartesianTriangularMeshMapLayer(cartesianTriangularMeshMapLayer);
 				if (result == null) result = caseAbstractMapLayer(cartesianTriangularMeshMapLayer);
@@ -442,7 +442,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER: {
 				CartesianTriangularMeshDerivedImageMapLayer cartesianTriangularMeshDerivedImageMapLayer = (CartesianTriangularMeshDerivedImageMapLayer)theEObject;
 				T result = caseCartesianTriangularMeshDerivedImageMapLayer(cartesianTriangularMeshDerivedImageMapLayer);
 				if (result == null) result = caseImageMapLayer(cartesianTriangularMeshDerivedImageMapLayer);
@@ -454,7 +454,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER: {
 				CartesianTriangularMeshSlopeImageMapLayer cartesianTriangularMeshSlopeImageMapLayer = (CartesianTriangularMeshSlopeImageMapLayer)theEObject;
 				T result = caseCartesianTriangularMeshSlopeImageMapLayer(cartesianTriangularMeshSlopeImageMapLayer);
 				if (result == null) result = caseCartesianTriangularMeshDerivedImageMapLayer(cartesianTriangularMeshSlopeImageMapLayer);
@@ -467,7 +467,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER: {
 				CartesianTriangularMeshDiscreteSlopeImageMapLayer cartesianTriangularMeshDiscreteSlopeImageMapLayer = (CartesianTriangularMeshDiscreteSlopeImageMapLayer)theEObject;
 				T result = caseCartesianTriangularMeshDiscreteSlopeImageMapLayer(cartesianTriangularMeshDiscreteSlopeImageMapLayer);
 				if (result == null) result = caseCartesianTriangularMeshSlopeImageMapLayer(cartesianTriangularMeshDiscreteSlopeImageMapLayer);
@@ -481,7 +481,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER: {
 				CartesianTriangularMeshHeightImageMapLayer cartesianTriangularMeshHeightImageMapLayer = (CartesianTriangularMeshHeightImageMapLayer)theEObject;
 				T result = caseCartesianTriangularMeshHeightImageMapLayer(cartesianTriangularMeshHeightImageMapLayer);
 				if (result == null) result = caseCartesianTriangularMeshDerivedImageMapLayer(cartesianTriangularMeshHeightImageMapLayer);
@@ -494,7 +494,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE: {
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE: {
 				SlopeRange slopeRange = (SlopeRange)theEObject;
 				T result = caseSlopeRange(slopeRange);
 				if (result == null) result = caseNamed(slopeRange);
@@ -502,7 +502,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER: {
 				LineOfSightImageMapLayer lineOfSightImageMapLayer = (LineOfSightImageMapLayer)theEObject;
 				T result = caseLineOfSightImageMapLayer(lineOfSightImageMapLayer);
 				if (result == null) result = caseCartesianTriangularMeshDerivedImageMapLayer(lineOfSightImageMapLayer);
@@ -515,7 +515,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER: {
+			case ApogyCoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER: {
 				AbstractShapeImageLayer abstractShapeImageLayer = (AbstractShapeImageLayer)theEObject;
 				T result = caseAbstractShapeImageLayer(abstractShapeImageLayer);
 				if (result == null) result = caseImageMapLayer(abstractShapeImageLayer);
@@ -527,7 +527,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER: {
+			case ApogyCoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER: {
 				EllipseShapeImageLayer ellipseShapeImageLayer = (EllipseShapeImageLayer)theEObject;
 				T result = caseEllipseShapeImageLayer(ellipseShapeImageLayer);
 				if (result == null) result = caseAbstractShapeImageLayer(ellipseShapeImageLayer);
@@ -540,7 +540,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER: {
+			case ApogyCoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER: {
 				RectangleShapeImageLayer rectangleShapeImageLayer = (RectangleShapeImageLayer)theEObject;
 				T result = caseRectangleShapeImageLayer(rectangleShapeImageLayer);
 				if (result == null) result = caseAbstractShapeImageLayer(rectangleShapeImageLayer);
@@ -553,7 +553,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.POLYGON_SHAPE_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.POLYGON_SHAPE_IMAGE_MAP_LAYER: {
 				PolygonShapeImageMapLayer polygonShapeImageMapLayer = (PolygonShapeImageMapLayer)theEObject;
 				T result = casePolygonShapeImageMapLayer(polygonShapeImageMapLayer);
 				if (result == null) result = caseAbstractShapeImageLayer(polygonShapeImageMapLayer);
@@ -566,7 +566,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: {
 				CartesianCoordinatesPolygonShapeImageMapLayer cartesianCoordinatesPolygonShapeImageMapLayer = (CartesianCoordinatesPolygonShapeImageMapLayer)theEObject;
 				T result = caseCartesianCoordinatesPolygonShapeImageMapLayer(cartesianCoordinatesPolygonShapeImageMapLayer);
 				if (result == null) result = casePolygonShapeImageMapLayer(cartesianCoordinatesPolygonShapeImageMapLayer);
@@ -580,7 +580,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER: {
 				GeographicCoordinatesPolygonShapeImageMapLayer geographicCoordinatesPolygonShapeImageMapLayer = (GeographicCoordinatesPolygonShapeImageMapLayer)theEObject;
 				T result = caseGeographicCoordinatesPolygonShapeImageMapLayer(geographicCoordinatesPolygonShapeImageMapLayer);
 				if (result == null) result = casePolygonShapeImageMapLayer(geographicCoordinatesPolygonShapeImageMapLayer);
@@ -594,7 +594,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER: {
 				BasicCartesianTriangularMeshMapLayer basicCartesianTriangularMeshMapLayer = (BasicCartesianTriangularMeshMapLayer)theEObject;
 				T result = caseBasicCartesianTriangularMeshMapLayer(basicCartesianTriangularMeshMapLayer);
 				if (result == null) result = caseCartesianTriangularMeshMapLayer(basicCartesianTriangularMeshMapLayer);
@@ -604,7 +604,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER: {
 				CartesianTriangularMeshURLMapLayer cartesianTriangularMeshURLMapLayer = (CartesianTriangularMeshURLMapLayer)theEObject;
 				T result = caseCartesianTriangularMeshURLMapLayer(cartesianTriangularMeshURLMapLayer);
 				if (result == null) result = caseCartesianTriangularMeshMapLayer(cartesianTriangularMeshURLMapLayer);
@@ -615,7 +615,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER: {
+			case ApogyCoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER: {
 				FeaturesOfInterestMapLayer featuresOfInterestMapLayer = (FeaturesOfInterestMapLayer)theEObject;
 				T result = caseFeaturesOfInterestMapLayer(featuresOfInterestMapLayer);
 				if (result == null) result = caseAbstractMapLayer(featuresOfInterestMapLayer);
@@ -625,7 +625,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.WORKSITE_NODE: {
+			case ApogyCoreEnvironmentPackage.WORKSITE_NODE: {
 				WorksiteNode worksiteNode = (WorksiteNode)theEObject;
 				T result = caseWorksiteNode(worksiteNode);
 				if (result == null) result = caseGroupNode(worksiteNode);
@@ -633,7 +633,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE_NODE: {
+			case ApogyCoreEnvironmentPackage.SURFACE_WORKSITE_NODE: {
 				SurfaceWorksiteNode surfaceWorksiteNode = (SurfaceWorksiteNode)theEObject;
 				T result = caseSurfaceWorksiteNode(surfaceWorksiteNode);
 				if (result == null) result = caseWorksiteNode(surfaceWorksiteNode);
@@ -642,7 +642,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE: {
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE: {
 				EarthSurfaceWorksiteNode earthSurfaceWorksiteNode = (EarthSurfaceWorksiteNode)theEObject;
 				T result = caseEarthSurfaceWorksiteNode(earthSurfaceWorksiteNode);
 				if (result == null) result = caseSurfaceWorksiteNode(earthSurfaceWorksiteNode);
@@ -652,7 +652,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE: {
+			case ApogyCoreEnvironmentPackage.MAPS_LIST_NODE: {
 				MapsListNode mapsListNode = (MapsListNode)theEObject;
 				T result = caseMapsListNode(mapsListNode);
 				if (result == null) result = caseAggregateGroupNode(mapsListNode);
@@ -661,7 +661,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.MAP_NODE: {
+			case ApogyCoreEnvironmentPackage.MAP_NODE: {
 				MapNode mapNode = (MapNode)theEObject;
 				T result = caseMapNode(mapNode);
 				if (result == null) result = caseTransformNode(mapNode);
@@ -673,7 +673,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE: {
+			case ApogyCoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE: {
 				AbstractMapLayerNode abstractMapLayerNode = (AbstractMapLayerNode)theEObject;
 				T result = caseAbstractMapLayerNode(abstractMapLayerNode);
 				if (result == null) result = caseAggregateGroupNode(abstractMapLayerNode);
@@ -682,7 +682,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.SKY_NODE: {
+			case ApogyCoreEnvironmentPackage.SKY_NODE: {
 				SkyNode skyNode = (SkyNode)theEObject;
 				T result = caseSkyNode(skyNode);
 				if (result == null) result = caseGroupNode(skyNode);
@@ -690,7 +690,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.EARTH_SKY_NODE: {
+			case ApogyCoreEnvironmentPackage.EARTH_SKY_NODE: {
 				EarthSkyNode earthSkyNode = (EarthSkyNode)theEObject;
 				T result = caseEarthSkyNode(earthSkyNode);
 				if (result == null) result = caseSkyNode(earthSkyNode);
@@ -699,7 +699,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE: {
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE: {
 				CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode)theEObject;
 				T result = caseCartesianTriangularMeshMapLayerNode(cartesianTriangularMeshMapLayerNode);
 				if (result == null) result = caseAbstractMapLayerNode(cartesianTriangularMeshMapLayerNode);
@@ -1011,7 +1011,7 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreEnvironmentFacade(Symphony__CoreEnvironmentFacade object) {
+	public T caseApogyCoreEnvironmentFacade(ApogyCoreEnvironmentFacade object) {
 		return null;
 	}
 
@@ -1858,4 +1858,4 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentSwitch
+} //ApogyCoreEnvironmentSwitch

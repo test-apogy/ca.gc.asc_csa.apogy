@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class RescaleFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RescaleFilter_scale_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RescaleFilter_scale_feature", "_UI_RescaleFilter_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.RESCALE_FILTER__SCALE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.RESCALE_FILTER__SCALE,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class RescaleFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RescaleFilter.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE:
+			case ApogyAddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

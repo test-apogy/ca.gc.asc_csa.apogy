@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.core.runtime.jobs.Job;
 
@@ -13,10 +13,10 @@ import org.eclipse.core.runtime.jobs.Job;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.Server#getServerJob <em>Server Job</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.Server#getServerJob <em>Server Job</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getServer()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getServer()
  * @model
  * @generated
  */
@@ -30,8 +30,8 @@ public interface Server extends Startable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Server Job</em>' attribute.
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getServer_ServerJob()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.emf.Job" transient="true" changeable="false"
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getServer_ServerJob()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.emf.Job" transient="true" changeable="false"
 	 * @generated
 	 */
 	Job getServerJob();

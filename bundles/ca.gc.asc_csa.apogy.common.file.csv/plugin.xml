@@ -12,9 +12,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.common.file.common.csv"
-            class="org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage"
-            genModel="model/symphony_common_file_csv.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.file.common.csv"
+            class="ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage"
+            genModel="model/apogy_common_file_csv.xcore"/>
    </extension>
 
 </plugin>

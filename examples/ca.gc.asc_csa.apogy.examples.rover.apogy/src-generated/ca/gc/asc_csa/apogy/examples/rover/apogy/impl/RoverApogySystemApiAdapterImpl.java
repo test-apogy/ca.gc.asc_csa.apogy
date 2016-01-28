@@ -1,32 +1,32 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.examples.rover.Rover;
-import org.eclipse.symphony.examples.rover.symphony.RoverData;
-import org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyFactory;
-import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.examples.rover.Rover;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyFactory;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rover Symphony System Api Adapter</b></em>'.
+ * An implementation of the model object '<em><b>Rover Apogy System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterImpl implements RoverSymphonySystemApiAdapter
+public class RoverApogySystemApiAdapterImpl extends ApogySystemApiAdapterImpl implements RoverApogySystemApiAdapter
 {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoverSymphonySystemApiAdapterImpl()
+	protected RoverApogySystemApiAdapterImpl()
 	{
 		super();
 	}
@@ -39,7 +39,7 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyExamplesRoverApogyPackage.Literals.ROVER_APOGY_SYSTEM_API_ADAPTER;
 	}
 	
 	/**
@@ -58,7 +58,7 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	/**
 	 * This is the callback method that is called by the API adapter
 	 * when the rover instance is being disposed (i.e. shutdown /
-	 * destroyed) by Symphony
+	 * destroyed) by Apogy
 	 */
 	@Override
 	public void dispose()
@@ -86,7 +86,7 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	{
 		// Call the appropriate factory method for this package to get
 		// a RoverData instance and then return it.
-		return Symphony__ExamplesRoverSymphonyFactory.eINSTANCE.createRoverData();
+		return ApogyExamplesRoverApogyFactory.eINSTANCE.createRoverData();
 	}
 	
 	/**
@@ -126,7 +126,7 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 								 "it already is in that state.";
 				
 				// Throw an exception to indicate that the apply() has failed; this will
-				// be caught and logged by Symphony
+				// be caught and logged by Apogy
 				throw new RuntimeException(message);
 			}
 			
@@ -143,7 +143,7 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 			
 			// The apply() for each of the subcomponents (e.g. mobile
 			// platform, robotic arm, etc.) in the assembly will be
-			// called by Symphony
+			// called by Apogy
 			
 			// If the rover is supposed to be disposed
 			if (roverData.isDisposed() == true)
@@ -186,4 +186,4 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 		}
 	}
 
-} //RoverSymphonySystemApiAdapterImpl
+} //RoverApogySystemApiAdapterImpl

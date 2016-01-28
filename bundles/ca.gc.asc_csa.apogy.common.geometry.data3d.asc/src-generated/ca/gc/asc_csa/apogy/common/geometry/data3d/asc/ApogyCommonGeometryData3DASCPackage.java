@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData3DASC' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData3DASC' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d.asc/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated' testsDirectory='/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated' basePackage='org.eclipse.symphony.common.geometry.data3d'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonGeometryData3DASC' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCommonGeometryData3DASC' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.asc/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.edit/src-generated' testsDirectory='/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests/src-generated' basePackage='ca.gc.asc_csa.apogy.common.geometry.data3d'"
  * @generated
  */
-public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
+public interface ApogyCommonGeometryData3DASCPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.geometry.data3d.asc";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.geometry.data3d.asc";
 
 	/**
 	 * The package namespace name.
@@ -58,14 +58,14 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DASCPackage eINSTANCE = org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl.init();
+	ApogyCommonGeometryData3DASCPackage eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASC3DIOImpl <em>ASC3DIO</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASC3DIOImpl <em>ASC3DIO</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.ASC3DIOImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getASC3DIO()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASC3DIOImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getASC3DIO()
 	 * @generated
 	 */
 	int ASC3DIO = 0;
@@ -161,11 +161,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	int ASC3DIO_OPERATION_COUNT = 8;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl <em>ASC Header Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASCHeaderDataImpl <em>ASC Header Data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getASCHeaderData()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASCHeaderDataImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getASCHeaderData()
 	 * @generated
 	 */
 	int ASC_HEADER_DATA = 1;
@@ -243,11 +243,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	int ASC_HEADER_DATA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl <em>Coordinates2 D</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.Coordinates2DImpl <em>Coordinates2 D</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getCoordinates2D()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.Coordinates2DImpl
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getCoordinates2D()
 	 * @generated
 	 */
 	int COORDINATES2_D = 2;
@@ -289,11 +289,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	int COORDINATES2_D_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode <em>Altitude Mode</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode <em>Altitude Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getAltitudeMode()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getAltitudeMode()
 	 * @generated
 	 */
 	int ALTITUDE_MODE = 3;
@@ -303,216 +303,216 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 4;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO <em>ASC3DIO</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO <em>ASC3DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ASC3DIO</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO
 	 * @generated
 	 */
 	EClass getASC3DIO();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode) <em>Load Digital Elevation Map</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Digital Elevation Map</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Digital Elevation Map</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Digital Elevation Map</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, double)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D) <em>Load Digital Elevation Map</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Digital Elevation Map</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Digital Elevation Map</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Digital Elevation Map</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, double)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode) <em>Load Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadTriangularMesh__String_AltitudeMode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, double)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadTriangularMesh__String_AltitudeMode_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D) <em>Load Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D, double)
 	 * @generated
 	 */
 	EOperation getASC3DIO__LoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D_double();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData <em>ASC Header Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData <em>ASC Header Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ASC Header Data</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData
 	 * @generated
 	 */
 	EClass getASCHeaderData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow <em>Number Of Row</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow <em>Number Of Row</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Of Row</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow()
 	 * @see #getASCHeaderData()
 	 * @generated
 	 */
 	EAttribute getASCHeaderData_NumberOfRow();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns <em>Number Of Columns</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns <em>Number Of Columns</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Of Columns</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns()
 	 * @see #getASCHeaderData()
 	 * @generated
 	 */
 	EAttribute getASCHeaderData_NumberOfColumns();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getXllCenter <em>Xll Center</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getXllCenter <em>Xll Center</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Xll Center</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getXllCenter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getXllCenter()
 	 * @see #getASCHeaderData()
 	 * @generated
 	 */
 	EAttribute getASCHeaderData_XllCenter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getYllCenter <em>Yll Center</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getYllCenter <em>Yll Center</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Yll Center</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getYllCenter()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getYllCenter()
 	 * @see #getASCHeaderData()
 	 * @generated
 	 */
 	EAttribute getASCHeaderData_YllCenter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getCellSize <em>Cell Size</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getCellSize <em>Cell Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cell Size</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getCellSize()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getCellSize()
 	 * @see #getASCHeaderData()
 	 * @generated
 	 */
 	EAttribute getASCHeaderData_CellSize();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>No Data Value</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue()
 	 * @see #getASCHeaderData()
 	 * @generated
 	 */
 	EAttribute getASCHeaderData_NoDataValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D <em>Coordinates2 D</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D <em>Coordinates2 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinates2 D</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D
 	 * @generated
 	 */
 	EClass getCoordinates2D();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getX()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getX()
 	 * @see #getCoordinates2D()
 	 * @generated
 	 */
 	EAttribute getCoordinates2D_X();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getY()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D#getY()
 	 * @see #getCoordinates2D()
 	 * @generated
 	 */
 	EAttribute getCoordinates2D_Y();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode <em>Altitude Mode</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode <em>Altitude Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Altitude Mode</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode
 	 * @generated
 	 */
 	EEnum getAltitudeMode();
@@ -535,7 +535,7 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DASCFactory getSymphony__CommonGeometryData3DASCFactory();
+	ApogyCommonGeometryData3DASCFactory getApogyCommonGeometryData3DASCFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -552,11 +552,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASC3DIOImpl <em>ASC3DIO</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASC3DIOImpl <em>ASC3DIO</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.ASC3DIOImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getASC3DIO()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASC3DIOImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getASC3DIO()
 		 * @generated
 		 */
 		EClass ASC3DIO = eINSTANCE.getASC3DIO();
@@ -626,11 +626,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 		EOperation ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D_DOUBLE = eINSTANCE.getASC3DIO__LoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D_double();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl <em>ASC Header Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASCHeaderDataImpl <em>ASC Header Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getASCHeaderData()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ASCHeaderDataImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getASCHeaderData()
 		 * @generated
 		 */
 		EClass ASC_HEADER_DATA = eINSTANCE.getASCHeaderData();
@@ -684,11 +684,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 		EAttribute ASC_HEADER_DATA__NO_DATA_VALUE = eINSTANCE.getASCHeaderData_NoDataValue();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl <em>Coordinates2 D</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.Coordinates2DImpl <em>Coordinates2 D</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getCoordinates2D()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.Coordinates2DImpl
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getCoordinates2D()
 		 * @generated
 		 */
 		EClass COORDINATES2_D = eINSTANCE.getCoordinates2D();
@@ -710,11 +710,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 		EAttribute COORDINATES2_D__Y = eINSTANCE.getCoordinates2D_Y();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode <em>Altitude Mode</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode <em>Altitude Mode</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getAltitudeMode()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getAltitudeMode()
 		 * @generated
 		 */
 		EEnum ALTITUDE_MODE = eINSTANCE.getAltitudeMode();
@@ -724,11 +724,11 @@ public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.common.geometry.data3d.asc.impl.Symphony__CommonGeometryData3DASCPackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl.ApogyCommonGeometryData3DASCPackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
 
 	}
 
-} //Symphony__CommonGeometryData3DASCPackage
+} //ApogyCommonGeometryData3DASCPackage

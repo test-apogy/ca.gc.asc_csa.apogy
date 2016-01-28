@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui.composites;
+package ca.gc.asc_csa.apogy.common.images.ui.composites;
 
 import java.awt.geom.AffineTransform;
 

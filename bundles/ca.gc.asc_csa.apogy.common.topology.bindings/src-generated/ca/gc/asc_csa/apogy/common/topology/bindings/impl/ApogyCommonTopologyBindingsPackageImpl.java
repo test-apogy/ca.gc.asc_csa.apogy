@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Map;
 
@@ -15,22 +15,22 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.AngleUnits;
-import org.eclipse.symphony.common.topology.bindings.Axis;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
-import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
-import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AngleUnits;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl implements Symphony__CommonTopologyBindingsPackage
+public class ApogyCommonTopologyBindingsPackageImpl extends EPackageImpl implements ApogyCommonTopologyBindingsPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -108,7 +108,7 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonTopologyBindingsFacadeEClass = null;
+	private EClass apogy__CommonTopologyBindingsFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -142,13 +142,13 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__CommonTopologyBindingsPackageImpl()
+  private ApogyCommonTopologyBindingsPackageImpl()
   {
-		super(eNS_URI, Symphony__CommonTopologyBindingsFactory.eINSTANCE);
+		super(eNS_URI, ApogyCommonTopologyBindingsFactory.eINSTANCE);
 	}
 
   /**
@@ -161,7 +161,7 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonTopologyBindingsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonTopologyBindingsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -170,32 +170,32 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__CommonTopologyBindingsPackage init()
+  public static ApogyCommonTopologyBindingsPackage init()
   {
-		if (isInited) return (Symphony__CommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyBindingsPackage.eNS_URI);
+		if (isInited) return (ApogyCommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyBindingsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonTopologyBindingsPackageImpl theSymphony__CommonTopologyBindingsPackage = (Symphony__CommonTopologyBindingsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonTopologyBindingsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonTopologyBindingsPackageImpl());
+		ApogyCommonTopologyBindingsPackageImpl theApogyCommonTopologyBindingsPackage = (ApogyCommonTopologyBindingsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonTopologyBindingsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonTopologyBindingsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
-		Symphony__CommonEMFPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonTopologyBindingsPackage.createPackageContents();
+		theApogyCommonTopologyBindingsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonTopologyBindingsPackage.initializePackageContents();
+		theApogyCommonTopologyBindingsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonTopologyBindingsPackage.freeze();
+		theApogyCommonTopologyBindingsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonTopologyBindingsPackage.eNS_URI, theSymphony__CommonTopologyBindingsPackage);
-		return theSymphony__CommonTopologyBindingsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonTopologyBindingsPackage.eNS_URI, theApogyCommonTopologyBindingsPackage);
+		return theApogyCommonTopologyBindingsPackage;
 	}
 
   /**
@@ -553,8 +553,8 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonTopologyBindingsFacade() {
-		return symphony__CommonTopologyBindingsFacadeEClass;
+	public EClass getApogyCommonTopologyBindingsFacade() {
+		return apogy__CommonTopologyBindingsFacadeEClass;
 	}
 
 		/**
@@ -562,8 +562,8 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map() {
-		return symphony__CommonTopologyBindingsFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map() {
+		return apogy__CommonTopologyBindingsFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -599,8 +599,8 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyBindingsFactory getSymphony__CommonTopologyBindingsFactory() {
-		return (Symphony__CommonTopologyBindingsFactory)getEFactoryInstance();
+	public ApogyCommonTopologyBindingsFactory getApogyCommonTopologyBindingsFactory() {
+		return (ApogyCommonTopologyBindingsFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -667,8 +667,8 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 		createEOperation(bindingsSetEClass, BINDINGS_SET___BIND);
 		createEOperation(bindingsSetEClass, BINDINGS_SET___UNBIND);
 
-		symphony__CommonTopologyBindingsFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE);
-		createEOperation(symphony__CommonTopologyBindingsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP);
+		apogy__CommonTopologyBindingsFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE);
+		createEOperation(apogy__CommonTopologyBindingsFacadeEClass, APOGY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP);
 
 		// Create enums
 		axisEEnum = createEEnum(AXIS);
@@ -704,8 +704,8 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(mapEDataType, "K");
@@ -725,8 +725,8 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 		initEAttribute(getAbstractTopologyBinding_Description(), theEcorePackage.getEString(), "description", null, 0, 1, AbstractTopologyBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTopologyBinding_Name(), theEcorePackage.getEString(), "name", null, 0, 1, AbstractTopologyBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTopologyBinding_Source(), theEcorePackage.getEObject(), null, "source", null, 0, 1, AbstractTopologyBinding.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTopologyBinding_FeatureNode(), theSymphony__CommonEMFPackage.getAbstractFeatureNode(), null, "featureNode", null, 0, 1, AbstractTopologyBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTopologyBinding_FeatureNodeAdapter(), theSymphony__CommonEMFPackage.getFeatureNodeAdapter(), null, "featureNodeAdapter", null, 0, 1, AbstractTopologyBinding.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTopologyBinding_FeatureNode(), theApogyCommonEMFPackage.getAbstractFeatureNode(), null, "featureNode", null, 0, 1, AbstractTopologyBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTopologyBinding_FeatureNodeAdapter(), theApogyCommonEMFPackage.getFeatureNodeAdapter(), null, "featureNodeAdapter", null, 0, 1, AbstractTopologyBinding.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getAbstractTopologyBinding__Bind(), null, "bind", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -734,38 +734,38 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 
 		EOperation op = initEOperation(getAbstractTopologyBinding__Clone__Map(), this.getAbstractTopologyBinding(), "clone", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getMap());
-		EGenericType g2 = createEGenericType(theSymphony__CommonTopologyPackage.getNode());
+		EGenericType g2 = createEGenericType(theApogyCommonTopologyPackage.getNode());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__CommonTopologyPackage.getNode());
+		g2 = createEGenericType(theApogyCommonTopologyPackage.getNode());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "originalToCopyNodeMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(rotationBindingEClass, RotationBinding.class, "RotationBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRotationBinding_RotationNode(), theSymphony__CommonTopologyPackage.getRotationNode(), null, "rotationNode", null, 0, 1, RotationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRotationBinding_RotationNode(), theApogyCommonTopologyPackage.getRotationNode(), null, "rotationNode", null, 0, 1, RotationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRotationBinding_RotationAxis(), this.getAxis(), "rotationAxis", "X_AXIS", 0, 1, RotationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRotationBinding_RotationUnits(), this.getAngleUnits(), "rotationUnits", "DEGREES", 0, 1, RotationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(translationBindingEClass, TranslationBinding.class, "TranslationBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTranslationBinding_PositionNode(), theSymphony__CommonTopologyPackage.getPositionNode(), null, "positionNode", null, 0, 1, TranslationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTranslationBinding_PositionNode(), theApogyCommonTopologyPackage.getPositionNode(), null, "positionNode", null, 0, 1, TranslationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTranslationBinding_TranslationAxis(), this.getAxis(), "translationAxis", "X_AXIS", 0, 1, TranslationBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transformMatrixBindingEClass, TransformMatrixBinding.class, "TransformMatrixBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransformMatrixBinding_TransformNode(), theSymphony__CommonTopologyPackage.getTransformNode(), null, "transformNode", null, 0, 1, TransformMatrixBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransformMatrixBinding_TransformNode(), theApogyCommonTopologyPackage.getTransformNode(), null, "transformNode", null, 0, 1, TransformMatrixBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumerationSwitchBindingEClass, EnumerationSwitchBinding.class, "EnumerationSwitchBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEnumerationSwitchBinding_ParentNode(), theSymphony__CommonTopologyPackage.getGroupNode(), null, "parentNode", null, 1, 1, EnumerationSwitchBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumerationSwitchBinding_ParentNode(), theApogyCommonTopologyPackage.getGroupNode(), null, "parentNode", null, 1, 1, EnumerationSwitchBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnumerationSwitchBinding_Cases(), this.getEnumerationCase(), null, "cases", null, 1, -1, EnumerationSwitchBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnumerationSwitchBinding_ActiveCase(), this.getEnumerationCase(), null, "activeCase", null, 0, 1, EnumerationSwitchBinding.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumerationCaseEClass, EnumerationCase.class, "EnumerationCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnumerationCase_EnumerationLiterals(), theEcorePackage.getEEnumLiteral(), null, "enumerationLiterals", null, 1, -1, EnumerationCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnumerationCase_TopologyRoot(), theSymphony__CommonTopologyPackage.getNode(), null, "topologyRoot", null, 0, 1, EnumerationCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumerationCase_TopologyRoot(), theApogyCommonTopologyPackage.getNode(), null, "topologyRoot", null, 0, 1, EnumerationCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bindingsListEClass, BindingsList.class, "BindingsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBindingsList_Bindings(), this.getAbstractTopologyBinding(), null, "bindings", null, 0, -1, BindingsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureRootsListEClass, FeatureRootsList.class, "FeatureRootsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureRootsList_FeatureRoots(), theSymphony__CommonEMFPackage.getTreeRootNode(), null, "featureRoots", null, 0, -1, FeatureRootsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureRootsList_FeatureRoots(), theApogyCommonEMFPackage.getTreeRootNode(), null, "featureRoots", null, 0, -1, FeatureRootsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bindingsSetEClass, BindingsSet.class, "BindingsSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBindingsSet_FeatureRootsList(), this.getFeatureRootsList(), null, "featureRootsList", null, 1, 1, BindingsSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -775,14 +775,14 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 
 		initEOperation(getBindingsSet__Unbind(), null, "unbind", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(symphony__CommonTopologyBindingsFacadeEClass, Symphony__CommonTopologyBindingsFacade.class, "Symphony__CommonTopologyBindingsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonTopologyBindingsFacadeEClass, ApogyCommonTopologyBindingsFacade.class, "ApogyCommonTopologyBindingsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map(), this.getAbstractTopologyBinding(), "copy", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map(), this.getAbstractTopologyBinding(), "copy", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAbstractTopologyBinding(), "originalBinding", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getMap());
-		g2 = createEGenericType(theSymphony__CommonTopologyPackage.getNode());
+		g2 = createEGenericType(theApogyCommonTopologyPackage.getNode());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__CommonTopologyPackage.getNode());
+		g2 = createEGenericType(theApogyCommonTopologyPackage.getNode());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "originalToCopyNodeMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -806,4 +806,4 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonTopologyBindingsPackageImpl
+} //ApogyCommonTopologyBindingsPackageImpl

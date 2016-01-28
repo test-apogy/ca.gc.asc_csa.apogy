@@ -3,7 +3,7 @@
  *
  * $Id: NormalPointCloudImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,8 +25,8 @@ import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl#getPoints <em>Points</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl#getNormals <em>Normals</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.NormalPointCloudImpl#getPoints <em>Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.NormalPointCloudImpl#getNormals <em>Normals</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,7 +68,7 @@ public class NormalPointCloudImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.NORMAL_POINT_CLOUD;
+		return ApogyCommonGeometryData3DPackage.Literals.NORMAL_POINT_CLOUD;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class NormalPointCloudImpl extends MinimalEObjectImpl.Container implement
 		List<Point3d> oldPoints = points;
 		points = newPoints;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS, oldPoints, points));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS, oldPoints, points));
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class NormalPointCloudImpl extends MinimalEObjectImpl.Container implement
 		List<Vector3d> oldNormals = normals;
 		normals = newNormals;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS, oldNormals, normals));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS, oldNormals, normals));
 	}
 
 	/**
@@ -121,9 +121,9 @@ public class NormalPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
 				return getPoints();
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
 				return getNormals();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -138,10 +138,10 @@ public class NormalPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
 				setPoints((List<Point3d>)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
 				setNormals((List<Vector3d>)newValue);
 				return;
 		}
@@ -156,10 +156,10 @@ public class NormalPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
 				setPoints((List<Point3d>)null);
 				return;
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
 				setNormals((List<Vector3d>)null);
 				return;
 		}
@@ -174,9 +174,9 @@ public class NormalPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__POINTS:
 				return points != null;
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD__NORMALS:
 				return normals != null;
 		}
 		return super.eIsSet(featureID);

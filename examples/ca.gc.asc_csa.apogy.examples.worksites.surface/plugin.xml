@@ -2,10 +2,10 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.symphony.core.worksiteProvider">
+         point="ca.gc.asc_csa.apogy.core.worksiteProvider">
       <WorksiteProvider
             Description="CSA Analogue Terrain"
-            Name="Symphony Worksite Example"
+            Name="Apogy Worksite Example"
             URI="model/csa_analog_terrain.sws">
       </WorksiteProvider>
    </extension>

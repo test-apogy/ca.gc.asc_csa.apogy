@@ -1,20 +1,20 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.LabelPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.VectorPresentation;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPackageImpl implements Symphony__CommonTopologyAddonsPrimitivesUIPackage {
+public class ApogyCommonTopologyAddonsPrimitivesUIPackageImpl extends EPackageImpl implements ApogyCommonTopologyAddonsPrimitivesUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,12 +62,12 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPack
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.ApogyCommonTopologyAddonsPrimitivesUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl() {
-		super(eNS_URI, Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE);
+	private ApogyCommonTopologyAddonsPrimitivesUIPackageImpl() {
+		super(eNS_URI, ApogyCommonTopologyAddonsPrimitivesUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPack
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonTopologyAddonsPrimitivesUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonTopologyAddonsPrimitivesUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,30 +89,30 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPack
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyAddonsPrimitivesUIPackage init() {
-		if (isInited) return (Symphony__CommonTopologyAddonsPrimitivesUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyAddonsPrimitivesUIPackage.eNS_URI);
+	public static ApogyCommonTopologyAddonsPrimitivesUIPackage init() {
+		if (isInited) return (ApogyCommonTopologyAddonsPrimitivesUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyAddonsPrimitivesUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl theSymphony__CommonTopologyAddonsPrimitivesUIPackage = (Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl());
+		ApogyCommonTopologyAddonsPrimitivesUIPackageImpl theApogyCommonTopologyAddonsPrimitivesUIPackage = (ApogyCommonTopologyAddonsPrimitivesUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonTopologyAddonsPrimitivesUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonTopologyAddonsPrimitivesUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonTopologyAddonsPrimitivesUIPackage.createPackageContents();
+		theApogyCommonTopologyAddonsPrimitivesUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonTopologyAddonsPrimitivesUIPackage.initializePackageContents();
+		theApogyCommonTopologyAddonsPrimitivesUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonTopologyAddonsPrimitivesUIPackage.freeze();
+		theApogyCommonTopologyAddonsPrimitivesUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonTopologyAddonsPrimitivesUIPackage.eNS_URI, theSymphony__CommonTopologyAddonsPrimitivesUIPackage);
-		return theSymphony__CommonTopologyAddonsPrimitivesUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonTopologyAddonsPrimitivesUIPackage.eNS_URI, theApogyCommonTopologyAddonsPrimitivesUIPackage);
+		return theApogyCommonTopologyAddonsPrimitivesUIPackage;
 	}
 
 	/**
@@ -165,8 +165,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPack
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyAddonsPrimitivesUIFactory getSymphony__CommonTopologyAddonsPrimitivesUIFactory() {
-		return (Symphony__CommonTopologyAddonsPrimitivesUIFactory)getEFactoryInstance();
+	public ApogyCommonTopologyAddonsPrimitivesUIFactory getApogyCommonTopologyAddonsPrimitivesUIFactory() {
+		return (ApogyCommonTopologyAddonsPrimitivesUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -222,7 +222,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPack
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -230,10 +230,10 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPack
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		vectorPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		wayPointPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		labelPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		spherePrimitivePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		vectorPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		wayPointPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		labelPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		spherePrimitivePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vectorPresentationEClass, VectorPresentation.class, "VectorPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -249,4 +249,4 @@ public class Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl extends EPack
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonTopologyAddonsPrimitivesUIPackageImpl
+} //ApogyCommonTopologyAddonsPrimitivesUIPackageImpl

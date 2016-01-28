@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.provider;
+package ca.gc.asc_csa.apogy.core.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.core.ui.util.Symphony__CoreUIAdapterFactory;
+import ca.gc.asc_csa.apogy.core.ui.util.ApogyCoreUIAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -31,7 +31,7 @@ import org.eclipse.symphony.core.ui.util.Symphony__CoreUIAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreUIItemProviderAdapterFactory extends Symphony__CoreUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class ApogyCoreUIItemProviderAdapterFactory extends ApogyCoreUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class Symphony__CoreUIItemProviderAdapterFactory extends Symphony__CoreUI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreUIItemProviderAdapterFactory() {
+	public ApogyCoreUIItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -71,122 +71,122 @@ public class Symphony__CoreUIItemProviderAdapterFactory extends Symphony__CoreUI
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreUIFacadeItemProvider symphony__CoreUIFacadeItemProvider;
+	protected ApogyCoreUIFacadeItemProvider apogy__CoreUIFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSymphony__CoreUIFacadeAdapter() {
-		if (symphony__CoreUIFacadeItemProvider == null) {
-			symphony__CoreUIFacadeItemProvider = new Symphony__CoreUIFacadeItemProvider(this);
-		}
-
-		return symphony__CoreUIFacadeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.SymphonyResourceSettings} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SymphonyResourceSettingsItemProvider symphonyResourceSettingsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.SymphonyResourceSettings}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyResourceSettingsAdapter() {
-		if (symphonyResourceSettingsItemProvider == null) {
-			symphonyResourceSettingsItemProvider = new SymphonyResourceSettingsItemProvider(this);
+	public Adapter createApogyCoreUIFacadeAdapter() {
+		if (apogy__CoreUIFacadeItemProvider == null) {
+			apogy__CoreUIFacadeItemProvider = new ApogyCoreUIFacadeItemProvider(this);
 		}
 
-		return symphonyResourceSettingsItemProvider;
+		return apogy__CoreUIFacadeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NewSymphonyProjectSettingsItemProvider newSymphonyProjectSettingsItemProvider;
+	protected ApogyResourceSettingsItemProvider apogyResourceSettingsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNewSymphonyProjectSettingsAdapter() {
-		if (newSymphonyProjectSettingsItemProvider == null) {
-			newSymphonyProjectSettingsItemProvider = new NewSymphonyProjectSettingsItemProvider(this);
+	public Adapter createApogyResourceSettingsAdapter() {
+		if (apogyResourceSettingsItemProvider == null) {
+			apogyResourceSettingsItemProvider = new ApogyResourceSettingsItemProvider(this);
 		}
 
-		return newSymphonyProjectSettingsItemProvider;
+		return apogyResourceSettingsItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NewSymphonySessionSettingsItemProvider newSymphonySessionSettingsItemProvider;
+	protected NewApogyProjectSettingsItemProvider newApogyProjectSettingsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNewSymphonySessionSettingsAdapter() {
-		if (newSymphonySessionSettingsItemProvider == null) {
-			newSymphonySessionSettingsItemProvider = new NewSymphonySessionSettingsItemProvider(this);
+	public Adapter createNewApogyProjectSettingsAdapter() {
+		if (newApogyProjectSettingsItemProvider == null) {
+			newApogyProjectSettingsItemProvider = new NewApogyProjectSettingsItemProvider(this);
 		}
 
-		return newSymphonySessionSettingsItemProvider;
+		return newApogyProjectSettingsItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NewSymphonySystemSettingsItemProvider newSymphonySystemSettingsItemProvider;
+	protected NewApogySessionSettingsItemProvider newApogySessionSettingsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNewSymphonySystemSettingsAdapter() {
-		if (newSymphonySystemSettingsItemProvider == null) {
-			newSymphonySystemSettingsItemProvider = new NewSymphonySystemSettingsItemProvider(this);
+	public Adapter createNewApogySessionSettingsAdapter() {
+		if (newApogySessionSettingsItemProvider == null) {
+			newApogySessionSettingsItemProvider = new NewApogySessionSettingsItemProvider(this);
 		}
 
-		return newSymphonySystemSettingsItemProvider;
+		return newApogySessionSettingsItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.ResultNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewApogySystemSettingsItemProvider newApogySystemSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNewApogySystemSettingsAdapter() {
+		if (newApogySystemSettingsItemProvider == null) {
+			newApogySystemSettingsItemProvider = new NewApogySystemSettingsItemProvider(this);
+		}
+
+		return newApogySystemSettingsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CoreUIItemProviderAdapterFactory extends Symphony__CoreUI
 	protected ResultNodePresentationItemProvider resultNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.ResultNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -307,11 +307,11 @@ public class Symphony__CoreUIItemProviderAdapterFactory extends Symphony__CoreUI
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphony__CoreUIFacadeItemProvider != null) symphony__CoreUIFacadeItemProvider.dispose();
-		if (symphonyResourceSettingsItemProvider != null) symphonyResourceSettingsItemProvider.dispose();
-		if (newSymphonyProjectSettingsItemProvider != null) newSymphonyProjectSettingsItemProvider.dispose();
-		if (newSymphonySessionSettingsItemProvider != null) newSymphonySessionSettingsItemProvider.dispose();
-		if (newSymphonySystemSettingsItemProvider != null) newSymphonySystemSettingsItemProvider.dispose();
+		if (apogy__CoreUIFacadeItemProvider != null) apogy__CoreUIFacadeItemProvider.dispose();
+		if (apogyResourceSettingsItemProvider != null) apogyResourceSettingsItemProvider.dispose();
+		if (newApogyProjectSettingsItemProvider != null) newApogyProjectSettingsItemProvider.dispose();
+		if (newApogySessionSettingsItemProvider != null) newApogySessionSettingsItemProvider.dispose();
+		if (newApogySystemSettingsItemProvider != null) newApogySystemSettingsItemProvider.dispose();
 		if (resultNodePresentationItemProvider != null) resultNodePresentationItemProvider.dispose();
 	}
 

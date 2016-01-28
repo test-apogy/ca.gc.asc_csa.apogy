@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.Position#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.Position#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.Position#getTheta <em>Theta</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getTheta <em>Theta</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition()
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getPosition()
  * @model
  * @generated
  */
@@ -45,15 +45,15 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_X()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getPosition_X()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='m'"
 	 * @generated
 	 */
   double getX();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.Position#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getX <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>X</em>' attribute.
@@ -76,15 +76,15 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_Y()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getPosition_Y()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='m'"
 	 * @generated
 	 */
   double getY();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.Position#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getY <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Y</em>' attribute.
@@ -108,15 +108,15 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Theta</em>' attribute.
 	 * @see #setTheta(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_Theta()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getPosition_Theta()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' apogy_units='rad'"
 	 * @generated
 	 */
   double getTheta();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.Position#getTheta <em>Theta</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.Position#getTheta <em>Theta</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Theta</em>' attribute.

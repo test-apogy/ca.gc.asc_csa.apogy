@@ -1,7 +1,7 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.preferences;
 
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
 
 public class MRTImagingPreferencesConstants 
 {

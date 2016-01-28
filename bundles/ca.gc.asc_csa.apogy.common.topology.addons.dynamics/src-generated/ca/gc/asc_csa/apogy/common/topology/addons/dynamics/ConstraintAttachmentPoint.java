@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,21 +20,21 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint <em>Constraint</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform <em>Transform</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint <em>Constraint</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform <em>Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint()
  * @model
  * @generated
  */
 public interface ConstraintAttachmentPoint extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Physical Body</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -42,15 +42,15 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Physical Body</em>' reference.
 	 * @see #setPhysicalBody(PhysicalBody)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_PhysicalBody()
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_PhysicalBody()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints
 	 * @model opposite="constraintAttachmentPoints"
 	 * @generated
 	 */
 	PhysicalBody getPhysicalBody();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Physical Body</em>' reference.
@@ -61,7 +61,7 @@ public interface ConstraintAttachmentPoint extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Constraint</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints <em>Attachment Points</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints <em>Attachment Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -69,15 +69,15 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constraint</em>' container reference.
 	 * @see #setConstraint(AbstractConstraint)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Constraint()
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Constraint()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints
 	 * @model opposite="attachmentPoints" transient="false"
 	 * @generated
 	 */
 	AbstractConstraint getConstraint();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint <em>Constraint</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint <em>Constraint</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Constraint</em>' container reference.
@@ -96,14 +96,14 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transform</em>' containment reference.
 	 * @see #setTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Transform()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Transform()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Matrix4x4 getTransform();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform <em>Transform</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getTransform <em>Transform</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transform</em>' containment reference.
@@ -121,14 +121,14 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Description()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -146,14 +146,14 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Point Id</em>' attribute.
 	 * @see #setPointId(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_PointId()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_PointId()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getPointId();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Point Id</em>' attribute.

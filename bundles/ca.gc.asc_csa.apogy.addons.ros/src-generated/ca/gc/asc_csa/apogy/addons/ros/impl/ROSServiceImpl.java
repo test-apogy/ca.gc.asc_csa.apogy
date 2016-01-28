@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.TimeUnit;
@@ -21,14 +21,14 @@ import org.ros.internal.message.RawMessage;
 import org.ros.internal.message.field.Field;
 import org.ros.node.service.ServiceClient;
 import org.ros.node.service.ServiceResponseListener;
-import org.eclipse.symphony.addons.ros.Activator;
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.utilities.AsynchronousShutdowner;
-import org.eclipse.symphony.addons.ros.ROSService;
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.AsynchronousShutdowner;
+import ca.gc.asc_csa.apogy.addons.ros.ROSService;
 
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,12 +38,12 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl#getServiceName <em>Service Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl#getServiceType <em>Service Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl#isLaunched <em>Launched</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl#getServiceClient <em>Service Client</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSServiceImpl#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl#getServiceName <em>Service Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl#getServiceType <em>Service Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl#isLaunched <em>Launched</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl#getServiceClient <em>Service Client</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSServiceImpl#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}</li>
  * </ul>
  *
  * @generated
@@ -168,7 +168,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsROSPackage.Literals.ROS_SERVICE;
+		return ApogyAddonsROSPackage.Literals.ROS_SERVICE;
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 		String oldServiceName = serviceName;
 		serviceName = newServiceName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_NAME, oldServiceName, serviceName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_NAME, oldServiceName, serviceName));
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 		String oldServiceType = serviceType;
 		serviceType = newServiceType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_TYPE, oldServiceType, serviceType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_TYPE, oldServiceType, serviceType));
 	}
 
 	/**
@@ -237,7 +237,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 		boolean oldLaunched = launched;
 		launched = newLaunched;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE__LAUNCHED, oldLaunched, launched));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE__LAUNCHED, oldLaunched, launched));
 	}
 
 	/**
@@ -260,7 +260,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 		ServiceClient<Request, Response> oldServiceClient = serviceClient;
 		serviceClient = newServiceClient;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT, oldServiceClient, serviceClient));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT, oldServiceClient, serviceClient));
 	}
 
 	/**
@@ -275,7 +275,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 			node = (ROSNode)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsROSPackage.ROS_SERVICE__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsROSPackage.ROS_SERVICE__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -301,7 +301,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 		ROSNode oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE__NODE, oldNode, node));
 	}
 
 	/**
@@ -324,7 +324,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 		boolean oldDisconnectOnTimeout = disconnectOnTimeout;
 		disconnectOnTimeout = newDisconnectOnTimeout;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT, oldDisconnectOnTimeout, disconnectOnTimeout));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT, oldDisconnectOnTimeout, disconnectOnTimeout));
 	}
 
 	/**
@@ -469,18 +469,18 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
 				return getServiceName();
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
 				return getServiceType();
-			case Symphony__AddonsROSPackage.ROS_SERVICE__LAUNCHED:
+			case ApogyAddonsROSPackage.ROS_SERVICE__LAUNCHED:
 				return isLaunched();
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
 				return getServiceClient();
-			case Symphony__AddonsROSPackage.ROS_SERVICE__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case Symphony__AddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
 				return isDisconnectOnTimeout();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -496,22 +496,22 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
 				setServiceName((String)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
 				setServiceType((String)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__LAUNCHED:
+			case ApogyAddonsROSPackage.ROS_SERVICE__LAUNCHED:
 				setLaunched((Boolean)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
 				setServiceClient((ServiceClient<Request, Response>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__NODE:
 				setNode((ROSNode)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
 				setDisconnectOnTimeout((Boolean)newValue);
 				return;
 		}
@@ -527,22 +527,22 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
 				setServiceName(SERVICE_NAME_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
 				setServiceType(SERVICE_TYPE_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__LAUNCHED:
+			case ApogyAddonsROSPackage.ROS_SERVICE__LAUNCHED:
 				setLaunched(LAUNCHED_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
 				setServiceClient((ServiceClient<Request, Response>)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__NODE:
 				setNode((ROSNode)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
 				setDisconnectOnTimeout(DISCONNECT_ON_TIMEOUT_EDEFAULT);
 				return;
 		}
@@ -558,17 +558,17 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_NAME:
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_TYPE:
 				return SERVICE_TYPE_EDEFAULT == null ? serviceType != null : !SERVICE_TYPE_EDEFAULT.equals(serviceType);
-			case Symphony__AddonsROSPackage.ROS_SERVICE__LAUNCHED:
+			case ApogyAddonsROSPackage.ROS_SERVICE__LAUNCHED:
 				return launched != LAUNCHED_EDEFAULT;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__SERVICE_CLIENT:
 				return serviceClient != null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__NODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE__NODE:
 				return node != null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
+			case ApogyAddonsROSPackage.ROS_SERVICE__DISCONNECT_ON_TIMEOUT:
 				return disconnectOnTimeout != DISCONNECT_ON_TIMEOUT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -584,7 +584,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__AddonsROSPackage.ROS_SERVICE___LAUNCH__ROSNODE:
+			case ApogyAddonsROSPackage.ROS_SERVICE___LAUNCH__ROSNODE:
 				try {
 					launch((ROSNode)arguments.get(0));
 					return null;
@@ -592,14 +592,14 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__AddonsROSPackage.ROS_SERVICE___STOP:
+			case ApogyAddonsROSPackage.ROS_SERVICE___STOP:
 				stop();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_SERVICE___NEW_REQUEST_MESSAGE:
+			case ApogyAddonsROSPackage.ROS_SERVICE___NEW_REQUEST_MESSAGE:
 				return newRequestMessage();
-			case Symphony__AddonsROSPackage.ROS_SERVICE___CALL__MESSAGE:
+			case ApogyAddonsROSPackage.ROS_SERVICE___CALL__MESSAGE:
 				return call((Request)arguments.get(0));
-			case Symphony__AddonsROSPackage.ROS_SERVICE___CALL__MESSAGE_BOOLEAN:
+			case ApogyAddonsROSPackage.ROS_SERVICE___CALL__MESSAGE_BOOLEAN:
 				return call((Request)arguments.get(0), (Boolean)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log;
+package ca.gc.asc_csa.apogy.common.log;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * Event Severity.
  * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.common.log.Symphony__CommonLogPackage#getEventSeverity()
+ * @see ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage#getEventSeverity()
  * @model
  * @generated
  */

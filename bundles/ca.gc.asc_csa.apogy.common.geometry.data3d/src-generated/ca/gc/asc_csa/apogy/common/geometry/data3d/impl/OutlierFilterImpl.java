@@ -3,7 +3,7 @@
  *
  * $Id: OutlierFilterImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,13 +11,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.OutlierFilter;
-import org.eclipse.symphony.common.geometry.data3d.PointLocator;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.OutlierFilterImpl#getMaxDistance <em>Max Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.OutlierFilterImpl#getMaxDistance <em>Max Distance</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class OutlierFilterImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.OUTLIER_FILTER;
+		return ApogyCommonGeometryData3DPackage.Literals.OUTLIER_FILTER;
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class OutlierFilterImpl extends
 		double oldMaxDistance = maxDistance;
 		maxDistance = newMaxDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE, oldMaxDistance, maxDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE, oldMaxDistance, maxDistance));
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class OutlierFilterImpl extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
+			case ApogyCommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
 				return getMaxDistance();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class OutlierFilterImpl extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
+			case ApogyCommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
 				setMaxDistance((Double)newValue);
 				return;
 		}
@@ -144,7 +144,7 @@ public class OutlierFilterImpl extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
+			case ApogyCommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
 				setMaxDistance(MAX_DISTANCE_EDEFAULT);
 				return;
 		}
@@ -158,7 +158,7 @@ public class OutlierFilterImpl extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
+			case ApogyCommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
 				return maxDistance != MAX_DISTANCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -182,7 +182,7 @@ public class OutlierFilterImpl extends
 	@Override
 	public CartesianCoordinatesSet process(CartesianCoordinatesSet input) throws Exception {
 
-		PointLocator locator = Symphony__CommonGeometryData3DFactory.eINSTANCE.createKDTreeBasedPointLocator();
+		PointLocator locator = ApogyCommonGeometryData3DFactory.eINSTANCE.createKDTreeBasedPointLocator();
 		locator.addPoints(input.getPoints());		
 
 		List<CartesianPositionCoordinates> pointsToRemove = new LinkedList<CartesianPositionCoordinates>();

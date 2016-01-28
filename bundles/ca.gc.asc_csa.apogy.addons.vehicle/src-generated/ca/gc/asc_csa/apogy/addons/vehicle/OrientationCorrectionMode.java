@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  * Enumeration of available methods use to compute the orientation correction.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getOrientationCorrectionMode()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getOrientationCorrectionMode()
  * @model
  * @generated
  */

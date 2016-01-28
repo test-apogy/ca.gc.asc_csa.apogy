@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.widgets.ui;
+package ca.gc.asc_csa.apogy.common.widgets.ui;
 
 import java.net.URL;
 import java.text.DecimalFormat;
@@ -27,7 +27,7 @@ public class BatteryStatComposite extends Composite  {
 	private static final float POLE_HEIGHT_FRACTION = 0.392857f; //Fraction of the pole height of the battery
 	private static final float BATTERY_BEFORE_POLE_FRACTION = 0.789473f; //Fraction of the full battery before getting the pole.
 	
-	private static final String IMAGES_FOLDER = "platform:/plugin/org.eclipse.symphony.common.widgets.ui/images/"; //Images path
+	private static final String IMAGES_FOLDER = "platform:/plugin/ca.gc.asc_csa.apogy.common.widgets.ui/images/"; //Images path
 	private Image background; //Background image.
 	private double actualValue; //This is the actual value in percent. Minimum is 0 and maximum is 100.
 	private Color red;

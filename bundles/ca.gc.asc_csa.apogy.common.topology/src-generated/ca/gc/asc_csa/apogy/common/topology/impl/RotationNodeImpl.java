@@ -4,7 +4,7 @@
  *
  * $Id: RotationNodeImpl.java,v 1.12.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import javax.vecmath.Matrix3d;
 
@@ -13,13 +13,13 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.RotationNodeImpl#getRotationMatrix <em>Rotation Matrix</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.RotationNodeImpl#getRotationMatrix <em>Rotation Matrix</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.ROTATION_NODE;
+		return ApogyCommonTopologyPackage.Literals.ROTATION_NODE;
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 		{
 			Matrix3d matrix = new Matrix3d();
 			matrix.setIdentity();
-			tmp = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(matrix);
+			tmp = ApogyCommonMathFacade.INSTANCE.createMatrix3x3(matrix);
 			setRotationMatrix(tmp);
 		}
 		return tmp;
@@ -118,7 +118,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 		Matrix3x3 oldRotationMatrix = rotationMatrix;
 		rotationMatrix = newRotationMatrix;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, oldRotationMatrix, newRotationMatrix);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, oldRotationMatrix, newRotationMatrix);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -132,14 +132,14 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 		if (newRotationMatrix != rotationMatrix) {
 			NotificationChain msgs = null;
 			if (rotationMatrix != null)
-				msgs = ((InternalEObject)rotationMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, null, msgs);
+				msgs = ((InternalEObject)rotationMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, null, msgs);
 			if (newRotationMatrix != null)
-				msgs = ((InternalEObject)newRotationMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, null, msgs);
+				msgs = ((InternalEObject)newRotationMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, null, msgs);
 			msgs = basicSetRotationMatrix(newRotationMatrix, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, newRotationMatrix, newRotationMatrix));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX, newRotationMatrix, newRotationMatrix));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
 				return basicSetRotationMatrix(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -163,7 +163,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
 				return getRotationMatrix();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -176,7 +176,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
 				setRotationMatrix((Matrix3x3)newValue);
 				return;
 		}
@@ -190,7 +190,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
 				setRotationMatrix((Matrix3x3)null);
 				return;
 		}
@@ -204,7 +204,7 @@ public class RotationNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
+			case ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX:
 				return rotationMatrix != null;
 		}
 		return super.eIsSet(featureID);

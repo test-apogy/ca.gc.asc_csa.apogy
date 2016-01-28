@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.util;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,24 +10,24 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.addons.ros.imaging.*;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage
+ * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage
  * @generated
  */
-public class Symphony__AddonsROSImagingAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsROSImagingAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsROSImagingPackage modelPackage;
+	protected static ApogyAddonsROSImagingPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__AddonsROSImagingAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingAdapterFactory() {
+	public ApogyAddonsROSImagingAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsROSImagingPackage.eINSTANCE;
+			modelPackage = ApogyAddonsROSImagingPackage.eINSTANCE;
 		}
 	}
 
@@ -66,11 +66,11 @@ public class Symphony__AddonsROSImagingAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsROSImagingSwitch<Adapter> modelSwitch =
-		new Symphony__AddonsROSImagingSwitch<Adapter>() {
+	protected ApogyAddonsROSImagingSwitch<Adapter> modelSwitch =
+		new ApogyAddonsROSImagingSwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__AddonsROSImagingFacade(Symphony__AddonsROSImagingFacade object) {
-				return createSymphony__AddonsROSImagingFacadeAdapter();
+			public Adapter caseApogyAddonsROSImagingFacade(ApogyAddonsROSImagingFacade object) {
+				return createApogyAddonsROSImagingFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -93,16 +93,16 @@ public class Symphony__AddonsROSImagingAdapterFactory extends AdapterFactoryImpl
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__AddonsROSImagingFacadeAdapter() {
+	public Adapter createApogyAddonsROSImagingFacadeAdapter() {
 		return null;
 	}
 
@@ -118,4 +118,4 @@ public class Symphony__AddonsROSImagingAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__AddonsROSImagingAdapterFactory
+} //ApogyAddonsROSImagingAdapterFactory

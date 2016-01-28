@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__AddonsMobilityControllersPackageImpl.java,v 1.5.4.2 2015/05/21 15:50:44 pallard Exp $
+ * $Id: ApogyAddonsMobilityControllersPackageImpl.java,v 1.5.4.2 2015/05/21 15:50:44 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
-import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersFactory;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
-import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorder;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathRecorderSamplingMode;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.WaypointPathRecorder;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl implements Symphony__AddonsMobilityControllersPackage
+public class ApogyAddonsMobilityControllersPackageImpl extends EPackageImpl implements ApogyAddonsMobilityControllersPackage
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,13 +106,13 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsMobilityControllersPackageImpl()
+	private ApogyAddonsMobilityControllersPackageImpl()
 	{
-		super(eNS_URI, Symphony__AddonsMobilityControllersFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsMobilityControllersFactory.eINSTANCE);
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsMobilityControllersPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsMobilityControllersPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134,33 +134,33 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityControllersPackage init()
+	public static ApogyAddonsMobilityControllersPackage init()
 	{
-		if (isInited) return (Symphony__AddonsMobilityControllersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityControllersPackage.eNS_URI);
+		if (isInited) return (ApogyAddonsMobilityControllersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityControllersPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsMobilityControllersPackageImpl theSymphony__AddonsMobilityControllersPackage = (Symphony__AddonsMobilityControllersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsMobilityControllersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsMobilityControllersPackageImpl());
+		ApogyAddonsMobilityControllersPackageImpl theApogyAddonsMobilityControllersPackage = (ApogyAddonsMobilityControllersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsMobilityControllersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsMobilityControllersPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsMobilityPackage.eINSTANCE.eClass();
-		Symphony__AddonsGeometryPathsPackage.eINSTANCE.eClass();
-		Symphony__AddonsSensorsPosePackage.eINSTANCE.eClass();
+		ApogyAddonsMobilityPackage.eINSTANCE.eClass();
+		ApogyAddonsGeometryPathsPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsPosePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsMobilityControllersPackage.createPackageContents();
+		theApogyAddonsMobilityControllersPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsMobilityControllersPackage.initializePackageContents();
+		theApogyAddonsMobilityControllersPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsMobilityControllersPackage.freeze();
+		theApogyAddonsMobilityControllersPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsMobilityControllersPackage.eNS_URI, theSymphony__AddonsMobilityControllersPackage);
-		return theSymphony__AddonsMobilityControllersPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsMobilityControllersPackage.eNS_URI, theApogyAddonsMobilityControllersPackage);
+		return theApogyAddonsMobilityControllersPackage;
 	}
 
 	/**
@@ -582,8 +582,8 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityControllersFactory getSymphony__AddonsMobilityControllersFactory() {
-		return (Symphony__AddonsMobilityControllersFactory)getEFactoryInstance();
+	public ApogyAddonsMobilityControllersFactory getApogyAddonsMobilityControllersFactory() {
+		return (ApogyAddonsMobilityControllersFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -684,11 +684,11 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__AddonsMobilityPackage theSymphony__AddonsMobilityPackage = (Symphony__AddonsMobilityPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPackage.eNS_URI);
-		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
-		Symphony__AddonsSensorsPosePackage theSymphony__AddonsSensorsPosePackage = (Symphony__AddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPosePackage.eNS_URI);
+		ApogyAddonsMobilityPackage theApogyAddonsMobilityPackage = (ApogyAddonsMobilityPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPackage.eNS_URI);
+		ApogyAddonsGeometryPathsPackage theApogyAddonsGeometryPathsPackage = (ApogyAddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsGeometryPathsPackage.eNS_URI);
+		ApogyAddonsSensorsPosePackage theApogyAddonsSensorsPosePackage = (ApogyAddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPosePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter pathFollowerEClass_PlatformType = addETypeParameter(pathFollowerEClass, "PlatformType");
@@ -698,15 +698,15 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		ETypeParameter pathRecorderEClass_PathType = addETypeParameter(pathRecorderEClass, "PathType");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(theSymphony__AddonsMobilityPackage.getMobilePlatform());
+		EGenericType g1 = createEGenericType(theApogyAddonsMobilityPackage.getMobilePlatform());
 		pathFollowerEClass_PlatformType.getEBounds().add(g1);
-		g1 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getPath());
+		g1 = createEGenericType(theApogyAddonsGeometryPathsPackage.getPath());
 		pathFollowerEClass_PathType.getEBounds().add(g1);
-		g1 = createEGenericType(theSymphony__AddonsMobilityPackage.getSkidSteeredMobilePlatform());
+		g1 = createEGenericType(theApogyAddonsMobilityPackage.getSkidSteeredMobilePlatform());
 		skidSteeredPlatformPathFollowerEClass_PlateformType.getEBounds().add(g1);
-		g1 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getPath());
+		g1 = createEGenericType(theApogyAddonsGeometryPathsPackage.getPath());
 		skidSteeredPlatformPathFollowerEClass_PathType.getEBounds().add(g1);
-		g1 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getPath());
+		g1 = createEGenericType(theApogyAddonsGeometryPathsPackage.getPath());
 		pathRecorderEClass_PathType.getEBounds().add(g1);
 
 		// Add supertypes to classes
@@ -717,19 +717,19 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		g1.getETypeArguments().add(g2);
 		skidSteeredPlatformPathFollowerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getPathRecorder());
-		g2 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getWayPointPath());
+		g2 = createEGenericType(theApogyAddonsGeometryPathsPackage.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		waypointPathRecorderEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getSkidSteeredPlatformPathFollower());
-		g2 = createEGenericType(theSymphony__AddonsMobilityPackage.getSkidSteeredMobilePlatform());
+		g2 = createEGenericType(theApogyAddonsMobilityPackage.getSkidSteeredMobilePlatform());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getWayPointPath());
+		g2 = createEGenericType(theApogyAddonsGeometryPathsPackage.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		skidSteeredWayPointPathFollowerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getSkidSteeredPlatformPathFollower());
-		g2 = createEGenericType(theSymphony__AddonsMobilityPackage.getSkidSteeredMobilePlatform());
+		g2 = createEGenericType(theApogyAddonsMobilityPackage.getSkidSteeredMobilePlatform());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getWayPointPath());
+		g2 = createEGenericType(theApogyAddonsGeometryPathsPackage.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		astolfiGuidanceControllerEClass.getEGenericSuperTypes().add(g1);
 
@@ -739,7 +739,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		initEReference(getPathFollower_Path(), g1, null, "path", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		g1 = createEGenericType(pathFollowerEClass_PlatformType);
 		initEReference(getPathFollower_Platform(), g1, null, "platform", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPathFollower_PoseSensor(), theSymphony__AddonsSensorsPosePackage.getPoseSensor(), null, "poseSensor", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathFollower_PoseSensor(), theApogyAddonsSensorsPosePackage.getPoseSensor(), null, "poseSensor", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathFollower_DestinationReached(), theEcorePackage.getEBoolean(), "destinationReached", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathFollower_PathFollowerState(), this.getPathFollowerState(), "pathFollowerState", "IDLE", 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -759,7 +759,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		initEAttribute(getSkidSteeredPlatformPathFollower_MaximumLinearVelocity(), theEcorePackage.getEDouble(), "maximumLinearVelocity", null, 0, 1, SkidSteeredPlatformPathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pathRecorderEClass, PathRecorder.class, "PathRecorder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPathRecorder_PositionSensor(), theSymphony__AddonsSensorsPosePackage.getPoseSensor(), null, "positionSensor", null, 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathRecorder_PositionSensor(), theApogyAddonsSensorsPosePackage.getPoseSensor(), null, "positionSensor", null, 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathRecorder_MinimumDistanceDelta(), theEcorePackage.getEDouble(), "minimumDistanceDelta", "0.1", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathRecorder_MinimumTimeDelta(), theEcorePackage.getEDouble(), "minimumTimeDelta", "1.0", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathRecorder_SamplingMode(), this.getPathRecorderSamplingMode(), "samplingMode", "ON_DISTANCE_DELTA", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -771,9 +771,9 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		initEClass(skidSteeredWayPointPathFollowerEClass, SkidSteeredWayPointPathFollower.class, "SkidSteeredWayPointPathFollower", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(astolfiGuidanceControllerEClass, AstolfiGuidanceController.class, "AstolfiGuidanceController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAstolfiGuidanceController_CurrentWayPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAstolfiGuidanceController_PreviousWayPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "previousWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAstolfiGuidanceController_CurrentPoseInGuidanceReferenceFrame(), theSymphony__CommonGeometryData3DPackage.getPose(), null, "currentPoseInGuidanceReferenceFrame", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAstolfiGuidanceController_CurrentWayPoint(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAstolfiGuidanceController_PreviousWayPoint(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "previousWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAstolfiGuidanceController_CurrentPoseInGuidanceReferenceFrame(), theApogyCommonGeometryData3DPackage.getPose(), null, "currentPoseInGuidanceReferenceFrame", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAstolfiGuidanceController_Rho(), theEcorePackage.getEDouble(), "rho", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAstolfiGuidanceController_Phi(), theEcorePackage.getEDouble(), "phi", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAstolfiGuidanceController_Alpha(), theEcorePackage.getEDouble(), "alpha", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -807,4 +807,4 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsMobilityControllersPackageImpl
+} //ApogyAddonsMobilityControllersPackageImpl

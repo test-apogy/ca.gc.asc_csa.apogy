@@ -3,7 +3,7 @@
  *
  * $Id: Data3DUtilsImpl.java,v 1.3.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -16,17 +16,17 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
-import org.eclipse.symphony.common.geometry.data3d.PointLocator;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
 
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
@@ -62,7 +62,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.DATA3_DUTILS;
+		return ApogyCommonGeometryData3DPackage.Literals.DATA3_DUTILS;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 
 		centroid.scale(1.0 / (double) points.size());
 
-		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centroid.x, centroid.y,
+		return ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centroid.x, centroid.y,
 						centroid.z);
 	}
 
@@ -224,7 +224,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	 */
 	public CartesianTriangularMesh extrude(List<CartesianPositionCoordinates> profilePoints, CartesianAxis extrusionAxis, double extrusionWidth, boolean closeMesh) 
 	{
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		// Makes two arrays of point, one for each edge of the mesh.
 		List<CartesianPositionCoordinates> edgePositive = new ArrayList<CartesianPositionCoordinates>();				
@@ -242,18 +242,18 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			switch (extrusionAxis.getValue()) 
 			{
 				case CartesianAxis.X_VALUE:
-					positivePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(halfExtrusionWidth, y, z);
-					negativePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-halfExtrusionWidth, y, z);
+					positivePoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(halfExtrusionWidth, y, z);
+					negativePoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-halfExtrusionWidth, y, z);
 				break;
 
 				case CartesianAxis.Y_VALUE:		
-					positivePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, halfExtrusionWidth, z);
-					negativePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, -halfExtrusionWidth, z);
+					positivePoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, halfExtrusionWidth, z);
+					negativePoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, -halfExtrusionWidth, z);
 				break;
 
 				case CartesianAxis.Z_VALUE:		
-					positivePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, halfExtrusionWidth);
-					negativePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, -halfExtrusionWidth);
+					positivePoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, halfExtrusionWidth);
+					negativePoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, -halfExtrusionWidth);
 				break;
 				
 				default:
@@ -281,7 +281,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			CartesianPositionCoordinates v2 = edgeNegative.get(i+1);
 			CartesianPositionCoordinates v3 = edgePositive.get(i);
 			
-			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			CartesianTriangle triangle = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 		}
 		for(int i = 0; i < edgeNegative.size() - 1; i++)
@@ -290,7 +290,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			CartesianPositionCoordinates v2 = edgeNegative.get(i+1);
 			CartesianPositionCoordinates v3 = edgePositive.get(i+1);
 			
-			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			CartesianTriangle triangle = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 		}			
 		
@@ -300,14 +300,14 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			CartesianPositionCoordinates v2 = edgeNegative.get(0);
 			CartesianPositionCoordinates v3 = edgePositive.get(edgeNegative.size() - 1);
 			
-			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			CartesianTriangle triangle = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 			
 			v1 = edgePositive.get(edgeNegative.size() - 1);
 			v2 = edgeNegative.get(0);
 			v3 = edgePositive.get(0);
 			
-			triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			triangle = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 		}
 		
@@ -324,18 +324,18 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH:
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH:
 				return computeNormals((CartesianTriangularMesh)arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__LIST:
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__LIST:
 				return computeCentroid((List<CartesianPositionCoordinates>)arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET:
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET:
 				return computeCentroid((CartesianCoordinatesSet)arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET:
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET:
 				computeMinMaxValues((Point3d)arguments.get(0), (Point3d)arguments.get(1), (CartesianCoordinatesSet)arguments.get(2));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE:
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE:
 				return computeCurvatureChange((PointLocator)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___EXTRUDE__LIST_CARTESIANAXIS_DOUBLE_BOOLEAN:
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS___EXTRUDE__LIST_CARTESIANAXIS_DOUBLE_BOOLEAN:
 				return extrude((List<CartesianPositionCoordinates>)arguments.get(0), (CartesianAxis)arguments.get(1), (Double)arguments.get(2), (Boolean)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.ui.expressions;
+package ca.gc.asc_csa.apogy.common.ui.expressions;
 
 import org.eclipse.core.expressions.PropertyTester;
-import org.eclipse.symphony.common.ui.EclipseUiUtilities;
+import ca.gc.asc_csa.apogy.common.ui.EclipseUiUtilities;
 import org.eclipse.ui.views.properties.PropertySheet;
 
 public class TabbedPropertySheetPropertyTester extends PropertyTester {
 
-	public static final String PROPERTY_NAMESPACE = "org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester";
+	public static final String PROPERTY_NAMESPACE = "ca.gc.asc_csa.apogy.common.ui.expressions.TabbedPropertySheetPropertyTester";
 	public static final String PROPERTY_ACTIVE_SECTION = "activeSection";
 	
 	@Override

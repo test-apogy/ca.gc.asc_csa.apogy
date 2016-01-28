@@ -1,21 +1,21 @@
-@GenModel(prefix="Symphony__AddonsSensorsFOV",
+@GenModel(prefix="ApogyAddonsSensorsFOV",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsSensorsFOV",
+	      modelName="ApogyAddonsSensorsFOV",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.fov/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.fov.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.fov
+package ca.gc.asc_csa.apogy.addons.sensors.fov
 
-import org.eclipse.symphony.common.math.Matrix4x4
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
 
 class FieldOfView extends Node
 {
@@ -44,22 +44,22 @@ class DistanceRange
  */
 class AngularSpan
 {
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double minimumAngle = "0.0"
  	
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double maximumAngle = "0.0"
  	
 	/*
 	 * The total angular span, in radians.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	readonly transient volatile derived double spanningAngle
  	
 	/*
 	 * The center of the angular span, in radians.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	readonly transient volatile derived double centerAngle
  	
 	/*
@@ -80,13 +80,13 @@ class RectangularFrustrumFieldOfView extends FieldOfView
 	/*
 	 * Total horizontal field of view, in radians.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double horizontalFieldOfViewAngle
  	
 	/*
 	 * Total vertical field of view, in radians.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double verticalFieldOfViewAngle
  	
 	/*
@@ -105,7 +105,7 @@ class ConicalFieldOfView extends FieldOfView
 	/*
 	 * The apex angle, in radians, of the conical field of view.
 	 */
-	@GenModel(symphony_units="rad")
+	@GenModel(apogy_units="rad")
 	double fieldOfViewAngle
 	
 	/*
@@ -138,7 +138,7 @@ class RectangularFrustrumFieldOfViewSamplingShape<PolygonType extends CartesianP
 	refers RectangularFrustrumFieldOfView rectangularFrustrumFieldOfView
 }
 
-class Symphony__AddonsSensorsFOVFacade
+class ApogyAddonsSensorsFOVFacade
 {
 	op DistanceRange createDistanceRange(double minimumDistance, double maximumDistance)
 	

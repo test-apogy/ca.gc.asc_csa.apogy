@@ -2,24 +2,24 @@
 <?eclipse version="3.0"?>
 <plugin>
   <extension point="org.eclipse.sirius.componentization">
-    <component class="org.eclipse.symphony.core.ui.sirius.Activator"
-               id="org.eclipse.symphony.core.ui.sirius"
-	       name="symphony_core_ui_sirius">
+    <component class="ca.gc.asc_csa.apogy.core.ui.sirius.Activator"
+               id="ca.gc.asc_csa.apogy.core.ui.sirius"
+	       name="apogy_core_ui_sirius">
     </component>
   </extension>
   <extension
         point="org.eclipse.sirius.externalJavaAction">
      <javaActions
-           actionClass="org.eclipse.symphony.core.ui.sirius.topology.java_actions.CreateNodeExternalAction"
-           id="org.eclipse.symphony.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+           actionClass="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction"
+           id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
      </javaActions>
      <javaActions
-           actionClass="org.eclipse.symphony.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction"
-           id="org.eclipse.symphony.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction">
+           actionClass="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction"
+           id="ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction">
      </javaActions>
      <javaActions
-           actionClass="org.eclipse.symphony.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction"
-           id="org.eclipse.symphony.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction">
+           actionClass="ca.gc.asc_csa.apogy.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction"
+           id="ca.gc.asc_csa.apogy.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction">
      </javaActions>
   </extension>
 </plugin>

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 
 /**
@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.environment.ui;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryPickingTool()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getTrajectoryPickingTool()
  * @model
  * @generated
  */

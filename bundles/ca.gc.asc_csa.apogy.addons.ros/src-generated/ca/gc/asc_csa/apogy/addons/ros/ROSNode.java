@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.ros.utilities.NullRequestHandler;
-import org.eclipse.symphony.addons.ros.utilities.NullResponseHandler;
-import org.eclipse.symphony.addons.ros.utilities.ResponseLogger;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullRequestHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.NullResponseHandler;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.ResponseLogger;
 import org.ros.node.ConnectedNode;
 
 import org.ros.node.topic.Publisher;
@@ -22,22 +22,22 @@ import org.ros.node.topic.Publisher;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getConnectedNode <em>Connected Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getModules <em>Modules</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getServiceManagers <em>Service Managers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getTopicLaunchers <em>Topic Launchers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getPublisherManagers <em>Publisher Managers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#isConnected <em>Connected</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#isRestarting <em>Restarting</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getNodeName <em>Node Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getResponseLogger <em>Response Logger</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getNullResponseHandler <em>Null Response Handler</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSNode#getNullRequestHandler <em>Null Request Handler</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getConnectedNode <em>Connected Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getModules <em>Modules</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getServiceManagers <em>Service Managers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getTopicLaunchers <em>Topic Launchers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getPublisherManagers <em>Publisher Managers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isConnected <em>Connected</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isRestarting <em>Restarting</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNodeName <em>Node Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getResponseLogger <em>Response Logger</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullResponseHandler <em>Null Response Handler</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullRequestHandler <em>Null Request Handler</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode()
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode()
  * @model
  * @generated
  */
@@ -51,14 +51,14 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Connected Node</em>' attribute.
 	 * @see #setConnectedNode(ConnectedNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_ConnectedNode()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.ConnectedNode"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_ConnectedNode()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.ConnectedNode"
 	 * @generated
 	 */
 	ConnectedNode getConnectedNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#getConnectedNode <em>Connected Node</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getConnectedNode <em>Connected Node</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Connected Node</em>' attribute.
@@ -69,14 +69,14 @@ public interface ROSNode extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Modules</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.ros.ROSInterface}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.ros.ROSInterface}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The modules that have been registered with this node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Modules</em>' reference list.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_Modules()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_Modules()
 	 * @model
 	 * @generated
 	 */
@@ -84,14 +84,14 @@ public interface ROSNode extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Service Managers</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.ros.ROSServiceManager}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The service managers that have been associated with this node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Service Managers</em>' reference list.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_ServiceManagers()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_ServiceManagers()
 	 * @model
 	 * @generated
 	 */
@@ -99,14 +99,14 @@ public interface ROSNode extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Topic Launchers</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.ros.ROSTopicLauncher}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The topic launchers that have been associated with this node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topic Launchers</em>' reference list.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_TopicLaunchers()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_TopicLaunchers()
 	 * @model
 	 * @generated
 	 */
@@ -114,14 +114,14 @@ public interface ROSNode extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Publisher Managers</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.ros.ROSPublisherManager}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The publisher managers that have been associated with this node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Publisher Managers</em>' reference list.
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_PublisherManagers()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_PublisherManagers()
 	 * @model
 	 * @generated
 	 */
@@ -137,7 +137,7 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_Initialized()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_NODE'"
 	 * @generated
@@ -145,7 +145,7 @@ public interface ROSNode extends EObject {
 	boolean isInitialized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -164,7 +164,7 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Connected</em>' attribute.
 	 * @see #setConnected(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_Connected()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_Connected()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_NODE'"
 	 * @generated
@@ -172,7 +172,7 @@ public interface ROSNode extends EObject {
 	boolean isConnected();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#isConnected <em>Connected</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isConnected <em>Connected</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Connected</em>' attribute.
@@ -191,7 +191,7 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Restarting</em>' attribute.
 	 * @see #setRestarting(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_Restarting()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_Restarting()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_NODE'"
 	 * @generated
@@ -199,7 +199,7 @@ public interface ROSNode extends EObject {
 	boolean isRestarting();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#isRestarting <em>Restarting</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isRestarting <em>Restarting</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Restarting</em>' attribute.
@@ -219,7 +219,7 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enable Auto Restart On Connection Lost</em>' attribute.
 	 * @see #setEnableAutoRestartOnConnectionLost(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_EnableAutoRestartOnConnectionLost()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_EnableAutoRestartOnConnectionLost()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_NODE'"
 	 * @generated
@@ -227,7 +227,7 @@ public interface ROSNode extends EObject {
 	boolean isEnableAutoRestartOnConnectionLost();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#isEnableAutoRestartOnConnectionLost <em>Enable Auto Restart On Connection Lost</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Enable Auto Restart On Connection Lost</em>' attribute.
@@ -245,7 +245,7 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node Name</em>' attribute.
 	 * @see #setNodeName(String)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_NodeName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_NodeName()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_NODE'"
 	 * @generated
@@ -253,7 +253,7 @@ public interface ROSNode extends EObject {
 	String getNodeName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#getNodeName <em>Node Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNodeName <em>Node Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node Name</em>' attribute.
@@ -271,14 +271,14 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Response Logger</em>' attribute.
 	 * @see #setResponseLogger(ResponseLogger)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_ResponseLogger()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.ResponseLogger"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_ResponseLogger()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.ResponseLogger"
 	 * @generated
 	 */
 	ResponseLogger getResponseLogger();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#getResponseLogger <em>Response Logger</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getResponseLogger <em>Response Logger</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Response Logger</em>' attribute.
@@ -296,14 +296,14 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Null Response Handler</em>' attribute.
 	 * @see #setNullResponseHandler(NullResponseHandler)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_NullResponseHandler()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.NullResponseHandler"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_NullResponseHandler()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.NullResponseHandler"
 	 * @generated
 	 */
 	NullResponseHandler getNullResponseHandler();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#getNullResponseHandler <em>Null Response Handler</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullResponseHandler <em>Null Response Handler</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Null Response Handler</em>' attribute.
@@ -321,14 +321,14 @@ public interface ROSNode extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Null Request Handler</em>' attribute.
 	 * @see #setNullRequestHandler(NullRequestHandler)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSNode_NullRequestHandler()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.NullRequestHandler"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSNode_NullRequestHandler()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.NullRequestHandler"
 	 * @generated
 	 */
 	NullRequestHandler getNullRequestHandler();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSNode#getNullRequestHandler <em>Null Request Handler</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSNode#getNullRequestHandler <em>Null Request Handler</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Null Request Handler</em>' attribute.
@@ -354,7 +354,7 @@ public interface ROSNode extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Initializes the ROS node
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.ros.Exception"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.ros.Exception"
 	 * @generated
 	 */
 	void initialize() throws Exception;
@@ -368,7 +368,7 @@ public interface ROSNode extends EObject {
 	 * 
 	 * @param connectedNode The relevant connected node
 	 * <!-- end-model-doc -->
-	 * @model connectedNodeDataType="org.eclipse.symphony.addons.ros.ConnectedNode" connectedNodeUnique="false"
+	 * @model connectedNodeDataType="ca.gc.asc_csa.apogy.addons.ros.ConnectedNode" connectedNodeUnique="false"
 	 * @generated
 	 */
 	void onStart(ConnectedNode connectedNode);
@@ -448,7 +448,7 @@ public interface ROSNode extends EObject {
 	 * @param messageType The type for the publisher's messages
 	 * @return The newly created publisher
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.ros.Publisher<T>" unique="false" topicNameUnique="false" messageTypeUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.addons.ros.Publisher<T>" unique="false" topicNameUnique="false" messageTypeUnique="false"
 	 * @generated
 	 */
 	<T> Publisher<T> createPublisher(String topicName, String messageType);

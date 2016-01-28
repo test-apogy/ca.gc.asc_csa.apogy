@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.util;
+package ca.gc.asc_csa.apogy.examples.rover.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.examples.rover.*;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.examples.rover.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +19,10 @@ import org.eclipse.symphony.examples.rover.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage
  * @generated
  */
-public class Symphony__ExamplesRoverSwitch<T> extends Switch<T>
+public class ApogyExamplesRoverSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -30,7 +30,7 @@ public class Symphony__ExamplesRoverSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesRoverPackage modelPackage;
+  protected static ApogyExamplesRoverPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -38,10 +38,10 @@ public class Symphony__ExamplesRoverSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoverSwitch()
+  public ApogyExamplesRoverSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesRoverPackage.eINSTANCE;
+			modelPackage = ApogyExamplesRoverPackage.eINSTANCE;
 		}
 	}
 
@@ -70,26 +70,26 @@ public class Symphony__ExamplesRoverSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesRoverPackage.BATTERY: {
+			case ApogyExamplesRoverPackage.BATTERY: {
 				Battery battery = (Battery)theEObject;
 				T result = caseBattery(battery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoverPackage.POWER_SYSTEM: {
+			case ApogyExamplesRoverPackage.POWER_SYSTEM: {
 				PowerSystem powerSystem = (PowerSystem)theEObject;
 				T result = casePowerSystem(powerSystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoverPackage.ROVER: {
+			case ApogyExamplesRoverPackage.ROVER: {
 				Rover rover = (Rover)theEObject;
 				T result = caseRover(rover);
 				if (result == null) result = caseDisposable(rover);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoverPackage.ROVER_STUB: {
+			case ApogyExamplesRoverPackage.ROVER_STUB: {
 				RoverStub roverStub = (RoverStub)theEObject;
 				T result = caseRoverStub(roverStub);
 				if (result == null) result = caseRover(roverStub);
@@ -97,7 +97,7 @@ public class Symphony__ExamplesRoverSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoverPackage.ROVER_SIMULATED: {
+			case ApogyExamplesRoverPackage.ROVER_SIMULATED: {
 				RoverSimulated roverSimulated = (RoverSimulated)theEObject;
 				T result = caseRoverSimulated(roverSimulated);
 				if (result == null) result = caseRover(roverSimulated);
@@ -218,4 +218,4 @@ public class Symphony__ExamplesRoverSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesRoverSwitch
+} //ApogyExamplesRoverSwitch

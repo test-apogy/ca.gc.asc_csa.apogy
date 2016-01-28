@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -13,8 +13,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DateTime;
-import org.eclipse.symphony.common.emf.FixedTimeSource;
-import org.eclipse.symphony.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 
 public class FixedTimeSourceComposite extends AbstractTimeSourceComposite 
 {

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.impl;
+package ca.gc.asc_csa.apogy.core.programs.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,9 +11,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.Program;
-import org.eclipse.symphony.core.programs.AbstractProgramRuntime;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.impl.AbstractProgramRuntimeImpl#getProgram <em>Program</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.impl.AbstractProgramRuntimeImpl#getProgram <em>Program</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME;
+		return ApogyCoreProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 			program = (Program)eResolveProxy(oldProgram);
 			if (program != oldProgram) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
 			}
 		}
 		return program;
@@ -93,7 +93,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 		Program oldProgram = program;
 		program = newProgram;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
 	}
 
 	/**
@@ -170,7 +170,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				if (resolve) return getProgram();
 				return basicGetProgram();
 		}
@@ -185,7 +185,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				setProgram((Program)newValue);
 				return;
 		}
@@ -200,7 +200,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				setProgram((Program)null);
 				return;
 		}
@@ -215,7 +215,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				return program != null;
 		}
 		return super.eIsSet(featureID);
@@ -229,22 +229,22 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___RESUME:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___RESUME:
 				resume();
 				return null;
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___SUSPEND:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___SUSPEND:
 				suspend();
 				return null;
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___TERMINATE:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___TERMINATE:
 				terminate();
 				return null;
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_INTO:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_INTO:
 				stepInto();
 				return null;
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_OVER:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_OVER:
 				stepOver();
 				return null;
-			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN:
+			case ApogyCoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN:
 				stepReturn();
 				return null;
 		}

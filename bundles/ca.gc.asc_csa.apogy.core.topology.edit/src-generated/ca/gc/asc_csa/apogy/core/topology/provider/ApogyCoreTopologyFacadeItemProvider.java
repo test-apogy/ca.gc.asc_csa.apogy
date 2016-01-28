@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.provider;
+package ca.gc.asc_csa.apogy.core.topology.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreTopologyFacadeItemProvider
+public class ApogyCoreTopologyFacadeItemProvider
   extends ItemProviderAdapter
   implements
     IEditingDomainItemProvider,
@@ -40,7 +40,7 @@ public class Symphony__CoreTopologyFacadeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreTopologyFacadeItemProvider(AdapterFactory adapterFactory)
+  public ApogyCoreTopologyFacadeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -62,7 +62,7 @@ public class Symphony__CoreTopologyFacadeItemProvider
 	}
 
   /**
-	 * This returns Symphony__CoreTopologyFacade.gif.
+	 * This returns ApogyCoreTopologyFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -70,7 +70,7 @@ public class Symphony__CoreTopologyFacadeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreTopologyFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreTopologyFacade"));
 	}
 
   /**
@@ -82,7 +82,7 @@ public class Symphony__CoreTopologyFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_Symphony__CoreTopologyFacade_type");
+		return getString("_UI_ApogyCoreTopologyFacade_type");
 	}
 
   /**

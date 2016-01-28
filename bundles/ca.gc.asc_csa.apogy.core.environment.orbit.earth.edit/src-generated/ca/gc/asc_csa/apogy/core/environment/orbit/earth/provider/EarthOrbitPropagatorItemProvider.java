@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -10,13 +10,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.provider.AbstractOrbitPropagatorItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.provider.AbstractOrbitPropagatorItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -88,13 +88,13 @@ public class EarthOrbitPropagatorItemProvider extends AbstractOrbitPropagatorIte
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedFrame()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedFrame()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createNadirPointingAttitudeProvider()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createNadirPointingAttitudeProvider()));
 	}
 
 }

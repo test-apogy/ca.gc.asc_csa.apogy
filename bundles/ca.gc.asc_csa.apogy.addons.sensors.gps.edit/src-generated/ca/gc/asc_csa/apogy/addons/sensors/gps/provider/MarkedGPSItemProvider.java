@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.addons.sensors.gps.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.provider;
 
 
 import java.util.Collection;
@@ -11,13 +11,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
-import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.MarkedGPS;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.MarkedGPS} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.gps.MarkedGPS} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -61,7 +61,7 @@ public class MarkedGPSItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.MARKED_GPS__MARKER);
+			childrenFeatures.add(ApogyAddonsSensorsGPSPackage.Literals.MARKED_GPS__MARKER);
 		}
 		return childrenFeatures;
 	}
@@ -117,7 +117,7 @@ public class MarkedGPSItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MarkedGPS.class)) {
-			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER:
+			case ApogyAddonsSensorsGPSPackage.MARKED_GPS__MARKER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,8 +137,8 @@ public class MarkedGPSItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsGPSPackage.Literals.MARKED_GPS__MARKER,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
+				(ApogyAddonsSensorsGPSPackage.Literals.MARKED_GPS__MARKER,
+				 ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
 	}
 
 }

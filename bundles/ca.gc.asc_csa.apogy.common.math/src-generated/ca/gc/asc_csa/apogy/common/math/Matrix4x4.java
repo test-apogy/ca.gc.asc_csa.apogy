@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import javax.vecmath.Matrix4d;
 
@@ -16,25 +16,25 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM00 <em>M00</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM01 <em>M01</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM02 <em>M02</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM03 <em>M03</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM10 <em>M10</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM11 <em>M11</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM12 <em>M12</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM13 <em>M13</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM20 <em>M20</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM21 <em>M21</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM22 <em>M22</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM23 <em>M23</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM30 <em>M30</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM31 <em>M31</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM32 <em>M32</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM33 <em>M33</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM00 <em>M00</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM01 <em>M01</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM02 <em>M02</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM03 <em>M03</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM10 <em>M10</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM11 <em>M11</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM12 <em>M12</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM13 <em>M13</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM20 <em>M20</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM21 <em>M21</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM22 <em>M22</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM23 <em>M23</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM30 <em>M30</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM31 <em>M31</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM32 <em>M32</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM33 <em>M33</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4()
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M00</em>' attribute.
 	 * @see #setM00(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M00()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M00()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getM00();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM00 <em>M00</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM00 <em>M00</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M00</em>' attribute.
@@ -76,14 +76,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M01</em>' attribute.
 	 * @see #setM01(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M01()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M01()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM01();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM01 <em>M01</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM01 <em>M01</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M01</em>' attribute.
@@ -102,14 +102,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M02</em>' attribute.
 	 * @see #setM02(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M02()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M02()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM02();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM02 <em>M02</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM02 <em>M02</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M02</em>' attribute.
@@ -128,14 +128,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M03</em>' attribute.
 	 * @see #setM03(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M03()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M03()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM03();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM03 <em>M03</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM03 <em>M03</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M03</em>' attribute.
@@ -154,14 +154,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M10</em>' attribute.
 	 * @see #setM10(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M10()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M10()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM10();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM10 <em>M10</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM10 <em>M10</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M10</em>' attribute.
@@ -181,14 +181,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M11</em>' attribute.
 	 * @see #setM11(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M11()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M11()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getM11();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM11 <em>M11</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM11 <em>M11</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M11</em>' attribute.
@@ -207,14 +207,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M12</em>' attribute.
 	 * @see #setM12(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M12()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M12()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM12();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM12 <em>M12</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM12 <em>M12</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M12</em>' attribute.
@@ -233,14 +233,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M13</em>' attribute.
 	 * @see #setM13(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M13()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M13()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM13();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM13 <em>M13</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM13 <em>M13</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M13</em>' attribute.
@@ -259,14 +259,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M20</em>' attribute.
 	 * @see #setM20(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M20()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M20()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM20();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM20 <em>M20</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM20 <em>M20</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M20</em>' attribute.
@@ -285,14 +285,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M21</em>' attribute.
 	 * @see #setM21(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M21()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M21()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM21();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM21 <em>M21</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM21 <em>M21</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M21</em>' attribute.
@@ -312,14 +312,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M22</em>' attribute.
 	 * @see #setM22(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M22()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M22()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getM22();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM22 <em>M22</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM22 <em>M22</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M22</em>' attribute.
@@ -338,14 +338,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M23</em>' attribute.
 	 * @see #setM23(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M23()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M23()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM23();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM23 <em>M23</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM23 <em>M23</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M23</em>' attribute.
@@ -364,14 +364,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M30</em>' attribute.
 	 * @see #setM30(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M30()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M30()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM30();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM30 <em>M30</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM30 <em>M30</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M30</em>' attribute.
@@ -390,14 +390,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M31</em>' attribute.
 	 * @see #setM31(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M31()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M31()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM31();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM31 <em>M31</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM31 <em>M31</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M31</em>' attribute.
@@ -416,14 +416,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M32</em>' attribute.
 	 * @see #setM32(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M32()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M32()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getM32();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM32 <em>M32</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM32 <em>M32</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M32</em>' attribute.
@@ -443,14 +443,14 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M33</em>' attribute.
 	 * @see #setM33(double)
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M33()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage#getMatrix4x4_M33()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getM33();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Matrix4x4#getM33 <em>M33</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM33 <em>M33</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>M33</em>' attribute.
@@ -462,7 +462,7 @@ public interface Matrix4x4 extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.math.Matrix4d" unique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.math.Matrix4d" unique="false"
 	 * @generated
 	 */
 	Matrix4d asMatrix4d();

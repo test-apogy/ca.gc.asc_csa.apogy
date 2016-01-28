@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import org.eclipse.symphony.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 
 public class NodePresentationAdapterFactory {
 

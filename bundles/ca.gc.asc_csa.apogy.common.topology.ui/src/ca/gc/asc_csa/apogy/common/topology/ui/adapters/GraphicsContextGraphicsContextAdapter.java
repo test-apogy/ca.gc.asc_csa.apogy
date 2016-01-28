@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.topology.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.ui.adapters;
 
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContextAdapter;
 
 public class GraphicsContextGraphicsContextAdapter implements
 		GraphicsContextAdapter {

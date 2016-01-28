@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

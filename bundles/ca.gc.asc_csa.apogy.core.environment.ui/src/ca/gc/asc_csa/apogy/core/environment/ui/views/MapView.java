@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.ui.views;
 
 import java.util.List;
 
@@ -13,19 +13,19 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.actions.ClearAllTrajectoriesAction;
-import org.eclipse.symphony.core.environment.ui.actions.UpdateMapAction;
-import org.eclipse.symphony.core.environment.ui.actions.ZoomFitMapAction;
-import org.eclipse.symphony.core.environment.ui.composites.MapComposite;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.actions.ClearAllTrajectoriesAction;
+import ca.gc.asc_csa.apogy.core.environment.ui.actions.UpdateMapAction;
+import ca.gc.asc_csa.apogy.core.environment.ui.actions.ZoomFitMapAction;
+import ca.gc.asc_csa.apogy.core.environment.ui.composites.MapComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
@@ -59,10 +59,10 @@ public class MapView extends AbstractView
 		mapComposite = new MapComposite(parent, SWT.NONE);
 		
 		// Attempts to initialize the MapViewConfiguration.				
-		setMapViewConfiguration(Symphony__CoreEnvironmentUIFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
+		setMapViewConfiguration(ApogyCoreEnvironmentUIFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
 		
-		// Register to Symphony__CoreInvocatorFacade to listen for change on Active Session.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		// Register to ApogyCoreInvocatorFacade to listen for change on Active Session.
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
@@ -88,7 +88,7 @@ public class MapView extends AbstractView
 	{	
 		if(mapViewConfiguration != null)
 		{
-			mapViewConfigurationId = Symphony__CoreEnvironmentUIFacade.INSTANCE.getMapViewConfigurationIdentifier(mapViewConfiguration);
+			mapViewConfigurationId = ApogyCoreEnvironmentUIFacade.INSTANCE.getMapViewConfigurationIdentifier(mapViewConfiguration);
 			memento.putString(MAP_VIEW_CONFIG, mapViewConfigurationId);
 		}
 		memento.putBoolean(MAP_VIEW_PINNED, this.pinned);
@@ -126,8 +126,8 @@ public class MapView extends AbstractView
 	@Override
 	public void dispose() 
 	{
-		// Unregister to Symphony__CoreInvocatorFacade.
-		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		// Unregister to ApogyCoreInvocatorFacade.
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 		
 		setMapViewConfiguration(null);
 		
@@ -139,7 +139,7 @@ public class MapView extends AbstractView
 	@Override
 	public void updateSelection(ISelection selection) 
 	{
-		List<Object> mapViewConfigurations = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, MapViewConfiguration.class);
+		List<Object> mapViewConfigurations = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, MapViewConfiguration.class);
 		
 		if(!mapViewConfigurations.isEmpty())
 		{				
@@ -277,14 +277,14 @@ public class MapView extends AbstractView
 				@Override
 				public void notifyChanged(Notification msg) 
 				{				
-					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
+					if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
 						
-						if(featureId == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
+						if(featureId == ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
 						{
 							// Tries to update the MapViewConfiguration being displayed.
-							setMapViewConfiguration(Symphony__CoreEnvironmentUIFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
+							setMapViewConfiguration(ApogyCoreEnvironmentUIFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
 						}						
 					}
 				}

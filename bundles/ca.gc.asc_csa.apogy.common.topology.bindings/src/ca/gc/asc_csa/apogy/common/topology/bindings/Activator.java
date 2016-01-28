@@ -1,16 +1,16 @@
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.common.topology.bindings"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.bindings"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

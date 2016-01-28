@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -12,16 +12,16 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImagingUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,9 +31,9 @@ import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getTime <em>Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getFieldOfView <em>Field Of View</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.impl.ImageSnapshotImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.impl.ImageSnapshotImpl#getFieldOfView <em>Field Of View</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.impl.ImageSnapshotImpl#getImage <em>Image</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT;
+		return ApogyAddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT;
 	}
 
   /**
@@ -121,7 +121,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME, oldTime, time));
 	}
 
   /**
@@ -144,7 +144,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		RectangularFrustrumFieldOfView oldFieldOfView = fieldOfView;
 		fieldOfView = newFieldOfView;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, oldFieldOfView, newFieldOfView);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, oldFieldOfView, newFieldOfView);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -160,14 +160,14 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		if (newFieldOfView != fieldOfView) {
 			NotificationChain msgs = null;
 			if (fieldOfView != null)
-				msgs = ((InternalEObject)fieldOfView).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
+				msgs = ((InternalEObject)fieldOfView).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
 			if (newFieldOfView != null)
-				msgs = ((InternalEObject)newFieldOfView).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
+				msgs = ((InternalEObject)newFieldOfView).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
 			msgs = basicSetFieldOfView(newFieldOfView, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, newFieldOfView, newFieldOfView));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, newFieldOfView, newFieldOfView));
 	}
 
   /**
@@ -190,7 +190,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		AbstractEImage oldImage = image;
 		image = newImage;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, oldImage, newImage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, oldImage, newImage);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -206,14 +206,14 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		if (newImage != image) {
 			NotificationChain msgs = null;
 			if (image != null)
-				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
+				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
 			if (newImage != null)
-				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
+				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
 			msgs = basicSetImage(newImage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, newImage, newImage));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, newImage, newImage));
 	}
 
   	/**
@@ -245,9 +245,9 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				return basicSetFieldOfView(null, msgs);
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				return basicSetImage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -262,11 +262,11 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				return getTime();
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				return getFieldOfView();
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				return getImage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -281,13 +281,13 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				setTime((Date)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				setFieldOfView((RectangularFrustrumFieldOfView)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				setImage((AbstractEImage)newValue);
 				return;
 		}
@@ -303,13 +303,13 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				setFieldOfView((RectangularFrustrumFieldOfView)null);
 				return;
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				setImage((AbstractEImage)null);
 				return;
 		}
@@ -325,11 +325,11 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				return fieldOfView != null;
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				return image != null;
 		}
 		return super.eIsSet(featureID);
@@ -345,7 +345,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME: return ApogyCommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -362,7 +362,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME;
+				case ApogyCommonEMFPackage.TIMED__TIME: return ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME;
 				default: return -1;
 			}
 		}
@@ -377,9 +377,9 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_HORIZONTAL_ANGLE__INT:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_HORIZONTAL_ANGLE__INT:
 				return convertToHorizontalAngle((Integer)arguments.get(0));
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_VERTICAL_ANGLE__INT:
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_VERTICAL_ANGLE__INT:
 				return convertToVerticalAngle((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

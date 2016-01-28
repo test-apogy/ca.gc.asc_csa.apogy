@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings;
+package ca.gc.asc_csa.apogy.common.topology.bindings;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.TreeRootNode;
+import ca.gc.asc_csa.apogy.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList#getFeatureRoots <em>Feature Roots</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList#getFeatureRoots <em>Feature Roots</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getFeatureRootsList()
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getFeatureRootsList()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface FeatureRootsList extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Feature Roots</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.emf.TreeRootNode}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.emf.TreeRootNode}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Feature Roots</em>' containment reference list isn't clear,
@@ -40,7 +40,7 @@ public interface FeatureRootsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Roots</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getFeatureRootsList_FeatureRoots()
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage#getFeatureRootsList_FeatureRoots()
 	 * @model containment="true"
 	 * @generated
 	 */

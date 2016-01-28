@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.programs.controllers.ui.commands;
+package ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands;
 import java.util.Iterator;
 
 import org.eclipse.core.commands.AbstractHandler;
@@ -10,7 +10,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.programs.controllers.ControllersConfiguration;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 

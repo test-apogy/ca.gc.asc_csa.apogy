@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.AbstractListNode#getParent <em>Parent</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.AbstractListNode#getChild <em>Child</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getParent <em>Parent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getChild <em>Child</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractListNode()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractListNode()
  * @model abstract="true"
  * @generated
  */
@@ -25,7 +25,7 @@ public interface AbstractListNode extends EObject
 {
   /**
    * Returns the value of the '<em><b>Parent</b></em>' container reference.
-   * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.emf.AbstractListNode#getChild <em>Child</em>}'.
+   * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getChild <em>Child</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * <!-- begin-model-doc -->
@@ -33,8 +33,8 @@ public interface AbstractListNode extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Parent</em>' container reference.
    * @see #setParent(AbstractListNode)
-   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractListNode_Parent()
-   * @see org.eclipse.symphony.common.emf.AbstractListNode#getChild
+   * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractListNode_Parent()
+   * @see ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getChild
    * @model opposite="child" transient="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
    * @generated
@@ -42,7 +42,7 @@ public interface AbstractListNode extends EObject
   AbstractListNode getParent();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.common.emf.AbstractListNode#getParent <em>Parent</em>}' container reference.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getParent <em>Parent</em>}' container reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Parent</em>' container reference.
@@ -53,7 +53,7 @@ public interface AbstractListNode extends EObject
 
   /**
    * Returns the value of the '<em><b>Child</b></em>' containment reference.
-   * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.emf.AbstractListNode#getParent <em>Parent</em>}'.
+   * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getParent <em>Parent</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * <!-- begin-model-doc -->
@@ -61,8 +61,8 @@ public interface AbstractListNode extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Child</em>' containment reference.
    * @see #setChild(AbstractListNode)
-   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractListNode_Child()
-   * @see org.eclipse.symphony.common.emf.AbstractListNode#getParent
+   * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractListNode_Child()
+   * @see ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getParent
    * @model opposite="parent" containment="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
    * @generated
@@ -70,7 +70,7 @@ public interface AbstractListNode extends EObject
   AbstractListNode getChild();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.common.emf.AbstractListNode#getChild <em>Child</em>}' containment reference.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.AbstractListNode#getChild <em>Child</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Child</em>' containment reference.

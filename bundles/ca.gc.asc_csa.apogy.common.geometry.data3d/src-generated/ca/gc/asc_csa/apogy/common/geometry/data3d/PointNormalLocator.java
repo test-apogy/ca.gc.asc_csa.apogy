@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import javax.vecmath.GVector;
 import javax.vecmath.Point3d;
@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#getDataSet <em>Data Set</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointNormalLocator#getDataSet <em>Data Set</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointNormalLocator()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getPointNormalLocator()
  * @model
  * @generated
  */
@@ -38,14 +38,14 @@ public interface PointNormalLocator extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Set</em>' reference.
 	 * @see #setDataSet(NormalPointCloud)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointNormalLocator_DataSet()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getPointNormalLocator_DataSet()
 	 * @model
 	 * @generated
 	 */
 	NormalPointCloud getDataSet();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#getDataSet <em>Data Set</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointNormalLocator#getDataSet <em>Data Set</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Data Set</em>' reference.
@@ -57,7 +57,7 @@ public interface PointNormalLocator extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.GVector" unique="false" pointDataType="org.eclipse.symphony.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" normalUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.GVector" unique="false" pointDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" normalUnique="false"
 	 * @generated
 	 */
 	GVector findClosestPoint(Point3d point, Vector3d normal);
@@ -65,7 +65,7 @@ public interface PointNormalLocator extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.GVector" unique="false" radiusUnique="false" pointDataType="org.eclipse.symphony.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" normalUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.GVector" unique="false" radiusUnique="false" pointDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" normalUnique="false"
 	 * @generated
 	 */
 	EList<GVector> findPointsWithinRadius(double radius, Point3d point, Vector3d normal);
@@ -73,7 +73,7 @@ public interface PointNormalLocator extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.GVector" unique="false" nUnique="false" pointDataType="org.eclipse.symphony.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" normalUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.GVector" unique="false" nUnique="false" pointDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" normalUnique="false"
 	 * @generated
 	 */
 	EList<GVector> findClosestNPoints(int n, Point3d point, Vector3d normal);
@@ -81,7 +81,7 @@ public interface PointNormalLocator extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" pointDataType="org.eclipse.symphony.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" normalUnique="false"
+	 * @model unique="false" pointDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" normalUnique="false"
 	 * @generated
 	 */
 	int findClosestPointId(Point3d point, Vector3d normal);
@@ -89,7 +89,7 @@ public interface PointNormalLocator extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.IntArray" unique="false" radiusUnique="false" pointDataType="org.eclipse.symphony.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" normalUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.IntArray" unique="false" radiusUnique="false" pointDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" normalUnique="false"
 	 * @generated
 	 */
 	int[] findPointIdsWithinRadius(double radius, Point3d point, Vector3d normal);
@@ -97,7 +97,7 @@ public interface PointNormalLocator extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.IntArray" unique="false" nUnique="false" pointDataType="org.eclipse.symphony.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" normalUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.IntArray" unique="false" nUnique="false" pointDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" pointUnique="false" normalDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Vector3d" normalUnique="false"
 	 * @generated
 	 */
 	int[] findClosestNPointIds(int n, Point3d point, Vector3d normal);

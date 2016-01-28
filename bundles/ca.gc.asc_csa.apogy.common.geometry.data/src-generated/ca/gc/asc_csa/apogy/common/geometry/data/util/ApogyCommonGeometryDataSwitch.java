@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data.util;
+package ca.gc.asc_csa.apogy.common.geometry.data.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.geometry.data.*;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.geometry.data.*;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.common.processors.Processor;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage
  * @generated
  */
-public class Symphony__CommonGeometryDataSwitch<T1> extends Switch<T1> {
+public class ApogyCommonGeometryDataSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryDataPackage modelPackage;
+	protected static ApogyCommonGeometryDataPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__CommonGeometryDataSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryDataSwitch() {
+	public ApogyCommonGeometryDataSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryDataPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryDataPackage.eINSTANCE;
 		}
 	}
 
@@ -67,52 +67,52 @@ public class Symphony__CommonGeometryDataSwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES: {
+			case ApogyCommonGeometryDataPackage.COORDINATES: {
 				Coordinates coordinates = (Coordinates)theEObject;
 				T1 result = caseCoordinates(coordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET: {
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET: {
 				CoordinatesSet<?> coordinatesSet = (CoordinatesSet<?>)theEObject;
 				T1 result = caseCoordinatesSet(coordinatesSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.POLYGON: {
+			case ApogyCommonGeometryDataPackage.POLYGON: {
 				Polygon<?> polygon = (Polygon<?>)theEObject;
 				T1 result = casePolygon(polygon);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.MESH: {
+			case ApogyCommonGeometryDataPackage.MESH: {
 				Mesh<?, ?> mesh = (Mesh<?, ?>)theEObject;
 				T1 result = caseMesh(mesh);
 				if (result == null) result = caseCoordinatesSet(mesh);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.SAMPLING_SHAPE: {
+			case ApogyCommonGeometryDataPackage.SAMPLING_SHAPE: {
 				SamplingShape samplingShape = (SamplingShape)theEObject;
 				T1 result = caseSamplingShape(samplingShape);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE: {
+			case ApogyCommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE: {
 				CoordinatesSamplingShape<?> coordinatesSamplingShape = (CoordinatesSamplingShape<?>)theEObject;
 				T1 result = caseCoordinatesSamplingShape(coordinatesSamplingShape);
 				if (result == null) result = caseSamplingShape(coordinatesSamplingShape);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE: {
+			case ApogyCommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE: {
 				PolygonSamplingShape<?, ?> polygonSamplingShape = (PolygonSamplingShape<?, ?>)theEObject;
 				T1 result = casePolygonSamplingShape(polygonSamplingShape);
 				if (result == null) result = caseSamplingShape(polygonSamplingShape);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER: {
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER: {
 				CoordinatesSetShapesSampler<?> coordinatesSetShapesSampler = (CoordinatesSetShapesSampler<?>)theEObject;
 				T1 result = caseCoordinatesSetShapesSampler(coordinatesSetShapesSampler);
 				if (result == null) result = caseProcessor(coordinatesSetShapesSampler);
@@ -120,7 +120,7 @@ public class Symphony__CommonGeometryDataSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER: {
+			case ApogyCommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER: {
 				MeshCoordinatesShapesSampler<?, ?> meshCoordinatesShapesSampler = (MeshCoordinatesShapesSampler<?, ?>)theEObject;
 				T1 result = caseMeshCoordinatesShapesSampler(meshCoordinatesShapesSampler);
 				if (result == null) result = caseProcessor(meshCoordinatesShapesSampler);
@@ -128,7 +128,7 @@ public class Symphony__CommonGeometryDataSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER: {
+			case ApogyCommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER: {
 				MeshPolygonShapesSampler<?, ?> meshPolygonShapesSampler = (MeshPolygonShapesSampler<?, ?>)theEObject;
 				T1 result = caseMeshPolygonShapesSampler(meshPolygonShapesSampler);
 				if (result == null) result = caseProcessor(meshPolygonShapesSampler);
@@ -336,4 +336,4 @@ public class Symphony__CommonGeometryDataSwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__CommonGeometryDataSwitch
+} //ApogyCommonGeometryDataSwitch

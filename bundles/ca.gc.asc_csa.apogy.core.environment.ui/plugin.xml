@@ -7,41 +7,41 @@
 
 <plugin>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.core.environment.ui.adapters.EarthSkyPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.EarthSkyPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.core.environment.ui.adapters.StarFieldPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.StarFieldPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.core.environment.ui.adapters.SunPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.SunPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.core.environment.ui.adapters.MoonPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.MoonPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.core.environment.ui.adapters.EarthSurfaceWorksitePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.EarthSurfaceWorksitePresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.core.environment.ui.adapters.FeatureOfInterestPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.FeatureOfInterestPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.environment.ui.views.EarthSkyView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.views.EarthSkyView"
             icon="icons/earth_sky_view.gif"
-            id="org.eclipse.symphony.core.environment.ui.views.EarthSkyView"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.views.EarthSkyView"
             name="Earth Sky"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
-            class="org.eclipse.symphony.core.environment.ui.views.MapView"
+            category="ca.gc.asc_csa.apogy.core.ui.category"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.views.MapView"
             icon="icons/map_view_icon.gif"
-            id="org.eclipse.symphony.core.environment.ui.views.MapView"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.views.MapView"
             name="Map View"
             restorable="true">
       </view>
@@ -49,30 +49,30 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="org.eclipse.symphony.core.environment.ui.property.category.Default">
+               category="ca.gc.asc_csa.apogy.core.environment.ui.property.category.Default">
          </propertyCategory>
       </propertyContributor>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="org.eclipse.symphony.core.environment.ui.properties.sections.EarthSkyPropertySection"
-               id="org.eclipse.symphony.core.environment.ui.property.section.CartesianCoordinatesSet"
-               tab="org.eclipse.symphony.core.environment.ui.property.tab.EarthSky">
+               class="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.EarthSkyPropertySection"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.property.section.CartesianCoordinatesSet"
+               tab="ca.gc.asc_csa.apogy.core.environment.ui.property.tab.EarthSky">
             <input
-                  type="org.eclipse.symphony.core.environment.EarthSky">
+                  type="ca.gc.asc_csa.apogy.core.environment.EarthSky">
             </input>
          </propertySection>
          
          <propertySection
-               class="org.eclipse.symphony.core.environment.ui.properties.sections.MapLayerPresentationsListSection"
-               id="org.eclipse.symphony.core.environment.ui.property.sections.MapLayerPresentationsListSection"
-               tab="org.eclipse.symphony.core.environment.ui.property.tab.MapLayers"
-			   filter="org.eclipse.symphony.core.environment.ui.properties.sections.MapLayerPresentationsListSection">               
+               class="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.MapLayerPresentationsListSection"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.property.sections.MapLayerPresentationsListSection"
+               tab="ca.gc.asc_csa.apogy.core.environment.ui.property.tab.MapLayers"
+			   filter="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.MapLayerPresentationsListSection">               
          </propertySection>
          
       </propertySections>
@@ -80,10 +80,10 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.core.environment.ui.property.category.Default"
-               id="org.eclipse.symphony.core.environment.ui.property.tab.EarthSky"
+               category="ca.gc.asc_csa.apogy.core.environment.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.property.tab.EarthSky"
                label="Earth Sky Data">
          </propertyTab>
       </propertyTabs>
@@ -92,72 +92,72 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.core.environment.ui.property.category.Default"
-               id="org.eclipse.symphony.core.environment.ui.property.tab.MapLayers"
+               category="ca.gc.asc_csa.apogy.core.environment.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.property.tab.MapLayers"
                label="Map Layers">
          </propertyTab>
       </propertyTabs>
    </extension>      
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_environment_ui -->
+      <!-- @generated apogy_environment_ui -->
       <package
-            uri="org.eclipse.symphony.core.environment.ui"
-            class="org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage"
-            genModel="model/symphony_core_environment_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.core.environment.ui"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage"
+            genModel="model/apogy_core_environment_ui.xcore"/>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderClearCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderClearCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderClearCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderClearCommand"
             name="Clear Trajectory">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderInitializeCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderInitializeCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderInitializeCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderInitializeCommand"
             name="Initialize">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderSaveTrajectoryToFileCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderSaveTrajectoryToFileCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderSaveTrajectoryToFileCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderSaveTrajectoryToFileCommand"
             name="Save Tof File">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderLoadTrajectoryToFileCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderLoadTrajectoryToFileCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderLoadTrajectoryToFileCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderLoadTrajectoryToFileCommand"
             name="Load Trajectory">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.MapToolActivateCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.MapToolActivateCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapToolActivateCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapToolActivateCommand"
             name="Activate Map Tool">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.MapToolDeActivateCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.MapToolDeActivateCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapToolDeActivateCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapToolDeActivateCommand"
             name="De-Activate Map Tool">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.MapViewItemPresentationToggleVisibilityCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.MapViewItemPresentationToggleVisibilityCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapViewItemPresentationToggleVisibilityCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapViewItemPresentationToggleVisibilityCommand"
             name="Toggle Visibility">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.MoveToMapLayer"
-            id="org.eclipse.symphony.core.environment.ui.commands.MoveToMapLayer"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.MoveToMapLayer"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.MoveToMapLayer"
             name="Move To Map">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.CreateFOICommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.CreateFOICommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.CreateFOICommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.CreateFOICommand"
             name="Create FOI">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.ui.commands.ToggleCoordinateConversionViewSelectionEnabledCommand"
-            id="org.eclipse.symphony.core.environment.ui.commands.ToggleCoordinateConversionViewSelectionEnabledCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.ui.commands.ToggleCoordinateConversionViewSelectionEnabledCommand"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.commands.ToggleCoordinateConversionViewSelectionEnabledCommand"
             name="Allow Coordinate Object Selection &amp; Editing">
          <state
                class="org.eclipse.ui.handlers.RegistryToggleState:false"
@@ -169,9 +169,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderClearCommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderClearCommand"
                label="Clear Trajectory"
                style="push">
             <visibleWhen
@@ -182,14 +182,14 @@
                       ifEmpty="false"
                       operator="or">
                         <instanceof
-                            value="org.eclipse.symphony.core.environment.ui.TrajectoryProvider">
+                            value="ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider">
                         </instanceof>
                    </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderInitializeCommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderInitializeCommand"
                label="Initialize Trajectory"
                style="push">
             <visibleWhen
@@ -200,14 +200,14 @@
                       ifEmpty="false"
                       operator="or">
                         <instanceof
-                           value="org.eclipse.symphony.core.environment.ui.TrajectoryProvider">
+                           value="ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider">
                         </instanceof>
                    </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderSaveTrajectoryToFileCommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderSaveTrajectoryToFileCommand"
                label="Save Trajectory To File"
                style="push">
             <visibleWhen
@@ -218,14 +218,14 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="org.eclipse.symphony.core.environment.ui.TrajectoryProvider">
+                             value="ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider">
                          </instanceof>
                      </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderLoadTrajectoryToFileCommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.TrajectoryProviderLoadTrajectoryToFileCommand"
                label="Load Trajectory From File"
                style="push">
             <visibleWhen
@@ -236,14 +236,14 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="org.eclipse.symphony.core.environment.ui.TrajectoryProvider">
+                             value="ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider">
                          </instanceof>
                     </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.MapToolActivateCommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapToolActivateCommand"
                label="Activate Tool"
                style="push">
             <visibleWhen
@@ -254,14 +254,14 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="org.eclipse.symphony.core.environment.ui.MapTool">
+                             value="ca.gc.asc_csa.apogy.core.environment.ui.MapTool">
                          </instanceof>
                     </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.MapToolDeActivateCommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapToolDeActivateCommand"
                label="De-Activate Tool"
                style="push">
             <visibleWhen
@@ -272,14 +272,14 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="org.eclipse.symphony.core.environment.ui.MapTool">
+                             value="ca.gc.asc_csa.apogy.core.environment.ui.MapTool">
                          </instanceof>
                     </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.MapViewItemPresentationToggleVisibilityCommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.MapViewItemPresentationToggleVisibilityCommand"
                label="Toggle Visibility"
                style="push">
             <visibleWhen
@@ -290,14 +290,14 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="org.eclipse.symphony.core.environment.ui.MapViewItemPresentation">
+                             value="ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation">
                          </instanceof>
                     </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.MoveToMapLayer"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.MoveToMapLayer"
                label="Move To Map"
                style="push">
             <visibleWhen
@@ -308,14 +308,14 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="org.eclipse.symphony.core.PositionedResult">
+                             value="ca.gc.asc_csa.apogy.core.PositionedResult">
                          </instanceof>
                     </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.environment.ui.commands.CreateFOICommand"
+               commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.CreateFOICommand"
                label="Create FOI"
                style="push">
             <visibleWhen
@@ -326,7 +326,7 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="org.eclipse.symphony.core.AbsolutePoseProvider">
+                             value="ca.gc.asc_csa.apogy.core.AbsolutePoseProvider">
                          </instanceof>
                     </iterate>
                </with>
@@ -334,9 +334,9 @@
          </command>
       </menuContribution>
       <menuContribution
-             locationURI="toolbar:org.eclipse.symphony.core.environment.ui.views.CoordinateConversionView?after=additions">
+             locationURI="toolbar:ca.gc.asc_csa.apogy.core.environment.ui.views.CoordinateConversionView?after=additions">
           <command
-                commandId="org.eclipse.symphony.core.environment.ui.commands.ToggleCoordinateConversionViewSelectionEnabledCommand"
+                commandId="ca.gc.asc_csa.apogy.core.environment.ui.commands.ToggleCoordinateConversionViewSelectionEnabledCommand"
                 label="Allow Coordinate Object Selection &amp; Editing"
                 style="toggle">
           </command>
@@ -345,49 +345,49 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
-            class="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesPage"
-            id="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesPage"
+            category="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesPage"
             name="Maps and Map View">
       </page>
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentWorksitePreferencesPage"
-            id="org.eclipse.symphony.core.environment.ui.page1"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentWorksitePreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.page1"
             name="Earth Surface Worksite">
       </page>
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentSkyPreferencesPage"
-            id="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentSkyPreferencesPage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentSkyPreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentSkyPreferencesPage"
             name="Sky">
       </page>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="org.eclipse.symphony.core.environment.ui.properties.sections.GeographicCoordinatesSection"
-               filter="org.eclipse.symphony.core.environment.ui.properties.sections.GeographicCoordinatesSection"
-               id="org.eclipse.symphony.core.environment.ui.properties.sections.GeographicalCoordinatesSection"
-               tab="org.eclipse.symphony.core.environment.ui.property.tabs.GeographicalCoordinates">
+               class="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.GeographicCoordinatesSection"
+               filter="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.GeographicCoordinatesSection"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.GeographicalCoordinatesSection"
+               tab="ca.gc.asc_csa.apogy.core.environment.ui.property.tabs.GeographicalCoordinates">
          </propertySection>
       </propertySections>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.core.environment.ui.property.category.Default"
-               id="org.eclipse.symphony.core.environment.ui.property.tabs.GeographicalCoordinates"
+               category="ca.gc.asc_csa.apogy.core.environment.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.property.tabs.GeographicalCoordinates"
                label="Geographical Coordinates">
          </propertyTab>
       </propertyTabs>
@@ -395,22 +395,22 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="org.eclipse.symphony.core.environment.ui.properties.sections.PositionCoordinatesSection"
-               filter="org.eclipse.symphony.core.environment.ui.properties.sections.PositionCoordinatesSection"
-               id="org.eclipse.symphony.core.environment.ui.properties.sections.PositionSection"
-               tab="org.eclipse.symphony.core.environment.ui.property.tabs.Position">
+               class="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.PositionCoordinatesSection"
+               filter="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.PositionCoordinatesSection"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.properties.sections.PositionSection"
+               tab="ca.gc.asc_csa.apogy.core.environment.ui.property.tabs.Position">
          </propertySection>
       </propertySections>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.core.environment.ui.property.category.Default"
-               id="org.eclipse.symphony.core.environment.ui.property.tabs.Position"
+               category="ca.gc.asc_csa.apogy.core.environment.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.core.environment.ui.property.tabs.Position"
                label="Position">
          </propertyTab>
       </propertyTabs>

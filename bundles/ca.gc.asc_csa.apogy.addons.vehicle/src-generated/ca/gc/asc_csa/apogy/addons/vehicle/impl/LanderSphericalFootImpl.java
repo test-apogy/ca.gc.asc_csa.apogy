@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalBodyImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImp
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.LanderSphericalFootImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.LanderSphericalFootImpl#getRadius <em>Radius</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,7 +63,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT;
+		return ApogyAddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT;
 	}
 
   /**
@@ -86,7 +86,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -98,7 +98,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case ApogyAddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

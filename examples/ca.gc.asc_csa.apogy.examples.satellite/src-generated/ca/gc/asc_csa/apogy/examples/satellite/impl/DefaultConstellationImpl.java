@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.symphony.examples.satellite.DefaultConstellation;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class DefaultConstellationImpl extends AbstractConstellationImpl implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION;
+		return ApogyExamplesSatellitePackage.Literals.DEFAULT_CONSTELLATION;
 	}
 
 } //DefaultConstellationImpl

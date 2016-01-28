@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -12,26 +12,26 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
-import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.AngularCoordinates;
-import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.PVACoordinates;
-import org.eclipse.symphony.core.environment.orbit.PVCoordinatesProviderProvider;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
-import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.PVACoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.PVCoordinatesProviderProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
 import java.util.List;
 
 /**
@@ -40,7 +40,7 @@ import java.util.List;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl implements Symphony__CoreEnvironmentOrbitPackage {
+public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implements ApogyCoreEnvironmentOrbitPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,7 +137,7 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CoreEnvironmentOrbitFacadeEClass = null;
+	private EClass apogy__CoreEnvironmentOrbitFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,12 +164,12 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CoreEnvironmentOrbitPackageImpl() {
-		super(eNS_URI, Symphony__CoreEnvironmentOrbitFactory.eINSTANCE);
+	private ApogyCoreEnvironmentOrbitPackageImpl() {
+		super(eNS_URI, ApogyCoreEnvironmentOrbitFactory.eINSTANCE);
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CoreEnvironmentOrbitPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCoreEnvironmentOrbitPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,30 +191,30 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CoreEnvironmentOrbitPackage init() {
-		if (isInited) return (Symphony__CoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentOrbitPackage.eNS_URI);
+	public static ApogyCoreEnvironmentOrbitPackage init() {
+		if (isInited) return (ApogyCoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CoreEnvironmentOrbitPackageImpl theSymphony__CoreEnvironmentOrbitPackage = (Symphony__CoreEnvironmentOrbitPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CoreEnvironmentOrbitPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CoreEnvironmentOrbitPackageImpl());
+		ApogyCoreEnvironmentOrbitPackageImpl theApogyCoreEnvironmentOrbitPackage = (ApogyCoreEnvironmentOrbitPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCoreEnvironmentOrbitPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCoreEnvironmentOrbitPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CoreEnvironmentPackage.eINSTANCE.eClass();
+		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CoreEnvironmentOrbitPackage.createPackageContents();
+		theApogyCoreEnvironmentOrbitPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CoreEnvironmentOrbitPackage.initializePackageContents();
+		theApogyCoreEnvironmentOrbitPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CoreEnvironmentOrbitPackage.freeze();
+		theApogyCoreEnvironmentOrbitPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CoreEnvironmentOrbitPackage.eNS_URI, theSymphony__CoreEnvironmentOrbitPackage);
-		return theSymphony__CoreEnvironmentOrbitPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCoreEnvironmentOrbitPackage.eNS_URI, theApogyCoreEnvironmentOrbitPackage);
+		return theApogyCoreEnvironmentOrbitPackage;
 	}
 
 	/**
@@ -573,8 +573,8 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CoreEnvironmentOrbitFacade() {
-		return symphony__CoreEnvironmentOrbitFacadeEClass;
+	public EClass getApogyCoreEnvironmentOrbitFacade() {
+		return apogy__CoreEnvironmentOrbitFacadeEClass;
 	}
 
 	/**
@@ -582,8 +582,8 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel() {
-		return symphony__CoreEnvironmentOrbitFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel() {
+		return apogy__CoreEnvironmentOrbitFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -609,8 +609,8 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitFactory getSymphony__CoreEnvironmentOrbitFactory() {
-		return (Symphony__CoreEnvironmentOrbitFactory)getEFactoryInstance();
+	public ApogyCoreEnvironmentOrbitFactory getApogyCoreEnvironmentOrbitFactory() {
+		return (ApogyCoreEnvironmentOrbitFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -684,8 +684,8 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		createEReference(orbitModelEClass, ORBIT_MODEL__INITIAL_ORBIT);
 		createEReference(orbitModelEClass, ORBIT_MODEL__PROPAGATOR);
 
-		symphony__CoreEnvironmentOrbitFacadeEClass = createEClass(SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE);
-		createEOperation(symphony__CoreEnvironmentOrbitFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL);
+		apogy__CoreEnvironmentOrbitFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_ORBIT_FACADE);
+		createEOperation(apogy__CoreEnvironmentOrbitFacadeEClass, APOGY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -716,10 +716,10 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CoreEnvironmentPackage theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -728,33 +728,33 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		orbitWorksiteEClass.getESuperTypes().add(theSymphony__CoreEnvironmentPackage.getWorksite());
-		abstractFrameEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		abstractFrameEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		orbitWorksiteEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getWorksite());
+		abstractFrameEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractFrameEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		timedStampedPVACoordinatesEClass.getESuperTypes().add(this.getPVACoordinates());
-		timedStampedPVACoordinatesEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		timedStampedPVACoordinatesEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		timedStampedAngularCoordinatesEClass.getESuperTypes().add(this.getAngularCoordinates());
-		timedStampedAngularCoordinatesEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
-		spacecraftAttitudeEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
-		spacecraftStateEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
-		orbitEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		orbitEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
-		orbitEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
-		abstractOrbitPropagatorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		abstractOrbitPropagatorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
-		orbitModelEClass.getESuperTypes().add(theSymphony__CorePackage.getAbstractOrbitModel());
+		timedStampedAngularCoordinatesEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
+		spacecraftAttitudeEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
+		spacecraftStateEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
+		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		orbitEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
+		abstractOrbitPropagatorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractOrbitPropagatorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		orbitModelEClass.getESuperTypes().add(theApogyCorePackage.getAbstractOrbitModel());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(orbitWorksiteEClass, OrbitWorksite.class, "OrbitWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitWorksite_ActiveOrbitModel(), theSymphony__CorePackage.getAbstractOrbitModel(), null, "activeOrbitModel", null, 0, 1, OrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitWorksite_ActiveOrbitModel(), theApogyCorePackage.getAbstractOrbitModel(), null, "activeOrbitModel", null, 0, 1, OrbitWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractFrameEClass, AbstractFrame.class, "AbstractFrame", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pvaCoordinatesEClass, PVACoordinates.class, "PVACoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPVACoordinates_Position(), theSymphony__CommonMathPackage.getTuple3d(), null, "position", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPVACoordinates_Velocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "velocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPVACoordinates_Acceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "acceleration", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPVACoordinates_AngularVelocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularVelocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_Position(), theApogyCommonMathPackage.getTuple3d(), null, "position", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_Velocity(), theApogyCommonMathPackage.getTuple3d(), null, "velocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_Acceleration(), theApogyCommonMathPackage.getTuple3d(), null, "acceleration", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_AngularVelocity(), theApogyCommonMathPackage.getTuple3d(), null, "angularVelocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timedStampedPVACoordinatesEClass, TimedStampedPVACoordinates.class, "TimedStampedPVACoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -765,9 +765,9 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getAbstractFrame(), "frame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(angularCoordinatesEClass, AngularCoordinates.class, "AngularCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAngularCoordinates_Rotation(), theSymphony__CommonMathPackage.getMatrix3x3(), null, "rotation", null, 0, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAngularCoordinates_AngularRate(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularRate", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAngularCoordinates_AngularAcceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularAcceleration", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAngularCoordinates_Rotation(), theApogyCommonMathPackage.getMatrix3x3(), null, "rotation", null, 0, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAngularCoordinates_AngularRate(), theApogyCommonMathPackage.getTuple3d(), null, "angularRate", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAngularCoordinates_AngularAcceleration(), theApogyCommonMathPackage.getTuple3d(), null, "angularAcceleration", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timedStampedAngularCoordinatesEClass, TimedStampedAngularCoordinates.class, "TimedStampedAngularCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -818,9 +818,9 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		initEReference(getOrbitModel_InitialOrbit(), this.getOrbit(), null, "initialOrbit", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOrbitModel_Propagator(), this.getAbstractOrbitPropagator(), null, "propagator", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__CoreEnvironmentOrbitFacadeEClass, Symphony__CoreEnvironmentOrbitFacade.class, "Symphony__CoreEnvironmentOrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CoreEnvironmentOrbitFacadeEClass, ApogyCoreEnvironmentOrbitFacade.class, "ApogyCoreEnvironmentOrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__CoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel(), this.getOrbitModel(), "createOrbitModelCopy", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel(), this.getOrbitModel(), "createOrbitModelCopy", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOrbitModel(), "originalOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -847,17 +847,17 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CoreEnvironmentOrbit",
+			 "prefix", "ApogyCoreEnvironmentOrbit",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__CoreEnvironmentOrbit",
+			 "modelName", "ApogyCoreEnvironmentOrbit",
 			 "complianceLevel", "8.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.core.environment.orbit/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.core.environment.orbit.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.core.environment"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.core.environment"
 		   });	
 		addAnnotation
 		  (getOrbitWorksite_ActiveOrbitModel(), 
@@ -876,28 +876,28 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "The position.",
-			 "symphony_units", "m"
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (getPVACoordinates_Velocity(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The velocity.",
-			 "symphony_units", "m/s"
+			 "apogy_units", "m/s"
 		   });	
 		addAnnotation
 		  (getPVACoordinates_Acceleration(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The acceleration.",
-			 "symphony_units", "m/s\u00b2"
+			 "apogy_units", "m/s\u00b2"
 		   });	
 		addAnnotation
 		  (getPVACoordinates_AngularVelocity(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The angular velocity (spin) of this point as seen from the origin.",
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (timedStampedPVACoordinatesEClass, 
@@ -1002,7 +1002,7 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		  ((getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "symphony_units", "s"
+			 "apogy_units", "s"
 		   });	
 		addAnnotation
 		  (getAbstractOrbitPropagator__IsDateInValidRange__Date(), 
@@ -1047,11 +1047,11 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 			 "documentation", "Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and\na propagation method (through the AbstractOrbitPropagator)."
 		   });	
 		addAnnotation
-		  (symphony__CoreEnvironmentOrbitFacadeEClass, 
+		  (apogy__CoreEnvironmentOrbitFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "A class providing utilities methods for Orbits."
 		   });
 	}
 
-} //Symphony__CoreEnvironmentOrbitPackageImpl
+} //ApogyCoreEnvironmentOrbitPackageImpl

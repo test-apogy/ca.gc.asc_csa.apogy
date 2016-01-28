@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.impl;
+package ca.gc.asc_csa.apogy.common.processors.impl;
 
 import java.util.Iterator;
 
@@ -10,10 +10,10 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.processors.Activator;
-import org.eclipse.symphony.common.processors.JobProcessorsChain;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.processors.Activator;
+import ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public class JobProcessorsChainImpl<I, O> extends ProcessorsChainImpl<I, O> impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonProcessorsPackage.Literals.JOB_PROCESSORS_CHAIN;
+		return ApogyCommonProcessorsPackage.Literals.JOB_PROCESSORS_CHAIN;
 	}
 
 	@Override

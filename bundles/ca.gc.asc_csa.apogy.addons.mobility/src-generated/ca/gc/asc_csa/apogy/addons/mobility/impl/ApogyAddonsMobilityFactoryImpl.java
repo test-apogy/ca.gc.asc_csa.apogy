@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityFactoryImpl.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityFactoryImpl.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.mobility.*;
+import ca.gc.asc_csa.apogy.addons.mobility.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.addons.mobility.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsMobilityFactoryImpl extends EFactoryImpl implements Symphony__AddonsMobilityFactory {
+public class ApogyAddonsMobilityFactoryImpl extends EFactoryImpl implements ApogyAddonsMobilityFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsMobilityFactory init() {
+	public static ApogyAddonsMobilityFactory init() {
 		try {
-			Symphony__AddonsMobilityFactory theSymphony__AddonsMobilityFactory = (Symphony__AddonsMobilityFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsMobilityPackage.eNS_URI);
-			if (theSymphony__AddonsMobilityFactory != null) {
-				return theSymphony__AddonsMobilityFactory;
+			ApogyAddonsMobilityFactory theApogyAddonsMobilityFactory = (ApogyAddonsMobilityFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsMobilityPackage.eNS_URI);
+			if (theApogyAddonsMobilityFactory != null) {
+				return theApogyAddonsMobilityFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsMobilityFactoryImpl();
+		return new ApogyAddonsMobilityFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__AddonsMobilityFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityFactoryImpl() {
+	public ApogyAddonsMobilityFactoryImpl() {
 		super();
 	}
 
@@ -57,8 +57,8 @@ public class Symphony__AddonsMobilityFactoryImpl extends EFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM: return createMobilePlatform();
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM: return createSkidSteeredMobilePlatform();
+			case ApogyAddonsMobilityPackage.MOBILE_PLATFORM: return createMobilePlatform();
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM: return createSkidSteeredMobilePlatform();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -73,7 +73,7 @@ public class Symphony__AddonsMobilityFactoryImpl extends EFactoryImpl implements
 	public Object createFromString(EDataType eDataType, String initialValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM_STATUS:
+			case ApogyAddonsMobilityPackage.MOBILE_PLATFORM_STATUS:
 				return createMobilePlatformStatusFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -89,7 +89,7 @@ public class Symphony__AddonsMobilityFactoryImpl extends EFactoryImpl implements
 	public String convertToString(EDataType eDataType, Object instanceValue)
 	{
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM_STATUS:
+			case ApogyAddonsMobilityPackage.MOBILE_PLATFORM_STATUS:
 				return convertMobilePlatformStatusToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -141,8 +141,8 @@ public class Symphony__AddonsMobilityFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPackage getSymphony__AddonsMobilityPackage() {
-		return (Symphony__AddonsMobilityPackage)getEPackage();
+	public ApogyAddonsMobilityPackage getApogyAddonsMobilityPackage() {
+		return (ApogyAddonsMobilityPackage)getEPackage();
 	}
 
 	/**
@@ -152,8 +152,8 @@ public class Symphony__AddonsMobilityFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsMobilityPackage getPackage() {
-		return Symphony__AddonsMobilityPackage.eINSTANCE;
+	public static ApogyAddonsMobilityPackage getPackage() {
+		return ApogyAddonsMobilityPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsMobilityFactoryImpl
+} //ApogyAddonsMobilityFactoryImpl

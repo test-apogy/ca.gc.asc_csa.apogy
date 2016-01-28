@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Map;
 
@@ -10,13 +10,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.bindings.Axis;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.bindings.Axis;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +26,8 @@ import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl#getPositionNode <em>Position Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl#getTranslationAxis <em>Translation Axis</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TranslationBindingImpl#getPositionNode <em>Position Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.TranslationBindingImpl#getTranslationAxis <em>Translation Axis</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,7 +82,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING;
+		return ApogyCommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING;
 	}
 
   /**
@@ -105,7 +105,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 		Axis oldTranslationAxis = translationAxis;
 		translationAxis = newTranslationAxis == null ? TRANSLATION_AXIS_EDEFAULT : newTranslationAxis;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS, oldTranslationAxis, translationAxis));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS, oldTranslationAxis, translationAxis));
 	}
 
   /**
@@ -120,7 +120,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 			positionNode = (PositionNode)eResolveProxy(oldPositionNode);
 			if (positionNode != oldPositionNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
 			}
 		}
 		return positionNode;
@@ -146,7 +146,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 		PositionNode oldPositionNode = positionNode;
 		positionNode = newPositionNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
 	}
 
   /**
@@ -158,10 +158,10 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				if (resolve) return getPositionNode();
 				return basicGetPositionNode();
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				return getTranslationAxis();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -176,10 +176,10 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				setPositionNode((PositionNode)newValue);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				setTranslationAxis((Axis)newValue);
 				return;
 		}
@@ -195,10 +195,10 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				setPositionNode((PositionNode)null);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				setTranslationAxis(TRANSLATION_AXIS_EDEFAULT);
 				return;
 		}
@@ -214,9 +214,9 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				return positionNode != null;
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				return translationAxis != TRANSLATION_AXIS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -274,37 +274,37 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 				double x = newValue;
 				double y = getPositionNode().getPosition().getY();
 				double z = getPositionNode().getPosition().getZ();								
-				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.MINUS_XAXIS_VALUE:
 				x = -newValue;
 				y = getPositionNode().getPosition().getY();
 				z = getPositionNode().getPosition().getZ();								
-				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.YAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = newValue;
 				z = getPositionNode().getPosition().getZ();
-				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.MINUS_YAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = -newValue;
 				z = getPositionNode().getPosition().getZ();
-				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.ZAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = getPositionNode().getPosition().getY();
 				z = newValue;
-				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.MINUS_ZAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = getPositionNode().getPosition().getY();
 				z = -newValue;
-				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 		}	
   }

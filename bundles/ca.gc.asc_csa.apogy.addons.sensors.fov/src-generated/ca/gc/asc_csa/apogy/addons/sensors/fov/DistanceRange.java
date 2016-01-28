@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov;
+package ca.gc.asc_csa.apogy.addons.sensors.fov;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getDistance <em>Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getDistance <em>Distance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getDistanceRange()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface DistanceRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Distance</em>' attribute.
 	 * @see #setMinimumDistance(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange_MinimumDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getDistanceRange_MinimumDistance()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getMinimumDistance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum Distance</em>' attribute.
@@ -66,14 +66,14 @@ public interface DistanceRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Distance</em>' attribute.
 	 * @see #setMaximumDistance(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange_MaximumDistance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getDistanceRange_MaximumDistance()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getMaximumDistance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Distance</em>' attribute.
@@ -91,7 +91,7 @@ public interface DistanceRange extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distance</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange_Distance()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage#getDistanceRange_Distance()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

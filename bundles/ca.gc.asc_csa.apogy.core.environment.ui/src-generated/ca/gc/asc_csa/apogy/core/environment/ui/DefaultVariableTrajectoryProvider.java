@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 
 /**
@@ -18,11 +18,11 @@ package org.eclipse.symphony.core.environment.ui;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold <em>Distance Threshold</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold <em>Distance Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider()
  * @model
  * @generated
  */
@@ -38,15 +38,15 @@ public interface DefaultVariableTrajectoryProvider extends VariableTrajectoryPro
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Distance Threshold</em>' attribute.
 	 * @see #setDistanceThreshold(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_DistanceThreshold()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_DistanceThreshold()
 	 * @model default="0.5" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' apogy_units='m'"
 	 * @generated
 	 */
   double getDistanceThreshold();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold <em>Distance Threshold</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold <em>Distance Threshold</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Distance Threshold</em>' attribute.
@@ -65,15 +65,15 @@ public interface DefaultVariableTrajectoryProvider extends VariableTrajectoryPro
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth Threshold</em>' attribute.
 	 * @see #setAzimuthThreshold(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_AzimuthThreshold()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_AzimuthThreshold()
 	 * @model default="0.017" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' apogy_units='rad'"
 	 * @generated
 	 */
   double getAzimuthThreshold();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth Threshold</em>' attribute.

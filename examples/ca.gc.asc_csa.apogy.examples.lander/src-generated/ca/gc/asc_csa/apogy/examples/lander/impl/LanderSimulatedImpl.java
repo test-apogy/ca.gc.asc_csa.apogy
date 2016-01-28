@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.impl;
+package ca.gc.asc_csa.apogy.examples.lander.impl;
 
 import java.text.DecimalFormat;
 
@@ -14,17 +14,17 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.examples.lander.Activator;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderFactory;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.LanderLegExtension;
-import org.eclipse.symphony.examples.lander.LanderSimulated;
-import org.eclipse.symphony.examples.lander.Position;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.examples.lander.Activator;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderFactory;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.LanderLegExtension;
+import ca.gc.asc_csa.apogy.examples.lander.LanderSimulated;
+import ca.gc.asc_csa.apogy.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->
@@ -200,7 +200,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 		if (position == null)
 		{
 			// Create one
-			position = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
+			position = ApogyExamplesLanderFactory.eINSTANCE.createPosition();
 			
 			// Create an attitude matrix for it
 			Matrix3d newAttitude = new Matrix3d();
@@ -235,7 +235,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 		if (thruster == null)
 		{
 			// Create one
-			thruster = Symphony__AddonsVehicleFactory.eINSTANCE.createThruster();
+			thruster = ApogyAddonsVehicleFactory.eINSTANCE.createThruster();
 			
 			// Initialize it accordingly
 			thruster.setMinimumThrust(0);
@@ -320,7 +320,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Ignored; dispose() has already been successfully called.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and handled by Symphony
+			// be caught and handled by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, it hasn't been disposed of yet
@@ -370,7 +370,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Else if the lander hasn't been initialized
@@ -381,7 +381,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Else if the lander currently isn't flying
@@ -393,7 +393,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"permitted to fly - need to call startFlying() first.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Else if the thrust level is already at that given value
@@ -405,7 +405,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"matches the requested thrust.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander was initialized, hasn't been disposed
@@ -471,7 +471,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the lander hasn't been initialized
@@ -482,7 +482,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander isn't permitted to fly
@@ -494,7 +494,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"permitted to fly - need to call startFlying() first.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the thrust offset is zero
@@ -505,7 +505,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Ignored; the lander's thrust level will not changed by this offset.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander was initialized, it hadn't been disposed
@@ -583,7 +583,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and handled by Symphony
+			// be caught and handled by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the lander hasn't been initialized
@@ -594,7 +594,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and handled by Symphony
+			// be caught and handled by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the lander's legs are already moving
@@ -607,7 +607,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"previous commandLegPosition() call.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and handled by Symphony
+			// be caught and handled by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the provided extension levels match the lander's
@@ -622,7 +622,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"given leg extension levels.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and handled by Symphony
+			// be caught and handled by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander's legs are available to be reconfigured
@@ -702,7 +702,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander hasn't been initialized
@@ -713,7 +713,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is already moving
@@ -725,7 +725,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"of moving from a previous moveTo() call.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is currently landing
@@ -736,7 +736,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the landing is currently landing.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is already at the target coordinates
@@ -749,7 +749,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Ignored; the lander is already at the target coordinates.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander is ready to move to the given coordinates
@@ -879,7 +879,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise if the lander hasn't been initialized
@@ -890,7 +890,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the given angles match the lander's current angular
@@ -904,7 +904,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								" match the velocities given.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander is setup, still usable and the velocities are different
@@ -943,7 +943,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is not initialized
@@ -954,7 +954,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is landing
@@ -965,7 +965,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the landing is currently landing.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is already flying
@@ -976,7 +976,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Ignored; the lander is already permitted to fly / flying.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander is ready to start flying
@@ -1022,7 +1022,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is not initialized
@@ -1033,7 +1033,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is landing
@@ -1044,7 +1044,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is currently landing.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is not flying
@@ -1055,7 +1055,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Ignored; the lander is currently not flying.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander is ready to stop flying
@@ -1154,7 +1154,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			// updated; this is required in order to trigger the
 			// pose corrector.  This will allow the position to
 			// be adjusted appropriately (if it needs to be)
-			Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
+			Position newPosition = ApogyExamplesLanderFactory.eINSTANCE.createPosition();
 			newPosition.setAttitude(this.getPosition().getAttitude());
 			newPosition.setX(this.getPosition().getX());
 			newPosition.setY(this.getPosition().getY());
@@ -1216,7 +1216,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			// Create a new position object and update its values accordingly
 			// Note: This triggers the pose corrector, which if enabled, may
 			//       cause the position to be further refined and updated.
-			Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
+			Position newPosition = ApogyExamplesLanderFactory.eINSTANCE.createPosition();
 			newPosition.setAttitude(this.getPosition().getAttitude());
 			newPosition.setX(interpolatedPosition.getElement(0));
 			newPosition.setY(interpolatedPosition.getElement(1));
@@ -1260,7 +1260,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander has already been disposed (with dispose()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander hasn't been initialized
@@ -1271,7 +1271,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is not initialized (with init()).";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is currently landing
@@ -1282,7 +1282,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"Rejected; the lander is currently landing.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the lander is already changing its attitude
@@ -1295,7 +1295,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 								"or resetAttitude() call.";
 			
 			// Throw an exception to indicate the failure of the operation; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the lander is ready to have its attitude adjusted
@@ -1407,7 +1407,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			// Create a new position object and update its values accordingly
 			// Note: This triggers the pose corrector, which if enabled, may
 			//       cause the position to be further refined and updated.
-			Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
+			Position newPosition = ApogyExamplesLanderFactory.eINSTANCE.createPosition();
 			newPosition.setAttitude(newAttitude);
 			newPosition.setX(this.getPosition().getX());
 			newPosition.setY(this.getPosition().getY());
@@ -1527,7 +1527,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesLanderPackage.Literals.LANDER_SIMULATED;
+		return ApogyExamplesLanderPackage.Literals.LANDER_SIMULATED;
 	}
 
 } //LanderSimulatedImpl
@@ -1722,7 +1722,7 @@ final class LanderSimulatedFlyingJob extends Job
 				newAttitude.mul(yRot);		  
 
 				// Update the lander's coordinates and attitude
-				Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
+				Position newPosition = ApogyExamplesLanderFactory.eINSTANCE.createPosition();
 				newPosition.setX(newCoords.getX());
 				newPosition.setY(newCoords.getY());
 				newPosition.setZ(newCoords.getZ());

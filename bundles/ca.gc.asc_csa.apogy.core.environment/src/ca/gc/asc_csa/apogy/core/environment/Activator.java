@@ -1,16 +1,16 @@
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import java.net.URL;
 
-import org.eclipse.symphony.common.EclipseUtils;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.EclipseUtils;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
-	public static String ID = "org.eclipse.symphony.core.environment";
+	public static String ID = "ca.gc.asc_csa.apogy.core.environment";
 	
 	// The shared instance
 	private static Activator plugin;

@@ -3,30 +3,30 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.statistics.util;
+package ca.gc.asc_csa.apogy.common.math.statistics.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.statistics.*;
+import ca.gc.asc_csa.apogy.common.math.statistics.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage
+ * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage
  * @generated
  */
-public class Symphony__CommonMathStatisticsAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonMathStatisticsAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonMathStatisticsPackage modelPackage;
+	protected static ApogyCommonMathStatisticsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class Symphony__CommonMathStatisticsAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathStatisticsAdapterFactory() {
+	public ApogyCommonMathStatisticsAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonMathStatisticsPackage.eINSTANCE;
+			modelPackage = ApogyCommonMathStatisticsPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class Symphony__CommonMathStatisticsAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonMathStatisticsSwitch<Adapter> modelSwitch =
-		new Symphony__CommonMathStatisticsSwitch<Adapter>() {
+	protected ApogyCommonMathStatisticsSwitch<Adapter> modelSwitch =
+		new ApogyCommonMathStatisticsSwitch<Adapter>() {
 			@Override
 			public Adapter casePopulation(Population object) {
 				return createPopulationAdapter();
@@ -92,13 +92,13 @@ public class Symphony__CommonMathStatisticsAdapterFactory extends AdapterFactory
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.statistics.Population <em>Population</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.math.statistics.Population <em>Population</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.statistics.Population
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.Population
 	 * @generated
 	 */
 	public Adapter createPopulationAdapter() {
@@ -117,4 +117,4 @@ public class Symphony__CommonMathStatisticsAdapterFactory extends AdapterFactory
 		return null;
 	}
 
-} //Symphony__CommonMathStatisticsAdapterFactory
+} //ApogyCommonMathStatisticsAdapterFactory

@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility;
+package ca.gc.asc_csa.apogy.addons.mobility;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.MobilePlatform#isMoving <em>Moving</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.MobilePlatform#getMobilePlatformStatus <em>Mobile Platform Status</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform#isMoving <em>Moving</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform#getMobilePlatformStatus <em>Mobile Platform Status</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatform()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getMobilePlatform()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface MobilePlatform extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Moving</em>' attribute.
 	 * @see #setMoving(boolean)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatform_Moving()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getMobilePlatform_Moving()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isMoving();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.MobilePlatform#isMoving <em>Moving</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform#isMoving <em>Moving</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Moving</em>' attribute.
@@ -52,7 +52,7 @@ public interface MobilePlatform extends AggregateGroupNode {
 	/**
 	 * Returns the value of the '<em><b>Mobile Platform Status</b></em>' attribute.
 	 * The default value is <code>"OFF"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.mobility.MobilePlatformStatus}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatformStatus}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mobile Platform Status</em>' attribute isn't clear,
@@ -60,20 +60,20 @@ public interface MobilePlatform extends AggregateGroupNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mobile Platform Status</em>' attribute.
-	 * @see org.eclipse.symphony.addons.mobility.MobilePlatformStatus
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.MobilePlatformStatus
 	 * @see #setMobilePlatformStatus(MobilePlatformStatus)
-	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatform_MobilePlatformStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getMobilePlatform_MobilePlatformStatus()
 	 * @model default="OFF" unique="false"
 	 * @generated
 	 */
 	MobilePlatformStatus getMobilePlatformStatus();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.MobilePlatform#getMobilePlatformStatus <em>Mobile Platform Status</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform#getMobilePlatformStatus <em>Mobile Platform Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mobile Platform Status</em>' attribute.
-	 * @see org.eclipse.symphony.addons.mobility.MobilePlatformStatus
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.MobilePlatformStatus
 	 * @see #getMobilePlatformStatus()
 	 * @generated
 	 */

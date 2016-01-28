@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import java.awt.Color;
 
@@ -15,10 +15,10 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl;
+import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.core.environment.impl.LineOfSightImageMapLayerImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +28,9 @@ import org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getBellowCutoffColor <em>Bellow Cutoff Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getBellowCutoffColor <em>Bellow Cutoff Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,7 +103,7 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER;
+		return ApogyAddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER;
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 		AbstractAntennaRadiationPattern oldAntennaRadiationPattern = antennaRadiationPattern;
 		antennaRadiationPattern = newAntennaRadiationPattern;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, oldAntennaRadiationPattern, newAntennaRadiationPattern);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, oldAntennaRadiationPattern, newAntennaRadiationPattern);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -139,14 +139,14 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 		if (newAntennaRadiationPattern != antennaRadiationPattern) {
 			NotificationChain msgs = null;
 			if (antennaRadiationPattern != null)
-				msgs = ((InternalEObject)antennaRadiationPattern).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, null, msgs);
+				msgs = ((InternalEObject)antennaRadiationPattern).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, null, msgs);
 			if (newAntennaRadiationPattern != null)
-				msgs = ((InternalEObject)newAntennaRadiationPattern).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, null, msgs);
+				msgs = ((InternalEObject)newAntennaRadiationPattern).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, null, msgs);
 			msgs = basicSetAntennaRadiationPattern(newAntennaRadiationPattern, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, newAntennaRadiationPattern, newAntennaRadiationPattern));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN, newAntennaRadiationPattern, newAntennaRadiationPattern));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 		double oldSignalStrengthCutoff = signalStrengthCutoff;
 		signalStrengthCutoff = newSignalStrengthCutoff;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF, oldSignalStrengthCutoff, signalStrengthCutoff));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF, oldSignalStrengthCutoff, signalStrengthCutoff));
 	}
 
 	/**
@@ -188,7 +188,7 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 		Color3f oldBellowCutoffColor = bellowCutoffColor;
 		bellowCutoffColor = newBellowCutoffColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR, oldBellowCutoffColor, bellowCutoffColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR, oldBellowCutoffColor, bellowCutoffColor));
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
 				return basicSetAntennaRadiationPattern(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -213,11 +213,11 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
 				return getAntennaRadiationPattern();
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
 				return getSignalStrengthCutoff();
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
 				return getBellowCutoffColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -231,13 +231,13 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
 				setAntennaRadiationPattern((AbstractAntennaRadiationPattern)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
 				setSignalStrengthCutoff((Double)newValue);
 				return;
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
 				setBellowCutoffColor((Color3f)newValue);
 				return;
 		}
@@ -252,13 +252,13 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
 				setAntennaRadiationPattern((AbstractAntennaRadiationPattern)null);
 				return;
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
 				setSignalStrengthCutoff(SIGNAL_STRENGTH_CUTOFF_EDEFAULT);
 				return;
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
 				setBellowCutoffColor(BELLOW_CUTOFF_COLOR_EDEFAULT);
 				return;
 		}
@@ -273,11 +273,11 @@ public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMa
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
 				return antennaRadiationPattern != null;
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
 				return signalStrengthCutoff != SIGNAL_STRENGTH_CUTOFF_EDEFAULT;
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
 				return BELLOW_CUTOFF_COLOR_EDEFAULT == null ? bellowCutoffColor != null : !BELLOW_CUTOFF_COLOR_EDEFAULT.equals(bellowCutoffColor);
 		}
 		return super.eIsSet(featureID);

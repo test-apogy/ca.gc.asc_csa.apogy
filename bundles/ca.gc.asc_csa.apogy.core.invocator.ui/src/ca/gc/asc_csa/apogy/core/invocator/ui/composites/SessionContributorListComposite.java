@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.symphony.core.invocator.SessionContributor;
+import ca.gc.asc_csa.apogy.core.invocator.SessionContributor;
 
 public class SessionContributorListComposite extends Composite 
 {

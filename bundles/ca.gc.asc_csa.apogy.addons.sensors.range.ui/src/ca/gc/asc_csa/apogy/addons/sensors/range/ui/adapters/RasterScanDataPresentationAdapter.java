@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.sensors.range.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.adapters;
 
-import org.eclipse.symphony.addons.sensors.range.RasterScanData;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory;
-import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.RasterScanDataPresentation;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class RasterScanDataPresentationAdapter implements NodePresentationAdapter
 {
@@ -31,7 +31,7 @@ public class RasterScanDataPresentationAdapter implements NodePresentationAdapte
 		}
 		
 		RasterScanData rasterScanData = (RasterScanData) obj;
-		RasterScanDataPresentation presentationNode = Symphony__AddonsSensorsRangeUIFactory.eINSTANCE.createRasterScanDataPresentation();
+		RasterScanDataPresentation presentationNode = ApogyAddonsSensorsRangeUIFactory.eINSTANCE.createRasterScanDataPresentation();
 		presentationNode.setNode(rasterScanData);
 		return presentationNode;
 	}

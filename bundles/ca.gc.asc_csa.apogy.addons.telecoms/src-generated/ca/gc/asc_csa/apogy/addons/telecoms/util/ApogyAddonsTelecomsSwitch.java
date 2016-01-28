@@ -1,34 +1,34 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.util;
+package ca.gc.asc_csa.apogy.addons.telecoms.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
-import org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.IsotropicAntenna;
-import org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomNode;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
-import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
-import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegionImage;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
+import ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna;
+import ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
+import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,17 +40,17 @@ import org.eclipse.symphony.core.environment.RectangularRegionProvider;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage
  * @generated
  */
-public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
+public class ApogyAddonsTelecomsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsTelecomsPackage modelPackage;
+	protected static ApogyAddonsTelecomsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -58,9 +58,9 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsTelecomsSwitch() {
+	public ApogyAddonsTelecomsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsTelecomsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsTelecomsPackage.eINSTANCE;
 		}
 	}
 
@@ -87,19 +87,19 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE: {
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE: {
 				TelecomNode telecomNode = (TelecomNode)theEObject;
 				T result = caseTelecomNode(telecomNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL: {
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL: {
 				TelecomStatusMonitorTool telecomStatusMonitorTool = (TelecomStatusMonitorTool)theEObject;
 				T result = caseTelecomStatusMonitorTool(telecomStatusMonitorTool);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST: {
+			case ApogyAddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST: {
 				TelecomStatusMonitorToolList telecomStatusMonitorToolList = (TelecomStatusMonitorToolList)theEObject;
 				T result = caseTelecomStatusMonitorToolList(telecomStatusMonitorToolList);
 				if (result == null) result = caseSimpleTool(telecomStatusMonitorToolList);
@@ -109,7 +109,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN: {
+			case ApogyAddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN: {
 				AbstractAntennaRadiationPattern abstractAntennaRadiationPattern = (AbstractAntennaRadiationPattern)theEObject;
 				T result = caseAbstractAntennaRadiationPattern(abstractAntennaRadiationPattern);
 				if (result == null) result = caseNode(abstractAntennaRadiationPattern);
@@ -117,7 +117,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.ISOTROPIC_ANTENNA: {
+			case ApogyAddonsTelecomsPackage.ISOTROPIC_ANTENNA: {
 				IsotropicAntenna isotropicAntenna = (IsotropicAntenna)theEObject;
 				T result = caseIsotropicAntenna(isotropicAntenna);
 				if (result == null) result = caseAbstractAntennaRadiationPattern(isotropicAntenna);
@@ -126,7 +126,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.DIPOLE_ANTENNA_RADIATION_PATTERN: {
+			case ApogyAddonsTelecomsPackage.DIPOLE_ANTENNA_RADIATION_PATTERN: {
 				DipoleAntennaRadiationPattern dipoleAntennaRadiationPattern = (DipoleAntennaRadiationPattern)theEObject;
 				T result = caseDipoleAntennaRadiationPattern(dipoleAntennaRadiationPattern);
 				if (result == null) result = caseAbstractAntennaRadiationPattern(dipoleAntennaRadiationPattern);
@@ -135,7 +135,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN: {
+			case ApogyAddonsTelecomsPackage.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN: {
 				HalfWaveDipoleAntennaRadiationPattern halfWaveDipoleAntennaRadiationPattern = (HalfWaveDipoleAntennaRadiationPattern)theEObject;
 				T result = caseHalfWaveDipoleAntennaRadiationPattern(halfWaveDipoleAntennaRadiationPattern);
 				if (result == null) result = caseAbstractAntennaRadiationPattern(halfWaveDipoleAntennaRadiationPattern);
@@ -144,7 +144,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN: {
+			case ApogyAddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN: {
 				SimpleConicalRadiationPattern simpleConicalRadiationPattern = (SimpleConicalRadiationPattern)theEObject;
 				T result = caseSimpleConicalRadiationPattern(simpleConicalRadiationPattern);
 				if (result == null) result = caseAbstractAntennaRadiationPattern(simpleConicalRadiationPattern);
@@ -153,7 +153,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN: {
+			case ApogyAddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN: {
 				SimpleRectangularFrustumRadiationPattern simpleRectangularFrustumRadiationPattern = (SimpleRectangularFrustumRadiationPattern)theEObject;
 				T result = caseSimpleRectangularFrustumRadiationPattern(simpleRectangularFrustumRadiationPattern);
 				if (result == null) result = caseAbstractAntennaRadiationPattern(simpleRectangularFrustumRadiationPattern);
@@ -162,7 +162,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN: {
+			case ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN: {
 				URlBasedAntennaRadiationPattern uRlBasedAntennaRadiationPattern = (URlBasedAntennaRadiationPattern)theEObject;
 				T result = caseURlBasedAntennaRadiationPattern(uRlBasedAntennaRadiationPattern);
 				if (result == null) result = caseAbstractAntennaRadiationPattern(uRlBasedAntennaRadiationPattern);
@@ -171,7 +171,7 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER: {
+			case ApogyAddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER: {
 				AntennaRadiationPatternImageMapLayer antennaRadiationPatternImageMapLayer = (AntennaRadiationPatternImageMapLayer)theEObject;
 				T result = caseAntennaRadiationPatternImageMapLayer(antennaRadiationPatternImageMapLayer);
 				if (result == null) result = caseLineOfSightImageMapLayer(antennaRadiationPatternImageMapLayer);
@@ -535,4 +535,4 @@ public class Symphony__AddonsTelecomsSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsTelecomsSwitch
+} //ApogyAddonsTelecomsSwitch

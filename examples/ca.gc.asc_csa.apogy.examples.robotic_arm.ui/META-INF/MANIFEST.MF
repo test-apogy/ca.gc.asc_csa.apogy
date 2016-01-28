@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.examples.robotic_arm.ui;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.examples.robotic_arm.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.examples.robotic_arm.ui.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.examples.robotic_arm.ui.Activator
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
@@ -11,17 +11,17 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.osgi,
  org.eclipse.swt,
- org.eclipse.symphony.examples.robotic_arm,
+ ca.gc.asc_csa.apogy.examples.robotic_arm,
  org.eclipse.core.databinding.observable,
  org.eclipse.core.databinding,
  org.eclipse.jface.databinding,
  org.eclipse.core.databinding.property,
  org.eclipse.core.databinding.beans,
  org.eclipse.emf.databinding,
- org.eclipse.symphony.common.databinding,
+ ca.gc.asc_csa.apogy.common.databinding,
  org.eclipse.core.jobs,
  org.eclipse.equinox.registry,
- org.eclipse.symphony.common.ui,
- org.eclipse.symphony.common.converters,
- org.eclipse.symphony.core.invocator,
- org.eclipse.symphony.common.converters.ui
+ ca.gc.asc_csa.apogy.common.ui,
+ ca.gc.asc_csa.apogy.common.converters,
+ ca.gc.asc_csa.apogy.core.invocator,
+ ca.gc.asc_csa.apogy.common.converters.ui

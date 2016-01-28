@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion;
+package ca.gc.asc_csa.apogy.addons.sensors.motion;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +21,12 @@ import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionFactory
+ * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsSensorsMotion' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__AddonsSensorsMotion' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.motion/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.motion.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsSensorsMotion' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyAddonsSensorsMotion' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.sensors.motion/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.sensors.motion.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.sensors'"
  * @generated
  */
-public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
+public interface ApogyAddonsSensorsMotionPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.sensors.motion";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.sensors.motion";
 
 	/**
 	 * The package namespace name.
@@ -57,14 +57,14 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsMotionPackage eINSTANCE = org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl.init();
+	ApogyAddonsSensorsMotionPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.SelfMotionSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getSelfMotionSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.SelfMotionSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getSelfMotionSensor()
 	 * @generated
 	 */
 	int SELF_MOTION_SENSOR = 0;
@@ -76,7 +76,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR__PARENT = Symphony__AddonsSensorsPackage.SENSOR__PARENT;
+	int SELF_MOTION_SENSOR__PARENT = ApogyAddonsSensorsPackage.SENSOR__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -85,7 +85,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR__DESCRIPTION = Symphony__AddonsSensorsPackage.SENSOR__DESCRIPTION;
+	int SELF_MOTION_SENSOR__DESCRIPTION = ApogyAddonsSensorsPackage.SENSOR__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -94,7 +94,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR__NODE_ID = Symphony__AddonsSensorsPackage.SENSOR__NODE_ID;
+	int SELF_MOTION_SENSOR__NODE_ID = ApogyAddonsSensorsPackage.SENSOR__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -103,7 +103,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR__CHILDREN = Symphony__AddonsSensorsPackage.SENSOR__CHILDREN;
+	int SELF_MOTION_SENSOR__CHILDREN = ApogyAddonsSensorsPackage.SENSOR__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -112,7 +112,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR__AGGREGATED_CHILDREN = Symphony__AddonsSensorsPackage.SENSOR__AGGREGATED_CHILDREN;
+	int SELF_MOTION_SENSOR__AGGREGATED_CHILDREN = ApogyAddonsSensorsPackage.SENSOR__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -121,7 +121,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR__STATUS = Symphony__AddonsSensorsPackage.SENSOR__STATUS;
+	int SELF_MOTION_SENSOR__STATUS = ApogyAddonsSensorsPackage.SENSOR__STATUS;
 
 	/**
 	 * The number of structural features of the '<em>Self Motion Sensor</em>' class.
@@ -130,7 +130,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR_FEATURE_COUNT = Symphony__AddonsSensorsPackage.SENSOR_FEATURE_COUNT + 0;
+	int SELF_MOTION_SENSOR_FEATURE_COUNT = ApogyAddonsSensorsPackage.SENSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -139,7 +139,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsPackage.SENSOR___ACCEPT__INODEVISITOR;
+	int SELF_MOTION_SENSOR___ACCEPT__INODEVISITOR = ApogyAddonsSensorsPackage.SENSOR___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Self Motion Sensor</em>' class.
@@ -148,14 +148,14 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SELF_MOTION_SENSOR_OPERATION_COUNT = Symphony__AddonsSensorsPackage.SENSOR_OPERATION_COUNT + 0;
+	int SELF_MOTION_SENSOR_OPERATION_COUNT = ApogyAddonsSensorsPackage.SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getAngularVelocitySensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.AngularVelocitySensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getAngularVelocitySensor()
 	 * @generated
 	 */
 	int ANGULAR_VELOCITY_SENSOR = 1;
@@ -269,11 +269,11 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	int ANGULAR_VELOCITY_SENSOR_OPERATION_COUNT = SELF_MOTION_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getLinearAccelerationSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearAccelerationSensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getLinearAccelerationSensor()
 	 * @generated
 	 */
 	int LINEAR_ACCELERATION_SENSOR = 2;
@@ -387,11 +387,11 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	int LINEAR_ACCELERATION_SENSOR_OPERATION_COUNT = SELF_MOTION_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.LinearVelocitySensorImpl
-	 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getLinearVelocitySensor()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearVelocitySensorImpl
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getLinearVelocitySensor()
 	 * @generated
 	 */
 	int LINEAR_VELOCITY_SENSOR = 3;
@@ -506,139 +506,139 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Self Motion Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor
 	 * @generated
 	 */
 	EClass getSelfMotionSensor();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Angular Velocity Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor
 	 * @generated
 	 */
 	EClass getAngularVelocitySensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getXAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor#getXAngularVelocity()
 	 * @see #getAngularVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getAngularVelocitySensor_XAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getYAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor#getYAngularVelocity()
 	 * @see #getAngularVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getAngularVelocitySensor_YAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZAngular Velocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getZAngularVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor#getZAngularVelocity()
 	 * @see #getAngularVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getAngularVelocitySensor_ZAngularVelocity();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Linear Acceleration Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor
 	 * @generated
 	 */
 	EClass getLinearAccelerationSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XAcceleration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration()
 	 * @see #getLinearAccelerationSensor()
 	 * @generated
 	 */
 	EAttribute getLinearAccelerationSensor_XAcceleration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YAcceleration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration()
 	 * @see #getLinearAccelerationSensor()
 	 * @generated
 	 */
 	EAttribute getLinearAccelerationSensor_YAcceleration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZAcceleration</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration()
 	 * @see #getLinearAccelerationSensor()
 	 * @generated
 	 */
 	EAttribute getLinearAccelerationSensor_ZAcceleration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Linear Velocity Sensor</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor
 	 * @generated
 	 */
 	EClass getLinearVelocitySensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getXVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getXVelocity()
 	 * @see #getLinearVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getLinearVelocitySensor_XVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getYVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getYVelocity()
 	 * @see #getLinearVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getLinearVelocitySensor_YVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZVelocity</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getZVelocity()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor#getZVelocity()
 	 * @see #getLinearVelocitySensor()
 	 * @generated
 	 */
@@ -651,7 +651,7 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsMotionFactory getSymphony__AddonsSensorsMotionFactory();
+	ApogyAddonsSensorsMotionFactory getApogyAddonsSensorsMotionFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -668,21 +668,21 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.SelfMotionSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getSelfMotionSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.SelfMotionSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getSelfMotionSensor()
 		 * @generated
 		 */
 		EClass SELF_MOTION_SENSOR = eINSTANCE.getSelfMotionSensor();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getAngularVelocitySensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.AngularVelocitySensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getAngularVelocitySensor()
 		 * @generated
 		 */
 		EClass ANGULAR_VELOCITY_SENSOR = eINSTANCE.getAngularVelocitySensor();
@@ -712,11 +712,11 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 		EAttribute ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY = eINSTANCE.getAngularVelocitySensor_ZAngularVelocity();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getLinearAccelerationSensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearAccelerationSensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getLinearAccelerationSensor()
 		 * @generated
 		 */
 		EClass LINEAR_ACCELERATION_SENSOR = eINSTANCE.getLinearAccelerationSensor();
@@ -746,11 +746,11 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 		EAttribute LINEAR_ACCELERATION_SENSOR__ZACCELERATION = eINSTANCE.getLinearAccelerationSensor_ZAcceleration();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.LinearVelocitySensorImpl
-		 * @see org.eclipse.symphony.addons.sensors.motion.impl.Symphony__AddonsSensorsMotionPackageImpl#getLinearVelocitySensor()
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.LinearVelocitySensorImpl
+		 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.impl.ApogyAddonsSensorsMotionPackageImpl#getLinearVelocitySensor()
 		 * @generated
 		 */
 		EClass LINEAR_VELOCITY_SENSOR = eINSTANCE.getLinearVelocitySensor();
@@ -781,4 +781,4 @@ public interface Symphony__AddonsSensorsMotionPackage extends EPackage {
 
 	}
 
-} //Symphony__AddonsSensorsMotionPackage
+} //ApogyAddonsSensorsMotionPackage

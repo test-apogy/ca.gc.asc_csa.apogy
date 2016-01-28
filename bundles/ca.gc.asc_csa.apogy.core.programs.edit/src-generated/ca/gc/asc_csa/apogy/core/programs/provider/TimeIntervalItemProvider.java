@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.provider;
+package ca.gc.asc_csa.apogy.core.programs.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
-import org.eclipse.symphony.core.programs.TimeInterval;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.programs.TimeInterval;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.TimeInterval} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.TimeInterval} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class TimeIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeInterval_startTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeInterval_startTime_feature", "_UI_TimeInterval_type"),
-				 Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL__START_TIME,
+				 ApogyCoreProgramsPackage.Literals.TIME_INTERVAL__START_TIME,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class TimeIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeInterval_endTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeInterval_endTime_feature", "_UI_TimeInterval_type"),
-				 Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL__END_TIME,
+				 ApogyCoreProgramsPackage.Literals.TIME_INTERVAL__END_TIME,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class TimeIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeInterval_duration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeInterval_duration_feature", "_UI_TimeInterval_type"),
-				 Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL__DURATION,
+				 ApogyCoreProgramsPackage.Literals.TIME_INTERVAL__DURATION,
 				 false,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class TimeIntervalItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimeInterval.class)) {
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL__DURATION:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__START_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__END_TIME:
+			case ApogyCoreProgramsPackage.TIME_INTERVAL__DURATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

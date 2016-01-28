@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Collection;
 
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.AbstractOrbitModel;
-import org.eclipse.symphony.core.OrbitModelsList;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.OrbitModelsList;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +28,9 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.OrbitModelsListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.OrbitModelsListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.OrbitModelsListImpl#getOrbitModels <em>Orbit Models</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.OrbitModelsListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.OrbitModelsListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.OrbitModelsListImpl#getOrbitModels <em>Orbit Models</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,7 +102,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.ORBIT_MODELS_LIST;
+		return ApogyCorePackage.Literals.ORBIT_MODELS_LIST;
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ORBIT_MODELS_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.ORBIT_MODELS_LIST__NAME, oldName, name));
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<AbstractOrbitModel> getOrbitModels() {
 		if (orbitModels == null) {
-			orbitModels = new EObjectContainmentWithInverseEList<AbstractOrbitModel>(AbstractOrbitModel.class, this, Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST);
+			orbitModels = new EObjectContainmentWithInverseEList<AbstractOrbitModel>(AbstractOrbitModel.class, this, ApogyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS, ApogyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST);
 		}
 		return orbitModels;
 	}
@@ -168,7 +168,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOrbitModels()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -182,7 +182,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
 				return ((InternalEList<?>)getOrbitModels()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -196,11 +196,11 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__NAME:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__NAME:
 				return getName();
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
 				return getOrbitModels();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,13 +215,13 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__NAME:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
 				getOrbitModels().clear();
 				getOrbitModels().addAll((Collection<? extends AbstractOrbitModel>)newValue);
 				return;
@@ -237,13 +237,13 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__NAME:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
 				getOrbitModels().clear();
 				return;
 		}
@@ -258,11 +258,11 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__NAME:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
+			case ApogyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
 				return orbitModels != null && !orbitModels.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -277,7 +277,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -293,7 +293,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

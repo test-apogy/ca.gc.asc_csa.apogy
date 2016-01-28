@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -22,10 +22,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Spinner;
-import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DateToStringConverter;
+import ca.gc.asc_csa.apogy.common.emf.BrowseableTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
 
 public class BrowseableTimeSourceComposite extends AbstractTimeSourceComposite 
 {	
@@ -409,7 +409,7 @@ public class BrowseableTimeSourceComposite extends AbstractTimeSourceComposite
 		if(startTimeValueLabel != null)
 		{
 			IObservableValue startTimeLabelValue = PojoProperties.value("text").observe(startTimeValueLabel);		
-			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__START_TIME)).observe(getBrowseableTimeSource());			
+			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__START_TIME)).observe(getBrowseableTimeSource());			
 			UpdateValueStrategy startTimeValueStrategy = new UpdateValueStrategy();
 			startTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
 			bindingContext.bindValue(startTimeLabelValue, startTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), startTimeValueStrategy);

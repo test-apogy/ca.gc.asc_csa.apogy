@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.io.jinput;
+package ca.gc.asc_csa.apogy.common.io.jinput;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -54,7 +54,7 @@ public class Activator implements BundleActivator {
 	 */
 	public static EControllerEnvironment getEControllerEnvironment() {
 		if (eControllerEnvironment == null)
-			eControllerEnvironment = Symphony__CommonIOJInputFactory.eINSTANCE.createEControllerEnvironment();
+			eControllerEnvironment = ApogyCommonIOJInputFactory.eINSTANCE.createEControllerEnvironment();
 		return eControllerEnvironment;
 	}
 }

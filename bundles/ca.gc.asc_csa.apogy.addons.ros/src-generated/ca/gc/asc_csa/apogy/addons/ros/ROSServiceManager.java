@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import java.util.HashMap;
 
@@ -18,12 +18,12 @@ import org.ros.internal.message.Message;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSServiceManager#getServices <em>Services</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSServiceManager#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSServiceManager#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getServices <em>Services</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#isRunning <em>Running</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSServiceManager()
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSServiceManager()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface ROSServiceManager extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Services</em>' attribute.
 	 * @see #setServices(HashMap)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSServiceManager_Services()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.HashMap<org.eclipse.emf.ecore.EString, org.eclipse.symphony.addons.ros.ROSService<?, ?>>"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSServiceManager_Services()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.HashMap<org.eclipse.emf.ecore.EString, ca.gc.asc_csa.apogy.addons.ros.ROSService<?, ?>>"
 	 * @generated
 	 */
 	HashMap<String, ROSService<?, ?>> getServices();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#getServices <em>Services</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getServices <em>Services</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Services</em>' attribute.
@@ -62,14 +62,14 @@ public interface ROSServiceManager extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(ROSNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSServiceManager_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSServiceManager_Node()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' notify='true' propertyCategory='ROS_SERVICE_MANAGER'"
 	 * @generated
 	 */
 	ROSNode getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.
@@ -87,7 +87,7 @@ public interface ROSServiceManager extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Running</em>' attribute.
 	 * @see #setRunning(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSServiceManager_Running()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSServiceManager_Running()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_SERVICE_MANAGER'"
 	 * @generated
@@ -95,7 +95,7 @@ public interface ROSServiceManager extends EObject {
 	boolean isRunning();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSServiceManager#isRunning <em>Running</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager#isRunning <em>Running</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Running</em>' attribute.
@@ -146,7 +146,7 @@ public interface ROSServiceManager extends EObject {
 	 * @param serviceName The name of the desired service
 	 * @return The corresponding service (if one exists)
 	 * <!-- end-model-doc -->
-	 * @model unique="false" serviceNameUnique="false" RequestBounds="org.eclipse.symphony.addons.ros.Message" ResponseBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" serviceNameUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<Request extends Message, Response extends Message> ROSService<Request, Response> getService(String serviceName);
@@ -162,7 +162,7 @@ public interface ROSServiceManager extends EObject {
 	 * @param serviceName The name of the service, whose request message type determines the type of the new request message
 	 * @return The newly created request message
 	 * <!-- end-model-doc -->
-	 * @model unique="false" serviceNameUnique="false" RequestBounds="org.eclipse.symphony.addons.ros.Message" ResponseBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" serviceNameUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<Request extends Message, Response extends Message> Request createRequestMessage(String serviceName);
@@ -181,7 +181,7 @@ public interface ROSServiceManager extends EObject {
 	 * @param request The request to send to the service
 	 * @return The service's response to this call
 	 * <!-- end-model-doc -->
-	 * @model unique="false" serviceNameUnique="false" requestUnique="false" RequestBounds="org.eclipse.symphony.addons.ros.Message" ResponseBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" serviceNameUnique="false" requestUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<Request extends Message, Response extends Message> Response callService(String serviceName, Request request);
@@ -199,7 +199,7 @@ public interface ROSServiceManager extends EObject {
 	 * @param serviceName The name of the service to call
 	 * @return The service's response to this call
 	 * <!-- end-model-doc -->
-	 * @model unique="false" serviceNameUnique="false" RequestBounds="org.eclipse.symphony.addons.ros.Message" ResponseBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" serviceNameUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<Request extends Message, Response extends Message> Response callService(String serviceName);
@@ -219,7 +219,7 @@ public interface ROSServiceManager extends EObject {
 	 * @param enableLogging Whether or not logging should be enabled for this service call
 	 * @return The service's response to this call
 	 * <!-- end-model-doc -->
-	 * @model unique="false" serviceNameUnique="false" requestUnique="false" enableLoggingUnique="false" RequestBounds="org.eclipse.symphony.addons.ros.Message" ResponseBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" serviceNameUnique="false" requestUnique="false" enableLoggingUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging);
@@ -238,7 +238,7 @@ public interface ROSServiceManager extends EObject {
 	 * @param enableLogging Whether or not logging should be enabled for this service call
 	 * @return The service's response to this call
 	 * <!-- end-model-doc -->
-	 * @model unique="false" serviceNameUnique="false" enableLoggingUnique="false" RequestBounds="org.eclipse.symphony.addons.ros.Message" ResponseBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" serviceNameUnique="false" enableLoggingUnique="false" RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<Request extends Message, Response extends Message> Response callService(String serviceName, boolean enableLogging);

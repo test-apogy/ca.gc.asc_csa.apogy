@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.camera.commands;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.commands;
 
 import java.util.Iterator;
 
@@ -11,8 +11,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class ToggleCameraImageAnnotationVisibilityCommand extends AbstractHandler implements

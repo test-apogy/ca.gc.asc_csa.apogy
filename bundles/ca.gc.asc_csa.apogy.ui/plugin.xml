@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.ui.views">
       <category
-            id="org.eclipse.symphony.ui.category"
-            name="Symphony">
+            id="ca.gc.asc_csa.apogy.ui.category"
+            name="Apogy">
       </category>
    </extension>
 

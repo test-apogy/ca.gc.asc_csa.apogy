@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.text.DecimalFormat;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Star} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.Star} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -88,7 +88,7 @@ public class StarItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Star_magnitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Star_magnitude_feature", "_UI_Star_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.STAR__MAGNITUDE,
+				 ApogyCoreEnvironmentPackage.Literals.STAR__MAGNITUDE,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class StarItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Star_equatorialCoordinates_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Star_equatorialCoordinates_feature", "_UI_Star_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.STAR__EQUATORIAL_COORDINATES,
+				 ApogyCoreEnvironmentPackage.Literals.STAR__EQUATORIAL_COORDINATES,
 				 true,
 				 false,
 				 true,
@@ -169,7 +169,7 @@ public class StarItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Star.class)) {
-			case Symphony__CoreEnvironmentPackage.STAR__MAGNITUDE:
+			case ApogyCoreEnvironmentPackage.STAR__MAGNITUDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

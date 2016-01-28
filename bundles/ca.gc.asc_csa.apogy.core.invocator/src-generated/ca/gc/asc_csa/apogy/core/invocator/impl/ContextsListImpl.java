@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.Collection;
 
@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,8 +28,8 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextsListImpl#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextsListImpl#getContexts <em>Contexts</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextsListImpl#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.ContextsListImpl#getContexts <em>Contexts</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,7 +64,7 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST;
+		return ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST;
 	}
 
   /**
@@ -74,7 +74,7 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
 	 */
   public Environment getEnvironment()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT) return null;
 		return (Environment)eContainer();
 	}
 
@@ -85,7 +85,7 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
 	 */
   public Environment basicGetEnvironment()
   {
-		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT) return null;
+		if (eContainerFeatureID() != ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT) return null;
 		return (Environment)eInternalContainer();
 	}
 
@@ -96,7 +96,7 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
 	 */
   public NotificationChain basicSetEnvironment(Environment newEnvironment, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newEnvironment, Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newEnvironment, ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT, msgs);
 		return msgs;
 	}
 
@@ -107,19 +107,19 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
 	 */
   public void setEnvironment(Environment newEnvironment)
   {
-		if (newEnvironment != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT && newEnvironment != null)) {
+		if (newEnvironment != eInternalContainer() || (eContainerFeatureID() != ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT && newEnvironment != null)) {
 			if (EcoreUtil.isAncestor(this, newEnvironment))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newEnvironment != null)
-				msgs = ((InternalEObject)newEnvironment).eInverseAdd(this, Symphony__CoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST, Environment.class, msgs);
+				msgs = ((InternalEObject)newEnvironment).eInverseAdd(this, ApogyCoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST, Environment.class, msgs);
 			msgs = basicSetEnvironment(newEnvironment, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT, newEnvironment, newEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT, newEnvironment, newEnvironment));
 	}
 
   /**
@@ -130,7 +130,7 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public EList<Context> getContexts()
   {
 		if (contexts == null) {
-			contexts = new EObjectContainmentWithInverseEList<Context>(Context.class, this, Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS, Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST);
+			contexts = new EObjectContainmentWithInverseEList<Context>(Context.class, this, ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS, ApogyCoreInvocatorPackage.CONTEXT__CONTEXTS_LIST);
 		}
 		return contexts;
 	}
@@ -145,11 +145,11 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetEnvironment((Environment)otherEnd, msgs);
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContexts()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -164,9 +164,9 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
 				return basicSetEnvironment(null, msgs);
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				return ((InternalEList<?>)getContexts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,8 +181,8 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST, Environment.class, msgs);
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST, Environment.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -196,10 +196,10 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
 				if (resolve) return getEnvironment();
 				return basicGetEnvironment();
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				return getContexts();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,10 +215,10 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
 				setEnvironment((Environment)newValue);
 				return;
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				getContexts().clear();
 				getContexts().addAll((Collection<? extends Context>)newValue);
 				return;
@@ -235,10 +235,10 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
 				setEnvironment((Environment)null);
 				return;
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				getContexts().clear();
 				return;
 		}
@@ -254,9 +254,9 @@ public class ContextsListImpl extends MinimalEObjectImpl.Container implements Co
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__ENVIRONMENT:
 				return basicGetEnvironment() != null;
-			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case ApogyCoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				return contexts != null && !contexts.isEmpty();
 		}
 		return super.eIsSet(featureID);

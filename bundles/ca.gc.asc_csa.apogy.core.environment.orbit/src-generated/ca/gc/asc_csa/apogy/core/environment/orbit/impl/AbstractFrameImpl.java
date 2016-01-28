@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbi
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractFrameImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractFrameImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractFrameImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.AbstractFrameImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,7 +83,7 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_FRAME;
+		return ApogyCoreEnvironmentOrbitPackage.Literals.ABSTRACT_FRAME;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME, oldName, name));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
 				return getName();
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -170,10 +170,10 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -188,9 +188,9 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
+			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -205,7 +205,7 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -221,7 +221,7 @@ public abstract class AbstractFrameImpl extends MinimalEObjectImpl.Container imp
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION;
 				default: return -1;
 			}
 		}

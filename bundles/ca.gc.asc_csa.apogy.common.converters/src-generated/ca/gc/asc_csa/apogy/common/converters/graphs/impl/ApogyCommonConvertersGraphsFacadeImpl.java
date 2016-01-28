@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.graphs.impl;
+package ca.gc.asc_csa.apogy.common.converters.graphs.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -20,12 +20,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.converters.ChainedConverter;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.TypeCastConverter;
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
-import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsPackage;
+import ca.gc.asc_csa.apogy.common.converters.ChainedConverter;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.TypeCastConverter;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsPackage;
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.KShortestPaths;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
@@ -37,15 +37,15 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  *
  * @generated
  */
-public class Symphony__CommonConvertersGraphsFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonConvertersGraphsFacade {
+public class ApogyCommonConvertersGraphsFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonConvertersGraphsFacade {
 	
-	private static Symphony__CommonConvertersGraphsFacade instance = null;
+	private static ApogyCommonConvertersGraphsFacade instance = null;
 	
-	public static Symphony__CommonConvertersGraphsFacade getInstance()
+	public static ApogyCommonConvertersGraphsFacade getInstance()
 	{
 		if (instance == null)
 		{
-			instance = new Symphony__CommonConvertersGraphsFacadeImpl();
+			instance = new ApogyCommonConvertersGraphsFacadeImpl();
 		}
 		
 		return instance;
@@ -56,7 +56,7 @@ public class Symphony__CommonConvertersGraphsFacadeImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonConvertersGraphsFacadeImpl() {
+	protected ApogyCommonConvertersGraphsFacadeImpl() {
 		super();
 	}
 
@@ -67,7 +67,7 @@ public class Symphony__CommonConvertersGraphsFacadeImpl extends MinimalEObjectIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonConvertersGraphsPackage.Literals.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE;
+		return ApogyCommonConvertersGraphsPackage.Literals.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE;
 	}
 
 	/**
@@ -593,41 +593,41 @@ public class Symphony__CommonConvertersGraphsFacadeImpl extends MinimalEObjectIm
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_GRAPH__LIST:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_GRAPH__LIST:
 				return createGraph((List<IConverter>)arguments.get(0));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___ADD_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH_LIST:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___ADD_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH_LIST:
 				addConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (List<IConverter>)arguments.get(1));
 				return null;
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GENERATE_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GENERATE_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
 				return generateTypeCastConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___CONVERT__SIMPLEDIRECTEDWEIGHTEDGRAPH_OBJECT_CLASS:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CONVERT__SIMPLEDIRECTEDWEIGHTEDGRAPH_OBJECT_CLASS:
 				return convert((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), arguments.get(1), (Class<?>)arguments.get(2));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_ALL_CONVERTERS_BETWEEN_VERTICES__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_ALL_CONVERTERS_BETWEEN_VERTICES__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS:
 				return findAllConvertersBetweenVertices((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1), (Class<?>)arguments.get(2));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CONVERTER__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CONVERTER__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS:
 				return findConverter((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1), (Class<?>)arguments.get(2));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_INPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_INPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH:
 				return getAllInputTypes((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_OUTPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_OUTPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH:
 				return getAllOutputTypes((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_SOURCE_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_SOURCE_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS:
 				return getSourceVertex((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_DESTINATION_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_DESTINATION_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS:
 				return getDestinationVertex((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUPER_TYPE__LIST_CLASS:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUPER_TYPE__LIST_CLASS:
 				return findClosestSuperType((List<Class<?>>)arguments.get(0), (Class<?>)arguments.get(1));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUB_TYPE__LIST_CLASS:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUB_TYPE__LIST_CLASS:
 				return findClosestSubType((List<Class<?>>)arguments.get(0), (Class<?>)arguments.get(1));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
 				return getAllConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_NON_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_NON_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
 				return getAllNonTypeCastConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_AVAILABLE_DESTINATION_TYPE_MAP__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_AVAILABLE_DESTINATION_TYPE_MAP__SIMPLEDIRECTEDWEIGHTEDGRAPH:
 				return getAvailableDestinationTypeMap((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_COMPARATOR:
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_COMPARATOR:
 				return createComparator();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CommonConvertersGraphsFacadeImpl
+} //ApogyCommonConvertersGraphsFacadeImpl

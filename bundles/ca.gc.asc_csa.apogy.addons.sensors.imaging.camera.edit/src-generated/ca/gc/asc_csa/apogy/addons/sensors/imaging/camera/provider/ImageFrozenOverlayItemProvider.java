@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ImageFrozenOverlay_frozen_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFrozenOverlay_frozen_feature", "_UI_ImageFrozenOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN,
 				 false,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ImageFrozenOverlay_expectedImageUpdatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFrozenOverlay_expectedImageUpdatePeriod_feature", "_UI_ImageFrozenOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ImageFrozenOverlay_frozenMessage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFrozenOverlay_frozenMessage_feature", "_UI_ImageFrozenOverlay_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE,
 				 true,
 				 false,
 				 false,
@@ -162,9 +162,9 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageFrozenOverlay.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
-			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
+			case ApogyAddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

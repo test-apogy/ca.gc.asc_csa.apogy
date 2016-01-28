@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui.util;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +22,10 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage
  * @generated
  */
-public class Symphony__AddonsVehicleUISwitch<T> extends Switch<T>
+public class ApogyAddonsVehicleUISwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -33,7 +33,7 @@ public class Symphony__AddonsVehicleUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsVehicleUIPackage modelPackage;
+  protected static ApogyAddonsVehicleUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -41,10 +41,10 @@ public class Symphony__AddonsVehicleUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleUISwitch()
+  public ApogyAddonsVehicleUISwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsVehicleUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsVehicleUIPackage.eINSTANCE;
 		}
 	}
 
@@ -73,21 +73,21 @@ public class Symphony__AddonsVehicleUISwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__AddonsVehicleUIPackage.PHYSICAL_WHEEL_PRESENTATION: {
+			case ApogyAddonsVehicleUIPackage.PHYSICAL_WHEEL_PRESENTATION: {
 				PhysicalWheelPresentation physicalWheelPresentation = (PhysicalWheelPresentation)theEObject;
 				T result = casePhysicalWheelPresentation(physicalWheelPresentation);
 				if (result == null) result = caseNodePresentation(physicalWheelPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehicleUIPackage.LANDER_SPHERICAL_FOOT_PRESENTATION: {
+			case ApogyAddonsVehicleUIPackage.LANDER_SPHERICAL_FOOT_PRESENTATION: {
 				LanderSphericalFootPresentation landerSphericalFootPresentation = (LanderSphericalFootPresentation)theEObject;
 				T result = caseLanderSphericalFootPresentation(landerSphericalFootPresentation);
 				if (result == null) result = caseNodePresentation(landerSphericalFootPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION: {
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION: {
 				ThrusterPresentation thrusterPresentation = (ThrusterPresentation)theEObject;
 				T result = caseThrusterPresentation(thrusterPresentation);
 				if (result == null) result = caseNodePresentation(thrusterPresentation);
@@ -179,4 +179,4 @@ public class Symphony__AddonsVehicleUISwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsVehicleUISwitch
+} //ApogyAddonsVehicleUISwitch

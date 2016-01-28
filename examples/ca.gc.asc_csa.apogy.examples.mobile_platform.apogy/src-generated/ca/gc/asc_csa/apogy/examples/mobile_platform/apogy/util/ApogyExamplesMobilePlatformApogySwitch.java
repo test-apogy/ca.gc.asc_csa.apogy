@@ -1,22 +1,22 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.util;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.mobile_platform.symphony.*;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,10 +28,10 @@ import org.eclipse.symphony.examples.mobile_platform.symphony.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
+public class ApogyExamplesMobilePlatformApogySwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -39,7 +39,7 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesMobilePlatformSymphonyPackage modelPackage;
+  protected static ApogyExamplesMobilePlatformApogyPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -47,10 +47,10 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesMobilePlatformSymphonySwitch()
+  public ApogyExamplesMobilePlatformApogySwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesMobilePlatformSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesMobilePlatformApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -79,31 +79,31 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_SYMPHONY_SYSTEM_API_ADAPTER: {
-				MobilePlatformSymphonySystemApiAdapter mobilePlatformSymphonySystemApiAdapter = (MobilePlatformSymphonySystemApiAdapter)theEObject;
-				T result = caseMobilePlatformSymphonySystemApiAdapter(mobilePlatformSymphonySystemApiAdapter);
-				if (result == null) result = caseSymphonySystemApiAdapter(mobilePlatformSymphonySystemApiAdapter);
-				if (result == null) result = caseTypeApiAdapter(mobilePlatformSymphonySystemApiAdapter);
-				if (result == null) result = casePoseProvider(mobilePlatformSymphonySystemApiAdapter);
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_APOGY_SYSTEM_API_ADAPTER: {
+				MobilePlatformApogySystemApiAdapter mobilePlatformApogySystemApiAdapter = (MobilePlatformApogySystemApiAdapter)theEObject;
+				T result = caseMobilePlatformApogySystemApiAdapter(mobilePlatformApogySystemApiAdapter);
+				if (result == null) result = caseApogySystemApiAdapter(mobilePlatformApogySystemApiAdapter);
+				if (result == null) result = caseTypeApiAdapter(mobilePlatformApogySystemApiAdapter);
+				if (result == null) result = casePoseProvider(mobilePlatformApogySystemApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA: {
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_DATA: {
 				MobilePlatformData mobilePlatformData = (MobilePlatformData)theEObject;
 				T result = caseMobilePlatformData(mobilePlatformData);
-				if (result == null) result = caseSymphonyInitializationData(mobilePlatformData);
+				if (result == null) result = caseApogyInitializationData(mobilePlatformData);
 				if (result == null) result = caseInitializationData(mobilePlatformData);
 				if (result == null) result = caseAbstractInitializationData(mobilePlatformData);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_SYMPHONY_SYSTEM_ANNOTATION: {
-				MobilePlatformSymphonySystemAnnotation mobilePlatformSymphonySystemAnnotation = (MobilePlatformSymphonySystemAnnotation)theEObject;
-				T result = caseMobilePlatformSymphonySystemAnnotation(mobilePlatformSymphonySystemAnnotation);
-				if (result == null) result = casePoseVariableAnnotation(mobilePlatformSymphonySystemAnnotation);
-				if (result == null) result = caseAbstractVariableAnnotation(mobilePlatformSymphonySystemAnnotation);
-				if (result == null) result = caseMapAnnotation(mobilePlatformSymphonySystemAnnotation);
-				if (result == null) result = caseMapViewItemPresentation(mobilePlatformSymphonySystemAnnotation);
+			case ApogyExamplesMobilePlatformApogyPackage.MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION: {
+				MobilePlatformApogySystemAnnotation mobilePlatformApogySystemAnnotation = (MobilePlatformApogySystemAnnotation)theEObject;
+				T result = caseMobilePlatformApogySystemAnnotation(mobilePlatformApogySystemAnnotation);
+				if (result == null) result = casePoseVariableAnnotation(mobilePlatformApogySystemAnnotation);
+				if (result == null) result = caseAbstractVariableAnnotation(mobilePlatformApogySystemAnnotation);
+				if (result == null) result = caseMapAnnotation(mobilePlatformApogySystemAnnotation);
+				if (result == null) result = caseMapViewItemPresentation(mobilePlatformApogySystemAnnotation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,17 +112,17 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Mobile Platform Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Mobile Platform Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Mobile Platform Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Mobile Platform Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobilePlatformSymphonySystemApiAdapter(MobilePlatformSymphonySystemApiAdapter object) {
+	public T caseMobilePlatformApogySystemApiAdapter(MobilePlatformApogySystemApiAdapter object) {
 		return null;
 	}
 
@@ -142,17 +142,17 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Mobile Platform Symphony System Annotation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Mobile Platform Apogy System Annotation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Mobile Platform Symphony System Annotation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Mobile Platform Apogy System Annotation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobilePlatformSymphonySystemAnnotation(MobilePlatformSymphonySystemAnnotation object) {
+	public T caseMobilePlatformApogySystemAnnotation(MobilePlatformApogySystemAnnotation object) {
 		return null;
 	}
 
@@ -172,17 +172,17 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object)
+  public T caseApogySystemApiAdapter(ApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -218,17 +218,17 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyInitializationData(SymphonyInitializationData object) {
+	public T caseApogyInitializationData(ApogyInitializationData object) {
 		return null;
 	}
 
@@ -329,4 +329,4 @@ public class Symphony__ExamplesMobilePlatformSymphonySwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesMobilePlatformSymphonySwitch
+} //ApogyExamplesMobilePlatformApogySwitch

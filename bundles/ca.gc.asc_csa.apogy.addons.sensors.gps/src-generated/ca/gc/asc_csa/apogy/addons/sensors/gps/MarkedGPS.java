@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
-import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.MarkedGPS#getMarker <em>Marker</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.MarkedGPS#getMarker <em>Marker</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getMarkedGPS()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getMarkedGPS()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface MarkedGPS extends GPS {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Marker</em>' containment reference.
 	 * @see #setMarker(PositionMarker)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getMarkedGPS_Marker()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getMarkedGPS_Marker()
 	 * @model containment="true"
 	 * @generated
 	 */
 	PositionMarker getMarker();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.MarkedGPS#getMarker <em>Marker</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.MarkedGPS#getMarker <em>Marker</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Marker</em>' containment reference.

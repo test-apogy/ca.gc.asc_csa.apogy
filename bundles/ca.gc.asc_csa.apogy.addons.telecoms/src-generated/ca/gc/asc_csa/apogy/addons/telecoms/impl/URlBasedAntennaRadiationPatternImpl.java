@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.impl;
+package ca.gc.asc_csa.apogy.addons.telecoms.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,7 +59,7 @@ public class URlBasedAntennaRadiationPatternImpl extends AbstractAntennaRadiatio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsTelecomsPackage.Literals.URL_BASED_ANTENNA_RADIATION_PATTERN;
+		return ApogyAddonsTelecomsPackage.Literals.URL_BASED_ANTENNA_RADIATION_PATTERN;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class URlBasedAntennaRadiationPatternImpl extends AbstractAntennaRadiatio
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL, oldUrl, url));
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class URlBasedAntennaRadiationPatternImpl extends AbstractAntennaRadiatio
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
+			case ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
 				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -105,7 +105,7 @@ public class URlBasedAntennaRadiationPatternImpl extends AbstractAntennaRadiatio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
+			case ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
 				setUrl((String)newValue);
 				return;
 		}
@@ -120,7 +120,7 @@ public class URlBasedAntennaRadiationPatternImpl extends AbstractAntennaRadiatio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
+			case ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
 				setUrl(URL_EDEFAULT);
 				return;
 		}
@@ -135,7 +135,7 @@ public class URlBasedAntennaRadiationPatternImpl extends AbstractAntennaRadiatio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
+			case ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);

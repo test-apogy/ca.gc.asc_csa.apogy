@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsVehicleUI' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsVehicleUI' modelDirectory='/org.eclipse.symphony.addons.vehicle.ui/src-generated' editDirectory='/org.eclipse.symphony.addons.vehicle.ui.edit/src-generated' basePackage='org.eclipse.symphony.addons.vehicle'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsVehicleUI' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsVehicleUI' modelDirectory='/ca.gc.asc_csa.apogy.addons.vehicle.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.vehicle.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.vehicle'"
  * @generated
  */
-public interface Symphony__AddonsVehicleUIPackage extends EPackage
+public interface ApogyAddonsVehicleUIPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -41,7 +41,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.addons.vehicle.ui";
+  String eNS_URI = "ca.gc.asc_csa.apogy.addons.vehicle.ui";
 
   /**
 	 * The package namespace name.
@@ -57,14 +57,14 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsVehicleUIPackage eINSTANCE = org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIPackageImpl.init();
+  ApogyAddonsVehicleUIPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl <em>Physical Wheel Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl <em>Physical Wheel Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl
-	 * @see org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIPackageImpl#getPhysicalWheelPresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIPackageImpl#getPhysicalWheelPresentation()
 	 * @generated
 	 */
   int PHYSICAL_WHEEL_PRESENTATION = 0;
@@ -76,7 +76,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_WHEEL_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int PHYSICAL_WHEEL_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -85,7 +85,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int PHYSICAL_WHEEL_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -94,7 +94,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int PHYSICAL_WHEEL_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -103,7 +103,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int PHYSICAL_WHEEL_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -112,7 +112,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_WHEEL_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int PHYSICAL_WHEEL_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -121,7 +121,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int PHYSICAL_WHEEL_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -130,7 +130,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int PHYSICAL_WHEEL_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -139,7 +139,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int PHYSICAL_WHEEL_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -148,7 +148,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int PHYSICAL_WHEEL_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -157,7 +157,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int PHYSICAL_WHEEL_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -166,7 +166,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int PHYSICAL_WHEEL_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -175,7 +175,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int PHYSICAL_WHEEL_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -184,7 +184,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int PHYSICAL_WHEEL_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The number of structural features of the '<em>Physical Wheel Presentation</em>' class.
@@ -193,7 +193,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int PHYSICAL_WHEEL_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Physical Wheel Presentation</em>' class.
@@ -202,15 +202,15 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int PHYSICAL_WHEEL_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl <em>Lander Spherical Foot Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl <em>Lander Spherical Foot Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl
-	 * @see org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIPackageImpl#getLanderSphericalFootPresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIPackageImpl#getLanderSphericalFootPresentation()
 	 * @generated
 	 */
   int LANDER_SPHERICAL_FOOT_PRESENTATION = 1;
@@ -222,7 +222,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER_SPHERICAL_FOOT_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int LANDER_SPHERICAL_FOOT_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -231,7 +231,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -240,7 +240,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -249,7 +249,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -258,7 +258,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER_SPHERICAL_FOOT_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int LANDER_SPHERICAL_FOOT_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -267,7 +267,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -276,7 +276,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -285,7 +285,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -294,7 +294,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -303,7 +303,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -312,7 +312,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -321,7 +321,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -330,7 +330,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The number of structural features of the '<em>Lander Spherical Foot Presentation</em>' class.
@@ -339,7 +339,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Lander Spherical Foot Presentation</em>' class.
@@ -348,15 +348,15 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl <em>Thruster Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ThrusterPresentationImpl <em>Thruster Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl
-	 * @see org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIPackageImpl#getThrusterPresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ThrusterPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIPackageImpl#getThrusterPresentation()
 	 * @generated
 	 */
   int THRUSTER_PRESENTATION = 2;
@@ -368,7 +368,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int THRUSTER_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -377,7 +377,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int THRUSTER_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -386,7 +386,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int THRUSTER_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -395,7 +395,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int THRUSTER_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -404,7 +404,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int THRUSTER_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -413,7 +413,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int THRUSTER_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -422,7 +422,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int THRUSTER_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -431,7 +431,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int THRUSTER_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -440,7 +440,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int THRUSTER_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -449,7 +449,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int THRUSTER_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -458,7 +458,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int THRUSTER_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -467,7 +467,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int THRUSTER_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -476,7 +476,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int THRUSTER_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The feature id for the '<em><b>Plume Envelope Visible</b></em>' attribute.
@@ -485,7 +485,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Plume Envelope Length</b></em>' attribute.
@@ -494,7 +494,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Thruster Presentation</em>' class.
@@ -503,7 +503,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+  int THRUSTER_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Thruster Presentation</em>' class.
@@ -512,56 +512,56 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int THRUSTER_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation <em>Physical Wheel Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation <em>Physical Wheel Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Physical Wheel Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation
 	 * @generated
 	 */
   EClass getPhysicalWheelPresentation();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation <em>Lander Spherical Foot Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation <em>Lander Spherical Foot Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lander Spherical Foot Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.LanderSphericalFootPresentation
 	 * @generated
 	 */
   EClass getLanderSphericalFootPresentation();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation <em>Thruster Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation <em>Thruster Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Thruster Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation
 	 * @generated
 	 */
   EClass getThrusterPresentation();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Plume Envelope Visible</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible()
 	 * @see #getThrusterPresentation()
 	 * @generated
 	 */
 	EAttribute getThrusterPresentation_PlumeEnvelopeVisible();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Plume Envelope Length</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength()
 	 * @see #getThrusterPresentation()
 	 * @generated
 	 */
@@ -574,7 +574,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsVehicleUIFactory getSymphony__AddonsVehicleUIFactory();
+	ApogyAddonsVehicleUIFactory getApogyAddonsVehicleUIFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -592,29 +592,29 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl <em>Physical Wheel Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl <em>Physical Wheel Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl
-		 * @see org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIPackageImpl#getPhysicalWheelPresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.PhysicalWheelPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIPackageImpl#getPhysicalWheelPresentation()
 		 * @generated
 		 */
     EClass PHYSICAL_WHEEL_PRESENTATION = eINSTANCE.getPhysicalWheelPresentation();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl <em>Lander Spherical Foot Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl <em>Lander Spherical Foot Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl
-		 * @see org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIPackageImpl#getLanderSphericalFootPresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.LanderSphericalFootPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIPackageImpl#getLanderSphericalFootPresentation()
 		 * @generated
 		 */
     EClass LANDER_SPHERICAL_FOOT_PRESENTATION = eINSTANCE.getLanderSphericalFootPresentation();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl <em>Thruster Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ThrusterPresentationImpl <em>Thruster Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl
-		 * @see org.eclipse.symphony.addons.vehicle.ui.impl.Symphony__AddonsVehicleUIPackageImpl#getThrusterPresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ThrusterPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ApogyAddonsVehicleUIPackageImpl#getThrusterPresentation()
 		 * @generated
 		 */
     EClass THRUSTER_PRESENTATION = eINSTANCE.getThrusterPresentation();
@@ -635,4 +635,4 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 
   }
 
-} //Symphony__AddonsVehicleUIPackage
+} //ApogyAddonsVehicleUIPackage

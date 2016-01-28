@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -12,17 +12,17 @@ import org.ros.internal.message.Message;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage
  * @generated
  */
-public interface Symphony__AddonsROSFactory extends EFactory {
+public interface ApogyAddonsROSFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsROSFactory eINSTANCE = org.eclipse.symphony.addons.ros.impl.Symphony__AddonsROSFactoryImpl.init();
+	ApogyAddonsROSFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.ros.impl.ApogyAddonsROSFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>ROS Node</em>'.
@@ -94,7 +94,7 @@ public interface Symphony__AddonsROSFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__AddonsROSFacade createSymphony__AddonsROSFacade();
+	ApogyAddonsROSFacade createApogyAddonsROSFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -103,6 +103,6 @@ public interface Symphony__AddonsROSFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsROSPackage getSymphony__AddonsROSPackage();
+	ApogyAddonsROSPackage getApogyAddonsROSPackage();
 
-} //Symphony__AddonsROSFactory
+} //ApogyAddonsROSFactory

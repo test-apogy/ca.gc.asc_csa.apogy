@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.provider;
 
 
 import java.util.Collection;
@@ -14,18 +14,18 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
-import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
-import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.ApogyExamplesRoboticArmApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.robotic_arm.apogy.RoboticArmData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemProvider
+public class RoboticArmDataItemProvider extends ApogyInitializationDataItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -73,7 +73,7 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_initialized_feature", "_UI_RoboticArmData_type"),
-				 Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_DATA__INITIALIZED,
+				 ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 				 getResourceLocator(),
 				 getString("_UI_RoboticArmData_speed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_speed_feature", "_UI_RoboticArmData_type"),
-				 Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_DATA__SPEED,
+				 ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__SPEED,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 				getResourceLocator(),
 				getString("_UI_RoboticArmData_turretAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_turretAngle_feature", "_UI_RoboticArmData_type"),
-				Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_DATA__TURRET_ANGLE,
+				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__TURRET_ANGLE,
 				true,
 				false,
 				false,
@@ -140,7 +140,7 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 				getResourceLocator(),
 				getString("_UI_RoboticArmData_shoulderAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_shoulderAngle_feature", "_UI_RoboticArmData_type"),
-				Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_DATA__SHOULDER_ANGLE,
+				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__SHOULDER_ANGLE,
 				true,
 				false,
 				false,
@@ -163,7 +163,7 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 				getResourceLocator(),
 				getString("_UI_RoboticArmData_elbowAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_elbowAngle_feature", "_UI_RoboticArmData_type"),
-				Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_DATA__ELBOW_ANGLE,
+				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__ELBOW_ANGLE,
 				true,
 				false,
 				false,
@@ -186,7 +186,7 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 				getResourceLocator(),
 				getString("_UI_RoboticArmData_wristAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArmData_wristAngle_feature", "_UI_RoboticArmData_type"),
-				Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_DATA__WRIST_ANGLE,
+				ApogyExamplesRoboticArmApogyPackage.Literals.ROBOTIC_ARM_DATA__WRIST_ANGLE,
 				true,
 				false,
 				false,
@@ -233,12 +233,12 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RoboticArmData.class)) {
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SPEED:
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
-			case Symphony__ExamplesRoboticArmSymphonyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__INITIALIZED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SPEED:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__TURRET_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__SHOULDER_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__ELBOW_ANGLE:
+			case ApogyExamplesRoboticArmApogyPackage.ROBOTIC_ARM_DATA__WRIST_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -267,7 +267,7 @@ public class RoboticArmDataItemProvider extends SymphonyInitializationDataItemPr
 	@Override
 	public ResourceLocator getResourceLocator()
 	{
-		return Symphony__ExamplesRoboticArmSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesRoboticArmApogyEditPlugin.INSTANCE;
 	}
 
 }

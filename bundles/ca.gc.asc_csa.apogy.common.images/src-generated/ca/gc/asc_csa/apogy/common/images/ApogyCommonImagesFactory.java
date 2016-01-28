@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.images;
+package ca.gc.asc_csa.apogy.common.images;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage
  * @generated
  */
-public interface Symphony__CommonImagesFactory extends EFactory {
+public interface ApogyCommonImagesFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonImagesFactory eINSTANCE = org.eclipse.symphony.common.images.impl.Symphony__CommonImagesFactoryImpl.init();
+	ApogyCommonImagesFactory eINSTANCE = ca.gc.asc_csa.apogy.common.images.impl.ApogyCommonImagesFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>EImage</em>'.
@@ -74,6 +74,6 @@ public interface Symphony__CommonImagesFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonImagesPackage getSymphony__CommonImagesPackage();
+	ApogyCommonImagesPackage getApogyCommonImagesPackage();
 
-} //Symphony__CommonImagesFactory
+} //ApogyCommonImagesFactory

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.ui.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation;
-import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ApogyAddonsSensorsImagingUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.ImageSnapshotPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_presentationMode_feature", "_UI_ImageSnapshotPresentation_type"),
-				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE,
+				 ApogyAddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_transparency_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_transparency_feature", "_UI_ImageSnapshotPresentation_type"),
-				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY,
+				 ApogyAddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_imageProjectionVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_imageProjectionVisible_feature", "_UI_ImageSnapshotPresentation_type"),
-				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE,
+				 ApogyAddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_imageProjectionOnFOVVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_imageProjectionOnFOVVisible_feature", "_UI_ImageSnapshotPresentation_type"),
-				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE,
+				 ApogyAddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -190,10 +190,10 @@ public class ImageSnapshotPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageSnapshotPresentation.class)) {
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
-			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
+			case ApogyAddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

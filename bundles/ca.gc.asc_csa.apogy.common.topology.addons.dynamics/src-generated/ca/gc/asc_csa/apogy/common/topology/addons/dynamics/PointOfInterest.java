@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getOffset <em>Offset</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getKinematicState <em>Kinematic State</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getOffset <em>Offset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getKinematicState <em>Kinematic State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPointOfInterest()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPointOfInterest()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface PointOfInterest extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Offset</em>' containment reference.
 	 * @see #setOffset(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPointOfInterest_Offset()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPointOfInterest_Offset()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getOffset();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getOffset <em>Offset</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getOffset <em>Offset</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Offset</em>' containment reference.
@@ -65,14 +65,14 @@ public interface PointOfInterest extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kinematic State</em>' containment reference.
 	 * @see #setKinematicState(KinematicState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPointOfInterest_KinematicState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPointOfInterest_KinematicState()
 	 * @model containment="true"
 	 * @generated
 	 */
 	KinematicState getKinematicState();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getKinematicState <em>Kinematic State</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest#getKinematicState <em>Kinematic State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kinematic State</em>' containment reference.

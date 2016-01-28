@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import java.util.List;
 
@@ -16,23 +16,23 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode;
-import org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.WayPoint;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPathFilter;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.MinimumDistanceFilter;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.SplineEndControlPointGenerationMode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.UniformDistanceWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathFilter;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPathInterpolator;
 
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl implements Symphony__AddonsGeometryPathsPackage {
+public class ApogyAddonsGeometryPathsPackageImpl extends EPackageImpl implements ApogyAddonsGeometryPathsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -109,7 +109,7 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsGeometryPathsFacadeEClass = null;
+	private EClass apogy__AddonsGeometryPathsFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,12 +136,12 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsGeometryPathsPackageImpl() {
-		super(eNS_URI, Symphony__AddonsGeometryPathsFactory.eINSTANCE);
+	private ApogyAddonsGeometryPathsPackageImpl() {
+		super(eNS_URI, ApogyAddonsGeometryPathsFactory.eINSTANCE);
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsGeometryPathsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsGeometryPathsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -163,31 +163,31 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsGeometryPathsPackage init() {
-		if (isInited) return (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
+	public static ApogyAddonsGeometryPathsPackage init() {
+		if (isInited) return (ApogyAddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsGeometryPathsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsGeometryPathsPackageImpl theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsGeometryPathsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsGeometryPathsPackageImpl());
+		ApogyAddonsGeometryPathsPackageImpl theApogyAddonsGeometryPathsPackage = (ApogyAddonsGeometryPathsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsGeometryPathsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsGeometryPathsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData3DPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsGeometryPathsPackage.createPackageContents();
+		theApogyAddonsGeometryPathsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsGeometryPathsPackage.initializePackageContents();
+		theApogyAddonsGeometryPathsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsGeometryPathsPackage.freeze();
+		theApogyAddonsGeometryPathsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsGeometryPathsPackage.eNS_URI, theSymphony__AddonsGeometryPathsPackage);
-		return theSymphony__AddonsGeometryPathsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsGeometryPathsPackage.eNS_URI, theApogyAddonsGeometryPathsPackage);
+		return theApogyAddonsGeometryPathsPackage;
 	}
 
 	/**
@@ -357,8 +357,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsGeometryPathsFacade() {
-		return symphony__AddonsGeometryPathsFacadeEClass;
+	public EClass getApogyAddonsGeometryPathsFacade() {
+		return apogy__AddonsGeometryPathsFacadeEClass;
 	}
 
 	/**
@@ -366,8 +366,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath() {
-		return symphony__AddonsGeometryPathsFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath() {
+		return apogy__AddonsGeometryPathsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -375,8 +375,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List() {
-		return symphony__AddonsGeometryPathsFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyAddonsGeometryPathsFacade__CreateWayPointPath__List() {
+		return apogy__AddonsGeometryPathsFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -402,8 +402,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsFactory getSymphony__AddonsGeometryPathsFactory() {
-		return (Symphony__AddonsGeometryPathsFactory)getEFactoryInstance();
+	public ApogyAddonsGeometryPathsFactory getApogyAddonsGeometryPathsFactory() {
+		return (ApogyAddonsGeometryPathsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -452,9 +452,9 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		uniformDistanceWayPointPathInterpolatorEClass = createEClass(UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR);
 		createEAttribute(uniformDistanceWayPointPathInterpolatorEClass, UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL);
 
-		symphony__AddonsGeometryPathsFacadeEClass = createEClass(SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE);
-		createEOperation(symphony__AddonsGeometryPathsFacadeEClass, SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH);
-		createEOperation(symphony__AddonsGeometryPathsFacadeEClass, SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST);
+		apogy__AddonsGeometryPathsFacadeEClass = createEClass(APOGY_ADDONS_GEOMETRY_PATHS_FACADE);
+		createEOperation(apogy__AddonsGeometryPathsFacadeEClass, APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH);
+		createEOperation(apogy__AddonsGeometryPathsFacadeEClass, APOGY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST);
 
 		// Create enums
 		splineEndControlPointGenerationModeEEnum = createEEnum(SPLINE_END_CONTROL_POINT_GENERATION_MODE);
@@ -487,10 +487,10 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
+		ApogyCommonProcessorsPackage theApogyCommonProcessorsPackage = (ApogyCommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonProcessorsPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -498,12 +498,12 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		wayPointEClass.getESuperTypes().add(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
-		wayPointEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
-		pathEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
-		wayPointPathEClass.getESuperTypes().add(theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet());
+		wayPointEClass.getESuperTypes().add(theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		wayPointEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		pathEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
+		wayPointPathEClass.getESuperTypes().add(theApogyCommonGeometryData3DPackage.getCartesianCoordinatesSet());
 		wayPointPathEClass.getESuperTypes().add(this.getPath());
-		EGenericType g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		EGenericType g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		EGenericType g2 = createEGenericType(this.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getWayPointPath());
@@ -511,7 +511,7 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		wayPointPathInterpolatorEClass.getEGenericSuperTypes().add(g1);
 		catmullRomWayPointPathInterpolatorEClass.getESuperTypes().add(this.getWayPointPathInterpolator());
 		segmentWayPointPathInterpolatorEClass.getESuperTypes().add(this.getWayPointPathInterpolator());
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getWayPointPath());
@@ -528,9 +528,9 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		initEClass(wayPointPathEClass, WayPointPath.class, "WayPointPath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWayPointPath_Length(), theEcorePackage.getEDouble(), "length", "0.0", 0, 1, WayPointPath.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getWayPointPath__GetStartPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getStartPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getWayPointPath__GetStartPoint(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getStartPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getWayPointPath__GetEndPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getEndPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getWayPointPath__GetEndPoint(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getEndPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(wayPointPathInterpolatorEClass, WayPointPathInterpolator.class, "WayPointPathInterpolator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -550,14 +550,14 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		initEClass(uniformDistanceWayPointPathInterpolatorEClass, UniformDistanceWayPointPathInterpolator.class, "UniformDistanceWayPointPathInterpolator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUniformDistanceWayPointPathInterpolator_DistanceInterval(), theEcorePackage.getEDouble(), "distanceInterval", null, 0, 1, UniformDistanceWayPointPathInterpolator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__AddonsGeometryPathsFacadeEClass, Symphony__AddonsGeometryPathsFacade.class, "Symphony__AddonsGeometryPathsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsGeometryPathsFacadeEClass, ApogyAddonsGeometryPathsFacade.class, "ApogyAddonsGeometryPathsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyAddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getWayPointPath(), "wayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsGeometryPathsFacade__CreateWayPointPath__List(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -591,16 +591,16 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsGeometryPaths",
+			 "prefix", "ApogyAddonsGeometryPaths",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsGeometryPaths",
+			 "modelName", "ApogyAddonsGeometryPaths",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.geometry.paths/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.geometry.paths.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons.geometry"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.geometry.paths/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.geometry.paths.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons.geometry"
 		   });	
 		addAnnotation
 		  (catmullRomWayPointPathInterpolatorEClass, 
@@ -609,17 +609,17 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 			 "documentation", "Fits a spline on the specified path using Catmull-Rom and generates an\ninterpolated path using the specified maximum point to point distance.\nThe original waypoints are included in the resulting interpolated path."
 		   });	
 		addAnnotation
-		  (getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), 
+		  (getApogyAddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a WayPointPath from a WayPointPath. The WayPointPath created\ncontains copies of all the points found in the specified WayPointPath."
 		   });	
 		addAnnotation
-		  (getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List(), 
+		  (getApogyAddonsGeometryPathsFacade__CreateWayPointPath__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a WayPointPath using a list of CartesianPositionCoordinates.\nThe WayPointPath created contains copies of all the points found in\nthe specified list."
 		   });
 	}
 
-} //Symphony__AddonsGeometryPathsPackageImpl
+} //ApogyAddonsGeometryPathsPackageImpl

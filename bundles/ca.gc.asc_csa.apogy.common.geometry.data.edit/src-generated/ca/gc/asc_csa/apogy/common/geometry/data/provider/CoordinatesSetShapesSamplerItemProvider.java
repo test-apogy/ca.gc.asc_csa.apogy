@@ -3,7 +3,7 @@
  *
  * $Id: CoordinatesSetShapesSamplerItemProvider.java,v 1.3.4.2 2015/05/21 15:49:35 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data.provider;
 
 
 import java.util.Collection;
@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.processors.provider.ProcessorItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class CoordinatesSetShapesSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CoordinatesSetShapesSampler_coordinatesSamplingShapes_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CoordinatesSetShapesSampler_coordinatesSamplingShapes_feature", "_UI_CoordinatesSetShapesSampler_type"),
-				 Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES,
+				 ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES,
 				 true,
 				 false,
 				 true,
@@ -95,7 +95,7 @@ public class CoordinatesSetShapesSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CoordinatesSetShapesSampler_shapeSamplingMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CoordinatesSetShapesSampler_shapeSamplingMode_feature", "_UI_CoordinatesSetShapesSampler_type"),
-				 Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE,
+				 ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE,
 				 true,
 				 false,
 				 false,
@@ -145,7 +145,7 @@ public class CoordinatesSetShapesSamplerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CoordinatesSetShapesSampler.class)) {
-			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case ApogyCommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,22 +1,22 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.util;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
-import org.eclipse.symphony.examples.satellite.symphony.*;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,17 +28,17 @@ import org.eclipse.symphony.examples.satellite.symphony.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage
  * @generated
  */
-public class Symphony__ExamplesSatelliteSymphonySwitch<T> extends Switch<T> {
+public class ApogyExamplesSatelliteApogySwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__ExamplesSatelliteSymphonyPackage modelPackage;
+	protected static ApogyExamplesSatelliteApogyPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -46,9 +46,9 @@ public class Symphony__ExamplesSatelliteSymphonySwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteSymphonySwitch() {
+	public ApogyExamplesSatelliteApogySwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesSatelliteSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesSatelliteApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -75,19 +75,19 @@ public class Symphony__ExamplesSatelliteSymphonySwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_SYSTEM_API_ADAPTER: {
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_SYSTEM_API_ADAPTER: {
 				ConstellationSystemApiAdapter constellationSystemApiAdapter = (ConstellationSystemApiAdapter)theEObject;
 				T result = caseConstellationSystemApiAdapter(constellationSystemApiAdapter);
-				if (result == null) result = caseSymphonySystemApiAdapter(constellationSystemApiAdapter);
+				if (result == null) result = caseApogySystemApiAdapter(constellationSystemApiAdapter);
 				if (result == null) result = caseTypeApiAdapter(constellationSystemApiAdapter);
 				if (result == null) result = casePoseProvider(constellationSystemApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA: {
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA: {
 				ConstellationData constellationData = (ConstellationData)theEObject;
 				T result = caseConstellationData(constellationData);
-				if (result == null) result = caseSymphonyInitializationData(constellationData);
+				if (result == null) result = caseApogyInitializationData(constellationData);
 				if (result == null) result = caseInitializationData(constellationData);
 				if (result == null) result = caseAbstractInitializationData(constellationData);
 				if (result == null) result = defaultCase(theEObject);
@@ -158,17 +158,17 @@ public class Symphony__ExamplesSatelliteSymphonySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object) {
+	public T caseApogySystemApiAdapter(ApogySystemApiAdapter object) {
 		return null;
 	}
 
@@ -203,17 +203,17 @@ public class Symphony__ExamplesSatelliteSymphonySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyInitializationData(SymphonyInitializationData object) {
+	public T caseApogyInitializationData(ApogyInitializationData object) {
 		return null;
 	}
 
@@ -233,4 +233,4 @@ public class Symphony__ExamplesSatelliteSymphonySwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__ExamplesSatelliteSymphonySwitch
+} //ApogyExamplesSatelliteApogySwitch

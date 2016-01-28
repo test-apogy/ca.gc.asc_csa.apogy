@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.provider;
+package ca.gc.asc_csa.apogy.common.file.csv.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.file.csv.CsvColumn;
-import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
+import ca.gc.asc_csa.apogy.common.file.csv.CsvColumn;
+import ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.file.csv.CsvColumn} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.file.csv.CsvColumn} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class CsvColumnItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumn_values_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumn_values_feature", "_UI_CsvColumn_type"),
-				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN__VALUES,
+				 ApogyCommonFileCSVPackage.Literals.CSV_COLUMN__VALUES,
 				 true,
 				 false,
 				 true,
@@ -101,7 +101,7 @@ public class CsvColumnItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumn_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumn_name_feature", "_UI_CsvColumn_type"),
-				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN__NAME,
+				 ApogyCommonFileCSVPackage.Literals.CSV_COLUMN__NAME,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class CsvColumnItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumn_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumn_description_feature", "_UI_CsvColumn_type"),
-				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN__DESCRIPTION,
+				 ApogyCommonFileCSVPackage.Literals.CSV_COLUMN__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -170,8 +170,8 @@ public class CsvColumnItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CsvColumn.class)) {
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__NAME:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

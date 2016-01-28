@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.invocator.provider.AbstractToolsListContainerItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.provider.AbstractToolsListContainerItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -61,7 +61,7 @@ public class EarthViewConfigurationListItemProvider extends AbstractToolsListCon
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -114,7 +114,7 @@ public class EarthViewConfigurationListItemProvider extends AbstractToolsListCon
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthViewConfigurationList.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -134,8 +134,8 @@ public class EarthViewConfigurationListItemProvider extends AbstractToolsListCon
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS,
-				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfiguration()));
+				(ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS,
+				 ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfiguration()));
 	}
 
 }

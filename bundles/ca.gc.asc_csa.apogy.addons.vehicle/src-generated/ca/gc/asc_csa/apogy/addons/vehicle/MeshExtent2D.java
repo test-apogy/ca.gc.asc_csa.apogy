@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumX <em>Minimum X</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumY <em>Minimum Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumX <em>Maximum X</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumY <em>Maximum Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMinimumX <em>Minimum X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMinimumY <em>Minimum Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMaximumX <em>Maximum X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMaximumY <em>Maximum Y</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshExtent2D()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum X</em>' attribute.
 	 * @see #setMinimumX(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MinimumX()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshExtent2D_MinimumX()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
   double getMinimumX();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumX <em>Minimum X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMinimumX <em>Minimum X</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum X</em>' attribute.
@@ -64,14 +64,14 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Y</em>' attribute.
 	 * @see #setMinimumY(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MinimumY()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshExtent2D_MinimumY()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
   double getMinimumY();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumY <em>Minimum Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMinimumY <em>Minimum Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum Y</em>' attribute.
@@ -91,14 +91,14 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum X</em>' attribute.
 	 * @see #setMaximumX(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MaximumX()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshExtent2D_MaximumX()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
   double getMaximumX();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumX <em>Maximum X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMaximumX <em>Maximum X</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum X</em>' attribute.
@@ -118,14 +118,14 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Y</em>' attribute.
 	 * @see #setMaximumY(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MaximumY()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshExtent2D_MaximumY()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
   double getMaximumY();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumY <em>Maximum Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D#getMaximumY <em>Maximum Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Y</em>' attribute.

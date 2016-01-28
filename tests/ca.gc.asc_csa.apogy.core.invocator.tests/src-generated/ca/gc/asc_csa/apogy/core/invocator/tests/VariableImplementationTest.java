@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 
 import junit.textui.TestRunner;
 
@@ -54,7 +54,7 @@ public class VariableImplementationTest extends AbstractTypeImplementationTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementation());
+		setFixture(ApogyCoreInvocatorFactory.eINSTANCE.createVariableImplementation());
 	}
 
 	/**

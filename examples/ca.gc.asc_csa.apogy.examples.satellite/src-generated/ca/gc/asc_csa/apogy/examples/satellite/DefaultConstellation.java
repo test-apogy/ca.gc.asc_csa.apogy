@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 
 /**
@@ -14,7 +14,7 @@ package org.eclipse.symphony.examples.satellite;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getDefaultConstellation()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getDefaultConstellation()
  * @model
  * @generated
  */

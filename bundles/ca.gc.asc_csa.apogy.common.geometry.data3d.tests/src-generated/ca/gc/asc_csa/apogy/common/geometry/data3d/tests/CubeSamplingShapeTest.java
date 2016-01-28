@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -19,8 +19,8 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape#isPolygonInside(org.eclipse.symphony.common.geometry.data.Polygon) <em>Is Polygon Inside</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape#isInside(org.eclipse.symphony.common.geometry.data.Coordinates) <em>Is Inside</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape#isPolygonInside(ca.gc.asc_csa.apogy.common.geometry.data.Polygon) <em>Is Polygon Inside</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape#isInside(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates) <em>Is Inside</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -82,7 +82,7 @@ public class CubeSamplingShapeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCubeSamplingShape());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCubeSamplingShape());
 	}
 
 	/**
@@ -97,53 +97,53 @@ public class CubeSamplingShapeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape#isPolygonInside(org.eclipse.symphony.common.geometry.data.Polygon) <em>Is Polygon Inside</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape#isPolygonInside(ca.gc.asc_csa.apogy.common.geometry.data.Polygon) <em>Is Polygon Inside</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape#isPolygonInside(org.eclipse.symphony.common.geometry.data.Polygon)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape#isPolygonInside(ca.gc.asc_csa.apogy.common.geometry.data.Polygon)
 	 * @generated_NOT
 	 */
 	public void testIsPolygonInside__Polygon() 
 	{
-		CartesianPositionCoordinates corner1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, -1.0, -1.0);
-		CartesianPositionCoordinates corner2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 1.0);
+		CartesianPositionCoordinates corner1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, -1.0, -1.0);
+		CartesianPositionCoordinates corner2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 1.0);
 		
 		getFixture().setCorner1(corner1);
 		getFixture().setCorner2(corner2);
 		getFixture().setIncludeJustTouching(true);
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.50, 0.50, 0.00);								
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.75, 0.50, 0.25);						
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.75, 0.75, 0.50);				
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.50, 0.50, 0.00);								
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.75, 0.50, 0.25);						
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.75, 0.75, 0.50);				
 		
-		CartesianTriangle t1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p0, p1, p2);
+		CartesianTriangle t1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p0, p1, p2);
 		assertTrue(getFixture().isPolygonInside(t1));
 		
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape#isInside(org.eclipse.symphony.common.geometry.data.Coordinates) <em>Is Inside</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape#isInside(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates) <em>Is Inside</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape#isInside(org.eclipse.symphony.common.geometry.data.Coordinates)
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape#isInside(ca.gc.asc_csa.apogy.common.geometry.data.Coordinates)
 	 * @generated_NOT
 	 */
 	public void testIsInside__Coordinates() 
 	{
-		CartesianPositionCoordinates corner1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, -1.0, -1.0);
-		CartesianPositionCoordinates corner2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 1.0);
+		CartesianPositionCoordinates corner1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, -1.0, -1.0);
+		CartesianPositionCoordinates corner2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 1.0);
 		
 		getFixture().setCorner1(corner1);
 		getFixture().setCorner2(corner2);
 		getFixture().setIncludeJustTouching(true);
 		
-		CartesianPositionCoordinates p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);				
+		CartesianPositionCoordinates p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);				
 		assertTrue(getFixture().isInside(p));
 		
-		p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10.0, 0.0, 0.0);
+		p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(10.0, 0.0, 0.0);
 		assertFalse(getFixture().isInside(p));
 		
-		p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
+		p = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
 		assertTrue(getFixture().isInside(p));
 		
 		// Exclude point on the edges.

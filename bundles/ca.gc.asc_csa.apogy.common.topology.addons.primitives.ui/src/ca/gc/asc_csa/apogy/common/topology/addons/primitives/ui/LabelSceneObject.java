@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.topology.addons.primitives.ui;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui;
 
-import org.eclipse.symphony.common.topology.addons.primitives.Label;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 public interface LabelSceneObject extends SceneObject {
 

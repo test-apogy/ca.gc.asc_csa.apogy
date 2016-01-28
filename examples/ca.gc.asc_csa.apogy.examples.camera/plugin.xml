@@ -9,9 +9,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.examples.camera"
-            class="org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage"
-            genModel="model/symphony_examples_camera.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.camera"
+            class="ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage"
+            genModel="model/apogy_examples_camera.xcore"/>
    </extension>
 
 </plugin>

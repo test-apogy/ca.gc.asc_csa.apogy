@@ -3,7 +3,7 @@
  *
  * $Id: SphereSamplingShapeImpl.java,v 1.4.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,9 +29,9 @@ import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl#getCenter <em>Center</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl#isIncludeJustTouching <em>Include Just Touching</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphereSamplingShapeImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphereSamplingShapeImpl#getCenter <em>Center</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.SphereSamplingShapeImpl#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
  *
  * @generated
@@ -106,7 +106,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE;
+		return ApogyCommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE;
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 			center = (CartesianPositionCoordinates)eResolveProxy(oldCenter);
 			if (center != oldCenter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER, oldCenter, center));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER, oldCenter, center));
 			}
 		}
 		return center;
@@ -170,7 +170,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 		CartesianPositionCoordinates oldCenter = center;
 		center = newCenter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER, oldCenter, center));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER, oldCenter, center));
 	}
 
 	/**
@@ -193,7 +193,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 		boolean oldIncludeJustTouching = includeJustTouching;
 		includeJustTouching = newIncludeJustTouching;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING, oldIncludeJustTouching, includeJustTouching));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING, oldIncludeJustTouching, includeJustTouching));
 	}
 
 	/**
@@ -228,12 +228,12 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
 				return getRadius();
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
 				if (resolve) return getCenter();
 				return basicGetCenter();
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				return isIncludeJustTouching();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -248,13 +248,13 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
 				setRadius((Double)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
 				setCenter((CartesianPositionCoordinates)newValue);
 				return;
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				setIncludeJustTouching((Boolean)newValue);
 				return;
 		}
@@ -270,13 +270,13 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
 				setCenter((CartesianPositionCoordinates)null);
 				return;
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				setIncludeJustTouching(INCLUDE_JUST_TOUCHING_EDEFAULT);
 				return;
 		}
@@ -292,11 +292,11 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
 				return radius != RADIUS_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__CENTER:
 				return center != null;
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				return includeJustTouching != INCLUDE_JUST_TOUCHING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -311,7 +311,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == PolygonSamplingShape.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON;
+				case ApogyCommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON;
 				default: return -1;
 			}
 		}
@@ -327,9 +327,9 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON:
 				return isPolygonInside((PolygonType)arguments.get(0));
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES:
 				return isInside((CartesianPositionCoordinates)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

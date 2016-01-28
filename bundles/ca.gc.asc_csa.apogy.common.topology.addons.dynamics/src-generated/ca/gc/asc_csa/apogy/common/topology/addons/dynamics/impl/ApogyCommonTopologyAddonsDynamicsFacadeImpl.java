@@ -2,9 +2,9 @@
  * <copyright>
  * </copyright>
  *
- * $Id: Symphony__CommonTopologyAddonsDynamicsFacadeImpl.java,v 1.15.2.2 2015/02/03 20:01:37 rlarcheveque Exp $
+ * $Id: ApogyCommonTopologyAddonsDynamicsFacadeImpl.java,v 1.15.2.2 2015/02/03 20:01:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Set;
@@ -12,17 +12,17 @@ import java.util.Set;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeCenterOfMassVisitor;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeMassVisitor;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeVisitor;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBodyNodeCenterOfMassVisitor;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBodyNodeMassVisitor;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBodyNodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,15 +31,15 @@ import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopo
  *
  * @generated
  */
-public class Symphony__CommonTopologyAddonsDynamicsFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonTopologyAddonsDynamicsFacade 
+public class ApogyCommonTopologyAddonsDynamicsFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonTopologyAddonsDynamicsFacade 
 {
-	private static Symphony__CommonTopologyAddonsDynamicsFacadeImpl instance;
+	private static ApogyCommonTopologyAddonsDynamicsFacadeImpl instance;
 	
-	public static Symphony__CommonTopologyAddonsDynamicsFacade getInstance()
+	public static ApogyCommonTopologyAddonsDynamicsFacade getInstance()
 	{
 		if(instance == null)
 		{
-			instance =  new Symphony__CommonTopologyAddonsDynamicsFacadeImpl();
+			instance =  new ApogyCommonTopologyAddonsDynamicsFacadeImpl();
 		}
 		
 		return instance;
@@ -50,7 +50,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFacadeImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyAddonsDynamicsFacadeImpl() {
+	protected ApogyCommonTopologyAddonsDynamicsFacadeImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFacadeImpl extends MinimalEOb
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE;
 	}
 
 	/**
@@ -146,15 +146,15 @@ public class Symphony__CommonTopologyAddonsDynamicsFacadeImpl extends MinimalEOb
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE:
 				return findCenterOfMass((Node)arguments.get(0));
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE:
 				return findTotalMass((Node)arguments.get(0));
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE:
 				return getPhysicalBodies((Node)arguments.get(0));
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS:
 				return getPhysicalNodeSimulationProperty((PhysicalBody)arguments.get(0), (Class)arguments.get(1));
-			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.APOGY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS:
 				return getConstraintSimulationProperty((AbstractConstraint)arguments.get(0), (Class)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -162,4 +162,4 @@ public class Symphony__CommonTopologyAddonsDynamicsFacadeImpl extends MinimalEOb
 
 
 
-} //Symphony__CommonTopologyAddonsDynamicsFacadeImpl
+} //ApogyCommonTopologyAddonsDynamicsFacadeImpl

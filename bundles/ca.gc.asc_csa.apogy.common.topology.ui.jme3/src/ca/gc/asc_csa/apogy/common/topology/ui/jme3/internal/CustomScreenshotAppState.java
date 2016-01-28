@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;

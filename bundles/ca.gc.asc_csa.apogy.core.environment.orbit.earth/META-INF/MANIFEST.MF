@@ -2,33 +2,33 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.core.environment.orbit.earth;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.environment.orbit.earth;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.symphony.core.environment.orbit;bundle-version="0.4.0";visibility:=reexport,
- org.eclipse.symphony.core.environment;visibility:=reexport,
- org.eclipse.symphony.core;visibility:=reexport,
- org.eclipse.symphony.common.emf;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.topology.bindings;visibility:=reexport,
- org.eclipse.symphony.core.invocator;visibility:=reexport,
- org.eclipse.symphony.common.images;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment.orbit;bundle-version="0.4.0";visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.emf;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.invocator;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data3d;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
  org.orekit;bundle-version="0.7.0";visibility:=reexport,
- org.eclipse.symphony.addons.sensors.fov;bundle-version="0.3.0";visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.sensors.fov;bundle-version="0.3.0";visibility:=reexport,
  org.apache.commons.math3;bundle-version="3.2.0",
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.core.environment.orbit.earth,
- org.eclipse.symphony.core.environment.orbit.earth.impl,
- org.eclipse.symphony.core.environment.orbit.earth.util
-Bundle-Activator: org.eclipse.symphony.core.environment.orbit.earth.Activator
+Export-Package: ca.gc.asc_csa.apogy.core.environment.orbit.earth,
+ ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl,
+ ca.gc.asc_csa.apogy.core.environment.orbit.earth.util
+Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator

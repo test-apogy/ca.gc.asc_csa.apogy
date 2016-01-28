@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.impl;
+package ca.gc.asc_csa.apogy.common.images.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,8 +25,8 @@ import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.images.impl.ImagesAlbumImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.impl.ImagesAlbumImpl#getImages <em>Images</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.ImagesAlbumImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.impl.ImagesAlbumImpl#getImages <em>Images</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,7 +78,7 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM;
+		return ApogyCommonImagesPackage.Literals.IMAGES_ALBUM;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 	 */
 	public EList<AbstractEImage> getImages() {
 		if (images == null) {
-			images = new EObjectContainmentEList<AbstractEImage>(AbstractEImage.class, this, Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES);
+			images = new EObjectContainmentEList<AbstractEImage>(AbstractEImage.class, this, ApogyCommonImagesPackage.IMAGES_ALBUM__IMAGES);
 		}
 		return images;
 	}
@@ -101,7 +101,7 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__IMAGES:
 				return ((InternalEList<?>)getImages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -125,7 +125,7 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.IMAGES_ALBUM__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonImagesPackage.IMAGES_ALBUM__NAME, oldName, name));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__NAME:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__NAME:
 				return getName();
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__IMAGES:
 				return getImages();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +153,10 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__NAME:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__IMAGES:
 				getImages().clear();
 				getImages().addAll((Collection<? extends AbstractEImage>)newValue);
 				return;
@@ -172,10 +172,10 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__NAME:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__IMAGES:
 				getImages().clear();
 				return;
 		}
@@ -190,9 +190,9 @@ public class ImagesAlbumImpl extends MinimalEObjectImpl.Container implements Ima
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__NAME:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES:
+			case ApogyCommonImagesPackage.IMAGES_ALBUM__IMAGES:
 				return images != null && !images.isEmpty();
 		}
 		return super.eIsSet(featureID);

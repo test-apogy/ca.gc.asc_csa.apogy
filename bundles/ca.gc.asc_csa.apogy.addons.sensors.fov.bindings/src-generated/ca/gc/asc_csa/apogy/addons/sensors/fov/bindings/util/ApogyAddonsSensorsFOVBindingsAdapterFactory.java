@@ -1,27 +1,27 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.bindings.util;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
-import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage
  * @generated
  */
-public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFactoryImpl
+public class ApogyAddonsSensorsFOVBindingsAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -29,7 +29,7 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsSensorsFOVBindingsPackage modelPackage;
+  protected static ApogyAddonsSensorsFOVBindingsPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -37,10 +37,10 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsFOVBindingsAdapterFactory()
+  public ApogyAddonsSensorsFOVBindingsAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsFOVBindingsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsFOVBindingsPackage.eINSTANCE;
 		}
 	}
 
@@ -70,8 +70,8 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__AddonsSensorsFOVBindingsSwitch<Adapter> modelSwitch =
-    new Symphony__AddonsSensorsFOVBindingsSwitch<Adapter>() {
+  protected ApogyAddonsSensorsFOVBindingsSwitch<Adapter> modelSwitch =
+    new ApogyAddonsSensorsFOVBindingsSwitch<Adapter>() {
 			@Override
 			public Adapter caseCircularSectorFieldOfViewBinding(CircularSectorFieldOfViewBinding object) {
 				return createCircularSectorFieldOfViewBindingAdapter();
@@ -110,13 +110,13 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding <em>Circular Sector Field Of View Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding <em>Circular Sector Field Of View Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding
 	 * @generated
 	 */
   public Adapter createCircularSectorFieldOfViewBindingAdapter()
@@ -125,13 +125,13 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding <em>Conical Field Of View Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding <em>Conical Field Of View Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ConicalFieldOfViewBinding
 	 * @generated
 	 */
   public Adapter createConicalFieldOfViewBindingAdapter()
@@ -140,13 +140,13 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding <em>Rectangular Frustrum Field Of View Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding <em>Rectangular Frustrum Field Of View Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding
 	 * @generated
 	 */
   public Adapter createRectangularFrustrumFieldOfViewBindingAdapter()
@@ -155,13 +155,13 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
 	 * @generated
 	 */
   public Adapter createAbstractTopologyBindingAdapter()
@@ -182,4 +182,4 @@ public class Symphony__AddonsSensorsFOVBindingsAdapterFactory extends AdapterFac
 		return null;
 	}
 
-} //Symphony__AddonsSensorsFOVBindingsAdapterFactory
+} //ApogyAddonsSensorsFOVBindingsAdapterFactory

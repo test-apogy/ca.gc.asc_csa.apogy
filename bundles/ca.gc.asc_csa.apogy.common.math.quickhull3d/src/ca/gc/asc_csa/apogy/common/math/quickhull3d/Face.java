@@ -12,7 +12,7 @@
  * software.
  */
 
-package org.eclipse.symphony.common.math.quickhull3d;
+package ca.gc.asc_csa.apogy.common.math.quickhull3d;
 
 import javax.vecmath.Vector3d;
 

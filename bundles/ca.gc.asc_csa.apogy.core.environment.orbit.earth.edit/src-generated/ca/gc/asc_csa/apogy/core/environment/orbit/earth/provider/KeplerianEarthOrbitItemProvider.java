@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.KeplerianEarthOrbit} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_KeplerianEarthOrbit_semiMajorAxis_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KeplerianEarthOrbit_semiMajorAxis_feature", "_UI_KeplerianEarthOrbit_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__SEMI_MAJOR_AXIS,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__SEMI_MAJOR_AXIS,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_KeplerianEarthOrbit_eccentricity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KeplerianEarthOrbit_eccentricity_feature", "_UI_KeplerianEarthOrbit_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__ECCENTRICITY,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__ECCENTRICITY,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_KeplerianEarthOrbit_inclination_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KeplerianEarthOrbit_inclination_feature", "_UI_KeplerianEarthOrbit_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__INCLINATION,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__INCLINATION,
 				 true,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_KeplerianEarthOrbit_perigeeArgument_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KeplerianEarthOrbit_perigeeArgument_feature", "_UI_KeplerianEarthOrbit_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__PERIGEE_ARGUMENT,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__PERIGEE_ARGUMENT,
 				 true,
 				 false,
 				 false,
@@ -158,7 +158,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_KeplerianEarthOrbit_rightAscentionOfAscendingNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KeplerianEarthOrbit_rightAscentionOfAscendingNode_feature", "_UI_KeplerianEarthOrbit_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__RIGHT_ASCENTION_OF_ASCENDING_NODE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__RIGHT_ASCENTION_OF_ASCENDING_NODE,
 				 true,
 				 false,
 				 false,
@@ -180,7 +180,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_KeplerianEarthOrbit_meanAnomaly_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KeplerianEarthOrbit_meanAnomaly_feature", "_UI_KeplerianEarthOrbit_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__MEAN_ANOMALY,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__MEAN_ANOMALY,
 				 true,
 				 false,
 				 false,
@@ -202,7 +202,7 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_KeplerianEarthOrbit_trueAnomaly_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KeplerianEarthOrbit_trueAnomaly_feature", "_UI_KeplerianEarthOrbit_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__TRUE_ANOMALY,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.KEPLERIAN_EARTH_ORBIT__TRUE_ANOMALY,
 				 true,
 				 false,
 				 false,
@@ -249,13 +249,13 @@ public class KeplerianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(KeplerianEarthOrbit.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__SEMI_MAJOR_AXIS:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__ECCENTRICITY:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__INCLINATION:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__PERIGEE_ARGUMENT:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__RIGHT_ASCENTION_OF_ASCENDING_NODE:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__MEAN_ANOMALY:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__TRUE_ANOMALY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__SEMI_MAJOR_AXIS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__ECCENTRICITY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__INCLINATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__PERIGEE_ARGUMENT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__RIGHT_ASCENTION_OF_ASCENDING_NODE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__MEAN_ANOMALY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.KEPLERIAN_EARTH_ORBIT__TRUE_ANOMALY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

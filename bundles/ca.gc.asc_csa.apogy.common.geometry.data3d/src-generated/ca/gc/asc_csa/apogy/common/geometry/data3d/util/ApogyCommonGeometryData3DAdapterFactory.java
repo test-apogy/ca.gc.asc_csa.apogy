@@ -1,42 +1,42 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
-import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-import org.eclipse.symphony.common.geometry.data.SamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.*;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.*;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonGeometryData3DAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DPackage modelPackage;
+	protected static ApogyCommonGeometryData3DPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -44,9 +44,9 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DAdapterFactory() {
+	public ApogyCommonGeometryData3DAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DPackage.eINSTANCE;
 		}
 	}
 
@@ -75,8 +75,8 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DSwitch<Adapter> modelSwitch =
-		new Symphony__CommonGeometryData3DSwitch<Adapter>() {
+	protected ApogyCommonGeometryData3DSwitch<Adapter> modelSwitch =
+		new ApogyCommonGeometryData3DSwitch<Adapter>() {
 			@Override
 			public Adapter caseCartesianPolygon(CartesianPolygon object) {
 				return createCartesianPolygonAdapter();
@@ -250,8 +250,8 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 				return createRigidBodyPoseTrackerAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonGeometryData3DFacade(Symphony__CommonGeometryData3DFacade object) {
-				return createSymphony__CommonGeometryData3DFacadeAdapter();
+			public Adapter caseApogyCommonGeometryData3DFacade(ApogyCommonGeometryData3DFacade object) {
+				return createApogyCommonGeometryData3DFacadeAdapter();
 			}
 			@Override
 			public Adapter caseData3DIO(Data3DIO object) {
@@ -330,13 +330,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon <em>Cartesian Polygon</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon <em>Cartesian Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPolygon
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon
 	 * @generated
 	 */
 	public Adapter createCartesianPolygonAdapter() {
@@ -344,13 +344,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangle <em>Cartesian Triangle</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle <em>Cartesian Triangle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangle
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle
 	 * @generated
 	 */
 	public Adapter createCartesianTriangleAdapter() {
@@ -358,13 +358,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalPolygon <em>Spherical Polygon</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon <em>Spherical Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalPolygon
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon
 	 * @generated
 	 */
 	public Adapter createSphericalPolygonAdapter() {
@@ -372,13 +372,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangle <em>Spherical Triangle</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangle <em>Spherical Triangle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalTriangle
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangle
 	 * @generated
 	 */
 	public Adapter createSphericalTriangleAdapter() {
@@ -386,13 +386,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates <em>Cartesian Position Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates <em>Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
 	 * @generated
 	 */
 	public Adapter createCartesianPositionCoordinatesAdapter() {
@@ -400,13 +400,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates <em>Colored Cartesian Position Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates <em>Colored Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates
 	 * @generated
 	 */
 	public Adapter createColoredCartesianPositionCoordinatesAdapter() {
@@ -414,13 +414,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates <em>Cartesian Orientation Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates <em>Cartesian Orientation Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates
 	 * @generated
 	 */
 	public Adapter createCartesianOrientationCoordinatesAdapter() {
@@ -428,13 +428,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet
 	 * @generated
 	 */
 	public Adapter createAbstractCartesianCoordinatesSetAdapter() {
@@ -442,13 +442,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesSetAdapter() {
@@ -456,13 +456,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet
 	 * @generated
 	 */
 	public Adapter createColoredCoordinatesSetAdapter() {
@@ -470,13 +470,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent <em>Cartesian Coordinates Set Extent</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent <em>Cartesian Coordinates Set Extent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesSetExtentAdapter() {
@@ -484,13 +484,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap <em>Digital Elevation Map</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap <em>Digital Elevation Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap
 	 * @generated
 	 */
 	public Adapter createDigitalElevationMapAdapter() {
@@ -498,13 +498,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh <em>Cartesian Coordinates Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh <em>Cartesian Coordinates Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesMeshAdapter() {
@@ -512,13 +512,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh <em>Cartesian Triangular Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh <em>Cartesian Triangular Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshAdapter() {
@@ -526,13 +526,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates <em>Spherical Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates <em>Spherical Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates
 	 * @generated
 	 */
 	public Adapter createSphericalCoordinatesAdapter() {
@@ -540,13 +540,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesSet <em>Spherical Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesSet <em>Spherical Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesSet
 	 * @generated
 	 */
 	public Adapter createSphericalCoordinatesSetAdapter() {
@@ -554,13 +554,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesMesh <em>Spherical Coordinates Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesMesh <em>Spherical Coordinates Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesMesh
 	 * @generated
 	 */
 	public Adapter createSphericalCoordinatesMeshAdapter() {
@@ -568,13 +568,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh <em>Spherical Triangular Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangularMesh <em>Spherical Triangular Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangularMesh
 	 * @generated
 	 */
 	public Adapter createSphericalTriangularMeshAdapter() {
@@ -582,13 +582,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.Pose <em>Pose</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Pose <em>Pose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Pose
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
 	 * @generated
 	 */
 	public Adapter createPoseAdapter() {
@@ -596,13 +596,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape <em>Sphere Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape <em>Sphere Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape
 	 * @generated
 	 */
 	public Adapter createSphereSamplingShapeAdapter() {
@@ -610,13 +610,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape <em>Cube Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape <em>Cube Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape
 	 * @generated
 	 */
 	public Adapter createCubeSamplingShapeAdapter() {
@@ -624,13 +624,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler <em>Cartesian Coordinates Set Shape Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetShapeSampler <em>Cartesian Coordinates Set Shape Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetShapeSampler
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesSetShapeSamplerAdapter() {
@@ -638,13 +638,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler <em>Cartesian Coordinates Mesh Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler <em>Cartesian Coordinates Mesh Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesMeshSamplerAdapter() {
@@ -652,13 +652,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler <em>Cartesian Coordinates Mesh Polygon Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler <em>Cartesian Coordinates Mesh Polygon Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesMeshPolygonSamplerAdapter() {
@@ -666,13 +666,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler <em>Cartesian Triangular Mesh Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler <em>Cartesian Triangular Mesh Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshSamplerAdapter() {
@@ -680,13 +680,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler <em>Cartesian Triangular Mesh Polygon Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler <em>Cartesian Triangular Mesh Polygon Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshPolygonSamplerAdapter() {
@@ -694,13 +694,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinatesMesher <em>Cartesian Position Coordinates Mesher</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher <em>Cartesian Position Coordinates Mesher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinatesMesher
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher
 	 * @generated
 	 */
 	public Adapter createCartesianPositionCoordinatesMesherAdapter() {
@@ -708,13 +708,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud <em>Normal Point Cloud</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud <em>Normal Point Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.NormalPointCloud
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud
 	 * @generated
 	 */
 	public Adapter createNormalPointCloudAdapter() {
@@ -722,13 +722,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator <em>Point Locator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator <em>Point Locator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PointLocator
 	 * @generated
 	 */
 	public Adapter createPointLocatorAdapter() {
@@ -736,13 +736,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator <em>KD Tree Based Point Locator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator <em>KD Tree Based Point Locator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator
 	 * @generated
 	 */
 	public Adapter createKDTreeBasedPointLocatorAdapter() {
@@ -750,13 +750,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer <em>Mesh Localizer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer <em>Mesh Localizer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.MeshLocalizer
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer
 	 * @generated
 	 */
 	public Adapter createMeshLocalizerAdapter() {
@@ -764,13 +764,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher <em>Delaunay Mesher</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher <em>Delaunay Mesher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DelaunayMesher
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher
 	 * @generated
 	 */
 	public Adapter createDelaunayMesherAdapter() {
@@ -778,13 +778,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher <em>Digital Elevation Map Mesher</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher <em>Digital Elevation Map Mesher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher
 	 * @generated
 	 */
 	public Adapter createDigitalElevationMapMesherAdapter() {
@@ -792,13 +792,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler <em>Digital Elevation Map Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler <em>Digital Elevation Map Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler
 	 * @generated
 	 */
 	public Adapter createDigitalElevationMapSamplerAdapter() {
@@ -806,13 +806,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator <em>Triangular Mesh Normals Calculator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshNormalsCalculator <em>Triangular Mesh Normals Calculator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshNormalsCalculator
 	 * @generated
 	 */
 	public Adapter createTriangularMeshNormalsCalculatorAdapter() {
@@ -820,13 +820,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud <em>Triangular Mesh To Normal Point Cloud</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshToNormalPointCloud <em>Triangular Mesh To Normal Point Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshToNormalPointCloud
 	 * @generated
 	 */
 	public Adapter createTriangularMeshToNormalPointCloudAdapter() {
@@ -834,13 +834,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter <em>Unique Points Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.UniquePointsFilter <em>Unique Points Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.UniquePointsFilter
 	 * @generated
 	 */
 	public Adapter createUniquePointsFilterAdapter() {
@@ -848,13 +848,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter <em>Triangle Edge Length Triangular Mesh Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter <em>Triangle Edge Length Triangular Mesh Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter
 	 * @generated
 	 */
 	public Adapter createTriangleEdgeLengthTriangularMeshFilterAdapter() {
@@ -862,13 +862,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.OutlierFilter <em>Outlier Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter <em>Outlier Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.OutlierFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter
 	 * @generated
 	 */
 	public Adapter createOutlierFilterAdapter() {
@@ -876,13 +876,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother <em>Mesh Smoother</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother <em>Mesh Smoother</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.MeshSmoother
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother
 	 * @generated
 	 */
 	public Adapter createMeshSmootherAdapter() {
@@ -890,13 +890,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler <em>Voxel Based3 DPoint Cloud Resampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler <em>Voxel Based3 DPoint Cloud Resampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler
 	 * @generated
 	 */
 	public Adapter createVoxelBased3DPointCloudResamplerAdapter() {
@@ -904,13 +904,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker <em>Rigid Body Pose Tracker</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker <em>Rigid Body Pose Tracker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker
 	 * @generated
 	 */
 	public Adapter createRigidBodyPoseTrackerAdapter() {
@@ -918,13 +918,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.PositionMarker <em>Position Marker</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker <em>Position Marker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PositionMarker
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker
 	 * @generated
 	 */
 	public Adapter createPositionMarkerAdapter() {
@@ -932,27 +932,27 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonGeometryData3DFacadeAdapter() {
+	public Adapter createApogyCommonGeometryData3DFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO <em>Data3 DIO</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO <em>Data3 DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DIO
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO
 	 * @generated
 	 */
 	public Adapter createData3DIOAdapter() {
@@ -960,13 +960,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils <em>Data3 DUtils</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils <em>Data3 DUtils</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils
 	 * @generated
 	 */
 	public Adapter createData3DUtilsAdapter() {
@@ -974,13 +974,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Polygon <em>Polygon</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon <em>Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.Polygon
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Polygon
 	 * @generated
 	 */
 	public Adapter createPolygonAdapter() {
@@ -988,13 +988,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Coordinates <em>Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Coordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.Coordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Coordinates
 	 * @generated
 	 */
 	public Adapter createCoordinatesAdapter() {
@@ -1002,13 +1002,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetAdapter() {
@@ -1016,13 +1016,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Mesh <em>Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh <em>Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.Mesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Mesh
 	 * @generated
 	 */
 	public Adapter createMeshAdapter() {
@@ -1030,13 +1030,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape
 	 * @generated
 	 */
 	public Adapter createSamplingShapeAdapter() {
@@ -1044,13 +1044,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape
 	 * @generated
 	 */
 	public Adapter createCoordinatesSamplingShapeAdapter() {
@@ -1058,13 +1058,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape
 	 * @generated
 	 */
 	public Adapter createPolygonSamplingShapeAdapter() {
@@ -1072,13 +1072,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -1086,13 +1086,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -1100,13 +1100,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler <em>Coordinates Set Shapes Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler <em>Coordinates Set Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSetShapesSampler
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetShapesSamplerAdapter() {
@@ -1114,13 +1114,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler <em>Mesh Coordinates Shapes Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler <em>Mesh Coordinates Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshCoordinatesShapesSampler
 	 * @generated
 	 */
 	public Adapter createMeshCoordinatesShapesSamplerAdapter() {
@@ -1128,13 +1128,13 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler <em>Mesh Polygon Shapes Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler <em>Mesh Polygon Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.MeshPolygonShapesSampler
 	 * @generated
 	 */
 	public Adapter createMeshPolygonShapesSamplerAdapter() {
@@ -1153,4 +1153,4 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DAdapterFactory
+} //ApogyCommonGeometryData3DAdapterFactory

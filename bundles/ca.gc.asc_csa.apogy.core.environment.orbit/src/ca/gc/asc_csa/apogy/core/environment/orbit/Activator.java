@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
 
 import com.jme3.scene.Geometry;
 
@@ -15,7 +15,7 @@ import com.jme3.scene.Geometry;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package#getSceneObjectRegistry()
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package#getSceneObjectRegistry()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface SceneObjectRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.topology.ui.jme3.SceneObject" unique="false" jme3GeometryDataType="org.eclipse.symphony.common.topology.ui.jme3.JME3Geometry" jme3GeometryUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.ui.jme3.SceneObject" unique="false" jme3GeometryDataType="ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Geometry" jme3GeometryUnique="false"
 	 * @generated
 	 */
 	SceneObject getSceneObject(Geometry jme3Geometry);
@@ -39,7 +39,7 @@ public interface SceneObjectRegistry extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" jme3GeometryDataType="org.eclipse.symphony.common.topology.ui.jme3.JME3Geometry" jme3GeometryUnique="false"
+	 * @model unique="false" jme3GeometryDataType="ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Geometry" jme3GeometryUnique="false"
 	 * @generated
 	 */
 	NodePresentation getPresentationNode(Geometry jme3Geometry);

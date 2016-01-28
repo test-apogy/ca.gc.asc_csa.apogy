@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony;
+package ca.gc.asc_csa.apogy.examples.rover.apogy;
 
-import org.eclipse.symphony.core.SymphonyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,22 +15,22 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  * save and later restore the state of the component; this functionality is
  * implemented by the apply() (load) and collect() (save) methods of the rover's
  * API adapter,
- * which is {@link org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter}.
+ * which is {@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter}.
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.rover.symphony.RoverData#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.symphony.RoverData#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#getRoverData()
+ * @see ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage#getRoverData()
  * @model
  * @generated
  */
-public interface RoverData extends SymphonyInitializationData {
+public interface RoverData extends ApogyInitializationData {
 
 	/**
 	 * Returns the value of the '<em><b>Initialized</b></em>' attribute.
@@ -42,7 +42,7 @@ public interface RoverData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#getRoverData_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage#getRoverData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -50,7 +50,7 @@ public interface RoverData extends SymphonyInitializationData {
 	boolean isInitialized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.symphony.RoverData#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.
@@ -69,7 +69,7 @@ public interface RoverData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#getRoverData_Disposed()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage#getRoverData_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -77,7 +77,7 @@ public interface RoverData extends SymphonyInitializationData {
 	boolean isDisposed();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.rover.symphony.RoverData#isDisposed <em>Disposed</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isDisposed <em>Disposed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disposed</em>' attribute.

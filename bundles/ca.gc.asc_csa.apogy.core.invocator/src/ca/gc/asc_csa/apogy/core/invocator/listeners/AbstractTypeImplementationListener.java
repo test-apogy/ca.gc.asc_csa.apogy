@@ -1,16 +1,16 @@
-package org.eclipse.symphony.core.invocator.listeners;
+package ca.gc.asc_csa.apogy.core.invocator.listeners;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 public class AbstractTypeImplementationListener 
 {
@@ -52,7 +52,7 @@ public class AbstractTypeImplementationListener
 				
 				try
 				{
-					AbstractTypeImplementation ati = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
+					AbstractTypeImplementation ati = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
 					if(ati != null)
 					{
 						newInstance = ati.getInstance();
@@ -109,7 +109,7 @@ public class AbstractTypeImplementationListener
 	{
 		try
 		{
-			AbstractTypeImplementation ati = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
+			AbstractTypeImplementation ati = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
 			if(ati != null)
 			{
 				updateInstance(ati.getInstance());
@@ -137,7 +137,7 @@ public class AbstractTypeImplementationListener
 				{					
 					if(msg.getNotifier() instanceof Environment)
 					{
-						if(msg.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
+						if(msg.getFeatureID(Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
 						{
 							// Active Context has changed.
 							
@@ -161,13 +161,13 @@ public class AbstractTypeImplementationListener
 					}
 					else if(msg.getNotifier() instanceof Context)
 					{
-						if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
+						if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
 						{
 							// Instances have been created							
 							// Update instances and TypeApiAdapter
 							update();
 						}
-						else if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
+						else if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
 						{
 							// Instances have been disposed
 							

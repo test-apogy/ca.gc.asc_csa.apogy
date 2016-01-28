@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,10 +9,10 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 public class PathUtilities
 {	
@@ -42,7 +42,7 @@ public class PathUtilities
 	 */
 	public static WayPointPath append(List<WayPointPath> paths, boolean removeDuplicateAtEnds)
 	{
-		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
 		Iterator <WayPointPath> pathsIt = paths.iterator();
 		while(pathsIt.hasNext())
@@ -64,12 +64,12 @@ public class PathUtilities
 					CartesianPositionCoordinates currentEndPoint = path.getPoints().get(path.getPoints().size() -1);
 					if(!currentWayPoint.equals(currentEndPoint))
 					{
-						path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(currentWayPoint));
+						path.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(currentWayPoint));
 					}
 				}
 				else
 				{				
-					path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(currentWayPoint));
+					path.getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(currentWayPoint));
 				}
 			}			
 		}
@@ -227,7 +227,7 @@ public class PathUtilities
 	 */
 	public static WayPointPath applyTransform(final WayPointPath path, final Matrix4d transform)
 	{
-		WayPointPath transformedPath = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath transformedPath = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		Transform3D transform3d = new Transform3D(transform);
 		
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
@@ -236,7 +236,7 @@ public class PathUtilities
 			Point3d p = new Point3d(point.getX(), point.getY(), point.getZ());
 			transform3d.transform(p);
 			
-			CartesianPositionCoordinates newPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p.x, p.y, p.z);
+			CartesianPositionCoordinates newPoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p.x, p.y, p.z);
 			points.add(newPoint);
 		}
 		transformedPath.getPoints().addAll(points);

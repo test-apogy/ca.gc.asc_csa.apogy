@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,12 +25,12 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreEnvironmentUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CoreEnvironmentUI' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.core.environment.ui/src-generated' editDirectory='/org.eclipse.symphony.core.environment.ui.edit/src-generated' basePackage='org.eclipse.symphony.core.environment'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreEnvironmentUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCoreEnvironmentUI' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.core.environment.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.environment.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.environment'"
  * @generated
  */
-public interface Symphony__CoreEnvironmentUIPackage extends EPackage
+public interface ApogyCoreEnvironmentUIPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -46,7 +46,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.core.environment.ui";
+  String eNS_URI = "ca.gc.asc_csa.apogy.core.environment.ui";
 
   /**
 	 * The package namespace name.
@@ -62,14 +62,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CoreEnvironmentUIPackage eINSTANCE = org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl.init();
+  ApogyCoreEnvironmentUIPackage eINSTANCE = ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.StarFieldPresentationImpl <em>Star Field Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.StarFieldPresentationImpl <em>Star Field Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.StarFieldPresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getStarFieldPresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.StarFieldPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getStarFieldPresentation()
 	 * @generated
 	 */
   int STAR_FIELD_PRESENTATION = 0;
@@ -81,7 +81,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STAR_FIELD_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int STAR_FIELD_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -90,7 +90,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int STAR_FIELD_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -99,7 +99,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int STAR_FIELD_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -108,7 +108,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int STAR_FIELD_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -117,7 +117,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STAR_FIELD_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int STAR_FIELD_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -126,7 +126,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int STAR_FIELD_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -135,7 +135,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int STAR_FIELD_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -144,7 +144,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int STAR_FIELD_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -153,7 +153,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int STAR_FIELD_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -162,7 +162,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int STAR_FIELD_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -171,7 +171,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int STAR_FIELD_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -180,7 +180,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int STAR_FIELD_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -189,7 +189,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int STAR_FIELD_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The feature id for the '<em><b>Cut Off Magnitude</b></em>' attribute.
@@ -198,7 +198,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Star Field Presentation</em>' class.
@@ -207,7 +207,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+  int STAR_FIELD_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Star Field Presentation</em>' class.
@@ -216,14 +216,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int STAR_FIELD_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int STAR_FIELD_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.SunPresentationImpl <em>Sun Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.SunPresentationImpl <em>Sun Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.SunPresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getSunPresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.SunPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getSunPresentation()
 	 * @generated
 	 */
   int SUN_PRESENTATION = 1;
@@ -235,7 +235,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int SUN_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -244,7 +244,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int SUN_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -253,7 +253,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int SUN_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -262,7 +262,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int SUN_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -271,7 +271,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int SUN_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -280,7 +280,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int SUN_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -289,7 +289,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int SUN_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -298,7 +298,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int SUN_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -307,7 +307,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int SUN_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -316,7 +316,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int SUN_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -325,7 +325,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int SUN_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -334,7 +334,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int SUN_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -343,7 +343,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int SUN_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The number of structural features of the '<em>Sun Presentation</em>' class.
@@ -352,7 +352,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int SUN_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Sun Presentation</em>' class.
@@ -361,14 +361,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SUN_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int SUN_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl <em>Earth Surface Worksite Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl <em>Earth Surface Worksite Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEarthSurfaceWorksitePresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   int EARTH_SURFACE_WORKSITE_PRESENTATION = 2;
@@ -380,7 +380,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_WORKSITE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int EARTH_SURFACE_WORKSITE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -389,7 +389,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -398,7 +398,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -407,7 +407,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -416,7 +416,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_WORKSITE_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int EARTH_SURFACE_WORKSITE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -425,7 +425,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -434,7 +434,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -443,7 +443,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -452,7 +452,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -461,7 +461,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -470,7 +470,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -479,7 +479,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -488,7 +488,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The feature id for the '<em><b>Axis Visible</b></em>' attribute.
@@ -497,7 +497,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Axis Length</b></em>' attribute.
@@ -506,7 +506,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Azimuth Visible</b></em>' attribute.
@@ -515,7 +515,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Elevation Lines Visible</b></em>' attribute.
@@ -524,7 +524,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Azimuth Lines Visible</b></em>' attribute.
@@ -533,7 +533,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 4;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Plane Visible</b></em>' attribute.
@@ -542,7 +542,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 5;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 5;
 
   /**
 	 * The feature id for the '<em><b>Plane Grid Size</b></em>' attribute.
@@ -551,7 +551,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 6;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 6;
 
   /**
 	 * The feature id for the '<em><b>Plane Size</b></em>' attribute.
@@ -560,7 +560,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 7;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 7;
 
   /**
 	 * The number of structural features of the '<em>Earth Surface Worksite Presentation</em>' class.
@@ -569,7 +569,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 8;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 8;
 
   /**
 	 * The number of operations of the '<em>Earth Surface Worksite Presentation</em>' class.
@@ -578,14 +578,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SURFACE_WORKSITE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int EARTH_SURFACE_WORKSITE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.EarthSkyPresentationImpl <em>Earth Sky Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSkyPresentationImpl <em>Earth Sky Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.EarthSkyPresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEarthSkyPresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSkyPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getEarthSkyPresentation()
 	 * @generated
 	 */
   int EARTH_SKY_PRESENTATION = 3;
@@ -597,7 +597,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SKY_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int EARTH_SKY_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -606,7 +606,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int EARTH_SKY_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -615,7 +615,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int EARTH_SKY_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -624,7 +624,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int EARTH_SKY_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -633,7 +633,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SKY_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int EARTH_SKY_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -642,7 +642,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int EARTH_SKY_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -651,7 +651,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int EARTH_SKY_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -660,7 +660,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int EARTH_SKY_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -669,7 +669,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int EARTH_SKY_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -678,7 +678,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int EARTH_SKY_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -687,7 +687,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int EARTH_SKY_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -696,7 +696,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int EARTH_SKY_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -705,7 +705,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int EARTH_SKY_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The number of structural features of the '<em>Earth Sky Presentation</em>' class.
@@ -714,7 +714,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int EARTH_SKY_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Earth Sky Presentation</em>' class.
@@ -723,14 +723,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int EARTH_SKY_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int EARTH_SKY_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MoonPresentationImpl <em>Moon Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MoonPresentationImpl <em>Moon Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.MoonPresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMoonPresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MoonPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMoonPresentation()
 	 * @generated
 	 */
   int MOON_PRESENTATION = 4;
@@ -742,7 +742,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOON_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int MOON_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -751,7 +751,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+  int MOON_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -760,7 +760,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int MOON_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -769,7 +769,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int MOON_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -778,7 +778,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOON_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int MOON_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -787,7 +787,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int MOON_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -796,7 +796,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int MOON_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -805,7 +805,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+  int MOON_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -814,7 +814,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+  int MOON_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -823,7 +823,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int MOON_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -832,7 +832,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int MOON_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -841,7 +841,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int MOON_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -850,7 +850,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int MOON_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The number of structural features of the '<em>Moon Presentation</em>' class.
@@ -859,7 +859,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int MOON_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Moon Presentation</em>' class.
@@ -868,14 +868,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOON_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int MOON_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl <em>Feature Of Interest Node Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl <em>Feature Of Interest Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getFeatureOfInterestNodePresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getFeatureOfInterestNodePresentation()
 	 * @generated
 	 */
 	int FEATURE_OF_INTEREST_NODE_PRESENTATION = 5;
@@ -887,7 +887,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -896,7 +896,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 		/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -905,7 +905,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 		/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -914,7 +914,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 		/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -923,7 +923,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -932,7 +932,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -941,7 +941,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -950,7 +950,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -959,7 +959,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -968,7 +968,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -977,7 +977,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -986,7 +986,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -995,7 +995,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The feature id for the '<em><b>Pole Height</b></em>' attribute.
@@ -1004,7 +1004,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Flag Visible</b></em>' attribute.
@@ -1013,7 +1013,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Feature Of Interest Node Presentation</em>' class.
@@ -1022,7 +1022,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of operations of the '<em>Feature Of Interest Node Presentation</em>' class.
@@ -1031,14 +1031,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int FEATURE_OF_INTEREST_NODE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUIUtilities()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.EnvironmentUIUtilitiesImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getEnvironmentUIUtilities()
 	 * @generated
 	 */
   int ENVIRONMENT_UI_UTILITIES = 6;
@@ -1107,14 +1107,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int ENVIRONMENT_UI_UTILITIES_OPERATION_COUNT = 5;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getSymphony__CoreEnvironmentUIFacade()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getApogyCoreEnvironmentUIFacade()
 	 * @generated
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE = 7;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE = 7;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -1123,7 +1123,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE_FEATURE_COUNT = 0;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE_FEATURE_COUNT = 0;
 
 		/**
 	 * The operation id for the '<em>Get Visible Rectangular Region Provider</em>' operation.
@@ -1132,7 +1132,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = 0;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = 0;
 
 		/**
 	 * The operation id for the '<em>Get Image Map Layer Presentation Image</em>' operation.
@@ -1141,7 +1141,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = 1;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = 1;
 
 		/**
 	 * The operation id for the '<em>Get Trajectory Length</em>' operation.
@@ -1150,7 +1150,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = 2;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = 2;
 
 		/**
 	 * The operation id for the '<em>Get Map View Configuration Identifier</em>' operation.
@@ -1159,7 +1159,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = 3;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = 3;
 
 		/**
 	 * The operation id for the '<em>Get Active Map View Configuration</em>' operation.
@@ -1168,7 +1168,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = 4;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = 4;
 
 		/**
 	 * The operation id for the '<em>Get Active Map View Configuration List</em>' operation.
@@ -1177,7 +1177,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = 5;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = 5;
 
 		/**
 	 * The operation id for the '<em>Get Feature Of Interest Lists</em>' operation.
@@ -1186,7 +1186,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = 6;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = 6;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1195,14 +1195,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE_OPERATION_COUNT = 7;
+	int APOGY_CORE_ENVIRONMENT_UI_FACADE_OPERATION_COUNT = 7;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationListImpl <em>Map View Configuration List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationListImpl <em>Map View Configuration List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationListImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationListImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapViewConfigurationList()
 	 * @generated
 	 */
   int MAP_VIEW_CONFIGURATION_LIST = 8;
@@ -1214,7 +1214,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_LIST__TOOLS_LIST = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
+  int MAP_VIEW_CONFIGURATION_LIST__TOOLS_LIST = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
 
   /**
 	 * The feature id for the '<em><b>Map View Configurations</b></em>' containment reference list.
@@ -1223,7 +1223,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
+  int MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Map View Configuration List</em>' class.
@@ -1232,7 +1232,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
+  int MAP_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Map View Configuration List</em>' class.
@@ -1241,14 +1241,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
+  int MAP_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl <em>Map View Configuration</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationImpl <em>Map View Configuration</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapViewConfiguration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapViewConfiguration()
 	 * @generated
 	 */
   int MAP_VIEW_CONFIGURATION = 9;
@@ -1260,7 +1260,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+  int MAP_VIEW_CONFIGURATION__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1269,7 +1269,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+  int MAP_VIEW_CONFIGURATION__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Map Layers</b></em>' containment reference list.
@@ -1278,7 +1278,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__MAP_LAYERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+  int MAP_VIEW_CONFIGURATION__MAP_LAYERS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
@@ -1287,7 +1287,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+  int MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Map Annotations</b></em>' containment reference list.
@@ -1296,7 +1296,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+  int MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Default Rectangular Region</b></em>' reference.
@@ -1305,7 +1305,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
+	int MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Map Image</b></em>' reference.
@@ -1314,7 +1314,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__MAP_IMAGE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
+  int MAP_VIEW_CONFIGURATION__MAP_IMAGE = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The feature id for the '<em><b>Map Image Rectangular Region</b></em>' reference.
@@ -1323,7 +1323,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
+	int MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
 		/**
 	 * The feature id for the '<em><b>Extent</b></em>' reference.
@@ -1332,7 +1332,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION__EXTENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 7;
+	int MAP_VIEW_CONFIGURATION__EXTENT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
 		/**
 	 * The number of structural features of the '<em>Map View Configuration</em>' class.
@@ -1341,7 +1341,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 8;
+  int MAP_VIEW_CONFIGURATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 8;
 
   /**
 	 * The operation id for the '<em>Force Update</em>' operation.
@@ -1350,7 +1350,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION___FORCE_UPDATE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int MAP_VIEW_CONFIGURATION___FORCE_UPDATE = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Map View Configuration</em>' class.
@@ -1359,14 +1359,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
+  int MAP_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewItemPresentationImpl <em>Map View Item Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewItemPresentationImpl <em>Map View Item Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.MapViewItemPresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapViewItemPresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewItemPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapViewItemPresentation()
 	 * @generated
 	 */
   int MAP_VIEW_ITEM_PRESENTATION = 10;
@@ -1399,21 +1399,21 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int MAP_VIEW_ITEM_PRESENTATION_OPERATION_COUNT = 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl <em>Features Of Interest Map Layer Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl <em>Features Of Interest Map Layer Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getFeaturesOfInterestMapLayerPresentation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getFeaturesOfInterestMapLayerPresentation()
 	 * @generated
 	 */
 	int FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION = 14;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapAnnotationImpl <em>Map Annotation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapAnnotationImpl <em>Map Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.MapAnnotationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapAnnotationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapAnnotation()
 	 * @generated
 	 */
   int MAP_ANNOTATION = 11;
@@ -1455,11 +1455,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int MAP_ANNOTATION_OPERATION_COUNT = MAP_VIEW_ITEM_PRESENTATION_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapToolImpl <em>Map Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapToolImpl <em>Map Tool</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.MapToolImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapTool()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapToolImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapTool()
 	 * @generated
 	 */
   int MAP_TOOL = 12;
@@ -1537,11 +1537,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int MAP_TOOL_OPERATION_COUNT = MAP_ANNOTATION_OPERATION_COUNT + 3;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapRulerImpl <em>Map Ruler</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapRulerImpl <em>Map Ruler</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.MapRulerImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapRuler()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapRulerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapRuler()
 	 * @generated
 	 */
   int MAP_RULER = 13;
@@ -1700,21 +1700,21 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	int FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION_OPERATION_COUNT = MAP_ANNOTATION_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl <em>Variable Trajectory Provider</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryProviderImpl <em>Variable Trajectory Provider</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getVariableTrajectoryProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryProviderImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getVariableTrajectoryProvider()
 	 * @generated
 	 */
   int VARIABLE_TRAJECTORY_PROVIDER = 18;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl <em>Trajectory Provider</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl <em>Trajectory Provider</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getTrajectoryProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getTrajectoryProvider()
 	 * @generated
 	 */
   int TRAJECTORY_PROVIDER = 15;
@@ -1810,11 +1810,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int TRAJECTORY_PROVIDER_OPERATION_COUNT = 4;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl <em>Abstract Trajectory Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractTrajectoryToolImpl <em>Abstract Trajectory Tool</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getAbstractTrajectoryTool()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractTrajectoryToolImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getAbstractTrajectoryTool()
 	 * @generated
 	 */
   int ABSTRACT_TRAJECTORY_TOOL = 16;
@@ -1964,11 +1964,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int ABSTRACT_TRAJECTORY_TOOL_OPERATION_COUNT = TRAJECTORY_PROVIDER_OPERATION_COUNT + 4;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.TrajectoryPickingToolImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getTrajectoryPickingTool()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryPickingToolImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getTrajectoryPickingTool()
 	 * @generated
 	 */
   int TRAJECTORY_PICKING_TOOL = 17;
@@ -2226,11 +2226,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int VARIABLE_TRAJECTORY_PROVIDER_OPERATION_COUNT = TRAJECTORY_PROVIDER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl <em>Default Variable Trajectory Provider</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl <em>Default Variable Trajectory Provider</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getDefaultVariableTrajectoryProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getDefaultVariableTrajectoryProvider()
 	 * @generated
 	 */
   int DEFAULT_VARIABLE_TRAJECTORY_PROVIDER = 19;
@@ -2362,11 +2362,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int DEFAULT_VARIABLE_TRAJECTORY_PROVIDER_OPERATION_COUNT = VARIABLE_TRAJECTORY_PROVIDER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl <em>Abstract Variable Annotation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractVariableAnnotationImpl <em>Abstract Variable Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getAbstractVariableAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractVariableAnnotationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getAbstractVariableAnnotation()
 	 * @generated
 	 */
   int ABSTRACT_VARIABLE_ANNOTATION = 20;
@@ -2399,13 +2399,13 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE = MAP_ANNOTATION_FEATURE_COUNT + 1;
 
   /**
-	 * The feature id for the '<em><b>Symphony System Api Adapter</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER = MAP_ANNOTATION_FEATURE_COUNT + 2;
+  int ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER = MAP_ANNOTATION_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Abstract Variable Annotation</em>' class.
@@ -2444,11 +2444,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int ABSTRACT_VARIABLE_ANNOTATION_OPERATION_COUNT = MAP_ANNOTATION_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl <em>Pose Variable Annotation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.PoseVariableAnnotationImpl <em>Pose Variable Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getPoseVariableAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.PoseVariableAnnotationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getPoseVariableAnnotation()
 	 * @generated
 	 */
   int POSE_VARIABLE_ANNOTATION = 21;
@@ -2481,13 +2481,13 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int POSE_VARIABLE_ANNOTATION__VARIABLE_INSTANCE = ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE;
 
   /**
-	 * The feature id for the '<em><b>Symphony System Api Adapter</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int POSE_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER = ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER;
+  int POSE_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER = ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Vectorlength</b></em>' attribute.
@@ -2562,11 +2562,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int POSE_VARIABLE_ANNOTATION_OPERATION_COUNT = ABSTRACT_VARIABLE_ANNOTATION_OPERATION_COUNT + 1;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl <em>Variable Trajectory Annotation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl <em>Variable Trajectory Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getVariableTrajectoryAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getVariableTrajectoryAnnotation()
 	 * @generated
 	 */
   int VARIABLE_TRAJECTORY_ANNOTATION = 22;
@@ -2599,13 +2599,13 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int VARIABLE_TRAJECTORY_ANNOTATION__VARIABLE_INSTANCE = ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE;
 
   /**
-	 * The feature id for the '<em><b>Symphony System Api Adapter</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_TRAJECTORY_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER = ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER;
+  int VARIABLE_TRAJECTORY_ANNOTATION__APOGY_SYSTEM_API_ADAPTER = ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Latest Position</b></em>' attribute.
@@ -2725,11 +2725,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int VARIABLE_TRAJECTORY_ANNOTATION_OPERATION_COUNT = ABSTRACT_VARIABLE_ANNOTATION_OPERATION_COUNT + 4;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl <em>Vehicle Variable Annotation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VehicleVariableAnnotationImpl <em>Vehicle Variable Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getVehicleVariableAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.VehicleVariableAnnotationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getVehicleVariableAnnotation()
 	 * @generated
 	 */
   int VEHICLE_VARIABLE_ANNOTATION = 23;
@@ -2762,13 +2762,13 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int VEHICLE_VARIABLE_ANNOTATION__VARIABLE_INSTANCE = POSE_VARIABLE_ANNOTATION__VARIABLE_INSTANCE;
 
   /**
-	 * The feature id for the '<em><b>Symphony System Api Adapter</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int VEHICLE_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER = POSE_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER;
+  int VEHICLE_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER = POSE_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Vectorlength</b></em>' attribute.
@@ -2865,7 +2865,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see java.util.List
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getList()
 	 * @generated
 	 */
   int LIST = 24;
@@ -2875,7 +2875,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see javax.vecmath.Point2d
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getPoint2d()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getPoint2d()
 	 * @generated
 	 */
   int POINT2D = 25;
@@ -2885,7 +2885,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see javax.vecmath.Color3f
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getColor3f()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getColor3f()
 	 * @generated
 	 */
   int COLOR3F = 26;
@@ -2895,7 +2895,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see javax.vecmath.Point3f
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getPoint3f()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getPoint3f()
 	 * @generated
 	 */
   int POINT3F = 27;
@@ -2906,7 +2906,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.jfree.data.xy.XYSeries
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getXYSeries()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getXYSeries()
 	 * @generated
 	 */
   int XY_SERIES = 28;
@@ -2916,7 +2916,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.jfree.chart.plot.XYPlot
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getXYPlot()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getXYPlot()
 	 * @generated
 	 */
   int XY_PLOT = 29;
@@ -2927,7 +2927,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.jfree.data.xy.XYDataItem
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getXYDataItem()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getXYDataItem()
 	 * @generated
 	 */
   int XY_DATA_ITEM = 30;
@@ -2938,7 +2938,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.jfree.chart.annotations.AbstractXYAnnotation
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getAbstractXYAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getAbstractXYAnnotation()
 	 * @generated
 	 */
   int ABSTRACT_XY_ANNOTATION = 31;
@@ -2948,7 +2948,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.jfree.experimental.chart.swt.ChartComposite
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getChartComposite()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getChartComposite()
 	 * @generated
 	 */
   int CHART_COMPOSITE = 32;
@@ -2958,939 +2958,939 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.jfree.chart.JFreeChart
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getJFreeChart()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getJFreeChart()
 	 * @generated
 	 */
   int JFREE_CHART = 33;
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation <em>Star Field Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation <em>Star Field Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Star Field Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.StarFieldPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation
 	 * @generated
 	 */
   EClass getStarFieldPresentation();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation#getCutOffMagnitude <em>Cut Off Magnitude</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation#getCutOffMagnitude <em>Cut Off Magnitude</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cut Off Magnitude</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.StarFieldPresentation#getCutOffMagnitude()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation#getCutOffMagnitude()
 	 * @see #getStarFieldPresentation()
 	 * @generated
 	 */
   EAttribute getStarFieldPresentation_CutOffMagnitude();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.SunPresentation <em>Sun Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation <em>Sun Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Sun Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.SunPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.SunPresentation
 	 * @generated
 	 */
   EClass getSunPresentation();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation <em>Earth Surface Worksite Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation <em>Earth Surface Worksite Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Earth Surface Worksite Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation
 	 * @generated
 	 */
   EClass getEarthSurfaceWorksitePresentation();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible <em>Axis Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible <em>Axis Visible</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_AxisVisible();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength <em>Axis Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Axis Length</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_AxisLength();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible <em>Azimuth Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible <em>Azimuth Visible</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Azimuth Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthVisible()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_AzimuthVisible();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible <em>Elevation Lines Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible <em>Elevation Lines Visible</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Elevation Lines Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isElevationLinesVisible()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_ElevationLinesVisible();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible <em>Azimuth Lines Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible <em>Azimuth Lines Visible</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Azimuth Lines Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isAzimuthLinesVisible()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_AzimuthLinesVisible();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible <em>Plane Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible <em>Plane Visible</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Plane Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#isPlaneVisible()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_PlaneVisible();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize <em>Plane Grid Size</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize <em>Plane Grid Size</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Plane Grid Size</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_PlaneGridSize();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Plane Size</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize()
 	 * @see #getEarthSurfaceWorksitePresentation()
 	 * @generated
 	 */
   EAttribute getEarthSurfaceWorksitePresentation_PlaneSize();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.EarthSkyPresentation <em>Earth Sky Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation <em>Earth Sky Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Earth Sky Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EarthSkyPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation
 	 * @generated
 	 */
   EClass getEarthSkyPresentation();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MoonPresentation <em>Moon Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation <em>Moon Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Moon Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MoonPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation
 	 * @generated
 	 */
   EClass getMoonPresentation();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation <em>Feature Of Interest Node Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation <em>Feature Of Interest Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Feature Of Interest Node Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation
 	 * @generated
 	 */
 	EClass getFeatureOfInterestNodePresentation();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight <em>Pole Height</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight <em>Pole Height</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Pole Height</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight()
 	 * @see #getFeatureOfInterestNodePresentation()
 	 * @generated
 	 */
 	EAttribute getFeatureOfInterestNodePresentation_PoleHeight();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Flag Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible()
 	 * @see #getFeatureOfInterestNodePresentation()
 	 * @generated
 	 */
 	EAttribute getFeatureOfInterestNodePresentation_FlagVisible();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Environment UI Utilities</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities
 	 * @generated
 	 */
 	EClass getEnvironmentUIUtilities();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#toPoint3f(org.eclipse.symphony.core.environment.Star) <em>To Point3f</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star) <em>To Point3f</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>To Point3f</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#toPoint3f(org.eclipse.symphony.core.environment.Star)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#toPoint3f(ca.gc.asc_csa.apogy.core.environment.Star)
 	 * @generated
 	 */
 	EOperation getEnvironmentUIUtilities__ToPoint3f__Star();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float) <em>Get Point Size For Magnitude</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float) <em>Get Point Size For Magnitude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Point Size For Magnitude</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float)
 	 * @generated
 	 */
 	EOperation getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSunLightColor(double) <em>Get Sun Light Color</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getSunLightColor(double) <em>Get Sun Light Color</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sun Light Color</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSunLightColor(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getSunLightColor(double)
 	 * @generated
 	 */
 	EOperation getEnvironmentUIUtilities__GetSunLightColor__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyTransparency(double) <em>Get Sky Transparency</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getSkyTransparency(double) <em>Get Sky Transparency</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sky Transparency</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyTransparency(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getSkyTransparency(double)
 	 * @generated
 	 */
 	EOperation getEnvironmentUIUtilities__GetSkyTransparency__double();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyColor(double) <em>Get Sky Color</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getSkyColor(double) <em>Get Sky Color</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sky Color</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyColor(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.EnvironmentUIUtilities#getSkyColor(double)
 	 * @generated
 	 */
 	EOperation getEnvironmentUIUtilities__GetSkyColor__double();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade
 	 * @generated
 	 */
-	EClass getSymphony__CoreEnvironmentUIFacade();
+	EClass getApogyCoreEnvironmentUIFacade();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getVisibleRectangularRegionProvider(org.eclipse.symphony.core.environment.ui.MapViewConfiguration) <em>Get Visible Rectangular Region Provider</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getVisibleRectangularRegionProvider(ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration) <em>Get Visible Rectangular Region Provider</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Visible Rectangular Region Provider</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getVisibleRectangularRegionProvider(org.eclipse.symphony.core.environment.ui.MapViewConfiguration)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getVisibleRectangularRegionProvider(ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
+	EOperation getApogyCoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getImageMapLayerPresentationImage(org.eclipse.symphony.core.environment.ui.MapViewConfiguration, org.eclipse.symphony.core.environment.RectangularRegion, int) <em>Get Image Map Layer Presentation Image</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getImageMapLayerPresentationImage(ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration, ca.gc.asc_csa.apogy.core.environment.RectangularRegion, int) <em>Get Image Map Layer Presentation Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Image Map Layer Presentation Image</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getImageMapLayerPresentationImage(org.eclipse.symphony.core.environment.ui.MapViewConfiguration, org.eclipse.symphony.core.environment.RectangularRegion, int)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getImageMapLayerPresentationImage(ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration, ca.gc.asc_csa.apogy.core.environment.RectangularRegion, int)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
+	EOperation getApogyCoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries) <em>Get Trajectory Length</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries) <em>Get Trajectory Length</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Trajectory Length</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries();
+	EOperation getApogyCoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getMapViewConfigurationIdentifier(org.eclipse.symphony.core.environment.ui.MapViewConfiguration) <em>Get Map View Configuration Identifier</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getMapViewConfigurationIdentifier(ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration) <em>Get Map View Configuration Identifier</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Map View Configuration Identifier</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getMapViewConfigurationIdentifier(org.eclipse.symphony.core.environment.ui.MapViewConfiguration)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getMapViewConfigurationIdentifier(ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
+	EOperation getApogyCoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfiguration(java.lang.String) <em>Get Active Map View Configuration</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getActiveMapViewConfiguration(java.lang.String) <em>Get Active Map View Configuration</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Active Map View Configuration</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfiguration(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getActiveMapViewConfiguration(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String();
+	EOperation getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfigurationList() <em>Get Active Map View Configuration List</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getActiveMapViewConfigurationList() <em>Get Active Map View Configuration List</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Active Map View Configuration List</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getActiveMapViewConfigurationList()
 	 * @generated
 	 */
-	EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList();
+	EOperation getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfigurationList();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession) <em>Get Feature Of Interest Lists</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getFeatureOfInterestLists(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession) <em>Get Feature Of Interest Lists</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Feature Of Interest Lists</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade#getFeatureOfInterestLists(ca.gc.asc_csa.apogy.core.invocator.InvocatorSession)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession();
+	EOperation getApogyCoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList <em>Map View Configuration List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList <em>Map View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Map View Configuration List</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList
 	 * @generated
 	 */
   EClass getMapViewConfigurationList();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList#getMapViewConfigurations <em>Map View Configurations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList#getMapViewConfigurations <em>Map View Configurations</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Map View Configurations</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfigurationList#getMapViewConfigurations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList#getMapViewConfigurations()
 	 * @see #getMapViewConfigurationList()
 	 * @generated
 	 */
   EReference getMapViewConfigurationList_MapViewConfigurations();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration <em>Map View Configuration</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration <em>Map View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Map View Configuration</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration
 	 * @generated
 	 */
   EClass getMapViewConfiguration();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapLayers <em>Map Layers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapLayers <em>Map Layers</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Map Layers</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapLayers()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapLayers()
 	 * @see #getMapViewConfiguration()
 	 * @generated
 	 */
   EReference getMapViewConfiguration_MapLayers();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getBackgroundColor <em>Background Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getBackgroundColor <em>Background Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Background Color</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getBackgroundColor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getBackgroundColor()
 	 * @see #getMapViewConfiguration()
 	 * @generated
 	 */
   EAttribute getMapViewConfiguration_BackgroundColor();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapAnnotations <em>Map Annotations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapAnnotations <em>Map Annotations</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Map Annotations</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapAnnotations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapAnnotations()
 	 * @see #getMapViewConfiguration()
 	 * @generated
 	 */
   EReference getMapViewConfiguration_MapAnnotations();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion <em>Default Rectangular Region</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion <em>Default Rectangular Region</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Default Rectangular Region</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion()
 	 * @see #getMapViewConfiguration()
 	 * @generated
 	 */
 	EReference getMapViewConfiguration_DefaultRectangularRegion();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapImage <em>Map Image</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapImage <em>Map Image</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Map Image</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapImage()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapImage()
 	 * @see #getMapViewConfiguration()
 	 * @generated
 	 */
   EReference getMapViewConfiguration_MapImage();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapImageRectangularRegion <em>Map Image Rectangular Region</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapImageRectangularRegion <em>Map Image Rectangular Region</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Map Image Rectangular Region</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapImageRectangularRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapImageRectangularRegion()
 	 * @see #getMapViewConfiguration()
 	 * @generated
 	 */
 	EReference getMapViewConfiguration_MapImageRectangularRegion();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Extent</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getExtent()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getExtent()
 	 * @see #getMapViewConfiguration()
 	 * @generated
 	 */
 	EReference getMapViewConfiguration_Extent();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#forceUpdate() <em>Force Update</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#forceUpdate() <em>Force Update</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Force Update</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewConfiguration#forceUpdate()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#forceUpdate()
 	 * @generated
 	 */
 	EOperation getMapViewConfiguration__ForceUpdate();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Map View Item Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewItemPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation
 	 * @generated
 	 */
   EClass getMapViewItemPresentation();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation#isVisible <em>Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation#isVisible <em>Visible</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapViewItemPresentation#isVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation#isVisible()
 	 * @see #getMapViewItemPresentation()
 	 * @generated
 	 */
   EAttribute getMapViewItemPresentation_Visible();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation <em>Features Of Interest Map Layer Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation <em>Features Of Interest Map Layer Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Features Of Interest Map Layer Presentation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation
 	 * @generated
 	 */
 	EClass getFeaturesOfInterestMapLayerPresentation();
 
 		/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Features Of Interest Map Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer()
 	 * @see #getFeaturesOfInterestMapLayerPresentation()
 	 * @generated
 	 */
 	EReference getFeaturesOfInterestMapLayerPresentation_FeaturesOfInterestMapLayer();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Feature Of Interest Radius</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius()
 	 * @see #getFeaturesOfInterestMapLayerPresentation()
 	 * @generated
 	 */
 	EAttribute getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestRadius();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Feature Of Interest Color</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor()
 	 * @see #getFeaturesOfInterestMapLayerPresentation()
 	 * @generated
 	 */
 	EAttribute getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Map Annotation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation
 	 * @generated
 	 */
   EClass getMapAnnotation();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.MapAnnotation#getXYShapeAnnotation() <em>Get XY Shape Annotation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation#getXYShapeAnnotation() <em>Get XY Shape Annotation</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get XY Shape Annotation</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.MapAnnotation#getXYShapeAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation#getXYShapeAnnotation()
 	 * @generated
 	 */
   EOperation getMapAnnotation__GetXYShapeAnnotation();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MapTool <em>Map Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool <em>Map Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Map Tool</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapTool
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapTool
 	 * @generated
 	 */
   EClass getMapTool();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.MapTool#isActive <em>Active</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool#isActive <em>Active</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Active</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapTool#isActive()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapTool#isActive()
 	 * @see #getMapTool()
 	 * @generated
 	 */
   EAttribute getMapTool_Active();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.MapTool#initialize(org.jfree.experimental.chart.swt.ChartComposite, org.jfree.chart.JFreeChart) <em>Initialize</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool#initialize(org.jfree.experimental.chart.swt.ChartComposite, org.jfree.chart.JFreeChart) <em>Initialize</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.MapTool#initialize(org.jfree.experimental.chart.swt.ChartComposite, org.jfree.chart.JFreeChart)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapTool#initialize(org.jfree.experimental.chart.swt.ChartComposite, org.jfree.chart.JFreeChart)
 	 * @generated
 	 */
   EOperation getMapTool__Initialize__ChartComposite_JFreeChart();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.MapTool#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.MapTool#dispose()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapTool#dispose()
 	 * @generated
 	 */
   EOperation getMapTool__Dispose();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.MapTool#positionSelected(int, double, double) <em>Position Selected</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapTool#positionSelected(int, double, double) <em>Position Selected</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Position Selected</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.MapTool#positionSelected(int, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapTool#positionSelected(int, double, double)
 	 * @generated
 	 */
   EOperation getMapTool__PositionSelected__int_double_double();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MapRuler <em>Map Ruler</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler <em>Map Ruler</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Map Ruler</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapRuler
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapRuler
 	 * @generated
 	 */
   EClass getMapRuler();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ruler Color</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.MapRuler#getRulerColor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapRuler#getRulerColor()
 	 * @see #getMapRuler()
 	 * @generated
 	 */
   EAttribute getMapRuler_RulerColor();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider <em>Variable Trajectory Provider</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider <em>Variable Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Trajectory Provider</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider
 	 * @generated
 	 */
   EClass getVariableTrajectoryProvider();
 
   /**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Variable Annotation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation()
 	 * @see #getVariableTrajectoryProvider()
 	 * @generated
 	 */
   EReference getVariableTrajectoryProvider_VariableAnnotation();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pose Provider</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getPoseProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider#getPoseProvider()
 	 * @see #getVariableTrajectoryProvider()
 	 * @generated
 	 */
   EReference getVariableTrajectoryProvider_PoseProvider();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider <em>Default Variable Trajectory Provider</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider <em>Default Variable Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Default Variable Trajectory Provider</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider
 	 * @generated
 	 */
   EClass getDefaultVariableTrajectoryProvider();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold <em>Distance Threshold</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold <em>Distance Threshold</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Distance Threshold</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold()
 	 * @see #getDefaultVariableTrajectoryProvider()
 	 * @generated
 	 */
   EAttribute getDefaultVariableTrajectoryProvider_DistanceThreshold();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Azimuth Threshold</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold()
 	 * @see #getDefaultVariableTrajectoryProvider()
 	 * @generated
 	 */
   EAttribute getDefaultVariableTrajectoryProvider_AzimuthThreshold();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Variable Annotation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation
 	 * @generated
 	 */
   EClass getAbstractVariableAnnotation();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getVariable()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#getVariable()
 	 * @see #getAbstractVariableAnnotation()
 	 * @generated
 	 */
   EReference getAbstractVariableAnnotation_Variable();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getVariableInstance <em>Variable Instance</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#getVariableInstance <em>Variable Instance</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable Instance</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getVariableInstance()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#getVariableInstance()
 	 * @see #getAbstractVariableAnnotation()
 	 * @generated
 	 */
   EReference getAbstractVariableAnnotation_VariableInstance();
 
   /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getSymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#getApogySystemApiAdapter <em>Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Symphony System Api Adapter</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getSymphonySystemApiAdapter()
+	 * @return the meta object for the reference '<em>Apogy System Api Adapter</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#getApogySystemApiAdapter()
 	 * @see #getAbstractVariableAnnotation()
 	 * @generated
 	 */
-  EReference getAbstractVariableAnnotation_SymphonySystemApiAdapter();
+  EReference getAbstractVariableAnnotation_ApogySystemApiAdapter();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#updatePose(org.eclipse.symphony.common.math.Matrix4x4) <em>Update Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#updatePose(ca.gc.asc_csa.apogy.common.math.Matrix4x4) <em>Update Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Pose</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#updatePose(org.eclipse.symphony.common.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation#updatePose(ca.gc.asc_csa.apogy.common.math.Matrix4x4)
 	 * @generated
 	 */
 	EOperation getAbstractVariableAnnotation__UpdatePose__Matrix4x4();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pose Variable Annotation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation
 	 * @generated
 	 */
   EClass getPoseVariableAnnotation();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorlength <em>Vectorlength</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorlength <em>Vectorlength</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vectorlength</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorlength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorlength()
 	 * @see #getPoseVariableAnnotation()
 	 * @generated
 	 */
   EAttribute getPoseVariableAnnotation_Vectorlength();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorColor <em>Vector Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorColor <em>Vector Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vector Color</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorColor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#getVectorColor()
 	 * @see #getPoseVariableAnnotation()
 	 * @generated
 	 */
   EAttribute getPoseVariableAnnotation_VectorColor();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Show Pose</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#isShowPose()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#isShowPose()
 	 * @see #getPoseVariableAnnotation()
 	 * @generated
 	 */
   EAttribute getPoseVariableAnnotation_ShowPose();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#updatePose(double, double, double) <em>Update Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#updatePose(double, double, double) <em>Update Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Pose</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#updatePose(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation#updatePose(double, double, double)
 	 * @generated
 	 */
 	EOperation getPoseVariableAnnotation__UpdatePose__double_double_double();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation <em>Variable Trajectory Annotation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation <em>Variable Trajectory Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Trajectory Annotation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation
 	 * @generated
 	 */
   EClass getVariableTrajectoryAnnotation();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Trajectory Provider</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider()
 	 * @see #getVariableTrajectoryAnnotation()
 	 * @generated
 	 */
   EReference getVariableTrajectoryAnnotation_TrajectoryProvider();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation <em>Vehicle Variable Annotation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation <em>Vehicle Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Vehicle Variable Annotation</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation
 	 * @generated
 	 */
   EClass getVehicleVariableAnnotation();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleLength <em>Vehicle Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleLength <em>Vehicle Length</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vehicle Length</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleLength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleLength()
 	 * @see #getVehicleVariableAnnotation()
 	 * @generated
 	 */
   EAttribute getVehicleVariableAnnotation_VehicleLength();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vehicle Width</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth()
 	 * @see #getVehicleVariableAnnotation()
 	 * @generated
 	 */
   EAttribute getVehicleVariableAnnotation_VehicleWidth();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider <em>Trajectory Provider</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider <em>Trajectory Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Trajectory Provider</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider
 	 * @generated
 	 */
   EClass getTrajectoryProvider();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getLatestPosition <em>Latest Position</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getLatestPosition <em>Latest Position</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Latest Position</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getLatestPosition()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getLatestPosition()
 	 * @see #getTrajectoryProvider()
 	 * @generated
 	 */
   EAttribute getTrajectoryProvider_LatestPosition();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getAzimuthAngle <em>Azimuth Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getAzimuthAngle <em>Azimuth Angle</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Azimuth Angle</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getAzimuthAngle()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getAzimuthAngle()
 	 * @see #getTrajectoryProvider()
 	 * @generated
 	 */
   EAttribute getTrajectoryProvider_AzimuthAngle();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryLength <em>Trajectory Length</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryLength <em>Trajectory Length</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Trajectory Length</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryLength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryLength()
 	 * @see #getTrajectoryProvider()
 	 * @generated
 	 */
   EAttribute getTrajectoryProvider_TrajectoryLength();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Trajectory Color</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryColor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getTrajectoryColor()
 	 * @see #getTrajectoryProvider()
 	 * @generated
 	 */
   EAttribute getTrajectoryProvider_TrajectoryColor();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#initialize() <em>Initialize</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#initialize() <em>Initialize</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#initialize()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#initialize()
 	 * @generated
 	 */
   EOperation getTrajectoryProvider__Initialize();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#clear() <em>Clear</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#clear() <em>Clear</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Clear</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#clear()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#clear()
 	 * @generated
 	 */
   EOperation getTrajectoryProvider__Clear();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#asListOfPoint2d() <em>As List Of Point2d</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#asListOfPoint2d() <em>As List Of Point2d</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>As List Of Point2d</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#asListOfPoint2d()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#asListOfPoint2d()
 	 * @generated
 	 */
   EOperation getTrajectoryProvider__AsListOfPoint2d();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getXYSeries() <em>Get XY Series</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getXYSeries() <em>Get XY Series</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get XY Series</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getXYSeries()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider#getXYSeries()
 	 * @generated
 	 */
   EOperation getTrajectoryProvider__GetXYSeries();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool <em>Abstract Trajectory Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool <em>Abstract Trajectory Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Trajectory Tool</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractTrajectoryTool
 	 * @generated
 	 */
   EClass getAbstractTrajectoryTool();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool <em>Trajectory Picking Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Trajectory Picking Tool</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool
 	 * @generated
 	 */
   EClass getTrajectoryPickingTool();
@@ -4012,7 +4012,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentUIFactory getSymphony__CoreEnvironmentUIFactory();
+	ApogyCoreEnvironmentUIFactory getApogyCoreEnvironmentUIFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -4030,11 +4030,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.StarFieldPresentationImpl <em>Star Field Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.StarFieldPresentationImpl <em>Star Field Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.StarFieldPresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getStarFieldPresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.StarFieldPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getStarFieldPresentation()
 		 * @generated
 		 */
     EClass STAR_FIELD_PRESENTATION = eINSTANCE.getStarFieldPresentation();
@@ -4048,21 +4048,21 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EAttribute STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE = eINSTANCE.getStarFieldPresentation_CutOffMagnitude();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.SunPresentationImpl <em>Sun Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.SunPresentationImpl <em>Sun Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.SunPresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getSunPresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.SunPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getSunPresentation()
 		 * @generated
 		 */
     EClass SUN_PRESENTATION = eINSTANCE.getSunPresentation();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl <em>Earth Surface Worksite Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl <em>Earth Surface Worksite Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEarthSurfaceWorksitePresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getEarthSurfaceWorksitePresentation()
 		 * @generated
 		 */
     EClass EARTH_SURFACE_WORKSITE_PRESENTATION = eINSTANCE.getEarthSurfaceWorksitePresentation();
@@ -4132,31 +4132,31 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EAttribute EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE = eINSTANCE.getEarthSurfaceWorksitePresentation_PlaneSize();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.EarthSkyPresentationImpl <em>Earth Sky Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSkyPresentationImpl <em>Earth Sky Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.EarthSkyPresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEarthSkyPresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.EarthSkyPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getEarthSkyPresentation()
 		 * @generated
 		 */
     EClass EARTH_SKY_PRESENTATION = eINSTANCE.getEarthSkyPresentation();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MoonPresentationImpl <em>Moon Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MoonPresentationImpl <em>Moon Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.MoonPresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMoonPresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MoonPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMoonPresentation()
 		 * @generated
 		 */
     EClass MOON_PRESENTATION = eINSTANCE.getMoonPresentation();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl <em>Feature Of Interest Node Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl <em>Feature Of Interest Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getFeatureOfInterestNodePresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getFeatureOfInterestNodePresentation()
 		 * @generated
 		 */
 		EClass FEATURE_OF_INTEREST_NODE_PRESENTATION = eINSTANCE.getFeatureOfInterestNodePresentation();
@@ -4178,11 +4178,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		EAttribute FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE = eINSTANCE.getFeatureOfInterestNodePresentation_FlagVisible();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUIUtilities()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.EnvironmentUIUtilitiesImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getEnvironmentUIUtilities()
 		 * @generated
 		 */
     EClass ENVIRONMENT_UI_UTILITIES = eINSTANCE.getEnvironmentUIUtilities();
@@ -4228,14 +4228,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EOperation ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = eINSTANCE.getEnvironmentUIUtilities__GetSkyColor__double();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getSymphony__CoreEnvironmentUIFacade()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getApogyCoreEnvironmentUIFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_CORE_ENVIRONMENT_UI_FACADE = eINSTANCE.getSymphony__CoreEnvironmentUIFacade();
+		EClass APOGY_CORE_ENVIRONMENT_UI_FACADE = eINSTANCE.getApogyCoreEnvironmentUIFacade();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Visible Rectangular Region Provider</b></em>' operation.
@@ -4243,7 +4243,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
+		EOperation APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = eINSTANCE.getApogyCoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Image Map Layer Presentation Image</b></em>' operation.
@@ -4251,7 +4251,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
+		EOperation APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = eINSTANCE.getApogyCoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Trajectory Length</b></em>' operation.
@@ -4259,7 +4259,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries();
+		EOperation APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = eINSTANCE.getApogyCoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Map View Configuration Identifier</b></em>' operation.
@@ -4267,7 +4267,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
+		EOperation APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = eINSTANCE.getApogyCoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Active Map View Configuration</b></em>' operation.
@@ -4275,7 +4275,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String();
+		EOperation APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = eINSTANCE.getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Active Map View Configuration List</b></em>' operation.
@@ -4283,7 +4283,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList();
+		EOperation APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = eINSTANCE.getApogyCoreEnvironmentUIFacade__GetActiveMapViewConfigurationList();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Feature Of Interest Lists</b></em>' operation.
@@ -4291,14 +4291,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession();
+		EOperation APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = eINSTANCE.getApogyCoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationListImpl <em>Map View Configuration List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationListImpl <em>Map View Configuration List</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationListImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapViewConfigurationList()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationListImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapViewConfigurationList()
 		 * @generated
 		 */
     EClass MAP_VIEW_CONFIGURATION_LIST = eINSTANCE.getMapViewConfigurationList();
@@ -4312,11 +4312,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EReference MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS = eINSTANCE.getMapViewConfigurationList_MapViewConfigurations();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl <em>Map View Configuration</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationImpl <em>Map View Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapViewConfiguration()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewConfigurationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapViewConfiguration()
 		 * @generated
 		 */
     EClass MAP_VIEW_CONFIGURATION = eINSTANCE.getMapViewConfiguration();
@@ -4386,11 +4386,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		EOperation MAP_VIEW_CONFIGURATION___FORCE_UPDATE = eINSTANCE.getMapViewConfiguration__ForceUpdate();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewItemPresentationImpl <em>Map View Item Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewItemPresentationImpl <em>Map View Item Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.MapViewItemPresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapViewItemPresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapViewItemPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapViewItemPresentation()
 		 * @generated
 		 */
     EClass MAP_VIEW_ITEM_PRESENTATION = eINSTANCE.getMapViewItemPresentation();
@@ -4404,11 +4404,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EAttribute MAP_VIEW_ITEM_PRESENTATION__VISIBLE = eINSTANCE.getMapViewItemPresentation_Visible();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl <em>Features Of Interest Map Layer Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl <em>Features Of Interest Map Layer Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getFeaturesOfInterestMapLayerPresentation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getFeaturesOfInterestMapLayerPresentation()
 		 * @generated
 		 */
 		EClass FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION = eINSTANCE.getFeaturesOfInterestMapLayerPresentation();
@@ -4438,11 +4438,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		EAttribute FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR = eINSTANCE.getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapAnnotationImpl <em>Map Annotation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapAnnotationImpl <em>Map Annotation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.MapAnnotationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapAnnotation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapAnnotationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapAnnotation()
 		 * @generated
 		 */
     EClass MAP_ANNOTATION = eINSTANCE.getMapAnnotation();
@@ -4456,11 +4456,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EOperation MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION = eINSTANCE.getMapAnnotation__GetXYShapeAnnotation();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapToolImpl <em>Map Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapToolImpl <em>Map Tool</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.MapToolImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapTool()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapToolImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapTool()
 		 * @generated
 		 */
     EClass MAP_TOOL = eINSTANCE.getMapTool();
@@ -4498,11 +4498,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EOperation MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE = eINSTANCE.getMapTool__PositionSelected__int_double_double();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapRulerImpl <em>Map Ruler</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapRulerImpl <em>Map Ruler</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.MapRulerImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getMapRuler()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.MapRulerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getMapRuler()
 		 * @generated
 		 */
     EClass MAP_RULER = eINSTANCE.getMapRuler();
@@ -4516,11 +4516,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EAttribute MAP_RULER__RULER_COLOR = eINSTANCE.getMapRuler_RulerColor();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl <em>Variable Trajectory Provider</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryProviderImpl <em>Variable Trajectory Provider</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getVariableTrajectoryProvider()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryProviderImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getVariableTrajectoryProvider()
 		 * @generated
 		 */
     EClass VARIABLE_TRAJECTORY_PROVIDER = eINSTANCE.getVariableTrajectoryProvider();
@@ -4542,11 +4542,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EReference VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER = eINSTANCE.getVariableTrajectoryProvider_PoseProvider();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl <em>Default Variable Trajectory Provider</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl <em>Default Variable Trajectory Provider</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getDefaultVariableTrajectoryProvider()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getDefaultVariableTrajectoryProvider()
 		 * @generated
 		 */
     EClass DEFAULT_VARIABLE_TRAJECTORY_PROVIDER = eINSTANCE.getDefaultVariableTrajectoryProvider();
@@ -4568,11 +4568,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EAttribute DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD = eINSTANCE.getDefaultVariableTrajectoryProvider_AzimuthThreshold();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl <em>Abstract Variable Annotation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractVariableAnnotationImpl <em>Abstract Variable Annotation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getAbstractVariableAnnotation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractVariableAnnotationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getAbstractVariableAnnotation()
 		 * @generated
 		 */
     EClass ABSTRACT_VARIABLE_ANNOTATION = eINSTANCE.getAbstractVariableAnnotation();
@@ -4594,12 +4594,12 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EReference ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE = eINSTANCE.getAbstractVariableAnnotation_VariableInstance();
 
     /**
-		 * The meta object literal for the '<em><b>Symphony System Api Adapter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Apogy System Api Adapter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER = eINSTANCE.getAbstractVariableAnnotation_SymphonySystemApiAdapter();
+    EReference ABSTRACT_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER = eINSTANCE.getAbstractVariableAnnotation_ApogySystemApiAdapter();
 
     /**
 		 * The meta object literal for the '<em><b>Update Pose</b></em>' operation.
@@ -4610,11 +4610,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		EOperation ABSTRACT_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4 = eINSTANCE.getAbstractVariableAnnotation__UpdatePose__Matrix4x4();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl <em>Pose Variable Annotation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.PoseVariableAnnotationImpl <em>Pose Variable Annotation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getPoseVariableAnnotation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.PoseVariableAnnotationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getPoseVariableAnnotation()
 		 * @generated
 		 */
     EClass POSE_VARIABLE_ANNOTATION = eINSTANCE.getPoseVariableAnnotation();
@@ -4652,11 +4652,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		EOperation POSE_VARIABLE_ANNOTATION___UPDATE_POSE__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getPoseVariableAnnotation__UpdatePose__double_double_double();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl <em>Variable Trajectory Annotation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl <em>Variable Trajectory Annotation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getVariableTrajectoryAnnotation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getVariableTrajectoryAnnotation()
 		 * @generated
 		 */
     EClass VARIABLE_TRAJECTORY_ANNOTATION = eINSTANCE.getVariableTrajectoryAnnotation();
@@ -4670,11 +4670,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EReference VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER = eINSTANCE.getVariableTrajectoryAnnotation_TrajectoryProvider();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl <em>Vehicle Variable Annotation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VehicleVariableAnnotationImpl <em>Vehicle Variable Annotation</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getVehicleVariableAnnotation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.VehicleVariableAnnotationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getVehicleVariableAnnotation()
 		 * @generated
 		 */
     EClass VEHICLE_VARIABLE_ANNOTATION = eINSTANCE.getVehicleVariableAnnotation();
@@ -4696,11 +4696,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EAttribute VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH = eINSTANCE.getVehicleVariableAnnotation_VehicleWidth();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl <em>Trajectory Provider</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl <em>Trajectory Provider</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getTrajectoryProvider()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryProviderImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getTrajectoryProvider()
 		 * @generated
 		 */
     EClass TRAJECTORY_PROVIDER = eINSTANCE.getTrajectoryProvider();
@@ -4770,21 +4770,21 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
     EOperation TRAJECTORY_PROVIDER___GET_XY_SERIES = eINSTANCE.getTrajectoryProvider__GetXYSeries();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl <em>Abstract Trajectory Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractTrajectoryToolImpl <em>Abstract Trajectory Tool</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getAbstractTrajectoryTool()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.AbstractTrajectoryToolImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getAbstractTrajectoryTool()
 		 * @generated
 		 */
     EClass ABSTRACT_TRAJECTORY_TOOL = eINSTANCE.getAbstractTrajectoryTool();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryPickingToolImpl <em>Trajectory Picking Tool</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.TrajectoryPickingToolImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getTrajectoryPickingTool()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.TrajectoryPickingToolImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getTrajectoryPickingTool()
 		 * @generated
 		 */
     EClass TRAJECTORY_PICKING_TOOL = eINSTANCE.getTrajectoryPickingTool();
@@ -4794,7 +4794,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see java.util.List
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getList()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getList()
 		 * @generated
 		 */
     EDataType LIST = eINSTANCE.getList();
@@ -4804,7 +4804,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see javax.vecmath.Point2d
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getPoint2d()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getPoint2d()
 		 * @generated
 		 */
     EDataType POINT2D = eINSTANCE.getPoint2d();
@@ -4814,7 +4814,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see javax.vecmath.Color3f
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getColor3f()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getColor3f()
 		 * @generated
 		 */
     EDataType COLOR3F = eINSTANCE.getColor3f();
@@ -4824,7 +4824,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see javax.vecmath.Point3f
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getPoint3f()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getPoint3f()
 		 * @generated
 		 */
     EDataType POINT3F = eINSTANCE.getPoint3f();
@@ -4834,7 +4834,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.jfree.data.xy.XYSeries
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getXYSeries()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getXYSeries()
 		 * @generated
 		 */
     EDataType XY_SERIES = eINSTANCE.getXYSeries();
@@ -4844,7 +4844,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.jfree.chart.plot.XYPlot
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getXYPlot()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getXYPlot()
 		 * @generated
 		 */
     EDataType XY_PLOT = eINSTANCE.getXYPlot();
@@ -4854,7 +4854,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.jfree.data.xy.XYDataItem
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getXYDataItem()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getXYDataItem()
 		 * @generated
 		 */
     EDataType XY_DATA_ITEM = eINSTANCE.getXYDataItem();
@@ -4864,7 +4864,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.jfree.chart.annotations.AbstractXYAnnotation
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getAbstractXYAnnotation()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getAbstractXYAnnotation()
 		 * @generated
 		 */
     EDataType ABSTRACT_XY_ANNOTATION = eINSTANCE.getAbstractXYAnnotation();
@@ -4874,7 +4874,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.jfree.experimental.chart.swt.ChartComposite
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getChartComposite()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getChartComposite()
 		 * @generated
 		 */
     EDataType CHART_COMPOSITE = eINSTANCE.getChartComposite();
@@ -4884,11 +4884,11 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see org.jfree.chart.JFreeChart
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getJFreeChart()
+		 * @see ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIPackageImpl#getJFreeChart()
 		 * @generated
 		 */
     EDataType JFREE_CHART = eINSTANCE.getJFreeChart();
 
   }
 
-} //Symphony__CoreEnvironmentUIPackage
+} //ApogyCoreEnvironmentUIPackage

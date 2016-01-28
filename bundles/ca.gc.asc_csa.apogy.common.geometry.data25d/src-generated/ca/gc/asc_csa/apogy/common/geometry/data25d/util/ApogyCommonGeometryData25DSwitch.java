@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.util;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data25d.*;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.*;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,17 +24,17 @@ import org.eclipse.symphony.common.processors.Processor;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage
  * @generated
  */
-public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
+public class ApogyCommonGeometryData25DSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData25DPackage modelPackage;
+	protected static ApogyCommonGeometryData25DPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -42,9 +42,9 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DSwitch() {
+	public ApogyCommonGeometryData25DSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData25DPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData25DPackage.eINSTANCE;
 		}
 	}
 
@@ -71,21 +71,21 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D: {
+			case ApogyCommonGeometryData25DPackage.COORDINATES25_D: {
 				Coordinates25D coordinates25D = (Coordinates25D)theEObject;
 				T1 result = caseCoordinates25D(coordinates25D);
 				if (result == null) result = caseCoordinates(coordinates25D);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D: {
+			case ApogyCommonGeometryData25DPackage.COORDINATES_SET25_D: {
 				CoordinatesSet25D coordinatesSet25D = (CoordinatesSet25D)theEObject;
 				T1 result = caseCoordinatesSet25D(coordinatesSet25D);
 				if (result == null) result = caseCoordinatesSet(coordinatesSet25D);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.VOLUMETRIC_COORDINATES_SET25_D: {
+			case ApogyCommonGeometryData25DPackage.VOLUMETRIC_COORDINATES_SET25_D: {
 				VolumetricCoordinatesSet25D volumetricCoordinatesSet25D = (VolumetricCoordinatesSet25D)theEObject;
 				T1 result = caseVolumetricCoordinatesSet25D(volumetricCoordinatesSet25D);
 				if (result == null) result = caseCoordinatesSet25D(volumetricCoordinatesSet25D);
@@ -93,14 +93,14 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.POLYGON25_D: {
+			case ApogyCommonGeometryData25DPackage.POLYGON25_D: {
 				Polygon25D polygon25D = (Polygon25D)theEObject;
 				T1 result = casePolygon25D(polygon25D);
 				if (result == null) result = casePolygon(polygon25D);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.MESH25_D: {
+			case ApogyCommonGeometryData25DPackage.MESH25_D: {
 				Mesh25D mesh25D = (Mesh25D)theEObject;
 				T1 result = caseMesh25D(mesh25D);
 				if (result == null) result = caseMesh(mesh25D);
@@ -108,7 +108,7 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.VOLUMETRIC_MESH25_D: {
+			case ApogyCommonGeometryData25DPackage.VOLUMETRIC_MESH25_D: {
 				VolumetricMesh25D volumetricMesh25D = (VolumetricMesh25D)theEObject;
 				T1 result = caseVolumetricMesh25D(volumetricMesh25D);
 				if (result == null) result = caseMesh25D(volumetricMesh25D);
@@ -117,7 +117,7 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_DFILTER: {
+			case ApogyCommonGeometryData25DPackage.COORDINATES_SET25_DFILTER: {
 				CoordinatesSet25DFilter<?> coordinatesSet25DFilter = (CoordinatesSet25DFilter<?>)theEObject;
 				T1 result = caseCoordinatesSet25DFilter(coordinatesSet25DFilter);
 				if (result == null) result = caseProcessor(coordinatesSet25DFilter);
@@ -125,13 +125,13 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE: {
-				Symphony__CommonGeometryData25DFacade symphony__CommonGeometryData25DFacade = (Symphony__CommonGeometryData25DFacade)theEObject;
-				T1 result = caseSymphony__CommonGeometryData25DFacade(symphony__CommonGeometryData25DFacade);
+			case ApogyCommonGeometryData25DPackage.APOGY_COMMON_GEOMETRY_DATA25_DFACADE: {
+				ApogyCommonGeometryData25DFacade apogy__CommonGeometryData25DFacade = (ApogyCommonGeometryData25DFacade)theEObject;
+				T1 result = caseApogyCommonGeometryData25DFacade(apogy__CommonGeometryData25DFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.DATA25_DIO: {
+			case ApogyCommonGeometryData25DPackage.DATA25_DIO: {
 				Data25DIO data25DIO = (Data25DIO)theEObject;
 				T1 result = caseData25DIO(data25DIO);
 				if (result == null) result = defaultCase(theEObject);
@@ -257,7 +257,7 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSymphony__CommonGeometryData25DFacade(Symphony__CommonGeometryData25DFacade object) {
+	public T1 caseApogyCommonGeometryData25DFacade(ApogyCommonGeometryData25DFacade object) {
 		return null;
 	}
 
@@ -382,4 +382,4 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__CommonGeometryData25DSwitch
+} //ApogyCommonGeometryData25DSwitch

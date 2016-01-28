@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -13,13 +13,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TreeFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.TreeFeatureNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +71,7 @@ public class TreeFeatureNodeItemProvider
        getResourceLocator(),
        getString("_UI_AbstractFeatureSpecifier_structuralFeature_feature"),
        getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_structuralFeature_feature", "_UI_AbstractFeatureSpecifier_type"),
-       Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE,
+       ApogyCommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE,
        true,
        false,
        true,
@@ -84,7 +84,7 @@ public class TreeFeatureNodeItemProvider
 				TreeFeatureNode featureNode = (TreeFeatureNode) object;
 				AbstractFeatureNode parent = featureNode.getParent();
 				
-				List<EStructuralFeature> childFeatures = Symphony__CommonEMFFacade.INSTANCE.getChildEStructuralFeatures(parent);
+				List<EStructuralFeature> childFeatures = ApogyCommonEMFFacade.INSTANCE.getChildEStructuralFeatures(parent);
 				return childFeatures;
 			}
 		});
@@ -104,7 +104,7 @@ public class TreeFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_multiValued_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_multiValued_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
+				 ApogyCommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
 				 false,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class TreeFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_index_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
+				 ApogyCommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
 				 true,
 				 false,
 				 false,
@@ -196,9 +196,9 @@ public class TreeFeatureNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TreeFeatureNode.class)) {
-			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE__STRUCTURAL_FEATURE:
-			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE__MULTI_VALUED:
-			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE__INDEX:
+			case ApogyCommonEMFPackage.TREE_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case ApogyCommonEMFPackage.TREE_FEATURE_NODE__MULTI_VALUED:
+			case ApogyCommonEMFPackage.TREE_FEATURE_NODE__INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

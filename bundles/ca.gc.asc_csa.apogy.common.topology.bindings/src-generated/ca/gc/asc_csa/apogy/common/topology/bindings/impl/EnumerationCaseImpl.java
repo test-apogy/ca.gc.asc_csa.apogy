@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Collection;
 
@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +26,8 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl#getEnumerationLiterals <em>Enumeration Literals</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl#getTopologyRoot <em>Topology Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationCaseImpl#getEnumerationLiterals <em>Enumeration Literals</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.EnumerationCaseImpl#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,7 +72,7 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE;
+		return ApogyCommonTopologyBindingsPackage.Literals.ENUMERATION_CASE;
 	}
 
   /**
@@ -83,7 +83,7 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
   public EList<EEnumLiteral> getEnumerationLiterals()
   {
 		if (enumerationLiterals == null) {
-			enumerationLiterals = new EObjectResolvingEList<EEnumLiteral>(EEnumLiteral.class, this, Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS);
+			enumerationLiterals = new EObjectResolvingEList<EEnumLiteral>(EEnumLiteral.class, this, ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS);
 		}
 		return enumerationLiterals;
 	}
@@ -108,7 +108,7 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
 		Node oldTopologyRoot = topologyRoot;
 		topologyRoot = newTopologyRoot;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, oldTopologyRoot, newTopologyRoot);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, oldTopologyRoot, newTopologyRoot);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -124,14 +124,14 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
 		if (newTopologyRoot != topologyRoot) {
 			NotificationChain msgs = null;
 			if (topologyRoot != null)
-				msgs = ((InternalEObject)topologyRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, null, msgs);
+				msgs = ((InternalEObject)topologyRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, null, msgs);
 			if (newTopologyRoot != null)
-				msgs = ((InternalEObject)newTopologyRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, null, msgs);
+				msgs = ((InternalEObject)newTopologyRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, null, msgs);
 			msgs = basicSetTopologyRoot(newTopologyRoot, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, newTopologyRoot, newTopologyRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT, newTopologyRoot, newTopologyRoot));
 	}
 
   /**
@@ -143,7 +143,7 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				return basicSetTopologyRoot(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -158,9 +158,9 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
 				return getEnumerationLiterals();
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				return getTopologyRoot();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -176,11 +176,11 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
 				getEnumerationLiterals().clear();
 				getEnumerationLiterals().addAll((Collection<? extends EEnumLiteral>)newValue);
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				setTopologyRoot((Node)newValue);
 				return;
 		}
@@ -196,10 +196,10 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
 				getEnumerationLiterals().clear();
 				return;
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				setTopologyRoot((Node)null);
 				return;
 		}
@@ -215,9 +215,9 @@ public class EnumerationCaseImpl extends MinimalEObjectImpl.Container implements
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__ENUMERATION_LITERALS:
 				return enumerationLiterals != null && !enumerationLiterals.isEmpty();
-			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
+			case ApogyCommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				return topologyRoot != null;
 		}
 		return super.eIsSet(featureID);

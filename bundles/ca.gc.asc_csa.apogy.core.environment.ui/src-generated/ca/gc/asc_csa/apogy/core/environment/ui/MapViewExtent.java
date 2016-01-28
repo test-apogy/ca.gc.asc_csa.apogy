@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,16 +13,16 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getXMin <em>XMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getXMax <em>XMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getYMin <em>YMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getYMax <em>YMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getXDimension <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getYDimension <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getXMin <em>XMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getXMax <em>XMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getYMin <em>YMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getYMax <em>YMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getXDimension <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getYDimension <em>YDimension</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewExtent()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>XMin</em>' attribute.
    * @see #setXMin(double)
-   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_XMin()
+   * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewExtent_XMin()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -46,7 +46,7 @@ public interface MapViewExtent extends EObject
   double getXMin();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getXMin <em>XMin</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getXMin <em>XMin</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>XMin</em>' attribute.
@@ -65,7 +65,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>XMax</em>' attribute.
    * @see #setXMax(double)
-   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_XMax()
+   * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewExtent_XMax()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -73,7 +73,7 @@ public interface MapViewExtent extends EObject
   double getXMax();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getXMax <em>XMax</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getXMax <em>XMax</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>XMax</em>' attribute.
@@ -92,7 +92,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>YMin</em>' attribute.
    * @see #setYMin(double)
-   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_YMin()
+   * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewExtent_YMin()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -100,7 +100,7 @@ public interface MapViewExtent extends EObject
   double getYMin();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getYMin <em>YMin</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getYMin <em>YMin</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>YMin</em>' attribute.
@@ -119,7 +119,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>YMax</em>' attribute.
    * @see #setYMax(double)
-   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_YMax()
+   * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewExtent_YMax()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -127,7 +127,7 @@ public interface MapViewExtent extends EObject
   double getYMax();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewExtent#getYMax <em>YMax</em>}' attribute.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewExtent#getYMax <em>YMax</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>YMax</em>' attribute.
@@ -144,7 +144,7 @@ public interface MapViewExtent extends EObject
    * * Dimension along the X axis.
    * <!-- end-model-doc -->
    * @return the value of the '<em>XDimension</em>' attribute.
-   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_XDimension()
+   * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewExtent_XDimension()
    * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES'"
    * @generated
@@ -159,7 +159,7 @@ public interface MapViewExtent extends EObject
    * * Dimension along the Y axis.
    * <!-- end-model-doc -->
    * @return the value of the '<em>YDimension</em>' attribute.
-   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_YDimension()
+   * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewExtent_YDimension()
    * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES'"
    * @generated

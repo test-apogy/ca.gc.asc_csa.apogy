@@ -1,23 +1,23 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.util;
+package ca.gc.asc_csa.apogy.examples.lidar.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.examples.lidar.*;
+import ca.gc.asc_csa.apogy.examples.lidar.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage
+ * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage
  * @generated
  */
-public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesLidarAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -25,7 +25,7 @@ public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesLidarPackage modelPackage;
+  protected static ApogyExamplesLidarPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -33,10 +33,10 @@ public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLidarAdapterFactory()
+  public ApogyExamplesLidarAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesLidarPackage.eINSTANCE;
+			modelPackage = ApogyExamplesLidarPackage.eINSTANCE;
 		}
 	}
 
@@ -66,8 +66,8 @@ public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesLidarSwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesLidarSwitch<Adapter>() {
+  protected ApogyExamplesLidarSwitch<Adapter> modelSwitch =
+    new ApogyExamplesLidarSwitch<Adapter>() {
 			@Override
 			public Adapter caseLidar(Lidar object) {
 				return createLidarAdapter();
@@ -102,13 +102,13 @@ public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.lidar.Lidar <em>Lidar</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.lidar.Lidar <em>Lidar</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.lidar.Lidar
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.Lidar
 	 * @generated
 	 */
   public Adapter createLidarAdapter()
@@ -117,13 +117,13 @@ public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.lidar.LidarStub <em>Lidar Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.lidar.LidarStub <em>Lidar Stub</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.lidar.LidarStub
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.LidarStub
 	 * @generated
 	 */
   public Adapter createLidarStubAdapter()
@@ -132,13 +132,13 @@ public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.lidar.LidarSimulated <em>Lidar Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.lidar.LidarSimulated <em>Lidar Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.lidar.LidarSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.lidar.LidarSimulated
 	 * @generated
 	 */
 	public Adapter createLidarSimulatedAdapter() {
@@ -158,4 +158,4 @@ public class Symphony__ExamplesLidarAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__ExamplesLidarAdapterFactory
+} //ApogyExamplesLidarAdapterFactory

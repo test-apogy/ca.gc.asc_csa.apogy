@@ -3,7 +3,7 @@
  *
  * $Id: FieldOfViewPresentationImpl.java,v 1.1.4.2 2015/05/21 15:50:53 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.ui.Activator;
-import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.FieldOfViewSceneObject;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.scene_objects.FieldOfViewSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,11 +26,11 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#getTransparency <em>Transparency</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#isShowOutlineOnly <em>Show Outline Only</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#isShowProjection <em>Show Projection</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#getProjectionColor <em>Projection Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#getTransparency <em>Transparency</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#isShowOutlineOnly <em>Show Outline Only</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#isShowProjection <em>Show Projection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl.FieldOfViewPresentationImpl#getProjectionColor <em>Projection Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -161,7 +161,7 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION;
+		return ApogyAddonsSensorsFOVUIPackage.Literals.FIELD_OF_VIEW_PRESENTATION;
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 		float oldTransparency = transparency;
 		transparency = newTransparency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY, oldTransparency, transparency));
 	}
 
 	/**
@@ -217,7 +217,7 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 		MeshPresentationMode oldPresentationMode = presentationMode;
 		presentationMode = newPresentationMode == null ? PRESENTATION_MODE_EDEFAULT : newPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
 	}
 
 	/**
@@ -240,7 +240,7 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 		boolean oldShowOutlineOnly = showOutlineOnly;
 		showOutlineOnly = newShowOutlineOnly;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY, oldShowOutlineOnly, showOutlineOnly));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY, oldShowOutlineOnly, showOutlineOnly));
 	}
 
 	/**
@@ -261,7 +261,7 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 		boolean oldShowProjection = showProjection;
 		showProjection = newShowProjection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION, oldShowProjection, showProjection));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION, oldShowProjection, showProjection));
 	}
 
 	/**
@@ -282,7 +282,7 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 		RGB oldProjectionColor = projectionColor;
 		projectionColor = newProjectionColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR, oldProjectionColor, projectionColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR, oldProjectionColor, projectionColor));
 	}
 
 	/**
@@ -294,15 +294,15 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
 				return getTransparency();
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
 				return isShowOutlineOnly();
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
 				return isShowProjection();
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
 				return getProjectionColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -317,19 +317,19 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
 				setTransparency((Float)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((MeshPresentationMode)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
 				setShowOutlineOnly((Boolean)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
 				setShowProjection((Boolean)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
 				setProjectionColor((RGB)newValue);
 				return;
 		}
@@ -345,19 +345,19 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
 				setTransparency(TRANSPARENCY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
 				setShowOutlineOnly(SHOW_OUTLINE_ONLY_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
 				setShowProjection(SHOW_PROJECTION_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
 				setProjectionColor(PROJECTION_COLOR_EDEFAULT);
 				return;
 		}
@@ -373,15 +373,15 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
 				return transparency != TRANSPARENCY_EDEFAULT;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
 				return showOutlineOnly != SHOW_OUTLINE_ONLY_EDEFAULT;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
 				return showProjection != SHOW_PROJECTION_EDEFAULT;
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
 				return PROJECTION_COLOR_EDEFAULT == null ? projectionColor != null : !PROJECTION_COLOR_EDEFAULT.equals(projectionColor);
 		}
 		return super.eIsSet(featureID);
@@ -437,23 +437,23 @@ public class FieldOfViewPresentationImpl extends NodePresentationImpl implements
 			
 			switch (featureId) 
 			{
-				case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
+				case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PRESENTATION_MODE:
 					fieldOfViewSceneObject.setPresentationMode(this.getPresentationMode());
 				break;
 			
-				case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
+				case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__TRANSPARENCY:
 					fieldOfViewSceneObject.setTransparency(this.getTransparency());
 				break;
 
-				case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
+				case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_OUTLINE_ONLY:
 					fieldOfViewSceneObject.setShowOutlineOnly(this.isShowOutlineOnly());
 				break;
 				
-				case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
+				case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__SHOW_PROJECTION:
 					fieldOfViewSceneObject.setShowProjection(this.isShowProjection());
 				break;
 			
-				case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
+				case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION__PROJECTION_COLOR:
 					fieldOfViewSceneObject.setProjectionColor(this.getProjectionColor());
 				break;
 

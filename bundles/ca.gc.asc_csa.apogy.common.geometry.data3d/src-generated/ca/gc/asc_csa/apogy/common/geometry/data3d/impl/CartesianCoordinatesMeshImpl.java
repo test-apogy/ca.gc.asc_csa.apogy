@@ -3,22 +3,22 @@
  *
  * $Id: CartesianCoordinatesMeshImpl.java,v 1.2.4.4 2015/08/13 19:12:08 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
-import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.MeshImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_MESH;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_MESH;
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	@Override
 	public EList<CartesianPolygon> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<CartesianPolygon>(CartesianPolygon.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH__POLYGONS);
+			polygons = new EObjectContainmentEList<CartesianPolygon>(CartesianPolygon.class, this, ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH__POLYGONS);
 		}
 		return polygons;
 	}
@@ -80,7 +80,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == AbstractCartesianCoordinatesSet.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT: return Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT;
+				case ApogyCommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT: return ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT;
 				default: return -1;
 			}
 		}
@@ -100,7 +100,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT:
 				return getExtent();
 		}
 		return super.eInvoke(operationID, arguments);

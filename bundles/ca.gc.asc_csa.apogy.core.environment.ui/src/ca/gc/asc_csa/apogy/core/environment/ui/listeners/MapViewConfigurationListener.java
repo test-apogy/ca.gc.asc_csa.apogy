@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.listeners;
+package ca.gc.asc_csa.apogy.core.environment.ui.listeners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,11 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 public class MapViewConfigurationListener 
 {
@@ -93,7 +93,7 @@ public class MapViewConfigurationListener
 						
 						switch(featureID)
 						{
-							case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+							case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
 							{
 								if(msg.getEventType() == Notification.ADD)
 								{
@@ -149,7 +149,7 @@ public class MapViewConfigurationListener
 							}	
 							break;
 							
-							case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+							case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
 								mapViewConfigurationUpdate();
 							break;
 							
@@ -162,15 +162,15 @@ public class MapViewConfigurationListener
 						int featureID = msg.getFeatureID(ImageMapLayerPresentation.class); 
 						switch(featureID)
 						{
-							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__VISIBLE:
+							case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__VISIBLE:
 								mapViewConfigurationUpdate();
 							break;
 							
-							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+							case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 								mapViewConfigurationUpdate();
 							break;
 							
-							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__MAP_LAYER:
+							case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__MAP_LAYER:
 								mapViewConfigurationUpdate();
 							break;
 							
@@ -183,15 +183,15 @@ public class MapViewConfigurationListener
 						int featureID = msg.getFeatureID(ImageMapLayer.class); 
 						switch(featureID)
 						{
-							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
+							case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
 								mapViewConfigurationUpdate();
 							break;							
 							
-							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
+							case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
 								mapViewConfigurationUpdate();
 							break;		
 							
-							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+							case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
 								mapViewConfigurationUpdate();
 							break;		
 							

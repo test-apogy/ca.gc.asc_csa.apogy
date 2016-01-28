@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.util;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,32 +10,32 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 
-import org.eclipse.symphony.examples.satellite.symphony.*;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage
  * @generated
  */
-public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFactoryImpl {
+public class ApogyExamplesSatelliteApogyAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__ExamplesSatelliteSymphonyPackage modelPackage;
+	protected static ApogyExamplesSatelliteApogyPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -43,9 +43,9 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteSymphonyAdapterFactory() {
+	public ApogyExamplesSatelliteApogyAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesSatelliteSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesSatelliteApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -74,8 +74,8 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__ExamplesSatelliteSymphonySwitch<Adapter> modelSwitch =
-		new Symphony__ExamplesSatelliteSymphonySwitch<Adapter>() {
+	protected ApogyExamplesSatelliteApogySwitch<Adapter> modelSwitch =
+		new ApogyExamplesSatelliteApogySwitch<Adapter>() {
 			@Override
 			public Adapter caseConstellationSystemApiAdapter(ConstellationSystemApiAdapter object) {
 				return createConstellationSystemApiAdapterAdapter();
@@ -93,8 +93,8 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 				return createPoseProviderAdapter();
 			}
 			@Override
-			public Adapter caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object) {
-				return createSymphonySystemApiAdapterAdapter();
+			public Adapter caseApogySystemApiAdapter(ApogySystemApiAdapter object) {
+				return createApogySystemApiAdapterAdapter();
 			}
 			@Override
 			public Adapter caseAbstractInitializationData(AbstractInitializationData object) {
@@ -105,8 +105,8 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 				return createInitializationDataAdapter();
 			}
 			@Override
-			public Adapter caseSymphonyInitializationData(SymphonyInitializationData object) {
-				return createSymphonyInitializationDataAdapter();
+			public Adapter caseApogyInitializationData(ApogyInitializationData object) {
+				return createApogyInitializationDataAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -129,13 +129,13 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter <em>Constellation System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter <em>Constellation System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter
 	 * @generated
 	 */
 	public Adapter createConstellationSystemApiAdapterAdapter() {
@@ -143,13 +143,13 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData <em>Constellation Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData <em>Constellation Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData
 	 * @generated
 	 */
 	public Adapter createConstellationDataAdapter() {
@@ -157,13 +157,13 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter
 	 * @generated
 	 */
 	public Adapter createTypeApiAdapterAdapter() {
@@ -171,13 +171,13 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseProvider <em>Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.PoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.PoseProvider
+	 * @see ca.gc.asc_csa.apogy.core.PoseProvider
 	 * @generated
 	 */
 	public Adapter createPoseProviderAdapter() {
@@ -185,27 +185,27 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter <em>Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.SymphonySystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
 	 * @generated
 	 */
-	public Adapter createSymphonySystemApiAdapterAdapter() {
+	public Adapter createApogySystemApiAdapterAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData
 	 * @generated
 	 */
 	public Adapter createAbstractInitializationDataAdapter() {
@@ -213,13 +213,13 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.InitializationData <em>Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.InitializationData <em>Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.InitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InitializationData
 	 * @generated
 	 */
 	public Adapter createInitializationDataAdapter() {
@@ -227,16 +227,16 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonyInitializationData <em>Symphony Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ApogyInitializationData <em>Apogy Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.SymphonyInitializationData
+	 * @see ca.gc.asc_csa.apogy.core.ApogyInitializationData
 	 * @generated
 	 */
-	public Adapter createSymphonyInitializationDataAdapter() {
+	public Adapter createApogyInitializationDataAdapter() {
 		return null;
 	}
 
@@ -252,4 +252,4 @@ public class Symphony__ExamplesSatelliteSymphonyAdapterFactory extends AdapterFa
 		return null;
 	}
 
-} //Symphony__ExamplesSatelliteSymphonyAdapterFactory
+} //ApogyExamplesSatelliteApogyAdapterFactory

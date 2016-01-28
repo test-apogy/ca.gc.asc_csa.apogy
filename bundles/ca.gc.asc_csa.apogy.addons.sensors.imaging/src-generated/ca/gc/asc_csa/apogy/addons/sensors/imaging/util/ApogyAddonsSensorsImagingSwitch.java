@@ -1,23 +1,23 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.util;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImagingUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,10 +29,10 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage
  * @generated
  */
-public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
+public class ApogyAddonsSensorsImagingSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -40,7 +40,7 @@ public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsSensorsImagingPackage modelPackage;
+  protected static ApogyAddonsSensorsImagingPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -48,10 +48,10 @@ public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingSwitch()
+  public ApogyAddonsSensorsImagingSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsImagingPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsImagingPackage.eINSTANCE;
 		}
 	}
 
@@ -80,7 +80,7 @@ public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA: {
+			case ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA: {
 				AbstractCamera abstractCamera = (AbstractCamera)theEObject;
 				T result = caseAbstractCamera(abstractCamera);
 				if (result == null) result = caseSensor(abstractCamera);
@@ -91,7 +91,7 @@ public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT: {
+			case ApogyAddonsSensorsImagingPackage.IMAGE_SNAPSHOT: {
 				ImageSnapshot imageSnapshot = (ImageSnapshot)theEObject;
 				T result = caseImageSnapshot(imageSnapshot);
 				if (result == null) result = caseGroupNode(imageSnapshot);
@@ -100,7 +100,7 @@ public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT: {
+			case ApogyAddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT: {
 				RectifiedImageSnapshot rectifiedImageSnapshot = (RectifiedImageSnapshot)theEObject;
 				T result = caseRectifiedImageSnapshot(rectifiedImageSnapshot);
 				if (result == null) result = caseImageSnapshot(rectifiedImageSnapshot);
@@ -110,13 +110,13 @@ public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE: {
+			case ApogyAddonsSensorsImagingPackage.ZOOMABLE: {
 				Zoomable zoomable = (Zoomable)theEObject;
 				T result = caseZoomable(zoomable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsImagingPackage.IMAGING_UTILITIES: {
+			case ApogyAddonsSensorsImagingPackage.IMAGING_UTILITIES: {
 				ImagingUtilities imagingUtilities = (ImagingUtilities)theEObject;
 				T result = caseImagingUtilities(imagingUtilities);
 				if (result == null) result = defaultCase(theEObject);
@@ -318,4 +318,4 @@ public class Symphony__AddonsSensorsImagingSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__AddonsSensorsImagingSwitch
+} //ApogyAddonsSensorsImagingSwitch

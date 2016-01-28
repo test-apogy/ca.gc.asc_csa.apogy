@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,10 +30,10 @@ import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#getSourceObject <em>Source Object</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#getFeatureNode <em>Feature Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#getCurrentValue <em>Current Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#isResolved <em>Resolved</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.FeatureNodeAdapterImpl#getSourceObject <em>Source Object</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.FeatureNodeAdapterImpl#getFeatureNode <em>Feature Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.FeatureNodeAdapterImpl#getCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.FeatureNodeAdapterImpl#isResolved <em>Resolved</em>}</li>
  * </ul>
  *
  * @generated
@@ -123,7 +123,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonEMFPackage.Literals.FEATURE_NODE_ADAPTER;
+		return ApogyCommonEMFPackage.Literals.FEATURE_NODE_ADAPTER;
 	}
 
   /**
@@ -138,7 +138,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 			sourceObject = eResolveProxy(oldSourceObject);
 			if (sourceObject != oldSourceObject) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 			}
 		}
 		return sourceObject;
@@ -180,10 +180,10 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 	  if(newSourceObject != null && getFeatureNode() != null)
 	  {
 		  // Updates the resolved status.
-		  boolean newResolved = Symphony__CommonEMFFacade.INSTANCE.isResolved(newSourceObject, getFeatureNode());
+		  boolean newResolved = ApogyCommonEMFFacade.INSTANCE.isResolved(newSourceObject, getFeatureNode());
 		  setResolved(newResolved);
 		 
-		  if(newResolved) setCurrentValue(Symphony__CommonEMFFacade.INSTANCE.resolve(newSourceObject, getFeatureNode()));
+		  if(newResolved) setCurrentValue(ApogyCommonEMFFacade.INSTANCE.resolve(newSourceObject, getFeatureNode()));
 	  }	  
 	  
 	  // Register adapter.
@@ -200,7 +200,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		EObject oldSourceObject = sourceObject;
 		sourceObject = newSourceObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 	}
 
   /**
@@ -215,7 +215,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 			featureNode = (AbstractFeatureNode)eResolveProxy(oldFeatureNode);
 			if (featureNode != oldFeatureNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 			}
 		}
 		return featureNode;
@@ -263,10 +263,10 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 	  if(getSourceObject() != null && newFeatureNode != null)
 	  {
 		  // Updates the resolved status.
-		  boolean newResolved = Symphony__CommonEMFFacade.INSTANCE.isResolved(getSourceObject(), newFeatureNode);
+		  boolean newResolved = ApogyCommonEMFFacade.INSTANCE.isResolved(getSourceObject(), newFeatureNode);
 		  setResolved(newResolved);
 		 
-		  if(newResolved) setCurrentValue(Symphony__CommonEMFFacade.INSTANCE.resolve(getSourceObject(), newFeatureNode));
+		  if(newResolved) setCurrentValue(ApogyCommonEMFFacade.INSTANCE.resolve(getSourceObject(), newFeatureNode));
 	  }
 	  	  
 	  // Register adapter.
@@ -283,7 +283,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		AbstractFeatureNode oldFeatureNode = featureNode;
 		featureNode = newFeatureNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 	}
   
   /**
@@ -306,7 +306,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		Object oldCurrentValue = currentValue;
 		currentValue = newCurrentValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
 	}
 
   /**
@@ -329,7 +329,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		boolean oldResolved = resolved;
 		resolved = newResolved;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
 	}
 
   /**
@@ -341,15 +341,15 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				if (resolve) return getSourceObject();
 				return basicGetSourceObject();
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				if (resolve) return getFeatureNode();
 				return basicGetFeatureNode();
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return getCurrentValue();
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				return isResolved();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -364,16 +364,16 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)newValue);
 				return;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)newValue);
 				return;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(newValue);
 				return;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved((Boolean)newValue);
 				return;
 		}
@@ -389,16 +389,16 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)null);
 				return;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)null);
 				return;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(CURRENT_VALUE_EDEFAULT);
 				return;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved(RESOLVED_EDEFAULT);
 				return;
 		}
@@ -414,13 +414,13 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				return sourceObject != null;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				return featureNode != null;
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return CURRENT_VALUE_EDEFAULT == null ? currentValue != null : !CURRENT_VALUE_EDEFAULT.equals(currentValue);
-			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case ApogyCommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				return resolved != RESOLVED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -463,7 +463,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		  source.eAdapters().add(getAdapter());
 		  eObjects.add(source);
 		  
-		  List<AbstractFeatureNode> nodes = Symphony__CommonEMFFacade.INSTANCE.getAncestries(node);		  		  		  
+		  List<AbstractFeatureNode> nodes = ApogyCommonEMFFacade.INSTANCE.getAncestries(node);		  		  		  
 		  Iterator<AbstractFeatureNode> it = nodes.iterator();
 		  
 		  EObject eObject = source;
@@ -509,7 +509,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   
   protected void initializeFeatureOfInterest(AbstractFeatureNode featureNode)
   {
-	  List<AbstractFeatureNode> nodes = Symphony__CommonEMFFacade.INSTANCE.getAncestries(featureNode);		  		  		  
+	  List<AbstractFeatureNode> nodes = ApogyCommonEMFFacade.INSTANCE.getAncestries(featureNode);		  		  		  
 	  Iterator<AbstractFeatureNode> it = nodes.iterator();
 	  
 	  while(it.hasNext())
@@ -582,10 +582,10 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 										if(getSourceObject() != null && getFeatureNode() != null)
 										{
 											// Updates the resolved status.
-											setResolved(Symphony__CommonEMFFacade.INSTANCE.isResolved(getSourceObject(), getFeatureNode()));
+											setResolved(ApogyCommonEMFFacade.INSTANCE.isResolved(getSourceObject(), getFeatureNode()));
 											
 											// Attemps to resolve the new value.
-											setCurrentValue(Symphony__CommonEMFFacade.INSTANCE.resolve(getSourceObject(), getFeatureNode()));  
+											setCurrentValue(ApogyCommonEMFFacade.INSTANCE.resolve(getSourceObject(), getFeatureNode()));  
 										}
 									}
 								}

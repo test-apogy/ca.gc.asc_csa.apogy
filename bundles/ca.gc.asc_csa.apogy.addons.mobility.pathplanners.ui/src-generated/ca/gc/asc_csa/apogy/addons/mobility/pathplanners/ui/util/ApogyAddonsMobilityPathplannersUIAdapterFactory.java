@@ -1,32 +1,32 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.ui.util;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
-import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.ApogyAddonsMobilityPathplannersUIPackage
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsMobilityPathplannersUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPathplannersUIPackage modelPackage;
+	protected static ApogyAddonsMobilityPathplannersUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class Symphony__AddonsMobilityPathplannersUIAdapterFactory extends Adapte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityPathplannersUIAdapterFactory() {
+	public ApogyAddonsMobilityPathplannersUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPathplannersUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPathplannersUIPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class Symphony__AddonsMobilityPathplannersUIAdapterFactory extends Adapte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsMobilityPathplannersUISwitch<Adapter> modelSwitch =
-		new Symphony__AddonsMobilityPathplannersUISwitch<Adapter>() {
+	protected ApogyAddonsMobilityPathplannersUISwitch<Adapter> modelSwitch =
+		new ApogyAddonsMobilityPathplannersUISwitch<Adapter>() {
 			@Override
 			public Adapter caseCircularExclusionZonePresentation(CircularExclusionZonePresentation object) {
 				return createCircularExclusionZonePresentationAdapter();
@@ -96,13 +96,13 @@ public class Symphony__AddonsMobilityPathplannersUIAdapterFactory extends Adapte
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation <em>Circular Exclusion Zone Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation <em>Circular Exclusion Zone Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation
 	 * @generated
 	 */
 	public Adapter createCircularExclusionZonePresentationAdapter() {
@@ -110,13 +110,13 @@ public class Symphony__AddonsMobilityPathplannersUIAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -135,4 +135,4 @@ public class Symphony__AddonsMobilityPathplannersUIAdapterFactory extends Adapte
 		return null;
 	}
 
-} //Symphony__AddonsMobilityPathplannersUIAdapterFactory
+} //ApogyAddonsMobilityPathplannersUIAdapterFactory

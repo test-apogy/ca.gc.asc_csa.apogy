@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.awt.Graphics2D;
 import java.awt.geom.AffineTransform;
@@ -15,31 +15,31 @@ import javax.vecmath.Point2d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
 
@@ -50,16 +50,16 @@ import org.jfree.data.xy.XYSeries;
  *
  * @generated
  */
-public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CoreEnvironmentUIFacade
+public class ApogyCoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreEnvironmentUIFacade
 {
 	
-	private static Symphony__CoreEnvironmentUIFacade instance = null;
+	private static ApogyCoreEnvironmentUIFacade instance = null;
 	
-	public static Symphony__CoreEnvironmentUIFacade getInstance() 
+	public static ApogyCoreEnvironmentUIFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CoreEnvironmentUIFacadeImpl();
+			instance = new ApogyCoreEnvironmentUIFacadeImpl();
 		}
 		return instance;
 	}
@@ -69,7 +69,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreEnvironmentUIFacadeImpl()
+  protected ApogyCoreEnvironmentUIFacadeImpl()
   {
 		super();
 	}
@@ -82,7 +82,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE;
+		return ApogyCoreEnvironmentUIPackage.Literals.APOGY_CORE_ENVIRONMENT_UI_FACADE;
 	}
 
 //  /**
@@ -92,7 +92,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
 //   */
 //  public void getImageMapLayerPresentationExtent(ImageMapLayerPresentation imageMapLayerPresentation, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
 //  {
-//	  Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(imageMapLayerPresentation.getImageMapLayer(), lowerLeftCorner, upperRightCorner);
+//	  ApogyCoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(imageMapLayerPresentation.getImageMapLayer(), lowerLeftCorner, upperRightCorner);
 //  }
 
 //  /**
@@ -103,7 +103,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
 //  public void getImageMapLayerPresentationExtent(List<ImageMapLayerPresentation> imageMapLayerPresentations, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
 //  {	  
 //	  List<ImageMapLayerPresentation> visibilePresentations = getVisibleImageMapLayerPresentation(imageMapLayerPresentations);
-//	  Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(visibilePresentations, lowerLeftCorner, upperRightCorner);
+//	  ApogyCoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(visibilePresentations, lowerLeftCorner, upperRightCorner);
 //  }
 
 //  /**
@@ -119,7 +119,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
 //	  if(!imageMapLayerPresentations.isEmpty())
 //	  {
 //		  List<ImageMapLayerPresentation> visiblePresentations = getVisibleImageMapLayerPresentation(imageMapLayerPresentations);		  		  
-//		  result =  Symphony__CoreEnvironmentFacade.INSTANCE.createEImage(visiblePresentations);
+//		  result =  ApogyCoreEnvironmentFacade.INSTANCE.createEImage(visiblePresentations);
 //	  }
 //	  	  
 //	  return result;
@@ -221,7 +221,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
 	  double verticalResolution = (mapImage.getHeight() / mapViewConfiguration.getMapImageRectangularRegion().getYDimension());	
 	  
 	  // If the specified mapViewExtent is entirely covered by the MapViewConfiguration.
-	  if(Symphony__CoreEnvironmentFacade.INSTANCE.fitsInside(mapViewExtent, mapViewConfiguration.getMapImageRectangularRegion()))
+	  if(ApogyCoreEnvironmentFacade.INSTANCE.fitsInside(mapViewExtent, mapViewConfiguration.getMapImageRectangularRegion()))
 	  {		  		  
 		  // Gets the sub image representing mapViewExtent within mapViewConfiguration.		  
 		  double minX = mapViewExtent.getXMin();
@@ -343,7 +343,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
 		
 		if(mapViewConfiguration != null)
 		{
-			identifier = Symphony__CommonEMFFacade.INSTANCE.getID(mapViewConfiguration);
+			identifier = ApogyCommonEMFFacade.INSTANCE.getID(mapViewConfiguration);
 		}
 		
 		return identifier;
@@ -387,7 +387,7 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
 	{
 		MapViewConfigurationList mapViewConfigurationList = null;
 		
-		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null)
 		{
 			ToolsList toolsList = session.getToolsList();
@@ -417,9 +417,9 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
 	{
 		List<FeatureOfInterestList> featureOfInterestLists = new ArrayList<FeatureOfInterestList>();
 		
-		if(session != null && session.getEnvironment() instanceof SymphonyEnvironment)
+		if(session != null && session.getEnvironment() instanceof ApogyEnvironment)
 		{
-			SymphonyEnvironment se = (SymphonyEnvironment) session.getEnvironment();
+			ApogyEnvironment se = (ApogyEnvironment) session.getEnvironment();
 			if(se.getActiveWorksite() instanceof SurfaceWorksite)
 			{
 				SurfaceWorksite surfaceWorksite = (SurfaceWorksite) se.getActiveWorksite();
@@ -449,22 +449,22 @@ public class Symphony__CoreEnvironmentUIFacadeImpl extends MinimalEObjectImpl.Co
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION:
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION:
 				return getVisibleRectangularRegionProvider((MapViewConfiguration)arguments.get(0));
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT:
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT:
 				return getImageMapLayerPresentationImage((MapViewConfiguration)arguments.get(0), (RectangularRegion)arguments.get(1), (Integer)arguments.get(2));
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES:
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES:
 				return getTrajectoryLength((XYSeries)arguments.get(0));
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION:
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION:
 				return getMapViewConfigurationIdentifier((MapViewConfiguration)arguments.get(0));
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING:
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING:
 				return getActiveMapViewConfiguration((String)arguments.get(0));
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST:
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST:
 				return getActiveMapViewConfigurationList();
-			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION:
+			case ApogyCoreEnvironmentUIPackage.APOGY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION:
 				return getFeatureOfInterestLists((InvocatorSession)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CoreEnvironmentUIFacadeImpl
+} //ApogyCoreEnvironmentUIFacadeImpl

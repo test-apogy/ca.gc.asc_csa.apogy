@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,21 +32,21 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
-import org.eclipse.symphony.core.environment.ui.util.Symphony__CoreEnvironmentUISwitch;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
-import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyFactory;
-import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.util.ApogyCoreEnvironmentUISwitch;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage;
 
-import org.eclipse.symphony.examples.mobile_platform.symphony.util.Symphony__ExamplesMobilePlatformSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.util.ApogyExamplesMobilePlatformApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -57,7 +57,7 @@ import org.eclipse.symphony.examples.mobile_platform.symphony.util.Symphony__Exa
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory extends Symphony__ExamplesMobilePlatformSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory extends ApogyExamplesMobilePlatformApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesMobilePlatformSymphonyEditPlugin.INSTANCE, Symphony__ExamplesMobilePlatformSymphonyPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesMobilePlatformApogyEditPlugin.INSTANCE, ApogyExamplesMobilePlatformApogyPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -96,7 +96,7 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory() {
+	public ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -105,30 +105,30 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobilePlatformSymphonySystemApiAdapterItemProvider mobilePlatformSymphonySystemApiAdapterItemProvider;
+	protected MobilePlatformApogySystemApiAdapterItemProvider mobilePlatformApogySystemApiAdapterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobilePlatformSymphonySystemApiAdapterAdapter() {
-		if (mobilePlatformSymphonySystemApiAdapterItemProvider == null) {
-			mobilePlatformSymphonySystemApiAdapterItemProvider = new MobilePlatformSymphonySystemApiAdapterItemProvider(this);
+	public Adapter createMobilePlatformApogySystemApiAdapterAdapter() {
+		if (mobilePlatformApogySystemApiAdapterItemProvider == null) {
+			mobilePlatformApogySystemApiAdapterItemProvider = new MobilePlatformApogySystemApiAdapterItemProvider(this);
 		}
 
-		return mobilePlatformSymphonySystemApiAdapterItemProvider;
+		return mobilePlatformApogySystemApiAdapterItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,7 +136,7 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 	protected MobilePlatformDataItemProvider mobilePlatformDataItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -151,26 +151,26 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobilePlatformSymphonySystemAnnotationItemProvider mobilePlatformSymphonySystemAnnotationItemProvider;
+	protected MobilePlatformApogySystemAnnotationItemProvider mobilePlatformApogySystemAnnotationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobilePlatformSymphonySystemAnnotationAdapter() {
-		if (mobilePlatformSymphonySystemAnnotationItemProvider == null) {
-			mobilePlatformSymphonySystemAnnotationItemProvider = new MobilePlatformSymphonySystemAnnotationItemProvider(this);
+	public Adapter createMobilePlatformApogySystemAnnotationAdapter() {
+		if (mobilePlatformApogySystemAnnotationItemProvider == null) {
+			mobilePlatformApogySystemAnnotationItemProvider = new MobilePlatformApogySystemAnnotationItemProvider(this);
 		}
 
-		return mobilePlatformSymphonySystemAnnotationItemProvider;
+		return mobilePlatformApogySystemAnnotationItemProvider;
 	}
 
 	/**
@@ -299,25 +299,25 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 	 * @generated
 	 */
 	public void dispose() {
-		if (mobilePlatformSymphonySystemApiAdapterItemProvider != null) mobilePlatformSymphonySystemApiAdapterItemProvider.dispose();
+		if (mobilePlatformApogySystemApiAdapterItemProvider != null) mobilePlatformApogySystemApiAdapterItemProvider.dispose();
 		if (mobilePlatformDataItemProvider != null) mobilePlatformDataItemProvider.dispose();
-		if (mobilePlatformSymphonySystemAnnotationItemProvider != null) mobilePlatformSymphonySystemAnnotationItemProvider.dispose();
+		if (mobilePlatformApogySystemAnnotationItemProvider != null) mobilePlatformApogySystemAnnotationItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -353,8 +353,8 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 			public Object caseAbstractTypeImplementation(AbstractTypeImplementation object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformData()));
+						(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformData()));
 
 				return null;
 			}
@@ -387,24 +387,24 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesMobilePlatformSymphonyEditPlugin.INSTANCE;
+			return ApogyExamplesMobilePlatformApogyEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreEnvironmentUIPackage}.
+	 * A child creation extender for the {@link ApogyCoreEnvironmentUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreEnvironmentUIChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreEnvironmentUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreEnvironmentUISwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreEnvironmentUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -440,8 +440,8 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 			public Object caseMapViewConfiguration(MapViewConfiguration object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformSymphonySystemAnnotation()));
+						(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformApogySystemAnnotation()));
 
 				return null;
 			}
@@ -474,24 +474,24 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesMobilePlatformSymphonyEditPlugin.INSTANCE;
+			return ApogyExamplesMobilePlatformApogyEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -527,18 +527,18 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformSymphonySystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformApogySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformData()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformData()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformSymphonySystemAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformApogySystemAnnotation()));
 
 				return null;
 			}
@@ -552,18 +552,18 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformSymphonySystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformApogySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformData()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformData()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformSymphonySystemAnnotation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformApogySystemAnnotation()));
 
 				return null;
 			}
@@ -596,7 +596,7 @@ public class Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory 
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesMobilePlatformSymphonyEditPlugin.INSTANCE;
+			return ApogyExamplesMobilePlatformApogyEditPlugin.INSTANCE;
 		}
 	}
 

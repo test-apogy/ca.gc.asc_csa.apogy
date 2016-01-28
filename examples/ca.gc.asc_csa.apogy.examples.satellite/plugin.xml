@@ -8,11 +8,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_examples_satellite -->
+      <!-- @generated apogy_examples_satellite -->
       <package
-            uri="org.eclipse.symphony.examples.satellite"
-            class="org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage"
-            genModel="model/symphony_examples_satellite.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.satellite"
+            class="ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage"
+            genModel="model/apogy_examples_satellite.xcore"/>
    </extension>
 
 </plugin>

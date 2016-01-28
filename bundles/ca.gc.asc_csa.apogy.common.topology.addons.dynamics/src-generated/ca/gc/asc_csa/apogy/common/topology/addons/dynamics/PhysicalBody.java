@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,15 +20,15 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties <em>Physical Properties</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getSimulationProperties <em>Simulation Properties</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState <em>Center Of Mass Kinematic State</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPointsOfInterest <em>Points Of Interest</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry <em>Collision Geometry</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties <em>Physical Properties</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getSimulationProperties <em>Simulation Properties</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState <em>Center Of Mass Kinematic State</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getPointsOfInterest <em>Points Of Interest</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry <em>Collision Geometry</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Physical Properties</em>' containment reference.
 	 * @see #setPhysicalProperties(PhysicalProperties)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_PhysicalProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody_PhysicalProperties()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	PhysicalProperties getPhysicalProperties();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties <em>Physical Properties</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties <em>Physical Properties</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Physical Properties</em>' containment reference.
@@ -60,16 +60,16 @@ public interface PhysicalBody extends AggregateGroupNode {
 
 	/**
 	 * Returns the value of the '<em><b>Constraint Attachment Points</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of constraints associated with this body.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constraint Attachment Points</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_ConstraintAttachmentPoints()
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody_ConstraintAttachmentPoints()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody
 	 * @model opposite="physicalBody"
 	 * @generated
 	 */
@@ -77,7 +77,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 
 	/**
 	 * Returns the value of the '<em><b>Simulation Properties</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -86,7 +86,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * Note that this list can contain items for different implementation of Dynamic Engine.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Simulation Properties</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_SimulationProperties()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody_SimulationProperties()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -101,14 +101,14 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center Of Mass Kinematic State</em>' containment reference.
 	 * @see #setCenterOfMassKinematicState(KinematicState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_CenterOfMassKinematicState()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody_CenterOfMassKinematicState()
 	 * @model containment="true"
 	 * @generated
 	 */
 	KinematicState getCenterOfMassKinematicState();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState <em>Center Of Mass Kinematic State</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody#getCenterOfMassKinematicState <em>Center Of Mass Kinematic State</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Center Of Mass Kinematic State</em>' containment reference.
@@ -119,14 +119,14 @@ public interface PhysicalBody extends AggregateGroupNode {
 
 	/**
 	 * Returns the value of the '<em><b>Points Of Interest</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PointOfInterest}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of PointOfInterest currently defined for the PhysicalBody.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Points Of Interest</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_PointsOfInterest()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody_PointsOfInterest()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -134,14 +134,14 @@ public interface PhysicalBody extends AggregateGroupNode {
 
 	/**
 	 * Returns the value of the '<em><b>Collision Geometry</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of collision geometries used to defined the collision volume of the PhysicalBody.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Collision Geometry</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_CollisionGeometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getPhysicalBody_CollisionGeometry()
 	 * @model containment="true"
 	 * @generated
 	 */

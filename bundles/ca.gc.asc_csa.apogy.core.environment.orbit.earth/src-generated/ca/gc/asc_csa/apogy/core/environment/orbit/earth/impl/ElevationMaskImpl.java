@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class ElevationMaskImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.ELEVATION_MASK;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.ELEVATION_MASK;
 	}
 
 	/**
@@ -68,9 +68,9 @@ public abstract class ElevationMaskImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ELEVATION_MASK___GET_ELEVATION__DOUBLE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ELEVATION_MASK___GET_ELEVATION__DOUBLE:
 				return getElevation((Double)arguments.get(0));
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ELEVATION_MASK___GET_ORE_KIT_ELEVATION_MASK:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ELEVATION_MASK___GET_ORE_KIT_ELEVATION_MASK:
 				return getOreKitElevationMask();
 		}
 		return super.eInvoke(operationID, arguments);

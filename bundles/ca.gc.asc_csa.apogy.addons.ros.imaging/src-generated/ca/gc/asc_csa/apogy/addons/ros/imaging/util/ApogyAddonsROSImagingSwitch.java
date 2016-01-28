@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging.util;
+package ca.gc.asc_csa.apogy.addons.ros.imaging.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.ros.imaging.*;
+import ca.gc.asc_csa.apogy.addons.ros.imaging.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.addons.ros.imaging.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingPackage
+ * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingPackage
  * @generated
  */
-public class Symphony__AddonsROSImagingSwitch<T> extends Switch<T> {
+public class ApogyAddonsROSImagingSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsROSImagingPackage modelPackage;
+	protected static ApogyAddonsROSImagingPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__AddonsROSImagingSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSImagingSwitch() {
+	public ApogyAddonsROSImagingSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsROSImagingPackage.eINSTANCE;
+			modelPackage = ApogyAddonsROSImagingPackage.eINSTANCE;
 		}
 	}
 
@@ -67,9 +67,9 @@ public class Symphony__AddonsROSImagingSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsROSImagingPackage.SYMPHONY_ADDONS_ROS_IMAGING_FACADE: {
-				Symphony__AddonsROSImagingFacade symphony__AddonsROSImagingFacade = (Symphony__AddonsROSImagingFacade)theEObject;
-				T result = caseSymphony__AddonsROSImagingFacade(symphony__AddonsROSImagingFacade);
+			case ApogyAddonsROSImagingPackage.APOGY_ADDONS_ROS_IMAGING_FACADE: {
+				ApogyAddonsROSImagingFacade apogy__AddonsROSImagingFacade = (ApogyAddonsROSImagingFacade)theEObject;
+				T result = caseApogyAddonsROSImagingFacade(apogy__AddonsROSImagingFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,7 +88,7 @@ public class Symphony__AddonsROSImagingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__AddonsROSImagingFacade(Symphony__AddonsROSImagingFacade object) {
+	public T caseApogyAddonsROSImagingFacade(ApogyAddonsROSImagingFacade object) {
 		return null;
 	}
 
@@ -108,4 +108,4 @@ public class Symphony__AddonsROSImagingSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsROSImagingSwitch
+} //ApogyAddonsROSImagingSwitch

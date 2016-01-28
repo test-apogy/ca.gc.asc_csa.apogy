@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.util.ArrayList;
@@ -24,19 +24,19 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.Argument;
-import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.provider.OperationCallItemProvider;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.provider.OperationCallItemProvider;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class OperationCallControllerBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallControllerBinding_createResult_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallControllerBinding_createResult_feature", "_UI_OperationCallControllerBinding_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT,
+				 ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class OperationCallControllerBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallControllerBinding_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallControllerBinding_active_feature", "_UI_OperationCallControllerBinding_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE,
+				 ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE,
 				 false,
 				 false,
 				 false,
@@ -131,7 +131,7 @@ public class OperationCallControllerBindingItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
+			childrenFeatures.add(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
 		}
 		return childrenFeatures;
 	}
@@ -175,12 +175,12 @@ public class OperationCallControllerBindingItemProvider
 		String name_str = operationCall.getName() == null ? "unamed" : operationCall.getName();
 
 		String variable_str = operationCall.getVariable() == null ? "Not Defined"
-				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
+				: ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getVariable());
 
 		String operation_str = operationCall.getEOperation() == null ? "Not Defined"
 				+ "()"
-				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
+				: ApogyCommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getEOperation());
 
 		return name_str + " - [" + variable_str + "." + operation_str + "]";	    
@@ -199,11 +199,11 @@ public class OperationCallControllerBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallControllerBinding.class)) {
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case ApogyCoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -224,18 +224,18 @@ public class OperationCallControllerBindingItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createTimeTrigger()));
+				(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createTimeTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllerEdgeTrigger()));
+				(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerEdgeTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
-				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllerStateTrigger()));
+				(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+				 ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerStateTrigger()));
 	}
 
   @Override
@@ -245,7 +245,7 @@ public class OperationCallControllerBindingItemProvider
   protected Command createSetCommand(EditingDomain domain, EObject owner,
 			EStructuralFeature feature, Object value, int index) 
   {
-		if (feature == Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) 
+		if (feature == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) 
 		{
 			EOperation eOperation = (EOperation) value;
 			CompoundCommand compoundCommand = new CompoundCommand();
@@ -261,7 +261,7 @@ public class OperationCallControllerBindingItemProvider
 				
 				if (parameter.getEType() instanceof EEnum)
 				{
-					argument = Symphony__CoreInvocatorFactory.eINSTANCE.createEEnumArgument();
+					argument = ApogyCoreInvocatorFactory.eINSTANCE.createEEnumArgument();
 					EEnum eEnum = (EEnum) parameter.getEType();			
 					((EEnumArgument)argument).setEEnum(eEnum);
 					
@@ -271,7 +271,7 @@ public class OperationCallControllerBindingItemProvider
 				else if (parameter.getEType() instanceof EDataType)
 				{							
 					// Create the Controller Binding specific Argument.
-					argument = Symphony__CoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();					
+					argument = ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();					
 					
 //					Object defaultValue = parameter.getEType().getDefaultValue();	
 					
@@ -283,7 +283,7 @@ public class OperationCallControllerBindingItemProvider
 				}
 				else
 				{
-					argument = Symphony__CoreInvocatorFactory.eINSTANCE.createEClassArgument();
+					argument = ApogyCoreInvocatorFactory.eINSTANCE.createEClassArgument();
 				}
 				arguments.add(argument);
 			}
@@ -291,13 +291,13 @@ public class OperationCallControllerBindingItemProvider
 			/** Add arguments if there are parameters only. */
 			if (!arguments.isEmpty())
 			{
-				ArgumentsList argumentsList = Symphony__CoreInvocatorFactory.eINSTANCE.createArgumentsList();
+				ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE.createArgumentsList();
 				argumentsList.getArguments().addAll(arguments);
 	
 				compoundCommand.append(new SetCommand(
 											domain, 
 											owner, 
-											Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
+											ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
 											argumentsList));
 			}
 			else
@@ -306,7 +306,7 @@ public class OperationCallControllerBindingItemProvider
 				compoundCommand.append(new SetCommand(
 							domain, 
 							owner, 
-							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
 							null));
 			}
 			

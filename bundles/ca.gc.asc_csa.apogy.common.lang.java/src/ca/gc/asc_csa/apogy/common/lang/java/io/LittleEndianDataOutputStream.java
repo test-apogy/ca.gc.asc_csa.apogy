@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.eclipse.symphony.common.lang.java.io;
+package ca.gc.asc_csa.apogy.common.lang.java.io;
 
 import java.io.DataOutput;
 import java.io.DataOutputStream;

@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.symphony.core.AbstractOrbitModel;
-import org.eclipse.symphony.core.environment.impl.WorksiteImpl;
-import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbi
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitWorksiteImpl#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,7 +52,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE;
+		return ApogyCoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 			activeOrbitModel = (AbstractOrbitModel)eResolveProxy(oldActiveOrbitModel);
 			if (activeOrbitModel != oldActiveOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
 			}
 		}
 		return activeOrbitModel;
@@ -90,7 +90,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 		AbstractOrbitModel oldActiveOrbitModel = activeOrbitModel;
 		activeOrbitModel = newActiveOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
 	}
 
 	/**
@@ -101,7 +101,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				if (resolve) return getActiveOrbitModel();
 				return basicGetActiveOrbitModel();
 		}
@@ -116,7 +116,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				setActiveOrbitModel((AbstractOrbitModel)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				setActiveOrbitModel((AbstractOrbitModel)null);
 				return;
 		}
@@ -146,7 +146,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case ApogyCoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				return activeOrbitModel != null;
 		}
 		return super.eIsSet(featureID);

@@ -3,7 +3,7 @@
  *
  * $Id: SegmentWayPointPathInterpolatorImpl.java,v 1.2.4.2 2015/05/21 15:50:36 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import javax.vecmath.Point3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.SegmentWayPointPathInterpolatorImpl#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.impl.SegmentWayPointPathInterpolatorImpl#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,7 +73,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsGeometryPathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR;
+		return ApogyAddonsGeometryPathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 		double oldMaximumDistanceInterval = maximumDistanceInterval;
 		maximumDistanceInterval = newMaximumDistanceInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL, oldMaximumDistanceInterval, maximumDistanceInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL, oldMaximumDistanceInterval, maximumDistanceInterval));
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				return getMaximumDistanceInterval();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,7 +123,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				setMaximumDistanceInterval((Double)newValue);
 				return;
 		}
@@ -139,7 +139,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				setMaximumDistanceInterval(MAXIMUM_DISTANCE_INTERVAL_EDEFAULT);
 				return;
 		}
@@ -155,7 +155,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				return maximumDistanceInterval != MAXIMUM_DISTANCE_INTERVAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -207,7 +207,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 				double y = point0.y + (t * deltaY);
 				double z = point0.z + (t * deltaZ);
 				
-				CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+				CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
 				points.add(point);
 				
 				t += deltaT;
@@ -229,7 +229,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 		
 		if(getProgressMonitor() != null) getProgressMonitor().beginTask("Interpolating WayPointPath.", input.getPoints().size());
 		
-		WayPointPath result = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath result = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		setOutput(result);		
 		
 		if(input.getPoints().size() > 1)
@@ -245,13 +245,13 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 				if(getProgressMonitor() != null) getProgressMonitor().worked(1);
 			}
 			// Adds the last point.
-			CartesianPositionCoordinates lastPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getEndPoint());			
+			CartesianPositionCoordinates lastPoint = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getEndPoint());			
 			
 			result.getPoints().add(lastPoint);
 		}		
 		else if(input.getPoints().size() == 1)
 		{
-			CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getStartPoint());
+			CartesianPositionCoordinates point = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getStartPoint());
 			result.getPoints().add(point);
 		}
 		if(getProgressMonitor() != null) getProgressMonitor().done();

@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.file.csv;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.file.csv;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.common.file.csv,
- org.eclipse.symphony.common.file.csv.impl,
- org.eclipse.symphony.common.file.csv.util
+Export-Package: ca.gc.asc_csa.apogy.common.file.csv,
+ ca.gc.asc_csa.apogy.common.file.csv.impl,
+ ca.gc.asc_csa.apogy.common.file.csv.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,

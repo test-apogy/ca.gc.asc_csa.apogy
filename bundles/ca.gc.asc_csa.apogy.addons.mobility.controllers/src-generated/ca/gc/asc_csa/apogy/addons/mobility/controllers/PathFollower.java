@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.controllers;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
 
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
 
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,14 +28,14 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPath <em>Path</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPlatform <em>Platform</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPoseSensor <em>Pose Sensor</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#isDestinationReached <em>Destination Reached</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPath <em>Path</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPlatform <em>Platform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPoseSensor <em>Pose Sensor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#isDestinationReached <em>Destination Reached</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#getPathFollower()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path</em>' reference.
 	 * @see #setPath(Path)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_Path()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#getPathFollower_Path()
 	 * @model
 	 * @generated
 	 */
 	PathType getPath();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPath <em>Path</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPath <em>Path</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Path</em>' reference.
@@ -76,14 +76,14 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Platform</em>' reference.
 	 * @see #setPlatform(MobilePlatform)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_Platform()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#getPathFollower_Platform()
 	 * @model
 	 * @generated
 	 */
 	PlatformType getPlatform();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPlatform <em>Platform</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPlatform <em>Platform</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Platform</em>' reference.
@@ -102,14 +102,14 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose Sensor</em>' reference.
 	 * @see #setPoseSensor(PoseSensor)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_PoseSensor()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#getPathFollower_PoseSensor()
 	 * @model
 	 * @generated
 	 */
 	PoseSensor getPoseSensor();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPoseSensor <em>Pose Sensor</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPoseSensor <em>Pose Sensor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pose Sensor</em>' reference.
@@ -128,14 +128,14 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Destination Reached</em>' attribute.
 	 * @see #setDestinationReached(boolean)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_DestinationReached()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#getPathFollower_DestinationReached()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isDestinationReached();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#isDestinationReached <em>Destination Reached</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#isDestinationReached <em>Destination Reached</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Destination Reached</em>' attribute.
@@ -147,7 +147,7 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	/**
 	 * Returns the value of the '<em><b>Path Follower State</b></em>' attribute.
 	 * The default value is <code>"IDLE"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.mobility.controllers.PathFollowerState}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Path Follower State</em>' attribute isn't clear,
@@ -155,20 +155,20 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path Follower State</em>' attribute.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollowerState
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState
 	 * @see #setPathFollowerState(PathFollowerState)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_PathFollowerState()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage#getPathFollower_PathFollowerState()
 	 * @model default="IDLE" unique="false"
 	 * @generated
 	 */
 	PathFollowerState getPathFollowerState();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Path Follower State</em>' attribute.
-	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollowerState
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState
 	 * @see #getPathFollowerState()
 	 * @generated
 	 */

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.CenteredParabolicInputConditioning} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class CenteredParabolicInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CenteredParabolicInputConditioning_deadBand_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CenteredParabolicInputConditioning_deadBand_feature", "_UI_CenteredParabolicInputConditioning_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND,
+				 ApogyCoreProgramsControllersPackage.Literals.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class CenteredParabolicInputConditioningItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CenteredParabolicInputConditioning.class)) {
-			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
+			case ApogyCoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

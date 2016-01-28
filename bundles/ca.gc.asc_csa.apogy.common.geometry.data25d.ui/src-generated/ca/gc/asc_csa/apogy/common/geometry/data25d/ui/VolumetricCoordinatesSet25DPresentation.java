@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.ui;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.ui;
 
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,10 +15,10 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud <em>Points Cloud</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud <em>Points Cloud</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage#getVolumetricCoordinatesSet25DPresentation()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage#getVolumetricCoordinatesSet25DPresentation()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface VolumetricCoordinatesSet25DPresentation extends NodePresentatio
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points Cloud</em>' reference.
 	 * @see #setPointsCloud(VolumetricCoordinatesSet25D)
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage#getVolumetricCoordinatesSet25DPresentation_PointsCloud()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ui.ApogyCommonGeometryData25DUIPackage#getVolumetricCoordinatesSet25DPresentation_PointsCloud()
 	 * @model
 	 * @generated
 	 */
 	VolumetricCoordinatesSet25D getPointsCloud();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud <em>Points Cloud</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud <em>Points Cloud</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Points Cloud</em>' reference.

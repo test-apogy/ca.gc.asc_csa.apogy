@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.provider.SkyItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.provider.SkyItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class EarthOrbitSkyItemProvider extends SkyItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_EarthOrbitSky_earthOrbitWorksite_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthOrbitSky_earthOrbitWorksite_feature", "_UI_EarthOrbitSky_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE,
 				 true,
 				 false,
 				 true,
@@ -86,7 +86,7 @@ public class EarthOrbitSkyItemProvider extends SkyItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_EarthOrbitSky_moon_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthOrbitSky_moon_feature", "_UI_EarthOrbitSky_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__MOON,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__MOON,
 				 false,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class EarthOrbitSkyItemProvider extends SkyItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_EarthOrbitSky_earth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthOrbitSky_earth_feature", "_UI_EarthOrbitSky_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__EARTH,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__EARTH,
 				 false,
 				 false,
 				 false,

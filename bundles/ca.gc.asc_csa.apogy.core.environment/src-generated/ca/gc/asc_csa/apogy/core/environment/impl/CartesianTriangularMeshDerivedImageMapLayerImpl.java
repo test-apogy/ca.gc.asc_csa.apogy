@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
@@ -24,24 +24,24 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
@@ -58,8 +58,8 @@ import edu.wlu.cs.levy.CG.KeySizeException;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshDerivedImageMapLayerImpl#getRequiredResolution <em>Required Resolution</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshDerivedImageMapLayerImpl#getCartesianTriangularMeshMapLayer <em>Cartesian Triangular Mesh Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshDerivedImageMapLayerImpl#getRequiredResolution <em>Required Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.CartesianTriangularMeshDerivedImageMapLayerImpl#getCartesianTriangularMeshMapLayer <em>Cartesian Triangular Mesh Map Layer</em>}</li>
  * </ul>
  *
  * @generated
@@ -116,7 +116,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER;
 	}
 
 	/**
@@ -137,7 +137,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 		double oldRequiredResolution = requiredResolution;
 		requiredResolution = newRequiredResolution;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION, oldRequiredResolution, requiredResolution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION, oldRequiredResolution, requiredResolution));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 			cartesianTriangularMeshMapLayer = (CartesianTriangularMeshMapLayer)eResolveProxy(oldCartesianTriangularMeshMapLayer);
 			if (cartesianTriangularMeshMapLayer != oldCartesianTriangularMeshMapLayer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER, oldCartesianTriangularMeshMapLayer, cartesianTriangularMeshMapLayer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER, oldCartesianTriangularMeshMapLayer, cartesianTriangularMeshMapLayer));
 			}
 		}
 		return cartesianTriangularMeshMapLayer;
@@ -175,7 +175,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 		CartesianTriangularMeshMapLayer oldCartesianTriangularMeshMapLayer = cartesianTriangularMeshMapLayer;
 		cartesianTriangularMeshMapLayer = newCartesianTriangularMeshMapLayer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER, oldCartesianTriangularMeshMapLayer, cartesianTriangularMeshMapLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER, oldCartesianTriangularMeshMapLayer, cartesianTriangularMeshMapLayer));
 	}
 
 	/**
@@ -186,9 +186,9 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
 				return getRequiredResolution();
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
 				if (resolve) return getCartesianTriangularMeshMapLayer();
 				return basicGetCartesianTriangularMeshMapLayer();
 		}
@@ -203,10 +203,10 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
 				setRequiredResolution((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
 				setCartesianTriangularMeshMapLayer((CartesianTriangularMeshMapLayer)newValue);
 				return;
 		}
@@ -221,10 +221,10 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
 				setRequiredResolution(REQUIRED_RESOLUTION_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
 				setCartesianTriangularMeshMapLayer((CartesianTriangularMeshMapLayer)null);
 				return;
 		}
@@ -239,9 +239,9 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
 				return requiredResolution != REQUIRED_RESOLUTION_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
 				return cartesianTriangularMeshMapLayer != null;
 		}
 		return super.eIsSet(featureID);
@@ -285,7 +285,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 	{		
 		if(getCartesianTriangularMeshMapLayer() != null && getCartesianTriangularMeshMapLayer().getCurrentMesh() != null)
 		{
-			return Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCartesianTriangularMeshMapLayer().getCurrentMesh());
+			return ApogyCoreEnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCartesianTriangularMeshMapLayer().getCurrentMesh());
 		}
 		else
 		{
@@ -677,7 +677,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 			progressMonitor.worked(height);
 		}
 		
-		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+		EImage eImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 		eImage.setImageContent(bufferedImage);
 		
 		return eImage;

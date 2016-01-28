@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_lander -->
+      <!-- @generated apogy_examples_lander -->
       <factory
-            uri="org.eclipse.symphony.examples.lander.symphony"
-            class="org.eclipse.symphony.examples.lander.symphony.provider.Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.lander.apogy"
+            class="ca.gc.asc_csa.apogy.examples.lander.apogy.provider.ApogyExamplesLanderApogyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

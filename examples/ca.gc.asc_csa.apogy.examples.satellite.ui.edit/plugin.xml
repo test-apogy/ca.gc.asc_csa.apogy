@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_satellite_ui -->
+      <!-- @generated apogy_examples_satellite_ui -->
       <factory
-            uri="org.eclipse.symphony.examples.satellite.ui"
-            class="org.eclipse.symphony.examples.satellite.ui.provider.Symphony__ExamplesSatelliteUiItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.satellite.ui"
+            class="ca.gc.asc_csa.apogy.examples.satellite.ui.provider.ApogyExamplesSatelliteUiItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

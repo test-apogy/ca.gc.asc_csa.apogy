@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.viewer.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class TopologyViewerRegistryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyViewerRegistry_verbose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyViewerRegistry_verbose_feature", "_UI_TopologyViewerRegistry_type"),
-				 Symphony__CommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__VERBOSE,
+				 ApogyCommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__VERBOSE,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class TopologyViewerRegistryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyViewerRegistry_iTopologyViewers_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyViewerRegistry_iTopologyViewers_feature", "_UI_TopologyViewerRegistry_type"),
-				 Symphony__CommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS,
+				 ApogyCommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class TopologyViewerRegistryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyViewerRegistry_latestNodeSelection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyViewerRegistry_latestNodeSelection_feature", "_UI_TopologyViewerRegistry_type"),
-				 Symphony__CommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION,
+				 ApogyCommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION,
 				 true,
 				 false,
 				 true,
@@ -168,8 +168,8 @@ public class TopologyViewerRegistryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyViewerRegistry.class)) {
-			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
-			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
+			case ApogyCommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
+			case ApogyCommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

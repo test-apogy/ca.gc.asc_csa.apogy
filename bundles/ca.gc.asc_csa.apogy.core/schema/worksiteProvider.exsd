@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.symphony.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="ca.gc.asc_csa.apogy.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.eclipse.symphony.core" id="worksiteProvider" name="WorksiteProvider"/>
+         <meta.schema plugin="ca.gc.asc_csa.apogy.core" id="worksiteProvider" name="WorksiteProvider"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]

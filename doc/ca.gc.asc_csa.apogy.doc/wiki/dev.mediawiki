@@ -1,19 +1,19 @@
-= Developing for Symphony =
+= Developing for Apogy =
 
 == Table Of Contents ==
 __TOC__
 
-== Symphony Architecture ==
+== Apogy Architecture ==
 
 * Based on the Eclipse Modeling Framework (EMF);
 * A basic custom framework (''EMFInvocator'') defines the ''Type'', ''Variable'', ''Context'', ''Operation Call'', and ''Operation Call Result'' concepts;
-* Symphony specializes a few concepts defined in ''EMFInvocator'' and adds new ones: 3D representation, ''Assembly Links'', ''Connection Points'' and ''Data Product'' geo-referencing; 
+* Apogy specializes a few concepts defined in ''EMFInvocator'' and adds new ones: 3D representation, ''Assembly Links'', ''Connection Points'' and ''Data Product'' geo-referencing; 
 
-[[File:../resources/dev/symphony_arch.svg|frame]]
+[[File:../resources/dev/apogy_arch.svg|frame]]
 
 === Type Interface Modeling ===
 
-* Recall, that a ''System'' is a specialized ''Type'', which's use forms much of the backbone of Symphony.
+* Recall, that a ''System'' is a specialized ''Type'', which's use forms much of the backbone of Apogy.
 * The interface of the ''System'' is modeled in EMF (e.g. via Xcore) and ends up being transformed into an EClass
 * The commands of the ''System'' directly correspond the modeled system's operations.
 * The command's parameters and return value types correspond to ''EClasses'', ''EEnumerations'', and other built-in types (e.g. ''boolean'', ''float'', ''int'', etc.)
@@ -24,16 +24,16 @@ __TOC__
 === Variable Initialization ===
 
 <ul>
-	<li> ''Variable'' initialization is done through the ''InvocatorDelegate'' (which is specialized in Symphony):</li>
+	<li> ''Variable'' initialization is done through the ''InvocatorDelegate'' (which is specialized in Apogy):</li>
 	<ol>
-		<li> Gets the ''SymphonySystemApiAdapter'' associated with the ''Variable'';</li>
+		<li> Gets the ''ApogySystemApiAdapter'' associated with the ''Variable'';</li>
 		<li> Instantiate the ''System'';</li>
-		<li> Copies its associated topology and sets it in the ''SymphonySystemApiAdapter'';</li>
+		<li> Copies its associated topology and sets it in the ''ApogySystemApiAdapter'';</li>
 		<li> For each ''TypeMember'':</li>
 		<ol type="i">
-			<li> Gets the ''SymphonySystemApiAdapter'' associated with the ''Variable'';</li>
+			<li> Gets the ''ApogySystemApiAdapter'' associated with the ''Variable'';</li>
 			<li> Instantiate the ''System'';</li>
-			<li> Copies its associated topology and sets in the appropriate ''SymphonySystemApiAdapter'';</li>
+			<li> Copies its associated topology and sets in the appropriate ''ApogySystemApiAdapter'';</li>
 			<li> Attaches the topology to the parent's ''Connection Point'';</li>
 			<li> Recurse for each ''TypeMember'' of the current ''TypeMember''.</li>
 		</ol>
@@ -43,15 +43,15 @@ __TOC__
 === Operation Call Invocation ===
 
 * Method invocation is done through EMF reflection;
-* Actual invocation done through the invocator delegate, which in turn, delegates part of it to the ''SymphonySystemApiAdapter''.
+* Actual invocation done through the invocator delegate, which in turn, delegates part of it to the ''ApogySystemApiAdapter''.
 
 [[File:../resources/dev/operation_call_invocation.svg]]
 
-== Symphonyzing ==
+== Apogyzing ==
 
 === Definition ===
 
-'''''Symphonyzing''''': ''The process of creating EMF models of a System to expose its interface to Symphony.''
+'''''Apogyzing''''': ''The process of creating EMF models of a System to expose its interface to Apogy.''
 
 Some of what you get in return:
 * Generic support for command call invocation and documentation;
@@ -61,17 +61,17 @@ Some of what you get in return:
 
 === High-Level Steps ===
 
-Defining a Symphony ''System'' involves 3 steps:
+Defining a Apogy ''System'' involves 3 steps:
 # Defining the ''System'' in EMF;
-# Creating the Symphony plugin;
-# Creating the Symphony System Model (*.ss).
+# Creating the Apogy plugin;
+# Creating the Apogy System Model (*.ss).
 
-[[File:../resources/dev/symphonyzing.svg]]
+[[File:../resources/dev/apogyzing.svg]]
 
 === Guidelines ===
 
 Symphonizing Guidelines:
-# Keep the ''System'' EMF model seperate from Symphony; this provides modularity and your system can be used before your Symphony plugin is done!
+# Keep the ''System'' EMF model seperate from Apogy; this provides modularity and your system can be used before your Apogy plugin is done!
 # Attributes are '''NEVER''' changed directly by an operator; they are considered states that are changed in response to command calls and interaction with the environment.
 # Commands are used to change the settings of a ''System'' (e.g. operating mode, limits, etc.) as well as to to command actions. However, commands are '''NOT''' used to get the current status of the System; attributes are used instead to accomplish this. 
 
@@ -82,7 +82,7 @@ Symphonizing Guidelines:
 ! Description
 |-
 | ''<org_prefix>.<system_name>''
-| Core plugin that defines the ''System'' and its associated types.  This should be kept independently of Symphony.
+| Core plugin that defines the ''System'' and its associated types.  This should be kept independently of Apogy.
 |-
 | ''<org_prefix>.<system_name>.edit''
 | Edit plugin providing basic GUI support for the ''System''.  Generated automatically by EMF.
@@ -90,11 +90,11 @@ Symphonizing Guidelines:
 | ''<org_prefix>.<system_name>.ui''
 | Plugin providing ''System''-specific contributions to the Eclipse Workbench (e.g. Views, Commands, Menu Contributions, etc.).  This plugin may or may not be present.
 |-
-| ''<org_prefix>.<system_name>.symphony''
-| Plugin defining the Symphony System (*.ss), specialized ''SymphonyInitializationData'' and ''SymphonySystemApiAdapter''.
+| ''<org_prefix>.<system_name>.apogy''
+| Plugin defining the Apogy System (*.ss), specialized ''ApogyInitializationData'' and ''ApogySystemApiAdapter''.
 |-
-| ''<org_prefix>.<system_name>.symphony.edit''
-| Edit plugin providing basic GUI support for the Symphony System.  Generated automatically by EMF.
+| ''<org_prefix>.<system_name>.apogy.edit''
+| Edit plugin providing basic GUI support for the Apogy System.  Generated automatically by EMF.
 |}
    
 === Step 1. Defining The System In EMF ===
@@ -129,76 +129,76 @@ Symphonizing Guidelines:
 		<li> Defining all the class attributes and their classes;</li>
 		<li> Defining all methods as well as their parameters and return values; this may involve specifying additional classes.</li>
 	</ol> 
-	<li> Define a concrete ''AStub'' class that extends ''A''.  The methods for this implementation do nothing.  This class can be used in Symphony when playing data back.</li>
-	<li> Define a concrete ''ASimulated'' class that extends ''A''. This implementation provides a simulated ''A'' for Symphony.</li>
+	<li> Define a concrete ''AStub'' class that extends ''A''.  The methods for this implementation do nothing.  This class can be used in Apogy when playing data back.</li>
+	<li> Define a concrete ''ASimulated'' class that extends ''A''. This implementation provides a simulated ''A'' for Apogy.</li>
 	<li> Define a concrete ''AReal'' class that extends ''A''.  This implementation provides an interface to the real (physical) system.</li>
 </ol>
 
-=== Step 2. Creating the Symphony plugin ===
+=== Step 2. Creating the Apogy plugin ===
 
 ==== Definition ====
 
-The '''Symphony plugin''' is an EMF (typically Xcore) plugin, which contains the required meta-model to specify the ''System'''s interface with Symphony.
+The '''Apogy plugin''' is an EMF (typically Xcore) plugin, which contains the required meta-model to specify the ''System'''s interface with Apogy.
 
-It typically defines a specialization of ''SymphonyInitializationData''; this allows Symphony to be able to both capture as well as restore the specific state of the ''System'', which is useful in a variety of circumstances.  The ''SymphonySystemApiAdapter'' is also typically subclassed, allowing one to customize the invocation of the ''System'''s operations.     
+It typically defines a specialization of ''ApogyInitializationData''; this allows Apogy to be able to both capture as well as restore the specific state of the ''System'', which is useful in a variety of circumstances.  The ''ApogySystemApiAdapter'' is also typically subclassed, allowing one to customize the invocation of the ''System'''s operations.     
 
-==== The Four Steps to making a Symphony Plugin ====
+==== The Four Steps to making a Apogy Plugin ====
 
-Creating the Symphony plugin involves four (4) steps:
+Creating the Apogy plugin involves four (4) steps:
 # Creating the plugin;
 # Creating an Xcore model;
-# Defining a sub-class of ''SymphonyInitializationData'';
-# Defining a sub-class of ''SymphonySystemApiAdapter''.
+# Defining a sub-class of ''ApogyInitializationData'';
+# Defining a sub-class of ''ApogySystemApiAdapter''.
 
-===== i. Creating the Symphony Plugin Itself =====
+===== i. Creating the Apogy Plugin Itself =====
 TODO!
 
 ===== ii. Creating a Xcore (.xcore) Model =====
 TODO!
 
-===== iii. Defining a Subclass of <i>SymphonyInitializationData</i> =====
+===== iii. Defining a Subclass of <i>ApogyInitializationData</i> =====
 
-The ''SymphonyInitializationData'' class only includes the pose of your ''System'' in the ''Worksite'' frame.
+The ''ApogyInitializationData'' class only includes the pose of your ''System'' in the ''Worksite'' frame.
 
-Your specialized ''SymphonyInitializationData'':
+Your specialized ''ApogyInitializationData'':
 * Defines the required initialization data for your ''System''.
-* Symphony persists the data for you.
-* Symphony delegates to your custom ''SymphonySystemApiAdapter'' sub-class, the responsibility to create, populate and apply the data; 
+* Apogy persists the data for you.
+* Apogy delegates to your custom ''ApogySystemApiAdapter'' sub-class, the responsibility to create, populate and apply the data; 
 
 ====== Rules & Guidelines ======
 
-* All attributes in your specialized SymphonyInitializationData must be:
-** Contained in the ''SymphonyInitializationData'' (or marked as '''transient''');
-** Serializable (or have the necessary methods implemented correctly in your Symphony plugin Factory implementation class);
+* All attributes in your specialized ApogyInitializationData must be:
+** Contained in the ''ApogyInitializationData'' (or marked as '''transient''');
+** Serializable (or have the necessary methods implemented correctly in your Apogy plugin Factory implementation class);
 * Should contain all of the data required to bring your ''System'' back to a given state (e.g. modes, actuators, position, etc.)
 
-===== iv. Defining a Subclass of <i>SymphonySystemApiAdapter</i> =====
+===== iv. Defining a Subclass of <i>ApogySystemApiAdapter</i> =====
 
-Providing a specialized ''SymphonySystemApiAdapter'':
+Providing a specialized ''ApogySystemApiAdapter'':
 * Allows for the specialization of ''OperationCallPositionResult''';
 * Enables the customized calculation of the result position matrix for each specific ''Operation Call'';
 * Provides support for custom ''InitializationData'' creation, collection and application;
-* Grants access to the ''Symphony Environment'' (which includes the worksite, sky, etc.) 
+* Grants access to the ''Apogy Environment'' (which includes the worksite, sky, etc.) 
 
 ====== Localization ======
 
-* Symphony does '''NOT''' assume anything about the ''System'''s ''Interface Class'' (apart from it being an EClass), so there is no way for Symphony to know where to get the pose information about your ''System''.
+* Apogy does '''NOT''' assume anything about the ''System'''s ''Interface Class'' (apart from it being an EClass), so there is no way for Apogy to know where to get the pose information about your ''System''.
 
 * There are two ways to implement this:
-*# Through the ''SymphonySystemApiAdapter'':
-*#* Typically done by using an adapter on the system to figure out when the pose changes and call the '''setPoseTransform(Matrix4x4)''' method of the ''SymphonySystemApiAdapter;
+*# Through the ''ApogySystemApiAdapter'':
+*#* Typically done by using an adapter on the system to figure out when the pose changes and call the '''setPoseTransform(Matrix4x4)''' method of the ''ApogySystemApiAdapter;
 *#** The ''MobilePlatform'' and ''Lander'' examples use this method;
-*# Have your System implement ''PoseProvider'' (''org.eclipse.symphony.core.PoseProvider''): The ''SymphonySystemApiAdapter'' will handle it for you. 
+*# Have your System implement ''PoseProvider'' (''ca.gc.asc_csa.apogy.core.PoseProvider''): The ''ApogySystemApiAdapter'' will handle it for you. 
 
 ====== Rules & Guidelines ======
 
-* Your specialized ''SymphonySystemApiAdapter'' is:
+* Your specialized ''ApogySystemApiAdapter'' is:
 ** '''NOT PERSISTED''': it is instantiated every time you call ''Reset Instances'';
 ** Not shared between instances of your System;
-* While your specialized ''SymphonySystemApiAdapter'' can depend on your ''System'''s EMF model, the opposite is not true (would lead to a dependency cycle);
-* Just override the methods you need: the ''SymphonySystemApiAdapter'' provides adequate default implementation for all methods
+* While your specialized ''ApogySystemApiAdapter'' can depend on your ''System'''s EMF model, the opposite is not true (would lead to a dependency cycle);
+* Just override the methods you need: the ''ApogySystemApiAdapter'' provides adequate default implementation for all methods
 
-====== <i>SymphonySystemApiAdapter</i> Methods ======
+====== <i>ApogySystemApiAdapter</i> Methods ======
 
 {| border="1" cellpadding="2"
 ! Method
@@ -218,7 +218,7 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 |-
 | ''AbstractInitializationData'' '''createInitializationData'''()
 | Creates an instance of initialization data.
-| Creates an instance of ''SymphonyInitializationData''
+| Creates an instance of ''ApogyInitializationData''
 | style="text-align:center;" | No
 |-
 | void '''collect'''(''AbstractInitializationData'')
@@ -237,20 +237,20 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 | style="text-align:center;" | No
 |}
 
-=== Step 3. Creating the <i>Symphony System Model</i> (*.ss) file ===
+=== Step 3. Creating the <i>Apogy System Model</i> (*.ss) file ===
 
 ==== Definition ====
 
-Recall that the ''Symphony System'':
+Recall that the ''Apogy System'':
 
-* Is the "LEGO block" of Symphony;
+* Is the "LEGO block" of Apogy;
 * A '''''System''''' is a specialization of ''Type'';
 * Adds functions to assemble systems together through ''Connection Points'' and ''Assembly Links'';
 * Provdes a 3D representation of the System.
 
-==== The Six Steps to make a <i>Symphony System Model</i> ====
+==== The Six Steps to make a <i>Apogy System Model</i> ====
 
-Creating a ''Symphony System Model'' (*.ss file) involves:
+Creating a ''Apogy System Model'' (*.ss file) involves:
 <ol>
 	<li> Defining the ''Topology Root'';</li>
 	<li> Defining the ''Bindings'';</li>
@@ -267,12 +267,12 @@ Additionally, for Composite ''Systems'':
 Finally:
 
 <ol start="6">
-	<li> Registering your ''Symphony System'';</li>
+	<li> Registering your ''Apogy System'';</li>
 </ol>
 
 ===== i. Defining the <i>Topology Root</i> =====
 
-The steps to fully defining the ''Symphony System'''s topology are:
+The steps to fully defining the ''Apogy System'''s topology are:
 # Creating a root node (e.g ''AggregateGroupNode'')
 # Assembly a hierarchy of transforms (e.g ''TransformNode'', ''RotationNode'', ''PositionNode'') to defined how parts are relative in position to each other and allow support for animation;
 # Add nodes representing geometries (e.g ''URLNode'');
@@ -296,7 +296,7 @@ An example of the general structure given by these guidelines is:
 
 ===== ii. Defining the Bindings =====
 
-Topology bindings are what Symphony uses to relate selected attributes in the ''System'''s ''Interface Class'' to behaviours of the topology.  This allows, for example:
+Topology bindings are what Apogy uses to relate selected attributes in the ''System'''s ''Interface Class'' to behaviours of the topology.  This allows, for example:
 * Binding the position of a certain ''TransformNode'' to a linear position atribute in the System's ''Interface Class'';
 * Binding the vertical and horizontal angles of a FOV in the topology to the FOV of a camera attribute in the System's ''Interface Class''  
 
@@ -310,7 +310,7 @@ Defining the bindings required the following steps:
 * The list of available attributes is automatically populated, based on the ''System'''s specified ''Interface Class''.
 * Populating the ''Feature Roots List'' involves the following:
 *# Under ''Feature Roots List'', create a new ''Tree Root Node'';
-*# Set the ''Source Class'' of the ''Tree Root Node'' to the same class as the ''Interface Class'' of the ''Symphony System'';
+*# Set the ''Source Class'' of the ''Tree Root Node'' to the same class as the ''Interface Class'' of the ''Apogy System'';
 *# Add the required child child under the ''Tree Root Node'' and its sub-nodes to specify the required attributes for the bindings.
 
 ====== Populating the <i>Bindings List</i> ======
@@ -320,7 +320,7 @@ Defining the bindings required the following steps:
 *#* It is recommended that the name of all binding elements include '''BIND''' 
 *# Set the attributes of the newly created ''Binding''
 
-====== Bindings Currently Available in Symphony ======
+====== Bindings Currently Available in Apogy ======
 
 The bindings currently available for generic topology ''Nodes'' are:
 
@@ -396,25 +396,25 @@ TODO!
 
 TODO!
 
-===== vi. Registering your <i>Symphony System Model</i> with Symphony =====
+===== vi. Registering your <i>Apogy System Model</i> with Apogy =====
 
-In order for Symphony to be made aware of your ''Symphony System Model'', your model must be registered.
+In order for Apogy to be made aware of your ''Apogy System Model'', your model must be registered.
 Here are the steps to do so:
 
-# Open the '''MANIFEST.MF''' of the the plugin where your ''Symphony System Model'' is defined;
+# Open the '''MANIFEST.MF''' of the the plugin where your ''Apogy System Model'' is defined;
 # In the ''Extensions'' tab, click ''Add...''
 # Ensure the "''Show only the extension points from the required plug-ins''" checkbox is '''NOT''' checked.
-# Select the '''org.eclipse.symphony.core.invocator.typeContributor''' extension point;
+# Select the '''ca.gc.asc_csa.apogy.core.invocator.typeContributor''' extension point;
 # Click ''Finish''
 # Select the newly added extension and then click on ''Browse'' for the '''URI''' field;
-# Browse to your ''Symphony System Model'' (*.ss) file and click ''OK'';
+# Browse to your ''Apogy System Model'' (*.ss) file and click ''OK'';
 # Save the '''MANIFEST.MF'''
 
 == Advanced Topics ==
 
 === Specialized Topology <i>Nodes</i> ===
 
-The currently available specialized topology ''Nodes'' in Symphony are:
+The currently available specialized topology ''Nodes'' in Apogy are:
 
 {| border="1" cellpadding="2"
 ! Name
@@ -422,7 +422,7 @@ The currently available specialized topology ''Nodes'' in Symphony are:
 ! Description
 |-
 | '''''CircularSectorFieldOfView'''''
-| rowspan="3" style="text-align:center;" | ''org.eclipse.symphony.addons.sensors.fov''
+| rowspan="3" style="text-align:center;" | ''ca.gc.asc_csa.apogy.addons.sensors.fov''
 | Represents a field of view (FOV) that is a circular sector.  This is useful for representing the FOV for certain types of line scanner sensors (e.g. SICK Lidar)
 |-
 | '''''ConicalFieldOfView'''''
@@ -432,22 +432,22 @@ The currently available specialized topology ''Nodes'' in Symphony are:
 | Represents a field of view (FOV) that is rectangular.  This is used for representing the FOV for cameras and many range sensors.
 |-
 | '''''AbstractCamera'''''
-| rowspan="2" style="text-align:center;" | ''org.eclipse.symphony.addons.sensors.imaging''
-| Represents a camera that includes a ''RectangularFrustrumFieldOfView and can take an ''ImageSnapshot''.  This is the class expected by the ''Symphony Camera View''.
+| rowspan="2" style="text-align:center;" | ''ca.gc.asc_csa.apogy.addons.sensors.imaging''
+| Represents a camera that includes a ''RectangularFrustrumFieldOfView and can take an ''ImageSnapshot''.  This is the class expected by the ''Apogy Camera View''.
 |-
 | '''''ImageSnapshot'''''
-| Represents an image and its associated ''RectangularFrustrumFieldOfView''. This is required to enable image projections in Symphony.
+| Represents an image and its associated ''RectangularFrustrumFieldOfView''. This is required to enable image projections in Apogy.
 |-
 | '''''URLNode'''''
-| ''org.eclipse.symphony.common.topology''
+| ''ca.gc.asc_csa.apogy.common.topology''
 | Represents an object's geometry.  Refers to the actual geometry by defining a URL to the file containing the geometry.
 |-
 | '''''WayPointPath'''''
-| ''org.eclipse.symphony.addons.geometry.paths''
+| ''ca.gc.asc_csa.apogy.addons.geometry.paths''
 | Represents a trajectory as a list of way points.
 |-
 | '''''Wheel'''''
-| rowspan="3" style="text-align:center;" | ''org.eclipse.symphony.addons.vehicle''
+| rowspan="3" style="text-align:center;" | ''ca.gc.asc_csa.apogy.addons.vehicle''
 | Represents a wheel as a cylinder.  Used by the ''VehiclePoseCorrector''.  See the ''MobilePlatform'' Example.
 |-
 | '''''LanderSphericalFoot'''''
@@ -459,13 +459,13 @@ The currently available specialized topology ''Nodes'' in Symphony are:
 
 === Extending the Tools ===
 
-* Extending the built-in tools in Symphony is done through EMF;
+* Extending the built-in tools in Apogy is done through EMF;
 * You simply extend the tool you want to customize in your meta-model and implement / override the required methods;
 * That's it!
 
 ==== Built-in <i>Camera View</i> Tools ====
 
-The following built-in ''Camera View'' tools (located in ''org.eclipse.symphony.addons.sensors.imaging.camera'') are available in Symphony: 
+The following built-in ''Camera View'' tools (located in ''ca.gc.asc_csa.apogy.addons.sensors.imaging.camera'') are available in Apogy: 
 
 {| border="1" cellpadding="2"
 ! Name
@@ -488,12 +488,12 @@ The following built-in ''Camera View'' tools (located in ''org.eclipse.symphony.
 |-
 | '''''CameraTool'''''
 | style="text-align:center;" | ''Tools''
-| Tool that provides interaction with mouse motion and selection in the ''Symphony Camera View''.
+| Tool that provides interaction with mouse motion and selection in the ''Apogy Camera View''.
 |}
 
 ==== Built-in <i>Map View</i> Tools ====
 
-The following built-in ''Map View'' tools (located in ''org.eclipse.symphony.core.environment.ui'') are available in Symphony:
+The following built-in ''Map View'' tools (located in ''ca.gc.asc_csa.apogy.core.environment.ui'') are available in Apogy:
 
 {| border="1" cellpadding="2"
 ! Name
@@ -533,7 +533,7 @@ The following built-in ''Map View'' tools (located in ''org.eclipse.symphony.cor
 * This information can then be used to perform those ''Native Units'' to a ''Different Display'' unit (e.g. degrees <-> radians) 
 * In order to have the ''Properties View'' correctly manage attributes for which units have been defined:
 ** Need to modify the generated method in the generated ''ItemProvider'' for the EClass (found in the respective .edit plugin):
-**# Add a dependency to org.eclipse.symphony.common.emf.ui;
+**# Add a dependency to ca.gc.asc_csa.apogy.common.emf.ui;
 **# Replace the '''createItemPropertyDescriptor()''' call with '''new ''AbstractUnitItemPropertyDescriptor''''';
 **# Mark the method as '''@generated_NOT''' to prevent your work from being overwritten;
 

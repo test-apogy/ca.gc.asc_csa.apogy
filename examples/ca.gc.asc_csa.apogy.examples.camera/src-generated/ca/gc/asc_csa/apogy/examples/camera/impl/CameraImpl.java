@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.impl;
+package ca.gc.asc_csa.apogy.examples.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
-import org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl;
-import org.eclipse.symphony.examples.camera.Camera;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.impl.AbstractCameraImpl;
+import ca.gc.asc_csa.apogy.examples.camera.Camera;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,11 +27,11 @@ import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#getCurrentZoom <em>Current Zoom</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#isStreamingEnabled <em>Streaming Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl#getCurrentZoom <em>Current Zoom</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl#isStreamingEnabled <em>Streaming Enabled</em>}</li>
  * </ul>
  *
  * @generated
@@ -143,7 +143,7 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__ExamplesCameraPackage.Literals.CAMERA;
+		return ApogyExamplesCameraPackage.Literals.CAMERA;
 	}
 
 	/**
@@ -166,7 +166,7 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 		double oldCurrentZoom = currentZoom;
 		currentZoom = newCurrentZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM, oldCurrentZoom, currentZoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM, oldCurrentZoom, currentZoom));
 	}
 
 	/**
@@ -189,7 +189,7 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 		double oldCommandedZoom = commandedZoom;
 		commandedZoom = newCommandedZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
 	}
 
 	/**
@@ -212,7 +212,7 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 		RectangularFrustrumFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.CAMERA__FOV, oldFov, newFov);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.CAMERA__FOV, oldFov, newFov);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -228,14 +228,14 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 		if (newFov != fov) {
 			NotificationChain msgs = null;
 			if (fov != null)
-				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesCameraPackage.CAMERA__FOV, null, msgs);
+				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesCameraPackage.CAMERA__FOV, null, msgs);
 			if (newFov != null)
-				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesCameraPackage.CAMERA__FOV, null, msgs);
+				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyExamplesCameraPackage.CAMERA__FOV, null, msgs);
 			msgs = basicSetFov(newFov, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.CAMERA__FOV, newFov, newFov));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.CAMERA__FOV, newFov, newFov));
 	}
 
 	/**
@@ -256,7 +256,7 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.CAMERA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.CAMERA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -277,7 +277,7 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 		boolean oldStreamingEnabled = streamingEnabled;
 		streamingEnabled = newStreamingEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraPackage.CAMERA__STREAMING_ENABLED, oldStreamingEnabled, streamingEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesCameraPackage.CAMERA__STREAMING_ENABLED, oldStreamingEnabled, streamingEnabled));
 	}
 
 	/**
@@ -357,7 +357,7 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.CAMERA__FOV:
+			case ApogyExamplesCameraPackage.CAMERA__FOV:
 				return basicSetFov(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -372,15 +372,15 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
 				return getCurrentZoom();
-			case Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
 				return getCommandedZoom();
-			case Symphony__ExamplesCameraPackage.CAMERA__FOV:
+			case ApogyExamplesCameraPackage.CAMERA__FOV:
 				return getFov();
-			case Symphony__ExamplesCameraPackage.CAMERA__INITIALIZED:
+			case ApogyExamplesCameraPackage.CAMERA__INITIALIZED:
 				return isInitialized();
-			case Symphony__ExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
+			case ApogyExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
 				return isStreamingEnabled();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -395,19 +395,19 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
 				setCurrentZoom((Double)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
 				setCommandedZoom((Double)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__FOV:
+			case ApogyExamplesCameraPackage.CAMERA__FOV:
 				setFov((RectangularFrustrumFieldOfView)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__INITIALIZED:
+			case ApogyExamplesCameraPackage.CAMERA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
+			case ApogyExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
 				setStreamingEnabled((Boolean)newValue);
 				return;
 		}
@@ -423,19 +423,19 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
 				setCurrentZoom(CURRENT_ZOOM_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
 				setCommandedZoom(COMMANDED_ZOOM_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__FOV:
+			case ApogyExamplesCameraPackage.CAMERA__FOV:
 				setFov((RectangularFrustrumFieldOfView)null);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__INITIALIZED:
+			case ApogyExamplesCameraPackage.CAMERA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
+			case ApogyExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
 				setStreamingEnabled(STREAMING_ENABLED_EDEFAULT);
 				return;
 		}
@@ -451,15 +451,15 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
 				return currentZoom != CURRENT_ZOOM_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
 				return commandedZoom != COMMANDED_ZOOM_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.CAMERA__FOV:
+			case ApogyExamplesCameraPackage.CAMERA__FOV:
 				return fov != null;
-			case Symphony__ExamplesCameraPackage.CAMERA__INITIALIZED:
+			case ApogyExamplesCameraPackage.CAMERA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case Symphony__ExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
+			case ApogyExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
 				return streamingEnabled != STREAMING_ENABLED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -475,8 +475,8 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	{
 		if (baseClass == Zoomable.class) {
 			switch (derivedFeatureID) {
-				case Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
-				case Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
+				case ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM: return ApogyAddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
+				case ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM: return ApogyAddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -493,8 +493,8 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	{
 		if (baseClass == Zoomable.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM;
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM;
+				case ApogyAddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM;
+				case ApogyAddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -511,9 +511,9 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	{
 		if (baseClass == Zoomable.class) {
 			switch (baseOperationID) {
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return Symphony__ExamplesCameraPackage.CAMERA___COMMAND_ZOOM__DOUBLE;
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return Symphony__ExamplesCameraPackage.CAMERA___GET_MINIMUM_ZOOM;
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return Symphony__ExamplesCameraPackage.CAMERA___GET_MAXIMUM_ZOOM;
+				case ApogyAddonsSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return ApogyExamplesCameraPackage.CAMERA___COMMAND_ZOOM__DOUBLE;
+				case ApogyAddonsSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return ApogyExamplesCameraPackage.CAMERA___GET_MINIMUM_ZOOM;
+				case ApogyAddonsSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return ApogyExamplesCameraPackage.CAMERA___GET_MAXIMUM_ZOOM;
 				default: return -1;
 			}
 		}
@@ -529,15 +529,15 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__ExamplesCameraPackage.CAMERA___INIT:
+			case ApogyExamplesCameraPackage.CAMERA___INIT:
 				return init();
-			case Symphony__ExamplesCameraPackage.CAMERA___COMMAND_STREAMING__BOOLEAN:
+			case ApogyExamplesCameraPackage.CAMERA___COMMAND_STREAMING__BOOLEAN:
 				return commandStreaming((Boolean)arguments.get(0));
-			case Symphony__ExamplesCameraPackage.CAMERA___COMMAND_ZOOM__DOUBLE:
+			case ApogyExamplesCameraPackage.CAMERA___COMMAND_ZOOM__DOUBLE:
 				return commandZoom((Double)arguments.get(0));
-			case Symphony__ExamplesCameraPackage.CAMERA___GET_MINIMUM_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA___GET_MINIMUM_ZOOM:
 				return getMinimumZoom();
-			case Symphony__ExamplesCameraPackage.CAMERA___GET_MAXIMUM_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA___GET_MAXIMUM_ZOOM:
 				return getMaximumZoom();
 		}
 		return super.eInvoke(operationID, arguments);

@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitFacadeImpl;
+import ca.gc.asc_csa.apogy.core.environment.orbit.impl.ApogyCoreEnvironmentOrbitFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,13 +16,13 @@ import org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmen
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSymphony__CoreEnvironmentOrbitFacade()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getApogyCoreEnvironmentOrbitFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreEnvironmentOrbitFacade extends EObject 
+public interface ApogyCoreEnvironmentOrbitFacade extends EObject 
 {
-	public static Symphony__CoreEnvironmentOrbitFacade INSTANCE = Symphony__CoreEnvironmentOrbitFacadeImpl.getInstance();
+	public static ApogyCoreEnvironmentOrbitFacade INSTANCE = ApogyCoreEnvironmentOrbitFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -32,4 +32,4 @@ public interface Symphony__CoreEnvironmentOrbitFacade extends EObject
 	 */
 	OrbitModel createOrbitModelCopy(OrbitModel originalOrbitModel);
 
-} // Symphony__CoreEnvironmentOrbitFacade
+} // ApogyCoreEnvironmentOrbitFacade

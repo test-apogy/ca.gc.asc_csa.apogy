@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.Region#getTransformation <em>Transformation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.Region#getTransformation <em>Transformation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRegion()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRegion()
  * @model abstract="true"
  * @generated
  */
@@ -38,14 +38,14 @@ public interface Region extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transformation</em>' containment reference.
 	 * @see #setTransformation(Matrix4x4)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRegion_Transformation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRegion_Transformation()
 	 * @model containment="true"
 	 * @generated
 	 */
   Matrix4x4 getTransformation();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.Region#getTransformation <em>Transformation</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.Region#getTransformation <em>Transformation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transformation</em>' containment reference.

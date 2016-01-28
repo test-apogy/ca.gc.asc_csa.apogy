@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander;
+package ca.gc.asc_csa.apogy.examples.lander;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * This enumeration is used to define the possible levels
  * of extension that the lander's legs can have.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLanderLegExtension()
+ * @see ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage#getLanderLegExtension()
  * @model
  * @generated
  */

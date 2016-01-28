@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingShape;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner1 <em>Corner1</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner2 <em>Corner2</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner1 <em>Corner1</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner2 <em>Corner2</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCubeSamplingShape()
  * @model
  * @generated
  */
@@ -44,14 +44,14 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Corner1</em>' reference.
 	 * @see #setCorner1(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_Corner1()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCubeSamplingShape_Corner1()
 	 * @model
 	 * @generated
 	 */
 	CartesianPositionCoordinates getCorner1();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner1 <em>Corner1</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner1 <em>Corner1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Corner1</em>' reference.
@@ -74,14 +74,14 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Corner2</em>' reference.
 	 * @see #setCorner2(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_Corner2()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCubeSamplingShape_Corner2()
 	 * @model
 	 * @generated
 	 */
 	CartesianPositionCoordinates getCorner2();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner2 <em>Corner2</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#getCorner2 <em>Corner2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Corner2</em>' reference.
@@ -105,14 +105,14 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Include Just Touching</em>' attribute.
 	 * @see #setIncludeJustTouching(boolean)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_IncludeJustTouching()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCubeSamplingShape_IncludeJustTouching()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isIncludeJustTouching();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Include Just Touching</em>' attribute.

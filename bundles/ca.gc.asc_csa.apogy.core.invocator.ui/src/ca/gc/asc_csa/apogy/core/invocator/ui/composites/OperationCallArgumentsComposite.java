@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -29,12 +29,12 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Argument;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 
 /**
  * This class provides UI components to edit the argument values for a list of
@@ -320,7 +320,7 @@ public class OperationCallArgumentsComposite extends Composite {
 						EClass interfaceClass = variableImplementation
 								.getVariable().getVariableType()
 								.getInterfaceClass();
-						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
+						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
 								interfaceClass).toArray();
 					}
 				}
@@ -332,7 +332,7 @@ public class OperationCallArgumentsComposite extends Composite {
 						EClass interfaceClass = typeMemberImplementation
 								.getTypeMember().getMemberType()
 								.getInterfaceClass();
-						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
+						elements = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
 								interfaceClass).toArray();
 					}
 				}
@@ -378,7 +378,7 @@ public class OperationCallArgumentsComposite extends Composite {
 //			SetCommand command = new SetCommand(
 //					editingDomain,
 //					implementation,
-//					Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+//					ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 //					eClass);
 //			editingDomain.getCommandStack().execute(command);
 

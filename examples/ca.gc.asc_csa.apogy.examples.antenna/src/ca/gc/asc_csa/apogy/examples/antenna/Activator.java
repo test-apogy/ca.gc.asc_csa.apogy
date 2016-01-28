@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.antenna;
+package ca.gc.asc_csa.apogy.examples.antenna;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -10,7 +10,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator implements BundleActivator
 {
-	public static final String ID = "org.eclipse.symphony.examples.antenna";
+	public static final String ID = "ca.gc.asc_csa.apogy.examples.antenna";
 	
 	/**
 	 * This is a single activator instance which is shared

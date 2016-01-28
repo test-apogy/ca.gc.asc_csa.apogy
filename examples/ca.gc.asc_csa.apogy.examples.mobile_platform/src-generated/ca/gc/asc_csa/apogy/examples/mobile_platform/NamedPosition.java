@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
 
 /**
@@ -17,10 +17,10 @@ package org.eclipse.symphony.examples.mobile_platform;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.mobile_platform.NamedPosition#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getNamedPosition()
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getNamedPosition()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface NamedPosition extends Position
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getNamedPosition_Name()
+	 * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getNamedPosition_Name()
 	 * @model default="" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly'"
 	 * @generated
@@ -48,7 +48,7 @@ public interface NamedPosition extends Position
   String getName();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.mobile_platform.NamedPosition#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.mobile_platform.NamedPosition#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.

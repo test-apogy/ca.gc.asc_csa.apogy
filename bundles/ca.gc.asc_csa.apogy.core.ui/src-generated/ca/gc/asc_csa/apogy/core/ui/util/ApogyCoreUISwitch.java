@@ -1,20 +1,20 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.util;
+package ca.gc.asc_csa.apogy.core.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +26,10 @@ import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage
+ * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage
  * @generated
  */
-public class Symphony__CoreUISwitch<T> extends Switch<T>
+public class ApogyCoreUISwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -37,7 +37,7 @@ public class Symphony__CoreUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreUIPackage modelPackage;
+  protected static ApogyCoreUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -45,10 +45,10 @@ public class Symphony__CoreUISwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreUISwitch()
+  public ApogyCoreUISwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreUIPackage.eINSTANCE;
 		}
 	}
 
@@ -77,37 +77,37 @@ public class Symphony__CoreUISwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE: {
-				Symphony__CoreUIFacade symphony__CoreUIFacade = (Symphony__CoreUIFacade)theEObject;
-				T result = caseSymphony__CoreUIFacade(symphony__CoreUIFacade);
+			case ApogyCoreUIPackage.APOGY_CORE_UI_FACADE: {
+				ApogyCoreUIFacade apogy__CoreUIFacade = (ApogyCoreUIFacade)theEObject;
+				T result = caseApogyCoreUIFacade(apogy__CoreUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS: {
-				SymphonyResourceSettings symphonyResourceSettings = (SymphonyResourceSettings)theEObject;
-				T result = caseSymphonyResourceSettings(symphonyResourceSettings);
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS: {
+				ApogyResourceSettings apogyResourceSettings = (ApogyResourceSettings)theEObject;
+				T result = caseApogyResourceSettings(apogyResourceSettings);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS: {
-				NewSymphonyProjectSettings newSymphonyProjectSettings = (NewSymphonyProjectSettings)theEObject;
-				T result = caseNewSymphonyProjectSettings(newSymphonyProjectSettings);
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS: {
+				NewApogyProjectSettings newApogyProjectSettings = (NewApogyProjectSettings)theEObject;
+				T result = caseNewApogyProjectSettings(newApogyProjectSettings);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS: {
-				NewSymphonySessionSettings newSymphonySessionSettings = (NewSymphonySessionSettings)theEObject;
-				T result = caseNewSymphonySessionSettings(newSymphonySessionSettings);
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS: {
+				NewApogySessionSettings newApogySessionSettings = (NewApogySessionSettings)theEObject;
+				T result = caseNewApogySessionSettings(newApogySessionSettings);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS: {
-				NewSymphonySystemSettings newSymphonySystemSettings = (NewSymphonySystemSettings)theEObject;
-				T result = caseNewSymphonySystemSettings(newSymphonySystemSettings);
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS: {
+				NewApogySystemSettings newApogySystemSettings = (NewApogySystemSettings)theEObject;
+				T result = caseNewApogySystemSettings(newApogySystemSettings);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION: {
+			case ApogyCoreUIPackage.RESULT_NODE_PRESENTATION: {
 				ResultNodePresentation resultNodePresentation = (ResultNodePresentation)theEObject;
 				T result = caseResultNodePresentation(resultNodePresentation);
 				if (result == null) result = caseTransformNodePresentation(resultNodePresentation);
@@ -130,68 +130,68 @@ public class Symphony__CoreUISwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreUIFacade(Symphony__CoreUIFacade object) {
+	public T caseApogyCoreUIFacade(ApogyCoreUIFacade object) {
 		return null;
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Resource Settings</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Resource Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Resource Settings</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Resource Settings</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyResourceSettings(SymphonyResourceSettings object) {
+	public T caseApogyResourceSettings(ApogyResourceSettings object) {
 		return null;
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>New Symphony Project Settings</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>New Apogy Project Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New Symphony Project Settings</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>New Apogy Project Settings</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNewSymphonyProjectSettings(NewSymphonyProjectSettings object) {
+	public T caseNewApogyProjectSettings(NewApogyProjectSettings object) {
 		return null;
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>New Symphony Session Settings</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>New Apogy Session Settings</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New Symphony Session Settings</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>New Apogy Session Settings</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseNewSymphonySessionSettings(NewSymphonySessionSettings object)
+  public T caseNewApogySessionSettings(NewApogySessionSettings object)
   {
 		return null;
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>New Symphony System Settings</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>New Apogy System Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New Symphony System Settings</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>New Apogy System Settings</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNewSymphonySystemSettings(NewSymphonySystemSettings object) {
+	public T caseNewApogySystemSettings(NewApogySystemSettings object) {
 		return null;
 	}
 
@@ -259,4 +259,4 @@ public class Symphony__CoreUISwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CoreUISwitch
+} //ApogyCoreUISwitch

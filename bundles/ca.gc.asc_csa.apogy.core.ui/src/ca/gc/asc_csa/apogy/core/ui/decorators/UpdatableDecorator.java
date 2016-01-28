@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.ui.decorators;
+package ca.gc.asc_csa.apogy.core.ui.decorators;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IDecoration;
 import org.eclipse.jface.viewers.ILightweightLabelDecorator;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.ui.Activator;
+import ca.gc.asc_csa.apogy.core.Updatable;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 public class UpdatableDecorator extends LabelProvider implements ILightweightLabelDecorator 

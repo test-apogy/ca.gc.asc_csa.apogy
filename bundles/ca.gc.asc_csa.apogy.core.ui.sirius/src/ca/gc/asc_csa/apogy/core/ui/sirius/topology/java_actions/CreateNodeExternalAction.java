@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius.topology.java_actions;
+package ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions;
 
 
 import java.util.Collection;
@@ -9,12 +9,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.window.Window;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
-import org.eclipse.symphony.core.ui.sirius.util.ObjIdDescWizard;
-import org.eclipse.symphony.core.ui.sirius.util.WizardUtil;
-import org.eclipse.symphony.core.ui.sirius.util.topology.NodeClassWizard;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.ui.sirius.util.ObjIdDescWizard;
+import ca.gc.asc_csa.apogy.core.ui.sirius.util.WizardUtil;
+import ca.gc.asc_csa.apogy.core.ui.sirius.util.topology.NodeClassWizard;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 public class CreateNodeExternalAction implements IExternalJavaAction
 {

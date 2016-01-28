@@ -1,28 +1,28 @@
-package org.eclipse.symphony.core.invocator.delegates;
+package ca.gc.asc_csa.apogy.core.invocator.delegates;
 
 import java.util.Iterator;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Activator;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.core.invocator.TypeMember;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
 
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 
 public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
@@ -74,7 +74,7 @@ public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
 				if (!typeMember.getTypeFeatureRootNode().getChildren()
 						.isEmpty()) {
-					Symphony__CommonEMFFacade.INSTANCE.setValue(srcObj, typeMember
+					ApogyCommonEMFFacade.INSTANCE.setValue(srcObj, typeMember
 							.getTypeFeatureRootNode().getChildren().get(0),
 							subTypeMemberImplementation.getInstance());
 				}
@@ -190,7 +190,7 @@ public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
 	public void execute(EObject instance, OperationCall operationCall,
 			boolean saveResult) {
-		TypeApiAdapter typeApiAdapter = Symphony__CoreInvocatorFacade.INSTANCE
+		TypeApiAdapter typeApiAdapter = ApogyCoreInvocatorFacade.INSTANCE
 				.getTypeApiAdapter(operationCall);
 		typeApiAdapter.invoke(instance, operationCall, saveResult);
 	}
@@ -274,6 +274,6 @@ public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
 	@Override
 	public TypeApiAdapter newDefaultTypeApiAdapter() {
-		return Symphony__CoreInvocatorFactory.eINSTANCE.createTypeApiAdapter();
+		return ApogyCoreInvocatorFactory.eINSTANCE.createTypeApiAdapter();
 	}
 }

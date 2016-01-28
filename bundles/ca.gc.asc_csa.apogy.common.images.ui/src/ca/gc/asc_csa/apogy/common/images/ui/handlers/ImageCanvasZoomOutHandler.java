@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.images.ui.handlers;
+package ca.gc.asc_csa.apogy.common.images.ui.handlers;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.symphony.common.images.ui.Activator;
-import org.eclipse.symphony.common.images.ui.properties.sections.ImageSection;
-import org.eclipse.symphony.common.images.ui.views.ImageView;
-import org.eclipse.symphony.common.ui.EclipseUiUtilities;
+import ca.gc.asc_csa.apogy.common.images.ui.Activator;
+import ca.gc.asc_csa.apogy.common.images.ui.properties.sections.ImageSection;
+import ca.gc.asc_csa.apogy.common.images.ui.views.ImageView;
+import ca.gc.asc_csa.apogy.common.ui.EclipseUiUtilities;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.views.properties.PropertySheet;

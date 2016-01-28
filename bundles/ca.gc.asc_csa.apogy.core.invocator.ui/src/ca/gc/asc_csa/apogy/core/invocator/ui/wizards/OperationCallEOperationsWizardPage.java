@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -9,15 +9,15 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.emf.ui.composites.EOperationsComposite;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.EOperationsComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 
 public class OperationCallEOperationsWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.OperationCallEOperationsWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallEOperationsWizardPage";
 	private EOperationsComposite eOperationsComposite;
 	private OperationCall operationCall;
 	private AdapterImpl adapter;
@@ -51,13 +51,13 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 				@Override
 				public void notifyChanged(Notification msg) {
 					switch (msg.getFeatureID(VariableFeatureReference.class)) {
-					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+					case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 						operationCall.setTypeMemberReferenceListElement(null);
 						operationCall.setFeatureRoot(null);
-					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+					case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 						operationCall.setFeatureRoot(null);
-					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:						
-						EClass eClass = Symphony__CoreInvocatorFacade.INSTANCE.getInstanceClass(operationCall);	
+					case ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:						
+						EClass eClass = ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(operationCall);	
 						eOperationsComposite.setEClass(eClass);						
 						break;
 

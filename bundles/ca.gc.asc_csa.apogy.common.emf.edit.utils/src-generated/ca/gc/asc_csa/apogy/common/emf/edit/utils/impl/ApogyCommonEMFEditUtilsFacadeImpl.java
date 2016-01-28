@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.edit.utils.impl;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -21,14 +21,14 @@ import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPa
  *
  * @generated
  */
-public class Symphony__CommonEMFEditUtilsFacadeImpl extends MinimalEObjectImpl.Container
-		implements Symphony__CommonEMFEditUtilsFacade {
+public class ApogyCommonEMFEditUtilsFacadeImpl extends MinimalEObjectImpl.Container
+		implements ApogyCommonEMFEditUtilsFacade {
 
-	private static Symphony__CommonEMFEditUtilsFacade instance = null;
+	private static ApogyCommonEMFEditUtilsFacade instance = null;
 
-	public static Symphony__CommonEMFEditUtilsFacade getInstance() {
+	public static ApogyCommonEMFEditUtilsFacade getInstance() {
 		if (instance == null) {
-			instance = new Symphony__CommonEMFEditUtilsFacadeImpl();
+			instance = new ApogyCommonEMFEditUtilsFacadeImpl();
 		}
 		return instance;
 	}
@@ -37,7 +37,7 @@ public class Symphony__CommonEMFEditUtilsFacadeImpl extends MinimalEObjectImpl.C
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonEMFEditUtilsFacadeImpl() {
+	protected ApogyCommonEMFEditUtilsFacadeImpl() {
 		super();
 	}
 
@@ -47,7 +47,7 @@ public class Symphony__CommonEMFEditUtilsFacadeImpl extends MinimalEObjectImpl.C
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFEditUtilsPackage.Literals.SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE;
+		return ApogyCommonEMFEditUtilsPackage.Literals.APOGY_COMMON_EMF_EDIT_UTILS_FACADE;
 	}
 
 	/**
@@ -98,13 +98,13 @@ public class Symphony__CommonEMFEditUtilsFacadeImpl extends MinimalEObjectImpl.C
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonEMFEditUtilsPackage.SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT:
+			case ApogyCommonEMFEditUtilsPackage.APOGY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT:
 				return getText(arguments.get(0));
-			case Symphony__CommonEMFEditUtilsPackage.SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT:
+			case ApogyCommonEMFEditUtilsPackage.APOGY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT:
 				removeChildDescriptor((Collection<Object>)arguments.get(0), arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} // Symphony__CommonEMFEditUtilsFacadeImpl
+} // ApogyCommonEMFEditUtilsFacadeImpl

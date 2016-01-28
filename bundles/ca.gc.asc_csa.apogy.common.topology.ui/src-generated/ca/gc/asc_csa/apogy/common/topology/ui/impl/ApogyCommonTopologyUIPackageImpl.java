@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.ui.impl;
 
 import java.util.List;
 
@@ -19,23 +19,23 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.PositionNodePresentation;
-import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
-import org.eclipse.symphony.common.topology.ui.ShadowMode;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
-import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implements Symphony__CommonTopologyUIPackage {
+public class ApogyCommonTopologyUIPackageImpl extends EPackageImpl implements ApogyCommonTopologyUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,7 +112,7 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__CommonTopologyUIFacadeEClass = null;
+	private EClass apogy__CommonTopologyUIFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,12 +181,12 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonTopologyUIPackageImpl() {
-		super(eNS_URI, Symphony__CommonTopologyUIFactory.eINSTANCE);
+	private ApogyCommonTopologyUIPackageImpl() {
+		super(eNS_URI, ApogyCommonTopologyUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonTopologyUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonTopologyUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -208,30 +208,30 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyUIPackage init() {
-		if (isInited) return (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+	public static ApogyCommonTopologyUIPackage init() {
+		if (isInited) return (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonTopologyUIPackageImpl theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonTopologyUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonTopologyUIPackageImpl());
+		ApogyCommonTopologyUIPackageImpl theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonTopologyUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonTopologyUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonTopologyUIPackage.createPackageContents();
+		theApogyCommonTopologyUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonTopologyUIPackage.initializePackageContents();
+		theApogyCommonTopologyUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonTopologyUIPackage.freeze();
+		theApogyCommonTopologyUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonTopologyUIPackage.eNS_URI, theSymphony__CommonTopologyUIPackage);
-		return theSymphony__CommonTopologyUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonTopologyUIPackage.eNS_URI, theApogyCommonTopologyUIPackage);
+		return theApogyCommonTopologyUIPackage;
 	}
 
 	/**
@@ -698,8 +698,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__CommonTopologyUIFacade() {
-		return symphony__CommonTopologyUIFacadeEClass;
+	public EClass getApogyCommonTopologyUIFacade() {
+		return apogy__CommonTopologyUIFacadeEClass;
 	}
 
 	/**
@@ -707,8 +707,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node() {
-		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyCommonTopologyUIFacade__CreateGraphicsContext__Node() {
+		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -716,8 +716,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d() {
-		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyCommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d() {
+		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -725,8 +725,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d() {
-		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(2);
+	public EOperation getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d() {
+		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -734,8 +734,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f() {
-		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(3);
+	public EOperation getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f() {
+		return apogy__CommonTopologyUIFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -815,8 +815,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIFactory getSymphony__CommonTopologyUIFactory() {
-		return (Symphony__CommonTopologyUIFactory)getEFactoryInstance();
+	public ApogyCommonTopologyUIFactory getApogyCommonTopologyUIFactory() {
+		return (ApogyCommonTopologyUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -898,11 +898,11 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__AXIS_LENGTH);
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__PRESENTATION_MODE);
 
-		symphony__CommonTopologyUIFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_UI_FACADE);
-		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE);
-		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D);
-		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D);
-		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F);
+		apogy__CommonTopologyUIFacadeEClass = createEClass(APOGY_COMMON_TOPOLOGY_UI_FACADE);
+		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE);
+		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D);
+		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D);
+		createEOperation(apogy__CommonTopologyUIFacadeEClass, APOGY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F);
 
 		// Create enums
 		shadowModeEEnum = createEEnum(SHADOW_MODE);
@@ -941,9 +941,9 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -962,23 +962,23 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		initEReference(getTopologyPresentationRegistry_NodePresentationList(), this.getNodePresentation(), null, "nodePresentationList", null, 0, -1, TopologyPresentationRegistry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getTopologyPresentationRegistry__CreateTopologyPresentationSet__Node(), this.getTopologyPresentationSet(), "createTopologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationRegistry__Release__TopologyPresentationSet(), null, "release", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationRegistry__GetPresentationNode__Node(), this.getNodePresentation(), "getPresentationNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(graphicsContextEClass, GraphicsContext.class, "GraphicsContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGraphicsContext_Topology(), theSymphony__CommonTopologyPackage.getNode(), null, "topology", null, 0, 1, GraphicsContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGraphicsContext_Topology(), theApogyCommonTopologyPackage.getNode(), null, "topology", null, 0, 1, GraphicsContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGraphicsContext_TopologyPresentationSet(), this.getTopologyPresentationSet(), this.getTopologyPresentationSet_GraphicsContext(), "topologyPresentationSet", null, 0, 1, GraphicsContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getGraphicsContext__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(nodeSelectionEClass, NodeSelection.class, "NodeSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNodeSelection_TopologyPresentationSet(), this.getTopologyPresentationSet(), null, "topologyPresentationSet", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeSelection_SelectedNode(), theSymphony__CommonTopologyPackage.getNode(), null, "selectedNode", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeSelection_SelectedNode(), theApogyCommonTopologyPackage.getNode(), null, "selectedNode", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNodeSelection_NodePresentation(), this.getNodePresentation(), null, "nodePresentation", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeSelection_RelativeIntersectionPoint(), this.getPoint3d(), "relativeIntersectionPoint", null, 0, 1, NodeSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeSelection_AbsoluteIntersectionPoint(), this.getPoint3d(), "absoluteIntersectionPoint", null, 0, 1, NodeSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -991,24 +991,24 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		initEReference(getTopologyPresentationSet_NodePresentationList(), this.getNodePresentation(), this.getNodePresentation_TopologyPresentationSet(), "nodePresentationList", null, 0, -1, TopologyPresentationSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationSet__GetPresentationNode__Node(), this.getNodePresentation(), "getPresentationNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationSet__GetNodes(), null, "getNodes", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
-		EGenericType g2 = createEGenericType(theSymphony__CommonTopologyPackage.getNode());
+		EGenericType g2 = createEGenericType(theApogyCommonTopologyPackage.getNode());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
 		initEClass(nodePresentationEClass, NodePresentation.class, "NodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNodePresentation_TopologyPresentationSet(), this.getTopologyPresentationSet(), this.getTopologyPresentationSet_NodePresentationList(), "topologyPresentationSet", null, 0, -1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Node(), theSymphony__CommonTopologyPackage.getNode(), null, "node", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Node(), theApogyCommonTopologyPackage.getNode(), null, "node", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_Color(), this.getRGB(), "color", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_ShadowMode(), this.getShadowMode(), "shadowMode", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_UseInBoundingCalculation(), theEcorePackage.getEBoolean(), "useInBoundingCalculation", "true", 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Centroid(), theSymphony__CommonMathPackage.getTuple3d(), null, "centroid", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Min(), theSymphony__CommonMathPackage.getTuple3d(), null, "min", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Max(), theSymphony__CommonMathPackage.getTuple3d(), null, "max", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Centroid(), theApogyCommonMathPackage.getTuple3d(), null, "centroid", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Min(), theApogyCommonMathPackage.getTuple3d(), null, "min", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Max(), theApogyCommonMathPackage.getTuple3d(), null, "max", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_XRange(), theEcorePackage.getEDouble(), "xRange", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_YRange(), theEcorePackage.getEDouble(), "yRange", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_ZRange(), theEcorePackage.getEDouble(), "zRange", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1031,25 +1031,25 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		initEAttribute(getURLNodePresentation_AxisLength(), theEcorePackage.getEDouble(), "axisLength", "1.0", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURLNodePresentation_PresentationMode(), this.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__CommonTopologyUIFacadeEClass, Symphony__CommonTopologyUIFacade.class, "Symphony__CommonTopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__CommonTopologyUIFacadeEClass, ApogyCommonTopologyUIFacade.class, "ApogyCommonTopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node(), this.getGraphicsContext(), "createGraphicsContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyUIFacade__CreateGraphicsContext__Node(), this.getGraphicsContext(), "createGraphicsContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d(), null, "findExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d(), null, "findExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "min", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "max", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "min", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getTuple3d(), "max", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNodePresentation(), "nodePresentation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "relativePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "relativePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVector3f(), "relativeNormal", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1078,4 +1078,4 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonTopologyUIPackageImpl
+} //ApogyCommonTopologyUIPackageImpl

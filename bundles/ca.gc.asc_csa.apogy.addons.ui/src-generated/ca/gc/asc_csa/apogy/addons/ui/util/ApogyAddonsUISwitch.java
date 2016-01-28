@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.util;
+package ca.gc.asc_csa.apogy.addons.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.ui.*;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.ui.*;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage
  * @generated
  */
-public class Symphony__AddonsUISwitch<T> extends Switch<T> {
+public class ApogyAddonsUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsUIPackage modelPackage;
+	protected static ApogyAddonsUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class Symphony__AddonsUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsUISwitch() {
+	public ApogyAddonsUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsUIPackage.eINSTANCE;
 		}
 	}
 
@@ -66,21 +66,21 @@ public class Symphony__AddonsUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsUIPackage.RULER3D_TOOL_NODE_PRESENTATION: {
+			case ApogyAddonsUIPackage.RULER3D_TOOL_NODE_PRESENTATION: {
 				Ruler3dToolNodePresentation ruler3dToolNodePresentation = (Ruler3dToolNodePresentation)theEObject;
 				T result = caseRuler3dToolNodePresentation(ruler3dToolNodePresentation);
 				if (result == null) result = caseNodePresentation(ruler3dToolNodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsUIPackage.SUN_VECTOR3_DTOOL_NODE_PRESENTATION: {
+			case ApogyAddonsUIPackage.SUN_VECTOR3_DTOOL_NODE_PRESENTATION: {
 				SunVector3DToolNodePresentation sunVector3DToolNodePresentation = (SunVector3DToolNodePresentation)theEObject;
 				T result = caseSunVector3DToolNodePresentation(sunVector3DToolNodePresentation);
 				if (result == null) result = caseNodePresentation(sunVector3DToolNodePresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsUIPackage.TRAJECTORY3_DTOOL_NODE_PRESENTATION: {
+			case ApogyAddonsUIPackage.TRAJECTORY3_DTOOL_NODE_PRESENTATION: {
 				Trajectory3DToolNodePresentation trajectory3DToolNodePresentation = (Trajectory3DToolNodePresentation)theEObject;
 				T result = caseTrajectory3DToolNodePresentation(trajectory3DToolNodePresentation);
 				if (result == null) result = caseNodePresentation(trajectory3DToolNodePresentation);
@@ -167,4 +167,4 @@ public class Symphony__AddonsUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsUISwitch
+} //ApogyAddonsUISwitch

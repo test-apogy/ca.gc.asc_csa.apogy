@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2008.
  */
-package org.eclipse.symphony.addons.mobility.controllers.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.impl;
 
 import java.util.Iterator;
 import java.util.List;
@@ -13,25 +13,25 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode;
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.addons.mobility.controllers.Activator;
-import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.PoseUtils;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Pose;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.SplineEndControlPointGenerationMode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.Activator;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.AstolfiGuidanceController;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseUtils;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,25 +41,25 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getCurrentWayPoint <em>Current Way Point</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPreviousWayPoint <em>Previous Way Point</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getCurrentPoseInGuidanceReferenceFrame <em>Current Pose In Guidance Reference Frame</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getRho <em>Rho</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPhi <em>Phi</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getAlpha <em>Alpha</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getYaw <em>Yaw</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getNu <em>Nu</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getOmega <em>Omega</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKrho <em>Krho</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKphi <em>Kphi</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKalpha <em>Kalpha</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getDestinationDistanceThreshold <em>Destination Distance Threshold</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getWayPointDistanceThreshold <em>Way Point Distance Threshold</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKHill <em>KHill</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getHillThreshold <em>Hill Threshold</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPhiThresholdForReducedVelocity <em>Phi Threshold For Reduced Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getAlphaThresholdForReducedVelocity <em>Alpha Threshold For Reduced Velocity</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#isSmoothPathEnabled <em>Smooth Path Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getCurrentWayPoint <em>Current Way Point</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPreviousWayPoint <em>Previous Way Point</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getCurrentPoseInGuidanceReferenceFrame <em>Current Pose In Guidance Reference Frame</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getRho <em>Rho</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPhi <em>Phi</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getAlpha <em>Alpha</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getYaw <em>Yaw</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getNu <em>Nu</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getOmega <em>Omega</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKrho <em>Krho</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKphi <em>Kphi</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKalpha <em>Kalpha</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getDestinationDistanceThreshold <em>Destination Distance Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getWayPointDistanceThreshold <em>Way Point Distance Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getKHill <em>KHill</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getHillThreshold <em>Hill Threshold</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPhiThresholdForReducedVelocity <em>Phi Threshold For Reduced Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getAlphaThresholdForReducedVelocity <em>Alpha Threshold For Reduced Velocity</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#isSmoothPathEnabled <em>Smooth Path Enabled</em>}</li>
  * </ul>
  *
  * @generated
@@ -408,7 +408,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER;
+		return ApogyAddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER;
 	}
 
 	/**
@@ -422,7 +422,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 			currentWayPoint = (CartesianPositionCoordinates)eResolveProxy(oldCurrentWayPoint);
 			if (currentWayPoint != oldCurrentWayPoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT, oldCurrentWayPoint, currentWayPoint));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT, oldCurrentWayPoint, currentWayPoint));
 			}
 		}
 		return currentWayPoint;
@@ -446,7 +446,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		CartesianPositionCoordinates oldCurrentWayPoint = currentWayPoint;
 		currentWayPoint = newCurrentWayPoint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT, oldCurrentWayPoint, currentWayPoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT, oldCurrentWayPoint, currentWayPoint));
 	}
 
 	/**
@@ -460,7 +460,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 			previousWayPoint = (CartesianPositionCoordinates)eResolveProxy(oldPreviousWayPoint);
 			if (previousWayPoint != oldPreviousWayPoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT, oldPreviousWayPoint, previousWayPoint));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT, oldPreviousWayPoint, previousWayPoint));
 			}
 		}
 		return previousWayPoint;
@@ -484,7 +484,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		CartesianPositionCoordinates oldPreviousWayPoint = previousWayPoint;
 		previousWayPoint = newPreviousWayPoint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT, oldPreviousWayPoint, previousWayPoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT, oldPreviousWayPoint, previousWayPoint));
 	}
 
 	/**
@@ -498,7 +498,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 			currentPoseInGuidanceReferenceFrame = (Pose)eResolveProxy(oldCurrentPoseInGuidanceReferenceFrame);
 			if (currentPoseInGuidanceReferenceFrame != oldCurrentPoseInGuidanceReferenceFrame) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME, oldCurrentPoseInGuidanceReferenceFrame, currentPoseInGuidanceReferenceFrame));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME, oldCurrentPoseInGuidanceReferenceFrame, currentPoseInGuidanceReferenceFrame));
 			}
 		}
 		return currentPoseInGuidanceReferenceFrame;
@@ -522,7 +522,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		Pose oldCurrentPoseInGuidanceReferenceFrame = currentPoseInGuidanceReferenceFrame;
 		currentPoseInGuidanceReferenceFrame = newCurrentPoseInGuidanceReferenceFrame;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME, oldCurrentPoseInGuidanceReferenceFrame, currentPoseInGuidanceReferenceFrame));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME, oldCurrentPoseInGuidanceReferenceFrame, currentPoseInGuidanceReferenceFrame));
 	}
 
 	@Override
@@ -571,7 +571,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		int indexLast = getSmoothedPath().getPoints().size()-1;
 		
 		List<CartesianPositionCoordinates> remainingPathPoints = getSmoothedPath().getPoints().subList(indexCurrent, indexLast);
-		WayPointPath remainingPathToDestination = Symphony__AddonsGeometryPathsFacade.INSTANCE.createWayPointPath(remainingPathPoints);
+		WayPointPath remainingPathToDestination = ApogyAddonsGeometryPathsFacade.INSTANCE.createWayPointPath(remainingPathPoints);
 		
 		double remainingPathToDestinationLength=remainingPathToDestination.getLength() + getRho();
 		
@@ -753,7 +753,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldKrho = krho;
 		krho = newKrho;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO, oldKrho, krho));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO, oldKrho, krho));
 	}
 
 	/**
@@ -774,7 +774,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldKphi = kphi;
 		kphi = newKphi;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI, oldKphi, kphi));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI, oldKphi, kphi));
 	}
 
 	/**
@@ -795,7 +795,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldKalpha = kalpha;
 		kalpha = newKalpha;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA, oldKalpha, kalpha));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA, oldKalpha, kalpha));
 	}
 
 	/**
@@ -816,7 +816,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldDestinationDistanceThreshold = destinationDistanceThreshold;
 		destinationDistanceThreshold = newDestinationDistanceThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD, oldDestinationDistanceThreshold, destinationDistanceThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD, oldDestinationDistanceThreshold, destinationDistanceThreshold));
 	}
 
 	/**
@@ -837,7 +837,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldWayPointDistanceThreshold = wayPointDistanceThreshold;
 		wayPointDistanceThreshold = newWayPointDistanceThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD, oldWayPointDistanceThreshold, wayPointDistanceThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD, oldWayPointDistanceThreshold, wayPointDistanceThreshold));
 	}
 
 	/**
@@ -858,7 +858,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldKHill = kHill;
 		kHill = newKHill;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL, oldKHill, kHill));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL, oldKHill, kHill));
 	}
 
 	/**
@@ -879,7 +879,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldHillThreshold = hillThreshold;
 		hillThreshold = newHillThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD, oldHillThreshold, hillThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD, oldHillThreshold, hillThreshold));
 	}
 
 	/**
@@ -900,7 +900,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldPhiThresholdForReducedVelocity = phiThresholdForReducedVelocity;
 		phiThresholdForReducedVelocity = newPhiThresholdForReducedVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY, oldPhiThresholdForReducedVelocity, phiThresholdForReducedVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY, oldPhiThresholdForReducedVelocity, phiThresholdForReducedVelocity));
 	}
 
 	/**
@@ -921,7 +921,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		double oldAlphaThresholdForReducedVelocity = alphaThresholdForReducedVelocity;
 		alphaThresholdForReducedVelocity = newAlphaThresholdForReducedVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY, oldAlphaThresholdForReducedVelocity, alphaThresholdForReducedVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY, oldAlphaThresholdForReducedVelocity, alphaThresholdForReducedVelocity));
 	}
 
 	/**
@@ -942,7 +942,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		boolean oldSmoothPathEnabled = smoothPathEnabled;
 		smoothPathEnabled = newSmoothPathEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED, oldSmoothPathEnabled, smoothPathEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED, oldSmoothPathEnabled, smoothPathEnabled));
 	}
 
 	/**
@@ -953,46 +953,46 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
 				if (resolve) return getCurrentWayPoint();
 				return basicGetCurrentWayPoint();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
 				if (resolve) return getPreviousWayPoint();
 				return basicGetPreviousWayPoint();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
 				if (resolve) return getCurrentPoseInGuidanceReferenceFrame();
 				return basicGetCurrentPoseInGuidanceReferenceFrame();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__RHO:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__RHO:
 				return getRho();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI:
 				return getPhi();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA:
 				return getAlpha();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__YAW:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__YAW:
 				return getYaw();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__NU:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__NU:
 				return getNu();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA:
 				return getOmega();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
 				return getKrho();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
 				return getKphi();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
 				return getKalpha();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
 				return getDestinationDistanceThreshold();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
 				return getWayPointDistanceThreshold();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
 				return getKHill();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
 				return getHillThreshold();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
 				return getPhiThresholdForReducedVelocity();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
 				return getAlphaThresholdForReducedVelocity();
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
 				return isSmoothPathEnabled();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -1006,43 +1006,43 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
 				setCurrentWayPoint((CartesianPositionCoordinates)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
 				setPreviousWayPoint((CartesianPositionCoordinates)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
 				setCurrentPoseInGuidanceReferenceFrame((Pose)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
 				setKrho((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
 				setKphi((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
 				setKalpha((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
 				setDestinationDistanceThreshold((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
 				setWayPointDistanceThreshold((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
 				setKHill((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
 				setHillThreshold((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
 				setPhiThresholdForReducedVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
 				setAlphaThresholdForReducedVelocity((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
 				setSmoothPathEnabled((Boolean)newValue);
 				return;
 		}
@@ -1057,43 +1057,43 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
 				setCurrentWayPoint((CartesianPositionCoordinates)null);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
 				setPreviousWayPoint((CartesianPositionCoordinates)null);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
 				setCurrentPoseInGuidanceReferenceFrame((Pose)null);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
 				setKrho(KRHO_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
 				setKphi(KPHI_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
 				setKalpha(KALPHA_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
 				setDestinationDistanceThreshold(DESTINATION_DISTANCE_THRESHOLD_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
 				setWayPointDistanceThreshold(WAY_POINT_DISTANCE_THRESHOLD_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
 				setKHill(KHILL_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
 				setHillThreshold(HILL_THRESHOLD_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
 				setPhiThresholdForReducedVelocity(PHI_THRESHOLD_FOR_REDUCED_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
 				setAlphaThresholdForReducedVelocity(ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
 				setSmoothPathEnabled(SMOOTH_PATH_ENABLED_EDEFAULT);
 				return;
 		}
@@ -1108,43 +1108,43 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT:
 				return currentWayPoint != null;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT:
 				return previousWayPoint != null;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME:
 				return currentPoseInGuidanceReferenceFrame != null;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__RHO:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__RHO:
 				return rho != RHO_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI:
 				return getPhi() != PHI_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA:
 				return getAlpha() != ALPHA_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__YAW:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__YAW:
 				return getYaw() != YAW_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__NU:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__NU:
 				return getNu() != NU_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA:
 				return getOmega() != OMEGA_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
 				return krho != KRHO_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
 				return kphi != KPHI_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
 				return kalpha != KALPHA_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
 				return destinationDistanceThreshold != DESTINATION_DISTANCE_THRESHOLD_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
 				return wayPointDistanceThreshold != WAY_POINT_DISTANCE_THRESHOLD_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
 				return kHill != KHILL_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
 				return hillThreshold != HILL_THRESHOLD_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
 				return phiThresholdForReducedVelocity != PHI_THRESHOLD_FOR_REDUCED_VELOCITY_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
 				return alphaThresholdForReducedVelocity != ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
+			case ApogyAddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
 				return smoothPathEnabled != SMOOTH_PATH_ENABLED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -1230,7 +1230,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 					createSmoothedPath();
 				} else {
 					// Copies the path as is.
-					smoothedPath = Symphony__AddonsGeometryPathsFacade.INSTANCE
+					smoothedPath = ApogyAddonsGeometryPathsFacade.INSTANCE
 							.createWayPointPath(getPath());
 				}
 
@@ -1247,7 +1247,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 				// Initialise the path iterator.
 				wayPointIterator = getSmoothedPath().getPoints().listIterator();
 
-				setPreviousWayPoint(Symphony__CommonGeometryData3DFactory.eINSTANCE
+				setPreviousWayPoint(ApogyCommonGeometryData3DFactory.eINSTANCE
 						.createCartesianPositionCoordinates()); // First point
 				// is always
 				// origin
@@ -1259,7 +1259,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 			// position to the origin.
 			poseTransformation = PoseUtils
 					.getTransformFromSensorFrameToNewPose(getPoseSensor()
-							.getPose(), Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose());
+							.getPose(), ApogyCommonGeometryData3DFactory.eINSTANCE.createPose());
 
 			// Calls the start from super to effect the mode change.
 			return super.start();
@@ -1331,7 +1331,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		// Interpolate the path using Catmull - Rom is there are more than 2
 		// points.
 		if (getPath().getPoints().size() > 2) {
-			CatmullRomWayPointPathInterpolator interpolator = Symphony__AddonsGeometryPathsFactory.eINSTANCE
+			CatmullRomWayPointPathInterpolator interpolator = ApogyAddonsGeometryPathsFactory.eINSTANCE
 					.createCatmullRomWayPointPathInterpolator();
 			interpolator.setMaximumWayPointsDistance(0.1);
 			interpolator.setTension(0.25);
@@ -1339,7 +1339,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 					.setEndControlPointGenerationMode(SplineEndControlPointGenerationMode.AUTO_CTRL_POINTS_DUPLICATE_ENDNODES);
 			smoothedPath = interpolator.process(getPath());
 		} else {
-			smoothedPath = Symphony__AddonsGeometryPathsFacade.INSTANCE.createWayPointPath(getPath());
+			smoothedPath = ApogyAddonsGeometryPathsFacade.INSTANCE.createWayPointPath(getPath());
 		}
 	}
 
@@ -1474,7 +1474,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 				{
 					//System.out.println("Notified");
 					
-					if (notification.getFeatureID(PoseSensor.class) == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION)		
+					if (notification.getFeatureID(PoseSensor.class) == ApogyAddonsSensorsPosePackage.POSE_SENSOR__POSITION)		
 					{				
 						if (noRefresh == 0) 
 						{

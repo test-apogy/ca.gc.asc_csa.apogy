@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.camera.internal;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.internal;
 
 /**
  * Simple Watch Dog.

@@ -8,20 +8,20 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_examples_mobile_platform -->
+      <!-- @generated apogy_examples_mobile_platform -->
       <package
-            uri="org.eclipse.symphony.examples.mobile_platform.symphony"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage"
-            genModel="model/symphony_examples_mobile_platform_symphony.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage"
+            genModel="model/apogy_examples_mobile_platform_apogy.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.typeContributor">
+         point="ca.gc.asc_csa.apogy.core.invocator.typeContributor">
       <Type
-            URI="model/MobilePlatformSymphonySystem.ss">
+            URI="model/MobilePlatformApogySystem.ss">
       </Type>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.sessionProvider">
+         point="ca.gc.asc_csa.apogy.core.invocator.sessionProvider">
       <SessionProvider
             Description="Session showing the use of the Mobile Platform example system."
             Name="Mobile Platform Example"

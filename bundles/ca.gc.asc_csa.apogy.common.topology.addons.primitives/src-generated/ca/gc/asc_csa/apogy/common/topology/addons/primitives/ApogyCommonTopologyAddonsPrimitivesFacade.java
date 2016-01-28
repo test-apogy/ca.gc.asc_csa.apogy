@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesFacadeImpl;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.ApogyCommonTopologyAddonsPrimitivesFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,13 +17,13 @@ import org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__Com
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSymphony__CommonTopologyAddonsPrimitivesFacade()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getApogyCommonTopologyAddonsPrimitivesFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonTopologyAddonsPrimitivesFacade extends EObject
+public interface ApogyCommonTopologyAddonsPrimitivesFacade extends EObject
 {
-	public static Symphony__CommonTopologyAddonsPrimitivesFacade INSTANCE = Symphony__CommonTopologyAddonsPrimitivesFacadeImpl.getInstance();
+	public static ApogyCommonTopologyAddonsPrimitivesFacade INSTANCE = ApogyCommonTopologyAddonsPrimitivesFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" p0DataType="org.eclipse.symphony.common.topology.addons.primitives.Point3d" p0Unique="false" p1DataType="org.eclipse.symphony.common.topology.addons.primitives.Point3d" p1Unique="false"
+	 * @model unique="false" p0DataType="ca.gc.asc_csa.apogy.common.topology.addons.primitives.Point3d" p0Unique="false" p1DataType="ca.gc.asc_csa.apogy.common.topology.addons.primitives.Point3d" p1Unique="false"
 	 * @generated
 	 */
 	Vector createVector(Point3d p0, Point3d p1);
@@ -52,7 +52,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" v0DataType="org.eclipse.symphony.common.topology.addons.primitives.Vector3d" v0Unique="false" v1DataType="org.eclipse.symphony.common.topology.addons.primitives.Vector3d" v1Unique="false" widthUnique="false" heightUnique="false"
+	 * @model unique="false" v0DataType="ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector3d" v0Unique="false" v1DataType="ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector3d" v1Unique="false" widthUnique="false" heightUnique="false"
 	 * @generated
 	 */
 	Plane createPlane(Vector3d v0, Vector3d v1, double width, double height);
@@ -137,4 +137,4 @@ public interface Symphony__CommonTopologyAddonsPrimitivesFacade extends EObject
 	 */
 	SpotLight createSpotLight(boolean lightOn, Tuple3d color, Tuple3d position, Tuple3d attenuation, Tuple3d direction, float speadAngle, float concentration);
 
-} // Symphony__CommonTopologyAddonsPrimitivesFacade
+} // ApogyCommonTopologyAddonsPrimitivesFacade

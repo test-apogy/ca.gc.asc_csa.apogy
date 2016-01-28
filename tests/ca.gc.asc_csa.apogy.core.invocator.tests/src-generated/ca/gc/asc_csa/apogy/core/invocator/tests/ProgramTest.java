@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Program;
+import ca.gc.asc_csa.apogy.core.invocator.Program;
 
 import junit.framework.TestCase;
 
@@ -14,7 +14,7 @@ import junit.framework.TestCase;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Program#getInvocatorSession() <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Program#getInvocatorSession() <em>Invocator Session</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -60,10 +60,10 @@ public abstract class ProgramTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.Program#getInvocatorSession() <em>Invocator Session</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.Program#getInvocatorSession() <em>Invocator Session</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.Program#getInvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Program#getInvocatorSession()
 	 * @generated
 	 */
 	public void testGetInvocatorSession() {

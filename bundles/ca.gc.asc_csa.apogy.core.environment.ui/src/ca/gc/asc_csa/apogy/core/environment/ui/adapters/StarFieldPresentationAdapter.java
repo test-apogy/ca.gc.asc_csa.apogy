@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.environment.ui.adapters;
+package ca.gc.asc_csa.apogy.core.environment.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
 
 public class StarFieldPresentationAdapter implements NodePresentationAdapter
 {
@@ -36,7 +36,7 @@ public class StarFieldPresentationAdapter implements NodePresentationAdapter
 
 		StarField starField = (StarField) obj;
 		
-		StarFieldPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation();
+		StarFieldPresentation presentationNode = ApogyCoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation();
 		presentationNode.setNode(starField);			
 						
 		return presentationNode;

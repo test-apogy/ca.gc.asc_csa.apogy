@@ -4,7 +4,7 @@
  *
  * $Id: CircularSectorFieldOfViewPresentationImpl.java,v 1.1.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl;
 
 import javax.vecmath.Point3d;
 
@@ -12,14 +12,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.fov.ui.Activator;
-import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesConstants;
-import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.CircularSectorFieldOfViewSceneObject;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.preferences.MRTFOVPreferencesConstants;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.scene_objects.CircularSectorFieldOfViewSceneObject;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class CircularSectorFieldOfViewPresentationImpl extends FieldOfViewPresen
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsFOVUIPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW_PRESENTATION;
+		return ApogyAddonsSensorsFOVUIPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW_PRESENTATION;
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class CircularSectorFieldOfViewPresentationImpl extends FieldOfViewPresen
 			point3d = getSceneObject().getCentroid();
 		}
 		
-		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
+		return ApogyCommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}
 	
 	@Override

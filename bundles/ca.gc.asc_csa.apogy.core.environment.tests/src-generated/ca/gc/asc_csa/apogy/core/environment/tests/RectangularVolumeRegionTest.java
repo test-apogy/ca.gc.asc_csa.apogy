@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZDimension() <em>ZDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZDimension() <em>ZDimension</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -60,7 +60,7 @@ public class RectangularVolumeRegionTest extends RectangularRegionTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion());
 	}
 
 	/**
@@ -75,10 +75,10 @@ public class RectangularVolumeRegionTest extends RectangularRegionTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZDimension() <em>ZDimension</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZDimension() <em>ZDimension</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZDimension()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion#getZDimension()
 	 * @generated_NOT
 	 */
 	public void testGetZDimension() 

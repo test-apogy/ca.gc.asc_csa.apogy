@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.topology;
+package ca.gc.asc_csa.apogy.core.topology;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
-	public static final String ID = "org.eclipse.symphony.core.topology";
+	public static final String ID = "ca.gc.asc_csa.apogy.core.topology";
 	
 	private static BundleContext context;
 	

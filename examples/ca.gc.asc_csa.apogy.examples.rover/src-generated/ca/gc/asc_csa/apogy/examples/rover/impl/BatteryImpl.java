@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.impl;
+package ca.gc.asc_csa.apogy.examples.rover.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Random;
@@ -11,8 +11,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.rover.Battery;
-import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
+import ca.gc.asc_csa.apogy.examples.rover.Battery;
+import ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,9 +22,9 @@ import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl#isActive <em>Active</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl#getVoltage <em>Voltage</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl#getCurrent <em>Current</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.BatteryImpl#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.BatteryImpl#getVoltage <em>Voltage</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.impl.BatteryImpl#getCurrent <em>Current</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,7 +133,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesRoverPackage.Literals.BATTERY;
+		return ApogyExamplesRoverPackage.Literals.BATTERY;
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.BATTERY__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoverPackage.BATTERY__ACTIVE, oldActive, active));
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 		double oldVoltage = voltage;
 		voltage = newVoltage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE, oldVoltage, voltage));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoverPackage.BATTERY__VOLTAGE, oldVoltage, voltage));
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 		double oldCurrent = current;
 		current = newCurrent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.BATTERY__CURRENT, oldCurrent, current));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoverPackage.BATTERY__CURRENT, oldCurrent, current));
 	}
 
 	/**
@@ -239,11 +239,11 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
+			case ApogyExamplesRoverPackage.BATTERY__ACTIVE:
 				return isActive();
-			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
+			case ApogyExamplesRoverPackage.BATTERY__VOLTAGE:
 				return getVoltage();
-			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
+			case ApogyExamplesRoverPackage.BATTERY__CURRENT:
 				return getCurrent();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -257,13 +257,13 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
+			case ApogyExamplesRoverPackage.BATTERY__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
-			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
+			case ApogyExamplesRoverPackage.BATTERY__VOLTAGE:
 				setVoltage((Double)newValue);
 				return;
-			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
+			case ApogyExamplesRoverPackage.BATTERY__CURRENT:
 				setCurrent((Double)newValue);
 				return;
 		}
@@ -278,13 +278,13 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
+			case ApogyExamplesRoverPackage.BATTERY__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
+			case ApogyExamplesRoverPackage.BATTERY__VOLTAGE:
 				setVoltage(VOLTAGE_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
+			case ApogyExamplesRoverPackage.BATTERY__CURRENT:
 				setCurrent(CURRENT_EDEFAULT);
 				return;
 		}
@@ -299,11 +299,11 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
+			case ApogyExamplesRoverPackage.BATTERY__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
-			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
+			case ApogyExamplesRoverPackage.BATTERY__VOLTAGE:
 				return voltage != VOLTAGE_EDEFAULT;
-			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
+			case ApogyExamplesRoverPackage.BATTERY__CURRENT:
 				return current != CURRENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -317,10 +317,10 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__ExamplesRoverPackage.BATTERY___ACTIVATE:
+			case ApogyExamplesRoverPackage.BATTERY___ACTIVATE:
 				activate();
 				return null;
-			case Symphony__ExamplesRoverPackage.BATTERY___DEACTIVATE:
+			case ApogyExamplesRoverPackage.BATTERY___DEACTIVATE:
 				deactivate();
 				return null;
 		}

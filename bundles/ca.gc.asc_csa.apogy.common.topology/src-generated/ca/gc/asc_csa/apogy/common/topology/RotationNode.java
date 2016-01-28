@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
-import org.eclipse.symphony.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.RotationNode#getRotationMatrix <em>Rotation Matrix</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.RotationNode#getRotationMatrix <em>Rotation Matrix</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getRotationNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getRotationNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface RotationNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rotation Matrix</em>' containment reference.
 	 * @see #setRotationMatrix(Matrix3x3)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getRotationNode_RotationMatrix()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getRotationNode_RotationMatrix()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false'"
 	 * @generated
@@ -40,7 +40,7 @@ public interface RotationNode extends AggregateGroupNode {
 	Matrix3x3 getRotationMatrix();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.RotationNode#getRotationMatrix <em>Rotation Matrix</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.RotationNode#getRotationMatrix <em>Rotation Matrix</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rotation Matrix</em>' containment reference.

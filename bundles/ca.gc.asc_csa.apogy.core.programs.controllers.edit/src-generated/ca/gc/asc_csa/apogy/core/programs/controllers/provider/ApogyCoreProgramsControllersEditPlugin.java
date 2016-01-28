@@ -1,22 +1,22 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.common.io.jinput.provider.Symphony__CommonIOJInputEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.io.jinput.provider.ApogyCommonIOJInputEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CoreProgramsControllers edit plugin.
+ * This is the central singleton for the ApogyCoreProgramsControllers edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CoreProgramsControllersEditPlugin extends EMFPlugin
+public final class ApogyCoreProgramsControllersEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -24,7 +24,7 @@ public final class Symphony__CoreProgramsControllersEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final Symphony__CoreProgramsControllersEditPlugin INSTANCE = new Symphony__CoreProgramsControllersEditPlugin();
+  public static final ApogyCoreProgramsControllersEditPlugin INSTANCE = new ApogyCoreProgramsControllersEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -40,14 +40,14 @@ public final class Symphony__CoreProgramsControllersEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreProgramsControllersEditPlugin()
+  public ApogyCoreProgramsControllersEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {
 		     EcoreEditPlugin.INSTANCE,
-		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     Symphony__CommonIOJInputEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCommonIOJInputEditPlugin.INSTANCE,
 		   });
 	}
 

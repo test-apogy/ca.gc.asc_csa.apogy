@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.impl;
+package ca.gc.asc_csa.apogy.common.file.csv.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
-import org.eclipse.symphony.common.file.csv.CsvValueProvider;
+import ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage;
+import ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class CsvValueProviderImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonFileCSVPackage.Literals.CSV_VALUE_PROVIDER;
+		return ApogyCommonFileCSVPackage.Literals.CSV_VALUE_PROVIDER;
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class CsvValueProviderImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonFileCSVPackage.CSV_VALUE_PROVIDER___GET_STRING_VALUE__OBJECT:
+			case ApogyCommonFileCSVPackage.CSV_VALUE_PROVIDER___GET_STRING_VALUE__OBJECT:
 				return getStringValue(arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

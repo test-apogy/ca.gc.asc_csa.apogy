@@ -1,26 +1,26 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui.provider;
+package ca.gc.asc_csa.apogy.core.invocator.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CoreInvocatorUI edit plugin.
+ * This is the central singleton for the ApogyCoreInvocatorUI edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CoreInvocatorUIEditPlugin extends EMFPlugin {
+public final class ApogyCoreInvocatorUIEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CoreInvocatorUIEditPlugin INSTANCE = new Symphony__CoreInvocatorUIEditPlugin();
+	public static final ApogyCoreInvocatorUIEditPlugin INSTANCE = new ApogyCoreInvocatorUIEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -36,11 +36,11 @@ public final class Symphony__CoreInvocatorUIEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUIEditPlugin() {
+	public ApogyCoreInvocatorUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 /**
@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Program#getProgramsList <em>Programs List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Program#getInvocatorSession <em>Invocator Session</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Program#getValuesList <em>Values List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Program#getProgramsList <em>Programs List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Program#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Program#getValuesList <em>Values List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgram()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Program extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Programs List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.ProgramsList#getPrograms <em>Programs</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getPrograms <em>Programs</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Programs List</em>' container reference isn't clear,
@@ -44,8 +44,8 @@ public interface Program extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Programs List</em>' container reference.
 	 * @see #setProgramsList(ProgramsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram_ProgramsList()
-	 * @see org.eclipse.symphony.core.invocator.ProgramsList#getPrograms
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgram_ProgramsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ProgramsList#getPrograms
 	 * @model opposite="programs" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -53,7 +53,7 @@ public interface Program extends Named, Described
   ProgramsList getProgramsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Program#getProgramsList <em>Programs List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Program#getProgramsList <em>Programs List</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Programs List</em>' container reference.
@@ -71,9 +71,9 @@ public interface Program extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram_InvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgram_InvocatorSession()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%org.eclipse.symphony.core.invocator.ProgramsList%> _programsList = this.getProgramsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_programsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.ProgramsList%> _programsList_1 = this.getProgramsList();\n\treturn _programsList_1.getInvocatorSession();\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.ProgramsList%> _programsList = this.getProgramsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_programsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.core.invocator.ProgramsList%> _programsList_1 = this.getProgramsList();\n\treturn _programsList_1.getInvocatorSession();\n}'"
 	 * @generated
 	 */
   InvocatorSession getInvocatorSession();
@@ -88,14 +88,14 @@ public interface Program extends Named, Described
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Values List</em>' containment reference.
 	 * @see #setValuesList(ValuesList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram_ValuesList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getProgram_ValuesList()
 	 * @model containment="true"
 	 * @generated
 	 */
 	ValuesList getValuesList();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Program#getValuesList <em>Values List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Program#getValuesList <em>Values List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Values List</em>' containment reference.

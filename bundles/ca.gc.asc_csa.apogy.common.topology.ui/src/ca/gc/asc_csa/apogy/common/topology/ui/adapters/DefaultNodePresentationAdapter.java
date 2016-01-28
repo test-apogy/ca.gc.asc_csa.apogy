@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.topology.ui.adapters;
+package ca.gc.asc_csa.apogy.common.topology.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 public class DefaultNodePresentationAdapter implements NodePresentationAdapter {
 
@@ -20,7 +20,7 @@ public class DefaultNodePresentationAdapter implements NodePresentationAdapter {
 	public NodePresentation getAdapter(Node obj, Object context) {
 		NodePresentation nodePresentation = null;
 		if (isAdapterFor(obj)) {
-			nodePresentation = Symphony__CommonTopologyUIFactory.eINSTANCE.createNodePresentation();
+			nodePresentation = ApogyCommonTopologyUIFactory.eINSTANCE.createNodePresentation();
 			nodePresentation.setNode((Node) obj);
 		}
 		return nodePresentation;

@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.invocator.AttributeResultValue;
-import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AttributeResultValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AttributeResultValueImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE;
+		return ApogyCoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE;
 	}
 
   /**
@@ -78,7 +78,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
 		AttributeValue oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, oldValue, newValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -94,14 +94,14 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, null, msgs);
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, null, msgs);
 			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, newValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE, newValue, newValue));
 	}
 
   /**
@@ -113,7 +113,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
 				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -128,7 +128,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -143,7 +143,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
 				setValue((AttributeValue)newValue);
 				return;
 		}
@@ -159,7 +159,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
 				setValue((AttributeValue)null);
 				return;
 		}
@@ -175,7 +175,7 @@ public class AttributeResultValueImpl extends AbstractResultValueImpl implements
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

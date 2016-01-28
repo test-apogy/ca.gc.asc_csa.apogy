@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,15 +18,15 @@ import org.ros.node.topic.Publisher;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisher#isLaunched <em>Launched</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisher#getTopicName <em>Topic Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisher#getMessageType <em>Message Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisher#getPublisher <em>Publisher</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisher#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#isLaunched <em>Launched</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getTopicName <em>Topic Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getMessageType <em>Message Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getPublisher <em>Publisher</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getNode <em>Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisher()
- * @model TBounds="org.eclipse.symphony.addons.ros.Message"
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisher()
+ * @model TBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
  * @generated
  */
 public interface ROSPublisher<T extends Message> extends EObject {
@@ -39,7 +39,7 @@ public interface ROSPublisher<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Launched</em>' attribute.
 	 * @see #isSetLaunched()
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisher_Launched()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisher_Launched()
 	 * @model unique="false" unsettable="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_PUBLISHER'"
 	 * @generated
@@ -47,7 +47,7 @@ public interface ROSPublisher<T extends Message> extends EObject {
 	boolean isLaunched();
 
 	/**
-	 * Returns whether the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#isLaunched <em>Launched</em>}' attribute is set.
+	 * Returns whether the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#isLaunched <em>Launched</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return whether the value of the '<em>Launched</em>' attribute is set.
@@ -65,14 +65,14 @@ public interface ROSPublisher<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topic Name</em>' attribute.
 	 * @see #setTopicName(String)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisher_TopicName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisher_TopicName()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getTopicName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getTopicName <em>Topic Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getTopicName <em>Topic Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Topic Name</em>' attribute.
@@ -90,14 +90,14 @@ public interface ROSPublisher<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Message Type</em>' attribute.
 	 * @see #setMessageType(String)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisher_MessageType()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisher_MessageType()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getMessageType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getMessageType <em>Message Type</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getMessageType <em>Message Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Message Type</em>' attribute.
@@ -115,14 +115,14 @@ public interface ROSPublisher<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Publisher</em>' attribute.
 	 * @see #setPublisher(Publisher)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisher_Publisher()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.Publisher<T>"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisher_Publisher()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.Publisher<T>"
 	 * @generated
 	 */
 	Publisher<T> getPublisher();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getPublisher <em>Publisher</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getPublisher <em>Publisher</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Publisher</em>' attribute.
@@ -141,14 +141,14 @@ public interface ROSPublisher<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(ROSNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisher_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisher_Node()
 	 * @model
 	 * @generated
 	 */
 	ROSNode getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisher#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.

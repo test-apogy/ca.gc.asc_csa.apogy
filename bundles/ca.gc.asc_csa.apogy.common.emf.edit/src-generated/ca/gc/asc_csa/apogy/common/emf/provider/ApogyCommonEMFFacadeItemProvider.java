@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFFacadeItemProvider
+public class ApogyCommonEMFFacadeItemProvider
   extends ItemProviderAdapter
   implements
     IEditingDomainItemProvider,
@@ -39,7 +39,7 @@ public class Symphony__CommonEMFFacadeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFFacadeItemProvider(AdapterFactory adapterFactory)
+  public ApogyCommonEMFFacadeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -61,7 +61,7 @@ public class Symphony__CommonEMFFacadeItemProvider
 	}
 
   /**
-	 * This returns Symphony__CommonEMFFacade.gif.
+	 * This returns ApogyCommonEMFFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -69,7 +69,7 @@ public class Symphony__CommonEMFFacadeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonEMFFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonEMFFacade"));
 	}
 
   /**
@@ -81,7 +81,7 @@ public class Symphony__CommonEMFFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_Symphony__CommonEMFFacade_type");
+		return getString("_UI_ApogyCommonEMFFacade_type");
 	}
 
   /**

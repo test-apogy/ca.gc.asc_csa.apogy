@@ -2,22 +2,22 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.core.topology.ui;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.topology.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.core.topology.ui.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.core.topology.ui.Activator
 Bundle-Vendor: %providerName
-Require-Bundle: org.eclipse.symphony.common.converters,
- org.eclipse.symphony.common.topology.ui.viewer,
- org.eclipse.symphony.core.topology,
- org.eclipse.symphony.core.ui,
- org.eclipse.symphony.common.topology.ui.jme3,
+Require-Bundle: ca.gc.asc_csa.apogy.common.converters,
+ ca.gc.asc_csa.apogy.common.topology.ui.viewer,
+ ca.gc.asc_csa.apogy.core.topology,
+ ca.gc.asc_csa.apogy.core.ui,
+ ca.gc.asc_csa.apogy.common.topology.ui.jme3,
  org.eclipse.emf.edit,
  org.eclipse.core.expressions,
- org.eclipse.symphony.common.log;bundle-version="0.3.0",
- org.eclipse.symphony.common.converters.ui
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
+ ca.gc.asc_csa.apogy.common.converters.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.symphony.core.topology.ui,
- org.eclipse.symphony.core.topology.ui.commands,
- org.eclipse.symphony.core.topology.ui.preferences,
- org.eclipse.symphony.core.topology.ui.views
+Export-Package: ca.gc.asc_csa.apogy.core.topology.ui,
+ ca.gc.asc_csa.apogy.core.topology.ui.commands,
+ ca.gc.asc_csa.apogy.core.topology.ui.preferences,
+ ca.gc.asc_csa.apogy.core.topology.ui.views

@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log.util;
+package ca.gc.asc_csa.apogy.common.log.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.log.*;
+import ca.gc.asc_csa.apogy.common.log.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,17 +18,17 @@ import org.eclipse.symphony.common.log.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.log.Symphony__CommonLogPackage
+ * @see ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage
  * @generated
  */
-public class Symphony__CommonLogSwitch<T> extends Switch<T> {
+public class ApogyCommonLogSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonLogPackage modelPackage;
+	protected static ApogyCommonLogPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -36,9 +36,9 @@ public class Symphony__CommonLogSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonLogSwitch() {
+	public ApogyCommonLogSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonLogPackage.eINSTANCE;
+			modelPackage = ApogyCommonLogPackage.eINSTANCE;
 		}
 	}
 
@@ -65,7 +65,7 @@ public class Symphony__CommonLogSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonLogPackage.LOGGER: {
+			case ApogyCommonLogPackage.LOGGER: {
 				Logger logger = (Logger)theEObject;
 				T result = caseLogger(logger);
 				if (result == null) result = defaultCase(theEObject);
@@ -106,4 +106,4 @@ public class Symphony__CommonLogSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonLogSwitch
+} //ApogyCommonLogSwitch

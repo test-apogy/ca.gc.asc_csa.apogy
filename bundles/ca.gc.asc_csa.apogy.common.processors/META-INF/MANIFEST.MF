@@ -1,20 +1,20 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.processors;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.processors;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.symphony.common.processors,
- org.eclipse.symphony.common.processors.impl,
- org.eclipse.symphony.common.processors.util
+Export-Package: ca.gc.asc_csa.apogy.common.processors,
+ ca.gc.asc_csa.apogy.common.processors.impl,
+ ca.gc.asc_csa.apogy.common.processors.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Bundle-Activator: org.eclipse.symphony.common.processors.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.common.processors.Activator
 

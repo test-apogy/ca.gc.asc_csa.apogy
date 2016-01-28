@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal;
 
 import java.util.concurrent.Callable;
 
@@ -8,16 +8,16 @@ import javax.vecmath.Point3d;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.jme3.Activator;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
 
 import com.jme3.collision.CollisionResult;
 import com.jme3.collision.CollisionResults;
@@ -115,7 +115,7 @@ public abstract class MousePickListener implements ActionListener
 			         if(node != null)
 			         {			        	 			        	 
 			        	 // Transform the pick position in the node frame.
-				         Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
+				         Matrix4d m = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
 				         m.invert();				         
 				         Point3d relativePosition = new Point3d(collisionResult.getContactPoint().x, collisionResult.getContactPoint().y, collisionResult.getContactPoint().z);				         
 				         m.transform(relativePosition);
@@ -131,7 +131,7 @@ public abstract class MousePickListener implements ActionListener
 				        	 topologyPresentationSet = graphicsContext.getTopologyPresentationSet();
 				         }
 				         				         
-				         final NodeSelection nodeSelection = Symphony__CommonTopologyUIFacade.INSTANCE.createNodeSelection(topologyPresentationSet, node, relativePosition, contactNormalVector);
+				         final NodeSelection nodeSelection = ApogyCommonTopologyUIFacade.INSTANCE.createNodeSelection(topologyPresentationSet, node, relativePosition, contactNormalVector);
 				         
 				         System.out.println("--------------------------------------------------------------");
 				         System.out.println("                        PICK SELECTION");

@@ -4,7 +4,7 @@
  *
  * $Id: LinearVelocitySensorItemProvider.java,v 1.4.4.2 2015/05/21 15:50:04 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.motion.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class LinearVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearVelocitySensor_xVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearVelocitySensor_xVelocity_feature", "_UI_LinearVelocitySensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__XVELOCITY,
+				 ApogyAddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__XVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class LinearVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearVelocitySensor_yVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearVelocitySensor_yVelocity_feature", "_UI_LinearVelocitySensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__YVELOCITY,
+				 ApogyAddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__YVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class LinearVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearVelocitySensor_zVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearVelocitySensor_zVelocity_feature", "_UI_LinearVelocitySensor_type"),
-				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__ZVELOCITY,
+				 ApogyAddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__ZVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class LinearVelocitySensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LinearVelocitySensor.class)) {
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
-			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
+			case ApogyAddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

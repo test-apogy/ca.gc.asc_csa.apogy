@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.actuators;
+package ca.gc.asc_csa.apogy.addons.actuators;
 
 import org.eclipse.core.runtime.Plugin;
 
 public class Activator extends Plugin
 {
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.addons.actuators";
+	public static final String ID = "ca.gc.asc_csa.apogy.addons.actuators";
 	
 	// The shared instance
 	private static Activator plugin;

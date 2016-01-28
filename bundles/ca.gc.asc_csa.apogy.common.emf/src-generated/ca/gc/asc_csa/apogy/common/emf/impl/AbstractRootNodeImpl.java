@@ -1,14 +1,14 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractRootNodeImpl#getSourceClass <em>Source Class</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.AbstractRootNodeImpl#getSourceClass <em>Source Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,7 +53,7 @@ public abstract class AbstractRootNodeImpl extends MinimalEObjectImpl.Container 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonEMFPackage.Literals.ABSTRACT_ROOT_NODE;
+		return ApogyCommonEMFPackage.Literals.ABSTRACT_ROOT_NODE;
 	}
 
   /**
@@ -68,7 +68,7 @@ public abstract class AbstractRootNodeImpl extends MinimalEObjectImpl.Container 
 			sourceClass = (EClass)eResolveProxy(oldSourceClass);
 			if (sourceClass != oldSourceClass) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
 			}
 		}
 		return sourceClass;
@@ -94,7 +94,7 @@ public abstract class AbstractRootNodeImpl extends MinimalEObjectImpl.Container 
 		EClass oldSourceClass = sourceClass;
 		sourceClass = newSourceClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
 	}
 
   /**
@@ -106,7 +106,7 @@ public abstract class AbstractRootNodeImpl extends MinimalEObjectImpl.Container 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
+			case ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
 				if (resolve) return getSourceClass();
 				return basicGetSourceClass();
 		}
@@ -122,7 +122,7 @@ public abstract class AbstractRootNodeImpl extends MinimalEObjectImpl.Container 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
+			case ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
 				setSourceClass((EClass)newValue);
 				return;
 		}
@@ -138,7 +138,7 @@ public abstract class AbstractRootNodeImpl extends MinimalEObjectImpl.Container 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
+			case ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
 				setSourceClass((EClass)null);
 				return;
 		}
@@ -154,7 +154,7 @@ public abstract class AbstractRootNodeImpl extends MinimalEObjectImpl.Container 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
+			case ApogyCommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS:
 				return sourceClass != null;
 		}
 		return super.eIsSet(featureID);

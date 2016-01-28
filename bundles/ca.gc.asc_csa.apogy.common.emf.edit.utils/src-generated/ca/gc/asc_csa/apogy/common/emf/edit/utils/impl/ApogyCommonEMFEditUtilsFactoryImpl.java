@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.edit.utils.impl;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.ecore.EClass;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFactory;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFactory;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPa
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implements Symphony__CommonEMFEditUtilsFactory
+public class ApogyCommonEMFEditUtilsFactoryImpl extends EFactoryImpl implements ApogyCommonEMFEditUtilsFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -27,18 +27,18 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__CommonEMFEditUtilsFactory init()
+  public static ApogyCommonEMFEditUtilsFactory init()
   {
 		try {
-			Symphony__CommonEMFEditUtilsFactory theSymphony__CommonEMFEditUtilsFactory = (Symphony__CommonEMFEditUtilsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonEMFEditUtilsPackage.eNS_URI);
-			if (theSymphony__CommonEMFEditUtilsFactory != null) {
-				return theSymphony__CommonEMFEditUtilsFactory;
+			ApogyCommonEMFEditUtilsFactory theApogyCommonEMFEditUtilsFactory = (ApogyCommonEMFEditUtilsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonEMFEditUtilsPackage.eNS_URI);
+			if (theApogyCommonEMFEditUtilsFactory != null) {
+				return theApogyCommonEMFEditUtilsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonEMFEditUtilsFactoryImpl();
+		return new ApogyCommonEMFEditUtilsFactoryImpl();
 	}
 
   /**
@@ -47,7 +47,7 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFEditUtilsFactoryImpl()
+  public ApogyCommonEMFEditUtilsFactoryImpl()
   {
 		super();
 	}
@@ -61,7 +61,7 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonEMFEditUtilsPackage.SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE: return createSymphony__CommonEMFEditUtilsFacade();
+			case ApogyCommonEMFEditUtilsPackage.APOGY_COMMON_EMF_EDIT_UTILS_FACADE: return createApogyCommonEMFEditUtilsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -76,7 +76,7 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonEMFEditUtilsPackage.COLLECTION_OBJECT:
+			case ApogyCommonEMFEditUtilsPackage.COLLECTION_OBJECT:
 				return createCollectionObjectFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -92,7 +92,7 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonEMFEditUtilsPackage.COLLECTION_OBJECT:
+			case ApogyCommonEMFEditUtilsPackage.COLLECTION_OBJECT:
 				return convertCollectionObjectToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -104,9 +104,9 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFEditUtilsFacade createSymphony__CommonEMFEditUtilsFacade() {
-		Symphony__CommonEMFEditUtilsFacadeImpl symphony__CommonEMFEditUtilsFacade = new Symphony__CommonEMFEditUtilsFacadeImpl();
-		return symphony__CommonEMFEditUtilsFacade;
+	public ApogyCommonEMFEditUtilsFacade createApogyCommonEMFEditUtilsFacade() {
+		ApogyCommonEMFEditUtilsFacadeImpl apogy__CommonEMFEditUtilsFacade = new ApogyCommonEMFEditUtilsFacadeImpl();
+		return apogy__CommonEMFEditUtilsFacade;
 	}
 
 		/**
@@ -135,8 +135,8 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonEMFEditUtilsPackage getSymphony__CommonEMFEditUtilsPackage() {
-		return (Symphony__CommonEMFEditUtilsPackage)getEPackage();
+	public ApogyCommonEMFEditUtilsPackage getApogyCommonEMFEditUtilsPackage() {
+		return (ApogyCommonEMFEditUtilsPackage)getEPackage();
 	}
 
 		/**
@@ -146,9 +146,9 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__CommonEMFEditUtilsPackage getPackage()
+  public static ApogyCommonEMFEditUtilsPackage getPackage()
   {
-		return Symphony__CommonEMFEditUtilsPackage.eINSTANCE;
+		return ApogyCommonEMFEditUtilsPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonEMFEditUtilsFactoryImpl
+} //ApogyCommonEMFEditUtilsFactoryImpl

@@ -12,9 +12,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "org.eclipse.symphony.common.topology" 
-       class = "org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage"
-       genModel = "model/symphony_common_topology.xcore" /> 
+       uri = "ca.gc.asc_csa.apogy.common.topology" 
+       class = "ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage"
+       genModel = "model/apogy_common_topology.xcore" /> 
   </extension>
 
 </plugin>

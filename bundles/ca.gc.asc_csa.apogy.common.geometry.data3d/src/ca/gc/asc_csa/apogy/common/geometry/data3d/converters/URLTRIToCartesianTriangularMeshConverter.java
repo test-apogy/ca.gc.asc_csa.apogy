@@ -1,13 +1,13 @@
-package org.eclipse.symphony.common.geometry.data3d.converters;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.converters;
 
 import java.io.File;
 import java.net.URL;
 
-import org.eclipse.symphony.common.geometry.data3d.Activator;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class URLTRIToCartesianTriangularMeshConverter extends URLToCartesianTriangularMeshConverter 
 {

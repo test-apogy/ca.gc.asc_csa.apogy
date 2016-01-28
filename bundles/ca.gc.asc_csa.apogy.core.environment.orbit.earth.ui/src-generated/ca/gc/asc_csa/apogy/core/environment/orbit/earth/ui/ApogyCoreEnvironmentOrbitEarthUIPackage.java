@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,12 +25,12 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIFactory
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreEnvironmentOrbitEarthUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CoreEnvironmentOrbitEarthUI' complianceLevel='8.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.core.environment.orbit.earth.ui/src-generated' editDirectory='/org.eclipse.symphony.core.environment.orbit.earth.ui.edit/src-generated' basePackage='org.eclipse.symphony.core.environment.orbit.earth'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreEnvironmentOrbitEarthUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyCoreEnvironmentOrbitEarthUI' complianceLevel='8.0' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.environment.orbit.earth'"
  * @generated
  */
-public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
+public interface ApogyCoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -45,7 +45,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.core.environment.orbit.earth.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui";
 
 	/**
 	 * The package namespace name.
@@ -61,14 +61,14 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitEarthUIPackage eINSTANCE = org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl.init();
+	ApogyCoreEnvironmentOrbitEarthUIPackage eINSTANCE = ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl <em>Earth View Configuration List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl <em>Earth View Configuration List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfigurationList()
 	 * @generated
 	 */
 	int EARTH_VIEW_CONFIGURATION_LIST = 0;
@@ -80,7 +80,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_LIST__TOOLS_LIST = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
+	int EARTH_VIEW_CONFIGURATION_LIST__TOOLS_LIST = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
 
 	/**
 	 * The feature id for the '<em><b>Earth View Configurations</b></em>' containment reference list.
@@ -89,7 +89,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
+	int EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Earth View Configuration List</em>' class.
@@ -98,7 +98,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
+	int EARTH_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Earth View Configuration List</em>' class.
@@ -107,14 +107,14 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
+	int EARTH_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl <em>Earth View Configuration</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl <em>Earth View Configuration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfiguration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfiguration()
 	 * @generated
 	 */
 	int EARTH_VIEW_CONFIGURATION = 1;
@@ -126,7 +126,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int EARTH_VIEW_CONFIGURATION__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -135,7 +135,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int EARTH_VIEW_CONFIGURATION__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
@@ -144,7 +144,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION__LAYERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int EARTH_VIEW_CONFIGURATION__LAYERS = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Earth View Configuration</em>' class.
@@ -153,7 +153,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int EARTH_VIEW_CONFIGURATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Earth View Configuration</em>' class.
@@ -162,14 +162,14 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int EARTH_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl <em>Abstract World Wind Layer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl <em>Abstract World Wind Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getAbstractWorldWindLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getAbstractWorldWindLayer()
 	 * @generated
 	 */
 	int ABSTRACT_WORLD_WIND_LAYER = 2;
@@ -181,7 +181,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER__UPDATING = Symphony__CorePackage.UPDATABLE__UPDATING;
+	int ABSTRACT_WORLD_WIND_LAYER__UPDATING = ApogyCorePackage.UPDATABLE__UPDATING;
 
 	/**
 	 * The feature id for the '<em><b>Auto Update Enabled</b></em>' attribute.
@@ -190,7 +190,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER__AUTO_UPDATE_ENABLED = Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED;
+	int ABSTRACT_WORLD_WIND_LAYER__AUTO_UPDATE_ENABLED = ApogyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -199,7 +199,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER__VISIBLE = Symphony__CorePackage.UPDATABLE_FEATURE_COUNT + 0;
+	int ABSTRACT_WORLD_WIND_LAYER__VISIBLE = ApogyCorePackage.UPDATABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Renderable Layer</b></em>' attribute.
@@ -208,7 +208,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER = Symphony__CorePackage.UPDATABLE_FEATURE_COUNT + 1;
+	int ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER = ApogyCorePackage.UPDATABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Abstract World Wind Layer</em>' class.
@@ -217,7 +217,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT = Symphony__CorePackage.UPDATABLE_FEATURE_COUNT + 2;
+	int ABSTRACT_WORLD_WIND_LAYER_FEATURE_COUNT = ApogyCorePackage.UPDATABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Default Auto Update Enabled</em>' operation.
@@ -226,7 +226,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER___GET_DEFAULT_AUTO_UPDATE_ENABLED = Symphony__CorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED;
+	int ABSTRACT_WORLD_WIND_LAYER___GET_DEFAULT_AUTO_UPDATE_ENABLED = ApogyCorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED;
 
 	/**
 	 * The operation id for the '<em>Update</em>' operation.
@@ -235,7 +235,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER___UPDATE = Symphony__CorePackage.UPDATABLE___UPDATE;
+	int ABSTRACT_WORLD_WIND_LAYER___UPDATE = ApogyCorePackage.UPDATABLE___UPDATE;
 
 	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -244,7 +244,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER___DISPOSE = Symphony__CorePackage.UPDATABLE_OPERATION_COUNT + 0;
+	int ABSTRACT_WORLD_WIND_LAYER___DISPOSE = ApogyCorePackage.UPDATABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Abstract World Wind Layer</em>' class.
@@ -253,14 +253,14 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT = Symphony__CorePackage.UPDATABLE_OPERATION_COUNT + 1;
+	int ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT = ApogyCorePackage.UPDATABLE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl <em>Spacecraft Location World Wind Layer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl <em>Spacecraft Location World Wind Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftLocationWorldWindLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftLocationWorldWindLayer()
 	 * @generated
 	 */
 	int SPACECRAFT_LOCATION_WORLD_WIND_LAYER = 3;
@@ -392,11 +392,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int SPACECRAFT_LOCATION_WORLD_WIND_LAYER_OPERATION_COUNT = ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl <em>Orbit Model World Wind Layer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl <em>Orbit Model World Wind Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getOrbitModelWorldWindLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	int ORBIT_MODEL_WORLD_WIND_LAYER = 4;
@@ -546,11 +546,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int ORBIT_MODEL_WORLD_WIND_LAYER_OPERATION_COUNT = ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl <em>Spacecraft Swath World Wind Layer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl <em>Spacecraft Swath World Wind Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftSwathWorldWindLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	int SPACECRAFT_SWATH_WORLD_WIND_LAYER = 5;
@@ -727,11 +727,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int SPACECRAFT_SWATH_WORLD_WIND_LAYER_OPERATION_COUNT = ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl <em>Earth Surface Location World Wind Layer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl <em>Earth Surface Location World Wind Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getEarthSurfaceLocationWorldWindLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthSurfaceLocationWorldWindLayer()
 	 * @generated
 	 */
 	int EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER = 6;
@@ -836,11 +836,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER_OPERATION_COUNT = ABSTRACT_WORLD_WIND_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl <em>Ground Station World Wind Layer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl <em>Ground Station World Wind Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getGroundStationWorldWindLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getGroundStationWorldWindLayer()
 	 * @generated
 	 */
 	int GROUND_STATION_WORLD_WIND_LAYER = 7;
@@ -963,11 +963,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	int GROUND_STATION_WORLD_WIND_LAYER_OPERATION_COUNT = EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl <em>Spacecraft Visibility Pass View Configuration List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl <em>Spacecraft Visibility Pass View Configuration List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfigurationList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfigurationList()
 	 * @generated
 	 */
 	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST = 8;
@@ -979,7 +979,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__TOOLS_LIST = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__TOOLS_LIST = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
 
 	/**
 	 * The feature id for the '<em><b>Configurations</b></em>' containment reference list.
@@ -988,7 +988,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Spacecraft Visibility Pass View Configuration List</em>' class.
@@ -997,7 +997,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft Visibility Pass View Configuration List</em>' class.
@@ -1006,14 +1006,14 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = ApogyCoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl <em>Spacecraft Visibility Pass View Configuration</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl <em>Spacecraft Visibility Pass View Configuration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfiguration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfiguration()
 	 * @generated
 	 */
 	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION = 9;
@@ -1025,7 +1025,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME = ApogyCommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1034,7 +1034,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Configurations List</b></em>' container reference.
@@ -1043,7 +1043,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Visibility Set</b></em>' containment reference.
@@ -1052,7 +1052,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Spacecraft Visibility Pass View Configuration</em>' class.
@@ -1061,7 +1061,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft Visibility Pass View Configuration</em>' class.
@@ -1070,14 +1070,14 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '<em>Renderable Layer</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see gov.nasa.worldwind.layers.RenderableLayer
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getRenderableLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getRenderableLayer()
 	 * @generated
 	 */
 	int RENDERABLE_LAYER = 10;
@@ -1088,469 +1088,469 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.Map
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getMap()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getMap()
 	 * @generated
 	 */
 	int MAP = 11;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList <em>Earth View Configuration List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList <em>Earth View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Earth View Configuration List</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList
 	 * @generated
 	 */
 	EClass getEarthViewConfigurationList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList#getEarthViewConfigurations <em>Earth View Configurations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList#getEarthViewConfigurations <em>Earth View Configurations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Earth View Configurations</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList#getEarthViewConfigurations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList#getEarthViewConfigurations()
 	 * @see #getEarthViewConfigurationList()
 	 * @generated
 	 */
 	EReference getEarthViewConfigurationList_EarthViewConfigurations();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration <em>Earth View Configuration</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration <em>Earth View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Earth View Configuration</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration
 	 * @generated
 	 */
 	EClass getEarthViewConfiguration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration#getLayers <em>Layers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration#getLayers <em>Layers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Layers</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration#getLayers()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration#getLayers()
 	 * @see #getEarthViewConfiguration()
 	 * @generated
 	 */
 	EReference getEarthViewConfiguration_Layers();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer <em>Abstract World Wind Layer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer <em>Abstract World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract World Wind Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer
 	 * @generated
 	 */
 	EClass getAbstractWorldWindLayer();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible <em>Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible <em>Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible()
 	 * @see #getAbstractWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getAbstractWorldWindLayer_Visible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Renderable Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer()
 	 * @see #getAbstractWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getAbstractWorldWindLayer_RenderableLayer();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#dispose()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer#dispose()
 	 * @generated
 	 */
 	EOperation getAbstractWorldWindLayer__Dispose();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer <em>Spacecraft Location World Wind Layer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer <em>Spacecraft Location World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spacecraft Location World Wind Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer
 	 * @generated
 	 */
 	EClass getSpacecraftLocationWorldWindLayer();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getOrbitModel <em>Orbit Model</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getOrbitModel <em>Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Orbit Model</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getOrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getOrbitModel()
 	 * @see #getSpacecraftLocationWorldWindLayer()
 	 * @generated
 	 */
 	EReference getSpacecraftLocationWorldWindLayer_OrbitModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getTimeSource <em>Time Source</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getTimeSource <em>Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Time Source</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getTimeSource()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#getTimeSource()
 	 * @see #getSpacecraftLocationWorldWindLayer()
 	 * @generated
 	 */
 	EReference getSpacecraftLocationWorldWindLayer_TimeSource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowGroundProjection <em>Show Ground Projection</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowGroundProjection <em>Show Ground Projection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Show Ground Projection</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowGroundProjection()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowGroundProjection()
 	 * @see #getSpacecraftLocationWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftLocationWorldWindLayer_ShowGroundProjection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowLatLon <em>Show Lat Lon</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowLatLon <em>Show Lat Lon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Show Lat Lon</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowLatLon()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowLatLon()
 	 * @see #getSpacecraftLocationWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftLocationWorldWindLayer_ShowLatLon();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer <em>Orbit Model World Wind Layer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer <em>Orbit Model World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Orbit Model World Wind Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer
 	 * @generated
 	 */
 	EClass getOrbitModelWorldWindLayer();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getOrbitModel <em>Orbit Model</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getOrbitModel <em>Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Orbit Model</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getOrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getOrbitModel()
 	 * @see #getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	EReference getOrbitModelWorldWindLayer_OrbitModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeSource <em>Time Source</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeSource <em>Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Time Source</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeSource()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeSource()
 	 * @see #getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	EReference getOrbitModelWorldWindLayer_TimeSource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeInterval <em>Time Interval</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeInterval <em>Time Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Time Interval</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeInterval()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeInterval()
 	 * @see #getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getOrbitModelWorldWindLayer_TimeInterval();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Forward Propagation Duration</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getForwardPropagationDuration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getForwardPropagationDuration()
 	 * @see #getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getOrbitModelWorldWindLayer_ForwardPropagationDuration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Backward Propagation Duration</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getBackwardPropagationDuration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getBackwardPropagationDuration()
 	 * @see #getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getOrbitModelWorldWindLayer_BackwardPropagationDuration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Show Ground Trace</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowGroundTrace()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowGroundTrace()
 	 * @see #getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getOrbitModelWorldWindLayer_ShowGroundTrace();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowOrbit <em>Show Orbit</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowOrbit <em>Show Orbit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Show Orbit</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowOrbit()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowOrbit()
 	 * @see #getOrbitModelWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getOrbitModelWorldWindLayer_ShowOrbit();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer <em>Spacecraft Swath World Wind Layer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer <em>Spacecraft Swath World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spacecraft Swath World Wind Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer
 	 * @generated
 	 */
 	EClass getSpacecraftSwathWorldWindLayer();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel <em>Orbit Model</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel <em>Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Orbit Model</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getOrbitModel()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EReference getSpacecraftSwathWorldWindLayer_OrbitModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource <em>Time Source</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource <em>Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Time Source</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeSource()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EReference getSpacecraftSwathWorldWindLayer_TimeSource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration <em>Forward Propagation Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Forward Propagation Duration</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardPropagationDuration()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftSwathWorldWindLayer_ForwardPropagationDuration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration <em>Backward Propagation Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Backward Propagation Duration</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardPropagationDuration()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval <em>Time Interval</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval <em>Time Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Time Interval</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getTimeInterval()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftSwathWorldWindLayer_TimeInterval();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle <em>Left Swath Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle <em>Left Swath Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Left Swath Angle</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getLeftSwathAngle()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftSwathWorldWindLayer_LeftSwathAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle <em>Right Swath Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle <em>Right Swath Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Right Swath Angle</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getRightSwathAngle()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftSwathWorldWindLayer_RightSwathAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Show Ground Trace</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#isShowGroundTrace()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getSpacecraftSwathWorldWindLayer_ShowGroundTrace();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor <em>Forward Spacecraft Swath Corridor</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor <em>Forward Spacecraft Swath Corridor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Forward Spacecraft Swath Corridor</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getForwardSpacecraftSwathCorridor()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EReference getSpacecraftSwathWorldWindLayer_ForwardSpacecraftSwathCorridor();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor <em>Backward Spacecraft Swath Corridor</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor <em>Backward Spacecraft Swath Corridor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Backward Spacecraft Swath Corridor</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer#getBackwardSpacecraftSwathCorridor()
 	 * @see #getSpacecraftSwathWorldWindLayer()
 	 * @generated
 	 */
 	EReference getSpacecraftSwathWorldWindLayer_BackwardSpacecraftSwathCorridor();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer <em>Earth Surface Location World Wind Layer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer <em>Earth Surface Location World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Earth Surface Location World Wind Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer
 	 * @generated
 	 */
 	EClass getEarthSurfaceLocationWorldWindLayer();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getEarthSurfaceLocation <em>Earth Surface Location</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getEarthSurfaceLocation <em>Earth Surface Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Earth Surface Location</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getEarthSurfaceLocation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getEarthSurfaceLocation()
 	 * @see #getEarthSurfaceLocationWorldWindLayer()
 	 * @generated
 	 */
 	EReference getEarthSurfaceLocationWorldWindLayer_EarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getTargetRadius <em>Target Radius</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getTargetRadius <em>Target Radius</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Target Radius</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getTargetRadius()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getTargetRadius()
 	 * @see #getEarthSurfaceLocationWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getEarthSurfaceLocationWorldWindLayer_TargetRadius();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer <em>Ground Station World Wind Layer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer <em>Ground Station World Wind Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Ground Station World Wind Layer</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer
 	 * @generated
 	 */
 	EClass getGroundStationWorldWindLayer();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getGroundStation <em>Ground Station</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getGroundStation <em>Ground Station</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ground Station</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getGroundStation()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getGroundStation()
 	 * @see #getGroundStationWorldWindLayer()
 	 * @generated
 	 */
 	EReference getGroundStationWorldWindLayer_GroundStation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getReferenceAltitude <em>Reference Altitude</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getReferenceAltitude <em>Reference Altitude</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Reference Altitude</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getReferenceAltitude()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getReferenceAltitude()
 	 * @see #getGroundStationWorldWindLayer()
 	 * @generated
 	 */
 	EAttribute getGroundStationWorldWindLayer_ReferenceAltitude();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList <em>Spacecraft Visibility Pass View Configuration List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList <em>Spacecraft Visibility Pass View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spacecraft Visibility Pass View Configuration List</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList
 	 * @generated
 	 */
 	EClass getSpacecraftVisibilityPassViewConfigurationList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations <em>Configurations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations <em>Configurations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Configurations</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations()
 	 * @see #getSpacecraftVisibilityPassViewConfigurationList()
 	 * @generated
 	 */
 	EReference getSpacecraftVisibilityPassViewConfigurationList_Configurations();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration <em>Spacecraft Visibility Pass View Configuration</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration <em>Spacecraft Visibility Pass View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Spacecraft Visibility Pass View Configuration</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration
 	 * @generated
 	 */
 	EClass getSpacecraftVisibilityPassViewConfiguration();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Configurations List</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList()
 	 * @see #getSpacecraftVisibilityPassViewConfiguration()
 	 * @generated
 	 */
 	EReference getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getVisibilitySet <em>Visibility Set</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getVisibilitySet <em>Visibility Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Visibility Set</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getVisibilitySet()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getVisibilitySet()
 	 * @see #getSpacecraftVisibilityPassViewConfiguration()
 	 * @generated
 	 */
@@ -1585,7 +1585,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CoreEnvironmentOrbitEarthUIFactory getSymphony__CoreEnvironmentOrbitEarthUIFactory();
+	ApogyCoreEnvironmentOrbitEarthUIFactory getApogyCoreEnvironmentOrbitEarthUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1602,11 +1602,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl <em>Earth View Configuration List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl <em>Earth View Configuration List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfigurationList()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationListImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfigurationList()
 		 * @generated
 		 */
 		EClass EARTH_VIEW_CONFIGURATION_LIST = eINSTANCE.getEarthViewConfigurationList();
@@ -1620,11 +1620,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EReference EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS = eINSTANCE.getEarthViewConfigurationList_EarthViewConfigurations();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl <em>Earth View Configuration</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl <em>Earth View Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfiguration()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthViewConfiguration()
 		 * @generated
 		 */
 		EClass EARTH_VIEW_CONFIGURATION = eINSTANCE.getEarthViewConfiguration();
@@ -1638,11 +1638,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EReference EARTH_VIEW_CONFIGURATION__LAYERS = eINSTANCE.getEarthViewConfiguration_Layers();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl <em>Abstract World Wind Layer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl <em>Abstract World Wind Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getAbstractWorldWindLayer()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getAbstractWorldWindLayer()
 		 * @generated
 		 */
 		EClass ABSTRACT_WORLD_WIND_LAYER = eINSTANCE.getAbstractWorldWindLayer();
@@ -1672,11 +1672,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EOperation ABSTRACT_WORLD_WIND_LAYER___DISPOSE = eINSTANCE.getAbstractWorldWindLayer__Dispose();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl <em>Spacecraft Location World Wind Layer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl <em>Spacecraft Location World Wind Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftLocationWorldWindLayer()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftLocationWorldWindLayer()
 		 * @generated
 		 */
 		EClass SPACECRAFT_LOCATION_WORLD_WIND_LAYER = eINSTANCE.getSpacecraftLocationWorldWindLayer();
@@ -1714,11 +1714,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EAttribute SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_LAT_LON = eINSTANCE.getSpacecraftLocationWorldWindLayer_ShowLatLon();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl <em>Orbit Model World Wind Layer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl <em>Orbit Model World Wind Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getOrbitModelWorldWindLayer()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getOrbitModelWorldWindLayer()
 		 * @generated
 		 */
 		EClass ORBIT_MODEL_WORLD_WIND_LAYER = eINSTANCE.getOrbitModelWorldWindLayer();
@@ -1780,11 +1780,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EAttribute ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT = eINSTANCE.getOrbitModelWorldWindLayer_ShowOrbit();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl <em>Spacecraft Swath World Wind Layer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl <em>Spacecraft Swath World Wind Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftSwathWorldWindLayer()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftSwathWorldWindLayer()
 		 * @generated
 		 */
 		EClass SPACECRAFT_SWATH_WORLD_WIND_LAYER = eINSTANCE.getSpacecraftSwathWorldWindLayer();
@@ -1870,11 +1870,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EReference SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR = eINSTANCE.getSpacecraftSwathWorldWindLayer_BackwardSpacecraftSwathCorridor();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl <em>Earth Surface Location World Wind Layer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl <em>Earth Surface Location World Wind Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getEarthSurfaceLocationWorldWindLayer()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getEarthSurfaceLocationWorldWindLayer()
 		 * @generated
 		 */
 		EClass EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER = eINSTANCE.getEarthSurfaceLocationWorldWindLayer();
@@ -1896,11 +1896,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EAttribute EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS = eINSTANCE.getEarthSurfaceLocationWorldWindLayer_TargetRadius();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl <em>Ground Station World Wind Layer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl <em>Ground Station World Wind Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getGroundStationWorldWindLayer()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getGroundStationWorldWindLayer()
 		 * @generated
 		 */
 		EClass GROUND_STATION_WORLD_WIND_LAYER = eINSTANCE.getGroundStationWorldWindLayer();
@@ -1922,11 +1922,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EAttribute GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE = eINSTANCE.getGroundStationWorldWindLayer_ReferenceAltitude();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl <em>Spacecraft Visibility Pass View Configuration List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl <em>Spacecraft Visibility Pass View Configuration List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfigurationList()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationListImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfigurationList()
 		 * @generated
 		 */
 		EClass SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST = eINSTANCE.getSpacecraftVisibilityPassViewConfigurationList();
@@ -1940,11 +1940,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		EReference SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS = eINSTANCE.getSpacecraftVisibilityPassViewConfigurationList_Configurations();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl <em>Spacecraft Visibility Pass View Configuration</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl <em>Spacecraft Visibility Pass View Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfiguration()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.SpacecraftVisibilityPassViewConfigurationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getSpacecraftVisibilityPassViewConfiguration()
 		 * @generated
 		 */
 		EClass SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION = eINSTANCE.getSpacecraftVisibilityPassViewConfiguration();
@@ -1970,7 +1970,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see gov.nasa.worldwind.layers.RenderableLayer
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getRenderableLayer()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getRenderableLayer()
 		 * @generated
 		 */
 		EDataType RENDERABLE_LAYER = eINSTANCE.getRenderableLayer();
@@ -1980,11 +1980,11 @@ public interface Symphony__CoreEnvironmentOrbitEarthUIPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.Map
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.impl.Symphony__CoreEnvironmentOrbitEarthUIPackageImpl#getMap()
+		 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.ApogyCoreEnvironmentOrbitEarthUIPackageImpl#getMap()
 		 * @generated
 		 */
 		EDataType MAP = eINSTANCE.getMap();
 
 	}
 
-} //Symphony__CoreEnvironmentOrbitEarthUIPackage
+} //ApogyCoreEnvironmentOrbitEarthUIPackage

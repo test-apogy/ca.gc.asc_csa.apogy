@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import java.util.List;
 import javax.vecmath.Point3d;
@@ -16,30 +16,30 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.range.ContactSensor;
-import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RangeScanner;
-import org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator;
-import org.eclipse.symphony.addons.sensors.range.RangeSensor;
-import org.eclipse.symphony.addons.sensors.range.RasterScanData;
-import org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor;
-import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-import org.eclipse.symphony.addons.sensors.range.RayData;
-import org.eclipse.symphony.addons.sensors.range.SimpleLineRangeScanner;
-import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
-import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
-import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
-import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ContactSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RangeScanner;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RangeScannerSimulator;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RangeSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanData;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanRangeSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RasterScanSettings;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RayData;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleLineRangeScanner;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRangeSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScanner;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangeFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implements Symphony__AddonsSensorsRangePackage {
+public class ApogyAddonsSensorsRangePackageImpl extends EPackageImpl implements ApogyAddonsSensorsRangePackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -151,7 +151,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsSensorsRangeFacadeEClass = null;
+	private EClass apogy__AddonsSensorsRangeFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -192,12 +192,12 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsRangePackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsRangeFactory.eINSTANCE);
+	private ApogyAddonsSensorsRangePackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsRangeFactory.eINSTANCE);
 	}
 
 	/**
@@ -210,7 +210,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsRangePackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsRangePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -219,33 +219,33 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsRangePackage init() {
-		if (isInited) return (Symphony__AddonsSensorsRangePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsRangePackage.eNS_URI);
+	public static ApogyAddonsSensorsRangePackage init() {
+		if (isInited) return (ApogyAddonsSensorsRangePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsRangePackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsRangePackageImpl theSymphony__AddonsSensorsRangePackage = (Symphony__AddonsSensorsRangePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsRangePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsRangePackageImpl());
+		ApogyAddonsSensorsRangePackageImpl theApogyAddonsSensorsRangePackage = (ApogyAddonsSensorsRangePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsRangePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsRangePackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
-		Symphony__AddonsSensorsPackage.eINSTANCE.eClass();
-		Symphony__CommonGeometryData25DPackage.eINSTANCE.eClass();
-		Symphony__CommonEMFPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsFOVPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData25DPackage.eINSTANCE.eClass();
+		ApogyCommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsRangePackage.createPackageContents();
+		theApogyAddonsSensorsRangePackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsRangePackage.initializePackageContents();
+		theApogyAddonsSensorsRangePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsRangePackage.freeze();
+		theApogyAddonsSensorsRangePackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsRangePackage.eNS_URI, theSymphony__AddonsSensorsRangePackage);
-		return theSymphony__AddonsSensorsRangePackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsRangePackage.eNS_URI, theApogyAddonsSensorsRangePackage);
+		return theApogyAddonsSensorsRangePackage;
 	}
 
 	/**
@@ -649,8 +649,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsSensorsRangeFacade() {
-		return symphony__AddonsSensorsRangeFacadeEClass;
+	public EClass getApogyAddonsSensorsRangeFacade() {
+		return apogy__AddonsSensorsRangeFacadeEClass;
 	}
 
 	/**
@@ -658,8 +658,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int() {
-		return symphony__AddonsSensorsRangeFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int() {
+		return apogy__AddonsSensorsRangeFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -667,8 +667,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings() {
-		return symphony__AddonsSensorsRangeFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyAddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings() {
+		return apogy__AddonsSensorsRangeFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -712,8 +712,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeFactory getSymphony__AddonsSensorsRangeFactory() {
-		return (Symphony__AddonsSensorsRangeFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsRangeFactory getApogyAddonsSensorsRangeFactory() {
+		return (ApogyAddonsSensorsRangeFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -793,9 +793,9 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		createEReference(rasterScanDataEClass, RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS);
 		createEReference(rasterScanDataEClass, RASTER_SCAN_DATA__SCAN_DATA);
 
-		symphony__AddonsSensorsRangeFacadeEClass = createEClass(SYMPHONY_ADDONS_SENSORS_RANGE_FACADE);
-		createEOperation(symphony__AddonsSensorsRangeFacadeEClass, SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT);
-		createEOperation(symphony__AddonsSensorsRangeFacadeEClass, SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS);
+		apogy__AddonsSensorsRangeFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_RANGE_FACADE);
+		createEOperation(apogy__AddonsSensorsRangeFacadeEClass, APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT);
+		createEOperation(apogy__AddonsSensorsRangeFacadeEClass, APOGY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -828,14 +828,14 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
+		ApogyAddonsSensorsFOVPackage theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__AddonsSensorsPackage theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
-		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
-		Symphony__CommonGeometryData25DPackage theSymphony__CommonGeometryData25DPackage = (Symphony__CommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData25DPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		ApogyAddonsSensorsPackage theApogyAddonsSensorsPackage = (ApogyAddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPackage.eNS_URI);
+		ApogyCommonProcessorsPackage theApogyCommonProcessorsPackage = (ApogyCommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonProcessorsPackage.eNS_URI);
+		ApogyCommonGeometryData25DPackage theApogyCommonGeometryData25DPackage = (ApogyCommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData25DPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter rangeScannerEClass_InputType = addETypeParameter(rangeScannerEClass, "InputType");
@@ -845,8 +845,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		rasterScanSettingsEClass.getESuperTypes().add(theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView());
-		rangeSensorEClass.getESuperTypes().add(theSymphony__AddonsSensorsPackage.getSensor());
+		rasterScanSettingsEClass.getESuperTypes().add(theApogyAddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView());
+		rangeSensorEClass.getESuperTypes().add(theApogyAddonsSensorsPackage.getSensor());
 		contactSensorEClass.getESuperTypes().add(this.getRangeSensor());
 		simpleRangeSensorEClass.getESuperTypes().add(this.getRangeSensor());
 		simpleSonarEClass.getESuperTypes().add(this.getSimpleRangeSensor());
@@ -854,10 +854,10 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		simpleLineRangeScannerEClass.getESuperTypes().add(this.getLineRangeScanner());
 		EGenericType g1 = createEGenericType(this.getRangeSensor());
 		rangeScannerEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		EGenericType g2 = createEGenericType(rangeScannerEClass_InputType);
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D());
+		g2 = createEGenericType(theApogyCommonGeometryData25DPackage.getVolumetricCoordinatesSet25D());
 		g1.getETypeArguments().add(g2);
 		rangeScannerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getRangeScanner());
@@ -868,10 +868,10 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		g2 = createEGenericType(this.getRasterScanSettings());
 		g1.getETypeArguments().add(g2);
 		rasterScanRangeSensorEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theApogyCommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getRasterScanSettings());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D());
+		g2 = createEGenericType(theApogyCommonGeometryData25DPackage.getVolumetricCoordinatesSet25D());
 		g1.getETypeArguments().add(g2);
 		rasterScanRangeSensorEClass.getEGenericSuperTypes().add(g1);
 		simpleRasterScanRangeScannerEClass.getESuperTypes().add(this.getRasterScanRangeSensor());
@@ -881,8 +881,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		simpleRasterScanRangeScannerSimulatorEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getSimpleRasterScanRangeScanner());
 		simpleRasterScanRangeScannerSimulatorEClass.getEGenericSuperTypes().add(g1);
-		rasterScanDataEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
-		rasterScanDataEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		rasterScanDataEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
+		rasterScanDataEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(rayDataEClass, RayData.class, "RayData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -905,12 +905,12 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		initEClass(simpleSonarEClass, SimpleSonar.class, "SimpleSonar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSimpleSonar_EchoDetected(), theEcorePackage.getEBoolean(), "echoDetected", null, 0, 1, SimpleSonar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSimpleSonar__GetFieldOfView(), theSymphony__AddonsSensorsFOVPackage.getConicalFieldOfView(), "getFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSimpleSonar__GetFieldOfView(), theApogyAddonsSensorsFOVPackage.getConicalFieldOfView(), "getFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(lineRangeScannerEClass, LineRangeScanner.class, "LineRangeScanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLineRangeScanner_AngularResolution(), theEcorePackage.getEInt(), "angularResolution", null, 0, 1, LineRangeScanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getLineRangeScanner__GetFieldOfView(), theSymphony__AddonsSensorsFOVPackage.getCircularSectorFieldOfView(), "getFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getLineRangeScanner__GetFieldOfView(), theApogyAddonsSensorsFOVPackage.getCircularSectorFieldOfView(), "getFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(simpleLineRangeScannerEClass, SimpleLineRangeScanner.class, "SimpleLineRangeScanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -919,8 +919,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		initEClass(rangeScannerEClass, RangeScanner.class, "RangeScanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(rangeScannerSimulatorEClass, RangeScannerSimulator.class, "RangeScannerSimulator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		g1 = createEGenericType(theSymphony__CommonTopologyPackage.getContentNode());
-		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh());
+		g1 = createEGenericType(theApogyCommonTopologyPackage.getContentNode());
+		g2 = createEGenericType(theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);
 		initEReference(getRangeScannerSimulator_MeshNode(), g1, null, "meshNode", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRangeScannerSimulator_NoiseEnabled(), theEcorePackage.getEBoolean(), "noiseEnabled", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -928,7 +928,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		initEAttribute(getRangeScannerSimulator_TimeFindingIntersections(), theEcorePackage.getELong(), "timeFindingIntersections", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRangeScannerSimulator_TimeGettingSimulatedRays(), theEcorePackage.getELong(), "timeGettingSimulatedRays", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getRangeScannerSimulator__GetCroppedMesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "getCroppedMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getRangeScannerSimulator__GetCroppedMesh(), theApogyCommonGeometryData3DPackage.getCartesianTriangularMesh(), "getCroppedMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		EOperation op = initEOperation(getRangeScannerSimulator__GetSimulatedRays(), null, "getSimulatedRays", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
@@ -947,7 +947,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		addEParameter(op, this.getRayData(), "cleanRayData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRayData(), "noisyRayData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getRangeScannerSimulator__CreateCoordinates25D__RayData_double(), theSymphony__CommonGeometryData25DPackage.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getRangeScannerSimulator__CreateCoordinates25D__RayData_double(), theApogyCommonGeometryData25DPackage.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRayData(), "rayData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "range", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -965,11 +965,11 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 
 		initEClass(rasterScanDataEClass, RasterScanData.class, "RasterScanData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRasterScanData_RasterScanSettings(), this.getRasterScanSettings(), null, "rasterScanSettings", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRasterScanData_ScanData(), theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D(), null, "scanData", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRasterScanData_ScanData(), theApogyCommonGeometryData25DPackage.getVolumetricCoordinatesSet25D(), null, "scanData", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphony__AddonsSensorsRangeFacadeEClass, Symphony__AddonsSensorsRangeFacade.class, "Symphony__AddonsSensorsRangeFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsSensorsRangeFacadeEClass, ApogyAddonsSensorsRangeFacade.class, "ApogyAddonsSensorsRangeFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "horizontalFieldOfViewAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -977,7 +977,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		addEParameter(op, theEcorePackage.getEInt(), "horizontalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "verticalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRasterScanSettings(), "rasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -1006,16 +1006,16 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsSensorsRange",
+			 "prefix", "ApogyAddonsSensorsRange",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsSensorsRange",
+			 "modelName", "ApogyAddonsSensorsRange",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.range/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.sensors.range.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons.sensors"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.range/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.range.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons.sensors"
 		   });	
 		addAnnotation
 		  (getSimpleSonar_EchoDetected(), 
@@ -1097,4 +1097,4 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		   });
 	}
 
-} //Symphony__AddonsSensorsRangePackageImpl
+} //ApogyAddonsSensorsRangePackageImpl

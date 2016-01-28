@@ -1,21 +1,21 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range.util;
+package ca.gc.asc_csa.apogy.addons.sensors.range.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.range.*;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.range.*;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,17 +27,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage
  * @generated
  */
-public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsRangeSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsRangePackage modelPackage;
+	protected static ApogyAddonsSensorsRangePackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -45,9 +45,9 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsRangeSwitch() {
+	public ApogyAddonsSensorsRangeSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsRangePackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsRangePackage.eINSTANCE;
 		}
 	}
 
@@ -74,13 +74,13 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsRangePackage.RAY_DATA: {
+			case ApogyAddonsSensorsRangePackage.RAY_DATA: {
 				RayData rayData = (RayData)theEObject;
 				T result = caseRayData(rayData);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS: {
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_SETTINGS: {
 				RasterScanSettings rasterScanSettings = (RasterScanSettings)theEObject;
 				T result = caseRasterScanSettings(rasterScanSettings);
 				if (result == null) result = caseRectangularFrustrumFieldOfView(rasterScanSettings);
@@ -89,7 +89,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.RANGE_SENSOR: {
+			case ApogyAddonsSensorsRangePackage.RANGE_SENSOR: {
 				RangeSensor rangeSensor = (RangeSensor)theEObject;
 				T result = caseRangeSensor(rangeSensor);
 				if (result == null) result = caseSensor(rangeSensor);
@@ -99,7 +99,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR: {
+			case ApogyAddonsSensorsRangePackage.CONTACT_SENSOR: {
 				ContactSensor contactSensor = (ContactSensor)theEObject;
 				T result = caseContactSensor(contactSensor);
 				if (result == null) result = caseRangeSensor(contactSensor);
@@ -110,7 +110,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR: {
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR: {
 				SimpleRangeSensor simpleRangeSensor = (SimpleRangeSensor)theEObject;
 				T result = caseSimpleRangeSensor(simpleRangeSensor);
 				if (result == null) result = caseRangeSensor(simpleRangeSensor);
@@ -121,7 +121,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR: {
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR: {
 				SimpleSonar simpleSonar = (SimpleSonar)theEObject;
 				T result = caseSimpleSonar(simpleSonar);
 				if (result == null) result = caseSimpleRangeSensor(simpleSonar);
@@ -133,7 +133,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER: {
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER: {
 				LineRangeScanner lineRangeScanner = (LineRangeScanner)theEObject;
 				T result = caseLineRangeScanner(lineRangeScanner);
 				if (result == null) result = caseRangeSensor(lineRangeScanner);
@@ -144,7 +144,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_LINE_RANGE_SCANNER: {
+			case ApogyAddonsSensorsRangePackage.SIMPLE_LINE_RANGE_SCANNER: {
 				SimpleLineRangeScanner simpleLineRangeScanner = (SimpleLineRangeScanner)theEObject;
 				T result = caseSimpleLineRangeScanner(simpleLineRangeScanner);
 				if (result == null) result = caseLineRangeScanner(simpleLineRangeScanner);
@@ -156,7 +156,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER: {
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER: {
 				RangeScanner<?> rangeScanner = (RangeScanner<?>)theEObject;
 				T result = caseRangeScanner(rangeScanner);
 				if (result == null) result = caseRangeSensor(rangeScanner);
@@ -169,7 +169,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR: {
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR: {
 				RangeScannerSimulator<?> rangeScannerSimulator = (RangeScannerSimulator<?>)theEObject;
 				T result = caseRangeScannerSimulator(rangeScannerSimulator);
 				if (result == null) result = caseRangeScanner(rangeScannerSimulator);
@@ -183,7 +183,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_RANGE_SENSOR: {
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_RANGE_SENSOR: {
 				RasterScanRangeSensor rasterScanRangeSensor = (RasterScanRangeSensor)theEObject;
 				T result = caseRasterScanRangeSensor(rasterScanRangeSensor);
 				if (result == null) result = caseRangeScanner(rasterScanRangeSensor);
@@ -197,7 +197,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER: {
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER: {
 				SimpleRasterScanRangeScanner simpleRasterScanRangeScanner = (SimpleRasterScanRangeScanner)theEObject;
 				T result = caseSimpleRasterScanRangeScanner(simpleRasterScanRangeScanner);
 				if (result == null) result = caseRasterScanRangeSensor(simpleRasterScanRangeScanner);
@@ -212,7 +212,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR: {
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR: {
 				SimpleRasterScanRangeScannerSimulator simpleRasterScanRangeScannerSimulator = (SimpleRasterScanRangeScannerSimulator)theEObject;
 				T result = caseSimpleRasterScanRangeScannerSimulator(simpleRasterScanRangeScannerSimulator);
 				if (result == null) result = caseRangeScannerSimulator(simpleRasterScanRangeScannerSimulator);
@@ -229,7 +229,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA: {
+			case ApogyAddonsSensorsRangePackage.RASTER_SCAN_DATA: {
 				RasterScanData rasterScanData = (RasterScanData)theEObject;
 				T result = caseRasterScanData(rasterScanData);
 				if (result == null) result = caseAggregateGroupNode(rasterScanData);
@@ -239,9 +239,9 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.SYMPHONY_ADDONS_SENSORS_RANGE_FACADE: {
-				Symphony__AddonsSensorsRangeFacade symphony__AddonsSensorsRangeFacade = (Symphony__AddonsSensorsRangeFacade)theEObject;
-				T result = caseSymphony__AddonsSensorsRangeFacade(symphony__AddonsSensorsRangeFacade);
+			case ApogyAddonsSensorsRangePackage.APOGY_ADDONS_SENSORS_RANGE_FACADE: {
+				ApogyAddonsSensorsRangeFacade apogy__AddonsSensorsRangeFacade = (ApogyAddonsSensorsRangeFacade)theEObject;
+				T result = caseApogyAddonsSensorsRangeFacade(apogy__AddonsSensorsRangeFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -470,7 +470,7 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__AddonsSensorsRangeFacade(Symphony__AddonsSensorsRangeFacade object) {
+	public T caseApogyAddonsSensorsRangeFacade(ApogyAddonsSensorsRangeFacade object) {
 		return null;
 	}
 
@@ -625,4 +625,4 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsRangeSwitch
+} //ApogyAddonsSensorsRangeSwitch

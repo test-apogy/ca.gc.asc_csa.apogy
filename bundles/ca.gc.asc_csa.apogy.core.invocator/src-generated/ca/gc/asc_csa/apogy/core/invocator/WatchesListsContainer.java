@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -20,10 +20,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.WatchesListsContainer#getWatches <em>Watches</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer#getWatches <em>Watches</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchesListsContainer()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchesListsContainer()
  * @model
  * @generated
  */
@@ -31,8 +31,8 @@ public interface WatchesListsContainer extends AbstractToolsListContainer
 {
   /**
 	 * Returns the value of the '<em><b>Watches</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.WatchesList}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.WatchesList#getWatchesListsContainer <em>Watches Lists Container</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.WatchesList}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatchesListsContainer <em>Watches Lists Container</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Watches</em>' containment reference list isn't clear,
@@ -40,8 +40,8 @@ public interface WatchesListsContainer extends AbstractToolsListContainer
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Watches</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchesListsContainer_Watches()
-	 * @see org.eclipse.symphony.core.invocator.WatchesList#getWatchesListsContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getWatchesListsContainer_Watches()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.WatchesList#getWatchesListsContainer
 	 * @model opposite="watchesListsContainer" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated

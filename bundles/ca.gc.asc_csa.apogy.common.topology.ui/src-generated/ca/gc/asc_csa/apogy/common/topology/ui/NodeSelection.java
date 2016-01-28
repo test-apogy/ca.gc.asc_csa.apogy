@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3f;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,16 +22,16 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getSelectedNode <em>Selected Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getNodePresentation <em>Node Presentation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionPoint <em>Relative Intersection Point</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint <em>Absolute Intersection Point</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getSelectedNode <em>Selected Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getNodePresentation <em>Node Presentation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionPoint <em>Relative Intersection Point</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint <em>Absolute Intersection Point</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection()
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection()
  * @model
  * @generated
  */
@@ -46,14 +46,14 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topology Presentation Set</em>' reference.
 	 * @see #setTopologyPresentationSet(TopologyPresentationSet)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_TopologyPresentationSet()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection_TopologyPresentationSet()
 	 * @model transient="true"
 	 * @generated
 	 */
 	TopologyPresentationSet getTopologyPresentationSet();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getTopologyPresentationSet <em>Topology Presentation Set</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getTopologyPresentationSet <em>Topology Presentation Set</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Topology Presentation Set</em>' reference.
@@ -72,14 +72,14 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selected Node</em>' reference.
 	 * @see #setSelectedNode(Node)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_SelectedNode()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection_SelectedNode()
 	 * @model transient="true"
 	 * @generated
 	 */
 	Node getSelectedNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getSelectedNode <em>Selected Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getSelectedNode <em>Selected Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Selected Node</em>' reference.
@@ -98,14 +98,14 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Presentation</em>' reference.
 	 * @see #setNodePresentation(NodePresentation)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_NodePresentation()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection_NodePresentation()
 	 * @model transient="true"
 	 * @generated
 	 */
 	NodePresentation getNodePresentation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getNodePresentation <em>Node Presentation</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getNodePresentation <em>Node Presentation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node Presentation</em>' reference.
@@ -124,14 +124,14 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative Intersection Point</em>' attribute.
 	 * @see #setRelativeIntersectionPoint(Point3d)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_RelativeIntersectionPoint()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Point3d"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection_RelativeIntersectionPoint()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.topology.ui.Point3d"
 	 * @generated
 	 */
 	Point3d getRelativeIntersectionPoint();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionPoint <em>Relative Intersection Point</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionPoint <em>Relative Intersection Point</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Relative Intersection Point</em>' attribute.
@@ -150,14 +150,14 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Absolute Intersection Point</em>' attribute.
 	 * @see #setAbsoluteIntersectionPoint(Point3d)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_AbsoluteIntersectionPoint()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Point3d"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection_AbsoluteIntersectionPoint()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.topology.ui.Point3d"
 	 * @generated
 	 */
 	Point3d getAbsoluteIntersectionPoint();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint <em>Absolute Intersection Point</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionPoint <em>Absolute Intersection Point</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Absolute Intersection Point</em>' attribute.
@@ -176,14 +176,14 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative Intersection Normal</em>' attribute.
 	 * @see #setRelativeIntersectionNormal(Vector3f)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_RelativeIntersectionNormal()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Vector3f"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection_RelativeIntersectionNormal()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.topology.ui.Vector3f"
 	 * @generated
 	 */
 	Vector3f getRelativeIntersectionNormal();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Relative Intersection Normal</em>' attribute.
@@ -202,14 +202,14 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Absolute Intersection Normal</em>' attribute.
 	 * @see #setAbsoluteIntersectionNormal(Vector3f)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_AbsoluteIntersectionNormal()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Vector3f"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodeSelection_AbsoluteIntersectionNormal()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.common.topology.ui.Vector3f"
 	 * @generated
 	 */
 	Vector3f getAbsoluteIntersectionNormal();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Absolute Intersection Normal</em>' attribute.

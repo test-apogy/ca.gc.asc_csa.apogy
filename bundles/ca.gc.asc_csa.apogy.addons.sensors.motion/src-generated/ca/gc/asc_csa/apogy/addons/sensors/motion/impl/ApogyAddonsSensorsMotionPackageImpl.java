@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.motion.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.motion.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,14 +10,14 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
-import org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor;
-import org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionFactory;
-import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
-import org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.AngularVelocitySensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.LinearAccelerationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.LinearVelocitySensor;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.motion.SelfMotionSensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsMotionPackage {
+public class ApogyAddonsSensorsMotionPackageImpl extends EPackageImpl implements ApogyAddonsSensorsMotionPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,12 +65,12 @@ public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl imple
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.motion.ApogyAddonsSensorsMotionPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsMotionPackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsMotionFactory.eINSTANCE);
+	private ApogyAddonsSensorsMotionPackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsMotionFactory.eINSTANCE);
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl imple
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsMotionPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsMotionPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,30 +92,30 @@ public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl imple
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsMotionPackage init() {
-		if (isInited) return (Symphony__AddonsSensorsMotionPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsMotionPackage.eNS_URI);
+	public static ApogyAddonsSensorsMotionPackage init() {
+		if (isInited) return (ApogyAddonsSensorsMotionPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsMotionPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsMotionPackageImpl theSymphony__AddonsSensorsMotionPackage = (Symphony__AddonsSensorsMotionPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsMotionPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsMotionPackageImpl());
+		ApogyAddonsSensorsMotionPackageImpl theApogyAddonsSensorsMotionPackage = (ApogyAddonsSensorsMotionPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsMotionPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsMotionPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsSensorsPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsMotionPackage.createPackageContents();
+		theApogyAddonsSensorsMotionPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsMotionPackage.initializePackageContents();
+		theApogyAddonsSensorsMotionPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsMotionPackage.freeze();
+		theApogyAddonsSensorsMotionPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsMotionPackage.eNS_URI, theSymphony__AddonsSensorsMotionPackage);
-		return theSymphony__AddonsSensorsMotionPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsMotionPackage.eNS_URI, theApogyAddonsSensorsMotionPackage);
+		return theApogyAddonsSensorsMotionPackage;
 	}
 
 	/**
@@ -240,8 +240,8 @@ public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsMotionFactory getSymphony__AddonsSensorsMotionFactory() {
-		return (Symphony__AddonsSensorsMotionFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsMotionFactory getApogyAddonsSensorsMotionFactory() {
+		return (ApogyAddonsSensorsMotionFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -305,7 +305,7 @@ public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl imple
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__AddonsSensorsPackage theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
+		ApogyAddonsSensorsPackage theApogyAddonsSensorsPackage = (ApogyAddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -313,7 +313,7 @@ public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl imple
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		selfMotionSensorEClass.getESuperTypes().add(theSymphony__AddonsSensorsPackage.getSensor());
+		selfMotionSensorEClass.getESuperTypes().add(theApogyAddonsSensorsPackage.getSensor());
 		angularVelocitySensorEClass.getESuperTypes().add(this.getSelfMotionSensor());
 		linearAccelerationSensorEClass.getESuperTypes().add(this.getSelfMotionSensor());
 		linearVelocitySensorEClass.getESuperTypes().add(this.getSelfMotionSensor());
@@ -356,17 +356,17 @@ public class Symphony__AddonsSensorsMotionPackageImpl extends EPackageImpl imple
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsSensorsMotion",
+			 "prefix", "ApogyAddonsSensorsMotion",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsSensorsMotion",
+			 "modelName", "ApogyAddonsSensorsMotion",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.motion/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.sensors.motion.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons.sensors"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.motion/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.motion.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons.sensors"
 		   });
 	}
 
-} //Symphony__AddonsSensorsMotionPackageImpl
+} //ApogyAddonsSensorsMotionPackageImpl

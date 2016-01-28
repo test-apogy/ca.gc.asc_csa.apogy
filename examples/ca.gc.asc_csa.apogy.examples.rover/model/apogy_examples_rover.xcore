@@ -1,18 +1,18 @@
-@GenModel(prefix="Symphony__ExamplesRover",
+@GenModel(prefix="ApogyExamplesRover",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="Symphony__ExamplesRover",
+		  modelName="ApogyExamplesRover",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.rover/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.rover.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.rover/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.rover.edit/src-generated")
 
-package org.eclipse.symphony.examples.rover
+package ca.gc.asc_csa.apogy.examples.rover
 
-import org.eclipse.symphony.common.emf.Disposable
-import org.eclipse.symphony.examples.robotic_arm.RoboticArm
-import org.eclipse.symphony.examples.mobile_platform.MobilePlatform
-import org.eclipse.symphony.examples.camera.PTUCamera
+import ca.gc.asc_csa.apogy.common.emf.Disposable
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm
+import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera
 
 /*
  * This class represents a battery in the rover's
@@ -34,7 +34,7 @@ class Battery
 	 * as measured in volts; initially, zero
 	 */
 	@GenModel(notify="true",
-			  symphony_units="V", 
+			  apogy_units="V", 
 			  property="Readonly")
 	double voltage = "0.0"
 	
@@ -43,7 +43,7 @@ class Battery
 	 * as measured in amps; initially, zero
 	 */
 	@GenModel(notify="true",
-			  symphony_units="A", 
+			  apogy_units="A", 
 			  property="Readonly")
 	double current = "0.0"
 	
@@ -84,7 +84,7 @@ class PowerSystem
 	 * is currently outputting.
 	 */
 	@GenModel(notify="true",
-			  symphony_units="V")
+			  apogy_units="V")
 	readonly transient volatile derived double currentVoltage get
 	{
 		// If there is an active battery
@@ -106,7 +106,7 @@ class PowerSystem
 	 * is currently outputting.
 	 */
 	@GenModel(notify="true",
-			  symphony_units="A")
+			  apogy_units="A")
 	readonly transient volatile derived double currentCurrent get
 	{
 		// If there is an active battery
@@ -191,7 +191,7 @@ abstract class Rover extends Disposable
 	 */
 	@GenModel(children="false",
 			  notify="true",
-			  symphony_units="m/s",
+			  apogy_units="m/s",
 			  property="Readonly",
 			  propertyCategory="Velocities")
 	readonly transient volatile derived double linearVelocity get
@@ -223,7 +223,7 @@ abstract class Rover extends Disposable
 	 */
 	@GenModel(children="false",
 			  notify="true",
-			  symphony_units="rad/s",
+			  apogy_units="rad/s",
 			  property="Readonly",
 			  propertyCategory="Velocities")
 	readonly transient volatile derived double angularVelocity get
@@ -286,7 +286,7 @@ abstract class Rover extends Disposable
 	 * @param linearVelocity The rover assembly's new linear velocity (in m/s)
 	 * @see #cmdVelocities(double, double)
 	 */
-	op void cmdLinearVelocity(@GenModel(symphony_units="m/s") double linearVelocity)
+	op void cmdLinearVelocity(@GenModel(apogy_units="m/s") double linearVelocity)
 	
 	/*
 	 * This operation is used to change the angular velocity of the rover
@@ -302,7 +302,7 @@ abstract class Rover extends Disposable
 	 * @param angularVelocity The rover assembly's new angular velocity (in rad/s)
 	 * @see #cmdVelocities(double, double)
 	 */
-	op void cmdAngularVelocity(@GenModel(symphony_units="rad/s") double angularVelocity)
+	op void cmdAngularVelocity(@GenModel(apogy_units="rad/s") double angularVelocity)
 	
 	/* 
 	 * This operation is used to change both the linear velocity (given in m/s)
@@ -325,8 +325,8 @@ abstract class Rover extends Disposable
 	 * @see #cmdLinearVelocity(double)
 	 * @see #cmdAngularVelocity(double)
 	 */
-	op void cmdVelocities(@GenModel(symphony_units="m/s") double linearVelocity,
-					  	  @GenModel(symphony_units="rad/s") double angularVelocity)
+	op void cmdVelocities(@GenModel(apogy_units="m/s") double linearVelocity,
+					  	  @GenModel(apogy_units="rad/s") double angularVelocity)
 }
 
 /* 
@@ -338,7 +338,7 @@ class RoverStub extends Rover
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.rover.impl.RoverStubImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverStubImpl}
 	 */	
 }
 
@@ -352,6 +352,6 @@ class RoverSimulated extends Rover
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.rover.impl.RoverSimulatedImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.rover.impl.RoverSimulatedImpl}
 	 */
 }

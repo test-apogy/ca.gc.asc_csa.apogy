@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +19,10 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest#getImage <em>Image</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getImageConstellationRequest()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getImageConstellationRequest()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface ImageConstellationRequest extends AbstractConstellationRequest,
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image</em>' containment reference.
 	 * @see #setImage(OrbitalImage)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getImageConstellationRequest_Image()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getImageConstellationRequest_Image()
 	 * @model containment="true"
 	 * @generated
 	 */
 	OrbitalImage getImage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest#getImage <em>Image</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest#getImage <em>Image</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image</em>' containment reference.

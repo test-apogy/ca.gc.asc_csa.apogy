@@ -4,16 +4,16 @@
  *
  * $Id: PrismaticConstraintImpl.java,v 1.3.2.2 2015/02/03 20:01:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PrismaticConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PrismaticConstraintImpl#getLinearCurrentState <em>Linear Current State</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PrismaticConstraintImpl#getLinearCurrentState <em>Linear Current State</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 		ConstraintState oldLinearCurrentState = linearCurrentState;
 		linearCurrentState = newLinearCurrentState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, oldLinearCurrentState, newLinearCurrentState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, oldLinearCurrentState, newLinearCurrentState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -91,14 +91,14 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 		if (newLinearCurrentState != linearCurrentState) {
 			NotificationChain msgs = null;
 			if (linearCurrentState != null)
-				msgs = ((InternalEObject)linearCurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)linearCurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
 			if (newLinearCurrentState != null)
-				msgs = ((InternalEObject)newLinearCurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)newLinearCurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
 			msgs = basicSetLinearCurrentState(newLinearCurrentState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, newLinearCurrentState, newLinearCurrentState));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE, newLinearCurrentState, newLinearCurrentState));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
 				return basicSetLinearCurrentState(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -123,7 +123,7 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
 				return getLinearCurrentState();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -137,7 +137,7 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
 				setLinearCurrentState((ConstraintState)newValue);
 				return;
 		}
@@ -152,7 +152,7 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
 				setLinearCurrentState((ConstraintState)null);
 				return;
 		}
@@ -167,7 +167,7 @@ public class PrismaticConstraintImpl extends AbstractConstraintImpl implements P
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
 				return linearCurrentState != null;
 		}
 		return super.eIsSet(featureID);

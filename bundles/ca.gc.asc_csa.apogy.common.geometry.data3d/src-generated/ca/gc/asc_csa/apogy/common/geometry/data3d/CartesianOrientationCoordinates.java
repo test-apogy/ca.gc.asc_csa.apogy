@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation <em>XRotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation <em>YRotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation <em>XRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation <em>YRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianOrientationCoordinates()
  * @model
  * @generated
  */
@@ -39,15 +39,15 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XRotation</em>' attribute.
 	 * @see #setXRotation(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_XRotation()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianOrientationCoordinates_XRotation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getXRotation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation <em>XRotation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation <em>XRotation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XRotation</em>' attribute.
@@ -66,15 +66,15 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YRotation</em>' attribute.
 	 * @see #setYRotation(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_YRotation()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianOrientationCoordinates_YRotation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getYRotation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation <em>YRotation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation <em>YRotation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YRotation</em>' attribute.
@@ -93,15 +93,15 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZRotation</em>' attribute.
 	 * @see #setZRotation(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_ZRotation()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianOrientationCoordinates_ZRotation()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='rad'"
 	 * @generated
 	 */
 	double getZRotation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZRotation</em>' attribute.

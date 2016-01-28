@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.MapsList#getMaps <em>Maps</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.MapsList#getMapsListNode <em>Maps List Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.MapsList#getMaps <em>Maps</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.MapsList#getMapsListNode <em>Maps List Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsList()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapsList()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface MapsList extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Maps</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.Map}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.Map}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Maps</em>' containment reference list isn't clear,
@@ -35,7 +35,7 @@ public interface MapsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maps</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsList_Maps()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapsList_Maps()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface MapsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maps List Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsList_MapsListNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getMapsList_MapsListNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated

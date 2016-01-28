@@ -4,7 +4,7 @@
  *
  * $Id: UniversalConstraintItemProvider.java,v 1.4.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,8 +64,8 @@ public class UniversalConstraintItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE);
+			childrenFeatures.add(ApogyCommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE);
+			childrenFeatures.add(ApogyCommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -120,8 +120,8 @@ public class UniversalConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UniversalConstraint.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
-			case Symphony__CommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
+			case ApogyCommonTopologyAddonsDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -141,13 +141,13 @@ public class UniversalConstraintItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
 	}
 
 	/**
@@ -162,8 +162,8 @@ public class UniversalConstraintItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE ||
-			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE;
+			childFeature == ApogyCommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE ||
+			childFeature == ApogyCommonTopologyAddonsDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE;
 
 		if (qualify) {
 			return getString

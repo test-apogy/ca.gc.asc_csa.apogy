@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.topology.ui.commands;
+package ca.gc.asc_csa.apogy.core.topology.ui.commands;
 
 import java.util.Iterator;
 
@@ -11,11 +11,11 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
-import org.eclipse.symphony.core.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
+import ca.gc.asc_csa.apogy.core.topology.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class ToggleVariableTopologyVisibilityCommandHandler extends AbstractHandler implements
@@ -41,10 +41,10 @@ public class ToggleVariableTopologyVisibilityCommandHandler extends AbstractHand
 					{
 						try
 						{			
-							Node node = Symphony__CoreTopologyFacade.INSTANCE.getVariableOriginNode(variable);
+							Node node = ApogyCoreTopologyFacade.INSTANCE.getVariableOriginNode(variable);
 							if(node != null)
 							{								
-								NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(node);				
+								NodePresentation nodePresentation = ca.gc.asc_csa.apogy.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(node);				
 								if(nodePresentation != null)
 								{
 									nodePresentation.setVisible(!nodePresentation.isVisible());

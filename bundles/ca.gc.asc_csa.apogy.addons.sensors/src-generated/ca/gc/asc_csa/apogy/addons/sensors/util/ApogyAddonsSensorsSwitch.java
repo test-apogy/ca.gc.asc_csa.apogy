@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.util;
+package ca.gc.asc_csa.apogy.addons.sensors.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.sensors.*;
+import ca.gc.asc_csa.apogy.addons.sensors.*;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,17 +24,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage
  * @generated
  */
-public class Symphony__AddonsSensorsSwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsPackage modelPackage;
+	protected static ApogyAddonsSensorsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -42,9 +42,9 @@ public class Symphony__AddonsSensorsSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsSwitch() {
+	public ApogyAddonsSensorsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsPackage.eINSTANCE;
 		}
 	}
 
@@ -71,7 +71,7 @@ public class Symphony__AddonsSensorsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsPackage.SENSOR: {
+			case ApogyAddonsSensorsPackage.SENSOR: {
 				Sensor sensor = (Sensor)theEObject;
 				T result = caseSensor(sensor);
 				if (result == null) result = caseAggregateGroupNode(sensor);
@@ -80,7 +80,7 @@ public class Symphony__AddonsSensorsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPackage.REFERENCEABLE: {
+			case ApogyAddonsSensorsPackage.REFERENCEABLE: {
 				Referenceable referenceable = (Referenceable)theEObject;
 				T result = caseReferenceable(referenceable);
 				if (result == null) result = defaultCase(theEObject);
@@ -181,4 +181,4 @@ public class Symphony__AddonsSensorsSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsSwitch
+} //ApogyAddonsSensorsSwitch

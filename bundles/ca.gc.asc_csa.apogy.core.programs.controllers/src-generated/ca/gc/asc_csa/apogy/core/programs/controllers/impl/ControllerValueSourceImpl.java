@@ -1,23 +1,23 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.Activator;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
-import org.eclipse.symphony.core.programs.controllers.ControllerValueSource;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.Activator;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,10 +27,10 @@ import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsCont
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getComponent <em>Component</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getEComponentQualifier <em>EComponent Qualifier</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getConditioning <em>Conditioning</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getLastValue <em>Last Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllerValueSourceImpl#getComponent <em>Component</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllerValueSourceImpl#getEComponentQualifier <em>EComponent Qualifier</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllerValueSourceImpl#getConditioning <em>Conditioning</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllerValueSourceImpl#getLastValue <em>Last Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,7 +105,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE;
+		return ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE;
 	}
 
   /**
@@ -117,7 +117,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   {
 	  if(getEComponentQualifier() != null)
 	  {  
-		  return org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().resolveEComponent(getEComponentQualifier());
+		  return ca.gc.asc_csa.apogy.common.io.jinput.Activator.getEControllerEnvironment().resolveEComponent(getEComponentQualifier());
 	  }
 	  else
 	  {
@@ -145,7 +145,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		EComponent oldComponent = component;
 		component = newComponent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT, oldComponent, component));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT, oldComponent, component));
 	}
 
   /**
@@ -159,7 +159,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 	  
 	  if(componentQualifier == null)
 	  {
-		  componentQualifier = Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
+		  componentQualifier = ApogyCommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
 		  setEComponentQualifier(componentQualifier);
 	  }
 	  return componentQualifier;
@@ -185,7 +185,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		EComponentQualifier oldEComponentQualifier = eComponentQualifier;
 		eComponentQualifier = newEComponentQualifier;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, oldEComponentQualifier, newEComponentQualifier);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, oldEComponentQualifier, newEComponentQualifier);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -201,14 +201,14 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		if (newEComponentQualifier != eComponentQualifier) {
 			NotificationChain msgs = null;
 			if (eComponentQualifier != null)
-				msgs = ((InternalEObject)eComponentQualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)eComponentQualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, null, msgs);
 			if (newEComponentQualifier != null)
-				msgs = ((InternalEObject)newEComponentQualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)newEComponentQualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, null, msgs);
 			msgs = basicSetEComponentQualifier(newEComponentQualifier, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, newEComponentQualifier, newEComponentQualifier));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER, newEComponentQualifier, newEComponentQualifier));
 	}
 
   /**
@@ -230,7 +230,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		AbstractInputConditioning oldConditioning = conditioning;
 		conditioning = newConditioning;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, oldConditioning, newConditioning);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, oldConditioning, newConditioning);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -245,14 +245,14 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		if (newConditioning != conditioning) {
 			NotificationChain msgs = null;
 			if (conditioning != null)
-				msgs = ((InternalEObject)conditioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, null, msgs);
+				msgs = ((InternalEObject)conditioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, null, msgs);
 			if (newConditioning != null)
-				msgs = ((InternalEObject)newConditioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, null, msgs);
+				msgs = ((InternalEObject)newConditioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, null, msgs);
 			msgs = basicSetConditioning(newConditioning, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, newConditioning, newConditioning));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING, newConditioning, newConditioning));
 	}
 
 		/**
@@ -275,7 +275,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		Object oldLastValue = lastValue;
 		lastValue = newLastValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE, oldLastValue, lastValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE, oldLastValue, lastValue));
 	}
 
   /**
@@ -287,9 +287,9 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
 				return basicSetEComponentQualifier(null, msgs);
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
 				return basicSetConditioning(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -304,14 +304,14 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
 				if (resolve) return getComponent();
 				return basicGetComponent();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
 				return getEComponentQualifier();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
 				return getConditioning();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
 				return getLastValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -326,16 +326,16 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
 				setComponent((EComponent)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
 				setEComponentQualifier((EComponentQualifier)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
 				setConditioning((AbstractInputConditioning)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
 				setLastValue(newValue);
 				return;
 		}
@@ -351,16 +351,16 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
 				setComponent((EComponent)null);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
 				setEComponentQualifier((EComponentQualifier)null);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
 				setConditioning((AbstractInputConditioning)null);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
 				setLastValue(LAST_VALUE_EDEFAULT);
 				return;
 		}
@@ -376,13 +376,13 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
 				return component != null;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
 				return eComponentQualifier != null;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
 				return conditioning != null;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
 				return LAST_VALUE_EDEFAULT == null ? lastValue != null : !LAST_VALUE_EDEFAULT.equals(lastValue);
 		}
 		return super.eIsSet(featureID);
@@ -426,7 +426,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		  }
 		  
 		  // Converts the float to the required data type
-		  Object value = Symphony__CoreProgramsControllersFacade.INSTANCE.createValue(getBindedEDataTypeArgument().getEParameter(), data);
+		  Object value = ApogyCoreProgramsControllersFacade.INSTANCE.createValue(getBindedEDataTypeArgument().getEParameter(), data);
 		  
 		  // Update last value (used for display purposes).
 		  setLastValue(value);

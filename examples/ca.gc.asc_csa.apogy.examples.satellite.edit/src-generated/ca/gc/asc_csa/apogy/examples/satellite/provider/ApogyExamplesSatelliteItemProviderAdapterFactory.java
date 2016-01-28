@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,27 +33,27 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
-import org.eclipse.symphony.common.images.util.Symphony__CommonImagesSwitch;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.util.Symphony__CoreEnvironmentOrbitEarthSwitch;
-import org.eclipse.symphony.core.environment.util.Symphony__CoreEnvironmentSwitch;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.common.images.util.ApogyCommonImagesSwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.util.ApogyCoreEnvironmentOrbitEarthSwitch;
+import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
-import org.eclipse.symphony.examples.satellite.util.Symphony__ExamplesSatelliteAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.util.ApogyExamplesSatelliteAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -64,7 +64,7 @@ import org.eclipse.symphony.examples.satellite.util.Symphony__ExamplesSatelliteA
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symphony__ExamplesSatelliteAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamplesSatelliteAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -87,7 +87,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesSatelliteEditPlugin.INSTANCE, Symphony__ExamplesSatellitePackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesSatelliteEditPlugin.INSTANCE, ApogyExamplesSatellitePackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -103,7 +103,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteItemProviderAdapterFactory() {
+	public ApogyExamplesSatelliteItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -112,7 +112,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -120,7 +120,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected ConstellationCommandPlanItemProvider constellationCommandPlanItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -135,7 +135,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -143,7 +143,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected ConstellationCommandPlanItemItemProvider constellationCommandPlanItemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -158,7 +158,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.DefaultConstellation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -166,7 +166,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected DefaultConstellationItemProvider defaultConstellationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.DefaultConstellation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -181,7 +181,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -189,7 +189,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected ConstellationRequestsListItemProvider constellationRequestsListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -204,7 +204,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -212,7 +212,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected ImageConstellationRequestItemProvider imageConstellationRequestItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,7 +227,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.SatellitesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.SatellitesList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -235,7 +235,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected SatellitesListItemProvider satellitesListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.SatellitesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.SatellitesList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -250,7 +250,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.Satellite} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.Satellite} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -258,7 +258,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected SatelliteItemProvider satelliteItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.Satellite}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.Satellite}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -273,7 +273,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -281,7 +281,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected AbstractSatelliteCommandItemProvider abstractSatelliteCommandItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -296,7 +296,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -304,7 +304,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected AcquireImageSatelliteCommandItemProvider acquireImageSatelliteCommandItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -319,7 +319,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.OrbitalImage} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -327,7 +327,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected OrbitalImageItemProvider orbitalImageItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.OrbitalImage}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -342,7 +342,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -350,7 +350,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected ConstellationDownlinksListItemProvider constellationDownlinksListItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -365,7 +365,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ConstellationDownlink} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -373,7 +373,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected ConstellationDownlinkItemProvider constellationDownlinkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationDownlink}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -388,7 +388,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -396,7 +396,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected OrbitalImageConstellationDownlinkItemItemProvider orbitalImageConstellationDownlinkItemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -411,7 +411,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ConstellationUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -419,7 +419,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	protected ConstellationUtilitiesItemProvider constellationUtilitiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ConstellationUtilities}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -576,19 +576,19 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreEnvironmentOrbitEarthPackage}.
+	 * A child creation extender for the {@link ApogyCoreEnvironmentOrbitEarthPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreEnvironmentOrbitEarthChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreEnvironmentOrbitEarthChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreEnvironmentOrbitEarthSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreEnvironmentOrbitEarthSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -624,18 +624,18 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public Object caseEarthSurfaceLocation(EarthSurfaceLocation object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				return null;
 			}
@@ -649,48 +649,48 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public Object caseCorridorPoint(CorridorPoint object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				return null;
 			}
@@ -723,24 +723,24 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesSatelliteEditPlugin.INSTANCE;
+			return ApogyExamplesSatelliteEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreEnvironmentPackage}.
+	 * A child creation extender for the {@link ApogyCoreEnvironmentPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreEnvironmentChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreEnvironmentChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreEnvironmentSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreEnvironmentSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -776,18 +776,18 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public Object caseEarthSurfaceWorksite(EarthSurfaceWorksite object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				return null;
 			}
@@ -801,13 +801,13 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public Object caseImageMapLayer(ImageMapLayer object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+						(ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+						(ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;
 			}
@@ -820,18 +820,18 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public Object caseGeographicCoordinatesPolygonShapeImageMapLayer(GeographicCoordinatesPolygonShapeImageMapLayer object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				return null;
 			}
@@ -864,24 +864,24 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesSatelliteEditPlugin.INSTANCE;
+			return ApogyExamplesSatelliteEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonImagesPackage}.
+	 * A child creation extender for the {@link ApogyCommonImagesPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonImagesChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonImagesChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonImagesSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonImagesSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -917,8 +917,8 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public Object caseImagesAlbum(ImagesAlbum object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+						(ApogyCommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;
 			}
@@ -951,24 +951,24 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesSatelliteEditPlugin.INSTANCE;
+			return ApogyExamplesSatelliteEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1004,73 +1004,73 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlanItem()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlanItem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createDefaultConstellation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatellite()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellite()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationDownlink()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlink()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImageConstellationDownlinkItem()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImageConstellationDownlinkItem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationUtilities()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationUtilities()));
 
 				return null;
 			}
@@ -1084,73 +1084,73 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlan()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlanItem()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationCommandPlanItem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createDefaultConstellation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createDefaultConstellation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatellite()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellite()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationDownlink()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlink()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImageConstellationDownlinkItem()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImageConstellationDownlinkItem()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationUtilities()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationUtilities()));
 
 				return null;
 			}
@@ -1183,7 +1183,7 @@ public class Symphony__ExamplesSatelliteItemProviderAdapterFactory extends Symph
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesSatelliteEditPlugin.INSTANCE;
+			return ApogyExamplesSatelliteEditPlugin.INSTANCE;
 		}
 	}
 

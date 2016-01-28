@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Factory
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Factory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonTopologyUIJME3' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='Symphony__CommonTopologyUIJME3' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.ui.jme3/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.jme3.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.ui'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonTopologyUIJME3' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='ApogyCommonTopologyUIJME3' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.topology.ui.jme3/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.topology.ui.jme3.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common.topology.ui'"
  * @generated
  */
-public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
+public interface ApogyCommonTopologyUIJME3Package extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.topology.ui.jme3";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.topology.ui.jme3";
 
 	/**
 	 * The package namespace name.
@@ -56,14 +56,14 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIJME3Package eINSTANCE = org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl.init();
+	ApogyCommonTopologyUIJME3Package eINSTANCE = ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.jme3.impl.JME3TypeFactoryImpl <em>JME3 Type Factory</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.JME3TypeFactoryImpl <em>JME3 Type Factory</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.JME3TypeFactoryImpl
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3TypeFactory()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.JME3TypeFactoryImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3TypeFactory()
 	 * @generated
 	 */
 	int JME3_TYPE_FACTORY = 0;
@@ -109,7 +109,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Color3f
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getColor3f()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getColor3f()
 	 * @generated
 	 */
 	int COLOR3F = 1;
@@ -119,7 +119,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.jme3.math.ColorRGBA
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getColorRGBA()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getColorRGBA()
 	 * @generated
 	 */
 	int COLOR_RGBA = 2;
@@ -129,7 +129,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.jme3.math.Vector3f
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJMEVector3f()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJMEVector3f()
 	 * @generated
 	 */
 	int JME_VECTOR3F = 3;
@@ -139,7 +139,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Vector3f
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getVector3f()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getVector3f()
 	 * @generated
 	 */
 	int VECTOR3F = 4;
@@ -149,8 +149,8 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * The meta object id for the '<em>JME3 Scene Object</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3SceneObject()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3SceneObject()
 	 * @generated
 	 */
 	int JME3_SCENE_OBJECT = 5;
@@ -161,7 +161,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.jme3.scene.Node
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3Node()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3Node()
 	 * @generated
 	 */
 	int JME3_NODE = 6;
@@ -171,37 +171,37 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.jme3.scene.Geometry
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3Geometry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3Geometry()
 	 * @generated
 	 */
 	int JME3_GEOMETRY = 7;
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory <em>JME3 Type Factory</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory <em>JME3 Type Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>JME3 Type Factory</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory
 	 * @generated
 	 */
 	EClass getJME3TypeFactory();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory#createColorRGBA(javax.vecmath.Color3f) <em>Create Color RGBA</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory#createColorRGBA(javax.vecmath.Color3f) <em>Create Color RGBA</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Color RGBA</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory#createColorRGBA(javax.vecmath.Color3f)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory#createColorRGBA(javax.vecmath.Color3f)
 	 * @generated
 	 */
 	EOperation getJME3TypeFactory__CreateColorRGBA__Color3f();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory#createVector3f(javax.vecmath.Vector3f) <em>Create Vector3f</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory#createVector3f(javax.vecmath.Vector3f) <em>Create Vector3f</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Vector3f</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory#createVector3f(javax.vecmath.Vector3f)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory#createVector3f(javax.vecmath.Vector3f)
 	 * @generated
 	 */
 	EOperation getJME3TypeFactory__CreateVector3f__Vector3f();
@@ -251,12 +251,12 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	EDataType getVector3f();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject <em>JME3 Scene Object</em>}'.
+	 * Returns the meta object for data type '{@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject <em>JME3 Scene Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>JME3 Scene Object</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject
-	 * @model instanceClass="org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject"
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject
+	 * @model instanceClass="ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject"
 	 * @generated
 	 */
 	EDataType getJME3SceneObject();
@@ -290,7 +290,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonTopologyUIJME3Factory getSymphony__CommonTopologyUIJME3Factory();
+	ApogyCommonTopologyUIJME3Factory getApogyCommonTopologyUIJME3Factory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -307,11 +307,11 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.jme3.impl.JME3TypeFactoryImpl <em>JME3 Type Factory</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.JME3TypeFactoryImpl <em>JME3 Type Factory</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.JME3TypeFactoryImpl
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3TypeFactory()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.JME3TypeFactoryImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3TypeFactory()
 		 * @generated
 		 */
 		EClass JME3_TYPE_FACTORY = eINSTANCE.getJME3TypeFactory();
@@ -337,7 +337,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Color3f
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getColor3f()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getColor3f()
 		 * @generated
 		 */
 		EDataType COLOR3F = eINSTANCE.getColor3f();
@@ -347,7 +347,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.jme3.math.ColorRGBA
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getColorRGBA()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getColorRGBA()
 		 * @generated
 		 */
 		EDataType COLOR_RGBA = eINSTANCE.getColorRGBA();
@@ -357,7 +357,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.jme3.math.Vector3f
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJMEVector3f()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJMEVector3f()
 		 * @generated
 		 */
 		EDataType JME_VECTOR3F = eINSTANCE.getJMEVector3f();
@@ -367,7 +367,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Vector3f
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getVector3f()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getVector3f()
 		 * @generated
 		 */
 		EDataType VECTOR3F = eINSTANCE.getVector3f();
@@ -376,8 +376,8 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 		 * The meta object literal for the '<em>JME3 Scene Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3SceneObject()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3SceneObject()
 		 * @generated
 		 */
 		EDataType JME3_SCENE_OBJECT = eINSTANCE.getJME3SceneObject();
@@ -387,7 +387,7 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.jme3.scene.Node
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3Node()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3Node()
 		 * @generated
 		 */
 		EDataType JME3_NODE = eINSTANCE.getJME3Node();
@@ -397,11 +397,11 @@ public interface Symphony__CommonTopologyUIJME3Package extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.jme3.scene.Geometry
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.Symphony__CommonTopologyUIJME3PackageImpl#getJME3Geometry()
+		 * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.impl.ApogyCommonTopologyUIJME3PackageImpl#getJME3Geometry()
 		 * @generated
 		 */
 		EDataType JME3_GEOMETRY = eINSTANCE.getJME3Geometry();
 
 	}
 
-} //Symphony__CommonTopologyUIJME3Package
+} //ApogyCommonTopologyUIJME3Package

@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology;
+package ca.gc.asc_csa.apogy.core.topology;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.core.SymphonyEnvironment;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,11 +16,11 @@ import org.eclipse.symphony.core.SymphonyEnvironment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter#getDeployment <em>Deployment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter#getSystemsGroup <em>Systems Group</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter#getDeployment <em>Deployment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter#getSystemsGroup <em>Systems Group</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSystemsTopologyAdapter()
+ * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getSystemsTopologyAdapter()
  * @model
  * @generated
  */
@@ -34,22 +34,22 @@ public interface SystemsTopologyAdapter extends EObject
 	 * The Deployment to monitor.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Deployment</em>' reference.
-	 * @see #setDeployment(SymphonyEnvironment)
-	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSystemsTopologyAdapter_Deployment()
+	 * @see #setDeployment(ApogyEnvironment)
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getSystemsTopologyAdapter_Deployment()
 	 * @model transient="true"
 	 * @generated
 	 */
-  SymphonyEnvironment getDeployment();
+  ApogyEnvironment getDeployment();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter#getDeployment <em>Deployment</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter#getDeployment <em>Deployment</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Deployment</em>' reference.
 	 * @see #getDeployment()
 	 * @generated
 	 */
-  void setDeployment(SymphonyEnvironment value);
+  void setDeployment(ApogyEnvironment value);
 
   /**
 	 * Returns the value of the '<em><b>Systems Group</b></em>' reference.
@@ -60,14 +60,14 @@ public interface SystemsTopologyAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Systems Group</em>' reference.
 	 * @see #setSystemsGroup(ReferencedGroupNode)
-	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSystemsTopologyAdapter_SystemsGroup()
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getSystemsTopologyAdapter_SystemsGroup()
 	 * @model transient="true"
 	 * @generated
 	 */
   ReferencedGroupNode getSystemsGroup();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter#getSystemsGroup <em>Systems Group</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter#getSystemsGroup <em>Systems Group</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Systems Group</em>' reference.

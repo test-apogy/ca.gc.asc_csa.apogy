@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.wizards;
+package ca.gc.asc_csa.apogy.common.topology.ui.wizards;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardPage;

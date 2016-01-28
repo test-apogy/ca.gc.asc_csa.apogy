@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters;
+package ca.gc.asc_csa.apogy.common.converters;
 
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.impl.Symphony__CommonConvertersFacadeImpl;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge;
+import ca.gc.asc_csa.apogy.common.converters.impl.ApogyCommonConvertersFacadeImpl;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 /**
@@ -20,13 +20,13 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.converters.Symphony__CommonConvertersPackage#getSymphony__CommonConvertersFacade()
+ * @see ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersPackage#getApogyCommonConvertersFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonConvertersFacade extends EObject {
+public interface ApogyCommonConvertersFacade extends EObject {
 	
-	public static Symphony__CommonConvertersFacade INSTANCE = Symphony__CommonConvertersFacadeImpl.getInstance();
+	public static ApogyCommonConvertersFacade INSTANCE = ApogyCommonConvertersFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -49,7 +49,7 @@ public interface Symphony__CommonConvertersFacade extends EObject {
 	 * Return the list of registered converters.
 	 * @return The list of converters.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.common.converters.List<org.eclipse.symphony.common.converters.IConverter>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.converters.List<ca.gc.asc_csa.apogy.common.converters.IConverter>" unique="false" many="false"
 	 * @generated
 	 */
 	List<IConverter> getAllRegisteredConverters();
@@ -61,9 +61,9 @@ public interface Symphony__CommonConvertersFacade extends EObject {
 	 * Returns the SimpleDirectedWeightedGraph representing the converters.
 	 * @return The SimpleDirectedWeightedGraph where vertex are input/output types and edges contain converters.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, org.eclipse.symphony.common.converters.graphs.ConverterEdge>" unique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.converters.SimpleDirectedWeightedGraph<org.eclipse.emf.ecore.EJavaClass<?>, ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge>" unique="false"
 	 * @generated
 	 */
 	SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> getGraph();
 
-} // Symphony__CommonConvertersFacade
+} // ApogyCommonConvertersFacade

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.composites;
+package ca.gc.asc_csa.apogy.core.invocator.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.databinding.EMFObservables;
@@ -16,10 +16,10 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
@@ -144,13 +144,13 @@ public class SourceDestinationContextsComposite extends Composite {
 		
 		ViewerSupport.bind(sourceContextViewer, EMFObservables.observeList(
 				contextsList,
-				Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
-				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
+				ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
+				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
 
 		ViewerSupport.bind(destinationContextViewer, EMFObservables.observeList(
 				contextsList,
-				Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
-				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
+				ApogyCoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
+				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME));
 
 		return bindingContext;
 	}

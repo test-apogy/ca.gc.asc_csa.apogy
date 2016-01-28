@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilitySwitch.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilitySwitch.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.util;
+package ca.gc.asc_csa.apogy.addons.mobility.util;
 
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.mobility.*;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.mobility.*;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,17 +24,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage
  * @generated
  */
-public class Symphony__AddonsMobilitySwitch<T> extends Switch<T> {
+public class ApogyAddonsMobilitySwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPackage modelPackage;
+	protected static ApogyAddonsMobilityPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -42,9 +42,9 @@ public class Symphony__AddonsMobilitySwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilitySwitch() {
+	public ApogyAddonsMobilitySwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPackage.eINSTANCE;
 		}
 	}
 
@@ -71,7 +71,7 @@ public class Symphony__AddonsMobilitySwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM: {
+			case ApogyAddonsMobilityPackage.MOBILE_PLATFORM: {
 				MobilePlatform mobilePlatform = (MobilePlatform)theEObject;
 				T result = caseMobilePlatform(mobilePlatform);
 				if (result == null) result = caseAggregateGroupNode(mobilePlatform);
@@ -80,7 +80,7 @@ public class Symphony__AddonsMobilitySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM: {
+			case ApogyAddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM: {
 				SkidSteeredMobilePlatform skidSteeredMobilePlatform = (SkidSteeredMobilePlatform)theEObject;
 				T result = caseSkidSteeredMobilePlatform(skidSteeredMobilePlatform);
 				if (result == null) result = caseMobilePlatform(skidSteeredMobilePlatform);
@@ -187,4 +187,4 @@ public class Symphony__AddonsMobilitySwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsMobilitySwitch
+} //ApogyAddonsMobilitySwitch

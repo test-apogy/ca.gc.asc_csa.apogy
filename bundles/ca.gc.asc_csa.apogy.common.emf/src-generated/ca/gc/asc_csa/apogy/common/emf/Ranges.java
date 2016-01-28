@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * *
  * Ranges Definition
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getRanges()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getRanges()
  * @model
  * @generated
  */

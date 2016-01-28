@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_tools_telecoms -->
+      <!-- @generated apogy_tools_telecoms -->
       <factory
-            uri="org.eclipse.symphony.addons.telecoms"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.telecoms"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,22 +21,22 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_telecoms -->
+      <!-- @generated apogy_addons_telecoms -->
       <extender
-            uri="org.eclipse.symphony.addons"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__AddonsChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.addons"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyAddonsChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CoreEnvironmentChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.environment"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyCoreEnvironmentChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.bindings"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyCommonTopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

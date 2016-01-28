@@ -1,30 +1,30 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.util;
+package ca.gc.asc_csa.apogy.core.topology.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
-import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
-import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage
+ * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage
  * @generated
  */
-public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
+public class ApogyCoreTopologyAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -32,7 +32,7 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreTopologyPackage modelPackage;
+  protected static ApogyCoreTopologyPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -40,10 +40,10 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreTopologyAdapterFactory()
+  public ApogyCoreTopologyAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreTopologyPackage.eINSTANCE;
+			modelPackage = ApogyCoreTopologyPackage.eINSTANCE;
 		}
 	}
 
@@ -73,23 +73,23 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreTopologySwitch<Adapter> modelSwitch =
-    new Symphony__CoreTopologySwitch<Adapter>() {
+  protected ApogyCoreTopologySwitch<Adapter> modelSwitch =
+    new ApogyCoreTopologySwitch<Adapter>() {
 			@Override
 			public Adapter caseSystemsTopologyAdapter(SystemsTopologyAdapter object) {
 				return createSystemsTopologyAdapterAdapter();
 			}
 			@Override
-			public Adapter caseSymphonyEnvironmentNode(SymphonyEnvironmentNode object) {
-				return createSymphonyEnvironmentNodeAdapter();
+			public Adapter caseApogyEnvironmentNode(ApogyEnvironmentNode object) {
+				return createApogyEnvironmentNodeAdapter();
 			}
 			@Override
-			public Adapter caseSymphonySystemAPIsNode(SymphonySystemAPIsNode object) {
-				return createSymphonySystemAPIsNodeAdapter();
+			public Adapter caseApogySystemAPIsNode(ApogySystemAPIsNode object) {
+				return createApogySystemAPIsNodeAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CoreTopologyFacade(Symphony__CoreTopologyFacade object) {
-				return createSymphony__CoreTopologyFacadeAdapter();
+			public Adapter caseApogyCoreTopologyFacade(ApogyCoreTopologyFacade object) {
+				return createApogyCoreTopologyFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -125,13 +125,13 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter <em>Systems Topology Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter <em>Systems Topology Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.topology.SystemsTopologyAdapter
+	 * @see ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter
 	 * @generated
 	 */
   public Adapter createSystemsTopologyAdapterAdapter()
@@ -140,57 +140,57 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode <em>Symphony Environment Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode <em>Apogy Environment Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.topology.SymphonyEnvironmentNode
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode
 	 * @generated
 	 */
-  public Adapter createSymphonyEnvironmentNodeAdapter()
+  public Adapter createApogyEnvironmentNodeAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.topology.SymphonySystemAPIsNode <em>Symphony System AP Is Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode <em>Apogy System AP Is Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.topology.SymphonySystemAPIsNode
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode
 	 * @generated
 	 */
-  public Adapter createSymphonySystemAPIsNodeAdapter()
+  public Adapter createApogySystemAPIsNodeAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreTopologyFacadeAdapter() {
+	public Adapter createApogyCoreTopologyFacadeAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
   public Adapter createNodeAdapter()
@@ -199,13 +199,13 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
   public Adapter createGroupNodeAdapter()
@@ -214,13 +214,13 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ReferencedGroupNode <em>Referenced Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode <em>Referenced Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ReferencedGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode
 	 * @generated
 	 */
   public Adapter createReferencedGroupNodeAdapter()
@@ -241,4 +241,4 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__CoreTopologyAdapterFactory
+} //ApogyCoreTopologyAdapterFactory

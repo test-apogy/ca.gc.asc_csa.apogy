@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.vehicle.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.adapters;
 
 
 
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class WheelPresentationAdapter implements NodePresentationAdapter
 {
@@ -32,7 +32,7 @@ public class WheelPresentationAdapter implements NodePresentationAdapter
 
 		Wheel wheel = (Wheel) obj;
 		
-		PhysicalWheelPresentation presentationNode = Symphony__AddonsVehicleUIFactory.eINSTANCE.createPhysicalWheelPresentation();
+		PhysicalWheelPresentation presentationNode = ApogyAddonsVehicleUIFactory.eINSTANCE.createPhysicalWheelPresentation();
 		presentationNode.setNode(wheel);			
 						
 		return presentationNode;

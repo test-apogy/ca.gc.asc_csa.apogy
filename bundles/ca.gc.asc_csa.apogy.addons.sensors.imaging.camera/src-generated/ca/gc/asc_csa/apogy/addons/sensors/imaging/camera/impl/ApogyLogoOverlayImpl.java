@@ -1,28 +1,28 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.awt.Graphics2D;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.images.URLEImage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.OverlayAlignment;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.URLEImage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Symphony Logo Overlay</b></em>'.
+ * An implementation of the model object '<em><b>Apogy Logo Overlay</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class SymphonyLogoOverlayImpl extends ImageCameraOverlayImpl implements SymphonyLogoOverlay
+public class ApogyLogoOverlayImpl extends ImageCameraOverlayImpl implements ApogyLogoOverlay
 {
 	private AbstractEImage logoImage = null;
 	
@@ -31,7 +31,7 @@ public class SymphonyLogoOverlayImpl extends ImageCameraOverlayImpl implements S
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SymphonyLogoOverlayImpl()
+  protected ApogyLogoOverlayImpl()
   {
 		super();
 	}
@@ -44,7 +44,7 @@ public class SymphonyLogoOverlayImpl extends ImageCameraOverlayImpl implements S
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.SYMPHONY_LOGO_OVERLAY;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.APOGY_LOGO_OVERLAY;
 	}
 
   @Override
@@ -113,11 +113,11 @@ public class SymphonyLogoOverlayImpl extends ImageCameraOverlayImpl implements S
   {
 	  if(logoImage == null)
 	  {
-		  URLEImage urlImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
-		  urlImage.setUrl("platform:/plugin/org.eclipse.symphony.addons.sensors.imaging.camera/images/SymphonyLogo.gif");		  		  
+		  URLEImage urlImage = ApogyCommonImagesFactory.eINSTANCE.createURLEImage();
+		  urlImage.setUrl("platform:/plugin/ca.gc.asc_csa.apogy.addons.sensors.imaging.camera/images/ApogyLogo.gif");		  		  
 		  logoImage = urlImage;
 	  }
 	  
 	  return logoImage;
   }
-} //SymphonyLogoOverlayImpl
+} //ApogyLogoOverlayImpl

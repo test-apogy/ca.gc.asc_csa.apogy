@@ -4,11 +4,11 @@
  *
  * $Id: AmbientLightImpl.java,v 1.3.2.2 2015/02/03 20:01:31 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.topology.addons.primitives.AmbientLight;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class AmbientLightImpl extends LightImpl implements AmbientLight {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.AMBIENT_LIGHT;
+		return ApogyCommonTopologyAddonsPrimitivesPackage.Literals.AMBIENT_LIGHT;
 	}
 
 } //AmbientLightImpl

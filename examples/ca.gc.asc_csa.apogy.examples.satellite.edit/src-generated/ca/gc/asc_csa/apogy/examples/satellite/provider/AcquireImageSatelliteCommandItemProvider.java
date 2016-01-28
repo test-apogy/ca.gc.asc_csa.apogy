@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractSatelliteC
 				 getResourceLocator(),
 				 getString("_UI_AcquireImageSatelliteCommand_rollAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AcquireImageSatelliteCommand_rollAngle_feature", "_UI_AcquireImageSatelliteCommand_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE,
+				 ApogyExamplesSatellitePackage.Literals.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractSatelliteC
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AcquireImageSatelliteCommand.class)) {
-			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

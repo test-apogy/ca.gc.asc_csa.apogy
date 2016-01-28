@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.examples.satellite.symphony.*;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,24 +19,24 @@ import org.eclipse.symphony.examples.satellite.symphony.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteSymphonyFactoryImpl extends EFactoryImpl implements Symphony__ExamplesSatelliteSymphonyFactory {
+public class ApogyExamplesSatelliteApogyFactoryImpl extends EFactoryImpl implements ApogyExamplesSatelliteApogyFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesSatelliteSymphonyFactory init() {
+	public static ApogyExamplesSatelliteApogyFactory init() {
 		try {
-			Symphony__ExamplesSatelliteSymphonyFactory theSymphony__ExamplesSatelliteSymphonyFactory = (Symphony__ExamplesSatelliteSymphonyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesSatelliteSymphonyPackage.eNS_URI);
-			if (theSymphony__ExamplesSatelliteSymphonyFactory != null) {
-				return theSymphony__ExamplesSatelliteSymphonyFactory;
+			ApogyExamplesSatelliteApogyFactory theApogyExamplesSatelliteApogyFactory = (ApogyExamplesSatelliteApogyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesSatelliteApogyPackage.eNS_URI);
+			if (theApogyExamplesSatelliteApogyFactory != null) {
+				return theApogyExamplesSatelliteApogyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesSatelliteSymphonyFactoryImpl();
+		return new ApogyExamplesSatelliteApogyFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class Symphony__ExamplesSatelliteSymphonyFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteSymphonyFactoryImpl() {
+	public ApogyExamplesSatelliteApogyFactoryImpl() {
 		super();
 	}
 
@@ -57,8 +57,8 @@ public class Symphony__ExamplesSatelliteSymphonyFactoryImpl extends EFactoryImpl
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_SYSTEM_API_ADAPTER: return createConstellationSystemApiAdapter();
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA: return createConstellationData();
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_SYSTEM_API_ADAPTER: return createConstellationSystemApiAdapter();
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA: return createConstellationData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -89,8 +89,8 @@ public class Symphony__ExamplesSatelliteSymphonyFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteSymphonyPackage getSymphony__ExamplesSatelliteSymphonyPackage() {
-		return (Symphony__ExamplesSatelliteSymphonyPackage)getEPackage();
+	public ApogyExamplesSatelliteApogyPackage getApogyExamplesSatelliteApogyPackage() {
+		return (ApogyExamplesSatelliteApogyPackage)getEPackage();
 	}
 
 	/**
@@ -100,8 +100,8 @@ public class Symphony__ExamplesSatelliteSymphonyFactoryImpl extends EFactoryImpl
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesSatelliteSymphonyPackage getPackage() {
-		return Symphony__ExamplesSatelliteSymphonyPackage.eINSTANCE;
+	public static ApogyExamplesSatelliteApogyPackage getPackage() {
+		return ApogyExamplesSatelliteApogyPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesSatelliteSymphonyFactoryImpl
+} //ApogyExamplesSatelliteApogyFactoryImpl

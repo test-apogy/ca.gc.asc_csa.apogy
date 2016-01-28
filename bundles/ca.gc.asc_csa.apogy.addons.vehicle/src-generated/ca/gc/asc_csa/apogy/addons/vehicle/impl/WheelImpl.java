@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.PhysicalBodyImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +18,8 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImp
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getLength <em>Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.WheelImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.impl.WheelImpl#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,7 +84,7 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehiclePackage.Literals.WHEEL;
+		return ApogyAddonsVehiclePackage.Literals.WHEEL;
 	}
 
   /**
@@ -107,7 +107,7 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.WHEEL__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -128,7 +128,7 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 		double oldLength = length;
 		length = newLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL__LENGTH, oldLength, length));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.WHEEL__LENGTH, oldLength, length));
 	}
 
 		/**
@@ -140,9 +140,9 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
+			case ApogyAddonsVehiclePackage.WHEEL__RADIUS:
 				return getRadius();
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+			case ApogyAddonsVehiclePackage.WHEEL__LENGTH:
 				return getLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -157,10 +157,10 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
+			case ApogyAddonsVehiclePackage.WHEEL__RADIUS:
 				setRadius((Double)newValue);
 				return;
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+			case ApogyAddonsVehiclePackage.WHEEL__LENGTH:
 				setLength((Double)newValue);
 				return;
 		}
@@ -176,10 +176,10 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
+			case ApogyAddonsVehiclePackage.WHEEL__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+			case ApogyAddonsVehiclePackage.WHEEL__LENGTH:
 				setLength(LENGTH_EDEFAULT);
 				return;
 		}
@@ -195,9 +195,9 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
+			case ApogyAddonsVehiclePackage.WHEEL__RADIUS:
 				return radius != RADIUS_EDEFAULT;
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+			case ApogyAddonsVehiclePackage.WHEEL__LENGTH:
 				return length != LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

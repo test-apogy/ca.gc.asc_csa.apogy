@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.camera.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.examples.camera.symphony.util.Symphony__ExamplesCameraSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.util.ApogyExamplesCameraApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -31,7 +31,7 @@ import org.eclipse.symphony.examples.camera.symphony.util.Symphony__ExamplesCame
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory extends Symphony__ExamplesCameraSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+public class ApogyExamplesCameraApogyItemProviderAdapterFactory extends ApogyExamplesCameraApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -63,7 +63,7 @@ public class Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory extends 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory()
+  public ApogyExamplesCameraApogyItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -73,31 +73,31 @@ public class Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected CameraSymphonySystemApiAdapterItemProvider cameraSymphonySystemApiAdapterItemProvider;
+  protected CameraApogySystemApiAdapterItemProvider cameraApogySystemApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createCameraSymphonySystemApiAdapterAdapter()
+  public Adapter createCameraApogySystemApiAdapterAdapter()
   {
-		if (cameraSymphonySystemApiAdapterItemProvider == null) {
-			cameraSymphonySystemApiAdapterItemProvider = new CameraSymphonySystemApiAdapterItemProvider(this);
+		if (cameraApogySystemApiAdapterItemProvider == null) {
+			cameraApogySystemApiAdapterItemProvider = new CameraApogySystemApiAdapterItemProvider(this);
 		}
 
-		return cameraSymphonySystemApiAdapterItemProvider;
+		return cameraApogySystemApiAdapterItemProvider;
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.symphony.CameraData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory extends 
   protected CameraDataItemProvider cameraDataItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.symphony.CameraData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -121,31 +121,31 @@ public class Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory extends 
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraApogySystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected PTUCameraSymphonySystemApiAdapterItemProvider ptuCameraSymphonySystemApiAdapterItemProvider;
+  protected PTUCameraApogySystemApiAdapterItemProvider ptuCameraApogySystemApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraApogySystemApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createPTUCameraSymphonySystemApiAdapterAdapter()
+  public Adapter createPTUCameraApogySystemApiAdapterAdapter()
   {
-		if (ptuCameraSymphonySystemApiAdapterItemProvider == null) {
-			ptuCameraSymphonySystemApiAdapterItemProvider = new PTUCameraSymphonySystemApiAdapterItemProvider(this);
+		if (ptuCameraApogySystemApiAdapterItemProvider == null) {
+			ptuCameraApogySystemApiAdapterItemProvider = new PTUCameraApogySystemApiAdapterItemProvider(this);
 		}
 
-		return ptuCameraSymphonySystemApiAdapterItemProvider;
+		return ptuCameraApogySystemApiAdapterItemProvider;
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -153,7 +153,7 @@ public class Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory extends 
   protected PTUCameraDataItemProvider ptuCameraDataItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -276,9 +276,9 @@ public class Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory extends 
 	 */
   public void dispose()
   {
-		if (cameraSymphonySystemApiAdapterItemProvider != null) cameraSymphonySystemApiAdapterItemProvider.dispose();
+		if (cameraApogySystemApiAdapterItemProvider != null) cameraApogySystemApiAdapterItemProvider.dispose();
 		if (cameraDataItemProvider != null) cameraDataItemProvider.dispose();
-		if (ptuCameraSymphonySystemApiAdapterItemProvider != null) ptuCameraSymphonySystemApiAdapterItemProvider.dispose();
+		if (ptuCameraApogySystemApiAdapterItemProvider != null) ptuCameraApogySystemApiAdapterItemProvider.dispose();
 		if (ptuCameraDataItemProvider != null) ptuCameraDataItemProvider.dispose();
 	}
 

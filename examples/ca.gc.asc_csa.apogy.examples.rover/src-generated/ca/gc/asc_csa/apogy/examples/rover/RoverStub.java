@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover;
+package ca.gc.asc_csa.apogy.examples.rover;
 
 
 /**
@@ -16,7 +16,7 @@ package org.eclipse.symphony.examples.rover;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRoverStub()
+ * @see ca.gc.asc_csa.apogy.examples.rover.ApogyExamplesRoverPackage#getRoverStub()
  * @model
  * @generated
  */

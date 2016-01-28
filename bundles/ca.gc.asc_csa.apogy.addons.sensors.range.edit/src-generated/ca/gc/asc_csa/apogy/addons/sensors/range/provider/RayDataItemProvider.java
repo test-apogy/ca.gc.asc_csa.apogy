@@ -4,7 +4,7 @@
  *
  * $Id: RayDataItemProvider.java,v 1.2.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -26,11 +26,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RayData;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RayData;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.RayData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.RayData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -83,7 +83,7 @@ public class RayDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RayData_origin_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RayData_origin_feature", "_UI_RayData_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RAY_DATA__ORIGIN,
+				 ApogyAddonsSensorsRangePackage.Literals.RAY_DATA__ORIGIN,
 				 true,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class RayDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RayData_direction_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RayData_direction_feature", "_UI_RayData_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.RAY_DATA__DIRECTION,
+				 ApogyAddonsSensorsRangePackage.Literals.RAY_DATA__DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -152,8 +152,8 @@ public class RayDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RayData.class)) {
-			case Symphony__AddonsSensorsRangePackage.RAY_DATA__ORIGIN:
-			case Symphony__AddonsSensorsRangePackage.RAY_DATA__DIRECTION:
+			case ApogyAddonsSensorsRangePackage.RAY_DATA__ORIGIN:
+			case ApogyAddonsSensorsRangePackage.RAY_DATA__DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

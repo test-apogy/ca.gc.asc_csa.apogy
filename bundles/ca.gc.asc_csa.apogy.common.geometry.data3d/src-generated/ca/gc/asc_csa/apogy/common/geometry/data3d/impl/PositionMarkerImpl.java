@@ -3,13 +3,13 @@
  *
  * $Id: PositionMarkerImpl.java,v 1.3.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl#getIdentifier <em>Identifier</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.PositionMarkerImpl#getIdentifier <em>Identifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +61,7 @@ public class PositionMarkerImpl extends CartesianPositionCoordinatesImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.POSITION_MARKER;
+		return ApogyCommonGeometryData3DPackage.Literals.POSITION_MARKER;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class PositionMarkerImpl extends CartesianPositionCoordinatesImpl impleme
 		String oldIdentifier = identifier;
 		identifier = newIdentifier;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER, oldIdentifier, identifier));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER, oldIdentifier, identifier));
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class PositionMarkerImpl extends CartesianPositionCoordinatesImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
+			case ApogyCommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
 				return getIdentifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public class PositionMarkerImpl extends CartesianPositionCoordinatesImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
+			case ApogyCommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
 				setIdentifier((String)newValue);
 				return;
 		}
@@ -122,7 +122,7 @@ public class PositionMarkerImpl extends CartesianPositionCoordinatesImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
+			case ApogyCommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
 				setIdentifier(IDENTIFIER_EDEFAULT);
 				return;
 		}
@@ -137,7 +137,7 @@ public class PositionMarkerImpl extends CartesianPositionCoordinatesImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
+			case ApogyCommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
 				return IDENTIFIER_EDEFAULT == null ? identifier != null : !IDENTIFIER_EDEFAULT.equals(identifier);
 		}
 		return super.eIsSet(featureID);

@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.common.geometry.data3d.las.*;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.common.geometry.data3d.las.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DLASSwitch<T> extends Switch<T> {
+public class ApogyCommonGeometryData3DLASSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DLASPackage modelPackage;
+	protected static ApogyCommonGeometryData3DLASPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__CommonGeometryData3DLASSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASSwitch() {
+	public ApogyCommonGeometryData3DLASSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DLASPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DLASPackage.eINSTANCE;
 		}
 	}
 
@@ -67,37 +67,37 @@ public class Symphony__CommonGeometryData3DLASSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER: {
+			case ApogyCommonGeometryData3DLASPackage.LAS_HEADER: {
 				LASHeader lasHeader = (LASHeader)theEObject;
 				T result = caseLASHeader(lasHeader);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD: {
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD: {
 				VariableLengthRecord variableLengthRecord = (VariableLengthRecord)theEObject;
 				T result = caseVariableLengthRecord(variableLengthRecord);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER: {
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER: {
 				LASReader lasReader = (LASReader)theEObject;
 				T result = caseLASReader(lasReader);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT: {
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT: {
 				LASPoint lasPoint = (LASPoint)theEObject;
 				T result = caseLASPoint(lasPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DLASPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE: {
-				Symphony__CommonGeometryData3DLASFacade symphony__CommonGeometryData3DLASFacade = (Symphony__CommonGeometryData3DLASFacade)theEObject;
-				T result = caseSymphony__CommonGeometryData3DLASFacade(symphony__CommonGeometryData3DLASFacade);
+			case ApogyCommonGeometryData3DLASPackage.APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE: {
+				ApogyCommonGeometryData3DLASFacade apogy__CommonGeometryData3DLASFacade = (ApogyCommonGeometryData3DLASFacade)theEObject;
+				T result = caseApogyCommonGeometryData3DLASFacade(apogy__CommonGeometryData3DLASFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER: {
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER: {
 				LASWriter lasWriter = (LASWriter)theEObject;
 				T result = caseLASWriter(lasWriter);
 				if (result == null) result = defaultCase(theEObject);
@@ -178,7 +178,7 @@ public class Symphony__CommonGeometryData3DLASSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonGeometryData3DLASFacade(Symphony__CommonGeometryData3DLASFacade object) {
+	public T caseApogyCommonGeometryData3DLASFacade(ApogyCommonGeometryData3DLASFacade object) {
 		return null;
 	}
 
@@ -213,4 +213,4 @@ public class Symphony__CommonGeometryData3DLASSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DLASSwitch
+} //ApogyCommonGeometryData3DLASSwitch

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.io.IOException;
 import java.net.URL;

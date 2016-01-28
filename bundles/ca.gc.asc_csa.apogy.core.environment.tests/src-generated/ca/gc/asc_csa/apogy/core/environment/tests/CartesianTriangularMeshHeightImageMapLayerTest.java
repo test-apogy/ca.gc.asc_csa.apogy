@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.textui.TestRunner;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +57,7 @@ public class CartesianTriangularMeshHeightImageMapLayerTest extends CartesianTri
 	@Override
 	protected void setUp() throws Exception 
 	{
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer());
 		
 		getFixture().setCartesianTriangularMeshMapLayer(super.createCartesianTriangularMeshMapLayer());
 		getFixture().setRequiredResolution(2.0);

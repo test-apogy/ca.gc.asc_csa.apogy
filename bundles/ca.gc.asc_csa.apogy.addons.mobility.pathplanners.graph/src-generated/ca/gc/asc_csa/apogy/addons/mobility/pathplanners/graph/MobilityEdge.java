@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,20 +18,20 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getCostFunctions <em>Cost Functions</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getFrom <em>From</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getTo <em>To</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getWeight <em>Weight</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge#getCostFunctions <em>Cost Functions</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge#getFrom <em>From</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge#getTo <em>To</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge#getWeight <em>Weight</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getMobilityEdge()
  * @model
  * @generated
  */
 public interface MobilityEdge extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Cost Functions</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DisplacementCostFunction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cost Functions</em>' reference list isn't clear,
@@ -39,7 +39,7 @@ public interface MobilityEdge extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cost Functions</em>' reference list.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_CostFunctions()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getMobilityEdge_CostFunctions()
 	 * @model
 	 * @generated
 	 */
@@ -55,14 +55,14 @@ public interface MobilityEdge extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(CartesianPolygon)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_From()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getMobilityEdge_From()
 	 * @model
 	 * @generated
 	 */
 	CartesianPolygon getFrom();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getFrom <em>From</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge#getFrom <em>From</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From</em>' reference.
@@ -81,14 +81,14 @@ public interface MobilityEdge extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' reference.
 	 * @see #setTo(CartesianPolygon)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_To()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getMobilityEdge_To()
 	 * @model
 	 * @generated
 	 */
 	CartesianPolygon getTo();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getTo <em>To</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge#getTo <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To</em>' reference.
@@ -107,14 +107,14 @@ public interface MobilityEdge extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Weight</em>' attribute.
 	 * @see #setWeight(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_Weight()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage#getMobilityEdge_Weight()
 	 * @model unique="false" derived="true"
 	 * @generated
 	 */
 	double getWeight();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getWeight <em>Weight</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.MobilityEdge#getWeight <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Weight</em>' attribute.

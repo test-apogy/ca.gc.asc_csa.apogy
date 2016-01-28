@@ -3,7 +3,7 @@
  *
  * $Id: ConicalFieldOfViewItemProvider.java,v 1.4.4.2 2015/05/21 15:51:09 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 
 import java.util.Collection;
@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +71,7 @@ public class ConicalFieldOfViewItemProvider
 				getResourceLocator(),
 				getString("_UI_ConicalFieldOfView_fieldOfViewAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfView_fieldOfViewAngle_feature", "_UI_ConicalFieldOfView_type"),
-				Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE,
+				ApogyAddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE,
 				true, 
 				false,
 				false, 
@@ -96,7 +96,7 @@ public class ConicalFieldOfViewItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConicalFieldOfView_volume_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfView_volume_feature", "_UI_ConicalFieldOfView_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__VOLUME,
+				 ApogyAddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__VOLUME,
 				 false,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class ConicalFieldOfViewItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE);
+			childrenFeatures.add(ApogyAddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE);
 		}
 		return childrenFeatures;
 	}
@@ -189,11 +189,11 @@ public class ConicalFieldOfViewItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConicalFieldOfView.class)) {
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -214,8 +214,8 @@ public class ConicalFieldOfViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
+				(ApogyAddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 	}
 
 }

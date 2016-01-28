@@ -1,20 +1,20 @@
-@GenModel(prefix="Symphony__AddonsSensorsFOVBindings",
+@GenModel(prefix="ApogyAddonsSensorsFOVBindings",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne - Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__AddonsSensorsFOVBindings",
+		  modelName="ApogyAddonsSensorsFOVBindings",
 		  complianceLevel="6.0")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.fov.bindings/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.fov.bindings.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.bindings/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.fov.bindings
+package ca.gc.asc_csa.apogy.addons.sensors.fov.bindings
 
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
 
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
 /**
  * Binding that binds a CircularSectorFieldOfView to another CircularSectorFieldOfView.

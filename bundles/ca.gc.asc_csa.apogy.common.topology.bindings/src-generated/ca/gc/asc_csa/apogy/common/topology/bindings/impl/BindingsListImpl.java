@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.impl;
+package ca.gc.asc_csa.apogy.common.topology.bindings.impl;
 
 import java.util.Collection;
 
@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBin
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsListImpl#getBindings <em>Bindings</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.bindings.impl.BindingsListImpl#getBindings <em>Bindings</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,7 +59,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST;
+		return ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public EList<AbstractTopologyBinding> getBindings()
   {
 		if (bindings == null) {
-			bindings = new EObjectContainmentEList<AbstractTopologyBinding>(AbstractTopologyBinding.class, this, Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS);
+			bindings = new EObjectContainmentEList<AbstractTopologyBinding>(AbstractTopologyBinding.class, this, ApogyCommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS);
 		}
 		return bindings;
 	}
@@ -84,7 +84,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				return ((InternalEList<?>)getBindings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				return getBindings();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				getBindings().clear();
 				getBindings().addAll((Collection<? extends AbstractTopologyBinding>)newValue);
 				return;
@@ -132,7 +132,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				getBindings().clear();
 				return;
 		}
@@ -148,7 +148,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				return bindings != null && !bindings.isEmpty();
 		}
 		return super.eIsSet(featureID);

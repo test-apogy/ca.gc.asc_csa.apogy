@@ -1,12 +1,12 @@
 /**
  */
-package org.eclipse.symphony.common.emf.edit.utils.util;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
-import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade;
+import ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPa
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage
+ * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsPackage
  * @generated
  */
-public class Symphony__CommonEMFEditUtilsSwitch<T> extends Switch<T>
+public class ApogyCommonEMFEditUtilsSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -29,7 +29,7 @@ public class Symphony__CommonEMFEditUtilsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CommonEMFEditUtilsPackage modelPackage;
+  protected static ApogyCommonEMFEditUtilsPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -37,10 +37,10 @@ public class Symphony__CommonEMFEditUtilsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonEMFEditUtilsSwitch()
+  public ApogyCommonEMFEditUtilsSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonEMFEditUtilsPackage.eINSTANCE;
+			modelPackage = ApogyCommonEMFEditUtilsPackage.eINSTANCE;
 		}
 	}
 
@@ -69,9 +69,9 @@ public class Symphony__CommonEMFEditUtilsSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CommonEMFEditUtilsPackage.SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE: {
-				Symphony__CommonEMFEditUtilsFacade symphony__CommonEMFEditUtilsFacade = (Symphony__CommonEMFEditUtilsFacade)theEObject;
-				T result = caseSymphony__CommonEMFEditUtilsFacade(symphony__CommonEMFEditUtilsFacade);
+			case ApogyCommonEMFEditUtilsPackage.APOGY_COMMON_EMF_EDIT_UTILS_FACADE: {
+				ApogyCommonEMFEditUtilsFacade apogy__CommonEMFEditUtilsFacade = (ApogyCommonEMFEditUtilsFacade)theEObject;
+				T result = caseApogyCommonEMFEditUtilsFacade(apogy__CommonEMFEditUtilsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -90,7 +90,7 @@ public class Symphony__CommonEMFEditUtilsSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CommonEMFEditUtilsFacade(Symphony__CommonEMFEditUtilsFacade object) {
+	public T caseApogyCommonEMFEditUtilsFacade(ApogyCommonEMFEditUtilsFacade object) {
 		return null;
 	}
 
@@ -111,4 +111,4 @@ public class Symphony__CommonEMFEditUtilsSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__CommonEMFEditUtilsSwitch
+} //ApogyCommonEMFEditUtilsSwitch

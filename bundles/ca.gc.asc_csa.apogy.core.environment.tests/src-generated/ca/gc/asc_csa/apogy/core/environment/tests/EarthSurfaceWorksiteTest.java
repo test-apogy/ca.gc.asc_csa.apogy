@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import java.util.Date;
 
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -20,14 +20,14 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getEarthSky() <em>Earth Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getEarthSky() <em>Earth Sky</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(org.eclipse.symphony.common.math.Tuple3d) <em>Convert To Geographic Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#convertToXYZPosition(org.eclipse.symphony.core.environment.GeographicCoordinates) <em>Convert To XYZ Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Convert To Geographic Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#convertToXYZPosition(ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates) <em>Convert To XYZ Position</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -72,7 +72,7 @@ public class EarthSurfaceWorksiteTest extends SurfaceWorksiteTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite());
 	}
 
 	/**
@@ -87,27 +87,27 @@ public class EarthSurfaceWorksiteTest extends SurfaceWorksiteTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getEarthSky() <em>Earth Sky</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getEarthSky() <em>Earth Sky</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getEarthSky()
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#getEarthSky()
 	 * @generated_NOT
 	 */
 	public void testGetEarthSky() {
-		setFixture(Symphony__CoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite());
+		setFixture(ApogyCoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite());
 		assertNotNull(getFixture().getEarthSky());	
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#setEarthSky(org.eclipse.symphony.core.environment.EarthSky) <em>Earth Sky</em>}' feature setter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#setEarthSky(ca.gc.asc_csa.apogy.core.environment.EarthSky) <em>Earth Sky</em>}' feature setter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSurfaceWorksite#setEarthSky(org.eclipse.symphony.core.environment.EarthSky)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#setEarthSky(ca.gc.asc_csa.apogy.core.environment.EarthSky)
 	 * @generated_NOT
 	 */
 	public void testSetEarthSky() 
 	{
-		EarthSky sky = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSky();
+		EarthSky sky = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSky();
 		getFixture().setEarthSky(sky);
 		sky.setTime(new Date());
 		assertNotNull(getFixture().getSky());
@@ -115,10 +115,10 @@ public class EarthSurfaceWorksiteTest extends SurfaceWorksiteTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(org.eclipse.symphony.common.math.Tuple3d) <em>Convert To Geographic Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(ca.gc.asc_csa.apogy.common.math.Tuple3d) <em>Convert To Geographic Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(org.eclipse.symphony.common.math.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(ca.gc.asc_csa.apogy.common.math.Tuple3d)
 	 * @generated_NOT
 	 */
 	public void testConvertToGeographicCoordinates__Tuple3d() {
@@ -128,10 +128,10 @@ public class EarthSurfaceWorksiteTest extends SurfaceWorksiteTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#convertToXYZPosition(org.eclipse.symphony.core.environment.GeographicCoordinates) <em>Convert To XYZ Position</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#convertToXYZPosition(ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates) <em>Convert To XYZ Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSurfaceWorksite#convertToXYZPosition(org.eclipse.symphony.core.environment.GeographicCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite#convertToXYZPosition(ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates)
 	 * @generated_NOT
 	 */
 	public void testConvertToXYZPosition__GeographicCoordinates() {

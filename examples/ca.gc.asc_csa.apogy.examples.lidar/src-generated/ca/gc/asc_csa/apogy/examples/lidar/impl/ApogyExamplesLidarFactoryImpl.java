@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.impl;
+package ca.gc.asc_csa.apogy.examples.lidar.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.lidar.*;
+import ca.gc.asc_csa.apogy.examples.lidar.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.symphony.examples.lidar.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLidarFactoryImpl extends EFactoryImpl implements Symphony__ExamplesLidarFactory
+public class ApogyExamplesLidarFactoryImpl extends EFactoryImpl implements ApogyExamplesLidarFactory
 {
 	/**
 	 * Creates the default factory implementation.
@@ -24,18 +24,18 @@ public class Symphony__ExamplesLidarFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__ExamplesLidarFactory init()
+	public static ApogyExamplesLidarFactory init()
 	{
 		try {
-			Symphony__ExamplesLidarFactory theSymphony__ExamplesLidarFactory = (Symphony__ExamplesLidarFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesLidarPackage.eNS_URI);
-			if (theSymphony__ExamplesLidarFactory != null) {
-				return theSymphony__ExamplesLidarFactory;
+			ApogyExamplesLidarFactory theApogyExamplesLidarFactory = (ApogyExamplesLidarFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesLidarPackage.eNS_URI);
+			if (theApogyExamplesLidarFactory != null) {
+				return theApogyExamplesLidarFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesLidarFactoryImpl();
+		return new ApogyExamplesLidarFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Symphony__ExamplesLidarFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLidarFactoryImpl()
+	public ApogyExamplesLidarFactoryImpl()
 	{
 		super();
 	}
@@ -58,8 +58,8 @@ public class Symphony__ExamplesLidarFactoryImpl extends EFactoryImpl implements 
 	public EObject create(EClass eClass)
 	{
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesLidarPackage.LIDAR_STUB: return createLidarStub();
-			case Symphony__ExamplesLidarPackage.LIDAR_SIMULATED: return createLidarSimulated();
+			case ApogyExamplesLidarPackage.LIDAR_STUB: return createLidarStub();
+			case ApogyExamplesLidarPackage.LIDAR_SIMULATED: return createLidarSimulated();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -122,8 +122,8 @@ public class Symphony__ExamplesLidarFactoryImpl extends EFactoryImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLidarPackage getSymphony__ExamplesLidarPackage() {
-		return (Symphony__ExamplesLidarPackage)getEPackage();
+	public ApogyExamplesLidarPackage getApogyExamplesLidarPackage() {
+		return (ApogyExamplesLidarPackage)getEPackage();
 	}
 
 	/**
@@ -133,9 +133,9 @@ public class Symphony__ExamplesLidarFactoryImpl extends EFactoryImpl implements 
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__ExamplesLidarPackage getPackage()
+	public static ApogyExamplesLidarPackage getPackage()
 	{
-		return Symphony__ExamplesLidarPackage.eINSTANCE;
+		return ApogyExamplesLidarPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesLidarFactoryImpl
+} //ApogyExamplesLidarFactoryImpl

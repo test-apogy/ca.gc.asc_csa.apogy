@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.edit.descriptors.ENumberDataTypeArgumentItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.edit.descriptors.ENumberDataTypeArgumentItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.EDataTypeArgument} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
@@ -75,7 +75,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 							getString("_UI_PropertyDescriptor_description",
 									"_UI_EDataTypeArgument_value_feature",
 									"_UI_EDataTypeArgument_type"),
-							Symphony__CoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+							ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
 							true, false, false,
 							ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
 							null){
@@ -110,7 +110,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 							getString("_UI_PropertyDescriptor_description",
 									"_UI_EDataTypeArgument_value_feature",
 									"_UI_EDataTypeArgument_type"),
-							Symphony__CoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+							ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
 							true, false, false,
 							ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
 							null));
@@ -129,7 +129,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 					getString("_UI_PropertyDescriptor_description",
 							"_UI_EDataTypeArgument_value_feature",
 							"_UI_EDataTypeArgument_type"),
-					Symphony__CoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+					ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
 					true, false, false,
 					ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
 					null));
@@ -175,7 +175,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EDataTypeArgument.class)) {
-			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
+			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

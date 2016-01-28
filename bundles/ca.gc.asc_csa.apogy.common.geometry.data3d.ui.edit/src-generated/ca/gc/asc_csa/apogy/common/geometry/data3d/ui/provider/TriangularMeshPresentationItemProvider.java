@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.ui.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
-import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +71,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_mesh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_mesh_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__MESH,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__MESH,
 				 false,
 				 false,
 				 false,
@@ -93,7 +93,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_pointSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_pointSize_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -115,7 +115,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_numberOfPoints_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_numberOfPoints_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS,
 				 false,
 				 false,
 				 false,
@@ -137,7 +137,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_numberOfPolygons_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_numberOfPolygons_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS,
 				 false,
 				 false,
 				 false,
@@ -159,7 +159,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_presentationMode_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -181,7 +181,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_transparency_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_transparency_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY,
 				 true,
 				 false,
 				 false,
@@ -203,7 +203,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_useShading_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_useShading_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__USE_SHADING,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__USE_SHADING,
 				 true,
 				 false,
 				 false,
@@ -225,7 +225,7 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_TriangularMeshPresentation_textureImage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TriangularMeshPresentation_textureImage_feature", "_UI_TriangularMeshPresentation_type"),
-				 Symphony__CommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE,
+				 ApogyCommonGeometryData3DUIPackage.Literals.TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE,
 				 true,
 				 false,
 				 true,
@@ -273,12 +273,12 @@ public class TriangularMeshPresentationItemProvider extends NodePresentationItem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TriangularMeshPresentation.class)) {
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
-			case Symphony__CommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__POINT_SIZE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY:
+			case ApogyCommonGeometryData3DUIPackage.TRIANGULAR_MESH_PRESENTATION__USE_SHADING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

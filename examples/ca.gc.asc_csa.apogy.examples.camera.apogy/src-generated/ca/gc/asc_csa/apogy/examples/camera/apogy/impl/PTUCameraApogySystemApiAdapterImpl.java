@@ -1,43 +1,43 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.camera.apogy.impl;
 
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.PTUCamera;
-import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
-import org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyFactory;
-import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyFactory;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>PTU Camera Symphony System Api Adapter</b></em>'. <!-- end-user-doc
+ * <em><b>PTU Camera Apogy System Api Adapter</b></em>'. <!-- end-user-doc
  * -->
  * <p>
  * </p>
  * 
  * @generated
  */
-public class PTUCameraSymphonySystemApiAdapterImpl extends
-		SymphonySystemApiAdapterImpl implements
-		PTUCameraSymphonySystemApiAdapter {
+public class PTUCameraApogySystemApiAdapterImpl extends
+		ApogySystemApiAdapterImpl implements
+		PTUCameraApogySystemApiAdapter {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PTUCameraSymphonySystemApiAdapterImpl() {
+	protected PTUCameraApogySystemApiAdapterImpl() {
 		super();
 	}
 
@@ -47,7 +47,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesCameraSymphonyPackage.Literals.PTU_CAMERA_SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyExamplesCameraApogyPackage.Literals.PTU_CAMERA_APOGY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 		// Use the relevant factory method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of PTUCameraData.
-		return Symphony__ExamplesCameraSymphonyFactory.eINSTANCE.createPTUCameraData();
+		return ApogyExamplesCameraApogyFactory.eINSTANCE.createPTUCameraData();
 	}
 	
 	/**
@@ -120,7 +120,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 				if (ptuCameraData.getFov() != null)
 				{
 					// Set the camera's FOV accordingly
-					this.getPTUCamera().setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(ptuCameraData.getFov()));
+					this.getPTUCamera().setFov(ApogyAddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(ptuCameraData.getFov()));
 				}
 				// Otherwise
 				else
@@ -142,7 +142,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 									 "it already is in that state.";
 					
 					// Throw an exception to indicate that the apply() has failed; this will
-					// be caught and logged by Symphony
+					// be caught and logged by Apogy
 					throw new RuntimeException(message);
 				}
 			}
@@ -176,7 +176,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 			if (this.getPTUCamera().getFov() != null)
 			{
 				// Create a copy of the FOV and store it in the initialization object
-				ptuCameraData.setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getPTUCamera().getFov()));
+				ptuCameraData.setFov(ApogyAddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getPTUCamera().getFov()));
 			}
 			// Otherwise
 			else
@@ -210,19 +210,19 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 	public Matrix4x4 createResultMatrix(OperationCall operationCall) 
 	{
 		// If the takeSnapshot() method was called
-		if (operationCall.getEOperation().getOperationID() == Symphony__ExamplesCameraPackage.CAMERA___TAKE_SNAPSHOT)
+		if (operationCall.getEOperation().getOperationID() == ApogyExamplesCameraPackage.CAMERA___TAKE_SNAPSHOT)
 		{
 			// Extract the camera lens and root nodes
-			Node tip = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_SYM_SYS_LENS",
-															 getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
-			Node root = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_SYM_SYS_ROOT",
-															  getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
+			Node tip = ApogyCommonTopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_SYM_SYS_LENS",
+															 getApogySystem().getTopologyRoot().getOriginNode()).get(0);
+			Node root = ApogyCommonTopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_SYM_SYS_ROOT",
+															  getApogySystem().getTopologyRoot().getOriginNode()).get(0);
 			
 			// Determine the series of transformations that have taken place
-			Matrix4d matrix4d = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(tip,	root);
+			Matrix4d matrix4d = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(tip,	root);
 			
 			// Create a 4x4 Matrix with the transformation and return it
-			return Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix4d);
+			return ApogyCommonMathFacade.INSTANCE.createMatrix4x4(matrix4d);
 		}
 		// Otherwise, any other operation was called
 		else
@@ -231,4 +231,4 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 			return super.createResultMatrix(operationCall);
 		}
 	}
-} // PTUCameraSymphonySystemApiAdapterImpl
+} // PTUCameraApogySystemApiAdapterImpl

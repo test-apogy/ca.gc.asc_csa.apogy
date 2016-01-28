@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -10,12 +10,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.impl.TransformNodeImpl;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestNodeImpl#getFeatureOfInterest <em>Feature Of Interest</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestNodeImpl#getFeatureOfInterest <em>Feature Of Interest</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,7 +60,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_NODE;
+		return ApogyCorePackage.Literals.FEATURE_OF_INTEREST_NODE;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 			featureOfInterest = (FeatureOfInterest)eResolveProxy(oldFeatureOfInterest);
 			if (featureOfInterest != oldFeatureOfInterest) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
 			}
 		}
 		return featureOfInterest;
@@ -134,7 +134,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 		FeatureOfInterest oldFeatureOfInterest = featureOfInterest;
 		featureOfInterest = newFeatureOfInterest;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				if (resolve) return getFeatureOfInterest();
 				return basicGetFeatureOfInterest();
 		}
@@ -160,7 +160,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				setFeatureOfInterest((FeatureOfInterest)newValue);
 				return;
 		}
@@ -175,7 +175,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				setFeatureOfInterest((FeatureOfInterest)null);
 				return;
 		}
@@ -190,7 +190,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case ApogyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				return featureOfInterest != null;
 		}
 		return super.eIsSet(featureID);
@@ -199,7 +199,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	private void update()
 	{
 		FeatureOfInterest foi = getFeatureOfInterest();
-		Matrix4x4 pose = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
+		Matrix4x4 pose = ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 		if(foi != null)
 		{
 			if(foi.getPose() != null)
@@ -223,7 +223,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 					if(notification.getNotifier() instanceof FeatureOfInterest)
 					{
 						int featureId = notification.getFeatureID(FeatureOfInterest.class);	
-						if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST__POSE)
+						if(featureId == ApogyCorePackage.FEATURE_OF_INTEREST__POSE)
 						{
 							// Unregister from previous Pose
 							if(notification.getOldValue() instanceof Matrix4x4)

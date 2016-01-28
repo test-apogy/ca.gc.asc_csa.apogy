@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.provider;
+package ca.gc.asc_csa.apogy.common.emf.provider;
 
 
 import java.util.Collection;
@@ -23,10 +23,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.EObjectReference} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.emf.EObjectReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -78,7 +78,7 @@ public class EObjectReferenceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EObjectReference_eObject_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EObjectReference_eObject_feature", "_UI_EObjectReference_type"),
-				 Symphony__CommonEMFPackage.Literals.EOBJECT_REFERENCE__EOBJECT,
+				 ApogyCommonEMFPackage.Literals.EOBJECT_REFERENCE__EOBJECT,
 				 true,
 				 false,
 				 true,
@@ -99,7 +99,7 @@ public class EObjectReferenceItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonEMFPackage.Literals.EOBJECT_REFERENCE__EOBJECT);
+			childrenFeatures.add(ApogyCommonEMFPackage.Literals.EOBJECT_REFERENCE__EOBJECT);
 		}
 		return childrenFeatures;
 	}

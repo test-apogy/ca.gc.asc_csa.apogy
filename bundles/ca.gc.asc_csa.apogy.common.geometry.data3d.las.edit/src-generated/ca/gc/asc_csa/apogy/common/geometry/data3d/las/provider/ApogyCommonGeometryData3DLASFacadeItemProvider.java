@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DLASFacadeItemProvider 
+public class ApogyCommonGeometryData3DLASFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class Symphony__CommonGeometryData3DLASFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCommonGeometryData3DLASFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,14 +61,14 @@ public class Symphony__CommonGeometryData3DLASFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CommonGeometryData3DLASFacade.gif.
+	 * This returns ApogyCommonGeometryData3DLASFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CommonGeometryData3DLASFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCommonGeometryData3DLASFacade"));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Symphony__CommonGeometryData3DLASFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CommonGeometryData3DLASFacade_type");
+		return getString("_UI_ApogyCommonGeometryData3DLASFacade_type");
 	}
 	
 

@@ -1,27 +1,27 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
 
 /**
- * This is the central singleton for the Symphony__CommonGeometryData3D edit plugin.
+ * This is the central singleton for the ApogyCommonGeometryData3D edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonGeometryData3DEditPlugin extends EMFPlugin {
+public final class ApogyCommonGeometryData3DEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonGeometryData3DEditPlugin INSTANCE = new Symphony__CommonGeometryData3DEditPlugin();
+	public static final ApogyCommonGeometryData3DEditPlugin INSTANCE = new ApogyCommonGeometryData3DEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -37,11 +37,11 @@ public final class Symphony__CommonGeometryData3DEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DEditPlugin() {
+	public ApogyCommonGeometryData3DEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
-		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

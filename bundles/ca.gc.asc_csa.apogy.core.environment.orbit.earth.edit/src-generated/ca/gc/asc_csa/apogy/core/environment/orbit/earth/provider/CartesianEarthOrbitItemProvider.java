@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CartesianEarthOrbit} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -60,7 +60,7 @@ public class CartesianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -116,7 +116,7 @@ public class CartesianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianEarthOrbit.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -136,8 +136,8 @@ public class CartesianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES,
-				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES,
+				 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
 	}
 
 }

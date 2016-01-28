@@ -1,63 +1,63 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.util;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
-import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.AbsolutePoseProvider;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage
  * @generated
  */
-public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterFactoryImpl
+public class ApogyAddonsSensorsImagingCameraAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -65,7 +65,7 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsSensorsImagingCameraPackage modelPackage;
+  protected static ApogyAddonsSensorsImagingCameraPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -73,10 +73,10 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingCameraAdapterFactory()
+  public ApogyAddonsSensorsImagingCameraAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsImagingCameraPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsImagingCameraPackage.eINSTANCE;
 		}
 	}
 
@@ -106,8 +106,8 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__AddonsSensorsImagingCameraSwitch<Adapter> modelSwitch =
-    new Symphony__AddonsSensorsImagingCameraSwitch<Adapter>() {
+  protected ApogyAddonsSensorsImagingCameraSwitch<Adapter> modelSwitch =
+    new ApogyAddonsSensorsImagingCameraSwitch<Adapter>() {
 			@Override
 			public Adapter caseCameraViewUtilities(CameraViewUtilities object) {
 				return createCameraViewUtilitiesAdapter();
@@ -201,8 +201,8 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 				return createURLImageOverlayAdapter();
 			}
 			@Override
-			public Adapter caseSymphonyLogoOverlay(SymphonyLogoOverlay object) {
-				return createSymphonyLogoOverlayAdapter();
+			public Adapter caseApogyLogoOverlay(ApogyLogoOverlay object) {
+				return createApogyLogoOverlayAdapter();
 			}
 			@Override
 			public Adapter caseFOVOverlay(FOVOverlay object) {
@@ -290,13 +290,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities <em>Camera View Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities <em>Camera View Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities
 	 * @generated
 	 */
 	public Adapter createCameraViewUtilitiesAdapter() {
@@ -304,13 +304,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList <em>Camera View Configuration List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList <em>Camera View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList
 	 * @generated
 	 */
   public Adapter createCameraViewConfigurationListAdapter()
@@ -319,13 +319,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration <em>Camera View Configuration</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration <em>Camera View Configuration</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration
 	 * @generated
 	 */
   public Adapter createCameraViewConfigurationAdapter()
@@ -334,13 +334,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList <em>Filter List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList <em>Filter List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FilterList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList
 	 * @generated
 	 */
   public Adapter createFilterListAdapter()
@@ -349,13 +349,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter <em>Image Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter <em>Image Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter
 	 * @generated
 	 */
   public Adapter createImageFilterAdapter()
@@ -364,13 +364,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter <em>Gray Scale Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter <em>Gray Scale Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter
 	 * @generated
 	 */
   public Adapter createGrayScaleFilterAdapter()
@@ -379,13 +379,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter <em>Edge Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter <em>Edge Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter
 	 * @generated
 	 */
   public Adapter createEdgeFilterAdapter()
@@ -394,13 +394,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter <em>Contrast And Brightness Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter <em>Contrast And Brightness Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter
 	 * @generated
 	 */
   public Adapter createContrastAndBrightnessFilterAdapter()
@@ -409,13 +409,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter <em>Exposure Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter <em>Exposure Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter
 	 * @generated
 	 */
   public Adapter createExposureFilterAdapter()
@@ -424,13 +424,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter <em>Gain Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter <em>Gain Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter
 	 * @generated
 	 */
   public Adapter createGainFilterAdapter()
@@ -439,13 +439,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter <em>Invert Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter <em>Invert Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter
 	 * @generated
 	 */
   public Adapter createInvertFilterAdapter()
@@ -454,13 +454,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter <em>Rescale Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter <em>Rescale Filter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter
 	 * @generated
 	 */
   public Adapter createRescaleFilterAdapter()
@@ -469,13 +469,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation <em>Camera Image Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation <em>Camera Image Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation
 	 * @generated
 	 */
 	public Adapter createCameraImageAnnotationAdapter() {
@@ -483,13 +483,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList <em>Camera Overlay List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList <em>Camera Overlay List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList
 	 * @generated
 	 */
   public Adapter createCameraOverlayListAdapter()
@@ -498,13 +498,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay <em>Camera Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay <em>Camera Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay
 	 * @generated
 	 */
   public Adapter createCameraOverlayAdapter()
@@ -513,13 +513,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay <em>Drawn Camera Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay <em>Drawn Camera Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.DrawnCameraOverlay
 	 * @generated
 	 */
   public Adapter createDrawnCameraOverlayAdapter()
@@ -528,13 +528,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay <em>Abstract Text Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay <em>Abstract Text Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay
 	 * @generated
 	 */
   public Adapter createAbstractTextOverlayAdapter()
@@ -543,13 +543,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay <em>EMF Feature Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay <em>EMF Feature Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay
 	 * @generated
 	 */
   public Adapter createEMFFeatureOverlayAdapter()
@@ -558,13 +558,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay <em>Camera Name Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay <em>Camera Name Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay
 	 * @generated
 	 */
   public Adapter createCameraNameOverlayAdapter()
@@ -573,13 +573,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay <em>Image Count Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay <em>Image Count Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay
 	 * @generated
 	 */
 	public Adapter createImageCountOverlayAdapter() {
@@ -587,13 +587,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay <em>Image Frozen Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay <em>Image Frozen Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay
 	 * @generated
 	 */
 	public Adapter createImageFrozenOverlayAdapter() {
@@ -601,13 +601,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay <em>Image Camera Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay <em>Image Camera Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCameraOverlay
 	 * @generated
 	 */
   public Adapter createImageCameraOverlayAdapter()
@@ -616,13 +616,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay <em>URL Image Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay <em>URL Image Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay
 	 * @generated
 	 */
 	public Adapter createURLImageOverlayAdapter() {
@@ -630,28 +630,28 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay <em>Symphony Logo Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay <em>Apogy Logo Overlay</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay
 	 * @generated
 	 */
-  public Adapter createSymphonyLogoOverlayAdapter()
+  public Adapter createApogyLogoOverlayAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay <em>FOV Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay <em>FOV Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay
 	 * @generated
 	 */
 	public Adapter createFOVOverlayAdapter() {
@@ -659,13 +659,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay <em>Azimuth Elevation FOV Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay <em>Azimuth Elevation FOV Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay
 	 * @generated
 	 */
 	public Adapter createAzimuthElevationFOVOverlayAdapter() {
@@ -673,13 +673,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay <em>EMF Feature Azimuth Elevation FOV Overlay</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay <em>EMF Feature Azimuth Elevation FOV Overlay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay
 	 * @generated
 	 */
 	public Adapter createEMFFeatureAzimuthElevationFOVOverlayAdapter() {
@@ -687,13 +687,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference <em>Azimuth Feature Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference <em>Azimuth Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference
 	 * @generated
 	 */
 	public Adapter createAzimuthFeatureReferenceAdapter() {
@@ -701,13 +701,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference <em>Elevation Feature Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference <em>Elevation Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference
 	 * @generated
 	 */
 	public Adapter createElevationFeatureReferenceAdapter() {
@@ -715,13 +715,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider <em>Tool Tip Text Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider <em>Tool Tip Text Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider
 	 * @generated
 	 */
 	public Adapter createToolTipTextProviderAdapter() {
@@ -729,13 +729,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool <em>Camera Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool <em>Camera Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool
 	 * @generated
 	 */
 	public Adapter createCameraToolAdapter() {
@@ -743,13 +743,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList <em>Camera Tool List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList <em>Camera Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList
 	 * @generated
 	 */
 	public Adapter createCameraToolListAdapter() {
@@ -757,13 +757,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool <em>Pointer Camera Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool <em>Pointer Camera Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool
 	 * @generated
 	 */
 	public Adapter createPointerCameraToolAdapter() {
@@ -771,13 +771,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer <em>Abstract Tools List Container</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer
 	 * @generated
 	 */
   public Adapter createAbstractToolsListContainerAdapter()
@@ -786,13 +786,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.VariableFeatureReference
+	 * @see ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference
 	 * @generated
 	 */
   public Adapter createVariableFeatureReferenceAdapter()
@@ -801,13 +801,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
   public Adapter createNamedAdapter()
@@ -816,13 +816,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
   public Adapter createDescribedAdapter()
@@ -831,13 +831,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.AbstractTool <em>Abstract Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.AbstractTool <em>Abstract Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.AbstractTool
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTool
 	 * @generated
 	 */
   public Adapter createAbstractToolAdapter()
@@ -846,13 +846,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseProvider <em>Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.PoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.PoseProvider
+	 * @see ca.gc.asc_csa.apogy.core.PoseProvider
 	 * @generated
 	 */
 	public Adapter createPoseProviderAdapter() {
@@ -860,13 +860,13 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbsolutePoseProvider <em>Absolute Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbsolutePoseProvider <em>Absolute Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.AbsolutePoseProvider
+	 * @see ca.gc.asc_csa.apogy.core.AbsolutePoseProvider
 	 * @generated
 	 */
 	public Adapter createAbsolutePoseProviderAdapter() {
@@ -886,4 +886,4 @@ public class Symphony__AddonsSensorsImagingCameraAdapterFactory extends AdapterF
 		return null;
 	}
 
-} //Symphony__AddonsSensorsImagingCameraAdapterFactory
+} //ApogyAddonsSensorsImagingCameraAdapterFactory

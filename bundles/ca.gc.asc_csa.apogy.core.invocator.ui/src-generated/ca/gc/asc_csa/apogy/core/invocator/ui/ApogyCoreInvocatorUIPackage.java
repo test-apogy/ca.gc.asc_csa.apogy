@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui;
+package ca.gc.asc_csa.apogy.core.invocator.ui;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFactory
+ * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreInvocatorUI' childCreationExtenders='true' modelName='Symphony__CoreInvocatorUI' modelDirectory='/org.eclipse.symphony.core.invocator.ui/src-generated' editDirectory='/org.eclipse.symphony.core.invocator.ui.edit/src-generated' basePackage='org.eclipse.symphony.core.invocator'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCoreInvocatorUI' childCreationExtenders='true' modelName='ApogyCoreInvocatorUI' modelDirectory='/ca.gc.asc_csa.apogy.core.invocator.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.invocator.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core.invocator'"
  * @generated
  */
-public interface Symphony__CoreInvocatorUIPackage extends EPackage {
+public interface ApogyCoreInvocatorUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.core.invocator.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.core.invocator.ui";
 
 	/**
 	 * The package namespace name.
@@ -55,17 +55,17 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CoreInvocatorUIPackage eINSTANCE = org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl.init();
+	ApogyCoreInvocatorUIPackage eINSTANCE = ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl
-	 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getSymphony__CoreInvocatorUIFacade()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getApogyCoreInvocatorUIFacade()
 	 * @generated
 	 */
-	int SYMPHONY_CORE_INVOCATOR_UI_FACADE = 0;
+	int APOGY_CORE_INVOCATOR_UI_FACADE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -74,7 +74,7 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_UI_FACADE_FEATURE_COUNT = 0;
+	int APOGY_CORE_INVOCATOR_UI_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Copy Initialization Data</em>' operation.
@@ -83,7 +83,7 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = 0;
+	int APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = 0;
 
 	/**
 	 * The operation id for the '<em>Copy Initialization Data</em>' operation.
@@ -92,7 +92,7 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = 1;
+	int APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = 1;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -101,48 +101,48 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 2;
+	int APOGY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '<em>Compound Command</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.command.CompoundCommand
-	 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getCompoundCommand()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getCompoundCommand()
 	 * @generated
 	 */
 	int COMPOUND_COMMAND = 1;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade
 	 * @generated
 	 */
-	EClass getSymphony__CoreInvocatorUIFacade();
+	EClass getApogyCoreInvocatorUIFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.Context, org.eclipse.symphony.core.invocator.Context) <em>Copy Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#copyInitializationData(ca.gc.asc_csa.apogy.core.invocator.Context, ca.gc.asc_csa.apogy.core.invocator.Context) <em>Copy Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Copy Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.Context, org.eclipse.symphony.core.invocator.Context)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#copyInitializationData(ca.gc.asc_csa.apogy.core.invocator.Context, ca.gc.asc_csa.apogy.core.invocator.Context)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorUIFacade__CopyInitializationData__Context_Context();
+	EOperation getApogyCoreInvocatorUIFacade__CopyInitializationData__Context_Context();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand) <em>Copy Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#copyInitializationData(ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation, ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand) <em>Copy Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Copy Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand)
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade#copyInitializationData(ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation, ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
+	EOperation getApogyCoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.common.command.CompoundCommand <em>Compound Command</em>}'.
@@ -162,7 +162,7 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CoreInvocatorUIFactory getSymphony__CoreInvocatorUIFactory();
+	ApogyCoreInvocatorUIFactory getApogyCoreInvocatorUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,38 +179,38 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl
-		 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getSymphony__CoreInvocatorUIFacade()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getApogyCoreInvocatorUIFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_CORE_INVOCATOR_UI_FACADE = eINSTANCE.getSymphony__CoreInvocatorUIFacade();
+		EClass APOGY_CORE_INVOCATOR_UI_FACADE = eINSTANCE.getApogyCoreInvocatorUIFacade();
 		/**
 		 * The meta object literal for the '<em><b>Copy Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = eINSTANCE.getSymphony__CoreInvocatorUIFacade__CopyInitializationData__Context_Context();
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = eINSTANCE.getApogyCoreInvocatorUIFacade__CopyInitializationData__Context_Context();
 		/**
 		 * The meta object literal for the '<em><b>Copy Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = eINSTANCE.getSymphony__CoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
+		EOperation APOGY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = eINSTANCE.getApogyCoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
 		/**
 		 * The meta object literal for the '<em>Compound Command</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.emf.common.command.CompoundCommand
-		 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getCompoundCommand()
+		 * @see ca.gc.asc_csa.apogy.core.invocator.ui.impl.ApogyCoreInvocatorUIPackageImpl#getCompoundCommand()
 		 * @generated
 		 */
 		EDataType COMPOUND_COMMAND = eINSTANCE.getCompoundCommand();
 
 	}
 
-} //Symphony__CoreInvocatorUIPackage
+} //ApogyCoreInvocatorUIPackage

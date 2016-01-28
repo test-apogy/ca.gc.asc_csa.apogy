@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,17 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.ui.jme3.Activator;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.SunVector3DTool;
+import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
@@ -435,11 +435,11 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 	
 	private Vector3f getSunVectorDirection()
 	{
-		Matrix4d sunMatrix = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getFromNode());				
+		Matrix4d sunMatrix = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getFromNode());				
 		javax.vecmath.Vector3d sun = new Vector3d();
 		sunMatrix.get(sun);
 		
-		Matrix4d toMatrix = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getToNode());
+		Matrix4d toMatrix = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getToNode());
 		javax.vecmath.Vector3d to = new Vector3d();
 		toMatrix.get(to);				
 		
@@ -485,7 +485,7 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 					{												
 						int featureId = msg.getFeatureID(SunVector3DToolNode.class);
 						
-						if(featureId == Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL)
+						if(featureId == ApogyAddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL)
 						{
 							if(msg.getOldValue() instanceof SunVector3DToolNode)
 							{
@@ -511,30 +511,30 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 							int featureId = msg.getFeatureID(SunVector3DTool.class);
 							switch(featureId)
 							{
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__FROM_RELATIVE_POSITION:
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__FROM_ABSOLUTE_POSITION:
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__TO_ABSOLUTE_POSITION:
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__TO_RELATIVE_POSITION:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__FROM_RELATIVE_POSITION:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__FROM_ABSOLUTE_POSITION:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__TO_ABSOLUTE_POSITION:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__TO_RELATIVE_POSITION:
 										updateGeometry();
 								break;
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
 										if(msg.getNewValue() instanceof Color3f)
 										{
 											Color3f color = (Color3f) msg.getNewValue();
 											setColor(convertToRGB(color));								
 										}
 								break;							
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
 								{
 									setEndPointRadius((float) msg.getNewDoubleValue());
 								}		
 								break;
-								case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+								case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 									setVisible(msg.getNewBooleanValue());
 								break;
-								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+								case ApogyAddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 									
 									// Removes adapter if applicable.
 									if(getTopologyNode().getSunVector3DTool() != null)
@@ -556,7 +556,7 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 										});
 									}
 								break;
-								case Symphony__AddonsPackage.SIMPLE3_DTOOL___DISPOSE:
+								case ApogyAddonsPackage.SIMPLE3_DTOOL___DISPOSE:
 									jme3Application.enqueue(new Callable<Object>() 
 									{
 										@Override

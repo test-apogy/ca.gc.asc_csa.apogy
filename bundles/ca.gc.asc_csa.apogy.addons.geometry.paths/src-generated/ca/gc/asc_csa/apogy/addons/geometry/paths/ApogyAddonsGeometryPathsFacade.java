@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsFacadeImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.impl.ApogyAddonsGeometryPathsFacadeImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,13 +15,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getSymphony__AddonsGeometryPathsFacade()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage#getApogyAddonsGeometryPathsFacade()
  * @model
  * @generated
  */
-public interface Symphony__AddonsGeometryPathsFacade extends EObject {
+public interface ApogyAddonsGeometryPathsFacade extends EObject {
 
-	public static Symphony__AddonsGeometryPathsFacade INSTANCE = Symphony__AddonsGeometryPathsFacadeImpl.getInstance();
+	public static ApogyAddonsGeometryPathsFacade INSTANCE = ApogyAddonsGeometryPathsFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -43,9 +43,9 @@ public interface Symphony__AddonsGeometryPathsFacade extends EObject {
 	 * The WayPointPath created contains copies of all the points found in
 	 * the specified list.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" pointsDataType="org.eclipse.symphony.addons.geometry.paths.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" pointsUnique="false" pointsMany="false"
+	 * @model unique="false" pointsDataType="ca.gc.asc_csa.apogy.addons.geometry.paths.List<ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates>" pointsUnique="false" pointsMany="false"
 	 * @generated
 	 */
 	WayPointPath createWayPointPath(List<CartesianPositionCoordinates> points);
 
-} // Symphony__AddonsGeometryPathsFacade
+} // ApogyAddonsGeometryPathsFacade

@@ -1,26 +1,26 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log.provider;
+package ca.gc.asc_csa.apogy.common.log.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonLog edit plugin.
+ * This is the central singleton for the ApogyCommonLog edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonLogEditPlugin extends EMFPlugin {
+public final class ApogyCommonLogEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonLogEditPlugin INSTANCE = new Symphony__CommonLogEditPlugin();
+	public static final ApogyCommonLogEditPlugin INSTANCE = new ApogyCommonLogEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -36,7 +36,7 @@ public final class Symphony__CommonLogEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonLogEditPlugin() {
+	public ApogyCommonLogEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

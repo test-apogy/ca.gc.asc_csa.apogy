@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -14,14 +14,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.provider.VariableFeatureReferenceItemProvider;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.provider.VariableFeatureReferenceItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -102,7 +102,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_camera_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_camera_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__CAMERA,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__CAMERA,
 				 false,
 				 false,
 				 true,
@@ -125,7 +125,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageWidth_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageHeight_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -170,7 +170,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageCount_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT,
 				 true,
 				 false,
 				 false,
@@ -193,7 +193,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_displayRectifiedImage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_displayRectifiedImage_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE,
 				 true,
 				 false,
 				 false,
@@ -215,7 +215,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageAutoSaveEnable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageAutoSaveEnable_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE,
 				 true,
 				 false,
 				 false,
@@ -237,7 +237,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_saveImageWithOverlays_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_saveImageWithOverlays_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS,
 				 true,
 				 false,
 				 false,
@@ -259,7 +259,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageAutoSaveFolderPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageAutoSaveFolderPath_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH,
 				 true,
 				 false,
 				 false,
@@ -281,9 +281,9 @@ public class CameraViewConfigurationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST);
-			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST);
-			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST);
+			childrenFeatures.add(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST);
+			childrenFeatures.add(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST);
+			childrenFeatures.add(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -342,19 +342,19 @@ public class CameraViewConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraViewConfiguration.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__FILTER_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__FILTER_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -375,18 +375,18 @@ public class CameraViewConfigurationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST,
-				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
+				(ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST,
+				 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
 	}
 
 }

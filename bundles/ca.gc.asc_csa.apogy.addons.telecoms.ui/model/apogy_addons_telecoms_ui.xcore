@@ -1,17 +1,17 @@
-@GenModel(prefix="Symphony__AddonsTelecomsUI",
+@GenModel(prefix="ApogyAddonsTelecomsUI",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__AddonsTelecomsUI",
+		  modelName="ApogyAddonsTelecomsUI",
 		  complianceLevel="6.0",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.telecoms.ui/src-generated")
-@GenModel(editDirectory= "/org.eclipse.symphony.addons.telecoms.ui.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.telecoms.ui/src-generated")
+@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.addons.telecoms.ui.edit/src-generated")
 
-package org.eclipse.symphony.addons.telecoms.ui
+package ca.gc.asc_csa.apogy.addons.telecoms.ui
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 
 class AbstractAntennaRadiationPatternPresentation extends NodePresentation
 {

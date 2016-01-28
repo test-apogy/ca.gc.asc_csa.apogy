@@ -1,33 +1,33 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.bindings.util;
+package ca.gc.asc_csa.apogy.common.topology.bindings.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
-import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
-import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList;
+import ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage
  * @generated
  */
-public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFactoryImpl
+public class ApogyCommonTopologyBindingsAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -35,7 +35,7 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CommonTopologyBindingsPackage modelPackage;
+  protected static ApogyCommonTopologyBindingsPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -43,10 +43,10 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CommonTopologyBindingsAdapterFactory()
+  public ApogyCommonTopologyBindingsAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyBindingsPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyBindingsPackage.eINSTANCE;
 		}
 	}
 
@@ -76,8 +76,8 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CommonTopologyBindingsSwitch<Adapter> modelSwitch =
-    new Symphony__CommonTopologyBindingsSwitch<Adapter>() {
+  protected ApogyCommonTopologyBindingsSwitch<Adapter> modelSwitch =
+    new ApogyCommonTopologyBindingsSwitch<Adapter>() {
 			@Override
 			public Adapter caseAbstractTopologyBinding(AbstractTopologyBinding object) {
 				return createAbstractTopologyBindingAdapter();
@@ -115,8 +115,8 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 				return createBindingsSetAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonTopologyBindingsFacade(Symphony__CommonTopologyBindingsFacade object) {
-				return createSymphony__CommonTopologyBindingsFacadeAdapter();
+			public Adapter caseApogyCommonTopologyBindingsFacade(ApogyCommonTopologyBindingsFacade object) {
+				return createApogyCommonTopologyBindingsFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -140,13 +140,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
 	 * @generated
 	 */
   public Adapter createAbstractTopologyBindingAdapter()
@@ -155,13 +155,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.RotationBinding <em>Rotation Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding <em>Rotation Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.RotationBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.RotationBinding
 	 * @generated
 	 */
   public Adapter createRotationBindingAdapter()
@@ -170,13 +170,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding <em>Translation Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding <em>Translation Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.TranslationBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding
 	 * @generated
 	 */
   public Adapter createTranslationBindingAdapter()
@@ -185,13 +185,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding <em>Transform Matrix Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding <em>Transform Matrix Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding
 	 * @generated
 	 */
   public Adapter createTransformMatrixBindingAdapter()
@@ -200,13 +200,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding <em>Enumeration Switch Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding <em>Enumeration Switch Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationSwitchBinding
 	 * @generated
 	 */
   public Adapter createEnumerationSwitchBindingAdapter()
@@ -215,13 +215,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.EnumerationCase <em>Enumeration Case</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase <em>Enumeration Case</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.EnumerationCase
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.EnumerationCase
 	 * @generated
 	 */
   public Adapter createEnumerationCaseAdapter()
@@ -230,13 +230,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.BindingsList <em>Bindings List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList <em>Bindings List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsList
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsList
 	 * @generated
 	 */
   public Adapter createBindingsListAdapter()
@@ -245,13 +245,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList <em>Feature Roots List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList <em>Feature Roots List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.FeatureRootsList
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.FeatureRootsList
 	 * @generated
 	 */
   public Adapter createFeatureRootsListAdapter()
@@ -260,13 +260,13 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.BindingsSet <em>Bindings Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet <em>Bindings Set</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.BindingsSet
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet
 	 * @generated
 	 */
   public Adapter createBindingsSetAdapter()
@@ -275,16 +275,16 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonTopologyBindingsFacadeAdapter() {
+	public Adapter createApogyCommonTopologyBindingsFacadeAdapter() {
 		return null;
 	}
 
@@ -301,4 +301,4 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 		return null;
 	}
 
-} //Symphony__CommonTopologyBindingsAdapterFactory
+} //ApogyCommonTopologyBindingsAdapterFactory

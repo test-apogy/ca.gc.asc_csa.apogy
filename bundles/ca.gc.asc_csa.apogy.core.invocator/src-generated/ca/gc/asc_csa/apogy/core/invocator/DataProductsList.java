@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 
 /**
@@ -16,13 +16,13 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.DataProductsList#getDataProductsListsContainer <em>Data Products Lists Container</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.DataProductsList#getOperationCallResultsList <em>Operation Call Results List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.DataProductsList#getInvocatorSession <em>Invocator Session</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getDataProductsListsContainer <em>Data Products Lists Container</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getOperationCallResultsList <em>Operation Call Results List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsList()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getDataProductsList()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface DataProductsList extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Data Products Lists Container</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.DataProductsListsContainer#getDataProductsList <em>Data Products List</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getDataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Data Products Lists Container</em>' container reference isn't clear,
@@ -39,8 +39,8 @@ public interface DataProductsList extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Products Lists Container</em>' container reference.
 	 * @see #setDataProductsListsContainer(DataProductsListsContainer)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsList_DataProductsListsContainer()
-	 * @see org.eclipse.symphony.core.invocator.DataProductsListsContainer#getDataProductsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getDataProductsList_DataProductsListsContainer()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer#getDataProductsList
 	 * @model opposite="dataProductsList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -48,7 +48,7 @@ public interface DataProductsList extends Named, Described
   DataProductsListsContainer getDataProductsListsContainer();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.DataProductsList#getDataProductsListsContainer <em>Data Products Lists Container</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getDataProductsListsContainer <em>Data Products Lists Container</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Data Products Lists Container</em>' container reference.
@@ -59,7 +59,7 @@ public interface DataProductsList extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Operation Call Results List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.OperationCallResultsList#getDataProductsList <em>Data Products List</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList#getDataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operation Call Results List</em>' containment reference isn't clear,
@@ -68,15 +68,15 @@ public interface DataProductsList extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call Results List</em>' containment reference.
 	 * @see #setOperationCallResultsList(OperationCallResultsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsList_OperationCallResultsList()
-	 * @see org.eclipse.symphony.core.invocator.OperationCallResultsList#getDataProductsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getDataProductsList_OperationCallResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList#getDataProductsList
 	 * @model opposite="dataProductsList" containment="true" required="true"
 	 * @generated
 	 */
   OperationCallResultsList getOperationCallResultsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.DataProductsList#getOperationCallResultsList <em>Operation Call Results List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getOperationCallResultsList <em>Operation Call Results List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operation Call Results List</em>' containment reference.
@@ -87,7 +87,7 @@ public interface DataProductsList extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Recording Results List</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.RecordingResultsList#getDataProductsList <em>Data Products List</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getDataProductsList <em>Data Products List</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Recording Results List</em>' containment reference isn't clear,
@@ -96,8 +96,8 @@ public interface DataProductsList extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recording Results List</em>' containment reference.
 	 * @see #setRecordingResultsList(RecordingResultsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsList_RecordingResultsList()
-	 * @see org.eclipse.symphony.core.invocator.RecordingResultsList#getDataProductsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getDataProductsList_RecordingResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList#getDataProductsList
 	 * @model opposite="dataProductsList" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false' notify='false'"
 	 * @generated
@@ -105,7 +105,7 @@ public interface DataProductsList extends Named, Described
   RecordingResultsList getRecordingResultsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList#getRecordingResultsList <em>Recording Results List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Recording Results List</em>' containment reference.
@@ -123,9 +123,9 @@ public interface DataProductsList extends Named, Described
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsList_InvocatorSession()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getDataProductsList_InvocatorSession()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%org.eclipse.symphony.core.invocator.DataProductsListsContainer%> _dataProductsListsContainer = this.getDataProductsListsContainer();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_dataProductsListsContainer, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.DataProductsListsContainer%> _dataProductsListsContainer_1 = this.getDataProductsListsContainer();\n\treturn _dataProductsListsContainer_1.getInvocatorSession();\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer%> _dataProductsListsContainer = this.getDataProductsListsContainer();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_dataProductsListsContainer, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer%> _dataProductsListsContainer_1 = this.getDataProductsListsContainer();\n\treturn _dataProductsListsContainer_1.getInvocatorSession();\n}'"
 	 * @generated
 	 */
 	InvocatorSession getInvocatorSession();

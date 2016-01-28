@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import javax.vecmath.Matrix4d;
 
@@ -11,14 +11,14 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.environment.Worksite;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteNodeImpl#getSkyTransformNode <em>Sky Transform Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.EarthSurfaceWorksiteNodeImpl#getSkyTransformNode <em>Sky Transform Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE;
 	}
 
   /**
@@ -81,11 +81,11 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		  if(getWorksite() instanceof EarthSurfaceWorksite)
 		  {
 			  EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getWorksite();
-			  t = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());			  
+			  t = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());			  
 		  }
 		  else
 		  {
-			  t = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
+			  t = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
 		  }		  		  		  
 		  t.setNodeId("SKY_TRANSFORM");
 		  t.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
@@ -110,7 +110,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 			skyTransformNode = (TransformNode)eResolveProxy(oldSkyTransformNode);
 			if (skyTransformNode != oldSkyTransformNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE, oldSkyTransformNode, skyTransformNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE, oldSkyTransformNode, skyTransformNode));
 			}
 		}
 		return skyTransformNode;
@@ -136,7 +136,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		TransformNode oldSkyTransformNode = skyTransformNode;
 		skyTransformNode = newSkyTransformNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE, oldSkyTransformNode, skyTransformNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE, oldSkyTransformNode, skyTransformNode));
 	}
 
   /**
@@ -148,7 +148,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
 				if (resolve) return getSkyTransformNode();
 				return basicGetSkyTransformNode();
 		}
@@ -164,7 +164,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
 				setSkyTransformNode((TransformNode)newValue);
 				return;
 		}
@@ -180,7 +180,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
 				setSkyTransformNode((TransformNode)null);
 				return;
 		}
@@ -196,7 +196,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
+			case ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE:
 				return skyTransformNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -258,7 +258,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {				
-				  if(msg.getFeatureID(EarthSurfaceWorksite.class) == Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH)
+				  if(msg.getFeatureID(EarthSurfaceWorksite.class) == ApogyCoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH)
 				  {
 					  updateSkyTransform(msg.getNewDoubleValue()); 
 				  }

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -23,13 +23,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -81,7 +81,7 @@ public class CorridorPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -102,9 +102,9 @@ public class CorridorPointItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT);
 		}
 		return childrenFeatures;
 	}
@@ -161,12 +161,12 @@ public class CorridorPointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CorridorPoint.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -186,18 +186,18 @@ public class CorridorPointItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 	/**
@@ -212,9 +212,9 @@ public class CorridorPointItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT ||
-			childFeature == Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER ||
-			childFeature == Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT;
+			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT ||
+			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER ||
+			childFeature == ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT;
 
 		if (qualify) {
 			return getString

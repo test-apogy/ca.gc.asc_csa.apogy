@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.scene_objects;
 
 import com.jme3.math.Vector3f;
 import com.jme3.post.SimpleTextureProjector;

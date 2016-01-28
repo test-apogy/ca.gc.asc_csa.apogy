@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.util.Collection;
 
@@ -14,20 +14,20 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.Activator;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.impl.TransformNodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.Activator;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.MapNodeImpl#getMap <em>Map</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.MapNodeImpl#getMap <em>Map</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,7 +76,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.MAP_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.MAP_NODE;
 	}
 
   /**
@@ -91,7 +91,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 			map = (Map)eResolveProxy(oldMap);
 			if (map != oldMap) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
 			}
 		}
 		return map;
@@ -117,7 +117,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 		Map oldMap = map;
 		map = newMap;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
 	}
 
   /**
@@ -129,7 +129,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
+			case ApogyCoreEnvironmentPackage.MAP_NODE__MAP:
 				if (resolve) return getMap();
 				return basicGetMap();
 		}
@@ -145,7 +145,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
+			case ApogyCoreEnvironmentPackage.MAP_NODE__MAP:
 				setMap((Map)newValue);
 				return;
 		}
@@ -161,7 +161,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
+			case ApogyCoreEnvironmentPackage.MAP_NODE__MAP:
 				setMap((Map)null);
 				return;
 		}
@@ -177,7 +177,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
+			case ApogyCoreEnvironmentPackage.MAP_NODE__MAP:
 				return map != null;
 		}
 		return super.eIsSet(featureID);
@@ -244,7 +244,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 	{
 		if(referencedGroupNode == null)
 		{
-			referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
+			referencedGroupNode = ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
 			referencedGroupNode.setDescription("Map Group Node.");
 			referencedGroupNode.setNodeId("Map Content (" + getMap().getName() + ")");
 			getChildren().add(referencedGroupNode);
@@ -265,7 +265,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 				{					
 					if(msg.getNotifier() instanceof MapNode)
 					{
-						if(msg.getFeatureID(MapNode.class) == Symphony__CoreEnvironmentPackage.MAP_NODE__MAP)
+						if(msg.getFeatureID(MapNode.class) == ApogyCoreEnvironmentPackage.MAP_NODE__MAP)
 						{
 							// Clear topology.
 							clearTopology();
@@ -283,7 +283,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 					}
 					else if(msg.getNotifier() instanceof Map)
 					{						
-						if(msg.getFeatureID(Map.class) == Symphony__CoreEnvironmentPackage.MAP__LAYERS)
+						if(msg.getFeatureID(Map.class) == ApogyCoreEnvironmentPackage.MAP__LAYERS)
 						{
 							final Notification message = msg;
 							Job job = new Job("MapNode Modify Layers")
@@ -342,7 +342,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 							job.schedule();
 							
 						}
-						else if(msg.getFeatureID(Map.class)== Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION)
+						else if(msg.getFeatureID(Map.class)== ApogyCoreEnvironmentPackage.MAP__TRANSFORMATION)
 						{
 							Matrix4x4 matrix = (Matrix4x4) msg.getNewValue();
 							if(matrix != null)

@@ -1,34 +1,34 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
-import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.examples.lidar.Lidar;
-import org.eclipse.symphony.examples.lidar.symphony.LidarData;
-import org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyFactory;
-import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade;
+import ca.gc.asc_csa.apogy.core.impl.ApogySystemApiAdapterImpl;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.examples.lidar.Lidar;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyFactory;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Lidar Symphony System Api Adapter</b></em>'.
+ * An implementation of the model object '<em><b>Lidar Apogy System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterImpl
-											   implements LidarSymphonySystemApiAdapter
+public class LidarApogySystemApiAdapterImpl extends ApogySystemApiAdapterImpl
+											   implements LidarApogySystemApiAdapter
 {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LidarSymphonySystemApiAdapterImpl() {
+	protected LidarApogySystemApiAdapterImpl() {
 		super();
 	}
 
@@ -39,7 +39,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_SYMPHONY_SYSTEM_API_ADAPTER;
+		return ApogyExamplesLidarApogyPackage.Literals.LIDAR_APOGY_SYSTEM_API_ADAPTER;
 	}
 	
 	/**
@@ -63,7 +63,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	public AbstractInitializationData createInitializationData()
 	{
 		// Create a Lidar unit initialization data object and return it
-		return Symphony__ExamplesLidarSymphonyFactory.eINSTANCE.createLidarData();
+		return ApogyExamplesLidarApogyFactory.eINSTANCE.createLidarData();
 	}
 	
 	/**
@@ -101,7 +101,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 				if (lidarData.getFov() != null)
 				{
 					// Get a copy of that FOV and set it accordingly
-					this.getLidar().setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(lidarData.getFov()));
+					this.getLidar().setFov(ApogyAddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(lidarData.getFov()));
 				}
 				// Otherwise
 				else
@@ -123,7 +123,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 									 "it already is in that state.";
 					
 					// Throw an exception to indicate that the apply() has failed; this will
-					// be caught and logged by Symphony
+					// be caught and logged by Apogy
 					throw new RuntimeException(message);
 				}
 			}
@@ -156,7 +156,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 			if (this.getLidar().getFov() == null)
 			{
 				// Get a copy of the FOV and set it accordingly
-				lidarData.setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getLidar().getFov()));
+				lidarData.setFov(ApogyAddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getLidar().getFov()));
 			}
 			// Otherwise,
 			else
@@ -167,4 +167,4 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 		}
 	}
 
-} //LidarSymphonySystemApiAdapterImpl
+} //LidarApogySystemApiAdapterImpl

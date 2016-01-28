@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.TimeUnit;
@@ -14,14 +14,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.ros.ROSListener;
+import ca.gc.asc_csa.apogy.addons.ros.ROSListener;
 import org.ros.internal.message.Message;
 import org.ros.message.MessageListener;
 import org.ros.node.ConnectedNode;
 import org.ros.node.topic.Subscriber;
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.utilities.AsynchronousShutdowner;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.utilities.AsynchronousShutdowner;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,12 +31,12 @@ import org.eclipse.symphony.addons.ros.utilities.AsynchronousShutdowner;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl#isRunning <em>Running</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl#getRosSubscriber <em>Ros Subscriber</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl#getTopicName <em>Topic Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl#getMessageType <em>Message Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSListenerImpl#getMessageListener <em>Message Listener</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl#getRosSubscriber <em>Ros Subscriber</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl#getTopicName <em>Topic Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl#getMessageType <em>Message Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSListenerImpl#getMessageListener <em>Message Listener</em>}</li>
  * </ul>
  *
  * @generated
@@ -158,7 +158,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsROSPackage.Literals.ROS_LISTENER;
+		return ApogyAddonsROSPackage.Literals.ROS_LISTENER;
 	}
 
 	/**
@@ -181,7 +181,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 		boolean oldRunning = running;
 		running = newRunning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_LISTENER__RUNNING, oldRunning, running));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_LISTENER__RUNNING, oldRunning, running));
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 			node = (ROSNode)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsROSPackage.ROS_LISTENER__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsROSPackage.ROS_LISTENER__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -222,7 +222,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 		ROSNode oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_LISTENER__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_LISTENER__NODE, oldNode, node));
 	}
 
 	/**
@@ -245,7 +245,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 		Subscriber<T> oldRosSubscriber = rosSubscriber;
 		rosSubscriber = newRosSubscriber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER, oldRosSubscriber, rosSubscriber));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER, oldRosSubscriber, rosSubscriber));
 	}
 
 	/**
@@ -268,7 +268,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 		String oldTopicName = topicName;
 		topicName = newTopicName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_LISTENER__TOPIC_NAME, oldTopicName, topicName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_LISTENER__TOPIC_NAME, oldTopicName, topicName));
 	}
 
 	/**
@@ -291,7 +291,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 		String oldMessageType = messageType;
 		messageType = newMessageType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE, oldMessageType, messageType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE, oldMessageType, messageType));
 	}
 
 	/**
@@ -314,7 +314,7 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 		MessageListener<T> oldMessageListener = messageListener;
 		messageListener = newMessageListener;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER, oldMessageListener, messageListener));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER, oldMessageListener, messageListener));
 	}
 
 	/**
@@ -406,18 +406,18 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_LISTENER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_LISTENER__RUNNING:
 				return isRunning();
-			case Symphony__AddonsROSPackage.ROS_LISTENER__NODE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case Symphony__AddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
 				return getRosSubscriber();
-			case Symphony__AddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
+			case ApogyAddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
 				return getTopicName();
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
 				return getMessageType();
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
 				return getMessageListener();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -433,22 +433,22 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_LISTENER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_LISTENER__RUNNING:
 				setRunning((Boolean)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__NODE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__NODE:
 				setNode((ROSNode)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
 				setRosSubscriber((Subscriber<T>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
+			case ApogyAddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
 				setTopicName((String)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
 				setMessageType((String)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
 				setMessageListener((MessageListener<T>)newValue);
 				return;
 		}
@@ -464,22 +464,22 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_LISTENER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_LISTENER__RUNNING:
 				setRunning(RUNNING_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__NODE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__NODE:
 				setNode((ROSNode)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
 				setRosSubscriber((Subscriber<T>)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
+			case ApogyAddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
 				setTopicName(TOPIC_NAME_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
 				setMessageType(MESSAGE_TYPE_EDEFAULT);
 				return;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
 				setMessageListener((MessageListener<T>)null);
 				return;
 		}
@@ -495,17 +495,17 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_LISTENER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_LISTENER__RUNNING:
 				return running != RUNNING_EDEFAULT;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__NODE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__NODE:
 				return node != null;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__ROS_SUBSCRIBER:
 				return rosSubscriber != null;
-			case Symphony__AddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
+			case ApogyAddonsROSPackage.ROS_LISTENER__TOPIC_NAME:
 				return TOPIC_NAME_EDEFAULT == null ? topicName != null : !TOPIC_NAME_EDEFAULT.equals(topicName);
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_TYPE:
 				return MESSAGE_TYPE_EDEFAULT == null ? messageType != null : !MESSAGE_TYPE_EDEFAULT.equals(messageType);
-			case Symphony__AddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
+			case ApogyAddonsROSPackage.ROS_LISTENER__MESSAGE_LISTENER:
 				return messageListener != null;
 		}
 		return super.eIsSet(featureID);
@@ -520,14 +520,14 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__AddonsROSPackage.ROS_LISTENER___START_WITH_LOCKS__ROSNODE:
+			case ApogyAddonsROSPackage.ROS_LISTENER___START_WITH_LOCKS__ROSNODE:
 				try {
 					return startWithLocks((ROSNode)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__AddonsROSPackage.ROS_LISTENER___START__ROSNODE:
+			case ApogyAddonsROSPackage.ROS_LISTENER___START__ROSNODE:
 				try {
 					start((ROSNode)arguments.get(0));
 					return null;
@@ -535,10 +535,10 @@ public class ROSListenerImpl<T extends Message> extends MinimalEObjectImpl.Conta
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__AddonsROSPackage.ROS_LISTENER___CONNECT_SUBSCRIBER__CONNECTEDNODE:
+			case ApogyAddonsROSPackage.ROS_LISTENER___CONNECT_SUBSCRIBER__CONNECTEDNODE:
 				connectSubscriber((ConnectedNode)arguments.get(0));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_LISTENER___STOP:
+			case ApogyAddonsROSPackage.ROS_LISTENER___STOP:
 				stop();
 				return null;
 		}

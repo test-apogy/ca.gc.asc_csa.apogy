@@ -1,27 +1,27 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Symphony Initialization Data</b></em>'. <!-- end-user-doc -->
+ * <em><b>Apogy Initialization Data</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.SymphonyInitializationData#getInitialPoseTransform <em>Initial Pose Transform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ApogyInitializationData#getInitialPoseTransform <em>Initial Pose Transform</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyInitializationData()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyInitializationData()
  * @model
  * @generated
  */
-public interface SymphonyInitializationData extends InitializationData {
+public interface ApogyInitializationData extends InitializationData {
 
 	/**
 	 * Returns the value of the '<em><b>Initial Pose Transform</b></em>' containment reference.
@@ -34,7 +34,7 @@ public interface SymphonyInitializationData extends InitializationData {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Pose Transform</em>' containment reference.
 	 * @see #setInitialPoseTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyInitializationData_InitialPoseTransform()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getApogyInitializationData_InitialPoseTransform()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -42,7 +42,7 @@ public interface SymphonyInitializationData extends InitializationData {
 
 	/**
 	 * Sets the value of the '
-	 * {@link org.eclipse.symphony.core.SymphonyInitializationData#getInitialPoseTransform
+	 * {@link ca.gc.asc_csa.apogy.core.ApogyInitializationData#getInitialPoseTransform
 	 * <em>Initial Pose Transform</em>}' containment reference. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -53,4 +53,4 @@ public interface SymphonyInitializationData extends InitializationData {
 	 * @generated
 	 */
 	void setInitialPoseTransform(Matrix4x4 value);
-} // SymphonyInitializationData
+} // ApogyInitializationData

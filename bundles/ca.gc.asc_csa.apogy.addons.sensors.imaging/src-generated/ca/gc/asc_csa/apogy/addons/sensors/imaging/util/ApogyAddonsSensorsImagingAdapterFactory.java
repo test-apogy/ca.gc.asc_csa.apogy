@@ -1,34 +1,34 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.util;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImagingUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage
  * @generated
  */
-public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactoryImpl
+public class ApogyAddonsSensorsImagingAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -36,7 +36,7 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsSensorsImagingPackage modelPackage;
+  protected static ApogyAddonsSensorsImagingPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -44,10 +44,10 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingAdapterFactory()
+  public ApogyAddonsSensorsImagingAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsImagingPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsImagingPackage.eINSTANCE;
 		}
 	}
 
@@ -77,8 +77,8 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__AddonsSensorsImagingSwitch<Adapter> modelSwitch =
-    new Symphony__AddonsSensorsImagingSwitch<Adapter>() {
+  protected ApogyAddonsSensorsImagingSwitch<Adapter> modelSwitch =
+    new ApogyAddonsSensorsImagingSwitch<Adapter>() {
 			@Override
 			public Adapter caseAbstractCamera(AbstractCamera object) {
 				return createAbstractCameraAdapter();
@@ -145,13 +145,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera <em>Abstract Camera</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera <em>Abstract Camera</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera
 	 * @generated
 	 */
   public Adapter createAbstractCameraAdapter()
@@ -160,13 +160,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot <em>Image Snapshot</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot <em>Image Snapshot</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot
 	 * @generated
 	 */
   public Adapter createImageSnapshotAdapter()
@@ -175,13 +175,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot <em>Rectified Image Snapshot</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot <em>Rectified Image Snapshot</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot
 	 * @generated
 	 */
   public Adapter createRectifiedImageSnapshotAdapter()
@@ -190,13 +190,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable <em>Zoomable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable <em>Zoomable</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.Zoomable
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable
 	 * @generated
 	 */
   public Adapter createZoomableAdapter()
@@ -205,13 +205,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities <em>Imaging Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.ImagingUtilities <em>Imaging Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ImagingUtilities
 	 * @generated
 	 */
 	public Adapter createImagingUtilitiesAdapter() {
@@ -219,13 +219,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
   public Adapter createNodeAdapter()
@@ -234,13 +234,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
   public Adapter createGroupNodeAdapter()
@@ -249,13 +249,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
   public Adapter createAggregateGroupNodeAdapter()
@@ -264,13 +264,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.Sensor <em>Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.sensors.Sensor <em>Sensor</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.Sensor
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.Sensor
 	 * @generated
 	 */
   public Adapter createSensorAdapter()
@@ -279,13 +279,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
   public Adapter createNamedAdapter()
@@ -294,13 +294,13 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Timed
+	 * @see ca.gc.asc_csa.apogy.common.emf.Timed
 	 * @generated
 	 */
   public Adapter createTimedAdapter()
@@ -321,4 +321,4 @@ public class Symphony__AddonsSensorsImagingAdapterFactory extends AdapterFactory
 		return null;
 	}
 
-} //Symphony__AddonsSensorsImagingAdapterFactory
+} //ApogyAddonsSensorsImagingAdapterFactory

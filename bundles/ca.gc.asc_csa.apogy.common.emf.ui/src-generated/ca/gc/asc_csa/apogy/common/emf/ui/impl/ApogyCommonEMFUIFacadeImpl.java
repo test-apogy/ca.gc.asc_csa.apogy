@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.ui.impl;
+package ca.gc.asc_csa.apogy.common.emf.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Ranges;
-import org.eclipse.symphony.common.emf.ui.Activator;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
-import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.Ranges;
+import ca.gc.asc_csa.apogy.common.emf.ui.Activator;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,15 +26,15 @@ import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
  *
  * @generated
  */
-public class Symphony__CommonEMFUIFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonEMFUIFacade
+public class ApogyCommonEMFUIFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonEMFUIFacade
 {
-	private static Symphony__CommonEMFUIFacade instance = null;
+	private static ApogyCommonEMFUIFacade instance = null;
 	
-	public static Symphony__CommonEMFUIFacade getInstance() 
+	public static ApogyCommonEMFUIFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new Symphony__CommonEMFUIFacadeImpl();
+			instance = new ApogyCommonEMFUIFacadeImpl();
 		}
 		return instance;
 	}
@@ -44,7 +44,7 @@ public class Symphony__CommonEMFUIFacadeImpl extends MinimalEObjectImpl.Containe
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CommonEMFUIFacadeImpl()
+  protected ApogyCommonEMFUIFacadeImpl()
   {
 		super();
 	}
@@ -57,7 +57,7 @@ public class Symphony__CommonEMFUIFacadeImpl extends MinimalEObjectImpl.Containe
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CommonEMFUIPackage.Literals.SYMPHONY_COMMON_EMFUI_FACADE;
+		return ApogyCommonEMFUIPackage.Literals.APOGY_COMMON_EMFUI_FACADE;
 	}
 
 		/**
@@ -83,7 +83,7 @@ public class Symphony__CommonEMFUIFacadeImpl extends MinimalEObjectImpl.Containe
 	  // No display unit defined, return the native units.
 	  if(displayUnit == null)
 	  {
-		  displayUnit = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
+		  displayUnit = ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
 	  }
 	  
 	  return displayUnit;
@@ -98,12 +98,12 @@ public class Symphony__CommonEMFUIFacadeImpl extends MinimalEObjectImpl.Containe
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CommonEMFUIPackage.SYMPHONY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES:
+			case ApogyCommonEMFUIPackage.APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES:
 				return getColorForRange((Ranges)arguments.get(0));
-			case Symphony__CommonEMFUIPackage.SYMPHONY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT:
+			case ApogyCommonEMFUIPackage.APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT:
 				return getDisplayUnits((ETypedElement)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CommonEMFUIFacadeImpl
+} //ApogyCommonEMFUIFacadeImpl

@@ -1,40 +1,40 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.PositionNodePresentation;
-import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
-import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage
  * @generated
  */
-public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonTopologyUIAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyUIPackage modelPackage;
+	protected static ApogyCommonTopologyUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -42,9 +42,9 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIAdapterFactory() {
+	public ApogyCommonTopologyUIAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyUIPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyUIPackage.eINSTANCE;
 		}
 	}
 
@@ -73,8 +73,8 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyUISwitch<Adapter> modelSwitch =
-		new Symphony__CommonTopologyUISwitch<Adapter>() {
+	protected ApogyCommonTopologyUISwitch<Adapter> modelSwitch =
+		new ApogyCommonTopologyUISwitch<Adapter>() {
 			@Override
 			public Adapter caseTopologyPresentationRegistry(TopologyPresentationRegistry object) {
 				return createTopologyPresentationRegistryAdapter();
@@ -112,8 +112,8 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 				return createURLNodePresentationAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonTopologyUIFacade(Symphony__CommonTopologyUIFacade object) {
-				return createSymphony__CommonTopologyUIFacadeAdapter();
+			public Adapter caseApogyCommonTopologyUIFacade(ApogyCommonTopologyUIFacade object) {
+				return createApogyCommonTopologyUIFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -136,13 +136,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry <em>Topology Presentation Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry
 	 * @generated
 	 */
 	public Adapter createTopologyPresentationRegistryAdapter() {
@@ -150,13 +150,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.GraphicsContext <em>Graphics Context</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext <em>Graphics Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext
 	 * @generated
 	 */
 	public Adapter createGraphicsContextAdapter() {
@@ -164,13 +164,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodeSelection <em>Node Selection</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection <em>Node Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection
 	 * @generated
 	 */
 	public Adapter createNodeSelectionAdapter() {
@@ -178,13 +178,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet <em>Topology Presentation Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet <em>Topology Presentation Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet
 	 * @generated
 	 */
 	public Adapter createTopologyPresentationSetAdapter() {
@@ -192,13 +192,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
 	public Adapter createNodePresentationAdapter() {
@@ -206,13 +206,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation <em>Transform Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation <em>Transform Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.TransformNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
 	 * @generated
 	 */
 	public Adapter createTransformNodePresentationAdapter() {
@@ -220,13 +220,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation <em>Rotation Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation <em>Rotation Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.RotationNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.RotationNodePresentation
 	 * @generated
 	 */
 	public Adapter createRotationNodePresentationAdapter() {
@@ -234,13 +234,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation <em>Position Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation <em>Position Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.PositionNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.PositionNodePresentation
 	 * @generated
 	 */
 	public Adapter createPositionNodePresentationAdapter() {
@@ -248,13 +248,13 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation <em>URL Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation <em>URL Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.URLNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.URLNodePresentation
 	 * @generated
 	 */
 	public Adapter createURLNodePresentationAdapter() {
@@ -262,16 +262,16 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonTopologyUIFacadeAdapter() {
+	public Adapter createApogyCommonTopologyUIFacadeAdapter() {
 		return null;
 	}
 
@@ -287,4 +287,4 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__CommonTopologyUIAdapterFactory
+} //ApogyCommonTopologyUIAdapterFactory

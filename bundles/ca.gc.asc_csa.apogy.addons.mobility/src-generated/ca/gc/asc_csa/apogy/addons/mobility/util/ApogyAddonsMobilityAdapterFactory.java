@@ -1,35 +1,35 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityAdapterFactory.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
+ * $Id: ApogyAddonsMobilityAdapterFactory.java,v 1.5.4.3 2015/09/22 19:39:42 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.util;
+package ca.gc.asc_csa.apogy.addons.mobility.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.mobility.*;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.addons.mobility.*;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage
+ * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage
  * @generated
  */
-public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
+public class ApogyAddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsMobilityPackage modelPackage;
+	protected static ApogyAddonsMobilityPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -37,9 +37,9 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsMobilityAdapterFactory() {
+	public ApogyAddonsMobilityAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsMobilityPackage.eINSTANCE;
+			modelPackage = ApogyAddonsMobilityPackage.eINSTANCE;
 		}
 	}
 
@@ -68,8 +68,8 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsMobilitySwitch<Adapter> modelSwitch =
-		new Symphony__AddonsMobilitySwitch<Adapter>() {
+	protected ApogyAddonsMobilitySwitch<Adapter> modelSwitch =
+		new ApogyAddonsMobilitySwitch<Adapter>() {
 			@Override
 			public Adapter caseMobilePlatform(MobilePlatform object) {
 				return createMobilePlatformAdapter();
@@ -111,13 +111,13 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.MobilePlatform <em>Mobile Platform</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform <em>Mobile Platform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.MobilePlatform
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform
 	 * @generated
 	 */
 	public Adapter createMobilePlatformAdapter() {
@@ -125,13 +125,13 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform <em>Skid Steered Mobile Platform</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform <em>Skid Steered Mobile Platform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.SkidSteeredMobilePlatform
 	 * @generated
 	 */
 	public Adapter createSkidSteeredMobilePlatformAdapter() {
@@ -139,13 +139,13 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter()
@@ -154,13 +154,13 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter()
@@ -169,13 +169,13 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -194,4 +194,4 @@ public class Symphony__AddonsMobilityAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Symphony__AddonsMobilityAdapterFactory
+} //ApogyAddonsMobilityAdapterFactory

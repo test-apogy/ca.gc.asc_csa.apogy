@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,9 +17,9 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension() <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension() <em>YDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension() <em>ZDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension() <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension() <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension() <em>ZDimension</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -81,7 +81,7 @@ public class CartesianCoordinatesSetExtentTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSetExtent());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSetExtent());
 	}
 
 	/**
@@ -96,10 +96,10 @@ public class CartesianCoordinatesSetExtentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension() <em>XDimension</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension() <em>XDimension</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getXDimension()
 	 * @generated_NOT
 	 */
 	public void testGetXDimension() 
@@ -111,10 +111,10 @@ public class CartesianCoordinatesSetExtentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension() <em>YDimension</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension() <em>YDimension</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension()
 	 * @generated_NOT
 	 */
 	public void testGetYDimension() 
@@ -126,10 +126,10 @@ public class CartesianCoordinatesSetExtentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension() <em>ZDimension</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension() <em>ZDimension</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension()
 	 * @generated_NOT
 	 */
 	public void testGetZDimension() 

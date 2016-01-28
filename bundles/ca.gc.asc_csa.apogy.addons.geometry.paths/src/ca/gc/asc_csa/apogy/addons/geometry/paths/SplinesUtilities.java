@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.geometry.paths;
+package ca.gc.asc_csa.apogy.addons.geometry.paths;
 
 import java.util.ArrayList;
 import java.util.List;

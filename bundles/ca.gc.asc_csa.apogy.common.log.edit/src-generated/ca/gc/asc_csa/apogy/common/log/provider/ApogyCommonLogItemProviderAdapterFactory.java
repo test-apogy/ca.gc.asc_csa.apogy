@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log.provider;
+package ca.gc.asc_csa.apogy.common.log.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.log.Symphony__CommonLogPackage;
-import org.eclipse.symphony.common.log.util.Symphony__CommonLogAdapterFactory;
+import ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage;
+import ca.gc.asc_csa.apogy.common.log.util.ApogyCommonLogAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.log.util.Symphony__CommonLogAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonLogItemProviderAdapterFactory extends Symphony__CommonLogAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonLogItemProviderAdapterFactory extends ApogyCommonLogAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonLogItemProviderAdapterFactory extends Symphony__Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonLogEditPlugin.INSTANCE, Symphony__CommonLogPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonLogEditPlugin.INSTANCE, ApogyCommonLogPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonLogItemProviderAdapterFactory extends Symphony__Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonLogItemProviderAdapterFactory() {
+	public ApogyCommonLogItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonLogItemProviderAdapterFactory extends Symphony__Com
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.log.Logger} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.log.Logger} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonLogItemProviderAdapterFactory extends Symphony__Com
 	protected LoggerItemProvider loggerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.log.Logger}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.log.Logger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

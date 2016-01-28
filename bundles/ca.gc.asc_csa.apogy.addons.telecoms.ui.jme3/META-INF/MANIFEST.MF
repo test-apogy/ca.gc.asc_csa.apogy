@@ -2,17 +2,17 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.telecoms.ui.jme3;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.telecoms.ui.jme3;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: org.eclipse.symphony.addons.telecoms.ui.jme3.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.telecoms.ui.jme3.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.symphony.common.topology.ui.jme3;bundle-version="0.5.0",
- org.eclipse.symphony.addons.telecoms.ui;bundle-version="0.4.0",
- org.eclipse.symphony.addons.telecoms
+ ca.gc.asc_csa.apogy.common.topology.ui.jme3;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.addons.telecoms.ui;bundle-version="0.4.0",
+ ca.gc.asc_csa.apogy.addons.telecoms
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
-Export-Package: org.eclipse.symphony.addons.telecoms.ui.jme3,
- org.eclipse.symphony.addons.telecoms.ui.jme3.adapters,
- org.eclipse.symphony.addons.telecoms.ui.jme3.scene_objects
+Export-Package: ca.gc.asc_csa.apogy.addons.telecoms.ui.jme3,
+ ca.gc.asc_csa.apogy.addons.telecoms.ui.jme3.adapters,
+ ca.gc.asc_csa.apogy.addons.telecoms.ui.jme3.scene_objects

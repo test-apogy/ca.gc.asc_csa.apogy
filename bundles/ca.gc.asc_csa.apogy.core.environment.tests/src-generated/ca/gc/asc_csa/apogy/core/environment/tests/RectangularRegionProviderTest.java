@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.framework.TestCase;
 
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +14,7 @@ import org.eclipse.symphony.core.environment.RectangularRegionProvider;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -60,10 +60,10 @@ public abstract class RectangularRegionProviderTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion()
 	 * @generated_NOT
 	 */
 	public void testGetRegion() 

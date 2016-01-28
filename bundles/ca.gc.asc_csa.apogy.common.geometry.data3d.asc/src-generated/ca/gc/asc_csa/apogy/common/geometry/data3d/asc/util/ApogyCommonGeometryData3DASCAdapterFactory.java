@@ -1,33 +1,33 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DASCAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonGeometryData3DASCAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DASCPackage modelPackage;
+	protected static ApogyCommonGeometryData3DASCPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__CommonGeometryData3DASCAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DASCAdapterFactory() {
+	public ApogyCommonGeometryData3DASCAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DASCPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DASCPackage.eINSTANCE;
 		}
 	}
 
@@ -66,8 +66,8 @@ public class Symphony__CommonGeometryData3DASCAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DASCSwitch<Adapter> modelSwitch =
-		new Symphony__CommonGeometryData3DASCSwitch<Adapter>() {
+	protected ApogyCommonGeometryData3DASCSwitch<Adapter> modelSwitch =
+		new ApogyCommonGeometryData3DASCSwitch<Adapter>() {
 			@Override
 			public Adapter caseASC3DIO(ASC3DIO object) {
 				return createASC3DIOAdapter();
@@ -101,13 +101,13 @@ public class Symphony__CommonGeometryData3DASCAdapterFactory extends AdapterFact
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO <em>ASC3DIO</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO <em>ASC3DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO
 	 * @generated
 	 */
 	public Adapter createASC3DIOAdapter() {
@@ -115,13 +115,13 @@ public class Symphony__CommonGeometryData3DASCAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData <em>ASC Header Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData <em>ASC Header Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData
 	 * @generated
 	 */
 	public Adapter createASCHeaderDataAdapter() {
@@ -129,13 +129,13 @@ public class Symphony__CommonGeometryData3DASCAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D <em>Coordinates2 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D <em>Coordinates2 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D
 	 * @generated
 	 */
 	public Adapter createCoordinates2DAdapter() {
@@ -154,4 +154,4 @@ public class Symphony__CommonGeometryData3DASCAdapterFactory extends AdapterFact
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DASCAdapterFactory
+} //ApogyCommonGeometryData3DASCAdapterFactory

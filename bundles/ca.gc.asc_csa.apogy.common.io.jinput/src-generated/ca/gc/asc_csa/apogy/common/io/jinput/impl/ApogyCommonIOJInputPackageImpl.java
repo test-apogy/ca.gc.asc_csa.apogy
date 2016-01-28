@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.impl;
+package ca.gc.asc_csa.apogy.common.io.jinput.impl;
 
 import net.java.games.input.Component;
 import net.java.games.input.Controller;
@@ -14,17 +14,17 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.io.jinput.EAxis;
-import org.eclipse.symphony.common.io.jinput.EButton;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.EComponents;
-import org.eclipse.symphony.common.io.jinput.EController;
-import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
-import org.eclipse.symphony.common.io.jinput.EKey;
-import org.eclipse.symphony.common.io.jinput.EVirtualComponent;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EAxis;
+import ca.gc.asc_csa.apogy.common.io.jinput.EButton;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponents;
+import ca.gc.asc_csa.apogy.common.io.jinput.EController;
+import ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment;
+import ca.gc.asc_csa.apogy.common.io.jinput.EKey;
+import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonIOJInputPackageImpl extends EPackageImpl implements Symphony__CommonIOJInputPackage {
+public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements ApogyCommonIOJInputPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,12 +128,12 @@ public class Symphony__CommonIOJInputPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonIOJInputPackageImpl() {
-		super(eNS_URI, Symphony__CommonIOJInputFactory.eINSTANCE);
+	private ApogyCommonIOJInputPackageImpl() {
+		super(eNS_URI, ApogyCommonIOJInputFactory.eINSTANCE);
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class Symphony__CommonIOJInputPackageImpl extends EPackageImpl implements
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonIOJInputPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonIOJInputPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -155,11 +155,11 @@ public class Symphony__CommonIOJInputPackageImpl extends EPackageImpl implements
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonIOJInputPackage init() {
-		if (isInited) return (Symphony__CommonIOJInputPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonIOJInputPackage.eNS_URI);
+	public static ApogyCommonIOJInputPackage init() {
+		if (isInited) return (ApogyCommonIOJInputPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonIOJInputPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonIOJInputPackageImpl theSymphony__CommonIOJInputPackage = (Symphony__CommonIOJInputPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonIOJInputPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonIOJInputPackageImpl());
+		ApogyCommonIOJInputPackageImpl theApogyCommonIOJInputPackage = (ApogyCommonIOJInputPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonIOJInputPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonIOJInputPackageImpl());
 
 		isInited = true;
 
@@ -167,18 +167,18 @@ public class Symphony__CommonIOJInputPackageImpl extends EPackageImpl implements
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonIOJInputPackage.createPackageContents();
+		theApogyCommonIOJInputPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonIOJInputPackage.initializePackageContents();
+		theApogyCommonIOJInputPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonIOJInputPackage.freeze();
+		theApogyCommonIOJInputPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonIOJInputPackage.eNS_URI, theSymphony__CommonIOJInputPackage);
-		return theSymphony__CommonIOJInputPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonIOJInputPackage.eNS_URI, theApogyCommonIOJInputPackage);
+		return theApogyCommonIOJInputPackage;
 	}
 
 	/**
@@ -616,8 +616,8 @@ public class Symphony__CommonIOJInputPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonIOJInputFactory getSymphony__CommonIOJInputFactory() {
-		return (Symphony__CommonIOJInputFactory)getEFactoryInstance();
+	public ApogyCommonIOJInputFactory getApogyCommonIOJInputFactory() {
+		return (ApogyCommonIOJInputFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -843,17 +843,17 @@ public class Symphony__CommonIOJInputPackageImpl extends EPackageImpl implements
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonIOJInput",
+			 "prefix", "ApogyCommonIOJInput",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonIOJInput",
+			 "modelName", "ApogyCommonIOJInput",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.io.jinput/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.io.jinput.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.io"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.io.jinput/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.io.jinput.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common.io"
 		   });
 	}
 
-} //Symphony__CommonIOJInputPackageImpl
+} //ApogyCommonIOJInputPackageImpl

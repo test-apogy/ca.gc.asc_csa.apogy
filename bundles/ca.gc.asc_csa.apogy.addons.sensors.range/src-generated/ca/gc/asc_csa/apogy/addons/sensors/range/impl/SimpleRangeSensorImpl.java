@@ -4,13 +4,13 @@
  *
  * $Id: SimpleRangeSensorImpl.java,v 1.3.4.2 2015/05/21 15:50:21 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleRangeSensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleRangeSensorImpl#getDistanceMeasured <em>Distance Measured</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.impl.SimpleRangeSensorImpl#getDistanceMeasured <em>Distance Measured</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public class SimpleRangeSensorImpl extends RangeSensorImpl implements SimpleRang
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RANGE_SENSOR;
+		return ApogyAddonsSensorsRangePackage.Literals.SIMPLE_RANGE_SENSOR;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class SimpleRangeSensorImpl extends RangeSensorImpl implements SimpleRang
 		double oldDistanceMeasured = distanceMeasured;
 		distanceMeasured = newDistanceMeasured;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED, oldDistanceMeasured, distanceMeasured));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED, oldDistanceMeasured, distanceMeasured));
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class SimpleRangeSensorImpl extends RangeSensorImpl implements SimpleRang
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
 				return getDistanceMeasured();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class SimpleRangeSensorImpl extends RangeSensorImpl implements SimpleRang
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
 				setDistanceMeasured((Double)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public class SimpleRangeSensorImpl extends RangeSensorImpl implements SimpleRang
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
 				setDistanceMeasured(DISTANCE_MEASURED_EDEFAULT);
 				return;
 		}
@@ -147,7 +147,7 @@ public class SimpleRangeSensorImpl extends RangeSensorImpl implements SimpleRang
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
 				return distanceMeasured != DISTANCE_MEASURED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

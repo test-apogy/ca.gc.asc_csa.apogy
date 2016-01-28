@@ -1,18 +1,18 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.views;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.Activator;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.composites.GearRatioConstraintComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites.GearRatioConstraintComposite;
 
 public class GearRatioConstraintView extends AbstractPinableView<GearRatioConstraint>
 {
 	private GearRatioConstraint gearRatioConstraint;
-	public static final String ID = "org.eclipse.symphony.common.topology.addons.dynamics.ui.views.GearRatioConstraintView"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.GearRatioConstraintView"; //$NON-NLS-1$
 
 	private GearRatioConstraintComposite gearRatioConstraintComposite = null;
 	

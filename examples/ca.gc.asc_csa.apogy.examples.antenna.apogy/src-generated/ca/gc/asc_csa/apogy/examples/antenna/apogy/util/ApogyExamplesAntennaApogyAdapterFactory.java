@@ -1,31 +1,31 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.util;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage
  * @generated
  */
-public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesAntennaApogyAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -33,7 +33,7 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesAntennaSymphonyPackage modelPackage;
+  protected static ApogyExamplesAntennaApogyPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -41,10 +41,10 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesAntennaSymphonyAdapterFactory()
+  public ApogyExamplesAntennaApogyAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesAntennaSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesAntennaApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -74,11 +74,11 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesAntennaSymphonySwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesAntennaSymphonySwitch<Adapter>() {
+  protected ApogyExamplesAntennaApogySwitch<Adapter> modelSwitch =
+    new ApogyExamplesAntennaApogySwitch<Adapter>() {
 			@Override
-			public Adapter casePTUDishAntennaSymphonySystemApiAdapter(PTUDishAntennaSymphonySystemApiAdapter object) {
-				return createPTUDishAntennaSymphonySystemApiAdapterAdapter();
+			public Adapter casePTUDishAntennaApogySystemApiAdapter(PTUDishAntennaApogySystemApiAdapter object) {
+				return createPTUDishAntennaApogySystemApiAdapterAdapter();
 			}
 			@Override
 			public Adapter casePTUDishAntennaData(PTUDishAntennaData object) {
@@ -93,8 +93,8 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 				return createPoseProviderAdapter();
 			}
 			@Override
-			public Adapter caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object) {
-				return createSymphonySystemApiAdapterAdapter();
+			public Adapter caseApogySystemApiAdapter(ApogySystemApiAdapter object) {
+				return createApogySystemApiAdapterAdapter();
 			}
 			@Override
 			public Adapter caseAbstractInitializationData(AbstractInitializationData object) {
@@ -105,8 +105,8 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 				return createInitializationDataAdapter();
 			}
 			@Override
-			public Adapter caseSymphonyInitializationData(SymphonyInitializationData object) {
-				return createSymphonyInitializationDataAdapter();
+			public Adapter caseApogyInitializationData(ApogyInitializationData object) {
+				return createApogyInitializationDataAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -130,28 +130,28 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter <em>PTU Dish Antenna Symphony System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter <em>PTU Dish Antenna Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter
 	 * @generated
 	 */
-  public Adapter createPTUDishAntennaSymphonySystemApiAdapterAdapter()
+  public Adapter createPTUDishAntennaApogySystemApiAdapterAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData <em>PTU Dish Antenna Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData <em>PTU Dish Antenna Data</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData
 	 * @generated
 	 */
   public Adapter createPTUDishAntennaDataAdapter()
@@ -160,13 +160,13 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter
 	 * @generated
 	 */
 	public Adapter createTypeApiAdapterAdapter() {
@@ -174,13 +174,13 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseProvider <em>Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.PoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.PoseProvider
+	 * @see ca.gc.asc_csa.apogy.core.PoseProvider
 	 * @generated
 	 */
   public Adapter createPoseProviderAdapter()
@@ -189,28 +189,28 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter <em>Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.SymphonySystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
 	 * @generated
 	 */
-  public Adapter createSymphonySystemApiAdapterAdapter()
+  public Adapter createApogySystemApiAdapterAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData
 	 * @generated
 	 */
 	public Adapter createAbstractInitializationDataAdapter() {
@@ -218,13 +218,13 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.InitializationData <em>Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.InitializationData <em>Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.InitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InitializationData
 	 * @generated
 	 */
 	public Adapter createInitializationDataAdapter() {
@@ -232,16 +232,16 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonyInitializationData <em>Symphony Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ApogyInitializationData <em>Apogy Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.SymphonyInitializationData
+	 * @see ca.gc.asc_csa.apogy.core.ApogyInitializationData
 	 * @generated
 	 */
-  public Adapter createSymphonyInitializationDataAdapter()
+  public Adapter createApogyInitializationDataAdapter()
   {
 		return null;
 	}
@@ -259,4 +259,4 @@ public class Symphony__ExamplesAntennaSymphonyAdapterFactory extends AdapterFact
 		return null;
 	}
 
-} //Symphony__ExamplesAntennaSymphonyAdapterFactory
+} //ApogyExamplesAntennaApogyAdapterFactory

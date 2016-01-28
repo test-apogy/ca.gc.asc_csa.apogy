@@ -1,9 +1,9 @@
-package org.eclipse.symphony.core.invocator.ui.decorators;
+package ca.gc.asc_csa.apogy.core.invocator.ui.decorators;
 
 import org.eclipse.jface.viewers.IDecoration;
 import org.eclipse.jface.viewers.ILightweightLabelDecorator;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.symphony.core.invocator.OperationCallResult;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult;
 import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.PlatformUI;
 

@@ -9,9 +9,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.addons.sensors.fov.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage"
-            genModel="model/symphony_addons_sensors_fov_bindings.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.sensors.fov.bindings"
+            class="ca.gc.asc_csa.apogy.addons.sensors.fov.bindings.ApogyAddonsSensorsFOVBindingsPackage"
+            genModel="model/apogy_addons_sensors_fov_bindings.xcore"/>
    </extension>
 
 </plugin>

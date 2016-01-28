@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,12 +16,12 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Type#getMembers <em>Members</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Type#getInterfaceClass <em>Interface Class</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Type#getMembers <em>Members</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Type#getInterfaceClass <em>Interface Class</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getType()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface Type extends Named, AbstractType
 {
   /**
 	 * Returns the value of the '<em><b>Members</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.TypeMember}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.TypeMember}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Members</em>' containment reference list isn't clear,
@@ -37,7 +37,7 @@ public interface Type extends Named, AbstractType
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Members</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType_Members()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getType_Members()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -54,14 +54,14 @@ public interface Type extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interface Class</em>' reference.
 	 * @see #setInterfaceClass(EClass)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType_InterfaceClass()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getType_InterfaceClass()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
 	 */
   EClass getInterfaceClass();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Type#getInterfaceClass <em>Interface Class</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Type#getInterfaceClass <em>Interface Class</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Interface Class</em>' reference.
@@ -80,14 +80,14 @@ public interface Type extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Api Adapter Class</em>' reference.
 	 * @see #setTypeApiAdapterClass(EClass)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType_TypeApiAdapterClass()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getType_TypeApiAdapterClass()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
 	 */
   EClass getTypeApiAdapterClass();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type Api Adapter Class</em>' reference.

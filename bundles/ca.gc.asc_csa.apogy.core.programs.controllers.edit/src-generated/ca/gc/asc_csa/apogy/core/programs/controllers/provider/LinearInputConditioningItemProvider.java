@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.provider;
+package ca.gc.asc_csa.apogy.core.programs.controllers.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.LinearInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.controllers.LinearInputConditioning} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class LinearInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearInputConditioning_minimum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearInputConditioning_minimum_feature", "_UI_LinearInputConditioning_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MINIMUM,
+				 ApogyCoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MINIMUM,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class LinearInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearInputConditioning_maximum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearInputConditioning_maximum_feature", "_UI_LinearInputConditioning_type"),
-				 Symphony__CoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MAXIMUM,
+				 ApogyCoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MAXIMUM,
 				 true,
 				 false,
 				 false,
@@ -142,8 +142,8 @@ public class LinearInputConditioningItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LinearInputConditioning.class)) {
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
-			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
+			case ApogyCoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

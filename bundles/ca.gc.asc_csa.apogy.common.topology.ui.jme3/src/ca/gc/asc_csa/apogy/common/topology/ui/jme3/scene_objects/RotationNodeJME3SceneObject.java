@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.topology.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects;
 
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 
 public class RotationNodeJME3SceneObject extends AbstractTransformationJME3SceneObject<RotationNode> {
 	

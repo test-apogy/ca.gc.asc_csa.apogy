@@ -1,12 +1,12 @@
-package org.eclipse.symphony.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.ui.Activator;
-import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
@@ -20,11 +20,11 @@ public class CopyInitializationDataWizard extends Wizard implements INewWizard {
 	 */
 	public CopyInitializationDataWizard() {
 		super();
-		setWindowTitle("Copy Symphony Initialization Data");
+		setWindowTitle("Copy Apogy Initialization Data");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
 				Activator.ID,
-				"icons/wizban/symphony_copy_initialization_data.png");
+				"icons/wizban/apogy_copy_initialization_data.png");
 		setDefaultPageImageDescriptor(image);
 	}
 
@@ -48,7 +48,7 @@ public class CopyInitializationDataWizard extends Wizard implements INewWizard {
 	@Override
 	public boolean performFinish() {
 		try {
-			Symphony__CoreInvocatorUIFacade.INSTANCE.copyInitializationData(page.getSourceContext(), page.getDestinationContext());
+			ApogyCoreInvocatorUIFacade.INSTANCE.copyInitializationData(page.getSourceContext(), page.getDestinationContext());
 			return true;
 		} catch (Exception e) {
 			Logger.INSTANCE.log(Activator.ID, this, "Contexts <" + page.getSourceContext().getName() + "> and <" + page.getDestinationContext().getName() + "> are not consistent.", EventSeverity.ERROR, e);

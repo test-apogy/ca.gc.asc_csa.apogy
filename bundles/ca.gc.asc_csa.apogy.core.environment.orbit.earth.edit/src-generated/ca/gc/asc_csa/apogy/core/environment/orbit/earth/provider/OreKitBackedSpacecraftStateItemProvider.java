@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -14,14 +14,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.provider.SpacecraftStateItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.provider.SpacecraftStateItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class OreKitBackedSpacecraftStateItemProvider extends SpacecraftStateItem
 				 getResourceLocator(),
 				 getString("_UI_OreKitBackedSpacecraftState_oreKitSpacecraftState_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OreKitBackedSpacecraftState_oreKitSpacecraftState_feature", "_UI_OreKitBackedSpacecraftState_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class OreKitBackedSpacecraftStateItemProvider extends SpacecraftStateItem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OreKitBackedSpacecraftState.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
+			case ApogyCoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -134,13 +134,13 @@ public class OreKitBackedSpacecraftStateItemProvider extends SpacecraftStateItem
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
 	}
 
 }

@@ -4,7 +4,7 @@
  *
  * $Id: PathFollowerImpl.java,v 1.4.4.4 2015/09/22 20:02:14 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.mobility.controllers.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Adapter;
@@ -15,19 +15,19 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.MobilePlatformStatus;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
-import org.eclipse.symphony.addons.mobility.controllers.Activator;
-import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
-import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
-import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.Path;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatformStatus;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.Activator;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.ApogyAddonsMobilityControllersPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollower;
+import ca.gc.asc_csa.apogy.addons.mobility.controllers.PathFollowerState;
+import ca.gc.asc_csa.apogy.addons.sensors.SensorStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,11 +37,11 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPath <em>Path</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPlatform <em>Platform</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPoseSensor <em>Pose Sensor</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#isDestinationReached <em>Destination Reached</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPathFollowerState <em>Path Follower State</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl#getPath <em>Path</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl#getPlatform <em>Platform</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl#getPoseSensor <em>Pose Sensor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl#isDestinationReached <em>Destination Reached</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.controllers.impl.PathFollowerImpl#getPathFollowerState <em>Path Follower State</em>}</li>
  * </ul>
  *
  * @generated
@@ -139,7 +139,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsMobilityControllersPackage.Literals.PATH_FOLLOWER;
+		return ApogyAddonsMobilityControllersPackage.Literals.PATH_FOLLOWER;
 	}
 
 	/**
@@ -155,7 +155,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 			path = (PathType)eResolveProxy(oldPath);
 			if (path != oldPath) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH, oldPath, path));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH, oldPath, path));
 			}
 		}
 		return path;
@@ -208,7 +208,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 		PathType oldPath = path;
 		path = newPath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH, oldPath, path));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH, oldPath, path));
 	}
 
 	
@@ -225,7 +225,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 			platform = (PlatformType)eResolveProxy(oldPlatform);
 			if (platform != oldPlatform) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM, oldPlatform, platform));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM, oldPlatform, platform));
 			}
 		}
 		return platform;
@@ -251,7 +251,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 		PlatformType oldPlatform = platform;
 		platform = newPlatform;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM, oldPlatform, platform));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM, oldPlatform, platform));
 		
 		// Unregister listener from the old PoseSensor.
 		if(oldPlatform != null)
@@ -278,7 +278,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 			poseSensor = (PoseSensor)eResolveProxy(oldPoseSensor);
 			if (poseSensor != oldPoseSensor) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR, oldPoseSensor, poseSensor));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR, oldPoseSensor, poseSensor));
 			}
 		}
 		return poseSensor;
@@ -304,7 +304,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 		PoseSensor oldPoseSensor = poseSensor;
 		poseSensor = newPoseSensor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR, oldPoseSensor, poseSensor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR, oldPoseSensor, poseSensor));
 		
 		// Unregister listener from the old PoseSensor.
 		if(oldPoseSensor != null)
@@ -339,7 +339,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 		boolean oldDestinationReached = destinationReached;
 		destinationReached = newDestinationReached;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED, oldDestinationReached, destinationReached));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED, oldDestinationReached, destinationReached));
 		
 		// Log in a Destination reached event.
 		if(newDestinationReached)
@@ -368,7 +368,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 		PathFollowerState oldPathFollowerState = pathFollowerState;
 		pathFollowerState = newPathFollowerState == null ? PATH_FOLLOWER_STATE_EDEFAULT : newPathFollowerState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE, oldPathFollowerState, pathFollowerState));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE, oldPathFollowerState, pathFollowerState));
 	}
 
 	/**
@@ -519,18 +519,18 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
 				if (resolve) return getPath();
 				return basicGetPath();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
 				if (resolve) return getPlatform();
 				return basicGetPlatform();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
 				if (resolve) return getPoseSensor();
 				return basicGetPoseSensor();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
 				return isDestinationReached();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
 				return getPathFollowerState();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -546,19 +546,19 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
 				setPath((PathType)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
 				setPlatform((PlatformType)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
 				setPoseSensor((PoseSensor)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
 				setDestinationReached((Boolean)newValue);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
 				setPathFollowerState((PathFollowerState)newValue);
 				return;
 		}
@@ -574,19 +574,19 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
 				setPath((PathType)null);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
 				setPlatform((PlatformType)null);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
 				setPoseSensor((PoseSensor)null);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
 				setDestinationReached(DESTINATION_REACHED_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
 				setPathFollowerState(PATH_FOLLOWER_STATE_EDEFAULT);
 				return;
 		}
@@ -602,15 +602,15 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH:
 				return path != null;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PLATFORM:
 				return platform != null;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__POSE_SENSOR:
 				return poseSensor != null;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
 				return destinationReached != DESTINATION_REACHED_EDEFAULT;
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
 				return pathFollowerState != PATH_FOLLOWER_STATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -624,15 +624,15 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER___START:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER___START:
 				return start();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER___PAUSE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER___PAUSE:
 				return pause();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER___RESUME:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER___RESUME:
 				return resume();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER___STOP:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER___STOP:
 				return stop();
-			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER___IS_TRANSITION_VALID__PATHFOLLOWERSTATE:
+			case ApogyAddonsMobilityControllersPackage.PATH_FOLLOWER___IS_TRANSITION_VALID__PATHFOLLOWERSTATE:
 				return isTransitionValid((PathFollowerState)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -672,7 +672,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 				@Override
 				public void notifyChanged(Notification msg)
 				{										
-					if(msg.getFeatureID(PoseSensor.class) == Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS)
+					if(msg.getFeatureID(PoseSensor.class) == ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS)
 					{
 						if(msg.getNewValue() == SensorStatus.FAILED)
 						{
@@ -721,7 +721,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 				@Override
 				public void notifyChanged(Notification msg)
 				{
-					if(msg.getFeatureID(MobilePlatform.class) == Symphony__AddonsMobilityPackage.MOBILE_PLATFORM_STATUS)
+					if(msg.getFeatureID(MobilePlatform.class) == ApogyAddonsMobilityPackage.MOBILE_PLATFORM_STATUS)
 					{
 						if(msg.getNewValue() == MobilePlatformStatus.FAILED)
 						{

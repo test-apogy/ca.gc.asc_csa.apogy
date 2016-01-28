@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class SurfaceWorksiteNodeImpl extends WorksiteNodeImpl implements Surface
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE_NODE;
+		return ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE_NODE;
 	}
 
   private void clearTopology()
@@ -78,7 +78,7 @@ public class SurfaceWorksiteNodeImpl extends WorksiteNodeImpl implements Surface
 					
 					if(notification.getNotifier() instanceof SurfaceWorksiteNode)
 					{
-						if(notification.getFeatureID(SurfaceWorksiteNode.class) == Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE)
+						if(notification.getFeatureID(SurfaceWorksiteNode.class) == ApogyCoreEnvironmentPackage.WORKSITE_NODE__WORKSITE)
 						{
 							// Worksite of SurfaceWorksiteNode has been set.
 							
@@ -100,7 +100,7 @@ public class SurfaceWorksiteNodeImpl extends WorksiteNodeImpl implements Surface
 					}
 					else if(notification.getNotifier() instanceof SurfaceWorksite)
 					{
-						if(notification.getFeatureID(SurfaceWorksite.class) == Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST)
+						if(notification.getFeatureID(SurfaceWorksite.class) == ApogyCoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST)
 						{
 							// MapsList of Worksite has been set.					
 							

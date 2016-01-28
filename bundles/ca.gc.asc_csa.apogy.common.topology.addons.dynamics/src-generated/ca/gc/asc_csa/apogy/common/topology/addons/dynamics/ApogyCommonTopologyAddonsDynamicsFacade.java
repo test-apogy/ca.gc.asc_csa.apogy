@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.dynamics;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics;
 
 import java.util.Set;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.ApogyCommonTopologyAddonsDynamicsFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,13 +22,13 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__Commo
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getSymphony__CommonTopologyAddonsDynamicsFacade()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage#getApogyCommonTopologyAddonsDynamicsFacade()
  * @model
  * @generated
  */
-public interface Symphony__CommonTopologyAddonsDynamicsFacade extends EObject
+public interface ApogyCommonTopologyAddonsDynamicsFacade extends EObject
 {
-	public static final Symphony__CommonTopologyAddonsDynamicsFacade INSTANCE = Symphony__CommonTopologyAddonsDynamicsFacadeImpl.getInstance();
+	public static final ApogyCommonTopologyAddonsDynamicsFacade INSTANCE = ApogyCommonTopologyAddonsDynamicsFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Given a node in a topology, traverse the tree and extracts the Set of PhysicalBody defined in the topology.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.topology.addons.dynamics.Set<org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody>" unique="false" rootUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.addons.dynamics.Set<ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody>" unique="false" rootUnique="false"
 	 * @generated
 	 */
 	Set<PhysicalBody> getPhysicalBodies(Node root);
@@ -81,4 +81,4 @@ public interface Symphony__CommonTopologyAddonsDynamicsFacade extends EObject
 	 */
 	<T extends AbstractConstraintSimulationProperties> T getConstraintSimulationProperty(AbstractConstraint constraint, Class<T> propertyType);
 
-} // Symphony__CommonTopologyAddonsDynamicsFacade
+} // ApogyCommonTopologyAddonsDynamicsFacade

@@ -1,12 +1,12 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.adapters;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui.adapters;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIFactory;
-import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.ApogyCommonGeometryData3DUIFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ui.TriangularMeshPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class TriangularMeshPresentationAdapter implements
 		NodePresentationAdapter {
@@ -22,7 +22,7 @@ public class TriangularMeshPresentationAdapter implements
 			throw new IllegalArgumentException();
 		}
 
-		TriangularMeshPresentation presentation = Symphony__CommonGeometryData3DUIFactory.eINSTANCE.createTriangularMeshPresentation();
+		TriangularMeshPresentation presentation = ApogyCommonGeometryData3DUIFactory.eINSTANCE.createTriangularMeshPresentation();
 
 		ContentNode<CartesianTriangularMesh> cNode = (ContentNode<CartesianTriangularMesh>) node;
 

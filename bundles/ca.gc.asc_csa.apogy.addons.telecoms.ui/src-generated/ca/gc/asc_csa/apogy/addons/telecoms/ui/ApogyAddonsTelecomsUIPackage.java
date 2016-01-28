@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.ui;
+package ca.gc.asc_csa.apogy.addons.telecoms.ui;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIFactory
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.ApogyAddonsTelecomsUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsTelecomsUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsTelecomsUI' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.telecoms.ui/src-generated' editDirectory='/org.eclipse.symphony.addons.telecoms.ui.edit/src-generated' basePackage='org.eclipse.symphony.addons.telecoms'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsTelecomsUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsTelecomsUI' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.telecoms.ui/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.telecoms.ui.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.telecoms'"
  * @generated
  */
-public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
+public interface ApogyAddonsTelecomsUIPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.telecoms.ui";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.telecoms.ui";
 
 	/**
 	 * The package namespace name.
@@ -55,14 +55,14 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsTelecomsUIPackage eINSTANCE = org.eclipse.symphony.addons.telecoms.ui.impl.Symphony__AddonsTelecomsUIPackageImpl.init();
+	ApogyAddonsTelecomsUIPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.telecoms.ui.impl.ApogyAddonsTelecomsUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl <em>Abstract Antenna Radiation Pattern Presentation</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl <em>Abstract Antenna Radiation Pattern Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl
-	 * @see org.eclipse.symphony.addons.telecoms.ui.impl.Symphony__AddonsTelecomsUIPackageImpl#getAbstractAntennaRadiationPatternPresentation()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.impl.ApogyAddonsTelecomsUIPackageImpl#getAbstractAntennaRadiationPatternPresentation()
 	 * @generated
 	 */
 	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION = 0;
@@ -74,7 +74,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -83,7 +83,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -92,7 +92,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -101,7 +101,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -110,7 +110,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -119,7 +119,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -128,7 +128,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -137,7 +137,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -146,7 +146,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -155,7 +155,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -164,7 +164,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -173,7 +173,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -182,7 +182,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Antenna Radiation Pattern Presentation</em>' class.
@@ -191,7 +191,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Abstract Antenna Radiation Pattern Presentation</em>' class.
@@ -200,15 +200,15 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation <em>Abstract Antenna Radiation Pattern Presentation</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation <em>Abstract Antenna Radiation Pattern Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Antenna Radiation Pattern Presentation</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation
 	 * @generated
 	 */
 	EClass getAbstractAntennaRadiationPatternPresentation();
@@ -220,7 +220,7 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsTelecomsUIFactory getSymphony__AddonsTelecomsUIFactory();
+	ApogyAddonsTelecomsUIFactory getApogyAddonsTelecomsUIFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,15 +237,15 @@ public interface Symphony__AddonsTelecomsUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl <em>Abstract Antenna Radiation Pattern Presentation</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl <em>Abstract Antenna Radiation Pattern Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl
-		 * @see org.eclipse.symphony.addons.telecoms.ui.impl.Symphony__AddonsTelecomsUIPackageImpl#getAbstractAntennaRadiationPatternPresentation()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.impl.AbstractAntennaRadiationPatternPresentationImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.ui.impl.ApogyAddonsTelecomsUIPackageImpl#getAbstractAntennaRadiationPatternPresentation()
 		 * @generated
 		 */
 		EClass ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION = eINSTANCE.getAbstractAntennaRadiationPatternPresentation();
 
 	}
 
-} //Symphony__AddonsTelecomsUIPackage
+} //ApogyAddonsTelecomsUIPackage

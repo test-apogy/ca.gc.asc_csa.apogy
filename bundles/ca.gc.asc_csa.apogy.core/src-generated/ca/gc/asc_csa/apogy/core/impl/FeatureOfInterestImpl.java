@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.FeatureOfInterestImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,7 +80,7 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.FEATURE_OF_INTEREST;
+		return ApogyCorePackage.Literals.FEATURE_OF_INTEREST;
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.FEATURE_OF_INTEREST__NAME, oldName, name));
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -133,9 +133,9 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__NAME:
 				return getName();
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -149,10 +149,10 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -167,10 +167,10 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -185,9 +185,9 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__NAME:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
+			case ApogyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -202,13 +202,13 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.FEATURE_OF_INTEREST__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
+				case ApogyCorePackage.FEATURE_OF_INTEREST__NAME: return ApogyCommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -224,13 +224,13 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.NAMED__NAME: return Symphony__CorePackage.FEATURE_OF_INTEREST__NAME;
+				case ApogyCommonEMFPackage.NAMED__NAME: return ApogyCorePackage.FEATURE_OF_INTEREST__NAME;
 				default: return -1;
 			}
 		}
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION;
 				default: return -1;
 			}
 		}

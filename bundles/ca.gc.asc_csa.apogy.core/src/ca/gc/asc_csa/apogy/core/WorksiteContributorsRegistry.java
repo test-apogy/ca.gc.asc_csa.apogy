@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 public class WorksiteContributorsRegistry 
 {
-	public static final String WORKSITE_CONTRIBUTORS_POINT_ID = "org.eclipse.symphony.core.worksiteProvider";
+	public static final String WORKSITE_CONTRIBUTORS_POINT_ID = "ca.gc.asc_csa.apogy.core.worksiteProvider";
 	public static final String WORKSITE_CONTRIBUTORS_NAME_ID = "Name";
 	public static final String WORKSITE_CONTRIBUTORS_DESCRIPTION_ID = "Description";
 	public static final String WORKSITE_CONTRIBUTORS_URI_ID = "URI";

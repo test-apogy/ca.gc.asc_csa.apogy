@@ -1,19 +1,19 @@
-@GenModel(prefix="Symphony__CommonGeometryData3DASC",
+@GenModel(prefix="ApogyCommonGeometryData3DASC",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CommonGeometryData3DASC",
+		  modelName="ApogyCommonGeometryData3DASC",
 		  complianceLevel="6.0",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d.asc/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated")
-@GenModel(testsDirectory="/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.asc/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.edit/src-generated")
+@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.asc.tests/src-generated")
 
-package org.eclipse.symphony.common.geometry.data3d.asc
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap
 
 type Exception wraps java.lang.Exception
 
@@ -128,7 +128,7 @@ class ASCHeaderData
 	
 	double yllCenter = "0.0"
 	
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	double cellSize = "0.0"
 	
 	double noDataValue = "-9999"
@@ -160,10 +160,10 @@ enum AltitudeMode
  */
 class Coordinates2D
 {
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	double x
 	
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	double y
 }
 

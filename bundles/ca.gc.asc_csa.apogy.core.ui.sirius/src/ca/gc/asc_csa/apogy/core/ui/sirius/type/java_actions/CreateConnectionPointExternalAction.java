@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius.type.java_actions;
+package ca.gc.asc_csa.apogy.core.ui.sirius.type.java_actions;
 
 import java.util.Collection;
 import java.util.Map;
@@ -7,16 +7,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.window.Window;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
-import org.eclipse.symphony.core.ui.sirius.util.ObjIdDescWizard;
-import org.eclipse.symphony.core.ui.sirius.util.WizardUtil;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.SymphonySystem;
+import ca.gc.asc_csa.apogy.core.ui.sirius.util.ObjIdDescWizard;
+import ca.gc.asc_csa.apogy.core.ui.sirius.util.WizardUtil;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
 
 public class CreateConnectionPointExternalAction implements IExternalJavaAction
 {
 	// Constants used to keep track of the expected parameter names
-	private static final String SYMPHONY_SYSTEM_PARAM_STR = "SymphonySystem";
+	private static final String APOGY_SYSTEM_PARAM_STR = "ApogySystem";
 	
 	// Constants used to define the default connection point information
 	private static final String DEF_CONNECT_POINT_NAME = "NEW_CONNECTION_POINT";
@@ -25,8 +25,8 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 	private static final String WIZARD_STR = "Name";
 	
 	// Get the EClass for ConnectionPoint
-	private static final String CONNECTION_POINT_CLASS_STR = "org.eclipse.symphony.core.ConnectionPoint";
-	private static final EClass CONNECTION_POINT_ECLASS = Symphony__CommonEMFFacade.INSTANCE.getEClass(CONNECTION_POINT_CLASS_STR);
+	private static final String CONNECTION_POINT_CLASS_STR = "ca.gc.asc_csa.apogy.core.ConnectionPoint";
+	private static final EClass CONNECTION_POINT_ECLASS = ApogyCommonEMFFacade.INSTANCE.getEClass(CONNECTION_POINT_CLASS_STR);
 	
 	// Actually execute the external action and create the connection point
 	@Override
@@ -34,20 +34,20 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 						Map<String, Object> parameters)
 	{
 		// If the required parameter is not present
-		if (parameters.containsKey(SYMPHONY_SYSTEM_PARAM_STR) == false)
+		if (parameters.containsKey(APOGY_SYSTEM_PARAM_STR) == false)
 		{
 			// Cannot proceed; just return
 			return;
 		}
 
 		// Extract the parameter from the map
-		Object symSys = parameters.get(SYMPHONY_SYSTEM_PARAM_STR);
+		Object symSys = parameters.get(APOGY_SYSTEM_PARAM_STR);
 		
 		// If the parameter has the correct type
-		if (symSys instanceof SymphonySystem)
+		if (symSys instanceof ApogySystem)
 		{
 			// Cast down
-			SymphonySystem symphonySystem = (SymphonySystem) symSys;
+			ApogySystem apogySystem = (ApogySystem) symSys;
 			
 			// Create a new wizard to select the type for the new node
 			ObjIdDescWizard wizard = new ObjIdDescWizard(WIZARD_STR);
@@ -81,8 +81,8 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 			connPoint.setName(pointName);
 			connPoint.setDescription(pointDesc);
 			
-			// Add it to the SymphonySystem
-			symphonySystem.getConnectionPointsList().getConnectionPoints().add(connPoint);
+			// Add it to the ApogySystem
+			apogySystem.getConnectionPointsList().getConnectionPoints().add(connPoint);
 		}
 	}
 

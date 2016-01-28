@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.ExceptionContainer#getException <em>Exception</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer#getException <em>Exception</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getExceptionContainer()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getExceptionContainer()
  * @model
  * @generated
  */
@@ -33,15 +33,15 @@ public interface ExceptionContainer extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exception</em>' attribute.
 	 * @see #setException(Throwable)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getExceptionContainer_Exception()
-	 * @model unique="false" dataType="org.eclipse.symphony.core.invocator.Throwable"
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getExceptionContainer_Exception()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.core.invocator.Throwable"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
 	 */
   Throwable getException();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.ExceptionContainer#getException <em>Exception</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer#getException <em>Exception</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exception</em>' attribute.

@@ -8,49 +8,49 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated symphony_tools_ui -->
+      <!-- @generated apogy_tools_ui -->
       <package
-            uri="org.eclipse.symphony.addons.ui"
-            class="org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage"
-            genModel="model/symphony_addons_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.ui"
+            class="ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage"
+            genModel="model/apogy_addons_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.addons.ui.adapters.Ruler3dToolNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.ui.adapters.Ruler3dToolNodePresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.addons.ui.adapters.SunVector3DToolNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.ui.adapters.SunVector3DToolNodePresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.addons.ui.commands.AbstractTwoPoints3DToolLockFromNodeCommand"
-            id="org.eclipse.symphony.addons.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.AbstractTwoPoints3DToolLockFromNodeCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
             name="Toggle Ruler3D From Node Lock">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.addons.ui.commands.AbstractTwoPoints3DToolLockToNodeCommand"
-            id="org.eclipse.symphony.addons.ui.commands.ToggleRuler3DToolLockToNodeCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.AbstractTwoPoints3DToolLockToNodeCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockToNodeCommand"
             name="Toggle Ruler3D To Node Lock">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleSimpleToolActiveCommand"
-            id="org.eclipse.symphony.addons.ui.commands.ToggleSimpleToolActiveCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimpleToolActiveCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimpleToolActiveCommand"
             name="Toggle Simple3DTool Active">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
-            id="org.eclipse.symphony.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
             name="Toggle Simple3DTool Visibility">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
-            id="org.eclipse.symphony.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
+            id="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
             name="Toggle Trajectory3DTool Pen">
       </command>
    </extension>
@@ -58,9 +58,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.addons.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
                label="Toggle From Node Lock"
                style="push">
             <visibleWhen
@@ -71,14 +71,14 @@
                       ifEmpty="false"
                       operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.addons.AbstractTwoPoints3DTool">
+                           value="ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool">
                        </instanceof>
                    </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.addons.ui.commands.ToggleRuler3DToolLockToNodeCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleRuler3DToolLockToNodeCommand"
                label="Toggle To Node Lock"
                style="push">
             <visibleWhen
@@ -89,14 +89,14 @@
                       ifEmpty="false"
                       operator="or">
                         <instanceof
-                           value="org.eclipse.symphony.addons.AbstractTwoPoints3DTool">
+                           value="ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool">
                         </instanceof>
                    </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.addons.ui.commands.ToggleSimpleToolActiveCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimpleToolActiveCommand"
                label="Toggle Simple3DTool Active"
                style="push">
             <visibleWhen
@@ -107,14 +107,14 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.addons.Simple3DTool">
+                           value="ca.gc.asc_csa.apogy.addons.Simple3DTool">
                        </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
                label="Toggle Simple3DTool Visibility"
                style="push">
             <visibleWhen
@@ -125,14 +125,14 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.addons.Simple3DTool">
+                           value="ca.gc.asc_csa.apogy.addons.Simple3DTool">
                        </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
+               commandId="ca.gc.asc_csa.apogy.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
                label="Toggle Trajectory3DTool Pen"
                style="push">
             <visibleWhen
@@ -143,7 +143,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.addons.Trajectory3DTool">
+                           value="ca.gc.asc_csa.apogy.addons.Trajectory3DTool">
                        </instanceof>
                   </iterate>
                </with>
@@ -154,23 +154,23 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesPage"
-            id="org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesPage"
-            name="Symphony Tools">
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesPage"
+            name="Apogy Tools">
       </page>
    </extension>
    <extension
          point="org.eclipse.ui.views">
       <category
-            id="org.eclipse.symphony.addons.ui.category"
-            name="Symphony Addons">
+            id="ca.gc.asc_csa.apogy.addons.ui.category"
+            name="Apogy Addons">
       </category>
    </extension>
 

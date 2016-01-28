@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 
 /**
@@ -13,7 +13,7 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getSelectionBasedTimeSource()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getSelectionBasedTimeSource()
  * @model
  * @generated
  */

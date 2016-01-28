@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.RecordingToolsContainer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -60,9 +60,9 @@ public class RecordingToolsContainerItemProvider extends AbstractToolsListContai
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__RECORDER);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__PLAYER);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__RECORDER);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__PLAYER);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS);
 		}
 		return childrenFeatures;
 	}
@@ -115,9 +115,9 @@ public class RecordingToolsContainerItemProvider extends AbstractToolsListContai
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RecordingToolsContainer.class)) {
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
-			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case ApogyCoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,8 +137,8 @@ public class RecordingToolsContainerItemProvider extends AbstractToolsListContai
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createChannelsList()));
+				(ApogyCoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createChannelsList()));
 	}
 
 }

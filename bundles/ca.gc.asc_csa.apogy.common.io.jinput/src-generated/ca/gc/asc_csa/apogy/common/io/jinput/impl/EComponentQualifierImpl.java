@@ -1,14 +1,14 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.impl;
+package ca.gc.asc_csa.apogy.common.io.jinput.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +18,8 @@ import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl#getEComponentName <em>EComponent Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl#getEControllerName <em>EController Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentQualifierImpl#getEComponentName <em>EComponent Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.io.jinput.impl.EComponentQualifierImpl#getEControllerName <em>EController Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER;
+		return ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 		String oldEComponentName = eComponentName;
 		eComponentName = newEComponentName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, oldEComponentName, eComponentName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, oldEComponentName, eComponentName));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 		String oldEControllerName = eControllerName;
 		eControllerName = newEControllerName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, oldEControllerName, eControllerName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, oldEControllerName, eControllerName));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				return getEComponentName();
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				return getEControllerName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				setEComponentName((String)newValue);
 				return;
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				setEControllerName((String)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				setEComponentName(ECOMPONENT_NAME_EDEFAULT);
 				return;
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				setEControllerName(ECONTROLLER_NAME_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				return ECOMPONENT_NAME_EDEFAULT == null ? eComponentName != null : !ECOMPONENT_NAME_EDEFAULT.equals(eComponentName);
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				return ECONTROLLER_NAME_EDEFAULT == null ? eControllerName != null : !ECONTROLLER_NAME_EDEFAULT.equals(eControllerName);
 		}
 		return super.eIsSet(featureID);

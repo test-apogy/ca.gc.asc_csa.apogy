@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,14 +19,14 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getMinimumThrust <em>Minimum Thrust</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getMaximumThrust <em>Maximum Thrust</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getCurrentThrust <em>Current Thrust</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getThrustLevel <em>Thrust Level</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getPlumeAngle <em>Plume Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getMinimumThrust <em>Minimum Thrust</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getMaximumThrust <em>Maximum Thrust</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getCurrentThrust <em>Current Thrust</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getThrustLevel <em>Thrust Level</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getPlumeAngle <em>Plume Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getThruster()
  * @model
  * @generated
  */
@@ -42,15 +42,15 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Thrust</em>' attribute.
 	 * @see #setMinimumThrust(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_MinimumThrust()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getThruster_MinimumThrust()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='N' propertyCategory='THRUST_INFO'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
 	 */
 	double getMinimumThrust();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Thruster#getMinimumThrust <em>Minimum Thrust</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getMinimumThrust <em>Minimum Thrust</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Minimum Thrust</em>' attribute.
@@ -69,15 +69,15 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Thrust</em>' attribute.
 	 * @see #setMaximumThrust(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_MaximumThrust()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getThruster_MaximumThrust()
 	 * @model default="100" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='N' propertyCategory='THRUST_INFO'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
 	 */
 	double getMaximumThrust();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Thruster#getMaximumThrust <em>Maximum Thrust</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getMaximumThrust <em>Maximum Thrust</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Maximum Thrust</em>' attribute.
@@ -95,15 +95,15 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Thrust</em>' attribute.
 	 * @see #setCurrentThrust(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_CurrentThrust()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getThruster_CurrentThrust()
 	 * @model unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='N' propertyCategory='THRUST_INFO'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
 	 */
 	double getCurrentThrust();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Thruster#getCurrentThrust <em>Current Thrust</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getCurrentThrust <em>Current Thrust</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Thrust</em>' attribute.
@@ -122,15 +122,15 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plume Angle</em>' attribute.
 	 * @see #setPlumeAngle(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_PlumeAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getThruster_PlumeAngle()
 	 * @model default="0.5" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getPlumeAngle();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Thruster#getPlumeAngle <em>Plume Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getPlumeAngle <em>Plume Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Plume Angle</em>' attribute.
@@ -149,7 +149,7 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Thrust Level</em>' attribute.
 	 * @see #setThrustLevel(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_ThrustLevel()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getThruster_ThrustLevel()
 	 * @model default="0.0" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='THRUST_INFO'"
 	 * @generated
@@ -157,7 +157,7 @@ public interface Thruster extends Node
   double getThrustLevel();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Thruster#getThrustLevel <em>Thrust Level</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster#getThrustLevel <em>Thrust Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Thrust Level</em>' attribute.

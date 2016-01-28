@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -21,14 +21,14 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSky#getMoon() <em>Moon</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSky#getMoonHorizontalCoordinates() <em>Moon Horizontal Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoon() <em>Moon</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonHorizontalCoordinates() <em>Moon Horizontal Coordinates</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.EarthSky#getMoonAngularDiameter() <em>Get Moon Angular Diameter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonAngularDiameter() <em>Get Moon Angular Diameter</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -73,7 +73,7 @@ public class EarthSkyTest extends SkyTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSky());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSky());
 	}
 
 	/**
@@ -88,19 +88,19 @@ public class EarthSkyTest extends SkyTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSky#getMoon() <em>Moon</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoon() <em>Moon</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSky#getMoon()
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoon()
 	 * @generated_NOT
 	 */
 	public void testGetMoon() 
 	{
-	  	EarthSurfaceWorksite earthSurfaceWorksite = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
+	  	EarthSurfaceWorksite earthSurfaceWorksite = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
 	  	earthSurfaceWorksite.setSky(getFixture());
 	  	
-	  	EarthSkyNode earthSkyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();
-	  	Symphony__CoreEnvironmentFacade.INSTANCE.initializeEarthSkyNode(getFixture(), earthSkyNode);		
+	  	EarthSkyNode earthSkyNode = ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();
+	  	ApogyCoreEnvironmentFacade.INSTANCE.initializeEarthSkyNode(getFixture(), earthSkyNode);		
 		
 		// Verifies that the Moon is not null.
 		Moon moon = getFixture().getMoon();
@@ -113,10 +113,10 @@ public class EarthSkyTest extends SkyTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSky#getMoonHorizontalCoordinates() <em>Moon Horizontal Coordinates</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonHorizontalCoordinates() <em>Moon Horizontal Coordinates</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSky#getMoonHorizontalCoordinates()
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonHorizontalCoordinates()
 	 * @generated_NOT
 	 */
 	public void testGetMoonHorizontalCoordinates() 
@@ -125,10 +125,10 @@ public class EarthSkyTest extends SkyTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSky#setMoonHorizontalCoordinates(org.eclipse.symphony.core.environment.HorizontalCoordinates) <em>Moon Horizontal Coordinates</em>}' feature setter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#setMoonHorizontalCoordinates(ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates) <em>Moon Horizontal Coordinates</em>}' feature setter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSky#setMoonHorizontalCoordinates(org.eclipse.symphony.core.environment.HorizontalCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSky#setMoonHorizontalCoordinates(ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates)
 	 * @generated_NOT
 	 */
 	public void testSetMoonHorizontalCoordinates() 
@@ -137,16 +137,16 @@ public class EarthSkyTest extends SkyTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.EarthSky#getMoonAngularDiameter() <em>Get Moon Angular Diameter</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonAngularDiameter() <em>Get Moon Angular Diameter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.EarthSky#getMoonAngularDiameter()
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSky#getMoonAngularDiameter()
 	 * @generated_NOT
 	 */
 	public void testGetMoonAngularDiameter() 
 	{
 		// Creates a fully initialise EarthSurfaceWorksite.		
-		EarthSurfaceWorksite earthSurfaceWorksite = Symphony__CoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();		
+		EarthSurfaceWorksite earthSurfaceWorksite = ApogyCoreEnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();		
 		setFixture(earthSurfaceWorksite.getEarthSky());
 		
 		double moonAngularSize = getFixture().getMoonAngularDiameter();

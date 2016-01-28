@@ -1,36 +1,36 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.util;
+package ca.gc.asc_csa.apogy.core.environment.orbit.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.AbstractOrbitModel;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.orbit.*;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCoreEnvironmentOrbitAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreEnvironmentOrbitPackage modelPackage;
+	protected static ApogyCoreEnvironmentOrbitPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -38,9 +38,9 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitAdapterFactory() {
+	public ApogyCoreEnvironmentOrbitAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentOrbitPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentOrbitPackage.eINSTANCE;
 		}
 	}
 
@@ -69,8 +69,8 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreEnvironmentOrbitSwitch<Adapter> modelSwitch =
-		new Symphony__CoreEnvironmentOrbitSwitch<Adapter>() {
+	protected ApogyCoreEnvironmentOrbitSwitch<Adapter> modelSwitch =
+		new ApogyCoreEnvironmentOrbitSwitch<Adapter>() {
 			@Override
 			public Adapter caseOrbitWorksite(OrbitWorksite object) {
 				return createOrbitWorksiteAdapter();
@@ -124,8 +124,8 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 				return createOrbitModelAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CoreEnvironmentOrbitFacade(Symphony__CoreEnvironmentOrbitFacade object) {
-				return createSymphony__CoreEnvironmentOrbitFacadeAdapter();
+			public Adapter caseApogyCoreEnvironmentOrbitFacade(ApogyCoreEnvironmentOrbitFacade object) {
+				return createApogyCoreEnvironmentOrbitFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNamed(Named object) {
@@ -172,13 +172,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.OrbitWorksite <em>Orbit Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite <em>Orbit Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.OrbitWorksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite
 	 * @generated
 	 */
 	public Adapter createOrbitWorksiteAdapter() {
@@ -186,13 +186,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.AbstractFrame <em>Abstract Frame</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame <em>Abstract Frame</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.AbstractFrame
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame
 	 * @generated
 	 */
 	public Adapter createAbstractFrameAdapter() {
@@ -200,13 +200,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.PVACoordinates <em>PVA Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.PVACoordinates <em>PVA Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.PVACoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.PVACoordinates
 	 * @generated
 	 */
 	public Adapter createPVACoordinatesAdapter() {
@@ -214,13 +214,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates <em>Timed Stamped PVA Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates <em>Timed Stamped PVA Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates
 	 * @generated
 	 */
 	public Adapter createTimedStampedPVACoordinatesAdapter() {
@@ -228,13 +228,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.PVCoordinatesProviderProvider <em>PV Coordinates Provider Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.PVCoordinatesProviderProvider <em>PV Coordinates Provider Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.PVCoordinatesProviderProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.PVCoordinatesProviderProvider
 	 * @generated
 	 */
 	public Adapter createPVCoordinatesProviderProviderAdapter() {
@@ -242,13 +242,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates <em>Angular Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates <em>Angular Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.AngularCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates
 	 * @generated
 	 */
 	public Adapter createAngularCoordinatesAdapter() {
@@ -256,13 +256,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates <em>Timed Stamped Angular Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates <em>Timed Stamped Angular Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates
 	 * @generated
 	 */
 	public Adapter createTimedStampedAngularCoordinatesAdapter() {
@@ -270,13 +270,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude <em>Spacecraft Attitude</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude <em>Spacecraft Attitude</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude
 	 * @generated
 	 */
 	public Adapter createSpacecraftAttitudeAdapter() {
@@ -284,13 +284,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.AttitudeProvider <em>Attitude Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider <em>Attitude Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.AttitudeProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider
 	 * @generated
 	 */
 	public Adapter createAttitudeProviderAdapter() {
@@ -298,13 +298,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState <em>Spacecraft State</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState <em>Spacecraft State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.SpacecraftState
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState
 	 * @generated
 	 */
 	public Adapter createSpacecraftStateAdapter() {
@@ -312,13 +312,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.Orbit <em>Orbit</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.Orbit <em>Orbit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.Orbit
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.Orbit
 	 * @generated
 	 */
 	public Adapter createOrbitAdapter() {
@@ -326,13 +326,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator <em>Abstract Orbit Propagator</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator <em>Abstract Orbit Propagator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitPropagator
 	 * @generated
 	 */
 	public Adapter createAbstractOrbitPropagatorAdapter() {
@@ -340,13 +340,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.OrbitModel <em>Orbit Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel <em>Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.OrbitModel
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
 	 * @generated
 	 */
 	public Adapter createOrbitModelAdapter() {
@@ -354,27 +354,27 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreEnvironmentOrbitFacadeAdapter() {
+	public Adapter createApogyCoreEnvironmentOrbitFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite <em>Abstract Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.AbstractWorksite
+	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite
 	 * @generated
 	 */
 	public Adapter createAbstractWorksiteAdapter() {
@@ -382,13 +382,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Worksite <em>Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Worksite <em>Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Worksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.Worksite
 	 * @generated
 	 */
 	public Adapter createWorksiteAdapter() {
@@ -396,13 +396,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.AbstractOrbitModel
+	 * @see ca.gc.asc_csa.apogy.core.AbstractOrbitModel
 	 * @generated
 	 */
 	public Adapter createAbstractOrbitModelAdapter() {
@@ -410,13 +410,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {
@@ -424,13 +424,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
@@ -438,13 +438,13 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Timed
+	 * @see ca.gc.asc_csa.apogy.common.emf.Timed
 	 * @generated
 	 */
 	public Adapter createTimedAdapter() {
@@ -463,4 +463,4 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentOrbitAdapterFactory
+} //ApogyCoreEnvironmentOrbitAdapterFactory

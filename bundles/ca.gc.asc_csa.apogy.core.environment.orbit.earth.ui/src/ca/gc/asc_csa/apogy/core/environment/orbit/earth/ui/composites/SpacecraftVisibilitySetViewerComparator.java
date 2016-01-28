@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites;
 
 import java.util.Date;
 

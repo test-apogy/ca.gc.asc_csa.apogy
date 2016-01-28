@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,12 +9,12 @@ import java.util.Date;
 
 import javax.vecmath.Point3d;
 
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -26,31 +26,31 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunEquatorialPosition(double) <em>Get Sun Equatorial Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getHorizontalSunPosition(java.util.Date, double, double) <em>Get Horizontal Sun Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getMoonEquatorialPosition(double) <em>Get Moon Equatorial Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getMoonTopocentricEquatorialPosition(java.util.Date, double, double) <em>Get Moon Topocentric Equatorial Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getHorizontalMoonPosition(java.util.Date, double, double) <em>Get Horizontal Moon Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getTimeSinceJ2000(double) <em>Get Time Since J2000</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getLocalSideralTime(java.util.Date, double) <em>Get Local Sideral Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getUTCDecimalHours(java.util.Date) <em>Get UTC Decimal Hours</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToHorizontalCoordinates(org.eclipse.symphony.core.environment.EquatorialCoordinates, double, double, java.util.Date) <em>Convert To Horizontal Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertTimeToAngle(int, int, int) <em>Convert Time To Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#clampAngleToZero2PI(double) <em>Clamp Angle To Zero2 PI</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToEquatorialCoordinates(org.eclipse.symphony.core.environment.EclipticCoordinates) <em>Convert To Equatorial Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToEclipticCoordinates(org.eclipse.symphony.core.environment.EquatorialCoordinates) <em>Convert To Ecliptic Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEclipticRectangular(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Ecliptic Rectangular</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEclipticRectangularToEquatorialRectangular(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Equatorial Rectangular</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEclipticRectangularToEclipticCoordinates(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Ecliptic Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEquatorialCoordinates(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Equatorial Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromHorizontalCoordinatesToHorizontalRectangular(org.eclipse.symphony.core.environment.HorizontalCoordinates) <em>Convert From Horizontal Coordinates To Horizontal Rectangular</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialCoordinatesToEquatorialRectangular(org.eclipse.symphony.core.environment.EquatorialCoordinates) <em>Convert From Equatorial Coordinates To Equatorial Rectangular</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertAUtoMeters(double) <em>Convert AUto Meters</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getMaximumSunAltitude(double) <em>Get Maximum Sun Altitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToHHmmssString(double) <em>Convert To HHmmss String</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunRiseTime(java.util.Date, double, double) <em>Get Sun Rise Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunSetTime(java.util.Date, double, double) <em>Get Sun Set Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunHighestElevationTime(java.util.Date, double, double) <em>Get Sun Highest Elevation Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunEquatorialPosition(double) <em>Get Sun Equatorial Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getHorizontalSunPosition(java.util.Date, double, double) <em>Get Horizontal Sun Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMoonEquatorialPosition(double) <em>Get Moon Equatorial Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMoonTopocentricEquatorialPosition(java.util.Date, double, double) <em>Get Moon Topocentric Equatorial Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getHorizontalMoonPosition(java.util.Date, double, double) <em>Get Horizontal Moon Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getTimeSinceJ2000(double) <em>Get Time Since J2000</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getLocalSideralTime(java.util.Date, double) <em>Get Local Sideral Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getUTCDecimalHours(java.util.Date) <em>Get UTC Decimal Hours</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToHorizontalCoordinates(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates, double, double, java.util.Date) <em>Convert To Horizontal Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertTimeToAngle(int, int, int) <em>Convert Time To Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#clampAngleToZero2PI(double) <em>Clamp Angle To Zero2 PI</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToEquatorialCoordinates(ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates) <em>Convert To Equatorial Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToEclipticCoordinates(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates) <em>Convert To Ecliptic Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEclipticRectangular(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Ecliptic Rectangular</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEclipticRectangularToEquatorialRectangular(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Equatorial Rectangular</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEclipticRectangularToEclipticCoordinates(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Ecliptic Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEquatorialCoordinates(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Equatorial Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromHorizontalCoordinatesToHorizontalRectangular(ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates) <em>Convert From Horizontal Coordinates To Horizontal Rectangular</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialCoordinatesToEquatorialRectangular(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates) <em>Convert From Equatorial Coordinates To Equatorial Rectangular</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertAUtoMeters(double) <em>Convert AUto Meters</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMaximumSunAltitude(double) <em>Get Maximum Sun Altitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToHHmmssString(double) <em>Convert To HHmmss String</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunRiseTime(java.util.Date, double, double) <em>Get Sun Rise Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunSetTime(java.util.Date, double, double) <em>Get Sun Set Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunHighestElevationTime(java.util.Date, double, double) <em>Get Sun Highest Elevation Time</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -112,7 +112,7 @@ public class AstronomyUtilsTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createAstronomyUtils());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createAstronomyUtils());
 	}
 
 	/**
@@ -127,10 +127,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunEquatorialPosition(double) <em>Get Sun Equatorial Position</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunEquatorialPosition(double) <em>Get Sun Equatorial Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getSunEquatorialPosition(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunEquatorialPosition(double)
 	 * @generated_NOT
 	 */
 	public void testGetSunEquatorialPosition__double() 
@@ -177,10 +177,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getHorizontalSunPosition(java.util.Date, double, double) <em>Get Horizontal Sun Position</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getHorizontalSunPosition(java.util.Date, double, double) <em>Get Horizontal Sun Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getHorizontalSunPosition(java.util.Date, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getHorizontalSunPosition(java.util.Date, double, double)
 	 * @generated_NOT
 	 */
 	public void testGetHorizontalSunPosition__Date_double_double() 
@@ -234,10 +234,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getMoonEquatorialPosition(double) <em>Get Moon Equatorial Position</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMoonEquatorialPosition(double) <em>Get Moon Equatorial Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getMoonEquatorialPosition(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMoonEquatorialPosition(double)
 	 * @generated_NOT
 	 */
 	public void testGetMoonEquatorialPosition__double() 
@@ -284,10 +284,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getMoonTopocentricEquatorialPosition(java.util.Date, double, double) <em>Get Moon Topocentric Equatorial Position</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMoonTopocentricEquatorialPosition(java.util.Date, double, double) <em>Get Moon Topocentric Equatorial Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getMoonTopocentricEquatorialPosition(java.util.Date, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMoonTopocentricEquatorialPosition(java.util.Date, double, double)
 	 * @generated_NOT
 	 */
 	public void testGetMoonTopocentricEquatorialPosition__Date_double_double() 
@@ -314,10 +314,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getHorizontalMoonPosition(java.util.Date, double, double) <em>Get Horizontal Moon Position</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getHorizontalMoonPosition(java.util.Date, double, double) <em>Get Horizontal Moon Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getHorizontalMoonPosition(java.util.Date, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getHorizontalMoonPosition(java.util.Date, double, double)
 	 * @generated_NOT
 	 */
 	public void testGetHorizontalMoonPosition__Date_double_double() 
@@ -371,10 +371,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getTimeSinceJ2000(double) <em>Get Time Since J2000</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getTimeSinceJ2000(double) <em>Get Time Since J2000</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getTimeSinceJ2000(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getTimeSinceJ2000(double)
 	 * @generated_NOT
 	 */
 	public void testGetTimeSinceJ2000__double() 
@@ -394,10 +394,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getLocalSideralTime(java.util.Date, double) <em>Get Local Sideral Time</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getLocalSideralTime(java.util.Date, double) <em>Get Local Sideral Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getLocalSideralTime(java.util.Date, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getLocalSideralTime(java.util.Date, double)
 	 * @generated_NOT
 	 */
 	public void testGetLocalSideralTime__Date_double() 
@@ -440,10 +440,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getUTCDecimalHours(java.util.Date) <em>Get UTC Decimal Hours</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getUTCDecimalHours(java.util.Date) <em>Get UTC Decimal Hours</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getUTCDecimalHours(java.util.Date)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getUTCDecimalHours(java.util.Date)
 	 * @generated_NOT
 	 */
 	public void testGetUTCDecimalHours__Date() 
@@ -466,10 +466,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToHorizontalCoordinates(org.eclipse.symphony.core.environment.EquatorialCoordinates, double, double, java.util.Date) <em>Convert To Horizontal Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToHorizontalCoordinates(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates, double, double, java.util.Date) <em>Convert To Horizontal Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertToHorizontalCoordinates(org.eclipse.symphony.core.environment.EquatorialCoordinates, double, double, java.util.Date)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToHorizontalCoordinates(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates, double, double, java.util.Date)
 	 * @generated_NOT
 	 */
 	public void testConvertToHorizontalCoordinates__EquatorialCoordinates_double_double_Date() 
@@ -484,7 +484,7 @@ public class AstronomyUtilsTest extends TestCase {
 		double observerLongitude = Math.toRadians(10);
 		double observerLatitude = Math.toRadians(50);
 		
-		EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates equatorialCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 		equatorialCoordinates.setRightAscension(Math.toRadians(55.8));
 		equatorialCoordinates.setDeclination(Math.toRadians(19.7));
 		
@@ -512,10 +512,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertTimeToAngle(int, int, int) <em>Convert Time To Angle</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertTimeToAngle(int, int, int) <em>Convert Time To Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertTimeToAngle(int, int, int)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertTimeToAngle(int, int, int)
 	 * @generated_NOT
 	 */
 	public void testConvertTimeToAngle__int_int_int() 
@@ -531,10 +531,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#clampAngleToZero2PI(double) <em>Clamp Angle To Zero2 PI</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#clampAngleToZero2PI(double) <em>Clamp Angle To Zero2 PI</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#clampAngleToZero2PI(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#clampAngleToZero2PI(double)
 	 * @generated_NOT
 	 */
 	public void testClampAngleToZero2PI__double() 
@@ -547,10 +547,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToEquatorialCoordinates(org.eclipse.symphony.core.environment.EclipticCoordinates) <em>Convert To Equatorial Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToEquatorialCoordinates(ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates) <em>Convert To Equatorial Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertToEquatorialCoordinates(org.eclipse.symphony.core.environment.EclipticCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToEquatorialCoordinates(ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates)
 	 * @generated_NOT
 	 */
 	public void testConvertToEquatorialCoordinates__EclipticCoordinates() 
@@ -559,7 +559,7 @@ public class AstronomyUtilsTest extends TestCase {
 		// converts to :
 		//  Right Acension = 309.5011 deg and Declination = -19.1032 deg
 		
-		EclipticCoordinates eclipticCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEclipticCoordinates();
+		EclipticCoordinates eclipticCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEclipticCoordinates();
 		eclipticCoordinates.setLatitude(Math.toRadians(-0.55));
 		eclipticCoordinates.setLongitude(Math.toRadians(306.94));
 		eclipticCoordinates.setRadius(60.793);
@@ -571,10 +571,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToEclipticCoordinates(org.eclipse.symphony.core.environment.EquatorialCoordinates) <em>Convert To Ecliptic Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToEclipticCoordinates(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates) <em>Convert To Ecliptic Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertToEclipticCoordinates(org.eclipse.symphony.core.environment.EquatorialCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToEclipticCoordinates(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates)
 	 * @generated_NOT
 	 */
 	public void testConvertToEclipticCoordinates__EquatorialCoordinates() 
@@ -583,7 +583,7 @@ public class AstronomyUtilsTest extends TestCase {
 		// converts to
 		// longitude 306.94 deg,  latitude -0.55 deg,  distance 60.793 Earth radii		
 		
-		EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();		
+		EquatorialCoordinates equatorialCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();		
 		equatorialCoordinates.setRightAscension(Math.toRadians(309.5011));
 		equatorialCoordinates.setDeclination(Math.toRadians(-19.1032));
 		
@@ -594,10 +594,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEclipticRectangular(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Ecliptic Rectangular</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEclipticRectangular(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Ecliptic Rectangular</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEclipticRectangular(javax.vecmath.Point3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEclipticRectangular(javax.vecmath.Point3d)
 	 * @generated_NOT
 	 */
 	public void testConvertFromEquatorialRectangularToEclipticRectangular__Point3d() 
@@ -619,10 +619,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEclipticRectangularToEquatorialRectangular(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Equatorial Rectangular</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEclipticRectangularToEquatorialRectangular(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Equatorial Rectangular</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEclipticRectangularToEquatorialRectangular(javax.vecmath.Point3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEclipticRectangularToEquatorialRectangular(javax.vecmath.Point3d)
 	 * @generated_NOT
 	 */
 	public void testConvertFromEclipticRectangularToEquatorialRectangular__Point3d() 
@@ -643,10 +643,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEclipticRectangularToEclipticCoordinates(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Ecliptic Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEclipticRectangularToEclipticCoordinates(javax.vecmath.Point3d) <em>Convert From Ecliptic Rectangular To Ecliptic Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEclipticRectangularToEclipticCoordinates(javax.vecmath.Point3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEclipticRectangularToEclipticCoordinates(javax.vecmath.Point3d)
 	 * @generated_NOT
 	 */
 	public void testConvertFromEclipticRectangularToEclipticCoordinates__Point3d() 
@@ -670,10 +670,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEquatorialCoordinates(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Equatorial Coordinates</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEquatorialCoordinates(javax.vecmath.Point3d) <em>Convert From Equatorial Rectangular To Equatorial Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEquatorialCoordinates(javax.vecmath.Point3d)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialRectangularToEquatorialCoordinates(javax.vecmath.Point3d)
 	 * @generated_NOT
 	 */
 	public void testConvertFromEquatorialRectangularToEquatorialCoordinates__Point3d() 
@@ -697,10 +697,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromHorizontalCoordinatesToHorizontalRectangular(org.eclipse.symphony.core.environment.HorizontalCoordinates) <em>Convert From Horizontal Coordinates To Horizontal Rectangular</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromHorizontalCoordinatesToHorizontalRectangular(ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates) <em>Convert From Horizontal Coordinates To Horizontal Rectangular</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertFromHorizontalCoordinatesToHorizontalRectangular(org.eclipse.symphony.core.environment.HorizontalCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromHorizontalCoordinatesToHorizontalRectangular(ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates)
 	 * @generated_NOT
 	 */
 	public void testConvertFromHorizontalCoordinatesToHorizontalRectangular__HorizontalCoordinates() 
@@ -714,7 +714,7 @@ public class AstronomyUtilsTest extends TestCase {
 											   {45.0, 45.0, 1.0,  0.5, -0.5, 0.707106781},};
 
 		
-		HorizontalCoordinates horizontalCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
+		HorizontalCoordinates horizontalCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
 		Point3d expected = new Point3d();
 		Point3d actual = new Point3d();
 		
@@ -737,15 +737,15 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialCoordinatesToEquatorialRectangular(org.eclipse.symphony.core.environment.EquatorialCoordinates) <em>Convert From Equatorial Coordinates To Equatorial Rectangular</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialCoordinatesToEquatorialRectangular(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates) <em>Convert From Equatorial Coordinates To Equatorial Rectangular</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertFromEquatorialCoordinatesToEquatorialRectangular(org.eclipse.symphony.core.environment.EquatorialCoordinates)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertFromEquatorialCoordinatesToEquatorialRectangular(ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates)
 	 * @generated_NOT
 	 */
 	public void testConvertFromEquatorialCoordinatesToEquatorialRectangular__EquatorialCoordinates() 
 	{
-		EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates equatorialCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 		equatorialCoordinates.setRightAscension(0.0);
 		equatorialCoordinates.setDeclination(0.0);
 		equatorialCoordinates.setRadius(1.0);
@@ -794,10 +794,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertAUtoMeters(double) <em>Convert AUto Meters</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertAUtoMeters(double) <em>Convert AUto Meters</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertAUtoMeters(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertAUtoMeters(double)
 	 * @generated_NOT
 	 */
 	public void testConvertAUtoMeters__double() 
@@ -807,10 +807,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getMaximumSunAltitude(double) <em>Get Maximum Sun Altitude</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMaximumSunAltitude(double) <em>Get Maximum Sun Altitude</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getMaximumSunAltitude(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getMaximumSunAltitude(double)
 	 * @generated_NOT
 	 */
 	public void testGetMaximumSunAltitude__double() 
@@ -839,10 +839,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#convertToHHmmssString(double) <em>Convert To HHmmss String</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToHHmmssString(double) <em>Convert To HHmmss String</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#convertToHHmmssString(double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#convertToHHmmssString(double)
 	 * @generated_NOT
 	 */
 	public void testConvertToHHmmssString__double() 
@@ -869,10 +869,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunRiseTime(java.util.Date, double, double) <em>Get Sun Rise Time</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunRiseTime(java.util.Date, double, double) <em>Get Sun Rise Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getSunRiseTime(java.util.Date, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunRiseTime(java.util.Date, double, double)
 	 * @generated_NOT
 	 */
 	public void testGetSunRiseTime__Date_double_double() 
@@ -896,10 +896,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunSetTime(java.util.Date, double, double) <em>Get Sun Set Time</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunSetTime(java.util.Date, double, double) <em>Get Sun Set Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getSunSetTime(java.util.Date, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunSetTime(java.util.Date, double, double)
 	 * @generated_NOT
 	 */
 	public void testGetSunSetTime__Date_double_double() 
@@ -926,10 +926,10 @@ public class AstronomyUtilsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AstronomyUtils#getSunHighestElevationTime(java.util.Date, double, double) <em>Get Sun Highest Elevation Time</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunHighestElevationTime(java.util.Date, double, double) <em>Get Sun Highest Elevation Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils#getSunHighestElevationTime(java.util.Date, double, double)
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils#getSunHighestElevationTime(java.util.Date, double, double)
 	 * @generated_NOT
 	 */
 	public void testGetSunHighestElevationTime__Date_double_double() 

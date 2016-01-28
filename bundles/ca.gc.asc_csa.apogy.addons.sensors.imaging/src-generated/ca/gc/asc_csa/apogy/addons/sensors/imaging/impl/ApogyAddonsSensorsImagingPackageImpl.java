@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.impl;
 
 import java.awt.Color;
 
@@ -14,20 +14,20 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection;
-import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AzimuthDirection;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ElevationDirection;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImagingUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsImagingPackage
+public class ApogyAddonsSensorsImagingPackageImpl extends EPackageImpl implements ApogyAddonsSensorsImagingPackage
 {
   /**
 	 * <!-- begin-user-doc -->
@@ -104,13 +104,13 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__AddonsSensorsImagingPackageImpl()
+  private ApogyAddonsSensorsImagingPackageImpl()
   {
-		super(eNS_URI, Symphony__AddonsSensorsImagingFactory.eINSTANCE);
+		super(eNS_URI, ApogyAddonsSensorsImagingFactory.eINSTANCE);
 	}
 
   /**
@@ -123,7 +123,7 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsImagingPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsImagingPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -132,34 +132,34 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__AddonsSensorsImagingPackage init()
+  public static ApogyAddonsSensorsImagingPackage init()
   {
-		if (isInited) return (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
+		if (isInited) return (ApogyAddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsImagingPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsImagingPackageImpl theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsImagingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsImagingPackageImpl());
+		ApogyAddonsSensorsImagingPackageImpl theApogyAddonsSensorsImagingPackage = (ApogyAddonsSensorsImagingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsImagingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsImagingPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsSensorsPackage.eINSTANCE.eClass();
-		Symphony__CommonEMFPackage.eINSTANCE.eClass();
-		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
-		Symphony__CommonImagesPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsPackage.eINSTANCE.eClass();
+		ApogyCommonEMFPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsFOVPackage.eINSTANCE.eClass();
+		ApogyCommonImagesPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsImagingPackage.createPackageContents();
+		theApogyAddonsSensorsImagingPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsImagingPackage.initializePackageContents();
+		theApogyAddonsSensorsImagingPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsImagingPackage.freeze();
+		theApogyAddonsSensorsImagingPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsImagingPackage.eNS_URI, theSymphony__AddonsSensorsImagingPackage);
-		return theSymphony__AddonsSensorsImagingPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsImagingPackage.eNS_URI, theApogyAddonsSensorsImagingPackage);
+		return theApogyAddonsSensorsImagingPackage;
 	}
 
   /**
@@ -398,8 +398,8 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsImagingFactory getSymphony__AddonsSensorsImagingFactory() {
-		return (Symphony__AddonsSensorsImagingFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsImagingFactory getApogyAddonsSensorsImagingFactory() {
+		return (ApogyAddonsSensorsImagingFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -481,11 +481,11 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__AddonsSensorsPackage theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
-		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
+		ApogyAddonsSensorsPackage theApogyAddonsSensorsPackage = (ApogyAddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyAddonsSensorsFOVPackage theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -493,10 +493,10 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		abstractCameraEClass.getESuperTypes().add(theSymphony__AddonsSensorsPackage.getSensor());
-		abstractCameraEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		imageSnapshotEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
-		imageSnapshotEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		abstractCameraEClass.getESuperTypes().add(theApogyAddonsSensorsPackage.getSensor());
+		abstractCameraEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		imageSnapshotEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		imageSnapshotEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		rectifiedImageSnapshotEClass.getESuperTypes().add(this.getImageSnapshot());
 
 		// Initialize classes, features, and operations; add parameters
@@ -505,11 +505,11 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 
 		initEOperation(getAbstractCamera__TakeSnapshot(), this.getImageSnapshot(), "takeSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getAbstractCamera__GetFieldOfView(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), "getFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getAbstractCamera__GetFieldOfView(), theApogyAddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), "getFieldOfView", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(imageSnapshotEClass, ImageSnapshot.class, "ImageSnapshot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getImageSnapshot_FieldOfView(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fieldOfView", null, 0, 1, ImageSnapshot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageSnapshot_Image(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "image", null, 0, 1, ImageSnapshot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageSnapshot_FieldOfView(), theApogyAddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fieldOfView", null, 0, 1, ImageSnapshot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageSnapshot_Image(), theApogyCommonImagesPackage.getAbstractEImage(), null, "image", null, 0, 1, ImageSnapshot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getImageSnapshot__ConvertToHorizontalAngle__int(), theEcorePackage.getEDouble(), "convertToHorizontalAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "horizontalPixelPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -519,7 +519,7 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 
 		initEClass(rectifiedImageSnapshotEClass, RectifiedImageSnapshot.class, "RectifiedImageSnapshot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getRectifiedImageSnapshot__GetRectifiedImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getRectifiedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getRectifiedImageSnapshot__GetRectifiedImage(), theApogyCommonImagesPackage.getAbstractEImage(), "getRectifiedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(zoomableEClass, Zoomable.class, "Zoomable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getZoomable_CurrentZoom(), theEcorePackage.getEDouble(), "currentZoom", "1.0", 0, 1, Zoomable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -542,7 +542,7 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getImageSnapshot(), "imageSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "verticalPixelPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getImagingUtilities__GetAzimuthElevationOverlay__int_int_double_double_double_double_AzimuthDirection_ElevationDirection_int_String_int_Color_Color_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getAzimuthElevationOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getImagingUtilities__GetAzimuthElevationOverlay__int_int_double_double_double_double_AzimuthDirection_ElevationDirection_int_String_int_Color_Color_int(), theApogyCommonImagesPackage.getAbstractEImage(), "getAzimuthElevationOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "imageWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "imageHeight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "panAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -574,4 +574,4 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsSensorsImagingPackageImpl
+} //ApogyAddonsSensorsImagingPackageImpl

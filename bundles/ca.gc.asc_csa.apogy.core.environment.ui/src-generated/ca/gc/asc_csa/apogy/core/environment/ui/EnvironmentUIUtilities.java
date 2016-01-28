@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import javax.vecmath.Color3f;
 import javax.vecmath.Point3f;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.ui.impl.EnvironmentUIUtilitiesImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEnvironmentUIUtilities()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getEnvironmentUIUtilities()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface EnvironmentUIUtilities extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.ui.Point3f" unique="false" starUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.ui.Point3f" unique="false" starUnique="false"
 	 * @generated
 	 */
   Point3f toPoint3f(Star star);
@@ -55,8 +55,8 @@ public interface EnvironmentUIUtilities extends EObject
 	 * Return the sun color for a given altitude above the horizon.
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
-	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   Color3f getSunLightColor(double sunAltitude);
@@ -70,7 +70,7 @@ public interface EnvironmentUIUtilities extends EObject
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeUnique="false"
-	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getSkyTransparency(double sunAltitude);
@@ -82,8 +82,8 @@ public interface EnvironmentUIUtilities extends EObject
 	 * Return the sky color for a given altitude above the horizon.
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
-	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   Color3f getSkyColor(double sunAltitude);

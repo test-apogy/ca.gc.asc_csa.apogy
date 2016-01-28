@@ -1,7 +1,7 @@
-package org.eclipse.symphony.common.topology.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects;
 
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 
 public class PositionNodeJME3SceneObject extends AbstractTransformationJME3SceneObject<PositionNode> {
 	

@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,17 +16,17 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#getCameraToolList <em>Camera Tool List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#getCameraToolList <em>Camera Tool List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraTool()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraTool()
  * @model abstract="true"
  * @generated
  */
 public interface CameraTool extends CameraImageAnnotation {
 	/**
 	 * Returns the value of the '<em><b>Camera Tool List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getTools <em>Tools</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getTools <em>Tools</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Camera Tool List</em>' container reference isn't clear,
@@ -35,8 +35,8 @@ public interface CameraTool extends CameraImageAnnotation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Camera Tool List</em>' container reference.
 	 * @see #setCameraToolList(CameraToolList)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraTool_CameraToolList()
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getTools
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getCameraTool_CameraToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList#getTools
 	 * @model opposite="tools" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -44,7 +44,7 @@ public interface CameraTool extends CameraImageAnnotation {
 	CameraToolList getCameraToolList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#getCameraToolList <em>Camera Tool List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraTool#getCameraToolList <em>Camera Tool List</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Camera Tool List</em>' container reference.

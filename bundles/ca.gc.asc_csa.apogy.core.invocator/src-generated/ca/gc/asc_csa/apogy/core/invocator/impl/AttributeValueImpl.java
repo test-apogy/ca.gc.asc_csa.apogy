@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.AttributeValueImpl#getObject <em>Object</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.AttributeValueImpl#getObject <em>Object</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,7 +63,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_VALUE;
+		return ApogyCoreInvocatorPackage.Literals.ATTRIBUTE_VALUE;
 	}
 
   /**
@@ -86,7 +86,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
 		Object oldObject = object;
 		object = newObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT, oldObject, object));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT, oldObject, object));
 	}
 
   /**
@@ -98,7 +98,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				return getObject();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				setObject(newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				setObject(OBJECT_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				return OBJECT_EDEFAULT == null ? object != null : !OBJECT_EDEFAULT.equals(object);
 		}
 		return super.eIsSet(featureID);

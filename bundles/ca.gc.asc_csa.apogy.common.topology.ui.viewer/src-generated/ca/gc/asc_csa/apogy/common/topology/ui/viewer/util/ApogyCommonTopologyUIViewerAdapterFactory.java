@@ -1,31 +1,31 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.viewer.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage
  * @generated
  */
-public class Symphony__CommonTopologyUIViewerAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonTopologyUIViewerAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyUIViewerPackage modelPackage;
+	protected static ApogyCommonTopologyUIViewerPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -33,9 +33,9 @@ public class Symphony__CommonTopologyUIViewerAdapterFactory extends AdapterFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIViewerAdapterFactory() {
+	public ApogyCommonTopologyUIViewerAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyUIViewerPackage.eINSTANCE;
+			modelPackage = ApogyCommonTopologyUIViewerPackage.eINSTANCE;
 		}
 	}
 
@@ -64,8 +64,8 @@ public class Symphony__CommonTopologyUIViewerAdapterFactory extends AdapterFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonTopologyUIViewerSwitch<Adapter> modelSwitch =
-		new Symphony__CommonTopologyUIViewerSwitch<Adapter>() {
+	protected ApogyCommonTopologyUIViewerSwitch<Adapter> modelSwitch =
+		new ApogyCommonTopologyUIViewerSwitch<Adapter>() {
 			@Override
 			public Adapter caseTopologyViewerRegistry(TopologyViewerRegistry object) {
 				return createTopologyViewerRegistryAdapter();
@@ -91,13 +91,13 @@ public class Symphony__CommonTopologyUIViewerAdapterFactory extends AdapterFacto
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry <em>Topology Viewer Registry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry <em>Topology Viewer Registry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry
 	 * @generated
 	 */
 	public Adapter createTopologyViewerRegistryAdapter() {
@@ -116,4 +116,4 @@ public class Symphony__CommonTopologyUIViewerAdapterFactory extends AdapterFacto
 		return null;
 	}
 
-} //Symphony__CommonTopologyUIViewerAdapterFactory
+} //ApogyCommonTopologyUIViewerAdapterFactory

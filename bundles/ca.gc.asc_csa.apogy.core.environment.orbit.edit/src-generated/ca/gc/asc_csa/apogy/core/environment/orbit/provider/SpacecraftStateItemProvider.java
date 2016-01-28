@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -23,13 +23,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.SpacecraftState} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class SpacecraftStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class SpacecraftStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftState_coordinates_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftState_coordinates_feature", "_UI_SpacecraftState_type"),
-				 Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES,
+				 ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES,
 				 false,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class SpacecraftStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftState_attitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftState_attitude_feature", "_UI_SpacecraftState_type"),
-				 Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
+				 ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
 				 false,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class SpacecraftStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftState_orbit_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftState_orbit_feature", "_UI_SpacecraftState_type"),
-				 Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
+				 ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
 				 false,
 				 false,
 				 false,
@@ -171,9 +171,9 @@ public class SpacecraftStateItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT);
 		}
 		return childrenFeatures;
 	}
@@ -230,12 +230,12 @@ public class SpacecraftStateItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftState.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__TIME:
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__COORDINATES:
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
-			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__COORDINATES:
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
+			case ApogyCoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -255,13 +255,13 @@ public class SpacecraftStateItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES,
-				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES,
+				 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
-				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
+				 ApogyCoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
 	}
 
 	/**

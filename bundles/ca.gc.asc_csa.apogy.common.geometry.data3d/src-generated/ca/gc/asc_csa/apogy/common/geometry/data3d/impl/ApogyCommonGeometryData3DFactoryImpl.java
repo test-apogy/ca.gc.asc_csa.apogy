@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.geometry.data3d.*;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,24 +34,24 @@ import org.eclipse.symphony.common.geometry.data3d.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl implements Symphony__CommonGeometryData3DFactory {
+public class ApogyCommonGeometryData3DFactoryImpl extends EFactoryImpl implements ApogyCommonGeometryData3DFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData3DFactory init() {
+	public static ApogyCommonGeometryData3DFactory init() {
 		try {
-			Symphony__CommonGeometryData3DFactory theSymphony__CommonGeometryData3DFactory = (Symphony__CommonGeometryData3DFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonGeometryData3DPackage.eNS_URI);
-			if (theSymphony__CommonGeometryData3DFactory != null) {
-				return theSymphony__CommonGeometryData3DFactory;
+			ApogyCommonGeometryData3DFactory theApogyCommonGeometryData3DFactory = (ApogyCommonGeometryData3DFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonGeometryData3DPackage.eNS_URI);
+			if (theApogyCommonGeometryData3DFactory != null) {
+				return theApogyCommonGeometryData3DFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonGeometryData3DFactoryImpl();
+		return new ApogyCommonGeometryData3DFactoryImpl();
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DFactoryImpl() {
+	public ApogyCommonGeometryData3DFactoryImpl() {
 		super();
 	}
 
@@ -72,51 +72,51 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON: return createCartesianPolygon();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGLE: return createCartesianTriangle();
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_POLYGON: return createSphericalPolygon();
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_TRIANGLE: return createSphericalTriangle();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES: return createCartesianPositionCoordinates();
-			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: return createColoredCartesianPositionCoordinates();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES: return createCartesianOrientationCoordinates();
-			case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET: return createAbstractCartesianCoordinatesSet();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET: return createCartesianCoordinatesSet();
-			case Symphony__CommonGeometryData3DPackage.COLORED_COORDINATES_SET: return createColoredCoordinatesSet();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT: return createCartesianCoordinatesSetExtent();
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP: return createDigitalElevationMap();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH: return createCartesianCoordinatesMesh();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH: return createCartesianTriangularMesh();
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES: return createSphericalCoordinates();
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES_SET: return createSphericalCoordinatesSet();
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES_MESH: return createSphericalCoordinatesMesh();
-			case Symphony__CommonGeometryData3DPackage.SPHERICAL_TRIANGULAR_MESH: return createSphericalTriangularMesh();
-			case Symphony__CommonGeometryData3DPackage.POSE: return createPose();
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE: return createSphereSamplingShape();
-			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE: return createCubeSamplingShape();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER: return createCartesianCoordinatesSetShapeSampler();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_SAMPLER: return createCartesianCoordinatesMeshSampler();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER: return createCartesianCoordinatesMeshPolygonSampler();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_SAMPLER: return createCartesianTriangularMeshSampler();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER: return createCartesianTriangularMeshPolygonSampler();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_MESHER: return createCartesianPositionCoordinatesMesher();
-			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD: return createNormalPointCloud();
-			case Symphony__CommonGeometryData3DPackage.KD_TREE_BASED_POINT_LOCATOR: return createKDTreeBasedPointLocator();
-			case Symphony__CommonGeometryData3DPackage.MESH_LOCALIZER: return createMeshLocalizer();
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER: return createDelaunayMesher();
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_MESHER: return createDigitalElevationMapMesher();
-			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER: return createDigitalElevationMapSampler();
-			case Symphony__CommonGeometryData3DPackage.TRIANGULAR_MESH_NORMALS_CALCULATOR: return createTriangularMeshNormalsCalculator();
-			case Symphony__CommonGeometryData3DPackage.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD: return createTriangularMeshToNormalPointCloud();
-			case Symphony__CommonGeometryData3DPackage.UNIQUE_POINTS_FILTER: return createUniquePointsFilter();
-			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER: return createTriangleEdgeLengthTriangularMeshFilter();
-			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER: return createOutlierFilter();
-			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER: return createMeshSmoother();
-			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER: return createVoxelBased3DPointCloudResampler();
-			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER: return createPositionMarker();
-			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: return createRigidBodyPoseTracker();
-			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE: return createSymphony__CommonGeometryData3DFacade();
-			case Symphony__CommonGeometryData3DPackage.DATA3_DIO: return createData3DIO();
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS: return createData3DUtils();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON: return createCartesianPolygon();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGLE: return createCartesianTriangle();
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_POLYGON: return createSphericalPolygon();
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_TRIANGLE: return createSphericalTriangle();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES: return createCartesianPositionCoordinates();
+			case ApogyCommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: return createColoredCartesianPositionCoordinates();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES: return createCartesianOrientationCoordinates();
+			case ApogyCommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET: return createAbstractCartesianCoordinatesSet();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET: return createCartesianCoordinatesSet();
+			case ApogyCommonGeometryData3DPackage.COLORED_COORDINATES_SET: return createColoredCoordinatesSet();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT: return createCartesianCoordinatesSetExtent();
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP: return createDigitalElevationMap();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH: return createCartesianCoordinatesMesh();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH: return createCartesianTriangularMesh();
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_COORDINATES: return createSphericalCoordinates();
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_COORDINATES_SET: return createSphericalCoordinatesSet();
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_COORDINATES_MESH: return createSphericalCoordinatesMesh();
+			case ApogyCommonGeometryData3DPackage.SPHERICAL_TRIANGULAR_MESH: return createSphericalTriangularMesh();
+			case ApogyCommonGeometryData3DPackage.POSE: return createPose();
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE: return createSphereSamplingShape();
+			case ApogyCommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE: return createCubeSamplingShape();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER: return createCartesianCoordinatesSetShapeSampler();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_SAMPLER: return createCartesianCoordinatesMeshSampler();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER: return createCartesianCoordinatesMeshPolygonSampler();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_SAMPLER: return createCartesianTriangularMeshSampler();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER: return createCartesianTriangularMeshPolygonSampler();
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_MESHER: return createCartesianPositionCoordinatesMesher();
+			case ApogyCommonGeometryData3DPackage.NORMAL_POINT_CLOUD: return createNormalPointCloud();
+			case ApogyCommonGeometryData3DPackage.KD_TREE_BASED_POINT_LOCATOR: return createKDTreeBasedPointLocator();
+			case ApogyCommonGeometryData3DPackage.MESH_LOCALIZER: return createMeshLocalizer();
+			case ApogyCommonGeometryData3DPackage.DELAUNAY_MESHER: return createDelaunayMesher();
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_MESHER: return createDigitalElevationMapMesher();
+			case ApogyCommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER: return createDigitalElevationMapSampler();
+			case ApogyCommonGeometryData3DPackage.TRIANGULAR_MESH_NORMALS_CALCULATOR: return createTriangularMeshNormalsCalculator();
+			case ApogyCommonGeometryData3DPackage.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD: return createTriangularMeshToNormalPointCloud();
+			case ApogyCommonGeometryData3DPackage.UNIQUE_POINTS_FILTER: return createUniquePointsFilter();
+			case ApogyCommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER: return createTriangleEdgeLengthTriangularMeshFilter();
+			case ApogyCommonGeometryData3DPackage.OUTLIER_FILTER: return createOutlierFilter();
+			case ApogyCommonGeometryData3DPackage.MESH_SMOOTHER: return createMeshSmoother();
+			case ApogyCommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER: return createVoxelBased3DPointCloudResampler();
+			case ApogyCommonGeometryData3DPackage.POSITION_MARKER: return createPositionMarker();
+			case ApogyCommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: return createRigidBodyPoseTracker();
+			case ApogyCommonGeometryData3DPackage.APOGY_COMMON_GEOMETRY_DATA3_DFACADE: return createApogyCommonGeometryData3DFacade();
+			case ApogyCommonGeometryData3DPackage.DATA3_DIO: return createData3DIO();
+			case ApogyCommonGeometryData3DPackage.DATA3_DUTILS: return createData3DUtils();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -130,47 +130,47 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_AXIS:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_AXIS:
 				return createCartesianAxisFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_PLANE:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_PLANE:
 				return createCartesianPlaneFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.VECTOR2D:
+			case ApogyCommonGeometryData3DPackage.VECTOR2D:
 				return createVector2dFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.VECTOR3D:
+			case ApogyCommonGeometryData3DPackage.VECTOR3D:
 				return createVector3dFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.POINT3D:
+			case ApogyCommonGeometryData3DPackage.POINT3D:
 				return createPoint3dFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.MATRIX4D:
+			case ApogyCommonGeometryData3DPackage.MATRIX4D:
 				return createMatrix4dFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.GVECTOR:
+			case ApogyCommonGeometryData3DPackage.GVECTOR:
 				return createGVectorFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.LIST:
+			case ApogyCommonGeometryData3DPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.MAP:
+			case ApogyCommonGeometryData3DPackage.MAP:
 				return createMapFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.SET:
+			case ApogyCommonGeometryData3DPackage.SET:
 				return createSetFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.SORTED_SET:
+			case ApogyCommonGeometryData3DPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.COLLECTION:
+			case ApogyCommonGeometryData3DPackage.COLLECTION:
 				return createCollectionFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.ELIST:
+			case ApogyCommonGeometryData3DPackage.ELIST:
 				return createEListFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.IPROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DPackage.IPROGRESS_MONITOR:
 				return createIProgressMonitorFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.OUTPUT_STREAM:
+			case ApogyCommonGeometryData3DPackage.OUTPUT_STREAM:
 				return createOutputStreamFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.INPUT_STREAM:
+			case ApogyCommonGeometryData3DPackage.INPUT_STREAM:
 				return createInputStreamFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.IO_EXCEPTION:
+			case ApogyCommonGeometryData3DPackage.IO_EXCEPTION:
 				return createIOExceptionFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.EXCEPTION:
+			case ApogyCommonGeometryData3DPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.ILLEGAL_ARGUMENT_EXCEPTION:
+			case ApogyCommonGeometryData3DPackage.ILLEGAL_ARGUMENT_EXCEPTION:
 				return createIllegalArgumentExceptionFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.DOUBLE_ARRAY_OF_ARRAY:
+			case ApogyCommonGeometryData3DPackage.DOUBLE_ARRAY_OF_ARRAY:
 				return createDoubleArrayOfArrayFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DPackage.INT_ARRAY:
+			case ApogyCommonGeometryData3DPackage.INT_ARRAY:
 				return createIntArrayFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -185,47 +185,47 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_AXIS:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_AXIS:
 				return convertCartesianAxisToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_PLANE:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_PLANE:
 				return convertCartesianPlaneToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.VECTOR2D:
+			case ApogyCommonGeometryData3DPackage.VECTOR2D:
 				return convertVector2dToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.VECTOR3D:
+			case ApogyCommonGeometryData3DPackage.VECTOR3D:
 				return convertVector3dToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.POINT3D:
+			case ApogyCommonGeometryData3DPackage.POINT3D:
 				return convertPoint3dToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.MATRIX4D:
+			case ApogyCommonGeometryData3DPackage.MATRIX4D:
 				return convertMatrix4dToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.GVECTOR:
+			case ApogyCommonGeometryData3DPackage.GVECTOR:
 				return convertGVectorToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.LIST:
+			case ApogyCommonGeometryData3DPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.MAP:
+			case ApogyCommonGeometryData3DPackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.SET:
+			case ApogyCommonGeometryData3DPackage.SET:
 				return convertSetToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.SORTED_SET:
+			case ApogyCommonGeometryData3DPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.COLLECTION:
+			case ApogyCommonGeometryData3DPackage.COLLECTION:
 				return convertCollectionToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.ELIST:
+			case ApogyCommonGeometryData3DPackage.ELIST:
 				return convertEListToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.IPROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DPackage.IPROGRESS_MONITOR:
 				return convertIProgressMonitorToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.OUTPUT_STREAM:
+			case ApogyCommonGeometryData3DPackage.OUTPUT_STREAM:
 				return convertOutputStreamToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.INPUT_STREAM:
+			case ApogyCommonGeometryData3DPackage.INPUT_STREAM:
 				return convertInputStreamToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.IO_EXCEPTION:
+			case ApogyCommonGeometryData3DPackage.IO_EXCEPTION:
 				return convertIOExceptionToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.EXCEPTION:
+			case ApogyCommonGeometryData3DPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.ILLEGAL_ARGUMENT_EXCEPTION:
+			case ApogyCommonGeometryData3DPackage.ILLEGAL_ARGUMENT_EXCEPTION:
 				return convertIllegalArgumentExceptionToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.DOUBLE_ARRAY_OF_ARRAY:
+			case ApogyCommonGeometryData3DPackage.DOUBLE_ARRAY_OF_ARRAY:
 				return convertDoubleArrayOfArrayToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DPackage.INT_ARRAY:
+			case ApogyCommonGeometryData3DPackage.INT_ARRAY:
 				return convertIntArrayToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -657,9 +657,9 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DFacade createSymphony__CommonGeometryData3DFacade() {
-		Symphony__CommonGeometryData3DFacadeImpl symphony__CommonGeometryData3DFacade = new Symphony__CommonGeometryData3DFacadeImpl();
-		return symphony__CommonGeometryData3DFacade;
+	public ApogyCommonGeometryData3DFacade createApogyCommonGeometryData3DFacade() {
+		ApogyCommonGeometryData3DFacadeImpl apogy__CommonGeometryData3DFacade = new ApogyCommonGeometryData3DFacadeImpl();
+		return apogy__CommonGeometryData3DFacade;
 	}
 
 	/**
@@ -1069,8 +1069,8 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DPackage getSymphony__CommonGeometryData3DPackage() {
-		return (Symphony__CommonGeometryData3DPackage)getEPackage();
+	public ApogyCommonGeometryData3DPackage getApogyCommonGeometryData3DPackage() {
+		return (ApogyCommonGeometryData3DPackage)getEPackage();
 	}
 
 	/**
@@ -1080,8 +1080,8 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonGeometryData3DPackage getPackage() {
-		return Symphony__CommonGeometryData3DPackage.eINSTANCE;
+	public static ApogyCommonGeometryData3DPackage getPackage() {
+		return ApogyCommonGeometryData3DPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonGeometryData3DFactoryImpl
+} //ApogyCommonGeometryData3DFactoryImpl

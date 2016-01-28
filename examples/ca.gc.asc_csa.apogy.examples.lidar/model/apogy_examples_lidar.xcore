@@ -1,17 +1,17 @@
-@GenModel(prefix="Symphony__ExamplesLidar",
+@GenModel(prefix="ApogyExamplesLidar",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="Symphony__ExamplesLidar",
+		  modelName="ApogyExamplesLidar",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.lidar/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.lidar.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.lidar/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.lidar.edit/src-generated")
 
-package org.eclipse.symphony.examples.lidar
+package ca.gc.asc_csa.apogy.examples.lidar
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
 
 /* 
  * This is an abstraction of the Lidar unit, a 3D laser-based range
@@ -62,8 +62,8 @@ abstract class Lidar
 	 * @return The resulting scan with the given horizontal and vertical angular resolution.
 	 * @see #acquireScanNonBlocking(double, double)
 	 */
-	op CartesianCoordinatesSet acquireScan(@GenModel(symphony_units="rad") double horizontalResolution,
-										   @GenModel(symphony_units="rad") double verticalResolution)
+	op CartesianCoordinatesSet acquireScan(@GenModel(apogy_units="rad") double horizontalResolution,
+										   @GenModel(apogy_units="rad") double verticalResolution)
 	
 	/* 
 	 * This operation is used to acquire a depth scan of the field of view, with the given
@@ -76,8 +76,8 @@ abstract class Lidar
 	 * @return The resulting scan with the given horizontal and vertical angular resolution.
 	 * @see #acquireScan(double, double)
 	 */
-	op CartesianCoordinatesSet acquireScanNonBlocking(@GenModel(symphony_units="rad") double horizontalResolution,
-													  @GenModel(symphony_units="rad") double verticalResolution)
+	op CartesianCoordinatesSet acquireScanNonBlocking(@GenModel(apogy_units="rad") double horizontalResolution,
+													  @GenModel(apogy_units="rad") double verticalResolution)
 }
 
 /* 
@@ -90,7 +90,7 @@ class LidarStub extends Lidar
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.lidar.impl.LidarStubImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarStubImpl}
 	 */
 }
 
@@ -105,6 +105,6 @@ class LidarSimulated extends Lidar
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.lidar.impl.LidarSimulatedImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.lidar.impl.LidarSimulatedImpl}
 	 */
 }

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging.camera.listeners;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.listeners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,20 +7,20 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Activator;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlay;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
 
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
 
 public class CameraViewConfigurationListener 
 {
@@ -115,20 +115,20 @@ public class CameraViewConfigurationListener
 						int featureID = msg.getFeatureID(CameraViewConfiguration.class);
 						switch (featureID) 
 						{
-							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
-							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
+							case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
+							case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
 								imageSizeChanged(cameraViewConfiguration.getImageWidth(), cameraViewConfiguration.getImageHeight());
 							break;
 
-							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__CAMERA:
+							case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__CAMERA:
 								cameraChanged((AbstractCamera) msg.getNewValue());
 							break;
 								
-							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
+							case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
 								displayRectifiedChanged(msg.getNewBooleanValue());
 							break;
 							
-							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__VARIABLE:
+							case ApogyAddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__VARIABLE:
 								if(msg.getOldValue() instanceof Variable)
 								{
 									getAbstractVariableFeatureReferenceListener().setVariableFeatureReference(null);
@@ -295,7 +295,7 @@ public class CameraViewConfigurationListener
 		  
 		  try
 		  {
-			  EObject instance = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(cameraViewConfiguration);
+			  EObject instance = ApogyCoreInvocatorFacade.INSTANCE.getInstance(cameraViewConfiguration);
 		  
 			  if(instance instanceof AbstractCamera)
 			  {

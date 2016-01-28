@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.provider;
 
 
 import java.util.Collection;
@@ -22,10 +22,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.Referenceable} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.Referenceable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -77,7 +77,7 @@ public class ReferenceableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Referenceable_referenceFrame_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Referenceable_referenceFrame_feature", "_UI_Referenceable_type"),
-				 Symphony__AddonsSensorsPackage.Literals.REFERENCEABLE__REFERENCE_FRAME,
+				 ApogyAddonsSensorsPackage.Literals.REFERENCEABLE__REFERENCE_FRAME,
 				 true,
 				 false,
 				 true,

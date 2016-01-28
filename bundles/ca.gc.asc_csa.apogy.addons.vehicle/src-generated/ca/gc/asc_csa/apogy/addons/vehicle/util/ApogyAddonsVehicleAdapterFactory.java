@@ -1,50 +1,50 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.util;
+package ca.gc.asc_csa.apogy.addons.vehicle.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.vehicle.ContactProvider;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
-import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
-import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
-import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
-import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.core.PoseCorrector;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
+import ca.gc.asc_csa.apogy.addons.Simple3DTool;
+import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot;
+import ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D;
+import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster;
+import ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade;
+import ca.gc.asc_csa.apogy.addons.vehicle.Wheel;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
+import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage
  * @generated
  */
-public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
+public class ApogyAddonsVehicleAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -52,7 +52,7 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__AddonsVehiclePackage modelPackage;
+  protected static ApogyAddonsVehiclePackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -60,10 +60,10 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsVehicleAdapterFactory()
+  public ApogyAddonsVehicleAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsVehiclePackage.eINSTANCE;
+			modelPackage = ApogyAddonsVehiclePackage.eINSTANCE;
 		}
 	}
 
@@ -93,8 +93,8 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__AddonsVehicleSwitch<Adapter> modelSwitch =
-    new Symphony__AddonsVehicleSwitch<Adapter>() {
+  protected ApogyAddonsVehicleSwitch<Adapter> modelSwitch =
+    new ApogyAddonsVehicleSwitch<Adapter>() {
 			@Override
 			public Adapter caseVehiclePoseCorrector(VehiclePoseCorrector object) {
 				return createVehiclePoseCorrectorAdapter();
@@ -132,8 +132,8 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 				return createLanderSphericalFootContactProviderAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__AddonsVehicleFacade(Symphony__AddonsVehicleFacade object) {
-				return createSymphony__AddonsVehicleFacadeAdapter();
+			public Adapter caseApogyAddonsVehicleFacade(ApogyAddonsVehicleFacade object) {
+				return createApogyAddonsVehicleFacadeAdapter();
 			}
 			@Override
 			public Adapter caseWheelVehicleUtilities(WheelVehicleUtilities object) {
@@ -225,13 +225,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector <em>Vehicle Pose Corrector</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector <em>Vehicle Pose Corrector</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector
 	 * @generated
 	 */
   public Adapter createVehiclePoseCorrectorAdapter()
@@ -240,13 +240,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry <em>Mesh Node Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry <em>Mesh Node Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.MeshNodeEntry
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry
 	 * @generated
 	 */
 	public Adapter createMeshNodeEntryAdapter() {
@@ -254,13 +254,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.ContactProvider <em>Contact Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider <em>Contact Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.ContactProvider
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider
 	 * @generated
 	 */
   public Adapter createContactProviderAdapter()
@@ -269,13 +269,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.Wheel <em>Wheel</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel <em>Wheel</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.Wheel
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.Wheel
 	 * @generated
 	 */
   public Adapter createWheelAdapter()
@@ -284,13 +284,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.Thruster <em>Thruster</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.Thruster <em>Thruster</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.Thruster
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.Thruster
 	 * @generated
 	 */
   public Adapter createThrusterAdapter()
@@ -299,13 +299,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.ThrusterBinding <em>Thruster Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding <em>Thruster Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.ThrusterBinding
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ThrusterBinding
 	 * @generated
 	 */
   public Adapter createThrusterBindingAdapter()
@@ -314,13 +314,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.WheelContactProvider <em>Wheel Contact Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider <em>Wheel Contact Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.WheelContactProvider
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.WheelContactProvider
 	 * @generated
 	 */
   public Adapter createWheelContactProviderAdapter()
@@ -329,13 +329,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.LanderSphericalFoot <em>Lander Spherical Foot</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot <em>Lander Spherical Foot</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.LanderSphericalFoot
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFoot
 	 * @generated
 	 */
   public Adapter createLanderSphericalFootAdapter()
@@ -344,13 +344,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider <em>Lander Spherical Foot Contact Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider <em>Lander Spherical Foot Contact Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.LanderSphericalFootContactProvider
 	 * @generated
 	 */
   public Adapter createLanderSphericalFootContactProviderAdapter()
@@ -359,27 +359,27 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__AddonsVehicleFacadeAdapter() {
+	public Adapter createApogyAddonsVehicleFacadeAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities <em>Wheel Vehicle Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities <em>Wheel Vehicle Utilities</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities
 	 * @generated
 	 */
   public Adapter createWheelVehicleUtilitiesAdapter()
@@ -388,13 +388,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D <em>Mesh Extent2 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D <em>Mesh Extent2 D</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.MeshExtent2D
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D
 	 * @generated
 	 */
   public Adapter createMeshExtent2DAdapter()
@@ -403,13 +403,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool <em>Path Planner Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool <em>Path Planner Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.PathPlannerTool
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool
 	 * @generated
 	 */
 	public Adapter createPathPlannerToolAdapter() {
@@ -417,13 +417,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.PathPlannerToolNode <em>Path Planner Tool Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode <em>Path Planner Tool Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.PathPlannerToolNode
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode
 	 * @generated
 	 */
 	public Adapter createPathPlannerToolNodeAdapter() {
@@ -431,13 +431,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool <em>Vehicle Path Planner Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool <em>Vehicle Path Planner Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool
 	 * @generated
 	 */
 	public Adapter createVehiclePathPlannerToolAdapter() {
@@ -445,13 +445,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseCorrector <em>Pose Corrector</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.PoseCorrector <em>Pose Corrector</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.PoseCorrector
+	 * @see ca.gc.asc_csa.apogy.core.PoseCorrector
 	 * @generated
 	 */
   public Adapter createPoseCorrectorAdapter()
@@ -460,13 +460,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
   public Adapter createNodeAdapter()
@@ -475,13 +475,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
   public Adapter createGroupNodeAdapter()
@@ -490,13 +490,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
   public Adapter createAggregateGroupNodeAdapter()
@@ -505,13 +505,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody <em>Physical Body</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody <em>Physical Body</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody
 	 * @generated
 	 */
   public Adapter createPhysicalBodyAdapter()
@@ -520,13 +520,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
+	 * @see ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
 	 * @generated
 	 */
   public Adapter createAbstractTopologyBindingAdapter()
@@ -535,13 +535,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {
@@ -549,13 +549,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
 	public Adapter createDescribedAdapter() {
@@ -563,13 +563,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.AbstractTool <em>Abstract Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.AbstractTool <em>Abstract Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.AbstractTool
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTool
 	 * @generated
 	 */
 	public Adapter createAbstractToolAdapter() {
@@ -577,13 +577,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.SimpleTool <em>Simple Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.SimpleTool <em>Simple Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.SimpleTool
+	 * @see ca.gc.asc_csa.apogy.addons.SimpleTool
 	 * @generated
 	 */
 	public Adapter createSimpleToolAdapter() {
@@ -591,13 +591,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.Simple3DTool <em>Simple3 DTool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.Simple3DTool <em>Simple3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.Simple3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.Simple3DTool
 	 * @generated
 	 */
 	public Adapter createSimple3DToolAdapter() {
@@ -605,13 +605,13 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool <em>Abstract Two Points3 DTool</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool <em>Abstract Two Points3 DTool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.AbstractTwoPoints3DTool
+	 * @see ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool
 	 * @generated
 	 */
 	public Adapter createAbstractTwoPoints3DToolAdapter() {
@@ -631,4 +631,4 @@ public class Symphony__AddonsVehicleAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__AddonsVehicleAdapterFactory
+} //ApogyAddonsVehicleAdapterFactory

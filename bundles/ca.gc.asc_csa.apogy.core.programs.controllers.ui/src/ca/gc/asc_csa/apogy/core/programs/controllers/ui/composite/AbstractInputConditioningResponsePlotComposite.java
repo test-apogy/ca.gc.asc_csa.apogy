@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.programs.controllers.ui.composite;
+package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -7,9 +7,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.io.jinput.EVirtualComponent;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
-import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
+import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
@@ -149,7 +149,7 @@ public class AbstractInputConditioningResponsePlotComposite extends Composite {
 		{
 			if(this.abstractInputConditioning != null)
 			{
-				EVirtualComponent component = Symphony__CommonIOJInputFactory.eINSTANCE.createEVirtualComponent();
+				EVirtualComponent component = ApogyCommonIOJInputFactory.eINSTANCE.createEVirtualComponent();
 				
 				AbstractInputConditioning conditioning = EcoreUtil.copy(abstractInputConditioning);
 				

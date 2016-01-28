@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.geometry.data3d.las.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -23,15 +23,15 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
-import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
-import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
-import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFactory;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
-import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
-import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
-import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.EdgeOfFlightLine;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ScanDirection;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord;
+import ca.gc.asc_csa.apogy.common.lang.java.io.LittleEndianDataInputStream;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -40,12 +40,12 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getFile <em>File</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getInputStream <em>Input Stream</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getVlrs <em>Vlrs</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getHeader <em>Header</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getPoints <em>Points</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl#getFile <em>File</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl#getInputStream <em>Input Stream</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl#getVlrs <em>Vlrs</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl#getHeader <em>Header</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl.LASReaderImpl#getPoints <em>Points</em>}</li>
  * </ul>
  *
  * @generated
@@ -152,7 +152,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER;
+		return ApogyCommonGeometryData3DLASPackage.Literals.LAS_READER;
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 		String oldFile = file;
 		file = newFile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_READER__FILE, oldFile, file));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.LAS_READER__FILE, oldFile, file));
 	}
 
 	/**
@@ -190,7 +190,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 		InputStream oldInputStream = inputStream;
 		inputStream = newInputStream;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM, oldInputStream, inputStream));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM, oldInputStream, inputStream));
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	 */
 	public EList<VariableLengthRecord> getVlrs() {
 		if (vlrs == null) {
-			vlrs = new EObjectResolvingEList<VariableLengthRecord>(VariableLengthRecord.class, this, Symphony__CommonGeometryData3DLASPackage.LAS_READER__VLRS);
+			vlrs = new EObjectResolvingEList<VariableLengthRecord>(VariableLengthRecord.class, this, ApogyCommonGeometryData3DLASPackage.LAS_READER__VLRS);
 		}
 		return vlrs;
 	}
@@ -220,7 +220,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 		IProgressMonitor oldProgressMonitor = progressMonitor;
 		progressMonitor = newProgressMonitor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
 	}
 
 	/**
@@ -233,7 +233,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 			header = (LASHeader)eResolveProxy(oldHeader);
 			if (header != oldHeader) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DLASPackage.LAS_READER__HEADER, oldHeader, header));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonGeometryData3DLASPackage.LAS_READER__HEADER, oldHeader, header));
 			}
 		}
 		return header;
@@ -255,7 +255,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 		LASHeader oldHeader = header;
 		header = newHeader;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_READER__HEADER, oldHeader, header));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DLASPackage.LAS_READER__HEADER, oldHeader, header));
 	}
 
 	/**
@@ -266,7 +266,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	public EList<LASPoint> getPoints() {
 		if (points == null) {
 			points = new EObjectResolvingEList<LASPoint>(LASPoint.class, this,
-					Symphony__CommonGeometryData3DLASPackage.LAS_READER__POINTS) {
+					ApogyCommonGeometryData3DLASPackage.LAS_READER__POINTS) {
 				/**
 						 * 
 						 */
@@ -333,18 +333,18 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__FILE:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__FILE:
 				return getFile();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
 				return getInputStream();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__VLRS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__VLRS:
 				return getVlrs();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
 				return getProgressMonitor();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__HEADER:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__HEADER:
 				if (resolve) return getHeader();
 				return basicGetHeader();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__POINTS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__POINTS:
 				return getPoints();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -358,23 +358,23 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__FILE:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__FILE:
 				setFile((String)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
 				setInputStream((InputStream)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__VLRS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__VLRS:
 				getVlrs().clear();
 				getVlrs().addAll((Collection<? extends VariableLengthRecord>)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
 				setProgressMonitor((IProgressMonitor)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__HEADER:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__HEADER:
 				setHeader((LASHeader)newValue);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__POINTS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__POINTS:
 				getPoints().clear();
 				getPoints().addAll((Collection<? extends LASPoint>)newValue);
 				return;
@@ -389,22 +389,22 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__FILE:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__FILE:
 				setFile(FILE_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
 				setInputStream(INPUT_STREAM_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__VLRS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__VLRS:
 				getVlrs().clear();
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
 				setProgressMonitor(PROGRESS_MONITOR_EDEFAULT);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__HEADER:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__HEADER:
 				setHeader((LASHeader)null);
 				return;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__POINTS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__POINTS:
 				getPoints().clear();
 				return;
 		}
@@ -418,17 +418,17 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__FILE:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__FILE:
 				return FILE_EDEFAULT == null ? file != null : !FILE_EDEFAULT.equals(file);
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
 				return INPUT_STREAM_EDEFAULT == null ? inputStream != null : !INPUT_STREAM_EDEFAULT.equals(inputStream);
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__VLRS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__VLRS:
 				return vlrs != null && !vlrs.isEmpty();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
 				return PROGRESS_MONITOR_EDEFAULT == null ? progressMonitor != null : !PROGRESS_MONITOR_EDEFAULT.equals(progressMonitor);
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__HEADER:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__HEADER:
 				return header != null;
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__POINTS:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__POINTS:
 				return points != null && !points.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -442,7 +442,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER___READ:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER___READ:
 				try {
 					read();
 					return null;
@@ -475,7 +475,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 
 	private void readHeader() throws IOException {
 
-		header = Symphony__CommonGeometryData3DLASFactory.eINSTANCE.createLASHeader();
+		header = ApogyCommonGeometryData3DLASFactory.eINSTANCE.createLASHeader();
 
 		// Following data type size expected:
 		// char (1 byte)
@@ -721,7 +721,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 
 		getLittleEndianInputStream().read(data);
 
-		VariableLengthRecord vlr = Symphony__CommonGeometryData3DLASFactory.eINSTANCE
+		VariableLengthRecord vlr = ApogyCommonGeometryData3DLASFactory.eINSTANCE
 				.createVariableLengthRecord();
 		vlr.setReserved(recordSig);
 		vlr.setDescription(description);
@@ -745,7 +745,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 			throw new IllegalArgumentException("Invalid point format");
 		}
 
-		LASPoint point = Symphony__CommonGeometryData3DLASFactory.eINSTANCE.createLASPoint();
+		LASPoint point = ApogyCommonGeometryData3DLASFactory.eINSTANCE.createLASPoint();
 
 		// Every point format has at least the 0 format
 

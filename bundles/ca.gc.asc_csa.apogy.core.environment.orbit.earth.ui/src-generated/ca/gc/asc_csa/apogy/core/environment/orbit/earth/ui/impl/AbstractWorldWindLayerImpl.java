@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
 
 import gov.nasa.worldwind.layers.RenderableLayer;
 
@@ -11,9 +11,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.impl.UpdatableImpl;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.impl.UpdatableImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,8 +23,8 @@ import org.eclipse.symphony.core.impl.UpdatableImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl#getRenderableLayer <em>Renderable Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl#getRenderableLayer <em>Renderable Layer</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,7 +86,7 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ABSTRACT_WORLD_WIND_LAYER;
+		return ApogyCoreEnvironmentOrbitEarthUIPackage.Literals.ABSTRACT_WORLD_WIND_LAYER;
 	}
 
 	/**
@@ -119,7 +119,7 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE, oldVisible, visible));
 	}
 	
 	/**
@@ -156,7 +156,7 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 		RenderableLayer oldRenderableLayer = renderableLayer;
 		renderableLayer = newRenderableLayer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER, oldRenderableLayer, renderableLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER, oldRenderableLayer, renderableLayer));
 	}
 
 	/**
@@ -203,9 +203,9 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
 				return isVisible();
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
 				return getRenderableLayer();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -219,10 +219,10 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
 				setRenderableLayer((RenderableLayer)newValue);
 				return;
 		}
@@ -237,10 +237,10 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
 				setRenderableLayer(RENDERABLE_LAYER_EDEFAULT);
 				return;
 		}
@@ -255,9 +255,9 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__RENDERABLE_LAYER:
 				return RENDERABLE_LAYER_EDEFAULT == null ? renderableLayer != null : !RENDERABLE_LAYER_EDEFAULT.equals(renderableLayer);
 		}
 		return super.eIsSet(featureID);
@@ -271,7 +271,7 @@ public abstract class AbstractWorldWindLayerImpl extends UpdatableImpl implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER___DISPOSE:
+			case ApogyCoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER___DISPOSE:
 				dispose();
 				return null;
 		}

@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.EDataTypeArgumentImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,7 +64,7 @@ public class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgu
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT;
+		return ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT;
 	}
 
   /**
@@ -87,7 +87,7 @@ public class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgu
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE, oldValue, value));
 	}
 
   /**
@@ -99,7 +99,7 @@ public class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgu
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
+			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -114,7 +114,7 @@ public class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgu
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
+			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -130,7 +130,7 @@ public class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgu
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
+			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -146,7 +146,7 @@ public class EDataTypeArgumentImpl extends ArgumentImpl implements EDataTypeArgu
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
+			case ApogyCoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);

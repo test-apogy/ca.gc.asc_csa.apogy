@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.tests;
+package ca.gc.asc_csa.apogy.common.topology.ui.tests;
 
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,8 +17,8 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getPresentationNode(org.eclipse.symphony.common.topology.Node) <em>Get Presentation Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodes() <em>Get Nodes</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getPresentationNode(ca.gc.asc_csa.apogy.common.topology.Node) <em>Get Presentation Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodes() <em>Get Nodes</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -80,7 +80,7 @@ public class TopologyPresentationSetTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet());
+		setFixture(ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet());
 	}
 
 	/**
@@ -95,10 +95,10 @@ public class TopologyPresentationSetTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getPresentationNode(org.eclipse.symphony.common.topology.Node) <em>Get Presentation Node</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getPresentationNode(ca.gc.asc_csa.apogy.common.topology.Node) <em>Get Presentation Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getPresentationNode(org.eclipse.symphony.common.topology.Node)
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getPresentationNode(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
 	public void testGetPresentationNode__Node() {
@@ -108,10 +108,10 @@ public class TopologyPresentationSetTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodes() <em>Get Nodes</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodes() <em>Get Nodes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodes()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodes()
 	 * @generated
 	 */
 	public void testGetNodes() {

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -16,15 +16,15 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.ros.internal.message.Message;
 import org.ros.message.MessageListener;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFactory;
-import org.eclipse.symphony.addons.ros.Activator;
-import org.eclipse.symphony.addons.ros.ROSListener;
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.addons.ros.ROSTopicLauncher;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.ROSListener;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher;
 
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,9 +34,9 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSTopicLauncherImpl#getListenerList <em>Listener List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSTopicLauncherImpl#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSTopicLauncherImpl#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl#getListenerList <em>Listener List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSTopicLauncherImpl#isRunning <em>Running</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,7 +103,7 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER;
+		return ApogyAddonsROSPackage.Literals.ROS_TOPIC_LAUNCHER;
 	}
 
   /**
@@ -126,7 +126,7 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
 		boolean oldRunning = running;
 		running = newRunning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING, oldRunning, running));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING, oldRunning, running));
 	}
 
   /**
@@ -137,7 +137,7 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
   public EList<ROSListener<?>> getListenerList()
   {
 		if (listenerList == null) {
-			listenerList = new EObjectResolvingEList<ROSListener<?>>(ROSListener.class, this, Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST);
+			listenerList = new EObjectResolvingEList<ROSListener<?>>(ROSListener.class, this, ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST);
 		}
 		return listenerList;
 	}
@@ -154,7 +154,7 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
 			node = (ROSNode)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -180,7 +180,7 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
 		ROSNode oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE, oldNode, node));
 	}
 
   /**
@@ -190,7 +190,7 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
    */
   public <M extends Message> void createListener(String topicName, String messageType, MessageListener<M> messageListener)
   {
-	  ROSListener<M> listener = Symphony__AddonsROSFactory.eINSTANCE.createROSListener();
+	  ROSListener<M> listener = ApogyAddonsROSFactory.eINSTANCE.createROSListener();
 	  listener.setTopicName(topicName);
 	  listener.setMessageType(messageType);
 	  listener.setMessageListener(messageListener);
@@ -250,12 +250,12 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
 				return getListenerList();
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
 				return isRunning();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -271,14 +271,14 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
 				getListenerList().clear();
 				getListenerList().addAll((Collection<? extends ROSListener<?>>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
 				setNode((ROSNode)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
 				setRunning((Boolean)newValue);
 				return;
 		}
@@ -294,13 +294,13 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
 				getListenerList().clear();
 				return;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
 				setNode((ROSNode)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
 				setRunning(RUNNING_EDEFAULT);
 				return;
 		}
@@ -316,11 +316,11 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__LISTENER_LIST:
 				return listenerList != null && !listenerList.isEmpty();
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__NODE:
 				return node != null;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
 				return running != RUNNING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -336,16 +336,16 @@ public class ROSTopicLauncherImpl extends MinimalEObjectImpl.Container implement
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER___CREATE_LISTENER__STRING_STRING_MESSAGELISTENER:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER___CREATE_LISTENER__STRING_STRING_MESSAGELISTENER:
 				createListener((String)arguments.get(0), (String)arguments.get(1), (MessageListener)arguments.get(2));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER___LAUNCH:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER___LAUNCH:
 				launch();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER___STOP:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER___STOP:
 				stop();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER___RESET:
+			case ApogyAddonsROSPackage.ROS_TOPIC_LAUNCHER___RESET:
 				reset();
 				return null;
 		}

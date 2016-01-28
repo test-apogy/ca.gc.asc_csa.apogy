@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,11 +19,11 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImage()
  * @model
  * @generated
  */
@@ -38,14 +38,14 @@ public interface OrbitalImage extends EImage {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Coordinates</em>' containment reference.
 	 * @see #setCoordinates(GeographicCoordinates)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_Coordinates()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImage_Coordinates()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	GeographicCoordinates getCoordinates();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Coordinates</em>' containment reference.
@@ -65,14 +65,14 @@ public interface OrbitalImage extends EImage {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Roll Angle</em>' attribute.
 	 * @see #setRollAngle(double)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_RollAngle()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getOrbitalImage_RollAngle()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getRollAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Roll Angle</em>' attribute.

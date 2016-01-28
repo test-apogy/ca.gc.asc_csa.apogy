@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.commands;
+package ca.gc.asc_csa.apogy.core.environment.ui.commands;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -16,10 +16,10 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class TrajectoryProviderSaveTrajectoryToFileCommand extends AbstractHandler implements IHandler 

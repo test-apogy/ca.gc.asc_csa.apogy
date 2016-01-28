@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class ThrusterPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ThrusterPresentation_plumeEnvelopeVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ThrusterPresentation_plumeEnvelopeVisible_feature", "_UI_ThrusterPresentation_type"),
-				 Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE,
+				 ApogyAddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class ThrusterPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ThrusterPresentation_plumeEnvelopeLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ThrusterPresentation_plumeEnvelopeLength_feature", "_UI_ThrusterPresentation_type"),
-				 Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH,
+				 ApogyAddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -141,8 +141,8 @@ public class ThrusterPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ThrusterPresentation.class)) {
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

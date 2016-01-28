@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -12,13 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.invocator.provider.AbstractToolsListContainerItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.provider.AbstractToolsListContainerItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfigurationList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class MapViewConfigurationListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
+			childrenFeatures.add(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -131,7 +131,7 @@ public class MapViewConfigurationListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapViewConfigurationList.class)) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,8 +152,8 @@ public class MapViewConfigurationListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
 	}
 
 }

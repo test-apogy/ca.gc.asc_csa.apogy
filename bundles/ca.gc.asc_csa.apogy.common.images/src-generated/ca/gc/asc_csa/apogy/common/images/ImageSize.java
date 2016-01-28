@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.images;
+package ca.gc.asc_csa.apogy.common.images;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.images.ImageSize#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.images.ImageSize#getHeight <em>Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.ImageSize#getWidth <em>Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.images.ImageSize#getHeight <em>Height</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImageSize()
+ * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getImageSize()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface ImageSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(int)
-	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImageSize_Width()
+	 * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getImageSize_Width()
 	 * @model default="-1" unique="false"
 	 * @generated
 	 */
 	int getWidth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.images.ImageSize#getWidth <em>Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.images.ImageSize#getWidth <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Width</em>' attribute.
@@ -61,14 +61,14 @@ public interface ImageSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(int)
-	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImageSize_Height()
+	 * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#getImageSize_Height()
 	 * @model default="-1" unique="false"
 	 * @generated
 	 */
 	int getHeight();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.images.ImageSize#getHeight <em>Height</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.images.ImageSize#getHeight <em>Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Height</em>' attribute.

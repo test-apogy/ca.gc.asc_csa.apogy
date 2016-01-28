@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import org.eclipse.emf.common.util.URI;
 

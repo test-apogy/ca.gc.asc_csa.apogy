@@ -3,18 +3,18 @@
  *
  * $Id: CircularSectorFieldOfViewImpl.java,v 1.3.4.2 2015/05/21 15:51:25 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.fov.AngularSpan;
-import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,9 +24,9 @@ import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getRange <em>Range</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getAngularSpan <em>Angular Span</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getArea <em>Area</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getRange <em>Range</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getAngularSpan <em>Angular Span</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getArea <em>Area</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,7 +78,7 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW;
+		return ApogyAddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW;
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 		AngularSpan oldAngularSpan = angularSpan;
 		angularSpan = newAngularSpan;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, oldAngularSpan, newAngularSpan);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, oldAngularSpan, newAngularSpan);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -120,14 +120,14 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 		if (newAngularSpan != angularSpan) {
 			NotificationChain msgs = null;
 			if (angularSpan != null)
-				msgs = ((InternalEObject)angularSpan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, null, msgs);
+				msgs = ((InternalEObject)angularSpan).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, null, msgs);
 			if (newAngularSpan != null)
-				msgs = ((InternalEObject)newAngularSpan).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, null, msgs);
+				msgs = ((InternalEObject)newAngularSpan).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, null, msgs);
 			msgs = basicSetAngularSpan(newAngularSpan, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, newAngularSpan, newAngularSpan));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN, newAngularSpan, newAngularSpan));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 		DistanceRange tmp = getRangeGen();
 		if(tmp == null)
 		{
-			tmp = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
+			tmp = ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
 			setRange(tmp);
 		}
 		
@@ -166,7 +166,7 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 		DistanceRange oldRange = range;
 		range = newRange;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, oldRange, newRange);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, oldRange, newRange);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -185,14 +185,14 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 		if (newRange != range) {
 			NotificationChain msgs = null;
 			if (range != null)
-				msgs = ((InternalEObject)range).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, null, msgs);
+				msgs = ((InternalEObject)range).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, null, msgs);
 			if (newRange != null)
-				msgs = ((InternalEObject)newRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, null, msgs);
+				msgs = ((InternalEObject)newRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, null, msgs);
 			msgs = basicSetRange(newRange, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, newRange, newRange));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE, newRange, newRange));
 	}
 
 	/**
@@ -239,9 +239,9 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
 				return basicSetRange(null, msgs);
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
 				return basicSetAngularSpan(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -255,11 +255,11 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
 				return getRange();
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
 				return getAngularSpan();
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
 				return getArea();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -273,10 +273,10 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
 				setRange((DistanceRange)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
 				setAngularSpan((AngularSpan)newValue);
 				return;
 		}
@@ -291,10 +291,10 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
 				setRange((DistanceRange)null);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
 				setAngularSpan((AngularSpan)null);
 				return;
 		}
@@ -309,11 +309,11 @@ public class CircularSectorFieldOfViewImpl extends FieldOfViewImpl implements Ci
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
 				return range != null;
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
 				return angularSpan != null;
-			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
+			case ApogyAddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
 				return getArea() != AREA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

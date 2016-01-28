@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsSensorsFOVFacadeItemProvider.java,v 1.3.4.2 2015/05/21 15:51:09 pallard Exp $
+ * $Id: ApogyAddonsSensorsFOVFacadeItemProvider.java,v 1.3.4.2 2015/05/21 15:51:09 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVFacadeItemProvider
+public class ApogyAddonsSensorsFOVFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -42,7 +42,7 @@ public class Symphony__AddonsSensorsFOVFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVFacadeItemProvider(AdapterFactory adapterFactory)
+	public ApogyAddonsSensorsFOVFacadeItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -64,7 +64,7 @@ public class Symphony__AddonsSensorsFOVFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsSensorsFOVFacade.gif.
+	 * This returns ApogyAddonsSensorsFOVFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,7 +72,7 @@ public class Symphony__AddonsSensorsFOVFacadeItemProvider
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsSensorsFOVFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsSensorsFOVFacade"));
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class Symphony__AddonsSensorsFOVFacadeItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Symphony__AddonsSensorsFOVFacade_type");
+		return getString("_UI_ApogyAddonsSensorsFOVFacade_type");
 	}
 
 	/**

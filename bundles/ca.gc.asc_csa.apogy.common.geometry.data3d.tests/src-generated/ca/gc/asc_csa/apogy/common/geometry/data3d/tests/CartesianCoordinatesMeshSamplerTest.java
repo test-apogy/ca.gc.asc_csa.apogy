@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
-import org.eclipse.symphony.common.geometry.data.PolygonSamplingMode;
-import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler;
-import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data.PolygonSamplingMode;
+import ca.gc.asc_csa.apogy.common.geometry.data.ShapeSamplingMode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -22,7 +22,7 @@ import junit.textui.TestRunner;
  */
 public class CartesianCoordinatesMeshSamplerTest extends TestCase {
 
-	private static Symphony__CommonGeometryData3DFacade data3dFacade = Symphony__CommonGeometryData3DFacade.INSTANCE;
+	private static ApogyCommonGeometryData3DFacade data3dFacade = ApogyCommonGeometryData3DFacade.INSTANCE;
 	
 	/**
 	 * The fixture for this Cartesian Coordinates Mesh Sampler test case.
@@ -79,7 +79,7 @@ public class CartesianCoordinatesMeshSamplerTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMeshSampler());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMeshSampler());
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class CartesianCoordinatesMeshSamplerTest extends TestCase {
 			fail(e.getMessage());
 		}
 				
-		SphereSamplingShape sphere1 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
+		SphereSamplingShape sphere1 = ApogyCommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
 		sphere1.setCenter(data3dFacade.createCartesianPositionCoordinates(0,0,0));
 		sphere1.setRadius(0.5);
 		
@@ -204,7 +204,7 @@ public class CartesianCoordinatesMeshSamplerTest extends TestCase {
 			sphere1.setRadius(100);
 			getFixture().getCoordinatesSamplingShapes().add(sphere1);
 			
-			SphereSamplingShape sphere2 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
+			SphereSamplingShape sphere2 = ApogyCommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
 			sphere2.setCenter(data3dFacade.createCartesianPositionCoordinates(-100,0,0));
 			sphere2.setRadius(100);									
 			getFixture().getCoordinatesSamplingShapes().add(sphere2);
@@ -230,7 +230,7 @@ public class CartesianCoordinatesMeshSamplerTest extends TestCase {
 			sphere1.setRadius(100);
 			getFixture().getCoordinatesSamplingShapes().add(sphere1);
 			
-			SphereSamplingShape sphere2 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
+			SphereSamplingShape sphere2 = ApogyCommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
 			sphere2.setCenter(data3dFacade.createCartesianPositionCoordinates(-100,0,0));
 			sphere2.setRadius(100);									
 			getFixture().getCoordinatesSamplingShapes().add(sphere2);
@@ -256,7 +256,7 @@ public class CartesianCoordinatesMeshSamplerTest extends TestCase {
 			sphere1.setRadius(100);
 			getFixture().getCoordinatesSamplingShapes().add(sphere1);
 			
-			SphereSamplingShape sphere2 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
+			SphereSamplingShape sphere2 = ApogyCommonGeometryData3DFactory.eINSTANCE.createSphereSamplingShape();
 			sphere2.setCenter(data3dFacade.createCartesianPositionCoordinates(0,0,0));
 			sphere2.setRadius(100);		
 			

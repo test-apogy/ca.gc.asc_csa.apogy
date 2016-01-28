@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2007.
  */
-package org.eclipse.symphony.addons.sensors.pose.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.provider;
 
 
 import java.util.Collection;
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -61,8 +61,8 @@ public class InertialMeasurementUnitItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY);
-			childrenFeatures.add(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION);
+			childrenFeatures.add(ApogyAddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY);
+			childrenFeatures.add(ApogyAddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION);
 		}
 		return childrenFeatures;
 	}
@@ -117,8 +117,8 @@ public class InertialMeasurementUnitItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(InertialMeasurementUnit.class)) {
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -138,13 +138,13 @@ public class InertialMeasurementUnitItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyAddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyAddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**
@@ -159,8 +159,8 @@ public class InertialMeasurementUnitItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY ||
-			childFeature == Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION;
+			childFeature == ApogyAddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY ||
+			childFeature == ApogyAddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION;
 
 		if (qualify) {
 			return getString

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.math.Symphony__CommonMathFactory
+ * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonMath' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonMath' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.math/src-generated' editDirectory='/org.eclipse.symphony.common.math.edit/src-generated' basePackage='org.eclipse.symphony.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonMath' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonMath' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.math/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.math.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common'"
  * @generated
  */
-public interface Symphony__CommonMathPackage extends EPackage {
+public interface ApogyCommonMathPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.math";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.math";
 
 	/**
 	 * The package namespace name.
@@ -57,14 +57,14 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonMathPackage eINSTANCE = org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl.init();
+	ApogyCommonMathPackage eINSTANCE = ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl <em>Tuple3d</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.math.impl.Tuple3dImpl <em>Tuple3d</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.impl.Tuple3dImpl
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getTuple3d()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.Tuple3dImpl
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getTuple3d()
 	 * @generated
 	 */
 	int TUPLE3D = 0;
@@ -124,11 +124,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	int TUPLE3D_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl <em>Matrix3x3</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.math.impl.Matrix3x3Impl <em>Matrix3x3</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.impl.Matrix3x3Impl
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix3x3()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.Matrix3x3Impl
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix3x3()
 	 * @generated
 	 */
 	int MATRIX3X3 = 1;
@@ -242,11 +242,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	int MATRIX3X3_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.Matrix4x4Impl <em>Matrix4x4</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.math.impl.Matrix4x4Impl <em>Matrix4x4</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.impl.Matrix4x4Impl
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix4x4()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.Matrix4x4Impl
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix4x4()
 	 * @generated
 	 */
 	int MATRIX4X4 = 2;
@@ -423,11 +423,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	int MATRIX4X4_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.PolynomialImpl <em>Polynomial</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl <em>Polynomial</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.impl.PolynomialImpl
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getPolynomial()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getPolynomial()
 	 * @generated
 	 */
 	int POLYNOMIAL = 3;
@@ -487,14 +487,14 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	int POLYNOMIAL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.Symphony__CommonMathFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathFacadeImpl
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getSymphony__CommonMathFacade()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getApogyCommonMathFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE = 4;
+	int APOGY_COMMON_MATH_FACADE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -503,7 +503,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_MATH_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Matrix4x4</em>' operation.
@@ -512,7 +512,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D = 0;
+	int APOGY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D = 0;
 
 	/**
 	 * The operation id for the '<em>Create Matrix3x3</em>' operation.
@@ -521,7 +521,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D = 1;
+	int APOGY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D = 1;
 
 	/**
 	 * The operation id for the '<em>Create Tuple3d</em>' operation.
@@ -530,7 +530,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D = 2;
+	int APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D = 2;
 
 	/**
 	 * The operation id for the '<em>Create Tuple3d</em>' operation.
@@ -539,7 +539,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE = 3;
+	int APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE = 3;
 
 	/**
 	 * The operation id for the '<em>Create Polynomial</em>' operation.
@@ -548,7 +548,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE = 4;
+	int APOGY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Identity Matrix4x4</em>' operation.
@@ -557,7 +557,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4 = 5;
+	int APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4 = 5;
 
 	/**
 	 * The operation id for the '<em>Create Identity Matrix3x3</em>' operation.
@@ -566,7 +566,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3 = 6;
+	int APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3 = 6;
 
 	/**
 	 * The operation id for the '<em>Extract Position</em>' operation.
@@ -575,7 +575,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4 = 7;
+	int APOGY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4 = 7;
 
 	/**
 	 * The operation id for the '<em>Extract Orientation</em>' operation.
@@ -584,7 +584,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4 = 8;
+	int APOGY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4 = 8;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -593,14 +593,14 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_MATH_FACADE_OPERATION_COUNT = 9;
+	int APOGY_COMMON_MATH_FACADE_OPERATION_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.MathIOImpl <em>Math IO</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.math.impl.MathIOImpl <em>Math IO</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.impl.MathIOImpl
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMathIO()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.MathIOImpl
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMathIO()
 	 * @generated
 	 */
 	int MATH_IO = 5;
@@ -654,7 +654,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * The meta object id for the '<em>EDouble Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getEDoubleArray()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getEDoubleArray()
 	 * @generated
 	 */
 	int EDOUBLE_ARRAY = 6;
@@ -664,7 +664,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Matrix3d
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix3d()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix3d()
 	 * @generated
 	 */
 	int MATRIX3D = 7;
@@ -674,7 +674,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Matrix4d
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix4d()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix4d()
 	 * @generated
 	 */
 	int MATRIX4D = 8;
@@ -684,7 +684,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Tuple3d
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getVecmathTuple3d()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getVecmathTuple3d()
 	 * @generated
 	 */
 	int VECMATH_TUPLE3D = 9;
@@ -694,570 +694,570 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 10;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Tuple3d <em>Tuple3d</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d <em>Tuple3d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Tuple3d</em>'.
-	 * @see org.eclipse.symphony.common.math.Tuple3d
+	 * @see ca.gc.asc_csa.apogy.common.math.Tuple3d
 	 * @generated
 	 */
 	EClass getTuple3d();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Tuple3d#getX <em>X</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getX <em>X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see org.eclipse.symphony.common.math.Tuple3d#getX()
+	 * @see ca.gc.asc_csa.apogy.common.math.Tuple3d#getX()
 	 * @see #getTuple3d()
 	 * @generated
 	 */
 	EAttribute getTuple3d_X();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Tuple3d#getY <em>Y</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getY <em>Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see org.eclipse.symphony.common.math.Tuple3d#getY()
+	 * @see ca.gc.asc_csa.apogy.common.math.Tuple3d#getY()
 	 * @see #getTuple3d()
 	 * @generated
 	 */
 	EAttribute getTuple3d_Y();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Tuple3d#getZ <em>Z</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#getZ <em>Z</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Z</em>'.
-	 * @see org.eclipse.symphony.common.math.Tuple3d#getZ()
+	 * @see ca.gc.asc_csa.apogy.common.math.Tuple3d#getZ()
 	 * @see #getTuple3d()
 	 * @generated
 	 */
 	EAttribute getTuple3d_Z();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Tuple3d#asTuple3d() <em>As Tuple3d</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.Tuple3d#asTuple3d() <em>As Tuple3d</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>As Tuple3d</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Tuple3d#asTuple3d()
+	 * @see ca.gc.asc_csa.apogy.common.math.Tuple3d#asTuple3d()
 	 * @generated
 	 */
 	EOperation getTuple3d__AsTuple3d();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Matrix3x3 <em>Matrix3x3</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3 <em>Matrix3x3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Matrix3x3</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3
 	 * @generated
 	 */
 	EClass getMatrix3x3();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM00 <em>M00</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM00 <em>M00</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M00</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM00()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM00()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M00();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM01 <em>M01</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM01 <em>M01</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M01</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM01()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM01()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M01();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM02 <em>M02</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM02 <em>M02</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M02</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM02()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM02()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M02();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM10 <em>M10</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM10 <em>M10</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M10</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM10()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM10()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M10();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM11 <em>M11</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM11 <em>M11</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M11</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM11()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM11()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M11();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM12 <em>M12</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM12 <em>M12</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M12</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM12()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM12()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M12();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM20 <em>M20</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM20 <em>M20</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M20</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM20()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM20()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M20();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM21 <em>M21</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM21 <em>M21</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M21</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM21()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM21()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M21();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix3x3#getM22 <em>M22</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM22 <em>M22</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M22</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#getM22()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#getM22()
 	 * @see #getMatrix3x3()
 	 * @generated
 	 */
 	EAttribute getMatrix3x3_M22();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Matrix3x3#asMatrix3d() <em>As Matrix3d</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.Matrix3x3#asMatrix3d() <em>As Matrix3d</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>As Matrix3d</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Matrix3x3#asMatrix3d()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix3x3#asMatrix3d()
 	 * @generated
 	 */
 	EOperation getMatrix3x3__AsMatrix3d();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Matrix4x4 <em>Matrix4x4</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4 <em>Matrix4x4</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Matrix4x4</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4
 	 * @generated
 	 */
 	EClass getMatrix4x4();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM00 <em>M00</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM00 <em>M00</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M00</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM00()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM00()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M00();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM01 <em>M01</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM01 <em>M01</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M01</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM01()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM01()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M01();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM02 <em>M02</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM02 <em>M02</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M02</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM02()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM02()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M02();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM03 <em>M03</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM03 <em>M03</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M03</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM03()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM03()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M03();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM10 <em>M10</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM10 <em>M10</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M10</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM10()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM10()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M10();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM11 <em>M11</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM11 <em>M11</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M11</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM11()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM11()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M11();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM12 <em>M12</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM12 <em>M12</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M12</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM12()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM12()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M12();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM13 <em>M13</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM13 <em>M13</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M13</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM13()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM13()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M13();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM20 <em>M20</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM20 <em>M20</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M20</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM20()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM20()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M20();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM21 <em>M21</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM21 <em>M21</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M21</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM21()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM21()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M21();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM22 <em>M22</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM22 <em>M22</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M22</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM22()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM22()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M22();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM23 <em>M23</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM23 <em>M23</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M23</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM23()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM23()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M23();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM30 <em>M30</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM30 <em>M30</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M30</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM30()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM30()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M30();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM31 <em>M31</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM31 <em>M31</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M31</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM31()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM31()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M31();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM32 <em>M32</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM32 <em>M32</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M32</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM32()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM32()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M32();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Matrix4x4#getM33 <em>M33</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM33 <em>M33</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>M33</em>'.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#getM33()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#getM33()
 	 * @see #getMatrix4x4()
 	 * @generated
 	 */
 	EAttribute getMatrix4x4_M33();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Matrix4x4#asMatrix4d() <em>As Matrix4d</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.Matrix4x4#asMatrix4d() <em>As Matrix4d</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>As Matrix4d</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Matrix4x4#asMatrix4d()
+	 * @see ca.gc.asc_csa.apogy.common.math.Matrix4x4#asMatrix4d()
 	 * @generated
 	 */
 	EOperation getMatrix4x4__AsMatrix4d();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Polynomial <em>Polynomial</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.math.Polynomial <em>Polynomial</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Polynomial</em>'.
-	 * @see org.eclipse.symphony.common.math.Polynomial
+	 * @see ca.gc.asc_csa.apogy.common.math.Polynomial
 	 * @generated
 	 */
 	EClass getPolynomial();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Polynomial#getDegree <em>Degree</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getDegree <em>Degree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Degree</em>'.
-	 * @see org.eclipse.symphony.common.math.Polynomial#getDegree()
+	 * @see ca.gc.asc_csa.apogy.common.math.Polynomial#getDegree()
 	 * @see #getPolynomial()
 	 * @generated
 	 */
 	EAttribute getPolynomial_Degree();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Polynomial#getCoeffs <em>Coeffs</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getCoeffs <em>Coeffs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Coeffs</em>'.
-	 * @see org.eclipse.symphony.common.math.Polynomial#getCoeffs()
+	 * @see ca.gc.asc_csa.apogy.common.math.Polynomial#getCoeffs()
 	 * @see #getPolynomial()
 	 * @generated
 	 */
 	EAttribute getPolynomial_Coeffs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Polynomial#getRealRoots <em>Real Roots</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getRealRoots <em>Real Roots</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Real Roots</em>'.
-	 * @see org.eclipse.symphony.common.math.Polynomial#getRealRoots()
+	 * @see ca.gc.asc_csa.apogy.common.math.Polynomial#getRealRoots()
 	 * @see #getPolynomial()
 	 * @generated
 	 */
 	EAttribute getPolynomial_RealRoots();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.math.Polynomial#getImaginaryRoots <em>Imaginary Roots</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.math.Polynomial#getImaginaryRoots <em>Imaginary Roots</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Imaginary Roots</em>'.
-	 * @see org.eclipse.symphony.common.math.Polynomial#getImaginaryRoots()
+	 * @see ca.gc.asc_csa.apogy.common.math.Polynomial#getImaginaryRoots()
 	 * @see #getPolynomial()
 	 * @generated
 	 */
 	EAttribute getPolynomial_ImaginaryRoots();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonMathFacade();
+	EClass getApogyCommonMathFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createMatrix4x4(javax.vecmath.Matrix4d) <em>Create Matrix4x4</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createMatrix4x4(javax.vecmath.Matrix4d) <em>Create Matrix4x4</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Matrix4x4</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createMatrix4x4(javax.vecmath.Matrix4d)
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createMatrix4x4(javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__CreateMatrix4x4__Matrix4d();
+	EOperation getApogyCommonMathFacade__CreateMatrix4x4__Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createMatrix3x3(javax.vecmath.Matrix3d) <em>Create Matrix3x3</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createMatrix3x3(javax.vecmath.Matrix3d) <em>Create Matrix3x3</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Matrix3x3</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createMatrix3x3(javax.vecmath.Matrix3d)
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createMatrix3x3(javax.vecmath.Matrix3d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__CreateMatrix3x3__Matrix3d();
+	EOperation getApogyCommonMathFacade__CreateMatrix3x3__Matrix3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createTuple3d(javax.vecmath.Tuple3d) <em>Create Tuple3d</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createTuple3d(javax.vecmath.Tuple3d) <em>Create Tuple3d</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Tuple3d</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createTuple3d(javax.vecmath.Tuple3d)
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createTuple3d(javax.vecmath.Tuple3d)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__CreateTuple3d__Tuple3d();
+	EOperation getApogyCommonMathFacade__CreateTuple3d__Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createTuple3d(double, double, double) <em>Create Tuple3d</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createTuple3d(double, double, double) <em>Create Tuple3d</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Tuple3d</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createTuple3d(double, double, double)
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createTuple3d(double, double, double)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__CreateTuple3d__double_double_double();
+	EOperation getApogyCommonMathFacade__CreateTuple3d__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createPolynomial(double[]) <em>Create Polynomial</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createPolynomial(double[]) <em>Create Polynomial</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Polynomial</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createPolynomial(double[])
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createPolynomial(double[])
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__CreatePolynomial__double();
+	EOperation getApogyCommonMathFacade__CreatePolynomial__double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createIdentityMatrix4x4() <em>Create Identity Matrix4x4</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createIdentityMatrix4x4() <em>Create Identity Matrix4x4</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Identity Matrix4x4</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createIdentityMatrix4x4()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createIdentityMatrix4x4()
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__CreateIdentityMatrix4x4();
+	EOperation getApogyCommonMathFacade__CreateIdentityMatrix4x4();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createIdentityMatrix3x3() <em>Create Identity Matrix3x3</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createIdentityMatrix3x3() <em>Create Identity Matrix3x3</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Identity Matrix3x3</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#createIdentityMatrix3x3()
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#createIdentityMatrix3x3()
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__CreateIdentityMatrix3x3();
+	EOperation getApogyCommonMathFacade__CreateIdentityMatrix3x3();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#extractPosition(org.eclipse.symphony.common.math.Matrix4x4) <em>Extract Position</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#extractPosition(ca.gc.asc_csa.apogy.common.math.Matrix4x4) <em>Extract Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Extract Position</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#extractPosition(org.eclipse.symphony.common.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#extractPosition(ca.gc.asc_csa.apogy.common.math.Matrix4x4)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__ExtractPosition__Matrix4x4();
+	EOperation getApogyCommonMathFacade__ExtractPosition__Matrix4x4();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade#extractOrientation(org.eclipse.symphony.common.math.Matrix4x4) <em>Extract Orientation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#extractOrientation(ca.gc.asc_csa.apogy.common.math.Matrix4x4) <em>Extract Orientation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Extract Orientation</em>' operation.
-	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade#extractOrientation(org.eclipse.symphony.common.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade#extractOrientation(ca.gc.asc_csa.apogy.common.math.Matrix4x4)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonMathFacade__ExtractOrientation__Matrix4x4();
+	EOperation getApogyCommonMathFacade__ExtractOrientation__Matrix4x4();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.MathIO <em>Math IO</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.math.MathIO <em>Math IO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Math IO</em>'.
-	 * @see org.eclipse.symphony.common.math.MathIO
+	 * @see ca.gc.asc_csa.apogy.common.math.MathIO
 	 * @generated
 	 */
 	EClass getMathIO();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathIO#readTrMatrix(java.lang.String) <em>Read Tr Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.MathIO#readTrMatrix(java.lang.String) <em>Read Tr Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Read Tr Matrix</em>' operation.
-	 * @see org.eclipse.symphony.common.math.MathIO#readTrMatrix(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.math.MathIO#readTrMatrix(java.lang.String)
 	 * @generated
 	 */
 	EOperation getMathIO__ReadTrMatrix__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathIO#writeTrMatrix(org.eclipse.symphony.common.math.Matrix4x4, java.lang.String) <em>Write Tr Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.MathIO#writeTrMatrix(ca.gc.asc_csa.apogy.common.math.Matrix4x4, java.lang.String) <em>Write Tr Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Write Tr Matrix</em>' operation.
-	 * @see org.eclipse.symphony.common.math.MathIO#writeTrMatrix(org.eclipse.symphony.common.math.Matrix4x4, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.math.MathIO#writeTrMatrix(ca.gc.asc_csa.apogy.common.math.Matrix4x4, java.lang.String)
 	 * @generated
 	 */
 	EOperation getMathIO__WriteTrMatrix__Matrix4x4_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathIO#writeTrMatrix(javax.vecmath.Matrix4d, java.lang.String) <em>Write Tr Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.math.MathIO#writeTrMatrix(javax.vecmath.Matrix4d, java.lang.String) <em>Write Tr Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Write Tr Matrix</em>' operation.
-	 * @see org.eclipse.symphony.common.math.MathIO#writeTrMatrix(javax.vecmath.Matrix4d, java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.math.MathIO#writeTrMatrix(javax.vecmath.Matrix4d, java.lang.String)
 	 * @generated
 	 */
 	EOperation getMathIO__WriteTrMatrix__Matrix4d_String();
@@ -1323,7 +1323,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonMathFactory getSymphony__CommonMathFactory();
+	ApogyCommonMathFactory getApogyCommonMathFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1340,11 +1340,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl <em>Tuple3d</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.math.impl.Tuple3dImpl <em>Tuple3d</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.impl.Tuple3dImpl
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getTuple3d()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.Tuple3dImpl
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getTuple3d()
 		 * @generated
 		 */
 		EClass TUPLE3D = eINSTANCE.getTuple3d();
@@ -1382,11 +1382,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		EOperation TUPLE3D___AS_TUPLE3D = eINSTANCE.getTuple3d__AsTuple3d();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl <em>Matrix3x3</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.math.impl.Matrix3x3Impl <em>Matrix3x3</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.impl.Matrix3x3Impl
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix3x3()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.Matrix3x3Impl
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix3x3()
 		 * @generated
 		 */
 		EClass MATRIX3X3 = eINSTANCE.getMatrix3x3();
@@ -1472,11 +1472,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		EOperation MATRIX3X3___AS_MATRIX3D = eINSTANCE.getMatrix3x3__AsMatrix3d();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.Matrix4x4Impl <em>Matrix4x4</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.math.impl.Matrix4x4Impl <em>Matrix4x4</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.impl.Matrix4x4Impl
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix4x4()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.Matrix4x4Impl
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix4x4()
 		 * @generated
 		 */
 		EClass MATRIX4X4 = eINSTANCE.getMatrix4x4();
@@ -1618,11 +1618,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		EOperation MATRIX4X4___AS_MATRIX4D = eINSTANCE.getMatrix4x4__AsMatrix4d();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.PolynomialImpl <em>Polynomial</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl <em>Polynomial</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.impl.PolynomialImpl
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getPolynomial()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.PolynomialImpl
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getPolynomial()
 		 * @generated
 		 */
 		EClass POLYNOMIAL = eINSTANCE.getPolynomial();
@@ -1660,14 +1660,14 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		EAttribute POLYNOMIAL__IMAGINARY_ROOTS = eINSTANCE.getPolynomial_ImaginaryRoots();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.Symphony__CommonMathFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathFacadeImpl
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getSymphony__CommonMathFacade()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getApogyCommonMathFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_MATH_FACADE = eINSTANCE.getSymphony__CommonMathFacade();
+		EClass APOGY_COMMON_MATH_FACADE = eINSTANCE.getApogyCommonMathFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Matrix4x4</b></em>' operation.
@@ -1675,7 +1675,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D = eINSTANCE.getSymphony__CommonMathFacade__CreateMatrix4x4__Matrix4d();
+		EOperation APOGY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D = eINSTANCE.getApogyCommonMathFacade__CreateMatrix4x4__Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Matrix3x3</b></em>' operation.
@@ -1683,7 +1683,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D = eINSTANCE.getSymphony__CommonMathFacade__CreateMatrix3x3__Matrix3d();
+		EOperation APOGY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D = eINSTANCE.getApogyCommonMathFacade__CreateMatrix3x3__Matrix3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Tuple3d</b></em>' operation.
@@ -1691,7 +1691,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D = eINSTANCE.getSymphony__CommonMathFacade__CreateTuple3d__Tuple3d();
+		EOperation APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D = eINSTANCE.getApogyCommonMathFacade__CreateTuple3d__Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Tuple3d</b></em>' operation.
@@ -1699,7 +1699,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonMathFacade__CreateTuple3d__double_double_double();
+		EOperation APOGY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyCommonMathFacade__CreateTuple3d__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Polynomial</b></em>' operation.
@@ -1707,7 +1707,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE = eINSTANCE.getSymphony__CommonMathFacade__CreatePolynomial__double();
+		EOperation APOGY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE = eINSTANCE.getApogyCommonMathFacade__CreatePolynomial__double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Identity Matrix4x4</b></em>' operation.
@@ -1715,7 +1715,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4 = eINSTANCE.getSymphony__CommonMathFacade__CreateIdentityMatrix4x4();
+		EOperation APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4 = eINSTANCE.getApogyCommonMathFacade__CreateIdentityMatrix4x4();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Identity Matrix3x3</b></em>' operation.
@@ -1723,7 +1723,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3 = eINSTANCE.getSymphony__CommonMathFacade__CreateIdentityMatrix3x3();
+		EOperation APOGY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3 = eINSTANCE.getApogyCommonMathFacade__CreateIdentityMatrix3x3();
 
 		/**
 		 * The meta object literal for the '<em><b>Extract Position</b></em>' operation.
@@ -1731,7 +1731,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4 = eINSTANCE.getSymphony__CommonMathFacade__ExtractPosition__Matrix4x4();
+		EOperation APOGY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4 = eINSTANCE.getApogyCommonMathFacade__ExtractPosition__Matrix4x4();
 
 		/**
 		 * The meta object literal for the '<em><b>Extract Orientation</b></em>' operation.
@@ -1739,14 +1739,14 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4 = eINSTANCE.getSymphony__CommonMathFacade__ExtractOrientation__Matrix4x4();
+		EOperation APOGY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4 = eINSTANCE.getApogyCommonMathFacade__ExtractOrientation__Matrix4x4();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.MathIOImpl <em>Math IO</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.math.impl.MathIOImpl <em>Math IO</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.impl.MathIOImpl
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMathIO()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.MathIOImpl
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMathIO()
 		 * @generated
 		 */
 		EClass MATH_IO = eINSTANCE.getMathIO();
@@ -1779,7 +1779,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * The meta object literal for the '<em>EDouble Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getEDoubleArray()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getEDoubleArray()
 		 * @generated
 		 */
 		EDataType EDOUBLE_ARRAY = eINSTANCE.getEDoubleArray();
@@ -1789,7 +1789,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Matrix3d
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix3d()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix3d()
 		 * @generated
 		 */
 		EDataType MATRIX3D = eINSTANCE.getMatrix3d();
@@ -1799,7 +1799,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Matrix4d
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getMatrix4d()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getMatrix4d()
 		 * @generated
 		 */
 		EDataType MATRIX4D = eINSTANCE.getMatrix4d();
@@ -1809,7 +1809,7 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Tuple3d
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getVecmathTuple3d()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getVecmathTuple3d()
 		 * @generated
 		 */
 		EDataType VECMATH_TUPLE3D = eINSTANCE.getVecmathTuple3d();
@@ -1819,11 +1819,11 @@ public interface Symphony__CommonMathPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.common.math.impl.Symphony__CommonMathPackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.common.math.impl.ApogyCommonMathPackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
 
 	}
 
-} //Symphony__CommonMathPackage
+} //ApogyCommonMathPackage

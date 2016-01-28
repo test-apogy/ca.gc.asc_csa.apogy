@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,12 +26,12 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsTelecoms' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__AddonsTelecoms' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.telecoms/src-generated' editDirectory='/org.eclipse.symphony.addons.telecoms.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsTelecoms' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='ApogyAddonsTelecoms' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.addons.telecoms/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.telecoms.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons'"
  * @generated
  */
-public interface Symphony__AddonsTelecomsPackage extends EPackage {
+public interface ApogyAddonsTelecomsPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.telecoms";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.telecoms";
 
 	/**
 	 * The package namespace name.
@@ -62,14 +62,14 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsTelecomsPackage eINSTANCE = org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl.init();
+	ApogyAddonsTelecomsPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl <em>Telecom Node</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl <em>Telecom Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomNode()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomNode()
 	 * @generated
 	 */
 	int TELECOM_NODE = 0;
@@ -210,11 +210,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int TELECOM_NODE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl <em>Telecom Status Monitor Tool</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl <em>Telecom Status Monitor Tool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomStatusMonitorTool()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomStatusMonitorTool()
 	 * @generated
 	 */
 	int TELECOM_STATUS_MONITOR_TOOL = 1;
@@ -301,11 +301,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int TELECOM_STATUS_MONITOR_TOOL_OPERATION_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolListImpl <em>Telecom Status Monitor Tool List</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolListImpl <em>Telecom Status Monitor Tool List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolListImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomStatusMonitorToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolListImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomStatusMonitorToolList()
 	 * @generated
 	 */
 	int TELECOM_STATUS_MONITOR_TOOL_LIST = 2;
@@ -317,7 +317,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__NAME = Symphony__AddonsPackage.SIMPLE_TOOL__NAME;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__NAME = ApogyAddonsPackage.SIMPLE_TOOL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -326,7 +326,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__DESCRIPTION = Symphony__AddonsPackage.SIMPLE_TOOL__DESCRIPTION;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__DESCRIPTION = ApogyAddonsPackage.SIMPLE_TOOL__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Tool List</b></em>' container reference.
@@ -335,7 +335,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__TOOL_LIST = Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__TOOL_LIST = ApogyAddonsPackage.SIMPLE_TOOL__TOOL_LIST;
 
 	/**
 	 * The feature id for the '<em><b>Active</b></em>' attribute.
@@ -344,7 +344,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__ACTIVE = Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__ACTIVE = ApogyAddonsPackage.SIMPLE_TOOL__ACTIVE;
 
 	/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -353,7 +353,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__DISPOSED = Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__DISPOSED = ApogyAddonsPackage.SIMPLE_TOOL__DISPOSED;
 
 	/**
 	 * The feature id for the '<em><b>Telecom Status Monitors</b></em>' containment reference list.
@@ -362,7 +362,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS = Symphony__AddonsPackage.SIMPLE_TOOL_FEATURE_COUNT + 0;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS = ApogyAddonsPackage.SIMPLE_TOOL_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Telecom Status Monitor Tool List</em>' class.
@@ -371,7 +371,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST_FEATURE_COUNT = Symphony__AddonsPackage.SIMPLE_TOOL_FEATURE_COUNT + 1;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST_FEATURE_COUNT = ApogyAddonsPackage.SIMPLE_TOOL_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -380,7 +380,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST___DISPOSE = Symphony__AddonsPackage.SIMPLE_TOOL___DISPOSE;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST___DISPOSE = ApogyAddonsPackage.SIMPLE_TOOL___DISPOSE;
 
 	/**
 	 * The number of operations of the '<em>Telecom Status Monitor Tool List</em>' class.
@@ -389,14 +389,14 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST_OPERATION_COUNT = Symphony__AddonsPackage.SIMPLE_TOOL_OPERATION_COUNT + 0;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST_OPERATION_COUNT = ApogyAddonsPackage.SIMPLE_TOOL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl <em>Abstract Antenna Radiation Pattern</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl <em>Abstract Antenna Radiation Pattern</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getAbstractAntennaRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getAbstractAntennaRadiationPattern()
 	 * @generated
 	 */
 	int ABSTRACT_ANTENNA_RADIATION_PATTERN = 3;
@@ -408,7 +408,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__PARENT = ApogyCommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -417,7 +417,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__DESCRIPTION = ApogyCommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -426,7 +426,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NODE_ID = ApogyCommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -435,7 +435,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Antenna Radiation Pattern</em>' class.
@@ -444,7 +444,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_FEATURE_COUNT = ApogyCommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -453,7 +453,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Compute Gain</em>' operation.
@@ -462,7 +462,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN___COMPUTE_GAIN__DOUBLE_DOUBLE = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN___COMPUTE_GAIN__DOUBLE_DOUBLE = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Abstract Antenna Radiation Pattern</em>' class.
@@ -471,14 +471,14 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 1;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT = ApogyCommonTopologyPackage.NODE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.IsotropicAntennaImpl <em>Isotropic Antenna</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.IsotropicAntennaImpl <em>Isotropic Antenna</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.IsotropicAntennaImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getIsotropicAntenna()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.IsotropicAntennaImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getIsotropicAntenna()
 	 * @generated
 	 */
 	int ISOTROPIC_ANTENNA = 4;
@@ -556,11 +556,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int ISOTROPIC_ANTENNA_OPERATION_COUNT = ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl <em>Dipole Antenna Radiation Pattern</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl <em>Dipole Antenna Radiation Pattern</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getDipoleAntennaRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getDipoleAntennaRadiationPattern()
 	 * @generated
 	 */
 	int DIPOLE_ANTENNA_RADIATION_PATTERN = 5;
@@ -638,11 +638,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int DIPOLE_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT = ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl <em>Half Wave Dipole Antenna Radiation Pattern</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl <em>Half Wave Dipole Antenna Radiation Pattern</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getHalfWaveDipoleAntennaRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getHalfWaveDipoleAntennaRadiationPattern()
 	 * @generated
 	 */
 	int HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN = 6;
@@ -720,11 +720,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT = ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.SimpleConicalRadiationPatternImpl <em>Simple Conical Radiation Pattern</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleConicalRadiationPatternImpl <em>Simple Conical Radiation Pattern</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.SimpleConicalRadiationPatternImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getSimpleConicalRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleConicalRadiationPatternImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getSimpleConicalRadiationPattern()
 	 * @generated
 	 */
 	int SIMPLE_CONICAL_RADIATION_PATTERN = 7;
@@ -811,11 +811,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int SIMPLE_CONICAL_RADIATION_PATTERN_OPERATION_COUNT = ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl <em>Simple Rectangular Frustum Radiation Pattern</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl <em>Simple Rectangular Frustum Radiation Pattern</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getSimpleRectangularFrustumRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getSimpleRectangularFrustumRadiationPattern()
 	 * @generated
 	 */
 	int SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN = 8;
@@ -911,11 +911,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN_OPERATION_COUNT = ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl <em>URl Based Antenna Radiation Pattern</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl <em>URl Based Antenna Radiation Pattern</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getURlBasedAntennaRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getURlBasedAntennaRadiationPattern()
 	 * @generated
 	 */
 	int URL_BASED_ANTENNA_RADIATION_PATTERN = 9;
@@ -1002,11 +1002,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	int URL_BASED_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT = ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl <em>Antenna Radiation Pattern Image Map Layer</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl <em>Antenna Radiation Pattern Image Map Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getAntennaRadiationPatternImageMapLayer()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getAntennaRadiationPatternImageMapLayer()
 	 * @generated
 	 */
 	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER = 10;
@@ -1018,7 +1018,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__NAME = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__NAME;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__NAME = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1027,7 +1027,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__DESCRIPTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__DESCRIPTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__DESCRIPTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' container reference.
@@ -1036,7 +1036,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__MAP = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__MAP;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__MAP = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__MAP;
 
 	/**
 	 * The feature id for the '<em><b>Abstract Map Layer Node</b></em>' reference.
@@ -1045,7 +1045,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1054,7 +1054,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__WIDTH = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__WIDTH;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__WIDTH = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -1063,7 +1063,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__HEIGHT = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__HEIGHT;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__HEIGHT = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Opaque</b></em>' attribute.
@@ -1072,7 +1072,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OPAQUE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OPAQUE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OPAQUE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OPAQUE;
 
 	/**
 	 * The feature id for the '<em><b>Image</b></em>' containment reference.
@@ -1081,7 +1081,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__IMAGE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__IMAGE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__IMAGE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Legend</b></em>' containment reference.
@@ -1090,7 +1090,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LEGEND = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LEGEND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LEGEND = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LEGEND;
 
 	/**
 	 * The feature id for the '<em><b>Resolution</b></em>' attribute.
@@ -1099,7 +1099,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__RESOLUTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__RESOLUTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__RESOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Required Resolution</b></em>' attribute.
@@ -1108,7 +1108,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Cartesian Triangular Mesh Map Layer</b></em>' reference.
@@ -1117,7 +1117,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
 
 	/**
 	 * The feature id for the '<em><b>Line Of Sight Available Color</b></em>' attribute.
@@ -1126,7 +1126,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Line Of Sight Not Available Color</b></em>' attribute.
@@ -1135,7 +1135,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Observer Pose</b></em>' containment reference.
@@ -1144,7 +1144,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OBSERVER_POSE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OBSERVER_POSE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE;
 
 	/**
 	 * The feature id for the '<em><b>Target Height Above Ground</b></em>' attribute.
@@ -1153,7 +1153,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND;
 
 	/**
 	 * The feature id for the '<em><b>Use Height Perpendicular To Ground</b></em>' attribute.
@@ -1162,7 +1162,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND;
 
 	/**
 	 * The feature id for the '<em><b>Antenna Radiation Pattern</b></em>' containment reference.
@@ -1171,7 +1171,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 0;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Signal Strength Cutoff</b></em>' attribute.
@@ -1180,7 +1180,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 1;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Bellow Cutoff Color</b></em>' attribute.
@@ -1189,7 +1189,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 2;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Antenna Radiation Pattern Image Map Layer</em>' class.
@@ -1198,7 +1198,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_FEATURE_COUNT = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 3;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_FEATURE_COUNT = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Region</em>' operation.
@@ -1207,7 +1207,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION;
 
 	/**
 	 * The operation id for the '<em>Get Region Image</em>' operation.
@@ -1216,7 +1216,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION_IMAGE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION_IMAGE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION_IMAGE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION_IMAGE;
 
 	/**
 	 * The operation id for the '<em>Get Resolution</em>' operation.
@@ -1225,7 +1225,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_RESOLUTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_RESOLUTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_RESOLUTION;
 
 	/**
 	 * The operation id for the '<em>Update Image</em>' operation.
@@ -1234,7 +1234,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR;
 
 	/**
 	 * The operation id for the '<em>Get Image Map Layer Region</em>' operation.
@@ -1243,7 +1243,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
 
 	/**
 	 * The number of operations of the '<em>Antenna Radiation Pattern Image Map Layer</em>' class.
@@ -1252,14 +1252,14 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_OPERATION_COUNT = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_OPERATION_COUNT + 0;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_OPERATION_COUNT = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}' enum.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNodeStatus
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomNodeStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomNodeStatus()
 	 * @generated
 	 */
 	int TELECOM_NODE_STATUS = 11;
@@ -1270,443 +1270,443 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see javax.vecmath.Color3f
-	 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getColor3f()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getColor3f()
 	 * @generated
 	 */
 	int COLOR3F = 12;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.TelecomNode <em>Telecom Node</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode <em>Telecom Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Telecom Node</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode
 	 * @generated
 	 */
 	EClass getTelecomNode();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getStatusMonitorTool <em>Status Monitor Tool</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getStatusMonitorTool <em>Status Monitor Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Status Monitor Tool</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getStatusMonitorTool()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getStatusMonitorTool()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EReference getTelecomNode_StatusMonitorTool();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#isEnabled <em>Enabled</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#isEnabled <em>Enabled</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Enabled</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#isEnabled()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#isEnabled()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_Enabled();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getName()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getName()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getAddress <em>Address</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getAddress <em>Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Address</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getAddress()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getAddress()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_Address();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketsToSend <em>Packets To Send</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketsToSend <em>Packets To Send</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Packets To Send</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketsToSend()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketsToSend()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_PacketsToSend();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getConnectionTimeout <em>Connection Timeout</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getConnectionTimeout <em>Connection Timeout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Connection Timeout</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getConnectionTimeout()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getConnectionTimeout()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_ConnectionTimeout();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getLatencyWarning <em>Latency Warning</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getLatencyWarning <em>Latency Warning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Latency Warning</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getLatencyWarning()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getLatencyWarning()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_LatencyWarning();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getLatencyAlarm <em>Latency Alarm</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getLatencyAlarm <em>Latency Alarm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Latency Alarm</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getLatencyAlarm()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getLatencyAlarm()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_LatencyAlarm();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketLossWarning <em>Packet Loss Warning</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketLossWarning <em>Packet Loss Warning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Packet Loss Warning</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketLossWarning()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketLossWarning()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_PacketLossWarning();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketLossAlarm <em>Packet Loss Alarm</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketLossAlarm <em>Packet Loss Alarm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Packet Loss Alarm</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketLossAlarm()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketLossAlarm()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_PacketLossAlarm();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getLatency <em>Latency</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getLatency <em>Latency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Latency</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getLatency()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getLatency()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_Latency();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketLoss <em>Packet Loss</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketLoss <em>Packet Loss</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Packet Loss</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketLoss()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getPacketLoss()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_PacketLoss();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getStatus <em>Status</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getStatus <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Status</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getStatus()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode#getStatus()
 	 * @see #getTelecomNode()
 	 * @generated
 	 */
 	EAttribute getTelecomNode_Status();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool <em>Telecom Status Monitor Tool</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool <em>Telecom Status Monitor Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Telecom Status Monitor Tool</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool
 	 * @generated
 	 */
 	EClass getTelecomStatusMonitorTool();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getTelecomNodes <em>Telecom Nodes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#getTelecomNodes <em>Telecom Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Telecom Nodes</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getTelecomNodes()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#getTelecomNodes()
 	 * @see #getTelecomStatusMonitorTool()
 	 * @generated
 	 */
 	EReference getTelecomStatusMonitorTool_TelecomNodes();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList <em>Status Monitor Tool List</em>}'.
+	 * Returns the meta object for the container reference '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList <em>Status Monitor Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Status Monitor Tool List</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList()
 	 * @see #getTelecomStatusMonitorTool()
 	 * @generated
 	 */
 	EReference getTelecomStatusMonitorTool_StatusMonitorToolList();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isRunning <em>Running</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isRunning <em>Running</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Running</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isRunning()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isRunning()
 	 * @see #getTelecomStatusMonitorTool()
 	 * @generated
 	 */
 	EAttribute getTelecomStatusMonitorTool_Running();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isDisposed <em>Disposed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isDisposed <em>Disposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Disposed</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isDisposed()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#isDisposed()
 	 * @see #getTelecomStatusMonitorTool()
 	 * @generated
 	 */
 	EAttribute getTelecomStatusMonitorTool_Disposed();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#start() <em>Start</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#start() <em>Start</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Start</em>' operation.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#start()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#start()
 	 * @generated
 	 */
 	EOperation getTelecomStatusMonitorTool__Start();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#stop() <em>Stop</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Stop</em>' operation.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#stop()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#stop()
 	 * @generated
 	 */
 	EOperation getTelecomStatusMonitorTool__Stop();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#dispose() <em>Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose</em>' operation.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#dispose()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorTool#dispose()
 	 * @generated
 	 */
 	EOperation getTelecomStatusMonitorTool__Dispose();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList <em>Telecom Status Monitor Tool List</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList <em>Telecom Status Monitor Tool List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Telecom Status Monitor Tool List</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList
 	 * @generated
 	 */
 	EClass getTelecomStatusMonitorToolList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Telecom Status Monitors</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors()
 	 * @see #getTelecomStatusMonitorToolList()
 	 * @generated
 	 */
 	EReference getTelecomStatusMonitorToolList_TelecomStatusMonitors();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern <em>Abstract Antenna Radiation Pattern</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern <em>Abstract Antenna Radiation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Antenna Radiation Pattern</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern
 	 * @generated
 	 */
 	EClass getAbstractAntennaRadiationPattern();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern#computeGain(double, double) <em>Compute Gain</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern#computeGain(double, double) <em>Compute Gain</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Gain</em>' operation.
-	 * @see org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern#computeGain(double, double)
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern#computeGain(double, double)
 	 * @generated
 	 */
 	EOperation getAbstractAntennaRadiationPattern__ComputeGain__double_double();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.IsotropicAntenna <em>Isotropic Antenna</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna <em>Isotropic Antenna</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Isotropic Antenna</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.IsotropicAntenna
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.IsotropicAntenna
 	 * @generated
 	 */
 	EClass getIsotropicAntenna();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern <em>Dipole Antenna Radiation Pattern</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern <em>Dipole Antenna Radiation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Dipole Antenna Radiation Pattern</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern
 	 * @generated
 	 */
 	EClass getDipoleAntennaRadiationPattern();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern <em>Half Wave Dipole Antenna Radiation Pattern</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern <em>Half Wave Dipole Antenna Radiation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Half Wave Dipole Antenna Radiation Pattern</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern
 	 * @generated
 	 */
 	EClass getHalfWaveDipoleAntennaRadiationPattern();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern <em>Simple Conical Radiation Pattern</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern <em>Simple Conical Radiation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simple Conical Radiation Pattern</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern
 	 * @generated
 	 */
 	EClass getSimpleConicalRadiationPattern();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern#getApexAngle <em>Apex Angle</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern#getApexAngle <em>Apex Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Apex Angle</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern#getApexAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern#getApexAngle()
 	 * @see #getSimpleConicalRadiationPattern()
 	 * @generated
 	 */
 	EAttribute getSimpleConicalRadiationPattern_ApexAngle();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern <em>Simple Rectangular Frustum Radiation Pattern</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern <em>Simple Rectangular Frustum Radiation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Simple Rectangular Frustum Radiation Pattern</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern
 	 * @generated
 	 */
 	EClass getSimpleRectangularFrustumRadiationPattern();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Horizontal Field Of View</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView()
 	 * @see #getSimpleRectangularFrustumRadiationPattern()
 	 * @generated
 	 */
 	EAttribute getSimpleRectangularFrustumRadiationPattern_HorizontalFieldOfView();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vertical Field Of View</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView()
 	 * @see #getSimpleRectangularFrustumRadiationPattern()
 	 * @generated
 	 */
 	EAttribute getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern <em>URl Based Antenna Radiation Pattern</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern <em>URl Based Antenna Radiation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>URl Based Antenna Radiation Pattern</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern
 	 * @generated
 	 */
 	EClass getURlBasedAntennaRadiationPattern();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern#getUrl()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern#getUrl()
 	 * @see #getURlBasedAntennaRadiationPattern()
 	 * @generated
 	 */
 	EAttribute getURlBasedAntennaRadiationPattern_Url();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer <em>Antenna Radiation Pattern Image Map Layer</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer <em>Antenna Radiation Pattern Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Antenna Radiation Pattern Image Map Layer</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer
 	 * @generated
 	 */
 	EClass getAntennaRadiationPatternImageMapLayer();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Antenna Radiation Pattern</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern()
 	 * @see #getAntennaRadiationPatternImageMapLayer()
 	 * @generated
 	 */
 	EReference getAntennaRadiationPatternImageMapLayer_AntennaRadiationPattern();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Signal Strength Cutoff</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff()
 	 * @see #getAntennaRadiationPatternImageMapLayer()
 	 * @generated
 	 */
 	EAttribute getAntennaRadiationPatternImageMapLayer_SignalStrengthCutoff();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor <em>Bellow Cutoff Color</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor <em>Bellow Cutoff Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Bellow Cutoff Color</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor()
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor()
 	 * @see #getAntennaRadiationPatternImageMapLayer()
 	 * @generated
 	 */
 	EAttribute getAntennaRadiationPatternImageMapLayer_BellowCutoffColor();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}'.
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Telecom Node Status</em>'.
-	 * @see org.eclipse.symphony.addons.telecoms.TelecomNodeStatus
+	 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus
 	 * @generated
 	 */
 	EEnum getTelecomNodeStatus();
@@ -1729,7 +1729,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsTelecomsFactory getSymphony__AddonsTelecomsFactory();
+	ApogyAddonsTelecomsFactory getApogyAddonsTelecomsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1746,11 +1746,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl <em>Telecom Node</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl <em>Telecom Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomNode()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomNodeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomNode()
 		 * @generated
 		 */
 		EClass TELECOM_NODE = eINSTANCE.getTelecomNode();
@@ -1860,11 +1860,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EAttribute TELECOM_NODE__STATUS = eINSTANCE.getTelecomNode_Status();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl <em>Telecom Status Monitor Tool</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl <em>Telecom Status Monitor Tool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomStatusMonitorTool()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomStatusMonitorTool()
 		 * @generated
 		 */
 		EClass TELECOM_STATUS_MONITOR_TOOL = eINSTANCE.getTelecomStatusMonitorTool();
@@ -1926,11 +1926,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EOperation TELECOM_STATUS_MONITOR_TOOL___DISPOSE = eINSTANCE.getTelecomStatusMonitorTool__Dispose();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolListImpl <em>Telecom Status Monitor Tool List</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolListImpl <em>Telecom Status Monitor Tool List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolListImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomStatusMonitorToolList()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.TelecomStatusMonitorToolListImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomStatusMonitorToolList()
 		 * @generated
 		 */
 		EClass TELECOM_STATUS_MONITOR_TOOL_LIST = eINSTANCE.getTelecomStatusMonitorToolList();
@@ -1944,11 +1944,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EReference TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS = eINSTANCE.getTelecomStatusMonitorToolList_TelecomStatusMonitors();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl <em>Abstract Antenna Radiation Pattern</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl <em>Abstract Antenna Radiation Pattern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getAbstractAntennaRadiationPattern()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getAbstractAntennaRadiationPattern()
 		 * @generated
 		 */
 		EClass ABSTRACT_ANTENNA_RADIATION_PATTERN = eINSTANCE.getAbstractAntennaRadiationPattern();
@@ -1962,41 +1962,41 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EOperation ABSTRACT_ANTENNA_RADIATION_PATTERN___COMPUTE_GAIN__DOUBLE_DOUBLE = eINSTANCE.getAbstractAntennaRadiationPattern__ComputeGain__double_double();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.IsotropicAntennaImpl <em>Isotropic Antenna</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.IsotropicAntennaImpl <em>Isotropic Antenna</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.IsotropicAntennaImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getIsotropicAntenna()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.IsotropicAntennaImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getIsotropicAntenna()
 		 * @generated
 		 */
 		EClass ISOTROPIC_ANTENNA = eINSTANCE.getIsotropicAntenna();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl <em>Dipole Antenna Radiation Pattern</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl <em>Dipole Antenna Radiation Pattern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getDipoleAntennaRadiationPattern()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.DipoleAntennaRadiationPatternImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getDipoleAntennaRadiationPattern()
 		 * @generated
 		 */
 		EClass DIPOLE_ANTENNA_RADIATION_PATTERN = eINSTANCE.getDipoleAntennaRadiationPattern();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl <em>Half Wave Dipole Antenna Radiation Pattern</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl <em>Half Wave Dipole Antenna Radiation Pattern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getHalfWaveDipoleAntennaRadiationPattern()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.HalfWaveDipoleAntennaRadiationPatternImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getHalfWaveDipoleAntennaRadiationPattern()
 		 * @generated
 		 */
 		EClass HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN = eINSTANCE.getHalfWaveDipoleAntennaRadiationPattern();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.SimpleConicalRadiationPatternImpl <em>Simple Conical Radiation Pattern</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleConicalRadiationPatternImpl <em>Simple Conical Radiation Pattern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.SimpleConicalRadiationPatternImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getSimpleConicalRadiationPattern()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleConicalRadiationPatternImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getSimpleConicalRadiationPattern()
 		 * @generated
 		 */
 		EClass SIMPLE_CONICAL_RADIATION_PATTERN = eINSTANCE.getSimpleConicalRadiationPattern();
@@ -2010,11 +2010,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EAttribute SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE = eINSTANCE.getSimpleConicalRadiationPattern_ApexAngle();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl <em>Simple Rectangular Frustum Radiation Pattern</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl <em>Simple Rectangular Frustum Radiation Pattern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getSimpleRectangularFrustumRadiationPattern()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getSimpleRectangularFrustumRadiationPattern()
 		 * @generated
 		 */
 		EClass SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN = eINSTANCE.getSimpleRectangularFrustumRadiationPattern();
@@ -2036,11 +2036,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EAttribute SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW = eINSTANCE.getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl <em>URl Based Antenna Radiation Pattern</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl <em>URl Based Antenna Radiation Pattern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getURlBasedAntennaRadiationPattern()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getURlBasedAntennaRadiationPattern()
 		 * @generated
 		 */
 		EClass URL_BASED_ANTENNA_RADIATION_PATTERN = eINSTANCE.getURlBasedAntennaRadiationPattern();
@@ -2054,11 +2054,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EAttribute URL_BASED_ANTENNA_RADIATION_PATTERN__URL = eINSTANCE.getURlBasedAntennaRadiationPattern_Url();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl <em>Antenna Radiation Pattern Image Map Layer</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl <em>Antenna Radiation Pattern Image Map Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getAntennaRadiationPatternImageMapLayer()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getAntennaRadiationPatternImageMapLayer()
 		 * @generated
 		 */
 		EClass ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER = eINSTANCE.getAntennaRadiationPatternImageMapLayer();
@@ -2088,11 +2088,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		EAttribute ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR = eINSTANCE.getAntennaRadiationPatternImageMapLayer_BellowCutoffColor();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}' enum.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.telecoms.TelecomNodeStatus
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getTelecomNodeStatus()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getTelecomNodeStatus()
 		 * @generated
 		 */
 		EEnum TELECOM_NODE_STATUS = eINSTANCE.getTelecomNodeStatus();
@@ -2102,11 +2102,11 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see javax.vecmath.Color3f
-		 * @see org.eclipse.symphony.addons.telecoms.impl.Symphony__AddonsTelecomsPackageImpl#getColor3f()
+		 * @see ca.gc.asc_csa.apogy.addons.telecoms.impl.ApogyAddonsTelecomsPackageImpl#getColor3f()
 		 * @generated
 		 */
 		EDataType COLOR3F = eINSTANCE.getColor3f();
 
 	}
 
-} //Symphony__AddonsTelecomsPackage
+} //ApogyAddonsTelecomsPackage

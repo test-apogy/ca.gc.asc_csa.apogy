@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getPointSize <em>Point Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getEndPointsRadius <em>End Points Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation#getPointSize <em>Point Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation#getEndPointsRadius <em>End Points Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation()
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage#getWayPointPathPresentation()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface WayPointPathPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Size</em>' attribute.
 	 * @see #setPointSize(int)
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation_PointSize()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage#getWayPointPathPresentation_PointSize()
 	 * @model default="2" unique="false"
 	 * @generated
 	 */
 	int getPointSize();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getPointSize <em>Point Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation#getPointSize <em>Point Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Point Size</em>' attribute.
@@ -54,7 +54,7 @@ public interface WayPointPathPresentation extends NodePresentation {
 	/**
 	 * Returns the value of the '<em><b>Presentation Mode</b></em>' attribute.
 	 * The default value is <code>"Points Lines"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode}.
+	 * The literals are from the enumeration {@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Presentation Mode</em>' attribute isn't clear,
@@ -62,20 +62,20 @@ public interface WayPointPathPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode
 	 * @see #setPresentationMode(PathPresentationMode)
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation_PresentationMode()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage#getWayPointPathPresentation_PresentationMode()
 	 * @model default="Points Lines" unique="false"
 	 * @generated
 	 */
 	PathPresentationMode getPresentationMode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getPresentationMode <em>Presentation Mode</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation#getPresentationMode <em>Presentation Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Presentation Mode</em>' attribute.
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode
 	 * @see #getPresentationMode()
 	 * @generated
 	 */
@@ -92,14 +92,14 @@ public interface WayPointPathPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Points Radius</em>' attribute.
 	 * @see #setEndPointsRadius(float)
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation_EndPointsRadius()
+	 * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage#getWayPointPathPresentation_EndPointsRadius()
 	 * @model default="0.02" unique="false"
 	 * @generated
 	 */
 	float getEndPointsRadius();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getEndPointsRadius <em>End Points Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation#getEndPointsRadius <em>End Points Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>End Points Radius</em>' attribute.

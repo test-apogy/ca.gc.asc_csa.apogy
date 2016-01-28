@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3.provider;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package;
-import org.eclipse.symphony.common.topology.ui.jme3.util.Symphony__CommonTopologyUIJME3AdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.util.ApogyCommonTopologyUIJME3AdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.topology.ui.jme3.util.Symphony__CommonTopolog
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIJME3ItemProviderAdapterFactory extends Symphony__CommonTopologyUIJME3AdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonTopologyUIJME3ItemProviderAdapterFactory extends ApogyCommonTopologyUIJME3AdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class Symphony__CommonTopologyUIJME3ItemProviderAdapterFactory extends Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonTopologyUIJME3EditPlugin.INSTANCE, Symphony__CommonTopologyUIJME3Package.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonTopologyUIJME3EditPlugin.INSTANCE, ApogyCommonTopologyUIJME3Package.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CommonTopologyUIJME3ItemProviderAdapterFactory extends Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIJME3ItemProviderAdapterFactory() {
+	public ApogyCommonTopologyUIJME3ItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -85,7 +85,7 @@ public class Symphony__CommonTopologyUIJME3ItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class Symphony__CommonTopologyUIJME3ItemProviderAdapterFactory extends Sy
 	protected JME3TypeFactoryItemProvider jme3TypeFactoryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

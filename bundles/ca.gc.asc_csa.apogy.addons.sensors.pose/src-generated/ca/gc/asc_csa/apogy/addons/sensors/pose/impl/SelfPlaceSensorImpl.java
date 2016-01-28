@@ -3,12 +3,12 @@
  *
  * $Id: SelfPlaceSensorImpl.java,v 1.2.4.2 2015/05/21 15:51:31 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.impl.SensorImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class SelfPlaceSensorImpl extends SensorImpl implements SelfPlaceSensor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsPosePackage.Literals.SELF_PLACE_SENSOR;
+		return ApogyAddonsSensorsPosePackage.Literals.SELF_PLACE_SENSOR;
 	}
 
 } //SelfPlaceSensorImpl

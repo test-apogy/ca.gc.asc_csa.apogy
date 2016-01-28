@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.AttributeResultValue;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AttributeResultValue} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class AttributeResultValueItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AttributeResultValue_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AttributeResultValue_value_feature", "_UI_AttributeResultValue_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE,
+				 ApogyCoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE,
 				 false,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class AttributeResultValueItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -153,7 +153,7 @@ public class AttributeResultValueItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AttributeResultValue.class)) {
-			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

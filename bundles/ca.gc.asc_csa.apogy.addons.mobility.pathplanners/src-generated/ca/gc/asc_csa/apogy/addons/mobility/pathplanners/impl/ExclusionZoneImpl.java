@@ -3,16 +3,16 @@
  *
  * $Id: ExclusionZoneImpl.java,v 1.4.4.2 2015/05/21 15:50:52 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public abstract class ExclusionZoneImpl extends NodeImpl implements ExclusionZon
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityPathplannersPackage.Literals.EXCLUSION_ZONE;
+		return ApogyAddonsMobilityPathplannersPackage.Literals.EXCLUSION_ZONE;
 	}
 
 	/**
@@ -71,9 +71,9 @@ public abstract class ExclusionZoneImpl extends NodeImpl implements ExclusionZon
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsMobilityPathplannersPackage.EXCLUSION_ZONE___IS_INSIDE__CARTESIANPOSITIONCOORDINATES:
+			case ApogyAddonsMobilityPathplannersPackage.EXCLUSION_ZONE___IS_INSIDE__CARTESIANPOSITIONCOORDINATES:
 				return isInside((CartesianPositionCoordinates)arguments.get(0));
-			case Symphony__AddonsMobilityPathplannersPackage.EXCLUSION_ZONE___INTERSECTS__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
+			case ApogyAddonsMobilityPathplannersPackage.EXCLUSION_ZONE___INTERSECTS__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
 				return intersects((CartesianPositionCoordinates)arguments.get(0), (CartesianPositionCoordinates)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

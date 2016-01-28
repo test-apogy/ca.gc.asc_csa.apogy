@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import java.awt.Frame;
 import java.awt.image.BufferedImage;
@@ -12,13 +12,13 @@ import org.eclipse.swt.awt.SWT_AWT;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.FocusListener;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.jme3.internal.CreateSceneGraphHTMLActionListener;
-import org.eclipse.symphony.common.topology.ui.jme3.internal.CustomCameraControl;
-import org.eclipse.symphony.common.topology.ui.jme3.internal.CustomScreenshotAppState;
-import org.eclipse.symphony.common.topology.ui.jme3.internal.ICameraControl;
-import org.eclipse.symphony.common.topology.ui.jme3.internal.MousePickListener;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.CreateSceneGraphHTMLActionListener;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.CustomCameraControl;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.CustomScreenshotAppState;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.ICameraControl;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal.MousePickListener;
 
 import com.jme3.app.SimpleApplication;
 import com.jme3.asset.AssetManager;
@@ -60,8 +60,8 @@ public class JME3Application extends SimpleApplication
 		super();	
 					
 		AppSettings newSetting = new AppSettings(true);				
-		newSetting.setFrameRate(org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getMaximumFrameRate());
-		if(org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().isAntialiasing())
+		newSetting.setFrameRate(ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getMaximumFrameRate());
+		if(ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().isAntialiasing())
 		{
 			newSetting.setSamples(4);			
 		}
@@ -189,7 +189,7 @@ public class JME3Application extends SimpleApplication
 	{
 		Logger.INSTANCE.log(Activator.ID, this, "Setting anti aliasing to <" + enable + ">.", EventSeverity.INFO);
 				
-		settings.setFrameRate(org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getMaximumFrameRate());
+		settings.setFrameRate(ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getMaximumFrameRate());
 		
 		if(enable)
 		{

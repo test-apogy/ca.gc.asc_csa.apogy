@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 
 /**
@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.topology;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getPickAndPlaceNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getPickAndPlaceNode()
  * @model
  * @generated
  */

@@ -1,95 +1,95 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.util;
+package ca.gc.asc_csa.apogy.core.environment.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.AbstractShapeImageLayer;
-import org.eclipse.symphony.core.environment.AstronomyUtils;
-import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.Earth;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.EarthSurfaceEnvironment;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
-import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
-import org.eclipse.symphony.core.environment.EnvironmentUtilities;
-import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapLayerPresentation;
-import org.eclipse.symphony.core.environment.MapNode;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.MapsListNode;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionImage;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.Region;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SurfaceEnvironment;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
-import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
-import org.eclipse.symphony.core.environment.URLImageMapLayer;
-import org.eclipse.symphony.core.environment.URLMapLayer;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.Atmosphere;
+import ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Earth;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.Environment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
+import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.MapNode;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.MapsListNode;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion;
+import ca.gc.asc_csa.apogy.core.environment.Region;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
+import ca.gc.asc_csa.apogy.core.environment.SlopeRange;
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.StarField;
+import ca.gc.asc_csa.apogy.core.environment.Sun;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.URLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage
  * @generated
  */
-public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
+public class ApogyCoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -97,7 +97,7 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreEnvironmentPackage modelPackage;
+  protected static ApogyCoreEnvironmentPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -105,10 +105,10 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreEnvironmentAdapterFactory()
+  public ApogyCoreEnvironmentAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreEnvironmentPackage.eINSTANCE;
+			modelPackage = ApogyCoreEnvironmentPackage.eINSTANCE;
 		}
 	}
 
@@ -138,8 +138,8 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreEnvironmentSwitch<Adapter> modelSwitch =
-    new Symphony__CoreEnvironmentSwitch<Adapter>() {
+  protected ApogyCoreEnvironmentSwitch<Adapter> modelSwitch =
+    new ApogyCoreEnvironmentSwitch<Adapter>() {
 			@Override
 			public Adapter caseWorksite(Worksite object) {
 				return createWorksiteAdapter();
@@ -213,8 +213,8 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 				return createEnvironmentUtilitiesAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CoreEnvironmentFacade(Symphony__CoreEnvironmentFacade object) {
-				return createSymphony__CoreEnvironmentFacadeAdapter();
+			public Adapter caseApogyCoreEnvironmentFacade(ApogyCoreEnvironmentFacade object) {
+				return createApogyCoreEnvironmentFacadeAdapter();
 			}
 			@Override
 			public Adapter caseStar(Star object) {
@@ -450,13 +450,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Worksite <em>Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Worksite <em>Worksite</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Worksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.Worksite
 	 * @generated
 	 */
   public Adapter createWorksiteAdapter()
@@ -465,13 +465,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.SurfaceWorksite <em>Surface Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite <em>Surface Worksite</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.SurfaceWorksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite
 	 * @generated
 	 */
   public Adapter createSurfaceWorksiteAdapter()
@@ -480,13 +480,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite <em>Earth Surface Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite <em>Earth Surface Worksite</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EarthSurfaceWorksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite
 	 * @generated
 	 */
   public Adapter createEarthSurfaceWorksiteAdapter()
@@ -495,13 +495,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Environment <em>Environment</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Environment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Environment
+	 * @see ca.gc.asc_csa.apogy.core.environment.Environment
 	 * @generated
 	 */
   public Adapter createEnvironmentAdapter()
@@ -510,13 +510,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.SurfaceEnvironment <em>Surface Environment</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment <em>Surface Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.SurfaceEnvironment
+	 * @see ca.gc.asc_csa.apogy.core.environment.SurfaceEnvironment
 	 * @generated
 	 */
   public Adapter createSurfaceEnvironmentAdapter()
@@ -525,13 +525,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EarthSurfaceEnvironment <em>Earth Surface Environment</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment <em>Earth Surface Environment</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EarthSurfaceEnvironment
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSurfaceEnvironment
 	 * @generated
 	 */
   public Adapter createEarthSurfaceEnvironmentAdapter()
@@ -540,13 +540,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Atmosphere <em>Atmosphere</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Atmosphere <em>Atmosphere</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Atmosphere
+	 * @see ca.gc.asc_csa.apogy.core.environment.Atmosphere
 	 * @generated
 	 */
   public Adapter createAtmosphereAdapter()
@@ -555,13 +555,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.AtmosphereUtils <em>Atmosphere Utils</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils <em>Atmosphere Utils</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.AtmosphereUtils
+	 * @see ca.gc.asc_csa.apogy.core.environment.AtmosphereUtils
 	 * @generated
 	 */
   public Adapter createAtmosphereUtilsAdapter()
@@ -570,13 +570,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EquatorialCoordinates <em>Equatorial Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates <em>Equatorial Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EquatorialCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates
 	 * @generated
 	 */
   public Adapter createEquatorialCoordinatesAdapter()
@@ -585,13 +585,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.GeographicCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
 	 * @generated
 	 */
   public Adapter createGeographicCoordinatesAdapter()
@@ -600,13 +600,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.HorizontalCoordinates <em>Horizontal Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates <em>Horizontal Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.HorizontalCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates
 	 * @generated
 	 */
   public Adapter createHorizontalCoordinatesAdapter()
@@ -615,13 +615,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EclipticCoordinates <em>Ecliptic Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates <em>Ecliptic Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EclipticCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.EclipticCoordinates
 	 * @generated
 	 */
   public Adapter createEclipticCoordinatesAdapter()
@@ -630,13 +630,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Sky <em>Sky</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Sky <em>Sky</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Sky
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky
 	 * @generated
 	 */
   public Adapter createSkyAdapter()
@@ -645,13 +645,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EarthSky <em>Earth Sky</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EarthSky <em>Earth Sky</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EarthSky
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSky
 	 * @generated
 	 */
   public Adapter createEarthSkyAdapter()
@@ -660,13 +660,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Sun <em>Sun</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Sun <em>Sun</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Sun
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sun
 	 * @generated
 	 */
   public Adapter createSunAdapter()
@@ -675,13 +675,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Earth <em>Earth</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Earth <em>Earth</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Earth
+	 * @see ca.gc.asc_csa.apogy.core.environment.Earth
 	 * @generated
 	 */
 	public Adapter createEarthAdapter() {
@@ -689,13 +689,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Moon <em>Moon</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Moon <em>Moon</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Moon
+	 * @see ca.gc.asc_csa.apogy.core.environment.Moon
 	 * @generated
 	 */
   public Adapter createMoonAdapter()
@@ -704,13 +704,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EnvironmentUtilities <em>Environment Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities <em>Environment Utilities</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentUtilities
+	 * @see ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities
 	 * @generated
 	 */
   public Adapter createEnvironmentUtilitiesAdapter()
@@ -719,27 +719,27 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreEnvironmentFacadeAdapter() {
+	public Adapter createApogyCoreEnvironmentFacadeAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Star <em>Star</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Star <em>Star</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Star
+	 * @see ca.gc.asc_csa.apogy.core.environment.Star
 	 * @generated
 	 */
   public Adapter createStarAdapter()
@@ -748,13 +748,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.StarField <em>Star Field</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.StarField <em>Star Field</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.StarField
+	 * @see ca.gc.asc_csa.apogy.core.environment.StarField
 	 * @generated
 	 */
   public Adapter createStarFieldAdapter()
@@ -763,13 +763,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.AstronomyUtils <em>Astronomy Utils</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AstronomyUtils <em>Astronomy Utils</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.AstronomyUtils
+	 * @see ca.gc.asc_csa.apogy.core.environment.AstronomyUtils
 	 * @generated
 	 */
   public Adapter createAstronomyUtilsAdapter()
@@ -778,13 +778,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Map <em>Map</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Map <em>Map</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Map
+	 * @see ca.gc.asc_csa.apogy.core.environment.Map
 	 * @generated
 	 */
   public Adapter createMapAdapter()
@@ -793,13 +793,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.MapsList <em>Maps List</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.MapsList <em>Maps List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.MapsList
+	 * @see ca.gc.asc_csa.apogy.core.environment.MapsList
 	 * @generated
 	 */
   public Adapter createMapsListAdapter()
@@ -808,13 +808,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.AbstractMapLayer <em>Abstract Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer <em>Abstract Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.AbstractMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer
 	 * @generated
 	 */
   public Adapter createAbstractMapLayerAdapter()
@@ -823,13 +823,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.MapLayerPresentation <em>Map Layer Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation <em>Map Layer Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.MapLayerPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.MapLayerPresentation
 	 * @generated
 	 */
 	public Adapter createMapLayerPresentationAdapter() {
@@ -837,13 +837,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.URLMapLayer <em>URL Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.URLMapLayer <em>URL Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.URLMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.URLMapLayer
 	 * @generated
 	 */
   public Adapter createURLMapLayerAdapter()
@@ -852,13 +852,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Region <em>Region</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.Region <em>Region</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.Region
+	 * @see ca.gc.asc_csa.apogy.core.environment.Region
 	 * @generated
 	 */
   public Adapter createRegionAdapter()
@@ -867,13 +867,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangularRegion <em>Rectangular Region</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion <em>Rectangular Region</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.RectangularRegion
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegion
 	 * @generated
 	 */
   public Adapter createRectangularRegionAdapter()
@@ -882,13 +882,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion <em>Rectangular Volume Region</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion <em>Rectangular Volume Region</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.RectangularVolumeRegion
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularVolumeRegion
 	 * @generated
 	 */
 	public Adapter createRectangularVolumeRegionAdapter() {
@@ -896,13 +896,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider
 	 * @generated
 	 */
 	public Adapter createRectangularRegionProviderAdapter() {
@@ -910,13 +910,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangularRegionImage <em>Rectangular Region Image</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage <em>Rectangular Region Image</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionImage
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage
 	 * @generated
 	 */
   public Adapter createRectangularRegionImageAdapter()
@@ -925,13 +925,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ImageMapLayer <em>Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer <em>Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.ImageMapLayer
 	 * @generated
 	 */
   public Adapter createImageMapLayerAdapter()
@@ -940,13 +940,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation <em>Image Map Layer Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation <em>Image Map Layer Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ImageMapLayerPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation
 	 * @generated
 	 */
 	public Adapter createImageMapLayerPresentationAdapter() {
@@ -954,13 +954,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.URLImageMapLayer <em>URL Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer <em>URL Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.URLImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.URLImageMapLayer
 	 * @generated
 	 */
   public Adapter createURLImageMapLayerAdapter()
@@ -969,13 +969,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayer <em>Topology Tree Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer <em>Topology Tree Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.TopologyTreeMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer
 	 * @generated
 	 */
 	public Adapter createTopologyTreeMapLayerAdapter() {
@@ -983,13 +983,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode <em>Topology Tree Map Layer Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode <em>Topology Tree Map Layer Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode
 	 * @generated
 	 */
 	public Adapter createTopologyTreeMapLayerNodeAdapter() {
@@ -997,13 +997,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer <em>Cartesian Triangular Mesh Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer <em>Cartesian Triangular Mesh Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshMapLayerAdapter() {
@@ -1011,13 +1011,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer <em>Cartesian Triangular Mesh Derived Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer <em>Cartesian Triangular Mesh Derived Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshDerivedImageMapLayerAdapter() {
@@ -1025,13 +1025,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer <em>Cartesian Triangular Mesh Slope Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshSlopeImageMapLayer <em>Cartesian Triangular Mesh Slope Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshSlopeImageMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshSlopeImageMapLayerAdapter() {
@@ -1039,13 +1039,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer <em>Cartesian Triangular Mesh Discrete Slope Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer <em>Cartesian Triangular Mesh Discrete Slope Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshDiscreteSlopeImageMapLayerAdapter() {
@@ -1053,13 +1053,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer <em>Cartesian Triangular Mesh Height Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer <em>Cartesian Triangular Mesh Height Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshHeightImageMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshHeightImageMapLayerAdapter() {
@@ -1067,13 +1067,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer <em>Line Of Sight Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer <em>Line Of Sight Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.LineOfSightImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer
 	 * @generated
 	 */
 	public Adapter createLineOfSightImageMapLayerAdapter() {
@@ -1081,13 +1081,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer <em>Abstract Shape Image Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer <em>Abstract Shape Image Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.AbstractShapeImageLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractShapeImageLayer
 	 * @generated
 	 */
 	public Adapter createAbstractShapeImageLayerAdapter() {
@@ -1095,13 +1095,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer <em>Ellipse Shape Image Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer <em>Ellipse Shape Image Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EllipseShapeImageLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer
 	 * @generated
 	 */
 	public Adapter createEllipseShapeImageLayerAdapter() {
@@ -1109,13 +1109,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer <em>Rectangle Shape Image Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer <em>Rectangle Shape Image Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.RectangleShapeImageLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangleShapeImageLayer
 	 * @generated
 	 */
 	public Adapter createRectangleShapeImageLayerAdapter() {
@@ -1123,13 +1123,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer <em>Polygon Shape Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer <em>Polygon Shape Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer
 	 * @generated
 	 */
 	public Adapter createPolygonShapeImageMapLayerAdapter() {
@@ -1137,13 +1137,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer <em>Cartesian Coordinates Polygon Shape Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer <em>Cartesian Coordinates Polygon Shape Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesPolygonShapeImageMapLayerAdapter() {
@@ -1151,13 +1151,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer <em>Geographic Coordinates Polygon Shape Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer <em>Geographic Coordinates Polygon Shape Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer
 	 * @generated
 	 */
 	public Adapter createGeographicCoordinatesPolygonShapeImageMapLayerAdapter() {
@@ -1165,13 +1165,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.SlopeRange <em>Slope Range</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.SlopeRange <em>Slope Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.SlopeRange
+	 * @see ca.gc.asc_csa.apogy.core.environment.SlopeRange
 	 * @generated
 	 */
 	public Adapter createSlopeRangeAdapter() {
@@ -1179,13 +1179,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer <em>Basic Cartesian Triangular Mesh Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer <em>Basic Cartesian Triangular Mesh Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.BasicCartesianTriangularMeshMapLayer
 	 * @generated
 	 */
 	public Adapter createBasicCartesianTriangularMeshMapLayerAdapter() {
@@ -1193,13 +1193,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer <em>Cartesian Triangular Mesh URL Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer <em>Cartesian Triangular Mesh URL Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer
 	 * @generated
 	 */
   public Adapter createCartesianTriangularMeshURLMapLayerAdapter()
@@ -1208,13 +1208,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer
 	 * @generated
 	 */
 	public Adapter createFeaturesOfInterestMapLayerAdapter() {
@@ -1222,13 +1222,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.WorksiteNode <em>Worksite Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.WorksiteNode <em>Worksite Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.WorksiteNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.WorksiteNode
 	 * @generated
 	 */
   public Adapter createWorksiteNodeAdapter()
@@ -1237,13 +1237,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.SurfaceWorksiteNode <em>Surface Worksite Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode <em>Surface Worksite Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.SurfaceWorksiteNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.SurfaceWorksiteNode
 	 * @generated
 	 */
   public Adapter createSurfaceWorksiteNodeAdapter()
@@ -1252,13 +1252,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode <em>Earth Surface Worksite Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode <em>Earth Surface Worksite Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksiteNode
 	 * @generated
 	 */
   public Adapter createEarthSurfaceWorksiteNodeAdapter()
@@ -1267,13 +1267,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.MapsListNode <em>Maps List Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.MapsListNode <em>Maps List Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.MapsListNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.MapsListNode
 	 * @generated
 	 */
   public Adapter createMapsListNodeAdapter()
@@ -1282,13 +1282,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.MapNode <em>Map Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.MapNode <em>Map Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.MapNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.MapNode
 	 * @generated
 	 */
   public Adapter createMapNodeAdapter()
@@ -1297,13 +1297,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.AbstractMapLayerNode <em>Abstract Map Layer Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode <em>Abstract Map Layer Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.AbstractMapLayerNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractMapLayerNode
 	 * @generated
 	 */
   public Adapter createAbstractMapLayerNodeAdapter()
@@ -1312,13 +1312,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.SkyNode <em>Sky Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.SkyNode <em>Sky Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.SkyNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.SkyNode
 	 * @generated
 	 */
   public Adapter createSkyNodeAdapter()
@@ -1327,13 +1327,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EarthSkyNode <em>Earth Sky Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.EarthSkyNode <em>Earth Sky Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EarthSkyNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.EarthSkyNode
 	 * @generated
 	 */
   public Adapter createEarthSkyNodeAdapter()
@@ -1342,13 +1342,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode
+	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayerNode
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshMapLayerNodeAdapter() {
@@ -1356,13 +1356,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Named
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
 	 * @generated
 	 */
   public Adapter createNamedAdapter()
@@ -1371,13 +1371,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Described
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
 	 * @generated
 	 */
   public Adapter createDescribedAdapter()
@@ -1386,13 +1386,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite <em>Abstract Worksite</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.AbstractWorksite
+	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite
 	 * @generated
 	 */
   public Adapter createAbstractWorksiteAdapter()
@@ -1401,13 +1401,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see ca.gc.asc_csa.apogy.common.topology.Node
 	 * @generated
 	 */
   public Adapter createNodeAdapter()
@@ -1416,13 +1416,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.GroupNode
 	 * @generated
 	 */
   public Adapter createGroupNodeAdapter()
@@ -1431,13 +1431,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
 	 * @generated
 	 */
   public Adapter createAggregateGroupNodeAdapter()
@@ -1446,13 +1446,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.PositionNode <em>Position Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.PositionNode <em>Position Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.PositionNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.PositionNode
 	 * @generated
 	 */
   public Adapter createPositionNodeAdapter()
@@ -1461,13 +1461,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.RotationNode <em>Rotation Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.RotationNode <em>Rotation Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.RotationNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.RotationNode
 	 * @generated
 	 */
   public Adapter createRotationNodeAdapter()
@@ -1476,13 +1476,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.TransformNode <em>Transform Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.TransformNode <em>Transform Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.TransformNode
+	 * @see ca.gc.asc_csa.apogy.common.topology.TransformNode
 	 * @generated
 	 */
   public Adapter createTransformNodeAdapter()
@@ -1491,13 +1491,13 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.Timed
+	 * @see ca.gc.asc_csa.apogy.common.emf.Timed
 	 * @generated
 	 */
   public Adapter createTimedAdapter()
@@ -1518,4 +1518,4 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__CoreEnvironmentAdapterFactory
+} //ApogyCoreEnvironmentAdapterFactory

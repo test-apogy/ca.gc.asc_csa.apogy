@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,16 +20,16 @@ import org.ros.node.service.ServiceClient;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSService#getServiceName <em>Service Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSService#getServiceType <em>Service Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSService#isLaunched <em>Launched</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSService#getServiceClient <em>Service Client</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSService#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSService#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceName <em>Service Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceType <em>Service Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#isLaunched <em>Launched</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceClient <em>Service Client</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSService()
- * @model RequestBounds="org.eclipse.symphony.addons.ros.Message" ResponseBounds="org.eclipse.symphony.addons.ros.Message"
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSService()
+ * @model RequestBounds="ca.gc.asc_csa.apogy.addons.ros.Message" ResponseBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
  * @generated
  */
 public interface ROSService<Request extends Message, Response extends Message> extends EObject {
@@ -42,14 +42,14 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Service Name</em>' attribute.
 	 * @see #setServiceName(String)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSService_ServiceName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSService_ServiceName()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getServiceName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSService#getServiceName <em>Service Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceName <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Service Name</em>' attribute.
@@ -67,14 +67,14 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Service Type</em>' attribute.
 	 * @see #setServiceType(String)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSService_ServiceType()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSService_ServiceType()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getServiceType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSService#getServiceType <em>Service Type</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceType <em>Service Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Service Type</em>' attribute.
@@ -93,14 +93,14 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Launched</em>' attribute.
 	 * @see #setLaunched(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSService_Launched()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSService_Launched()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
 	boolean isLaunched();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSService#isLaunched <em>Launched</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#isLaunched <em>Launched</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Launched</em>' attribute.
@@ -118,14 +118,14 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Service Client</em>' attribute.
 	 * @see #setServiceClient(ServiceClient)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSService_ServiceClient()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.ServiceClient<Request, Response>"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSService_ServiceClient()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.ServiceClient<Request, Response>"
 	 * @generated
 	 */
 	ServiceClient<Request, Response> getServiceClient();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSService#getServiceClient <em>Service Client</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getServiceClient <em>Service Client</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Service Client</em>' attribute.
@@ -143,14 +143,14 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(ROSNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSService_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSService_Node()
 	 * @model
 	 * @generated
 	 */
 	ROSNode getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSService#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.
@@ -169,14 +169,14 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disconnect On Timeout</em>' attribute.
 	 * @see #setDisconnectOnTimeout(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSService_DisconnectOnTimeout()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSService_DisconnectOnTimeout()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isDisconnectOnTimeout();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSService#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSService#isDisconnectOnTimeout <em>Disconnect On Timeout</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Disconnect On Timeout</em>' attribute.
@@ -195,7 +195,7 @@ public interface ROSService<Request extends Message, Response extends Message> e
 	 * @param node The ROS node that this service corresponds to
 	 * @throws ServiceNotFoundException Thrown if the service could not be resolved to the given ROS node.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.ros.ServiceNotFoundException" nodeUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.ros.ServiceNotFoundException" nodeUnique="false"
 	 * @generated
 	 */
 	void launch(ROSNode node) throws ServiceNotFoundException;

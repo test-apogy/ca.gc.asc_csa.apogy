@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -19,13 +19,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getSourceObject <em>Source Object</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getCurrentValue <em>Current Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#getSourceObject <em>Source Object</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#getCurrentValue <em>Current Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getFeatureNodeAdapter()
  * @model
  * @generated
  */
@@ -44,14 +44,14 @@ public interface FeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source Object</em>' reference.
 	 * @see #setSourceObject(EObject)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_SourceObject()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getFeatureNodeAdapter_SourceObject()
 	 * @model
 	 * @generated
 	 */
   EObject getSourceObject();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getSourceObject <em>Source Object</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#getSourceObject <em>Source Object</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source Object</em>' reference.
@@ -73,14 +73,14 @@ public interface FeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node</em>' reference.
 	 * @see #setFeatureNode(AbstractFeatureNode)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_FeatureNode()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getFeatureNodeAdapter_FeatureNode()
 	 * @model
 	 * @generated
 	 */
   AbstractFeatureNode getFeatureNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Node</em>' reference.
@@ -99,14 +99,14 @@ public interface FeatureNodeAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(Object)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_CurrentValue()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getFeatureNodeAdapter_CurrentValue()
 	 * @model unique="false"
 	 * @generated
 	 */
   Object getCurrentValue();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getCurrentValue <em>Current Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#getCurrentValue <em>Current Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Value</em>' attribute.
@@ -129,14 +129,14 @@ public interface FeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolved</em>' attribute.
 	 * @see #setResolved(boolean)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_Resolved()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getFeatureNodeAdapter_Resolved()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
   boolean isResolved();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#isResolved <em>Resolved</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter#isResolved <em>Resolved</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Resolved</em>' attribute.

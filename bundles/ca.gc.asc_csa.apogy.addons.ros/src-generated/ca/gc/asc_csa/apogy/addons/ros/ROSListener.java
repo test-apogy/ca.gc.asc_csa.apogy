@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -22,16 +22,16 @@ import org.ros.node.topic.Subscriber;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSListener#isRunning <em>Running</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSListener#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSListener#getRosSubscriber <em>Ros Subscriber</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSListener#getTopicName <em>Topic Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSListener#getMessageType <em>Message Type</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSListener#getMessageListener <em>Message Listener</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getRosSubscriber <em>Ros Subscriber</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getTopicName <em>Topic Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageType <em>Message Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageListener <em>Message Listener</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSListener()
- * @model TBounds="org.eclipse.symphony.addons.ros.Message"
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSListener()
+ * @model TBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
  * @generated
  */
 public interface ROSListener<T extends Message> extends EObject {
@@ -44,14 +44,14 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Running</em>' attribute.
 	 * @see #setRunning(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSListener_Running()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSListener_Running()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isRunning();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSListener#isRunning <em>Running</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#isRunning <em>Running</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Running</em>' attribute.
@@ -69,14 +69,14 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(ROSNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSListener_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSListener_Node()
 	 * @model
 	 * @generated
 	 */
 	ROSNode getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSListener#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.
@@ -94,14 +94,14 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ros Subscriber</em>' attribute.
 	 * @see #setRosSubscriber(Subscriber)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSListener_RosSubscriber()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.Subscriber<T>"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSListener_RosSubscriber()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.Subscriber<T>"
 	 * @generated
 	 */
 	Subscriber<T> getRosSubscriber();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSListener#getRosSubscriber <em>Ros Subscriber</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getRosSubscriber <em>Ros Subscriber</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ros Subscriber</em>' attribute.
@@ -119,14 +119,14 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topic Name</em>' attribute.
 	 * @see #setTopicName(String)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSListener_TopicName()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSListener_TopicName()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getTopicName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSListener#getTopicName <em>Topic Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getTopicName <em>Topic Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Topic Name</em>' attribute.
@@ -144,14 +144,14 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Message Type</em>' attribute.
 	 * @see #setMessageType(String)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSListener_MessageType()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSListener_MessageType()
 	 * @model unique="false"
 	 * @generated
 	 */
 	String getMessageType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSListener#getMessageType <em>Message Type</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageType <em>Message Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Message Type</em>' attribute.
@@ -169,14 +169,14 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Message Listener</em>' attribute.
 	 * @see #setMessageListener(MessageListener)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSListener_MessageListener()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.MessageListener<T>"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSListener_MessageListener()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.MessageListener<T>"
 	 * @generated
 	 */
 	MessageListener<T> getMessageListener();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSListener#getMessageListener <em>Message Listener</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSListener#getMessageListener <em>Message Listener</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Message Listener</em>' attribute.
@@ -199,7 +199,7 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * @return Whether or not the listener started running
 	 * @throws Exception Thrown if any underlying exception occurs
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.addons.ros.Exception" nodeUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.addons.ros.Exception" nodeUnique="false"
 	 * @generated
 	 */
 	boolean startWithLocks(ROSNode node) throws Exception;
@@ -216,7 +216,7 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * @param node The underlying ROS node to listen on
 	 * @throws Exception Thrown if any underlying exception occurs
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.addons.ros.Exception" nodeUnique="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.addons.ros.Exception" nodeUnique="false"
 	 * @generated
 	 */
 	void start(ROSNode node) throws Exception;
@@ -229,7 +229,7 @@ public interface ROSListener<T extends Message> extends EObject {
 	 * 
 	 * @ param connectedNode The node to subscribe to this listener
 	 * <!-- end-model-doc -->
-	 * @model connectedNodeDataType="org.eclipse.symphony.addons.ros.ConnectedNode" connectedNodeUnique="false"
+	 * @model connectedNodeDataType="ca.gc.asc_csa.apogy.addons.ros.ConnectedNode" connectedNodeUnique="false"
 	 * @generated
 	 */
 	void connectSubscriber(ConnectedNode connectedNode);

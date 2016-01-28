@@ -4,16 +4,16 @@
  *
  * $Id: DirectionalLightImpl.java,v 1.3.2.2 2015/02/03 20:01:31 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.DirectionalLightImpl#getDirection <em>Direction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.DirectionalLightImpl#getDirection <em>Direction</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,7 +55,7 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT;
+		return ApogyCommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 		Tuple3d oldDirection = direction;
 		direction = newDirection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, oldDirection, newDirection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, oldDirection, newDirection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -91,14 +91,14 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 		if (newDirection != direction) {
 			NotificationChain msgs = null;
 			if (direction != null)
-				msgs = ((InternalEObject)direction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, null, msgs);
+				msgs = ((InternalEObject)direction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, null, msgs);
 			if (newDirection != null)
-				msgs = ((InternalEObject)newDirection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, null, msgs);
+				msgs = ((InternalEObject)newDirection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, null, msgs);
 			msgs = basicSetDirection(newDirection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, newDirection, newDirection));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION, newDirection, newDirection));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
 				return basicSetDirection(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -123,7 +123,7 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
 				return getDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -137,7 +137,7 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
 				setDirection((Tuple3d)newValue);
 				return;
 		}
@@ -152,7 +152,7 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
 				setDirection((Tuple3d)null);
 				return;
 		}
@@ -167,7 +167,7 @@ public class DirectionalLightImpl extends LightImpl implements DirectionalLight 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
 				return direction != null;
 		}
 		return super.eIsSet(featureID);

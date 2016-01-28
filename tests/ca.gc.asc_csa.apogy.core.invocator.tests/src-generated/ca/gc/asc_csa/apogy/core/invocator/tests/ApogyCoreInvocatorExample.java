@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceFactoryImpl;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorResourceFactoryImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceF
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorExample {
+public class ApogyCoreInvocatorExample {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Load all the argument file paths or URIs as instances of the model.
@@ -41,13 +41,13 @@ public class Symphony__CoreInvocatorExample {
 		//
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put
 			(Resource.Factory.Registry.DEFAULT_EXTENSION, 
-			 new Symphony__CoreInvocatorResourceFactoryImpl());
+			 new ApogyCoreInvocatorResourceFactoryImpl());
 
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(Symphony__CoreInvocatorPackage.eNS_URI, 
-			 Symphony__CoreInvocatorPackage.eINSTANCE);
+			(ApogyCoreInvocatorPackage.eNS_URI, 
+			 ApogyCoreInvocatorPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
@@ -55,7 +55,7 @@ public class Symphony__CoreInvocatorExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.sym"));
-				Symphony__CoreInvocatorFacade root = Symphony__CoreInvocatorFactory.eINSTANCE.createSymphony__CoreInvocatorFacade();
+				ApogyCoreInvocatorFacade root = ApogyCoreInvocatorFactory.eINSTANCE.createApogyCoreInvocatorFacade();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}
@@ -113,4 +113,4 @@ public class Symphony__CoreInvocatorExample {
 		}
 	}
 
-} //Symphony__CoreInvocatorExample
+} //ApogyCoreInvocatorExample

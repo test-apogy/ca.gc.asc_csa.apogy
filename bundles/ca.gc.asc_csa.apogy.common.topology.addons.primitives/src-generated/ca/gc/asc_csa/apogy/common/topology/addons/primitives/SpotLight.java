@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getConcentration <em>Concentration</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getSpreadAngle <em>Spread Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getDirection <em>Direction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight#getConcentration <em>Concentration</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight#getSpreadAngle <em>Spread Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight#getDirection <em>Direction</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getSpotLight()
  * @model
  * @generated
  */
@@ -44,14 +44,14 @@ public interface SpotLight extends PointLight {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Concentration</em>' attribute.
 	 * @see #setConcentration(float)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight_Concentration()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getSpotLight_Concentration()
 	 * @model unique="false"
 	 * @generated
 	 */
 	float getConcentration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getConcentration <em>Concentration</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight#getConcentration <em>Concentration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Concentration</em>' attribute.
@@ -70,14 +70,14 @@ public interface SpotLight extends PointLight {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Spread Angle</em>' attribute.
 	 * @see #setSpreadAngle(float)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight_SpreadAngle()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getSpotLight_SpreadAngle()
 	 * @model unique="false"
 	 * @generated
 	 */
 	float getSpreadAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getSpreadAngle <em>Spread Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight#getSpreadAngle <em>Spread Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Spread Angle</em>' attribute.
@@ -96,14 +96,14 @@ public interface SpotLight extends PointLight {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction</em>' containment reference.
 	 * @see #setDirection(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight_Direction()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getSpotLight_Direction()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getDirection();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getDirection <em>Direction</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight#getDirection <em>Direction</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Direction</em>' containment reference.

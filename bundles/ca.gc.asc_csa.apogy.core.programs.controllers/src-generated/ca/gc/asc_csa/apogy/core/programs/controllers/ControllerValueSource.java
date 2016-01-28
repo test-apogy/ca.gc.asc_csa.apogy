@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,13 +15,13 @@ import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getComponent <em>Component</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getEComponentQualifier <em>EComponent Qualifier</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getConditioning <em>Conditioning</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getLastValue <em>Last Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getComponent <em>Component</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getEComponentQualifier <em>EComponent Qualifier</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getConditioning <em>Conditioning</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getLastValue <em>Last Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerValueSource()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component</em>' reference.
 	 * @see #setComponent(EComponent)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_Component()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerValueSource_Component()
 	 * @model transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' notify='true' resolveProxies='false'"
 	 * @generated
@@ -45,7 +45,7 @@ public interface ControllerValueSource extends ValueSource
   EComponent getComponent();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getComponent <em>Component</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getComponent <em>Component</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Component</em>' reference.
@@ -64,7 +64,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EComponent Qualifier</em>' containment reference.
 	 * @see #setEComponentQualifier(EComponentQualifier)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_EComponentQualifier()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerValueSource_EComponentQualifier()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface ControllerValueSource extends ValueSource
   EComponentQualifier getEComponentQualifier();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getEComponentQualifier <em>EComponent Qualifier</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getEComponentQualifier <em>EComponent Qualifier</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>EComponent Qualifier</em>' containment reference.
@@ -91,7 +91,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conditioning</em>' containment reference.
 	 * @see #setConditioning(AbstractInputConditioning)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_Conditioning()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerValueSource_Conditioning()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated
@@ -99,7 +99,7 @@ public interface ControllerValueSource extends ValueSource
   AbstractInputConditioning getConditioning();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getConditioning <em>Conditioning</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getConditioning <em>Conditioning</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Conditioning</em>' containment reference.
@@ -118,7 +118,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Last Value</em>' attribute.
 	 * @see #setLastValue(Object)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_LastValue()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getControllerValueSource_LastValue()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -126,7 +126,7 @@ public interface ControllerValueSource extends ValueSource
   Object getLastValue();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getLastValue <em>Last Value</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource#getLastValue <em>Last Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Last Value</em>' attribute.

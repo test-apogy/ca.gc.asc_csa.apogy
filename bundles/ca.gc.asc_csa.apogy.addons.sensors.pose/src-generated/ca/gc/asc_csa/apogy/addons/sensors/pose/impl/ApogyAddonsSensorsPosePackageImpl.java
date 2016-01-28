@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.impl;
 
 import java.io.IOException;
 
@@ -15,27 +15,27 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
-import org.eclipse.symphony.addons.sensors.pose.CSVDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit;
-import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.PoseDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFactory;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
-import org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.CSVDataLogger;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.InertialMeasurementUnit;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.OrientationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseDataLogger;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPoseFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PositionSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SelfPlaceSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedOrientationSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.SimulatedPositionSensor;
 
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl implements Symphony__AddonsSensorsPosePackage {
+public class ApogyAddonsSensorsPosePackageImpl extends EPackageImpl implements ApogyAddonsSensorsPosePackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,7 +119,7 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsSensorsPoseFacadeEClass = null;
+	private EClass apogy__AddonsSensorsPoseFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -146,12 +146,12 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsPosePackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsPoseFactory.eINSTANCE);
+	private ApogyAddonsSensorsPosePackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsPoseFactory.eINSTANCE);
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsPosePackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsPosePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,31 +173,31 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsPosePackage init() {
-		if (isInited) return (Symphony__AddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPosePackage.eNS_URI);
+	public static ApogyAddonsSensorsPosePackage init() {
+		if (isInited) return (ApogyAddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPosePackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsPosePackageImpl theSymphony__AddonsSensorsPosePackage = (Symphony__AddonsSensorsPosePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsPosePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsPosePackageImpl());
+		ApogyAddonsSensorsPosePackageImpl theApogyAddonsSensorsPosePackage = (ApogyAddonsSensorsPosePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsPosePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsPosePackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsSensorsPackage.eINSTANCE.eClass();
-		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsPackage.eINSTANCE.eClass();
+		ApogyCommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsPosePackage.createPackageContents();
+		theApogyAddonsSensorsPosePackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsPosePackage.initializePackageContents();
+		theApogyAddonsSensorsPosePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsPosePackage.freeze();
+		theApogyAddonsSensorsPosePackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsPosePackage.eNS_URI, theSymphony__AddonsSensorsPosePackage);
-		return theSymphony__AddonsSensorsPosePackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsPosePackage.eNS_URI, theApogyAddonsSensorsPosePackage);
+		return theApogyAddonsSensorsPosePackage;
 	}
 
 	/**
@@ -538,8 +538,8 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsSensorsPoseFacade() {
-		return symphony__AddonsSensorsPoseFacadeEClass;
+	public EClass getApogyAddonsSensorsPoseFacade() {
+		return apogy__AddonsSensorsPoseFacadeEClass;
 	}
 
 	/**
@@ -547,8 +547,8 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String() {
-		return symphony__AddonsSensorsPoseFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsSensorsPoseFacade__CreateCSVDataLogger__String() {
+		return apogy__AddonsSensorsPoseFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -574,8 +574,8 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPoseFactory getSymphony__AddonsSensorsPoseFactory() {
-		return (Symphony__AddonsSensorsPoseFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsPoseFactory getApogyAddonsSensorsPoseFactory() {
+		return (ApogyAddonsSensorsPoseFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -644,8 +644,8 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 
 		csvDataLoggerEClass = createEClass(CSV_DATA_LOGGER);
 
-		symphony__AddonsSensorsPoseFacadeEClass = createEClass(SYMPHONY_ADDONS_SENSORS_POSE_FACADE);
-		createEOperation(symphony__AddonsSensorsPoseFacadeEClass, SYMPHONY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING);
+		apogy__AddonsSensorsPoseFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_POSE_FACADE);
+		createEOperation(apogy__AddonsSensorsPoseFacadeEClass, APOGY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING);
 
 		// Create data types
 		exceptionEDataType = createEDataType(EXCEPTION);
@@ -676,26 +676,26 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__AddonsSensorsPackage theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		ApogyAddonsSensorsPackage theApogyAddonsSensorsPackage = (ApogyAddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		selfPlaceSensorEClass.getESuperTypes().add(theSymphony__AddonsSensorsPackage.getSensor());
-		positionSensorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getPositionNode());
+		selfPlaceSensorEClass.getESuperTypes().add(theApogyAddonsSensorsPackage.getSensor());
+		positionSensorEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getPositionNode());
 		positionSensorEClass.getESuperTypes().add(this.getSelfPlaceSensor());
 		simulatedPositionSensorEClass.getESuperTypes().add(this.getPositionSensor());
-		orientationSensorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getRotationNode());
+		orientationSensorEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getRotationNode());
 		orientationSensorEClass.getESuperTypes().add(this.getSelfPlaceSensor());
 		inertialMeasurementUnitEClass.getESuperTypes().add(this.getOrientationSensor());
 		simulatedOrientationSensorEClass.getESuperTypes().add(this.getOrientationSensor());
-		poseSensorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getTransformNode());
+		poseSensorEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getTransformNode());
 		poseSensorEClass.getESuperTypes().add(this.getPositionSensor());
 		poseSensorEClass.getESuperTypes().add(this.getOrientationSensor());
 		simulatedPoseSensorEClass.getESuperTypes().add(this.getPoseSensor());
@@ -705,10 +705,10 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEClass(selfPlaceSensorEClass, SelfPlaceSensor.class, "SelfPlaceSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(positionSensorEClass, PositionSensor.class, "PositionSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPositionSensor_PositionCoordinates(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "positionCoordinates", null, 0, 1, PositionSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionSensor_PositionCoordinates(), theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "positionCoordinates", null, 0, 1, PositionSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getPositionSensor__ResetPosition__CartesianPositionCoordinates(), null, "resetPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "newPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianPositionCoordinates(), "newPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
 		initEClass(simulatedPositionSensorEClass, SimulatedPositionSensor.class, "SimulatedPositionSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -718,18 +718,18 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEAttribute(getSimulatedPositionSensor_UpdatePeriod(), theEcorePackage.getEDouble(), "updatePeriod", "1.0", 0, 1, SimulatedPositionSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orientationSensorEClass, OrientationSensor.class, "OrientationSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrientationSensor_OrientationCoordinates(), theSymphony__CommonGeometryData3DPackage.getCartesianOrientationCoordinates(), null, "orientationCoordinates", null, 0, 1, OrientationSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getOrientationSensor_OrientationCoordinates(), theApogyCommonGeometryData3DPackage.getCartesianOrientationCoordinates(), null, "orientationCoordinates", null, 0, 1, OrientationSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getOrientationSensor__ResetOrientation__CartesianOrientationCoordinates(), null, "resetOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianOrientationCoordinates(), "newOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getCartesianOrientationCoordinates(), "newOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getOrientationSensor__ExtractOrientationFromMatrix__Matrix3x3(), theSymphony__CommonGeometryData3DPackage.getCartesianOrientationCoordinates(), "extractOrientationFromMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonMathPackage.getMatrix3x3(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getOrientationSensor__ExtractOrientationFromMatrix__Matrix3x3(), theApogyCommonGeometryData3DPackage.getCartesianOrientationCoordinates(), "extractOrientationFromMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonMathPackage.getMatrix3x3(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(inertialMeasurementUnitEClass, InertialMeasurementUnit.class, "InertialMeasurementUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInertialMeasurementUnit_AngularVelocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularVelocity", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInertialMeasurementUnit_LinearAcceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "linearAcceleration", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInertialMeasurementUnit_AngularVelocity(), theApogyCommonMathPackage.getTuple3d(), null, "angularVelocity", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInertialMeasurementUnit_LinearAcceleration(), theApogyCommonMathPackage.getTuple3d(), null, "linearAcceleration", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simulatedOrientationSensorEClass, SimulatedOrientationSensor.class, "SimulatedOrientationSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSimulatedOrientationSensor_XAngularVelocity(), theEcorePackage.getEDouble(), "xAngularVelocity", null, 0, 1, SimulatedOrientationSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -738,11 +738,11 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEAttribute(getSimulatedOrientationSensor_UpdatePeriod(), theEcorePackage.getEDouble(), "updatePeriod", "1.0", 0, 1, SimulatedOrientationSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(poseSensorEClass, PoseSensor.class, "PoseSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPoseSensor_Pose(), theSymphony__CommonGeometryData3DPackage.getPose(), null, "pose", null, 0, 1, PoseSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getPoseSensor_Pose(), theApogyCommonGeometryData3DPackage.getPose(), null, "pose", null, 0, 1, PoseSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getPoseSensor_DataLogger(), this.getPoseDataLogger(), null, "dataLogger", null, 0, 1, PoseSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getPoseSensor__ResetPose__Pose(), null, "resetPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getPose(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getPose(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
 		initEClass(simulatedPoseSensorEClass, SimulatedPoseSensor.class, "SimulatedPoseSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -758,14 +758,14 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEAttribute(getPoseDataLogger_OutputFile(), theEcorePackage.getEString(), "outputFile", null, 0, 1, PoseDataLogger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getPoseDataLogger__LogPose__Pose(), null, "logPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getPose(), "pose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getPose(), "pose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIOException());
 
 		initEClass(csvDataLoggerEClass, CSVDataLogger.class, "CSVDataLogger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(symphony__AddonsSensorsPoseFacadeEClass, Symphony__AddonsSensorsPoseFacade.class, "Symphony__AddonsSensorsPoseFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsSensorsPoseFacadeEClass, ApogyAddonsSensorsPoseFacade.class, "ApogyAddonsSensorsPoseFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String(), this.getCSVDataLogger(), "createCSVDataLogger", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsPoseFacade__CreateCSVDataLogger__String(), this.getCSVDataLogger(), "createCSVDataLogger", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "fileName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -792,17 +792,17 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsSensorsPose",
+			 "prefix", "ApogyAddonsSensorsPose",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsSensorsPose",
+			 "modelName", "ApogyAddonsSensorsPose",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.pose/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.sensors.pose.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons.sensors"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.pose/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.pose.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons.sensors"
 		   });
 	}
 
-} //Symphony__AddonsSensorsPosePackageImpl
+} //ApogyAddonsSensorsPosePackageImpl

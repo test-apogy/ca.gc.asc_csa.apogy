@@ -1,39 +1,39 @@
-@GenModel(prefix="Symphony__Core",
+@GenModel(prefix="ApogyCore",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__Core",
+		  modelName="ApogyCore",
 		  multipleEditorPages="false",
 		  fileExtensions="sym") 
-@GenModel(modelDirectory="/org.eclipse.symphony.core/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.core.edit/src-generated")
-//@GenModel(editorDirectory="/org.eclipse.symphony.core.editor/src-generated")
-//@GenModel(testsDirectory="/org.eclipse.symphony.core.tests/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.edit/src-generated")
+//@GenModel(editorDirectory="/ca.gc.asc_csa.apogy.core.editor/src-generated")
+//@GenModel(testsDirectory="/ca.gc.asc_csa.apogy.core.tests/src-generated")
 
-package org.eclipse.symphony.core
+package ca.gc.asc_csa.apogy.core
 
-import org.eclipse.symphony.common.emf.Described
-import org.eclipse.symphony.common.emf.Named
-import org.eclipse.symphony.common.emf.Timed
-import org.eclipse.symphony.common.emf.TimeSource
+import ca.gc.asc_csa.apogy.common.emf.Described
+import ca.gc.asc_csa.apogy.common.emf.Named
+import ca.gc.asc_csa.apogy.common.emf.Timed
+import ca.gc.asc_csa.apogy.common.emf.TimeSource
 
-import org.eclipse.symphony.core.invocator.AbstractResult
-import org.eclipse.symphony.core.invocator.OperationCallResult
-import org.eclipse.symphony.core.invocator.ResultsList
-import org.eclipse.symphony.core.invocator.Environment
-import org.eclipse.symphony.core.invocator.Type
-import org.eclipse.symphony.common.topology.bindings.BindingsSet
-import org.eclipse.symphony.common.math.Matrix4x4
-import org.eclipse.symphony.core.invocator.TypeMember
-import org.eclipse.symphony.core.invocator.InvocatorSession
-import org.eclipse.symphony.core.invocator.TypeApiAdapter
-import org.eclipse.symphony.core.invocator.OperationCall
-import org.eclipse.symphony.core.invocator.AbstractType
-import org.eclipse.symphony.core.invocator.InitializationData
-import org.eclipse.symphony.common.topology.AggregateGroupNode
-import org.eclipse.symphony.common.topology.TransformNode
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.common.topology.GroupNode
+import ca.gc.asc_csa.apogy.core.invocator.AbstractResult
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResult
+import ca.gc.asc_csa.apogy.core.invocator.ResultsList
+import ca.gc.asc_csa.apogy.core.invocator.Environment
+import ca.gc.asc_csa.apogy.core.invocator.Type
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall
+import ca.gc.asc_csa.apogy.core.invocator.AbstractType
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.GroupNode
 
 /* Types definitions. */
 type Map<K,V> wraps java.util.Map
@@ -43,22 +43,22 @@ type Exception wraps java.lang.Exception
 
 /* -------------------------------------------------------------------------
  * 
- * Symphony Core Facade.
+ * Apogy Core Facade.
  * 
  * ------------------------------------------------------------------------- */ 
-class Symphony__CoreFacade
+class ApogyCoreFacade
 {
-	op Matrix4x4 computeAbsolutePoseMatrix(SymphonySystem symphonySystem, Matrix4x4 relativePose)
+	op Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose)
 	op ResultNode createResultNode(PositionedResult result)		
-	op InvocatorSession createSymphonySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
+	op InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
 	
 	/*
-	 * Searches and returns the {@link SymphonySystem} instance based on the specified fullyQualifiedName.
+	 * Searches and returns the {@link ApogySystem} instance based on the specified fullyQualifiedName.
 	 * @param environment Environment from which the search will be performed.
-	 * @param param fullyQualifiedName Fully qualified name that refers the {@link SymphonySystem} instance.
-	 * @return Reference to the {@link SymphonySystem} that matches the fully qualified name or null if not found.
+	 * @param param fullyQualifiedName Fully qualified name that refers the {@link ApogySystem} instance.
+	 * @return Reference to the {@link ApogySystem} that matches the fully qualified name or null if not found.
 	 */
-	op SymphonySystem getSymphonySystem(Environment environment, String fullyQualifiedName)	
+	op ApogySystem getApogySystem(Environment environment, String fullyQualifiedName)	
 	
 	/*
 	 * Loads FeatureOfInterest from file.
@@ -79,10 +79,10 @@ class Symphony__CoreFacade
 
 /* -------------------------------------------------------------------------
  * 
- * Symphony Environment.
+ * Apogy Environment.
  * 
  * ------------------------------------------------------------------------- */ 
-class SymphonyEnvironment extends Environment, Timed
+class ApogyEnvironment extends Environment, Timed
 {
 	contains WorksitesList[0..1] worksitesList
 	
@@ -92,7 +92,7 @@ class SymphonyEnvironment extends Environment, Timed
 	refers AbstractWorksite activeWorksite
 		
 	@GenModel(children="true", notify="true", property="None")
-	refers derived transient SymphonyTopology[0..1] symphonyTopology	
+	refers derived transient ApogyTopology[0..1] apogyTopology	
 	
 	/*
 	 * The list of available time sources.
@@ -108,12 +108,12 @@ class SymphonyEnvironment extends Environment, Timed
 class TimeSourcesList
 {	
     @GenModel(property="None")
-	container SymphonyEnvironment environment opposite timeSourcesList
+	container ApogyEnvironment environment opposite timeSourcesList
 	contains TimeSource[0..*] timeSources 
 }
 
 
-class SymphonyTopology
+class ApogyTopology
 {
  	@GenModel(children="true", notify="true", property="Readonly")
 	refers derived transient GroupNode rootNode
@@ -121,35 +121,35 @@ class SymphonyTopology
 
 /* -------------------------------------------------------------------------
  * 
- * Symphony System.
+ * Apogy System.
  * 
  * ------------------------------------------------------------------------- */ 
-class SymphonySystem extends Type
+class ApogySystem extends Type
 {
 	@GenModel(children="true", createChild="true", property="None")
 	contains TopologyRoot topologyRoot
 	contains BindingsSet bindingSet
-	contains ConnectionPointsList [0..1] connectionPointsList opposite symphonySystem
+	contains ConnectionPointsList [0..1] connectionPointsList opposite apogySystem
 	contains AssemblyLinksList[0..1] assemblyLinksList
 	refers AbstractType[0..1] poseProvider
 	
-	// Used in the SymphonySystem copies only.
+	// Used in the ApogySystem copies only.
 	refers transient PoseProvider [0..1] poseProviderInstance	
 }
 
-class SymphonySystemApiAdapter extends TypeApiAdapter, PoseProvider
+class ApogySystemApiAdapter extends TypeApiAdapter, PoseProvider
 {
-	contains PoseCorrector[0..1] poseCorrector opposite symphonySystemApiAdapter
+	contains PoseCorrector[0..1] poseCorrector opposite apogySystemApiAdapter
 	op Matrix4x4 createResultMatrix(OperationCall operationCall)	
 	
 	@GenModel(children="true", createChild="false")
-	refers transient SymphonySystem [0..1] symphonySystem	
+	refers transient ApogySystem [0..1] apogySystem	
 }
 
 class ConnectionPointsList
 {	
     @GenModel(property="None")
-	container SymphonySystem[1] symphonySystem opposite connectionPointsList
+	container ApogySystem[1] apogySystem opposite connectionPointsList
 	contains ConnectionPoint[0..*] connectionPoints opposite pointsList	
 }
 
@@ -195,10 +195,10 @@ class AssemblyLink extends Named, Described
 	contains Node [0..1] geometryNode
 	
  	@GenModel(property="Readonly", propertyCategory="LINK_PARENT")
-	refers transient SymphonySystem [0..1] parentInstance
+	refers transient ApogySystem [0..1] parentInstance
 		
  	@GenModel(property="Readonly", propertyCategory="LINK_CHILD")
-	refers transient SymphonySystem [0..1] subSystemInstance	
+	refers transient ApogySystem [0..1] subSystemInstance	
 }
 
 class AssemblyLinksList{
@@ -208,7 +208,7 @@ class AssemblyLinksList{
 
 /* -------------------------------------------------------------------------
  * 
- * Symphony System API.
+ * Apogy System API.
  * 
  * ------------------------------------------------------------------------- */ 
  
@@ -229,7 +229,7 @@ class AbsolutePoseProvider extends PoseProvider
  */
 abstract class PoseCorrector
 {
-	refers SymphonySystemApiAdapter symphonySystemApiAdapter opposite poseCorrector
+	refers ApogySystemApiAdapter apogySystemApiAdapter opposite poseCorrector
 	op Matrix4x4 applyCorrection(Matrix4x4 originalPose)
 	
 	/*
@@ -239,7 +239,7 @@ abstract class PoseCorrector
 	boolean enabled = "false"
 }
 
-class SymphonyInitializationData extends InitializationData
+class ApogyInitializationData extends InitializationData
 {
 	contains Matrix4x4 [0..1] initialPoseTransform	
 }
@@ -353,12 +353,12 @@ class UserDefinedResult extends PositionedResult, Named, Described
  * ------------------------------------------------------------------------- */
  
 /*
- * A specialized Topology node representing a SymphonyResult.
+ * A specialized Topology node representing a ApogyResult.
  */
 class ResultNode extends AggregateGroupNode
 {
 	/*
-	 * The SymphonyResult represented by this node.
+	 * The ApogyResult represented by this node.
 	 */
 	refers transient PositionedResult result
 }

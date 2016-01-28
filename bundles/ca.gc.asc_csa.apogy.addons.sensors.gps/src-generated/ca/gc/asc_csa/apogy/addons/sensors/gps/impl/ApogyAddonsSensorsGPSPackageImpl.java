@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.gps.GPSConnection;
-import org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade;
-import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
-import org.eclipse.symphony.addons.sensors.gps.GPSQuality;
-import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
-import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFactory;
-import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
-import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
-import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSConnection;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSDataInterpreter;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSFacade;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSQuality;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSReading;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSRepository;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.MarkedGPS;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsGPSPackage {
+public class ApogyAddonsSensorsGPSPackageImpl extends EPackageImpl implements ApogyAddonsSensorsGPSPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,7 +92,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphony__AddonsSensorsGPSFacadeEClass = null;
+	private EClass apogy__AddonsSensorsGPSFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,12 +154,12 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsGPSPackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsGPSFactory.eINSTANCE);
+	private ApogyAddonsSensorsGPSPackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsGPSFactory.eINSTANCE);
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsGPSPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsGPSPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,31 +181,31 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsGPSPackage init() {
-		if (isInited) return (Symphony__AddonsSensorsGPSPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsGPSPackage.eNS_URI);
+	public static ApogyAddonsSensorsGPSPackage init() {
+		if (isInited) return (ApogyAddonsSensorsGPSPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsGPSPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsGPSPackageImpl theSymphony__AddonsSensorsGPSPackage = (Symphony__AddonsSensorsGPSPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsGPSPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsGPSPackageImpl());
+		ApogyAddonsSensorsGPSPackageImpl theApogyAddonsSensorsGPSPackage = (ApogyAddonsSensorsGPSPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsGPSPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsGPSPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__AddonsSensorsPosePackage.eINSTANCE.eClass();
-		Symphony__CommonEMFPackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsPosePackage.eINSTANCE.eClass();
+		ApogyCommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsGPSPackage.createPackageContents();
+		theApogyAddonsSensorsGPSPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsGPSPackage.initializePackageContents();
+		theApogyAddonsSensorsGPSPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsGPSPackage.freeze();
+		theApogyAddonsSensorsGPSPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsGPSPackage.eNS_URI, theSymphony__AddonsSensorsGPSPackage);
-		return theSymphony__AddonsSensorsGPSPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsGPSPackage.eNS_URI, theApogyAddonsSensorsGPSPackage);
+		return theApogyAddonsSensorsGPSPackage;
 	}
 
 	/**
@@ -609,8 +609,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphony__AddonsSensorsGPSFacade() {
-		return symphony__AddonsSensorsGPSFacadeEClass;
+	public EClass getApogyAddonsSensorsGPSFacade() {
+		return apogy__AddonsSensorsGPSFacadeEClass;
 	}
 
 	/**
@@ -618,8 +618,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double() {
-		return symphony__AddonsSensorsGPSFacadeEClass.getEOperations().get(0);
+	public EOperation getApogyAddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double() {
+		return apogy__AddonsSensorsGPSFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -627,8 +627,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__AddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker() {
-		return symphony__AddonsSensorsGPSFacadeEClass.getEOperations().get(1);
+	public EOperation getApogyAddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker() {
+		return apogy__AddonsSensorsGPSFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -699,8 +699,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsGPSFactory getSymphony__AddonsSensorsGPSFactory() {
-		return (Symphony__AddonsSensorsGPSFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsGPSFactory getApogyAddonsSensorsGPSFactory() {
+		return (ApogyAddonsSensorsGPSFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -773,9 +773,9 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		createEOperation(gpsRepositoryEClass, GPS_REPOSITORY___SCAN_FOR_DEVICES);
 		createEOperation(gpsRepositoryEClass, GPS_REPOSITORY___GET_GPS_BY_ID__STRING);
 
-		symphony__AddonsSensorsGPSFacadeEClass = createEClass(SYMPHONY_ADDONS_SENSORS_GPS_FACADE);
-		createEOperation(symphony__AddonsSensorsGPSFacadeEClass, SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE);
-		createEOperation(symphony__AddonsSensorsGPSFacadeEClass, SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER);
+		apogy__AddonsSensorsGPSFacadeEClass = createEClass(APOGY_ADDONS_SENSORS_GPS_FACADE);
+		createEOperation(apogy__AddonsSensorsGPSFacadeEClass, APOGY_ADDONS_SENSORS_GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE);
+		createEOperation(apogy__AddonsSensorsGPSFacadeEClass, APOGY_ADDONS_SENSORS_GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER);
 
 		// Create enums
 		gpsStatusEEnum = createEEnum(GPS_STATUS);
@@ -814,17 +814,17 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__AddonsSensorsPosePackage theSymphony__AddonsSensorsPosePackage = (Symphony__AddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPosePackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		ApogyAddonsSensorsPosePackage theApogyAddonsSensorsPosePackage = (ApogyAddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPosePackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCommonGeometryData3DPackage theApogyCommonGeometryData3DPackage = (ApogyCommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		gpsPoseSensorEClass.getESuperTypes().add(theSymphony__AddonsSensorsPosePackage.getPoseSensor());
-		gpsPoseSensorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getServer());
+		gpsPoseSensorEClass.getESuperTypes().add(theApogyAddonsSensorsPosePackage.getPoseSensor());
+		gpsPoseSensorEClass.getESuperTypes().add(theApogyCommonEMFPackage.getServer());
 		markedGPSEClass.getESuperTypes().add(this.getGPS());
 
 		// Initialize classes, features, and operations; add parameters
@@ -860,16 +860,16 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		initEAttribute(getGPSPoseSensor_OriginElevation(), theEcorePackage.getEDouble(), "originElevation", "33.0985", 0, 1, GPSPoseSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPSPoseSensor_MaxInitTime(), theEcorePackage.getELong(), "maxInitTime", "10000", 0, 1, GPSPoseSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gpsEClass, org.eclipse.symphony.addons.sensors.gps.GPS.class, "GPS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGPS_Connection(), this.getGPSConnection(), null, "connection", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGPS_DataInterpreter(), this.getGPSDataInterpreter(), this.getGPSDataInterpreter_Gps(), "dataInterpreter", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGPS_Reading(), this.getGPSReading(), null, "reading", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPS_Status(), this.getGPSStatus(), "status", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPS_UpdateRate(), theEcorePackage.getELong(), "updateRate", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPS_LastFailure(), this.getException(), "lastFailure", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPS_MaxReconnectTime(), theEcorePackage.getEInt(), "maxReconnectTime", "10000", 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPS_SpeedKnots(), theEcorePackage.getEDouble(), "speedKnots", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPS_SpeedKmh(), theEcorePackage.getEDouble(), "speedKmh", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(gpsEClass, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, "GPS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGPS_Connection(), this.getGPSConnection(), null, "connection", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGPS_DataInterpreter(), this.getGPSDataInterpreter(), this.getGPSDataInterpreter_Gps(), "dataInterpreter", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGPS_Reading(), this.getGPSReading(), null, "reading", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPS_Status(), this.getGPSStatus(), "status", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPS_UpdateRate(), theEcorePackage.getELong(), "updateRate", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPS_LastFailure(), this.getException(), "lastFailure", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPS_MaxReconnectTime(), theEcorePackage.getEInt(), "maxReconnectTime", "10000", 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPS_SpeedKnots(), theEcorePackage.getEDouble(), "speedKnots", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPS_SpeedKmh(), theEcorePackage.getEDouble(), "speedKmh", null, 0, 1, ca.gc.asc_csa.apogy.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getGPS__Start(), null, "start", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -880,7 +880,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		initEOperation(getGPS__Reconnect(), theEcorePackage.getEBoolean(), "reconnect", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(markedGPSEClass, MarkedGPS.class, "MarkedGPS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMarkedGPS_Marker(), theSymphony__CommonGeometryData3DPackage.getPositionMarker(), null, "marker", null, 0, 1, MarkedGPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMarkedGPS_Marker(), theApogyCommonGeometryData3DPackage.getPositionMarker(), null, "marker", null, 0, 1, MarkedGPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gpsRepositoryEClass, GPSRepository.class, "GPSRepository", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGPSRepository_GpsDevices(), this.getGPS(), null, "gpsDevices", null, 0, -1, GPSRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -890,14 +890,14 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		op = initEOperation(getGPSRepository__GetGPSById__String(), this.getGPS(), "getGPSById", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "gpsId", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(symphony__AddonsSensorsGPSFacadeEClass, Symphony__AddonsSensorsGPSFacade.class, "Symphony__AddonsSensorsGPSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(apogy__AddonsSensorsGPSFacadeEClass, ApogyAddonsSensorsGPSFacade.class, "ApogyAddonsSensorsGPSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSymphony__AddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double(), this.getGPSPoseSensor(), "createGPSPoseSensor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double(), this.getGPSPoseSensor(), "createGPSPoseSensor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "originLatitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "originLongitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__AddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker(), this.getMarkedGPS(), "createMarkedGPS", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getPositionMarker(), "marker", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyAddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker(), this.getMarkedGPS(), "createMarkedGPS", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonGeometryData3DPackage.getPositionMarker(), "marker", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gpsStatusEEnum, GPSStatus.class, "GPSStatus");
@@ -945,16 +945,16 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsSensorsGPS",
+			 "prefix", "ApogyAddonsSensorsGPS",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsSensorsGPS",
+			 "modelName", "ApogyAddonsSensorsGPS",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.gps/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.sensors.gps.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons.sensors"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.gps/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.gps.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons.sensors"
 		   });	
 		addAnnotation
 		  (getGPSConnection__Reset(), 
@@ -973,21 +973,21 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		   source, 
 		   new String[] {
 			 "documentation", "This is the origin frame\'s latitude.  The default\nvalue is set to \"45.518206644445\", which is the\nMET\'s origin value.",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getGPSPoseSensor_OriginLongitude(), 
 		   source, 
 		   new String[] {
 			 "documentation", "This is the origin frame\'s longitude.  The default\nvalue is set to \"-73.393904468182\", which is the\nvalue which is the MET\'s origin value.",
-			 "symphony_units", "deg"
+			 "apogy_units", "deg"
 		   });	
 		addAnnotation
 		  (getGPSPoseSensor_NeAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The angle, in radians, between the Noth East frame (z rotation).\nDefault value is \"0.5940676\", which is the value used for the MET.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getGPSPoseSensor_MaxInitTime(), 
@@ -1057,4 +1057,4 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		   });
 	}
 
-} //Symphony__AddonsSensorsGPSPackageImpl
+} //ApogyAddonsSensorsGPSPackageImpl

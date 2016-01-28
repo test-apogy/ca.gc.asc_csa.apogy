@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,15 +8,15 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Tuple3d;
 
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.ShadowMode;
-import org.eclipse.symphony.common.topology.ui.jme3.Activator;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.app.Application;
 import com.jme3.asset.plugins.FileLocator;

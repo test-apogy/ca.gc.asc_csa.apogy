@@ -1,23 +1,23 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.util;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.examples.robotic_arm.*;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage
  * @generated
  */
-public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesRoboticArmAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -25,7 +25,7 @@ public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryIm
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesRoboticArmPackage modelPackage;
+  protected static ApogyExamplesRoboticArmPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -33,10 +33,10 @@ public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryIm
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoboticArmAdapterFactory()
+  public ApogyExamplesRoboticArmAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesRoboticArmPackage.eINSTANCE;
+			modelPackage = ApogyExamplesRoboticArmPackage.eINSTANCE;
 		}
 	}
 
@@ -66,8 +66,8 @@ public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryIm
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesRoboticArmSwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesRoboticArmSwitch<Adapter>() {
+  protected ApogyExamplesRoboticArmSwitch<Adapter> modelSwitch =
+    new ApogyExamplesRoboticArmSwitch<Adapter>() {
 			@Override
 			public Adapter caseRoboticArm(RoboticArm object) {
 				return createRoboticArmAdapter();
@@ -102,13 +102,13 @@ public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryIm
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm <em>Robotic Arm</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm <em>Robotic Arm</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArm
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm
 	 * @generated
 	 */
   public Adapter createRoboticArmAdapter()
@@ -117,13 +117,13 @@ public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryIm
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArmStub <em>Robotic Arm Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub <em>Robotic Arm Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArmStub
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmStub
 	 * @generated
 	 */
 	public Adapter createRoboticArmStubAdapter() {
@@ -131,13 +131,13 @@ public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryIm
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated <em>Robotic Arm Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated <em>Robotic Arm Simulated</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated
 	 * @generated
 	 */
   public Adapter createRoboticArmSimulatedAdapter()
@@ -158,4 +158,4 @@ public class Symphony__ExamplesRoboticArmAdapterFactory extends AdapterFactoryIm
 		return null;
 	}
 
-} //Symphony__ExamplesRoboticArmAdapterFactory
+} //ApogyExamplesRoboticArmAdapterFactory

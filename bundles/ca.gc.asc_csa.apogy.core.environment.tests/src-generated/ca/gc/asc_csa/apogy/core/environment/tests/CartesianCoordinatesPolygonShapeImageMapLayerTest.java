@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.textui.TestRunner;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,17 +59,17 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerTest extends PolygonSh
 	@Override
 	protected void setUp() throws Exception 
 	{
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer());
 		
 		getFixture().setRequiredResolution(0.5);
 		
-		Tuple3d p0 = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);		
+		Tuple3d p0 = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);		
 		getFixture().getVertices().add(p0);
 		
-		Tuple3d p1 = Symphony__CommonMathFacade.INSTANCE.createTuple3d(10, 0, 0);		
+		Tuple3d p1 = ApogyCommonMathFacade.INSTANCE.createTuple3d(10, 0, 0);		
 		getFixture().getVertices().add(p1);
 		
-		Tuple3d p2 = Symphony__CommonMathFacade.INSTANCE.createTuple3d(10, 20, 0);		
+		Tuple3d p2 = ApogyCommonMathFacade.INSTANCE.createTuple3d(10, 20, 0);		
 		getFixture().getVertices().add(p2);		
 	}
 

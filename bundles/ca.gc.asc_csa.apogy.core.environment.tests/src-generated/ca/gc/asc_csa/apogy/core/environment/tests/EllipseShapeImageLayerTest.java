@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.EllipseShapeImageLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -57,7 +57,7 @@ public class EllipseShapeImageLayerTest extends AbstractShapeImageLayerTest {
 	@Override
 	protected void setUp() throws Exception 
 	{
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer());
 			
 		getFixture().setRequiredResolution(0.1);
 		getFixture().setEllipseHeight(10.0);

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.osgi.framework.log.FrameworkLog;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -23,13 +23,13 @@ import org.osgi.framework.ServiceReference;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.common.topology.ui";
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.ui";
 
-	public static final String PRESENTATION_EXTENSION_POINT_ID = "org.eclipse.symphony.common.topology.ui.presentation";
+	public static final String PRESENTATION_EXTENSION_POINT_ID = "ca.gc.asc_csa.apogy.common.topology.ui.presentation";
 
-	public static final String JAVA3D_EXTENSION_POINT_ID = "org.eclipse.symphony.common.topology.ui.java3d";
+	public static final String JAVA3D_EXTENSION_POINT_ID = "ca.gc.asc_csa.apogy.common.topology.ui.java3d";
 
-	public static final String GRAPHICS_CONTEXT_POINT_ID = "org.eclipse.symphony.common.topology.ui.graphicsContextAdapter";
+	public static final String GRAPHICS_CONTEXT_POINT_ID = "ca.gc.asc_csa.apogy.common.topology.ui.graphicsContextAdapter";
 
 	private static final String PRESENTATION_EXTENSION_POINT_ID_CLASS = "Class";
 
@@ -146,7 +146,7 @@ public class Activator extends AbstractUIPlugin {
 
 	/**
 	 * Returns the node adapter factory based on the content of the extension
-	 * point org.eclipse.symphony.common.topology.ui.presentation.
+	 * point ca.gc.asc_csa.apogy.common.topology.ui.presentation.
 	 */
 	public List<NodePresentationAdapter> getRegisteredNodePresentationAdapters() 
 	{
@@ -206,13 +206,13 @@ public class Activator extends AbstractUIPlugin {
 	{
 		if(topologyPresentationRegistry == null)
 		{
-			topologyPresentationRegistry = Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
+			topologyPresentationRegistry = ApogyCommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
 		}		
 		return topologyPresentationRegistry;
 	}
 	
 	/**
-	 * Return the FrameworkLog that is used to log messages within Symphony.
+	 * Return the FrameworkLog that is used to log messages within Apogy.
 	 * @return The FrameworkLog used to log messages.
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })

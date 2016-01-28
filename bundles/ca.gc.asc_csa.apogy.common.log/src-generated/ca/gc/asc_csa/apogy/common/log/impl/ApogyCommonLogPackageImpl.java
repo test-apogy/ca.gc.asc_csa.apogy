@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.log.impl;
+package ca.gc.asc_csa.apogy.common.log.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.osgi.framework.log.FrameworkLog;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.log.Symphony__CommonLogFactory;
-import org.eclipse.symphony.common.log.Symphony__CommonLogPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.ApogyCommonLogFactory;
+import ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage;
 import org.osgi.framework.Bundle;
 
 /**
@@ -23,7 +23,7 @@ import org.osgi.framework.Bundle;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonLogPackageImpl extends EPackageImpl implements Symphony__CommonLogPackage {
+public class ApogyCommonLogPackageImpl extends EPackageImpl implements ApogyCommonLogPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,12 +70,12 @@ public class Symphony__CommonLogPackageImpl extends EPackageImpl implements Symp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.log.Symphony__CommonLogPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.log.ApogyCommonLogPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonLogPackageImpl() {
-		super(eNS_URI, Symphony__CommonLogFactory.eINSTANCE);
+	private ApogyCommonLogPackageImpl() {
+		super(eNS_URI, ApogyCommonLogFactory.eINSTANCE);
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class Symphony__CommonLogPackageImpl extends EPackageImpl implements Symp
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonLogPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonLogPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,11 +97,11 @@ public class Symphony__CommonLogPackageImpl extends EPackageImpl implements Symp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonLogPackage init() {
-		if (isInited) return (Symphony__CommonLogPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonLogPackage.eNS_URI);
+	public static ApogyCommonLogPackage init() {
+		if (isInited) return (ApogyCommonLogPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonLogPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonLogPackageImpl theSymphony__CommonLogPackage = (Symphony__CommonLogPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonLogPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonLogPackageImpl());
+		ApogyCommonLogPackageImpl theApogyCommonLogPackage = (ApogyCommonLogPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonLogPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonLogPackageImpl());
 
 		isInited = true;
 
@@ -109,18 +109,18 @@ public class Symphony__CommonLogPackageImpl extends EPackageImpl implements Symp
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonLogPackage.createPackageContents();
+		theApogyCommonLogPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonLogPackage.initializePackageContents();
+		theApogyCommonLogPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonLogPackage.freeze();
+		theApogyCommonLogPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonLogPackage.eNS_URI, theSymphony__CommonLogPackage);
-		return theSymphony__CommonLogPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonLogPackage.eNS_URI, theApogyCommonLogPackage);
+		return theApogyCommonLogPackage;
 	}
 
 	/**
@@ -218,8 +218,8 @@ public class Symphony__CommonLogPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonLogFactory getSymphony__CommonLogFactory() {
-		return (Symphony__CommonLogFactory)getEFactoryInstance();
+	public ApogyCommonLogFactory getApogyCommonLogFactory() {
+		return (ApogyCommonLogFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -335,4 +335,4 @@ public class Symphony__CommonLogPackageImpl extends EPackageImpl implements Symp
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonLogPackageImpl
+} //ApogyCommonLogPackageImpl

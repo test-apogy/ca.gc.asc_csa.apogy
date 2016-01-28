@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import java.text.DecimalFormat;
 
@@ -13,19 +13,19 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage.Literals;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage.Literals;
 
 public class ConstraintStateComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState constraintState;
+	private ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState constraintState;
 	private Text forceText;
 	private Text positionText;
 	private Text velocityText;
 
 	public ConstraintStateComposite(Composite parent, int style,
-			org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState newConstraintState) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState newConstraintState) {
 		this(parent, style);
 		setConstraintState(newConstraintState);
 	}
@@ -94,17 +94,17 @@ public class ConstraintStateComposite extends Composite {
 		return bindingContext;
 	}
 
-	public org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState getConstraintState() {
+	public ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState getConstraintState() {
 		return constraintState;
 	}
 
 	public void setConstraintState(
-			org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState newConstraintState) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState newConstraintState) {
 		setConstraintState(newConstraintState, true);
 	}
 
 	public void setConstraintState(
-			org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState newConstraintState,
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState newConstraintState,
 			boolean update) {
 		constraintState = newConstraintState;
 		if (update) {

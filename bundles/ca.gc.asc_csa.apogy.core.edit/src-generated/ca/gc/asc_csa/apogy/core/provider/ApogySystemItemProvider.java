@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,27 +12,27 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.invocator.provider.TypeItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.invocator.provider.TypeItemProvider;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.SymphonySystem} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ApogySystem} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class SymphonySystemItemProvider extends TypeItemProvider {
+public class ApogySystemItemProvider extends TypeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	public SymphonySystemItemProvider(AdapterFactory adapterFactory) {
+	public ApogySystemItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -65,9 +65,9 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonySystem_poseProvider_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonySystem_poseProvider_feature", "_UI_SymphonySystem_type"),
-				 Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__POSE_PROVIDER,
+				 getString("_UI_ApogySystem_poseProvider_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogySystem_poseProvider_feature", "_UI_ApogySystem_type"),
+				 ApogyCorePackage.Literals.APOGY_SYSTEM__POSE_PROVIDER,
 				 true,
 				 false,
 				 true,
@@ -88,9 +88,9 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonySystem_poseProviderInstance_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonySystem_poseProviderInstance_feature", "_UI_SymphonySystem_type"),
-				 Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE,
+				 getString("_UI_ApogySystem_poseProviderInstance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogySystem_poseProviderInstance_feature", "_UI_ApogySystem_type"),
+				 ApogyCorePackage.Literals.APOGY_SYSTEM__POSE_PROVIDER_INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -111,10 +111,10 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__TOPOLOGY_ROOT);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__BINDING_SET);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_SYSTEM__TOPOLOGY_ROOT);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_SYSTEM__BINDING_SET);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_SYSTEM__CONNECTION_POINTS_LIST);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_SYSTEM__ASSEMBLY_LINKS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -132,14 +132,14 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 	}
 
 	/**
-	 * This returns SymphonySystem.gif.
+	 * This returns ApogySystem.gif.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonySystem"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogySystem"));
 	}
 
 	/**
@@ -150,12 +150,12 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		SymphonySystem symphonySystem = (SymphonySystem) object;
+		ApogySystem apogySystem = (ApogySystem) object;
 
-		String label = getString("_UI_SymphonySystem_type");
+		String label = getString("_UI_ApogySystem_type");
 
-		if (symphonySystem.getName() != null) {
-			label = symphonySystem.getName();
+		if (apogySystem.getName() != null) {
+			label = apogySystem.getName();
 		}
 		return label;
 	}
@@ -171,11 +171,11 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SymphonySystem.class)) {
-			case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
-			case Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET:
-			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
-			case Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
+		switch (notification.getFeatureID(ApogySystem.class)) {
+			case ApogyCorePackage.APOGY_SYSTEM__TOPOLOGY_ROOT:
+			case ApogyCorePackage.APOGY_SYSTEM__BINDING_SET:
+			case ApogyCorePackage.APOGY_SYSTEM__CONNECTION_POINTS_LIST:
+			case ApogyCorePackage.APOGY_SYSTEM__ASSEMBLY_LINKS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -196,23 +196,23 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__TOPOLOGY_ROOT,
-				 Symphony__CoreFactory.eINSTANCE.createTopologyRoot()));
+				(ApogyCorePackage.Literals.APOGY_SYSTEM__TOPOLOGY_ROOT,
+				 ApogyCoreFactory.eINSTANCE.createTopologyRoot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__BINDING_SET,
-				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet()));
+				(ApogyCorePackage.Literals.APOGY_SYSTEM__BINDING_SET,
+				 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsSet()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST,
-				 Symphony__CoreFactory.eINSTANCE.createConnectionPointsList()));
+				(ApogyCorePackage.Literals.APOGY_SYSTEM__CONNECTION_POINTS_LIST,
+				 ApogyCoreFactory.eINSTANCE.createConnectionPointsList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST,
-				 Symphony__CoreFactory.eINSTANCE.createAssemblyLinksList()));
+				(ApogyCorePackage.Literals.APOGY_SYSTEM__ASSEMBLY_LINKS_LIST,
+				 ApogyCoreFactory.eINSTANCE.createAssemblyLinksList()));
 	}
 
 }

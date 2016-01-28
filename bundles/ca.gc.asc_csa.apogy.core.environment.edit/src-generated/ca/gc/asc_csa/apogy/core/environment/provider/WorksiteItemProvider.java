@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.Worksite;
-import org.eclipse.symphony.core.provider.AbstractWorksiteItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.provider.AbstractWorksiteItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Worksite} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.Worksite} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class WorksiteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Worksite_orbitsModels_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Worksite_orbitsModels_feature", "_UI_Worksite_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ORBITS_MODELS,
+				 ApogyCoreEnvironmentPackage.Literals.WORKSITE__ORBITS_MODELS,
 				 true,
 				 false,
 				 true,
@@ -90,8 +90,8 @@ public class WorksiteItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__WORKSITE_NODE);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.WORKSITE__WORKSITE_NODE);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT);
 		}
 		return childrenFeatures;
 	}
@@ -138,8 +138,8 @@ public class WorksiteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Worksite.class)) {
-			case Symphony__CoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
-			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case ApogyCoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
+			case ApogyCoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -160,18 +160,18 @@ public class WorksiteItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEnvironment()));
+				(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEnvironment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
+				(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
+				(ApogyCoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
 	}
 
 }

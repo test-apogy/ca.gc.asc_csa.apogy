@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.provider;
+package ca.gc.asc_csa.apogy.addons.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Simple3DTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.Simple3DTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.Simple3DTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Simple3DTool_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Simple3DTool_visible_feature", "_UI_Simple3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SIMPLE3_DTOOL__VISIBLE,
+				 ApogyAddonsPackage.Literals.SIMPLE3_DTOOL__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Simple3DTool_rootNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Simple3DTool_rootNode_feature", "_UI_Simple3DTool_type"),
-				 Symphony__AddonsPackage.Literals.SIMPLE3_DTOOL__ROOT_NODE,
+				 ApogyAddonsPackage.Literals.SIMPLE3_DTOOL__ROOT_NODE,
 				 true,
 				 false,
 				 true,
@@ -143,7 +143,7 @@ public class Simple3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Simple3DTool.class)) {
-			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+			case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

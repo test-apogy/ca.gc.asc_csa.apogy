@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.programs.controllers.ui.properties.sections;
+package ca.gc.asc_csa.apogy.core.programs.controllers.ui.properties.sections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
-import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.ui.composite.AbstractInputConditioningResponsePlotComposite;
+import ca.gc.asc_csa.apogy.common.ui.properties.sections.AbstractExtendedPropertySection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.AbstractInputConditioningResponsePlotComposite;
 
 public class AbstractInputConditionningPropertySection extends AbstractExtendedPropertySection {
 		

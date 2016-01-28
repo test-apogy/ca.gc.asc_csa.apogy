@@ -4,14 +4,14 @@
  *
  * $Id: SpherePrimitiveImpl.java,v 1.3.2.2 2015/02/03 20:01:31 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.SpherePrimitiveImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.SpherePrimitiveImpl#getRadius <em>Radius</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class SpherePrimitiveImpl extends AggregateGroupNodeImpl implements Spher
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.SPHERE_PRIMITIVE;
+		return ApogyCommonTopologyAddonsPrimitivesPackage.Literals.SPHERE_PRIMITIVE;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class SpherePrimitiveImpl extends AggregateGroupNodeImpl implements Spher
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class SpherePrimitiveImpl extends AggregateGroupNodeImpl implements Spher
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -116,7 +116,7 @@ public class SpherePrimitiveImpl extends AggregateGroupNodeImpl implements Spher
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class SpherePrimitiveImpl extends AggregateGroupNodeImpl implements Spher
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -148,7 +148,7 @@ public class SpherePrimitiveImpl extends AggregateGroupNodeImpl implements Spher
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

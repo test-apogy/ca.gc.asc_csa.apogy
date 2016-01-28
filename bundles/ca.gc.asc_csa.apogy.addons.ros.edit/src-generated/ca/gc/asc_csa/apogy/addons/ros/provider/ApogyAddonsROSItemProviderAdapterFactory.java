@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,9 +29,9 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
 
-import org.eclipse.symphony.addons.ros.util.Symphony__AddonsROSAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.ros.util.ApogyAddonsROSAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -42,7 +42,7 @@ import org.eclipse.symphony.addons.ros.util.Symphony__AddonsROSAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__AddonsROSAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsROSItemProviderAdapterFactory extends ApogyAddonsROSAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsROSEditPlugin.INSTANCE, Symphony__AddonsROSPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsROSEditPlugin.INSTANCE, ApogyAddonsROSPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -81,7 +81,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSItemProviderAdapterFactory() {
+	public ApogyAddonsROSItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -90,7 +90,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.ROSNode} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ROSNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -98,7 +98,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	protected ROSNodeItemProvider rosNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.ROSNode}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -113,7 +113,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.ROSPublisherManager} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	protected ROSPublisherManagerItemProvider rosPublisherManagerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.ROSPublisherManager}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,7 +136,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.ROSPublisher} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -144,7 +144,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	protected ROSPublisherItemProvider rosPublisherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.ROSPublisher}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -159,7 +159,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.ROSServiceManager} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -167,7 +167,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	protected ROSServiceManagerItemProvider rosServiceManagerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.ROSServiceManager}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSServiceManager}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -182,7 +182,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.ROSService} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ROSService} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -190,7 +190,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	protected ROSServiceItemProvider rosServiceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.ROSService}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSService}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -205,7 +205,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.ROSTopicLauncher} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -213,7 +213,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	protected ROSTopicLauncherItemProvider rosTopicLauncherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.ROSTopicLauncher}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSTopicLauncher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -228,7 +228,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.ROSListener} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ROSListener} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -236,7 +236,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	protected ROSListenerItemProvider rosListenerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.ROSListener}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ROSListener}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -251,26 +251,26 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsROSFacadeItemProvider symphony__AddonsROSFacadeItemProvider;
+	protected ApogyAddonsROSFacadeItemProvider apogy__AddonsROSFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ros.Symphony__AddonsROSFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__AddonsROSFacadeAdapter() {
-		if (symphony__AddonsROSFacadeItemProvider == null) {
-			symphony__AddonsROSFacadeItemProvider = new Symphony__AddonsROSFacadeItemProvider(this);
+	public Adapter createApogyAddonsROSFacadeAdapter() {
+		if (apogy__AddonsROSFacadeItemProvider == null) {
+			apogy__AddonsROSFacadeItemProvider = new ApogyAddonsROSFacadeItemProvider(this);
 		}
 
-		return symphony__AddonsROSFacadeItemProvider;
+		return apogy__AddonsROSFacadeItemProvider;
 	}
 
 	/**
@@ -406,7 +406,7 @@ public class Symphony__AddonsROSItemProviderAdapterFactory extends Symphony__Add
 		if (rosServiceItemProvider != null) rosServiceItemProvider.dispose();
 		if (rosTopicLauncherItemProvider != null) rosTopicLauncherItemProvider.dispose();
 		if (rosListenerItemProvider != null) rosListenerItemProvider.dispose();
-		if (symphony__AddonsROSFacadeItemProvider != null) symphony__AddonsROSFacadeItemProvider.dispose();
+		if (apogy__AddonsROSFacadeItemProvider != null) apogy__AddonsROSFacadeItemProvider.dispose();
 	}
 
 }

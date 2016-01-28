@@ -3,7 +3,7 @@
  *
  * $Id: SegmentWayPointPathInterpolatorItemProvider.java,v 1.3.4.3 2015/09/22 19:39:43 rlarcheveque Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.SegmentWayPointPathInterpolator} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +70,7 @@ public class SegmentWayPointPathInterpolatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SegmentWayPointPathInterpolator_maximumDistanceInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SegmentWayPointPathInterpolator_maximumDistanceInterval_feature", "_UI_SegmentWayPointPathInterpolator_type"),
-				 Symphony__AddonsGeometryPathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL,
+				 ApogyAddonsGeometryPathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class SegmentWayPointPathInterpolatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SegmentWayPointPathInterpolator.class)) {
-			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

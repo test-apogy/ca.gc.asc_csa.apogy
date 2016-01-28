@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 import org.jfree.data.xy.XYDataItem;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.DefaultVariableTrajectoryProvider} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class DefaultVariableTrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DefaultVariableTrajectoryProvider_distanceThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DefaultVariableTrajectoryProvider_distanceThreshold_feature", "_UI_DefaultVariableTrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD,
+				 ApogyCoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class DefaultVariableTrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DefaultVariableTrajectoryProvider_azimuthThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DefaultVariableTrajectoryProvider_azimuthThreshold_feature", "_UI_DefaultVariableTrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD,
+				 ApogyCoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -142,8 +142,8 @@ public class DefaultVariableTrajectoryProviderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DefaultVariableTrajectoryProvider.class)) {
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
-			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case ApogyCoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

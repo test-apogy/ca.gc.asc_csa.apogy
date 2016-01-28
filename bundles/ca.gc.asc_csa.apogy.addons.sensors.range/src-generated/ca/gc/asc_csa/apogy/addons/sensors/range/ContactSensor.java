@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.addons.sensors.range;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.ContactSensor#isContacted <em>Contacted</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.ContactSensor#isContacted <em>Contacted</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getContactSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getContactSensor()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface ContactSensor extends RangeSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contacted</em>' attribute.
 	 * @see #setContacted(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getContactSensor_Contacted()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getContactSensor_Contacted()
 	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isContacted();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.ContactSensor#isContacted <em>Contacted</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.ContactSensor#isContacted <em>Contacted</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Contacted</em>' attribute.

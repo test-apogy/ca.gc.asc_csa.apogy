@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius.topology.java_actions;
+package ca.gc.asc_csa.apogy.core.ui.sirius.topology.java_actions;
 
 import java.util.Collection;
 import java.util.Map;
@@ -7,10 +7,10 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.TopologyRoot;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 public class DeleteNodeExternalAction implements IExternalJavaAction
 {
@@ -35,11 +35,11 @@ public class DeleteNodeExternalAction implements IExternalJavaAction
 		
 		// If the variables are of the correct types
 		if (obj instanceof Node &&
-			container instanceof SymphonySystem)
+			container instanceof ApogySystem)
 		{
 			// Cast down
 			Node node = (Node) obj;
-			TopologyRoot root = ((SymphonySystem)container).getTopologyRoot();
+			TopologyRoot root = ((ApogySystem)container).getTopologyRoot();
 			
 			// If the node to delete is the root of the topology
 			if (node == root.getOriginNode())

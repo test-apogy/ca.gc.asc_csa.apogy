@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.provider;
+package ca.gc.asc_csa.apogy.core.topology.provider;
 
 
 import java.util.Collection;
@@ -11,17 +11,17 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.provider.ReferencedGroupNodeItemProvider;
-import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.ReferencedGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.topology.SymphonySystemAPIsNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SymphonySystemAPIsNodeItemProvider
+public class ApogySystemAPIsNodeItemProvider
   extends ReferencedGroupNodeItemProvider
 {
   /**
@@ -30,7 +30,7 @@ public class SymphonySystemAPIsNodeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonySystemAPIsNodeItemProvider(AdapterFactory adapterFactory)
+  public ApogySystemAPIsNodeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -47,26 +47,26 @@ public class SymphonySystemAPIsNodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSymphonyEnvironmentPropertyDescriptor(object);
+			addApogyEnvironmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
-	 * This adds a property descriptor for the Symphony Environment feature.
+	 * This adds a property descriptor for the Apogy Environment feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addSymphonyEnvironmentPropertyDescriptor(Object object)
+  protected void addApogyEnvironmentPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonySystemAPIsNode_symphonyEnvironment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonySystemAPIsNode_symphonyEnvironment_feature", "_UI_SymphonySystemAPIsNode_type"),
-				 Symphony__CoreTopologyPackage.Literals.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT,
+				 getString("_UI_ApogySystemAPIsNode_apogyEnvironment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogySystemAPIsNode_apogyEnvironment_feature", "_UI_ApogySystemAPIsNode_type"),
+				 ApogyCoreTopologyPackage.Literals.APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT,
 				 true,
 				 false,
 				 true,
@@ -76,7 +76,7 @@ public class SymphonySystemAPIsNodeItemProvider
 	}
 
   /**
-	 * This returns SymphonySystemAPIsNode.gif.
+	 * This returns ApogySystemAPIsNode.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -84,7 +84,7 @@ public class SymphonySystemAPIsNodeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonySystemAPIsNode"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogySystemAPIsNode"));
 	}
 
   /**
@@ -97,9 +97,9 @@ public class SymphonySystemAPIsNodeItemProvider
   public String getText(Object object)
   {
 	  @SuppressWarnings("unused")
-	  SymphonySystemAPIsNode symphonySystemAPIsNode = (SymphonySystemAPIsNode) object;
+	  ApogySystemAPIsNode apogySystemAPIsNode = (ApogySystemAPIsNode) object;
 	  
-	  String label = getString("_UI_SymphonySystemAPIsNode_type");
+	  String label = getString("_UI_ApogySystemAPIsNode_type");
 
 	  return label;
   }

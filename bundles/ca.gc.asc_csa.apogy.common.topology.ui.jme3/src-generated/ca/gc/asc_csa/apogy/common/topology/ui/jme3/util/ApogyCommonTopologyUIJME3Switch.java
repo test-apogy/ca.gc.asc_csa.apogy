@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.jme3.util;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3TypeFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.jme3.ApogyCommonTopologyUIJME3Package
  * @generated
  */
-public class Symphony__CommonTopologyUIJME3Switch<T> extends Switch<T> {
+public class ApogyCommonTopologyUIJME3Switch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonTopologyUIJME3Package modelPackage;
+	protected static ApogyCommonTopologyUIJME3Package modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class Symphony__CommonTopologyUIJME3Switch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIJME3Switch() {
+	public ApogyCommonTopologyUIJME3Switch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonTopologyUIJME3Package.eINSTANCE;
+			modelPackage = ApogyCommonTopologyUIJME3Package.eINSTANCE;
 		}
 	}
 
@@ -66,7 +66,7 @@ public class Symphony__CommonTopologyUIJME3Switch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonTopologyUIJME3Package.JME3_TYPE_FACTORY: {
+			case ApogyCommonTopologyUIJME3Package.JME3_TYPE_FACTORY: {
 				JME3TypeFactory jme3TypeFactory = (JME3TypeFactory)theEObject;
 				T result = caseJME3TypeFactory(jme3TypeFactory);
 				if (result == null) result = defaultCase(theEObject);
@@ -107,4 +107,4 @@ public class Symphony__CommonTopologyUIJME3Switch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonTopologyUIJME3Switch
+} //ApogyCommonTopologyUIJME3Switch

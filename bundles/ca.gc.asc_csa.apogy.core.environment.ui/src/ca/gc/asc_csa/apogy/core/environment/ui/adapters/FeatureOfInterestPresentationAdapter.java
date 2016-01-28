@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.environment.ui.adapters;
+package ca.gc.asc_csa.apogy.core.environment.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
 
 public class FeatureOfInterestPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class FeatureOfInterestPresentationAdapter implements NodePresentationAda
 			throw new IllegalArgumentException();
 		}
 
-		FeatureOfInterestNodePresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation();
+		FeatureOfInterestNodePresentation presentationNode = ApogyCoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

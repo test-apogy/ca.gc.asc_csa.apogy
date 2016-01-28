@@ -3,21 +3,21 @@
  *
  * $Id: DigitalElevationMapMesherImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public class DigitalElevationMapMesherImpl extends ProcessorImpl<DigitalElevatio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP_MESHER;
+		return ApogyCommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP_MESHER;
 	}
 
 	
@@ -72,13 +72,13 @@ public class DigitalElevationMapMesherImpl extends ProcessorImpl<DigitalElevatio
 	@Override
 	public CartesianTriangularMesh process(DigitalElevationMap input) throws Exception 
 	{
-		CartesianTriangularMesh result = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh result = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		// Copies the points to the mesh.
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		for(CartesianPositionCoordinates p : input.getPoints())
 		{
-			CartesianPositionCoordinates copy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p);
+			CartesianPositionCoordinates copy = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p);
 			points.add(copy);
 		}
 		result.getPoints().addAll(points);
@@ -96,10 +96,10 @@ public class DigitalElevationMapMesherImpl extends ProcessorImpl<DigitalElevatio
 					CartesianPositionCoordinates pc = array[xn + 1][ym + 1];
 					CartesianPositionCoordinates pd = array[xn][ym + 1];
 					
-					CartesianTriangle t1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(pa, pb, pc);
+					CartesianTriangle t1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(pa, pb, pc);
 					triangles.add(t1);
 					
-					CartesianTriangle t2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(pa, pc, pd);				
+					CartesianTriangle t2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(pa, pc, pd);				
 					triangles.add(t2);
 				}			
 		}

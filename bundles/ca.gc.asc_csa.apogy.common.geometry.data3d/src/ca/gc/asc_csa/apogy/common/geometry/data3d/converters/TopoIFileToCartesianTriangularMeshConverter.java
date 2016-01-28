@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.geometry.data3d.converters;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.converters;
 
 import java.io.InputStream;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO;
 
 public class TopoIFileToCartesianTriangularMeshConverter implements IConverter {
 

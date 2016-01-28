@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -22,13 +22,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.WatchesList;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.WatchesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class WatchesListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class WatchesListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -132,7 +132,7 @@ public class WatchesListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchesList_watchesListsContainer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchesList_watchesListsContainer_feature", "_UI_WatchesList_type"),
-				 Symphony__CoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES_LISTS_CONTAINER,
+				 ApogyCoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES_LISTS_CONTAINER,
 				 true,
 				 false,
 				 true,
@@ -154,7 +154,7 @@ public class WatchesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES);
 		}
 		return childrenFeatures;
 	}
@@ -213,11 +213,11 @@ public class WatchesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WatchesList.class)) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LIST__NAME:
-			case Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
+			case ApogyCoreInvocatorPackage.WATCHES_LIST__NAME:
+			case ApogyCoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -238,8 +238,8 @@ public class WatchesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createWatch()));
+				(ApogyCoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createWatch()));
 	}
 
   /**

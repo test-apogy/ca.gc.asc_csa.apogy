@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -10,11 +10,11 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>Symphony__CoreInvocator</b></em>' model.
+ * A test suite for the '<em><b>ApogyCoreInvocator</b></em>' model.
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorAllTests extends TestSuite {
+public class ApogyCoreInvocatorAllTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,8 +31,8 @@ public class Symphony__CoreInvocatorAllTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new Symphony__CoreInvocatorAllTests("Symphony__CoreInvocator Tests");
-		suite.addTest(Symphony__CoreInvocatorTests.suite());
+		TestSuite suite = new ApogyCoreInvocatorAllTests("ApogyCoreInvocator Tests");
+		suite.addTest(ApogyCoreInvocatorTests.suite());
 		return suite;
 	}
 
@@ -41,8 +41,8 @@ public class Symphony__CoreInvocatorAllTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorAllTests(String name) {
+	public ApogyCoreInvocatorAllTests(String name) {
 		super(name);
 	}
 
-} //Symphony__CoreInvocatorAllTests
+} //ApogyCoreInvocatorAllTests

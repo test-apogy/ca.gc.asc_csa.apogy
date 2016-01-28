@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.Zoomable} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class ZoomableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_currentZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_currentZoom_feature", "_UI_Zoomable_type"),
-				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
+				 ApogyAddonsSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class ZoomableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_commandedZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_commandedZoom_feature", "_UI_Zoomable_type"),
-				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
+				 ApogyAddonsSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -140,8 +140,8 @@ public class ZoomableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Zoomable.class)) {
-			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
-			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
+			case ApogyAddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
+			case ApogyAddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

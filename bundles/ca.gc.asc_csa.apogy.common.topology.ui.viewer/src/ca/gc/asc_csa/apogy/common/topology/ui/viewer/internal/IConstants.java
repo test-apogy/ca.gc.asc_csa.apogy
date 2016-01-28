@@ -9,9 +9,9 @@
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
 
-package org.eclipse.symphony.common.topology.ui.viewer.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.internal;
 
-import org.eclipse.symphony.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
 
 /**
  * Constants relating to the console plug-in.

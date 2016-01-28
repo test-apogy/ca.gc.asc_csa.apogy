@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsGeometryPathsFacadeItemProvider.java,v 1.3.4.2 2015/05/21 15:51:22 pallard Exp $
+ * $Id: ApogyAddonsGeometryPathsFacadeItemProvider.java,v 1.3.4.2 2015/05/21 15:51:22 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.provider;
 
 
 import java.util.Collection;
@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsGeometryPathsFacadeItemProvider
+public class ApogyAddonsGeometryPathsFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -42,7 +42,7 @@ public class Symphony__AddonsGeometryPathsFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsFacadeItemProvider(AdapterFactory adapterFactory)
+	public ApogyAddonsGeometryPathsFacadeItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -64,7 +64,7 @@ public class Symphony__AddonsGeometryPathsFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__AddonsGeometryPathsFacade.gif.
+	 * This returns ApogyAddonsGeometryPathsFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,7 +72,7 @@ public class Symphony__AddonsGeometryPathsFacadeItemProvider
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__AddonsGeometryPathsFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyAddonsGeometryPathsFacade"));
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class Symphony__AddonsGeometryPathsFacadeItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Symphony__AddonsGeometryPathsFacade_type");
+		return getString("_UI_ApogyAddonsGeometryPathsFacade_type");
 	}
 
 	/**

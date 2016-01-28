@@ -10,10 +10,10 @@
 
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_tools_camera -->
+      <!-- @generated apogy_tools_camera -->
       <factory
-            uri="org.eclipse.symphony.addons.sensors.imaging.camera"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider.ApogyAddonsSensorsImagingCameraItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,13 +23,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_imaging_camera -->
+      <!-- @generated apogy_addons_imaging_camera -->
       <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.invocator"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider.ApogyAddonsSensorsImagingCameraItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider.ApogyAddonsSensorsImagingCameraItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

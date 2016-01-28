@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.viewer.impl;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerFactory;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,24 +20,24 @@ import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIViewerFactoryImpl extends EFactoryImpl implements Symphony__CommonTopologyUIViewerFactory {
+public class ApogyCommonTopologyUIViewerFactoryImpl extends EFactoryImpl implements ApogyCommonTopologyUIViewerFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyUIViewerFactory init() {
+	public static ApogyCommonTopologyUIViewerFactory init() {
 		try {
-			Symphony__CommonTopologyUIViewerFactory theSymphony__CommonTopologyUIViewerFactory = (Symphony__CommonTopologyUIViewerFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonTopologyUIViewerPackage.eNS_URI);
-			if (theSymphony__CommonTopologyUIViewerFactory != null) {
-				return theSymphony__CommonTopologyUIViewerFactory;
+			ApogyCommonTopologyUIViewerFactory theApogyCommonTopologyUIViewerFactory = (ApogyCommonTopologyUIViewerFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonTopologyUIViewerPackage.eNS_URI);
+			if (theApogyCommonTopologyUIViewerFactory != null) {
+				return theApogyCommonTopologyUIViewerFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonTopologyUIViewerFactoryImpl();
+		return new ApogyCommonTopologyUIViewerFactoryImpl();
 	}
 
 	/**
@@ -46,7 +46,7 @@ public class Symphony__CommonTopologyUIViewerFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIViewerFactoryImpl() {
+	public ApogyCommonTopologyUIViewerFactoryImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class Symphony__CommonTopologyUIViewerFactoryImpl extends EFactoryImpl im
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY: return createTopologyViewerRegistry();
+			case ApogyCommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY: return createTopologyViewerRegistry();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -72,7 +72,7 @@ public class Symphony__CommonTopologyUIViewerFactoryImpl extends EFactoryImpl im
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyUIViewerPackage.ITOPOLOGY_VIEWER:
+			case ApogyCommonTopologyUIViewerPackage.ITOPOLOGY_VIEWER:
 				return createITopologyViewerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -87,7 +87,7 @@ public class Symphony__CommonTopologyUIViewerFactoryImpl extends EFactoryImpl im
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonTopologyUIViewerPackage.ITOPOLOGY_VIEWER:
+			case ApogyCommonTopologyUIViewerPackage.ITOPOLOGY_VIEWER:
 				return convertITopologyViewerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -127,8 +127,8 @@ public class Symphony__CommonTopologyUIViewerFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIViewerPackage getSymphony__CommonTopologyUIViewerPackage() {
-		return (Symphony__CommonTopologyUIViewerPackage)getEPackage();
+	public ApogyCommonTopologyUIViewerPackage getApogyCommonTopologyUIViewerPackage() {
+		return (ApogyCommonTopologyUIViewerPackage)getEPackage();
 	}
 
 	/**
@@ -138,8 +138,8 @@ public class Symphony__CommonTopologyUIViewerFactoryImpl extends EFactoryImpl im
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonTopologyUIViewerPackage getPackage() {
-		return Symphony__CommonTopologyUIViewerPackage.eINSTANCE;
+	public static ApogyCommonTopologyUIViewerPackage getPackage() {
+		return ApogyCommonTopologyUIViewerPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonTopologyUIViewerFactoryImpl
+} //ApogyCommonTopologyUIViewerFactoryImpl

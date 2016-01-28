@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.impl;
+package ca.gc.asc_csa.apogy.addons.ros.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -14,15 +14,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.ros.internal.message.Message;
 
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage;
-import org.eclipse.symphony.addons.ros.Symphony__AddonsROSFactory;
-import org.eclipse.symphony.addons.ros.Activator;
-import org.eclipse.symphony.addons.ros.ROSNode;
-import org.eclipse.symphony.addons.ros.ROSPublisher;
-import org.eclipse.symphony.addons.ros.ROSPublisherManager;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage;
+import ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSFactory;
+import ca.gc.asc_csa.apogy.addons.ros.Activator;
+import ca.gc.asc_csa.apogy.addons.ros.ROSNode;
+import ca.gc.asc_csa.apogy.addons.ros.ROSPublisher;
+import ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager;
 
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,9 +32,9 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSPublisherManagerImpl#getPublishers <em>Publishers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSPublisherManagerImpl#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.impl.ROSPublisherManagerImpl#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherManagerImpl#getPublishers <em>Publishers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherManagerImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.impl.ROSPublisherManagerImpl#isRunning <em>Running</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsROSPackage.Literals.ROS_PUBLISHER_MANAGER;
+		return ApogyAddonsROSPackage.Literals.ROS_PUBLISHER_MANAGER;
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 		HashMap<String, ROSPublisher<?>> oldPublishers = publishers;
 		publishers = newPublishers;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS, oldPublishers, publishers));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS, oldPublishers, publishers));
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 			node = (ROSNode)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -164,7 +164,7 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 		ROSNode oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE, oldNode, node));
 	}
 
 	/**
@@ -187,7 +187,7 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 		boolean oldRunning = running;
 		running = newRunning;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING, oldRunning, running));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING, oldRunning, running));
 	}
 
 	/**
@@ -197,7 +197,7 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public void createPublisher(String topicName, String messageType)
 	{
-		ROSPublisher<Message> publisher = Symphony__AddonsROSFactory.eINSTANCE.createROSPublisher();
+		ROSPublisher<Message> publisher = ApogyAddonsROSFactory.eINSTANCE.createROSPublisher();
 		publisher.setTopicName(topicName);
 		publisher.setMessageType(messageType);
 		getPublishers().put(topicName, publisher);
@@ -316,12 +316,12 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
 				return getPublishers();
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
 				return isRunning();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -337,13 +337,13 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
 				setPublishers((HashMap<String, ROSPublisher<?>>)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
 				setNode((ROSNode)newValue);
 				return;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
 				setRunning((Boolean)newValue);
 				return;
 		}
@@ -359,13 +359,13 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
 				setPublishers((HashMap<String, ROSPublisher<?>>)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
 				setNode((ROSNode)null);
 				return;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
 				setRunning(RUNNING_EDEFAULT);
 				return;
 		}
@@ -381,11 +381,11 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
 				return publishers != null;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__NODE:
 				return node != null;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
 				return running != RUNNING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -401,21 +401,21 @@ public class ROSPublisherManagerImpl extends MinimalEObjectImpl.Container implem
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER___CREATE_PUBLISHER__STRING_STRING:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER___CREATE_PUBLISHER__STRING_STRING:
 				createPublisher((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER___LAUNCH:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER___LAUNCH:
 				launch();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER___STOP:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER___STOP:
 				stop();
 				return null;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER___CREATE_MESSAGE__STRING:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER___CREATE_MESSAGE__STRING:
 				return createMessage((String)arguments.get(0));
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER___PUBLISH__STRING_MESSAGE:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER___PUBLISH__STRING_MESSAGE:
 				publish((String)arguments.get(0), (Message)arguments.get(1));
 				return null;
-			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER___GET_PUBLISHER__STRING:
+			case ApogyAddonsROSPackage.ROS_PUBLISHER_MANAGER___GET_PUBLISHER__STRING:
 				return getPublisher((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

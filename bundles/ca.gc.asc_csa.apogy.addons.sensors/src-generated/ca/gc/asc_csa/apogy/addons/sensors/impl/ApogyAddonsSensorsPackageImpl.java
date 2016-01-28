@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.addons.sensors.Referenceable;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.Referenceable;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.SensorStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage;
 
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements Symphony__AddonsSensorsPackage {
+public class ApogyAddonsSensorsPackageImpl extends EPackageImpl implements ApogyAddonsSensorsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,12 +58,12 @@ public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.ApogyAddonsSensorsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsSensorsPackageImpl() {
-		super(eNS_URI, Symphony__AddonsSensorsFactory.eINSTANCE);
+	private ApogyAddonsSensorsPackageImpl() {
+		super(eNS_URI, ApogyAddonsSensorsFactory.eINSTANCE);
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsSensorsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsSensorsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,30 +85,30 @@ public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements 
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsPackage init() {
-		if (isInited) return (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
+	public static ApogyAddonsSensorsPackage init() {
+		if (isInited) return (ApogyAddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsSensorsPackageImpl theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsSensorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsSensorsPackageImpl());
+		ApogyAddonsSensorsPackageImpl theApogyAddonsSensorsPackage = (ApogyAddonsSensorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsSensorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsSensorsPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsSensorsPackage.createPackageContents();
+		theApogyAddonsSensorsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsSensorsPackage.initializePackageContents();
+		theApogyAddonsSensorsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsSensorsPackage.freeze();
+		theApogyAddonsSensorsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsSensorsPackage.eNS_URI, theSymphony__AddonsSensorsPackage);
-		return theSymphony__AddonsSensorsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsSensorsPackage.eNS_URI, theApogyAddonsSensorsPackage);
+		return theApogyAddonsSensorsPackage;
 	}
 
 	/**
@@ -161,8 +161,8 @@ public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFactory getSymphony__AddonsSensorsFactory() {
-		return (Symphony__AddonsSensorsFactory)getEFactoryInstance();
+	public ApogyAddonsSensorsFactory getApogyAddonsSensorsFactory() {
+		return (ApogyAddonsSensorsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -218,21 +218,21 @@ public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements 
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		sensorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		sensorEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(sensorEClass, Sensor.class, "Sensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSensor_Status(), this.getSensorStatus(), "status", "OFF", 0, 1, Sensor.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(referenceableEClass, Referenceable.class, "Referenceable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReferenceable_ReferenceFrame(), theSymphony__CommonTopologyPackage.getNode(), null, "referenceFrame", null, 0, 1, Referenceable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReferenceable_ReferenceFrame(), theApogyCommonTopologyPackage.getNode(), null, "referenceFrame", null, 0, 1, Referenceable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(sensorStatusEEnum, SensorStatus.class, "SensorStatus");
@@ -261,16 +261,16 @@ public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements 
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__AddonsSensors",
+			 "prefix", "ApogyAddonsSensors",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__AddonsSensors",
+			 "modelName", "ApogyAddonsSensors",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.addons.sensors/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.addons.sensors.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.addons"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.addons.sensors/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.addons.sensors.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.addons"
 		   });	
 		addAnnotation
 		  (sensorStatusEEnum, 
@@ -280,4 +280,4 @@ public class Symphony__AddonsSensorsPackageImpl extends EPackageImpl implements 
 		   });
 	}
 
-} //Symphony__AddonsSensorsPackageImpl
+} //ApogyAddonsSensorsPackageImpl

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
@@ -12,7 +12,7 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.ShadowMode;
+import ca.gc.asc_csa.apogy.common.topology.ui.ShadowMode;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

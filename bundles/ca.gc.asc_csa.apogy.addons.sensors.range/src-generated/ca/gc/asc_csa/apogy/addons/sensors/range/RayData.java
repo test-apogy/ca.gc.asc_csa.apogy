@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.range;
+package ca.gc.asc_csa.apogy.addons.sensors.range;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RayData#getOrigin <em>Origin</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.RayData#getDirection <em>Direction</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RayData#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.RayData#getDirection <em>Direction</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRayData()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRayData()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface RayData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origin</em>' attribute.
 	 * @see #setOrigin(Point3d)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRayData_Origin()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.range.Point3d"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRayData_Origin()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.range.Point3d"
 	 * @generated
 	 */
 	Point3d getOrigin();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RayData#getOrigin <em>Origin</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RayData#getOrigin <em>Origin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Origin</em>' attribute.
@@ -62,14 +62,14 @@ public interface RayData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction</em>' attribute.
 	 * @see #setDirection(Vector3d)
-	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRayData_Direction()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.range.Vector3d"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage#getRayData_Direction()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.range.Vector3d"
 	 * @generated
 	 */
 	Vector3d getDirection();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.range.RayData#getDirection <em>Direction</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.range.RayData#getDirection <em>Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Direction</em>' attribute.

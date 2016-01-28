@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.impl.ApogyCoreEnvironmentUIFacadeImpl;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import org.jfree.data.xy.XYSeries;
 
 /**
@@ -20,13 +20,13 @@ import org.jfree.data.xy.XYSeries;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getSymphony__CoreEnvironmentUIFacade()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getApogyCoreEnvironmentUIFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreEnvironmentUIFacade extends EObject
+public interface ApogyCoreEnvironmentUIFacade extends EObject
 {
-  public static Symphony__CoreEnvironmentUIFacade INSTANCE = Symphony__CoreEnvironmentUIFacadeImpl.getInstance();
+  public static ApogyCoreEnvironmentUIFacade INSTANCE = ApogyCoreEnvironmentUIFacadeImpl.getInstance();
 	
   /**
 	 * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public interface Symphony__CoreEnvironmentUIFacade extends EObject
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The image representing the specified list of ImageMapLayerPresentation.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.ui.List<org.eclipse.symphony.core.environment.RectangularRegionProvider>" unique="false" many="false" mapViewConfigurationUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.ui.List<ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider>" unique="false" many="false" mapViewConfigurationUnique="false"
 	 * @generated
 	 */
 	List<RectangularRegionProvider> getVisibleRectangularRegionProvider(MapViewConfiguration mapViewConfiguration);
@@ -65,7 +65,7 @@ public interface Symphony__CoreEnvironmentUIFacade extends EObject
 	 * @param The XYSeries.
 	 * @return The length of the trajectory represented in the XYSerie.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" xySeriesDataType="org.eclipse.symphony.core.environment.ui.XYSeries" xySeriesUnique="false"
+	 * @model unique="false" xySeriesDataType="ca.gc.asc_csa.apogy.core.environment.ui.XYSeries" xySeriesUnique="false"
 	 * @generated
 	 */
   double getTrajectoryLength(XYSeries xySeries);
@@ -111,9 +111,9 @@ public interface Symphony__CoreEnvironmentUIFacade extends EObject
 		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.ui.List<org.eclipse.symphony.core.FeatureOfInterestList>" unique="false" many="false" sessionUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.ui.List<ca.gc.asc_csa.apogy.core.FeatureOfInterestList>" unique="false" many="false" sessionUnique="false"
 	 * @generated
 	 */
 	List<FeatureOfInterestList> getFeatureOfInterestLists(InvocatorSession session);
 
-} // Symphony__CoreEnvironmentUIFacade
+} // ApogyCoreEnvironmentUIFacade

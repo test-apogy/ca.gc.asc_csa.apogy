@@ -4,7 +4,7 @@
  *
  * $Id: PrimitivesItemProviderAdapterFactory.java,v 1.10.2.3 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -30,14 +30,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.util.Symphony__CommonTopologyAddonsPrimitivesAdapterFactory;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.util.ApogyCommonTopologyAddonsPrimitivesAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -98,7 +98,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.Vector} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -106,7 +106,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected VectorItemProvider vectorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Vector}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.PickVector} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected PickVectorItemProvider pickVectorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PickVector}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -144,7 +144,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade} instances.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -152,7 +152,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade}. <!--
+	 * {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesFacade}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -168,7 +168,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.Plane} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -176,7 +176,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected PlaneItemProvider planeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Plane}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -192,7 +192,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.WayPoint} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.WayPoint} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -201,7 +201,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.WayPoint}. <!--
+	 * {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.WayPoint}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -217,7 +217,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.Label} instances. <!--
+	 * {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -225,7 +225,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected LabelItemProvider labelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Label}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Label}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive} instances.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -248,7 +248,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive}. <!--
+	 * {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpherePrimitive}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -263,7 +263,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.AmbientLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -271,7 +271,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected AmbientLightItemProvider ambientLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.AmbientLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.AmbientLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,7 +286,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -294,7 +294,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected DirectionalLightItemProvider directionalLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.DirectionalLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -309,7 +309,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.PointLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -317,7 +317,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected PointLightItemProvider pointLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PointLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -332,7 +332,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -340,7 +340,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	protected SpotLightItemProvider spotLightItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.SpotLight}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

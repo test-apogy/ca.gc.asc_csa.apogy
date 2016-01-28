@@ -3,17 +3,17 @@
  *
  * $Id: DistanceAndSlopesCostFunctionImpl.java,v 1.2.4.2 2015/05/21 15:50:20 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
-import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,11 +23,11 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getGravityAxis <em>Gravity Axis</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getMaximumUpSlope <em>Maximum Up Slope</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getMaximumDownSlope <em>Maximum Down Slope</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getGravityAxis <em>Gravity Axis</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getMaximumUpSlope <em>Maximum Up Slope</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getMaximumDownSlope <em>Maximum Down Slope</em>}</li>
  * </ul>
  *
  * @generated
@@ -149,7 +149,7 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION;
+		return ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_SLOPES_COST_FUNCTION;
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 		double oldUpSlopeCostFactor = upSlopeCostFactor;
 		upSlopeCostFactor = newUpSlopeCostFactor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR, oldUpSlopeCostFactor, upSlopeCostFactor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR, oldUpSlopeCostFactor, upSlopeCostFactor));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 		double oldDownSlopeCostFactor = downSlopeCostFactor;
 		downSlopeCostFactor = newDownSlopeCostFactor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR, oldDownSlopeCostFactor, downSlopeCostFactor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR, oldDownSlopeCostFactor, downSlopeCostFactor));
 	}
 
 	/**
@@ -212,7 +212,7 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 		CartesianAxis oldGravityAxis = gravityAxis;
 		gravityAxis = newGravityAxis == null ? GRAVITY_AXIS_EDEFAULT : newGravityAxis;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS, oldGravityAxis, gravityAxis));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS, oldGravityAxis, gravityAxis));
 	}
 
 	/**
@@ -233,7 +233,7 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 		double oldMaximumUpSlope = maximumUpSlope;
 		maximumUpSlope = newMaximumUpSlope;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE, oldMaximumUpSlope, maximumUpSlope));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE, oldMaximumUpSlope, maximumUpSlope));
 	}
 
 	/**
@@ -254,7 +254,7 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 		double oldMaximumDownSlope = maximumDownSlope;
 		maximumDownSlope = newMaximumDownSlope;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE, oldMaximumDownSlope, maximumDownSlope));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE, oldMaximumDownSlope, maximumDownSlope));
 	}
 
 	/**
@@ -265,15 +265,15 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
 				return getUpSlopeCostFactor();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
 				return getDownSlopeCostFactor();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
 				return getGravityAxis();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
 				return getMaximumUpSlope();
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
 				return getMaximumDownSlope();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -287,19 +287,19 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
 				setUpSlopeCostFactor((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
 				setDownSlopeCostFactor((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
 				setGravityAxis((CartesianAxis)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
 				setMaximumUpSlope((Double)newValue);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
 				setMaximumDownSlope((Double)newValue);
 				return;
 		}
@@ -314,19 +314,19 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
 				setUpSlopeCostFactor(UP_SLOPE_COST_FACTOR_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
 				setDownSlopeCostFactor(DOWN_SLOPE_COST_FACTOR_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
 				setGravityAxis(GRAVITY_AXIS_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
 				setMaximumUpSlope(MAXIMUM_UP_SLOPE_EDEFAULT);
 				return;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
 				setMaximumDownSlope(MAXIMUM_DOWN_SLOPE_EDEFAULT);
 				return;
 		}
@@ -341,15 +341,15 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR:
 				return upSlopeCostFactor != UP_SLOPE_COST_FACTOR_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR:
 				return downSlopeCostFactor != DOWN_SLOPE_COST_FACTOR_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS:
 				return gravityAxis != GRAVITY_AXIS_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE:
 				return maximumUpSlope != MAXIMUM_UP_SLOPE_EDEFAULT;
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE:
 				return maximumDownSlope != MAXIMUM_DOWN_SLOPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

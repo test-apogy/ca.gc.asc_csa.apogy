@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitImpl;
 import org.orekit.orbits.Orbit;
 
 /**
@@ -36,7 +36,7 @@ public abstract class EarthOrbitImpl extends OrbitImpl implements EarthOrbit {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT;
 	}
 
 	/**
@@ -58,7 +58,7 @@ public abstract class EarthOrbitImpl extends OrbitImpl implements EarthOrbit {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT___GET_ORE_KIT_ORBIT:
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT___GET_ORE_KIT_ORBIT:
 				return getOreKitOrbit();
 		}
 		return super.eInvoke(operationID, arguments);

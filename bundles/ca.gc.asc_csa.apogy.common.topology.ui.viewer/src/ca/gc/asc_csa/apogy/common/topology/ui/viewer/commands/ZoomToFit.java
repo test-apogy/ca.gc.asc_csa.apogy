@@ -1,9 +1,9 @@
-package org.eclipse.symphony.common.topology.ui.viewer.commands;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.commands;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerProvider;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerProvider;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 

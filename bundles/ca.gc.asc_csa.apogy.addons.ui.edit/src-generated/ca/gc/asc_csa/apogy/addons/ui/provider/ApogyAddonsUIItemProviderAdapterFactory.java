@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.provider;
+package ca.gc.asc_csa.apogy.addons.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,18 +33,18 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory;
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage;
 
-import org.eclipse.symphony.addons.ui.util.Symphony__AddonsUIAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.ui.util.ApogyAddonsUIAdapterFactory;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.util.Symphony__CommonTopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.util.ApogyCommonTopologyUISwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -55,7 +55,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__AddonsUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsUIItemProviderAdapterFactory extends ApogyAddonsUIAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -78,7 +78,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsUIEditPlugin.INSTANCE, Symphony__AddonsUIPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsUIEditPlugin.INSTANCE, ApogyAddonsUIPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -94,7 +94,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsUIItemProviderAdapterFactory() {
+	public ApogyAddonsUIItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -103,7 +103,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -111,7 +111,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	protected Ruler3dToolNodePresentationItemProvider ruler3dToolNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -126,7 +126,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -134,7 +134,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	protected SunVector3DToolNodePresentationItemProvider sunVector3DToolNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,7 +149,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -157,7 +157,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	protected Trajectory3DToolNodePresentationItemProvider trajectory3DToolNodePresentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -303,19 +303,19 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyUIPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyUIChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologyUISwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologyUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -351,18 +351,18 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 			public Object caseTopologyPresentationRegistry(TopologyPresentationRegistry object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 Symphony__AddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyAddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
 
 				return null;
 			}
@@ -395,24 +395,24 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsUIEditPlugin.INSTANCE;
+			return ApogyAddonsUIEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -448,18 +448,18 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
 
 				return null;
 			}
@@ -473,18 +473,18 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
 
 				return null;
 			}
@@ -517,7 +517,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsUIEditPlugin.INSTANCE;
+			return ApogyAddonsUIEditPlugin.INSTANCE;
 		}
 	}
 

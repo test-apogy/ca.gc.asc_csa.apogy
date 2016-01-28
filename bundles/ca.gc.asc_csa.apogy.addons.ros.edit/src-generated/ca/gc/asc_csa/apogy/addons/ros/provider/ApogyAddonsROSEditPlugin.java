@@ -1,26 +1,26 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.provider;
+package ca.gc.asc_csa.apogy.addons.ros.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__AddonsROS edit plugin.
+ * This is the central singleton for the ApogyAddonsROS edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__AddonsROSEditPlugin extends EMFPlugin {
+public final class ApogyAddonsROSEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__AddonsROSEditPlugin INSTANCE = new Symphony__AddonsROSEditPlugin();
+	public static final ApogyAddonsROSEditPlugin INSTANCE = new ApogyAddonsROSEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -36,7 +36,7 @@ public final class Symphony__AddonsROSEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsROSEditPlugin() {
+	public ApogyAddonsROSEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

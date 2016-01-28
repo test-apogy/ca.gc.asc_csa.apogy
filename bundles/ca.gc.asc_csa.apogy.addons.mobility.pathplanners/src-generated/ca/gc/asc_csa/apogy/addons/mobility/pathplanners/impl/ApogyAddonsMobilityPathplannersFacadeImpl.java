@@ -1,19 +1,19 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsMobilityPathplannersFacadeImpl.java,v 1.4.4.2 2015/05/21 15:50:52 pallard Exp $
+ * $Id: ApogyAddonsMobilityPathplannersFacadeImpl.java,v 1.4.4.2 2015/05/21 15:50:52 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.impl;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
-import org.eclipse.symphony.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.CircularExclusionZone;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFacade;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,13 +22,13 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *
  * @generated
  */
-public class Symphony__AddonsMobilityPathplannersFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__AddonsMobilityPathplannersFacade {
+public class ApogyAddonsMobilityPathplannersFacadeImpl extends MinimalEObjectImpl.Container implements ApogyAddonsMobilityPathplannersFacade {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsMobilityPathplannersFacadeImpl() {
+	protected ApogyAddonsMobilityPathplannersFacadeImpl() {
 		super();
 	}
 
@@ -39,7 +39,7 @@ public class Symphony__AddonsMobilityPathplannersFacadeImpl extends MinimalEObje
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsMobilityPathplannersPackage.Literals.SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE;
+		return ApogyAddonsMobilityPathplannersPackage.Literals.APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Symphony__AddonsMobilityPathplannersFacadeImpl extends MinimalEObje
 	 */
 	public CircularExclusionZone createCircularExclusionZone(double radius, GroupNode parent)
 	{
-		CircularExclusionZone zone  = Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone();				
+		CircularExclusionZone zone  = ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone();				
 		zone.setRadius(radius);	
 		parent.getChildren().add(zone);
 		return zone;
@@ -63,9 +63,9 @@ public class Symphony__AddonsMobilityPathplannersFacadeImpl extends MinimalEObje
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsMobilityPathplannersPackage.SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE:
+			case ApogyAddonsMobilityPathplannersPackage.APOGY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE:
 				return createCircularExclusionZone((Double)arguments.get(0), (GroupNode)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
-} //Symphony__AddonsMobilityPathplannersFacadeImpl
+} //ApogyAddonsMobilityPathplannersFacadeImpl

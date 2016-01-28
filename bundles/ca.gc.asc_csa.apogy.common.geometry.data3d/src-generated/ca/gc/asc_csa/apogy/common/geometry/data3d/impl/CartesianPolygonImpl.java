@@ -3,7 +3,7 @@
  *
  * $Id: CartesianPolygonImpl.java,v 1.2.4.2 2015/05/21 15:50:49 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import javax.vecmath.Vector3d;
 
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectEList;
-import org.eclipse.symphony.common.geometry.data.impl.PolygonImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.PolygonImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,9 +25,9 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl#getSurface <em>Surface</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl#getNormal <em>Normal</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl#getCentroid <em>Centroid</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPolygonImpl#getSurface <em>Surface</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPolygonImpl#getNormal <em>Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.CartesianPolygonImpl#getCentroid <em>Centroid</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,7 +69,7 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON;
+		return ApogyCommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	@Override
 	public EList<CartesianPositionCoordinates> getVertices() {
 		if (vertices == null) {
-			vertices = new EObjectEList<CartesianPositionCoordinates>(CartesianPositionCoordinates.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__VERTICES);
+			vertices = new EObjectEList<CartesianPositionCoordinates>(CartesianPositionCoordinates.class, this, ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__VERTICES);
 		}
 		return vertices;
 	}
@@ -131,11 +131,11 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
 				return getSurface();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
 				return getNormal();
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__CENTROID:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__CENTROID:
 				if (resolve) return getCentroid();
 				return basicGetCentroid();
 		}
@@ -150,11 +150,11 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
 				return getSurface() != SURFACE_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
 				return NORMAL_EDEFAULT == null ? getNormal() != null : !NORMAL_EDEFAULT.equals(getNormal());
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__CENTROID:
+			case ApogyCommonGeometryData3DPackage.CARTESIAN_POLYGON__CENTROID:
 				return basicGetCentroid() != null;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera;
+package ca.gc.asc_csa.apogy.examples.camera;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,12 +23,12 @@ import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagin
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraFactory
+ * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesCamera' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='Symphony__ExamplesCamera' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.camera/src-generated' editDirectory='/org.eclipse.symphony.examples.camera.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesCamera' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='ApogyExamplesCamera' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.examples.camera/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.camera.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples'"
  * @generated
  */
-public interface Symphony__ExamplesCameraPackage extends EPackage
+public interface ApogyExamplesCameraPackage extends EPackage
 {
 
   /**
@@ -44,7 +44,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.camera";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.camera";
   /**
 	 * The package namespace name.
 	 * <!-- begin-user-doc -->
@@ -58,13 +58,13 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesCameraPackage eINSTANCE = org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl.init();
+  ApogyExamplesCameraPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl.init();
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.CameraImpl <em>Camera</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl <em>Camera</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.camera.impl.CameraImpl
-	 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getCamera()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getCamera()
 	 * @generated
 	 */
   int CAMERA = 0;
@@ -75,7 +75,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__PARENT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
+	int CAMERA__PARENT = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__DESCRIPTION = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
+	int CAMERA__DESCRIPTION = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__NODE_ID = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
+	int CAMERA__NODE_ID = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
 		/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -99,7 +99,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
+	int CAMERA__CHILDREN = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
 		/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -107,7 +107,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__AGGREGATED_CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
+	int CAMERA__AGGREGATED_CHILDREN = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
 		/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,7 +115,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__STATUS = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
+	int CAMERA__STATUS = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__NAME = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
+	int CAMERA__NAME = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
 		/**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -131,7 +131,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__LATEST_IMAGE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT;
+  int CAMERA__LATEST_IMAGE_SNAPSHOT = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT;
   /**
 	 * The feature id for the '<em><b>Current Zoom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -139,7 +139,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__CURRENT_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 0;
+  int CAMERA__CURRENT_ZOOM = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 0;
   /**
 	 * The feature id for the '<em><b>Commanded Zoom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -147,7 +147,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__COMMANDED_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 1;
+  int CAMERA__COMMANDED_ZOOM = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 1;
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -155,7 +155,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__FOV = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 2;
+  int CAMERA__FOV = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 2;
   /**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -163,7 +163,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__INITIALIZED = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 3;
+	int CAMERA__INITIALIZED = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 3;
 		/**
 	 * The feature id for the '<em><b>Streaming Enabled</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -171,7 +171,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__STREAMING_ENABLED = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
+	int CAMERA__STREAMING_ENABLED = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
 		/**
 	 * The number of structural features of the '<em>Camera</em>' class.
 	 * <!-- begin-user-doc -->
@@ -179,7 +179,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_FEATURE_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 5;
+  int CAMERA_FEATURE_COUNT = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 5;
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -187,7 +187,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
+	int CAMERA___ACCEPT__INODEVISITOR = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
 		/**
 	 * The operation id for the '<em>Take Snapshot</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -195,7 +195,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___TAKE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT;
+  int CAMERA___TAKE_SNAPSHOT = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT;
   /**
 	 * The operation id for the '<em>Get Field Of View</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -203,7 +203,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___GET_FIELD_OF_VIEW = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW;
+  int CAMERA___GET_FIELD_OF_VIEW = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW;
   /**
 	 * The operation id for the '<em>Command Zoom</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -211,7 +211,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___COMMAND_ZOOM__DOUBLE = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 0;
+  int CAMERA___COMMAND_ZOOM__DOUBLE = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 0;
   /**
 	 * The operation id for the '<em>Get Minimum Zoom</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -219,7 +219,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___GET_MINIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 1;
+  int CAMERA___GET_MINIMUM_ZOOM = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 1;
   /**
 	 * The operation id for the '<em>Get Maximum Zoom</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -227,7 +227,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___GET_MAXIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 2;
+  int CAMERA___GET_MAXIMUM_ZOOM = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 2;
   /**
 	 * The operation id for the '<em>Init</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -235,7 +235,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA___INIT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 3;
+	int CAMERA___INIT = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 3;
 		/**
 	 * The operation id for the '<em>Command Streaming</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -243,7 +243,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA___COMMAND_STREAMING__BOOLEAN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 4;
+	int CAMERA___COMMAND_STREAMING__BOOLEAN = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 4;
 		/**
 	 * The number of operations of the '<em>Camera</em>' class.
 	 * <!-- begin-user-doc -->
@@ -251,13 +251,13 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_OPERATION_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 5;
+  int CAMERA_OPERATION_COUNT = ApogyAddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 5;
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.CameraStubImpl <em>Camera Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraStubImpl <em>Camera Stub</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.camera.impl.CameraStubImpl
-	 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getCameraStub()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.CameraStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getCameraStub()
 	 * @generated
 	 */
 	int CAMERA_STUB = 1;
@@ -446,11 +446,11 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 */
 	int CAMERA_STUB_OPERATION_COUNT = CAMERA_OPERATION_COUNT + 0;
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.CameraSimulatedImpl <em>Camera Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraSimulatedImpl <em>Camera Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.camera.impl.CameraSimulatedImpl
-	 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getCameraSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.CameraSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getCameraSimulated()
 	 * @generated
 	 */
 	int CAMERA_SIMULATED = 2;
@@ -639,11 +639,11 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 */
 	int CAMERA_SIMULATED_OPERATION_COUNT = CAMERA_OPERATION_COUNT + 0;
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraImpl <em>PTU Camera</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraImpl <em>PTU Camera</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.camera.impl.PTUCameraImpl
-	 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getPTUCamera()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraImpl
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getPTUCamera()
 	 * @generated
 	 */
   int PTU_CAMERA = 3;
@@ -968,11 +968,11 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 */
   int PTU_CAMERA_OPERATION_COUNT = CAMERA_OPERATION_COUNT + 11;
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl <em>PTU Camera Stub</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraStubImpl <em>PTU Camera Stub</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl
-	 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getPTUCameraStub()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraStubImpl
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getPTUCameraStub()
 	 * @generated
 	 */
 	int PTU_CAMERA_STUB = 4;
@@ -1297,11 +1297,11 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 */
 	int PTU_CAMERA_STUB_OPERATION_COUNT = CAMERA_STUB_OPERATION_COUNT + 11;
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl <em>PTU Camera Simulated</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl <em>PTU Camera Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl
-	 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getPTUCameraSimulated()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getPTUCameraSimulated()
 	 * @generated
 	 */
 	int PTU_CAMERA_SIMULATED = 5;
@@ -1630,120 +1630,120 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see java.lang.Throwable
-	 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getThrowable()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getThrowable()
 	 * @generated
 	 */
   int THROWABLE = 6;
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.camera.Camera <em>Camera</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.camera.Camera <em>Camera</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera</em>'.
-	 * @see org.eclipse.symphony.examples.camera.Camera
+	 * @see ca.gc.asc_csa.apogy.examples.camera.Camera
 	 * @generated
 	 */
   EClass getCamera();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.camera.Camera#getFov <em>Fov</em>}'.
+	 * Returns the meta object for the containment reference '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#getFov <em>Fov</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Fov</em>'.
-	 * @see org.eclipse.symphony.examples.camera.Camera#getFov()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.Camera#getFov()
 	 * @see #getCamera()
 	 * @generated
 	 */
   EReference getCamera_Fov();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.camera.Camera#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.camera.Camera#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.Camera#isInitialized()
 	 * @see #getCamera()
 	 * @generated
 	 */
 	EAttribute getCamera_Initialized();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Streaming Enabled</em>'.
-	 * @see org.eclipse.symphony.examples.camera.Camera#isStreamingEnabled()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.Camera#isStreamingEnabled()
 	 * @see #getCamera()
 	 * @generated
 	 */
 	EAttribute getCamera_StreamingEnabled();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.camera.Camera#init() <em>Init</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#init() <em>Init</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init</em>' operation.
-	 * @see org.eclipse.symphony.examples.camera.Camera#init()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.Camera#init()
 	 * @generated
 	 */
 	EOperation getCamera__Init();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.camera.Camera#commandStreaming(boolean) <em>Command Streaming</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.examples.camera.Camera#commandStreaming(boolean) <em>Command Streaming</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Command Streaming</em>' operation.
-	 * @see org.eclipse.symphony.examples.camera.Camera#commandStreaming(boolean)
+	 * @see ca.gc.asc_csa.apogy.examples.camera.Camera#commandStreaming(boolean)
 	 * @generated
 	 */
 	EOperation getCamera__CommandStreaming__boolean();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.camera.CameraStub <em>Camera Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.camera.CameraStub <em>Camera Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Stub</em>'.
-	 * @see org.eclipse.symphony.examples.camera.CameraStub
+	 * @see ca.gc.asc_csa.apogy.examples.camera.CameraStub
 	 * @generated
 	 */
 	EClass getCameraStub();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.camera.CameraSimulated <em>Camera Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.camera.CameraSimulated <em>Camera Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Camera Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.camera.CameraSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.camera.CameraSimulated
 	 * @generated
 	 */
 	EClass getCameraSimulated();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.camera.PTUCamera <em>PTU Camera</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.camera.PTUCamera <em>PTU Camera</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>PTU Camera</em>'.
-	 * @see org.eclipse.symphony.examples.camera.PTUCamera
+	 * @see ca.gc.asc_csa.apogy.examples.camera.PTUCamera
 	 * @generated
 	 */
   EClass getPTUCamera();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.camera.PTUCameraStub <em>PTU Camera Stub</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub <em>PTU Camera Stub</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>PTU Camera Stub</em>'.
-	 * @see org.eclipse.symphony.examples.camera.PTUCameraStub
+	 * @see ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub
 	 * @generated
 	 */
 	EClass getPTUCameraStub();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.camera.PTUCameraSimulated <em>PTU Camera Simulated</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated <em>PTU Camera Simulated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>PTU Camera Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.camera.PTUCameraSimulated
+	 * @see ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated
 	 * @generated
 	 */
 	EClass getPTUCameraSimulated();
@@ -1766,7 +1766,7 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesCameraFactory getSymphony__ExamplesCameraFactory();
+	ApogyExamplesCameraFactory getApogyExamplesCameraFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -1784,11 +1784,11 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.camera.impl.CameraImpl <em>Camera</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl <em>Camera</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.camera.impl.CameraImpl
-		 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getCamera()
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.CameraImpl
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getCamera()
 		 * @generated
 		 */
     EClass CAMERA = eINSTANCE.getCamera();
@@ -1834,51 +1834,51 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 		EOperation CAMERA___COMMAND_STREAMING__BOOLEAN = eINSTANCE.getCamera__CommandStreaming__boolean();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.camera.impl.CameraStubImpl <em>Camera Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraStubImpl <em>Camera Stub</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.camera.impl.CameraStubImpl
-		 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getCameraStub()
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.CameraStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getCameraStub()
 		 * @generated
 		 */
 		EClass CAMERA_STUB = eINSTANCE.getCameraStub();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.camera.impl.CameraSimulatedImpl <em>Camera Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.CameraSimulatedImpl <em>Camera Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.camera.impl.CameraSimulatedImpl
-		 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getCameraSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.CameraSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getCameraSimulated()
 		 * @generated
 		 */
 		EClass CAMERA_SIMULATED = eINSTANCE.getCameraSimulated();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraImpl <em>PTU Camera</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraImpl <em>PTU Camera</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.camera.impl.PTUCameraImpl
-		 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getPTUCamera()
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraImpl
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getPTUCamera()
 		 * @generated
 		 */
     EClass PTU_CAMERA = eINSTANCE.getPTUCamera();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl <em>PTU Camera Stub</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraStubImpl <em>PTU Camera Stub</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl
-		 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getPTUCameraStub()
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraStubImpl
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getPTUCameraStub()
 		 * @generated
 		 */
 		EClass PTU_CAMERA_STUB = eINSTANCE.getPTUCameraStub();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl <em>PTU Camera Simulated</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl <em>PTU Camera Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl
-		 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getPTUCameraSimulated()
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.PTUCameraSimulatedImpl
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getPTUCameraSimulated()
 		 * @generated
 		 */
 		EClass PTU_CAMERA_SIMULATED = eINSTANCE.getPTUCameraSimulated();
@@ -1888,11 +1888,11 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see java.lang.Throwable
-		 * @see org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraPackageImpl#getThrowable()
+		 * @see ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraPackageImpl#getThrowable()
 		 * @generated
 		 */
     EDataType THROWABLE = eINSTANCE.getThrowable();
 
   }
 
-} //Symphony__ExamplesCameraPackage
+} //ApogyExamplesCameraPackage

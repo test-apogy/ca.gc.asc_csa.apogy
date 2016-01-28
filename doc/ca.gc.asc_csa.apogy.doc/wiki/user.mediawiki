@@ -1,11 +1,11 @@
-= Using Symphony =
+= Using Apogy =
 
 == Table Of Contents ==
 __TOC__
 
 == Eclipse Basics ==
 
-As Symphony is set of functionality 
+As Apogy is set of functionality 
 
 === <i>Workspace</i> ===
 
@@ -36,7 +36,7 @@ As Symphony is set of functionality
 * A window managed by the main window;
 * Can be detached;
 * Most are singleton;
-* Most Symphony views are ''Selection Listeners''
+* Most Apogy views are ''Selection Listeners''
 
 ==== <i>Project Explorer View</i> ====
 
@@ -65,18 +65,18 @@ As Symphony is set of functionality
 * Made available through a pull down;
 * Action(s) available are selection dependent;
 
-== Symphony Concepts ==
+== Apogy Concepts ==
 
 === <i>Session</i> & <i>Environment</i> ===
 
 ==== <i>Session</i> ====
 
-* Resource that Symphony is centered around;
-* Is the container for all Symphony session elements;
+* Resource that Apogy is centered around;
+* Is the container for all Apogy session elements;
 
-==== <i>Symphony Environment</i> ====
+==== <i>Apogy Environment</i> ====
 
-* Contains the definitions of the ''Worksite'', ''Time Sources'' and the registered ''Symphony Systems'';
+* Contains the definitions of the ''Worksite'', ''Time Sources'' and the registered ''Apogy Systems'';
 * Defines what you have to work with in a specific deployment;
 
 === <i>Worksites</i> ===
@@ -150,21 +150,21 @@ TODO!
 ** Similar to an Interface Control Document (ICD);
 ** Used to specify what a ''Variable'' represents;
 * Type can include ''Type Members'' in their definitions;
-* Types include an ''API Adapter'' that acts as a bridge between Symphony and the ''Interface Class'';
+* Types include an ''API Adapter'' that acts as a bridge between Apogy and the ''Interface Class'';
 
 ===== <i>Interface Class</i> =====
 
-* An '''''Interface Class''''' is the specific (i.e. real-world) Java type of the Symphony ''Type''
+* An '''''Interface Class''''' is the specific (i.e. real-world) Java type of the Apogy ''Type''
 
-==== Symphony <i>System</i> ====
+==== Apogy <i>System</i> ====
 
-* Is the "LEGO block" of Symphony;
+* Is the "LEGO block" of Apogy;
 * A '''''System''''' is a specialization of ''Type'';
 * Adds functions to assemble systems together through ''Connection Points'' and ''Assembly Links'';
 * Provide 3D representation of the ''System'';
 
 * A given ''System'' may have multiple implementations (e.g. Stub, Simulated, etc.);
-* Implementation specific details transparent to Symphony: what matters is the interface.
+* Implementation specific details transparent to Apogy: what matters is the interface.
 
 ===== <i>Connection Points</i> & <i>Assembly Links</i> =====
 
@@ -194,13 +194,13 @@ TODO!
 
 ===== <i>API Adapter</i> =====
 
-* An '''''API Adapter''''' is the object that acts as a bridge between the System (i.e. the ''Interface Class'') and Symphony;
-* Automatically managed by Symphony;
+* An '''''API Adapter''''' is the object that acts as a bridge between the System (i.e. the ''Interface Class'') and Apogy;
+* Automatically managed by Apogy;
 * It provides:
-** System to Symphony pose transformation and update functions;
+** System to Apogy pose transformation and update functions;
 ** A ''Pose Corrector'';
 ** A reference to the ''Variable / Type Member'' instance;
-** A reference to the ''Symphony Environment'';
+** A reference to the ''Apogy Environment'';
 
 ==== <i>Pose Corrector</i> ====
 
@@ -211,7 +211,7 @@ TODO!
 ==== <i>Context</i> ====
 
 * A '''''Context''''' map ''Variables'' to an actual implementation through the ''Active Context'';
-* Used by Symphony to dispatch commands to System instances;
+* Used by Apogy to dispatch commands to System instances;
 * Includes:
 ** A name (which should be unique)
 ** Where the results from operation invocations will be stored (i.e. ''Data Product Set'');
@@ -268,7 +268,7 @@ TODO!
 
 * A '''''Controller Configuration''''' is a set of ''Operation Call Controller Bindings'';
 * Used to map one or more joystick(s) / controller(s) to one or more ''Operation Calls'';
-* No more than '''ONE''' ''Controller Configuration'' is active at any given time in a given Symphony Session;
+* No more than '''ONE''' ''Controller Configuration'' is active at any given time in a given Apogy Session;
 
 ==== <i>Operation Call Controller Binding</i> ====
 
@@ -388,7 +388,7 @@ Slope is made continuous at dead band limits.
 ** contains ''Map View Configurations'';
 
 * A '''''Map View Configuration''''' object:
-** defines what the ''Symphony Map View'' will display;
+** defines what the ''Apogy Map View'' will display;
 ** defines the ''Map Layers'' to display;
 ** defines annotation to show vehicle position, FOV, etc.;
 ** defines map tools (e.g. ''Trajectory Picking Tool'');
@@ -399,7 +399,7 @@ Slope is made continuous at dead band limits.
 ** contains ''Camera View Configurations'';
 
 * A '''''Camera View Configuration''''' object:
-** defines what the ''Symphony Camera View'' will display;
+** defines what the ''Apogy Camera View'' will display;
 ** defines the ''Overlays'' to display;
 ** specifies image processing steps;
 * defines image tools (e.g. ''Pointer Camera Tool'');
@@ -407,7 +407,7 @@ Slope is made continuous at dead band limits.
 ===== <i>Overlays</i> =====
 
 * An '''''Overlay''''' represents graphics overlaid on top of the camera image.
-* Symphony provides a list of basic, built-in ''Overlays'';
+* Apogy provides a list of basic, built-in ''Overlays'';
 * System-specific overlay can be contributed for a rover/instrument
 
 ====== Built-in <i>Overlays</i> ======
@@ -425,9 +425,9 @@ Slope is made continuous at dead band limits.
 | style="text-align:center;" | [[File:../resources/user/overlay_camera_name.gif]] 
 | Displays the name of the camera, if applicable.
 |-
-| '''''Symphony Logo Overlay'''''
-| style="text-align:center;" | [[File:../resources/user/overlay_symphony_logo.gif]] 
-| Displays the Symphony Logo.
+| '''''Apogy Logo Overlay'''''
+| style="text-align:center;" | [[File:../resources/user/overlay_apogy_logo.gif]] 
+| Displays the Apogy Logo.
 |-
 | '''''FOV Overlay'''''
 | style="text-align:center;" | [[File:../resources/user/overlay_fov.gif]]
@@ -485,7 +485,7 @@ TODO!
 
 ==== <i>Simple Tools</i> ====
 
-* Symphony provides a few ''Simple Tools'' that are used with the ''Symphony 3D Viewer'' and other views;
+* Apogy provides a few ''Simple Tools'' that are used with the ''Apogy 3D Viewer'' and other views;
 * These tools act as a ''Selection Listener'' to the above views.
 ** Tool responds only if active;
 ** More than one tool can be active at the same time!
@@ -529,13 +529,13 @@ Note that the ''Feature Of Interest List'', where the ''Feature Of Interests'' a
 
 === Topology ===
 
-* The complete topology, including all that is present in the ''Symphony Environment'':
+* The complete topology, including all that is present in the ''Apogy Environment'':
 ** ''Variable'' instances;
 ** ''Worksite'';
 ** ''Data Products''; and
 ** ''Tools''.
 
-== Symphony UI ==
+== Apogy UI ==
 
 === Preferences ===
 
@@ -543,7 +543,7 @@ Note that the ''Feature Of Interest List'', where the ''Feature Of Interests'' a
 
 * <i>Types</i> support definition of ranges for attributes and ''Operation Call Parameters'';
 * Colour used to highlight value ranges.
-* '''Currently, Symphony does not provide colouring to the Properties Page cells''';
+* '''Currently, Apogy does not provide colouring to the Properties Page cells''';
 
 ==== UI Preferences ====
 
@@ -556,8 +556,8 @@ Note that the ''Feature Of Interest List'', where the ''Feature Of Interests'' a
 === <i>Session Editor</i> ===
 
 * It is an ''Editor''
-* Is used to explore and edit Symphony elements;
-* Presents the ''Symphony Session'' as an hierarchical tree of containment;
+* Is used to explore and edit Apogy elements;
+* Presents the ''Apogy Session'' as an hierarchical tree of containment;
 * Opens ''.sym'' files;
 * Supports Undo/Redo
 * Is a ''Selection Provider''
@@ -567,7 +567,7 @@ Note that the ''Feature Of Interest List'', where the ''Feature Of Interests'' a
 * View is a singleton;
 * Used to monitor all Controllers (joysticks) connected to the host;
 * Shows all Controllers components including names, types and current values;
-* ''Controllers conntected after Symphony has started will not be recognized!''
+* ''Controllers conntected after Apogy has started will not be recognized!''
 
 === <i>Nodes Distance View</i> ===
 
@@ -582,7 +582,7 @@ Note that the ''Feature Of Interest List'', where the ''Feature Of Interests'' a
 
 === <i>3D Viewer</i> ===
 
-* Selection based (''Symphony Environment'');
+* Selection based (''Apogy Environment'');
 
 * Displays in 3D, the following elements:
 ** ''Variable'' instance
@@ -603,7 +603,7 @@ Note that the ''Feature Of Interest List'', where the ''Feature Of Interests'' a
 * Configuring 3D representations of topology ''Nodes'':
 ** Each ''Node'' in the topology is assigned a '''''Presentation''''' that contains its 3D representation attributes.
 ** ''Presentation'' attributes are accessible using the ''Properties View'', under the ''Presentation'' tab.
-** Node visibility can be toggled by right-clicking on the ''Node'' and selecting ''"Symphony > Toggle Node Visibility."''
+** Node visibility can be toggled by right-clicking on the ''Node'' and selecting ''"Apogy > Toggle Node Visibility."''
 ** ''URL Nodes'' (''Nodes'' associated with a CAD model) have an additional '''''Presentation Mode''''' attribute, which can be one of three values:
 **# '''''SURFACE''''': The CAD will be rendered as a surface (if possible)
 **# '''''WIREFRAME''''': Only the wireframe outline of the CAD surface will be rendered (if possible)

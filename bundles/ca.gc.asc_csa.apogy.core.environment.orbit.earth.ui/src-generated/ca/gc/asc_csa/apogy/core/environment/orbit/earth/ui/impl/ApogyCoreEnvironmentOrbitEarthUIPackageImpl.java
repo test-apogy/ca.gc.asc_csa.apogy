@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
 
 import gov.nasa.worldwind.layers.RenderableLayer;
 
@@ -15,23 +15,23 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl implements Symphony__CoreEnvironmentOrbitEarthUIPackage {
+public class ApogyCoreEnvironmentOrbitEarthUIPackageImpl extends EPackageImpl implements ApogyCoreEnvironmentOrbitEarthUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -135,12 +135,12 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CoreEnvironmentOrbitEarthUIPackageImpl() {
-		super(eNS_URI, Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE);
+	private ApogyCoreEnvironmentOrbitEarthUIPackageImpl() {
+		super(eNS_URI, ApogyCoreEnvironmentOrbitEarthUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CoreEnvironmentOrbitEarthUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCoreEnvironmentOrbitEarthUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -162,30 +162,30 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CoreEnvironmentOrbitEarthUIPackage init() {
-		if (isInited) return (Symphony__CoreEnvironmentOrbitEarthUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentOrbitEarthUIPackage.eNS_URI);
+	public static ApogyCoreEnvironmentOrbitEarthUIPackage init() {
+		if (isInited) return (ApogyCoreEnvironmentOrbitEarthUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CoreEnvironmentOrbitEarthUIPackageImpl theSymphony__CoreEnvironmentOrbitEarthUIPackage = (Symphony__CoreEnvironmentOrbitEarthUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CoreEnvironmentOrbitEarthUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CoreEnvironmentOrbitEarthUIPackageImpl());
+		ApogyCoreEnvironmentOrbitEarthUIPackageImpl theApogyCoreEnvironmentOrbitEarthUIPackage = (ApogyCoreEnvironmentOrbitEarthUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCoreEnvironmentOrbitEarthUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCoreEnvironmentOrbitEarthUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CoreEnvironmentOrbitEarthPackage.eINSTANCE.eClass();
+		ApogyCoreEnvironmentOrbitEarthPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CoreEnvironmentOrbitEarthUIPackage.createPackageContents();
+		theApogyCoreEnvironmentOrbitEarthUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CoreEnvironmentOrbitEarthUIPackage.initializePackageContents();
+		theApogyCoreEnvironmentOrbitEarthUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CoreEnvironmentOrbitEarthUIPackage.freeze();
+		theApogyCoreEnvironmentOrbitEarthUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CoreEnvironmentOrbitEarthUIPackage.eNS_URI, theSymphony__CoreEnvironmentOrbitEarthUIPackage);
-		return theSymphony__CoreEnvironmentOrbitEarthUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCoreEnvironmentOrbitEarthUIPackage.eNS_URI, theApogyCoreEnvironmentOrbitEarthUIPackage);
+		return theApogyCoreEnvironmentOrbitEarthUIPackage;
 	}
 
 	/**
@@ -598,8 +598,8 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreEnvironmentOrbitEarthUIFactory getSymphony__CoreEnvironmentOrbitEarthUIFactory() {
-		return (Symphony__CoreEnvironmentOrbitEarthUIFactory)getEFactoryInstance();
+	public ApogyCoreEnvironmentOrbitEarthUIFactory getApogyCoreEnvironmentOrbitEarthUIFactory() {
+		return (ApogyCoreEnvironmentOrbitEarthUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -703,12 +703,12 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CoreEnvironmentOrbitPackage theSymphony__CoreEnvironmentOrbitPackage = (Symphony__CoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentOrbitPackage.eNS_URI);
-		Symphony__CoreEnvironmentOrbitEarthPackage theSymphony__CoreEnvironmentOrbitEarthPackage = (Symphony__CoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentOrbitEarthPackage.eNS_URI);
+		ApogyCoreEnvironmentOrbitPackage theApogyCoreEnvironmentOrbitPackage = (ApogyCoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
+		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(mapEDataType, "K");
@@ -717,19 +717,19 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		earthViewConfigurationListEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getAbstractToolsListContainer());
-		earthViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		earthViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
-		abstractWorldWindLayerEClass.getESuperTypes().add(theSymphony__CorePackage.getUpdatable());
+		earthViewConfigurationListEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getAbstractToolsListContainer());
+		earthViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		earthViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		abstractWorldWindLayerEClass.getESuperTypes().add(theApogyCorePackage.getUpdatable());
 		spacecraftLocationWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
-		spacecraftLocationWorldWindLayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		spacecraftLocationWorldWindLayerEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		orbitModelWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		spacecraftSwathWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		earthSurfaceLocationWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		groundStationWorldWindLayerEClass.getESuperTypes().add(this.getEarthSurfaceLocationWorldWindLayer());
-		spacecraftVisibilityPassViewConfigurationListEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getAbstractToolsListContainer());
-		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		spacecraftVisibilityPassViewConfigurationListEClass.getESuperTypes().add(theApogyCoreInvocatorPackage.getAbstractToolsListContainer());
+		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(earthViewConfigurationListEClass, EarthViewConfigurationList.class, "EarthViewConfigurationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -745,14 +745,14 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		initEOperation(getAbstractWorldWindLayer__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(spacecraftLocationWorldWindLayerEClass, SpacecraftLocationWorldWindLayer.class, "SpacecraftLocationWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpacecraftLocationWorldWindLayer_OrbitModel(), theSymphony__CoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftLocationWorldWindLayer_TimeSource(), theSymphony__CommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftLocationWorldWindLayer_OrbitModel(), theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftLocationWorldWindLayer_TimeSource(), theApogyCommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftLocationWorldWindLayer_ShowGroundProjection(), theEcorePackage.getEBoolean(), "showGroundProjection", "true", 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftLocationWorldWindLayer_ShowLatLon(), theEcorePackage.getEBoolean(), "showLatLon", "true", 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitModelWorldWindLayerEClass, OrbitModelWorldWindLayer.class, "OrbitModelWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitModelWorldWindLayer_OrbitModel(), theSymphony__CoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOrbitModelWorldWindLayer_TimeSource(), theSymphony__CommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitModelWorldWindLayer_OrbitModel(), theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitModelWorldWindLayer_TimeSource(), theApogyCommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitModelWorldWindLayer_TimeInterval(), theEcorePackage.getEDouble(), "timeInterval", "600.0", 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitModelWorldWindLayer_ForwardPropagationDuration(), theEcorePackage.getEDouble(), "forwardPropagationDuration", "43200.0", 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitModelWorldWindLayer_BackwardPropagationDuration(), theEcorePackage.getEDouble(), "backwardPropagationDuration", "43200.0", 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -760,23 +760,23 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		initEAttribute(getOrbitModelWorldWindLayer_ShowOrbit(), theEcorePackage.getEBoolean(), "showOrbit", "true", 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spacecraftSwathWorldWindLayerEClass, SpacecraftSwathWorldWindLayer.class, "SpacecraftSwathWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpacecraftSwathWorldWindLayer_OrbitModel(), theSymphony__CoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftSwathWorldWindLayer_TimeSource(), theSymphony__CommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftSwathWorldWindLayer_OrbitModel(), theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftSwathWorldWindLayer_TimeSource(), theApogyCommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_ForwardPropagationDuration(), theEcorePackage.getEDouble(), "forwardPropagationDuration", "43200.0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration(), theEcorePackage.getEDouble(), "backwardPropagationDuration", "43200.0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_TimeInterval(), theEcorePackage.getEDouble(), "timeInterval", "600.0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_LeftSwathAngle(), theEcorePackage.getEDouble(), "leftSwathAngle", "0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_RightSwathAngle(), theEcorePackage.getEDouble(), "rightSwathAngle", "0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_ShowGroundTrace(), theEcorePackage.getEBoolean(), "showGroundTrace", "true", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftSwathWorldWindLayer_ForwardSpacecraftSwathCorridor(), theSymphony__CoreEnvironmentOrbitEarthPackage.getSpacecraftSwathCorridor(), null, "forwardSpacecraftSwathCorridor", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftSwathWorldWindLayer_BackwardSpacecraftSwathCorridor(), theSymphony__CoreEnvironmentOrbitEarthPackage.getSpacecraftSwathCorridor(), null, "backwardSpacecraftSwathCorridor", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftSwathWorldWindLayer_ForwardSpacecraftSwathCorridor(), theApogyCoreEnvironmentOrbitEarthPackage.getSpacecraftSwathCorridor(), null, "forwardSpacecraftSwathCorridor", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftSwathWorldWindLayer_BackwardSpacecraftSwathCorridor(), theApogyCoreEnvironmentOrbitEarthPackage.getSpacecraftSwathCorridor(), null, "backwardSpacecraftSwathCorridor", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceLocationWorldWindLayerEClass, EarthSurfaceLocationWorldWindLayer.class, "EarthSurfaceLocationWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthSurfaceLocationWorldWindLayer_EarthSurfaceLocation(), theSymphony__CoreEnvironmentOrbitEarthPackage.getEarthSurfaceLocation(), null, "earthSurfaceLocation", null, 0, 1, EarthSurfaceLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEarthSurfaceLocationWorldWindLayer_EarthSurfaceLocation(), theApogyCoreEnvironmentOrbitEarthPackage.getEarthSurfaceLocation(), null, "earthSurfaceLocation", null, 0, 1, EarthSurfaceLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEarthSurfaceLocationWorldWindLayer_TargetRadius(), theEcorePackage.getEDouble(), "targetRadius", "50", 0, 1, EarthSurfaceLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groundStationWorldWindLayerEClass, GroundStationWorldWindLayer.class, "GroundStationWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGroundStationWorldWindLayer_GroundStation(), theSymphony__CoreEnvironmentOrbitEarthPackage.getGroundStation(), null, "groundStation", null, 0, 1, GroundStationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroundStationWorldWindLayer_GroundStation(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStation(), null, "groundStation", null, 0, 1, GroundStationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGroundStationWorldWindLayer_ReferenceAltitude(), theEcorePackage.getEDouble(), "referenceAltitude", "500", 0, 1, GroundStationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spacecraftVisibilityPassViewConfigurationListEClass, SpacecraftVisibilityPassViewConfigurationList.class, "SpacecraftVisibilityPassViewConfigurationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -784,7 +784,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 
 		initEClass(spacecraftVisibilityPassViewConfigurationEClass, SpacecraftVisibilityPassViewConfiguration.class, "SpacecraftVisibilityPassViewConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList(), this.getSpacecraftVisibilityPassViewConfigurationList(), this.getSpacecraftVisibilityPassViewConfigurationList_Configurations(), "configurationsList", null, 0, 1, SpacecraftVisibilityPassViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftVisibilityPassViewConfiguration_VisibilitySet(), theSymphony__CoreEnvironmentOrbitEarthPackage.getSpacecraftsVisibilitySet(), null, "visibilitySet", null, 0, 1, SpacecraftVisibilityPassViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftVisibilityPassViewConfiguration_VisibilitySet(), theApogyCoreEnvironmentOrbitEarthPackage.getSpacecraftsVisibilitySet(), null, "visibilitySet", null, 0, 1, SpacecraftVisibilityPassViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(renderableLayerEDataType, RenderableLayer.class, "RenderableLayer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -810,17 +810,17 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CoreEnvironmentOrbitEarthUI",
+			 "prefix", "ApogyCoreEnvironmentOrbitEarthUI",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-			 "modelName", "Symphony__CoreEnvironmentOrbitEarthUI",
+			 "modelName", "ApogyCoreEnvironmentOrbitEarthUI",
 			 "complianceLevel", "8.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.core.environment.orbit.earth.ui/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.core.environment.orbit.earth.ui.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.core.environment.orbit.earth"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.orbit.earth"
 		   });	
 		addAnnotation
 		  (getEarthViewConfiguration_Layers(), 
@@ -910,7 +910,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The time interval at which to show\nthe position.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "symphony_units", "s"
+			 "apogy_units", "s"
 		   });	
 		addAnnotation
 		  (getOrbitModelWorldWindLayer_ForwardPropagationDuration(), 
@@ -918,7 +918,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The forward propagation duration\nfrom the current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "symphony_units", "s"
+			 "apogy_units", "s"
 		   });	
 		addAnnotation
 		  (getOrbitModelWorldWindLayer_BackwardPropagationDuration(), 
@@ -926,7 +926,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The backward propagation duration\nfrom the current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "symphony_units", "s"
+			 "apogy_units", "s"
 		   });	
 		addAnnotation
 		  (getOrbitModelWorldWindLayer_ShowGroundTrace(), 
@@ -966,7 +966,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The forward propagation duration from\nthe current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "symphony_units", "s"
+			 "apogy_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration(), 
@@ -974,7 +974,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The backward propagation duration from\nthe current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "symphony_units", "s"
+			 "apogy_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_TimeInterval(), 
@@ -984,7 +984,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 			 "notify", "true",
 			 "propertyCategory", "TIME_PERIOD",
 			 "property", "Editable",
-			 "symphony_units", "s"
+			 "apogy_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_LeftSwathAngle(), 
@@ -993,7 +993,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "SWATH",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_RightSwathAngle(), 
@@ -1002,7 +1002,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "SWATH",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_ShowGroundTrace(), 
@@ -1019,7 +1019,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The radius of the target.",
 			 "propertyCategory", "VISUALS",
-			 "symphony_units", "km"
+			 "apogy_units", "km"
 		   });	
 		addAnnotation
 		  (getGroundStationWorldWindLayer_ReferenceAltitude(), 
@@ -1027,7 +1027,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The altitude to which to project\nthe ElevationMask.",
 			 "propertyCategory", "VISUALS",
-			 "symphony_units", "km"
+			 "apogy_units", "km"
 		   });	
 		addAnnotation
 		  (spacecraftVisibilityPassViewConfigurationListEClass, 
@@ -1057,4 +1057,4 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   });
 	}
 
-} //Symphony__CoreEnvironmentOrbitEarthUIPackageImpl
+} //ApogyCoreEnvironmentOrbitEarthUIPackageImpl

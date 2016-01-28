@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors;
+package ca.gc.asc_csa.apogy.common.processors;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsFactory
+ * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonProcessors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonProcessors' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.processors/src-generated' editDirectory='/org.eclipse.symphony.common.processors.edit/src-generated' basePackage='org.eclipse.symphony.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonProcessors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCommonProcessors' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.asc_csa.apogy.common.processors/src-generated' editDirectory='/ca.gc.asc_csa.apogy.common.processors.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.common'"
  * @generated
  */
-public interface Symphony__CommonProcessorsPackage extends EPackage {
+public interface ApogyCommonProcessorsPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.common.processors";
+	String eNS_URI = "ca.gc.asc_csa.apogy.common.processors";
 
 	/**
 	 * The package namespace name.
@@ -58,54 +58,54 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonProcessorsPackage eINSTANCE = org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl.init();
+	ApogyCommonProcessorsPackage eINSTANCE = ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.processors.Monitorable
-	 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getMonitorable()
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getMonitorable()
 	 * @generated
 	 */
 	int MONITORABLE = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl <em>Processor</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl <em>Processor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.processors.impl.ProcessorImpl
-	 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getProcessor()
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getProcessor()
 	 * @generated
 	 */
 	int PROCESSOR = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.processors.impl.ProcessorsChainImpl <em>Processors Chain</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.processors.impl.ProcessorsChainImpl <em>Processors Chain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.processors.impl.ProcessorsChainImpl
-	 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getProcessorsChain()
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ProcessorsChainImpl
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getProcessorsChain()
 	 * @generated
 	 */
 	int PROCESSORS_CHAIN = 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.processors.impl.JobProcessorsChainImpl <em>Job Processors Chain</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.processors.impl.JobProcessorsChainImpl <em>Job Processors Chain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.processors.impl.JobProcessorsChainImpl
-	 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getJobProcessorsChain()
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.JobProcessorsChainImpl
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getJobProcessorsChain()
 	 * @generated
 	 */
 	int JOB_PROCESSORS_CHAIN = 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.processors.VerboseProvider <em>Verbose Provider</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider <em>Verbose Provider</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.processors.VerboseProvider
-	 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getVerboseProvider()
+	 * @see ca.gc.asc_csa.apogy.common.processors.VerboseProvider
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getVerboseProvider()
 	 * @generated
 	 */
 	int VERBOSE_PROVIDER = 0;
@@ -394,7 +394,7 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.core.runtime.IProgressMonitor
-	 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getIProgressMonitor()
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getIProgressMonitor()
 	 * @generated
 	 */
 	int IPROGRESS_MONITOR = 5;
@@ -404,155 +404,155 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getException()
+	 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getException()
 	 * @generated
 	 */
 	int EXCEPTION = 6;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Monitorable</em>'.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	EClass getMonitorable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.processors.Monitorable#getProgressMonitor <em>Progress Monitor</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable#getProgressMonitor <em>Progress Monitor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Progress Monitor</em>'.
-	 * @see org.eclipse.symphony.common.processors.Monitorable#getProgressMonitor()
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable#getProgressMonitor()
 	 * @see #getMonitorable()
 	 * @generated
 	 */
 	EAttribute getMonitorable_ProgressMonitor();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Processor</em>'.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	EClass getProcessor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.processors.Processor#getInput <em>Input</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.processors.Processor#getInput <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Input</em>'.
-	 * @see org.eclipse.symphony.common.processors.Processor#getInput()
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor#getInput()
 	 * @see #getProcessor()
 	 * @generated
 	 */
 	EAttribute getProcessor_Input();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.processors.Processor#getOutput <em>Output</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.processors.Processor#getOutput <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Output</em>'.
-	 * @see org.eclipse.symphony.common.processors.Processor#getOutput()
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor#getOutput()
 	 * @see #getProcessor()
 	 * @generated
 	 */
 	EAttribute getProcessor_Output();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.processors.Processor#process(java.lang.Object) <em>Process</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.processors.Processor#process(java.lang.Object) <em>Process</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Process</em>' operation.
-	 * @see org.eclipse.symphony.common.processors.Processor#process(java.lang.Object)
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor#process(java.lang.Object)
 	 * @generated
 	 */
 	EOperation getProcessor__Process__Object();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.processors.ProcessorsChain <em>Processors Chain</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain <em>Processors Chain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Processors Chain</em>'.
-	 * @see org.eclipse.symphony.common.processors.ProcessorsChain
+	 * @see ca.gc.asc_csa.apogy.common.processors.ProcessorsChain
 	 * @generated
 	 */
 	EClass getProcessorsChain();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.processors.ProcessorsChain#getIntermediateResult <em>Intermediate Result</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getIntermediateResult <em>Intermediate Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Intermediate Result</em>'.
-	 * @see org.eclipse.symphony.common.processors.ProcessorsChain#getIntermediateResult()
+	 * @see ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getIntermediateResult()
 	 * @see #getProcessorsChain()
 	 * @generated
 	 */
 	EAttribute getProcessorsChain_IntermediateResult();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.processors.ProcessorsChain#getRunningProcessor <em>Running Processor</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getRunningProcessor <em>Running Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Running Processor</em>'.
-	 * @see org.eclipse.symphony.common.processors.ProcessorsChain#getRunningProcessor()
+	 * @see ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getRunningProcessor()
 	 * @see #getProcessorsChain()
 	 * @generated
 	 */
 	EReference getProcessorsChain_RunningProcessor();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.common.processors.ProcessorsChain#getProcessors <em>Processors</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getProcessors <em>Processors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Processors</em>'.
-	 * @see org.eclipse.symphony.common.processors.ProcessorsChain#getProcessors()
+	 * @see ca.gc.asc_csa.apogy.common.processors.ProcessorsChain#getProcessors()
 	 * @see #getProcessorsChain()
 	 * @generated
 	 */
 	EReference getProcessorsChain_Processors();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.processors.JobProcessorsChain <em>Job Processors Chain</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain <em>Job Processors Chain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Job Processors Chain</em>'.
-	 * @see org.eclipse.symphony.common.processors.JobProcessorsChain
+	 * @see ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain
 	 * @generated
 	 */
 	EClass getJobProcessorsChain();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Verbose Provider</em>'.
-	 * @see org.eclipse.symphony.common.processors.VerboseProvider
+	 * @see ca.gc.asc_csa.apogy.common.processors.VerboseProvider
 	 * @generated
 	 */
 	EClass getVerboseProvider();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.processors.VerboseProvider#isVerbose <em>Verbose</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider#isVerbose <em>Verbose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Verbose</em>'.
-	 * @see org.eclipse.symphony.common.processors.VerboseProvider#isVerbose()
+	 * @see ca.gc.asc_csa.apogy.common.processors.VerboseProvider#isVerbose()
 	 * @see #getVerboseProvider()
 	 * @generated
 	 */
 	EAttribute getVerboseProvider_Verbose();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.processors.VerboseProvider#printVerbose(java.lang.String) <em>Print Verbose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider#printVerbose(java.lang.String) <em>Print Verbose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Print Verbose</em>' operation.
-	 * @see org.eclipse.symphony.common.processors.VerboseProvider#printVerbose(java.lang.String)
+	 * @see ca.gc.asc_csa.apogy.common.processors.VerboseProvider#printVerbose(java.lang.String)
 	 * @generated
 	 */
 	EOperation getVerboseProvider__PrintVerbose__String();
@@ -586,7 +586,7 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonProcessorsFactory getSymphony__CommonProcessorsFactory();
+	ApogyCommonProcessorsFactory getApogyCommonProcessorsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -603,11 +603,11 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.processors.Monitorable
-		 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getMonitorable()
+		 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getMonitorable()
 		 * @generated
 		 */
 		EClass MONITORABLE = eINSTANCE.getMonitorable();
@@ -621,11 +621,11 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 		EAttribute MONITORABLE__PROGRESS_MONITOR = eINSTANCE.getMonitorable_ProgressMonitor();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl <em>Processor</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl <em>Processor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.processors.impl.ProcessorImpl
-		 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getProcessor()
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getProcessor()
 		 * @generated
 		 */
 		EClass PROCESSOR = eINSTANCE.getProcessor();
@@ -655,11 +655,11 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 		EOperation PROCESSOR___PROCESS__OBJECT = eINSTANCE.getProcessor__Process__Object();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.processors.impl.ProcessorsChainImpl <em>Processors Chain</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.processors.impl.ProcessorsChainImpl <em>Processors Chain</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.processors.impl.ProcessorsChainImpl
-		 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getProcessorsChain()
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ProcessorsChainImpl
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getProcessorsChain()
 		 * @generated
 		 */
 		EClass PROCESSORS_CHAIN = eINSTANCE.getProcessorsChain();
@@ -689,21 +689,21 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 		EReference PROCESSORS_CHAIN__PROCESSORS = eINSTANCE.getProcessorsChain_Processors();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.processors.impl.JobProcessorsChainImpl <em>Job Processors Chain</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.processors.impl.JobProcessorsChainImpl <em>Job Processors Chain</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.processors.impl.JobProcessorsChainImpl
-		 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getJobProcessorsChain()
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.JobProcessorsChainImpl
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getJobProcessorsChain()
 		 * @generated
 		 */
 		EClass JOB_PROCESSORS_CHAIN = eINSTANCE.getJobProcessorsChain();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.processors.VerboseProvider <em>Verbose Provider</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.processors.VerboseProvider <em>Verbose Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.processors.VerboseProvider
-		 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getVerboseProvider()
+		 * @see ca.gc.asc_csa.apogy.common.processors.VerboseProvider
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getVerboseProvider()
 		 * @generated
 		 */
 		EClass VERBOSE_PROVIDER = eINSTANCE.getVerboseProvider();
@@ -729,7 +729,7 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.core.runtime.IProgressMonitor
-		 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getIProgressMonitor()
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getIProgressMonitor()
 		 * @generated
 		 */
 		EDataType IPROGRESS_MONITOR = eINSTANCE.getIProgressMonitor();
@@ -739,11 +739,11 @@ public interface Symphony__CommonProcessorsPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.common.processors.impl.Symphony__CommonProcessorsPackageImpl#getException()
+		 * @see ca.gc.asc_csa.apogy.common.processors.impl.ApogyCommonProcessorsPackageImpl#getException()
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
 
 	}
 
-} //Symphony__CommonProcessorsPackage
+} //ApogyCommonProcessorsPackage

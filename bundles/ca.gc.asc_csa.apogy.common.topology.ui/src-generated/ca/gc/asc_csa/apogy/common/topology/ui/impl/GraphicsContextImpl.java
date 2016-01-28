@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.impl;
+package ca.gc.asc_csa.apogy.common.topology.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.Activator;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +26,8 @@ import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl#getTopology <em>Topology</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.GraphicsContextImpl#getTopology <em>Topology</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.impl.GraphicsContextImpl#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,7 +69,7 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT;
+		return ApogyCommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 			topology = (Node)eResolveProxy(oldTopology);
 			if (topology != oldTopology) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY, oldTopology, topology));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY, oldTopology, topology));
 			}
 		}
 		return topology;
@@ -107,7 +107,7 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 		Node oldTopology = topology;
 		topology = newTopology;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY, oldTopology, topology));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY, oldTopology, topology));
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 			topologyPresentationSet = (TopologyPresentationSet)eResolveProxy(oldTopologyPresentationSet);
 			if (topologyPresentationSet != oldTopologyPresentationSet) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, topologyPresentationSet));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, topologyPresentationSet));
 			}
 		}
 		return topologyPresentationSet;
@@ -145,7 +145,7 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 		TopologyPresentationSet oldTopologyPresentationSet = topologyPresentationSet;
 		topologyPresentationSet = newTopologyPresentationSet;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, newTopologyPresentationSet);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, newTopologyPresentationSet);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -160,14 +160,14 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 		if (newTopologyPresentationSet != topologyPresentationSet) {
 			NotificationChain msgs = null;
 			if (topologyPresentationSet != null)
-				msgs = ((InternalEObject)topologyPresentationSet).eInverseRemove(this, Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT, TopologyPresentationSet.class, msgs);
+				msgs = ((InternalEObject)topologyPresentationSet).eInverseRemove(this, ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT, TopologyPresentationSet.class, msgs);
 			if (newTopologyPresentationSet != null)
-				msgs = ((InternalEObject)newTopologyPresentationSet).eInverseAdd(this, Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT, TopologyPresentationSet.class, msgs);
+				msgs = ((InternalEObject)newTopologyPresentationSet).eInverseAdd(this, ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT, TopologyPresentationSet.class, msgs);
 			msgs = basicSetTopologyPresentationSet(newTopologyPresentationSet, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET, newTopologyPresentationSet, newTopologyPresentationSet));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET, newTopologyPresentationSet, newTopologyPresentationSet));
 	}
 
 	/**
@@ -198,9 +198,9 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
 				if (topologyPresentationSet != null)
-					msgs = ((InternalEObject)topologyPresentationSet).eInverseRemove(this, Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT, TopologyPresentationSet.class, msgs);
+					msgs = ((InternalEObject)topologyPresentationSet).eInverseRemove(this, ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT, TopologyPresentationSet.class, msgs);
 				return basicSetTopologyPresentationSet((TopologyPresentationSet)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -214,7 +214,7 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
 				return basicSetTopologyPresentationSet(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -228,10 +228,10 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
 				if (resolve) return getTopology();
 				return basicGetTopology();
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
 				if (resolve) return getTopologyPresentationSet();
 				return basicGetTopologyPresentationSet();
 		}
@@ -246,10 +246,10 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
 				setTopology((Node)newValue);
 				return;
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
 				setTopologyPresentationSet((TopologyPresentationSet)newValue);
 				return;
 		}
@@ -264,10 +264,10 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
 				setTopology((Node)null);
 				return;
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
 				setTopologyPresentationSet((TopologyPresentationSet)null);
 				return;
 		}
@@ -282,9 +282,9 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY:
 				return topology != null;
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET:
 				return topologyPresentationSet != null;
 		}
 		return super.eIsSet(featureID);
@@ -298,7 +298,7 @@ public class GraphicsContextImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyUIPackage.GRAPHICS_CONTEXT___DISPOSE:
+			case ApogyCommonTopologyUIPackage.GRAPHICS_CONTEXT___DISPOSE:
 				dispose();
 				return null;
 		}

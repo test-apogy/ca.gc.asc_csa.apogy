@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -23,12 +23,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Sky} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.Sky} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -87,7 +87,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sky_sun_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_sun_feature", "_UI_Sky_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SKY__SUN,
+				 ApogyCoreEnvironmentPackage.Literals.SKY__SUN,
 				 false,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sky_sunHorizontalCoordinates_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_sunHorizontalCoordinates_feature", "_UI_Sky_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SKY__SUN_HORIZONTAL_COORDINATES,
+				 ApogyCoreEnvironmentPackage.Literals.SKY__SUN_HORIZONTAL_COORDINATES,
 				 true,
 				 false,
 				 true,
@@ -156,7 +156,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sky_starField_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_starField_feature", "_UI_Sky_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SKY__STAR_FIELD,
+				 ApogyCoreEnvironmentPackage.Literals.SKY__STAR_FIELD,
 				 false,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class SkyItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SKY__SKY_NODE);
+			childrenFeatures.add(ApogyCoreEnvironmentPackage.Literals.SKY__SKY_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -238,10 +238,10 @@ public class SkyItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Sky.class)) {
-			case Symphony__CoreEnvironmentPackage.SKY__TIME:
+			case ApogyCoreEnvironmentPackage.SKY__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentPackage.SKY__SKY_NODE:
+			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

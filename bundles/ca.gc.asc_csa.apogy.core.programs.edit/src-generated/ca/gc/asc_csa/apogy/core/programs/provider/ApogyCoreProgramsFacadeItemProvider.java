@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.provider;
+package ca.gc.asc_csa.apogy.core.programs.provider;
 
 
 import java.util.Collection;
@@ -19,15 +19,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsFacadeItemProvider 
+public class ApogyCoreProgramsFacadeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class Symphony__CoreProgramsFacadeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsFacadeItemProvider(AdapterFactory adapterFactory) {
+	public ApogyCoreProgramsFacadeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -73,9 +73,9 @@ public class Symphony__CoreProgramsFacadeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreProgramsFacade_session_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreProgramsFacade_session_feature", "_UI_Symphony__CoreProgramsFacade_type"),
-				 Symphony__CoreProgramsPackage.Literals.SYMPHONY_CORE_PROGRAMS_FACADE__SESSION,
+				 getString("_UI_ApogyCoreProgramsFacade_session_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreProgramsFacade_session_feature", "_UI_ApogyCoreProgramsFacade_type"),
+				 ApogyCoreProgramsPackage.Literals.APOGY_CORE_PROGRAMS_FACADE__SESSION,
 				 false,
 				 false,
 				 false,
@@ -95,9 +95,9 @@ public class Symphony__CoreProgramsFacadeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Symphony__CoreProgramsFacade_variables_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreProgramsFacade_variables_feature", "_UI_Symphony__CoreProgramsFacade_type"),
-				 Symphony__CoreProgramsPackage.Literals.SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES,
+				 getString("_UI_ApogyCoreProgramsFacade_variables_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreProgramsFacade_variables_feature", "_UI_ApogyCoreProgramsFacade_type"),
+				 ApogyCoreProgramsPackage.Literals.APOGY_CORE_PROGRAMS_FACADE__VARIABLES,
 				 false,
 				 false,
 				 false,
@@ -107,14 +107,14 @@ public class Symphony__CoreProgramsFacadeItemProvider
 	}
 
 	/**
-	 * This returns Symphony__CoreProgramsFacade.gif.
+	 * This returns ApogyCoreProgramsFacade.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreProgramsFacade"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreProgramsFacade"));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class Symphony__CoreProgramsFacadeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Symphony__CoreProgramsFacade_type");
+		return getString("_UI_ApogyCoreProgramsFacade_type");
 	}
 	
 

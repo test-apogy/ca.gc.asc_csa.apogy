@@ -1,23 +1,23 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.util;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
 
-import org.eclipse.symphony.addons.sensors.pose.*;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.*;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,17 +29,17 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ApogyAddonsSensorsPosePackage
  * @generated
  */
-public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsPoseSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsPosePackage modelPackage;
+	protected static ApogyAddonsSensorsPosePackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -47,9 +47,9 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsPoseSwitch() {
+	public ApogyAddonsSensorsPoseSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsPosePackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsPosePackage.eINSTANCE;
 		}
 	}
 
@@ -76,7 +76,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsPosePackage.SELF_PLACE_SENSOR: {
+			case ApogyAddonsSensorsPosePackage.SELF_PLACE_SENSOR: {
 				SelfPlaceSensor selfPlaceSensor = (SelfPlaceSensor)theEObject;
 				T result = caseSelfPlaceSensor(selfPlaceSensor);
 				if (result == null) result = caseSensor(selfPlaceSensor);
@@ -86,7 +86,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR: {
+			case ApogyAddonsSensorsPosePackage.POSITION_SENSOR: {
 				PositionSensor positionSensor = (PositionSensor)theEObject;
 				T result = casePositionSensor(positionSensor);
 				if (result == null) result = casePositionNode(positionSensor);
@@ -98,7 +98,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR: {
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR: {
 				SimulatedPositionSensor simulatedPositionSensor = (SimulatedPositionSensor)theEObject;
 				T result = caseSimulatedPositionSensor(simulatedPositionSensor);
 				if (result == null) result = casePositionSensor(simulatedPositionSensor);
@@ -111,7 +111,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR: {
+			case ApogyAddonsSensorsPosePackage.ORIENTATION_SENSOR: {
 				OrientationSensor orientationSensor = (OrientationSensor)theEObject;
 				T result = caseOrientationSensor(orientationSensor);
 				if (result == null) result = caseRotationNode(orientationSensor);
@@ -123,7 +123,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT: {
+			case ApogyAddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT: {
 				InertialMeasurementUnit inertialMeasurementUnit = (InertialMeasurementUnit)theEObject;
 				T result = caseInertialMeasurementUnit(inertialMeasurementUnit);
 				if (result == null) result = caseOrientationSensor(inertialMeasurementUnit);
@@ -136,7 +136,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR: {
+			case ApogyAddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR: {
 				SimulatedOrientationSensor simulatedOrientationSensor = (SimulatedOrientationSensor)theEObject;
 				T result = caseSimulatedOrientationSensor(simulatedOrientationSensor);
 				if (result == null) result = caseOrientationSensor(simulatedOrientationSensor);
@@ -149,7 +149,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR: {
+			case ApogyAddonsSensorsPosePackage.POSE_SENSOR: {
 				PoseSensor poseSensor = (PoseSensor)theEObject;
 				T result = casePoseSensor(poseSensor);
 				if (result == null) result = caseTransformNode(poseSensor);
@@ -165,7 +165,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR: {
+			case ApogyAddonsSensorsPosePackage.SIMULATED_POSE_SENSOR: {
 				SimulatedPoseSensor simulatedPoseSensor = (SimulatedPoseSensor)theEObject;
 				T result = caseSimulatedPoseSensor(simulatedPoseSensor);
 				if (result == null) result = casePoseSensor(simulatedPoseSensor);
@@ -182,22 +182,22 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER: {
+			case ApogyAddonsSensorsPosePackage.POSE_DATA_LOGGER: {
 				PoseDataLogger poseDataLogger = (PoseDataLogger)theEObject;
 				T result = casePoseDataLogger(poseDataLogger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.CSV_DATA_LOGGER: {
+			case ApogyAddonsSensorsPosePackage.CSV_DATA_LOGGER: {
 				CSVDataLogger csvDataLogger = (CSVDataLogger)theEObject;
 				T result = caseCSVDataLogger(csvDataLogger);
 				if (result == null) result = casePoseDataLogger(csvDataLogger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.SYMPHONY_ADDONS_SENSORS_POSE_FACADE: {
-				Symphony__AddonsSensorsPoseFacade symphony__AddonsSensorsPoseFacade = (Symphony__AddonsSensorsPoseFacade)theEObject;
-				T result = caseSymphony__AddonsSensorsPoseFacade(symphony__AddonsSensorsPoseFacade);
+			case ApogyAddonsSensorsPosePackage.APOGY_ADDONS_SENSORS_POSE_FACADE: {
+				ApogyAddonsSensorsPoseFacade apogy__AddonsSensorsPoseFacade = (ApogyAddonsSensorsPoseFacade)theEObject;
+				T result = caseApogyAddonsSensorsPoseFacade(apogy__AddonsSensorsPoseFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -366,7 +366,7 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__AddonsSensorsPoseFacade(Symphony__AddonsSensorsPoseFacade object) {
+	public T caseApogyAddonsSensorsPoseFacade(ApogyAddonsSensorsPoseFacade object) {
 		return null;
 	}
 
@@ -491,4 +491,4 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsPoseSwitch
+} //ApogyAddonsSensorsPoseSwitch

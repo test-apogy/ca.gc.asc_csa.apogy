@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui;
+package ca.gc.asc_csa.apogy.examples.satellite.ui;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.invocator.OperationCallResultsList;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelliteUiFacadeImpl;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.impl.ApogyExamplesSatelliteUiFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,14 +21,14 @@ import org.eclipse.symphony.examples.satellite.ui.impl.Symphony__ExamplesSatelli
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade#getConstellationVariableName <em>Constellation Variable Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade#getConstellationVariableName <em>Constellation Variable Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiPackage#getSymphony__ExamplesSatelliteUiFacade()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage#getApogyExamplesSatelliteUiFacade()
  * @model
  * @generated
  */
-public interface Symphony__ExamplesSatelliteUiFacade extends EObject {
+public interface ApogyExamplesSatelliteUiFacade extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Constellation Variable Name</b></em>' attribute.
 	 * The default value is <code>"constellation"</code>.
@@ -42,7 +42,7 @@ public interface Symphony__ExamplesSatelliteUiFacade extends EObject {
 	 * Returns the name of the constellation {@link Variable}.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constellation Variable Name</em>' attribute.
-	 * @see org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiPackage#getSymphony__ExamplesSatelliteUiFacade_ConstellationVariableName()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage#getApogyExamplesSatelliteUiFacade_ConstellationVariableName()
 	 * @model default="constellation" unique="false" changeable="false"
 	 * @generated
 	 */
@@ -73,6 +73,6 @@ public interface Symphony__ExamplesSatelliteUiFacade extends EObject {
 	 */
 	OperationCallResultsList getOperationCallResultsList();
 
-	public Symphony__ExamplesSatelliteUiFacade INSTANCE = Symphony__ExamplesSatelliteUiFacadeImpl.getInstance();	
+	public ApogyExamplesSatelliteUiFacade INSTANCE = ApogyExamplesSatelliteUiFacadeImpl.getInstance();	
 
-} // Symphony__ExamplesSatelliteUiFacade
+} // ApogyExamplesSatelliteUiFacade

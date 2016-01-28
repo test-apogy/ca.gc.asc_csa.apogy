@@ -3,7 +3,7 @@
  *
  * $Id: SphereSamplingShapeItemProvider.java,v 1.2.4.2 2015/05/21 15:50:28 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 
 import java.util.Collection;
@@ -23,11 +23,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class SphereSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereSamplingShape_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereSamplingShape_radius_feature", "_UI_SphereSamplingShape_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__RADIUS,
+				 ApogyCommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class SphereSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereSamplingShape_center_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereSamplingShape_center_feature", "_UI_SphereSamplingShape_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__CENTER,
+				 ApogyCommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__CENTER,
 				 true,
 				 false,
 				 true,
@@ -131,7 +131,7 @@ public class SphereSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereSamplingShape_includeJustTouching_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereSamplingShape_includeJustTouching_feature", "_UI_SphereSamplingShape_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING,
+				 ApogyCommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING,
 				 true,
 				 false,
 				 false,
@@ -178,8 +178,8 @@ public class SphereSamplingShapeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SphereSamplingShape.class)) {
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
-			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
+			case ApogyCommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

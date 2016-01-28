@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.provider;
 
 
 import java.text.DecimalFormat;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.SimpleConicalRadiationPattern} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class SimpleConicalRadiationPatternItemProvider extends AbstractAntennaRa
 				 getResourceLocator(),
 				 getString("_UI_SimpleConicalRadiationPattern_apexAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleConicalRadiationPattern_apexAngle_feature", "_UI_SimpleConicalRadiationPattern_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE,
+				 ApogyAddonsTelecomsPackage.Literals.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class SimpleConicalRadiationPatternItemProvider extends AbstractAntennaRa
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleConicalRadiationPattern.class)) {
-			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
+			case ApogyAddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.util.Date;
 
@@ -12,37 +12,37 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.TimeSourcesList;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.SymphonyTopology;
-import org.eclipse.symphony.core.WorksitesList;
-import org.eclipse.symphony.core.invocator.impl.EnvironmentImpl;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeSource;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.core.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.TimeSourcesList;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
+import ca.gc.asc_csa.apogy.core.WorksitesList;
+import ca.gc.asc_csa.apogy.core.invocator.impl.EnvironmentImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Symphony Environment</b></em>'. <!-- end-user-doc -->
+ * <em><b>Apogy Environment</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getTime <em>Time</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getWorksitesList <em>Worksites List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getActiveWorksite <em>Active Worksite</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getSymphonyTopology <em>Symphony Topology</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getTimeSourcesList <em>Time Sources List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getActiveTimeSource <em>Active Time Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getWorksitesList <em>Worksites List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getActiveWorksite <em>Active Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getApogyTopology <em>Apogy Topology</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getTimeSourcesList <em>Time Sources List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ApogyEnvironmentImpl#getActiveTimeSource <em>Active Time Source</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
-		SymphonyEnvironment {
+public class ApogyEnvironmentImpl extends EnvironmentImpl implements
+		ApogyEnvironment {
 	
 	private Adapter timeSourceAdapter = null;
 	
@@ -87,14 +87,14 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	protected AbstractWorksite activeWorksite;
 
 	/**
-	 * The cached value of the '{@link #getSymphonyTopology() <em>Symphony Topology</em>}' reference.
+	 * The cached value of the '{@link #getApogyTopology() <em>Apogy Topology</em>}' reference.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @see #getSymphonyTopology()
+	 * @see #getApogyTopology()
 	 * @generated
 	 * @ordered
 	 */
-	protected SymphonyTopology symphonyTopology;
+	protected ApogyTopology apogyTopology;
 
 	/**
 	 * The cached value of the '{@link #getTimeSourcesList() <em>Time Sources List</em>}' containment reference.
@@ -120,7 +120,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyEnvironmentImpl() {
+	protected ApogyEnvironmentImpl() {
 		super();
 	}
 
@@ -130,7 +130,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT;
+		return ApogyCorePackage.Literals.APOGY_ENVIRONMENT;
 	}
 
 	/**
@@ -166,7 +166,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__TIME, oldTime, time));
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		WorksitesList oldWorksitesList = worksitesList;
 		worksitesList = newWorksitesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, oldWorksitesList, newWorksitesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST, oldWorksitesList, newWorksitesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -200,14 +200,14 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		if (newWorksitesList != worksitesList) {
 			NotificationChain msgs = null;
 			if (worksitesList != null)
-				msgs = ((InternalEObject)worksitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
+				msgs = ((InternalEObject)worksitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
 			if (newWorksitesList != null)
-				msgs = ((InternalEObject)newWorksitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
+				msgs = ((InternalEObject)newWorksitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
 			msgs = basicSetWorksitesList(newWorksitesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, newWorksitesList, newWorksitesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST, newWorksitesList, newWorksitesList));
 	}
 
 	/**
@@ -220,7 +220,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 			activeWorksite = (AbstractWorksite)eResolveProxy(oldActiveWorksite);
 			if (activeWorksite != oldActiveWorksite) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
 			}
 		}
 		return activeWorksite;
@@ -242,7 +242,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		AbstractWorksite oldActiveWorksite = activeWorksite;
 		activeWorksite = newActiveWorksite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
 	}
 
 	/**
@@ -250,11 +250,11 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	 * 
 	 * @generated_NOT
 	 */
-	public SymphonyTopology getSymphonyTopology() {
-		SymphonyTopology tmp = getSymphonyTopologyGen();
+	public ApogyTopology getApogyTopology() {
+		ApogyTopology tmp = getApogyTopologyGen();
 		if (tmp == null) {
-			tmp = Symphony__CoreFactory.eINSTANCE.createSymphonyTopology();
-			setSymphonyTopology(tmp);
+			tmp = ApogyCoreFactory.eINSTANCE.createApogyTopology();
+			setApogyTopology(tmp);
 		}
 
 		return tmp;
@@ -264,35 +264,35 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonyTopology getSymphonyTopologyGen() {
-		if (symphonyTopology != null && symphonyTopology.eIsProxy()) {
-			InternalEObject oldSymphonyTopology = (InternalEObject)symphonyTopology;
-			symphonyTopology = (SymphonyTopology)eResolveProxy(oldSymphonyTopology);
-			if (symphonyTopology != oldSymphonyTopology) {
+	public ApogyTopology getApogyTopologyGen() {
+		if (apogyTopology != null && apogyTopology.eIsProxy()) {
+			InternalEObject oldApogyTopology = (InternalEObject)apogyTopology;
+			apogyTopology = (ApogyTopology)eResolveProxy(oldApogyTopology);
+			if (apogyTopology != oldApogyTopology) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY, oldSymphonyTopology, symphonyTopology));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
 			}
 		}
-		return symphonyTopology;
+		return apogyTopology;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonyTopology basicGetSymphonyTopology() {
-		return symphonyTopology;
+	public ApogyTopology basicGetApogyTopology() {
+		return apogyTopology;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSymphonyTopology(SymphonyTopology newSymphonyTopology) {
-		SymphonyTopology oldSymphonyTopology = symphonyTopology;
-		symphonyTopology = newSymphonyTopology;
+	public void setApogyTopology(ApogyTopology newApogyTopology) {
+		ApogyTopology oldApogyTopology = apogyTopology;
+		apogyTopology = newApogyTopology;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY, oldSymphonyTopology, symphonyTopology));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY, oldApogyTopology, apogyTopology));
 	}
 
 	/**
@@ -313,7 +313,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		TimeSourcesList oldTimeSourcesList = timeSourcesList;
 		timeSourcesList = newTimeSourcesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, oldTimeSourcesList, newTimeSourcesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST, oldTimeSourcesList, newTimeSourcesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -328,14 +328,14 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		if (newTimeSourcesList != timeSourcesList) {
 			NotificationChain msgs = null;
 			if (timeSourcesList != null)
-				msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, Symphony__CorePackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
+				msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, ApogyCorePackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
 			if (newTimeSourcesList != null)
-				msgs = ((InternalEObject)newTimeSourcesList).eInverseAdd(this, Symphony__CorePackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
+				msgs = ((InternalEObject)newTimeSourcesList).eInverseAdd(this, ApogyCorePackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
 			msgs = basicSetTimeSourcesList(newTimeSourcesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, newTimeSourcesList, newTimeSourcesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST, newTimeSourcesList, newTimeSourcesList));
 	}
 
 	/**
@@ -349,7 +349,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 			activeTimeSource = (TimeSource)eResolveProxy(oldActiveTimeSource);
 			if (activeTimeSource != oldActiveTimeSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
 			}
 		}
 		return activeTimeSource;
@@ -394,7 +394,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		TimeSource oldActiveTimeSource = activeTimeSource;
 		activeTimeSource = newActiveTimeSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
 	}
 	
 	/**
@@ -405,9 +405,9 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				if (timeSourcesList != null)
-					msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
+					msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
 				return basicSetTimeSourcesList((TimeSourcesList)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -421,9 +421,9 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
 				return basicSetWorksitesList(null, msgs);
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return basicSetTimeSourcesList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -436,19 +436,19 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME:
 				return getTime();
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
 				return getWorksitesList();
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				if (resolve) return getActiveWorksite();
 				return basicGetActiveWorksite();
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
-				if (resolve) return getSymphonyTopology();
-				return basicGetSymphonyTopology();
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
+				if (resolve) return getApogyTopology();
+				return basicGetApogyTopology();
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return getTimeSourcesList();
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				if (resolve) return getActiveTimeSource();
 				return basicGetActiveTimeSource();
 		}
@@ -462,22 +462,22 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME:
 				setTime((Date)newValue);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
 				setWorksitesList((WorksitesList)newValue);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				setActiveWorksite((AbstractWorksite)newValue);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
-				setSymphonyTopology((SymphonyTopology)newValue);
+			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
+				setApogyTopology((ApogyTopology)newValue);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				setTimeSourcesList((TimeSourcesList)newValue);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				setActiveTimeSource((TimeSource)newValue);
 				return;
 		}
@@ -491,22 +491,22 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
 				setWorksitesList((WorksitesList)null);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				setActiveWorksite((AbstractWorksite)null);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
-				setSymphonyTopology((SymphonyTopology)null);
+			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
+				setApogyTopology((ApogyTopology)null);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				setTimeSourcesList((TimeSourcesList)null);
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				setActiveTimeSource((TimeSource)null);
 				return;
 		}
@@ -520,17 +520,17 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
 				return worksitesList != null;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
 				return activeWorksite != null;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
-				return symphonyTopology != null;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
+				return apogyTopology != null;
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return timeSourcesList != null;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				return activeTimeSource != null;
 		}
 		return super.eIsSet(featureID);
@@ -545,7 +545,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case ApogyCorePackage.APOGY_ENVIRONMENT__TIME: return ApogyCommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -561,7 +561,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME;
+				case ApogyCommonEMFPackage.TIMED__TIME: return ApogyCorePackage.APOGY_ENVIRONMENT__TIME;
 				default: return -1;
 			}
 		}
@@ -597,7 +597,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 					{
 						int featureId = msg.getFeatureID(TimeSource.class);
 						
-						if(featureId == Symphony__CommonEMFPackage.TIMED__TIME)
+						if(featureId == ApogyCommonEMFPackage.TIMED__TIME)
 						{
 							if(msg.getNewValue() instanceof Date)
 							{
@@ -612,4 +612,4 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		
 		return timeSourceAdapter;
 	}
-} // SymphonyEnvironmentImpl
+} // ApogyEnvironmentImpl

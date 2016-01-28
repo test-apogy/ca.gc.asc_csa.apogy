@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorAdapterFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -36,7 +36,7 @@ import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorAdapterFa
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony__CoreInvocatorAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyCoreInvocatorItemProviderAdapterFactory extends ApogyCoreInvocatorAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -60,7 +60,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CoreInvocatorEditPlugin.INSTANCE, Symphony__CoreInvocatorPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCoreInvocatorEditPlugin.INSTANCE, ApogyCoreInvocatorPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -76,7 +76,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreInvocatorItemProviderAdapterFactory()
+  public ApogyCoreInvocatorItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -86,30 +86,30 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreInvocatorFacadeItemProvider symphony__CoreInvocatorFacadeItemProvider;
+	protected ApogyCoreInvocatorFacadeItemProvider apogy__CoreInvocatorFacadeItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CoreInvocatorFacadeAdapter() {
-		if (symphony__CoreInvocatorFacadeItemProvider == null) {
-			symphony__CoreInvocatorFacadeItemProvider = new Symphony__CoreInvocatorFacadeItemProvider(this);
+	public Adapter createApogyCoreInvocatorFacadeAdapter() {
+		if (apogy__CoreInvocatorFacadeItemProvider == null) {
+			apogy__CoreInvocatorFacadeItemProvider = new ApogyCoreInvocatorFacadeItemProvider(this);
 		}
 
-		return symphony__CoreInvocatorFacadeItemProvider;
+		return apogy__CoreInvocatorFacadeItemProvider;
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.InvocatorSession} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected InvocatorSessionItemProvider invocatorSessionItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.InvocatorSession}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.InvocatorSession}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -133,7 +133,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.Environment} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Environment} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -141,7 +141,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected EnvironmentItemProvider environmentItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.Environment}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Environment}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -157,7 +157,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.DataProductsListsContainer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -165,7 +165,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected DataProductsListsContainerItemProvider dataProductsListsContainerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.DataProductsListsContainer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.DataProductsListsContainer}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -181,7 +181,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.DataProductsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -189,7 +189,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected DataProductsListItemProvider dataProductsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.DataProductsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.DataProductsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -205,7 +205,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ToolsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ToolsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -213,7 +213,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ToolsListItemProvider toolsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ToolsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ToolsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -229,7 +229,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.TypesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypesList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -237,7 +237,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypesListItemProvider typesListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.TypesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypesList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -253,7 +253,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.LocalTypesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.LocalTypesList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -261,7 +261,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected LocalTypesListItemProvider localTypesListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.LocalTypesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.LocalTypesList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -277,7 +277,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.RegisteredTypesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -285,7 +285,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected RegisteredTypesListItemProvider registeredTypesListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.RegisteredTypesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RegisteredTypesList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -301,7 +301,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.Type} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Type} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -309,7 +309,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypeItemProvider typeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.Type}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Type}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -325,7 +325,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.TypeApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -333,7 +333,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypeApiAdapterItemProvider typeApiAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.TypeApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -349,7 +349,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.TypeMember} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypeMember} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -357,7 +357,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypeMemberItemProvider typeMemberItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.TypeMember}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMember}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -373,7 +373,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.TypeMemberReference} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -381,7 +381,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypeMemberReferenceItemProvider typeMemberReferenceItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberReference}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReference}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -397,7 +397,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -405,7 +405,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypeMemberReferenceListElementItemProvider typeMemberReferenceListElementItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceListElement}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -421,7 +421,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -429,7 +429,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypeMemberReferenceTreeElementItemProvider typeMemberReferenceTreeElementItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberReferenceTreeElement}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -445,7 +445,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.VariablesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.VariablesList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -453,7 +453,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected VariablesListItemProvider variablesListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.VariablesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.VariablesList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -469,7 +469,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.Variable} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Variable} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -477,7 +477,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected VariableItemProvider variableItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.Variable}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Variable}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -493,7 +493,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ContextsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ContextsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -501,7 +501,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ContextsListItemProvider contextsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ContextsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ContextsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -517,7 +517,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.BasicContext} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.BasicContext} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -525,7 +525,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected BasicContextItemProvider basicContextItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.BasicContext}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.BasicContext}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -541,7 +541,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.VariableImplementationsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -549,7 +549,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected VariableImplementationsListItemProvider variableImplementationsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.VariableImplementationsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -565,7 +565,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.InitializationData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.InitializationData} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -573,7 +573,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected InitializationDataItemProvider initializationDataItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.InitializationData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.InitializationData}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -589,7 +589,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.VariableImplementation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -597,7 +597,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected VariableImplementationItemProvider variableImplementationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.VariableImplementation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.VariableImplementation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -613,7 +613,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.TypeMemberImplementation} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -621,7 +621,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected TypeMemberImplementationItemProvider typeMemberImplementationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberImplementation}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -637,7 +637,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ValuesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ValuesList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -645,7 +645,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ValuesListItemProvider valuesListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ValuesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ValuesList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -661,7 +661,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.Value} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Value} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -669,7 +669,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ValueItemProvider valueItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.Value}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Value}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -685,7 +685,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ProgramsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -693,7 +693,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ProgramsListItemProvider programsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ProgramsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ProgramsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -709,7 +709,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.OperationCallsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -717,7 +717,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected OperationCallsListItemProvider operationCallsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -733,7 +733,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.VariableFeatureReference} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -741,7 +741,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected VariableFeatureReferenceItemProvider variableFeatureReferenceItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.VariableFeatureReference}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -757,7 +757,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.OperationCall} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCall} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -765,7 +765,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected OperationCallItemProvider operationCallItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.OperationCall}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCall}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -781,7 +781,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ArgumentsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -789,7 +789,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ArgumentsListItemProvider argumentsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ArgumentsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -805,7 +805,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.EDataTypeArgument} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -813,7 +813,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected EDataTypeArgumentItemProvider eDataTypeArgumentItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.EDataTypeArgument}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -829,7 +829,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.EEnumArgument} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -837,7 +837,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected EEnumArgumentItemProvider eEnumArgumentItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.EEnumArgument}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.EEnumArgument}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -853,7 +853,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.EClassArgument} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.EClassArgument} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -861,7 +861,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected EClassArgumentItemProvider eClassArgumentItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.EClassArgument}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.EClassArgument}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -877,7 +877,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.OperationCallResultsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -885,7 +885,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected OperationCallResultsListItemProvider operationCallResultsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResultsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -901,7 +901,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.RecordingResultsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -909,7 +909,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected RecordingResultsListItemProvider recordingResultsListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.RecordingResultsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RecordingResultsList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -925,7 +925,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.OperationCallResult} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -933,7 +933,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected OperationCallResultItemProvider operationCallResultItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResult}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResult}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -949,7 +949,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ExceptionContainer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -957,7 +957,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ExceptionContainerItemProvider exceptionContainerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ExceptionContainer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ExceptionContainer}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -973,7 +973,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.AttributeResultValue} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -981,7 +981,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected AttributeResultValueItemProvider attributeResultValueItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.AttributeResultValue}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -997,7 +997,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.AttributeValue} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.AttributeValue} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1005,7 +1005,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected AttributeValueItemProvider attributeValueItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.AttributeValue}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.AttributeValue}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1021,7 +1021,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ReferenceResultValue} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1029,7 +1029,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected ReferenceResultValueItemProvider referenceResultValueItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ReferenceResultValue}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1045,7 +1045,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.WatchesListsContainer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1053,7 +1053,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected WatchesListsContainerItemProvider watchesListsContainerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.WatchesListsContainer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1069,7 +1069,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.WatchesList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.WatchesList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1077,7 +1077,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected WatchesListItemProvider watchesListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.WatchesList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchesList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1093,7 +1093,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.Watch} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.Watch} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1101,7 +1101,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected WatchItemProvider watchItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.Watch}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.Watch}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1117,7 +1117,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1125,7 +1125,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected WatchFeatureNodeAdapterItemProvider watchFeatureNodeAdapterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.WatchFeatureNodeAdapter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1141,7 +1141,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.DisplaysListsContainer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1149,7 +1149,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected DisplaysListsContainerItemProvider displaysListsContainerItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.DisplaysListsContainer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysListsContainer}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1165,7 +1165,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.DisplaysList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1173,7 +1173,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
   protected DisplaysListItemProvider displaysListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.DisplaysList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.DisplaysList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1189,7 +1189,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.RecordingToolsContainer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1197,7 +1197,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	protected RecordingToolsContainerItemProvider recordingToolsContainerItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.RecordingToolsContainer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.RecordingToolsContainer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1212,7 +1212,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ChannelsList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1220,7 +1220,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	protected ChannelsListItemProvider channelsListItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ChannelsList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ChannelsList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1235,7 +1235,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1243,7 +1243,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	protected OperationCallResultsListTimeSourceItemProvider operationCallResultsListTimeSourceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallResultsListTimeSource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1395,7 +1395,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	 */
   public void dispose()
   {
-		if (symphony__CoreInvocatorFacadeItemProvider != null) symphony__CoreInvocatorFacadeItemProvider.dispose();
+		if (apogy__CoreInvocatorFacadeItemProvider != null) apogy__CoreInvocatorFacadeItemProvider.dispose();
 		if (invocatorSessionItemProvider != null) invocatorSessionItemProvider.dispose();
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (dataProductsListsContainerItemProvider != null) dataProductsListsContainerItemProvider.dispose();

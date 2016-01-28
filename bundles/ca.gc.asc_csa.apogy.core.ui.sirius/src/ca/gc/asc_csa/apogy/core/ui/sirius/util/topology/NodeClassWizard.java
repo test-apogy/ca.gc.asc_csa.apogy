@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius.util.topology;
+package ca.gc.asc_csa.apogy.core.ui.sirius.util.topology;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jface.wizard.Wizard;

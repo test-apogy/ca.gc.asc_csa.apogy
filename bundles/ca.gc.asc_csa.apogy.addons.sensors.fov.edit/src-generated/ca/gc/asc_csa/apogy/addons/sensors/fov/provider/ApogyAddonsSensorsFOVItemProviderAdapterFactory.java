@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,17 +33,17 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
-import org.eclipse.symphony.addons.sensors.fov.util.Symphony__AddonsSensorsFOVAdapterFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.util.ApogyAddonsSensorsFOVAdapterFactory;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -54,7 +54,7 @@ import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Symphony__AddonsSensorsFOVAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyAddonsSensorsFOVItemProviderAdapterFactory extends ApogyAddonsSensorsFOVAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsSensorsFOVEditPlugin.INSTANCE, Symphony__AddonsSensorsFOVPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsSensorsFOVEditPlugin.INSTANCE, ApogyAddonsSensorsFOVPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -93,7 +93,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVItemProviderAdapterFactory() {
+	public ApogyAddonsSensorsFOVItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -102,7 +102,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.FieldOfView} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -110,7 +110,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	protected FieldOfViewItemProvider fieldOfViewItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.FieldOfView}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.FieldOfView}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.DistanceRange} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,7 +133,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	protected DistanceRangeItemProvider distanceRangeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.DistanceRange}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.AngularSpan} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -156,7 +156,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	protected AngularSpanItemProvider angularSpanItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.AngularSpan}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.AngularSpan}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,7 +179,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	protected RectangularFrustrumFieldOfViewItemProvider rectangularFrustrumFieldOfViewItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -202,7 +202,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	protected ConicalFieldOfViewItemProvider conicalFieldOfViewItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -225,7 +225,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	protected CircularSectorFieldOfViewItemProvider circularSectorFieldOfViewItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.CircularSectorFieldOfView}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -248,7 +248,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	protected RectangularFrustrumFieldOfViewSamplingShapeItemProvider rectangularFrustrumFieldOfViewSamplingShapeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -263,26 +263,26 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__AddonsSensorsFOVFacadeItemProvider symphony__AddonsSensorsFOVFacadeItemProvider;
+	protected ApogyAddonsSensorsFOVFacadeItemProvider apogy__AddonsSensorsFOVFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__AddonsSensorsFOVFacadeAdapter() {
-		if (symphony__AddonsSensorsFOVFacadeItemProvider == null) {
-			symphony__AddonsSensorsFOVFacadeItemProvider = new Symphony__AddonsSensorsFOVFacadeItemProvider(this);
+	public Adapter createApogyAddonsSensorsFOVFacadeAdapter() {
+		if (apogy__AddonsSensorsFOVFacadeItemProvider == null) {
+			apogy__AddonsSensorsFOVFacadeItemProvider = new ApogyAddonsSensorsFOVFacadeItemProvider(this);
 		}
 
-		return symphony__AddonsSensorsFOVFacadeItemProvider;
+		return apogy__AddonsSensorsFOVFacadeItemProvider;
 	}
 
 	/**
@@ -418,23 +418,23 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 		if (conicalFieldOfViewItemProvider != null) conicalFieldOfViewItemProvider.dispose();
 		if (circularSectorFieldOfViewItemProvider != null) circularSectorFieldOfViewItemProvider.dispose();
 		if (rectangularFrustrumFieldOfViewSamplingShapeItemProvider != null) rectangularFrustrumFieldOfViewSamplingShapeItemProvider.dispose();
-		if (symphony__AddonsSensorsFOVFacadeItemProvider != null) symphony__AddonsSensorsFOVFacadeItemProvider.dispose();
+		if (apogy__AddonsSensorsFOVFacadeItemProvider != null) apogy__AddonsSensorsFOVFacadeItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -470,43 +470,43 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createAngularSpan()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createAngularSpan()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfViewSamplingShape()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfViewSamplingShape()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createSymphony__AddonsSensorsFOVFacade()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createApogyAddonsSensorsFOVFacade()));
 
 				return null;
 			}
@@ -520,43 +520,43 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createAngularSpan()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createAngularSpan()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfViewSamplingShape()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfViewSamplingShape()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createSymphony__AddonsSensorsFOVFacade()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createApogyAddonsSensorsFOVFacade()));
 
 				return null;
 			}
@@ -570,23 +570,23 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 			public Object caseAggregateGroupNode(AggregateGroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 ApogyAddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 				return null;
 			}
@@ -619,7 +619,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsFOVEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsFOVEditPlugin.INSTANCE;
 		}
 	}
 

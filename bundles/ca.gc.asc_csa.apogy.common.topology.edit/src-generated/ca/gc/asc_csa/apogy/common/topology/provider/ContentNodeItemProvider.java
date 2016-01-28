@@ -4,7 +4,7 @@
  *
  * $Id: ContentNodeItemProvider.java,v 1.20.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.provider;
+package ca.gc.asc_csa.apogy.common.topology.provider;
 
 
 import java.util.Collection;
@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ContentNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.ContentNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class ContentNodeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT);
+			childrenFeatures.add(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +132,7 @@ public class ContentNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContentNode.class)) {
-			case Symphony__CommonTopologyPackage.CONTENT_NODE__CONTENT:
+			case ApogyCommonTopologyPackage.CONTENT_NODE__CONTENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,183 +152,183 @@ public class ContentNodeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createSymphony__CommonTopologyFacade()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createApogyCommonTopologyFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEAnnotation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEDataType()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEEnum()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEEnumLiteral()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEFactory()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEObject()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEPackage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEParameter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.create(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY)));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEGenericType()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createETypeParameter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createPolynomial()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonMathFactory.eINSTANCE.createPolynomial()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createSymphony__CommonMathFacade()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonMathFactory.eINSTANCE.createApogyCommonMathFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createMathIO()));
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonMathFactory.eINSTANCE.createMathIO()));
 	}
 
 }

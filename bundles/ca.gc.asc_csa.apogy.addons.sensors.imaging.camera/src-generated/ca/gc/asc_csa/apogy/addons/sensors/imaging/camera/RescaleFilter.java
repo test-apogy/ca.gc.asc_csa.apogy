@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter#getScale <em>Scale</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter#getScale <em>Scale</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getRescaleFilter()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getRescaleFilter()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface RescaleFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scale</em>' attribute.
 	 * @see #setScale(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getRescaleFilter_Scale()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getRescaleFilter_Scale()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated
@@ -41,7 +41,7 @@ public interface RescaleFilter extends ImageFilter
   double getScale();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter#getScale <em>Scale</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter#getScale <em>Scale</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Scale</em>' attribute.

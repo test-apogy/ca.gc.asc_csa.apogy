@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.util;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -10,24 +10,24 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.symphony.common.geometry.data3d.las.*;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage
  * @generated
  */
-public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonGeometryData3DLASAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData3DLASPackage modelPackage;
+	protected static ApogyCommonGeometryData3DLASPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +35,9 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASAdapterFactory() {
+	public ApogyCommonGeometryData3DLASAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData3DLASPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData3DLASPackage.eINSTANCE;
 		}
 	}
 
@@ -66,8 +66,8 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DLASSwitch<Adapter> modelSwitch =
-		new Symphony__CommonGeometryData3DLASSwitch<Adapter>() {
+	protected ApogyCommonGeometryData3DLASSwitch<Adapter> modelSwitch =
+		new ApogyCommonGeometryData3DLASSwitch<Adapter>() {
 			@Override
 			public Adapter caseLASHeader(LASHeader object) {
 				return createLASHeaderAdapter();
@@ -85,8 +85,8 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 				return createLASPointAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonGeometryData3DLASFacade(Symphony__CommonGeometryData3DLASFacade object) {
-				return createSymphony__CommonGeometryData3DLASFacadeAdapter();
+			public Adapter caseApogyCommonGeometryData3DLASFacade(ApogyCommonGeometryData3DLASFacade object) {
+				return createApogyCommonGeometryData3DLASFacadeAdapter();
 			}
 			@Override
 			public Adapter caseLASWriter(LASWriter object) {
@@ -113,13 +113,13 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader <em>LAS Header</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader <em>LAS Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASHeader
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASHeader
 	 * @generated
 	 */
 	public Adapter createLASHeaderAdapter() {
@@ -127,13 +127,13 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord <em>Variable Length Record</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord <em>Variable Length Record</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.VariableLengthRecord
 	 * @generated
 	 */
 	public Adapter createVariableLengthRecordAdapter() {
@@ -141,13 +141,13 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader <em>LAS Reader</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader <em>LAS Reader</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader
 	 * @generated
 	 */
 	public Adapter createLASReaderAdapter() {
@@ -155,13 +155,13 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint <em>LAS Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint <em>LAS Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASPoint
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASPoint
 	 * @generated
 	 */
 	public Adapter createLASPointAdapter() {
@@ -169,27 +169,27 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonGeometryData3DLASFacadeAdapter() {
+	public Adapter createApogyCommonGeometryData3DLASFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter <em>LAS Writer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter <em>LAS Writer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASWriter
 	 * @generated
 	 */
 	public Adapter createLASWriterAdapter() {
@@ -208,4 +208,4 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 		return null;
 	}
 
-} //Symphony__CommonGeometryData3DLASAdapterFactory
+} //ApogyCommonGeometryData3DLASAdapterFactory

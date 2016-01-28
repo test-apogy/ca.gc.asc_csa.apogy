@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getRequest <em>Request</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand <em>Satellite Command</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getRequest <em>Request</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand <em>Satellite Command</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationCommandPlanItem()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlanItem()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface ConstellationCommandPlanItem extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Request</em>' reference.
 	 * @see #setRequest(AbstractConstellationRequest)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationCommandPlanItem_Request()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlanItem_Request()
 	 * @model required="true"
 	 * @generated
 	 */
 	AbstractConstellationRequest getRequest();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getRequest <em>Request</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getRequest <em>Request</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Request</em>' reference.
@@ -61,14 +61,14 @@ public interface ConstellationCommandPlanItem extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Satellite Command</em>' containment reference.
 	 * @see #setSatelliteCommand(AbstractSatelliteCommand)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getConstellationCommandPlanItem_SatelliteCommand()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getConstellationCommandPlanItem_SatelliteCommand()
 	 * @model containment="true"
 	 * @generated
 	 */
 	AbstractSatelliteCommand getSatelliteCommand();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand <em>Satellite Command</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand <em>Satellite Command</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Satellite Command</em>' containment reference.

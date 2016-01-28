@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.ui.jme3.adapters;
+package ca.gc.asc_csa.apogy.core.ui.jme3.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.ui.jme3.scene_objects.ResultNodeJME3Object;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Adapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ui.jme3.scene_objects.ResultNodeJME3Object;
 
 public class ResultNodeJME3Adapter implements JME3Adapter {
 

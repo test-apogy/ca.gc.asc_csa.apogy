@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.asc.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.asc.impl;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,22 +14,22 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
-import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
-import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.Activator;
-import org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode;
-import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
-import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASC3DIO;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ASCHeaderData;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Activator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.AltitudeMode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.Coordinates2D;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.asc.ApogyCommonGeometryData3DASCPackage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DASCPackage.Literals.ASC3DIO;
+		return ApogyCommonGeometryData3DASCPackage.Literals.ASC3DIO;
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 	public DigitalElevationMap loadDigitalElevationMap(String file, AltitudeMode altitudeMode, double targetResolution) throws Exception 
 	{
 		DigitalElevationMap dem = internalLoadDigitalElevationMap(file, altitudeMode, null, null);		
-		DigitalElevationMapSampler sampler = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapSampler();		
+		DigitalElevationMapSampler sampler = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapSampler();		
 		sampler.setTargetResolution(targetResolution);
 		return sampler.process(dem);
 	}
@@ -107,7 +107,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 	public DigitalElevationMap loadDigitalElevationMap(String file, AltitudeMode altitudeMode, Coordinates2D southWestCorner, Coordinates2D northEastCorner, double targetResolution) throws Exception 
 	{
 		DigitalElevationMap dem = internalLoadDigitalElevationMap(file, altitudeMode, southWestCorner, northEastCorner);		
-		DigitalElevationMapSampler sampler = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapSampler();		
+		DigitalElevationMapSampler sampler = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapSampler();		
 		sampler.setTargetResolution(targetResolution);
 		return sampler.process(dem);
 	}
@@ -133,7 +133,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 		DigitalElevationMap digitalElevationMap = loadDigitalElevationMap(file, altitudeMode, targetResolution);
 						
 		// Then mesh the DEM.
-		DigitalElevationMapMesher mesher = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();						
+		DigitalElevationMapMesher mesher = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();						
 		CartesianTriangularMesh mesh = mesher.process(digitalElevationMap);					
 		return mesh; 
 	}
@@ -159,7 +159,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 		DigitalElevationMap digitalElevationMap = loadDigitalElevationMap(file, altitudeMode, southWestCorner, northEastCorner, targetResolution);
 								
 		// Then mesh the DEM.
-		DigitalElevationMapMesher mesher = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();						
+		DigitalElevationMapMesher mesher = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();						
 		CartesianTriangularMesh mesh = mesher.process(digitalElevationMap);					
 		return mesh; 
 	}
@@ -172,56 +172,56 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE:
 				try {
 					return loadDigitalElevationMap((String)arguments.get(0), (AltitudeMode)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE_DOUBLE:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE_DOUBLE:
 				try {
 					return loadDigitalElevationMap((String)arguments.get(0), (AltitudeMode)arguments.get(1), (Double)arguments.get(2));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D:
 				try {
 					return loadDigitalElevationMap((String)arguments.get(0), (AltitudeMode)arguments.get(1), (Coordinates2D)arguments.get(2), (Coordinates2D)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D_DOUBLE:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_DIGITAL_ELEVATION_MAP__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D_DOUBLE:
 				try {
 					return loadDigitalElevationMap((String)arguments.get(0), (AltitudeMode)arguments.get(1), (Coordinates2D)arguments.get(2), (Coordinates2D)arguments.get(3), (Double)arguments.get(4));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE:
 				try {
 					return loadTriangularMesh((String)arguments.get(0), (AltitudeMode)arguments.get(1));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE_DOUBLE:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE_DOUBLE:
 				try {
 					return loadTriangularMesh((String)arguments.get(0), (AltitudeMode)arguments.get(1), (Double)arguments.get(2));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D:
 				try {
 					return loadTriangularMesh((String)arguments.get(0), (AltitudeMode)arguments.get(1), (Coordinates2D)arguments.get(2), (Coordinates2D)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Symphony__CommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D_DOUBLE:
+			case ApogyCommonGeometryData3DASCPackage.ASC3DIO___LOAD_TRIANGULAR_MESH__STRING_ALTITUDEMODE_COORDINATES2D_COORDINATES2D_DOUBLE:
 				try {
 					return loadTriangularMesh((String)arguments.get(0), (AltitudeMode)arguments.get(1), (Coordinates2D)arguments.get(2), (Coordinates2D)arguments.get(3), (Double)arguments.get(4));
 				}
@@ -234,7 +234,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 		
 	protected ASCHeaderData extractHeader(BufferedReader bufferedReader) throws Exception
 	{
-		ASCHeaderData header = Symphony__CommonGeometryData3DASCFactory.eINSTANCE.createASCHeaderData();
+		ASCHeaderData header = ApogyCommonGeometryData3DASCFactory.eINSTANCE.createASCHeaderData();
 
 		// Extracts the DEM size.
 		String headerLine1 = bufferedReader.readLine();		
@@ -331,12 +331,12 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 				double y = j * header.getCellSize();
 				double z = correctedHeights[i][j];
 				
-				CartesianPositionCoordinates position = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+				CartesianPositionCoordinates position = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
 				points.add(position);
 			}
 		}
 								
-		DigitalElevationMap digitalElevationMap = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();
+		DigitalElevationMap digitalElevationMap = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();
 		digitalElevationMap.setXDimension(correctedHeights.length);
 		digitalElevationMap.setYDimension(correctedHeights[0].length);
 		digitalElevationMap.getPoints().addAll(points);
@@ -350,7 +350,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 		DigitalElevationMap digitalElevationMap = internalLoadDigitalElevationMap(file, altitudeMode, southWestCorner, northEastCorner);
 				
 		// Then mesh the DEM.
-		DigitalElevationMapMesher mesher = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();						
+		DigitalElevationMapMesher mesher = ApogyCommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMapMesher();						
 		CartesianTriangularMesh mesh = mesher.process(digitalElevationMap);
 				
 		return mesh; 

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.wizards;
+package ca.gc.asc_csa.apogy.core.ui.wizards;
 
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -10,12 +10,12 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.composites.NewSymphonySystemComposite;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
+import ca.gc.asc_csa.apogy.core.ui.composites.NewApogySystemComposite;
 
-public class NewSymphonySystemWizardPage extends WizardPage {
+public class NewApogySystemWizardPage extends WizardPage {
 
-	private NewSymphonySystemSettings systemSettings;
+	private NewApogySystemSettings systemSettings;
 	private Adapter systemSettingsAdapter; 
 	
 	/**
@@ -23,10 +23,10 @@ public class NewSymphonySystemWizardPage extends WizardPage {
 	 * 
 	 * @param pageName
 	 */
-	public NewSymphonySystemWizardPage(NewSymphonySystemSettings systemSettings) {
+	public NewApogySystemWizardPage(NewApogySystemSettings systemSettings) {
 		super("wizardPage");
-		setTitle("New Symphony Session");
-		setDescription("This wizard creates a new Symphony Session File with *.ss extension.");
+		setTitle("New Apogy Session");
+		setDescription("This wizard creates a new Apogy Session File with *.ss extension.");
 		this.systemSettings = systemSettings;
 		systemSettings.eAdapters().add(getSystemSettingsAdapter());
 	}
@@ -35,8 +35,8 @@ public class NewSymphonySystemWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {		
-		NewSymphonySystemComposite sessionComposite = new NewSymphonySystemComposite(parent, SWT.NONE, systemSettings);
-		sessionComposite.setNewSymphonySystemSettings(systemSettings);
+		NewApogySystemComposite sessionComposite = new NewApogySystemComposite(parent, SWT.NONE, systemSettings);
+		sessionComposite.setNewApogySystemSettings(systemSettings);
 		setControl(sessionComposite);
 	}
 	

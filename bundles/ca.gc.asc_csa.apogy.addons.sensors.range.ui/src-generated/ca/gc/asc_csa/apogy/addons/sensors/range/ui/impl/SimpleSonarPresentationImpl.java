@@ -3,17 +3,17 @@
  *
  * $Id: SimpleSonarPresentationImpl.java,v 1.1.4.2 2015/05/21 15:50:06 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
-import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
-import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
-import org.eclipse.symphony.addons.sensors.range.ui.scene_objects.SimpleSonarSceneObject;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.ApogyAddonsSensorsRangeUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.SimpleSonarPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ui.scene_objects.SimpleSonarSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl#isDetectedRangeVisible <em>Detected Range Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl#isDetectedRangeVisible <em>Detected Range Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,7 +69,7 @@ public class SimpleSonarPresentationImpl extends NodePresentationImpl implements
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsSensorsRangeUIPackage.Literals.SIMPLE_SONAR_PRESENTATION;
+		return ApogyAddonsSensorsRangeUIPackage.Literals.SIMPLE_SONAR_PRESENTATION;
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class SimpleSonarPresentationImpl extends NodePresentationImpl implements
 		boolean oldDetectedRangeVisible = detectedRangeVisible;
 		detectedRangeVisible = newDetectedRangeVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE, oldDetectedRangeVisible, detectedRangeVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE, oldDetectedRangeVisible, detectedRangeVisible));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class SimpleSonarPresentationImpl extends NodePresentationImpl implements
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
+			case ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
 				return isDetectedRangeVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -119,7 +119,7 @@ public class SimpleSonarPresentationImpl extends NodePresentationImpl implements
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
+			case ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
 				setDetectedRangeVisible((Boolean)newValue);
 				return;
 		}
@@ -135,7 +135,7 @@ public class SimpleSonarPresentationImpl extends NodePresentationImpl implements
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
+			case ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
 				setDetectedRangeVisible(DETECTED_RANGE_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -151,7 +151,7 @@ public class SimpleSonarPresentationImpl extends NodePresentationImpl implements
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
+			case ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
 				return detectedRangeVisible != DETECTED_RANGE_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -191,7 +191,7 @@ public class SimpleSonarPresentationImpl extends NodePresentationImpl implements
 		if(sceneObject != null)
 		{
 			SimpleSonarSceneObject j3DObject = (SimpleSonarSceneObject) sceneObject;
-			if(notification.getFeatureID( SimpleSonar.class) == Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE)
+			if(notification.getFeatureID( SimpleSonar.class) == ApogyAddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE)
 			{
 				j3DObject.setDetectedRangeVisible(notification.getNewBooleanValue());
 			}		

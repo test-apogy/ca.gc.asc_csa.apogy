@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -18,13 +18,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
@@ -37,11 +37,11 @@ import org.jfree.data.xy.XYSeries;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getLatestPosition <em>Latest Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getAzimuthAngle <em>Azimuth Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryLength <em>Trajectory Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryColor <em>Trajectory Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryProvider <em>Trajectory Provider</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getLatestPosition <em>Latest Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getAzimuthAngle <em>Azimuth Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryLength <em>Trajectory Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryColor <em>Trajectory Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryProvider <em>Trajectory Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -118,7 +118,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Color3f TRAJECTORY_COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+  protected static final Color3f TRAJECTORY_COLOR_EDEFAULT = (Color3f)ApogyCoreEnvironmentUIFactory.eINSTANCE.createFromString(ApogyCoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 
   /**
 	 * The cached value of the '{@link #getTrajectoryColor() <em>Trajectory Color</em>}' attribute.
@@ -158,7 +158,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION;
+		return ApogyCoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION;
 	}
 
   /**
@@ -181,7 +181,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 		XYDataItem oldLatestPosition = latestPosition;
 		latestPosition = newLatestPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION, oldLatestPosition, latestPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION, oldLatestPosition, latestPosition));
 	}
 
   /**
@@ -204,7 +204,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 		double oldAzimuthAngle = azimuthAngle;
 		azimuthAngle = newAzimuthAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE, oldAzimuthAngle, azimuthAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE, oldAzimuthAngle, azimuthAngle));
 	}
 
   /**
@@ -227,7 +227,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 		double oldTrajectoryLength = trajectoryLength;
 		trajectoryLength = newTrajectoryLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH, oldTrajectoryLength, trajectoryLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH, oldTrajectoryLength, trajectoryLength));
 	}
 
   /**
@@ -251,7 +251,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 		VariableTrajectoryProvider oldTrajectoryProvider = trajectoryProvider;
 		trajectoryProvider = newTrajectoryProvider;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, oldTrajectoryProvider, newTrajectoryProvider);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, oldTrajectoryProvider, newTrajectoryProvider);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -291,14 +291,14 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 		if (newTrajectoryProvider != trajectoryProvider) {
 			NotificationChain msgs = null;
 			if (trajectoryProvider != null)
-				msgs = ((InternalEObject)trajectoryProvider).eInverseRemove(this, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, VariableTrajectoryProvider.class, msgs);
+				msgs = ((InternalEObject)trajectoryProvider).eInverseRemove(this, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, VariableTrajectoryProvider.class, msgs);
 			if (newTrajectoryProvider != null)
-				msgs = ((InternalEObject)newTrajectoryProvider).eInverseAdd(this, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, VariableTrajectoryProvider.class, msgs);
+				msgs = ((InternalEObject)newTrajectoryProvider).eInverseAdd(this, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, VariableTrajectoryProvider.class, msgs);
 			msgs = basicSetTrajectoryProvider(newTrajectoryProvider, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, newTrajectoryProvider, newTrajectoryProvider));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, newTrajectoryProvider, newTrajectoryProvider));
 	}
 
   /**
@@ -396,7 +396,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 		Color3f oldTrajectoryColor = trajectoryColor;
 		trajectoryColor = newTrajectoryColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR, oldTrajectoryColor, trajectoryColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR, oldTrajectoryColor, trajectoryColor));
 	}
 
   /**
@@ -408,9 +408,9 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				if (trajectoryProvider != null)
-					msgs = ((InternalEObject)trajectoryProvider).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, null, msgs);
+					msgs = ((InternalEObject)trajectoryProvider).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, null, msgs);
 				return basicSetTrajectoryProvider((VariableTrajectoryProvider)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -425,7 +425,7 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				return basicSetTrajectoryProvider(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -440,15 +440,15 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
 				return getLatestPosition();
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
 				return getAzimuthAngle();
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
 				return getTrajectoryLength();
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
 				return getTrajectoryColor();
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				return getTrajectoryProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -463,19 +463,19 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
 				setLatestPosition((XYDataItem)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
 				setAzimuthAngle((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
 				setTrajectoryLength((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
 				setTrajectoryColor((Color3f)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				setTrajectoryProvider((VariableTrajectoryProvider)newValue);
 				return;
 		}
@@ -491,19 +491,19 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
 				setLatestPosition(LATEST_POSITION_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
 				setAzimuthAngle(AZIMUTH_ANGLE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
 				setTrajectoryLength(TRAJECTORY_LENGTH_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
 				setTrajectoryColor(TRAJECTORY_COLOR_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				setTrajectoryProvider((VariableTrajectoryProvider)null);
 				return;
 		}
@@ -519,15 +519,15 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
 				return LATEST_POSITION_EDEFAULT == null ? latestPosition != null : !LATEST_POSITION_EDEFAULT.equals(latestPosition);
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
 				return azimuthAngle != AZIMUTH_ANGLE_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
 				return trajectoryLength != TRAJECTORY_LENGTH_EDEFAULT;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
 				return TRAJECTORY_COLOR_EDEFAULT == null ? trajectoryColor != null : !TRAJECTORY_COLOR_EDEFAULT.equals(trajectoryColor);
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				return trajectoryProvider != null;
 		}
 		return super.eIsSet(featureID);
@@ -543,10 +543,10 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   {
 		if (baseClass == TrajectoryProvider.class) {
 			switch (derivedFeatureID) {
-				case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION: return Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION;
-				case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE: return Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE;
-				case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH: return Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH;
-				case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR: return Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR;
+				case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION: return ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION;
+				case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE: return ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE;
+				case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH: return ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH;
+				case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR: return ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR;
 				default: return -1;
 			}
 		}
@@ -563,10 +563,10 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   {
 		if (baseClass == TrajectoryProvider.class) {
 			switch (baseFeatureID) {
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION;
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE;
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH;
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR;
 				default: return -1;
 			}
 		}
@@ -583,10 +583,10 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   {
 		if (baseClass == TrajectoryProvider.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___INITIALIZE: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___INITIALIZE;
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___CLEAR: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___CLEAR;
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___AS_LIST_OF_POINT2D: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___AS_LIST_OF_POINT2D;
-				case Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___GET_XY_SERIES: return Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___GET_XY_SERIES;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___INITIALIZE: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___INITIALIZE;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___CLEAR: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___CLEAR;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___AS_LIST_OF_POINT2D: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___AS_LIST_OF_POINT2D;
+				case ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER___GET_XY_SERIES: return ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___GET_XY_SERIES;
 				default: return -1;
 			}
 		}
@@ -602,15 +602,15 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___INITIALIZE:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___INITIALIZE:
 				initialize();
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___CLEAR:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___CLEAR:
 				clear();
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___AS_LIST_OF_POINT2D:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___AS_LIST_OF_POINT2D:
 				return asListOfPoint2d();
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___GET_XY_SERIES:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION___GET_XY_SERIES:
 				return getXYSeries();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -640,12 +640,12 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 	}  
   
   @Override
-  public void setSymphonySystemApiAdapter(SymphonySystemApiAdapter newSymphonySystemApiAdapter) 
+  public void setApogySystemApiAdapter(ApogySystemApiAdapter newApogySystemApiAdapter) 
   {
-	  super.setSymphonySystemApiAdapter(newSymphonySystemApiAdapter);
+	  super.setApogySystemApiAdapter(newApogySystemApiAdapter);
 	  if(getTrajectoryProvider() != null)
 	  {
-		  getTrajectoryProvider().setPoseProvider(newSymphonySystemApiAdapter);
+		  getTrajectoryProvider().setPoseProvider(newApogySystemApiAdapter);
 	  }
   }
 
@@ -671,15 +671,15 @@ public class VariableTrajectoryAnnotationImpl extends AbstractVariableAnnotation
 			@Override
 			public void notifyChanged(Notification msg)
 			{
-				if(msg.getFeatureID(TrajectoryProvider.class) == Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION)
+				if(msg.getFeatureID(TrajectoryProvider.class) == ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__LATEST_POSITION)
 				{
 					setLatestPosition((XYDataItem) msg.getNewValue());
 				}
-				else if(msg.getFeatureID(TrajectoryProvider.class) == Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH)
+				else if(msg.getFeatureID(TrajectoryProvider.class) == ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH)
 				{
 					setTrajectoryLength(msg.getNewDoubleValue());
 				}
-				else if(msg.getFeatureID(TrajectoryProvider.class) == Symphony__CoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE)
+				else if(msg.getFeatureID(TrajectoryProvider.class) == ApogyCoreEnvironmentUIPackage.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE)
 				{
 					setAzimuthAngle(msg.getNewDoubleValue());
 				}

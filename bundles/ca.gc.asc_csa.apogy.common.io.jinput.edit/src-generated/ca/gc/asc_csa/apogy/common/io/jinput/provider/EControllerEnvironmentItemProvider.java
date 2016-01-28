@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.provider;
+package ca.gc.asc_csa.apogy.common.io.jinput.provider;
 
 
 import java.util.Collection;
@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EControllerEnvironment} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_supported_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_supported_feature", "_UI_EControllerEnvironment_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__SUPPORTED,
+				 ApogyCommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__SUPPORTED,
 				 false,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_refreshRequested_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_refreshRequested_feature", "_UI_EControllerEnvironment_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED,
+				 ApogyCommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_pollingCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_pollingCount_feature", "_UI_EControllerEnvironment_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_COUNT,
+				 ApogyCommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_COUNT,
 				 true,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_pollingJob_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_pollingJob_feature", "_UI_EControllerEnvironment_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_JOB,
+				 ApogyCommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_JOB,
 				 false,
 				 false,
 				 false,
@@ -170,7 +170,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_pollingProblem_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_pollingProblem_feature", "_UI_EControllerEnvironment_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM,
+				 ApogyCommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM,
 				 true,
 				 false,
 				 false,
@@ -191,7 +191,7 @@ public class EControllerEnvironmentItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__CONTROLLERS);
+			childrenFeatures.add(ApogyCommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__CONTROLLERS);
 		}
 		return childrenFeatures;
 	}
@@ -243,14 +243,14 @@ public class EControllerEnvironmentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EControllerEnvironment.class)) {
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
+			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

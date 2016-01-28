@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui.composites;
+package ca.gc.asc_csa.apogy.common.images.ui.composites;
 
 import java.awt.image.BufferedImage;
 
@@ -19,10 +19,10 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.ui.Activator;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
+import ca.gc.asc_csa.apogy.common.images.ui.Activator;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 

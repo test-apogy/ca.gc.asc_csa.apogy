@@ -1,24 +1,24 @@
-@GenModel(prefix="Symphony__AddonsSensorsPose",
+@GenModel(prefix="ApogyAddonsSensorsPose",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__AddonsSensorsPose",
+	      modelName="ApogyAddonsSensorsPose",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.pose/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.pose.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.addons.sensors.pose/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.addons.sensors.pose.edit/src-generated")
 
-package org.eclipse.symphony.addons.sensors.pose
+package ca.gc.asc_csa.apogy.addons.sensors.pose
 
-import org.eclipse.symphony.addons.sensors.Sensor
-import org.eclipse.symphony.common.topology.PositionNode
-import org.eclipse.symphony.common.topology.RotationNode
-import org.eclipse.symphony.common.topology.TransformNode
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
-import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates
-import org.eclipse.symphony.common.geometry.data3d.Pose
-import org.eclipse.symphony.common.math.Matrix3x3
-import org.eclipse.symphony.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor
+import ca.gc.asc_csa.apogy.common.topology.PositionNode
+import ca.gc.asc_csa.apogy.common.topology.RotationNode
+import ca.gc.asc_csa.apogy.common.topology.TransformNode
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates
+import ca.gc.asc_csa.apogy.common.geometry.data3d.Pose
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
 
 type Exception wraps java.lang.Exception
 type IOException wraps java.io.IOException
@@ -111,7 +111,7 @@ class CSVDataLogger extends PoseDataLogger
 	
 }
 
-class Symphony__AddonsSensorsPoseFacade
+class ApogyAddonsSensorsPoseFacade
 {
 	op CSVDataLogger createCSVDataLogger(String fileName)
 }

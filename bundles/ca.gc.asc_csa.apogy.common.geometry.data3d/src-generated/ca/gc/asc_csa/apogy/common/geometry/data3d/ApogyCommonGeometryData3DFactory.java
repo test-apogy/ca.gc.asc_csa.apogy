@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,17 +10,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage
  * @generated
  */
-public interface Symphony__CommonGeometryData3DFactory extends EFactory {
+public interface ApogyCommonGeometryData3DFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DFactory eINSTANCE = org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFactoryImpl.init();
+	ApogyCommonGeometryData3DFactory eINSTANCE = ca.gc.asc_csa.apogy.common.geometry.data3d.impl.ApogyCommonGeometryData3DFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Cartesian Polygon</em>'.
@@ -407,7 +407,7 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DFacade createSymphony__CommonGeometryData3DFacade();
+	ApogyCommonGeometryData3DFacade createApogyCommonGeometryData3DFacade();
 
 	/**
 	 * Returns a new object of class '<em>Data3 DIO</em>'.
@@ -434,6 +434,6 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__CommonGeometryData3DPackage getSymphony__CommonGeometryData3DPackage();
+	ApogyCommonGeometryData3DPackage getApogyCommonGeometryData3DPackage();
 
-} //Symphony__CommonGeometryData3DFactory
+} //ApogyCommonGeometryData3DFactory

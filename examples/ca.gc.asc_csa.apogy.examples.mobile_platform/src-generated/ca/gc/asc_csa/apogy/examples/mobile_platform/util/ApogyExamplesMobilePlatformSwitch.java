@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform.util;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.examples.mobile_platform.*;
+import ca.gc.asc_csa.apogy.common.emf.Disposable;
+import ca.gc.asc_csa.apogy.examples.mobile_platform.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +19,10 @@ import org.eclipse.symphony.examples.mobile_platform.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage
  * @generated
  */
-public class Symphony__ExamplesMobilePlatformSwitch<T> extends Switch<T>
+public class ApogyExamplesMobilePlatformSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -30,7 +30,7 @@ public class Symphony__ExamplesMobilePlatformSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesMobilePlatformPackage modelPackage;
+  protected static ApogyExamplesMobilePlatformPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -38,10 +38,10 @@ public class Symphony__ExamplesMobilePlatformSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesMobilePlatformSwitch()
+  public ApogyExamplesMobilePlatformSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesMobilePlatformPackage.eINSTANCE;
+			modelPackage = ApogyExamplesMobilePlatformPackage.eINSTANCE;
 		}
 	}
 
@@ -70,27 +70,27 @@ public class Symphony__ExamplesMobilePlatformSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesMobilePlatformPackage.POSITION: {
+			case ApogyExamplesMobilePlatformPackage.POSITION: {
 				Position position = (Position)theEObject;
 				T result = casePosition(position);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION: {
+			case ApogyExamplesMobilePlatformPackage.NAMED_POSITION: {
 				NamedPosition namedPosition = (NamedPosition)theEObject;
 				T result = caseNamedPosition(namedPosition);
 				if (result == null) result = casePosition(namedPosition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM: {
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM: {
 				MobilePlatform mobilePlatform = (MobilePlatform)theEObject;
 				T result = caseMobilePlatform(mobilePlatform);
 				if (result == null) result = caseDisposable(mobilePlatform);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM_STUB: {
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM_STUB: {
 				MobilePlatformStub mobilePlatformStub = (MobilePlatformStub)theEObject;
 				T result = caseMobilePlatformStub(mobilePlatformStub);
 				if (result == null) result = caseMobilePlatform(mobilePlatformStub);
@@ -98,7 +98,7 @@ public class Symphony__ExamplesMobilePlatformSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM_SIMULATED: {
+			case ApogyExamplesMobilePlatformPackage.MOBILE_PLATFORM_SIMULATED: {
 				MobilePlatformSimulated mobilePlatformSimulated = (MobilePlatformSimulated)theEObject;
 				T result = caseMobilePlatformSimulated(mobilePlatformSimulated);
 				if (result == null) result = caseMobilePlatform(mobilePlatformSimulated);
@@ -221,4 +221,4 @@ public class Symphony__ExamplesMobilePlatformSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesMobilePlatformSwitch
+} //ApogyExamplesMobilePlatformSwitch

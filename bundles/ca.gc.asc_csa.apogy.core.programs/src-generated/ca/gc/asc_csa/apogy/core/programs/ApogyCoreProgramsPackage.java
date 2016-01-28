@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs;
+package ca.gc.asc_csa.apogy.core.programs;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFactory
+ * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CorePrograms' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CorePrograms' modelDirectory='/org.eclipse.symphony.core.programs/src-generated' editDirectory='/org.eclipse.symphony.core.programs.edit/src-generated' basePackage='org.eclipse.symphony.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCorePrograms' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='ApogyCorePrograms' modelDirectory='/ca.gc.asc_csa.apogy.core.programs/src-generated' editDirectory='/ca.gc.asc_csa.apogy.core.programs.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.core'"
  * @generated
  */
-public interface Symphony__CoreProgramsPackage extends EPackage {
+public interface ApogyCoreProgramsPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.core.programs";
+	String eNS_URI = "ca.gc.asc_csa.apogy.core.programs";
 
 	/**
 	 * The package namespace name.
@@ -57,14 +57,14 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__CoreProgramsPackage eINSTANCE = org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl.init();
+	ApogyCoreProgramsPackage eINSTANCE = ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.impl.AbstractProgramRuntimeImpl <em>Abstract Program Runtime</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.impl.AbstractProgramRuntimeImpl <em>Abstract Program Runtime</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.programs.impl.AbstractProgramRuntimeImpl
-	 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getAbstractProgramRuntime()
+	 * @see ca.gc.asc_csa.apogy.core.programs.impl.AbstractProgramRuntimeImpl
+	 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsPackageImpl#getAbstractProgramRuntime()
 	 * @generated
 	 */
 	int ABSTRACT_PROGRAM_RUNTIME = 0;
@@ -151,14 +151,14 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	int ABSTRACT_PROGRAM_RUNTIME_OPERATION_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl
-	 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getSymphony__CoreProgramsFacade()
+	 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsPackageImpl#getApogyCoreProgramsFacade()
 	 * @generated
 	 */
-	int SYMPHONY_CORE_PROGRAMS_FACADE = 1;
+	int APOGY_CORE_PROGRAMS_FACADE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Session</b></em>' reference.
@@ -167,7 +167,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_PROGRAMS_FACADE__SESSION = 0;
+	int APOGY_CORE_PROGRAMS_FACADE__SESSION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' reference list.
@@ -176,7 +176,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES = 1;
+	int APOGY_CORE_PROGRAMS_FACADE__VARIABLES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -185,7 +185,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_PROGRAMS_FACADE_FEATURE_COUNT = 2;
+	int APOGY_CORE_PROGRAMS_FACADE_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -194,7 +194,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = 0;
+	int APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = 0;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -203,14 +203,14 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_PROGRAMS_FACADE_OPERATION_COUNT = 1;
+	int APOGY_CORE_PROGRAMS_FACADE_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl <em>Time Interval</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.impl.TimeIntervalImpl <em>Time Interval</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.programs.impl.TimeIntervalImpl
-	 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getTimeInterval()
+	 * @see ca.gc.asc_csa.apogy.core.programs.impl.TimeIntervalImpl
+	 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsPackageImpl#getTimeInterval()
 	 * @generated
 	 */
 	int TIME_INTERVAL = 2;
@@ -262,166 +262,166 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime <em>Abstract Program Runtime</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime <em>Abstract Program Runtime</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Program Runtime</em>'.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime
 	 * @generated
 	 */
 	EClass getAbstractProgramRuntime();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Program</em>'.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime#getProgram()
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#getProgram()
 	 * @see #getAbstractProgramRuntime()
 	 * @generated
 	 */
 	EReference getAbstractProgramRuntime_Program();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#resume() <em>Resume</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#resume() <em>Resume</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resume</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime#resume()
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#resume()
 	 * @generated
 	 */
 	EOperation getAbstractProgramRuntime__Resume();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#suspend() <em>Suspend</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#suspend() <em>Suspend</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Suspend</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime#suspend()
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#suspend()
 	 * @generated
 	 */
 	EOperation getAbstractProgramRuntime__Suspend();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#terminate() <em>Terminate</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#terminate() <em>Terminate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Terminate</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime#terminate()
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#terminate()
 	 * @generated
 	 */
 	EOperation getAbstractProgramRuntime__Terminate();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#stepInto() <em>Step Into</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#stepInto() <em>Step Into</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Step Into</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime#stepInto()
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#stepInto()
 	 * @generated
 	 */
 	EOperation getAbstractProgramRuntime__StepInto();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#stepOver() <em>Step Over</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#stepOver() <em>Step Over</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Step Over</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime#stepOver()
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#stepOver()
 	 * @generated
 	 */
 	EOperation getAbstractProgramRuntime__StepOver();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#stepReturn() <em>Step Return</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#stepReturn() <em>Step Return</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Step Return</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.AbstractProgramRuntime#stepReturn()
+	 * @see ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime#stepReturn()
 	 * @generated
 	 */
 	EOperation getAbstractProgramRuntime__StepReturn();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade
 	 * @generated
 	 */
-	EClass getSymphony__CoreProgramsFacade();
+	EClass getApogyCoreProgramsFacade();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getSession <em>Session</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getSession <em>Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Session</em>'.
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getSession()
-	 * @see #getSymphony__CoreProgramsFacade()
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getSession()
+	 * @see #getApogyCoreProgramsFacade()
 	 * @generated
 	 */
-	EReference getSymphony__CoreProgramsFacade_Session();
+	EReference getApogyCoreProgramsFacade_Session();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getVariables <em>Variables</em>}'.
+	 * Returns the meta object for the reference list '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Variables</em>'.
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getVariables()
-	 * @see #getSymphony__CoreProgramsFacade()
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#getVariables()
+	 * @see #getApogyCoreProgramsFacade()
 	 * @generated
 	 */
-	EReference getSymphony__CoreProgramsFacade_Variables();
+	EReference getApogyCoreProgramsFacade_Variables();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#exec(org.eclipse.symphony.core.invocator.OperationCall) <em>Exec</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#exec(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsFacade#exec(ca.gc.asc_csa.apogy.core.invocator.OperationCall)
 	 * @generated
 	 */
-	EOperation getSymphony__CoreProgramsFacade__Exec__OperationCall();
+	EOperation getApogyCoreProgramsFacade__Exec__OperationCall();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.TimeInterval <em>Time Interval</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval <em>Time Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Time Interval</em>'.
-	 * @see org.eclipse.symphony.core.programs.TimeInterval
+	 * @see ca.gc.asc_csa.apogy.core.programs.TimeInterval
 	 * @generated
 	 */
 	EClass getTimeInterval();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.programs.TimeInterval#getStartTime <em>Start Time</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getStartTime <em>Start Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Start Time</em>'.
-	 * @see org.eclipse.symphony.core.programs.TimeInterval#getStartTime()
+	 * @see ca.gc.asc_csa.apogy.core.programs.TimeInterval#getStartTime()
 	 * @see #getTimeInterval()
 	 * @generated
 	 */
 	EAttribute getTimeInterval_StartTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.programs.TimeInterval#getEndTime <em>End Time</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getEndTime <em>End Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>End Time</em>'.
-	 * @see org.eclipse.symphony.core.programs.TimeInterval#getEndTime()
+	 * @see ca.gc.asc_csa.apogy.core.programs.TimeInterval#getEndTime()
 	 * @see #getTimeInterval()
 	 * @generated
 	 */
 	EAttribute getTimeInterval_EndTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.programs.TimeInterval#getDuration <em>Duration</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.core.programs.TimeInterval#getDuration <em>Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Duration</em>'.
-	 * @see org.eclipse.symphony.core.programs.TimeInterval#getDuration()
+	 * @see ca.gc.asc_csa.apogy.core.programs.TimeInterval#getDuration()
 	 * @see #getTimeInterval()
 	 * @generated
 	 */
@@ -434,7 +434,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CoreProgramsFactory getSymphony__CoreProgramsFactory();
+	ApogyCoreProgramsFactory getApogyCoreProgramsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -451,11 +451,11 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.impl.AbstractProgramRuntimeImpl <em>Abstract Program Runtime</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.impl.AbstractProgramRuntimeImpl <em>Abstract Program Runtime</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.programs.impl.AbstractProgramRuntimeImpl
-		 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getAbstractProgramRuntime()
+		 * @see ca.gc.asc_csa.apogy.core.programs.impl.AbstractProgramRuntimeImpl
+		 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsPackageImpl#getAbstractProgramRuntime()
 		 * @generated
 		 */
 		EClass ABSTRACT_PROGRAM_RUNTIME = eINSTANCE.getAbstractProgramRuntime();
@@ -517,14 +517,14 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		EOperation ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN = eINSTANCE.getAbstractProgramRuntime__StepReturn();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl
-		 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getSymphony__CoreProgramsFacade()
+		 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsPackageImpl#getApogyCoreProgramsFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_CORE_PROGRAMS_FACADE = eINSTANCE.getSymphony__CoreProgramsFacade();
+		EClass APOGY_CORE_PROGRAMS_FACADE = eINSTANCE.getApogyCoreProgramsFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Session</b></em>' reference feature.
@@ -532,7 +532,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYMPHONY_CORE_PROGRAMS_FACADE__SESSION = eINSTANCE.getSymphony__CoreProgramsFacade_Session();
+		EReference APOGY_CORE_PROGRAMS_FACADE__SESSION = eINSTANCE.getApogyCoreProgramsFacade_Session();
 
 		/**
 		 * The meta object literal for the '<em><b>Variables</b></em>' reference list feature.
@@ -540,7 +540,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES = eINSTANCE.getSymphony__CoreProgramsFacade_Variables();
+		EReference APOGY_CORE_PROGRAMS_FACADE__VARIABLES = eINSTANCE.getApogyCoreProgramsFacade_Variables();
 
 		/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
@@ -548,14 +548,14 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getSymphony__CoreProgramsFacade__Exec__OperationCall();
+		EOperation APOGY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getApogyCoreProgramsFacade__Exec__OperationCall();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl <em>Time Interval</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.impl.TimeIntervalImpl <em>Time Interval</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.programs.impl.TimeIntervalImpl
-		 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getTimeInterval()
+		 * @see ca.gc.asc_csa.apogy.core.programs.impl.TimeIntervalImpl
+		 * @see ca.gc.asc_csa.apogy.core.programs.impl.ApogyCoreProgramsPackageImpl#getTimeInterval()
 		 * @generated
 		 */
 		EClass TIME_INTERVAL = eINSTANCE.getTimeInterval();
@@ -586,4 +586,4 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 
 	}
 
-} //Symphony__CoreProgramsPackage
+} //ApogyCoreProgramsPackage

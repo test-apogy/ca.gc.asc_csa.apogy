@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony;
+package ca.gc.asc_csa.apogy.examples.rover.apogy;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,12 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyFactory
+ * @see ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesRoverSymphony' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016' modelName='Symphony__ExamplesRoverSymphony' modelDirectory='/org.eclipse.symphony.examples.rover.symphony/src-generated' editDirectory='/org.eclipse.symphony.examples.rover.symphony.edit/src-generated' basePackage='org.eclipse.symphony.examples.rover'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyExamplesRoverApogy' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016' modelName='ApogyExamplesRoverApogy' modelDirectory='/ca.gc.asc_csa.apogy.examples.rover.apogy/src-generated' editDirectory='/ca.gc.asc_csa.apogy.examples.rover.apogy.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.examples.rover'"
  * @generated
  */
-public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
+public interface ApogyExamplesRoverApogyPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -33,7 +33,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNAME = "symphony";
+  String eNAME = "apogy";
 
   /**
 	 * The package namespace URI.
@@ -41,7 +41,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.examples.rover.symphony";
+  String eNS_URI = "ca.gc.asc_csa.apogy.examples.rover.apogy";
 
   /**
 	 * The package namespace name.
@@ -49,7 +49,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_PREFIX = "symphony";
+  String eNS_PREFIX = "apogy";
 
   /**
 	 * The singleton instance of the package.
@@ -57,17 +57,17 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesRoverSymphonyPackage eINSTANCE = org.eclipse.symphony.examples.rover.symphony.impl.Symphony__ExamplesRoverSymphonyPackageImpl.init();
+  ApogyExamplesRoverApogyPackage eINSTANCE = ca.gc.asc_csa.apogy.examples.rover.apogy.impl.ApogyExamplesRoverApogyPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverSymphonySystemApiAdapterImpl <em>Rover Symphony System Api Adapter</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverApogySystemApiAdapterImpl <em>Rover Apogy System Api Adapter</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.rover.symphony.impl.RoverSymphonySystemApiAdapterImpl
-	 * @see org.eclipse.symphony.examples.rover.symphony.impl.Symphony__ExamplesRoverSymphonyPackageImpl#getRoverSymphonySystemApiAdapter()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverApogySystemApiAdapterImpl
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.ApogyExamplesRoverApogyPackageImpl#getRoverApogySystemApiAdapter()
 	 * @generated
 	 */
-  int ROVER_SYMPHONY_SYSTEM_API_ADAPTER = 0;
+  int ROVER_APOGY_SYSTEM_API_ADAPTER = 0;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -76,7 +76,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ENVIRONMENT;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ENVIRONMENT;
 
 		/**
 	 * The feature id for the '<em><b>Instance</b></em>' reference.
@@ -85,7 +85,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__INSTANCE;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER__INSTANCE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__INSTANCE;
 
 		/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -94,7 +94,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__ELEMENT_TYPE;
 
 		/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -103,7 +103,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
+  int ROVER_APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
 
   /**
 	 * The feature id for the '<em><b>Pose Corrector</b></em>' containment reference.
@@ -112,25 +112,25 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__POSE_CORRECTOR;
 
 		/**
-	 * The feature id for the '<em><b>Symphony System</b></em>' reference.
+	 * The feature id for the '<em><b>Apogy System</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM;
+  int ROVER_APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER__APOGY_SYSTEM;
 
   /**
-	 * The number of structural features of the '<em>Rover Symphony System Api Adapter</em>' class.
+	 * The number of structural features of the '<em>Rover Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
+  int ROVER_APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_FEATURE_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -139,7 +139,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
 
 		/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -148,7 +148,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
 
 		/**
 	 * The operation id for the '<em>Create Initialization Data</em>' operation.
@@ -157,7 +157,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_INITIALIZATION_DATA;
 
 		/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -166,7 +166,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
 
 		/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -175,7 +175,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
 
 		/**
 	 * The operation id for the '<em>Create Result</em>' operation.
@@ -184,7 +184,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
 
 		/**
 	 * The operation id for the '<em>Invoke</em>' operation.
@@ -193,7 +193,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -202,7 +202,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___DISPOSE;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___DISPOSE = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Create Result Matrix</em>' operation.
@@ -211,24 +211,24 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
+	int ROVER_APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL;
 
 		/**
-	 * The number of operations of the '<em>Rover Symphony System Api Adapter</em>' class.
+	 * The number of operations of the '<em>Rover Apogy System Api Adapter</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
+  int ROVER_APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT = ApogyCorePackage.APOGY_SYSTEM_API_ADAPTER_OPERATION_COUNT + 0;
 
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl <em>Rover Data</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverDataImpl <em>Rover Data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl
-	 * @see org.eclipse.symphony.examples.rover.symphony.impl.Symphony__ExamplesRoverSymphonyPackageImpl#getRoverData()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverDataImpl
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.ApogyExamplesRoverApogyPackageImpl#getRoverData()
 	 * @generated
 	 */
 	int ROVER_DATA = 1;
@@ -240,7 +240,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_DATA__INITIAL_POSE_TRANSFORM = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
+	int ROVER_DATA__INITIAL_POSE_TRANSFORM = ApogyCorePackage.APOGY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -249,7 +249,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_DATA__INITIALIZED = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
+	int ROVER_DATA__INITIALIZED = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -258,7 +258,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_DATA__DISPOSED = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
+	int ROVER_DATA__DISPOSED = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Rover Data</em>' class.
@@ -267,7 +267,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_DATA_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
+	int ROVER_DATA_FEATURE_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of operations of the '<em>Rover Data</em>' class.
@@ -276,46 +276,46 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER_DATA_OPERATION_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+	int ROVER_DATA_OPERATION_COUNT = ApogyCorePackage.APOGY_INITIALIZATION_DATA_OPERATION_COUNT + 0;
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter <em>Rover Symphony System Api Adapter</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter <em>Rover Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rover Symphony System Api Adapter</em>'.
-	 * @see org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter
+	 * @return the meta object for class '<em>Rover Apogy System Api Adapter</em>'.
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.RoverApogySystemApiAdapter
 	 * @generated
 	 */
-  EClass getRoverSymphonySystemApiAdapter();
+  EClass getRoverApogySystemApiAdapter();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.rover.symphony.RoverData <em>Rover Data</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData <em>Rover Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Rover Data</em>'.
-	 * @see org.eclipse.symphony.examples.rover.symphony.RoverData
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData
 	 * @generated
 	 */
 	EClass getRoverData();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.symphony.RoverData#isInitialized <em>Initialized</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isInitialized <em>Initialized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Initialized</em>'.
-	 * @see org.eclipse.symphony.examples.rover.symphony.RoverData#isInitialized()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isInitialized()
 	 * @see #getRoverData()
 	 * @generated
 	 */
 	EAttribute getRoverData_Initialized();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.rover.symphony.RoverData#isDisposed <em>Disposed</em>}'.
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isDisposed <em>Disposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Disposed</em>'.
-	 * @see org.eclipse.symphony.examples.rover.symphony.RoverData#isDisposed()
+	 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData#isDisposed()
 	 * @see #getRoverData()
 	 * @generated
 	 */
@@ -328,7 +328,7 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__ExamplesRoverSymphonyFactory getSymphony__ExamplesRoverSymphonyFactory();
+	ApogyExamplesRoverApogyFactory getApogyExamplesRoverApogyFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -346,20 +346,20 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverSymphonySystemApiAdapterImpl <em>Rover Symphony System Api Adapter</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverApogySystemApiAdapterImpl <em>Rover Apogy System Api Adapter</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.rover.symphony.impl.RoverSymphonySystemApiAdapterImpl
-		 * @see org.eclipse.symphony.examples.rover.symphony.impl.Symphony__ExamplesRoverSymphonyPackageImpl#getRoverSymphonySystemApiAdapter()
+		 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverApogySystemApiAdapterImpl
+		 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.ApogyExamplesRoverApogyPackageImpl#getRoverApogySystemApiAdapter()
 		 * @generated
 		 */
-    EClass ROVER_SYMPHONY_SYSTEM_API_ADAPTER = eINSTANCE.getRoverSymphonySystemApiAdapter();
+    EClass ROVER_APOGY_SYSTEM_API_ADAPTER = eINSTANCE.getRoverApogySystemApiAdapter();
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl <em>Rover Data</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverDataImpl <em>Rover Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl
-		 * @see org.eclipse.symphony.examples.rover.symphony.impl.Symphony__ExamplesRoverSymphonyPackageImpl#getRoverData()
+		 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverDataImpl
+		 * @see ca.gc.asc_csa.apogy.examples.rover.apogy.impl.ApogyExamplesRoverApogyPackageImpl#getRoverData()
 		 * @generated
 		 */
 		EClass ROVER_DATA = eINSTANCE.getRoverData();
@@ -380,4 +380,4 @@ public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
 
   }
 
-} //Symphony__ExamplesRoverSymphonyPackage
+} //ApogyExamplesRoverApogyPackage

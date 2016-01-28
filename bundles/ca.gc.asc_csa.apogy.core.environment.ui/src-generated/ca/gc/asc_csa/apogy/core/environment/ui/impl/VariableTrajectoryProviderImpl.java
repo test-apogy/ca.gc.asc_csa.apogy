@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider;
 import org.jfree.data.xy.XYSeries;
 
 /**
@@ -23,8 +23,8 @@ import org.jfree.data.xy.XYSeries;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl#getVariableAnnotation <em>Variable Annotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl#getPoseProvider <em>Pose Provider</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryProviderImpl#getVariableAnnotation <em>Variable Annotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.VariableTrajectoryProviderImpl#getPoseProvider <em>Pose Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +61,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_PROVIDER;
+		return ApogyCoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_PROVIDER;
 	}
 
   /**
@@ -71,7 +71,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
 	 */
   public VariableTrajectoryAnnotation getVariableAnnotation()
   {
-		if (eContainerFeatureID() != Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION) return null;
+		if (eContainerFeatureID() != ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION) return null;
 		return (VariableTrajectoryAnnotation)eContainer();
 	}
 
@@ -82,7 +82,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
 	 */
   public VariableTrajectoryAnnotation basicGetVariableAnnotation()
   {
-		if (eContainerFeatureID() != Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION) return null;
+		if (eContainerFeatureID() != ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION) return null;
 		return (VariableTrajectoryAnnotation)eInternalContainer();
 	}
 
@@ -93,7 +93,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
 	 */
   public NotificationChain basicSetVariableAnnotation(VariableTrajectoryAnnotation newVariableAnnotation, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newVariableAnnotation, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newVariableAnnotation, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, msgs);
 		return msgs;
 	}
 
@@ -108,7 +108,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
 	  
 	  if(newVariableAnnotation != null)
 	  {
-		  setPoseProvider(newVariableAnnotation.getSymphonySystemApiAdapter());		  		 
+		  setPoseProvider(newVariableAnnotation.getApogySystemApiAdapter());		  		 
 	  }
   }
   
@@ -119,19 +119,19 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
 	 */
   public void setVariableAnnotationGen(VariableTrajectoryAnnotation newVariableAnnotation)
   {
-		if (newVariableAnnotation != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION && newVariableAnnotation != null)) {
+		if (newVariableAnnotation != eInternalContainer() || (eContainerFeatureID() != ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION && newVariableAnnotation != null)) {
 			if (EcoreUtil.isAncestor(this, newVariableAnnotation))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newVariableAnnotation != null)
-				msgs = ((InternalEObject)newVariableAnnotation).eInverseAdd(this, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, VariableTrajectoryAnnotation.class, msgs);
+				msgs = ((InternalEObject)newVariableAnnotation).eInverseAdd(this, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, VariableTrajectoryAnnotation.class, msgs);
 			msgs = basicSetVariableAnnotation(newVariableAnnotation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, newVariableAnnotation, newVariableAnnotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION, newVariableAnnotation, newVariableAnnotation));
 	}
 
   /**
@@ -146,7 +146,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
 			poseProvider = (PoseProvider)eResolveProxy(oldPoseProvider);
 			if (poseProvider != oldPoseProvider) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER, oldPoseProvider, poseProvider));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER, oldPoseProvider, poseProvider));
 			}
 		}
 		return poseProvider;
@@ -172,7 +172,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
 		PoseProvider oldPoseProvider = poseProvider;
 		poseProvider = newPoseProvider;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER, oldPoseProvider, poseProvider));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER, oldPoseProvider, poseProvider));
 	}
 
   /**
@@ -184,7 +184,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetVariableAnnotation((VariableTrajectoryAnnotation)otherEnd, msgs);
@@ -201,7 +201,7 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
 				return basicSetVariableAnnotation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -216,8 +216,8 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, VariableTrajectoryAnnotation.class, msgs);
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER, VariableTrajectoryAnnotation.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -231,10 +231,10 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
 				if (resolve) return getVariableAnnotation();
 				return basicGetVariableAnnotation();
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
 				if (resolve) return getPoseProvider();
 				return basicGetPoseProvider();
 		}
@@ -250,10 +250,10 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
 				setVariableAnnotation((VariableTrajectoryAnnotation)newValue);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
 				setPoseProvider((PoseProvider)newValue);
 				return;
 		}
@@ -269,10 +269,10 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
 				setVariableAnnotation((VariableTrajectoryAnnotation)null);
 				return;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
 				setPoseProvider((PoseProvider)null);
 				return;
 		}
@@ -288,9 +288,9 @@ public abstract class VariableTrajectoryProviderImpl extends TrajectoryProviderI
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__VARIABLE_ANNOTATION:
 				return basicGetVariableAnnotation() != null;
-			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
+			case ApogyCoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER:
 				return poseProvider != null;
 		}
 		return super.eIsSet(featureID);

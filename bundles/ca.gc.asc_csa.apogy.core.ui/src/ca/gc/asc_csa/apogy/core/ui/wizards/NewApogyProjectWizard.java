@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.wizards;
+package ca.gc.asc_csa.apogy.core.ui.wizards;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,14 +17,14 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.presentation.CustomSymphony__CoreInvocatorEditor;
-import org.eclipse.symphony.core.ui.Activator;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.presentation.CustomApogyCoreInvocatorEditor;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFactory;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
@@ -37,36 +37,36 @@ import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
-	private NewSymphonyProjectSettings newSymphonyProjectSettings;
-	private NewSymphonySessionSettings newSymphonySessionSettings;
-	private SymphonyResourceSettings symphonyResourceSettings;
+public class NewApogyProjectWizard extends Wizard implements INewWizard {
+	private NewApogyProjectSettings newApogyProjectSettings;
+	private NewApogySessionSettings newApogySessionSettings;
+	private ApogyResourceSettings apogyResourceSettings;
 	private IWorkbench workbench;
-	private NewSymphonyProjectWizardPage newSymphonyProjectWizardPage;
-	private NewSymphonySessionWizardPage newSymphonySessionWizardPage;
-	private ImportRegisteredSymphonyProjectWizardPage importRegisteredSymphonyProjectWizardPage;
+	private NewApogyProjectWizardPage newApogyProjectWizardPage;
+	private NewApogySessionWizardPage newApogySessionWizardPage;
+	private ImportRegisteredApogyProjectWizardPage importRegisteredApogyProjectWizardPage;
 
 	/** The following member is used by performFinish(). */
-	private IFolder symphonyFolder;
+	private IFolder apogyFolder;
 
 	/**
-	 * Constructor for NewSymphonySessionWizard.
+	 * Constructor for NewApogySessionWizard.
 	 */
-	public NewSymphonyProjectWizard() {
+	public NewApogyProjectWizard() {
 		super();
-		setWindowTitle("New Symphony Project");
+		setWindowTitle("New Apogy Project");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
-				Activator.ID, "icons/wizban/symphony_new_project.png");
+				Activator.ID, "icons/wizban/apogy_new_project.png");
 		setDefaultPageImageDescriptor(image);
 
-		newSymphonyProjectWizardPage = new NewSymphonyProjectWizardPage(
-				getNewSymphonyProjectSettings(), getSymphonyResourceSettings());
+		newApogyProjectWizardPage = new NewApogyProjectWizardPage(
+				getNewApogyProjectSettings(), getApogyResourceSettings());
 
-		newSymphonySessionWizardPage = new NewSymphonySessionWizardPage(
-				getNewSymphonySessionSettings(), getSymphonyResourceSettings());
+		newApogySessionWizardPage = new NewApogySessionWizardPage(
+				getNewApogySessionSettings(), getApogyResourceSettings());
 
-		importRegisteredSymphonyProjectWizardPage = new ImportRegisteredSymphonyProjectWizardPage();
+		importRegisteredApogyProjectWizardPage = new ImportRegisteredApogyProjectWizardPage();
 	}
 
 	/**
@@ -83,59 +83,59 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 	 * Adding the page to the wizard.
 	 */
 	public void addPages() {
-		addPage(newSymphonyProjectWizardPage);
-		addPage(newSymphonySessionWizardPage);
-		addPage(importRegisteredSymphonyProjectWizardPage);
+		addPage(newApogyProjectWizardPage);
+		addPage(newApogySessionWizardPage);
+		addPage(importRegisteredApogyProjectWizardPage);
 	}
 
-	private SymphonyResourceSettings getSymphonyResourceSettings() {
+	private ApogyResourceSettings getApogyResourceSettings() {
 
-		if (symphonyResourceSettings == null) {
-			symphonyResourceSettings = Symphony__CoreUIFactory.eINSTANCE
-					.createSymphonyResourceSettings();
+		if (apogyResourceSettings == null) {
+			apogyResourceSettings = ApogyCoreUIFactory.eINSTANCE
+					.createApogyResourceSettings();
 		}
-		return symphonyResourceSettings;
+		return apogyResourceSettings;
 	}
 
-	private NewSymphonySessionSettings getNewSymphonySessionSettings() {
-		if (newSymphonySessionSettings == null) {
-			newSymphonySessionSettings = Symphony__CoreUIFactory.eINSTANCE
-					.createNewSymphonySessionSettings();
+	private NewApogySessionSettings getNewApogySessionSettings() {
+		if (newApogySessionSettings == null) {
+			newApogySessionSettings = ApogyCoreUIFactory.eINSTANCE
+					.createNewApogySessionSettings();
 		}
-		return newSymphonySessionSettings;
+		return newApogySessionSettings;
 	}
 
-	private NewSymphonyProjectSettings getNewSymphonyProjectSettings() {
-		if (newSymphonyProjectSettings == null) {
-			newSymphonyProjectSettings = Symphony__CoreUIFactory.eINSTANCE
-					.createNewSymphonyProjectSettings();
-			newSymphonyProjectSettings.setDefaultValues();
+	private NewApogyProjectSettings getNewApogyProjectSettings() {
+		if (newApogyProjectSettings == null) {
+			newApogyProjectSettings = ApogyCoreUIFactory.eINSTANCE
+					.createNewApogyProjectSettings();
+			newApogyProjectSettings.setDefaultValues();
 		}
-		return newSymphonyProjectSettings;
+		return newApogyProjectSettings;
 	}
 
 	@Override
 	public boolean performFinish() {
-		WorkspaceModifyOperation createSymphonyProjectOperation = new WorkspaceModifyOperation() {
+		WorkspaceModifyOperation createApogyProjectOperation = new WorkspaceModifyOperation() {
 			@Override
 			protected void execute(IProgressMonitor monitor)
 					throws CoreException, InvocationTargetException,
 					InterruptedException {
-				Symphony__CoreUIFacade.INSTANCE
-						.createSymphonyProject(getNewSymphonyProjectSettings());
-				symphonyFolder = Symphony__CoreUIFacade.INSTANCE
-						.createSymphonySessionFolder(getNewSymphonyProjectSettings());
+				ApogyCoreUIFacade.INSTANCE
+						.createApogyProject(getNewApogyProjectSettings());
+				apogyFolder = ApogyCoreUIFacade.INSTANCE
+						.createApogySessionFolder(getNewApogyProjectSettings());
 
-				if (getNewSymphonyProjectSettings().isImportRegisteredProject()) {
+				if (getNewApogyProjectSettings().isImportRegisteredProject()) {
 					/**
 					 * Import Registered Session.
 					 */
 					try {
-						URL url = new URL(importRegisteredSymphonyProjectWizardPage
+						URL url = new URL(importRegisteredApogyProjectWizardPage
 								.getSessionContributor().uri.toString());
 						InputStream inputStream = url.openConnection()
 								.getInputStream();
-						IFile newFile = symphonyFolder.getFile(getNewSymphonySessionSettings().getFilename());
+						IFile newFile = apogyFolder.getFile(getNewApogySessionSettings().getFilename());
 						newFile.create(inputStream, true,
 								new NullProgressMonitor());
 					} catch (MalformedURLException e1) {
@@ -149,20 +149,20 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 					/**
 					 * Create a new Session.
 					 */
-					Symphony__CoreUIFacade.INSTANCE
-							.createSymphonyProject(getNewSymphonyProjectSettings());
-					IFolder folder = Symphony__CoreUIFacade.INSTANCE
-							.createSymphonySessionFolder(getNewSymphonyProjectSettings());
+					ApogyCoreUIFacade.INSTANCE
+							.createApogyProject(getNewApogyProjectSettings());
+					IFolder folder = ApogyCoreUIFacade.INSTANCE
+							.createApogySessionFolder(getNewApogyProjectSettings());
 
 					InvocatorSession session = null;
 					String filename = null;
 
-					session = Symphony__CoreUIFacade.INSTANCE
-							.createSymphonySession(getNewSymphonySessionSettings());
-					filename = getNewSymphonySessionSettings().getFilename();
+					session = ApogyCoreUIFacade.INSTANCE
+							.createApogySession(getNewApogySessionSettings());
+					filename = getNewApogySessionSettings().getFilename();
 					try {
-						Symphony__CoreUIFacade.INSTANCE
-								.createSymphonySessionFile(folder, filename,
+						ApogyCoreUIFacade.INSTANCE
+								.createApogySessionFile(folder, filename,
 										session);
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -177,16 +177,16 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 		 * Execute Jobs.
 		 */
 		try {
-			getContainer().run(false, false, createSymphonyProjectOperation);
+			getContainer().run(false, false, createApogyProjectOperation);
 
 			/**
 			 * Selects the current file in the current view and open the editor.
 			 */
-			IFile modelFile = Symphony__CoreUIFacade.INSTANCE
-					.getSymphonySessionFile(
-							(IFolder) getSymphonyResourceSettings()
+			IFile modelFile = ApogyCoreUIFacade.INSTANCE
+					.getApogySessionFile(
+							(IFolder) getApogyResourceSettings()
 									.getResourceContainer(),
-							getNewSymphonySessionSettings().getFilename());
+							getNewApogySessionSettings().getFilename());
 
 			// Select the new file resource in the current view.
 			//
@@ -209,7 +209,7 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 			//
 			try {
 				page.openEditor(new FileEditorInput(modelFile),
-						CustomSymphony__CoreInvocatorEditor.ID);
+						CustomApogyCoreInvocatorEditor.ID);
 			} catch (PartInitException exception) {
 				exception.printStackTrace();
 				return false;
@@ -227,20 +227,20 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 	public IWizardPage getNextPage(IWizardPage page) {
 		IWizardPage nextPage = null;
 
-		if (page.equals(newSymphonyProjectWizardPage)) {
-			nextPage = getNewSymphonyProjectSettings()
-					.isImportRegisteredProject() ? importRegisteredSymphonyProjectWizardPage
-					: newSymphonySessionWizardPage;
+		if (page.equals(newApogyProjectWizardPage)) {
+			nextPage = getNewApogyProjectSettings()
+					.isImportRegisteredProject() ? importRegisteredApogyProjectWizardPage
+					: newApogySessionWizardPage;
 		}
 		return nextPage;
 	}
 
 	@Override
 	public boolean canFinish() {
-		return getNewSymphonyProjectSettings().isImportRegisteredProject() ? newSymphonyProjectWizardPage
+		return getNewApogyProjectSettings().isImportRegisteredProject() ? newApogyProjectWizardPage
 				.isPageComplete()
-				&& importRegisteredSymphonyProjectWizardPage.isPageComplete()
-				: newSymphonyProjectWizardPage.isPageComplete()
-						&& newSymphonySessionWizardPage.isPageComplete();
+				&& importRegisteredApogyProjectWizardPage.isPageComplete()
+				: newApogyProjectWizardPage.isPageComplete()
+						&& newApogySessionWizardPage.isPageComplete();
 	}
 }

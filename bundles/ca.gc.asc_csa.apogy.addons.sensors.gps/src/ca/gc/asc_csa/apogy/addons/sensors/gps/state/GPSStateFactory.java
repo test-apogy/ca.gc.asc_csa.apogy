@@ -1,7 +1,7 @@
-package org.eclipse.symphony.addons.sensors.gps.state;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.state;
 
-import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPS;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.GPSStatus;
 
 public final class GPSStateFactory {
 

@@ -4,10 +4,10 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.common.ui.property.category.Advanced"
-               id="org.eclipse.symphony.common.ui.property.tab.Advanced"
+               category="ca.gc.asc_csa.apogy.common.ui.property.category.Advanced"
+               id="ca.gc.asc_csa.apogy.common.ui.property.tab.Advanced"
                label="Advanced">
          </propertyTab>
       </propertyTabs>
@@ -15,19 +15,19 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="org.eclipse.symphony.common.ui.property.category.Advanced"></propertyCategory>
+               category="ca.gc.asc_csa.apogy.common.ui.property.category.Advanced"></propertyCategory>
       </propertyContributor>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="org.eclipse.symphony.common.ui.properties.sections.AdvancedPropertySection"
-               id="org.eclipse.symphony.common.ui.property.section.Advanced"
-               tab="org.eclipse.symphony.common.ui.property.tab.Advanced">
+               class="ca.gc.asc_csa.apogy.common.ui.properties.sections.AdvancedPropertySection"
+               id="ca.gc.asc_csa.apogy.common.ui.property.section.Advanced"
+               tab="ca.gc.asc_csa.apogy.common.ui.property.tab.Advanced">
             <input
                   type="java.lang.Object">
             </input>
@@ -37,9 +37,9 @@
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester"
-            id="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester"
-            namespace="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester"
+            class="ca.gc.asc_csa.apogy.common.ui.expressions.TabbedPropertySheetPropertyTester"
+            id="ca.gc.asc_csa.apogy.common.ui.expressions.TabbedPropertySheetPropertyTester"
+            namespace="ca.gc.asc_csa.apogy.common.ui.expressions.TabbedPropertySheetPropertyTester"
             properties="activeSection"
             type="java.lang.Object">
       </propertyTester>

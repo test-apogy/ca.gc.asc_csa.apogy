@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -11,12 +11,12 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.ui.Activator;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.ThrusterSceneObject;
-import org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ThrusterSceneObject;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +26,8 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ThrusterPresentationImpl#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.ui.impl.ThrusterPresentationImpl#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +98,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION;
+		return ApogyAddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION;
 	}
 
 		/**
@@ -119,7 +119,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		boolean oldPlumeEnvelopeVisible = plumeEnvelopeVisible;
 		plumeEnvelopeVisible = newPlumeEnvelopeVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE, oldPlumeEnvelopeVisible, plumeEnvelopeVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE, oldPlumeEnvelopeVisible, plumeEnvelopeVisible));
 	}
 
 		/**
@@ -140,7 +140,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		double oldPlumeEnvelopeLength = plumeEnvelopeLength;
 		plumeEnvelopeLength = newPlumeEnvelopeLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH, oldPlumeEnvelopeLength, plumeEnvelopeLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH, oldPlumeEnvelopeLength, plumeEnvelopeLength));
 	}
 
 		/**
@@ -151,9 +151,9 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				return isPlumeEnvelopeVisible();
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
 				return getPlumeEnvelopeLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -167,10 +167,10 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				setPlumeEnvelopeVisible((Boolean)newValue);
 				return;
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
 				setPlumeEnvelopeLength((Double)newValue);
 				return;
 		}
@@ -185,10 +185,10 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				setPlumeEnvelopeVisible(PLUME_ENVELOPE_VISIBLE_EDEFAULT);
 				return;
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
 				setPlumeEnvelopeLength(PLUME_ENVELOPE_LENGTH_EDEFAULT);
 				return;
 		}
@@ -203,9 +203,9 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				return plumeEnvelopeVisible != PLUME_ENVELOPE_VISIBLE_EDEFAULT;
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+			case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
 				return plumeEnvelopeLength != PLUME_ENVELOPE_LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -257,15 +257,15 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 			
 			switch (featureID) 
 			{
-				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+				case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 					thrusterSceneObject.setPlumeEnvelopeVisible(notification.getNewBooleanValue());
 				break;
 								
-				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+				case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
 					thrusterSceneObject.setPlumeEnvelopeLength(notification.getNewDoubleValue());
 				break;
 				
-				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__COLOR:
+				case ApogyAddonsVehicleUIPackage.THRUSTER_PRESENTATION__COLOR:
 					if(notification.getNewValue() instanceof RGB)
 					{
 						RGB color = (RGB) notification.getNewValue();

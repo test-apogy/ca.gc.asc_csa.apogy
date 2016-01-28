@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 
 /**
@@ -19,19 +19,19 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getXMin <em>XMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getXMax <em>XMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getYMin <em>YMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getYMax <em>YMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getXDimension <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getYDimension <em>YDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getLowerLeftCorner <em>Lower Left Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperLeftCorner <em>Upper Left Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getLowerRightCorner <em>Lower Right Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperRightCorner <em>Upper Right Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXMin <em>XMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXMax <em>XMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYMin <em>YMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYMax <em>YMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXDimension <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYDimension <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerLeftCorner <em>Lower Left Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperLeftCorner <em>Upper Left Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getLowerRightCorner <em>Lower Right Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getUpperRightCorner <em>Upper Right Corner</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion()
  * @model
  * @generated
  */
@@ -48,15 +48,15 @@ public interface RectangularRegion extends Region
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XMin</em>' attribute.
 	 * @see #setXMin(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XMin()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_XMin()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' apogy_units='m'"
 	 * @generated
 	 */
   double getXMin();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getXMin <em>XMin</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXMin <em>XMin</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XMin</em>' attribute.
@@ -75,15 +75,15 @@ public interface RectangularRegion extends Region
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XMax</em>' attribute.
 	 * @see #setXMax(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XMax()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_XMax()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' apogy_units='m'"
 	 * @generated
 	 */
   double getXMax();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getXMax <em>XMax</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getXMax <em>XMax</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XMax</em>' attribute.
@@ -102,15 +102,15 @@ public interface RectangularRegion extends Region
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YMin</em>' attribute.
 	 * @see #setYMin(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YMin()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_YMin()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' apogy_units='m'"
 	 * @generated
 	 */
   double getYMin();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getYMin <em>YMin</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYMin <em>YMin</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YMin</em>' attribute.
@@ -129,15 +129,15 @@ public interface RectangularRegion extends Region
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YMax</em>' attribute.
 	 * @see #setYMax(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YMax()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_YMax()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' apogy_units='m'"
 	 * @generated
 	 */
   double getYMax();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.RectangularRegion#getYMax <em>YMax</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegion#getYMax <em>YMax</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YMax</em>' attribute.
@@ -154,9 +154,9 @@ public interface RectangularRegion extends Region
 	 * Dimension along the X axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XDimension</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XDimension()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_XDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' apogy_units='m'"
 	 * @generated
 	 */
   double getXDimension();
@@ -169,9 +169,9 @@ public interface RectangularRegion extends Region
 	 * Dimension along the Y axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YDimension</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YDimension()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_YDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' apogy_units='m'"
 	 * @generated
 	 */
   double getYDimension();
@@ -185,7 +185,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lower Left Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_LowerLeftCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_LowerLeftCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -200,7 +200,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Upper Left Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_UpperLeftCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_UpperLeftCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -215,7 +215,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lower Right Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_LowerRightCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_LowerRightCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -230,7 +230,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Upper Right Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_UpperRightCorner()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getRectangularRegion_UpperRightCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

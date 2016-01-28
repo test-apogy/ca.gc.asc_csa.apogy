@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -22,13 +22,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.TypeMember;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeMember} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.TypeMember} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class TypeMemberItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class TypeMemberItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeMember_memberType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMember_memberType_feature", "_UI_TypeMember_type"),
-				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
+				 ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
 				 true,
 				 false,
 				 true,
@@ -130,7 +130,7 @@ public class TypeMemberItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -200,10 +200,10 @@ public class TypeMemberItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMember.class)) {
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__NAME:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
+			case ApogyCoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -224,8 +224,8 @@ public class TypeMemberItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE,
-				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
+				(ApogyCoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE,
+				 ApogyCommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 
   /**

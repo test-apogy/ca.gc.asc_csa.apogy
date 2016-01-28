@@ -1,27 +1,27 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.util;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.symphony.addons.geometry.paths.*;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.*;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
 
-import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,17 +33,17 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage
+ * @see ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage
  * @generated
  */
-public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
+public class ApogyAddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsGeometryPathsPackage modelPackage;
+	protected static ApogyAddonsGeometryPathsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -51,9 +51,9 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsGeometryPathsSwitch() {
+	public ApogyAddonsGeometryPathsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsGeometryPathsPackage.eINSTANCE;
+			modelPackage = ApogyAddonsGeometryPathsPackage.eINSTANCE;
 		}
 	}
 
@@ -80,7 +80,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT: {
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT: {
 				WayPoint wayPoint = (WayPoint)theEObject;
 				T1 result = caseWayPoint(wayPoint);
 				if (result == null) result = caseCartesianPositionCoordinates(wayPoint);
@@ -90,14 +90,14 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.PATH: {
+			case ApogyAddonsGeometryPathsPackage.PATH: {
 				Path path = (Path)theEObject;
 				T1 result = casePath(path);
 				if (result == null) result = caseNode(path);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH: {
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH: {
 				WayPointPath wayPointPath = (WayPointPath)theEObject;
 				T1 result = caseWayPointPath(wayPointPath);
 				if (result == null) result = caseCartesianCoordinatesSet(wayPointPath);
@@ -108,7 +108,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH_INTERPOLATOR: {
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH_INTERPOLATOR: {
 				WayPointPathInterpolator wayPointPathInterpolator = (WayPointPathInterpolator)theEObject;
 				T1 result = caseWayPointPathInterpolator(wayPointPathInterpolator);
 				if (result == null) result = caseProcessor(wayPointPathInterpolator);
@@ -116,7 +116,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR: {
+			case ApogyAddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR: {
 				CatmullRomWayPointPathInterpolator catmullRomWayPointPathInterpolator = (CatmullRomWayPointPathInterpolator)theEObject;
 				T1 result = caseCatmullRomWayPointPathInterpolator(catmullRomWayPointPathInterpolator);
 				if (result == null) result = caseWayPointPathInterpolator(catmullRomWayPointPathInterpolator);
@@ -125,7 +125,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR: {
+			case ApogyAddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR: {
 				SegmentWayPointPathInterpolator segmentWayPointPathInterpolator = (SegmentWayPointPathInterpolator)theEObject;
 				T1 result = caseSegmentWayPointPathInterpolator(segmentWayPointPathInterpolator);
 				if (result == null) result = caseWayPointPathInterpolator(segmentWayPointPathInterpolator);
@@ -134,7 +134,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH_FILTER: {
+			case ApogyAddonsGeometryPathsPackage.WAY_POINT_PATH_FILTER: {
 				WayPointPathFilter wayPointPathFilter = (WayPointPathFilter)theEObject;
 				T1 result = caseWayPointPathFilter(wayPointPathFilter);
 				if (result == null) result = caseProcessor(wayPointPathFilter);
@@ -142,7 +142,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER: {
+			case ApogyAddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER: {
 				MinimumDistanceFilter minimumDistanceFilter = (MinimumDistanceFilter)theEObject;
 				T1 result = caseMinimumDistanceFilter(minimumDistanceFilter);
 				if (result == null) result = caseWayPointPathFilter(minimumDistanceFilter);
@@ -151,7 +151,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR: {
+			case ApogyAddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR: {
 				UniformDistanceWayPointPathInterpolator uniformDistanceWayPointPathInterpolator = (UniformDistanceWayPointPathInterpolator)theEObject;
 				T1 result = caseUniformDistanceWayPointPathInterpolator(uniformDistanceWayPointPathInterpolator);
 				if (result == null) result = caseWayPointPathFilter(uniformDistanceWayPointPathInterpolator);
@@ -160,9 +160,9 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE: {
-				Symphony__AddonsGeometryPathsFacade symphony__AddonsGeometryPathsFacade = (Symphony__AddonsGeometryPathsFacade)theEObject;
-				T1 result = caseSymphony__AddonsGeometryPathsFacade(symphony__AddonsGeometryPathsFacade);
+			case ApogyAddonsGeometryPathsPackage.APOGY_ADDONS_GEOMETRY_PATHS_FACADE: {
+				ApogyAddonsGeometryPathsFacade apogy__AddonsGeometryPathsFacade = (ApogyAddonsGeometryPathsFacade)theEObject;
+				T1 result = caseApogyAddonsGeometryPathsFacade(apogy__AddonsGeometryPathsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -316,7 +316,7 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSymphony__AddonsGeometryPathsFacade(Symphony__AddonsGeometryPathsFacade object) {
+	public T1 caseApogyAddonsGeometryPathsFacade(ApogyAddonsGeometryPathsFacade object) {
 		return null;
 	}
 
@@ -471,4 +471,4 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 		return null;
 	}
 
-} //Symphony__AddonsGeometryPathsSwitch
+} //ApogyAddonsGeometryPathsSwitch

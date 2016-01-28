@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.math.ui.composites;
+package ca.gc.asc_csa.apogy.common.math.ui.composites;
 
 import java.text.DecimalFormat;
 
@@ -14,13 +14,13 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
-import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage.Literals;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
+import ca.gc.asc_csa.apogy.common.databinding.converters.StringToDoubleConverter;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage.Literals;
 
 public class Tuple3dComposite extends Composite 
 {
-	public org.eclipse.symphony.common.math.Tuple3d tuple3d;
+	public ca.gc.asc_csa.apogy.common.math.Tuple3d tuple3d;
 	
 	private String formatString = "0.000";
 	private DecimalFormat decimalFormat;
@@ -120,15 +120,15 @@ public class Tuple3dComposite extends Composite
 		}				
 	}
 
-	public org.eclipse.symphony.common.math.Tuple3d getTuple3d() {
+	public ca.gc.asc_csa.apogy.common.math.Tuple3d getTuple3d() {
 		return tuple3d;
 	}
 
-	public void setTuple3d(org.eclipse.symphony.common.math.Tuple3d newTuple3d) {
+	public void setTuple3d(ca.gc.asc_csa.apogy.common.math.Tuple3d newTuple3d) {
 		setTuple3d(newTuple3d, true);
 	}
 
-	public void setTuple3d(org.eclipse.symphony.common.math.Tuple3d newTuple3d, boolean update) {
+	public void setTuple3d(ca.gc.asc_csa.apogy.common.math.Tuple3d newTuple3d, boolean update) {
 		tuple3d = newTuple3d;
 		if (update) 
 		{

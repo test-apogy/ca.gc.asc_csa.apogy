@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.databinding.converters;
+package ca.gc.asc_csa.apogy.common.databinding.converters;
 
 import java.text.NumberFormat;
 import java.text.ParseException;

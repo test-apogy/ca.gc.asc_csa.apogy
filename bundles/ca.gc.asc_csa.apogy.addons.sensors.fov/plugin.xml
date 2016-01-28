@@ -11,9 +11,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "org.eclipse.symphony.addons.sensors.fov" 
-       class = "org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage"
-       genModel = "model/symphony_addons_sensors_fov.xcore" /> 
+       uri = "ca.gc.asc_csa.apogy.addons.sensors.fov" 
+       class = "ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage"
+       genModel = "model/apogy_addons_sensors_fov.xcore" /> 
   </extension>
 
 </plugin>

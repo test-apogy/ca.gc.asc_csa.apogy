@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.core.invocator;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberImplementation#getTypeMember <em>Type Member</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation#getTypeMember <em>Type Member</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberImplementation()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberImplementation()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface TypeMemberImplementation extends AbstractTypeImplementation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member</em>' reference.
 	 * @see #setTypeMember(TypeMember)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberImplementation_TypeMember()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeMemberImplementation_TypeMember()
 	 * @model required="true"
 	 * @generated
 	 */
   TypeMember getTypeMember();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMemberImplementation#getTypeMember <em>Type Member</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation#getTypeMember <em>Type Member</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type Member</em>' reference.

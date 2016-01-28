@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.ValueSource#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getValueSource()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getValueSource()
  * @model abstract="true"
  * @generated
  */
@@ -25,7 +25,7 @@ public interface ValueSource extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Binded EData Type Argument</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument#getValueSource <em>Value Source</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument#getValueSource <em>Value Source</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Binded EData Type Argument</em>' container reference isn't clear,
@@ -34,8 +34,8 @@ public interface ValueSource extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Binded EData Type Argument</em>' container reference.
 	 * @see #setBindedEDataTypeArgument(BindedEDataTypeArgument)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getValueSource_BindedEDataTypeArgument()
-	 * @see org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument#getValueSource
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getValueSource_BindedEDataTypeArgument()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument#getValueSource
 	 * @model opposite="valueSource" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -43,7 +43,7 @@ public interface ValueSource extends EObject
   BindedEDataTypeArgument getBindedEDataTypeArgument();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.ValueSource#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Binded EData Type Argument</em>' container reference.

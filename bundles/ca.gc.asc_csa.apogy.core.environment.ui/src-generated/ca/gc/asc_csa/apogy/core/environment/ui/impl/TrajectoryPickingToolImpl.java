@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.TrajectoryPickingTool;
 import org.jfree.data.xy.XYDataItem;
 
 /**
@@ -36,7 +36,7 @@ public class TrajectoryPickingToolImpl extends AbstractTrajectoryToolImpl implem
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PICKING_TOOL;
+		return ApogyCoreEnvironmentUIPackage.Literals.TRAJECTORY_PICKING_TOOL;
 	} 
    
   @Override
@@ -82,7 +82,7 @@ public class TrajectoryPickingToolImpl extends AbstractTrajectoryToolImpl implem
   protected void updateTrajectoryPickingTool()
   {
 	  // Update the trajectory length.
-	  double length = Symphony__CoreEnvironmentUIFacade.INSTANCE.getTrajectoryLength(getXYSeries());
+	  double length = ApogyCoreEnvironmentUIFacade.INSTANCE.getTrajectoryLength(getXYSeries());
 	  setTrajectoryLength(length);	  	  
   }
 } //TrajectoryPickingToolImpl

@@ -1,17 +1,17 @@
-@GenModel(prefix="Symphony__ExamplesLander",
+@GenModel(prefix="ApogyExamplesLander",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="Symphony__ExamplesLander",
+		  modelName="ApogyExamplesLander",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.lander/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.lander.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.lander/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.lander.edit/src-generated")
 
-package org.eclipse.symphony.examples.lander
+package ca.gc.asc_csa.apogy.examples.lander
 
-import org.eclipse.symphony.common.emf.Disposable
+import ca.gc.asc_csa.apogy.common.emf.Disposable
 
-import org.eclipse.symphony.addons.vehicle.Thruster
+import ca.gc.asc_csa.apogy.addons.vehicle.Thruster
 
 /*
  * A 3x3 Matrix, used to help implement the lander's position,
@@ -36,7 +36,7 @@ class Position
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Location",
-			  symphony_units="m")
+			  apogy_units="m")
 	double x
 	
 	/*
@@ -48,7 +48,7 @@ class Position
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Location",
-			  symphony_units="m")
+			  apogy_units="m")
 	double y
 
 	/*
@@ -60,7 +60,7 @@ class Position
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Location",
-			  symphony_units="m")
+			  apogy_units="m")
 	double z
 	
 	/*
@@ -204,7 +204,7 @@ abstract class Lander extends Disposable
 	@GenModel(children="false",
 			  notify="true",
 			  property="Readonly",
-			  symphony_units="m",
+			  apogy_units="m",
 			  propertyCategory="Leg Positions")
 	double legAPosition = "0"
 	
@@ -215,7 +215,7 @@ abstract class Lander extends Disposable
 	@GenModel(children="false",
 			  notify="true",
 			  property="Readonly",
-			  symphony_units="m",
+			  apogy_units="m",
 			  propertyCategory="Leg Positions")
 	double legBPosition = "0"
 	
@@ -226,7 +226,7 @@ abstract class Lander extends Disposable
 	@GenModel(children="false",
 			  notify="true",
 			  property="Readonly",
-			  symphony_units="m",
+			  apogy_units="m",
 			  propertyCategory="Leg Positions")
 	double legCPosition = "0"
 	
@@ -245,7 +245,7 @@ abstract class Lander extends Disposable
 	 */
 	@GenModel(children="false",
 			  notify="true",
-			  symphony_units="rad/s",
+			  apogy_units="rad/s",
 			  propertyCategory="Velocities")
 	double xAngularVelocity = "0"
 	
@@ -264,7 +264,7 @@ abstract class Lander extends Disposable
 	 */
 	@GenModel(children="false",
 			  notify="true",
-	 		  symphony_units="rad/s",
+	 		  apogy_units="rad/s",
 	 		  propertyCategory="Velocities")
 	double yAngularVelocity = "0"
 	
@@ -272,7 +272,7 @@ abstract class Lander extends Disposable
 	 * This represents the mass of the lander (in kg).
 	 */
 	 @GenModel(children="false",
-	 		   symphony_units="kg",
+	 		   apogy_units="kg",
 	 		   property="Readonly",
 	 		   propertyCategory="Flight")
 	transient volatile readonly derived double mass
@@ -291,7 +291,7 @@ abstract class Lander extends Disposable
 	 * @return The amount of gravitational force (in N) imposed upon the lander
 	 */
 	 @GenModel(children="false",
-	 		   symphony_units="N",
+	 		   apogy_units="N",
 	 		   property="Readonly",
 	 		   propertyCategory="Flight")
 	 transient volatile readonly derived double gravitationalPull
@@ -401,9 +401,9 @@ abstract class Lander extends Disposable
 	 * @param yAngle The lander's new angle of rotation (in radians) around the Y axis
 	 * @param zAngle The lander's new angle of rotation (in radians) around the Z axis
 	 */
-	op void changeAttitude(@GenModel(symphony_units="rad") double xAngle,
-						   @GenModel(symphony_units="rad") double yAngle,
-						   @GenModel(symphony_units="rad") double zAngle)
+	op void changeAttitude(@GenModel(apogy_units="rad") double xAngle,
+						   @GenModel(apogy_units="rad") double yAngle,
+						   @GenModel(apogy_units="rad") double zAngle)
 	 
 	/*
 	 * This operation is used to reset the lander's attitude /
@@ -428,8 +428,8 @@ abstract class Lander extends Disposable
 	 * @param xAngularVelocity The new X angular velocity for the lander (given in radians / second)
 	 * @param yAngularVelocity The new Y angular velocity for the lander (given in radians / second)
 	 */
-	op void commandAngularVelocities(@GenModel(symphony_units="rad/s") double xAngularVelocity,
-								   	 @GenModel(symphony_units="rad/s") double yAngularVelocity)	
+	op void commandAngularVelocities(@GenModel(apogy_units="rad/s") double xAngularVelocity,
+								   	 @GenModel(apogy_units="rad/s") double yAngularVelocity)	
 	
 	/*
 	 * This operation is used to update the lander's thrust level
@@ -440,7 +440,7 @@ abstract class Lander extends Disposable
 	 * 
 	 * @param thrustLevel The lander's new thrust level (given in N)
 	 */
-	op void commandThrust(@GenModel(symphony_units="N") double thrustLevel)
+	op void commandThrust(@GenModel(apogy_units="N") double thrustLevel)
 	
 	/*
 	 * This operation is used to change the lander's current thrust
@@ -452,7 +452,7 @@ abstract class Lander extends Disposable
 	 * 
 	 * @param thrustOffset The amount (in N) that the thrust level should be increased / decreased. 
 	 */
-	op void changeThrustBy(@GenModel(symphony_units="N") double thrustOffset)
+	op void changeThrustBy(@GenModel(apogy_units="N") double thrustOffset)
 	
 	/*
 	 * This operation is used to permit the lander to start flying.
@@ -486,7 +486,7 @@ class LanderStub extends Lander
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.lander.impl.LanderStub}
+	 * see {@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderStub}
 	 */
 }
 
@@ -500,6 +500,6 @@ class LanderSimulated extends Lander
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.lander.impl.LanderSimulated}
+	 * see {@link ca.gc.asc_csa.apogy.examples.lander.impl.LanderSimulated}
 	 */
 }

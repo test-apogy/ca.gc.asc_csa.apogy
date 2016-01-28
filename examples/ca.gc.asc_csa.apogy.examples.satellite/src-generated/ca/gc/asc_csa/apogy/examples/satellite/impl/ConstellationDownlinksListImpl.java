@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.util.Collection;
 
@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
-import org.eclipse.symphony.examples.satellite.ConstellationDownlink;
-import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,9 +34,9 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl#getDownlinks <em>Downlinks</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.ConstellationDownlinksListImpl#getDownlinks <em>Downlinks</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,7 +108,7 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.CONSTELLATION_DOWNLINKS_LIST;
+		return ApogyExamplesSatellitePackage.Literals.CONSTELLATION_DOWNLINKS_LIST;
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME, oldName, name));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	 */
 	public EList<ConstellationDownlink> getDownlinks() {
 		if (downlinks == null) {
-			downlinks = new EObjectContainmentEList<ConstellationDownlink>(ConstellationDownlink.class, this, Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS);
+			downlinks = new EObjectContainmentEList<ConstellationDownlink>(ConstellationDownlink.class, this, ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS);
 		}
 		return downlinks;
 	}
@@ -173,7 +173,7 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				return ((InternalEList<?>)getDownlinks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -187,11 +187,11 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
 				return getName();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				return getDescription();
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				return getDownlinks();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -206,13 +206,13 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				getDownlinks().clear();
 				getDownlinks().addAll((Collection<? extends ConstellationDownlink>)newValue);
 				return;
@@ -228,13 +228,13 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				getDownlinks().clear();
 				return;
 		}
@@ -249,11 +249,11 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
+			case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS:
 				return downlinks != null && !downlinks.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -268,7 +268,7 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -284,7 +284,7 @@ public class ConstellationDownlinksListImpl extends MinimalEObjectImpl.Container
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

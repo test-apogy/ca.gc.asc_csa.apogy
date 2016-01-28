@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl#getGain <em>Gain</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl#getBias <em>Bias</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GainFilterImpl#getGain <em>Gain</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.GainFilterImpl#getBias <em>Bias</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,7 +86,7 @@ public class GainFilterImpl extends ImageFilterImpl implements GainFilter
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER;
 	}
 
   /**
@@ -109,7 +109,7 @@ public class GainFilterImpl extends ImageFilterImpl implements GainFilter
 		double oldGain = gain;
 		gain = newGain;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN, oldGain, gain));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN, oldGain, gain));
 	}
 
   /**
@@ -132,7 +132,7 @@ public class GainFilterImpl extends ImageFilterImpl implements GainFilter
 		double oldBias = bias;
 		bias = newBias;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS, oldBias, bias));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS, oldBias, bias));
 	}
 
   /**
@@ -144,9 +144,9 @@ public class GainFilterImpl extends ImageFilterImpl implements GainFilter
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
 				return getGain();
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
 				return getBias();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public class GainFilterImpl extends ImageFilterImpl implements GainFilter
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
 				setGain((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
 				setBias((Double)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public class GainFilterImpl extends ImageFilterImpl implements GainFilter
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
 				setGain(GAIN_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
 				setBias(BIAS_EDEFAULT);
 				return;
 		}
@@ -199,9 +199,9 @@ public class GainFilterImpl extends ImageFilterImpl implements GainFilter
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
 				return gain != GAIN_EDEFAULT;
-			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
+			case ApogyAddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
 				return bias != BIAS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

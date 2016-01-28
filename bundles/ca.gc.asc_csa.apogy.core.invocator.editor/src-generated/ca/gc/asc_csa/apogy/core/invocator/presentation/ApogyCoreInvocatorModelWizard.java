@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.presentation;
+package ca.gc.asc_csa.apogy.core.invocator.presentation;
 
 
 import java.util.ArrayList;
@@ -46,9 +46,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
@@ -67,7 +67,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWizard
+public class ApogyCoreInvocatorModelWizard extends Wizard implements INewWizard
 {
   /**
 	 * The supported extensions for created files.
@@ -76,7 +76,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 	 * @generated
 	 */
   public static final List<String> FILE_EXTENSIONS =
-    Collections.unmodifiableList(Arrays.asList(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorEditorFilenameExtensions").split("\\s*,\\s*")));
+    Collections.unmodifiableList(Arrays.asList(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorEditorFilenameExtensions").split("\\s*,\\s*")));
 
   /**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -85,7 +85,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 	 * @generated
 	 */
   public static final String FORMATTED_FILE_EXTENSIONS =
-    Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+    ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
   /**
 	 * This caches an instance of the model package.
@@ -93,7 +93,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreInvocatorPackage symphony__CoreInvocatorPackage = Symphony__CoreInvocatorPackage.eINSTANCE;
+	protected ApogyCoreInvocatorPackage apogy__CoreInvocatorPackage = ApogyCoreInvocatorPackage.eINSTANCE;
 
 		/**
 	 * This caches an instance of the model factory.
@@ -101,7 +101,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CoreInvocatorFactory symphony__CoreInvocatorFactory = symphony__CoreInvocatorPackage.getSymphony__CoreInvocatorFactory();
+	protected ApogyCoreInvocatorFactory apogy__CoreInvocatorFactory = apogy__CoreInvocatorPackage.getApogyCoreInvocatorFactory();
 
 		/**
 	 * This is the file creation page.
@@ -109,7 +109,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreInvocatorModelWizardNewFileCreationPage newFileCreationPage;
+  protected ApogyCoreInvocatorModelWizardNewFileCreationPage newFileCreationPage;
 
   /**
 	 * This is the initial object creation page.
@@ -117,7 +117,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreInvocatorModelWizardInitialObjectCreationPage initialObjectCreationPage;
+  protected ApogyCoreInvocatorModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
   /**
 	 * Remember the selection during initialization for populating the default container.
@@ -153,8 +153,8 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
   {
 		this.workbench = workbench;
 		this.selection = selection;
-		setWindowTitle(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getImage("full/wizban/NewSymphony__CoreInvocator")));
+		setWindowTitle(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(ApogyCoreInvocatorEditorPlugin.INSTANCE.getImage("full/wizban/NewApogyCoreInvocator")));
 	}
 
   /**
@@ -167,7 +167,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
   {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : symphony__CoreInvocatorPackage.getEClassifiers()) {
+			for (EClassifier eClassifier : apogy__CoreInvocatorPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
@@ -188,8 +188,8 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 	 */
   protected EObject createInitialModel()
   {
-		EClass eClass = (EClass)symphony__CoreInvocatorPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = symphony__CoreInvocatorFactory.create(eClass);
+		EClass eClass = (EClass)apogy__CoreInvocatorPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = apogy__CoreInvocatorFactory.create(eClass);
 		return rootObject;
 	}
 
@@ -240,7 +240,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 							resource.save(options);
 						}
 						catch (Exception exception) {
-							Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+							ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 						}
 						finally {
 							progressMonitor.done();
@@ -273,14 +273,14 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
 			}
 			catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(), Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+				MessageDialog.openError(workbenchWindow.getShell(), ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
 		}
 		catch (Exception exception) {
-			Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
+			ApogyCoreInvocatorEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
 	}
@@ -291,14 +291,14 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class Symphony__CoreInvocatorModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+	public class ApogyCoreInvocatorModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public Symphony__CoreInvocatorModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
+		public ApogyCoreInvocatorModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
 			super(pageId, selection);
 		}
 
@@ -314,7 +314,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -338,7 +338,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class Symphony__CoreInvocatorModelWizardInitialObjectCreationPage extends WizardPage {
+	public class ApogyCoreInvocatorModelWizardInitialObjectCreationPage extends WizardPage {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -366,7 +366,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public Symphony__CoreInvocatorModelWizardInitialObjectCreationPage(String pageId) {
+		public ApogyCoreInvocatorModelWizardInitialObjectCreationPage(String pageId) {
 			super(pageId);
 		}
 
@@ -391,7 +391,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 
 			Label containerLabel = new Label(composite, SWT.LEFT);
 			{
-				containerLabel.setText(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+				containerLabel.setText(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -417,7 +417,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
-				encodingLabel.setText(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+				encodingLabel.setText(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -516,10 +516,10 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return Symphony__CoreInvocatorEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+				return ApogyCoreInvocatorEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
-				Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(mre);
+				ApogyCoreInvocatorEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
 		}
@@ -532,7 +532,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -551,10 +551,10 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
   {
 		// Create a page, set the title, and the initial model file name.
 		//
-		newFileCreationPage = new Symphony__CoreInvocatorModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorModelWizard_label"));
-		newFileCreationPage.setDescription(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorModelWizard_description"));
-		newFileCreationPage.setFileName(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage = new ApogyCoreInvocatorModelWizardNewFileCreationPage("Whatever", selection);
+		newFileCreationPage.setTitle(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorModelWizard_label"));
+		newFileCreationPage.setDescription(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorModelWizard_description"));
+		newFileCreationPage.setFileName(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -580,7 +580,7 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -590,9 +590,9 @@ public class Symphony__CoreInvocatorModelWizard extends Wizard implements INewWi
 				}
 			}
 		}
-		initialObjectCreationPage = new Symphony__CoreInvocatorModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Symphony__CoreInvocatorModelWizard_label"));
-		initialObjectCreationPage.setDescription(Symphony__CoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage = new ApogyCoreInvocatorModelWizardInitialObjectCreationPage("Whatever2");
+		initialObjectCreationPage.setTitle(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_ApogyCoreInvocatorModelWizard_label"));
+		initialObjectCreationPage.setDescription(ApogyCoreInvocatorEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 

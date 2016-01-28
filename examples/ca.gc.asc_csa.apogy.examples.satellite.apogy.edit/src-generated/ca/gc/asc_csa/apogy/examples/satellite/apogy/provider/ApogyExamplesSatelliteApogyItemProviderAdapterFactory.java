@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,21 +33,21 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
 
-import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyFactory;
-import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 
-import org.eclipse.symphony.examples.satellite.symphony.util.Symphony__ExamplesSatelliteSymphonyAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.util.ApogyExamplesSatelliteApogyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -58,7 +58,7 @@ import org.eclipse.symphony.examples.satellite.symphony.util.Symphony__ExamplesS
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory extends Symphony__ExamplesSatelliteSymphonyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyExamplesSatelliteApogyItemProviderAdapterFactory extends ApogyExamplesSatelliteApogyAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesSatelliteSymphonyEditPlugin.INSTANCE, Symphony__ExamplesSatelliteSymphonyPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesSatelliteApogyEditPlugin.INSTANCE, ApogyExamplesSatelliteApogyPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -97,7 +97,7 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory() {
+	public ApogyExamplesSatelliteApogyItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -106,7 +106,7 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -114,7 +114,7 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 	protected ConstellationSystemApiAdapterItemProvider constellationSystemApiAdapterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSystemApiAdapter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationSystemApiAdapter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +129,7 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -137,7 +137,7 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 	protected ConstellationDataItemProvider constellationDataItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -282,19 +282,19 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -330,8 +330,8 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 			public Object caseAbstractTypeImplementation(AbstractTypeImplementation object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
-						 Symphony__ExamplesSatelliteSymphonyFactory.eINSTANCE.createConstellationData()));
+						(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
+						 ApogyExamplesSatelliteApogyFactory.eINSTANCE.createConstellationData()));
 
 				return null;
 			}
@@ -364,24 +364,24 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesSatelliteSymphonyEditPlugin.INSTANCE;
+			return ApogyExamplesSatelliteApogyEditPlugin.INSTANCE;
 		}
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -417,13 +417,13 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteSymphonyFactory.eINSTANCE.createConstellationSystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteApogyFactory.eINSTANCE.createConstellationSystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__ExamplesSatelliteSymphonyFactory.eINSTANCE.createConstellationData()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyExamplesSatelliteApogyFactory.eINSTANCE.createConstellationData()));
 
 				return null;
 			}
@@ -437,13 +437,13 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteSymphonyFactory.eINSTANCE.createConstellationSystemApiAdapter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteApogyFactory.eINSTANCE.createConstellationSystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__ExamplesSatelliteSymphonyFactory.eINSTANCE.createConstellationData()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyExamplesSatelliteApogyFactory.eINSTANCE.createConstellationData()));
 
 				return null;
 			}
@@ -476,7 +476,7 @@ public class Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory exten
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__ExamplesSatelliteSymphonyEditPlugin.INSTANCE;
+			return ApogyExamplesSatelliteApogyEditPlugin.INSTANCE;
 		}
 	}
 

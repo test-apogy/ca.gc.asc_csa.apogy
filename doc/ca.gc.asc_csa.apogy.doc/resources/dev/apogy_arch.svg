@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r"
-   sodipodi:docname="symphony_arch.svg">
+   sodipodi:docname="apogy_arch.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -156,7 +156,7 @@
              sodipodi:role="line"
              x="201.81367"
              y="509.92404"
-             id="tspan3532">(org.eclipse.symphony.common.*)</tspan></text>
+             id="tspan3532">(ca.gc.asc_csa.apogy.common.*)</tspan></text>
       </g>
       <g
          transform="translate(0.40283966,0)"
@@ -178,11 +178,11 @@
              sodipodi:role="line"
              id="tspan3454"
              x="205.20078"
-             y="325.9007">Symphony Core</tspan><tspan
+             y="325.9007">Apogy Core</tspan><tspan
              id="tspan3469"
              sodipodi:role="line"
              x="205.20078"
-             y="360.2757">(org.eclipse.symphony.core.*)</tspan></text>
+             y="360.2757">(ca.gc.asc_csa.apogy.core.*)</tspan></text>
       </g>
       <g
          transform="translate(-1.1208801,6)"
@@ -208,7 +208,7 @@
              sodipodi:role="line"
              x="200.84456"
              y="202.12184"
-             id="tspan3492">(org.eclipse.symphony.addons.*)</tspan></text>
+             id="tspan3492">(ca.gc.asc_csa.apogy.addons.*)</tspan></text>
       </g>
       <g
          transform="translate(2,-6)"
@@ -234,7 +234,7 @@
              sodipodi:role="line"
              x="201.54279"
              y="61.044868"
-             id="tspan3500">(org.eclipse.symphony.examples.*)</tspan></text>
+             id="tspan3500">(ca.gc.asc_csa.apogy.examples.*)</tspan></text>
       </g>
       <g
          transform="translate(-65.692307,-98)"

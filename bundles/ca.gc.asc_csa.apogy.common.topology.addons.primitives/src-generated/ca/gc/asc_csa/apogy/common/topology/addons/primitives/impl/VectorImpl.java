@@ -4,7 +4,7 @@
  *
  * $Id: VectorImpl.java,v 1.5.2.3 2015/02/03 20:01:31 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl;
 
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Point3d;
@@ -12,10 +12,10 @@ import javax.vecmath.Point3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.Vector;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.Vector;
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,11 +25,11 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getXRotation <em>XRotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getYRotation <em>YRotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getZRotation <em>ZRotation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getLength <em>Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getEndPoint <em>End Point</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.VectorImpl#getXRotation <em>XRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.VectorImpl#getYRotation <em>YRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.VectorImpl#getZRotation <em>ZRotation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.VectorImpl#getLength <em>Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.VectorImpl#getEndPoint <em>End Point</em>}</li>
  * </ul>
  *
  * @generated
@@ -144,7 +144,7 @@ public class VectorImpl extends NodeImpl implements Vector
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR;
+		return ApogyCommonTopologyAddonsPrimitivesPackage.Literals.VECTOR;
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class VectorImpl extends NodeImpl implements Vector
 		double oldXRotation = xRotation;
 		xRotation = newXRotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION, oldXRotation, xRotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION, oldXRotation, xRotation));
 	}
 
 	/**
@@ -190,7 +190,7 @@ public class VectorImpl extends NodeImpl implements Vector
 		double oldYRotation = yRotation;
 		yRotation = newYRotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION, oldYRotation, yRotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION, oldYRotation, yRotation));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class VectorImpl extends NodeImpl implements Vector
 		double oldZRotation = zRotation;
 		zRotation = newZRotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION, oldZRotation, zRotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION, oldZRotation, zRotation));
 	}
 
 	/**
@@ -236,7 +236,7 @@ public class VectorImpl extends NodeImpl implements Vector
 		double oldLength = length;
 		length = newLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH, oldLength, length));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH, oldLength, length));
 	}
 
 	/**
@@ -269,15 +269,15 @@ public class VectorImpl extends NodeImpl implements Vector
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
 				return getXRotation();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
 				return getYRotation();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
 				return getZRotation();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
 				return getLength();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__END_POINT:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__END_POINT:
 				return getEndPoint();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -292,16 +292,16 @@ public class VectorImpl extends NodeImpl implements Vector
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
 				setXRotation((Double)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
 				setYRotation((Double)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
 				setZRotation((Double)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
 				setLength((Double)newValue);
 				return;
 		}
@@ -317,16 +317,16 @@ public class VectorImpl extends NodeImpl implements Vector
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
 				setXRotation(XROTATION_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
 				setYRotation(YROTATION_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
 				setZRotation(ZROTATION_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
 				setLength(LENGTH_EDEFAULT);
 				return;
 		}
@@ -342,15 +342,15 @@ public class VectorImpl extends NodeImpl implements Vector
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
 				return xRotation != XROTATION_EDEFAULT;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
 				return yRotation != YROTATION_EDEFAULT;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
 				return zRotation != ZROTATION_EDEFAULT;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
 				return length != LENGTH_EDEFAULT;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__END_POINT:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.VECTOR__END_POINT:
 				return END_POINT_EDEFAULT == null ? getEndPoint() != null : !END_POINT_EDEFAULT.equals(getEndPoint());
 		}
 		return super.eIsSet(featureID);

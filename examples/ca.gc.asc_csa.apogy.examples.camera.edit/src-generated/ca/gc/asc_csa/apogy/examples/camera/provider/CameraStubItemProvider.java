@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.provider;
+package ca.gc.asc_csa.apogy.examples.camera.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -9,12 +9,12 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.examples.camera.CameraStub;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.examples.camera.CameraStub;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.CameraStub} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.CameraStub} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -121,8 +121,8 @@ public class CameraStubItemProvider extends CameraItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
+			childFeature == ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
+			childFeature == ApogyExamplesCameraPackage.Literals.CAMERA__FOV;
 
 		if (qualify) {
 			return getString

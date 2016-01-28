@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -18,9 +18,9 @@ import javax.vecmath.Point2d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.ui.MapRuler;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
@@ -36,7 +36,7 @@ import org.jfree.ui.TextAnchor;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapRulerImpl#getRulerColor <em>Ruler Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapRulerImpl#getRulerColor <em>Ruler Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,7 +51,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Color3f RULER_COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+  protected static final Color3f RULER_COLOR_EDEFAULT = (Color3f)ApogyCoreEnvironmentUIFactory.eINSTANCE.createFromString(ApogyCoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
   /**
 	 * The cached value of the '{@link #getRulerColor() <em>Ruler Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -96,7 +96,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_RULER;
+		return ApogyCoreEnvironmentUIPackage.Literals.MAP_RULER;
 	}
 
   /**
@@ -130,7 +130,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
 		Color3f oldRulerColor = rulerColor;
 		rulerColor = newRulerColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR, oldRulerColor, rulerColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR, oldRulerColor, rulerColor));
 	}
 
   /**
@@ -142,7 +142,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
+			case ApogyCoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
 				return getRulerColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -157,7 +157,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
+			case ApogyCoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
 				setRulerColor((Color3f)newValue);
 				return;
 		}
@@ -173,7 +173,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
+			case ApogyCoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
 				setRulerColor(RULER_COLOR_EDEFAULT);
 				return;
 		}
@@ -189,7 +189,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
+			case ApogyCoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
 				return RULER_COLOR_EDEFAULT == null ? rulerColor != null : !RULER_COLOR_EDEFAULT.equals(rulerColor);
 		}
 		return super.eIsSet(featureID);

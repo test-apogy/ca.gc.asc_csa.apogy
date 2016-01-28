@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -34,12 +34,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getAltitude <em>Altitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getAzimuth <em>Azimuth</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates#getAltitude <em>Altitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates#getAzimuth <em>Azimuth</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getHorizontalCoordinates()
  * @model
  * @generated
  */
@@ -56,14 +56,14 @@ public interface HorizontalCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Altitude</em>' attribute.
 	 * @see #setAltitude(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates_Altitude()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getHorizontalCoordinates_Altitude()
 	 * @model unique="false"
 	 * @generated
 	 */
   double getAltitude();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getAltitude <em>Altitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates#getAltitude <em>Altitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Altitude</em>' attribute.
@@ -82,14 +82,14 @@ public interface HorizontalCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth</em>' attribute.
 	 * @see #setAzimuth(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates_Azimuth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getHorizontalCoordinates_Azimuth()
 	 * @model unique="false"
 	 * @generated
 	 */
   double getAzimuth();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getAzimuth <em>Azimuth</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates#getAzimuth <em>Azimuth</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth</em>' attribute.
@@ -108,14 +108,14 @@ public interface HorizontalCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates_Radius()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getHorizontalCoordinates_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */
   double getRadius();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getRadius <em>Radius</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates#getRadius <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Radius</em>' attribute.

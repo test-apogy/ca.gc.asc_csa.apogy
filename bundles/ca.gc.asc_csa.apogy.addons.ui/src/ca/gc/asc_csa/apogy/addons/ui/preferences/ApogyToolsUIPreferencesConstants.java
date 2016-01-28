@@ -1,9 +1,9 @@
-package org.eclipse.symphony.addons.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.ui.preferences;
 
 import org.eclipse.swt.graphics.RGB;
 
 
-public class SymphonyToolsUIPreferencesConstants 
+public class ApogyToolsUIPreferencesConstants 
 {
 	// Visibility Constants.
 	public static final String DEFAULT_SUN_VECTOR_COLOR_ID = "DEFAULT_SUN_VECTOR_COLOR_ID";	

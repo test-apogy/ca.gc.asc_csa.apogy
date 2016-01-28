@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import junit.framework.TestCase;
 
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +14,7 @@ import org.eclipse.symphony.core.environment.AbstractMapLayer;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.AbstractMapLayer#getAbstractMapLayerNode() <em>Abstract Map Layer Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getAbstractMapLayerNode() <em>Abstract Map Layer Node</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -60,10 +60,10 @@ public abstract class AbstractMapLayerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.AbstractMapLayer#getAbstractMapLayerNode() <em>Abstract Map Layer Node</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getAbstractMapLayerNode() <em>Abstract Map Layer Node</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.AbstractMapLayer#getAbstractMapLayerNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer#getAbstractMapLayerNode()
 	 * @generated_NOT
 	 */
 	public void testGetAbstractMapLayerNode() {

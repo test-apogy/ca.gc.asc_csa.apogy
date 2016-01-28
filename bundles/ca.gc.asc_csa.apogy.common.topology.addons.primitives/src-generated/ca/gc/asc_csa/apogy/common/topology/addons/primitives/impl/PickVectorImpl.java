@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.topology.addons.primitives.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.addons.primitives.PickVector;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.PickVector;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,12 +27,12 @@ import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTo
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getIntersectionDistance <em>Intersection Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getIntersectedNode <em>Intersected Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getRelativeIntersectionPosition <em>Relative Intersection Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getAbsoluteIntersectionPosition <em>Absolute Intersection Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getNodeTypesInIntersection <em>Node Types In Intersection</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getNodeTypesToExcludeFromIntersection <em>Node Types To Exclude From Intersection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.PickVectorImpl#getIntersectionDistance <em>Intersection Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.PickVectorImpl#getIntersectedNode <em>Intersected Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.PickVectorImpl#getRelativeIntersectionPosition <em>Relative Intersection Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.PickVectorImpl#getAbsoluteIntersectionPosition <em>Absolute Intersection Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.PickVectorImpl#getNodeTypesInIntersection <em>Node Types In Intersection</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.impl.PickVectorImpl#getNodeTypesToExcludeFromIntersection <em>Node Types To Exclude From Intersection</em>}</li>
  * </ul>
  *
  * @generated
@@ -144,7 +144,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR;
+		return ApogyCommonTopologyAddonsPrimitivesPackage.Literals.PICK_VECTOR;
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 		double oldIntersectionDistance = intersectionDistance;
 		intersectionDistance = newIntersectionDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE, oldIntersectionDistance, intersectionDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE, oldIntersectionDistance, intersectionDistance));
 	}
 
 	/**
@@ -179,7 +179,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 			intersectedNode = (Node)eResolveProxy(oldIntersectedNode);
 			if (intersectedNode != oldIntersectedNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE, oldIntersectedNode, intersectedNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE, oldIntersectedNode, intersectedNode));
 			}
 		}
 		return intersectedNode;
@@ -203,7 +203,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 		Node oldIntersectedNode = intersectedNode;
 		intersectedNode = newIntersectedNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE, oldIntersectedNode, intersectedNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE, oldIntersectedNode, intersectedNode));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	 */
 	public EList<EClass> getNodeTypesInIntersection() {
 		if (nodeTypesInIntersection == null) {
-			nodeTypesInIntersection = new EObjectResolvingEList<EClass>(EClass.class, this, Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION);
+			nodeTypesInIntersection = new EObjectResolvingEList<EClass>(EClass.class, this, ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION);
 		}
 		return nodeTypesInIntersection;
 	}
@@ -236,7 +236,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 		Point3d oldRelativeIntersectionPosition = relativeIntersectionPosition;
 		relativeIntersectionPosition = newRelativeIntersectionPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION, oldRelativeIntersectionPosition, relativeIntersectionPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION, oldRelativeIntersectionPosition, relativeIntersectionPosition));
 	}
 
 	/**
@@ -257,7 +257,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 		Point3d oldAbsoluteIntersectionPosition = absoluteIntersectionPosition;
 		absoluteIntersectionPosition = newAbsoluteIntersectionPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION, oldAbsoluteIntersectionPosition, absoluteIntersectionPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION, oldAbsoluteIntersectionPosition, absoluteIntersectionPosition));
 	}
 
 	/**
@@ -267,7 +267,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	 */
 	public EList<EClass> getNodeTypesToExcludeFromIntersection() {
 		if (nodeTypesToExcludeFromIntersection == null) {
-			nodeTypesToExcludeFromIntersection = new EObjectResolvingEList<EClass>(EClass.class, this, Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION);
+			nodeTypesToExcludeFromIntersection = new EObjectResolvingEList<EClass>(EClass.class, this, ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION);
 		}
 		return nodeTypesToExcludeFromIntersection;
 	}
@@ -326,18 +326,18 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
 				return getIntersectionDistance();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
 				if (resolve) return getIntersectedNode();
 				return basicGetIntersectedNode();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
 				return getRelativeIntersectionPosition();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
 				return getAbsoluteIntersectionPosition();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
 				return getNodeTypesInIntersection();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
 				return getNodeTypesToExcludeFromIntersection();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -352,23 +352,23 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
 				setIntersectionDistance((Double)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
 				setIntersectedNode((Node)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
 				setRelativeIntersectionPosition((Point3d)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
 				setAbsoluteIntersectionPosition((Point3d)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
 				getNodeTypesInIntersection().clear();
 				getNodeTypesInIntersection().addAll((Collection<? extends EClass>)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
 				getNodeTypesToExcludeFromIntersection().clear();
 				getNodeTypesToExcludeFromIntersection().addAll((Collection<? extends EClass>)newValue);
 				return;
@@ -384,22 +384,22 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
 				setIntersectionDistance(INTERSECTION_DISTANCE_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
 				setIntersectedNode((Node)null);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
 				setRelativeIntersectionPosition(RELATIVE_INTERSECTION_POSITION_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
 				setAbsoluteIntersectionPosition(ABSOLUTE_INTERSECTION_POSITION_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
 				getNodeTypesInIntersection().clear();
 				return;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
 				getNodeTypesToExcludeFromIntersection().clear();
 				return;
 		}
@@ -414,17 +414,17 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTION_DISTANCE:
 				return intersectionDistance != INTERSECTION_DISTANCE_EDEFAULT;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__INTERSECTED_NODE:
 				return intersectedNode != null;
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__RELATIVE_INTERSECTION_POSITION:
 				return RELATIVE_INTERSECTION_POSITION_EDEFAULT == null ? relativeIntersectionPosition != null : !RELATIVE_INTERSECTION_POSITION_EDEFAULT.equals(relativeIntersectionPosition);
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__ABSOLUTE_INTERSECTION_POSITION:
 				return ABSOLUTE_INTERSECTION_POSITION_EDEFAULT == null ? absoluteIntersectionPosition != null : !ABSOLUTE_INTERSECTION_POSITION_EDEFAULT.equals(absoluteIntersectionPosition);
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_IN_INTERSECTION:
 				return nodeTypesInIntersection != null && !nodeTypesInIntersection.isEmpty();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR__NODE_TYPES_TO_EXCLUDE_FROM_INTERSECTION:
 				return nodeTypesToExcludeFromIntersection != null && !nodeTypesToExcludeFromIntersection.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -438,7 +438,7 @@ public class PickVectorImpl extends VectorImpl implements PickVector {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PICK_VECTOR___IS_NODE_INCLUDED_IN_INTERSECTION__NODE:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.PICK_VECTOR___IS_NODE_INCLUDED_IN_INTERSECTION__NODE:
 				return isNodeIncludedInIntersection((Node)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -4,7 +4,7 @@
  *
  * $Id: SimpleSonarItemProvider.java,v 1.3.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.SimpleSonar} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.SimpleSonar} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class SimpleSonarItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleSonar_echoDetected_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleSonar_echoDetected_feature", "_UI_SimpleSonar_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_SONAR__ECHO_DETECTED,
+				 ApogyAddonsSensorsRangePackage.Literals.SIMPLE_SONAR__ECHO_DETECTED,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class SimpleSonarItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleSonar.class)) {
-			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case ApogyAddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

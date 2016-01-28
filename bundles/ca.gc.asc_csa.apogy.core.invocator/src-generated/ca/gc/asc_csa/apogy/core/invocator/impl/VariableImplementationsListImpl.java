@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.invocator.VariableImplementationsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementationsList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -26,7 +26,7 @@ import org.eclipse.symphony.core.invocator.VariableImplementationsList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationsListImpl#getVariableImplementations <em>Variable Implementations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.VariableImplementationsListImpl#getVariableImplementations <em>Variable Implementations</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,7 +58,7 @@ public class VariableImplementationsListImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATIONS_LIST;
+		return ApogyCoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATIONS_LIST;
 	}
 
 	/**
@@ -71,8 +71,8 @@ public class VariableImplementationsListImpl extends
 			variableImplementations = new EObjectContainmentWithInverseEList<VariableImplementation>(
 					VariableImplementation.class,
 					this,
-					Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS,
-					Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST);
+					ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS,
+					ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST);
 		}
 		return variableImplementations;
 	}
@@ -126,7 +126,7 @@ public class VariableImplementationsListImpl extends
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVariableImplementations()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -140,7 +140,7 @@ public class VariableImplementationsListImpl extends
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
 				return ((InternalEList<?>)getVariableImplementations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -153,7 +153,7 @@ public class VariableImplementationsListImpl extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
 				return getVariableImplementations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -167,7 +167,7 @@ public class VariableImplementationsListImpl extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
 				getVariableImplementations().clear();
 				getVariableImplementations().addAll((Collection<? extends VariableImplementation>)newValue);
 				return;
@@ -182,7 +182,7 @@ public class VariableImplementationsListImpl extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
 				getVariableImplementations().clear();
 				return;
 		}
@@ -196,7 +196,7 @@ public class VariableImplementationsListImpl extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
 				return variableImplementations != null && !variableImplementations.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -210,9 +210,9 @@ public class VariableImplementationsListImpl extends
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST___GET_VARIABLE_IMPLEMENTATION__VARIABLE:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST___GET_VARIABLE_IMPLEMENTATION__VARIABLE:
 				return getVariableImplementation((Variable)arguments.get(0));
-			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST___GET_VARIABLE_IMPLEMENTATION__STRING:
+			case ApogyCoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST___GET_VARIABLE_IMPLEMENTATION__STRING:
 				return getVariableImplementation((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

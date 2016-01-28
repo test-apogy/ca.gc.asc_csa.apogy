@@ -1,11 +1,11 @@
 /**
  */
-package org.eclipse.symphony.core.invocator.ui.util;
+package ca.gc.asc_csa.apogy.core.invocator.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.invocator.ui.*;
+import ca.gc.asc_csa.apogy.core.invocator.ui.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,17 +17,17 @@ import org.eclipse.symphony.core.invocator.ui.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIPackage
+ * @see ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIPackage
  * @generated
  */
-public class Symphony__CoreInvocatorUISwitch<T> extends Switch<T> {
+public class ApogyCoreInvocatorUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CoreInvocatorUIPackage modelPackage;
+	protected static ApogyCoreInvocatorUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -35,9 +35,9 @@ public class Symphony__CoreInvocatorUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreInvocatorUISwitch() {
+	public ApogyCoreInvocatorUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreInvocatorUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreInvocatorUIPackage.eINSTANCE;
 		}
 	}
 
@@ -64,9 +64,9 @@ public class Symphony__CoreInvocatorUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreInvocatorUIPackage.SYMPHONY_CORE_INVOCATOR_UI_FACADE: {
-				Symphony__CoreInvocatorUIFacade symphony__CoreInvocatorUIFacade = (Symphony__CoreInvocatorUIFacade)theEObject;
-				T result = caseSymphony__CoreInvocatorUIFacade(symphony__CoreInvocatorUIFacade);
+			case ApogyCoreInvocatorUIPackage.APOGY_CORE_INVOCATOR_UI_FACADE: {
+				ApogyCoreInvocatorUIFacade apogy__CoreInvocatorUIFacade = (ApogyCoreInvocatorUIFacade)theEObject;
+				T result = caseApogyCoreInvocatorUIFacade(apogy__CoreInvocatorUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -85,7 +85,7 @@ public class Symphony__CoreInvocatorUISwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphony__CoreInvocatorUIFacade(Symphony__CoreInvocatorUIFacade object) {
+	public T caseApogyCoreInvocatorUIFacade(ApogyCoreInvocatorUIFacade object) {
 		return null;
 	}
 
@@ -105,4 +105,4 @@ public class Symphony__CoreInvocatorUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CoreInvocatorUISwitch
+} //ApogyCoreInvocatorUISwitch

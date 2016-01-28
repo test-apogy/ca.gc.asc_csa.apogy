@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.log.tests;
+package ca.gc.asc_csa.apogy.common.log.tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.las;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

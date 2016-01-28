@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.impl;
+package ca.gc.asc_csa.apogy.common.processors.impl;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EAttribute;
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.processors.JobProcessorsChain;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsFactory;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.ProcessorsChain;
-import org.eclipse.symphony.common.processors.VerboseProvider;
+import ca.gc.asc_csa.apogy.common.processors.JobProcessorsChain;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsFactory;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.ProcessorsChain;
+import ca.gc.asc_csa.apogy.common.processors.VerboseProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.processors.VerboseProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implements Symphony__CommonProcessorsPackage {
+public class ApogyCommonProcessorsPackageImpl extends EPackageImpl implements ApogyCommonProcessorsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,12 +89,12 @@ public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonProcessorsPackageImpl() {
-		super(eNS_URI, Symphony__CommonProcessorsFactory.eINSTANCE);
+	private ApogyCommonProcessorsPackageImpl() {
+		super(eNS_URI, ApogyCommonProcessorsFactory.eINSTANCE);
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implemen
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonProcessorsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonProcessorsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -116,11 +116,11 @@ public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implemen
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonProcessorsPackage init() {
-		if (isInited) return (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
+	public static ApogyCommonProcessorsPackage init() {
+		if (isInited) return (ApogyCommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonProcessorsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonProcessorsPackageImpl theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonProcessorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonProcessorsPackageImpl());
+		ApogyCommonProcessorsPackageImpl theApogyCommonProcessorsPackage = (ApogyCommonProcessorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonProcessorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonProcessorsPackageImpl());
 
 		isInited = true;
 
@@ -128,18 +128,18 @@ public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implemen
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonProcessorsPackage.createPackageContents();
+		theApogyCommonProcessorsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonProcessorsPackage.initializePackageContents();
+		theApogyCommonProcessorsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonProcessorsPackage.freeze();
+		theApogyCommonProcessorsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonProcessorsPackage.eNS_URI, theSymphony__CommonProcessorsPackage);
-		return theSymphony__CommonProcessorsPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonProcessorsPackage.eNS_URI, theApogyCommonProcessorsPackage);
+		return theApogyCommonProcessorsPackage;
 	}
 
 	/**
@@ -291,8 +291,8 @@ public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonProcessorsFactory getSymphony__CommonProcessorsFactory() {
-		return (Symphony__CommonProcessorsFactory)getEFactoryInstance();
+	public ApogyCommonProcessorsFactory getApogyCommonProcessorsFactory() {
+		return (ApogyCommonProcessorsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -453,16 +453,16 @@ public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implemen
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonProcessors",
+			 "prefix", "ApogyCommonProcessors",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonProcessors",
+			 "modelName", "ApogyCommonProcessors",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.processors/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.processors.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.processors/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.processors.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common"
 		   });	
 		addAnnotation
 		  (monitorableEClass, 
@@ -484,4 +484,4 @@ public class Symphony__CommonProcessorsPackageImpl extends EPackageImpl implemen
 		   });
 	}
 
-} //Symphony__CommonProcessorsPackageImpl
+} //ApogyCommonProcessorsPackageImpl

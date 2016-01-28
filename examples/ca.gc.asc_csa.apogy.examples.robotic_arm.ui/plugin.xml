@@ -9,22 +9,22 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.examples.ui.category"
-            class="org.eclipse.symphony.examples.robotic_arm.ui.views.RoboticArmControlView"
-            id="org.eclipse.symphony.examples.robotic_arm.ui.views.RoboticArmControlView"
+            category="ca.gc.asc_csa.apogy.examples.ui.category"
+            class="ca.gc.asc_csa.apogy.examples.robotic_arm.ui.views.RoboticArmControlView"
+            id="ca.gc.asc_csa.apogy.examples.robotic_arm.ui.views.RoboticArmControlView"
             name="Robotic Arm Control View"
             restorable="true">
       </view>
  
       <category
-            id="org.eclipse.symphony.examples.ui.category"
-            name="Symphony Examples">
+            id="ca.gc.asc_csa.apogy.examples.ui.category"
+            name="Apogy Examples">
       </category>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.converters">
+         point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-            Class="org.eclipse.symphony.examples.robotic_arm.ui.converters.VariableToRoboticArmConverter">
+            Class="ca.gc.asc_csa.apogy.examples.robotic_arm.ui.converters.VariableToRoboticArmConverter">
       </new_element>
    </extension>
 

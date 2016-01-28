@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_camera -->
+      <!-- @generated apogy_examples_camera -->
       <factory
-            uri="org.eclipse.symphony.examples.camera.symphony"
-            class="org.eclipse.symphony.examples.camera.symphony.provider.Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.camera.apogy"
+            class="ca.gc.asc_csa.apogy.examples.camera.apogy.provider.ApogyExamplesCameraApogyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -1,18 +1,18 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.views;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.Activator;
-import org.eclipse.symphony.common.topology.addons.dynamics.ui.composites.CylindricalConstraintComposite;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites.CylindricalConstraintComposite;
 
 public class CylindricalConstraintView extends AbstractPinableView<CylindricalConstraint>
 {
 	private CylindricalConstraint cylindricalConstraint;
-	public static final String ID = "org.eclipse.symphony.common.topology.addons.dynamics.ui.views.CylindricalConstraintView"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.views.CylindricalConstraintView"; //$NON-NLS-1$
 
 	private CylindricalConstraintComposite cylindricalConstraintComposite = null;
 	

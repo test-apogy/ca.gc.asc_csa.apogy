@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology;
+package ca.gc.asc_csa.apogy.core.topology;
 
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.WorksiteNode;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.core.ResultsListNode;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Symphony Environment Node</b></em>'.
+ * A representation of the model object '<em><b>Apogy Environment Node</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -23,43 +23,43 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getWorksiteNode <em>Worksite Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getResultsListNode <em>Results List Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getSymphonySystemAPIsNode <em>Symphony System AP Is Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode#getApogyEnvironment <em>Apogy Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode#getWorksiteNode <em>Worksite Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode#getResultsListNode <em>Results List Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode#getApogySystemAPIsNode <em>Apogy System AP Is Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode()
+ * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getApogyEnvironmentNode()
  * @model
  * @generated
  */
-public interface SymphonyEnvironmentNode extends ReferencedGroupNode
+public interface ApogyEnvironmentNode extends ReferencedGroupNode
 {
   /**
-	 * Returns the value of the '<em><b>Symphony Environment</b></em>' reference.
+	 * Returns the value of the '<em><b>Apogy Environment</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Symphony Environment</em>' reference isn't clear,
+   * If the meaning of the '<em>Apogy Environment</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Symphony Environment</em>' reference.
-	 * @see #setSymphonyEnvironment(SymphonyEnvironment)
-	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_SymphonyEnvironment()
+	 * @return the value of the '<em>Apogy Environment</em>' reference.
+	 * @see #setApogyEnvironment(ApogyEnvironment)
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getApogyEnvironmentNode_ApogyEnvironment()
 	 * @model transient="true"
 	 * @generated
 	 */
-  SymphonyEnvironment getSymphonyEnvironment();
+  ApogyEnvironment getApogyEnvironment();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getSymphonyEnvironment <em>Symphony Environment</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode#getApogyEnvironment <em>Apogy Environment</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Symphony Environment</em>' reference.
-	 * @see #getSymphonyEnvironment()
+	 * @param value the new value of the '<em>Apogy Environment</em>' reference.
+	 * @see #getApogyEnvironment()
 	 * @generated
 	 */
-  void setSymphonyEnvironment(SymphonyEnvironment value);
+  void setApogyEnvironment(ApogyEnvironment value);
 
   /**
 	 * Returns the value of the '<em><b>Worksite Node</b></em>' reference.
@@ -71,14 +71,14 @@ public interface SymphonyEnvironmentNode extends ReferencedGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksite Node</em>' reference.
 	 * @see #setWorksiteNode(WorksiteNode)
-	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_WorksiteNode()
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getApogyEnvironmentNode_WorksiteNode()
 	 * @model required="true" transient="true" derived="true"
 	 * @generated
 	 */
   WorksiteNode getWorksiteNode();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getWorksiteNode <em>Worksite Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode#getWorksiteNode <em>Worksite Node</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Worksite Node</em>' reference.
@@ -96,26 +96,26 @@ public interface SymphonyEnvironmentNode extends ReferencedGroupNode
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Results List Node</em>' reference.
-	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_ResultsListNode()
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getApogyEnvironmentNode_ResultsListNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
   ResultsListNode getResultsListNode();
 
   /**
-	 * Returns the value of the '<em><b>Symphony System AP Is Node</b></em>' reference.
+	 * Returns the value of the '<em><b>Apogy System AP Is Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Symphony System AP Is Node</em>' reference isn't clear,
+   * If the meaning of the '<em>Apogy System AP Is Node</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Symphony System AP Is Node</em>' reference.
-	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_SymphonySystemAPIsNode()
+	 * @return the value of the '<em>Apogy System AP Is Node</em>' reference.
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage#getApogyEnvironmentNode_ApogySystemAPIsNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
-  SymphonySystemAPIsNode getSymphonySystemAPIsNode();
+  ApogySystemAPIsNode getApogySystemAPIsNode();
 
   /**
 	 * <!-- begin-user-doc -->
@@ -125,4 +125,4 @@ public interface SymphonyEnvironmentNode extends ReferencedGroupNode
 	 */
   void dispose();
 
-} // SymphonyEnvironmentNode
+} // ApogyEnvironmentNode

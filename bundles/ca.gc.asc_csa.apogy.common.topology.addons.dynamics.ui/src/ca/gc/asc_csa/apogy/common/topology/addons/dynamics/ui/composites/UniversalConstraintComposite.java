@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -14,14 +14,14 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage.Literals;
-import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage.Literals;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint;
 
 public class UniversalConstraintComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint universalConstraint;
+	private ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint universalConstraint;
 	private Button enabledButton;
 	private ConstraintStateComposite angular0ConstraintStateComposite;
 	private ConstraintStateComposite angular1ConstraintStateComposite;
@@ -30,7 +30,7 @@ public class UniversalConstraintComposite extends Composite {
 	public UniversalConstraintComposite(
 			Composite parent,
 			int style,
-			org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint newUniversalConstraint) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint newUniversalConstraint) {
 		this(parent, style);
 		setUniversalConstraint(newUniversalConstraint);
 	}
@@ -113,7 +113,7 @@ public class UniversalConstraintComposite extends Composite {
 	}
 
 	public void setUniversalConstraint(
-			org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint newUniversalConstraint,
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.UniversalConstraint newUniversalConstraint,
 			boolean update) {
 		universalConstraint = newUniversalConstraint;
 		if (update) {

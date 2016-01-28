@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.BindingsSet} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.BindingsSet} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -75,8 +75,8 @@ public class BindingsSetItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST);
-			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST);
+			childrenFeatures.add(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST);
+			childrenFeatures.add(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -129,8 +129,8 @@ public class BindingsSetItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BindingsSet.class)) {
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
-			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
+			case ApogyCommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,13 +150,13 @@ public class BindingsSetItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST,
-				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
+				(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST,
+				 ApogyCommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST,
-				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsList()));
+				(ApogyCommonTopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST,
+				 ApogyCommonTopologyBindingsFactory.eINSTANCE.createBindingsList()));
 	}
 
 	/**

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.provider;
+package ca.gc.asc_csa.apogy.core.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,27 +13,27 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.invocator.provider.EnvironmentItemProvider;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.invocator.provider.EnvironmentItemProvider;
 
 /**
  * This is the item provider adapter for a
- * {@link org.eclipse.symphony.core.SymphonyEnvironment} object. <!--
+ * {@link ca.gc.asc_csa.apogy.core.ApogyEnvironment} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
+public class ApogyEnvironmentItemProvider extends EnvironmentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	public SymphonyEnvironmentItemProvider(AdapterFactory adapterFactory) {
+	public ApogyEnvironmentItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,7 +68,7 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
+				 ApogyCommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -88,9 +88,9 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyEnvironment_activeWorksite_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironment_activeWorksite_feature", "_UI_SymphonyEnvironment_type"),
-				 Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE,
+				 getString("_UI_ApogyEnvironment_activeWorksite_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEnvironment_activeWorksite_feature", "_UI_ApogyEnvironment_type"),
+				 ApogyCorePackage.Literals.APOGY_ENVIRONMENT__ACTIVE_WORKSITE,
 				 true,
 				 false,
 				 true,
@@ -110,9 +110,9 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyEnvironment_activeTimeSource_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironment_activeTimeSource_feature", "_UI_SymphonyEnvironment_type"),
-				 Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE,
+				 getString("_UI_ApogyEnvironment_activeTimeSource_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEnvironment_activeTimeSource_feature", "_UI_ApogyEnvironment_type"),
+				 ApogyCorePackage.Literals.APOGY_ENVIRONMENT__ACTIVE_TIME_SOURCE,
 				 true,
 				 false,
 				 true,
@@ -133,9 +133,9 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__WORKSITES_LIST);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY);
-			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__WORKSITES_LIST);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__APOGY_TOPOLOGY);
+			childrenFeatures.add(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__TIME_SOURCES_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -153,14 +153,14 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 	}
 
 	/**
-	 * This returns SymphonyEnvironment.gif.
+	 * This returns ApogyEnvironment.gif.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonyEnvironment"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyEnvironment"));
 	}
 
 	/**
@@ -171,10 +171,10 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SymphonyEnvironment)object).getName();
+		String label = ((ApogyEnvironment)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_SymphonyEnvironment_type") :
-			getString("_UI_SymphonyEnvironment_type") + " " + label;
+			getString("_UI_ApogyEnvironment_type") :
+			getString("_UI_ApogyEnvironment_type") + " " + label;
 	}
 
 	/**
@@ -188,13 +188,13 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SymphonyEnvironment.class)) {
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
+		switch (notification.getFeatureID(ApogyEnvironment.class)) {
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
-			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__WORKSITES_LIST:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
+			case ApogyCorePackage.APOGY_ENVIRONMENT__TIME_SOURCES_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -215,13 +215,13 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__WORKSITES_LIST,
-				 Symphony__CoreFactory.eINSTANCE.createWorksitesList()));
+				(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__WORKSITES_LIST,
+				 ApogyCoreFactory.eINSTANCE.createWorksitesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST,
-				 Symphony__CoreFactory.eINSTANCE.createTimeSourcesList()));
+				(ApogyCorePackage.Literals.APOGY_ENVIRONMENT__TIME_SOURCES_LIST,
+				 ApogyCoreFactory.eINSTANCE.createTimeSourcesList()));
 	}
 
 }

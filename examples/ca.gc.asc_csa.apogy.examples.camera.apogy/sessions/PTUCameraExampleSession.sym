@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:emf="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="_MefnwHgbEeWKP8VylKhlAA">
-  <environment xsi:type="core:SymphonyEnvironment" xmi:id="_MegO0HgbEeWKP8VylKhlAA" name="PTU Camera Example" description="This is a sample session, illustrating how to use the PTU camera example" activeContext="_MegO13gbEeWKP8VylKhlAA" time="2015-04-13T08:53:27.536-0400" activeWorksite="_MegO3ngbEeWKP8VylKhlAA" activeTimeSource="_Mehc9XgbEeWKP8VylKhlAA">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.apogy.core" xmlns:emf="ca.gc.asc_csa.apogy.common.emf" xmlns:environment="ca.gc.asc_csa.apogy.core.environment" xmlns:invocator="ca.gc.asc_csa.apogy.core.invocator" xmi:id="_MefnwHgbEeWKP8VylKhlAA">
+  <environment xsi:type="core:ApogyEnvironment" xmi:id="_MegO0HgbEeWKP8VylKhlAA" name="PTU Camera Example" description="This is a sample session, illustrating how to use the PTU camera example" activeContext="_MegO13gbEeWKP8VylKhlAA" time="2015-04-13T08:53:27.536-0400" activeWorksite="_MegO3ngbEeWKP8VylKhlAA" activeTimeSource="_Mehc9XgbEeWKP8VylKhlAA">
     <typesList xmi:id="_MegO0XgbEeWKP8VylKhlAA">
       <localTypes xmi:id="_MegO0ngbEeWKP8VylKhlAA"/>
       <registeredTypes xmi:id="_MegO03gbEeWKP8VylKhlAA"/>
     </typesList>
     <variablesList xmi:id="_MegO1HgbEeWKP8VylKhlAA">
       <variables xmi:id="_MegO1XgbEeWKP8VylKhlAA" name="ptuCamera">
-        <variableType href="platform:/plugin/org.eclipse.symphony.examples.camera.symphony/model/PTUCameraSymphonySystem.ss#_1LPEwArOEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/ca.gc.asc_csa.apogy.examples.camera.apogy/model/PTUCameraApogySystem.ss#_1LPEwArOEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="_MegO1ngbEeWKP8VylKhlAA">
       <contexts xsi:type="invocator:BasicContext" xmi:id="_MegO13gbEeWKP8VylKhlAA" name="Simulated Impl. Context" dataProductsList="_MeiEAngbEeWKP8VylKhlAA">
         <variableImplementationsList xmi:id="_MegO2HgbEeWKP8VylKhlAA">
           <variableImplementations xmi:id="_MegO2XgbEeWKP8VylKhlAA" variable="_MegO1XgbEeWKP8VylKhlAA">
-            <implementationClass href="org.eclipse.symphony.examples.camera#//PTUCameraSimulated"/>
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//PTUCameraSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="_MegO2ngbEeWKP8VylKhlAA" name="Stub Impl. Context" dataProductsList="_MeiEBHgbEeWKP8VylKhlAA">
         <variableImplementationsList xmi:id="_MegO23gbEeWKP8VylKhlAA">
           <variableImplementations xmi:id="_MegO3HgbEeWKP8VylKhlAA" variable="_MegO1XgbEeWKP8VylKhlAA">
-            <implementationClass href="org.eclipse.symphony.examples.camera#//PTUCameraStub"/>
+            <implementationClass href="ca.gc.asc_csa.apogy.examples.camera#//PTUCameraStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -32,7 +32,7 @@
         <mapsList xmi:id="_Meg14ngbEeWKP8VylKhlAA">
           <maps xmi:id="_Meg143gbEeWKP8VylKhlAA" name="MarsYard" description="Simple Mars Yard Map.">
             <transformation xmi:id="_Mehc8HgbEeWKP8VylKhlAA"/>
-            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_Mehc8XgbEeWKP8VylKhlAA" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_Mehc8XgbEeWKP8VylKhlAA" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." url="platform:/plugin/ca.gc.asc_csa.apogy.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
           </maps>
         </mapsList>
         <geographicalCoordinates xmi:id="_Mehc8ngbEeWKP8VylKhlAA" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
@@ -46,33 +46,33 @@
   <programsList xmi:id="_Mehc9ngbEeWKP8VylKhlAA">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_Mehc93gbEeWKP8VylKhlAA">
       <operationCalls xmi:id="_Mehc-HgbEeWKP8VylKhlAA" name="Init" variable="_MegO1XgbEeWKP8VylKhlAA">
-        <eOperation href="org.eclipse.symphony.examples.camera#//Camera/init"/>
+        <eOperation href="ca.gc.asc_csa.apogy.examples.camera#//Camera/init"/>
       </operationCalls>
       <operationCalls xmi:id="_Mehc-XgbEeWKP8VylKhlAA" name="Change Zoom" variable="_MegO1XgbEeWKP8VylKhlAA">
-        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//Zoomable/commandZoom"/>
+        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_Mehc-ngbEeWKP8VylKhlAA">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Mehc-3gbEeWKP8VylKhlAA" value="1.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Mehc_HgbEeWKP8VylKhlAA" name="Take Snapshot" variable="_MegO1XgbEeWKP8VylKhlAA">
-        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//AbstractCamera/takeSnapshot"/>
+        <eOperation href="ca.gc.asc_csa.apogy.addons.sensors.imaging#//AbstractCamera/takeSnapshot"/>
       </operationCalls>
       <operationCalls xmi:id="_Mehc_XgbEeWKP8VylKhlAA" name="Move To Pan / Tilt Angles" variable="_MegO1XgbEeWKP8VylKhlAA">
-        <eOperation href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
+        <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_Mehc_ngbEeWKP8VylKhlAA">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Mehc_3gbEeWKP8VylKhlAA" value="0.7853981633974483"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MehdAHgbEeWKP8VylKhlAA" value="1.5707963267948966"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_MehdAXgbEeWKP8VylKhlAA" name="Move By Pan / Tilt Offsets" variable="_MegO1XgbEeWKP8VylKhlAA">
-        <eOperation href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/moveByPanTilt"/>
+        <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/moveByPanTilt"/>
         <argumentsList xmi:id="_MehdAngbEeWKP8VylKhlAA">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MehdA3gbEeWKP8VylKhlAA" value="0.17453292519943295"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MehdBHgbEeWKP8VylKhlAA" value="-0.17453292519943295"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_MeiEAHgbEeWKP8VylKhlAA" name="Stop Movement" variable="_MegO1XgbEeWKP8VylKhlAA">
-        <eOperation href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/stopMotion"/>
+        <eOperation href="ca.gc.asc_csa.apogy.addons.actuators#//PanTiltUnit/stopMotion"/>
       </operationCalls>
     </programs>
   </programsList>

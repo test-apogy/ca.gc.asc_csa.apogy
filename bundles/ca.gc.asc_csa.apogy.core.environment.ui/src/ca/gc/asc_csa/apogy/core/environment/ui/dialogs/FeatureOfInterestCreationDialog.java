@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.dialogs;
+package ca.gc.asc_csa.apogy.core.environment.ui.dialogs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +16,16 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.Map;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 public class FeatureOfInterestCreationDialog extends Dialog 
 {
@@ -124,7 +124,7 @@ public class FeatureOfInterestCreationDialog extends Dialog
 	@Override
 	protected void okPressed() 
 	{					
-		foi = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest();
+		foi = ApogyCoreFactory.eINSTANCE.createFeatureOfInterest();
 		foi.setPose(pose);
 		foi.setName(nameText.getText());
 		foi.setDescription(descriptionText.getText());
@@ -181,13 +181,13 @@ public class FeatureOfInterestCreationDialog extends Dialog
 	{		
 		List<FeaturesOfInterestMapLayer> list = new ArrayList<FeaturesOfInterestMapLayer>();	
 	
-		if(invocatorSession.getEnvironment() instanceof SymphonyEnvironment)
+		if(invocatorSession.getEnvironment() instanceof ApogyEnvironment)
 		{
-			SymphonyEnvironment symphonyEnvironment = (SymphonyEnvironment) invocatorSession.getEnvironment();
+			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) invocatorSession.getEnvironment();
 		
-			if(symphonyEnvironment.getActiveWorksite() instanceof SurfaceWorksite)
+			if(apogyEnvironment.getActiveWorksite() instanceof SurfaceWorksite)
 			{
-				SurfaceWorksite surfaceWorksite  = (SurfaceWorksite) symphonyEnvironment.getActiveWorksite();
+				SurfaceWorksite surfaceWorksite  = (SurfaceWorksite) apogyEnvironment.getActiveWorksite();
 				MapsList mapList = surfaceWorksite.getMapsList();			
 				for(Map map : mapList.getMaps())
 				{

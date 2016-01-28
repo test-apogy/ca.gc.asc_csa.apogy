@@ -4,7 +4,7 @@
  *
  * $Id: LineRangeScannerItemProvider.java,v 1.3.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.LineRangeScanner} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.LineRangeScanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -69,7 +69,7 @@ public class LineRangeScannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LineRangeScanner_angularResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LineRangeScanner_angularResolution_feature", "_UI_LineRangeScanner_type"),
-				 Symphony__AddonsSensorsRangePackage.Literals.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION,
+				 ApogyAddonsSensorsRangePackage.Literals.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class LineRangeScannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LineRangeScanner.class)) {
-			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
+			case ApogyAddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

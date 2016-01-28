@@ -1,33 +1,33 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony.util;
+package ca.gc.asc_csa.apogy.examples.camera.apogy.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.camera.symphony.CameraData;
-import org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
-import org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.CameraApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage
  * @generated
  */
-public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFactoryImpl
+public class ApogyExamplesCameraApogyAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -35,7 +35,7 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesCameraSymphonyPackage modelPackage;
+  protected static ApogyExamplesCameraApogyPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -43,10 +43,10 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesCameraSymphonyAdapterFactory()
+  public ApogyExamplesCameraApogyAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesCameraSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesCameraApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -76,19 +76,19 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__ExamplesCameraSymphonySwitch<Adapter> modelSwitch =
-    new Symphony__ExamplesCameraSymphonySwitch<Adapter>() {
+  protected ApogyExamplesCameraApogySwitch<Adapter> modelSwitch =
+    new ApogyExamplesCameraApogySwitch<Adapter>() {
 			@Override
-			public Adapter caseCameraSymphonySystemApiAdapter(CameraSymphonySystemApiAdapter object) {
-				return createCameraSymphonySystemApiAdapterAdapter();
+			public Adapter caseCameraApogySystemApiAdapter(CameraApogySystemApiAdapter object) {
+				return createCameraApogySystemApiAdapterAdapter();
 			}
 			@Override
 			public Adapter caseCameraData(CameraData object) {
 				return createCameraDataAdapter();
 			}
 			@Override
-			public Adapter casePTUCameraSymphonySystemApiAdapter(PTUCameraSymphonySystemApiAdapter object) {
-				return createPTUCameraSymphonySystemApiAdapterAdapter();
+			public Adapter casePTUCameraApogySystemApiAdapter(PTUCameraApogySystemApiAdapter object) {
+				return createPTUCameraApogySystemApiAdapterAdapter();
 			}
 			@Override
 			public Adapter casePTUCameraData(PTUCameraData object) {
@@ -103,8 +103,8 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 				return createPoseProviderAdapter();
 			}
 			@Override
-			public Adapter caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object) {
-				return createSymphonySystemApiAdapterAdapter();
+			public Adapter caseApogySystemApiAdapter(ApogySystemApiAdapter object) {
+				return createApogySystemApiAdapterAdapter();
 			}
 			@Override
 			public Adapter caseAbstractInitializationData(AbstractInitializationData object) {
@@ -115,8 +115,8 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 				return createInitializationDataAdapter();
 			}
 			@Override
-			public Adapter caseSymphonyInitializationData(SymphonyInitializationData object) {
-				return createSymphonyInitializationDataAdapter();
+			public Adapter caseApogyInitializationData(ApogyInitializationData object) {
+				return createApogyInitializationDataAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -140,28 +140,28 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter <em>Camera Symphony System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraApogySystemApiAdapter <em>Camera Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.CameraApogySystemApiAdapter
 	 * @generated
 	 */
-  public Adapter createCameraSymphonySystemApiAdapterAdapter()
+  public Adapter createCameraApogySystemApiAdapterAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.symphony.CameraData <em>Camera Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData <em>Camera Data</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.symphony.CameraData
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData
 	 * @generated
 	 */
   public Adapter createCameraDataAdapter()
@@ -170,28 +170,28 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter <em>PTU Camera Symphony System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraApogySystemApiAdapter <em>PTU Camera Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraApogySystemApiAdapter
 	 * @generated
 	 */
-  public Adapter createPTUCameraSymphonySystemApiAdapterAdapter()
+  public Adapter createPTUCameraApogySystemApiAdapterAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData <em>PTU Camera Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData <em>PTU Camera Data</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.camera.symphony.PTUCameraData
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.PTUCameraData
 	 * @generated
 	 */
   public Adapter createPTUCameraDataAdapter()
@@ -200,13 +200,13 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
+	 * @see ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter
 	 * @generated
 	 */
 	public Adapter createTypeApiAdapterAdapter() {
@@ -214,13 +214,13 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseProvider <em>Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.PoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.PoseProvider
+	 * @see ca.gc.asc_csa.apogy.core.PoseProvider
 	 * @generated
 	 */
   public Adapter createPoseProviderAdapter()
@@ -229,28 +229,28 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter <em>Apogy System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.SymphonySystemApiAdapter
+	 * @see ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
 	 * @generated
 	 */
-  public Adapter createSymphonySystemApiAdapterAdapter()
+  public Adapter createApogySystemApiAdapterAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData
 	 * @generated
 	 */
 	public Adapter createAbstractInitializationDataAdapter() {
@@ -258,13 +258,13 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.InitializationData <em>Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.invocator.InitializationData <em>Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.InitializationData
+	 * @see ca.gc.asc_csa.apogy.core.invocator.InitializationData
 	 * @generated
 	 */
 	public Adapter createInitializationDataAdapter() {
@@ -272,16 +272,16 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonyInitializationData <em>Symphony Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ApogyInitializationData <em>Apogy Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.SymphonyInitializationData
+	 * @see ca.gc.asc_csa.apogy.core.ApogyInitializationData
 	 * @generated
 	 */
-  public Adapter createSymphonyInitializationDataAdapter()
+  public Adapter createApogyInitializationDataAdapter()
   {
 		return null;
 	}
@@ -299,4 +299,4 @@ public class Symphony__ExamplesCameraSymphonyAdapterFactory extends AdapterFacto
 		return null;
 	}
 
-} //Symphony__ExamplesCameraSymphonyAdapterFactory
+} //ApogyExamplesCameraApogyAdapterFactory

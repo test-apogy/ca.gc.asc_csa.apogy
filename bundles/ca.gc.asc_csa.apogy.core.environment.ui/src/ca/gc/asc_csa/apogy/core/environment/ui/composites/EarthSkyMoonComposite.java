@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.ui.composites;
+package ca.gc.asc_csa.apogy.core.environment.ui.composites;
 
 import java.text.DecimalFormat;
 
@@ -13,12 +13,12 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToMoonHorizontalCoordinatesStringConverter;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.ui.databindings.converters.DateToMoonHorizontalCoordinatesStringConverter;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 public class EarthSkyMoonComposite extends Composite 
 {
@@ -107,7 +107,7 @@ public class EarthSkyMoonComposite extends Composite
 			{			
 				// Moon azimuth.
 				IObservableValue lblmoonAzimuthValueLabel = PojoProperties.value("text").observe(moonAzimuthValueLabel);		
-				IObservableValue moonAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue moonAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy moonAzimuthValueStrategy = new UpdateValueStrategy();
 				moonAzimuthValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.Coords.AZIMUTH));
@@ -116,7 +116,7 @@ public class EarthSkyMoonComposite extends Composite
 	
 				// Moon altitude.
 				IObservableValue lblmoonElevationValueLabel = PojoProperties.value("text").observe(moonElevationValueLabel);		
-				IObservableValue moonElevationObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue moonElevationObserveValue = EMFProperties.value(FeaturePath.fromList(ApogyCommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy moonElevationValueStrategy = new UpdateValueStrategy();
 				moonElevationValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.Coords.ALTITUDE));

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.impl;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -20,14 +20,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -53,9 +53,9 @@ import org.orekit.utils.PVCoordinates;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getTimeInterval <em>Time Interval</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getVisibilityPass <em>Visibility Pass</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getPositions <em>Positions</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getTimeInterval <em>Time Interval</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getVisibilityPass <em>Visibility Pass</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getPositions <em>Positions</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,7 +105,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY;
+		return ApogyCoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 		double oldTimeInterval = timeInterval;
 		timeInterval = newTimeInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL, oldTimeInterval, timeInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL, oldTimeInterval, timeInterval));
 	}
 
 	/**
@@ -135,7 +135,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	 * @generated
 	 */
 	public VisibilityPass getVisibilityPass() {
-		if (eContainerFeatureID() != Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS) return null;
+		if (eContainerFeatureID() != ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS) return null;
 		return (VisibilityPass)eContainer();
 	}
 
@@ -145,7 +145,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	 * @generated
 	 */
 	public VisibilityPass basicGetVisibilityPass() {
-		if (eContainerFeatureID() != Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS) return null;
+		if (eContainerFeatureID() != ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS) return null;
 		return (VisibilityPass)eInternalContainer();
 	}
 
@@ -155,7 +155,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	 * @generated
 	 */
 	public NotificationChain basicSetVisibilityPass(VisibilityPass newVisibilityPass, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newVisibilityPass, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newVisibilityPass, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, msgs);
 		return msgs;
 	}
 
@@ -165,19 +165,19 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	 * @generated
 	 */
 	public void setVisibilityPass(VisibilityPass newVisibilityPass) {
-		if (newVisibilityPass != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS && newVisibilityPass != null)) {
+		if (newVisibilityPass != eInternalContainer() || (eContainerFeatureID() != ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS && newVisibilityPass != null)) {
 			if (EcoreUtil.isAncestor(this, newVisibilityPass))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newVisibilityPass != null)
-				msgs = ((InternalEObject)newVisibilityPass).eInverseAdd(this, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY, VisibilityPass.class, msgs);
+				msgs = ((InternalEObject)newVisibilityPass).eInverseAdd(this, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY, VisibilityPass.class, msgs);
 			msgs = basicSetVisibilityPass(newVisibilityPass, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, newVisibilityPass, newVisibilityPass));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, newVisibilityPass, newVisibilityPass));
 	}
 
 	/**
@@ -187,7 +187,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	 */
 	public EList<VisibilityPassSpacecraftPosition> getPositions() {
 		if (positions == null) {
-			positions = new EObjectContainmentEList<VisibilityPassSpacecraftPosition>(VisibilityPassSpacecraftPosition.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS);
+			positions = new EObjectContainmentEList<VisibilityPassSpacecraftPosition>(VisibilityPassSpacecraftPosition.class, this, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS);
 		}
 		return positions;
 	}
@@ -272,7 +272,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetVisibilityPass((VisibilityPass)otherEnd, msgs);
@@ -288,9 +288,9 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
 				return basicSetVisibilityPass(null, msgs);
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
 				return ((InternalEList<?>)getPositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -304,8 +304,8 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
-				return eInternalContainer().eInverseRemove(this, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY, VisibilityPass.class, msgs);
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+				return eInternalContainer().eInverseRemove(this, ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY, VisibilityPass.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -318,12 +318,12 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
 				return getTimeInterval();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
 				if (resolve) return getVisibilityPass();
 				return basicGetVisibilityPass();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
 				return getPositions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -338,13 +338,13 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
 				setTimeInterval((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
 				setVisibilityPass((VisibilityPass)newValue);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
 				getPositions().clear();
 				getPositions().addAll((Collection<? extends VisibilityPassSpacecraftPosition>)newValue);
 				return;
@@ -360,13 +360,13 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
 				setTimeInterval(TIME_INTERVAL_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
 				setVisibilityPass((VisibilityPass)null);
 				return;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
 				getPositions().clear();
 				return;
 		}
@@ -381,11 +381,11 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
 				return timeInterval != TIME_INTERVAL_EDEFAULT;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
 				return basicGetVisibilityPass() != null;
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
 				return positions != null && !positions.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -399,11 +399,11 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_HIGHEST_ELEVATION_POSITION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_HIGHEST_ELEVATION_POSITION:
 				return getHighestElevationPosition();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_SMALLEST_SPACECRAFT_CROSS_TRACK_ANGLE_POSITION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___GET_SMALLEST_SPACECRAFT_CROSS_TRACK_ANGLE_POSITION:
 				return getSmallestSpacecraftCrossTrackAnglePosition();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___UPDATE_HISTORY:
+			case ApogyCoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY___UPDATE_HISTORY:
 				updateHistory();
 				return null;
 		}
@@ -442,7 +442,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			TopocentricFrame loc = new TopocentricFrame(earth, location, "location");
 			
 			TimeScale utc = TimeScalesFactory.getUTC();
-			AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(pass.getStartTime());
+			AbsoluteDate startAbsoluteDate = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(pass.getStartTime());
 			AbsoluteDate endAbsoluteDate = new AbsoluteDate(startAbsoluteDate, pass.getDuration());
 			AbsoluteDate extrapDate = startAbsoluteDate;
 			while (extrapDate.compareTo(endAbsoluteDate) <= 0)  
@@ -480,8 +480,8 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
                 double scToTargetProjectionOntoNadir = Vector3D.dotProduct(nadir, scToTarget);                
 			    double scCrossTrackAngle = Math.atan(scToTargetProjectionOntoCrossTrack / scToTargetProjectionOntoNadir);
 			    
-			    VisibilityPassSpacecraftPosition position = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPosition();
-			    position.setTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(extrapDate));
+			    VisibilityPassSpacecraftPosition position = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPosition();
+			    position.setTime(ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(extrapDate));
 			    position.setRange(range);
 			    position.setRangeRate(rangeRate);
 			    position.setAzimuth(azimuth);

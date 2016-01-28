@@ -1,14 +1,14 @@
-@GenModel(prefix="Symphony__CommonTopologyUIJME3",
+@GenModel(prefix="ApogyCommonTopologyUIJME3",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
-		  modelName="Symphony__CommonTopologyUIJME3",
+		  modelName="ApogyCommonTopologyUIJME3",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.ui.jme3/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.topology.ui.jme3.edit/src-generated")
-// @GenModel(testsDirectory="/org.eclipse.symphony.common.topology.ui.jme3.tests/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.ui.jme3/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.ui.jme3.edit/src-generated")
+// @GenModel(testsDirectory="/ca.gc.asc_csa.apogy.common.topology.ui.jme3.tests/src-generated")
 
-package org.eclipse.symphony.common.topology.ui.jme3
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3
 
 import com.jme3.scene.Geometry
 

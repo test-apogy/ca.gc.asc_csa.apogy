@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.environment.ui.adapters;
+package ca.gc.asc_csa.apogy.core.environment.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.ui.MoonPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
 
 public class MoonPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class MoonPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		MoonPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation();
+		MoonPresentation presentationNode = ApogyCoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

@@ -1,42 +1,42 @@
-@GenModel(prefix="Symphony__ExamplesAntennaSymphony",
+@GenModel(prefix="ApogyExamplesAntennaApogy",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
-		  modelName="Symphony__ExamplesAntennaSymphony",
+		  modelName="ApogyExamplesAntennaApogy",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.examples.antenna.symphony/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.examples.antenna.symphony.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.examples.antenna.apogy/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.examples.antenna.apogy.edit/src-generated")
 
-package org.eclipse.symphony.examples.antenna.symphony
+package ca.gc.asc_csa.apogy.examples.antenna.apogy
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter
-import org.eclipse.symphony.core.SymphonyInitializationData
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
-import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ConicalFieldOfView
 
 /*
- * This class is the specialized Symphony API adapter, used for connecting
+ * This class is the specialized Apogy API adapter, used for connecting
  * the existing PTU dish antenna example, located at
- * {@link org.eclipse.symphony.examples.antenna.PTUDishAntenna},
- * to Symphony; one can override the well-known callback functions to make
- * Symphony perform a variety of useful functions, including initialization,
+ * {@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
  * disposal and other features. 
  */
-class PTUDishAntennaSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+class PTUDishAntennaApogySystemApiAdapter extends ApogySystemApiAdapter
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaSymphonySystemApiAdapterImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaApogySystemApiAdapterImpl}
 	 */	
 }
 
 /*
- * This class specifies the initialization data that Symphony
+ * This class specifies the initialization data that Apogy
  * should be interested in when (re)initializing the PTU dish
  * antenna with the API Adapter (which in this case is
- * {org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter})
+ * {ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter})
  */
-class PTUDishAntennaData extends SymphonyInitializationData
+class PTUDishAntennaData extends ApogyInitializationData
 {
 	/*
 	 * This is the dish antenna's current field of view (FOV).
@@ -50,7 +50,7 @@ class PTUDishAntennaData extends SymphonyInitializationData
 	 * This is the current pan angle of the dish antenna's
 	 * Pan-Tilt Unit (PTU).
 	 */
-	@GenModel(symphony_units="rad",
+	@GenModel(apogy_units="rad",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="Pan-Tilt Unit")
@@ -60,7 +60,7 @@ class PTUDishAntennaData extends SymphonyInitializationData
 	 * This is the current tilt angle of the dish antenna's
 	 * Pan-Tilt Unit (PTU).
 	 */
-	@GenModel(symphony_units="rad",
+	@GenModel(apogy_units="rad",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="Pan-Tilt Unit")
@@ -85,6 +85,6 @@ class PTUDishAntennaData extends SymphonyInitializationData
 	
 	/*
 	 * For specific implementation details,
-	 * see {@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl}
+	 * see {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.impl.PTUDishAntennaDataImpl}
 	 */
 }

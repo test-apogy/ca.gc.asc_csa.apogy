@@ -1,13 +1,13 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import org.eclipse.core.runtime.jobs.Job;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.Server;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Server;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.emf.Server;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.ServerImpl#getServerJob <em>Server Job</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.ServerImpl#getServerJob <em>Server Job</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,7 +59,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.SERVER;
+		return ApogyCommonEMFPackage.Literals.SERVER;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.SERVER__SERVER_JOB:
+			case ApogyCommonEMFPackage.SERVER__SERVER_JOB:
 				return getServerJob();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -93,7 +93,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.SERVER__SERVER_JOB:
+			case ApogyCommonEMFPackage.SERVER__SERVER_JOB:
 				return SERVER_JOB_EDEFAULT == null ? serverJob != null : !SERVER_JOB_EDEFAULT.equals(serverJob);
 		}
 		return super.eIsSet(featureID);

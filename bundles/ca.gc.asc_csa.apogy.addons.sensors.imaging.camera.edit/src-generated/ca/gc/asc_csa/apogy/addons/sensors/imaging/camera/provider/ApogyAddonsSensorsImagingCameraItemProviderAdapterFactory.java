@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,16 +27,16 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.addons.sensors.imaging.camera.util.Symphony__AddonsSensorsImagingCameraAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ToolsList;
-import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.util.ApogyAddonsSensorsImagingCameraAdapterFactory;
+import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
+import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -47,7 +47,7 @@ import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory extends Symphony__AddonsSensorsImagingCameraAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class ApogyAddonsSensorsImagingCameraItemProviderAdapterFactory extends ApogyAddonsSensorsImagingCameraAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -71,7 +71,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__AddonsSensorsImagingCameraEditPlugin.INSTANCE, Symphony__AddonsSensorsImagingCameraPackage.eNS_URI);
+  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyAddonsSensorsImagingCameraEditPlugin.INSTANCE, ApogyAddonsSensorsImagingCameraPackage.eNS_URI);
 
   /**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -87,7 +87,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory()
+  public ApogyAddonsSensorsImagingCameraItemProviderAdapterFactory()
   {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
@@ -97,7 +97,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected CameraViewUtilitiesItemProvider cameraViewUtilitiesItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewUtilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -120,7 +120,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -128,7 +128,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected CameraViewConfigurationListItemProvider cameraViewConfigurationListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfigurationList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -144,7 +144,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -152,7 +152,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected CameraViewConfigurationItemProvider cameraViewConfigurationItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraViewConfiguration}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -168,7 +168,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -176,7 +176,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected FilterListItemProvider filterListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FilterList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -192,7 +192,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -200,7 +200,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected GrayScaleFilterItemProvider grayScaleFilterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GrayScaleFilter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -216,7 +216,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -224,7 +224,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected EdgeFilterItemProvider edgeFilterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EdgeFilter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -248,7 +248,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected ContrastAndBrightnessFilterItemProvider contrastAndBrightnessFilterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ContrastAndBrightnessFilter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -264,7 +264,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -272,7 +272,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected ExposureFilterItemProvider exposureFilterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ExposureFilter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -288,7 +288,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -296,7 +296,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected GainFilterItemProvider gainFilterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.GainFilter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -312,7 +312,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -320,7 +320,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected InvertFilterItemProvider invertFilterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.InvertFilter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -336,7 +336,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -344,7 +344,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected RescaleFilterItemProvider rescaleFilterItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.RescaleFilter}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -360,7 +360,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -368,7 +368,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected CameraOverlayListItemProvider cameraOverlayListItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraOverlayList}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -384,7 +384,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -392,7 +392,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected EMFFeatureOverlayItemProvider emfFeatureOverlayItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureOverlay}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -408,7 +408,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -416,7 +416,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
   protected CameraNameOverlayItemProvider cameraNameOverlayItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraNameOverlay}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -432,7 +432,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -440,7 +440,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected ImageCountOverlayItemProvider imageCountOverlayItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageCountOverlay}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -455,7 +455,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -463,7 +463,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected ImageFrozenOverlayItemProvider imageFrozenOverlayItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ImageFrozenOverlay}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -478,7 +478,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -486,7 +486,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected URLImageOverlayItemProvider urlImageOverlayItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.URLImageOverlay}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -501,31 +501,31 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SymphonyLogoOverlayItemProvider symphonyLogoOverlayItemProvider;
+  protected ApogyLogoOverlayItemProvider apogyLogoOverlayItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyLogoOverlay}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createSymphonyLogoOverlayAdapter()
+  public Adapter createApogyLogoOverlayAdapter()
   {
-		if (symphonyLogoOverlayItemProvider == null) {
-			symphonyLogoOverlayItemProvider = new SymphonyLogoOverlayItemProvider(this);
+		if (apogyLogoOverlayItemProvider == null) {
+			apogyLogoOverlayItemProvider = new ApogyLogoOverlayItemProvider(this);
 		}
 
-		return symphonyLogoOverlayItemProvider;
+		return apogyLogoOverlayItemProvider;
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -533,7 +533,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected FOVOverlayItemProvider fovOverlayItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.FOVOverlay}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -548,7 +548,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -556,7 +556,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected AzimuthElevationFOVOverlayItemProvider azimuthElevationFOVOverlayItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -571,7 +571,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -579,7 +579,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected EMFFeatureAzimuthElevationFOVOverlayItemProvider emfFeatureAzimuthElevationFOVOverlayItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -594,7 +594,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -602,7 +602,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected AzimuthFeatureReferenceItemProvider azimuthFeatureReferenceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AzimuthFeatureReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -617,7 +617,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -625,7 +625,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected ElevationFeatureReferenceItemProvider elevationFeatureReferenceItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ElevationFeatureReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -640,7 +640,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -648,7 +648,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected ToolTipTextProviderItemProvider toolTipTextProviderItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ToolTipTextProvider}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -663,7 +663,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -671,7 +671,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected CameraToolListItemProvider cameraToolListItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraToolList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -686,7 +686,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -694,7 +694,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	protected PointerCameraToolItemProvider pointerCameraToolItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.PointerCameraTool}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -863,7 +863,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 		if (imageCountOverlayItemProvider != null) imageCountOverlayItemProvider.dispose();
 		if (imageFrozenOverlayItemProvider != null) imageFrozenOverlayItemProvider.dispose();
 		if (urlImageOverlayItemProvider != null) urlImageOverlayItemProvider.dispose();
-		if (symphonyLogoOverlayItemProvider != null) symphonyLogoOverlayItemProvider.dispose();
+		if (apogyLogoOverlayItemProvider != null) apogyLogoOverlayItemProvider.dispose();
 		if (fovOverlayItemProvider != null) fovOverlayItemProvider.dispose();
 		if (azimuthElevationFOVOverlayItemProvider != null) azimuthElevationFOVOverlayItemProvider.dispose();
 		if (emfFeatureAzimuthElevationFOVOverlayItemProvider != null) emfFeatureAzimuthElevationFOVOverlayItemProvider.dispose();
@@ -875,19 +875,19 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
+	 * A child creation extender for the {@link ApogyCoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -923,8 +923,8 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 			public Object caseToolsList(ToolsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
+						(ApogyCoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
 
 				return null;
 			}
@@ -957,24 +957,24 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsImagingCameraEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsImagingCameraEditPlugin.INSTANCE;
 		}
 	}
 
 		/**
-	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * A child creation extender for the {@link ApogyCommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1010,133 +1010,133 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createApogyLogoOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
 
 				return null;
 			}
@@ -1150,133 +1150,133 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createApogyLogoOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyAddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
 
 				return null;
 			}
@@ -1309,7 +1309,7 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__AddonsSensorsImagingCameraEditPlugin.INSTANCE;
+			return ApogyAddonsSensorsImagingCameraEditPlugin.INSTANCE;
 		}
 	}
 

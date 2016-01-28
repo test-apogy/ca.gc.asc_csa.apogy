@@ -3,7 +3,7 @@
  *
  * $Id: DistanceRangeItemProvider.java,v 1.4.4.2 2015/05/21 15:51:09 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 
 import java.text.DecimalFormat;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.DistanceRange} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -89,7 +89,7 @@ public class DistanceRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceRange_minimumDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceRange_minimumDistance_feature", "_UI_DistanceRange_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__MINIMUM_DISTANCE,
+				 ApogyAddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__MINIMUM_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class DistanceRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceRange_maximumDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceRange_maximumDistance_feature", "_UI_DistanceRange_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__MAXIMUM_DISTANCE,
+				 ApogyAddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__MAXIMUM_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class DistanceRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceRange_distance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceRange_distance_feature", "_UI_DistanceRange_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__DISTANCE,
+				 ApogyAddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -182,9 +182,9 @@ public class DistanceRangeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DistanceRange.class)) {
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

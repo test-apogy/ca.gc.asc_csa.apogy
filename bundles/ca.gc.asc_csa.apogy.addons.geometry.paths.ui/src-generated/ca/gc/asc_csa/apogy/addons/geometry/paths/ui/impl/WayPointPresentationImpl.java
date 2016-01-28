@@ -4,15 +4,15 @@
  *
  * $Id: WayPointPresentationImpl.java,v 1.1.4.2 2015/05/21 15:50:31 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl;
 
 import javax.vecmath.Point3d;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public class WayPointPresentationImpl extends NodePresentationImpl implements Wa
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PRESENTATION;
+		return ApogyAddonsGeometryPathsUIPackage.Literals.WAY_POINT_PRESENTATION;
 	}
 	
 	@Override
@@ -54,7 +54,7 @@ public class WayPointPresentationImpl extends NodePresentationImpl implements Wa
 			point3d = sceneObject.getCentroid();
 		}
 		
-		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
+		return ApogyCommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}
 	
 } //WayPointPresentationImpl

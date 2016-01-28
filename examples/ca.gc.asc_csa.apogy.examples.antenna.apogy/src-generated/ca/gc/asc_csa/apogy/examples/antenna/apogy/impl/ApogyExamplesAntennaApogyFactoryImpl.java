@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyFactory;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyFactory;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaS
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesAntennaSymphonyFactoryImpl extends EFactoryImpl implements Symphony__ExamplesAntennaSymphonyFactory
+public class ApogyExamplesAntennaApogyFactoryImpl extends EFactoryImpl implements ApogyExamplesAntennaApogyFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -27,18 +27,18 @@ public class Symphony__ExamplesAntennaSymphonyFactoryImpl extends EFactoryImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__ExamplesAntennaSymphonyFactory init()
+  public static ApogyExamplesAntennaApogyFactory init()
   {
 		try {
-			Symphony__ExamplesAntennaSymphonyFactory theSymphony__ExamplesAntennaSymphonyFactory = (Symphony__ExamplesAntennaSymphonyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesAntennaSymphonyPackage.eNS_URI);
-			if (theSymphony__ExamplesAntennaSymphonyFactory != null) {
-				return theSymphony__ExamplesAntennaSymphonyFactory;
+			ApogyExamplesAntennaApogyFactory theApogyExamplesAntennaApogyFactory = (ApogyExamplesAntennaApogyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesAntennaApogyPackage.eNS_URI);
+			if (theApogyExamplesAntennaApogyFactory != null) {
+				return theApogyExamplesAntennaApogyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesAntennaSymphonyFactoryImpl();
+		return new ApogyExamplesAntennaApogyFactoryImpl();
 	}
 
   /**
@@ -47,7 +47,7 @@ public class Symphony__ExamplesAntennaSymphonyFactoryImpl extends EFactoryImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesAntennaSymphonyFactoryImpl()
+  public ApogyExamplesAntennaApogyFactoryImpl()
   {
 		super();
 	}
@@ -61,8 +61,8 @@ public class Symphony__ExamplesAntennaSymphonyFactoryImpl extends EFactoryImpl i
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER: return createPTUDishAntennaSymphonySystemApiAdapter();
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA: return createPTUDishAntennaData();
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER: return createPTUDishAntennaApogySystemApiAdapter();
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_DATA: return createPTUDishAntennaData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -73,10 +73,10 @@ public class Symphony__ExamplesAntennaSymphonyFactoryImpl extends EFactoryImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public PTUDishAntennaSymphonySystemApiAdapter createPTUDishAntennaSymphonySystemApiAdapter()
+  public PTUDishAntennaApogySystemApiAdapter createPTUDishAntennaApogySystemApiAdapter()
   {
-		PTUDishAntennaSymphonySystemApiAdapterImpl ptuDishAntennaSymphonySystemApiAdapter = new PTUDishAntennaSymphonySystemApiAdapterImpl();
-		return ptuDishAntennaSymphonySystemApiAdapter;
+		PTUDishAntennaApogySystemApiAdapterImpl ptuDishAntennaApogySystemApiAdapter = new PTUDishAntennaApogySystemApiAdapterImpl();
+		return ptuDishAntennaApogySystemApiAdapter;
 	}
 
   /**
@@ -95,8 +95,8 @@ public class Symphony__ExamplesAntennaSymphonyFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesAntennaSymphonyPackage getSymphony__ExamplesAntennaSymphonyPackage() {
-		return (Symphony__ExamplesAntennaSymphonyPackage)getEPackage();
+	public ApogyExamplesAntennaApogyPackage getApogyExamplesAntennaApogyPackage() {
+		return (ApogyExamplesAntennaApogyPackage)getEPackage();
 	}
 
 		/**
@@ -106,9 +106,9 @@ public class Symphony__ExamplesAntennaSymphonyFactoryImpl extends EFactoryImpl i
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__ExamplesAntennaSymphonyPackage getPackage()
+  public static ApogyExamplesAntennaApogyPackage getPackage()
   {
-		return Symphony__ExamplesAntennaSymphonyPackage.eINSTANCE;
+		return ApogyExamplesAntennaApogyPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesAntennaSymphonyFactoryImpl
+} //ApogyExamplesAntennaApogyFactoryImpl

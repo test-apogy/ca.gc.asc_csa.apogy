@@ -4,20 +4,20 @@
  *
  * $Id: PositionNodeImpl.java,v 1.12.2.2 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.PositionNodeImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.PositionNodeImpl#getPosition <em>Position</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,7 +50,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 	 * @generated_NOT
 	 * @ordered
 	 */
-	protected static final Tuple3d POSITION_EDEFAULT = Symphony__CommonMathFactory.eINSTANCE
+	protected static final Tuple3d POSITION_EDEFAULT = ApogyCommonMathFactory.eINSTANCE
 			.createTuple3d();
 
 	/**
@@ -67,7 +67,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.POSITION_NODE;
+		return ApogyCommonTopologyPackage.Literals.POSITION_NODE;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 		Tuple3d tmp = getPositionGen();
 		if(tmp == null)
 		{
-			tmp = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);
+			tmp = ApogyCommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);
 			setPosition(tmp);
 		}
 		
@@ -103,7 +103,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 		Tuple3d oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.POSITION_NODE__POSITION, oldPosition, newPosition);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.POSITION_NODE__POSITION, oldPosition, newPosition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -117,14 +117,14 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 		if (newPosition != position) {
 			NotificationChain msgs = null;
 			if (position != null)
-				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.POSITION_NODE__POSITION, null, msgs);
+				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyPackage.POSITION_NODE__POSITION, null, msgs);
 			if (newPosition != null)
-				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.POSITION_NODE__POSITION, null, msgs);
+				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCommonTopologyPackage.POSITION_NODE__POSITION, null, msgs);
 			msgs = basicSetPosition(newPosition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.POSITION_NODE__POSITION, newPosition, newPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.POSITION_NODE__POSITION, newPosition, newPosition));
 	}
 
 	/**
@@ -135,7 +135,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.POSITION_NODE__POSITION:
+			case ApogyCommonTopologyPackage.POSITION_NODE__POSITION:
 				return basicSetPosition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -148,7 +148,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.POSITION_NODE__POSITION:
+			case ApogyCommonTopologyPackage.POSITION_NODE__POSITION:
 				return getPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,7 +161,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.POSITION_NODE__POSITION:
+			case ApogyCommonTopologyPackage.POSITION_NODE__POSITION:
 				setPosition((Tuple3d)newValue);
 				return;
 		}
@@ -175,7 +175,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.POSITION_NODE__POSITION:
+			case ApogyCommonTopologyPackage.POSITION_NODE__POSITION:
 				setPosition((Tuple3d)null);
 				return;
 		}
@@ -189,7 +189,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.POSITION_NODE__POSITION:
+			case ApogyCommonTopologyPackage.POSITION_NODE__POSITION:
 				return position != null;
 		}
 		return super.eIsSet(featureID);

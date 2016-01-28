@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.symphony;
+package ca.gc.asc_csa.apogy.examples.lander.apogy;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage
  * @generated
  */
-public interface Symphony__ExamplesLanderSymphonyFactory extends EFactory
+public interface ApogyExamplesLanderApogyFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,16 +21,16 @@ public interface Symphony__ExamplesLanderSymphonyFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__ExamplesLanderSymphonyFactory eINSTANCE = org.eclipse.symphony.examples.lander.symphony.impl.Symphony__ExamplesLanderSymphonyFactoryImpl.init();
+  ApogyExamplesLanderApogyFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.lander.apogy.impl.ApogyExamplesLanderApogyFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Lander Symphony System Api Adapter</em>'.
+	 * Returns a new object of class '<em>Lander Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lander Symphony System Api Adapter</em>'.
+	 * @return a new object of class '<em>Lander Apogy System Api Adapter</em>'.
 	 * @generated
 	 */
-  LanderSymphonySystemApiAdapter createLanderSymphonySystemApiAdapter();
+  LanderApogySystemApiAdapter createLanderApogySystemApiAdapter();
 
   /**
 	 * Returns a new object of class '<em>Lander Data</em>'.
@@ -48,6 +48,6 @@ public interface Symphony__ExamplesLanderSymphonyFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesLanderSymphonyPackage getSymphony__ExamplesLanderSymphonyPackage();
+	ApogyExamplesLanderApogyPackage getApogyExamplesLanderApogyPackage();
 
-} //Symphony__ExamplesLanderSymphonyFactory
+} //ApogyExamplesLanderApogyFactory

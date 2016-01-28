@@ -4,7 +4,7 @@
  *
  * $Id: WayPointPathPresentationImpl.java,v 1.1.4.3 2015/05/27 15:18:39 pallard Exp $
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.impl;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl;
 
 import javax.vecmath.Point3d;
 import org.eclipse.emf.common.notify.Notification;
@@ -15,15 +15,15 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.geometry.paths.ui.Activator;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathSceneObject;
-import org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesConstants;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.PathPresentationMode;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathSceneObject;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.preferences.MRTPathsPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,9 +33,9 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getPointSize <em>Point Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getEndPointsRadius <em>End Points Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getPointSize <em>Point Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getEndPointsRadius <em>End Points Radius</em>}</li>
  * </ul>
  *
  * @generated
@@ -128,7 +128,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION;
+		return ApogyAddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION;
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 		int oldPointSize = pointSize;
 		pointSize = newPointSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
 	}
 
 	/**
@@ -174,7 +174,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 		PathPresentationMode oldPresentationMode = presentationMode;
 		presentationMode = newPresentationMode == null ? PRESENTATION_MODE_EDEFAULT : newPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
 	}
 
 	/**
@@ -195,7 +195,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 		float oldEndPointsRadius = endPointsRadius;
 		endPointsRadius = newEndPointsRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS, oldEndPointsRadius, endPointsRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS, oldEndPointsRadius, endPointsRadius));
 	}
 
 	/**
@@ -207,11 +207,11 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				return getPointSize();
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				return getEndPointsRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -226,13 +226,13 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				setPointSize((Integer)newValue);
 				return;
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((PathPresentationMode)newValue);
 				return;
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				setEndPointsRadius((Float)newValue);
 				return;
 		}
@@ -248,13 +248,13 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				setPointSize(POINT_SIZE_EDEFAULT);
 				return;
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
 				return;
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				setEndPointsRadius(END_POINTS_RADIUS_EDEFAULT);
 				return;
 		}
@@ -270,11 +270,11 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				return pointSize != POINT_SIZE_EDEFAULT;
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				return endPointsRadius != END_POINTS_RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -312,15 +312,15 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 			
 			switch (featureId) 
 			{
-				case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+				case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 					wayPointPathSceneObject.setPathPresentationMode(this.presentationMode);		
 				break;
 				
-				case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+				case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 					wayPointPathSceneObject.setPointSize(this.pointSize);			
 				break;
 
-				case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+				case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 					wayPointPathSceneObject.setEndPointsRadius(this.endPointsRadius);		
 				break;
 				
@@ -342,7 +342,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 			point3d = sceneObject.getCentroid();
 		}
 		
-		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
+		return ApogyCommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}
 	
 	@Override

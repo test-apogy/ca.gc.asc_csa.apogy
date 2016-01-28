@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.addons.sensors.gps.*;
+import ca.gc.asc_csa.apogy.addons.sensors.gps.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,24 +26,24 @@ import org.eclipse.symphony.addons.sensors.gps.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsGPSFactory {
+public class ApogyAddonsSensorsGPSFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsGPSFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsGPSFactory init() {
+	public static ApogyAddonsSensorsGPSFactory init() {
 		try {
-			Symphony__AddonsSensorsGPSFactory theSymphony__AddonsSensorsGPSFactory = (Symphony__AddonsSensorsGPSFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsGPSPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsGPSFactory != null) {
-				return theSymphony__AddonsSensorsGPSFactory;
+			ApogyAddonsSensorsGPSFactory theApogyAddonsSensorsGPSFactory = (ApogyAddonsSensorsGPSFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsGPSPackage.eNS_URI);
+			if (theApogyAddonsSensorsGPSFactory != null) {
+				return theApogyAddonsSensorsGPSFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsGPSFactoryImpl();
+		return new ApogyAddonsSensorsGPSFactoryImpl();
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsGPSFactoryImpl() {
+	public ApogyAddonsSensorsGPSFactoryImpl() {
 		super();
 	}
 
@@ -64,11 +64,11 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_READING: return createGPSReading();
-			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR: return createGPSPoseSensor();
-			case Symphony__AddonsSensorsGPSPackage.GPS: return createGPS();
-			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS: return createMarkedGPS();
-			case Symphony__AddonsSensorsGPSPackage.SYMPHONY_ADDONS_SENSORS_GPS_FACADE: return createSymphony__AddonsSensorsGPSFacade();
+			case ApogyAddonsSensorsGPSPackage.GPS_READING: return createGPSReading();
+			case ApogyAddonsSensorsGPSPackage.GPS_POSE_SENSOR: return createGPSPoseSensor();
+			case ApogyAddonsSensorsGPSPackage.GPS: return createGPS();
+			case ApogyAddonsSensorsGPSPackage.MARKED_GPS: return createMarkedGPS();
+			case ApogyAddonsSensorsGPSPackage.APOGY_ADDONS_SENSORS_GPS_FACADE: return createApogyAddonsSensorsGPSFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,19 +82,19 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_STATUS:
+			case ApogyAddonsSensorsGPSPackage.GPS_STATUS:
 				return createGPSStatusFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsGPSPackage.GPS_QUALITY:
+			case ApogyAddonsSensorsGPSPackage.GPS_QUALITY:
 				return createGPSQualityFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsGPSPackage.EXCEPTION:
+			case ApogyAddonsSensorsGPSPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsGPSPackage.IO_EXCEPTION:
+			case ApogyAddonsSensorsGPSPackage.IO_EXCEPTION:
 				return createIOExceptionFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsGPSPackage.INPUT_STREAM:
+			case ApogyAddonsSensorsGPSPackage.INPUT_STREAM:
 				return createInputStreamFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsGPSPackage.OUTPUT_STREAM:
+			case ApogyAddonsSensorsGPSPackage.OUTPUT_STREAM:
 				return createOutputStreamFromString(eDataType, initialValue);
-			case Symphony__AddonsSensorsGPSPackage.DATE:
+			case ApogyAddonsSensorsGPSPackage.DATE:
 				return createDateFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -109,19 +109,19 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__AddonsSensorsGPSPackage.GPS_STATUS:
+			case ApogyAddonsSensorsGPSPackage.GPS_STATUS:
 				return convertGPSStatusToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsGPSPackage.GPS_QUALITY:
+			case ApogyAddonsSensorsGPSPackage.GPS_QUALITY:
 				return convertGPSQualityToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsGPSPackage.EXCEPTION:
+			case ApogyAddonsSensorsGPSPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsGPSPackage.IO_EXCEPTION:
+			case ApogyAddonsSensorsGPSPackage.IO_EXCEPTION:
 				return convertIOExceptionToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsGPSPackage.INPUT_STREAM:
+			case ApogyAddonsSensorsGPSPackage.INPUT_STREAM:
 				return convertInputStreamToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsGPSPackage.OUTPUT_STREAM:
+			case ApogyAddonsSensorsGPSPackage.OUTPUT_STREAM:
 				return convertOutputStreamToString(eDataType, instanceValue);
-			case Symphony__AddonsSensorsGPSPackage.DATE:
+			case ApogyAddonsSensorsGPSPackage.DATE:
 				return convertDateToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -173,9 +173,9 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsGPSFacade createSymphony__AddonsSensorsGPSFacade() {
-		Symphony__AddonsSensorsGPSFacadeImpl symphony__AddonsSensorsGPSFacade = new Symphony__AddonsSensorsGPSFacadeImpl();
-		return symphony__AddonsSensorsGPSFacade;
+	public ApogyAddonsSensorsGPSFacade createApogyAddonsSensorsGPSFacade() {
+		ApogyAddonsSensorsGPSFacadeImpl apogy__AddonsSensorsGPSFacade = new ApogyAddonsSensorsGPSFacadeImpl();
+		return apogy__AddonsSensorsGPSFacade;
 	}
 
 	/**
@@ -313,8 +313,8 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsGPSPackage getSymphony__AddonsSensorsGPSPackage() {
-		return (Symphony__AddonsSensorsGPSPackage)getEPackage();
+	public ApogyAddonsSensorsGPSPackage getApogyAddonsSensorsGPSPackage() {
+		return (ApogyAddonsSensorsGPSPackage)getEPackage();
 	}
 
 	/**
@@ -324,8 +324,8 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsSensorsGPSPackage getPackage() {
-		return Symphony__AddonsSensorsGPSPackage.eINSTANCE;
+	public static ApogyAddonsSensorsGPSPackage getPackage() {
+		return ApogyAddonsSensorsGPSPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsGPSFactoryImpl
+} //ApogyAddonsSensorsGPSFactoryImpl

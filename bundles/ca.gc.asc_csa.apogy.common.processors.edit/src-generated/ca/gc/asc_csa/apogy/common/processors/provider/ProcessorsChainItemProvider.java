@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.provider;
+package ca.gc.asc_csa.apogy.common.processors.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.processors.ProcessorsChain;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.processors.ProcessorsChain;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.processors.ProcessorsChain} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.processors.ProcessorsChain} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ProcessorsChain_intermediateResult_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessorsChain_intermediateResult_feature", "_UI_ProcessorsChain_type"),
-				 Symphony__CommonProcessorsPackage.Literals.PROCESSORS_CHAIN__INTERMEDIATE_RESULT,
+				 ApogyCommonProcessorsPackage.Literals.PROCESSORS_CHAIN__INTERMEDIATE_RESULT,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ProcessorsChain_runningProcessor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessorsChain_runningProcessor_feature", "_UI_ProcessorsChain_type"),
-				 Symphony__CommonProcessorsPackage.Literals.PROCESSORS_CHAIN__RUNNING_PROCESSOR,
+				 ApogyCommonProcessorsPackage.Literals.PROCESSORS_CHAIN__RUNNING_PROCESSOR,
 				 true,
 				 false,
 				 true,
@@ -109,7 +109,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ProcessorsChain_processors_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessorsChain_processors_feature", "_UI_ProcessorsChain_type"),
-				 Symphony__CommonProcessorsPackage.Literals.PROCESSORS_CHAIN__PROCESSORS,
+				 ApogyCommonProcessorsPackage.Literals.PROCESSORS_CHAIN__PROCESSORS,
 				 true,
 				 false,
 				 true,
@@ -157,7 +157,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProcessorsChain.class)) {
-			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
+			case ApogyCommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

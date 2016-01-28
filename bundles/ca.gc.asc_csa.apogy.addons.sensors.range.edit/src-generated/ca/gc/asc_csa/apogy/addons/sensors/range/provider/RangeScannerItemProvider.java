@@ -4,7 +4,7 @@
  *
  * $Id: RangeScannerItemProvider.java,v 1.2.4.2 2015/05/21 15:49:57 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.range.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.range.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
-import org.eclipse.symphony.addons.sensors.range.RangeScanner;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.ApogyAddonsSensorsRangePackage;
+import ca.gc.asc_csa.apogy.addons.sensors.range.RangeScanner;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.RangeScanner} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.range.RangeScanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class RangeScannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Processor_input_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Processor_input_feature", "_UI_Processor_type"),
-				 Symphony__CommonProcessorsPackage.Literals.PROCESSOR__INPUT,
+				 ApogyCommonProcessorsPackage.Literals.PROCESSOR__INPUT,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class RangeScannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Processor_output_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Processor_output_feature", "_UI_Processor_type"),
-				 Symphony__CommonProcessorsPackage.Literals.PROCESSOR__OUTPUT,
+				 ApogyCommonProcessorsPackage.Literals.PROCESSOR__OUTPUT,
 				 true,
 				 false,
 				 false,
@@ -135,9 +135,9 @@ public class RangeScannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RangeScanner.class)) {
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
-			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
+			case ApogyAddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.images.impl;
+package ca.gc.asc_csa.apogy.common.images.impl;
 
 import java.awt.image.BufferedImage;
 import java.util.List;
@@ -17,16 +17,16 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.swt.graphics.ImageData;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.AbstractEImageProvider;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImageAlignment;
-import org.eclipse.symphony.common.images.ImageSize;
-import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.common.images.URLEImage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImageProvider;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ImageAlignment;
+import ca.gc.asc_csa.apogy.common.images.ImageSize;
+import ca.gc.asc_csa.apogy.common.images.ImagesAlbum;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.URLEImage;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -37,7 +37,7 @@ import java.awt.Font;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements Symphony__CommonImagesPackage {
+public class ApogyCommonImagesPackageImpl extends EPackageImpl implements ApogyCommonImagesPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,12 +147,12 @@ public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements S
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonImagesPackageImpl() {
-		super(eNS_URI, Symphony__CommonImagesFactory.eINSTANCE);
+	private ApogyCommonImagesPackageImpl() {
+		super(eNS_URI, ApogyCommonImagesFactory.eINSTANCE);
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements S
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonImagesPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonImagesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,11 +174,11 @@ public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements S
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonImagesPackage init() {
-		if (isInited) return (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
+	public static ApogyCommonImagesPackage init() {
+		if (isInited) return (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonImagesPackageImpl theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonImagesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonImagesPackageImpl());
+		ApogyCommonImagesPackageImpl theApogyCommonImagesPackage = (ApogyCommonImagesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonImagesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonImagesPackageImpl());
 
 		isInited = true;
 
@@ -186,18 +186,18 @@ public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements S
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonImagesPackage.createPackageContents();
+		theApogyCommonImagesPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonImagesPackage.initializePackageContents();
+		theApogyCommonImagesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonImagesPackage.freeze();
+		theApogyCommonImagesPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonImagesPackage.eNS_URI, theSymphony__CommonImagesPackage);
-		return theSymphony__CommonImagesPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonImagesPackage.eNS_URI, theApogyCommonImagesPackage);
+		return theApogyCommonImagesPackage;
 	}
 
 	/**
@@ -682,8 +682,8 @@ public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonImagesFactory getSymphony__CommonImagesFactory() {
-		return (Symphony__CommonImagesFactory)getEFactoryInstance();
+	public ApogyCommonImagesFactory getApogyCommonImagesFactory() {
+		return (ApogyCommonImagesFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -1011,16 +1011,16 @@ public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements S
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__CommonImages",
+			 "prefix", "ApogyCommonImages",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__CommonImages",
+			 "modelName", "ApogyCommonImages",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.images/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.images.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.images/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.images.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.common"
 		   });	
 		addAnnotation
 		  (getAbstractEImage_Width(), 
@@ -1042,4 +1042,4 @@ public class Symphony__CommonImagesPackageImpl extends EPackageImpl implements S
 		   });
 	}
 
-} //Symphony__CommonImagesPackageImpl
+} //ApogyCommonImagesPackageImpl

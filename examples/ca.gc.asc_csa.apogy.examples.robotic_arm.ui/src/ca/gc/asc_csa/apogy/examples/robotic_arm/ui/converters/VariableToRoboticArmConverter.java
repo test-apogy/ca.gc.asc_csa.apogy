@@ -1,22 +1,22 @@
-package org.eclipse.symphony.examples.robotic_arm.ui.converters;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.ui.converters;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
 
 public class VariableToRoboticArmConverter implements IConverter
 {
 	@Override
 	public boolean canConvert(Object object)
 	{
-		InvocatorSession activeSession = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession activeSession = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		
 		if (activeSession != null)
 		{
-			EObject inst = Symphony__CoreInvocatorFacade.INSTANCE.getInstance((Variable) object);
+			EObject inst = ApogyCoreInvocatorFacade.INSTANCE.getInstance((Variable) object);
 			
 			if ((inst instanceof RoboticArm) == true)
 			{
@@ -30,7 +30,7 @@ public class VariableToRoboticArmConverter implements IConverter
 	@Override
 	public Object convert(Object object) throws Exception
 	{
-		return Symphony__CoreInvocatorFacade.INSTANCE.getInstance((Variable) object);	
+		return ApogyCoreInvocatorFacade.INSTANCE.getInstance((Variable) object);	
 	}
 
 	@Override

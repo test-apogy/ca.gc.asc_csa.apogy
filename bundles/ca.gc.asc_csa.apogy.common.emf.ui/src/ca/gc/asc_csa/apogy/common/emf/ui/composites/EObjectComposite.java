@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.ui.composites;
+package ca.gc.asc_csa.apogy.common.emf.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.ecore.EObject;
@@ -20,8 +20,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.symphony.common.emf.EObjectReference;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class EObjectComposite extends Composite {
@@ -119,7 +119,7 @@ public class EObjectComposite extends Composite {
 	 */
 	private DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
-		EObjectReference eObjectReference = Symphony__CommonEMFFactory.eINSTANCE.createEObjectReference();
+		EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
 		eObjectReference.setEObject(eObject);
 		instanceViewer.setInput(eObjectReference);						
 		return bindingContext;

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.provider;
+package ca.gc.asc_csa.apogy.addons.vehicle.provider;
 
 
 import java.util.Collection;
@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.VehiclePathPlannerTool} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -60,7 +60,7 @@ public class VehiclePathPlannerToolItemProvider extends PathPlannerToolItemProvi
 				 getResourceLocator(),
 				 getString("_UI_VehiclePathPlannerTool_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePathPlannerTool_variable_feature", "_UI_VehiclePathPlannerTool_type"),
-				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL__VARIABLE,
+				 ApogyAddonsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL__VARIABLE,
 				 true,
 				 false,
 				 true,

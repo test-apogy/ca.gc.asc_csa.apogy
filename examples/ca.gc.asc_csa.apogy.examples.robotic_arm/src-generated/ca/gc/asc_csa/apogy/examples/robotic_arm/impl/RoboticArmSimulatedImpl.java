@@ -1,17 +1,17 @@
 /**
    * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.impl;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.impl;
 
 import javax.vecmath.GVector;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.examples.robotic_arm.Activator;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
-import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.Activator;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.MoveSpeedLevel;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArmSimulated;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -59,7 +59,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_SIMULATED;
+		return ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_SIMULATED;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 								"Rejected: the robotic arm has not been initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, it was initialized correctly
@@ -174,7 +174,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 								"Rejected; the robotic arm has not been initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the robotic arm is already in the midst of
@@ -187,7 +187,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 								"in the midst of another move request.";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the robotic arm's current joint angles are the same as
@@ -203,7 +203,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 								"arm's current joint configuration.";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the arm was both initialized, enabled and needs to move
@@ -257,7 +257,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 								"Rejected; the robotic arm has not been initialized (with init()).";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the robotic arm is already moving
@@ -269,7 +269,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 								"in the midst of another move request.";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, if the robotic arm's current joint angles are the same as
@@ -285,7 +285,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 							 	"in the stow joint configuration.";
 			
 			// Throw an exception to indicate that the operation has failed; this will
-			// be caught and logged by Symphony
+			// be caught and logged by Apogy
 			throw new RuntimeException(message);
 		}
 		// Otherwise, the arm is initialized, enabled and needs to move

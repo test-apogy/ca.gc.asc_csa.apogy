@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.core.invocator.ResultsList;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.invocator.ResultsList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ResultsListNode#getResultsList <em>Results List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ResultsListNode#getResultsList <em>Results List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.Symphony__CorePackage#getResultsListNode()
+ * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getResultsListNode()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface ResultsListNode extends AggregateGroupNode {
 	 * 
 	 * @return the value of the '<em>Results List</em>' reference.
 	 * @see #setResultsList(ResultsList)
-	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getResultsListNode_ResultsList()
+	 * @see ca.gc.asc_csa.apogy.core.ApogyCorePackage#getResultsListNode_ResultsList()
 	 * @model transient="true"
 	 * @generated
 	 */
 	ResultsList getResultsList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.ResultsListNode#getResultsList <em>Results List</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.ResultsListNode#getResultsList <em>Results List</em>}' reference.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @param value the new value of the '<em>Results List</em>' reference.

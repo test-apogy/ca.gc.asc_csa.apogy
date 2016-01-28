@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.MeshSmoother;
-import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother;
+import ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl#getNumberOfIterations <em>Number Of Iterations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.impl.MeshSmootherImpl#getNumberOfIterations <em>Number Of Iterations</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,7 +62,7 @@ public class MeshSmootherImpl extends ProcessorImpl<CartesianCoordinatesSet, Car
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData3DPackage.Literals.MESH_SMOOTHER;
+		return ApogyCommonGeometryData3DPackage.Literals.MESH_SMOOTHER;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class MeshSmootherImpl extends ProcessorImpl<CartesianCoordinatesSet, Car
 		int oldNumberOfIterations = numberOfIterations;
 		numberOfIterations = newNumberOfIterations;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS, oldNumberOfIterations, numberOfIterations));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS, oldNumberOfIterations, numberOfIterations));
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class MeshSmootherImpl extends ProcessorImpl<CartesianCoordinatesSet, Car
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
+			case ApogyCommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
 				return getNumberOfIterations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class MeshSmootherImpl extends ProcessorImpl<CartesianCoordinatesSet, Car
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
+			case ApogyCommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
 				setNumberOfIterations((Integer)newValue);
 				return;
 		}
@@ -145,7 +145,7 @@ public class MeshSmootherImpl extends ProcessorImpl<CartesianCoordinatesSet, Car
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
+			case ApogyCommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
 				setNumberOfIterations(NUMBER_OF_ITERATIONS_EDEFAULT);
 				return;
 		}
@@ -160,7 +160,7 @@ public class MeshSmootherImpl extends ProcessorImpl<CartesianCoordinatesSet, Car
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
+			case ApogyCommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
 				return numberOfIterations != NUMBER_OF_ITERATIONS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

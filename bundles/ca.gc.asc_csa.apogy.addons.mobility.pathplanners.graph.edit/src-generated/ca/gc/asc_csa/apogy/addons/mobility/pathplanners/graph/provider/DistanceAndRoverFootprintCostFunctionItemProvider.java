@@ -3,7 +3,7 @@
  *
  * $Id: DistanceAndRoverFootprintCostFunctionItemProvider.java,v 1.2.4.2 2015/05/21 15:51:33 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +71,7 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndRoverFootprintCostFunction_roverFootPrintRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndRoverFootprintCostFunction_roverFootPrintRadius_feature", "_UI_DistanceAndRoverFootprintCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -94,7 +94,7 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndRoverFootprintCostFunction_maximumRoughness_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndRoverFootprintCostFunction_maximumRoughness_feature", "_UI_DistanceAndRoverFootprintCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndRoverFootprintCostFunction_maximumCrossSlope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndRoverFootprintCostFunction_maximumCrossSlope_feature", "_UI_DistanceAndRoverFootprintCostFunction_type"),
-				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE,
+				 ApogyAddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE,
 				 true,
 				 false,
 				 false,
@@ -164,9 +164,9 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DistanceAndRoverFootprintCostFunction.class)) {
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
-			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
+			case ApogyAddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

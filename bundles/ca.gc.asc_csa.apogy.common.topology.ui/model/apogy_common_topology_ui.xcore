@@ -1,17 +1,17 @@
-@GenModel(prefix="Symphony__CommonTopologyUI",
+@GenModel(prefix="ApogyCommonTopologyUI",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-		  modelName="Symphony__CommonTopologyUI",
+		  modelName="ApogyCommonTopologyUI",
 		  complianceLevel="6.0")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.topology.ui.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.ui.edit/src-generated")
 
-package org.eclipse.symphony.common.topology.ui
+package ca.gc.asc_csa.apogy.common.topology.ui
 
-import org.eclipse.symphony.common.math.Tuple3d
-import org.eclipse.symphony.common.topology.Node
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.common.topology.Node
 
 type List<T> wraps java.util.List
 type RGB wraps org.eclipse.swt.graphics.RGB
@@ -19,7 +19,7 @@ type RGB wraps org.eclipse.swt.graphics.RGB
 type Point3d wraps javax.vecmath.Point3d
 type Vector3f wraps javax.vecmath.Vector3f
 
-type SceneObject wraps org.eclipse.symphony.common.topology.ui.SceneObject
+type SceneObject wraps ca.gc.asc_csa.apogy.common.topology.ui.SceneObject
 
 type Notification wraps org.eclipse.emf.common.notify.Notification
 
@@ -235,7 +235,7 @@ class URLNodePresentation extends NodePresentation
 	MeshPresentationMode presentationMode = "SURFACE"
 }
 
-class Symphony__CommonTopologyUIFacade
+class ApogyCommonTopologyUIFacade
 {
 	op GraphicsContext createGraphicsContext(Node topologyRoot)
 	

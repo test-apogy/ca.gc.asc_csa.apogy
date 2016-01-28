@@ -1,17 +1,17 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.lander.apogy.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.lander.symphony.LanderData;
-import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyFactory;
-import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.LanderApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyFactory;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSym
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLanderSymphonyFactoryImpl extends EFactoryImpl implements Symphony__ExamplesLanderSymphonyFactory
+public class ApogyExamplesLanderApogyFactoryImpl extends EFactoryImpl implements ApogyExamplesLanderApogyFactory
 {
   /**
 	 * Creates the default factory implementation.
@@ -27,18 +27,18 @@ public class Symphony__ExamplesLanderSymphonyFactoryImpl extends EFactoryImpl im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static Symphony__ExamplesLanderSymphonyFactory init()
+  public static ApogyExamplesLanderApogyFactory init()
   {
 		try {
-			Symphony__ExamplesLanderSymphonyFactory theSymphony__ExamplesLanderSymphonyFactory = (Symphony__ExamplesLanderSymphonyFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__ExamplesLanderSymphonyPackage.eNS_URI);
-			if (theSymphony__ExamplesLanderSymphonyFactory != null) {
-				return theSymphony__ExamplesLanderSymphonyFactory;
+			ApogyExamplesLanderApogyFactory theApogyExamplesLanderApogyFactory = (ApogyExamplesLanderApogyFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyExamplesLanderApogyPackage.eNS_URI);
+			if (theApogyExamplesLanderApogyFactory != null) {
+				return theApogyExamplesLanderApogyFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__ExamplesLanderSymphonyFactoryImpl();
+		return new ApogyExamplesLanderApogyFactoryImpl();
 	}
 
   /**
@@ -47,7 +47,7 @@ public class Symphony__ExamplesLanderSymphonyFactoryImpl extends EFactoryImpl im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLanderSymphonyFactoryImpl()
+  public ApogyExamplesLanderApogyFactoryImpl()
   {
 		super();
 	}
@@ -61,8 +61,8 @@ public class Symphony__ExamplesLanderSymphonyFactoryImpl extends EFactoryImpl im
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesLanderSymphonyPackage.LANDER_SYMPHONY_SYSTEM_API_ADAPTER: return createLanderSymphonySystemApiAdapter();
-			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA: return createLanderData();
+			case ApogyExamplesLanderApogyPackage.LANDER_APOGY_SYSTEM_API_ADAPTER: return createLanderApogySystemApiAdapter();
+			case ApogyExamplesLanderApogyPackage.LANDER_DATA: return createLanderData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -73,10 +73,10 @@ public class Symphony__ExamplesLanderSymphonyFactoryImpl extends EFactoryImpl im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public LanderSymphonySystemApiAdapter createLanderSymphonySystemApiAdapter()
+  public LanderApogySystemApiAdapter createLanderApogySystemApiAdapter()
   {
-		LanderSymphonySystemApiAdapterImpl landerSymphonySystemApiAdapter = new LanderSymphonySystemApiAdapterImpl();
-		return landerSymphonySystemApiAdapter;
+		LanderApogySystemApiAdapterImpl landerApogySystemApiAdapter = new LanderApogySystemApiAdapterImpl();
+		return landerApogySystemApiAdapter;
 	}
 
   /**
@@ -94,8 +94,8 @@ public class Symphony__ExamplesLanderSymphonyFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLanderSymphonyPackage getSymphony__ExamplesLanderSymphonyPackage() {
-		return (Symphony__ExamplesLanderSymphonyPackage)getEPackage();
+	public ApogyExamplesLanderApogyPackage getApogyExamplesLanderApogyPackage() {
+		return (ApogyExamplesLanderApogyPackage)getEPackage();
 	}
 
 		/**
@@ -105,9 +105,9 @@ public class Symphony__ExamplesLanderSymphonyFactoryImpl extends EFactoryImpl im
 	 * @generated
 	 */
   @Deprecated
-  public static Symphony__ExamplesLanderSymphonyPackage getPackage()
+  public static ApogyExamplesLanderApogyPackage getPackage()
   {
-		return Symphony__ExamplesLanderSymphonyPackage.eINSTANCE;
+		return ApogyExamplesLanderApogyPackage.eINSTANCE;
 	}
 
-} //Symphony__ExamplesLanderSymphonyFactoryImpl
+} //ApogyExamplesLanderApogyFactoryImpl

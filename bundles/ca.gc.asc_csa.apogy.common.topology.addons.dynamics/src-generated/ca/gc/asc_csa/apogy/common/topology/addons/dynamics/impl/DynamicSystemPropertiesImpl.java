@@ -4,7 +4,7 @@
  *
  * $Id: DynamicSystemPropertiesImpl.java,v 1.8.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import java.util.Collection;
 
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial;
-import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractConstraint;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractMaterial;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.DynamicSystemProperties;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,8 +28,8 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl#getMaterials <em>Materials</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl#getConstraints <em>Constraints</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl#getMaterials <em>Materials</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,7 +71,7 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	 */
 	public EList<AbstractConstraint> getConstraints() {
 		if (constraints == null) {
-			constraints = new EObjectContainmentEList<AbstractConstraint>(AbstractConstraint.class, this, Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS);
+			constraints = new EObjectContainmentEList<AbstractConstraint>(AbstractConstraint.class, this, ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -93,7 +93,7 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	 */
 	public EList<AbstractMaterial> getMaterials() {
 		if (materials == null) {
-			materials = new EObjectContainmentEList<AbstractMaterial>(AbstractMaterial.class, this, Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS);
+			materials = new EObjectContainmentEList<AbstractMaterial>(AbstractMaterial.class, this, ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS);
 		}
 		return materials;
 	}
@@ -106,9 +106,9 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
 				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
 				return ((InternalEList<?>)getMaterials()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -122,9 +122,9 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
 				return getConstraints();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
 				return getMaterials();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -139,11 +139,11 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends AbstractConstraint>)newValue);
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
 				getMaterials().clear();
 				getMaterials().addAll((Collection<? extends AbstractMaterial>)newValue);
 				return;
@@ -159,10 +159,10 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
 				getConstraints().clear();
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
 				getMaterials().clear();
 				return;
 		}
@@ -177,9 +177,9 @@ public class DynamicSystemPropertiesImpl extends AggregateGroupNodeImpl implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
+			case ApogyCommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
 				return materials != null && !materials.isEmpty();
 		}
 		return super.eIsSet(featureID);

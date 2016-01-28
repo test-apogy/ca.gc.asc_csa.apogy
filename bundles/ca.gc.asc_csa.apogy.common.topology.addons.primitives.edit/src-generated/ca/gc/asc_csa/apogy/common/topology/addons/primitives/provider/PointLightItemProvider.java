@@ -4,7 +4,7 @@
  *
  * $Id: PointLightItemProvider.java,v 1.3.2.3 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.primitives.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives.provider;
 
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.PointLight;
-import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight;
+import ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PointLight} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.PointLight} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,8 +64,8 @@ public class PointLightItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION);
+			childrenFeatures.add(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION);
+			childrenFeatures.add(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION);
 		}
 		return childrenFeatures;
 	}
@@ -120,8 +120,8 @@ public class PointLightItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PointLight.class)) {
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT_LIGHT__POSITION:
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT_LIGHT__ATTENUATION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.POINT_LIGHT__POSITION:
+			case ApogyCommonTopologyAddonsPrimitivesPackage.POINT_LIGHT__ATTENUATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -141,13 +141,13 @@ public class PointLightItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**
@@ -162,9 +162,9 @@ public class PointLightItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR ||
-			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION ||
-			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION;
+			childFeature == ApogyCommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR ||
+			childFeature == ApogyCommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION ||
+			childFeature == ApogyCommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION;
 
 		if (qualify) {
 			return getString

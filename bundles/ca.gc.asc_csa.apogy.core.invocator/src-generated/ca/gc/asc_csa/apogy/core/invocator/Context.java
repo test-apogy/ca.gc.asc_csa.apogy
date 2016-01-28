@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import java.util.Date;
 
-import org.eclipse.symphony.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,15 +16,15 @@ import org.eclipse.symphony.common.emf.Named;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Context#getContextsList <em>Contexts List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Context#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Context#getDataProductsList <em>Data Products List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList <em>Contexts List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getDataProductsList <em>Data Products List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext()
  * @model abstract="true"
  * @generated
  */
@@ -32,7 +32,7 @@ public interface Context extends Named
 {
   /**
 	 * Returns the value of the '<em><b>Contexts List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.ContextsList#getContexts <em>Contexts</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.ContextsList#getContexts <em>Contexts</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Contexts List</em>' container reference isn't clear,
@@ -41,8 +41,8 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts List</em>' container reference.
 	 * @see #setContextsList(ContextsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_ContextsList()
-	 * @see org.eclipse.symphony.core.invocator.ContextsList#getContexts
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_ContextsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ContextsList#getContexts
 	 * @model opposite="contexts" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -50,7 +50,7 @@ public interface Context extends Named
   ContextsList getContextsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Context#getContextsList <em>Contexts List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getContextsList <em>Contexts List</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Contexts List</em>' container reference.
@@ -69,14 +69,14 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Implementations List</em>' containment reference.
 	 * @see #setVariableImplementationsList(VariableImplementationsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_VariableImplementationsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_VariableImplementationsList()
 	 * @model containment="true"
 	 * @generated
 	 */
   VariableImplementationsList getVariableImplementationsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable Implementations List</em>' containment reference.
@@ -94,9 +94,9 @@ public interface Context extends Named
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_Environment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_Environment()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%org.eclipse.symphony.core.invocator.ContextsList%> _contextsList = this.getContextsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_contextsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.ContextsList%> _contextsList_1 = this.getContextsList();\n\treturn _contextsList_1.getEnvironment();\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%ca.gc.asc_csa.apogy.core.invocator.ContextsList%> _contextsList = this.getContextsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_contextsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%ca.gc.asc_csa.apogy.core.invocator.ContextsList%> _contextsList_1 = this.getContextsList();\n\treturn _contextsList_1.getEnvironment();\n}'"
 	 * @generated
 	 */
   Environment getEnvironment();
@@ -111,7 +111,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Products List</em>' reference.
 	 * @see #setDataProductsList(DataProductsList)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_DataProductsList()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_DataProductsList()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated
@@ -119,7 +119,7 @@ public interface Context extends Named
   DataProductsList getDataProductsList();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Context#getDataProductsList <em>Data Products List</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getDataProductsList <em>Data Products List</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Data Products List</em>' reference.
@@ -138,7 +138,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instances Creation Date</em>' attribute.
 	 * @see #setInstancesCreationDate(Date)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_InstancesCreationDate()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_InstancesCreationDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -146,7 +146,7 @@ public interface Context extends Named
   Date getInstancesCreationDate();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Instances Creation Date</em>' attribute.
@@ -165,7 +165,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instances Disposal Date</em>' attribute.
 	 * @see #setInstancesDisposalDate(Date)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_InstancesDisposalDate()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getContext_InstancesDisposalDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -173,7 +173,7 @@ public interface Context extends Named
   Date getInstancesDisposalDate();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Instances Disposal Date</em>' attribute.

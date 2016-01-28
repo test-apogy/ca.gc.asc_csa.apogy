@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.wizards;
+package ca.gc.asc_csa.apogy.core.ui.wizards;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,13 +12,13 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.presentation.CustomSymphony__CoreInvocatorEditor;
-import org.eclipse.symphony.core.ui.Activator;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.invocator.presentation.CustomApogyCoreInvocatorEditor;
+import ca.gc.asc_csa.apogy.core.ui.Activator;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFactory;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
@@ -31,22 +31,22 @@ import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-public class NewSymphonySessionWizard extends Wizard implements INewWizard {
-	private NewSymphonySessionWizardPage page;
+public class NewApogySessionWizard extends Wizard implements INewWizard {
+	private NewApogySessionWizardPage page;
 	private ISelection selection;
-	private NewSymphonySessionSettings newSymphonySessionSettings;
+	private NewApogySessionSettings newApogySessionSettings;
 	private IWorkbench workbench;
-	private SymphonyResourceSettings symphonyResourceSettings;
+	private ApogyResourceSettings apogyResourceSettings;
 
 	/**
-	 * Constructor for NewSymphonySessionWizard.
+	 * Constructor for NewApogySessionWizard.
 	 */
-	public NewSymphonySessionWizard() {
+	public NewApogySessionWizard() {
 		super();
-		setWindowTitle("New Symphony Session");
+		setWindowTitle("New Apogy Session");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(
-				Activator.ID, "icons/wizban/symphony_new_project.png");
+				Activator.ID, "icons/wizban/apogy_new_project.png");
 		setDefaultPageImageDescriptor(image);
 	}
 
@@ -65,27 +65,27 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 	 * Adding the page to the wizard.
 	 */
 	public void addPages() {
-		page = new NewSymphonySessionWizardPage(getNewSymphonySessionSettings(), getSymphonyResourceSettings());
+		page = new NewApogySessionWizardPage(getNewApogySessionSettings(), getApogyResourceSettings());
 		addPage(page);
 	}
 	
-	private SymphonyResourceSettings getSymphonyResourceSettings() {		
-		if (symphonyResourceSettings == null) {
-			symphonyResourceSettings = Symphony__CoreUIFactory.eINSTANCE
-					.createSymphonyResourceSettings();			
-			symphonyResourceSettings.setResourceContainer(getResourceContainer(this.selection));
-			symphonyResourceSettings.setResourceProject(getResourceContainer(this.selection).getProject());			
+	private ApogyResourceSettings getApogyResourceSettings() {		
+		if (apogyResourceSettings == null) {
+			apogyResourceSettings = ApogyCoreUIFactory.eINSTANCE
+					.createApogyResourceSettings();			
+			apogyResourceSettings.setResourceContainer(getResourceContainer(this.selection));
+			apogyResourceSettings.setResourceProject(getResourceContainer(this.selection).getProject());			
 		}
-		return symphonyResourceSettings;
+		return apogyResourceSettings;
 	}
 
-	private NewSymphonySessionSettings getNewSymphonySessionSettings() {
-		if (newSymphonySessionSettings == null) {
-			newSymphonySessionSettings = Symphony__CoreUIFactory.eINSTANCE
-					.createNewSymphonySessionSettings();
-			newSymphonySessionSettings.setDefaultValues(getResourceContainer(this.selection));
+	private NewApogySessionSettings getNewApogySessionSettings() {
+		if (newApogySessionSettings == null) {
+			newApogySessionSettings = ApogyCoreUIFactory.eINSTANCE
+					.createNewApogySessionSettings();
+			newApogySessionSettings.setDefaultValues(getResourceContainer(this.selection));
 		}
-		return newSymphonySessionSettings;
+		return newApogySessionSettings;
 	}
 
 	private IContainer getResourceContainer(ISelection selection) {
@@ -115,12 +115,12 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 					throws CoreException, InvocationTargetException,
 					InterruptedException {
 				IContainer container = getResourceContainer(selection);
-				InvocatorSession session = Symphony__CoreUIFacade.INSTANCE
-						.createSymphonySession(getNewSymphonySessionSettings());
+				InvocatorSession session = ApogyCoreUIFacade.INSTANCE
+						.createApogySession(getNewApogySessionSettings());
 				try {
-					Symphony__CoreUIFacade.INSTANCE
-							.createSymphonySessionFile(container,
-									getNewSymphonySessionSettings().getFilename(), session);
+					ApogyCoreUIFacade.INSTANCE
+							.createApogySessionFile(container,
+									getNewApogySessionSettings().getFilename(), session);
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
@@ -132,7 +132,7 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 		try {
 			getContainer().run(false, false, operation);
 
-			IFile modelFile = Symphony__CoreUIFacade.INSTANCE.getSymphonySessionFile(getSymphonyResourceSettings().getResourceContainer(), getNewSymphonySessionSettings().getFilename()); 
+			IFile modelFile = ApogyCoreUIFacade.INSTANCE.getApogySessionFile(getApogyResourceSettings().getResourceContainer(), getNewApogySessionSettings().getFilename()); 
 			
 			// Select the new file resource in the current view.
 			//
@@ -155,7 +155,7 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 			//
 			try {
 				page.openEditor(new FileEditorInput(modelFile),
-						CustomSymphony__CoreInvocatorEditor.ID);
+						CustomApogyCoreInvocatorEditor.ID);
 			} catch (PartInitException exception) {
 				// FIXME Logger
 				exception.printStackTrace();

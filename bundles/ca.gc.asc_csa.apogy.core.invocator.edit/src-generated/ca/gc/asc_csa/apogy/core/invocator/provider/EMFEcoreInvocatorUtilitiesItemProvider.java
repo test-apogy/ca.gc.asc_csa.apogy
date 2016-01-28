@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorUtilities} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorUtilities} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -63,7 +63,7 @@ public class EMFEcoreInvocatorUtilitiesItemProvider
   }
 
   /**
-   * This returns Symphony__CoreInvocatorUtilities.gif.
+   * This returns ApogyCoreInvocatorUtilities.gif.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -71,7 +71,7 @@ public class EMFEcoreInvocatorUtilitiesItemProvider
   @Override
   public Object getImage(Object object)
   {
-    return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreInvocatorUtilities"));
+    return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyCoreInvocatorUtilities"));
   }
 
   /**
@@ -83,7 +83,7 @@ public class EMFEcoreInvocatorUtilitiesItemProvider
   @Override
   public String getText(Object object)
   {
-    return getString("_UI_Symphony__CoreInvocatorUtilities_type");
+    return getString("_UI_ApogyCoreInvocatorUtilities_type");
   }
 
   /**

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,15 +13,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.RectangularRegionImage;
-import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,12 +31,12 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#isOpaque <em>Opaque</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getImage <em>Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getLegend <em>Legend</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getResolution <em>Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ImageMapLayerImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ImageMapLayerImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ImageMapLayerImpl#isOpaque <em>Opaque</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ImageMapLayerImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ImageMapLayerImpl#getLegend <em>Legend</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ImageMapLayerImpl#getResolution <em>Resolution</em>}</li>
  * </ul>
  *
  * @generated
@@ -161,7 +161,7 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER;
 	}
 
   /**
@@ -184,7 +184,7 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
 		double oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH, oldWidth, width));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH, oldWidth, width));
 	}
 
   /**
@@ -207,7 +207,7 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
 		double oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT, oldHeight, height));
 	}
 
   /**
@@ -230,7 +230,7 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
 		boolean oldOpaque = opaque;
 		opaque = newOpaque;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE, oldOpaque, opaque));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE, oldOpaque, opaque));
 	}
 
   /**
@@ -253,7 +253,7 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
 		AbstractEImage oldImage = image;
 		image = newImage;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, oldImage, newImage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, oldImage, newImage);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -269,14 +269,14 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
 		if (newImage != image) {
 			NotificationChain msgs = null;
 			if (image != null)
-				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, null, msgs);
+				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, null, msgs);
 			if (newImage != null)
-				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, null, msgs);
+				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, null, msgs);
 			msgs = basicSetImage(newImage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, newImage, newImage));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE, newImage, newImage));
 	}
 
   /**
@@ -299,7 +299,7 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
 		AbstractEImage oldLegend = legend;
 		legend = newLegend;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, oldLegend, newLegend);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, oldLegend, newLegend);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -315,14 +315,14 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
 		if (newLegend != legend) {
 			NotificationChain msgs = null;
 			if (legend != null)
-				msgs = ((InternalEObject)legend).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, null, msgs);
+				msgs = ((InternalEObject)legend).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, null, msgs);
 			if (newLegend != null)
-				msgs = ((InternalEObject)newLegend).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, null, msgs);
+				msgs = ((InternalEObject)newLegend).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, null, msgs);
 			msgs = basicSetLegend(newLegend, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, newLegend, newLegend));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND, newLegend, newLegend));
 	}
 
   	/**
@@ -332,8 +332,8 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
  	 */
  	public RectangularRegion getImageMapLayerRegion() 
  	{
- 		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
- 		rectangularRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
+ 		RectangularRegion rectangularRegion = ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
+ 		rectangularRegion.setTransformation(ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4());
  		
  		if(getMap() != null && getMap().getTransformation() != null)
  		{ 			 
@@ -407,9 +407,9 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
 				return basicSetImage(null, msgs);
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
 				return basicSetLegend(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -424,17 +424,17 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
 				return getWidth();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
 				return getHeight();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
 				return isOpaque();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
 				return getImage();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
 				return getLegend();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__RESOLUTION:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__RESOLUTION:
 				return getResolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -449,19 +449,19 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
 				setWidth((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
 				setHeight((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
 				setOpaque((Boolean)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
 				setImage((AbstractEImage)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
 				setLegend((AbstractEImage)newValue);
 				return;
 		}
@@ -477,19 +477,19 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
 				setOpaque(OPAQUE_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
 				setImage((AbstractEImage)null);
 				return;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
 				setLegend((AbstractEImage)null);
 				return;
 		}
@@ -505,17 +505,17 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
 				return width != WIDTH_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
 				return opaque != OPAQUE_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
 				return image != null;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
 				return legend != null;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__RESOLUTION:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER__RESOLUTION:
 				return resolution != RESOLUTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -531,14 +531,14 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   {
 		if (baseClass == RectangularRegionProvider.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION;
+				case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION;
 				default: return -1;
 			}
 		}
 		if (baseClass == RectangularRegionImage.class) {
 			switch (baseOperationID) {
-				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_REGION_IMAGE: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION_IMAGE;
-				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_RESOLUTION: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_RESOLUTION;
+				case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_REGION_IMAGE: return ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION_IMAGE;
+				case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_RESOLUTION: return ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_RESOLUTION;
 				default: return -1;
 			}
 		}
@@ -554,14 +554,14 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR:
 				updateImage((IProgressMonitor)arguments.get(0));
 				return null;
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION:
 				return getImageMapLayerRegion();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION_IMAGE:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION_IMAGE:
 				return getRegionImage();
-			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION:
+			case ApogyCoreEnvironmentPackage.IMAGE_MAP_LAYER___GET_REGION:
 				return getRegion();
 		}
 		return super.eInvoke(operationID, arguments);

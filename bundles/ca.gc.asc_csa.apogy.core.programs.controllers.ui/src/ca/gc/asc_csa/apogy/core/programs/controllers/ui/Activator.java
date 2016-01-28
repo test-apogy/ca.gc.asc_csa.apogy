@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.programs.controllers.ui;
+package ca.gc.asc_csa.apogy.core.programs.controllers.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -15,7 +15,7 @@ public class Activator extends AbstractUIPlugin
 	}
 	
 	// The plug-in ID
-	public static final String ID = "org.eclipse.symphony.core.programs.controllers.ui"; //$NON-NLS-1$
+	public static final String ID = "ca.gc.asc_csa.apogy.core.programs.controllers.ui"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

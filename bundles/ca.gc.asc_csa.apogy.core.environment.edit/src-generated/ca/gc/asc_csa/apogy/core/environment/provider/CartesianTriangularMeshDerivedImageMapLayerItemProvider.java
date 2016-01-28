@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshDerivedImageMapLayer_requiredResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshDerivedImageMapLayer_requiredResolution_feature", "_UI_CartesianTriangularMeshDerivedImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION,
+				 ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshDerivedImageMapLayer_cartesianTriangularMeshMapLayer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshDerivedImageMapLayer_cartesianTriangularMeshMapLayer_feature", "_UI_CartesianTriangularMeshDerivedImageMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER,
+				 ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER,
 				 true,
 				 false,
 				 true,
@@ -121,7 +121,7 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianTriangularMeshDerivedImageMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
+			case ApogyCoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -152,8 +152,8 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.impl;
+package ca.gc.asc_csa.apogy.core.invocator.impl;
 
 import java.util.Collection;
 
@@ -11,9 +11,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.WatchesList;
-import org.eclipse.symphony.core.invocator.WatchesListsContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesList;
+import ca.gc.asc_csa.apogy.core.invocator.WatchesListsContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.invocator.WatchesListsContainer;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchesListsContainerImpl#getWatches <em>Watches</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.impl.WatchesListsContainerImpl#getWatches <em>Watches</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,7 +58,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreInvocatorPackage.Literals.WATCHES_LISTS_CONTAINER;
+		return ApogyCoreInvocatorPackage.Literals.WATCHES_LISTS_CONTAINER;
 	}
 
   /**
@@ -69,7 +69,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   public EList<WatchesList> getWatches()
   {
 		if (watches == null) {
-			watches = new EObjectContainmentWithInverseEList<WatchesList>(WatchesList.class, this, Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES, Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER);
+			watches = new EObjectContainmentWithInverseEList<WatchesList>(WatchesList.class, this, ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES, ApogyCoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER);
 		}
 		return watches;
 	}
@@ -84,7 +84,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getWatches()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
 				return ((InternalEList<?>)getWatches()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -114,7 +114,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
 				return getWatches();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
 				getWatches().clear();
 				getWatches().addAll((Collection<? extends WatchesList>)newValue);
 				return;
@@ -147,7 +147,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
 				getWatches().clear();
 				return;
 		}
@@ -163,7 +163,7 @@ public class WatchesListsContainerImpl extends AbstractToolsListContainerImpl im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
+			case ApogyCoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES:
 				return watches != null && !watches.isEmpty();
 		}
 		return super.eIsSet(featureID);

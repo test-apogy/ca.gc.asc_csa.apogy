@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.impl;
+package ca.gc.asc_csa.apogy.common.math.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
@@ -11,8 +11,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -21,9 +21,9 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl#getZ <em>Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.impl.Tuple3dImpl#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.impl.Tuple3dImpl#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.impl.Tuple3dImpl#getZ <em>Z</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,7 +103,7 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonMathPackage.Literals.TUPLE3D;
+		return ApogyCommonMathPackage.Literals.TUPLE3D;
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.TUPLE3D__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonMathPackage.TUPLE3D__X, oldX, x));
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.TUPLE3D__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonMathPackage.TUPLE3D__Y, oldY, y));
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 		double oldZ = z;
 		z = newZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.TUPLE3D__Z, oldZ, z));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonMathPackage.TUPLE3D__Z, oldZ, z));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.TUPLE3D__X:
+			case ApogyCommonMathPackage.TUPLE3D__X:
 				return getX();
-			case Symphony__CommonMathPackage.TUPLE3D__Y:
+			case ApogyCommonMathPackage.TUPLE3D__Y:
 				return getY();
-			case Symphony__CommonMathPackage.TUPLE3D__Z:
+			case ApogyCommonMathPackage.TUPLE3D__Z:
 				return getZ();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,13 +195,13 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.TUPLE3D__X:
+			case ApogyCommonMathPackage.TUPLE3D__X:
 				setX((Double)newValue);
 				return;
-			case Symphony__CommonMathPackage.TUPLE3D__Y:
+			case ApogyCommonMathPackage.TUPLE3D__Y:
 				setY((Double)newValue);
 				return;
-			case Symphony__CommonMathPackage.TUPLE3D__Z:
+			case ApogyCommonMathPackage.TUPLE3D__Z:
 				setZ((Double)newValue);
 				return;
 		}
@@ -215,13 +215,13 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.TUPLE3D__X:
+			case ApogyCommonMathPackage.TUPLE3D__X:
 				setX(X_EDEFAULT);
 				return;
-			case Symphony__CommonMathPackage.TUPLE3D__Y:
+			case ApogyCommonMathPackage.TUPLE3D__Y:
 				setY(Y_EDEFAULT);
 				return;
-			case Symphony__CommonMathPackage.TUPLE3D__Z:
+			case ApogyCommonMathPackage.TUPLE3D__Z:
 				setZ(Z_EDEFAULT);
 				return;
 		}
@@ -235,11 +235,11 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonMathPackage.TUPLE3D__X:
+			case ApogyCommonMathPackage.TUPLE3D__X:
 				return x != X_EDEFAULT;
-			case Symphony__CommonMathPackage.TUPLE3D__Y:
+			case ApogyCommonMathPackage.TUPLE3D__Y:
 				return y != Y_EDEFAULT;
-			case Symphony__CommonMathPackage.TUPLE3D__Z:
+			case ApogyCommonMathPackage.TUPLE3D__Z:
 				return z != Z_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -253,7 +253,7 @@ public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonMathPackage.TUPLE3D___AS_TUPLE3D:
+			case ApogyCommonMathPackage.TUPLE3D___AS_TUPLE3D:
 				return asTuple3d();
 		}
 		return super.eInvoke(operationID, arguments);

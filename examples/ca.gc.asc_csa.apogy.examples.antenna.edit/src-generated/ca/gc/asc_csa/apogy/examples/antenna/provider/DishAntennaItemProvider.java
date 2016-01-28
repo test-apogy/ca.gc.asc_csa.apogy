@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.provider;
+package ca.gc.asc_csa.apogy.examples.antenna.provider;
 
 
 import java.util.Collection;
@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.examples.antenna.DishAntenna;
-import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.examples.antenna.DishAntenna;
+import ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.DishAntenna} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.antenna.DishAntenna} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ extends AntennaItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DishAntenna_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DishAntenna_fov_feature", "_UI_DishAntenna_type"),
-				 Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV,
+				 ApogyExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV,
 				 false,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ extends AntennaItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV);
+			childrenFeatures.add(ApogyExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -147,7 +147,7 @@ extends AntennaItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DishAntenna.class)) {
-			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
+			case ApogyExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -168,8 +168,8 @@ extends AntennaItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
+				(ApogyExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 	}
 
 }

@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated emf_ecore_examples_lander -->
       <package
-            uri="org.eclipse.symphony.examples.lander"
-            class="org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage"
-            genModel="model/symphony_examples_lander.xcore"/>
+            uri="ca.gc.asc_csa.apogy.examples.lander"
+            class="ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage"
+            genModel="model/apogy_examples_lander.xcore"/>
    </extension>
 
 </plugin>

@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.environment.impl.AtmosphereUtilsImpl;
+import ca.gc.asc_csa.apogy.core.environment.impl.AtmosphereUtilsImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +12,7 @@ import org.eclipse.symphony.core.environment.impl.AtmosphereUtilsImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphereUtils()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getAtmosphereUtils()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface AtmosphereUtils extends EObject
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeAngleUnique="false"
-	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getAirMass(double sunAltitudeAngle);
@@ -50,9 +50,9 @@ public interface AtmosphereUtils extends EObject
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeAngleUnique="false"
-	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" heightAboveSeaLevelUnique="false"
-	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='W/m\262'"
+	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" heightAboveSeaLevelUnique="false"
+	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='W/m\262'"
 	 * @generated
 	 */
   double getDirectSunIntensity(double sunAltitudeAngle, double heightAboveSeaLevel);
@@ -67,9 +67,9 @@ public interface AtmosphereUtils extends EObject
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeAngleUnique="false"
-	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" heightAboveSeaLevelUnique="false"
-	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='W/m\262'"
+	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" heightAboveSeaLevelUnique="false"
+	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='W/m\262'"
 	 * @generated
 	 */
   double getDiffuseSunIntensity(double sunAltitudeAngle, double heightAboveSeaLevel);
@@ -88,7 +88,7 @@ public interface AtmosphereUtils extends EObject
 	 * @see ../doc/AtmosphereRefractionCalculations.html or http://www.srrb.noaa.gov/highlights/sunrise/calcdetails.html.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" geometricAltitudeUnique="false"
-	 *        geometricAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        geometricAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
   double getAtmosphereRefractionCorrection(double geometricAltitude);

@@ -1,19 +1,19 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lander.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.lander.apogy.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
-import org.eclipse.symphony.examples.lander.symphony.LanderData;
-import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyFactory;
-import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.examples.lander.ApogyExamplesLanderPackage;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.LanderData;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.LanderApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyFactory;
+import ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,14 +21,14 @@ import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSym
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl implements Symphony__ExamplesLanderSymphonyPackage
+public class ApogyExamplesLanderApogyPackageImpl extends EPackageImpl implements ApogyExamplesLanderApogyPackage
 {
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass landerSymphonySystemApiAdapterEClass = null;
+  private EClass landerApogySystemApiAdapterEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -48,13 +48,13 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.lander.apogy.ApogyExamplesLanderApogyPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesLanderSymphonyPackageImpl()
+  private ApogyExamplesLanderApogyPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesLanderSymphonyFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesLanderApogyFactory.eINSTANCE);
 	}
 
   /**
@@ -67,7 +67,7 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesLanderSymphonyPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesLanderApogyPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -76,31 +76,31 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesLanderSymphonyPackage init()
+  public static ApogyExamplesLanderApogyPackage init()
   {
-		if (isInited) return (Symphony__ExamplesLanderSymphonyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesLanderSymphonyPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesLanderApogyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesLanderApogyPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesLanderSymphonyPackageImpl theSymphony__ExamplesLanderSymphonyPackage = (Symphony__ExamplesLanderSymphonyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesLanderSymphonyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesLanderSymphonyPackageImpl());
+		ApogyExamplesLanderApogyPackageImpl theApogyExamplesLanderApogyPackage = (ApogyExamplesLanderApogyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesLanderApogyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesLanderApogyPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__ExamplesLanderPackage.eINSTANCE.eClass();
+		ApogyExamplesLanderPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesLanderSymphonyPackage.createPackageContents();
+		theApogyExamplesLanderApogyPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesLanderSymphonyPackage.initializePackageContents();
+		theApogyExamplesLanderApogyPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesLanderSymphonyPackage.freeze();
+		theApogyExamplesLanderApogyPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesLanderSymphonyPackage.eNS_URI, theSymphony__ExamplesLanderSymphonyPackage);
-		return theSymphony__ExamplesLanderSymphonyPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesLanderApogyPackage.eNS_URI, theApogyExamplesLanderApogyPackage);
+		return theApogyExamplesLanderApogyPackage;
 	}
 
   /**
@@ -108,9 +108,9 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getLanderSymphonySystemApiAdapter()
+  public EClass getLanderApogySystemApiAdapter()
   {
-		return landerSymphonySystemApiAdapterEClass;
+		return landerApogySystemApiAdapterEClass;
 	}
 
   /**
@@ -226,8 +226,8 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesLanderSymphonyFactory getSymphony__ExamplesLanderSymphonyFactory() {
-		return (Symphony__ExamplesLanderSymphonyFactory)getEFactoryInstance();
+	public ApogyExamplesLanderApogyFactory getApogyExamplesLanderApogyFactory() {
+		return (ApogyExamplesLanderApogyFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -250,7 +250,7 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
 		isCreated = true;
 
 		// Create classes and their features
-		landerSymphonySystemApiAdapterEClass = createEClass(LANDER_SYMPHONY_SYSTEM_API_ADAPTER);
+		landerApogySystemApiAdapterEClass = createEClass(LANDER_APOGY_SYSTEM_API_ADAPTER);
 
 		landerDataEClass = createEClass(LANDER_DATA);
 		createEAttribute(landerDataEClass, LANDER_DATA__INITIALIZED);
@@ -291,28 +291,28 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__ExamplesLanderPackage theSymphony__ExamplesLanderPackage = (Symphony__ExamplesLanderPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesLanderPackage.eNS_URI);
+		ApogyExamplesLanderPackage theApogyExamplesLanderPackage = (ApogyExamplesLanderPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesLanderPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		landerSymphonySystemApiAdapterEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonySystemApiAdapter());
-		landerDataEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonyInitializationData());
+		landerApogySystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
+		landerDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(landerSymphonySystemApiAdapterEClass, LanderSymphonySystemApiAdapter.class, "LanderSymphonySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(landerApogySystemApiAdapterEClass, LanderApogySystemApiAdapter.class, "LanderApogySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(landerDataEClass, LanderData.class, "LanderData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLanderData_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLanderData_Disposed(), theEcorePackage.getEBoolean(), "disposed", "false", 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLanderData_FlyingEnabled(), theEcorePackage.getEBoolean(), "flyingEnabled", "false", 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLanderData_LegAExtension(), theSymphony__ExamplesLanderPackage.getLanderLegExtension(), "legAExtension", null, 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLanderData_LegBExtension(), theSymphony__ExamplesLanderPackage.getLanderLegExtension(), "legBExtension", null, 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLanderData_LegCExtension(), theSymphony__ExamplesLanderPackage.getLanderLegExtension(), "legCExtension", null, 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLanderData_LegAExtension(), theApogyExamplesLanderPackage.getLanderLegExtension(), "legAExtension", null, 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLanderData_LegBExtension(), theApogyExamplesLanderPackage.getLanderLegExtension(), "legBExtension", null, 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLanderData_LegCExtension(), theApogyExamplesLanderPackage.getLanderLegExtension(), "legCExtension", null, 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLanderData_CurrThrustLevel(), theEcorePackage.getEDouble(), "currThrustLevel", "0.0", 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLanderData_MinThrustLevel(), theEcorePackage.getEDouble(), "minThrustLevel", "0.0", 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLanderData_MaxThrustLevel(), theEcorePackage.getEDouble(), "maxThrustLevel", "0.0", 0, 1, LanderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -323,4 +323,4 @@ public class Symphony__ExamplesLanderSymphonyPackageImpl extends EPackageImpl im
 		createResource(eNS_URI);
 	}
 
-} //Symphony__ExamplesLanderSymphonyPackageImpl
+} //ApogyExamplesLanderApogyPackageImpl

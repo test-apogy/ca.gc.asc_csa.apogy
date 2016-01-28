@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.impl;
+package ca.gc.asc_csa.apogy.core.topology.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,62 +17,62 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.emf.ListFeatureNode;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
-import org.eclipse.symphony.common.topology.impl.ReferencedGroupNodeImpl;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.Environment;
-import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
-import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.invocator.VariableImplementation;
-import org.eclipse.symphony.core.topology.Activator;
-import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TransformMatrixBinding;
+import ca.gc.asc_csa.apogy.common.topology.impl.ReferencedGroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Context;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.TypeMemberImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
+import ca.gc.asc_csa.apogy.core.invocator.VariableImplementation;
+import ca.gc.asc_csa.apogy.core.topology.Activator;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Symphony System AP Is Node</b></em>'.
+ * An implementation of the model object '<em><b>Apogy System AP Is Node</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonySystemAPIsNodeImpl#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogySystemAPIsNodeImpl#getApogyEnvironment <em>Apogy Environment</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implements SymphonySystemAPIsNode
+public class ApogySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implements ApogySystemAPIsNode
 {
 	/**
-	 * The cached value of the '{@link #getSymphonyEnvironment() <em>Symphony Environment</em>}' reference.
+	 * The cached value of the '{@link #getApogyEnvironment() <em>Apogy Environment</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getSymphonyEnvironment()
+	 * @see #getApogyEnvironment()
 	 * @generated
 	 * @ordered
 	 */
-  protected SymphonyEnvironment symphonyEnvironment;
+  protected ApogyEnvironment apogyEnvironment;
 
   private List<AssemblyLink> processedAssemblyLink = new ArrayList<AssemblyLink>();
 	
@@ -83,7 +83,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SymphonySystemAPIsNodeImpl()
+  protected ApogySystemAPIsNodeImpl()
   {
 		super();
 	}
@@ -96,7 +96,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreTopologyPackage.Literals.SYMPHONY_SYSTEM_AP_IS_NODE;
+		return ApogyCoreTopologyPackage.Literals.APOGY_SYSTEM_AP_IS_NODE;
 	}
 
   /**
@@ -104,17 +104,17 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyEnvironment getSymphonyEnvironment()
+  public ApogyEnvironment getApogyEnvironment()
   {
-		if (symphonyEnvironment != null && symphonyEnvironment.eIsProxy()) {
-			InternalEObject oldSymphonyEnvironment = (InternalEObject)symphonyEnvironment;
-			symphonyEnvironment = (SymphonyEnvironment)eResolveProxy(oldSymphonyEnvironment);
-			if (symphonyEnvironment != oldSymphonyEnvironment) {
+		if (apogyEnvironment != null && apogyEnvironment.eIsProxy()) {
+			InternalEObject oldApogyEnvironment = (InternalEObject)apogyEnvironment;
+			apogyEnvironment = (ApogyEnvironment)eResolveProxy(oldApogyEnvironment);
+			if (apogyEnvironment != oldApogyEnvironment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment, apogyEnvironment));
 			}
 		}
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 
   /**
@@ -122,9 +122,9 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyEnvironment basicGetSymphonyEnvironment()
+  public ApogyEnvironment basicGetApogyEnvironment()
   {
-		return symphonyEnvironment;
+		return apogyEnvironment;
 	}
 
   /**
@@ -132,13 +132,13 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public void setSymphonyEnvironment(SymphonyEnvironment newSymphonyEnvironment)
+  public void setApogyEnvironment(ApogyEnvironment newApogyEnvironment)
   {
-	  SymphonyEnvironment oldSymphonyEnvironment = getSymphonyEnvironment();
+	  ApogyEnvironment oldApogyEnvironment = getApogyEnvironment();
 	  
-	  setSymphonyEnvironmentGen(newSymphonyEnvironment);
+	  setApogyEnvironmentGen(newApogyEnvironment);
 	  	  
-	  updateSymphonyEnvironment(oldSymphonyEnvironment, newSymphonyEnvironment);
+	  updateApogyEnvironment(oldApogyEnvironment, newApogyEnvironment);
   }
 
   /**
@@ -146,12 +146,12 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setSymphonyEnvironmentGen(SymphonyEnvironment newSymphonyEnvironment)
+  public void setApogyEnvironmentGen(ApogyEnvironment newApogyEnvironment)
   {
-		SymphonyEnvironment oldSymphonyEnvironment = symphonyEnvironment;
-		symphonyEnvironment = newSymphonyEnvironment;
+		ApogyEnvironment oldApogyEnvironment = apogyEnvironment;
+		apogyEnvironment = newApogyEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment, apogyEnvironment));
 	}
   
   /**
@@ -163,9 +163,9 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
-				if (resolve) return getSymphonyEnvironment();
-				return basicGetSymphonyEnvironment();
+			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT:
+				if (resolve) return getApogyEnvironment();
+				return basicGetApogyEnvironment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,8 +179,8 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
-				setSymphonyEnvironment((SymphonyEnvironment)newValue);
+			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT:
+				setApogyEnvironment((ApogyEnvironment)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,8 +195,8 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
-				setSymphonyEnvironment((SymphonyEnvironment)null);
+			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT:
+				setApogyEnvironment((ApogyEnvironment)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -211,8 +211,8 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
-				return symphonyEnvironment != null;
+			case ApogyCoreTopologyPackage.APOGY_SYSTEM_AP_IS_NODE__APOGY_ENVIRONMENT:
+				return apogyEnvironment != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -222,37 +222,37 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 	  getChildren().clear();	  
   }
   
-  private void updateSymphonyEnvironment(SymphonyEnvironment oldSymphonyEnvironment, SymphonyEnvironment newSymphonyEnvironment)
+  private void updateApogyEnvironment(ApogyEnvironment oldApogyEnvironment, ApogyEnvironment newApogyEnvironment)
   {	
 		// Clears the topology
 		clearTopology();
 		
-		// Un-register adapter from old SymphonyEnvironment if applicable.
-		if(oldSymphonyEnvironment != null)
+		// Un-register adapter from old ApogyEnvironment if applicable.
+		if(oldApogyEnvironment != null)
 		{
-			oldSymphonyEnvironment.eAdapters().remove(getAdapter());
+			oldApogyEnvironment.eAdapters().remove(getAdapter());
 			
 			// Un-Register from the old Environment Active Context if defined.
-			if(oldSymphonyEnvironment.getActiveContext() != null)
+			if(oldApogyEnvironment.getActiveContext() != null)
 			{
-				oldSymphonyEnvironment.getActiveContext().eAdapters().remove(getAdapter());
+				oldApogyEnvironment.getActiveContext().eAdapters().remove(getAdapter());
 			}
 		}
 		
-		// Register adapter to new SymphonyEnvironment if applicable.
-		if(newSymphonyEnvironment != null)
+		// Register adapter to new ApogyEnvironment if applicable.
+		if(newApogyEnvironment != null)
 		{						
-			newSymphonyEnvironment.eAdapters().add(getAdapter());
+			newApogyEnvironment.eAdapters().add(getAdapter());
 			
 			// Register to the new Environment Active Context if defined.
-			if(newSymphonyEnvironment.getActiveContext() != null)
+			if(newApogyEnvironment.getActiveContext() != null)
 			{
-				newSymphonyEnvironment.getActiveContext().eAdapters().add(getAdapter());
+				newApogyEnvironment.getActiveContext().eAdapters().add(getAdapter());
 			}
 			
 			
 			// Initialize the topology.
-			initializeTopology(newSymphonyEnvironment);
+			initializeTopology(newApogyEnvironment);
 		}
   }
   
@@ -271,7 +271,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 		  newContext.eAdapters().add(getAdapter());
 										
 		  // Updates topology.
-		  initializeTopology(getSymphonyEnvironment());
+		  initializeTopology(getApogyEnvironment());
 	  }	
   }
   
@@ -281,26 +281,26 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 	  clearTopology();
 	  
 	  // Updates topology.
-	  initializeTopology(getSymphonyEnvironment());
+	  initializeTopology(getApogyEnvironment());
   }
   
 
-  private TransformMatrixBinding createTransformMatrixBinding(final SymphonySystem symphonySystem, final TransformNode poseTransform, final PoseProvider poseProvider)
+  private TransformMatrixBinding createTransformMatrixBinding(final ApogySystem apogySystem, final TransformNode poseTransform, final PoseProvider poseProvider)
   {
-	  TransformMatrixBinding binding = Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding();
+	  TransformMatrixBinding binding = ApogyCommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding();
 	  
-	  ListRootNode listRootNode = Symphony__CommonEMFFactory.eINSTANCE.createListRootNode();
+	  ListRootNode listRootNode = ApogyCommonEMFFactory.eINSTANCE.createListRootNode();
 	  listRootNode.setSourceClass(poseProvider.eClass());
 	  
-	  ListFeatureNode listFeatureNode = Symphony__CommonEMFFactory.eINSTANCE.createListFeatureNode();	  	 
-	  listFeatureNode.setStructuralFeature(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+	  ListFeatureNode listFeatureNode = ApogyCommonEMFFactory.eINSTANCE.createListFeatureNode();	  	 
+	  listFeatureNode.setStructuralFeature(ApogyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
 	  listRootNode.setChild(listFeatureNode);
 	  
 	  binding.setFeatureNode(listFeatureNode);  
 	  binding.setTransformNode(poseTransform);
 	  binding.setSource(poseProvider);	  	  
 	  
-	  symphonySystem.getBindingSet().getBindingsList().getBindings().add(binding);
+	  apogySystem.getBindingSet().getBindingsList().getBindings().add(binding);
 	  
 	  binding.bind();
 	  
@@ -308,11 +308,11 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   }
 
   
-  private Map<SymphonySystem, SymphonySystemApiAdapter> createSystemToApiAdapterMap(final SymphonyEnvironment symphonyEnvironment)
+  private Map<ApogySystem, ApogySystemApiAdapter> createSystemToApiAdapterMap(final ApogyEnvironment apogyEnvironment)
   {
-	  Map<SymphonySystem, SymphonySystemApiAdapter> map = new HashMap<SymphonySystem, SymphonySystemApiAdapter>();
+	  Map<ApogySystem, ApogySystemApiAdapter> map = new HashMap<ApogySystem, ApogySystemApiAdapter>();
 	  
-	  Iterator<VariableImplementation> it = symphonyEnvironment.getActiveContext().getVariableImplementationsList().getVariableImplementations().iterator();
+	  Iterator<VariableImplementation> it = apogyEnvironment.getActiveContext().getVariableImplementationsList().getVariableImplementations().iterator();
 	  VariableImplementation variableImplementation = null;
 	  
 	  while(it.hasNext())
@@ -324,18 +324,18 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 	  return map;
   }
     
-  private void createSystemToApiAdapterMap(AbstractTypeImplementation abstractTypeImplementation, final Map<SymphonySystem, SymphonySystemApiAdapter> systemToApiAdapterMap)
+  private void createSystemToApiAdapterMap(AbstractTypeImplementation abstractTypeImplementation, final Map<ApogySystem, ApogySystemApiAdapter> systemToApiAdapterMap)
   {
 	  	  	  
-	  if(abstractTypeImplementation.getAdapterInstance() instanceof SymphonySystemApiAdapter)
+	  if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
 	  {
-		  SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
+		  ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
 		  
-		  if(symphonySystemApiAdapter.getSymphonySystem() != null)
+		  if(apogySystemApiAdapter.getApogySystem() != null)
 		  {
-			  SymphonySystem symphonySystem = symphonySystemApiAdapter.getSymphonySystem();
+			  ApogySystem apogySystem = apogySystemApiAdapter.getApogySystem();
 			  
-			  systemToApiAdapterMap.put(symphonySystem, symphonySystemApiAdapter);
+			  systemToApiAdapterMap.put(apogySystem, apogySystemApiAdapter);
 		  }
 	  }
 	  
@@ -350,16 +350,16 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 	  }
   }
 
-  private void initializeTopology(final SymphonyEnvironment symphonyEnvironment)
+  private void initializeTopology(final ApogyEnvironment apogyEnvironment)
   {	  	  
 	  processedAssemblyLink.clear();
 	  
-	  if(symphonyEnvironment != null && symphonyEnvironment.getActiveContext() != null)
+	  if(apogyEnvironment != null && apogyEnvironment.getActiveContext() != null)
 	  {
-		  Iterator<VariableImplementation> it = symphonyEnvironment.getActiveContext().getVariableImplementationsList().getVariableImplementations().iterator();
+		  Iterator<VariableImplementation> it = apogyEnvironment.getActiveContext().getVariableImplementationsList().getVariableImplementations().iterator();
 		  VariableImplementation variableImplementation = null;
 		  
-		  Map<SymphonySystem, SymphonySystemApiAdapter> systemToApiAdapterMap = createSystemToApiAdapterMap(symphonyEnvironment);
+		  Map<ApogySystem, ApogySystemApiAdapter> systemToApiAdapterMap = createSystemToApiAdapterMap(apogyEnvironment);
 		  
 		  while(it.hasNext())
 		  {			
@@ -369,22 +369,22 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 			  try
 			  {			
 				  // EObject instance = variableImplementation.getInstance();
-				  if(variableImplementation.getAdapterInstance() instanceof SymphonySystemApiAdapter)
+				  if(variableImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
 				  {		
 					  Logger.INSTANCE.log(Activator.ID, this, "Adding variable <" + variable.getName() + "> to the topology.", EventSeverity.WARNING);						  					 
 					  
-					  SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) variableImplementation.getAdapterInstance();					 					
-					  SymphonySystem symphonySystem = symphonySystemApiAdapter.getSymphonySystem();
+					  ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) variableImplementation.getAdapterInstance();					 					
+					  ApogySystem apogySystem = apogySystemApiAdapter.getApogySystem();
 
-					  if(symphonySystem != null)
+					  if(apogySystem != null)
 					  {							  
 						  // Adds a transform node used to effect the poseTransform.						  
 						  Matrix4d matrix = new Matrix4d();
 						  matrix.setIdentity();	
 						  	
-						  if(symphonySystemApiAdapter instanceof PoseProvider)
+						  if(apogySystemApiAdapter instanceof PoseProvider)
 						  {
-							  PoseProvider poseProvider = (PoseProvider) symphonySystemApiAdapter;
+							  PoseProvider poseProvider = (PoseProvider) apogySystemApiAdapter;
 							  
 							  if(poseProvider.getPoseTransform() != null)
 							  {
@@ -392,24 +392,24 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  }
 						  }
 						  
-						  TransformNode poseTransform = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(matrix);						  
+						  TransformNode poseTransform = ApogyCommonTopologyFacade.INSTANCE.createTransformNode(matrix);						  
 						  poseTransform.setNodeId(variable.getName() + "_poseTransform");						 
 						  
 						  // If the system defines a pose provider.
-						  if(symphonySystem.getPoseProviderInstance() instanceof PoseProvider)
+						  if(apogySystem.getPoseProviderInstance() instanceof PoseProvider)
 						  {							  
-							  PoseProvider poseProvide = symphonySystem.getPoseProviderInstance();
+							  PoseProvider poseProvide = apogySystem.getPoseProviderInstance();
 							  
 							  // Adds a binding to link the transform node to the poseTransform.
-							  createTransformMatrixBinding(symphonySystem, poseTransform, poseProvide);
+							  createTransformMatrixBinding(apogySystem, poseTransform, poseProvide);
 						  }
 						  						  
-						  // Adds the topology representing the SymphonySystem itself.
-						  ReferencedGroupNode referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
+						  // Adds the topology representing the ApogySystem itself.
+						  ReferencedGroupNode referencedGroupNode = ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
 						  referencedGroupNode.setNodeId(variableImplementation.getVariable().getName());
-						  if(symphonySystem.getTopologyRoot() != null && symphonySystem.getTopologyRoot().getOriginNode() != null)
+						  if(apogySystem.getTopologyRoot() != null && apogySystem.getTopologyRoot().getOriginNode() != null)
 						  {
-							  referencedGroupNode.getChildren().add(symphonySystem.getTopologyRoot().getOriginNode());
+							  referencedGroupNode.getChildren().add(apogySystem.getTopologyRoot().getOriginNode());
 						  }
 						  else
 						  {
@@ -417,9 +417,9 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.INFO);	
 							  
 							  // DEBUG
-							  if(symphonySystem.getTopologyRoot() != null)
+							  if(apogySystem.getTopologyRoot() != null)
 							  {
-								  symphonySystem.getTopologyRoot().setOriginNode(Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode());
+								  apogySystem.getTopologyRoot().setOriginNode(ApogyCommonTopologyFactory.eINSTANCE.createTransformNode());
 							  }
 							  // DEBUG
 						  }
@@ -429,11 +429,11 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 						  getChildren().add(poseTransform);
 						  
 						  // Assembles the variable sub-systems.							 						
-						  assembleSubSystems(symphonySystem, systemToApiAdapterMap);			
+						  assembleSubSystems(apogySystem, systemToApiAdapterMap);			
 					  }
 					  else if(variable.getVariableType().getInterfaceClass() != null)
 					  {
-						  String message = "Variable <" + variable.getName() + "> instance's SymphonySystem is not initialized !";
+						  String message = "Variable <" + variable.getName() + "> instance's ApogySystem is not initialized !";
 						  Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);								  
 					  }							  				  				 					  					 
 				  }
@@ -446,15 +446,15 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 	  }	
   }
 
-  private void assembleSubSystems(SymphonySystem symphonySystem, Map<SymphonySystem, SymphonySystemApiAdapter> systemToApiAdapterMap)
+  private void assembleSubSystems(ApogySystem apogySystem, Map<ApogySystem, ApogySystemApiAdapter> systemToApiAdapterMap)
   {	  	   	  
-	  Logger.INSTANCE.log(Activator.ID, this, "Assembling Sub-System <" + symphonySystem + ">", EventSeverity.INFO);
+	  Logger.INSTANCE.log(Activator.ID, this, "Assembling Sub-System <" + apogySystem + ">", EventSeverity.INFO);
 	  	 		  		  
-	  if(symphonySystem.getTopologyRoot() != null && symphonySystem.getTopologyRoot().getOriginNode() instanceof GroupNode)
+	  if(apogySystem.getTopologyRoot() != null && apogySystem.getTopologyRoot().getOriginNode() instanceof GroupNode)
 	  {		  
-		  if(symphonySystem.getAssemblyLinksList() != null && symphonySystem.getAssemblyLinksList().getAssemblyLinks() != null)
+		  if(apogySystem.getAssemblyLinksList() != null && apogySystem.getAssemblyLinksList().getAssemblyLinks() != null)
 		  {
-			  for(AssemblyLink link : symphonySystem.getAssemblyLinksList().getAssemblyLinks())
+			  for(AssemblyLink link : apogySystem.getAssemblyLinksList().getAssemblyLinks())
 			  {			  	
 				  if(!processedAssemblyLink.contains(link))
 				  {
@@ -463,10 +463,10 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 				  
 					  try
 					  {
-						  SymphonySystem parent = link.getParentInstance();					  					  
-						  SymphonySystem subSystem = link.getSubSystemInstance();
+						  ApogySystem parent = link.getParentInstance();					  					  
+						  ApogySystem subSystem = link.getSubSystemInstance();
 
-						  //SymphonySystemAPI symphonySystemAPI = subSystem.getSymphonySystemAPI();
+						  //ApogySystemAPI apogySystemAPI = subSystem.getApogySystemAPI();
 						  if(subSystem != null && parent != null)
 						  {						  										  						  						 
 							  // Gets the transformation matrix attaching the sub-system to the system attachment node.
@@ -479,7 +479,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  }
 							  
 							  // Attaches the sub-system to the system.
-							  TransformNode linkTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(transform);
+							  TransformNode linkTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNode(transform);
 							  linkTransformNode.setDescription("Transform representing link <" + link.getName() + ">");
 							  
 							  // Get the node in the parent to which the link is attached.
@@ -487,28 +487,28 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  parentNode.getChildren().add(linkTransformNode);						
 							  						  
 							  // Adds a transform node used to effect the poseTransform.						  
-							  Matrix4x4 matrix = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();						  						  						  
-							  TransformNode poseTransform = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(matrix.asMatrix4d());						  
+							  Matrix4x4 matrix = ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4();						  						  						  
+							  TransformNode poseTransform = ApogyCommonTopologyFacade.INSTANCE.createTransformNode(matrix.asMatrix4d());						  
 							  poseTransform.setNodeId(subSystem.getName() + "_poseTransform");								  											 
 							  
 							  // Is the API is not null, binds the Pose to the poseTransform.
-//							  SymphonySystemApiAdapter symphonySystemApiAdapter = systemToApiAdapterMap.get(subSystem);							  							 
-//							  if(symphonySystemApiAdapter != null)
+//							  ApogySystemApiAdapter apogySystemApiAdapter = systemToApiAdapterMap.get(subSystem);							  							 
+//							  if(apogySystemApiAdapter != null)
 //							  {								  								  
-//								  if(symphonySystemApiAdapter.getPoseTransform() != null)
+//								  if(apogySystemApiAdapter.getPoseTransform() != null)
 //								  {
-//									  poseTransform.setTransformation(symphonySystemApiAdapter.getPoseTransform().asMatrix4d());
+//									  poseTransform.setTransformation(apogySystemApiAdapter.getPoseTransform().asMatrix4d());
 //								  }									  									
 //								  
 //								  // Adds a binding to link the transform node to the api poseTransform.
-//								  if(symphonySystemApiAdapter.getInstance() != null)
+//								  if(apogySystemApiAdapter.getInstance() != null)
 //								  {
-//									  createTransformMatrixBinding(symphonySystemApiAdapter.getInstance(), poseTransform, symphonySystemApiAdapter);
+//									  createTransformMatrixBinding(apogySystemApiAdapter.getInstance(), poseTransform, apogySystemApiAdapter);
 //								  }
 //							  }
 							  
 							  // Creates a referenced node to refer the sub-system topology.
-							  ReferencedGroupNode referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();							  
+							  ReferencedGroupNode referencedGroupNode = ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode();							  
 							  if(subSystem.getTopologyRoot() != null && subSystem.getTopologyRoot().getOriginNode() != null)
 							  {
 								  referencedGroupNode.getChildren().add(subSystem.getTopologyRoot().getOriginNode());
@@ -557,7 +557,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 										
 					if(msg.getNotifier() instanceof Environment)
 					{
-						if(msg.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)					
+						if(msg.getFeatureID(Environment.class) == ApogyCoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)					
 						{
 							// Active Context has changed, update.
 							Context oldContext = (Context) msg.getOldValue();
@@ -567,12 +567,12 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 					}	
 					else if(msg.getNotifier() instanceof Context)
 					{
-						if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
+						if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
 						{
 							// Variable implementation has changed, update.
 							updateVariablesImplementations();			
 						}
-						else if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
+						else if(msg.getFeatureID(Context.class) == ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
 						{
 							if(msg.getNewValue() != null)
 							{
@@ -586,4 +586,4 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 		}
 		return adapter;
 	}	
-} //SymphonySystemAPIsNodeImpl
+} //ApogySystemAPIsNodeImpl

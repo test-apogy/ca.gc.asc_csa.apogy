@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.impl;
+package ca.gc.asc_csa.apogy.common.converters.impl;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.converters.*;
+import ca.gc.asc_csa.apogy.common.converters.*;
 
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
@@ -23,24 +23,24 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implements Symphony__CommonConvertersFactory {
+public class ApogyCommonConvertersFactoryImpl extends EFactoryImpl implements ApogyCommonConvertersFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonConvertersFactory init() {
+	public static ApogyCommonConvertersFactory init() {
 		try {
-			Symphony__CommonConvertersFactory theSymphony__CommonConvertersFactory = (Symphony__CommonConvertersFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonConvertersPackage.eNS_URI);
-			if (theSymphony__CommonConvertersFactory != null) {
-				return theSymphony__CommonConvertersFactory;
+			ApogyCommonConvertersFactory theApogyCommonConvertersFactory = (ApogyCommonConvertersFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonConvertersPackage.eNS_URI);
+			if (theApogyCommonConvertersFactory != null) {
+				return theApogyCommonConvertersFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonConvertersFactoryImpl();
+		return new ApogyCommonConvertersFactoryImpl();
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersFactoryImpl() {
+	public ApogyCommonConvertersFactoryImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonConvertersPackage.SYMPHONY_COMMON_CONVERTERS_FACADE: return createSymphony__CommonConvertersFacade();
+			case ApogyCommonConvertersPackage.APOGY_COMMON_CONVERTERS_FACADE: return createApogyCommonConvertersFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -75,13 +75,13 @@ public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonConvertersPackage.LIST:
+			case ApogyCommonConvertersPackage.LIST:
 				return createListFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case ApogyCommonConvertersPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				return createSimpleDirectedWeightedGraphFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersPackage.EXCEPTION:
+			case ApogyCommonConvertersPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersPackage.ICONVERTER:
+			case ApogyCommonConvertersPackage.ICONVERTER:
 				return createIConverterFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -96,13 +96,13 @@ public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonConvertersPackage.LIST:
+			case ApogyCommonConvertersPackage.LIST:
 				return convertListToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case ApogyCommonConvertersPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				return convertSimpleDirectedWeightedGraphToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersPackage.EXCEPTION:
+			case ApogyCommonConvertersPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersPackage.ICONVERTER:
+			case ApogyCommonConvertersPackage.ICONVERTER:
 				return convertIConverterToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -114,9 +114,9 @@ public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersFacade createSymphony__CommonConvertersFacade() {
-		Symphony__CommonConvertersFacadeImpl symphony__CommonConvertersFacade = new Symphony__CommonConvertersFacadeImpl();
-		return symphony__CommonConvertersFacade;
+	public ApogyCommonConvertersFacade createApogyCommonConvertersFacade() {
+		ApogyCommonConvertersFacadeImpl apogy__CommonConvertersFacade = new ApogyCommonConvertersFacadeImpl();
+		return apogy__CommonConvertersFacade;
 	}
 
 	/**
@@ -196,8 +196,8 @@ public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersPackage getSymphony__CommonConvertersPackage() {
-		return (Symphony__CommonConvertersPackage)getEPackage();
+	public ApogyCommonConvertersPackage getApogyCommonConvertersPackage() {
+		return (ApogyCommonConvertersPackage)getEPackage();
 	}
 
 	/**
@@ -207,8 +207,8 @@ public class Symphony__CommonConvertersFactoryImpl extends EFactoryImpl implemen
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonConvertersPackage getPackage() {
-		return Symphony__CommonConvertersPackage.eINSTANCE;
+	public static ApogyCommonConvertersPackage getPackage() {
+		return ApogyCommonConvertersPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonConvertersFactoryImpl
+} //ApogyCommonConvertersFactoryImpl

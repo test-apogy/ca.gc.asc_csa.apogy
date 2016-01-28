@@ -1,9 +1,9 @@
-package org.eclipse.symphony.addons.geometry.paths.ui.preferences;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
-import org.eclipse.symphony.addons.geometry.paths.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.Activator;
 
 public class MRTPathsPreferencesInitializer extends AbstractPreferenceInitializer {
 

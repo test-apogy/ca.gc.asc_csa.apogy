@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 import javax.vecmath.Color3f;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,16 +25,16 @@ import org.eclipse.symphony.core.environment.RectangularRegion;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapLayers <em>Map Layers</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getBackgroundColor <em>Background Color</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapAnnotations <em>Map Annotations</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion <em>Default Rectangular Region</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapImage <em>Map Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapImageRectangularRegion <em>Map Image Rectangular Region</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapLayers <em>Map Layers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getBackgroundColor <em>Background Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapAnnotations <em>Map Annotations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion <em>Default Rectangular Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapImage <em>Map Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getMapImageRectangularRegion <em>Map Image Rectangular Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface MapViewConfiguration extends Named, Described
 {
   /**
 	 * Returns the value of the '<em><b>Map Layers</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * List of Maps being displayed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Layers</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapLayers()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration_MapLayers()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
@@ -66,14 +66,14 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Background Color</em>' attribute.
 	 * @see #setBackgroundColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_BackgroundColor()
-	 * @model default="1.0,1.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration_BackgroundColor()
+	 * @model default="1.0,1.0,1.0" unique="false" dataType="ca.gc.asc_csa.apogy.core.environment.ui.Color3f"
 	 * @generated
 	 */
   Color3f getBackgroundColor();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getBackgroundColor <em>Background Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getBackgroundColor <em>Background Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Background Color</em>' attribute.
@@ -84,14 +84,14 @@ public interface MapViewConfiguration extends Named, Described
 
   /**
 	 * Returns the value of the '<em><b>Map Annotations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.ui.MapAnnotation}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * List of Symphony System instances being tracked.
+	 * List of Apogy System instances being tracked.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Annotations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapAnnotations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration_MapAnnotations()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
@@ -107,14 +107,14 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Default Rectangular Region</em>' reference.
 	 * @see #setDefaultRectangularRegion(RectangularRegion)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_DefaultRectangularRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration_DefaultRectangularRegion()
 	 * @model required="true" transient="true"
 	 * @generated
 	 */
 	RectangularRegion getDefaultRectangularRegion();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion <em>Default Rectangular Region</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getDefaultRectangularRegion <em>Default Rectangular Region</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Default Rectangular Region</em>' reference.
@@ -135,7 +135,7 @@ public interface MapViewConfiguration extends Named, Described
 	 * The image representing the active ImageMapLayers.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Image</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapImage()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration_MapImage()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='None'"
 	 * @generated
@@ -150,7 +150,7 @@ public interface MapViewConfiguration extends Named, Described
 	 * The rectangular region covered by the image layers defined in the map.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Image Rectangular Region</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapImageRectangularRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration_MapImageRectangularRegion()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly'"
 	 * @generated
@@ -171,7 +171,7 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Extent</em>' reference.
 	 * @see #setExtent(RectangularRegion)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_Extent()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getMapViewConfiguration_Extent()
 	 * @model required="true" transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly'"
 	 * @generated
@@ -179,7 +179,7 @@ public interface MapViewConfiguration extends Named, Described
 	RectangularRegion getExtent();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Extent</em>' reference.

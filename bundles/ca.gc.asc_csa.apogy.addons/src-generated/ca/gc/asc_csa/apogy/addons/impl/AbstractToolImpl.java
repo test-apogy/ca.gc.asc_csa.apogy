@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.addons.AbstractTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.AbstractToolImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.AbstractToolImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.AbstractToolImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.AbstractToolImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,7 +86,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsPackage.Literals.ABSTRACT_TOOL;
+		return ApogyAddonsPackage.Literals.ABSTRACT_TOOL;
 	}
 
   /**
@@ -109,7 +109,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TOOL__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.ABSTRACT_TOOL__NAME, oldName, name));
 	}
 
   /**
@@ -132,7 +132,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.ABSTRACT_TOOL__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -144,9 +144,9 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__NAME:
 				return getName();
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -199,9 +199,9 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
+			case ApogyAddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -217,7 +217,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyAddonsPackage.ABSTRACT_TOOL__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -234,7 +234,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyAddonsPackage.ABSTRACT_TOOL__DESCRIPTION;
 				default: return -1;
 			}
 		}

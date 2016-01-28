@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.provider;
 
 
 import java.util.Collection;
@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
-import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.ApogyCommonGeometryData3DLASPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASReader} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.las.LASReader} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_file_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_file_feature", "_UI_LASReader_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__FILE,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_READER__FILE,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_inputStream_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_inputStream_feature", "_UI_LASReader_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__INPUT_STREAM,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_READER__INPUT_STREAM,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_vlrs_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_vlrs_feature", "_UI_LASReader_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__VLRS,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_READER__VLRS,
 				 true,
 				 false,
 				 true,
@@ -151,7 +151,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_progressMonitor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_progressMonitor_feature", "_UI_LASReader_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__PROGRESS_MONITOR,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_READER__PROGRESS_MONITOR,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_header_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_header_feature", "_UI_LASReader_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__HEADER,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_READER__HEADER,
 				 true,
 				 false,
 				 true,
@@ -195,7 +195,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_points_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_points_feature", "_UI_LASReader_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__POINTS,
+				 ApogyCommonGeometryData3DLASPackage.Literals.LAS_READER__POINTS,
 				 true,
 				 false,
 				 true,
@@ -242,9 +242,9 @@ public class LASReaderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LASReader.class)) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__FILE:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__FILE:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.math.statistics;
+package ca.gc.asc_csa.apogy.common.math.statistics;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,18 +16,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getData <em>Data</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getStandardDeviation <em>Standard Deviation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getAverage <em>Average</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getSum <em>Sum</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getMedian <em>Median</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getSumSquared <em>Sum Squared</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getVariance <em>Variance</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getMin <em>Min</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getMax <em>Max</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getData <em>Data</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getStandardDeviation <em>Standard Deviation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getAverage <em>Average</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getSum <em>Sum</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getMedian <em>Median</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getSumSquared <em>Sum Squared</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getVariance <em>Variance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getMin <em>Min</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.math.statistics.Population#getMax <em>Max</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation()
+ * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data</em>' attribute list.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_Data()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_Data()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -57,7 +57,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Standard Deviation</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_StandardDeviation()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_StandardDeviation()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -72,7 +72,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Average</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_Average()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_Average()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sum</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_Sum()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_Sum()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -102,7 +102,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Median</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_Median()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_Median()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -117,7 +117,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sum Squared</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_SumSquared()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_SumSquared()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -132,7 +132,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variance</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_Variance()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_Variance()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -148,7 +148,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_Min()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_Min()
 	 * @model default="0.0" unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -164,7 +164,7 @@ public interface Population extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage#getPopulation_Max()
+	 * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage#getPopulation_Max()
 	 * @model default="0.0" unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

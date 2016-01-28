@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.PositionNode#getPosition <em>Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.PositionNode#getPosition <em>Position</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getPositionNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getPositionNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface PositionNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getPositionNode_Position()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getPositionNode_Position()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false'"
 	 * @generated
@@ -40,7 +40,7 @@ public interface PositionNode extends AggregateGroupNode {
 	Tuple3d getPosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.PositionNode#getPosition <em>Position</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.PositionNode#getPosition <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Position</em>' containment reference.

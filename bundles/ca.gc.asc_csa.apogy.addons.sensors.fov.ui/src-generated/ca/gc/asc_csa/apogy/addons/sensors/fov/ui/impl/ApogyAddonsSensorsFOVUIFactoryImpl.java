@@ -1,19 +1,19 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +21,24 @@ import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfView
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsSensorsFOVUIFactoryImpl extends EFactoryImpl implements Symphony__AddonsSensorsFOVUIFactory {
+public class ApogyAddonsSensorsFOVUIFactoryImpl extends EFactoryImpl implements ApogyAddonsSensorsFOVUIFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__AddonsSensorsFOVUIFactory init() {
+	public static ApogyAddonsSensorsFOVUIFactory init() {
 		try {
-			Symphony__AddonsSensorsFOVUIFactory theSymphony__AddonsSensorsFOVUIFactory = (Symphony__AddonsSensorsFOVUIFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__AddonsSensorsFOVUIPackage.eNS_URI);
-			if (theSymphony__AddonsSensorsFOVUIFactory != null) {
-				return theSymphony__AddonsSensorsFOVUIFactory;
+			ApogyAddonsSensorsFOVUIFactory theApogyAddonsSensorsFOVUIFactory = (ApogyAddonsSensorsFOVUIFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyAddonsSensorsFOVUIPackage.eNS_URI);
+			if (theApogyAddonsSensorsFOVUIFactory != null) {
+				return theApogyAddonsSensorsFOVUIFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__AddonsSensorsFOVUIFactoryImpl();
+		return new ApogyAddonsSensorsFOVUIFactoryImpl();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Symphony__AddonsSensorsFOVUIFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVUIFactoryImpl() {
+	public ApogyAddonsSensorsFOVUIFactoryImpl() {
 		super();
 	}
 
@@ -59,10 +59,10 @@ public class Symphony__AddonsSensorsFOVUIFactoryImpl extends EFactoryImpl implem
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION: return createFieldOfViewPresentation();
-			case Symphony__AddonsSensorsFOVUIPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_PRESENTATION: return createCircularSectorFieldOfViewPresentation();
-			case Symphony__AddonsSensorsFOVUIPackage.CONICAL_FIELD_OF_VIEW_PRESENTATION: return createConicalFieldOfViewPresentation();
-			case Symphony__AddonsSensorsFOVUIPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_PRESENTATION: return createRectangularFrustrumFieldOfViewPresentation();
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION: return createFieldOfViewPresentation();
+			case ApogyAddonsSensorsFOVUIPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_PRESENTATION: return createCircularSectorFieldOfViewPresentation();
+			case ApogyAddonsSensorsFOVUIPackage.CONICAL_FIELD_OF_VIEW_PRESENTATION: return createConicalFieldOfViewPresentation();
+			case ApogyAddonsSensorsFOVUIPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_PRESENTATION: return createRectangularFrustrumFieldOfViewPresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -113,8 +113,8 @@ public class Symphony__AddonsSensorsFOVUIFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVUIPackage getSymphony__AddonsSensorsFOVUIPackage() {
-		return (Symphony__AddonsSensorsFOVUIPackage)getEPackage();
+	public ApogyAddonsSensorsFOVUIPackage getApogyAddonsSensorsFOVUIPackage() {
+		return (ApogyAddonsSensorsFOVUIPackage)getEPackage();
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class Symphony__AddonsSensorsFOVUIFactoryImpl extends EFactoryImpl implem
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__AddonsSensorsFOVUIPackage getPackage() {
-		return Symphony__AddonsSensorsFOVUIPackage.eINSTANCE;
+	public static ApogyAddonsSensorsFOVUIPackage getPackage() {
+		return ApogyAddonsSensorsFOVUIPackage.eINSTANCE;
 	}
 
-} //Symphony__AddonsSensorsFOVUIFactoryImpl
+} //ApogyAddonsSensorsFOVUIFactoryImpl

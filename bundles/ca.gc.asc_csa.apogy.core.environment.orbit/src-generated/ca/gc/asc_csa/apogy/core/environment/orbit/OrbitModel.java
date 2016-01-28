@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit;
+package ca.gc.asc_csa.apogy.core.environment.orbit;
 
-import org.eclipse.symphony.core.AbstractOrbitModel;
+import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,11 +19,11 @@ import org.eclipse.symphony.core.AbstractOrbitModel;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitModel()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface OrbitModel extends AbstractOrbitModel {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Orbit</em>' containment reference.
 	 * @see #setInitialOrbit(Orbit)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitModel_InitialOrbit()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel_InitialOrbit()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Orbit getInitialOrbit();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initial Orbit</em>' containment reference.
@@ -65,14 +65,14 @@ public interface OrbitModel extends AbstractOrbitModel {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Propagator</em>' containment reference.
 	 * @see #setPropagator(AbstractOrbitPropagator)
-	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitModel_Propagator()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getOrbitModel_Propagator()
 	 * @model containment="true"
 	 * @generated
 	 */
 	AbstractOrbitPropagator getPropagator();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Propagator</em>' containment reference.

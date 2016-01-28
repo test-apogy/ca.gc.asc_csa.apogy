@@ -3,7 +3,7 @@
  *
  * $Id: DistanceRangeImpl.java,v 1.5.4.2 2015/05/21 15:51:25 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,8 +12,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.DistanceRange;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,9 +23,9 @@ import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl#getMinimumDistance <em>Minimum Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl#getMaximumDistance <em>Maximum Distance</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl#getDistance <em>Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.DistanceRangeImpl#getMinimumDistance <em>Minimum Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.DistanceRangeImpl#getMaximumDistance <em>Maximum Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.fov.impl.DistanceRangeImpl#getDistance <em>Distance</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,7 +97,7 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsFOVPackage.Literals.DISTANCE_RANGE;
+		return ApogyAddonsSensorsFOVPackage.Literals.DISTANCE_RANGE;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 		double oldMinimumDistance = minimumDistance;
 		minimumDistance = newMinimumDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE, oldMinimumDistance, minimumDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE, oldMinimumDistance, minimumDistance));
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 		double oldMaximumDistance = maximumDistance;
 		maximumDistance = newMaximumDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE, oldMaximumDistance, maximumDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE, oldMaximumDistance, maximumDistance));
 	}
 
 	/**
@@ -170,11 +170,11 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
 				return getMinimumDistance();
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
 				return getMaximumDistance();
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__DISTANCE:
 				return getDistance();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -188,10 +188,10 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
 				setMinimumDistance((Double)newValue);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
 				setMaximumDistance((Double)newValue);
 				return;
 		}
@@ -206,10 +206,10 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
 				setMinimumDistance(MINIMUM_DISTANCE_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
 				setMaximumDistance(MAXIMUM_DISTANCE_EDEFAULT);
 				return;
 		}
@@ -224,11 +224,11 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
 				return minimumDistance != MINIMUM_DISTANCE_EDEFAULT;
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
 				return maximumDistance != MAXIMUM_DISTANCE_EDEFAULT;
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__DISTANCE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE__DISTANCE:
 				return getDistance() != DISTANCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -242,7 +242,7 @@ public class DistanceRangeImpl extends MinimalEObjectImpl.Container implements D
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE___IS_WITHIN_RANGE__DOUBLE:
+			case ApogyAddonsSensorsFOVPackage.DISTANCE_RANGE___IS_WITHIN_RANGE__DOUBLE:
 				return isWithinRange((Double)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

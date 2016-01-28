@@ -224,7 +224,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
    id="tspan5901">arm</tspan> (<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'"
-   id="tspan5903">RoboticArmSymphonySystem</tspan>)</tspan></text>
+   id="tspan5903">RoboticArmApogySystem</tspan>)</tspan></text>
       </g>
       <g
          transform="matrix(0.49350797,0,0,0.48009998,136.53783,461.00887)"
@@ -251,7 +251,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
    id="tspan5967">camera</tspan> (<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'"
-   id="tspan5969">PTUCameraSymphonySystem</tspan>)</tspan></text>
+   id="tspan5969">PTUCameraApogySystem</tspan>)</tspan></text>
       </g>
       <g
          id="g5109">
@@ -368,7 +368,7 @@
              y="382.65659"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
-   id="tspan5737">rover</tspan> (MobilePlatformSymphonySystem)</tspan></text>
+   id="tspan5737">rover</tspan> (MobilePlatformApogySystem)</tspan></text>
       </g>
       <text
          transform="scale(1.0138676,0.98632208)"

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.provider;
+package ca.gc.asc_csa.apogy.core.programs.provider;
 
 
 import java.util.Collection;
@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
+import ca.gc.asc_csa.apogy.core.programs.ApogyCoreProgramsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.AbstractProgramRuntime} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.programs.AbstractProgramRuntime} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -74,7 +74,7 @@ public class AbstractProgramRuntimeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractProgramRuntime_program_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractProgramRuntime_program_feature", "_UI_AbstractProgramRuntime_type"),
-				 Symphony__CoreProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME__PROGRAM,
+				 ApogyCoreProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME__PROGRAM,
 				 true,
 				 false,
 				 true,

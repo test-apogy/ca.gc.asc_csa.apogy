@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated las -->
       <factory
-            uri="org.eclipse.symphony.common.geometry.data3d.las"
-            class="org.eclipse.symphony.common.geometry.data3d.las.provider.Symphony__CommonGeometryData3DLASItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.common.geometry.data3d.las"
+            class="ca.gc.asc_csa.apogy.common.geometry.data3d.las.provider.ApogyCommonGeometryData3DLASItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.provider;
+package ca.gc.asc_csa.apogy.common.io.jinput.provider;
 
 
 import java.util.ArrayList;
@@ -22,14 +22,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.io.jinput.Activator;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.EController;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.io.jinput.EController;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EComponentQualifier} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -82,7 +82,7 @@ public class EComponentQualifierItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponentQualifier_eComponentName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponentQualifier_eComponentName_feature", "_UI_EComponentQualifier_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class EComponentQualifierItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponentQualifier_eControllerName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponentQualifier_eControllerName_feature", "_UI_EComponentQualifier_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
 				 true,
 				 false,
 				 false,
@@ -202,8 +202,8 @@ public class EComponentQualifierItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EComponentQualifier.class)) {
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
-			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

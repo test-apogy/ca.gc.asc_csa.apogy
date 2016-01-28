@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.util;
+package ca.gc.asc_csa.apogy.common.file.csv.util;
 
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.file.csv.*;
+import ca.gc.asc_csa.apogy.common.file.csv.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +20,17 @@ import org.eclipse.symphony.common.file.csv.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage
+ * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage
  * @generated
  */
-public class Symphony__CommonFileCSVSwitch<T> extends Switch<T> {
+public class ApogyCommonFileCSVSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonFileCSVPackage modelPackage;
+	protected static ApogyCommonFileCSVPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +38,9 @@ public class Symphony__CommonFileCSVSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonFileCSVSwitch() {
+	public ApogyCommonFileCSVSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonFileCSVPackage.eINSTANCE;
+			modelPackage = ApogyCommonFileCSVPackage.eINSTANCE;
 		}
 	}
 
@@ -67,25 +67,25 @@ public class Symphony__CommonFileCSVSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN_VALUES_MAP: {
+			case ApogyCommonFileCSVPackage.CSV_COLUMN_VALUES_MAP: {
 				@SuppressWarnings("unchecked") Map.Entry<Integer, Object> csvColumnValuesMap = (Map.Entry<Integer, Object>)theEObject;
 				T result = caseCsvColumnValuesMap(csvColumnValuesMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN: {
+			case ApogyCommonFileCSVPackage.CSV_COLUMN: {
 				CsvColumn csvColumn = (CsvColumn)theEObject;
 				T result = caseCsvColumn(csvColumn);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonFileCSVPackage.CSV_COLUMNS_SET: {
+			case ApogyCommonFileCSVPackage.CSV_COLUMNS_SET: {
 				CsvColumnsSet csvColumnsSet = (CsvColumnsSet)theEObject;
 				T result = caseCsvColumnsSet(csvColumnsSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonFileCSVPackage.CSV_VALUE_PROVIDER: {
+			case ApogyCommonFileCSVPackage.CSV_VALUE_PROVIDER: {
 				CsvValueProvider csvValueProvider = (CsvValueProvider)theEObject;
 				T result = caseCsvValueProvider(csvValueProvider);
 				if (result == null) result = defaultCase(theEObject);
@@ -171,4 +171,4 @@ public class Symphony__CommonFileCSVSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonFileCSVSwitch
+} //ApogyCommonFileCSVSwitch

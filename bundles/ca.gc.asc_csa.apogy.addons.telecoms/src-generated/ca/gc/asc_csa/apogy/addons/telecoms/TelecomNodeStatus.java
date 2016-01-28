@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms;
+package ca.gc.asc_csa.apogy.addons.telecoms;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  *  The different possible states of the TelecomNode
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomNodeStatus()
+ * @see ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage#getTelecomNodeStatus()
  * @model
  * @generated
  */

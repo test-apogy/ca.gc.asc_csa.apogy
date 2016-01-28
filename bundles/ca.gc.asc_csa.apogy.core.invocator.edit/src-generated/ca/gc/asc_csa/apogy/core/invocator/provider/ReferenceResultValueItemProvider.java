@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.ReferenceResultValue;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ReferenceResultValue} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -68,7 +68,7 @@ public class ReferenceResultValueItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ReferenceResultValue_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ReferenceResultValue_value_feature", "_UI_ReferenceResultValue_type"),
-				 Symphony__CoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
+				 ApogyCoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
 				 false,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class ReferenceResultValueItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -146,7 +146,7 @@ public class ReferenceResultValueItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ReferenceResultValue.class)) {
-			case Symphony__CoreInvocatorPackage.REFERENCE_RESULT_VALUE__VALUE:
+			case ApogyCoreInvocatorPackage.REFERENCE_RESULT_VALUE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,7 +167,7 @@ public class ReferenceResultValueItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
+				(ApogyCoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
 				 EcoreFactory.eINSTANCE.createEObject()));
 	}
 

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 
 import java.util.Collection;
@@ -19,12 +19,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.environment.orbit.AngularCoordinates;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.AngularCoordinates} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -74,9 +74,9 @@ public class AngularCoordinatesItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ROTATION);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE);
-			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ROTATION);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE);
+			childrenFeatures.add(ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION);
 		}
 		return childrenFeatures;
 	}
@@ -129,9 +129,9 @@ public class AngularCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AngularCoordinates.class)) {
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
-			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
+			case ApogyCoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -151,18 +151,18 @@ public class AngularCoordinatesItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ROTATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ROTATION,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION,
-				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
+				(ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION,
+				 ApogyCommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**
@@ -177,8 +177,8 @@ public class AngularCoordinatesItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
-			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
+			childFeature == ApogyCoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
 
 		if (qualify) {
 			return getString

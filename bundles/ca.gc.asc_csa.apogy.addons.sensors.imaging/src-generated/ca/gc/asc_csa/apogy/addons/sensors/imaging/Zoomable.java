@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable#getCurrentZoom <em>Current Zoom</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable#getCommandedZoom <em>Commanded Zoom</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable#getCurrentZoom <em>Current Zoom</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable#getCommandedZoom <em>Commanded Zoom</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getZoomable()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#getZoomable()
  * @model abstract="true"
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Zoomable extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Zoom</em>' attribute.
 	 * @see #setCurrentZoom(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getZoomable_CurrentZoom()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#getZoomable_CurrentZoom()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ZOOMABLE_PROPERTIES'"
 	 * @generated
@@ -46,7 +46,7 @@ public interface Zoomable extends EObject
   double getCurrentZoom();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable#getCurrentZoom <em>Current Zoom</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable#getCurrentZoom <em>Current Zoom</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Zoom</em>' attribute.
@@ -69,7 +69,7 @@ public interface Zoomable extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Commanded Zoom</em>' attribute.
 	 * @see #setCommandedZoom(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getZoomable_CommandedZoom()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage#getZoomable_CommandedZoom()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ZOOMABLE_PROPERTIES'"
 	 * @generated
@@ -77,7 +77,7 @@ public interface Zoomable extends EObject
   double getCommandedZoom();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable#getCommandedZoom <em>Commanded Zoom</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable#getCommandedZoom <em>Commanded Zoom</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Commanded Zoom</em>' attribute.

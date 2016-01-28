@@ -1,16 +1,16 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.PositionedResult;
+import ca.gc.asc_csa.apogy.core.ResultNode;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.ResultNodeImpl#getResult <em>Result</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.ResultNodeImpl#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,7 +49,7 @@ public class ResultNodeImpl extends AggregateGroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.RESULT_NODE;
+		return ApogyCorePackage.Literals.RESULT_NODE;
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class ResultNodeImpl extends AggregateGroupNodeImpl implements
 			result = (PositionedResult)eResolveProxy(oldResult);
 			if (result != oldResult) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.RESULT_NODE__RESULT, oldResult, result));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCorePackage.RESULT_NODE__RESULT, oldResult, result));
 			}
 		}
 		return result;
@@ -85,7 +85,7 @@ public class ResultNodeImpl extends AggregateGroupNodeImpl implements
 		PositionedResult oldResult = result;
 		result = newResult;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.RESULT_NODE__RESULT, oldResult, result));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.RESULT_NODE__RESULT, oldResult, result));
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class ResultNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULT_NODE__RESULT:
+			case ApogyCorePackage.RESULT_NODE__RESULT:
 				if (resolve) return getResult();
 				return basicGetResult();
 		}
@@ -109,7 +109,7 @@ public class ResultNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULT_NODE__RESULT:
+			case ApogyCorePackage.RESULT_NODE__RESULT:
 				setResult((PositionedResult)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class ResultNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULT_NODE__RESULT:
+			case ApogyCorePackage.RESULT_NODE__RESULT:
 				setResult((PositionedResult)null);
 				return;
 		}
@@ -137,7 +137,7 @@ public class ResultNodeImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.RESULT_NODE__RESULT:
+			case ApogyCorePackage.RESULT_NODE__RESULT:
 				return result != null;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2011
  */
-package org.eclipse.symphony.common.topology.bindings.provider;
+package ca.gc.asc_csa.apogy.common.topology.bindings.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
+import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
+import ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.TranslationBinding} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.bindings.TranslationBinding} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class TranslationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TranslationBinding_translationAxis_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TranslationBinding_translationAxis_feature", "_UI_TranslationBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING__TRANSLATION_AXIS,
+				 ApogyCommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING__TRANSLATION_AXIS,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class TranslationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TranslationBinding_positionNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TranslationBinding_positionNode_feature", "_UI_TranslationBinding_type"),
-				 Symphony__CommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING__POSITION_NODE,
+				 ApogyCommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING__POSITION_NODE,
 				 true,
 				 false,
 				 true,
@@ -149,7 +149,7 @@ public class TranslationBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TranslationBinding.class)) {
-			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case ApogyCommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

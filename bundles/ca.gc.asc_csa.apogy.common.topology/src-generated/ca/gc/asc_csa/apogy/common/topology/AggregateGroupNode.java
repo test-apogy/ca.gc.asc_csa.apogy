@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology;
+package ca.gc.asc_csa.apogy.common.topology;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -14,17 +14,17 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.AggregateGroupNode#getAggregatedChildren <em>Aggregated Children</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode#getAggregatedChildren <em>Aggregated Children</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateGroupNode()
+ * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getAggregateGroupNode()
  * @model
  * @generated
  */
 public interface AggregateGroupNode extends GroupNode {
 	/**
 	 * Returns the value of the '<em><b>Aggregated Children</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.Node}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.Node}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Aggregated Children</em>' containment reference list isn't clear,
@@ -32,7 +32,7 @@ public interface AggregateGroupNode extends GroupNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aggregated Children</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateGroupNode_AggregatedChildren()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getAggregateGroupNode_AggregatedChildren()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.commands;
+package ca.gc.asc_csa.apogy.core.invocator.ui.commands;
 
 import java.util.Iterator;
 
@@ -11,8 +11,8 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Environment;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class VariableInstancesCollectInitializationDataCommand extends AbstractHandler implements
@@ -34,7 +34,7 @@ public class VariableInstancesCollectInitializationDataCommand extends AbstractH
 					final Object selection = selections.next();
 
 					if (selection instanceof Environment) {						
-						Symphony__CoreInvocatorFacade.INSTANCE
+						ApogyCoreInvocatorFacade.INSTANCE
 						.collectInitializationData((Environment) selection);
 					}
 				}
@@ -42,7 +42,7 @@ public class VariableInstancesCollectInitializationDataCommand extends AbstractH
 			}
 		};
 		
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 		domain.getCommandStack().execute(command);
 		
 		return null;

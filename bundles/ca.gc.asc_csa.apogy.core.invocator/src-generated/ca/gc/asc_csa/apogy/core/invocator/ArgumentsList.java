@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import java.util.List;
 
@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.ArgumentsList#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getArguments <em>Arguments</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getArgumentsList()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getArgumentsList()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface ArgumentsList extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Operation Call</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operation Call</em>' container reference isn't clear,
@@ -38,8 +38,8 @@ public interface ArgumentsList extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call</em>' container reference.
 	 * @see #setOperationCall(OperationCall)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getArgumentsList_OperationCall()
-	 * @see org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getArgumentsList_OperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.OperationCall#getArgumentsList
 	 * @model opposite="argumentsList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -47,7 +47,7 @@ public interface ArgumentsList extends EObject
   OperationCall getOperationCall();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.ArgumentsList#getOperationCall <em>Operation Call</em>}' container reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operation Call</em>' container reference.
@@ -58,8 +58,8 @@ public interface ArgumentsList extends EObject
 
   /**
 	 * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.Argument}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.invocator.Argument#getArgumentsList <em>Arguments List</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.invocator.Argument}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getArgumentsList <em>Arguments List</em>}'.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
@@ -67,8 +67,8 @@ public interface ArgumentsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getArgumentsList_Arguments()
-	 * @see org.eclipse.symphony.core.invocator.Argument#getArgumentsList
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getArgumentsList_Arguments()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getArgumentsList
 	 * @model opposite="argumentsList" containment="true"
 	 * @generated
 	 */
@@ -77,7 +77,7 @@ public interface ArgumentsList extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.common.emf.List<?>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.emf.List<?>" unique="false" many="false"
 	 * @generated
 	 */
   List<?> getArgumentValues();

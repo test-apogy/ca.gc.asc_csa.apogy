@@ -1,30 +1,30 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.impl;
+package ca.gc.asc_csa.apogy.core.ui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>New Symphony System Settings</b></em>'.
+ * An implementation of the model object '<em><b>New Apogy System Settings</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl#getFolder <em>Folder</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl#getFilename <em>Filename</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySystemSettingsImpl#getFolder <em>Folder</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogySystemSettingsImpl#getFilename <em>Filename</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container implements NewSymphonySystemSettings {
+public class NewApogySystemSettingsImpl extends MinimalEObjectImpl.Container implements NewApogySystemSettings {
 	/**
 	 * The default value of the '{@link #getFolder() <em>Folder</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NewSymphonySystemSettingsImpl() {
+	protected NewApogySystemSettingsImpl() {
 		super();
 	}
 
@@ -81,7 +81,7 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SYSTEM_SETTINGS;
+		return ApogyCoreUIPackage.Literals.NEW_APOGY_SYSTEM_SETTINGS;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 		String oldFolder = folder;
 		folder = newFolder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER, oldFolder, folder));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FOLDER, oldFolder, folder));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 		String oldFilename = filename;
 		filename = newFilename;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME, oldFilename, filename));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FILENAME, oldFilename, filename));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FOLDER:
 				return getFolder();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FILENAME:
 				return getFilename();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FOLDER:
 				setFolder((String)newValue);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FILENAME:
 				setFilename((String)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FOLDER:
 				setFolder(FOLDER_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FILENAME:
 				setFilename(FILENAME_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FOLDER:
 				return FOLDER_EDEFAULT == null ? folder != null : !FOLDER_EDEFAULT.equals(folder);
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SYSTEM_SETTINGS__FILENAME:
 				return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
 		}
 		return super.eIsSet(featureID);
@@ -212,4 +212,4 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 		return result.toString();
 	}
 
-} //NewSymphonySystemSettingsImpl
+} //NewApogySystemSettingsImpl

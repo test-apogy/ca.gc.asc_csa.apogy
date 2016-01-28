@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui.viewer.impl;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerFactory;
-import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ITopologyViewer;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl implements Symphony__CommonTopologyUIViewerPackage {
+public class ApogyCommonTopologyUIViewerPackageImpl extends EPackageImpl implements ApogyCommonTopologyUIViewerPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,12 +49,12 @@ public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl im
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonTopologyUIViewerPackageImpl() {
-		super(eNS_URI, Symphony__CommonTopologyUIViewerFactory.eINSTANCE);
+	private ApogyCommonTopologyUIViewerPackageImpl() {
+		super(eNS_URI, ApogyCommonTopologyUIViewerFactory.eINSTANCE);
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl im
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonTopologyUIViewerPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonTopologyUIViewerPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,30 +76,30 @@ public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl im
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonTopologyUIViewerPackage init() {
-		if (isInited) return (Symphony__CommonTopologyUIViewerPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIViewerPackage.eNS_URI);
+	public static ApogyCommonTopologyUIViewerPackage init() {
+		if (isInited) return (ApogyCommonTopologyUIViewerPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIViewerPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonTopologyUIViewerPackageImpl theSymphony__CommonTopologyUIViewerPackage = (Symphony__CommonTopologyUIViewerPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonTopologyUIViewerPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonTopologyUIViewerPackageImpl());
+		ApogyCommonTopologyUIViewerPackageImpl theApogyCommonTopologyUIViewerPackage = (ApogyCommonTopologyUIViewerPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonTopologyUIViewerPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonTopologyUIViewerPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__CommonTopologyUIViewerPackage.createPackageContents();
+		theApogyCommonTopologyUIViewerPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__CommonTopologyUIViewerPackage.initializePackageContents();
+		theApogyCommonTopologyUIViewerPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__CommonTopologyUIViewerPackage.freeze();
+		theApogyCommonTopologyUIViewerPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonTopologyUIViewerPackage.eNS_URI, theSymphony__CommonTopologyUIViewerPackage);
-		return theSymphony__CommonTopologyUIViewerPackage;
+		EPackage.Registry.INSTANCE.put(ApogyCommonTopologyUIViewerPackage.eNS_URI, theApogyCommonTopologyUIViewerPackage);
+		return theApogyCommonTopologyUIViewerPackage;
 	}
 
 	/**
@@ -170,8 +170,8 @@ public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonTopologyUIViewerFactory getSymphony__CommonTopologyUIViewerFactory() {
-		return (Symphony__CommonTopologyUIViewerFactory)getEFactoryInstance();
+	public ApogyCommonTopologyUIViewerFactory getApogyCommonTopologyUIViewerFactory() {
+		return (ApogyCommonTopologyUIViewerFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -229,7 +229,7 @@ public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl im
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -241,7 +241,7 @@ public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl im
 		initEClass(topologyViewerRegistryEClass, TopologyViewerRegistry.class, "TopologyViewerRegistry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTopologyViewerRegistry_Verbose(), theEcorePackage.getEBoolean(), "verbose", "false", 0, 1, TopologyViewerRegistry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTopologyViewerRegistry_ITopologyViewers(), this.getITopologyViewer(), "iTopologyViewers", null, 0, -1, TopologyViewerRegistry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyViewerRegistry_LatestNodeSelection(), theSymphony__CommonTopologyUIPackage.getNodeSelection(), null, "latestNodeSelection", null, 0, 1, TopologyViewerRegistry.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyViewerRegistry_LatestNodeSelection(), theApogyCommonTopologyUIPackage.getNodeSelection(), null, "latestNodeSelection", null, 0, 1, TopologyViewerRegistry.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getTopologyViewerRegistry__RegisterITopologyViewer__ITopologyViewer(), null, "registerITopologyViewer", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getITopologyViewer(), "iTopologyViewer", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -256,4 +256,4 @@ public class Symphony__CommonTopologyUIViewerPackageImpl extends EPackageImpl im
 		createResource(eNS_URI);
 	}
 
-} //Symphony__CommonTopologyUIViewerPackageImpl
+} //ApogyCommonTopologyUIViewerPackageImpl

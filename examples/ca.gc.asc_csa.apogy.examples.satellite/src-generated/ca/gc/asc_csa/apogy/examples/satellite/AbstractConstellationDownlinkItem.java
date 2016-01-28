@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractConstellationDownlinkItem()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationDownlinkItem()
  * @model abstract="true"
  * @generated
  */
@@ -36,14 +36,14 @@ public interface AbstractConstellationDownlinkItem extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Request UID</em>' attribute.
 	 * @see #setRequestUID(long)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getAbstractConstellationDownlinkItem_RequestUID()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getAbstractConstellationDownlinkItem_RequestUID()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
 	long getRequestUID();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Request UID</em>' attribute.

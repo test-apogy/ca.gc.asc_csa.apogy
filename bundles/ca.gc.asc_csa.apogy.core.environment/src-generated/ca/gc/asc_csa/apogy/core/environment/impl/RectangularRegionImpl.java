@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,16 +19,16 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getXMin <em>XMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getXMax <em>XMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getYMin <em>YMin</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getYMax <em>YMax</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getXDimension <em>XDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getYDimension <em>YDimension</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getLowerLeftCorner <em>Lower Left Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getUpperLeftCorner <em>Upper Left Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getLowerRightCorner <em>Lower Right Corner</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getUpperRightCorner <em>Upper Right Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getXMin <em>XMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getXMax <em>XMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getYMin <em>YMin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getYMax <em>YMax</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getXDimension <em>XDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getYDimension <em>YDimension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getLowerLeftCorner <em>Lower Left Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getUpperLeftCorner <em>Upper Left Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getLowerRightCorner <em>Lower Right Corner</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.RectangularRegionImpl#getUpperRightCorner <em>Upper Right Corner</em>}</li>
  * </ul>
  *
  * @generated
@@ -181,7 +181,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION;
+		return ApogyCoreEnvironmentPackage.Literals.RECTANGULAR_REGION;
 	}
 
   /**
@@ -204,7 +204,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldXMin = xMin;
 		xMin = newXMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN, oldXMin, xMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMIN, oldXMin, xMin));
 	}
 
   /**
@@ -227,7 +227,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldXMax = xMax;
 		xMax = newXMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX, oldXMax, xMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMAX, oldXMax, xMax));
 	}
 
   /**
@@ -250,7 +250,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldYMin = yMin;
 		yMin = newYMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN, oldYMin, yMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMIN, oldYMin, yMin));
 	}
 
   /**
@@ -273,7 +273,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldYMax = yMax;
 		yMax = newYMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX, oldYMax, yMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMAX, oldYMax, yMax));
 	}
 
   /**
@@ -305,7 +305,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {	  
 	  if(lowerLeftCorner == null)
 	  {
-		  lowerLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMin(), getYMin(), 0);		 
+		  lowerLeftCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(getXMin(), getYMin(), 0);		 
 	  }
 	  
 	  return lowerLeftCorner;
@@ -331,7 +331,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {
 	  if(upperLeftCorner == null)
 	  {
-		  upperLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMin(), getYMax(), 0);	
+		  upperLeftCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(getXMin(), getYMax(), 0);	
 	  }
 	  return upperLeftCorner;
   }
@@ -355,7 +355,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {
 	  if(lowerRightCorner == null)
 	  {
-		  lowerRightCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMax(), getYMin(), 0);	
+		  lowerRightCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(getXMax(), getYMin(), 0);	
 	  }
 	  return lowerRightCorner;
   }
@@ -379,7 +379,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {
 	  if(upperRightCorner == null)
 	  {
-		  upperRightCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMax(), getYMax(), 0);
+		  upperRightCorner = ApogyCommonMathFacade.INSTANCE.createTuple3d(getXMax(), getYMax(), 0);
 	  }
 	  return upperRightCorner;
   }
@@ -403,28 +403,28 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				return getXMin();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				return getXMax();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				return getYMin();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				return getYMax();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
 				return getXDimension();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
 				return getYDimension();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
 				if (resolve) return getLowerLeftCorner();
 				return basicGetLowerLeftCorner();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
 				if (resolve) return getUpperLeftCorner();
 				return basicGetUpperLeftCorner();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
 				if (resolve) return getLowerRightCorner();
 				return basicGetLowerRightCorner();
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
 				if (resolve) return getUpperRightCorner();
 				return basicGetUpperRightCorner();
 		}
@@ -440,16 +440,16 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				setXMin((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				setXMax((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				setYMin((Double)newValue);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				setYMax((Double)newValue);
 				return;
 		}
@@ -465,16 +465,16 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				setXMin(XMIN_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				setXMax(XMAX_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				setYMin(YMIN_EDEFAULT);
 				return;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				setYMax(YMAX_EDEFAULT);
 				return;
 		}
@@ -490,25 +490,25 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				return xMin != XMIN_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				return xMax != XMAX_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				return yMin != YMIN_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				return yMax != YMAX_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
 				return getXDimension() != XDIMENSION_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
 				return getYDimension() != YDIMENSION_EDEFAULT;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
 				return lowerLeftCorner != null;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
 				return upperLeftCorner != null;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
 				return lowerRightCorner != null;
-			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
+			case ApogyCoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
 				return upperRightCorner != null;
 		}
 		return super.eIsSet(featureID);

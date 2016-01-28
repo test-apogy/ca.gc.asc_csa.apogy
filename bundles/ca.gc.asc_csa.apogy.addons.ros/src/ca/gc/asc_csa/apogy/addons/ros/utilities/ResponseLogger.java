@@ -1,8 +1,8 @@
-package org.eclipse.symphony.addons.ros.utilities;
+package ca.gc.asc_csa.apogy.addons.ros.utilities;
 
 import org.ros.internal.message.Message;
 
-import org.eclipse.symphony.addons.ros.ROSService;
+import ca.gc.asc_csa.apogy.addons.ros.ROSService;
 
 /**
  * 	Strategy to log the service responses

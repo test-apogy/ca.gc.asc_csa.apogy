@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility.pathplanners;
+package ca.gc.asc_csa.apogy.addons.mobility.pathplanners;
 
-import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.processors.Processor;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getWayPointPathPlanner()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage#getWayPointPathPlanner()
  * @model
  * @generated
  */
@@ -43,14 +43,14 @@ public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Position</em>' reference.
 	 * @see #setCurrentPosition(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getWayPointPathPlanner_CurrentPosition()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage#getWayPointPathPlanner_CurrentPosition()
 	 * @model transient="true"
 	 * @generated
 	 */
 	CartesianPositionCoordinates getCurrentPosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Position</em>' reference.
@@ -69,14 +69,14 @@ public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Destination</em>' reference.
 	 * @see #setCurrentDestination(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getWayPointPathPlanner_CurrentDestination()
+	 * @see ca.gc.asc_csa.apogy.addons.mobility.pathplanners.ApogyAddonsMobilityPathplannersPackage#getWayPointPathPlanner_CurrentDestination()
 	 * @model transient="true"
 	 * @generated
 	 */
 	CartesianPositionCoordinates getCurrentDestination();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Current Destination</em>' reference.
@@ -88,7 +88,7 @@ public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.common.processors.Exception" currentPositionUnique="false" destinationPositionUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.common.processors.Exception" currentPositionUnique="false" destinationPositionUnique="false"
 	 * @generated
 	 */
 	WayPointPath plan(CartesianPositionCoordinates currentPosition, CartesianPositionCoordinates destinationPosition) throws Exception;

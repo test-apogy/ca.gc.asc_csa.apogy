@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -18,15 +18,15 @@ import javax.vecmath.Vector3d;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.PolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.POLYGON_SHAPE_IMAGE_MAP_LAYER;
+		return ApogyCoreEnvironmentPackage.Literals.POLYGON_SHAPE_IMAGE_MAP_LAYER;
 	}
 
 	
@@ -94,7 +94,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentPackage.POLYGON_SHAPE_IMAGE_MAP_LAYER___GET_VERTICES:
+			case ApogyCoreEnvironmentPackage.POLYGON_SHAPE_IMAGE_MAP_LAYER___GET_VERTICES:
 				return getVertices();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -140,7 +140,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 		g2d.dispose();
 		
 		// Updates the image
-		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+		EImage eImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 		eImage.setImageContent(bufferedImage);;
 		setImage(eImage);
 	}
@@ -177,8 +177,8 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 	 */
 	protected RectangularRegion getRectangularRegion(List<Tuple3d> vertices)
 	{
-		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
-		rectangularRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
+		RectangularRegion rectangularRegion = ApogyCoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		rectangularRegion.setTransformation(ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4());
 		if(vertices.size() > 0)
 		{			
 			double xMin = Double.POSITIVE_INFINITY;
@@ -204,7 +204,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 			Matrix4d matrix = new Matrix4d();	
 			matrix.setIdentity();
 			matrix.setTranslation(new Vector3d(xMin, yMin, 0));
-			rectangularRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix));
+			rectangularRegion.setTransformation(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(matrix));
 		}
 
 		return rectangularRegion;

@@ -3,7 +3,7 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.impl;
+package ca.gc.asc_csa.apogy.common.math.impl;
 
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
@@ -13,14 +13,14 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.math.MathIO;
-import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Polynomial;
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.MathIO;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Polynomial;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,24 +28,24 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Symphony__CommonMathFactory {
+public class ApogyCommonMathFactoryImpl extends EFactoryImpl implements ApogyCommonMathFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonMathFactory init() {
+	public static ApogyCommonMathFactory init() {
 		try {
-			Symphony__CommonMathFactory theSymphony__CommonMathFactory = (Symphony__CommonMathFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonMathPackage.eNS_URI);
-			if (theSymphony__CommonMathFactory != null) {
-				return theSymphony__CommonMathFactory;
+			ApogyCommonMathFactory theApogyCommonMathFactory = (ApogyCommonMathFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonMathPackage.eNS_URI);
+			if (theApogyCommonMathFactory != null) {
+				return theApogyCommonMathFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonMathFactoryImpl();
+		return new ApogyCommonMathFactoryImpl();
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathFactoryImpl() {
+	public ApogyCommonMathFactoryImpl() {
 		super();
 	}
 
@@ -66,12 +66,12 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonMathPackage.TUPLE3D: return createTuple3d();
-			case Symphony__CommonMathPackage.MATRIX3X3: return createMatrix3x3();
-			case Symphony__CommonMathPackage.MATRIX4X4: return createMatrix4x4();
-			case Symphony__CommonMathPackage.POLYNOMIAL: return createPolynomial();
-			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE: return createSymphony__CommonMathFacade();
-			case Symphony__CommonMathPackage.MATH_IO: return createMathIO();
+			case ApogyCommonMathPackage.TUPLE3D: return createTuple3d();
+			case ApogyCommonMathPackage.MATRIX3X3: return createMatrix3x3();
+			case ApogyCommonMathPackage.MATRIX4X4: return createMatrix4x4();
+			case ApogyCommonMathPackage.POLYNOMIAL: return createPolynomial();
+			case ApogyCommonMathPackage.APOGY_COMMON_MATH_FACADE: return createApogyCommonMathFacade();
+			case ApogyCommonMathPackage.MATH_IO: return createMathIO();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,15 +85,15 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonMathPackage.EDOUBLE_ARRAY:
+			case ApogyCommonMathPackage.EDOUBLE_ARRAY:
 				return createEDoubleArrayFromString(eDataType, initialValue);
-			case Symphony__CommonMathPackage.MATRIX3D:
+			case ApogyCommonMathPackage.MATRIX3D:
 				return createMatrix3dFromString(eDataType, initialValue);
-			case Symphony__CommonMathPackage.MATRIX4D:
+			case ApogyCommonMathPackage.MATRIX4D:
 				return createMatrix4dFromString(eDataType, initialValue);
-			case Symphony__CommonMathPackage.VECMATH_TUPLE3D:
+			case ApogyCommonMathPackage.VECMATH_TUPLE3D:
 				return createVecmathTuple3dFromString(eDataType, initialValue);
-			case Symphony__CommonMathPackage.EXCEPTION:
+			case ApogyCommonMathPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -108,15 +108,15 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonMathPackage.EDOUBLE_ARRAY:
+			case ApogyCommonMathPackage.EDOUBLE_ARRAY:
 				return convertEDoubleArrayToString(eDataType, instanceValue);
-			case Symphony__CommonMathPackage.MATRIX3D:
+			case ApogyCommonMathPackage.MATRIX3D:
 				return convertMatrix3dToString(eDataType, instanceValue);
-			case Symphony__CommonMathPackage.MATRIX4D:
+			case ApogyCommonMathPackage.MATRIX4D:
 				return convertMatrix4dToString(eDataType, instanceValue);
-			case Symphony__CommonMathPackage.VECMATH_TUPLE3D:
+			case ApogyCommonMathPackage.VECMATH_TUPLE3D:
 				return convertVecmathTuple3dToString(eDataType, instanceValue);
-			case Symphony__CommonMathPackage.EXCEPTION:
+			case ApogyCommonMathPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -168,9 +168,9 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathFacade createSymphony__CommonMathFacade() {
-		Symphony__CommonMathFacadeImpl symphony__CommonMathFacade = new Symphony__CommonMathFacadeImpl();
-		return symphony__CommonMathFacade;
+	public ApogyCommonMathFacade createApogyCommonMathFacade() {
+		ApogyCommonMathFacadeImpl apogy__CommonMathFacade = new ApogyCommonMathFacadeImpl();
+		return apogy__CommonMathFacade;
 	}
 
 	/**
@@ -279,8 +279,8 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathPackage getSymphony__CommonMathPackage() {
-		return (Symphony__CommonMathPackage)getEPackage();
+	public ApogyCommonMathPackage getApogyCommonMathPackage() {
+		return (ApogyCommonMathPackage)getEPackage();
 	}
 
 	/**
@@ -290,8 +290,8 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonMathPackage getPackage() {
-		return Symphony__CommonMathPackage.eINSTANCE;
+	public static ApogyCommonMathPackage getPackage() {
+		return ApogyCommonMathPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonMathFactoryImpl
+} //ApogyCommonMathFactoryImpl

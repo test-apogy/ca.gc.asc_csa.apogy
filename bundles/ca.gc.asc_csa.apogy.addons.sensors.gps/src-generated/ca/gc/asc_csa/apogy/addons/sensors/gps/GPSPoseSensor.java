@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.gps;
+package ca.gc.asc_csa.apogy.addons.sensors.gps;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.common.emf.Server;
+import ca.gc.asc_csa.apogy.addons.sensors.pose.PoseSensor;
+import ca.gc.asc_csa.apogy.common.emf.Server;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,22 +16,22 @@ import org.eclipse.symphony.common.emf.Server;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getGps <em>Gps</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginLatitude <em>Origin Latitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginLongitude <em>Origin Longitude</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getNeAngle <em>Ne Angle</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginElevation <em>Origin Elevation</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getMaxInitTime <em>Max Init Time</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getGps <em>Gps</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getOriginLatitude <em>Origin Latitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getOriginLongitude <em>Origin Longitude</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getNeAngle <em>Ne Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getOriginElevation <em>Origin Elevation</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getMaxInitTime <em>Max Init Time</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSPoseSensor()
  * @model
  * @generated
  */
 public interface GPSPoseSensor extends PoseSensor, Server {
 	/**
 	 * Returns the value of the '<em><b>Gps</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.addons.sensors.gps.MarkedGPS}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.addons.sensors.gps.MarkedGPS}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Gps</em>' containment reference list isn't clear,
@@ -39,7 +39,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gps</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_Gps()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSPoseSensor_Gps()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -57,15 +57,15 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Origin Latitude</em>' attribute.
 	 * @see #setOriginLatitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginLatitude()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSPoseSensor_OriginLatitude()
 	 * @model default="45.518206644445" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'"
 	 * @generated
 	 */
 	double getOriginLatitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginLatitude <em>Origin Latitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getOriginLatitude <em>Origin Latitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Origin Latitude</em>' attribute.
@@ -86,15 +86,15 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Origin Longitude</em>' attribute.
 	 * @see #setOriginLongitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginLongitude()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSPoseSensor_OriginLongitude()
 	 * @model default="-73.393904468182" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='deg'"
 	 * @generated
 	 */
 	double getOriginLongitude();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginLongitude <em>Origin Longitude</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getOriginLongitude <em>Origin Longitude</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Origin Longitude</em>' attribute.
@@ -114,15 +114,15 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ne Angle</em>' attribute.
 	 * @see #setNeAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_NeAngle()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSPoseSensor_NeAngle()
 	 * @model default="0.5940676" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getNeAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getNeAngle <em>Ne Angle</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getNeAngle <em>Ne Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ne Angle</em>' attribute.
@@ -142,14 +142,14 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origin Elevation</em>' attribute.
 	 * @see #setOriginElevation(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginElevation()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSPoseSensor_OriginElevation()
 	 * @model default="33.0985" unique="false"
 	 * @generated
 	 */
 	double getOriginElevation();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginElevation <em>Origin Elevation</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getOriginElevation <em>Origin Elevation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Origin Elevation</em>' attribute.
@@ -170,14 +170,14 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Max Init Time</em>' attribute.
 	 * @see #setMaxInitTime(long)
-	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_MaxInitTime()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.gps.ApogyAddonsSensorsGPSPackage#getGPSPoseSensor_MaxInitTime()
 	 * @model default="10000" unique="false"
 	 * @generated
 	 */
 	long getMaxInitTime();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getMaxInitTime <em>Max Init Time</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.gps.GPSPoseSensor#getMaxInitTime <em>Max Init Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Max Init Time</em>' attribute.

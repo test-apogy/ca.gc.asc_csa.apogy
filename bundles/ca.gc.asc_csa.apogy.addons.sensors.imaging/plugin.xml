@@ -11,14 +11,14 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.addons.sensors.imaging"
-            class="org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage"
-            genModel="model/symphony_addons_sensors_imaging.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.sensors.imaging"
+            class="ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage"
+            genModel="model/apogy_addons_sensors_imaging.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.converters">
+         point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-            Class="org.eclipse.symphony.addons.sensors.imaging.converters.ImageSnapshotToAbstractEImageConverter">
+            Class="ca.gc.asc_csa.apogy.addons.sensors.imaging.converters.ImageSnapshotToAbstractEImageConverter">
       </new_element>
    </extension>
 

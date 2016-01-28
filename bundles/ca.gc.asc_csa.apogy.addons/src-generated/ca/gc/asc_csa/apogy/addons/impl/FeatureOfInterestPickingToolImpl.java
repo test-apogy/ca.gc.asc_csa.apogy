@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.impl;
+package ca.gc.asc_csa.apogy.addons.impl;
 
 import javax.vecmath.AxisAngle4d;
 import javax.vecmath.Matrix3d;
@@ -19,21 +19,21 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
+import ca.gc.asc_csa.apogy.addons.FeatureOfInterestPickingTool;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.FeaturesOfInterestMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,12 +43,12 @@ import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreatio
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickAbsolutePosition <em>Pick Absolute Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickRelativePosition <em>Pick Relative Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickedNode <em>Picked Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickRelativeNormal <em>Pick Relative Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl#getPickAbsolutePosition <em>Pick Absolute Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl#getPickRelativePosition <em>Pick Relative Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl#getPickedNode <em>Picked Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.impl.FeatureOfInterestPickingToolImpl#getPickRelativeNormal <em>Pick Relative Normal</em>}</li>
  * </ul>
  *
  * @generated
@@ -130,7 +130,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL;
+		return ApogyAddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL;
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			featureOfInterestList = (FeatureOfInterestList)eResolveProxy(oldFeatureOfInterestList);
 			if (featureOfInterestList != oldFeatureOfInterestList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 			}
 		}
 		return featureOfInterestList;
@@ -168,7 +168,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		FeatureOfInterestList oldFeatureOfInterestList = featureOfInterestList;
 		featureOfInterestList = newFeatureOfInterestList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickAbsolutePosition = (Tuple3d)eResolveProxy(oldPickAbsolutePosition);
 			if (pickAbsolutePosition != oldPickAbsolutePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
 			}
 		}
 		return pickAbsolutePosition;
@@ -206,7 +206,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickAbsolutePosition = pickAbsolutePosition;
 		pickAbsolutePosition = newPickAbsolutePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
 	}
 
 	/**
@@ -220,7 +220,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickRelativePosition = (Tuple3d)eResolveProxy(oldPickRelativePosition);
 			if (pickRelativePosition != oldPickRelativePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
 			}
 		}
 		return pickRelativePosition;
@@ -244,7 +244,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickRelativePosition = pickRelativePosition;
 		pickRelativePosition = newPickRelativePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
 	}
 
 	/**
@@ -258,7 +258,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickedNode = (Node)eResolveProxy(oldPickedNode);
 			if (pickedNode != oldPickedNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
 			}
 		}
 		return pickedNode;
@@ -282,7 +282,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Node oldPickedNode = pickedNode;
 		pickedNode = newPickedNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
 	}
 
 	/**
@@ -296,7 +296,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickAbsoluteNormal = (Tuple3d)eResolveProxy(oldPickAbsoluteNormal);
 			if (pickAbsoluteNormal != oldPickAbsoluteNormal) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
 			}
 		}
 		return pickAbsoluteNormal;
@@ -320,7 +320,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickAbsoluteNormal = pickAbsoluteNormal;
 		pickAbsoluteNormal = newPickAbsoluteNormal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickRelativeNormal = (Tuple3d)eResolveProxy(oldPickRelativeNormal);
 			if (pickRelativeNormal != oldPickRelativeNormal) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
 			}
 		}
 		return pickRelativeNormal;
@@ -358,7 +358,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickRelativeNormal = pickRelativeNormal;
 		pickRelativeNormal = newPickRelativeNormal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
 	}
 
 	/**
@@ -369,22 +369,22 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				if (resolve) return getFeatureOfInterestList();
 				return basicGetFeatureOfInterestList();
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				if (resolve) return getPickAbsolutePosition();
 				return basicGetPickAbsolutePosition();
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				if (resolve) return getPickRelativePosition();
 				return basicGetPickRelativePosition();
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				if (resolve) return getPickedNode();
 				return basicGetPickedNode();
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				if (resolve) return getPickAbsoluteNormal();
 				return basicGetPickAbsoluteNormal();
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				if (resolve) return getPickRelativeNormal();
 				return basicGetPickRelativeNormal();
 		}
@@ -399,22 +399,22 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)newValue);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				setPickAbsolutePosition((Tuple3d)newValue);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				setPickRelativePosition((Tuple3d)newValue);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				setPickedNode((Node)newValue);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				setPickAbsoluteNormal((Tuple3d)newValue);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				setPickRelativeNormal((Tuple3d)newValue);
 				return;
 		}
@@ -429,22 +429,22 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)null);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				setPickAbsolutePosition((Tuple3d)null);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				setPickRelativePosition((Tuple3d)null);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				setPickedNode((Node)null);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				setPickAbsoluteNormal((Tuple3d)null);
 				return;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				setPickRelativeNormal((Tuple3d)null);
 				return;
 		}
@@ -459,17 +459,17 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				return featureOfInterestList != null;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				return pickAbsolutePosition != null;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				return pickRelativePosition != null;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				return pickedNode != null;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				return pickAbsoluteNormal != null;
-			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case ApogyAddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				return pickRelativeNormal != null;
 		}
 		return super.eIsSet(featureID);
@@ -484,7 +484,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				setPickRelativePosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint()));
+				setPickRelativePosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint()));
 			}
 			else
 			{
@@ -493,7 +493,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				setPickAbsoluteNormal(Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z));
+				setPickAbsoluteNormal(ApogyCommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z));
 			}
 			else
 			{
@@ -523,7 +523,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 					EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(getFeatureOfInterestList());
 					
 					// Creates an ADD command to add the FeatureOfInterest.
-					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
+					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), ApogyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
 					
 					// Executes the command.
 					editingDomain.getCommandStack().execute(addCommand);
@@ -569,7 +569,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 //					EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(getFeatureOfInterestList());
 //					
 //					// Creates an ADD command to add the FeatureOfInterest.
-//					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
+//					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), ApogyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
 //					
 //					// Executes the command.
 //					editingDomain.getCommandStack().execute(addCommand);
@@ -587,7 +587,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Matrix4x4 pose = null;
 		
 		// Gets the transform of the selected point relative to the root.
-		Matrix4d transform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
+		Matrix4d transform = ApogyCommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
 		
 		Point3d selectedPoint = new Point3d();
 		if(relativePosition != null)
@@ -599,17 +599,17 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		transform.transform(selectedPoint);
 		
 		// Updates absolute position
-		Tuple3d absolutePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(selectedPoint);
+		Tuple3d absolutePosition = ApogyCommonMathFacade.INSTANCE.createTuple3d(selectedPoint);
 		setPickAbsolutePosition(absolutePosition);
 		
 		// Gets the rotation matrix associated with the normal.
-		Matrix3x3 rotation = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(createFOIOrientation(normal));
+		Matrix3x3 rotation = ApogyCommonMathFacade.INSTANCE.createMatrix3x3(createFOIOrientation(normal));
 				
 		// Creates the pose of the FeatureOfInterest to be created.								
-		TransformNode t = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(selectedPoint.x, selectedPoint.y, selectedPoint.z, 0, 0, 0);
+		TransformNode t = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(selectedPoint.x, selectedPoint.y, selectedPoint.z, 0, 0, 0);
 		t.setRotationMatrix(rotation);
 				
-		pose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(t.asMatrix4d());
+		pose = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(t.asMatrix4d());
 		
 		return pose;
 	}

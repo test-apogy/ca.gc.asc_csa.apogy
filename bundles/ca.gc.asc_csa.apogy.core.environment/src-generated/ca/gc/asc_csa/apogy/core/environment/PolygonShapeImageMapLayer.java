@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 import java.util.List;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getPolygonShapeImageMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getPolygonShapeImageMapLayer()
  * @model abstract="true"
  * @generated
  */
@@ -28,7 +28,7 @@ public interface PolygonShapeImageMapLayer extends AbstractShapeImageLayer {
 	 * <!-- begin-model-doc -->
 	 *  Returns the list of vertices required to draw the polygon.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.List<org.eclipse.symphony.common.math.Tuple3d>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.List<ca.gc.asc_csa.apogy.common.math.Tuple3d>" unique="false" many="false"
 	 * @generated
 	 */
 	List<Tuple3d> getVertices();

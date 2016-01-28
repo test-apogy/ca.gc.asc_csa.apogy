@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import javax.vecmath.Point3d;
 
-import org.eclipse.symphony.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +21,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getY <em>Y</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getX <em>X</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getY <em>Y</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPositionCoordinates()
  * @model
  * @generated
  */
@@ -41,15 +41,15 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_X()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPositionCoordinates_X()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getX();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getX <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>X</em>' attribute.
@@ -68,15 +68,15 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_Y()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPositionCoordinates_Y()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getY();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getY <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Y</em>' attribute.
@@ -95,15 +95,15 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_Z()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getCartesianPositionCoordinates_Z()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' apogy_units='m'"
 	 * @generated
 	 */
 	double getZ();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Z</em>' attribute.
@@ -119,7 +119,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * *
 	 * Returns the position as a Point3d.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Point3d" unique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" unique="false"
 	 * @generated
 	 */
 	Point3d asPoint3d();

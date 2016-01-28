@@ -9,35 +9,35 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage"
-            genModel="model/symphony_core_environment.xcore"/>
+            uri="ca.gc.asc_csa.apogy.core.environment"
+            class="ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage"
+            genModel="model/apogy_core_environment.xcore"/>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
-            id="org.eclipse.symphony.core.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
+            id="ca.gc.asc_csa.apogy.core.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
             name="Update Mesh Image">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.commands.UpdateImageMapLayerCommandHandler"
-            id="org.eclipse.symphony.core.environment.commands.UpdateImageMapLayerCommandHandler"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler"
+            id="ca.gc.asc_csa.apogy.core.environment.commands.UpdateImageMapLayerCommandHandler"
             name="Update Image Map Layer">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
-            id="org.eclipse.symphony.core.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
+            defaultHandler="ca.gc.asc_csa.apogy.core.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
+            id="ca.gc.asc_csa.apogy.core.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
             name="Toggle Mesh Layer Visibility">
       </command>
    </extension>
    <extension
-        point="org.eclipse.symphony.common.converters">
+        point="ca.gc.asc_csa.apogy.common.converters">
       <new_element
-         Class="org.eclipse.symphony.core.environment.converters.GeographicalCoordinatesToPositionConverter">
+         Class="ca.gc.asc_csa.apogy.core.environment.converters.GeographicalCoordinatesToPositionConverter">
       </new_element>
       <new_element
-         Class="org.eclipse.symphony.core.environment.converters.PositionedToGeographicalCoordinatesConverter">
+         Class="ca.gc.asc_csa.apogy.core.environment.converters.PositionedToGeographicalCoordinatesConverter">
       </new_element>
    </extension>
 </plugin>

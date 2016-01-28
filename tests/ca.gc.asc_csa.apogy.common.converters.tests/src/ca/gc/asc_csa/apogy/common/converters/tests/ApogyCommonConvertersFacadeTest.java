@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.converters.tests;
+package ca.gc.asc_csa.apogy.common.converters.tests;
 
 import java.util.List;
 
@@ -6,15 +6,15 @@ import junit.framework.TestCase;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.converters.tests.types.A;
-import org.eclipse.symphony.common.converters.tests.types.B;
-import org.eclipse.symphony.common.converters.tests.types.C;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.A;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.B;
+import ca.gc.asc_csa.apogy.common.converters.tests.types.C;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
 import org.junit.Test;
 
-public class Symphony__CommonConvertersFacadeTest extends TestCase
+public class ApogyCommonConvertersFacadeTest extends TestCase
 {
 	@SuppressWarnings("rawtypes")
 	@Test
@@ -24,7 +24,7 @@ public class Symphony__CommonConvertersFacadeTest extends TestCase
 		input.setDescription("A");
 		IStructuredSelection structuredSelection = new StructuredSelection(input);
 		
-		List results = Symphony__CommonConvertersUIFacade.INSTANCE.convert(structuredSelection, B.class);
+		List results = ApogyCommonConvertersUIFacade.INSTANCE.convert(structuredSelection, B.class);
 		
 		assertEquals(1, results.size());		
 		B result = (B) results.get(0);
@@ -41,7 +41,7 @@ public class Symphony__CommonConvertersFacadeTest extends TestCase
 		B b = new B();
 		IStructuredSelection structuredSelection = new StructuredSelection(b);
 		
-		List results = Symphony__CommonConvertersUIFacade.INSTANCE.convert(structuredSelection, B.class);
+		List results = ApogyCommonConvertersUIFacade.INSTANCE.convert(structuredSelection, B.class);
 		assertEquals(1, results.size());	
 		
 		B result = (B) results.get(0);
@@ -55,14 +55,14 @@ public class Symphony__CommonConvertersFacadeTest extends TestCase
 		// Convert A to B
 		A a = new A();
 		a.setDescription("A");
-		B b = (B) Symphony__CommonConvertersFacade.INSTANCE.convert(a, B.class);
+		B b = (B) ApogyCommonConvertersFacade.INSTANCE.convert(a, B.class);
 		assertNotNull(b);
 		assertTrue(b.getDescription().compareTo("A->AtoB") == 0);	
 		
 		// Convert B to C
 		b = new B();
 		b.setDescription("B");
-		C c = (C) Symphony__CommonConvertersFacade.INSTANCE.convert(b, C.class);
+		C c = (C) ApogyCommonConvertersFacade.INSTANCE.convert(b, C.class);
 		assertNotNull(c);
 		assertTrue(c.getDescription().compareTo("B->BtoC") == 0);	
 	}
@@ -72,7 +72,7 @@ public class Symphony__CommonConvertersFacadeTest extends TestCase
 	{
 		C input = new C();
 		input.setDescription("A");
-		A result = (A) Symphony__CommonConvertersFacade.INSTANCE.convert(input, A.class);
+		A result = (A) ApogyCommonConvertersFacade.INSTANCE.convert(input, A.class);
 		assertTrue(result==null);		
 	}
 	
@@ -81,7 +81,7 @@ public class Symphony__CommonConvertersFacadeTest extends TestCase
 	{
 		A input = new A();
 		input.setDescription("A");
-		C c = (C) Symphony__CommonConvertersFacade.INSTANCE.convert(input,C.class);
+		C c = (C) ApogyCommonConvertersFacade.INSTANCE.convert(input,C.class);
 		assertNotNull(c);		
 		assertTrue(c.getDescription().compareTo("A->AtoB->BtoC") == 0);				
 	}
@@ -89,7 +89,7 @@ public class Symphony__CommonConvertersFacadeTest extends TestCase
 	@Test
 	public void testGetAllRegisteredConverters() 
 	{
-		List<IConverter> converters = Symphony__CommonConvertersFacade.INSTANCE.getAllRegisteredConverters();
+		List<IConverter> converters = ApogyCommonConvertersFacade.INSTANCE.getAllRegisteredConverters();
 		
 		for(int i = 0; i < converters.size(); i++)
 		{

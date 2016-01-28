@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.provider;
 
 
 import java.util.Collection;
@@ -14,20 +14,20 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
 public class PTUDishAntennaDataItemProvider
-extends SymphonyInitializationDataItemProvider
+extends ApogyInitializationDataItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -74,7 +74,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_fov_feature", "_UI_PTUDishAntennaData_type"),
-				 Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
+				 ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
 				 true,
 				 false,
 				 false,
@@ -97,7 +97,7 @@ extends SymphonyInitializationDataItemProvider
 				getResourceLocator(),
 				getString("_UI_PTUDishAntennaData_panAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_panAngle_feature", "_UI_PTUDishAntennaData_type"),
-				Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__PAN_ANGLE,
+				ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__PAN_ANGLE,
 				true,
 				false,
 				false,
@@ -120,7 +120,7 @@ extends SymphonyInitializationDataItemProvider
 				getResourceLocator(),
 				getString("_UI_PTUDishAntennaData_tiltAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_tiltAngle_feature", "_UI_PTUDishAntennaData_type"),
-				Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__TILT_ANGLE,
+				ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__TILT_ANGLE,
 				true,
 				false,
 				false,
@@ -142,7 +142,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_trackingSun_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_trackingSun_feature", "_UI_PTUDishAntennaData_type"),
-				 Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__TRACKING_SUN,
+				 ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__TRACKING_SUN,
 				 true,
 				 false,
 				 false,
@@ -164,7 +164,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_initialized_feature", "_UI_PTUDishAntennaData_type"),
-				 Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__INITIALIZED,
+				 ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -185,7 +185,7 @@ extends SymphonyInitializationDataItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV);
+			childrenFeatures.add(ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -241,13 +241,13 @@ extends SymphonyInitializationDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PTUDishAntennaData.class)) {
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case ApogyExamplesAntennaApogyPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -268,8 +268,8 @@ extends SymphonyInitializationDataItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
+				(ApogyExamplesAntennaApogyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 	}
 
 }

@@ -1,8 +1,8 @@
-package org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils;
 
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
 
 public abstract class AbstractFieldOfViewImageProjectorControl <T extends Node> extends ImageProjectorControl<T> 
 {	

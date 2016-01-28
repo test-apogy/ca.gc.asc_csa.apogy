@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite;
+package ca.gc.asc_csa.apogy.examples.satellite;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -20,17 +20,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.SatellitesList#getSatellites <em>Satellites</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.SatellitesList#getSatellites <em>Satellites</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellitesList()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellitesList()
  * @model
  * @generated
  */
 public interface SatellitesList extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Satellites</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.examples.satellite.Satellite}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.examples.satellite.Satellite}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Satellites</em>' containment reference list isn't clear,
@@ -38,7 +38,7 @@ public interface SatellitesList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Satellites</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellitesList_Satellites()
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#getSatellitesList_Satellites()
 	 * @model containment="true"
 	 * @generated
 	 */

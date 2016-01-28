@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.commands;
+package ca.gc.asc_csa.apogy.core.invocator.ui.commands;
 
 import java.util.Iterator;
 
@@ -14,9 +14,9 @@ import org.eclipse.emf.common.command.IdentityCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.core.invocator.OperationCallsList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.progress.UIJob;
 
@@ -26,7 +26,7 @@ public class ExecuteOperationCallCommand extends AbstractHandler implements
 	@Override
 	public Object execute(final ExecutionEvent event) throws ExecutionException {
 
-		new Job("Symphony__CoreInvocator: Execute Operation Call") {
+		new Job("ApogyCoreInvocator: Execute Operation Call") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				final Iterator<?> selections = ((IStructuredSelection) HandlerUtil
@@ -36,10 +36,10 @@ public class ExecuteOperationCallCommand extends AbstractHandler implements
 
 					final Object selection = selections.next();
 					if (selection instanceof OperationCall) {
-						Symphony__CoreInvocatorFacade.INSTANCE
+						ApogyCoreInvocatorFacade.INSTANCE
 								.exec((OperationCall) selection);
 					} else if (selection instanceof OperationCallsList) {
-						Symphony__CoreInvocatorFacade.INSTANCE
+						ApogyCoreInvocatorFacade.INSTANCE
 								.exec((OperationCallsList) selection);
 					}
 

@@ -3,7 +3,7 @@
  *
  * $Id: RectangularFrustrumFieldOfViewItemProvider.java,v 1.4.4.2 2015/05/21 15:51:09 pallard Exp $
  */
-package org.eclipse.symphony.addons.sensors.fov.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.provider;
 
 
 import java.util.Collection;
@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +72,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 				getResourceLocator(),
 				getString("_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE,
+				ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE,
 				true, 
 				false,
 				false, 
@@ -96,7 +96,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 				getResourceLocator(),
 				getString("_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE,
+				ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE,
 				true, 
 				false,
 				false, 
@@ -121,7 +121,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularFrustrumFieldOfView_volume_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_volume_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				 Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME,
+				 ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME,
 				 false,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE);
+			childrenFeatures.add(ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE);
 		}
 		return childrenFeatures;
 	}
@@ -210,12 +210,12 @@ public class RectangularFrustrumFieldOfViewItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RectangularFrustrumFieldOfView.class)) {
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+			case ApogyAddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -236,8 +236,8 @@ public class RectangularFrustrumFieldOfViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
+				(ApogyAddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 	}
 
 }

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 
 /**
@@ -13,10 +13,10 @@ package org.eclipse.symphony.core.programs.controllers;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.TimeTrigger#getRefreshPeriod <em>Refresh Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger#getRefreshPeriod <em>Refresh Period</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTimeTrigger()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getTimeTrigger()
  * @model
  * @generated
  */
@@ -36,15 +36,15 @@ public interface TimeTrigger extends Trigger
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Refresh Period</em>' attribute.
 	 * @see #setRefreshPeriod(long)
-	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTimeTrigger_RefreshPeriod()
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getTimeTrigger_RefreshPeriod()
 	 * @model default="100" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='ms'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' apogy_units='ms'"
 	 * @generated
 	 */
   long getRefreshPeriod();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.TimeTrigger#getRefreshPeriod <em>Refresh Period</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger#getRefreshPeriod <em>Refresh Period</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Refresh Period</em>' attribute.

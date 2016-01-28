@@ -3,7 +3,7 @@
  *
  * $Id: CoordinatesSet25DImpl.java,v 1.7.4.3 2015/09/22 19:39:38 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.geometry.data25d.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.impl;
 
 import java.util.Comparator;
 import java.util.List;
@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
-import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.impl.CoordinatesSetImpl;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DImpl#isEnforceUniqueness <em>Enforce Uniqueness</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data25d.impl.CoordinatesSet25DImpl#isEnforceUniqueness <em>Enforce Uniqueness</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,7 +75,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonGeometryData25DPackage.Literals.COORDINATES_SET25_D;
+		return ApogyCommonGeometryData25DPackage.Literals.COORDINATES_SET25_D;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS,
+					ApogyCommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS,
 					oldEnforceUniqueness, enforceUniqueness));
 
 	}
@@ -117,7 +117,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case ApogyCommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				return isEnforceUniqueness();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case ApogyCommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				setEnforceUniqueness((Boolean)newValue);
 				return;
 		}
@@ -144,7 +144,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case ApogyCommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				setEnforceUniqueness(ENFORCE_UNIQUENESS_EDEFAULT);
 				return;
 		}
@@ -158,7 +158,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case ApogyCommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				return enforceUniqueness != ENFORCE_UNIQUENESS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -218,7 +218,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 				@SuppressWarnings("unchecked")
 				@Override
 				public void notifyChanged(Notification notification) {
-					if (notification.getFeatureID(Mesh.class) == Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS) {
+					if (notification.getFeatureID(Mesh.class) == ApogyCommonGeometryDataPackage.COORDINATES_SET__POINTS) {
 						if (notification.getEventType() == Notification.ADD
 								|| notification.getEventType() == Notification.ADD_MANY) {
 

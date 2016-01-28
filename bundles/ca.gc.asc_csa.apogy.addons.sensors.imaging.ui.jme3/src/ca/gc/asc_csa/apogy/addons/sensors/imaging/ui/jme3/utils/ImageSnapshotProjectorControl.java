@@ -1,17 +1,17 @@
-package org.eclipse.symphony.addons.sensors.imaging.ui.jme3.utils;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.ui.jme3.utils;
 
 import java.awt.image.BufferedImage;
 
 
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
-import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.ImageProjectorControl;
-import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.jme3.utils.ImageProjectorControl;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ImageSnapshot;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.RectifiedImageSnapshot;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
 
 import com.jme3.post.MultiTextureProjectorRenderer.CombineMode;
 import com.jme3.renderer.Camera;
@@ -58,7 +58,7 @@ public class ImageSnapshotProjectorControl extends ImageProjectorControl<ImageSn
 		if(image != null)
 		{
 			// Ensures the image if of the right type.
-			EImage overlayImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+			EImage overlayImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 			overlayImage.setImageContent(image.asBufferedImage());
 			AbstractEImage transparentImage = EImagesUtilities.INSTANCE.createTransparentImage(overlayImage.getWidth(), overlayImage.getHeight());				
 			image = EImagesUtilities.INSTANCE.applyOverlay(transparentImage, overlayImage, false);					
@@ -108,7 +108,7 @@ public class ImageSnapshotProjectorControl extends ImageProjectorControl<ImageSn
 			}			
 		}
 
-		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
+		EImage filteredImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(rotated);
 		return filteredImage;     	
 	}

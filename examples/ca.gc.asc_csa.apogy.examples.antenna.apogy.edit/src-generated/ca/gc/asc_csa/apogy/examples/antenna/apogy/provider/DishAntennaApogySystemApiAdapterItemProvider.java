@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.provider;
 
 
 import java.util.Collection;
@@ -16,16 +16,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.DishAntennaSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.antenna.DishAntennaApogySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DishAntennaSymphonySystemApiAdapterItemProvider
-  extends SymphonySystemApiAdapterItemProvider
+public class DishAntennaApogySystemApiAdapterItemProvider
+  extends ApogySystemApiAdapterItemProvider
   implements
     IEditingDomainItemProvider,
     IStructuredItemContentProvider,
@@ -39,7 +39,7 @@ public class DishAntennaSymphonySystemApiAdapterItemProvider
    * <!-- end-user-doc -->
    * @generated
    */
-  public DishAntennaSymphonySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
+  public DishAntennaApogySystemApiAdapterItemProvider(AdapterFactory adapterFactory)
   {
     super(adapterFactory);
   }
@@ -62,7 +62,7 @@ public class DishAntennaSymphonySystemApiAdapterItemProvider
   }
 
   /**
-   * This returns DishAntennaSymphonySystemApiAdapter.gif.
+   * This returns DishAntennaApogySystemApiAdapter.gif.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -70,7 +70,7 @@ public class DishAntennaSymphonySystemApiAdapterItemProvider
   @Override
   public Object getImage(Object object)
   {
-    return overlayImage(object, getResourceLocator().getImage("full/obj16/DishAntennaSymphonySystemApiAdapter"));
+    return overlayImage(object, getResourceLocator().getImage("full/obj16/DishAntennaApogySystemApiAdapter"));
   }
 
   /**
@@ -82,7 +82,7 @@ public class DishAntennaSymphonySystemApiAdapterItemProvider
   @Override
   public String getText(Object object)
   {
-    return getString("_UI_DishAntennaSymphonySystemApiAdapter_type");
+    return getString("_UI_DishAntennaApogySystemApiAdapter_type");
   }
 
   /**
@@ -121,7 +121,7 @@ public class DishAntennaSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-    return Symphony__ExamplesAntennaSymphonyEditPlugin.INSTANCE;
+    return ApogyExamplesAntennaApogyEditPlugin.INSTANCE;
   }
 
 }

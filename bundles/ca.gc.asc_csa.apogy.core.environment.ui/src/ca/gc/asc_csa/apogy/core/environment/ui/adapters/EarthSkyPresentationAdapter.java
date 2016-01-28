@@ -1,11 +1,11 @@
-package org.eclipse.symphony.core.environment.ui.adapters;
+package ca.gc.asc_csa.apogy.core.environment.ui.adapters;
 
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.core.environment.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.ui.EarthSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
 
 public class EarthSkyPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class EarthSkyPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		EarthSkyPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation();
+		EarthSkyPresentation presentationNode = ApogyCoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

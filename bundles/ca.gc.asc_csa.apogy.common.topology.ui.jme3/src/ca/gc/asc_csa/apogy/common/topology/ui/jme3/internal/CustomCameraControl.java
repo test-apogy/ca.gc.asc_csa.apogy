@@ -1,11 +1,11 @@
-package org.eclipse.symphony.common.topology.ui.jme3.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal;
 
 import java.io.IOException;
 import java.util.Stack;
 
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Application;
 
 import com.jme3.export.JmeExporter;
 import com.jme3.export.JmeImporter;
@@ -95,7 +95,7 @@ public class CustomCameraControl implements ActionListener, AnalogListener, ICam
         target.addControl(this);
         setCamera(cam);   
         
-        org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
+        ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
     }
 
     /**
@@ -112,14 +112,14 @@ public class CustomCameraControl implements ActionListener, AnalogListener, ICam
         setCamera(cam);
         registerWithInput(inputManager);
         
-        org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
+        ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
     }
 
     @Override
     public void dispose() 
     {
     	// Unregister preferences listener.
-    	org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().removePropertyChangeListener(this);
+    	ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().removePropertyChangeListener(this);
     	
     	// Disable.
     	setEnabled(false);
@@ -423,11 +423,11 @@ public class CustomCameraControl implements ActionListener, AnalogListener, ICam
     	this.highSpeedMotionEnabled = highSpeedMotionEnabled;
     	if(highSpeedMotionEnabled)
     	{
-    		translationSpeedMultiplier = (float) org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearHighSpeedFactor();
+    		translationSpeedMultiplier = (float) ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearHighSpeedFactor();
     	}
     	else
     	{
-    		translationSpeedMultiplier = (float) org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearLowSpeedFactor();
+    		translationSpeedMultiplier = (float) ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearLowSpeedFactor();
     	}
     }
     
@@ -679,11 +679,11 @@ public class CustomCameraControl implements ActionListener, AnalogListener, ICam
 	{						
 		if(highSpeedMotionEnabled)
     	{
-    		translationSpeedMultiplier = (float) org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearHighSpeedFactor();
+    		translationSpeedMultiplier = (float) ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearHighSpeedFactor();
     	}
     	else
     	{
-    		translationSpeedMultiplier = (float) org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearLowSpeedFactor();
+    		translationSpeedMultiplier = (float) ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getNavigationLinearLowSpeedFactor();
     	}				
 	}	
 }

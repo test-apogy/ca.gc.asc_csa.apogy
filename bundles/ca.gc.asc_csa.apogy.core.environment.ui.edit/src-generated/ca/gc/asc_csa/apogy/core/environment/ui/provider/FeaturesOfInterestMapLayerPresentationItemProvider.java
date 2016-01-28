@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.FeaturesOfInterestMapLayerPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -65,7 +65,7 @@ public class FeaturesOfInterestMapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeaturesOfInterestMapLayerPresentation_featuresOfInterestMapLayer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturesOfInterestMapLayerPresentation_featuresOfInterestMapLayer_feature", "_UI_FeaturesOfInterestMapLayerPresentation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER,
+				 ApogyCoreEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER,
 				 true,
 				 false,
 				 true,
@@ -87,7 +87,7 @@ public class FeaturesOfInterestMapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeaturesOfInterestMapLayerPresentation_featureOfInterestRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturesOfInterestMapLayerPresentation_featureOfInterestRadius_feature", "_UI_FeaturesOfInterestMapLayerPresentation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS,
+				 ApogyCoreEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class FeaturesOfInterestMapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeaturesOfInterestMapLayerPresentation_featureOfInterestColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturesOfInterestMapLayerPresentation_featureOfInterestColor_feature", "_UI_FeaturesOfInterestMapLayerPresentation_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR,
+				 ApogyCoreEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR,
 				 true,
 				 false,
 				 false,
@@ -172,9 +172,9 @@ public class FeaturesOfInterestMapLayerPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeaturesOfInterestMapLayerPresentation.class)) {
-			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
-			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
-			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
+			case ApogyCoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
+			case ApogyCoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
+			case ApogyCoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

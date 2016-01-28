@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -35,23 +35,23 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.AbstractFeatureTreeNode;
-import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.Activator;
-import org.eclipse.symphony.common.emf.EClassFilter;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.EMFAnnotationConstants;
-import org.eclipse.symphony.common.emf.ListFeatureNode;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.emf.Ranges;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.emf.TreeFeatureNode;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureTreeNode;
+import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Activator;
+import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.EMFAnnotationConstants;
+import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
+import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Ranges;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.emf.TreeFeatureNode;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -59,18 +59,18 @@ import org.eclipse.symphony.common.log.Logger;
  *
  * @generated
  */
-public class Symphony__CommonEMFFacadeImpl extends MinimalEObjectImpl.Container implements
-Symphony__CommonEMFFacade {
+public class ApogyCommonEMFFacadeImpl extends MinimalEObjectImpl.Container implements
+ApogyCommonEMFFacade {
 
 	private static List<EClass> availableTypes = null;
 
-	private static Symphony__CommonEMFFacade instance = null;
+	private static ApogyCommonEMFFacade instance = null;
 
-	public static Symphony__CommonEMFFacade getInstance()
+	public static ApogyCommonEMFFacade getInstance()
 	{
 		if (instance == null)
 		{
-			instance = new Symphony__CommonEMFFacadeImpl();
+			instance = new ApogyCommonEMFFacadeImpl();
 		}
 
 		return instance;
@@ -80,7 +80,7 @@ Symphony__CommonEMFFacade {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonEMFFacadeImpl() {
+	protected ApogyCommonEMFFacadeImpl() {
 		super();
 	}
 
@@ -90,7 +90,7 @@ Symphony__CommonEMFFacade {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.SYMPHONY_COMMON_EMF_FACADE;
+		return ApogyCommonEMFPackage.Literals.APOGY_COMMON_EMF_FACADE;
 	}
 
 	/**
@@ -102,80 +102,80 @@ Symphony__CommonEMFFacade {
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_ECLASSES:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_ECLASSES:
 				return getAllAvailableEClasses();
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ALL_SUB_ECLASSES__ECLASS:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ALL_SUB_ECLASSES__ECLASS:
 				return getAllSubEClasses((EClass)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER:
 				return filterEClasses((List<EClass>)arguments.get(0), (EClassFilter)arguments.get(1));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_LIST:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_LIST:
 				return filterEClasses((List<EClass>)arguments.get(0), (List<EClassFilter>)arguments.get(1));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ECLASS__STRING:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ECLASS__STRING:
 				return getEClass((String)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___SORT_ALPHABETICALLY__LIST:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___SORT_ALPHABETICALLY__LIST:
 				return sortAlphabetically((List<EClass>)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS:
 				return getAllAvailableEOperations((EClass)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST:
 				return sortEOperationsAlphabetically((List<EOperation>)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT:
 				return getDocumentation((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT:
 				return getEngineeringUnitsAsString((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT:
 				return getEngineeringUnits((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT:
 				return getValueUpdateRate((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT:
 				return getWarningOCLExpression((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT:
 				return getAlarmOCLExpression((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT:
 				return getOutOfRangeOCLExpression((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT:
 				return getWarningMinValue((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT:
 				return getWarningMaxValue((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT:
 				return getAlarmMinValue((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT:
 				return getAlarmMaxValue((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT:
 				return getOutOfRangeMinValue((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT:
 				return getOutOfRangeMaxValue((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT:
 				return getRange((ETypedElement)arguments.get(0), arguments.get(1));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT:
 				return getFullDescription((ETypedElement)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE:
 				return getAncestriesString((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE:
 				return getFeatureRoot((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE:
 				return getAncestries((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE:
 				return getDescendants((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE:
 				return getChildEStructuralFeatures((AbstractFeatureNode)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE:
 				return resolve((EObject)arguments.get(0), (AbstractFeatureNode)arguments.get(1));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT:
 				setValue((EObject)arguments.get(0), (AbstractFeatureNode)arguments.get(1), arguments.get(2));
 				return null;
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE:
 				return isResolved((EObject)arguments.get(0), (AbstractFeatureNode)arguments.get(1));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_LEAF__LISTROOTNODE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_LEAF__LISTROOTNODE:
 				return getLeaf((ListRootNode)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_FILE__RESOURCE:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_FILE__RESOURCE:
 				return getFile((Resource)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_CONTENT__URI:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_CONTENT__URI:
 				return getContent((URI)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___SORT_TIMED__COLLECTION:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___SORT_TIMED__COLLECTION:
 				return sortTimed((Collection<Timed>)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION:
 				return getTimeSpan((Collection<Timed>)arguments.get(0));
-			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE___GET_ID__EOBJECT:
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___GET_ID__EOBJECT:
 				return getID((EObject)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -278,8 +278,8 @@ Symphony__CommonEMFFacade {
 				}
 			};
 
-			List<EClass> list = Symphony__CommonEMFFacade.INSTANCE.getAllAvailableEClasses();
-			classes = Symphony__CommonEMFFacade.INSTANCE.filterEClasses(list, filter);
+			List<EClass> list = ApogyCommonEMFFacade.INSTANCE.getAllAvailableEClasses();
+			classes = ApogyCommonEMFFacade.INSTANCE.filterEClasses(list, filter);
 		}
 		return classes;
 	}
@@ -646,22 +646,22 @@ Symphony__CommonEMFFacade {
 	{
 		String fullDocumentation = "";
 
-		String description = "Description : " + Symphony__CommonEMFFacade.INSTANCE.getDocumentation(eTypedElement);
-		String units = "Units : " + Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
+		String description = "Description : " + ApogyCommonEMFFacade.INSTANCE.getDocumentation(eTypedElement);
+		String units = "Units : " + ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
 
 		// Out Of range
-		Number oorMin = Symphony__CommonEMFFacade.INSTANCE.getOutOfRangeMinValue(eTypedElement);
-		Number oorMax = Symphony__CommonEMFFacade.INSTANCE.getOutOfRangeMaxValue(eTypedElement);
+		Number oorMin = ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMinValue(eTypedElement);
+		Number oorMax = ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMaxValue(eTypedElement);
 		String oorLimits = "Out Of Range Limits : " + getRangeString(oorMin, oorMax);
 
 		// Alarm range
-		Number alarmMin = Symphony__CommonEMFFacade.INSTANCE.getAlarmMinValue(eTypedElement);
-		Number alarmMax = Symphony__CommonEMFFacade.INSTANCE.getAlarmMaxValue(eTypedElement);
+		Number alarmMin = ApogyCommonEMFFacade.INSTANCE.getAlarmMinValue(eTypedElement);
+		Number alarmMax = ApogyCommonEMFFacade.INSTANCE.getAlarmMaxValue(eTypedElement);
 		String alarmsLimits = "Alarms Limits : " + getRangeString(alarmMin, alarmMax);
 
 		// Warning
-		Number warningMin = Symphony__CommonEMFFacade.INSTANCE.getWarningMinValue(eTypedElement);
-		Number warningMax = Symphony__CommonEMFFacade.INSTANCE.getWarningMaxValue(eTypedElement);
+		Number warningMin = ApogyCommonEMFFacade.INSTANCE.getWarningMinValue(eTypedElement);
+		Number warningMax = ApogyCommonEMFFacade.INSTANCE.getWarningMaxValue(eTypedElement);
 		String warningLimits = "Warning Limits : " + getRangeString(warningMin, warningMax);
 
 		fullDocumentation += description + "\n";
@@ -1361,4 +1361,4 @@ Symphony__CommonEMFFacade {
 			}
 		}
 	}
-} // Symphony__CommonEMFFacadeImpl
+} // ApogyCommonEMFFacadeImpl

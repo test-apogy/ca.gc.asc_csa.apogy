@@ -1,31 +1,31 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.addons.geometry.paths.ui;singleton:=true
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.addons.geometry.paths.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.symphony.addons.geometry.paths.ui,
- org.eclipse.symphony.addons.geometry.paths.ui.adapters,
- org.eclipse.symphony.addons.geometry.paths.ui.impl,
- org.eclipse.symphony.addons.geometry.paths.ui.preferences,
- org.eclipse.symphony.addons.geometry.paths.ui.util
+Export-Package: ca.gc.asc_csa.apogy.addons.geometry.paths.ui,
+ ca.gc.asc_csa.apogy.addons.geometry.paths.ui.adapters,
+ ca.gc.asc_csa.apogy.addons.geometry.paths.ui.impl,
+ ca.gc.asc_csa.apogy.addons.geometry.paths.ui.preferences,
+ ca.gc.asc_csa.apogy.addons.geometry.paths.ui.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.common.topology.ui;visibility:=reexport,
- org.eclipse.symphony.common.topology;visibility:=reexport,
- org.eclipse.symphony.addons.geometry.paths;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology.ui;visibility:=reexport,
+ ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
+ ca.gc.asc_csa.apogy.addons.geometry.paths;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.6.2",
- org.eclipse.symphony.common.topology.ui.viewer,
+ ca.gc.asc_csa.apogy.common.topology.ui.viewer,
  org.eclipse.core.databinding;bundle-version="1.4.1",
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
- org.eclipse.symphony.common.ui,
+ ca.gc.asc_csa.apogy.common.ui,
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.3",
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.addons.geometry.paths.ui.Activator
+Bundle-Activator: ca.gc.asc_csa.apogy.addons.geometry.paths.ui.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

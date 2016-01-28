@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.programs.controllers.Activator;
-import org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.Activator;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +22,8 @@ import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsCont
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerStateTriggerImpl#isEnablingValue <em>Enabling Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerStateTriggerImpl#getRepeatPeriod <em>Repeat Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllerStateTriggerImpl#isEnablingValue <em>Enabling Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllerStateTriggerImpl#getRepeatPeriod <em>Repeat Period</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,7 +91,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER;
+		return ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER;
 	}
 
   /**
@@ -114,7 +114,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
 		boolean oldEnablingValue = enablingValue;
 		enablingValue = newEnablingValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE, oldEnablingValue, enablingValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE, oldEnablingValue, enablingValue));
 	}
 
   /**
@@ -151,7 +151,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
 		long oldRepeatPeriod = repeatPeriod;
 		repeatPeriod = newRepeatPeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD, oldRepeatPeriod, repeatPeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD, oldRepeatPeriod, repeatPeriod));
 	}
   
   /**
@@ -163,9 +163,9 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				return isEnablingValue();
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				return getRepeatPeriod();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -180,10 +180,10 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				setEnablingValue((Boolean)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				setRepeatPeriod((Long)newValue);
 				return;
 		}
@@ -199,10 +199,10 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				setEnablingValue(ENABLING_VALUE_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				setRepeatPeriod(REPEAT_PERIOD_EDEFAULT);
 				return;
 		}
@@ -218,9 +218,9 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				return enablingValue != ENABLING_VALUE_EDEFAULT;
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case ApogyCoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				return repeatPeriod != REPEAT_PERIOD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -251,7 +251,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
 	  super.setComponentQualifier(newComponentQualifier);
 	  
 	  // Check to see if we should start the update
-	  EComponent component = org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().resolveEComponent(newComponentQualifier);
+	  EComponent component = ca.gc.asc_csa.apogy.common.io.jinput.Activator.getEControllerEnvironment().resolveEComponent(newComponentQualifier);
 	  if(component != null)
 	  {
 		  boolean buttonStatus = convert(component.getPollData());

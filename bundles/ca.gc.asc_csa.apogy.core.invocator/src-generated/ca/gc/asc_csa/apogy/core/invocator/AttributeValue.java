@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.AttributeValue#getObject <em>Object</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.AttributeValue#getObject <em>Object</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAttributeValue()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAttributeValue()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface AttributeValue extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Object</em>' attribute.
 	 * @see #setObject(Object)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAttributeValue_Object()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getAttributeValue_Object()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -41,7 +41,7 @@ public interface AttributeValue extends EObject
   Object getObject();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.AttributeValue#getObject <em>Object</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.AttributeValue#getObject <em>Object</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Object</em>' attribute.

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core;
+package ca.gc.asc_csa.apogy.core;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ public class Activator implements BundleActivator {
 
 	private static WorksiteContributorsRegistry worksiteContributorsRegistry = new WorksiteContributorsRegistry(false);
 	
-	public static String ID = "org.eclipse.symphony.core";
+	public static String ID = "ca.gc.asc_csa.apogy.core";
 
 	// The shared instance
 	private static Activator plugin;

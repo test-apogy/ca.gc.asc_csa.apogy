@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.views;
+package ca.gc.asc_csa.apogy.common.topology.ui.views;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -11,9 +11,9 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.topology.ui.Activator;
-import org.eclipse.symphony.common.topology.ui.composites.NodePresentationListComposite;
-import org.eclipse.symphony.common.topology.ui.composites.TopologyPresentationSetListComposite;
+import ca.gc.asc_csa.apogy.common.topology.ui.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.composites.NodePresentationListComposite;
+import ca.gc.asc_csa.apogy.common.topology.ui.composites.TopologyPresentationSetListComposite;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.progress.UIJob;
 

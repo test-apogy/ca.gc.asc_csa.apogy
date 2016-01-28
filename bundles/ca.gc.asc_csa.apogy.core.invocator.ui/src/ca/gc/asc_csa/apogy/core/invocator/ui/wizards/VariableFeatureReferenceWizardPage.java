@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.ui.wizards;
+package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -7,14 +7,14 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import org.eclipse.symphony.core.invocator.VariablesList;
-import org.eclipse.symphony.core.invocator.ui.composites.VariableFeatureReferenceComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
+import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
+import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
 
 public class VariableFeatureReferenceWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage";
+	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage";
 	private VariableFeatureReferenceComposite variableFeatureReferenceComposite; 
 	protected VariableFeatureReference variableFeatureReference;
 	private VariablesList variablesList;
@@ -50,7 +50,7 @@ public class VariableFeatureReferenceWizardPage extends WizardPage {
 			adapter = new AdapterImpl(){
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(VariableFeatureReference.class) == Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE){
+					if (msg.getFeatureID(VariableFeatureReference.class) == ApogyCoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE){
 						validate();
 					}
 				}

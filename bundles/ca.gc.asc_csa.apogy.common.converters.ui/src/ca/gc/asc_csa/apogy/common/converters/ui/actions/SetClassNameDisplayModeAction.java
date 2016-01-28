@@ -1,17 +1,17 @@
-package org.eclipse.symphony.common.converters.ui.actions;
+package ca.gc.asc_csa.apogy.common.converters.ui.actions;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuCreator;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.widgets.Event;
-import org.eclipse.symphony.common.converters.ui.Activator;
-import org.eclipse.symphony.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
-import org.eclipse.symphony.common.converters.ui.views.ConvertersView;
+import ca.gc.asc_csa.apogy.common.converters.ui.Activator;
+import ca.gc.asc_csa.apogy.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
+import ca.gc.asc_csa.apogy.common.converters.ui.views.ConvertersView;
 
 public class SetClassNameDisplayModeAction extends Action {
 
-	private static final String id ="org.eclipse.symphony.common.converters.ui.actions.SetClassNameDisplayModeAction";
+	private static final String id ="ca.gc.asc_csa.apogy.common.converters.ui.actions.SetClassNameDisplayModeAction";
 	private String description = "Use fully qualified class names in displays.";
 	private String toolTipText = "Use fully qualified class names in displays.";
 	private String text ="Use fully qualified class names in displays.";	

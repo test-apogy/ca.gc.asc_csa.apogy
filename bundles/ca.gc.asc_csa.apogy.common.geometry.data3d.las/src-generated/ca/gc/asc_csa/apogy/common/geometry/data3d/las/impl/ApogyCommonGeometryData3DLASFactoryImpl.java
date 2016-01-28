@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.las.impl;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.las.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.symphony.common.geometry.data3d.las.*;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.las.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,24 +26,24 @@ import org.eclipse.symphony.common.geometry.data3d.las.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl implements Symphony__CommonGeometryData3DLASFactory {
+public class ApogyCommonGeometryData3DLASFactoryImpl extends EFactoryImpl implements ApogyCommonGeometryData3DLASFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonGeometryData3DLASFactory init() {
+	public static ApogyCommonGeometryData3DLASFactory init() {
 		try {
-			Symphony__CommonGeometryData3DLASFactory theSymphony__CommonGeometryData3DLASFactory = (Symphony__CommonGeometryData3DLASFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonGeometryData3DLASPackage.eNS_URI);
-			if (theSymphony__CommonGeometryData3DLASFactory != null) {
-				return theSymphony__CommonGeometryData3DLASFactory;
+			ApogyCommonGeometryData3DLASFactory theApogyCommonGeometryData3DLASFactory = (ApogyCommonGeometryData3DLASFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonGeometryData3DLASPackage.eNS_URI);
+			if (theApogyCommonGeometryData3DLASFactory != null) {
+				return theApogyCommonGeometryData3DLASFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonGeometryData3DLASFactoryImpl();
+		return new ApogyCommonGeometryData3DLASFactoryImpl();
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASFactoryImpl() {
+	public ApogyCommonGeometryData3DLASFactoryImpl() {
 		super();
 	}
 
@@ -64,12 +64,12 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER: return createLASHeader();
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD: return createVariableLengthRecord();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_READER: return createLASReader();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT: return createLASPoint();
-			case Symphony__CommonGeometryData3DLASPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE: return createSymphony__CommonGeometryData3DLASFacade();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER: return createLASWriter();
+			case ApogyCommonGeometryData3DLASPackage.LAS_HEADER: return createLASHeader();
+			case ApogyCommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD: return createVariableLengthRecord();
+			case ApogyCommonGeometryData3DLASPackage.LAS_READER: return createLASReader();
+			case ApogyCommonGeometryData3DLASPackage.LAS_POINT: return createLASPoint();
+			case ApogyCommonGeometryData3DLASPackage.APOGY_COMMON_GEOMETRY_DATA3_DLAS_FACADE: return createApogyCommonGeometryData3DLASFacade();
+			case ApogyCommonGeometryData3DLASPackage.LAS_WRITER: return createLASWriter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,23 +83,23 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryData3DLASPackage.SCAN_DIRECTION:
+			case ApogyCommonGeometryData3DLASPackage.SCAN_DIRECTION:
 				return createScanDirectionFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.EDGE_OF_FLIGHT_LINE:
+			case ApogyCommonGeometryData3DLASPackage.EDGE_OF_FLIGHT_LINE:
 				return createEdgeOfFlightLineFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.IPROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.IPROGRESS_MONITOR:
 				return createIProgressMonitorFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.CHAR_ARRAY:
+			case ApogyCommonGeometryData3DLASPackage.CHAR_ARRAY:
 				return createCharArrayFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.LONG_ARRAY:
+			case ApogyCommonGeometryData3DLASPackage.LONG_ARRAY:
 				return createLongArrayFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.INPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.INPUT_STREAM:
 				return createInputStreamFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.IO_EXCEPTION:
+			case ApogyCommonGeometryData3DLASPackage.IO_EXCEPTION:
 				return createIOExceptionFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.OUTPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.OUTPUT_STREAM:
 				return createOutputStreamFromString(eDataType, initialValue);
-			case Symphony__CommonGeometryData3DLASPackage.EXCEPTION:
+			case ApogyCommonGeometryData3DLASPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -114,23 +114,23 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonGeometryData3DLASPackage.SCAN_DIRECTION:
+			case ApogyCommonGeometryData3DLASPackage.SCAN_DIRECTION:
 				return convertScanDirectionToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.EDGE_OF_FLIGHT_LINE:
+			case ApogyCommonGeometryData3DLASPackage.EDGE_OF_FLIGHT_LINE:
 				return convertEdgeOfFlightLineToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.IPROGRESS_MONITOR:
+			case ApogyCommonGeometryData3DLASPackage.IPROGRESS_MONITOR:
 				return convertIProgressMonitorToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.CHAR_ARRAY:
+			case ApogyCommonGeometryData3DLASPackage.CHAR_ARRAY:
 				return convertCharArrayToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.LONG_ARRAY:
+			case ApogyCommonGeometryData3DLASPackage.LONG_ARRAY:
 				return convertLongArrayToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.INPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.INPUT_STREAM:
 				return convertInputStreamToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.IO_EXCEPTION:
+			case ApogyCommonGeometryData3DLASPackage.IO_EXCEPTION:
 				return convertIOExceptionToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.OUTPUT_STREAM:
+			case ApogyCommonGeometryData3DLASPackage.OUTPUT_STREAM:
 				return convertOutputStreamToString(eDataType, instanceValue);
-			case Symphony__CommonGeometryData3DLASPackage.EXCEPTION:
+			case ApogyCommonGeometryData3DLASPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -182,9 +182,9 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASFacade createSymphony__CommonGeometryData3DLASFacade() {
-		Symphony__CommonGeometryData3DLASFacadeImpl symphony__CommonGeometryData3DLASFacade = new Symphony__CommonGeometryData3DLASFacadeImpl();
-		return symphony__CommonGeometryData3DLASFacade;
+	public ApogyCommonGeometryData3DLASFacade createApogyCommonGeometryData3DLASFacade() {
+		ApogyCommonGeometryData3DLASFacadeImpl apogy__CommonGeometryData3DLASFacade = new ApogyCommonGeometryData3DLASFacadeImpl();
+		return apogy__CommonGeometryData3DLASFacade;
 	}
 
 	/**
@@ -368,8 +368,8 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DLASPackage getSymphony__CommonGeometryData3DLASPackage() {
-		return (Symphony__CommonGeometryData3DLASPackage)getEPackage();
+	public ApogyCommonGeometryData3DLASPackage getApogyCommonGeometryData3DLASPackage() {
+		return (ApogyCommonGeometryData3DLASPackage)getEPackage();
 	}
 
 	/**
@@ -379,8 +379,8 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonGeometryData3DLASPackage getPackage() {
-		return Symphony__CommonGeometryData3DLASPackage.eINSTANCE;
+	public static ApogyCommonGeometryData3DLASPackage getPackage() {
+		return ApogyCommonGeometryData3DLASPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonGeometryData3DLASFactoryImpl
+} //ApogyCommonGeometryData3DLASFactoryImpl

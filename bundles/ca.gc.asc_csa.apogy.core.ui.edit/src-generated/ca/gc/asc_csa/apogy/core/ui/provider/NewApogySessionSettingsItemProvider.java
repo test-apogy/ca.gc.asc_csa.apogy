@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.provider;
+package ca.gc.asc_csa.apogy.core.ui.provider;
 
 
 import java.util.Collection;
@@ -20,16 +20,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class NewSymphonySessionSettingsItemProvider 
+public class NewApogySessionSettingsItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -43,7 +43,7 @@ public class NewSymphonySessionSettingsItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NewSymphonySessionSettingsItemProvider(AdapterFactory adapterFactory) {
+	public NewApogySessionSettingsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -79,9 +79,9 @@ public class NewSymphonySessionSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonySessionSettings_folder_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_folder_feature", "_UI_NewSymphonySessionSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER,
+				 getString("_UI_NewApogySessionSettings_folder_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogySessionSettings_folder_feature", "_UI_NewApogySessionSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_SESSION_SETTINGS__FOLDER,
 				 true,
 				 false,
 				 false,
@@ -101,9 +101,9 @@ public class NewSymphonySessionSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonySessionSettings_filename_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_filename_feature", "_UI_NewSymphonySessionSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME,
+				 getString("_UI_NewApogySessionSettings_filename_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogySessionSettings_filename_feature", "_UI_NewApogySessionSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_SESSION_SETTINGS__FILENAME,
 				 true,
 				 false,
 				 false,
@@ -123,9 +123,9 @@ public class NewSymphonySessionSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonySessionSettings_createEnvironment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createEnvironment_feature", "_UI_NewSymphonySessionSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT,
+				 getString("_UI_NewApogySessionSettings_createEnvironment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogySessionSettings_createEnvironment_feature", "_UI_NewApogySessionSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT,
 				 true,
 				 false,
 				 false,
@@ -145,9 +145,9 @@ public class NewSymphonySessionSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonySessionSettings_createPrograms_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createPrograms_feature", "_UI_NewSymphonySessionSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS,
+				 getString("_UI_NewApogySessionSettings_createPrograms_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogySessionSettings_createPrograms_feature", "_UI_NewApogySessionSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS,
 				 true,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class NewSymphonySessionSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonySessionSettings_createDataProducts_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createDataProducts_feature", "_UI_NewSymphonySessionSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS,
+				 getString("_UI_NewApogySessionSettings_createDataProducts_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogySessionSettings_createDataProducts_feature", "_UI_NewApogySessionSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS,
 				 true,
 				 false,
 				 false,
@@ -189,9 +189,9 @@ public class NewSymphonySessionSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NewSymphonySessionSettings_createTools_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createTools_feature", "_UI_NewSymphonySessionSettings_type"),
-				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS,
+				 getString("_UI_NewApogySessionSettings_createTools_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NewApogySessionSettings_createTools_feature", "_UI_NewApogySessionSettings_type"),
+				 ApogyCoreUIPackage.Literals.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS,
 				 true,
 				 false,
 				 false,
@@ -201,14 +201,14 @@ public class NewSymphonySessionSettingsItemProvider
 	}
 
 	/**
-	 * This returns NewSymphonySessionSettings.gif.
+	 * This returns NewApogySessionSettings.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/NewSymphonySessionSettings"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/NewApogySessionSettings"));
 	}
 
 	/**
@@ -219,10 +219,10 @@ public class NewSymphonySessionSettingsItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((NewSymphonySessionSettings)object).getFilename();
+		String label = ((NewApogySessionSettings)object).getFilename();
 		return label == null || label.length() == 0 ?
-			getString("_UI_NewSymphonySessionSettings_type") :
-			getString("_UI_NewSymphonySessionSettings_type") + " " + label;
+			getString("_UI_NewApogySessionSettings_type") :
+			getString("_UI_NewApogySessionSettings_type") + " " + label;
 	}
 	
 
@@ -237,13 +237,13 @@ public class NewSymphonySessionSettingsItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(NewSymphonySessionSettings.class)) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+		switch (notification.getFeatureID(NewApogySessionSettings.class)) {
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FOLDER:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__FILENAME:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case ApogyCoreUIPackage.NEW_APOGY_SESSION_SETTINGS__CREATE_TOOLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -270,7 +270,7 @@ public class NewSymphonySessionSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__CoreUIEditPlugin.INSTANCE;
+		return ApogyCoreUIEditPlugin.INSTANCE;
 	}
 
 }

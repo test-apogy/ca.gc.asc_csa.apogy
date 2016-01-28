@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.impl;
+package ca.gc.asc_csa.apogy.core.environment.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -9,8 +9,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.experimental.chart.swt.ChartComposite;
 
@@ -22,7 +22,7 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapToolImpl#isActive <em>Active</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.impl.MapToolImpl#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,7 +65,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_TOOL;
+		return ApogyCoreEnvironmentUIPackage.Literals.MAP_TOOL;
 	}
 
   /**
@@ -88,7 +88,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE, oldActive, active));
 	}
 
   /**
@@ -134,7 +134,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -149,7 +149,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
 		}
@@ -165,7 +165,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
 		}
@@ -181,7 +181,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -196,13 +196,13 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
 				initialize((ChartComposite)arguments.get(0), (JFreeChart)arguments.get(1));
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___DISPOSE:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL___DISPOSE:
 				dispose();
 				return null;
-			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
+			case ApogyCoreEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
 				positionSelected((Integer)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
 		}

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.properties.sections;
+package ca.gc.asc_csa.apogy.common.topology.ui.properties.sections;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.viewers.IFilter;
@@ -6,9 +6,9 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
@@ -37,7 +37,7 @@ public class NodePresentationPropertySection extends org.eclipse.ui.views.proper
 		{	
 			Object object = ((IStructuredSelection) selection).getFirstElement();
 						
-			NodePresentation nodePresentation = (NodePresentation) Symphony__CommonConvertersFacade.INSTANCE.convert(object, NodePresentation.class);
+			NodePresentation nodePresentation = (NodePresentation) ApogyCommonConvertersFacade.INSTANCE.convert(object, NodePresentation.class);
 			
 			if(nodePresentation != null)
 			{	
@@ -53,7 +53,7 @@ public class NodePresentationPropertySection extends org.eclipse.ui.views.proper
 	{
 		boolean result = false;
 		
-		result = (Symphony__CommonConvertersFacade.INSTANCE.convert(toTest, NodePresentation.class) != null);
+		result = (ApogyCommonConvertersFacade.INSTANCE.convert(toTest, NodePresentation.class) != null);
 				
 		return result;
 	}

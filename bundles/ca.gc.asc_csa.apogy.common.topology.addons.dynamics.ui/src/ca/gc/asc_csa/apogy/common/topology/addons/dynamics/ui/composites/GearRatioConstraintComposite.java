@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import java.text.DecimalFormat;
 
@@ -15,20 +15,20 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage.Literals;
+import ca.gc.asc_csa.apogy.common.databinding.converters.DoubleToStringConverter;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage.Literals;
 
 public class GearRatioConstraintComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint gearRatioConstraint;
+	private ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint gearRatioConstraint;
 	private Button enabledButton;
 	private Text forceText;
 
 	public GearRatioConstraintComposite(
 			Composite parent,
 			int style,
-			org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint newGearRatioConstraint) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint newGearRatioConstraint) {
 		this(parent, style);
 		setGearRatioConstraint(newGearRatioConstraint);
 	}
@@ -80,17 +80,17 @@ public class GearRatioConstraintComposite extends Composite {
 		return bindingContext;
 	}
 
-	public org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint getGearRatioConstraint() {
+	public ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint getGearRatioConstraint() {
 		return gearRatioConstraint;
 	}
 
 	public void setGearRatioConstraint(
-			org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint newGearRatioConstraint) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint newGearRatioConstraint) {
 		setGearRatioConstraint(newGearRatioConstraint, true);
 	}
 
 	public void setGearRatioConstraint(
-			org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint newGearRatioConstraint,
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.GearRatioConstraint newGearRatioConstraint,
 			boolean update) {
 		gearRatioConstraint = newGearRatioConstraint;
 		if (update) {

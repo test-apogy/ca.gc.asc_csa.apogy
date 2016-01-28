@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle.ui.impl;
+package ca.gc.asc_csa.apogy.addons.vehicle.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -9,11 +9,11 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.ui.Activator;
-import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
-import org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
-import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.Activator;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.PhysicalWheelPresentation;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.ApogyAddonsVehicleUIPackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,7 +49,7 @@ public class PhysicalWheelPresentationImpl extends NodePresentationImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__AddonsVehicleUIPackage.Literals.PHYSICAL_WHEEL_PRESENTATION;
+		return ApogyAddonsVehicleUIPackage.Literals.PHYSICAL_WHEEL_PRESENTATION;
 	}
 
   @Override

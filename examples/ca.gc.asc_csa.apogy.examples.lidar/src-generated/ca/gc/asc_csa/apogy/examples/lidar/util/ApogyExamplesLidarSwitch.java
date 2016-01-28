@@ -1,12 +1,12 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.util;
+package ca.gc.asc_csa.apogy.examples.lidar.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.examples.lidar.*;
+import ca.gc.asc_csa.apogy.examples.lidar.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.examples.lidar.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage
+ * @see ca.gc.asc_csa.apogy.examples.lidar.ApogyExamplesLidarPackage
  * @generated
  */
-public class Symphony__ExamplesLidarSwitch<T> extends Switch<T>
+public class ApogyExamplesLidarSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -29,7 +29,7 @@ public class Symphony__ExamplesLidarSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesLidarPackage modelPackage;
+  protected static ApogyExamplesLidarPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -37,10 +37,10 @@ public class Symphony__ExamplesLidarSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesLidarSwitch()
+  public ApogyExamplesLidarSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesLidarPackage.eINSTANCE;
+			modelPackage = ApogyExamplesLidarPackage.eINSTANCE;
 		}
 	}
 
@@ -69,20 +69,20 @@ public class Symphony__ExamplesLidarSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesLidarPackage.LIDAR: {
+			case ApogyExamplesLidarPackage.LIDAR: {
 				Lidar lidar = (Lidar)theEObject;
 				T result = caseLidar(lidar);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesLidarPackage.LIDAR_STUB: {
+			case ApogyExamplesLidarPackage.LIDAR_STUB: {
 				LidarStub lidarStub = (LidarStub)theEObject;
 				T result = caseLidarStub(lidarStub);
 				if (result == null) result = caseLidar(lidarStub);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesLidarPackage.LIDAR_SIMULATED: {
+			case ApogyExamplesLidarPackage.LIDAR_SIMULATED: {
 				LidarSimulated lidarSimulated = (LidarSimulated)theEObject;
 				T result = caseLidarSimulated(lidarSimulated);
 				if (result == null) result = caseLidar(lidarSimulated);
@@ -157,4 +157,4 @@ public class Symphony__ExamplesLidarSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesLidarSwitch
+} //ApogyExamplesLidarSwitch

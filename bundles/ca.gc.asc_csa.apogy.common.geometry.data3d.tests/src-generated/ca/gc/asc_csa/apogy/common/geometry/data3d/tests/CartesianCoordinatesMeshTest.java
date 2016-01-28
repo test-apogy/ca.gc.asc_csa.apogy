@@ -1,16 +1,16 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.util.List;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -22,7 +22,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent() <em>Get Extent</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent() <em>Get Extent</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -30,7 +30,7 @@ import junit.textui.TestRunner;
 public class CartesianCoordinatesMeshTest extends TestCase 
 {
 
-	private Symphony__CommonGeometryData3DFacade facade = Symphony__CommonGeometryData3DFacade.INSTANCE;
+	private ApogyCommonGeometryData3DFacade facade = ApogyCommonGeometryData3DFacade.INSTANCE;
 	
 	private CartesianPositionCoordinates p0;
 
@@ -104,7 +104,7 @@ public class CartesianCoordinatesMeshTest extends TestCase
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh());
 	}
 
 	/**
@@ -120,15 +120,15 @@ public class CartesianCoordinatesMeshTest extends TestCase
 
 	private void initialise(CartesianCoordinatesMesh mesh) 
 	{			
-		p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
-		p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
-		p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 1.0, 0.0);
-		p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
-		p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, 1.0, 0.0);
+		p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
+		p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
+		p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 1.0, 0.0);
+		p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
+		p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, 1.0, 0.0);
 
-		t0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p0, p1, p2);
-		t1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p1, p2, p3);
-		t2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p0, p2, p4);
+		t0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p0, p1, p2);
+		t1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p1, p2, p3);
+		t2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p0, p2, p4);
 
 		mesh.getPoints().add(p0);
 		mesh.getPoints().add(p1);
@@ -141,10 +141,10 @@ public class CartesianCoordinatesMeshTest extends TestCase
 	}
 	
 	/**
-	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent() <em>Get Extent</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent() <em>Get Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent()
 	 * @generated_NOT
 	 */
 	public void testGetExtent() 
@@ -153,10 +153,10 @@ public class CartesianCoordinatesMeshTest extends TestCase
 		getFixture().getPolygons().clear();
 		getFixture().getPoints().clear();
 		
-		getFixture().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 2.0, 3.0));
-		getFixture().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, 2.0, 3.0));
-		getFixture().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, -2.0, 3.0));
-		getFixture().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 2.0, -3.0));
+		getFixture().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 2.0, 3.0));
+		getFixture().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1.0, 2.0, 3.0));
+		getFixture().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, -2.0, 3.0));
+		getFixture().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 2.0, -3.0));
 		
 		CartesianCoordinatesSetExtent extent = getFixture().getExtent();
 		assertNotNull(extent);
@@ -212,7 +212,7 @@ public class CartesianCoordinatesMeshTest extends TestCase
 
 		initialise(getFixture());
 
-		CartesianCoordinatesMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
+		CartesianCoordinatesMesh mesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesMesh();
 		initialise(mesh);
 
 		assertTrue(mesh.equals(getFixture()));

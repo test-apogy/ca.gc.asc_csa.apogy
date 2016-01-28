@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy;
 
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,18 +11,18 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class is the specialized Symphony API adapter, used for connecting
+ * This class is the specialized Apogy API adapter, used for connecting
  * the existing constellation example, located at
- * {@link org.eclipse.symphony.examples.satellite.AbstractConstellation},
- * to Symphony; one can override the well-known callback functions to make
- * Symphony perform a variety of useful functions, including initialization,
+ * {@link ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation},
+ * to Apogy; one can override the well-known callback functions to make
+ * Apogy perform a variety of useful functions, including initialization,
  * disposal and other features.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage#getConstellationSystemApiAdapter()
+ * @see ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage#getConstellationSystemApiAdapter()
  * @model
  * @generated
  */
-public interface ConstellationSystemApiAdapter extends SymphonySystemApiAdapter {
+public interface ConstellationSystemApiAdapter extends ApogySystemApiAdapter {
 } // ConstellationSystemApiAdapter

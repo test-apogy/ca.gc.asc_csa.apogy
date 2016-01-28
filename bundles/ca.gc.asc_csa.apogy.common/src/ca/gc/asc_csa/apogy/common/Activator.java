@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common;
+package ca.gc.asc_csa.apogy.common;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator{
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.symphony.common"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "ca.gc.asc_csa.apogy.common"; //$NON-NLS-1$
 
 	private static BundleContext context;
 	

@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.edit.utils;
+package ca.gc.asc_csa.apogy.common.emf.edit.utils;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFactory
+ * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonEMFEditUtils' childCreationExtenders='true' modelName='Symphony__CommonEMFEditUtils' modelDirectory='/org.eclipse.symphony.common.emf.edit.utils/src-generated' basePackage='org.eclipse.symphony.common.emf.edit'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyCommonEMFEditUtils' childCreationExtenders='true' modelName='ApogyCommonEMFEditUtils' modelDirectory='/ca.gc.asc_csa.apogy.common.emf.edit.utils/src-generated' basePackage='ca.gc.asc_csa.apogy.common.emf.edit'"
  * @generated
  */
-public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
+public interface ApogyCommonEMFEditUtilsPackage extends EPackage
 {
   /**
 	 * The package name.
@@ -40,7 +40,7 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "org.eclipse.symphony.common.emf.edit.utils";
+  String eNS_URI = "ca.gc.asc_csa.apogy.common.emf.edit.utils";
 
   /**
 	 * The package namespace name.
@@ -56,17 +56,17 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__CommonEMFEditUtilsPackage eINSTANCE = org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl.init();
+  ApogyCommonEMFEditUtilsPackage eINSTANCE = ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl
-	 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getSymphony__CommonEMFEditUtilsFacade()
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsPackageImpl#getApogyCommonEMFEditUtilsFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE = 0;
+	int APOGY_COMMON_EMF_EDIT_UTILS_FACADE = 0;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -75,7 +75,7 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE_FEATURE_COUNT = 0;
+	int APOGY_COMMON_EMF_EDIT_UTILS_FACADE_FEATURE_COUNT = 0;
 
 		/**
 	 * The operation id for the '<em>Get Text</em>' operation.
@@ -84,7 +84,7 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = 0;
+	int APOGY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = 0;
 
 		/**
 	 * The operation id for the '<em>Remove Child Descriptor</em>' operation.
@@ -93,7 +93,7 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = 1;
+	int APOGY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = 1;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -102,47 +102,47 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE_OPERATION_COUNT = 2;
+	int APOGY_COMMON_EMF_EDIT_UTILS_FACADE_OPERATION_COUNT = 2;
 
 		/**
 	 * The meta object id for the '<em>Collection Object</em>' data type.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see java.util.Collection
-	 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getCollectionObject()
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsPackageImpl#getCollectionObject()
 	 * @generated
 	 */
   int COLLECTION_OBJECT = 1;
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade
 	 * @generated
 	 */
-	EClass getSymphony__CommonEMFEditUtilsFacade();
+	EClass getApogyCommonEMFEditUtilsFacade();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#getText(java.lang.Object) <em>Get Text</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade#getText(java.lang.Object) <em>Get Text</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Text</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#getText(java.lang.Object)
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade#getText(java.lang.Object)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonEMFEditUtilsFacade__GetText__Object();
+	EOperation getApogyCommonEMFEditUtilsFacade__GetText__Object();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object) <em>Remove Child Descriptor</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object) <em>Remove Child Descriptor</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Child Descriptor</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object)
+	 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.ApogyCommonEMFEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
+	EOperation getApogyCommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
 
 		/**
 	 * Returns the meta object for data type '{@link java.util.Collection <em>Collection Object</em>}'.
@@ -162,7 +162,7 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__CommonEMFEditUtilsFactory getSymphony__CommonEMFEditUtilsFactory();
+	ApogyCommonEMFEditUtilsFactory getApogyCommonEMFEditUtilsFactory();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -180,14 +180,14 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl
-		 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getSymphony__CommonEMFEditUtilsFacade()
+		 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsPackageImpl#getApogyCommonEMFEditUtilsFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE = eINSTANCE.getSymphony__CommonEMFEditUtilsFacade();
+		EClass APOGY_COMMON_EMF_EDIT_UTILS_FACADE = eINSTANCE.getApogyCommonEMFEditUtilsFacade();
 
 			/**
 		 * The meta object literal for the '<em><b>Get Text</b></em>' operation.
@@ -195,7 +195,7 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = eINSTANCE.getSymphony__CommonEMFEditUtilsFacade__GetText__Object();
+		EOperation APOGY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = eINSTANCE.getApogyCommonEMFEditUtilsFacade__GetText__Object();
 
 			/**
 		 * The meta object literal for the '<em><b>Remove Child Descriptor</b></em>' operation.
@@ -203,18 +203,18 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = eINSTANCE.getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
+		EOperation APOGY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = eINSTANCE.getApogyCommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
 
 				/**
 		 * The meta object literal for the '<em>Collection Object</em>' data type.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @see java.util.Collection
-		 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getCollectionObject()
+		 * @see ca.gc.asc_csa.apogy.common.emf.edit.utils.impl.ApogyCommonEMFEditUtilsPackageImpl#getCollectionObject()
 		 * @generated
 		 */
     EDataType COLLECTION_OBJECT = eINSTANCE.getCollectionObject();
 
   }
 
-} //Symphony__CommonEMFEditUtilsPackage
+} //ApogyCommonEMFEditUtilsPackage

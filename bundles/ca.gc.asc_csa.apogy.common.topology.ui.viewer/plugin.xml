@@ -4,39 +4,39 @@
    <extension
          point="org.eclipse.ui.contexts">
       <context
-            id="org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerContext"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerContext"
             name="Topology Viewer Context">            
       </context>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.common.topology.ui.viewer.commands.ZoomToFit"
-            id="org.eclipse.symphony.common.topology.ui.viewer.commands.ZoomToFit"
+            defaultHandler="ca.gc.asc_csa.apogy.common.topology.ui.viewer.commands.ZoomToFit"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.viewer.commands.ZoomToFit"
             name="Zoom to Fit">
       </command>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesInitializer">
       </initializer>
       <initializer
-            class="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferenceInitializer">
+            class="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferenceInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
-            class="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            id="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             name="3D Viewer">
       </page>
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferencePage"
-            id="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferencePage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferencePage"
+            id="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerLightingPreferencePage"
             name="Lighting">
       </page>
    </extension>
@@ -44,9 +44,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated topology_viewer -->
       <package
-            uri="org.eclipse.symphony.common.topology.ui.viewer"
-            class="org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage"
-            genModel="model/symphony_common_topology_ui_viewer.xcore"/>
+            uri="ca.gc.asc_csa.apogy.common.topology.ui.viewer"
+            class="ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage"
+            genModel="model/apogy_common_topology_ui_viewer.xcore"/>
    </extension>
 
 </plugin>

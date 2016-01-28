@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
-import org.eclipse.symphony.core.environment.URLMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.URLMapLayer;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.URLMapLayer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.URLMapLayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -67,7 +67,7 @@ public class URLMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLMapLayer_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLMapLayer_url_feature", "_UI_URLMapLayer_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
+				 ApogyCoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class URLMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLMapLayer.class)) {
-			case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL:
+			case ApogyCoreEnvironmentPackage.URL_MAP_LAYER__URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

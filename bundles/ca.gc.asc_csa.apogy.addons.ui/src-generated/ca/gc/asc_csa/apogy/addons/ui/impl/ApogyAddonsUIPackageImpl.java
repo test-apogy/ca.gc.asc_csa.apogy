@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ui.impl;
+package ca.gc.asc_csa.apogy.addons.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation;
-import org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation;
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory;
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage;
-import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation;
+import ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage;
+import ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symphony__AddonsUIPackage {
+public class ApogyAddonsUIPackageImpl extends EPackageImpl implements ApogyAddonsUIPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -52,12 +52,12 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__AddonsUIPackageImpl() {
-		super(eNS_URI, Symphony__AddonsUIFactory.eINSTANCE);
+	private ApogyAddonsUIPackageImpl() {
+		super(eNS_URI, ApogyAddonsUIFactory.eINSTANCE);
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__AddonsUIPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyAddonsUIPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,30 +79,30 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__AddonsUIPackage init() {
-		if (isInited) return (Symphony__AddonsUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsUIPackage.eNS_URI);
+	public static ApogyAddonsUIPackage init() {
+		if (isInited) return (ApogyAddonsUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsUIPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__AddonsUIPackageImpl theSymphony__AddonsUIPackage = (Symphony__AddonsUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__AddonsUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__AddonsUIPackageImpl());
+		ApogyAddonsUIPackageImpl theApogyAddonsUIPackage = (ApogyAddonsUIPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyAddonsUIPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyAddonsUIPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
+		ApogyCommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__AddonsUIPackage.createPackageContents();
+		theApogyAddonsUIPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__AddonsUIPackage.initializePackageContents();
+		theApogyAddonsUIPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__AddonsUIPackage.freeze();
+		theApogyAddonsUIPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__AddonsUIPackage.eNS_URI, theSymphony__AddonsUIPackage);
-		return theSymphony__AddonsUIPackage;
+		EPackage.Registry.INSTANCE.put(ApogyAddonsUIPackage.eNS_URI, theApogyAddonsUIPackage);
+		return theApogyAddonsUIPackage;
 	}
 
 	/**
@@ -137,8 +137,8 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsUIFactory getSymphony__AddonsUIFactory() {
-		return (Symphony__AddonsUIFactory)getEFactoryInstance();
+	public ApogyAddonsUIFactory getApogyAddonsUIFactory() {
+		return (ApogyAddonsUIFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -191,16 +191,16 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
+		ApogyCommonTopologyUIPackage theApogyCommonTopologyUIPackage = (ApogyCommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyUIPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		ruler3dToolNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		sunVector3DToolNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
-		trajectory3DToolNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		ruler3dToolNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		sunVector3DToolNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
+		trajectory3DToolNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(ruler3dToolNodePresentationEClass, Ruler3dToolNodePresentation.class, "Ruler3dToolNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -213,4 +213,4 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 		createResource(eNS_URI);
 	}
 
-} //Symphony__AddonsUIPackageImpl
+} //ApogyAddonsUIPackageImpl

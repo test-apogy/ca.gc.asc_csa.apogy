@@ -1,21 +1,21 @@
-@GenModel(prefix="Symphony__CommonGeometryData3DUI",
+@GenModel(prefix="ApogyCommonGeometryData3DUI",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-	      modelName="Symphony__CommonGeometryData3DUI",
+	      modelName="ApogyCommonGeometryData3DUI",
 	      complianceLevel="6.0")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d.ui/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.ui.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.geometry.data3d.ui.edit/src-generated")
 
-package org.eclipse.symphony.common.geometry.data3d.ui
+package ca.gc.asc_csa.apogy.common.geometry.data3d.ui
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh
 
-import org.eclipse.symphony.common.images.AbstractEImage
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode
-import org.eclipse.symphony.common.topology.ui.NodePresentation
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage
+import ca.gc.asc_csa.apogy.common.topology.ui.MeshPresentationMode
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 
 class CartesianCoordinatesSetPresentation extends NodePresentation
 {

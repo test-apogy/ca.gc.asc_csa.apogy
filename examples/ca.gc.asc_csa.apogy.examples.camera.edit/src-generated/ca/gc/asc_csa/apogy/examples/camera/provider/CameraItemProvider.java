@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.provider;
+package ca.gc.asc_csa.apogy.examples.camera.provider;
 
 
 import java.util.Collection;
@@ -14,16 +14,16 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.provider.AbstractCameraItemProvider;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.examples.camera.Camera;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraFactory;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.provider.AbstractCameraItemProvider;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.examples.camera.Camera;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraFactory;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.Camera} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.camera.Camera} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -76,7 +76,7 @@ extends AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_currentZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_currentZoom_feature", "_UI_Zoomable_type"),
-				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
+				 ApogyAddonsSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ extends AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_commandedZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_commandedZoom_feature", "_UI_Zoomable_type"),
-				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
+				 ApogyAddonsSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ extends AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Camera_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Camera_initialized_feature", "_UI_Camera_type"),
-				 Symphony__ExamplesCameraPackage.Literals.CAMERA__INITIALIZED,
+				 ApogyExamplesCameraPackage.Literals.CAMERA__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ extends AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Camera_streamingEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Camera_streamingEnabled_feature", "_UI_Camera_type"),
-				 Symphony__ExamplesCameraPackage.Literals.CAMERA__STREAMING_ENABLED,
+				 ApogyExamplesCameraPackage.Literals.CAMERA__STREAMING_ENABLED,
 				 false,
 				 false,
 				 false,
@@ -165,7 +165,7 @@ extends AbstractCameraItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV);
+			childrenFeatures.add(ApogyExamplesCameraPackage.Literals.CAMERA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -224,13 +224,13 @@ extends AbstractCameraItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Camera.class)) {
-			case Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
-			case Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
-			case Symphony__ExamplesCameraPackage.CAMERA__INITIALIZED:
-			case Symphony__ExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
+			case ApogyExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
+			case ApogyExamplesCameraPackage.CAMERA__INITIALIZED:
+			case ApogyExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesCameraPackage.CAMERA__FOV:
+			case ApogyExamplesCameraPackage.CAMERA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -251,28 +251,28 @@ extends AbstractCameraItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyExamplesCameraFactory.eINSTANCE.createCameraStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				(ApogyExamplesCameraPackage.Literals.CAMERA__FOV,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
 	/**
@@ -287,8 +287,8 @@ extends AbstractCameraItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
+			childFeature == ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
+			childFeature == ApogyExamplesCameraPackage.Literals.CAMERA__FOV;
 
 		if (qualify) {
 			return getString

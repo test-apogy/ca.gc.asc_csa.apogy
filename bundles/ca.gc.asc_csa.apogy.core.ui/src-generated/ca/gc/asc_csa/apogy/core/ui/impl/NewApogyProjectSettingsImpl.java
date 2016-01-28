@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.impl;
+package ca.gc.asc_csa.apogy.core.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -13,25 +13,25 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>New Symphony Project Settings</b></em>'.
+ * An implementation of the model object '<em><b>New Apogy Project Settings</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl#isImportRegisteredProject <em>Import Registered Project</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogyProjectSettingsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.ui.impl.NewApogyProjectSettingsImpl#isImportRegisteredProject <em>Import Registered Project</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container implements NewSymphonyProjectSettings {
+public class NewApogyProjectSettingsImpl extends MinimalEObjectImpl.Container implements NewApogyProjectSettings {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NewSymphonyProjectSettingsImpl() {
+	protected NewApogyProjectSettingsImpl() {
 		super();
 	}
 
@@ -88,7 +88,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_PROJECT_SETTINGS;
+		return ApogyCoreUIPackage.Literals.NEW_APOGY_PROJECT_SETTINGS;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__NAME, oldName, name));
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldImportRegisteredProject = importRegisteredProject;
 		importRegisteredProject = newImportRegisteredProject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT, oldImportRegisteredProject, importRegisteredProject));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT, oldImportRegisteredProject, importRegisteredProject));
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 		String result = null;
 		int index = 0;
 		IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();		
-		String name = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonyProjectNamePrefix();
+		String name = ApogyCoreUIFacade.INSTANCE.getDefaultApogyProjectNamePrefix();
 				
 		while (result == null){
 			IProject project = workspace.getProject(name);
@@ -150,7 +150,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 				result = name;
 			}
 			index++;
-			name = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonyProjectNamePrefix() + "_" + index;
+			name = ApogyCoreUIFacade.INSTANCE.getDefaultApogyProjectNamePrefix() + "_" + index;
 		}
 		return result;
 	}
@@ -172,9 +172,9 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__NAME:
 				return getName();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
 				return isImportRegisteredProject();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -188,10 +188,10 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
 				setImportRegisteredProject((Boolean)newValue);
 				return;
 		}
@@ -206,10 +206,10 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
 				setImportRegisteredProject(IMPORT_REGISTERED_PROJECT_EDEFAULT);
 				return;
 		}
@@ -224,9 +224,9 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
 				return importRegisteredProject != IMPORT_REGISTERED_PROJECT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -240,9 +240,9 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS___GET_DEFAULT_PROJECT_NAME:
 				return getDefaultProjectName();
-			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS___SET_DEFAULT_VALUES:
+			case ApogyCoreUIPackage.NEW_APOGY_PROJECT_SETTINGS___SET_DEFAULT_VALUES:
 				setDefaultValues();
 				return null;
 		}
@@ -267,4 +267,4 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 		return result.toString();
 	}
 
-} //NewSymphonyProjectSettingsImpl
+} //NewApogyProjectSettingsImpl

@@ -3,13 +3,13 @@
  * </copyright>
  *
  */
-package org.eclipse.symphony.common.math.statistics.util;
+package ca.gc.asc_csa.apogy.common.math.statistics.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.math.statistics.Population;
-import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage;
+import ca.gc.asc_csa.apogy.common.math.statistics.Population;
+import ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,17 +21,17 @@ import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatistic
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage
+ * @see ca.gc.asc_csa.apogy.common.math.statistics.ApogyCommonMathStatisticsPackage
  * @generated
  */
-public class Symphony__CommonMathStatisticsSwitch<T> extends Switch<T> {
+public class ApogyCommonMathStatisticsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonMathStatisticsPackage modelPackage;
+	protected static ApogyCommonMathStatisticsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -39,9 +39,9 @@ public class Symphony__CommonMathStatisticsSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonMathStatisticsSwitch() {
+	public ApogyCommonMathStatisticsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonMathStatisticsPackage.eINSTANCE;
+			modelPackage = ApogyCommonMathStatisticsPackage.eINSTANCE;
 		}
 	}
 
@@ -68,7 +68,7 @@ public class Symphony__CommonMathStatisticsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CommonMathStatisticsPackage.POPULATION: {
+			case ApogyCommonMathStatisticsPackage.POPULATION: {
 				Population population = (Population)theEObject;
 				T result = casePopulation(population);
 				if (result == null) result = defaultCase(theEObject);
@@ -109,4 +109,4 @@ public class Symphony__CommonMathStatisticsSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__CommonMathStatisticsSwitch
+} //ApogyCommonMathStatisticsSwitch

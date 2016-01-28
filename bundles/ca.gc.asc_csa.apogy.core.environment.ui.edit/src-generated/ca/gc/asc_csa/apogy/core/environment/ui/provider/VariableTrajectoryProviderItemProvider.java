@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -11,12 +11,12 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider;
 import org.jfree.data.xy.XYDataItem;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryProvider} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class VariableTrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VariableTrajectoryProvider_poseProvider_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableTrajectoryProvider_poseProvider_feature", "_UI_VariableTrajectoryProvider_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER,
+				 ApogyCoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER,
 				 true,
 				 false,
 				 true,

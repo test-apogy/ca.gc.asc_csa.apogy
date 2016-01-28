@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.emf.databinding;
+package ca.gc.asc_csa.apogy.common.emf.databinding;
 
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;

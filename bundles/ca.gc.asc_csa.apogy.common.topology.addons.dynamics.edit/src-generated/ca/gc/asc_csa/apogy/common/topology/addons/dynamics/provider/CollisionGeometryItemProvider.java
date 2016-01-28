@@ -4,7 +4,7 @@
  *
  * $Id: CollisionGeometryItemProvider.java,v 1.3.2.2 2015/02/03 20:01:27 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.provider;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider;
 
 
 import java.util.Collection;
@@ -25,13 +25,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsFactory;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CollisionGeometry} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_simulationProperties_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_simulationProperties_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__SIMULATION_PROPERTIES,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__SIMULATION_PROPERTIES,
 				 true,
 				 false,
 				 true,
@@ -108,7 +108,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_material_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_material_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__MATERIAL,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__MATERIAL,
 				 true,
 				 false,
 				 true,
@@ -130,7 +130,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_description_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__DESCRIPTION,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -152,7 +152,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_geometryId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_geometryId_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY_ID,
+				 ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY_ID,
 				 true,
 				 false,
 				 false,
@@ -173,8 +173,8 @@ public class CollisionGeometryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY);
-			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM);
+			childrenFeatures.add(ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY);
+			childrenFeatures.add(ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -229,12 +229,12 @@ public class CollisionGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CollisionGeometry.class)) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
-			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
+			case ApogyCommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
-			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
+			case ApogyCommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
+			case ApogyCommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -254,28 +254,28 @@ public class CollisionGeometryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createBoxGeometry()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createBoxGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylinderGeometry()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylinderGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createSphereGeometry()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 ApogyCommonTopologyAddonsDynamicsFactory.eINSTANCE.createSphereGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM,
-				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
+				(ApogyCommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM,
+				 ApogyCommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 	/**

@@ -1,7 +1,7 @@
-package org.eclipse.symphony.core.ui.preferences;
+package ca.gc.asc_csa.apogy.core.ui.preferences;
 
 
-public class SymphonyCorePreferencesConstants 
+public class ApogyCorePreferencesConstants 
 {
 	// Visibility Constants.
 	public static final String DEFAULT_RESULT_NODE_FLAG_VISIBILITY_ID = "DEFAULT_RESULT_NODE_FLAG_VISIBILITY_ID";	

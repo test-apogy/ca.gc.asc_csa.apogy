@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.pose.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.pose.ui;
 
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation#isFrameVisible <em>Frame Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation#isFrameVisible <em>Frame Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage#getPositionSensorPresentation()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage#getPositionSensorPresentation()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface PositionSensorPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Frame Visible</em>' attribute.
 	 * @see #setFrameVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage#getPositionSensorPresentation_FrameVisible()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.pose.ui.ApogyAddonsSensorsPoseUIPackage#getPositionSensorPresentation_FrameVisible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isFrameVisible();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation#isFrameVisible <em>Frame Visible</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.pose.ui.PositionSensorPresentation#isFrameVisible <em>Frame Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Frame Visible</em>' attribute.

@@ -1,36 +1,36 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data25d.util;
+package ca.gc.asc_csa.apogy.common.geometry.data25d.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data25d.*;
-import org.eclipse.symphony.common.processors.Monitorable;
-import org.eclipse.symphony.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data25d.*;
+import ca.gc.asc_csa.apogy.common.processors.Monitorable;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage
+ * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DPackage
  * @generated
  */
-public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactoryImpl {
+public class ApogyCommonGeometryData25DAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__CommonGeometryData25DPackage modelPackage;
+	protected static ApogyCommonGeometryData25DPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -38,9 +38,9 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData25DAdapterFactory() {
+	public ApogyCommonGeometryData25DAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CommonGeometryData25DPackage.eINSTANCE;
+			modelPackage = ApogyCommonGeometryData25DPackage.eINSTANCE;
 		}
 	}
 
@@ -69,8 +69,8 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData25DSwitch<Adapter> modelSwitch =
-		new Symphony__CommonGeometryData25DSwitch<Adapter>() {
+	protected ApogyCommonGeometryData25DSwitch<Adapter> modelSwitch =
+		new ApogyCommonGeometryData25DSwitch<Adapter>() {
 			@Override
 			public Adapter caseCoordinates25D(Coordinates25D object) {
 				return createCoordinates25DAdapter();
@@ -100,8 +100,8 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 				return createCoordinatesSet25DFilterAdapter();
 			}
 			@Override
-			public Adapter caseSymphony__CommonGeometryData25DFacade(Symphony__CommonGeometryData25DFacade object) {
-				return createSymphony__CommonGeometryData25DFacadeAdapter();
+			public Adapter caseApogyCommonGeometryData25DFacade(ApogyCommonGeometryData25DFacade object) {
+				return createApogyCommonGeometryData25DFacadeAdapter();
 			}
 			@Override
 			public Adapter caseData25DIO(Data25DIO object) {
@@ -152,13 +152,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D <em>Coordinates25 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D <em>Coordinates25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Coordinates25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Coordinates25D
 	 * @generated
 	 */
 	public Adapter createCoordinates25DAdapter() {
@@ -166,13 +166,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D <em>Coordinates Set25 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D <em>Coordinates Set25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25D
 	 * @generated
 	 */
 	public Adapter createCoordinatesSet25DAdapter() {
@@ -180,13 +180,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D <em>Volumetric Coordinates Set25 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D <em>Volumetric Coordinates Set25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricCoordinatesSet25D
 	 * @generated
 	 */
 	public Adapter createVolumetricCoordinatesSet25DAdapter() {
@@ -194,13 +194,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.Polygon25D <em>Polygon25 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D <em>Polygon25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Polygon25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Polygon25D
 	 * @generated
 	 */
 	public Adapter createPolygon25DAdapter() {
@@ -208,13 +208,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.Mesh25D <em>Mesh25 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D <em>Mesh25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Mesh25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Mesh25D
 	 * @generated
 	 */
 	public Adapter createMesh25DAdapter() {
@@ -222,13 +222,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D <em>Volumetric Mesh25 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D <em>Volumetric Mesh25 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.VolumetricMesh25D
 	 * @generated
 	 */
 	public Adapter createVolumetricMesh25DAdapter() {
@@ -236,13 +236,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter <em>Coordinates Set25 DFilter</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25DFilter <em>Coordinates Set25 DFilter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.CoordinatesSet25DFilter
 	 * @generated
 	 */
 	public Adapter createCoordinatesSet25DFilterAdapter() {
@@ -250,27 +250,27 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.ApogyCommonGeometryData25DFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CommonGeometryData25DFacadeAdapter() {
+	public Adapter createApogyCommonGeometryData25DFacadeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.Data25DIO <em>Data25 DIO</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO <em>Data25 DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.Data25DIO
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data25d.Data25DIO
 	 * @generated
 	 */
 	public Adapter createData25DIOAdapter() {
@@ -278,13 +278,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Coordinates <em>Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Coordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.Coordinates
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Coordinates
 	 * @generated
 	 */
 	public Adapter createCoordinatesAdapter() {
@@ -292,13 +292,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetAdapter() {
@@ -306,13 +306,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Polygon <em>Polygon</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Polygon <em>Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.Polygon
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Polygon
 	 * @generated
 	 */
 	public Adapter createPolygonAdapter() {
@@ -320,13 +320,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Mesh <em>Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.geometry.data.Mesh <em>Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data.Mesh
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data.Mesh
 	 * @generated
 	 */
 	public Adapter createMeshAdapter() {
@@ -334,13 +334,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Monitorable
+	 * @see ca.gc.asc_csa.apogy.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -348,13 +348,13 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.processors.Processor
+	 * @see ca.gc.asc_csa.apogy.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -373,4 +373,4 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 		return null;
 	}
 
-} //Symphony__CommonGeometryData25DAdapterFactory
+} //ApogyCommonGeometryData25DAdapterFactory

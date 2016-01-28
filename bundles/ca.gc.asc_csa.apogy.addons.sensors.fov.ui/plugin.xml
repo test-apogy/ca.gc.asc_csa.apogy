@@ -11,38 +11,38 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.CircularSectorFieldOfViewPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.adapters.CircularSectorFieldOfViewPresentationAdapter">
       </Class>
             <Class
-      Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
+      Class="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
       </Class>
       <Class
-            Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.RectangularFrustrumFieldOfViewPresentationAdapter">
+            Class="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.adapters.RectangularFrustrumFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
-            id="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
+            id="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
             name="Field Of View">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesInitializer">
+            class="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.preferences.MRTFOVPreferencesInitializer">
       </initializer>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="org.eclipse.symphony.addons.sensors.fov.ui"
-            class="org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage"
-            genModel="model/symphony_addons_sensors_fov_ui.xcore"/>
+            uri="ca.gc.asc_csa.apogy.addons.sensors.fov.ui"
+            class="ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage"
+            genModel="model/apogy_addons_sensors_fov_ui.xcore"/>
    </extension>
 
 </plugin>

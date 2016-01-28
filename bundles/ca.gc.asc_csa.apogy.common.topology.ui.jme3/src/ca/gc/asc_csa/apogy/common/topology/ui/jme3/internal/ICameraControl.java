@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3.internal;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.internal;
 
 import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;

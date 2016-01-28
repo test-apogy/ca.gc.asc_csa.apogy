@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera;
 
 import javax.vecmath.Color3f;
 
@@ -14,14 +14,14 @@ import javax.vecmath.Color3f;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset <em>Horizontal Offset</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset <em>Horizontal Offset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay()
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getAbstractTextOverlay()
  * @model abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Name</em>' attribute.
 	 * @see #setFontName(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_FontName()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getAbstractTextOverlay_FontName()
 	 * @model default="SansSerif" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -45,7 +45,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
   String getFontName();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Font Name</em>' attribute.
@@ -64,7 +64,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Size</em>' attribute.
 	 * @see #setFontSize(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_FontSize()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getAbstractTextOverlay_FontSize()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
   int getFontSize();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Font Size</em>' attribute.
@@ -91,7 +91,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Horizontal Offset</em>' attribute.
 	 * @see #setHorizontalOffset(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_HorizontalOffset()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getAbstractTextOverlay_HorizontalOffset()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_POSITION_PROPERTIES'"
 	 * @generated
@@ -99,7 +99,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
   int getHorizontalOffset();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset <em>Horizontal Offset</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getHorizontalOffset <em>Horizontal Offset</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Horizontal Offset</em>' attribute.
@@ -118,7 +118,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vertical Offset</em>' attribute.
 	 * @see #setVerticalOffset(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_VerticalOffset()
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getAbstractTextOverlay_VerticalOffset()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_POSITION_PROPERTIES'"
 	 * @generated
@@ -126,7 +126,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
   int getVerticalOffset();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vertical Offset</em>' attribute.
@@ -145,15 +145,15 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Text Color</em>' attribute.
 	 * @see #setTextColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_TextColor()
-	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
+	 * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage#getAbstractTextOverlay_TextColor()
+	 * @model default="0.0,1.0,0.0" unique="false" dataType="ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
 	 */
   Color3f getTextColor();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Text Color</em>' attribute.

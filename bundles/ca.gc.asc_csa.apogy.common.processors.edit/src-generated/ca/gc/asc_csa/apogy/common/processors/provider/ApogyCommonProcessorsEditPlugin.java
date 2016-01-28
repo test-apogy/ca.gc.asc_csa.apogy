@@ -1,26 +1,26 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.provider;
+package ca.gc.asc_csa.apogy.common.processors.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Symphony__CommonProcessors edit plugin.
+ * This is the central singleton for the ApogyCommonProcessors edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class Symphony__CommonProcessorsEditPlugin extends EMFPlugin {
+public final class ApogyCommonProcessorsEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final Symphony__CommonProcessorsEditPlugin INSTANCE = new Symphony__CommonProcessorsEditPlugin();
+	public static final ApogyCommonProcessorsEditPlugin INSTANCE = new ApogyCommonProcessorsEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -36,7 +36,7 @@ public final class Symphony__CommonProcessorsEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonProcessorsEditPlugin() {
+	public ApogyCommonProcessorsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
 		   });

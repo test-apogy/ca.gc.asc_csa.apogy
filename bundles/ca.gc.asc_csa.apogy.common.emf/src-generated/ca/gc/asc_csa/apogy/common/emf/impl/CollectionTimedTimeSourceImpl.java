@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf.impl;
+package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -21,14 +21,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.emf.Activator;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.TimeDirection;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.emf.Activator;
+import ca.gc.asc_csa.apogy.common.emf.CollectionTimedTimeSource;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.TimeDirection;
+import ca.gc.asc_csa.apogy.common.emf.Timed;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,11 +38,11 @@ import org.eclipse.symphony.common.log.Logger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#isLoopEnable <em>Loop Enable</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#getTimedsList <em>Timeds List</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#getCurrentTimedElement <em>Current Timed Element</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#getEarliestDate <em>Earliest Date</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#getLatestDate <em>Latest Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.CollectionTimedTimeSourceImpl#isLoopEnable <em>Loop Enable</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.CollectionTimedTimeSourceImpl#getTimedsList <em>Timeds List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.CollectionTimedTimeSourceImpl#getCurrentTimedElement <em>Current Timed Element</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.CollectionTimedTimeSourceImpl#getEarliestDate <em>Earliest Date</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.impl.CollectionTimedTimeSourceImpl#getLatestDate <em>Latest Date</em>}</li>
  * </ul>
  *
  * @generated
@@ -150,7 +150,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE;
+		return ApogyCommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE;
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		boolean oldLoopEnable = loopEnable;
 		loopEnable = newLoopEnable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE, oldLoopEnable, loopEnable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE, oldLoopEnable, loopEnable));
 	}
 
 	/**
@@ -181,7 +181,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	 */
 	public EList<Timed> getTimedsList() {
 		if (timedsList == null) {
-			timedsList = new EObjectResolvingEList<Timed>(Timed.class, this, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST);
+			timedsList = new EObjectResolvingEList<Timed>(Timed.class, this, ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST);
 		}
 		return timedsList;
 	}
@@ -197,7 +197,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 			currentTimedElement = (Timed)eResolveProxy(oldCurrentTimedElement);
 			if (currentTimedElement != oldCurrentTimedElement) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
 			}
 		}
 		return currentTimedElement;
@@ -221,7 +221,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		Timed oldCurrentTimedElement = currentTimedElement;
 		currentTimedElement = newCurrentTimedElement;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
 	}
 
 	/**
@@ -242,7 +242,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		Date oldEarliestDate = earliestDate;
 		earliestDate = newEarliestDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE, oldEarliestDate, earliestDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE, oldEarliestDate, earliestDate));
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		Date oldLatestDate = latestDate;
 		latestDate = newLatestDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE, oldLatestDate, latestDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE, oldLatestDate, latestDate));
 	}
 
 	@Override
@@ -359,16 +359,16 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				return isLoopEnable();
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				return getTimedsList();
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				if (resolve) return getCurrentTimedElement();
 				return basicGetCurrentTimedElement();
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				return getEarliestDate();
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				return getLatestDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -383,20 +383,20 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				setLoopEnable((Boolean)newValue);
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				getTimedsList().clear();
 				getTimedsList().addAll((Collection<? extends Timed>)newValue);
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				setCurrentTimedElement((Timed)newValue);
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				setEarliestDate((Date)newValue);
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				setLatestDate((Date)newValue);
 				return;
 		}
@@ -411,19 +411,19 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				setLoopEnable(LOOP_ENABLE_EDEFAULT);
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				getTimedsList().clear();
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				setCurrentTimedElement((Timed)null);
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				setEarliestDate(EARLIEST_DATE_EDEFAULT);
 				return;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				setLatestDate(LATEST_DATE_EDEFAULT);
 				return;
 		}
@@ -438,15 +438,15 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				return loopEnable != LOOP_ENABLE_EDEFAULT;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				return timedsList != null && !timedsList.isEmpty();
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				return currentTimedElement != null;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				return EARLIEST_DATE_EDEFAULT == null ? earliestDate != null : !EARLIEST_DATE_EDEFAULT.equals(earliestDate);
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				return LATEST_DATE_EDEFAULT == null ? latestDate != null : !LATEST_DATE_EDEFAULT.equals(latestDate);
 		}
 		return super.eIsSet(featureID);
@@ -460,10 +460,10 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT:
 				jumpToNext();
 				return null;
-			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS:
+			case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS:
 				jumpToPrevious();
 				return null;
 		}
@@ -494,7 +494,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	{
 		if(getTimedsList() != null)
 		{
-			return Symphony__CommonEMFFacade.INSTANCE.sortTimed(getTimedsList());
+			return ApogyCommonEMFFacade.INSTANCE.sortTimed(getTimedsList());
 		}
 		else
 		{
@@ -617,7 +617,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 						
 						switch (featureId) 
 						{
-							case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+							case ApogyCommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 							{
 								// Initialize the current timed element and time.
 								SortedSet<Timed> sorted = getTimeSortedTimedElements();

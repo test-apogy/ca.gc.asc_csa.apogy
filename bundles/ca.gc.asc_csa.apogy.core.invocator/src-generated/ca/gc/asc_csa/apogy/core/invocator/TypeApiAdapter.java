@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator;
+package ca.gc.asc_csa.apogy.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getInstance <em>Instance</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getInstance <em>Instance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter()
+ * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeApiAdapter()
  * @model
  * @generated
  */
@@ -42,14 +42,14 @@ public interface TypeApiAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
 	 * @see #setEnvironment(Environment)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter_Environment()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeApiAdapter_Environment()
 	 * @model transient="true"
 	 * @generated
 	 */
   Environment getEnvironment();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getEnvironment <em>Environment</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getEnvironment <em>Environment</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Environment</em>' reference.
@@ -68,14 +68,14 @@ public interface TypeApiAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instance</em>' reference.
 	 * @see #setInstance(EObject)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter_Instance()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeApiAdapter_Instance()
 	 * @model transient="true"
 	 * @generated
 	 */
   EObject getInstance();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getInstance <em>Instance</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getInstance <em>Instance</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Instance</em>' reference.
@@ -94,14 +94,14 @@ public interface TypeApiAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element Type</em>' reference.
 	 * @see #setElementType(Type)
-	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter_ElementType()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage#getTypeApiAdapter_ElementType()
 	 * @model transient="true"
 	 * @generated
 	 */
   Type getElementType();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Element Type</em>' reference.
@@ -191,7 +191,7 @@ public interface TypeApiAdapter extends EObject
 	 * @exception Reference to the exception if one exception was raised during the invocation.
 	 * @return Reference to the new result.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" operationCallUnique="false" invocationTimeUnique="false" resultValueUnique="false" exceptionDataType="org.eclipse.symphony.common.emf.Exception" exceptionUnique="false"
+	 * @model unique="false" operationCallUnique="false" invocationTimeUnique="false" resultValueUnique="false" exceptionDataType="ca.gc.asc_csa.apogy.common.emf.Exception" exceptionUnique="false"
 	 * @generated
 	 */
   OperationCallResult createResult(OperationCall operationCall, long invocationTime, Object resultValue, Exception exception);

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,9 +23,9 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#isVisible <em>Visible</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#isVisible <em>Visible</em>}</li>
  * </ul>
  *
  * @generated
@@ -107,7 +107,7 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_IMAGE_ANNOTATION;
+		return ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_IMAGE_ANNOTATION;
 	}
 
 	/**
@@ -128,7 +128,7 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME, oldName, name));
 	}
 
 	/**
@@ -149,7 +149,7 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -170,7 +170,7 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE, oldVisible, visible));
 	}
 
 	/**
@@ -190,11 +190,11 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
 				return getName();
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
 				return getDescription();
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
 				return isVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -208,13 +208,13 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
 		}
@@ -229,13 +229,13 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
 		}
@@ -250,11 +250,11 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -269,7 +269,7 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION: return ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -285,7 +285,7 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION;
+				case ApogyCommonEMFPackage.DESCRIBED__DESCRIPTION: return ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -300,7 +300,7 @@ public abstract class CameraImageAnnotationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION___DISPOSE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION___DISPOSE:
 				dispose();
 				return null;
 		}

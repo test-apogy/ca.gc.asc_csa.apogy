@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data;
+package ca.gc.asc_csa.apogy.common.geometry.data;
 
 
 /**
@@ -14,7 +14,7 @@ package org.eclipse.symphony.common.geometry.data;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getPolygonSamplingShape()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage#getPolygonSamplingShape()
  * @model interface="true" abstract="true"
  * @generated
  */

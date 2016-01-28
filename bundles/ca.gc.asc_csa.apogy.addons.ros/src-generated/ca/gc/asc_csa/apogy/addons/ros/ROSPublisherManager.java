@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros;
+package ca.gc.asc_csa.apogy.addons.ros;
 
 import java.util.HashMap;
 
@@ -18,12 +18,12 @@ import org.ros.internal.message.Message;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#getPublishers <em>Publishers</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#isRunning <em>Running</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getPublishers <em>Publishers</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#isRunning <em>Running</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisherManager()
+ * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisherManager()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface ROSPublisherManager extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Publishers</em>' attribute.
 	 * @see #setPublishers(HashMap)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisherManager_Publishers()
-	 * @model unique="false" dataType="org.eclipse.symphony.addons.ros.HashMap<org.eclipse.emf.ecore.EString, org.eclipse.symphony.addons.ros.ROSPublisher<?>>"
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisherManager_Publishers()
+	 * @model unique="false" dataType="ca.gc.asc_csa.apogy.addons.ros.HashMap<org.eclipse.emf.ecore.EString, ca.gc.asc_csa.apogy.addons.ros.ROSPublisher<?>>"
 	 * @generated
 	 */
 	HashMap<String, ROSPublisher<?>> getPublishers();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#getPublishers <em>Publishers</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getPublishers <em>Publishers</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Publishers</em>' attribute.
@@ -62,14 +62,14 @@ public interface ROSPublisherManager extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(ROSNode)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisherManager_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisherManager_Node()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' notify='true' propertyCategory='ROS_PUBLISHER_MANAGER'"
 	 * @generated
 	 */
 	ROSNode getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.
@@ -87,7 +87,7 @@ public interface ROSPublisherManager extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Running</em>' attribute.
 	 * @see #setRunning(boolean)
-	 * @see org.eclipse.symphony.addons.ros.Symphony__AddonsROSPackage#getROSPublisherManager_Running()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.ApogyAddonsROSPackage#getROSPublisherManager_Running()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='ROS_PUBLISHER_MANAGER'"
 	 * @generated
@@ -95,7 +95,7 @@ public interface ROSPublisherManager extends EObject {
 	boolean isRunning();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.ros.ROSPublisherManager#isRunning <em>Running</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.ros.ROSPublisherManager#isRunning <em>Running</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Running</em>' attribute.
@@ -154,7 +154,7 @@ public interface ROSPublisherManager extends EObject {
 	 * @param topicName The topic that the new message is to be created for
 	 * @return The newly created message.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" topicNameUnique="false" TBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" topicNameUnique="false" TBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<T extends Message> T createMessage(String topicName);
@@ -169,7 +169,7 @@ public interface ROSPublisherManager extends EObject {
 	 * @param topicName The topic that the given message is to be published to
 	 * @param message The message to be published
 	 * <!-- end-model-doc -->
-	 * @model topicNameUnique="false" messageUnique="false" TBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model topicNameUnique="false" messageUnique="false" TBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<T extends Message> void publish(String topicName, T message);
@@ -183,7 +183,7 @@ public interface ROSPublisherManager extends EObject {
 	 * @param topicName The topic whose publisher should be extracted
 	 * @return The publisher for that topic (if one exists)
 	 * <!-- end-model-doc -->
-	 * @model unique="false" topicNameUnique="false" TBounds="org.eclipse.symphony.addons.ros.Message"
+	 * @model unique="false" topicNameUnique="false" TBounds="ca.gc.asc_csa.apogy.addons.ros.Message"
 	 * @generated
 	 */
 	<T extends Message> ROSPublisher<T> getPublisher(String topicName);

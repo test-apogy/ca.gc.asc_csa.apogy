@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -85,7 +85,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_implementationClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_implementationClass_feature", "_UI_AbstractTypeImplementation_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+				 ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 				 true,
 				 false,
 				 true,
@@ -108,7 +108,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_instance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_instance_feature", "_UI_AbstractTypeImplementation_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE,
+				 ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -131,7 +131,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_adapterInstance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_adapterInstance_feature", "_UI_AbstractTypeImplementation_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE,
+				 ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -154,7 +154,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_handlingType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_handlingType_feature", "_UI_AbstractTypeImplementation_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE,
+				 ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE,
 				 false,
 				 false,
 				 false,
@@ -176,10 +176,10 @@ public class AbstractTypeImplementationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE);
 		}
 		return childrenFeatures;
 	}
@@ -223,13 +223,13 @@ public class AbstractTypeImplementationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTypeImplementation.class)) {
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
-			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
+			case ApogyCoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -250,13 +250,13 @@ public class AbstractTypeImplementationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberImplementation()));
+				(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createTypeMemberImplementation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createInitializationData()));
+				(ApogyCoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createInitializationData()));
 	}
 
   /**

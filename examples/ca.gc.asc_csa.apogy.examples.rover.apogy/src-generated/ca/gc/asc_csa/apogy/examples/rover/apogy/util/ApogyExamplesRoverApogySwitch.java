@@ -1,18 +1,18 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.util;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyInitializationData;
-import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.InitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.rover.symphony.*;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
+import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,10 @@ import org.eclipse.symphony.examples.rover.symphony.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage
+ * @see ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage
  * @generated
  */
-public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
+public class ApogyExamplesRoverApogySwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -35,7 +35,7 @@ public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesRoverSymphonyPackage modelPackage;
+  protected static ApogyExamplesRoverApogyPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -43,10 +43,10 @@ public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesRoverSymphonySwitch()
+  public ApogyExamplesRoverApogySwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesRoverSymphonyPackage.eINSTANCE;
+			modelPackage = ApogyExamplesRoverApogyPackage.eINSTANCE;
 		}
 	}
 
@@ -75,19 +75,19 @@ public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_SYMPHONY_SYSTEM_API_ADAPTER: {
-				RoverSymphonySystemApiAdapter roverSymphonySystemApiAdapter = (RoverSymphonySystemApiAdapter)theEObject;
-				T result = caseRoverSymphonySystemApiAdapter(roverSymphonySystemApiAdapter);
-				if (result == null) result = caseSymphonySystemApiAdapter(roverSymphonySystemApiAdapter);
-				if (result == null) result = caseTypeApiAdapter(roverSymphonySystemApiAdapter);
-				if (result == null) result = casePoseProvider(roverSymphonySystemApiAdapter);
+			case ApogyExamplesRoverApogyPackage.ROVER_APOGY_SYSTEM_API_ADAPTER: {
+				RoverApogySystemApiAdapter roverApogySystemApiAdapter = (RoverApogySystemApiAdapter)theEObject;
+				T result = caseRoverApogySystemApiAdapter(roverApogySystemApiAdapter);
+				if (result == null) result = caseApogySystemApiAdapter(roverApogySystemApiAdapter);
+				if (result == null) result = caseTypeApiAdapter(roverApogySystemApiAdapter);
+				if (result == null) result = casePoseProvider(roverApogySystemApiAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA: {
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA: {
 				RoverData roverData = (RoverData)theEObject;
 				T result = caseRoverData(roverData);
-				if (result == null) result = caseSymphonyInitializationData(roverData);
+				if (result == null) result = caseApogyInitializationData(roverData);
 				if (result == null) result = caseInitializationData(roverData);
 				if (result == null) result = caseAbstractInitializationData(roverData);
 				if (result == null) result = defaultCase(theEObject);
@@ -98,17 +98,17 @@ public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Rover Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Rover Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Rover Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Rover Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseRoverSymphonySystemApiAdapter(RoverSymphonySystemApiAdapter object)
+  public T caseRoverApogySystemApiAdapter(RoverApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -160,17 +160,17 @@ public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony System Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy System Api Adapter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object)
+  public T caseApogySystemApiAdapter(ApogySystemApiAdapter object)
   {
 		return null;
 	}
@@ -206,17 +206,17 @@ public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Apogy Initialization Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSymphonyInitializationData(SymphonyInitializationData object) {
+	public T caseApogyInitializationData(ApogyInitializationData object) {
 		return null;
 	}
 
@@ -237,4 +237,4 @@ public class Symphony__ExamplesRoverSymphonySwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesRoverSymphonySwitch
+} //ApogyExamplesRoverApogySwitch

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera;
+package ca.gc.asc_csa.apogy.examples.camera;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage
+ * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage
  * @generated
  */
-public interface Symphony__ExamplesCameraFactory extends EFactory
+public interface ApogyExamplesCameraFactory extends EFactory
 {
 	/**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__ExamplesCameraFactory extends EFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesCameraFactory eINSTANCE = org.eclipse.symphony.examples.camera.impl.Symphony__ExamplesCameraFactoryImpl.init();
+	ApogyExamplesCameraFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.camera.impl.ApogyExamplesCameraFactoryImpl.init();
 
 	/**
 	 * Returns a new Camera object, which has the same type as
@@ -86,6 +86,6 @@ public interface Symphony__ExamplesCameraFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesCameraPackage getSymphony__ExamplesCameraPackage();
+	ApogyExamplesCameraPackage getApogyExamplesCameraPackage();
 
-} //Symphony__ExamplesCameraFactory
+} //ApogyExamplesCameraFactory

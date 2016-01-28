@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallContainer} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.OperationCallContainer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -81,7 +81,7 @@ public class OperationCallContainerItemProvider
     if (childrenFeatures == null)
     {
       super.getChildrenFeatures(object);
-      childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+      childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
     }
     return childrenFeatures;
   }
@@ -138,7 +138,7 @@ public class OperationCallContainerItemProvider
 
     switch (notification.getFeatureID(OperationCallContainer.class))
     {
-      case Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS:
+      case ApogyCoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS:
         fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
         return;
     }
@@ -159,8 +159,8 @@ public class OperationCallContainerItemProvider
 
     newChildDescriptors.add
       (createChildParameter
-        (Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-         Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall()));
+        (ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+         ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall()));
   }
 
   /**

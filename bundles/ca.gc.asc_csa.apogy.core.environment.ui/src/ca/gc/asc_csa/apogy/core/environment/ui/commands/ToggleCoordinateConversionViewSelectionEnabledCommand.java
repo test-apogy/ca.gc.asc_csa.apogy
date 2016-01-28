@@ -1,16 +1,16 @@
-package org.eclipse.symphony.core.environment.ui.commands;
+package ca.gc.asc_csa.apogy.core.environment.ui.commands;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.symphony.core.environment.ui.views.CoordinateConversionView;
+import ca.gc.asc_csa.apogy.core.environment.ui.views.CoordinateConversionView;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class ToggleCoordinateConversionViewSelectionEnabledCommand extends AbstractHandler
 {
-	private static final String COORD_CONVERSION_VIEW_ID = "org.eclipse.symphony.core.environment.ui.views.CoordinateConversionView";
+	private static final String COORD_CONVERSION_VIEW_ID = "ca.gc.asc_csa.apogy.core.environment.ui.views.CoordinateConversionView";
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException

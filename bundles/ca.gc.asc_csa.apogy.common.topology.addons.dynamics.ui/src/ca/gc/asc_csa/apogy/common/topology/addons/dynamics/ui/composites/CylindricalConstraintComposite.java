@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.addons.dynamics.ui.composites;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -14,13 +14,13 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage.Literals;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ConstraintState;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage.Literals;
 
 public class CylindricalConstraintComposite extends Composite {
 
 	private DataBindingContext m_bindingContext;
-	private org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint cylindricalConstraint;
+	private ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint cylindricalConstraint;
 	private Button enabledButton;
 	
 	private ConstraintStateComposite angularConstraintStateComposite;
@@ -31,7 +31,7 @@ public class CylindricalConstraintComposite extends Composite {
 	public CylindricalConstraintComposite(
 			Composite parent,
 			int style,
-			org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint newCylindricalConstraint) {
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint newCylindricalConstraint) {
 		this(parent, style);
 		setCylindricalConstraint(newCylindricalConstraint);
 	}
@@ -84,11 +84,11 @@ public class CylindricalConstraintComposite extends Composite {
 		return bindingContext;
 	}
 
-	public org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint getCylindricalConstraint() {
+	public ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint getCylindricalConstraint() {
 		return cylindricalConstraint;
 	}
 
-	public void setCylindricalConstraint(org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint newCylindricalConstraint) 
+	public void setCylindricalConstraint(ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint newCylindricalConstraint) 
 	{
 		// Unregister listener from previous CylindricalConstraint
 		if(getCylindricalConstraint() != null)
@@ -114,7 +114,7 @@ public class CylindricalConstraintComposite extends Composite {
 	}
 
 	public void setCylindricalConstraint(
-			org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint newCylindricalConstraint,
+			ca.gc.asc_csa.apogy.common.topology.addons.dynamics.CylindricalConstraint newCylindricalConstraint,
 			boolean update) {
 		cylindricalConstraint = newCylindricalConstraint;
 		if (update) {

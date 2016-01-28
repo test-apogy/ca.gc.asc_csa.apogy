@@ -1,10 +1,10 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
-import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.MapsList;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -16,7 +16,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.MapsList#getMapsListNode() <em>Maps List Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.MapsList#getMapsListNode() <em>Maps List Node</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -78,7 +78,7 @@ public class MapsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsList());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createMapsList());
 	}
 
 	/**
@@ -93,10 +93,10 @@ public class MapsListTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.MapsList#getMapsListNode() <em>Maps List Node</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.MapsList#getMapsListNode() <em>Maps List Node</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.MapsList#getMapsListNode()
+	 * @see ca.gc.asc_csa.apogy.core.environment.MapsList#getMapsListNode()
 	 * @generated_NOT
 	 */
 	public void testGetMapsListNode() 

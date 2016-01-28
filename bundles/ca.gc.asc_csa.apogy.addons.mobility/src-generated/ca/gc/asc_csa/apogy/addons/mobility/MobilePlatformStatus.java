@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.addons.mobility;
+package ca.gc.asc_csa.apogy.addons.mobility;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Mobile Platform Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatformStatus()
+ * @see ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage#getMobilePlatformStatus()
  * @model
  * @generated
  */

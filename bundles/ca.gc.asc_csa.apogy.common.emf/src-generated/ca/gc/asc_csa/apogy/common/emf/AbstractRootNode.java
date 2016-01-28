@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.symphony.common.emf;
+package ca.gc.asc_csa.apogy.common.emf;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.emf.AbstractRootNode#getSourceClass <em>Source Class</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.AbstractRootNode#getSourceClass <em>Source Class</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractRootNode()
+ * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractRootNode()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface AbstractRootNode extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source Class</em>' reference.
 	 * @see #setSourceClass(EClass)
-	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractRootNode_SourceClass()
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getAbstractRootNode_SourceClass()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -44,7 +44,7 @@ public interface AbstractRootNode extends EObject
   EClass getSourceClass();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.AbstractRootNode#getSourceClass <em>Source Class</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.AbstractRootNode#getSourceClass <em>Source Class</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source Class</em>' reference.

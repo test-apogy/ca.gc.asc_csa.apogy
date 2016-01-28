@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna;
+package ca.gc.asc_csa.apogy.examples.antenna;
 
 
 /**
@@ -16,7 +16,7 @@ package org.eclipse.symphony.examples.antenna;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntennaStub()
+ * @see ca.gc.asc_csa.apogy.examples.antenna.ApogyExamplesAntennaPackage#getPTUDishAntennaStub()
  * @model
  * @generated
  */

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.provider;
+package ca.gc.asc_csa.apogy.core.invocator.provider;
 
 
 import java.util.Collection;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.LocalTypesList;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.LocalTypesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.LocalTypesList} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.invocator.LocalTypesList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -79,7 +79,7 @@ public class LocalTypesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES);
+			childrenFeatures.add(ApogyCoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class LocalTypesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LocalTypesList.class)) {
-			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
+			case ApogyCoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,8 +156,8 @@ public class LocalTypesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createType()));
+				(ApogyCoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES,
+				 ApogyCoreInvocatorFactory.eINSTANCE.createType()));
 	}
 
   /**

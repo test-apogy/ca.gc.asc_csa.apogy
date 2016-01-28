@@ -1,15 +1,15 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -60,14 +60,14 @@ public class LineOfSightImageMapLayerTest extends CartesianTriangularMeshDerived
 	@Override
 	protected void setUp() throws Exception 
 	{
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer());
 		
 		getFixture().setCartesianTriangularMeshMapLayer(super.createCartesianTriangularMeshMapLayer());		
 		getFixture().setRequiredResolution(2.0);
 		
 		Matrix4d observerPose = new Matrix4d();
 		observerPose.set(new Vector3d(10.0, 20.0, 1.0));
-		getFixture().setObserverPose(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(observerPose));
+		getFixture().setObserverPose(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(observerPose));
 		
 		getFixture().setOpaque(true);
 		getFixture().setTargetHeightAboveGround(1.5);

@@ -1,13 +1,13 @@
-package org.eclipse.symphony.addons.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.addons.ui.jme3.scene_objects;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 public class Trajectory3DToolNodeJME3Object extends DefaultJME3SceneObject<Trajectory3DToolNode>
 {				
@@ -49,7 +49,7 @@ public class Trajectory3DToolNodeJME3Object extends DefaultJME3SceneObject<Traje
 						
 						switch(featureId)
 						{
-							case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
+							case ApogyAddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 								setVisible(msg.getNewBooleanValue());
 							break;
 						}						

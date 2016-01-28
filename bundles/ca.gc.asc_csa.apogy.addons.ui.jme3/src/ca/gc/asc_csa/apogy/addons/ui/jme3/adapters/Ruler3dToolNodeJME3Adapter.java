@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.ui.jme3.adapters;
+package ca.gc.asc_csa.apogy.addons.ui.jme3.adapters;
 
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.ui.jme3.scene_objects.Ruler3dToolNodeJME3Object;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
+import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
+import ca.gc.asc_csa.apogy.addons.ui.jme3.scene_objects.Ruler3dToolNodeJME3Object;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Adapter;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3SceneObject;
 
 public class Ruler3dToolNodeJME3Adapter implements JME3Adapter {
 

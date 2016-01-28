@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.provider;
+package ca.gc.asc_csa.apogy.core.ui.provider;
 
 
 import java.util.Collection;
@@ -21,16 +21,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.SymphonyResourceSettings} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SymphonyResourceSettingsItemProvider 
+public class ApogyResourceSettingsItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -44,7 +44,7 @@ public class SymphonyResourceSettingsItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymphonyResourceSettingsItemProvider(AdapterFactory adapterFactory) {
+	public ApogyResourceSettingsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -77,9 +77,9 @@ public class SymphonyResourceSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyResourceSettings_resourceProject_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyResourceSettings_resourceProject_feature", "_UI_SymphonyResourceSettings_type"),
-				 Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT,
+				 getString("_UI_ApogyResourceSettings_resourceProject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyResourceSettings_resourceProject_feature", "_UI_ApogyResourceSettings_type"),
+				 ApogyCoreUIPackage.Literals.APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT,
 				 true,
 				 false,
 				 false,
@@ -99,9 +99,9 @@ public class SymphonyResourceSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyResourceSettings_resourceFile_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyResourceSettings_resourceFile_feature", "_UI_SymphonyResourceSettings_type"),
-				 Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE,
+				 getString("_UI_ApogyResourceSettings_resourceFile_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyResourceSettings_resourceFile_feature", "_UI_ApogyResourceSettings_type"),
+				 ApogyCoreUIPackage.Literals.APOGY_RESOURCE_SETTINGS__RESOURCE_FILE,
 				 true,
 				 false,
 				 false,
@@ -121,9 +121,9 @@ public class SymphonyResourceSettingsItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyResourceSettings_resourceContainer_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyResourceSettings_resourceContainer_feature", "_UI_SymphonyResourceSettings_type"),
-				 Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER,
+				 getString("_UI_ApogyResourceSettings_resourceContainer_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyResourceSettings_resourceContainer_feature", "_UI_ApogyResourceSettings_type"),
+				 ApogyCoreUIPackage.Literals.APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER,
 				 true,
 				 false,
 				 false,
@@ -133,14 +133,14 @@ public class SymphonyResourceSettingsItemProvider
 	}
 
 	/**
-	 * This returns SymphonyResourceSettings.gif.
+	 * This returns ApogyResourceSettings.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonyResourceSettings"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyResourceSettings"));
 	}
 
 	/**
@@ -151,11 +151,11 @@ public class SymphonyResourceSettingsItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		IProject labelValue = ((SymphonyResourceSettings)object).getResourceProject();
+		IProject labelValue = ((ApogyResourceSettings)object).getResourceProject();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_SymphonyResourceSettings_type") :
-			getString("_UI_SymphonyResourceSettings_type") + " " + label;
+			getString("_UI_ApogyResourceSettings_type") :
+			getString("_UI_ApogyResourceSettings_type") + " " + label;
 	}
 	
 
@@ -170,10 +170,10 @@ public class SymphonyResourceSettingsItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SymphonyResourceSettings.class)) {
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
-			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+		switch (notification.getFeatureID(ApogyResourceSettings.class)) {
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case ApogyCoreUIPackage.APOGY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -200,7 +200,7 @@ public class SymphonyResourceSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__CoreUIEditPlugin.INSTANCE;
+		return ApogyCoreUIEditPlugin.INSTANCE;
 	}
 
 }

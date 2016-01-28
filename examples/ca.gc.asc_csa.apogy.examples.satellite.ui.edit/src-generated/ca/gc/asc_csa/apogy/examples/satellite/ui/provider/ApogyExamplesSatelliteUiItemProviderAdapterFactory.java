@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015-2016 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.ui.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.ui.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,9 +27,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiPackage;
 
-import org.eclipse.symphony.examples.satellite.ui.util.Symphony__ExamplesSatelliteUiAdapterFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ui.util.ApogyExamplesSatelliteUiAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -40,7 +40,7 @@ import org.eclipse.symphony.examples.satellite.ui.util.Symphony__ExamplesSatelli
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatelliteUiItemProviderAdapterFactory extends Symphony__ExamplesSatelliteUiAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyExamplesSatelliteUiItemProviderAdapterFactory extends ApogyExamplesSatelliteUiAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class Symphony__ExamplesSatelliteUiItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__ExamplesSatelliteUiEditPlugin.INSTANCE, Symphony__ExamplesSatelliteUiPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyExamplesSatelliteUiEditPlugin.INSTANCE, ApogyExamplesSatelliteUiPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -79,7 +79,7 @@ public class Symphony__ExamplesSatelliteUiItemProviderAdapterFactory extends Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteUiItemProviderAdapterFactory() {
+	public ApogyExamplesSatelliteUiItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -88,26 +88,26 @@ public class Symphony__ExamplesSatelliteUiItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__ExamplesSatelliteUiFacadeItemProvider symphony__ExamplesSatelliteUiFacadeItemProvider;
+	protected ApogyExamplesSatelliteUiFacadeItemProvider apogy__ExamplesSatelliteUiFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ui.ApogyExamplesSatelliteUiFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__ExamplesSatelliteUiFacadeAdapter() {
-		if (symphony__ExamplesSatelliteUiFacadeItemProvider == null) {
-			symphony__ExamplesSatelliteUiFacadeItemProvider = new Symphony__ExamplesSatelliteUiFacadeItemProvider(this);
+	public Adapter createApogyExamplesSatelliteUiFacadeAdapter() {
+		if (apogy__ExamplesSatelliteUiFacadeItemProvider == null) {
+			apogy__ExamplesSatelliteUiFacadeItemProvider = new ApogyExamplesSatelliteUiFacadeItemProvider(this);
 		}
 
-		return symphony__ExamplesSatelliteUiFacadeItemProvider;
+		return apogy__ExamplesSatelliteUiFacadeItemProvider;
 	}
 
 	/**
@@ -236,7 +236,7 @@ public class Symphony__ExamplesSatelliteUiItemProviderAdapterFactory extends Sym
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphony__ExamplesSatelliteUiFacadeItemProvider != null) symphony__ExamplesSatelliteUiFacadeItemProvider.dispose();
+		if (apogy__ExamplesSatelliteUiFacadeItemProvider != null) apogy__ExamplesSatelliteUiFacadeItemProvider.dispose();
 	}
 
 }

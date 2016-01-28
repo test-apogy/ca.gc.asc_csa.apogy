@@ -1,4 +1,4 @@
-package org.eclipse.symphony.examples.mobile_platform.symphony;
+package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

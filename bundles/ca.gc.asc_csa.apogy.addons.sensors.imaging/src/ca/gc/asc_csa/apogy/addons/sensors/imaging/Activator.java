@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.imaging;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

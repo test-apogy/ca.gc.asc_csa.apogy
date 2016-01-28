@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +18,8 @@ import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsCont
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.CustomInputConditioningPointImpl#getInputValue <em>Input Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.CustomInputConditioningPointImpl#getOutputValue <em>Output Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.CustomInputConditioningPointImpl#getInputValue <em>Input Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.CustomInputConditioningPointImpl#getOutputValue <em>Output Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,7 +81,7 @@ public class CustomInputConditioningPointImpl extends MinimalEObjectImpl.Contain
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreProgramsControllersPackage.Literals.CUSTOM_INPUT_CONDITIONING_POINT;
+		return ApogyCoreProgramsControllersPackage.Literals.CUSTOM_INPUT_CONDITIONING_POINT;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class CustomInputConditioningPointImpl extends MinimalEObjectImpl.Contain
 		double oldInputValue = inputValue;
 		inputValue = newInputValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE, oldInputValue, inputValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE, oldInputValue, inputValue));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class CustomInputConditioningPointImpl extends MinimalEObjectImpl.Contain
 		double oldOutputValue = outputValue;
 		outputValue = newOutputValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE, oldOutputValue, outputValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE, oldOutputValue, outputValue));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class CustomInputConditioningPointImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
 				return getInputValue();
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
 				return getOutputValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class CustomInputConditioningPointImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
 				setInputValue((Double)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
 				setOutputValue((Double)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class CustomInputConditioningPointImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
 				setInputValue(INPUT_VALUE_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
 				setOutputValue(OUTPUT_VALUE_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class CustomInputConditioningPointImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
 				return inputValue != INPUT_VALUE_EDEFAULT;
-			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
+			case ApogyCoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
 				return outputValue != OUTPUT_VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

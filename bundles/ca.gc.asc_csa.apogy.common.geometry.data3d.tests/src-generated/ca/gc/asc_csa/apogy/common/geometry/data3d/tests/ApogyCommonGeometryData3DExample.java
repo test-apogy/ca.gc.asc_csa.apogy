@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DExample {
+public class ApogyCommonGeometryData3DExample {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Load all the argument file paths or URIs as instances of the model.
@@ -52,16 +52,16 @@ public class Symphony__CommonGeometryData3DExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(Symphony__CommonGeometryData3DPackage.eNS_URI, 
-			 Symphony__CommonGeometryData3DPackage.eINSTANCE);
+			(ApogyCommonGeometryData3DPackage.eNS_URI, 
+			 ApogyCommonGeometryData3DPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.symphony__commongeometrydata3d"));
-				CartesianPolygon root = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.apogy__commongeometrydata3d"));
+				CartesianPolygon root = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}
@@ -119,4 +119,4 @@ public class Symphony__CommonGeometryData3DExample {
 		}
 	}
 
-} //Symphony__CommonGeometryData3DExample
+} //ApogyCommonGeometryData3DExample

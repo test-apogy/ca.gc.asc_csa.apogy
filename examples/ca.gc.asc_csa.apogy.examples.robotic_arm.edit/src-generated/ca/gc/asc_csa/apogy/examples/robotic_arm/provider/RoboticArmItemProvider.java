@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm.provider;
+package ca.gc.asc_csa.apogy.examples.robotic_arm.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
-import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage;
+import ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.robotic_arm.RoboticArm} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.robotic_arm.RoboticArm} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_RoboticArm_speed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_speed_feature", "_UI_RoboticArm_type"),
-				 Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__SPEED,
+				 ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__SPEED,
 				 false,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_turretAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_turretAngle_feature", "_UI_RoboticArm_type"),
-				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__TURRET_ANGLE,
+				ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__TURRET_ANGLE,
 				false,
 				false,
 				false,
@@ -132,7 +132,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_shoulderAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_shoulderAngle_feature", "_UI_RoboticArm_type"),
-				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__SHOULDER_ANGLE,
+				ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__SHOULDER_ANGLE,
 				false,
 				false,
 				false,
@@ -155,7 +155,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_elbowAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_elbowAngle_feature", "_UI_RoboticArm_type"),
-				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__ELBOW_ANGLE,
+				ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__ELBOW_ANGLE,
 				false,
 				false,
 				false,
@@ -178,7 +178,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_wristAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_wristAngle_feature", "_UI_RoboticArm_type"),
-				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__WRIST_ANGLE,
+				ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__WRIST_ANGLE,
 				false,
 				false,
 				false,
@@ -200,7 +200,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_RoboticArm_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_initialized_feature", "_UI_RoboticArm_type"),
-				 Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__INITIALIZED,
+				 ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -222,7 +222,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_RoboticArm_armMoving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_armMoving_feature", "_UI_RoboticArm_type"),
-				 Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__ARM_MOVING,
+				 ApogyExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__ARM_MOVING,
 				 false,
 				 false,
 				 false,
@@ -278,13 +278,13 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RoboticArm.class)) {
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
-			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED:
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
+			case ApogyExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

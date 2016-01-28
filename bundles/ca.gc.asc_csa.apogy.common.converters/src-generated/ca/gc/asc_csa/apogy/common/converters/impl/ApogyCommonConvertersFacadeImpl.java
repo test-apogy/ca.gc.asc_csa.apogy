@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.impl;
+package ca.gc.asc_csa.apogy.common.converters.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -16,15 +16,15 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.converters.Activator;
-import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
-import org.eclipse.symphony.common.converters.Symphony__CommonConvertersPackage;
+import ca.gc.asc_csa.apogy.common.converters.Activator;
+import ca.gc.asc_csa.apogy.common.converters.IConverter;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersPackage;
 
-import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ConverterEdge;
+import ca.gc.asc_csa.apogy.common.converters.graphs.ApogyCommonConvertersGraphsFacade;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 /**
@@ -34,21 +34,21 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  *
  * @generated
  */
-public class Symphony__CommonConvertersFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonConvertersFacade
+public class ApogyCommonConvertersFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonConvertersFacade
 {
-	private static Symphony__CommonConvertersFacade instance = null;
+	private static ApogyCommonConvertersFacade instance = null;
 	
-	public static Symphony__CommonConvertersFacade getInstance()
+	public static ApogyCommonConvertersFacade getInstance()
 	{
 		if (instance == null)
 		{
-			instance = new Symphony__CommonConvertersFacadeImpl();
+			instance = new ApogyCommonConvertersFacadeImpl();
 		}
 		
 		return instance;
 	}
 	
-	public static final String CONVERTER_EXTENSION_POINT_ID = "org.eclipse.symphony.common.converters";
+	public static final String CONVERTER_EXTENSION_POINT_ID = "ca.gc.asc_csa.apogy.common.converters";
 	private static final String CONVERTER_EXTENSION_POINT_ID_CLASS = "Class";
 	
 	private List<IConverter> converters = null;
@@ -59,7 +59,7 @@ public class Symphony__CommonConvertersFacadeImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonConvertersFacadeImpl() {
+	protected ApogyCommonConvertersFacadeImpl() {
 		super();
 	}
 
@@ -70,7 +70,7 @@ public class Symphony__CommonConvertersFacadeImpl extends MinimalEObjectImpl.Con
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonConvertersPackage.Literals.SYMPHONY_COMMON_CONVERTERS_FACADE;
+		return ApogyCommonConvertersPackage.Literals.APOGY_COMMON_CONVERTERS_FACADE;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class Symphony__CommonConvertersFacadeImpl extends MinimalEObjectImpl.Con
 		}
 					
 		// If no direct converter has been found, try to find one that is chained.
-		return Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(getGraph(), input, targetType);
+		return ApogyCommonConvertersGraphsFacade.INSTANCE.convert(getGraph(), input, targetType);
 	}
 
 	/**
@@ -164,11 +164,11 @@ public class Symphony__CommonConvertersFacadeImpl extends MinimalEObjectImpl.Con
 	{
 		if(graph == null)
 		{
-			graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(getAllRegisteredConverters());
+			graph = ApogyCommonConvertersGraphsFacade.INSTANCE.createGraph(getAllRegisteredConverters());
 				
 			// Creates and add the TypeCastConverters.
-			List<IConverter> castConverters = Symphony__CommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
-			Symphony__CommonConvertersGraphsFacade.INSTANCE.addConverters(graph, castConverters);
+			List<IConverter> castConverters = ApogyCommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
+			ApogyCommonConvertersGraphsFacade.INSTANCE.addConverters(graph, castConverters);
 		}
 		
 		return graph;
@@ -183,14 +183,14 @@ public class Symphony__CommonConvertersFacadeImpl extends MinimalEObjectImpl.Con
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonConvertersPackage.SYMPHONY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS:
+			case ApogyCommonConvertersPackage.APOGY_COMMON_CONVERTERS_FACADE___CONVERT__OBJECT_CLASS:
 				return convert(arguments.get(0), (Class<?>)arguments.get(1));
-			case Symphony__CommonConvertersPackage.SYMPHONY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS:
+			case ApogyCommonConvertersPackage.APOGY_COMMON_CONVERTERS_FACADE___GET_ALL_REGISTERED_CONVERTERS:
 				return getAllRegisteredConverters();
-			case Symphony__CommonConvertersPackage.SYMPHONY_COMMON_CONVERTERS_FACADE___GET_GRAPH:
+			case ApogyCommonConvertersPackage.APOGY_COMMON_CONVERTERS_FACADE___GET_GRAPH:
 				return getGraph();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //Symphony__CommonConvertersFacadeImpl
+} //ApogyCommonConvertersFacadeImpl

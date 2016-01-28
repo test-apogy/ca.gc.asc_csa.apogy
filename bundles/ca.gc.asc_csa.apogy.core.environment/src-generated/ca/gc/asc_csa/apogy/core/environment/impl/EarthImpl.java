@@ -1,14 +1,14 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.impl;
+package ca.gc.asc_csa.apogy.core.environment.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
-import org.eclipse.symphony.core.environment.Earth;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
+import ca.gc.asc_csa.apogy.core.environment.Earth;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthImpl#getRadius <em>Radius</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.EarthImpl#getRadius <em>Radius</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,7 +60,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreEnvironmentPackage.Literals.EARTH;
+		return ApogyCoreEnvironmentPackage.Literals.EARTH;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.EARTH__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
+			case ApogyCoreEnvironmentPackage.EARTH__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
+			case ApogyCoreEnvironmentPackage.EARTH__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
+			case ApogyCoreEnvironmentPackage.EARTH__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
+			case ApogyCoreEnvironmentPackage.EARTH__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

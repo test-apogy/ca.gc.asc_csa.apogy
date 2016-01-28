@@ -1,10 +1,10 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.symphony;
+package ca.gc.asc_csa.apogy.examples.camera.apogy;
 
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.core.SymphonyInitializationData;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,24 +15,24 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  * This class is the data required in order to initialize (or
  * reinitialize) the basic camera implementations.  This will
  * be used by the relevant API adapter, which in this case
- * is {@link CameraSymphonySystemApiAdapter}.
- * @see #CameraSymphonySystemApiAdapter
+ * is {@link CameraApogySystemApiAdapter}.
+ * @see #CameraApogySystemApiAdapter
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.camera.symphony.CameraData#getFov <em>Fov</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.symphony.CameraData#getZoom <em>Zoom</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.camera.symphony.CameraData#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData#getFov <em>Fov</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData#getZoom <em>Zoom</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData()
+ * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getCameraData()
  * @model
  * @generated
  */
-public interface CameraData extends SymphonyInitializationData
+public interface CameraData extends ApogyInitializationData
 {
 
   /**
@@ -44,7 +44,7 @@ public interface CameraData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData_Fov()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getCameraData_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertCategory='Camera'"
 	 * @generated
@@ -52,7 +52,7 @@ public interface CameraData extends SymphonyInitializationData
 	RectangularFrustrumFieldOfView getFov();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.symphony.CameraData#getFov <em>Fov</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData#getFov <em>Fov</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov</em>' containment reference.
@@ -74,7 +74,7 @@ public interface CameraData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Zoom</em>' attribute.
 	 * @see #setZoom(double)
-	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData_Zoom()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getCameraData_Zoom()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Camera'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface CameraData extends SymphonyInitializationData
   double getZoom();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.symphony.CameraData#getZoom <em>Zoom</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData#getZoom <em>Zoom</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Zoom</em>' attribute.
@@ -101,7 +101,7 @@ public interface CameraData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData_Initialized()
+	 * @see ca.gc.asc_csa.apogy.examples.camera.apogy.ApogyExamplesCameraApogyPackage#getCameraData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -109,7 +109,7 @@ public interface CameraData extends SymphonyInitializationData
 	boolean isInitialized();
 
 		/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.camera.symphony.CameraData#isInitialized <em>Initialized</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.examples.camera.apogy.CameraData#isInitialized <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initialized</em>' attribute.

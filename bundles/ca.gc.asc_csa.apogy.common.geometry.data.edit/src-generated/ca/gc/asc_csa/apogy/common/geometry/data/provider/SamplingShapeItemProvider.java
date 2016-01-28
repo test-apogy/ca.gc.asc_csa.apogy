@@ -3,7 +3,7 @@
  *
  * $Id: SamplingShapeItemProvider.java,v 1.2.4.2 2015/05/21 15:49:35 pallard Exp $
  */
-package org.eclipse.symphony.common.geometry.data.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data.provider;
 
 
 import java.util.Collection;
@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data.SamplingShape} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data.SamplingShape} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -123,7 +123,7 @@ public class SamplingShapeItemProvider
 	@Override
 	public ResourceLocator getResourceLocator()
 	{
-		return Symphony__CommonGeometryDataEditPlugin.INSTANCE;
+		return ApogyCommonGeometryDataEditPlugin.INSTANCE;
 	}
 
 }

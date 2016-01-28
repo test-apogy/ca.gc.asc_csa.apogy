@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.topology.provider;
+package ca.gc.asc_csa.apogy.core.topology.provider;
 
 
 import java.util.Collection;
@@ -11,17 +11,17 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.provider.ReferencedGroupNodeItemProvider;
-import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
-import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.ReferencedGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SymphonyEnvironmentNodeItemProvider
+public class ApogyEnvironmentNodeItemProvider
   extends ReferencedGroupNodeItemProvider
 {
   /**
@@ -30,7 +30,7 @@ public class SymphonyEnvironmentNodeItemProvider
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyEnvironmentNodeItemProvider(AdapterFactory adapterFactory)
+  public ApogyEnvironmentNodeItemProvider(AdapterFactory adapterFactory)
   {
 		super(adapterFactory);
 	}
@@ -47,29 +47,29 @@ public class SymphonyEnvironmentNodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSymphonyEnvironmentPropertyDescriptor(object);
+			addApogyEnvironmentPropertyDescriptor(object);
 			addWorksiteNodePropertyDescriptor(object);
 			addResultsListNodePropertyDescriptor(object);
-			addSymphonySystemAPIsNodePropertyDescriptor(object);
+			addApogySystemAPIsNodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
-	 * This adds a property descriptor for the Symphony Environment feature.
+	 * This adds a property descriptor for the Apogy Environment feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addSymphonyEnvironmentPropertyDescriptor(Object object)
+  protected void addApogyEnvironmentPropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyEnvironmentNode_symphonyEnvironment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironmentNode_symphonyEnvironment_feature", "_UI_SymphonyEnvironmentNode_type"),
-				 Symphony__CoreTopologyPackage.Literals.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT,
+				 getString("_UI_ApogyEnvironmentNode_apogyEnvironment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEnvironmentNode_apogyEnvironment_feature", "_UI_ApogyEnvironmentNode_type"),
+				 ApogyCoreTopologyPackage.Literals.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT,
 				 true,
 				 false,
 				 true,
@@ -90,9 +90,9 @@ public class SymphonyEnvironmentNodeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyEnvironmentNode_worksiteNode_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironmentNode_worksiteNode_feature", "_UI_SymphonyEnvironmentNode_type"),
-				 Symphony__CoreTopologyPackage.Literals.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE,
+				 getString("_UI_ApogyEnvironmentNode_worksiteNode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEnvironmentNode_worksiteNode_feature", "_UI_ApogyEnvironmentNode_type"),
+				 ApogyCoreTopologyPackage.Literals.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE,
 				 true,
 				 false,
 				 true,
@@ -113,9 +113,9 @@ public class SymphonyEnvironmentNodeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyEnvironmentNode_resultsListNode_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironmentNode_resultsListNode_feature", "_UI_SymphonyEnvironmentNode_type"),
-				 Symphony__CoreTopologyPackage.Literals.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE,
+				 getString("_UI_ApogyEnvironmentNode_resultsListNode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEnvironmentNode_resultsListNode_feature", "_UI_ApogyEnvironmentNode_type"),
+				 ApogyCoreTopologyPackage.Literals.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE,
 				 false,
 				 false,
 				 false,
@@ -125,20 +125,20 @@ public class SymphonyEnvironmentNodeItemProvider
 	}
 
   /**
-	 * This adds a property descriptor for the Symphony System AP Is Node feature.
+	 * This adds a property descriptor for the Apogy System AP Is Node feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addSymphonySystemAPIsNodePropertyDescriptor(Object object)
+  protected void addApogySystemAPIsNodePropertyDescriptor(Object object)
   {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SymphonyEnvironmentNode_symphonySystemAPIsNode_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironmentNode_symphonySystemAPIsNode_feature", "_UI_SymphonyEnvironmentNode_type"),
-				 Symphony__CoreTopologyPackage.Literals.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE,
+				 getString("_UI_ApogyEnvironmentNode_apogySystemAPIsNode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEnvironmentNode_apogySystemAPIsNode_feature", "_UI_ApogyEnvironmentNode_type"),
+				 ApogyCoreTopologyPackage.Literals.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE,
 				 false,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class SymphonyEnvironmentNodeItemProvider
 	}
 
   /**
-	 * This returns SymphonyEnvironmentNode.gif.
+	 * This returns ApogyEnvironmentNode.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -156,7 +156,7 @@ public class SymphonyEnvironmentNodeItemProvider
   @Override
   public Object getImage(Object object)
   {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SymphonyEnvironmentNode"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ApogyEnvironmentNode"));
 	}
 
   /**
@@ -168,12 +168,12 @@ public class SymphonyEnvironmentNodeItemProvider
   @Override
   public String getText(Object object)
   {
-	  SymphonyEnvironmentNode symphonyEnvironmentNode = (SymphonyEnvironmentNode) object;
+	  ApogyEnvironmentNode apogyEnvironmentNode = (ApogyEnvironmentNode) object;
 	  
-	  String label = getString("_UI_SymphonyEnvironmentNode_type");
-	  if(symphonyEnvironmentNode.getNodeId() != null && symphonyEnvironmentNode.getNodeId().length() > 0)
+	  String label = getString("_UI_ApogyEnvironmentNode_type");
+	  if(apogyEnvironmentNode.getNodeId() != null && apogyEnvironmentNode.getNodeId().length() > 0)
 	  {
-		  label += " " + symphonyEnvironmentNode.getNodeId();
+		  label += " " + apogyEnvironmentNode.getNodeId();
 	  }	 
 	 
 	  return label;

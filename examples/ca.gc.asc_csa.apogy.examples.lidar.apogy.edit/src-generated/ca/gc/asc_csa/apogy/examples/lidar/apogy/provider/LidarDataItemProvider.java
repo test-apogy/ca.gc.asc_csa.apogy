@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.lidar.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.lidar.apogy.provider;
 
 
 import java.util.Collection;
@@ -15,18 +15,18 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
-import org.eclipse.symphony.examples.lidar.symphony.LidarData;
-import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVFactory;
+import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData;
+import ca.gc.asc_csa.apogy.examples.lidar.apogy.ApogyExamplesLidarApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lidar.symphony.LidarData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.lidar.apogy.LidarData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LidarDataItemProvider extends SymphonyInitializationDataItemProvider {
+public class LidarDataItemProvider extends ApogyInitializationDataItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_LidarData_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LidarData_fov_feature", "_UI_LidarData_type"),
-				 Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__FOV,
+				 ApogyExamplesLidarApogyPackage.Literals.LIDAR_DATA__FOV,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_LidarData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LidarData_initialized_feature", "_UI_LidarData_type"),
-				 Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__INITIALIZED,
+				 ApogyExamplesLidarApogyPackage.Literals.LIDAR_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -110,8 +110,8 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__FOV);
-			childrenFeatures.add(Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__INITIALIZED);
+			childrenFeatures.add(ApogyExamplesLidarApogyPackage.Literals.LIDAR_DATA__FOV);
+			childrenFeatures.add(ApogyExamplesLidarApogyPackage.Literals.LIDAR_DATA__INITIALIZED);
 		}
 		return childrenFeatures;
 	}
@@ -165,10 +165,10 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LidarData.class)) {
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
-			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__INITIALIZED:
+			case ApogyExamplesLidarApogyPackage.LIDAR_DATA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, true));
 				return;
 		}
@@ -188,8 +188,8 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__FOV,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				(ApogyExamplesLidarApogyPackage.Literals.LIDAR_DATA__FOV,
+				 ApogyAddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
 	/**
@@ -200,7 +200,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Symphony__ExamplesLidarSymphonyEditPlugin.INSTANCE;
+		return ApogyExamplesLidarApogyEditPlugin.INSTANCE;
 	}
 
 }

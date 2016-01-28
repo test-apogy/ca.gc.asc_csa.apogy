@@ -3,7 +3,7 @@
  *
  * $Id: MobilePlateformItemProvider.java,v 1.4.4.2 2015/05/21 15:51:23 pallard Exp $
  */
-package org.eclipse.symphony.addons.mobility.provider;
+package ca.gc.asc_csa.apogy.addons.mobility.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,14 +13,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityFactory;
-import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.ApogyAddonsMobilityPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.MobilePlatform} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.mobility.MobilePlatform} object.
  * <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_moving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_moving_feature", "_UI_MobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.MOBILE_PLATFORM__MOVING,
+				 ApogyAddonsMobilityPackage.Literals.MOBILE_PLATFORM__MOVING,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_mobilePlatformStatus_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_mobilePlatformStatus_feature", "_UI_MobilePlatform_type"),
-				 Symphony__AddonsMobilityPackage.Literals.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS,
+				 ApogyAddonsMobilityPackage.Literals.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS,
 				 true,
 				 false,
 				 false,
@@ -134,8 +134,8 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobilePlatform.class)) {
-			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOVING:
-			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
+			case ApogyAddonsMobilityPackage.MOBILE_PLATFORM__MOVING:
+			case ApogyAddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -156,13 +156,13 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__AddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
 	}
 
 }

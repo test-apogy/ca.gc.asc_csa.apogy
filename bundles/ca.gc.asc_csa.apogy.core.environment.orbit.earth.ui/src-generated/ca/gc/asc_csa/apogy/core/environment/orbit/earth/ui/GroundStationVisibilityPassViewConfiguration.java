@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.ui;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,20 +17,20 @@ import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getOrbitModels <em>Orbit Models</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getGroundStations <em>Ground Stations</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getOrbitModels <em>Orbit Models</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getGroundStations <em>Ground Stations</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration()
  * @model
  * @generated
  */
 public interface GroundStationVisibilityPassViewConfiguration extends Named, Described {
 	/**
 	 * Returns the value of the '<em><b>Configurations List</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfigurationList#getConfigurations <em>Configurations</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfigurationList#getConfigurations <em>Configurations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Configurations List</em>' container reference isn't clear,
@@ -39,15 +39,15 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Configurations List</em>' container reference.
 	 * @see #setConfigurationsList(GroundStationVisibilityPassViewConfigurationList)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_ConfigurationsList()
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfigurationList#getConfigurations
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_ConfigurationsList()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfigurationList#getConfigurations
 	 * @model opposite="configurations" transient="false"
 	 * @generated
 	 */
 	GroundStationVisibilityPassViewConfigurationList getConfigurationsList();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Configurations List</em>' container reference.
@@ -58,7 +58,7 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 
 	/**
 	 * Returns the value of the '<em><b>Orbit Models</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.OrbitModel}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Orbit Models</em>' reference list isn't clear,
@@ -66,7 +66,7 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbit Models</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_OrbitModels()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_OrbitModels()
 	 * @model
 	 * @generated
 	 */
@@ -74,7 +74,7 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 
 	/**
 	 * Returns the value of the '<em><b>Ground Stations</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ground Stations</em>' reference list isn't clear,
@@ -82,7 +82,7 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ground Stations</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_GroundStations()
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_GroundStations()
 	 * @model
 	 * @generated
 	 */

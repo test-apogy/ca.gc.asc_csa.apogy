@@ -11,9 +11,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "org.eclipse.symphony.addons.geometry.paths" 
-       class = "org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage"
-       genModel = "model/symphony_addons_geometry_paths.xcore" /> 
+       uri = "ca.gc.asc_csa.apogy.addons.geometry.paths" 
+       class = "ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsPackage"
+       genModel = "model/apogy_addons_geometry_paths.xcore" /> 
   </extension>
 
 </plugin>

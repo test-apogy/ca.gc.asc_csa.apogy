@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common;
+package ca.gc.asc_csa.apogy.common;
 
 import java.io.File;
 import java.net.URL;

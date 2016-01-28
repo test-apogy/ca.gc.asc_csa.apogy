@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,8 +10,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.Updatable;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.Updatable;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,8 +21,8 @@ import org.eclipse.symphony.core.Updatable;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.UpdatableImpl#isUpdating <em>Updating</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.UpdatableImpl#isAutoUpdateEnabled <em>Auto Update Enabled</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.UpdatableImpl#isUpdating <em>Updating</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.UpdatableImpl#isAutoUpdateEnabled <em>Auto Update Enabled</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,7 +84,7 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.UPDATABLE;
+		return ApogyCorePackage.Literals.UPDATABLE;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 		boolean oldUpdating = updating;
 		updating = newUpdating;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.UPDATABLE__UPDATING, oldUpdating, updating));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.UPDATABLE__UPDATING, oldUpdating, updating));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 		boolean oldAutoUpdateEnabled = autoUpdateEnabled;
 		autoUpdateEnabled = newAutoUpdateEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED, oldAutoUpdateEnabled, autoUpdateEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED, oldAutoUpdateEnabled, autoUpdateEnabled));
 	}
 
 	/**
@@ -184,9 +184,9 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.UPDATABLE__UPDATING:
+			case ApogyCorePackage.UPDATABLE__UPDATING:
 				return isUpdating();
-			case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
+			case ApogyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
 				return isAutoUpdateEnabled();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,10 +200,10 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.UPDATABLE__UPDATING:
+			case ApogyCorePackage.UPDATABLE__UPDATING:
 				setUpdating((Boolean)newValue);
 				return;
-			case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
+			case ApogyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
 				setAutoUpdateEnabled((Boolean)newValue);
 				return;
 		}
@@ -218,10 +218,10 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.UPDATABLE__UPDATING:
+			case ApogyCorePackage.UPDATABLE__UPDATING:
 				setUpdating(UPDATING_EDEFAULT);
 				return;
-			case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
+			case ApogyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
 				setAutoUpdateEnabled(AUTO_UPDATE_ENABLED_EDEFAULT);
 				return;
 		}
@@ -236,9 +236,9 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.UPDATABLE__UPDATING:
+			case ApogyCorePackage.UPDATABLE__UPDATING:
 				return updating != UPDATING_EDEFAULT;
-			case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
+			case ApogyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
 				return autoUpdateEnabled != AUTO_UPDATE_ENABLED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -252,9 +252,9 @@ public abstract class UpdatableImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED:
+			case ApogyCorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED:
 				return getDefaultAutoUpdateEnabled();
-			case Symphony__CorePackage.UPDATABLE___UPDATE:
+			case ApogyCorePackage.UPDATABLE___UPDATE:
 				try {
 					update();
 					return null;

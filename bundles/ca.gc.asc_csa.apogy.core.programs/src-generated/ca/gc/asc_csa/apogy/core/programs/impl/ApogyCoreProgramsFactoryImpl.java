@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.impl;
+package ca.gc.asc_csa.apogy.core.programs.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.programs.*;
+import ca.gc.asc_csa.apogy.core.programs.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,24 +16,24 @@ import org.eclipse.symphony.core.programs.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements Symphony__CoreProgramsFactory {
+public class ApogyCoreProgramsFactoryImpl extends EFactoryImpl implements ApogyCoreProgramsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CoreProgramsFactory init() {
+	public static ApogyCoreProgramsFactory init() {
 		try {
-			Symphony__CoreProgramsFactory theSymphony__CoreProgramsFactory = (Symphony__CoreProgramsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CoreProgramsPackage.eNS_URI);
-			if (theSymphony__CoreProgramsFactory != null) {
-				return theSymphony__CoreProgramsFactory;
+			ApogyCoreProgramsFactory theApogyCoreProgramsFactory = (ApogyCoreProgramsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCoreProgramsPackage.eNS_URI);
+			if (theApogyCoreProgramsFactory != null) {
+				return theApogyCoreProgramsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CoreProgramsFactoryImpl();
+		return new ApogyCoreProgramsFactoryImpl();
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsFactoryImpl() {
+	public ApogyCoreProgramsFactoryImpl() {
 		super();
 	}
 
@@ -54,8 +54,8 @@ public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements S
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE: return createSymphony__CoreProgramsFacade();
-			case Symphony__CoreProgramsPackage.TIME_INTERVAL: return createTimeInterval();
+			case ApogyCoreProgramsPackage.APOGY_CORE_PROGRAMS_FACADE: return createApogyCoreProgramsFacade();
+			case ApogyCoreProgramsPackage.TIME_INTERVAL: return createTimeInterval();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -66,9 +66,9 @@ public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsFacade createSymphony__CoreProgramsFacade() {
-		Symphony__CoreProgramsFacadeImpl symphony__CoreProgramsFacade = new Symphony__CoreProgramsFacadeImpl();
-		return symphony__CoreProgramsFacade;
+	public ApogyCoreProgramsFacade createApogyCoreProgramsFacade() {
+		ApogyCoreProgramsFacadeImpl apogy__CoreProgramsFacade = new ApogyCoreProgramsFacadeImpl();
+		return apogy__CoreProgramsFacade;
 	}
 
 	/**
@@ -86,8 +86,8 @@ public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CoreProgramsPackage getSymphony__CoreProgramsPackage() {
-		return (Symphony__CoreProgramsPackage)getEPackage();
+	public ApogyCoreProgramsPackage getApogyCoreProgramsPackage() {
+		return (ApogyCoreProgramsPackage)getEPackage();
 	}
 
 	/**
@@ -97,8 +97,8 @@ public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements S
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CoreProgramsPackage getPackage() {
-		return Symphony__CoreProgramsPackage.eINSTANCE;
+	public static ApogyCoreProgramsPackage getPackage() {
+		return ApogyCoreProgramsPackage.eINSTANCE;
 	}
 
-} //Symphony__CoreProgramsFactoryImpl
+} //ApogyCoreProgramsFactoryImpl

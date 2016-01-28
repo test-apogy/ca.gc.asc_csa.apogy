@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui.provider;
+package ca.gc.asc_csa.apogy.core.environment.ui.provider;
 
 
 import java.util.Collection;
@@ -24,15 +24,15 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
-import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.ui.VariableTrajectoryAnnotation;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -93,7 +93,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -139,7 +139,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_backgroundColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_backgroundColor_feature", "_UI_MapViewConfiguration_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR,
 				 true,
 				 false,
 				 false,
@@ -161,7 +161,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_defaultRectangularRegion_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_defaultRectangularRegion_feature", "_UI_MapViewConfiguration_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION,
 				 true,
 				 false,
 				 true,
@@ -183,7 +183,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_mapImageRectangularRegion_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_mapImageRectangularRegion_feature", "_UI_MapViewConfiguration_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION,
 				 false,
 				 false,
 				 false,
@@ -205,7 +205,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_extent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_extent_feature", "_UI_MapViewConfiguration_type"),
-				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__EXTENT,
+				 ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__EXTENT,
 				 false,
 				 false,
 				 true,
@@ -227,8 +227,8 @@ public class MapViewConfigurationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS);
-			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS);
+			childrenFeatures.add(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS);
+			childrenFeatures.add(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -287,16 +287,16 @@ public class MapViewConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapViewConfiguration.class)) {
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
-			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+			case ApogyCoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -347,10 +347,10 @@ public class MapViewConfigurationItemProvider
 	   if(variableTrajectoryAnnotationCommandParameter != null) newChildDescriptors.remove(variableTrajectoryAnnotationCommandParameter);
 	   
 	   // Create a new NewChildDescriptor for VariableTrajectoryAnnotation.
-	   VariableTrajectoryAnnotation vta = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation();
-	   vta.setTrajectoryProvider(Symphony__CoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider());
+	   VariableTrajectoryAnnotation vta = ApogyCoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation();
+	   vta.setTrajectoryProvider(ApogyCoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider());
 	   
-	   newChildDescriptors.add(createChildParameter(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,vta));
+	   newChildDescriptors.add(createChildParameter(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,vta));
    }
    
    /**
@@ -366,38 +366,38 @@ public class MapViewConfigurationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapRuler()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createMapRuler()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
+				(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 ApogyCoreEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
 	}
 
   

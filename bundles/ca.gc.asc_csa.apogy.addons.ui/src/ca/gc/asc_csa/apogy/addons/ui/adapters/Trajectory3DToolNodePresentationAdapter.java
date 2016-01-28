@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.ui.adapters;
 
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory;
-import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
+import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
+import ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class Trajectory3DToolNodePresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class Trajectory3DToolNodePresentationAdapter implements NodePresentation
 		}
 
 		Trajectory3DToolNode trajectory3DToolNode = (Trajectory3DToolNode) obj;		
-		Trajectory3DToolNodePresentation presentationNode = Symphony__AddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation();
+		Trajectory3DToolNodePresentation presentationNode = ApogyAddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation();
 		presentationNode.setNode(trajectory3DToolNode);			
 						
 		return presentationNode;

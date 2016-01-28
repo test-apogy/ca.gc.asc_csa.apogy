@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.ros.imaging;
+package ca.gc.asc_csa.apogy.addons.ros.imaging;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFactory
+ * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__AddonsROSImaging' modelName='Symphony__AddonsROSImaging' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelDirectory='/org.eclipse.symphony.addons.ros.imaging/src-generated' editDirectory='/org.eclipse.symphony.addons.ros.imaging.edit/src-generated' basePackage='org.eclipse.symphony.addons.ros'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='ApogyAddonsROSImaging' modelName='ApogyAddonsROSImaging' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelDirectory='/ca.gc.asc_csa.apogy.addons.ros.imaging/src-generated' editDirectory='/ca.gc.asc_csa.apogy.addons.ros.imaging.edit/src-generated' basePackage='ca.gc.asc_csa.apogy.addons.ros'"
  * @generated
  */
-public interface Symphony__AddonsROSImagingPackage extends EPackage {
+public interface ApogyAddonsROSImagingPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.eclipse.symphony.addons.ros.imaging";
+	String eNS_URI = "ca.gc.asc_csa.apogy.addons.ros.imaging";
 
 	/**
 	 * The package namespace name.
@@ -56,17 +56,17 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsROSImagingPackage eINSTANCE = org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl.init();
+	ApogyAddonsROSImagingPackage eINSTANCE = ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingFacadeImpl <em>Facade</em>}' class.
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingFacadeImpl
-	 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getSymphony__AddonsROSImagingFacade()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingFacadeImpl
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getApogyAddonsROSImagingFacade()
 	 * @generated
 	 */
-	int SYMPHONY_ADDONS_ROS_IMAGING_FACADE = 0;
+	int APOGY_ADDONS_ROS_IMAGING_FACADE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -75,7 +75,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_IMAGING_FACADE_FEATURE_COUNT = 0;
+	int APOGY_ADDONS_ROS_IMAGING_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Convert To EImage</em>' operation.
@@ -84,7 +84,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE = 0;
+	int APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE = 0;
 
 	/**
 	 * The operation id for the '<em>Convert To EImage</em>' operation.
@@ -93,7 +93,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE = 1;
+	int APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE = 1;
 
 	/**
 	 * The operation id for the '<em>Convert To Compressed Image</em>' operation.
@@ -102,7 +102,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE = 2;
+	int APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE = 2;
 
 	/**
 	 * The operation id for the '<em>Convert To Compressed Image</em>' operation.
@@ -111,7 +111,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE = 3;
+	int APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE = 3;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -120,14 +120,14 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_ADDONS_ROS_IMAGING_FACADE_OPERATION_COUNT = 4;
+	int APOGY_ADDONS_ROS_IMAGING_FACADE_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '<em>Image</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see sensor_msgs.Image
-	 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getImage()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getImage()
 	 * @generated
 	 */
 	int IMAGE = 1;
@@ -137,7 +137,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see sensor_msgs.CompressedImage
-	 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getCompressedImage()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getCompressedImage()
 	 * @generated
 	 */
 	int COMPRESSED_IMAGE = 2;
@@ -147,61 +147,61 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.ros.node.ConnectedNode
-	 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getConnectedNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getConnectedNode()
 	 * @generated
 	 */
 	int CONNECTED_NODE = 3;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade <em>Facade</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Facade</em>'.
-	 * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade
 	 * @generated
 	 */
-	EClass getSymphony__AddonsROSImagingFacade();
+	EClass getApogyAddonsROSImagingFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToEImage(sensor_msgs.Image) <em>Convert To EImage</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToEImage(sensor_msgs.Image) <em>Convert To EImage</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert To EImage</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToEImage(sensor_msgs.Image)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToEImage(sensor_msgs.Image)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSImagingFacade__ConvertToEImage__Image();
+	EOperation getApogyAddonsROSImagingFacade__ConvertToEImage__Image();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToEImage(sensor_msgs.CompressedImage) <em>Convert To EImage</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToEImage(sensor_msgs.CompressedImage) <em>Convert To EImage</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert To EImage</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToEImage(sensor_msgs.CompressedImage)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToEImage(sensor_msgs.CompressedImage)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSImagingFacade__ConvertToEImage__CompressedImage();
+	EOperation getApogyAddonsROSImagingFacade__ConvertToEImage__CompressedImage();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToCompressedImage(org.eclipse.symphony.common.images.EImage, org.ros.node.ConnectedNode) <em>Convert To Compressed Image</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToCompressedImage(ca.gc.asc_csa.apogy.common.images.EImage, org.ros.node.ConnectedNode) <em>Convert To Compressed Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert To Compressed Image</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToCompressedImage(org.eclipse.symphony.common.images.EImage, org.ros.node.ConnectedNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToCompressedImage(ca.gc.asc_csa.apogy.common.images.EImage, org.ros.node.ConnectedNode)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode();
+	EOperation getApogyAddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToCompressedImage(org.eclipse.swt.graphics.ImageData, org.ros.node.ConnectedNode) <em>Convert To Compressed Image</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToCompressedImage(org.eclipse.swt.graphics.ImageData, org.ros.node.ConnectedNode) <em>Convert To Compressed Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert To Compressed Image</em>' operation.
-	 * @see org.eclipse.symphony.addons.ros.imaging.Symphony__AddonsROSImagingFacade#convertToCompressedImage(org.eclipse.swt.graphics.ImageData, org.ros.node.ConnectedNode)
+	 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.ApogyAddonsROSImagingFacade#convertToCompressedImage(org.eclipse.swt.graphics.ImageData, org.ros.node.ConnectedNode)
 	 * @generated
 	 */
-	EOperation getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode();
+	EOperation getApogyAddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode();
 
 	/**
 	 * Returns the meta object for data type '{@link sensor_msgs.Image <em>Image</em>}'.
@@ -243,7 +243,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Symphony__AddonsROSImagingFactory getSymphony__AddonsROSImagingFactory();
+	ApogyAddonsROSImagingFactory getApogyAddonsROSImagingFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,14 +260,14 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingFacadeImpl <em>Facade</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingFacadeImpl
-		 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getSymphony__AddonsROSImagingFacade()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingFacadeImpl
+		 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getApogyAddonsROSImagingFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_ADDONS_ROS_IMAGING_FACADE = eINSTANCE.getSymphony__AddonsROSImagingFacade();
+		EClass APOGY_ADDONS_ROS_IMAGING_FACADE = eINSTANCE.getApogyAddonsROSImagingFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Convert To EImage</b></em>' operation.
@@ -275,7 +275,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE = eINSTANCE.getSymphony__AddonsROSImagingFacade__ConvertToEImage__Image();
+		EOperation APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__IMAGE = eINSTANCE.getApogyAddonsROSImagingFacade__ConvertToEImage__Image();
 
 		/**
 		 * The meta object literal for the '<em><b>Convert To EImage</b></em>' operation.
@@ -283,7 +283,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE = eINSTANCE.getSymphony__AddonsROSImagingFacade__ConvertToEImage__CompressedImage();
+		EOperation APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_EIMAGE__COMPRESSEDIMAGE = eINSTANCE.getApogyAddonsROSImagingFacade__ConvertToEImage__CompressedImage();
 
 		/**
 		 * The meta object literal for the '<em><b>Convert To Compressed Image</b></em>' operation.
@@ -291,7 +291,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE = eINSTANCE.getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode();
+		EOperation APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__EIMAGE_CONNECTEDNODE = eINSTANCE.getApogyAddonsROSImagingFacade__ConvertToCompressedImage__EImage_ConnectedNode();
 
 		/**
 		 * The meta object literal for the '<em><b>Convert To Compressed Image</b></em>' operation.
@@ -299,14 +299,14 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE = eINSTANCE.getSymphony__AddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode();
+		EOperation APOGY_ADDONS_ROS_IMAGING_FACADE___CONVERT_TO_COMPRESSED_IMAGE__IMAGEDATA_CONNECTEDNODE = eINSTANCE.getApogyAddonsROSImagingFacade__ConvertToCompressedImage__ImageData_ConnectedNode();
 
 		/**
 		 * The meta object literal for the '<em>Image</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see sensor_msgs.Image
-		 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getImage()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getImage()
 		 * @generated
 		 */
 		EDataType IMAGE = eINSTANCE.getImage();
@@ -316,7 +316,7 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see sensor_msgs.CompressedImage
-		 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getCompressedImage()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getCompressedImage()
 		 * @generated
 		 */
 		EDataType COMPRESSED_IMAGE = eINSTANCE.getCompressedImage();
@@ -326,11 +326,11 @@ public interface Symphony__AddonsROSImagingPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see org.ros.node.ConnectedNode
-		 * @see org.eclipse.symphony.addons.ros.imaging.impl.Symphony__AddonsROSImagingPackageImpl#getConnectedNode()
+		 * @see ca.gc.asc_csa.apogy.addons.ros.imaging.impl.ApogyAddonsROSImagingPackageImpl#getConnectedNode()
 		 * @generated
 		 */
 		EDataType CONNECTED_NODE = eINSTANCE.getConnectedNode();
 
 	}
 
-} //Symphony__AddonsROSImagingPackage
+} //ApogyAddonsROSImagingPackage

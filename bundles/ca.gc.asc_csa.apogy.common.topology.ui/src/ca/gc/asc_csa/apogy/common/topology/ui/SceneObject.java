@@ -1,10 +1,10 @@
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Tuple3d;
 
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 public interface SceneObject {
 

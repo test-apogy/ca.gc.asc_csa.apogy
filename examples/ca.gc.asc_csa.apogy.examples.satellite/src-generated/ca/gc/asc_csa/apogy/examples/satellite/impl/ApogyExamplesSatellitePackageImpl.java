@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import java.util.List;
 import java.util.SortedSet;
@@ -18,36 +18,36 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
-import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
-import org.eclipse.symphony.examples.satellite.AbstractConstellation;
-import org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem;
-import org.eclipse.symphony.examples.satellite.AbstractConstellationRequest;
-import org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.ConstellationCommandPlan;
-import org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem;
-import org.eclipse.symphony.examples.satellite.ConstellationDownlink;
-import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList;
-import org.eclipse.symphony.examples.satellite.ConstellationRequestPriority;
-import org.eclipse.symphony.examples.satellite.ConstellationRequestStatus;
-import org.eclipse.symphony.examples.satellite.ConstellationRequestsList;
-import org.eclipse.symphony.examples.satellite.ConstellationUtilities;
-import org.eclipse.symphony.examples.satellite.DefaultConstellation;
-import org.eclipse.symphony.examples.satellite.ImageConstellationRequest;
-import org.eclipse.symphony.examples.satellite.OrbitalImage;
-import org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem;
-import org.eclipse.symphony.examples.satellite.Satellite;
-import org.eclipse.symphony.examples.satellite.SatellitesList;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.AbstractSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlan;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationCommandPlanItem;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlink;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationDownlinksList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestPriority;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestStatus;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationRequestsList;
+import ca.gc.asc_csa.apogy.examples.satellite.ConstellationUtilities;
+import ca.gc.asc_csa.apogy.examples.satellite.DefaultConstellation;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
+import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImageConstellationDownlinkItem;
+import ca.gc.asc_csa.apogy.examples.satellite.Satellite;
+import ca.gc.asc_csa.apogy.examples.satellite.SatellitesList;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl implements Symphony__ExamplesSatellitePackage {
+public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements ApogyExamplesSatellitePackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,12 +214,12 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__ExamplesSatellitePackageImpl() {
-		super(eNS_URI, Symphony__ExamplesSatelliteFactory.eINSTANCE);
+	private ApogyExamplesSatellitePackageImpl() {
+		super(eNS_URI, ApogyExamplesSatelliteFactory.eINSTANCE);
 	}
 
 	/**
@@ -232,7 +232,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesSatellitePackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesSatellitePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,30 +241,30 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__ExamplesSatellitePackage init() {
-		if (isInited) return (Symphony__ExamplesSatellitePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesSatellitePackage.eNS_URI);
+	public static ApogyExamplesSatellitePackage init() {
+		if (isInited) return (ApogyExamplesSatellitePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesSatellitePackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesSatellitePackageImpl theSymphony__ExamplesSatellitePackage = (Symphony__ExamplesSatellitePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesSatellitePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesSatellitePackageImpl());
+		ApogyExamplesSatellitePackageImpl theApogyExamplesSatellitePackage = (ApogyExamplesSatellitePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesSatellitePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesSatellitePackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CoreEnvironmentOrbitEarthPackage.eINSTANCE.eClass();
+		ApogyCoreEnvironmentOrbitEarthPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesSatellitePackage.createPackageContents();
+		theApogyExamplesSatellitePackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesSatellitePackage.initializePackageContents();
+		theApogyExamplesSatellitePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesSatellitePackage.freeze();
+		theApogyExamplesSatellitePackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesSatellitePackage.eNS_URI, theSymphony__ExamplesSatellitePackage);
-		return theSymphony__ExamplesSatellitePackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesSatellitePackage.eNS_URI, theApogyExamplesSatellitePackage);
+		return theApogyExamplesSatellitePackage;
 	}
 
 	/**
@@ -776,8 +776,8 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesSatelliteFactory getSymphony__ExamplesSatelliteFactory() {
-		return (Symphony__ExamplesSatelliteFactory)getEFactoryInstance();
+	public ApogyExamplesSatelliteFactory getApogyExamplesSatelliteFactory() {
+		return (ApogyExamplesSatelliteFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -901,12 +901,12 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CoreEnvironmentOrbitEarthPackage theSymphony__CoreEnvironmentOrbitEarthPackage = (Symphony__CoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentOrbitEarthPackage.eNS_URI);
+		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Symphony__CoreEnvironmentPackage theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
-		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		Symphony__CoreEnvironmentOrbitPackage theSymphony__CoreEnvironmentOrbitPackage = (Symphony__CoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentOrbitPackage.eNS_URI);
-		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCoreEnvironmentOrbitPackage theApogyCoreEnvironmentOrbitPackage = (ApogyCoreEnvironmentOrbitPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitPackage.eNS_URI);
+		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -917,20 +917,20 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		// Add supertypes to classes
 		defaultConstellationEClass.getESuperTypes().add(this.getAbstractConstellation());
 		imageConstellationRequestEClass.getESuperTypes().add(this.getAbstractConstellationRequest());
-		imageConstellationRequestEClass.getESuperTypes().add(theSymphony__CoreEnvironmentPackage.getGeographicCoordinates());
-		satelliteEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		abstractSatelliteCommandEClass.getESuperTypes().add(theSymphony__CoreEnvironmentPackage.getGeographicCoordinates());
-		abstractSatelliteCommandEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		imageConstellationRequestEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		satelliteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractSatelliteCommandEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		abstractSatelliteCommandEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		acquireImageSatelliteCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
-		orbitalImageEClass.getESuperTypes().add(theSymphony__CommonImagesPackage.getEImage());
-		constellationDownlinksListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
-		constellationDownlinksListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		orbitalImageEClass.getESuperTypes().add(theApogyCommonImagesPackage.getEImage());
+		constellationDownlinksListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		constellationDownlinksListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		orbitalImageConstellationDownlinkItemEClass.getESuperTypes().add(this.getAbstractConstellationDownlinkItem());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractConstellationEClass, AbstractConstellation.class, "AbstractConstellation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractConstellation_SatellitesList(), this.getSatellitesList(), null, "satellitesList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractConstellation_GroundStationsReferencesList(), theSymphony__CoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractConstellation_GroundStationsReferencesList(), theApogyCoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellation_DownlinksLists(), this.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellation_ConstellationRequestsList(), this.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -998,7 +998,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		initEReference(getSatellitesList_Satellites(), this.getSatellite(), null, "satellites", null, 0, -1, SatellitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(satelliteEClass, Satellite.class, "Satellite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSatellite_OrbitModel(), theSymphony__CoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSatellite_OrbitModel(), theApogyCoreEnvironmentOrbitPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSatellite_MaximumRollRate(), theEcorePackage.getEDouble(), "maximumRollRate", "0.017452778", 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSatellite_MaximumRoll(), theEcorePackage.getEDouble(), "maximumRoll", "0.087", 0, 1, Satellite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1010,7 +1010,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		initEAttribute(getAcquireImageSatelliteCommand_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, AcquireImageSatelliteCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitalImageEClass, OrbitalImage.class, "OrbitalImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrbitalImage_Coordinates(), theSymphony__CoreEnvironmentPackage.getGeographicCoordinates(), null, "coordinates", null, 1, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitalImage_Coordinates(), theApogyCoreEnvironmentPackage.getGeographicCoordinates(), null, "coordinates", null, 1, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitalImage_RollAngle(), theEcorePackage.getEDouble(), "rollAngle", "0.0", 0, 1, OrbitalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constellationDownlinksListEClass, ConstellationDownlinksList.class, "ConstellationDownlinksList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1073,15 +1073,15 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesSatellite",
+			 "prefix", "ApogyExamplesSatellite",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "Symphony__ExamplesSatellite",
+			 "modelName", "ApogyExamplesSatellite",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.satellite/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.satellite.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.satellite/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.satellite.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples"
 		   });	
 		addAnnotation
 		  (listEDataType, 
@@ -1292,14 +1292,14 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "documentation", "The satellite maximum roll rate.",
-			 "symphony_units", "rad/s"
+			 "apogy_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getSatellite_MaximumRoll(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The satellite maximum roll.",
-			 "symphony_units", "rad"
+			 "apogy_units", "rad"
 		   });	
 		addAnnotation
 		  (abstractSatelliteCommandEClass, 
@@ -1381,4 +1381,4 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		   });
 	}
 
-} //Symphony__ExamplesSatellitePackageImpl
+} //ApogyExamplesSatellitePackageImpl

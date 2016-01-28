@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.antenna.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.antenna.apogy.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,12 +9,12 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyFactory;
-import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaData;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyFactory;
+import ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +22,14 @@ import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaS
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl implements Symphony__ExamplesAntennaSymphonyPackage
+public class ApogyExamplesAntennaApogyPackageImpl extends EPackageImpl implements ApogyExamplesAntennaApogyPackage
 {
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass ptuDishAntennaSymphonySystemApiAdapterEClass = null;
+  private EClass ptuDishAntennaApogySystemApiAdapterEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -49,13 +49,13 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.examples.antenna.apogy.ApogyExamplesAntennaApogyPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-  private Symphony__ExamplesAntennaSymphonyPackageImpl()
+  private ApogyExamplesAntennaApogyPackageImpl()
   {
-		super(eNS_URI, Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE);
+		super(eNS_URI, ApogyExamplesAntennaApogyFactory.eINSTANCE);
 	}
 
   /**
@@ -68,7 +68,7 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
   /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__ExamplesAntennaSymphonyPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyExamplesAntennaApogyPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -77,32 +77,32 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-  public static Symphony__ExamplesAntennaSymphonyPackage init()
+  public static ApogyExamplesAntennaApogyPackage init()
   {
-		if (isInited) return (Symphony__ExamplesAntennaSymphonyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__ExamplesAntennaSymphonyPackage.eNS_URI);
+		if (isInited) return (ApogyExamplesAntennaApogyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyExamplesAntennaApogyPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__ExamplesAntennaSymphonyPackageImpl theSymphony__ExamplesAntennaSymphonyPackage = (Symphony__ExamplesAntennaSymphonyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__ExamplesAntennaSymphonyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__ExamplesAntennaSymphonyPackageImpl());
+		ApogyExamplesAntennaApogyPackageImpl theApogyExamplesAntennaApogyPackage = (ApogyExamplesAntennaApogyPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyExamplesAntennaApogyPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyExamplesAntennaApogyPackageImpl());
 
 		isInited = true;
 
 		// Initialize simple dependencies
-		Symphony__CorePackage.eINSTANCE.eClass();
-		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
+		ApogyCorePackage.eINSTANCE.eClass();
+		ApogyAddonsSensorsFOVPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theSymphony__ExamplesAntennaSymphonyPackage.createPackageContents();
+		theApogyExamplesAntennaApogyPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSymphony__ExamplesAntennaSymphonyPackage.initializePackageContents();
+		theApogyExamplesAntennaApogyPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSymphony__ExamplesAntennaSymphonyPackage.freeze();
+		theApogyExamplesAntennaApogyPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__ExamplesAntennaSymphonyPackage.eNS_URI, theSymphony__ExamplesAntennaSymphonyPackage);
-		return theSymphony__ExamplesAntennaSymphonyPackage;
+		EPackage.Registry.INSTANCE.put(ApogyExamplesAntennaApogyPackage.eNS_URI, theApogyExamplesAntennaApogyPackage);
+		return theApogyExamplesAntennaApogyPackage;
 	}
 
   /**
@@ -110,9 +110,9 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getPTUDishAntennaSymphonySystemApiAdapter()
+  public EClass getPTUDishAntennaApogySystemApiAdapter()
   {
-		return ptuDishAntennaSymphonySystemApiAdapterEClass;
+		return ptuDishAntennaApogySystemApiAdapterEClass;
 	}
 
   /**
@@ -177,8 +177,8 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__ExamplesAntennaSymphonyFactory getSymphony__ExamplesAntennaSymphonyFactory() {
-		return (Symphony__ExamplesAntennaSymphonyFactory)getEFactoryInstance();
+	public ApogyExamplesAntennaApogyFactory getApogyExamplesAntennaApogyFactory() {
+		return (ApogyExamplesAntennaApogyFactory)getEFactoryInstance();
 	}
 
 		/**
@@ -201,7 +201,7 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		isCreated = true;
 
 		// Create classes and their features
-		ptuDishAntennaSymphonySystemApiAdapterEClass = createEClass(PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER);
+		ptuDishAntennaApogySystemApiAdapterEClass = createEClass(PTU_DISH_ANTENNA_APOGY_SYSTEM_API_ADAPTER);
 
 		ptuDishAntennaDataEClass = createEClass(PTU_DISH_ANTENNA_DATA);
 		createEReference(ptuDishAntennaDataEClass, PTU_DISH_ANTENNA_DATA__FOV);
@@ -236,8 +236,8 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
-		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
+		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
+		ApogyAddonsSensorsFOVPackage theApogyAddonsSensorsFOVPackage = (ApogyAddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -245,14 +245,14 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		ptuDishAntennaSymphonySystemApiAdapterEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonySystemApiAdapter());
-		ptuDishAntennaDataEClass.getESuperTypes().add(theSymphony__CorePackage.getSymphonyInitializationData());
+		ptuDishAntennaApogySystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
+		ptuDishAntennaDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(ptuDishAntennaSymphonySystemApiAdapterEClass, PTUDishAntennaSymphonySystemApiAdapter.class, "PTUDishAntennaSymphonySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(ptuDishAntennaApogySystemApiAdapterEClass, PTUDishAntennaApogySystemApiAdapter.class, "PTUDishAntennaApogySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(ptuDishAntennaDataEClass, PTUDishAntennaData.class, "PTUDishAntennaData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPTUDishAntennaData_Fov(), theSymphony__AddonsSensorsFOVPackage.getConicalFieldOfView(), null, "fov", null, 1, 1, PTUDishAntennaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPTUDishAntennaData_Fov(), theApogyAddonsSensorsFOVPackage.getConicalFieldOfView(), null, "fov", null, 1, 1, PTUDishAntennaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPTUDishAntennaData_PanAngle(), theEcorePackage.getEDouble(), "panAngle", null, 0, 1, PTUDishAntennaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPTUDishAntennaData_TiltAngle(), theEcorePackage.getEDouble(), "tiltAngle", null, 0, 1, PTUDishAntennaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPTUDishAntennaData_TrackingSun(), theEcorePackage.getEBoolean(), "trackingSun", "false", 0, 1, PTUDishAntennaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -278,27 +278,27 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "Symphony__ExamplesAntennaSymphony",
+			 "prefix", "ApogyExamplesAntennaApogy",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
-			 "modelName", "Symphony__ExamplesAntennaSymphony",
+			 "modelName", "ApogyExamplesAntennaApogy",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.examples.antenna.symphony/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.examples.antenna.symphony.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.examples.antenna"
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.examples.antenna.apogy/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.examples.antenna.apogy.edit/src-generated",
+			 "basePackage", "ca.gc.asc_csa.apogy.examples.antenna"
 		   });	
 		addAnnotation
-		  (ptuDishAntennaSymphonySystemApiAdapterEClass, 
+		  (ptuDishAntennaApogySystemApiAdapterEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "This class is the specialized Symphony API adapter, used for connecting\nthe existing PTU dish antenna example, located at\n{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna},\nto Symphony; one can override the well-known callback functions to make\nSymphony perform a variety of useful functions, including initialization,\ndisposal and other features."
+			 "documentation", "This class is the specialized Apogy API adapter, used for connecting\nthe existing PTU dish antenna example, located at\n{@link ca.gc.asc_csa.apogy.examples.antenna.PTUDishAntenna},\nto Apogy; one can override the well-known callback functions to make\nApogy perform a variety of useful functions, including initialization,\ndisposal and other features."
 		   });	
 		addAnnotation
 		  (ptuDishAntennaDataEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "This class specifies the initialization data that Symphony\nshould be interested in when (re)initializing the PTU dish\nantenna with the API Adapter (which in this case is\n{org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter})"
+			 "documentation", "This class specifies the initialization data that Apogy\nshould be interested in when (re)initializing the PTU dish\nantenna with the API Adapter (which in this case is\n{ca.gc.asc_csa.apogy.examples.antenna.apogy.PTUDishAntennaApogySystemApiAdapter})"
 		   });	
 		addAnnotation
 		  (getPTUDishAntennaData_Fov(), 
@@ -314,7 +314,7 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		   source, 
 		   new String[] {
 			 "documentation", "This is the current pan angle of the dish antenna\'s\nPan-Tilt Unit (PTU).",
-			 "symphony_units", "rad",
+			 "apogy_units", "rad",
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "Pan-Tilt Unit"
@@ -324,7 +324,7 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		   source, 
 		   new String[] {
 			 "documentation", "This is the current tilt angle of the dish antenna\'s\nPan-Tilt Unit (PTU).",
-			 "symphony_units", "rad",
+			 "apogy_units", "rad",
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "Pan-Tilt Unit"
@@ -349,4 +349,4 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		   });
 	}
 
-} //Symphony__ExamplesAntennaSymphonyPackageImpl
+} //ApogyExamplesAntennaApogyPackageImpl

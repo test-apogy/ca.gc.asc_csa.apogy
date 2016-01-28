@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.provider;
+package ca.gc.asc_csa.apogy.core.environment.provider;
 
 
 import java.util.Collection;
@@ -21,13 +21,13 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import ca.gc.asc_csa.apogy.core.environment.SlopeRange;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.SlopeRange} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.SlopeRange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -86,7 +86,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -130,7 +130,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SlopeRange_slopeLowerBound_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SlopeRange_slopeLowerBound_feature", "_UI_SlopeRange_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_LOWER_BOUND,
+				 ApogyCoreEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_LOWER_BOUND,
 				 true,
 				 false,
 				 false,
@@ -152,7 +152,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SlopeRange_slopeUpperBound_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SlopeRange_slopeUpperBound_feature", "_UI_SlopeRange_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_UPPER_BOUND,
+				 ApogyCoreEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_UPPER_BOUND,
 				 true,
 				 false,
 				 false,
@@ -174,7 +174,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SlopeRange_color_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SlopeRange_color_feature", "_UI_SlopeRange_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE__COLOR,
+				 ApogyCoreEnvironmentPackage.Literals.SLOPE_RANGE__COLOR,
 				 true,
 				 false,
 				 false,
@@ -228,11 +228,11 @@ public class SlopeRangeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SlopeRange.class)) {
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
-			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__NAME:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case ApogyCoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

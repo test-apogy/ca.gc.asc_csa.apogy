@@ -4,17 +4,17 @@
  *
  * $Id: ReferencedGroupNodeImpl.java,v 1.16.2.3 2015/02/03 20:01:30 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.impl;
+package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.impl.ReferencedGroupNodeImpl#getReferencedChildren <em>Referenced Children</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.ReferencedGroupNodeImpl#getReferencedChildren <em>Referenced Children</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,7 +54,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyPackage.Literals.REFERENCED_GROUP_NODE;
+		return ApogyCommonTopologyPackage.Literals.REFERENCED_GROUP_NODE;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	public EList<Node> getReferencedChildren() {
 		if (referencedChildren == null) {
 			referencedChildren = new EObjectResolvingEList<Node>(Node.class,
-					this, Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__CHILDREN) {
+					this, ApogyCommonTopologyPackage.REFERENCED_GROUP_NODE__CHILDREN) {
 				/**
 						 * 
 						 */
@@ -147,7 +147,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case ApogyCommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				return getReferencedChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,7 +161,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case ApogyCommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				getReferencedChildren().clear();
 				getReferencedChildren().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -176,7 +176,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case ApogyCommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				getReferencedChildren().clear();
 				return;
 		}
@@ -190,7 +190,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case ApogyCommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				return referencedChildren != null && !referencedChildren.isEmpty();
 		}
 		return super.eIsSet(featureID);

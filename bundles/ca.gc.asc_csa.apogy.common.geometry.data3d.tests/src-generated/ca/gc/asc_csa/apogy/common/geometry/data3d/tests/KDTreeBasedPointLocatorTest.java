@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.textui.TestRunner;
 
@@ -59,7 +59,7 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createKDTreeBasedPointLocator());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createKDTreeBasedPointLocator());
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	@Override
 	public void testAddPoint__CartesianPositionCoordinates() 
 	{
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
 		getFixture().addPoint(p0);
 		assertEquals(1, getFixture().getPoints().size());
 	}
@@ -86,11 +86,11 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
 		
 		points.add(p0);
 		points.add(p1);
@@ -107,11 +107,11 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
 		
 		points.add(p0);
 		points.add(p1);
@@ -130,11 +130,11 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
 		
 		points.add(p0);
 		points.add(p1);
@@ -157,11 +157,11 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
 		
 		points.add(p0);
 		points.add(p1);
@@ -183,11 +183,11 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
 		
 		points.add(p0);
 		points.add(p1);
@@ -197,7 +197,7 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 		
 		getFixture().addPoints(points);
 				
-		CartesianPositionCoordinates closestPoint = getFixture().findClosestPoint(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.9,  0.9,  0.9));		
+		CartesianPositionCoordinates closestPoint = getFixture().findClosestPoint(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.9,  0.9,  0.9));		
 		assertEquals(p3, closestPoint);		
 	}
 	
@@ -206,11 +206,11 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
 		
 		points.add(p0);
 		points.add(p1);
@@ -220,7 +220,7 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 		
 		getFixture().addPoints(points);
 		
-		List<CartesianPositionCoordinates> closest = getFixture().findClosestPoints(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0), 3);
+		List<CartesianPositionCoordinates> closest = getFixture().findClosestPoints(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0), 3);
 		
 		assertEquals(3, closest.size());
 		assertEquals(p0, closest.get(0));
@@ -233,11 +233,11 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 	{
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
-		CartesianPositionCoordinates p4 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,0,0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1,1,1);
+		CartesianPositionCoordinates p4 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-1,-1,-2);
 		
 		points.add(p0);
 		points.add(p1);
@@ -248,7 +248,7 @@ public class KDTreeBasedPointLocatorTest extends PointLocatorTest {
 		getFixture().addPoints(points);
 		
 		double radius = Math.sqrt(2.0) + 0.1;
-		List<CartesianPositionCoordinates> closest = getFixture().findPointsWithinRadius(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0), radius);
+		List<CartesianPositionCoordinates> closest = getFixture().findPointsWithinRadius(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0,0,0), radius);
 		
 		assertEquals(3, closest.size());
 		assertEquals(p0, closest.get(0));

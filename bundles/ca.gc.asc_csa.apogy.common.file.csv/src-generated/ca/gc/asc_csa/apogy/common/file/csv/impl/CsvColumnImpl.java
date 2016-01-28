@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.impl;
+package ca.gc.asc_csa.apogy.common.file.csv.impl;
 
 import java.util.Map;
 
@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.file.csv.CsvColumn;
-import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
+import ca.gc.asc_csa.apogy.common.file.csv.CsvColumn;
+import ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,9 +22,9 @@ import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl#getValues <em>Values</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.file.csv.impl.CsvColumnImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -96,7 +96,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN;
+		return ApogyCommonFileCSVPackage.Literals.CSV_COLUMN;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 			values = (Map.Entry<Integer, Object>)eResolveProxy(oldValues);
 			if (values != oldValues) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES, oldValues, values));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCommonFileCSVPackage.CSV_COLUMN__VALUES, oldValues, values));
 			}
 		}
 		return values;
@@ -135,7 +135,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 		Map.Entry<Integer, Object> oldValues = values;
 		values = newValues;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES, oldValues, values));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonFileCSVPackage.CSV_COLUMN__VALUES, oldValues, values));
 	}
 
 	/**
@@ -156,7 +156,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonFileCSVPackage.CSV_COLUMN__NAME, oldName, name));
 	}
 
 	/**
@@ -177,7 +177,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonFileCSVPackage.CSV_COLUMN__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -188,12 +188,12 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__VALUES:
 				if (resolve) return getValues();
 				return basicGetValues();
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__NAME:
 				return getName();
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -208,13 +208,13 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__VALUES:
 				setValues((Map.Entry<Integer, Object>)newValue);
 				return;
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__NAME:
 				setName((String)newValue);
 				return;
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -229,13 +229,13 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__VALUES:
 				setValues((Map.Entry<Integer, Object>)null);
 				return;
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -250,11 +250,11 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__VALUES:
 				return values != null;
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
+			case ApogyCommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);

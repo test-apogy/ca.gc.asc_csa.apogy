@@ -1,13 +1,13 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.ui;
+package ca.gc.asc_csa.apogy.common.topology.ui;
 
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,19 +18,19 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getGraphicsContext <em>Graphics Context</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodePresentationList <em>Node Presentation List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getGraphicsContext <em>Graphics Context</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet()
+ * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getTopologyPresentationSet()
  * @model
  * @generated
  */
 public interface TopologyPresentationSet extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Topology Presentation Registry</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -38,15 +38,15 @@ public interface TopologyPresentationSet extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Presentation Registry</em>' container reference.
 	 * @see #setTopologyPresentationRegistry(TopologyPresentationRegistry)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet_TopologyPresentationRegistry()
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getTopologyPresentationSet_TopologyPresentationRegistry()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList
 	 * @model opposite="topologyPresentationSetList" transient="false"
 	 * @generated
 	 */
 	TopologyPresentationRegistry getTopologyPresentationRegistry();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Topology Presentation Registry</em>' container reference.
@@ -57,7 +57,7 @@ public interface TopologyPresentationSet extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Graphics Context</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -65,15 +65,15 @@ public interface TopologyPresentationSet extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Graphics Context</em>' reference.
 	 * @see #setGraphicsContext(GraphicsContext)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet_GraphicsContext()
-	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopologyPresentationSet
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getTopologyPresentationSet_GraphicsContext()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext#getTopologyPresentationSet
 	 * @model opposite="topologyPresentationSet"
 	 * @generated
 	 */
 	GraphicsContext getGraphicsContext();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getGraphicsContext <em>Graphics Context</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getGraphicsContext <em>Graphics Context</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Graphics Context</em>' reference.
@@ -84,16 +84,16 @@ public interface TopologyPresentationSet extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Node Presentation List</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.topology.ui.NodePresentation}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation}.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getTopologyPresentationSet <em>Topology Presentation Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The list of NodePresentation managed by this PresentationTopology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node Presentation List</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet_NodePresentationList()
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getTopologyPresentationSet
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getTopologyPresentationSet_NodePresentationList()
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation#getTopologyPresentationSet
 	 * @model opposite="topologyPresentationSet"
 	 * @generated
 	 */
@@ -119,7 +119,7 @@ public interface TopologyPresentationSet extends EObject {
 	 * Returns the list of Nodes managed by this PresentationTopology.
 	 * @return The list of Nodes. Never null.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.common.topology.ui.List<org.eclipse.symphony.common.topology.Node>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.topology.ui.List<ca.gc.asc_csa.apogy.common.topology.Node>" unique="false" many="false"
 	 * @generated
 	 */
 	List<Node> getNodes();

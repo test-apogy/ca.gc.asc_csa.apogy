@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui;
 
 
 /**
@@ -17,11 +17,11 @@ package org.eclipse.symphony.core.environment.ui;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleLength <em>Vehicle Length</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleLength <em>Vehicle Length</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVehicleVariableAnnotation()
+ * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVehicleVariableAnnotation()
  * @model
  * @generated
  */
@@ -37,15 +37,15 @@ public interface VehicleVariableAnnotation extends PoseVariableAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vehicle Length</em>' attribute.
 	 * @see #setVehicleLength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleLength()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleLength()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VEHICLE_DIMENSIONS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VEHICLE_DIMENSIONS' apogy_units='m'"
 	 * @generated
 	 */
   double getVehicleLength();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleLength <em>Vehicle Length</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleLength <em>Vehicle Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vehicle Length</em>' attribute.
@@ -64,15 +64,15 @@ public interface VehicleVariableAnnotation extends PoseVariableAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vehicle Width</em>' attribute.
 	 * @see #setVehicleWidth(double)
-	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleWidth()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleWidth()
 	 * @model default="0.5" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VEHICLE_DIMENSIONS' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VEHICLE_DIMENSIONS' apogy_units='m'"
 	 * @generated
 	 */
   double getVehicleWidth();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Vehicle Width</em>' attribute.

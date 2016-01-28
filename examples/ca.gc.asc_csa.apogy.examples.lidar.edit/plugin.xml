@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_lidar -->
+      <!-- @generated apogy_examples_lidar -->
       <factory
-            uri="org.eclipse.symphony.examples.lidar"
-            class="org.eclipse.symphony.examples.lidar.provider.Symphony__ExamplesLidarItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.lidar"
+            class="ca.gc.asc_csa.apogy.examples.lidar.provider.ApogyExamplesLidarItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,10 +21,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_lidar -->
+      <!-- @generated apogy_examples_lidar -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.lidar.provider.Symphony__ExamplesLidarItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.examples.lidar.provider.ApogyExamplesLidarItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

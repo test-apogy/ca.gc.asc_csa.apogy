@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import java.util.Date;
 import java.util.List;
@@ -9,13 +9,13 @@ import java.util.SortedSet;
 
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.Matrix3x3;
-import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
-import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
-import org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthFacadeImpl;
+import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedPVACoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.ApogyCoreEnvironmentOrbitEarthFacadeImpl;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
 import org.orekit.orbits.KeplerianOrbit;
@@ -29,13 +29,13 @@ import org.orekit.utils.TimeStampedPVCoordinates;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSymphony__CoreEnvironmentOrbitEarthFacade()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getApogyCoreEnvironmentOrbitEarthFacade()
  * @model
  * @generated
  */
-public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject 
+public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject 
 {
-	public static Symphony__CoreEnvironmentOrbitEarthFacade INSTANCE = Symphony__CoreEnvironmentOrbitEarthFacadeImpl.getInstance();
+	public static ApogyCoreEnvironmentOrbitEarthFacade INSTANCE = ApogyCoreEnvironmentOrbitEarthFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m³/s².
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m\263/s\262'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m\263/s\262'"
 	 * @generated
 	 */
 	double getMu();
@@ -58,7 +58,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param date A date.
 	 * @return The AbsoluteDate (OreKit type) for the specified date.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.orbit.earth.AbsoluteDate" unique="false" dateUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbsoluteDate" unique="false" dateUnique="false"
 	 * @generated
 	 */
 	AbsoluteDate createAbsoluteDate(Date date);
@@ -69,7 +69,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Creates an Date from a AbsoluteDate.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" absoluteDateDataType="org.eclipse.symphony.core.environment.orbit.earth.AbsoluteDate" absoluteDateUnique="false"
+	 * @model unique="false" absoluteDateDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.AbsoluteDate" absoluteDateUnique="false"
 	 * @generated
 	 */
 	Date createDate(AbsoluteDate absoluteDate);
@@ -87,9 +87,9 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @return The EarthSurfaceLocation.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" nameUnique="false" descriptionUnique="false" longitudeUnique="false"
-	 *        longitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" latitudeUnique="false"
-	 *        latitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" elevationUnique="false"
-	 *        elevationAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        longitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" latitudeUnique="false"
+	 *        latitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" elevationUnique="false"
+	 *        elevationAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, double longitude, double latitude, double elevation);
@@ -101,7 +101,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Create an OreKitBackedFrame based on an OreKit frame.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" oreKitFrameDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitFrame" oreKitFrameUnique="false"
+	 * @model unique="false" oreKitFrameDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitFrame" oreKitFrameUnique="false"
 	 * @generated
 	 */
 	OreKitBackedFrame createOreKitBackedFrame(Frame oreKitFrame);
@@ -112,7 +112,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Returns the geographic sub-point for a given spacecraft state.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" oreKitBackedSpacecraftStateUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" oreKitBackedSpacecraftStateUnique="false"
 	 * @generated
 	 */
 	GeographicCoordinates getSpacecraftEarthSubPoint(OreKitBackedSpacecraftState oreKitBackedSpacecraftState) throws Exception;
@@ -124,8 +124,8 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * Returns the elevation angle of a spacecraft relative
 	 * to a Earth surface location.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getSpacecraftElevationAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception;
@@ -137,8 +137,8 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * Returns the azimuth angle (relative to North) of a
 	 * spacecraft at a Earth surface location.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'"
 	 * @generated
 	 */
 	double getSpacecraftAzimuthAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception;
@@ -149,8 +149,8 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * <!-- begin-model-doc -->
 	 * Returns the distance between spacecraft and a specified target.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
 	 * @generated
 	 */
 	double getRange(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception;
@@ -158,7 +158,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" orbitUnique="false" oreKitSpacecraftStateDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitSpacecraftState" oreKitSpacecraftStateUnique="false"
+	 * @model unique="false" orbitUnique="false" oreKitSpacecraftStateDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitSpacecraftState" oreKitSpacecraftStateUnique="false"
 	 * @generated
 	 */
 	SpacecraftState createSpacecraftState(Orbit orbit, org.orekit.propagation.SpacecraftState oreKitSpacecraftState);
@@ -166,7 +166,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" orbitUnique="false" oreKitSpacecraftStateDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitSpacecraftState" oreKitSpacecraftStateUnique="false"
+	 * @model unique="false" orbitUnique="false" oreKitSpacecraftStateDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitSpacecraftState" oreKitSpacecraftStateUnique="false"
 	 * @generated
 	 */
 	OreKitBackedSpacecraftState createOreKitBackedSpacecraftState(Orbit orbit, org.orekit.propagation.SpacecraftState oreKitSpacecraftState);
@@ -174,7 +174,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" oreKitTimeStampedPVCoordinatesDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitTimeStampedPVCoordinates" oreKitTimeStampedPVCoordinatesUnique="false"
+	 * @model unique="false" oreKitTimeStampedPVCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitTimeStampedPVCoordinates" oreKitTimeStampedPVCoordinatesUnique="false"
 	 * @generated
 	 */
 	TimedStampedPVACoordinates createTimedStampedPVACoordinates(TimeStampedPVCoordinates oreKitTimeStampedPVCoordinates);
@@ -182,7 +182,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" oreKitTimeStampedAngularCoordinatesDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitTimeStampedAngularCoordinates" oreKitTimeStampedAngularCoordinatesUnique="false"
+	 * @model unique="false" oreKitTimeStampedAngularCoordinatesDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitTimeStampedAngularCoordinates" oreKitTimeStampedAngularCoordinatesUnique="false"
 	 * @generated
 	 */
 	TimedStampedAngularCoordinates createTimedStampedAngularCoordinates(TimeStampedAngularCoordinates oreKitTimeStampedAngularCoordinates);
@@ -190,7 +190,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" rotationDataType="org.eclipse.symphony.core.environment.orbit.earth.Rotation" rotationUnique="false"
+	 * @model unique="false" rotationDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Rotation" rotationUnique="false"
 	 * @generated
 	 */
 	Matrix3x3 createMatrix3x3(Rotation rotation);
@@ -198,7 +198,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.orbit.earth.Rotation" unique="false" matrix3x3Unique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Rotation" unique="false" matrix3x3Unique="false"
 	 * @generated
 	 */
 	Rotation createRotation(Matrix3x3 matrix3x3);
@@ -211,7 +211,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param earthOrbitPropagator The EarthOrbitPropagator.
 	 * @return A KeplerianEarthOrbit representing the initial orbit of the propagator.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" earthOrbitPropagatorUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" earthOrbitPropagatorUnique="false"
 	 * @generated
 	 */
 	KeplerianEarthOrbit createKeplerianOrbit(EarthOrbitPropagator earthOrbitPropagator) throws Exception;
@@ -224,7 +224,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param earthOrbitPropagator The EarthOrbitPropagator.
 	 * @return A CartesianEarthOrbit representing the initial orbit of the propagator.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" earthOrbitPropagatorUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" earthOrbitPropagatorUnique="false"
 	 * @generated
 	 */
 	CartesianEarthOrbit createCartesianEarthOrbit(EarthOrbitPropagator earthOrbitPropagator) throws Exception;
@@ -237,7 +237,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param oreKitKeplerianOrbit The OreKit Keplerian Orbit.
 	 * @return the associated KeplerianEarthOrbit.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" oreKitKeplerianOrbitDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitKeplerianOrbit" oreKitKeplerianOrbitUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" oreKitKeplerianOrbitDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitKeplerianOrbit" oreKitKeplerianOrbitUnique="false"
 	 * @generated
 	 */
 	KeplerianEarthOrbit createKeplerianOrbit(KeplerianOrbit oreKitKeplerianOrbit) throws Exception;
@@ -250,7 +250,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param oreKitKeplerianOrbit The OreKit Cartesian Orbit.
 	 * @return the associated CartesianEarthOrbit.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" oreKitCartesianOrbitDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitCartesianOrbit" oreKitCartesianOrbitUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" oreKitCartesianOrbitDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitCartesianOrbit" oreKitCartesianOrbitUnique="false"
 	 * @generated
 	 */
 	CartesianEarthOrbit createCartesianEarthOrbit(CartesianOrbit oreKitCartesianOrbit) throws Exception;
@@ -263,7 +263,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param oreKitBackedSpacecraftState The OreKit SpacecraftState.
 	 * @return the associated GeographicCoordinates.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" oreKitBackedSpacecraftStateUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" oreKitBackedSpacecraftStateUnique="false"
 	 * @generated
 	 */
 	GeographicCoordinates convertToGeographicCoordinates(OreKitBackedSpacecraftState oreKitBackedSpacecraftState) throws Exception;
@@ -277,7 +277,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param passes The list of VisibilityPass.
 	 * @return the SortedSet of VisibilityPass.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.orbit.earth.SortedSet<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>" unique="false" passesDataType="org.eclipse.symphony.core.environment.orbit.earth.List<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>" passesUnique="false" passesMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.SortedSet<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" passesDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" passesUnique="false" passesMany="false"
 	 * @generated
 	 */
 	SortedSet<VisibilityPass> getVisibilityPassSortedByStartDate(List<VisibilityPass> passes);
@@ -291,7 +291,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param passes The list of VisibilityPass.
 	 * @return the SortedSet of VisibilityPass.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.orbit.earth.SortedSet<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>" unique="false" passesDataType="org.eclipse.symphony.core.environment.orbit.earth.List<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>" passesUnique="false" passesMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.SortedSet<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" passesDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" passesUnique="false" passesMany="false"
 	 * @generated
 	 */
 	SortedSet<VisibilityPass> getVisibilityPassSortedByDuration(List<VisibilityPass> passes);
@@ -305,7 +305,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param passes The list of VisibilityPassSpacecraftPosition.
 	 * @return the SortedSet of VisibilityPassSpacecraftPosition.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.orbit.earth.SortedSet<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" unique="false" positionsDataType="org.eclipse.symphony.core.environment.orbit.earth.List<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" positionsUnique="false" positionsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.SortedSet<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" unique="false" positionsDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" positionsUnique="false" positionsMany="false"
 	 * @generated
 	 */
 	SortedSet<VisibilityPassSpacecraftPosition> getVisibilityPassSpacecraftPositionSortedByElevation(List<VisibilityPassSpacecraftPosition> positions);
@@ -319,7 +319,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param passes The list of VisibilityPassSpacecraftPosition.
 	 * @return the SortedSet of VisibilityPassSpacecraftPosition.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.core.environment.orbit.earth.SortedSet<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" unique="false" positionsDataType="org.eclipse.symphony.core.environment.orbit.earth.List<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" positionsUnique="false" positionsMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.SortedSet<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" unique="false" positionsDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition>" positionsUnique="false" positionsMany="false"
 	 * @generated
 	 */
 	SortedSet<VisibilityPassSpacecraftPosition> getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle(List<VisibilityPassSpacecraftPosition> positions);
@@ -333,7 +333,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param url The URL as a String.
 	 * @return The loaded TLE
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" urlUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" urlUnique="false"
 	 * @generated
 	 */
 	TLE loadTLE(String url) throws Exception;
@@ -347,9 +347,9 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param tle The Two-Line Element defining the propagator.
 	 * @return The TLEEarthOrbitPropagator.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" tleUnique="false"
+	 * @model unique="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" tleUnique="false"
 	 * @generated
 	 */
 	TLEEarthOrbitPropagator createTLEEarthOrbitPropagator(TLE tle) throws Exception;
 
-} // Symphony__CoreEnvironmentOrbitEarthFacade
+} // ApogyCoreEnvironmentOrbitEarthFacade

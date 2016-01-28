@@ -1,27 +1,27 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.camera.util;
+package ca.gc.asc_csa.apogy.examples.camera.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.examples.camera.Camera;
-import org.eclipse.symphony.examples.camera.CameraSimulated;
-import org.eclipse.symphony.examples.camera.CameraStub;
-import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
-import org.eclipse.symphony.examples.camera.PTUCamera;
-import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
-import org.eclipse.symphony.examples.camera.PTUCameraStub;
+import ca.gc.asc_csa.apogy.addons.actuators.AbstractActuator;
+import ca.gc.asc_csa.apogy.addons.actuators.PanTiltUnit;
+import ca.gc.asc_csa.apogy.addons.sensors.Sensor;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.AbstractCamera;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.Zoomable;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.examples.camera.Camera;
+import ca.gc.asc_csa.apogy.examples.camera.CameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.CameraStub;
+import ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCamera;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraSimulated;
+import ca.gc.asc_csa.apogy.examples.camera.PTUCameraStub;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,10 +33,10 @@ import org.eclipse.symphony.examples.camera.PTUCameraStub;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage
+ * @see ca.gc.asc_csa.apogy.examples.camera.ApogyExamplesCameraPackage
  * @generated
  */
-public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
+public class ApogyExamplesCameraSwitch<T> extends Switch<T>
 {
   /**
 	 * The cached model package
@@ -44,7 +44,7 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__ExamplesCameraPackage modelPackage;
+  protected static ApogyExamplesCameraPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -52,10 +52,10 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__ExamplesCameraSwitch()
+  public ApogyExamplesCameraSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__ExamplesCameraPackage.eINSTANCE;
+			modelPackage = ApogyExamplesCameraPackage.eINSTANCE;
 		}
 	}
 
@@ -84,7 +84,7 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__ExamplesCameraPackage.CAMERA: {
+			case ApogyExamplesCameraPackage.CAMERA: {
 				Camera camera = (Camera)theEObject;
 				T result = caseCamera(camera);
 				if (result == null) result = caseAbstractCamera(camera);
@@ -97,7 +97,7 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesCameraPackage.CAMERA_STUB: {
+			case ApogyExamplesCameraPackage.CAMERA_STUB: {
 				CameraStub cameraStub = (CameraStub)theEObject;
 				T result = caseCameraStub(cameraStub);
 				if (result == null) result = caseCamera(cameraStub);
@@ -111,7 +111,7 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesCameraPackage.CAMERA_SIMULATED: {
+			case ApogyExamplesCameraPackage.CAMERA_SIMULATED: {
 				CameraSimulated cameraSimulated = (CameraSimulated)theEObject;
 				T result = caseCameraSimulated(cameraSimulated);
 				if (result == null) result = caseCamera(cameraSimulated);
@@ -125,7 +125,7 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA: {
+			case ApogyExamplesCameraPackage.PTU_CAMERA: {
 				PTUCamera ptuCamera = (PTUCamera)theEObject;
 				T result = casePTUCamera(ptuCamera);
 				if (result == null) result = caseCamera(ptuCamera);
@@ -141,7 +141,7 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_STUB: {
+			case ApogyExamplesCameraPackage.PTU_CAMERA_STUB: {
 				PTUCameraStub ptuCameraStub = (PTUCameraStub)theEObject;
 				T result = casePTUCameraStub(ptuCameraStub);
 				if (result == null) result = caseCameraStub(ptuCameraStub);
@@ -159,7 +159,7 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED: {
+			case ApogyExamplesCameraPackage.PTU_CAMERA_SIMULATED: {
 				PTUCameraSimulated ptuCameraSimulated = (PTUCameraSimulated)theEObject;
 				T result = casePTUCameraSimulated(ptuCameraSimulated);
 				if (result == null) result = caseCameraSimulated(ptuCameraSimulated);
@@ -429,4 +429,4 @@ public class Symphony__ExamplesCameraSwitch<T> extends Switch<T>
 		return null;
 	}
 
-} //Symphony__ExamplesCameraSwitch
+} //ApogyExamplesCameraSwitch

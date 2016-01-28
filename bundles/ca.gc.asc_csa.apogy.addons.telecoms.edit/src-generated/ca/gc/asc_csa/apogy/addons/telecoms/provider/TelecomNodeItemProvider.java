@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.TelecomNode;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.TelecomNode} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -89,7 +89,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_statusMonitorTool_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_statusMonitorTool_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__STATUS_MONITOR_TOOL,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__STATUS_MONITOR_TOOL,
 				 true,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_enabled_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__ENABLED,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__ENABLED,
 				 false,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_name_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__NAME,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__NAME,
 				 true,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_address_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_address_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__ADDRESS,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__ADDRESS,
 				 true,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetsToSend_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetsToSend_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKETS_TO_SEND,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__PACKETS_TO_SEND,
 				 true,
 				 false,
 				 false,
@@ -199,7 +199,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_connectionTimeout_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_connectionTimeout_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__CONNECTION_TIMEOUT,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__CONNECTION_TIMEOUT,
 				 true,
 				 false,
 				 false,
@@ -221,7 +221,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_latencyWarning_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_latencyWarning_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_WARNING,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_WARNING,
 				 true,
 				 false,
 				 false,
@@ -243,7 +243,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_latencyAlarm_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_latencyAlarm_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_ALARM,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_ALARM,
 				 true,
 				 false,
 				 false,
@@ -265,7 +265,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetLossWarning_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetLossWarning_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_WARNING,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_WARNING,
 				 true,
 				 false,
 				 false,
@@ -287,7 +287,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetLossAlarm_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetLossAlarm_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_ALARM,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_ALARM,
 				 true,
 				 false,
 				 false,
@@ -309,7 +309,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_latency_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_latency_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY,
 				 false,
 				 false,
 				 false,
@@ -331,7 +331,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetLoss_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetLoss_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS,
 				 false,
 				 false,
 				 false,
@@ -353,7 +353,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_status_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_status_feature", "_UI_TelecomNode_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__STATUS,
+				 ApogyAddonsTelecomsPackage.Literals.TELECOM_NODE__STATUS,
 				 false,
 				 false,
 				 false,
@@ -400,18 +400,18 @@ public class TelecomNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TelecomNode.class)) {
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ENABLED:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__NAME:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
-			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ENABLED:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__NAME:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__LATENCY:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
+			case ApogyAddonsTelecomsPackage.TELECOM_NODE__STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

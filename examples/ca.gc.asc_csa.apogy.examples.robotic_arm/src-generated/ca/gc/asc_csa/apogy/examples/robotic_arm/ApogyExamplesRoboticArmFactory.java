@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.robotic_arm;
+package ca.gc.asc_csa.apogy.examples.robotic_arm;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage
+ * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage
  * @generated
  */
-public interface Symphony__ExamplesRoboticArmFactory extends EFactory
+public interface ApogyExamplesRoboticArmFactory extends EFactory
 {
 	/**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__ExamplesRoboticArmFactory extends EFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__ExamplesRoboticArmFactory eINSTANCE = org.eclipse.symphony.examples.robotic_arm.impl.Symphony__ExamplesRoboticArmFactoryImpl.init();
+	ApogyExamplesRoboticArmFactory eINSTANCE = ca.gc.asc_csa.apogy.examples.robotic_arm.impl.ApogyExamplesRoboticArmFactoryImpl.init();
 
 	/**
 	 * Returns a new RoboticArm object, which has the same type as
@@ -58,6 +58,6 @@ public interface Symphony__ExamplesRoboticArmFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__ExamplesRoboticArmPackage getSymphony__ExamplesRoboticArmPackage();
+	ApogyExamplesRoboticArmPackage getApogyExamplesRoboticArmPackage();
 
-} //Symphony__ExamplesRoboticArmFactory
+} //ApogyExamplesRoboticArmFactory

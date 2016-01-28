@@ -1,15 +1,15 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.tests;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.tests;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 
 import junit.textui.TestRunner;
 
@@ -59,7 +59,7 @@ public class CartesianTriangleTest extends CartesianPolygonTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle());
+		setFixture(ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle());
 	}
 
 	/**
@@ -76,9 +76,9 @@ public class CartesianTriangleTest extends CartesianPolygonTest {
 	@Override
 	public void testGetNormal() 
 	{
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
 
 		getFixture().getVertices().add(p0);
 		getFixture().getVertices().add(p1);
@@ -92,9 +92,9 @@ public class CartesianTriangleTest extends CartesianPolygonTest {
 	@Override
 	public void testGetSurface() 
 	{
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
 
 		getFixture().getVertices().add(p0);
 		getFixture().getVertices().add(p1);
@@ -106,9 +106,9 @@ public class CartesianTriangleTest extends CartesianPolygonTest {
 	@Override
 	public void testGetCentroid() 
 	{
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 0.0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 1.0, 0.0);
 
 		getFixture().getVertices().add(p0);
 		getFixture().getVertices().add(p1);
@@ -121,13 +121,13 @@ public class CartesianTriangleTest extends CartesianPolygonTest {
 	
 	public void testAddVertices() {
 
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE
 				.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE
 				.createCartesianPositionCoordinates(0.0, 1.0, 0.0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE
 				.createCartesianPositionCoordinates(0.0, 0.0, 1.0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE
 				.createCartesianPositionCoordinates(1.0, 0.0, 1.0);
 
 		getFixture().getVertices().add(p0);
@@ -146,10 +146,10 @@ public class CartesianTriangleTest extends CartesianPolygonTest {
 
 	public void testAddVerticeMany() 
 	{
-		CartesianPositionCoordinates p0 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
-		CartesianPositionCoordinates p1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 1.0, 0.0);
-		CartesianPositionCoordinates p2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 1.0);
-		CartesianPositionCoordinates p3 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 1.0);
+		CartesianPositionCoordinates p0 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 0.0);
+		CartesianPositionCoordinates p1 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 1.0, 0.0);
+		CartesianPositionCoordinates p2 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(0.0, 0.0, 1.0);
+		CartesianPositionCoordinates p3 = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(1.0, 0.0, 1.0);
 
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 

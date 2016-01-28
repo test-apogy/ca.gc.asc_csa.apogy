@@ -1,13 +1,13 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.TimeTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.programs.controllers.TimeTrigger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.TimeTriggerImpl#getRefreshPeriod <em>Refresh Period</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.TimeTriggerImpl#getRefreshPeriod <em>Refresh Period</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,7 +64,7 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
   @Override
   protected EClass eStaticClass()
   {
-		return Symphony__CoreProgramsControllersPackage.Literals.TIME_TRIGGER;
+		return ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER;
 	}
 
   /**
@@ -87,7 +87,7 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
 		long oldRefreshPeriod = refreshPeriod;
 		refreshPeriod = newRefreshPeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD, oldRefreshPeriod, refreshPeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD, oldRefreshPeriod, refreshPeriod));
 	}
 
   /**
@@ -99,7 +99,7 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
+			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				return getRefreshPeriod();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -114,7 +114,7 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
+			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				setRefreshPeriod((Long)newValue);
 				return;
 		}
@@ -130,7 +130,7 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
+			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				setRefreshPeriod(REFRESH_PERIOD_EDEFAULT);
 				return;
 		}
@@ -146,7 +146,7 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
+			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				return refreshPeriod != REFRESH_PERIOD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

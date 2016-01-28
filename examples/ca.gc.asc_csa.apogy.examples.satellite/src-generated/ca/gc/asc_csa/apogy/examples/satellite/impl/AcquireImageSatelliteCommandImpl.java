@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.impl;
+package ca.gc.asc_csa.apogy.examples.satellite.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackag
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl#getRollAngle <em>Roll Angle</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.satellite.impl.AcquireImageSatelliteCommandImpl#getRollAngle <em>Roll Angle</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,7 +62,7 @@ public class AcquireImageSatelliteCommandImpl extends AbstractSatelliteCommandIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesSatellitePackage.Literals.ACQUIRE_IMAGE_SATELLITE_COMMAND;
+		return ApogyExamplesSatellitePackage.Literals.ACQUIRE_IMAGE_SATELLITE_COMMAND;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class AcquireImageSatelliteCommandImpl extends AbstractSatelliteCommandIm
 		double oldRollAngle = rollAngle;
 		rollAngle = newRollAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE, oldRollAngle, rollAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE, oldRollAngle, rollAngle));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class AcquireImageSatelliteCommandImpl extends AbstractSatelliteCommandIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
 				return getRollAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class AcquireImageSatelliteCommandImpl extends AbstractSatelliteCommandIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
 				setRollAngle((Double)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class AcquireImageSatelliteCommandImpl extends AbstractSatelliteCommandIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
 				setRollAngle(ROLL_ANGLE_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class AcquireImageSatelliteCommandImpl extends AbstractSatelliteCommandIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
+			case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE:
 				return rollAngle != ROLL_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

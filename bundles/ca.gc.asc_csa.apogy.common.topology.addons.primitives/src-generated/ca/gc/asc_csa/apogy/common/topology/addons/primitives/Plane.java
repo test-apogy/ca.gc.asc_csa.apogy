@@ -1,11 +1,11 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.topology.addons.primitives;
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives;
 
-import org.eclipse.symphony.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,13 +16,13 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getV0 <em>V0</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getV1 <em>V1</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getWidth <em>Width</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getHeight <em>Height</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getV0 <em>V0</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getV1 <em>V1</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getWidth <em>Width</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getHeight <em>Height</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane()
+ * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPlane()
  * @model
  * @generated
  */
@@ -37,14 +37,14 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>V0</em>' containment reference.
 	 * @see #setV0(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_V0()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPlane_V0()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getV0();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getV0 <em>V0</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getV0 <em>V0</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>V0</em>' containment reference.
@@ -63,14 +63,14 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>V1</em>' containment reference.
 	 * @see #setV1(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_V1()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPlane_V1()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Tuple3d getV1();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getV1 <em>V1</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getV1 <em>V1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>V1</em>' containment reference.
@@ -89,14 +89,14 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_Width()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPlane_Width()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getWidth();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getWidth <em>Width</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getWidth <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Width</em>' attribute.
@@ -115,14 +115,14 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_Height()
+	 * @see ca.gc.asc_csa.apogy.common.topology.addons.primitives.ApogyCommonTopologyAddonsPrimitivesPackage#getPlane_Height()
 	 * @model unique="false"
 	 * @generated
 	 */
 	double getHeight();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getHeight <em>Height</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.topology.addons.primitives.Plane#getHeight <em>Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Height</em>' attribute.

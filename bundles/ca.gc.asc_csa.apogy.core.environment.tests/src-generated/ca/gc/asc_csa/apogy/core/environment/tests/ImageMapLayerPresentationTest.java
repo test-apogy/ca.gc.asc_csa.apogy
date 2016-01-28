@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.tests;
+package ca.gc.asc_csa.apogy.core.environment.tests;
 
-import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
 
@@ -16,10 +16,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation#getImageMapLayer() <em>Get Image Map Layer</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegionImage#getResolution() <em>Get Resolution</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation#getImageMapLayer() <em>Get Image Map Layer</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getResolution() <em>Get Resolution</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -64,7 +64,7 @@ public class ImageMapLayerPresentationTest extends MapLayerPresentationTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation());
+		setFixture(ApogyCoreEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation());
 	}
 
 	/**
@@ -79,25 +79,25 @@ public class ImageMapLayerPresentationTest extends MapLayerPresentationTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation#getImageMapLayer() <em>Get Image Map Layer</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation#getImageMapLayer() <em>Get Image Map Layer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ImageMapLayerPresentation#getImageMapLayer()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ImageMapLayerPresentation#getImageMapLayer()
 	 * @generated_NOT
 	 */
 	public void testGetImageMapLayer() 
 	{
-		ImageMapLayer layer = Symphony__CoreEnvironmentFactory.eINSTANCE.createImageMapLayer();
+		ImageMapLayer layer = ApogyCoreEnvironmentFactory.eINSTANCE.createImageMapLayer();
 		getFixture().setMapLayer(layer);
 		
 		assertNotNull(getFixture().getImageMapLayer());		
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getRegionImage() <em>Get Region Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionImage#getRegionImage()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getRegionImage()
 	 * @generated_NOT
 	 */
 	public void testGetRegionImage() 
@@ -105,10 +105,10 @@ public class ImageMapLayerPresentationTest extends MapLayerPresentationTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegionImage#getResolution() <em>Get Resolution</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getResolution() <em>Get Resolution</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionImage#getResolution()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage#getResolution()
 	 * @generated_NOT
 	 */
 	public void testGetResolution() 
@@ -116,10 +116,10 @@ public class ImageMapLayerPresentationTest extends MapLayerPresentationTest {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion() <em>Get Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.RectangularRegionProvider#getRegion()
+	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider#getRegion()
 	 * @generated_NOT
 	 */
 	public void testGetRegion() 

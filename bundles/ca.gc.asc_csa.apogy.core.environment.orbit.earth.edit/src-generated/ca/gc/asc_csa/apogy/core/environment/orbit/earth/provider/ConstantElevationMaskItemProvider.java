@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth.provider;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 
 import java.util.Collection;
@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -64,7 +64,7 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstantElevationMask_constantElevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstantElevationMask_constantElevation_feature", "_UI_ConstantElevationMask_type"),
-				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION,
+				 ApogyCoreEnvironmentOrbitEarthPackage.Literals.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstantElevationMask.class)) {
-			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
+			case ApogyCoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

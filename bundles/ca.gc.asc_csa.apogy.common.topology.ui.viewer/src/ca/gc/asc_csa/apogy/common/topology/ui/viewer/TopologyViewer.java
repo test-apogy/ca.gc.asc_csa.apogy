@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.viewer;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -17,13 +17,13 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.ui.GraphicsContext;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
 
 /**
  * Base class for TopologyViewer.
@@ -84,9 +84,9 @@ public class TopologyViewer implements ITopologyViewer
 		// Initialize Viewer setting from Preferences				
 		updateSettingFromPreferences();
 		
-		org.eclipse.symphony.common.topology.ui.viewer.Activator.getTopologyViewerRegistry().registerITopologyViewer(this);
+		ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getTopologyViewerRegistry().registerITopologyViewer(this);
 		
-		org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getPropertyChangeListener());
+		ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getPropertyChangeListener());
 	}
 	
 	@Override
@@ -276,8 +276,8 @@ public class TopologyViewer implements ITopologyViewer
 	@Override
 	public void dispose() 
 	{
-		org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().removePropertyChangeListener(getPropertyChangeListener());
-		org.eclipse.symphony.common.topology.ui.viewer.Activator.getTopologyViewerRegistry().unRegisterITopologyViewer(this);
+		ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore().removePropertyChangeListener(getPropertyChangeListener());
+		ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getTopologyViewerRegistry().unRegisterITopologyViewer(this);
 		
 		// Unregister from the GraphicsContext
 		if(graphicsContext != null)
@@ -441,7 +441,7 @@ public class TopologyViewer implements ITopologyViewer
 						int featureId = msg.getFeatureID(TopologyPresentationSet.class);
 						switch (featureId) 
 						{
-							case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST:
+							case ApogyCommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST:
 							{
 								int eventType = msg.getEventType();
 								
@@ -520,7 +520,7 @@ public class TopologyViewer implements ITopologyViewer
 	private void updateSettingFromPreferences()
 	{
 		// Update all viewer preferences.
-		IPreferenceStore store = org.eclipse.symphony.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore();
+		IPreferenceStore store = ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator.getDefault().getPreferenceStore();
 		
 		Integer maxFrameRate = store.getInt(TopologyViewerPreferencesConstants.VIEWER_MAX_FRAME_RATE_ID);
 		if(maxFrameRate != null) setMaximumFrameRate(maximumFrameRate);			

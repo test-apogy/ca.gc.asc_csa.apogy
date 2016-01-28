@@ -1,12 +1,12 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons;
+package ca.gc.asc_csa.apogy.addons;
 
 import javax.vecmath.Matrix4d;
 
-import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,18 +21,18 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition <em>From Absolute Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromRelativePosition <em>From Relative Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromNode <em>From Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isFromNodeLock <em>From Node Lock</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToAbsolutePosition <em>To Absolute Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToRelativePosition <em>To Relative Position</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToNode <em>To Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isToNodeLock <em>To Node Lock</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getDistance <em>Distance</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition <em>From Absolute Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromRelativePosition <em>From Relative Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromNode <em>From Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isFromNodeLock <em>From Node Lock</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToAbsolutePosition <em>To Absolute Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToRelativePosition <em>To Relative Position</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToNode <em>To Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isToNodeLock <em>To Node Lock</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getDistance <em>Distance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool()
+ * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool()
  * @model abstract="true"
  * @generated
  */
@@ -47,7 +47,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Absolute Position</em>' reference.
 	 * @see #setFromAbsolutePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_FromAbsolutePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_FromAbsolutePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='FROM_NODE'"
 	 * @generated
@@ -55,7 +55,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	Tuple3d getFromAbsolutePosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition <em>From Absolute Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition <em>From Absolute Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From Absolute Position</em>' reference.
@@ -74,7 +74,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Relative Position</em>' reference.
 	 * @see #setFromRelativePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_FromRelativePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_FromRelativePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='FROM_NODE'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	Tuple3d getFromRelativePosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromRelativePosition <em>From Relative Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromRelativePosition <em>From Relative Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From Relative Position</em>' reference.
@@ -101,7 +101,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Node</em>' reference.
 	 * @see #setFromNode(Node)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_FromNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_FromNode()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='FROM_NODE'"
 	 * @generated
@@ -109,7 +109,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	Node getFromNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromNode <em>From Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getFromNode <em>From Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From Node</em>' reference.
@@ -129,7 +129,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Node Lock</em>' attribute.
 	 * @see #setFromNodeLock(boolean)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_FromNodeLock()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_FromNodeLock()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FROM_NODE'"
 	 * @generated
@@ -137,7 +137,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	boolean isFromNodeLock();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isFromNodeLock <em>From Node Lock</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isFromNodeLock <em>From Node Lock</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From Node Lock</em>' attribute.
@@ -156,7 +156,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Absolute Position</em>' reference.
 	 * @see #setToAbsolutePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_ToAbsolutePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_ToAbsolutePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='TO_NODE'"
 	 * @generated
@@ -164,7 +164,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	Tuple3d getToAbsolutePosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToAbsolutePosition <em>To Absolute Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToAbsolutePosition <em>To Absolute Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To Absolute Position</em>' reference.
@@ -183,7 +183,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Relative Position</em>' reference.
 	 * @see #setToRelativePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_ToRelativePosition()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_ToRelativePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='TO_NODE'"
 	 * @generated
@@ -191,7 +191,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	Tuple3d getToRelativePosition();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToRelativePosition <em>To Relative Position</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToRelativePosition <em>To Relative Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To Relative Position</em>' reference.
@@ -210,7 +210,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Node</em>' reference.
 	 * @see #setToNode(Node)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_ToNode()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_ToNode()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='TO_NODE'"
 	 * @generated
@@ -218,7 +218,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	Node getToNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getToNode <em>To Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getToNode <em>To Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To Node</em>' reference.
@@ -238,7 +238,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Node Lock</em>' attribute.
 	 * @see #setToNodeLock(boolean)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_ToNodeLock()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_ToNodeLock()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='TO_NODE'"
 	 * @generated
@@ -246,7 +246,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	boolean isToNodeLock();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isToNodeLock <em>To Node Lock</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#isToNodeLock <em>To Node Lock</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To Node Lock</em>' attribute.
@@ -266,15 +266,15 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distance</em>' attribute.
 	 * @see #setDistance(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_Distance()
+	 * @see ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage#getAbstractTwoPoints3DTool_Distance()
 	 * @model default="0" unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' apogy_units='m'"
 	 * @generated
 	 */
 	double getDistance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getDistance <em>Distance</em>}' attribute.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool#getDistance <em>Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Distance</em>' attribute.
@@ -289,7 +289,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- begin-model-doc -->
 	 *  Method called when the pose between from and to changes.
 	 * <!-- end-model-doc -->
-	 * @model newPoseDataType="org.eclipse.symphony.common.math.Matrix4d" newPoseUnique="false"
+	 * @model newPoseDataType="ca.gc.asc_csa.apogy.common.math.Matrix4d" newPoseUnique="false"
 	 * @generated
 	 */
 	void pointsRelativePoseChanged(Matrix4d newPose);

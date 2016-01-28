@@ -4,15 +4,15 @@
  *
  * $Id: AbstractDynamicsEngineImpl.java,v 1.8.2.2 2015/02/03 20:01:37 rlarcheveque Exp $
  */
-package org.eclipse.symphony.common.topology.addons.dynamics.impl;
+package ca.gc.asc_csa.apogy.common.topology.addons.dynamics.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.AbstractDynamicsEngine;
+import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public abstract class AbstractDynamicsEngineImpl extends MinimalEObjectImpl.Cont
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_DYNAMICS_ENGINE;
+		return ApogyCommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_DYNAMICS_ENGINE;
 	}
 
 	/**
@@ -71,10 +71,10 @@ public abstract class AbstractDynamicsEngineImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___START_SIMULATION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___START_SIMULATION:
 				startSimulation();
 				return null;
-			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___STOP_SIMULATION:
+			case ApogyCommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___STOP_SIMULATION:
 				stopSimulation();
 				return null;
 		}

@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated symphony_examples_satellite -->
+      <!-- @generated apogy_examples_satellite -->
       <factory
-            uri="org.eclipse.symphony.examples.satellite"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.examples.satellite"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,19 +21,19 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_satellite -->
+      <!-- @generated apogy_examples_satellite -->
       <extender
-            uri="org.eclipse.symphony.core.environment.orbit.earth"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CoreEnvironmentOrbitEarthChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.environment.orbit.earth"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCoreEnvironmentOrbitEarthChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CoreEnvironmentChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.environment"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCoreEnvironmentChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.images"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CommonImagesChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.images"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCommonImagesChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

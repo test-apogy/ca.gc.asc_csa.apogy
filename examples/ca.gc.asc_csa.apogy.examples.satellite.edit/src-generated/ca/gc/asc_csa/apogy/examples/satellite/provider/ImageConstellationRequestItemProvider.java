@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.examples.satellite.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
 import java.util.Collection;
@@ -17,14 +17,14 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
-import org.eclipse.symphony.examples.satellite.ImageConstellationRequest;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.ImageConstellationRequest} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +71,7 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_longitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_longitude_feature", "_UI_GeographicCoordinates_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
+				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
 				 true,
 				 false,
 				 false,
@@ -93,7 +93,7 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_latitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_latitude_feature", "_UI_GeographicCoordinates_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
+				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
 				 true,
 				 false,
 				 false,
@@ -115,7 +115,7 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_elevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_elevation_feature", "_UI_GeographicCoordinates_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
+				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
 				 true,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST__IMAGE);
+			childrenFeatures.add(ApogyExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST__IMAGE);
 		}
 		return childrenFeatures;
 	}
@@ -190,12 +190,12 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageConstellationRequest.class)) {
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LONGITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__LATITUDE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__ELEVATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
+			case ApogyExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST__IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -215,8 +215,8 @@ public class ImageConstellationRequestItemProvider extends AbstractConstellation
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST__IMAGE,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
+				(ApogyExamplesSatellitePackage.Literals.IMAGE_CONSTELLATION_REQUEST__IMAGE,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 	}
 
 }

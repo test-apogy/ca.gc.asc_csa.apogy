@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.file.csv.impl;
+package ca.gc.asc_csa.apogy.common.file.csv.impl;
 
 import java.util.Map;
 
@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.file.csv.CsvColumn;
-import org.eclipse.symphony.common.file.csv.CsvColumnsSet;
-import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVFactory;
-import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
-import org.eclipse.symphony.common.file.csv.CsvValueProvider;
+import ca.gc.asc_csa.apogy.common.file.csv.CsvColumn;
+import ca.gc.asc_csa.apogy.common.file.csv.CsvColumnsSet;
+import ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVFactory;
+import ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage;
+import ca.gc.asc_csa.apogy.common.file.csv.CsvValueProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.file.csv.CsvValueProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements Symphony__CommonFileCSVPackage {
+public class ApogyCommonFileCSVPackageImpl extends EPackageImpl implements ApogyCommonFileCSVPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,12 +72,12 @@ public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#eNS_URI
+	 * @see ca.gc.asc_csa.apogy.common.file.csv.ApogyCommonFileCSVPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Symphony__CommonFileCSVPackageImpl() {
-		super(eNS_URI, Symphony__CommonFileCSVFactory.eINSTANCE);
+	private ApogyCommonFileCSVPackageImpl() {
+		super(eNS_URI, ApogyCommonFileCSVFactory.eINSTANCE);
 	}
 
 	/**
@@ -90,7 +90,7 @@ public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Symphony__CommonFileCSVPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ApogyCommonFileCSVPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,11 +99,11 @@ public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements 
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Symphony__CommonFileCSVPackage init() {
-		if (isInited) return (Symphony__CommonFileCSVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonFileCSVPackage.eNS_URI);
+	public static ApogyCommonFileCSVPackage init() {
+		if (isInited) return (ApogyCommonFileCSVPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonFileCSVPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Symphony__CommonFileCSVPackageImpl theMRTCsvPackage = (Symphony__CommonFileCSVPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Symphony__CommonFileCSVPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Symphony__CommonFileCSVPackageImpl());
+		ApogyCommonFileCSVPackageImpl theMRTCsvPackage = (ApogyCommonFileCSVPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ApogyCommonFileCSVPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ApogyCommonFileCSVPackageImpl());
 
 		isInited = true;
 
@@ -121,7 +121,7 @@ public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements 
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Symphony__CommonFileCSVPackage.eNS_URI, theMRTCsvPackage);
+		EPackage.Registry.INSTANCE.put(ApogyCommonFileCSVPackage.eNS_URI, theMRTCsvPackage);
 		return theMRTCsvPackage;
 	}
 
@@ -247,8 +247,8 @@ public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonFileCSVFactory getSymphony__CommonFileCSVFactory() {
-		return (Symphony__CommonFileCSVFactory)getEFactoryInstance();
+	public ApogyCommonFileCSVFactory getApogyCommonFileCSVFactory() {
+		return (ApogyCommonFileCSVFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -342,7 +342,7 @@ public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements 
 		addEParameter(op, theEcorePackage.getEJavaObject(), "obj", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
-		initEDataType(csvColumnMapEDataType, Map.class, "CsvColumnMap", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.Map<java.lang.String, org.eclipse.symphony.common.file.csv.CsvColumn>");
+		initEDataType(csvColumnMapEDataType, Map.class, "CsvColumnMap", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.Map<java.lang.String, ca.gc.asc_csa.apogy.common.file.csv.CsvColumn>");
 
 		// Create resource
 		createResource(eNS_URI);
@@ -371,10 +371,10 @@ public class Symphony__CommonFileCSVPackageImpl extends EPackageImpl implements 
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "MRTCsv",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.file.csv/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.file.csv.edit/src-generated",
+			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.file.csv/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.common.file.csv.edit/src-generated",
 			 "basePackage", "ca.gc.space.mrt.common"
 		   });
 	}
 
-} //Symphony__CommonFileCSVPackageImpl
+} //ApogyCommonFileCSVPackageImpl

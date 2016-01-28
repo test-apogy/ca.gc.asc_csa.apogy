@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d;
+package ca.gc.asc_csa.apogy.common.geometry.data3d;
 
 import java.util.List;
 
@@ -26,17 +26,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin <em>Position Markers At Origin</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin <em>Position Markers At Origin</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRigidBodyPoseTracker()
+ * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getRigidBodyPoseTracker()
  * @model
  * @generated
  */
 public interface RigidBodyPoseTracker extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Position Markers At Origin</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.symphony.common.geometry.data3d.PositionMarker}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Position Markers At Origin</em>' reference list isn't clear,
@@ -48,7 +48,7 @@ public interface RigidBodyPoseTracker extends EObject {
 	 * The list of position markers for the rigid body at the origin.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position Markers At Origin</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRigidBodyPoseTracker_PositionMarkersAtOrigin()
+	 * @see ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage#getRigidBodyPoseTracker_PositionMarkersAtOrigin()
 	 * @model changeable="false" derived="true"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface RigidBodyPoseTracker extends EObject {
 	 * @param markerPositionsToTrack The list of position of the marker for which to find the body position.
 	 * @return The position of the rigid body.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Point3d" unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.Exception" markerPositionsToTrackDataType="org.eclipse.symphony.common.geometry.data3d.EList<org.eclipse.symphony.common.geometry.data3d.PositionMarker>" markerPositionsToTrackUnique="false" markerPositionsToTrackMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Point3d" unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.Exception" markerPositionsToTrackDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.EList<ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker>" markerPositionsToTrackUnique="false" markerPositionsToTrackMany="false"
 	 * @generated
 	 */
 	Point3d computeTransformation(EList<PositionMarker> markerPositionsToTrack) throws Exception;
@@ -80,7 +80,7 @@ public interface RigidBodyPoseTracker extends EObject {
 	 * @param markerPositionsToTrack The list of position of the marker for which to find the body pose.
 	 * @return The pose of the rigid body, represented as a 4x4 homogenous matrix.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.Exception" markerPositionsToTrackDataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.PositionMarker>" markerPositionsToTrackUnique="false" markerPositionsToTrackMany="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.common.geometry.data3d.Matrix4d" unique="false" exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.Exception" markerPositionsToTrackDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker>" markerPositionsToTrackUnique="false" markerPositionsToTrackMany="false"
 	 * @generated
 	 */
 	Matrix4d computeTransformation(List<PositionMarker> markerPositionsToTrack) throws Exception;
@@ -93,7 +93,7 @@ public interface RigidBodyPoseTracker extends EObject {
 	 * Adds a list of position marker to the one defining the rigid body.
 	 * @param markers The list of position markers.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.Exception" markersDataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.PositionMarker>" markersUnique="false" markersMany="false"
+	 * @model exceptions="ca.gc.asc_csa.apogy.common.geometry.data3d.Exception" markersDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker>" markersUnique="false" markersMany="false"
 	 * @generated
 	 */
 	void addPositionMarkers(List<PositionMarker> markers) throws Exception;
@@ -106,7 +106,7 @@ public interface RigidBodyPoseTracker extends EObject {
 	 * Removes a list of position marker from the one defining the rigid body.
 	 * @param markers The list of position markers.
 	 * <!-- end-model-doc -->
-	 * @model markersDataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.PositionMarker>" markersUnique="false" markersMany="false"
+	 * @model markersDataType="ca.gc.asc_csa.apogy.common.geometry.data3d.List<ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker>" markersUnique="false" markersMany="false"
 	 * @generated
 	 */
 	void removePositionMarkers(List<PositionMarker> markers);

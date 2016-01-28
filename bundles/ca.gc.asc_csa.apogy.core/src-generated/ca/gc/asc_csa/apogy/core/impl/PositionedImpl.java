@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.impl;
+package ca.gc.asc_csa.apogy.core.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
-import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.Symphony__CorePackage;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.Positioned;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.impl.PositionedImpl#getPose <em>Pose</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.impl.PositionedImpl#getPose <em>Pose</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,7 +54,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CorePackage.Literals.POSITIONED;
+		return ApogyCorePackage.Literals.POSITIONED;
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 		
 		if(tmp == null)
 		{
-			tmp = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
+			tmp = ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 			setPose(tmp);
 		}
 		
@@ -94,7 +94,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 		Matrix4x4 oldPose = pose;
 		pose = newPose;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSITIONED__POSE, oldPose, newPose);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCorePackage.POSITIONED__POSE, oldPose, newPose);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -109,14 +109,14 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 		if (newPose != pose) {
 			NotificationChain msgs = null;
 			if (pose != null)
-				msgs = ((InternalEObject)pose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSITIONED__POSE, null, msgs);
+				msgs = ((InternalEObject)pose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.POSITIONED__POSE, null, msgs);
 			if (newPose != null)
-				msgs = ((InternalEObject)newPose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSITIONED__POSE, null, msgs);
+				msgs = ((InternalEObject)newPose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApogyCorePackage.POSITIONED__POSE, null, msgs);
 			msgs = basicSetPose(newPose, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSITIONED__POSE, newPose, newPose));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCorePackage.POSITIONED__POSE, newPose, newPose));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CorePackage.POSITIONED__POSE:
+			case ApogyCorePackage.POSITIONED__POSE:
 				return basicSetPose(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -141,7 +141,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CorePackage.POSITIONED__POSE:
+			case ApogyCorePackage.POSITIONED__POSE:
 				return getPose();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -155,7 +155,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CorePackage.POSITIONED__POSE:
+			case ApogyCorePackage.POSITIONED__POSE:
 				setPose((Matrix4x4)newValue);
 				return;
 		}
@@ -170,7 +170,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.POSITIONED__POSE:
+			case ApogyCorePackage.POSITIONED__POSE:
 				setPose((Matrix4x4)null);
 				return;
 		}
@@ -185,7 +185,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CorePackage.POSITIONED__POSE:
+			case ApogyCorePackage.POSITIONED__POSE:
 				return pose != null;
 		}
 		return super.eIsSet(featureID);

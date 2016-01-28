@@ -1,9 +1,9 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 
 
 /**
@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshURLMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshURLMapLayer()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface CartesianTriangularMeshURLMapLayer extends CartesianTriangularM
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
 	 * @see #setMesh(CartesianTriangularMesh)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshURLMapLayer_Mesh()
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getCartesianTriangularMeshURLMapLayer_Mesh()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TRIANGULAR_MESH'"
 	 * @generated
@@ -47,7 +47,7 @@ public interface CartesianTriangularMeshURLMapLayer extends CartesianTriangularM
   CartesianTriangularMesh getMesh();
 
   /**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer#getMesh <em>Mesh</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshURLMapLayer#getMesh <em>Mesh</em>}' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mesh</em>' reference.

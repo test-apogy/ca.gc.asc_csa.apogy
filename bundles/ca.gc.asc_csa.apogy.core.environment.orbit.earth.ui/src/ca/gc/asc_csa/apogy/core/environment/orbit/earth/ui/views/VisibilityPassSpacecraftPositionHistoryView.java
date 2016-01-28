@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.environment.orbit.earth.ui.views;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.views;
 
 import java.util.List;
 
@@ -8,13 +8,13 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryAzElComposite;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryComposite;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryRangeComposite;
-import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
-import org.eclipse.symphony.common.ui.views.AbstractView;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryAzElComposite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryComposite;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryRangeComposite;
+import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
+import ca.gc.asc_csa.apogy.common.ui.views.AbstractView;
 
 public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView 
 {	
@@ -59,7 +59,7 @@ public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView
 	@Override
  	public void updateSelection(ISelection selection) 
  	{ 		
-		List<Object> visibilityPassSpacecraftPositionHistories = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, VisibilityPassSpacecraftPositionHistory.class);
+		List<Object> visibilityPassSpacecraftPositionHistories = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, VisibilityPassSpacecraftPositionHistory.class);
 		
 		if(!visibilityPassSpacecraftPositionHistories.isEmpty())
 		{
@@ -68,7 +68,7 @@ public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView
 		} 		
 		else
 		{
-			List<Object> passes = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, VisibilityPass.class);
+			List<Object> passes = ApogyCommonConvertersUIFacade.INSTANCE.convert(selection, VisibilityPass.class);
 			
 			if(!passes.isEmpty())
 			{

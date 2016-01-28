@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.images.ui;
+package ca.gc.asc_csa.apogy.common.images.ui;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -8,10 +8,10 @@ import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.MessageBox;
-import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
 import org.eclipse.ui.progress.UIJob;
 
 public class ImagesUiUtilities {
@@ -34,7 +34,7 @@ public class ImagesUiUtilities {
 		{			
 			try
 			{				
-				EImage image = Symphony__CommonImagesFactory.eINSTANCE.createEImage();				
+				EImage image = ApogyCommonImagesFactory.eINSTANCE.createEImage();				
 				image.setImageContent(EImagesUtilities.INSTANCE.convertToBufferedImage(imageData));
 				if(filename.endsWith(".jpg"))
 				{

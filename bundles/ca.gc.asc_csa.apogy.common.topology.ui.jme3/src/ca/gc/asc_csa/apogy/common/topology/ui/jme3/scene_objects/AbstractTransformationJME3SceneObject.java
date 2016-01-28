@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.jme3.scene_objects;
+package ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,17 +10,17 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.ui.adapters.TransformNodeSceneObject;
-import org.eclipse.symphony.common.topology.ui.jme3.Activator;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.PositionNode;
+import ca.gc.asc_csa.apogy.common.topology.RotationNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.common.topology.ui.adapters.TransformNodeSceneObject;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.math.Transform;
@@ -132,39 +132,39 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 		if(notification.getNotifier() instanceof TransformNode)
 		{
 			int featureId = notification.getFeatureID(TransformNode.class);									
-			if (featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION) 
+			if (featureId == ApogyCommonTopologyPackage.TRANSFORM_NODE__POSITION) 
 			{
 				// Unregister from previous position
-				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
+				if(notification.getOldValue() instanceof ca.gc.asc_csa.apogy.common.math.Tuple3d)
 				{
-					org.eclipse.symphony.common.math.Tuple3d oldValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getOldValue();
+					ca.gc.asc_csa.apogy.common.math.Tuple3d oldValue = (ca.gc.asc_csa.apogy.common.math.Tuple3d) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new position.
-				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
+				if(notification.getNewValue() instanceof ca.gc.asc_csa.apogy.common.math.Tuple3d)
 				{
-					org.eclipse.symphony.common.math.Tuple3d newValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getNewValue();
+					ca.gc.asc_csa.apogy.common.math.Tuple3d newValue = (ca.gc.asc_csa.apogy.common.math.Tuple3d) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}
 			}
-			else if(featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
+			else if(featureId == ApogyCommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
 			{
 				// Unregister from previous matrix
-				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
+				if(notification.getOldValue() instanceof ca.gc.asc_csa.apogy.common.math.Matrix3x3)
 				{
-					org.eclipse.symphony.common.math.Matrix3x3 oldValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getOldValue();
+					ca.gc.asc_csa.apogy.common.math.Matrix3x3 oldValue = (ca.gc.asc_csa.apogy.common.math.Matrix3x3) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new matrix.
-				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
+				if(notification.getNewValue() instanceof ca.gc.asc_csa.apogy.common.math.Matrix3x3)
 				{
-					org.eclipse.symphony.common.math.Matrix3x3 newValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getNewValue();
+					ca.gc.asc_csa.apogy.common.math.Matrix3x3 newValue = (ca.gc.asc_csa.apogy.common.math.Matrix3x3) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}							
 			}
@@ -172,21 +172,21 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 		else if(notification.getNotifier() instanceof RotationNode)
 		{
 			int featureId = notification.getFeatureID(RotationNode.class);									
-			if (featureId == Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX) 
+			if (featureId == ApogyCommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX) 
 			{
 				// Unregister from previous matrix
-				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
+				if(notification.getOldValue() instanceof ca.gc.asc_csa.apogy.common.math.Matrix3x3)
 				{
-					org.eclipse.symphony.common.math.Matrix3x3 oldValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getOldValue();
+					ca.gc.asc_csa.apogy.common.math.Matrix3x3 oldValue = (ca.gc.asc_csa.apogy.common.math.Matrix3x3) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new matrix.
-				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
+				if(notification.getNewValue() instanceof ca.gc.asc_csa.apogy.common.math.Matrix3x3)
 				{
-					org.eclipse.symphony.common.math.Matrix3x3 newValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getNewValue();
+					ca.gc.asc_csa.apogy.common.math.Matrix3x3 newValue = (ca.gc.asc_csa.apogy.common.math.Matrix3x3) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}
 			}
@@ -194,30 +194,30 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 		else if(notification.getNotifier() instanceof PositionNode)
 		{
 			int featureId = notification.getFeatureID(PositionNode.class);									
-			if (featureId == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION) 
+			if (featureId == ApogyCommonTopologyPackage.POSITION_NODE__POSITION) 
 			{
 				// Unregister from previous position
-				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
+				if(notification.getOldValue() instanceof ca.gc.asc_csa.apogy.common.math.Tuple3d)
 				{
-					org.eclipse.symphony.common.math.Tuple3d oldValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getOldValue();
+					ca.gc.asc_csa.apogy.common.math.Tuple3d oldValue = (ca.gc.asc_csa.apogy.common.math.Tuple3d) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new position.
-				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
+				if(notification.getNewValue() instanceof ca.gc.asc_csa.apogy.common.math.Tuple3d)
 				{
-					org.eclipse.symphony.common.math.Tuple3d newValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getNewValue();
+					ca.gc.asc_csa.apogy.common.math.Tuple3d newValue = (ca.gc.asc_csa.apogy.common.math.Tuple3d) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}								
 			}
 		}		
-		else if(notification.getNotifier() instanceof org.eclipse.symphony.common.math.Tuple3d)
+		else if(notification.getNotifier() instanceof ca.gc.asc_csa.apogy.common.math.Tuple3d)
 		{
 			updateTransform();
 		}
-		else if(notification.getNotifier() instanceof org.eclipse.symphony.common.math.Matrix3x3)
+		else if(notification.getNotifier() instanceof ca.gc.asc_csa.apogy.common.math.Matrix3x3)
 		{
 			updateTransform();
 		}

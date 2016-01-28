@@ -1,11 +1,11 @@
-package org.eclipse.symphony.addons.geometry.paths.ui.adapters;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.adapters;
 
-import org.eclipse.symphony.addons.geometry.paths.WayPoint;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIFactory;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPoint;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIFactory;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPresentation;
+import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
 
 public class WayPointPresentationAdapter implements NodePresentationAdapter
 {
@@ -23,7 +23,7 @@ public class WayPointPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 				
-		WayPointPresentation presentationNode = Symphony__AddonsGeometryPathsUIFactory.eINSTANCE.createWayPointPresentation();						
+		WayPointPresentation presentationNode = ApogyAddonsGeometryPathsUIFactory.eINSTANCE.createWayPointPresentation();						
 		presentationNode.setNode((WayPoint) obj);
 		
 		return presentationNode;

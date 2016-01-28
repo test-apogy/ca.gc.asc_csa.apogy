@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.telecoms.provider;
+package ca.gc.asc_csa.apogy.addons.telecoms.provider;
 
 
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
+import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -62,7 +62,7 @@ public class URlBasedAntennaRadiationPatternItemProvider extends AbstractAntenna
 				 getResourceLocator(),
 				 getString("_UI_URlBasedAntennaRadiationPattern_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URlBasedAntennaRadiationPattern_url_feature", "_UI_URlBasedAntennaRadiationPattern_type"),
-				 Symphony__AddonsTelecomsPackage.Literals.URL_BASED_ANTENNA_RADIATION_PATTERN__URL,
+				 ApogyAddonsTelecomsPackage.Literals.URL_BASED_ANTENNA_RADIATION_PATTERN__URL,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class URlBasedAntennaRadiationPatternItemProvider extends AbstractAntenna
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URlBasedAntennaRadiationPattern.class)) {
-			case Symphony__AddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
+			case ApogyAddonsTelecomsPackage.URL_BASED_ANTENNA_RADIATION_PATTERN__URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

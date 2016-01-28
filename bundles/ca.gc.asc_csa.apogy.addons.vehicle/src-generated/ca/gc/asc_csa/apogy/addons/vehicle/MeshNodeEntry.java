@@ -1,11 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.vehicle;
+package ca.gc.asc_csa.apogy.addons.vehicle;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.topology.Node;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getNode <em>Node</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getMesh <em>Mesh</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry#getNode <em>Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshNodeEntry()
+ * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshNodeEntry()
  * @model
  * @generated
  */
@@ -39,14 +39,14 @@ public interface MeshNodeEntry extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(Node)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshNodeEntry_Node()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshNodeEntry_Node()
 	 * @model
 	 * @generated
 	 */
 	Node getNode();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getNode <em>Node</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry#getNode <em>Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Node</em>' reference.
@@ -65,14 +65,14 @@ public interface MeshNodeEntry extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
 	 * @see #setMesh(CartesianTriangularMesh)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshNodeEntry_Mesh()
+	 * @see ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage#getMeshNodeEntry_Mesh()
 	 * @model
 	 * @generated
 	 */
 	CartesianTriangularMesh getMesh();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getMesh <em>Mesh</em>}' reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry#getMesh <em>Mesh</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mesh</em>' reference.

@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.geometry.data3d.provider;
+package ca.gc.asc_csa.apogy.common.geometry.data3d.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,15 +27,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.Mesh;
-import org.eclipse.symphony.common.geometry.data.Polygon;
-import org.eclipse.symphony.common.geometry.data.util.Symphony__CommonGeometryDataSwitch;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.util.Symphony__CommonGeometryData3DAdapterFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data.Coordinates;
+import ca.gc.asc_csa.apogy.common.geometry.data.CoordinatesSet;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data.Mesh;
+import ca.gc.asc_csa.apogy.common.geometry.data.Polygon;
+import ca.gc.asc_csa.apogy.common.geometry.data.util.ApogyCommonGeometryDataSwitch;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DPackage;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.util.ApogyCommonGeometryData3DAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -46,7 +46,7 @@ import org.eclipse.symphony.common.geometry.data3d.util.Symphony__CommonGeometry
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Symphony__CommonGeometryData3DAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+public class ApogyCommonGeometryData3DItemProviderAdapterFactory extends ApogyCommonGeometryData3DAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Symphony__CommonGeometryData3DEditPlugin.INSTANCE, Symphony__CommonGeometryData3DPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonGeometryData3DEditPlugin.INSTANCE, ApogyCommonGeometryData3DPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -85,7 +85,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonGeometryData3DItemProviderAdapterFactory() {
+	public ApogyCommonGeometryData3DItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -94,7 +94,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,7 +102,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianPolygonItemProvider cartesianPolygonItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangle} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +125,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianTriangleItemProvider cartesianTriangleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangle}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangle}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.SphericalPolygon} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected SphericalPolygonItemProvider sphericalPolygonItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphericalPolygon}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalPolygon}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,7 +163,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangle} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected SphericalTriangleItemProvider sphericalTriangleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangle}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangle}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,7 +186,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,7 +194,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianPositionCoordinatesItemProvider cartesianPositionCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,7 +209,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,7 +217,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected ColoredCartesianPositionCoordinatesItemProvider coloredCartesianPositionCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCartesianPositionCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,7 +232,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -240,7 +240,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianOrientationCoordinatesItemProvider cartesianOrientationCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianOrientationCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -255,7 +255,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -263,7 +263,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected AbstractCartesianCoordinatesSetItemProvider abstractCartesianCoordinatesSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.AbstractCartesianCoordinatesSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -278,7 +278,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,7 +286,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianCoordinatesSetItemProvider cartesianCoordinatesSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -301,7 +301,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -309,7 +309,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected ColoredCoordinatesSetItemProvider coloredCoordinatesSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ColoredCoordinatesSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -324,7 +324,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -332,7 +332,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianCoordinatesSetExtentItemProvider cartesianCoordinatesSetExtentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetExtent}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -347,7 +347,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -355,7 +355,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected DigitalElevationMapItemProvider digitalElevationMapItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMap}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -370,7 +370,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -378,7 +378,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianCoordinatesMeshItemProvider cartesianCoordinatesMeshItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMesh}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -393,7 +393,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -401,7 +401,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianTriangularMeshItemProvider cartesianTriangularMeshItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -416,7 +416,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -424,7 +424,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected SphericalCoordinatesItemProvider sphericalCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -439,7 +439,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesSet} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -447,7 +447,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected SphericalCoordinatesSetItemProvider sphericalCoordinatesSetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesSet}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -462,7 +462,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesMesh} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesMesh} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -470,7 +470,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected SphericalCoordinatesMeshItemProvider sphericalCoordinatesMeshItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesMesh}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalCoordinatesMesh}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -485,7 +485,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangularMesh} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -493,7 +493,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected SphericalTriangularMeshItemProvider sphericalTriangularMeshItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphericalTriangularMesh}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -508,7 +508,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.Pose} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.Pose} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -516,7 +516,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected PoseItemProvider poseItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Pose}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.Pose}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -531,7 +531,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -539,7 +539,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected SphereSamplingShapeItemProvider sphereSamplingShapeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.SphereSamplingShape}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -554,7 +554,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -562,7 +562,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CubeSamplingShapeItemProvider cubeSamplingShapeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CubeSamplingShape}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -577,7 +577,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetShapeSampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -585,7 +585,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianCoordinatesSetShapeSamplerItemProvider cartesianCoordinatesSetShapeSamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesSetShapeSampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -600,7 +600,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -608,7 +608,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianCoordinatesMeshSamplerItemProvider cartesianCoordinatesMeshSamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshSampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -623,7 +623,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -631,7 +631,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianCoordinatesMeshPolygonSamplerItemProvider cartesianCoordinatesMeshPolygonSamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +646,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -654,7 +654,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianTriangularMeshSamplerItemProvider cartesianTriangularMeshSamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshSampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -669,7 +669,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -677,7 +677,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianTriangularMeshPolygonSamplerItemProvider cartesianTriangularMeshPolygonSamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMeshPolygonSampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +692,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinatesMesher} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -700,7 +700,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected CartesianPositionCoordinatesMesherItemProvider cartesianPositionCoordinatesMesherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinatesMesher}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinatesMesher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -715,7 +715,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -723,7 +723,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected NormalPointCloudItemProvider normalPointCloudItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.NormalPointCloud}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +738,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -746,7 +746,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected KDTreeBasedPointLocatorItemProvider kdTreeBasedPointLocatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.KDTreeBasedPointLocator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -761,7 +761,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -769,7 +769,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected MeshLocalizerItemProvider meshLocalizerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshLocalizer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +784,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -792,7 +792,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected DelaunayMesherItemProvider delaunayMesherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DelaunayMesher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -807,7 +807,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -815,7 +815,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected DigitalElevationMapMesherItemProvider digitalElevationMapMesherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapMesher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -830,7 +830,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -838,7 +838,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected DigitalElevationMapSamplerItemProvider digitalElevationMapSamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.DigitalElevationMapSampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -853,7 +853,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshNormalsCalculator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -861,7 +861,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected TriangularMeshNormalsCalculatorItemProvider triangularMeshNormalsCalculatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshNormalsCalculator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -876,7 +876,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshToNormalPointCloud} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -884,7 +884,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected TriangularMeshToNormalPointCloudItemProvider triangularMeshToNormalPointCloudItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangularMeshToNormalPointCloud}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -899,7 +899,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.UniquePointsFilter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -907,7 +907,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected UniquePointsFilterItemProvider uniquePointsFilterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.UniquePointsFilter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -922,7 +922,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -930,7 +930,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected TriangleEdgeLengthTriangularMeshFilterItemProvider triangleEdgeLengthTriangularMeshFilterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -945,7 +945,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.OutlierFilter} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -953,7 +953,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected OutlierFilterItemProvider outlierFilterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.OutlierFilter}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.OutlierFilter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -968,7 +968,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -976,7 +976,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected MeshSmootherItemProvider meshSmootherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.MeshSmoother}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -991,7 +991,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -999,7 +999,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected VoxelBased3DPointCloudResamplerItemProvider voxelBased3DPointCloudResamplerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.VoxelBased3DPointCloudResampler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1014,7 +1014,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1022,7 +1022,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected RigidBodyPoseTrackerItemProvider rigidBodyPoseTrackerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.RigidBodyPoseTracker}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1037,7 +1037,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.PositionMarker} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1045,7 +1045,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected PositionMarkerItemProvider positionMarkerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.PositionMarker}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.PositionMarker}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1060,30 +1060,30 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Symphony__CommonGeometryData3DFacadeItemProvider symphony__CommonGeometryData3DFacadeItemProvider;
+	protected ApogyCommonGeometryData3DFacadeItemProvider apogy__CommonGeometryData3DFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphony__CommonGeometryData3DFacadeAdapter() {
-		if (symphony__CommonGeometryData3DFacadeItemProvider == null) {
-			symphony__CommonGeometryData3DFacadeItemProvider = new Symphony__CommonGeometryData3DFacadeItemProvider(this);
+	public Adapter createApogyCommonGeometryData3DFacadeAdapter() {
+		if (apogy__CommonGeometryData3DFacadeItemProvider == null) {
+			apogy__CommonGeometryData3DFacadeItemProvider = new ApogyCommonGeometryData3DFacadeItemProvider(this);
 		}
 
-		return symphony__CommonGeometryData3DFacadeItemProvider;
+		return apogy__CommonGeometryData3DFacadeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.Data3DIO} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1091,7 +1091,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected Data3DIOItemProvider data3DIOItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Data3DIO}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DIO}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1106,7 +1106,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils} instances.
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1114,7 +1114,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	protected Data3DUtilsItemProvider data3DUtilsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils}.
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.geometry.data3d.Data3DUtils}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1296,25 +1296,25 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		if (voxelBased3DPointCloudResamplerItemProvider != null) voxelBased3DPointCloudResamplerItemProvider.dispose();
 		if (positionMarkerItemProvider != null) positionMarkerItemProvider.dispose();
 		if (rigidBodyPoseTrackerItemProvider != null) rigidBodyPoseTrackerItemProvider.dispose();
-		if (symphony__CommonGeometryData3DFacadeItemProvider != null) symphony__CommonGeometryData3DFacadeItemProvider.dispose();
+		if (apogy__CommonGeometryData3DFacadeItemProvider != null) apogy__CommonGeometryData3DFacadeItemProvider.dispose();
 		if (data3DIOItemProvider != null) data3DIOItemProvider.dispose();
 		if (data3DUtilsItemProvider != null) data3DUtilsItemProvider.dispose();
 	}
 
 	/**
-	 * A child creation extender for the {@link Symphony__CommonGeometryDataPackage}.
+	 * A child creation extender for the {@link ApogyCommonGeometryDataPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Symphony__CommonGeometryDataChildCreationExtender implements IChildCreationExtender {
+	public static class ApogyCommonGeometryDataChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends Symphony__CommonGeometryDataSwitch<Object> {
+		protected static class CreationSwitch extends ApogyCommonGeometryDataSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1350,33 +1350,33 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 			public <T extends Coordinates> Object caseCoordinatesSet(CoordinatesSet<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createColoredCartesianPositionCoordinates()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createColoredCartesianPositionCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalCoordinates()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createSphericalCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createPose()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
+						(ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
 
 				return null;
 			}
@@ -1390,23 +1390,23 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 			public <CoordinatesType extends Coordinates, PolygonType extends Polygon<CoordinatesType>> Object caseMesh(Mesh<CoordinatesType, PolygonType> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon()));
+						(ApogyCommonGeometryDataPackage.Literals.MESH__POLYGONS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle()));
+						(ApogyCommonGeometryDataPackage.Literals.MESH__POLYGONS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalPolygon()));
+						(ApogyCommonGeometryDataPackage.Literals.MESH__POLYGONS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createSphericalPolygon()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalTriangle()));
+						(ApogyCommonGeometryDataPackage.Literals.MESH__POLYGONS,
+						 ApogyCommonGeometryData3DFactory.eINSTANCE.createSphericalTriangle()));
 
 				return null;
 			}
@@ -1439,7 +1439,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {
-			return Symphony__CommonGeometryData3DEditPlugin.INSTANCE;
+			return ApogyCommonGeometryData3DEditPlugin.INSTANCE;
 		}
 	}
 

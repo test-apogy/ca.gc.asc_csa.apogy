@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.invocator.delegates;
+package ca.gc.asc_csa.apogy.core.invocator.delegates;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -8,13 +8,13 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.symphony.common.log.EventSeverity;
-import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.Activator;
-import org.eclipse.symphony.core.invocator.Type;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.invocator.Activator;
+import ca.gc.asc_csa.apogy.core.invocator.Type;
 
 public class InvocatorDelegateRegistry {
-	public static final String INVOCATOR_DELEGATE_POINT_ID = "org.eclipse.symphony.core.invocator.invocatorDelegate";
+	public static final String INVOCATOR_DELEGATE_POINT_ID = "ca.gc.asc_csa.apogy.core.invocator.invocatorDelegate";
 	public static final String INVOCATOR_DELEGATE_POINT_ID_INVOCATOR_DELEGATE_CLASS = "invocatorDelegateClass";
 
 	private static InvocatorDelegateRegistry instance = null;

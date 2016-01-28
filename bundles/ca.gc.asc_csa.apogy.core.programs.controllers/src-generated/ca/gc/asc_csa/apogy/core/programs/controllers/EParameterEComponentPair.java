@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers;
+package ca.gc.asc_csa.apogy.core.programs.controllers;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EParameter;
@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EParameter;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.EParameterEComponentPair#getEParameter <em>EParameter</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.EParameterEComponentPair#getValueSource <em>Value Source</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.EParameterEComponentPair#getEParameter <em>EParameter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.EParameterEComponentPair#getValueSource <em>Value Source</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getEParameterEComponentPair()
+ * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getEParameterEComponentPair()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface EParameterEComponentPair extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>EParameter</em>' reference.
    * @see #setEParameter(EParameter)
-   * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getEParameterEComponentPair_EParameter()
+   * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getEParameterEComponentPair_EParameter()
    * @model required="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
    * @generated
@@ -43,7 +43,7 @@ public interface EParameterEComponentPair extends EObject
   EParameter getEParameter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.EParameterEComponentPair#getEParameter <em>EParameter</em>}' reference.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.EParameterEComponentPair#getEParameter <em>EParameter</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>EParameter</em>' reference.
@@ -54,7 +54,7 @@ public interface EParameterEComponentPair extends EObject
 
   /**
    * Returns the value of the '<em><b>Value Source</b></em>' containment reference.
-   * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.programs.controllers.ValueSource#getPair <em>Pair</em>}'.
+   * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource#getPair <em>Pair</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Value Source</em>' containment reference isn't clear,
@@ -63,8 +63,8 @@ public interface EParameterEComponentPair extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value Source</em>' containment reference.
    * @see #setValueSource(ValueSource)
-   * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getEParameterEComponentPair_ValueSource()
-   * @see org.eclipse.symphony.core.programs.controllers.ValueSource#getPair
+   * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage#getEParameterEComponentPair_ValueSource()
+   * @see ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource#getPair
    * @model opposite="pair" containment="true" required="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
    * @generated
@@ -72,7 +72,7 @@ public interface EParameterEComponentPair extends EObject
   ValueSource getValueSource();
 
   /**
-   * Sets the value of the '{@link org.eclipse.symphony.core.programs.controllers.EParameterEComponentPair#getValueSource <em>Value Source</em>}' containment reference.
+   * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.EParameterEComponentPair#getValueSource <em>Value Source</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Value Source</em>' containment reference.

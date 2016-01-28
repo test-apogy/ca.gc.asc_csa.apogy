@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.topology.ui.viewer.preferences;
+package ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences;
 
 import org.eclipse.core.runtime.preferences.IScopeContext;
 import org.eclipse.core.runtime.preferences.InstanceScope;
@@ -10,7 +10,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.common.topology.ui.viewer.Activator;
+import ca.gc.asc_csa.apogy.common.topology.ui.viewer.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.preferences.ScopedPreferenceStore;

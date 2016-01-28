@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.provider;
 
 
 import java.util.Collection;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
-import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation;
+import ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.ApogyAddonsSensorsImagingCameraPackage;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.sensors.imaging.camera.CameraImageAnnotation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -80,7 +80,7 @@ public class CameraImageAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
+				 ApogyCommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -102,7 +102,7 @@ public class CameraImageAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
+				 ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class CameraImageAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraImageAnnotation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraImageAnnotation_visible_feature", "_UI_CameraImageAnnotation_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_IMAGE_ANNOTATION__VISIBLE,
+				 ApogyAddonsSensorsImagingCameraPackage.Literals.CAMERA_IMAGE_ANNOTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -160,9 +160,9 @@ public class CameraImageAnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraImageAnnotation.class)) {
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
-			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
+			case ApogyAddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment.orbit.earth;
+package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
 import org.orekit.propagation.analytical.KeplerianPropagator;
 
@@ -16,7 +16,7 @@ import org.orekit.propagation.analytical.KeplerianPropagator;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianPropagatorEarthOrbitPropagator()
+ * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getKeplerianPropagatorEarthOrbitPropagator()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface KeplerianPropagatorEarthOrbitPropagator extends EarthOrbitPropa
 	 * <!-- begin-model-doc -->
 	 * Gets the underlying OreKit KeplerianPropagator used to do computations.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitKeplerianPropagator" unique="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitKeplerianPropagator" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
 	 */

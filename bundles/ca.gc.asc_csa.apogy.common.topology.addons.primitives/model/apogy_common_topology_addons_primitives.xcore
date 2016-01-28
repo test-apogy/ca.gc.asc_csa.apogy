@@ -1,20 +1,20 @@
-@GenModel(prefix="Symphony__CommonTopologyAddonsPrimitives",
+@GenModel(prefix="ApogyCommonTopologyAddonsPrimitives",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Symphony__CommonTopologyAddonsPrimitives",
+	      modelName="ApogyCommonTopologyAddonsPrimitives",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.addons.primitives/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.topology.addons.primitives.edit/src-generated")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.primitives/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.common.topology.addons.primitives.edit/src-generated")
 
-package org.eclipse.symphony.common.topology.addons.primitives
+package ca.gc.asc_csa.apogy.common.topology.addons.primitives
 
 import org.eclipse.emf.ecore.EClass
-import org.eclipse.symphony.common.topology.Node
-import org.eclipse.symphony.common.topology.Leaf
-import org.eclipse.symphony.common.topology.AggregateGroupNode
-import org.eclipse.symphony.common.math.Tuple3d
+import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.common.topology.Leaf
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode
+import ca.gc.asc_csa.apogy.common.math.Tuple3d
 
 type Point3d wraps javax.vecmath.Point3d
 type Vector3d wraps javax.vecmath.Vector3d
@@ -38,7 +38,7 @@ class PickVector extends Vector
 	 * The current shortest intersection distance between
 	 * the ray and a node of one of the included type.
 	 */
-	@GenModel(symphony_units="m")
+	@GenModel(apogy_units="m")
 	double intersectionDistance = "-1.0"
 	
 	refers Node intersectedNode
@@ -141,7 +141,7 @@ class SpotLight extends PointLight
 	contains Tuple3d direction
 }
 
-class Symphony__CommonTopologyAddonsPrimitivesFacade
+class ApogyCommonTopologyAddonsPrimitivesFacade
 {
 	op Vector createVector(Vector vector)
 	

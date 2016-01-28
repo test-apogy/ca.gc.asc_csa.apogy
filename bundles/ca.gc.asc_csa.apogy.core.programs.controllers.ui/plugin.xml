@@ -4,10 +4,10 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="org.eclipse.symphony.core.programs.controllers.ui.property.category.Default"
-               id="org.eclipse.symphony.core.programs.controllers.ui.property.tab.AbstractInputConditionning"
+               category="ca.gc.asc_csa.apogy.core.programs.controllers.ui.property.category.Default"
+               id="ca.gc.asc_csa.apogy.core.programs.controllers.ui.property.tab.AbstractInputConditionning"
                label="Plot">
          </propertyTab>
       </propertyTabs>
@@ -15,13 +15,13 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="org.eclipse.symphony.core.programs.controllers.ui.properties.sections.AbstractInputConditionningPropertySection"
-               id="org.eclipse.symphony.core.programs.controllers.ui.property.section.AbstractInputConditionning"
-               tab="org.eclipse.symphony.core.programs.controllers.ui.property.tab.AbstractInputConditionning">
+               class="ca.gc.asc_csa.apogy.core.programs.controllers.ui.properties.sections.AbstractInputConditionningPropertySection"
+               id="ca.gc.asc_csa.apogy.core.programs.controllers.ui.property.section.AbstractInputConditionning"
+               tab="ca.gc.asc_csa.apogy.core.programs.controllers.ui.property.tab.AbstractInputConditionning">
             <input
-                  type="org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning">
+                  type="ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning">
             </input>
          </propertySection>
       </propertySections>
@@ -29,26 +29,26 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="ca.gc.asc_csa.apogy.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="org.eclipse.symphony.core.programs.controllers.ui.property.category.Default"></propertyCategory>
+               category="ca.gc.asc_csa.apogy.core.programs.controllers.ui.property.category.Default"></propertyCategory>
       </propertyContributor>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.eclipse.symphony.core.programs.controllers.ui.commands.ActivateControllersConfigurationCommand"
-            id="org.eclipse.symphony.core.programs.controllers.ui.commands.ActivateControllersConfigurationCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.ActivateControllersConfigurationCommand"
+            id="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.ActivateControllersConfigurationCommand"
             name="ActivateControllersConfigurationCommand">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.programs.controllers.ui.commands.DeActivateControllersConfigurationCommand"
-            id="org.eclipse.symphony.core.programs.controllers.ui.commands.DeActivateControllersConfigurationCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.DeActivateControllersConfigurationCommand"
+            id="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.DeActivateControllersConfigurationCommand"
             name="DeActivateControllersConfigurationCommand">
       </command>
       <command
-            defaultHandler="org.eclipse.symphony.core.programs.controllers.ui.commands.LoadUserDefinedInputConditioningFromFileCommand"
-            id="org.eclipse.symphony.core.programs.controllers.ui.commands.LoadUserDefinedInputConditioningFromFileCommand"
+            defaultHandler="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.LoadUserDefinedInputConditioningFromFileCommand"
+            id="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.LoadUserDefinedInputConditioningFromFileCommand"
             name="Load User Defined Input Conditioning From File">
       </command>
    </extension>
@@ -56,9 +56,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+            locationURI="popup:ca.gc.asc_csa.apogy.core.ui.menu?after=additions">
          <command
-               commandId="org.eclipse.symphony.core.programs.controllers.ui.commands.ActivateControllersConfigurationCommand"
+               commandId="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.ActivateControllersConfigurationCommand"
                label="Activate"
                style="push">
             <visibleWhen
@@ -71,7 +71,7 @@
                         ifEmpty="false"
                         operator="and">
                           <instanceof
-                              value="org.eclipse.symphony.core.programs.controllers.ControllersConfiguration">
+                              value="ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration">
                           </instanceof>
                      </iterate>
                   </and>
@@ -79,7 +79,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.programs.controllers.ui.commands.DeActivateControllersConfigurationCommand"
+               commandId="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.DeActivateControllersConfigurationCommand"
                label="Deactivate"
                style="push">
             <visibleWhen
@@ -92,7 +92,7 @@
                         ifEmpty="false"
                         operator="and">
                           <instanceof
-                              value="org.eclipse.symphony.core.programs.controllers.ControllersConfiguration">
+                              value="ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration">
                           </instanceof>
                      </iterate>
                   </and>
@@ -100,7 +100,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="org.eclipse.symphony.core.programs.controllers.ui.commands.LoadUserDefinedInputConditioningFromFileCommand"
+               commandId="ca.gc.asc_csa.apogy.core.programs.controllers.ui.commands.LoadUserDefinedInputConditioningFromFileCommand"
                label="Load User Defined Input Conditioning From File"
                style="push">
             <visibleWhen
@@ -111,7 +111,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning">
+                           value="ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning">
                        </instanceof>
                   </iterate>
                </with>

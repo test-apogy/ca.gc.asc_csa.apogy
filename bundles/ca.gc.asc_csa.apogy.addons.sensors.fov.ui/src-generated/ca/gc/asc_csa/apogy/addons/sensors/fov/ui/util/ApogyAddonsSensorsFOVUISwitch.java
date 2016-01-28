@@ -1,17 +1,17 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov.ui.util;
+package ca.gc.asc_csa.apogy.addons.sensors.fov.ui.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
-import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.FieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage;
+import ca.gc.asc_csa.apogy.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,17 +23,17 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ui.ApogyAddonsSensorsFOVUIPackage
  * @generated
  */
-public class Symphony__AddonsSensorsFOVUISwitch<T> extends Switch<T> {
+public class ApogyAddonsSensorsFOVUISwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Symphony__AddonsSensorsFOVUIPackage modelPackage;
+	protected static ApogyAddonsSensorsFOVUIPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -41,9 +41,9 @@ public class Symphony__AddonsSensorsFOVUISwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__AddonsSensorsFOVUISwitch() {
+	public ApogyAddonsSensorsFOVUISwitch() {
 		if (modelPackage == null) {
-			modelPackage = Symphony__AddonsSensorsFOVUIPackage.eINSTANCE;
+			modelPackage = ApogyAddonsSensorsFOVUIPackage.eINSTANCE;
 		}
 	}
 
@@ -70,14 +70,14 @@ public class Symphony__AddonsSensorsFOVUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__AddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION: {
+			case ApogyAddonsSensorsFOVUIPackage.FIELD_OF_VIEW_PRESENTATION: {
 				FieldOfViewPresentation fieldOfViewPresentation = (FieldOfViewPresentation)theEObject;
 				T result = caseFieldOfViewPresentation(fieldOfViewPresentation);
 				if (result == null) result = caseNodePresentation(fieldOfViewPresentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVUIPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_PRESENTATION: {
+			case ApogyAddonsSensorsFOVUIPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_PRESENTATION: {
 				CircularSectorFieldOfViewPresentation circularSectorFieldOfViewPresentation = (CircularSectorFieldOfViewPresentation)theEObject;
 				T result = caseCircularSectorFieldOfViewPresentation(circularSectorFieldOfViewPresentation);
 				if (result == null) result = caseFieldOfViewPresentation(circularSectorFieldOfViewPresentation);
@@ -85,7 +85,7 @@ public class Symphony__AddonsSensorsFOVUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVUIPackage.CONICAL_FIELD_OF_VIEW_PRESENTATION: {
+			case ApogyAddonsSensorsFOVUIPackage.CONICAL_FIELD_OF_VIEW_PRESENTATION: {
 				ConicalFieldOfViewPresentation conicalFieldOfViewPresentation = (ConicalFieldOfViewPresentation)theEObject;
 				T result = caseConicalFieldOfViewPresentation(conicalFieldOfViewPresentation);
 				if (result == null) result = caseFieldOfViewPresentation(conicalFieldOfViewPresentation);
@@ -93,7 +93,7 @@ public class Symphony__AddonsSensorsFOVUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVUIPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_PRESENTATION: {
+			case ApogyAddonsSensorsFOVUIPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_PRESENTATION: {
 				RectangularFrustrumFieldOfViewPresentation rectangularFrustrumFieldOfViewPresentation = (RectangularFrustrumFieldOfViewPresentation)theEObject;
 				T result = caseRectangularFrustrumFieldOfViewPresentation(rectangularFrustrumFieldOfViewPresentation);
 				if (result == null) result = caseFieldOfViewPresentation(rectangularFrustrumFieldOfViewPresentation);
@@ -196,4 +196,4 @@ public class Symphony__AddonsSensorsFOVUISwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Symphony__AddonsSensorsFOVUISwitch
+} //ApogyAddonsSensorsFOVUISwitch

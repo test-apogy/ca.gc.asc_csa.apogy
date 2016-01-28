@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.environment;
+package ca.gc.asc_csa.apogy.core.environment;
 
 
 /**
@@ -17,17 +17,17 @@ package org.eclipse.symphony.core.environment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayer#getTopologyTreeRoot <em>Topology Tree Root</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer#getTopologyTreeRoot <em>Topology Tree Root</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getTopologyTreeMapLayer()
+ * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getTopologyTreeMapLayer()
  * @model
  * @generated
  */
 public interface TopologyTreeMapLayer extends AbstractMapLayer {
 	/**
 	 * Returns the value of the '<em><b>Topology Tree Root</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode#getTopologyTreeMapLayer <em>Topology Tree Map Layer</em>}'.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode#getTopologyTreeMapLayer <em>Topology Tree Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -35,8 +35,8 @@ public interface TopologyTreeMapLayer extends AbstractMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Tree Root</em>' containment reference.
 	 * @see #setTopologyTreeRoot(TopologyTreeMapLayerNode)
-	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getTopologyTreeMapLayer_TopologyTreeRoot()
-	 * @see org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode#getTopologyTreeMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getTopologyTreeMapLayer_TopologyTreeRoot()
+	 * @see ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayerNode#getTopologyTreeMapLayer
 	 * @model opposite="topologyTreeMapLayer" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' property='None'"
 	 * @generated
@@ -44,7 +44,7 @@ public interface TopologyTreeMapLayer extends AbstractMapLayer {
 	TopologyTreeMapLayerNode getTopologyTreeRoot();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayer#getTopologyTreeRoot <em>Topology Tree Root</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.TopologyTreeMapLayer#getTopologyTreeRoot <em>Topology Tree Root</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Topology Tree Root</em>' containment reference.

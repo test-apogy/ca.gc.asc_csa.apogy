@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.converters.graphs.impl;
+package ca.gc.asc_csa.apogy.common.converters.graphs.impl;
 
 import java.util.Comparator;
 import java.util.Map;
@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.converters.ChainedConverter;
-import org.eclipse.symphony.common.converters.graphs.*;
+import ca.gc.asc_csa.apogy.common.converters.ChainedConverter;
+import ca.gc.asc_csa.apogy.common.converters.graphs.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,24 +25,24 @@ import org.eclipse.symphony.common.converters.graphs.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl implements Symphony__CommonConvertersGraphsFactory {
+public class ApogyCommonConvertersGraphsFactoryImpl extends EFactoryImpl implements ApogyCommonConvertersGraphsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Symphony__CommonConvertersGraphsFactory init() {
+	public static ApogyCommonConvertersGraphsFactory init() {
 		try {
-			Symphony__CommonConvertersGraphsFactory theSymphony__CommonConvertersGraphsFactory = (Symphony__CommonConvertersGraphsFactory)EPackage.Registry.INSTANCE.getEFactory(Symphony__CommonConvertersGraphsPackage.eNS_URI);
-			if (theSymphony__CommonConvertersGraphsFactory != null) {
-				return theSymphony__CommonConvertersGraphsFactory;
+			ApogyCommonConvertersGraphsFactory theApogyCommonConvertersGraphsFactory = (ApogyCommonConvertersGraphsFactory)EPackage.Registry.INSTANCE.getEFactory(ApogyCommonConvertersGraphsPackage.eNS_URI);
+			if (theApogyCommonConvertersGraphsFactory != null) {
+				return theApogyCommonConvertersGraphsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Symphony__CommonConvertersGraphsFactoryImpl();
+		return new ApogyCommonConvertersGraphsFactoryImpl();
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersGraphsFactoryImpl() {
+	public ApogyCommonConvertersGraphsFactoryImpl() {
 		super();
 	}
 
@@ -63,7 +63,7 @@ public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl im
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE: return createSymphony__CommonConvertersGraphsFacade();
+			case ApogyCommonConvertersGraphsPackage.APOGY_COMMON_CONVERTERS_GRAPHS_FACADE: return createApogyCommonConvertersGraphsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,17 +77,17 @@ public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl im
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonConvertersGraphsPackage.SORTED_SET:
+			case ApogyCommonConvertersGraphsPackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersGraphsPackage.SET:
+			case ApogyCommonConvertersGraphsPackage.SET:
 				return createSetFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersGraphsPackage.COMPARATOR:
+			case ApogyCommonConvertersGraphsPackage.COMPARATOR:
 				return createComparatorFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersGraphsPackage.MAP:
+			case ApogyCommonConvertersGraphsPackage.MAP:
 				return createMapFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersGraphsPackage.CONVERTER_EDGE:
+			case ApogyCommonConvertersGraphsPackage.CONVERTER_EDGE:
 				return createConverterEdgeFromString(eDataType, initialValue);
-			case Symphony__CommonConvertersGraphsPackage.CHAINED_CONVERTER:
+			case ApogyCommonConvertersGraphsPackage.CHAINED_CONVERTER:
 				return createChainedConverterFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -102,17 +102,17 @@ public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl im
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Symphony__CommonConvertersGraphsPackage.SORTED_SET:
+			case ApogyCommonConvertersGraphsPackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersGraphsPackage.SET:
+			case ApogyCommonConvertersGraphsPackage.SET:
 				return convertSetToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersGraphsPackage.COMPARATOR:
+			case ApogyCommonConvertersGraphsPackage.COMPARATOR:
 				return convertComparatorToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersGraphsPackage.MAP:
+			case ApogyCommonConvertersGraphsPackage.MAP:
 				return convertMapToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersGraphsPackage.CONVERTER_EDGE:
+			case ApogyCommonConvertersGraphsPackage.CONVERTER_EDGE:
 				return convertConverterEdgeToString(eDataType, instanceValue);
-			case Symphony__CommonConvertersGraphsPackage.CHAINED_CONVERTER:
+			case ApogyCommonConvertersGraphsPackage.CHAINED_CONVERTER:
 				return convertChainedConverterToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -124,9 +124,9 @@ public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersGraphsFacade createSymphony__CommonConvertersGraphsFacade() {
-		Symphony__CommonConvertersGraphsFacadeImpl symphony__CommonConvertersGraphsFacade = new Symphony__CommonConvertersGraphsFacadeImpl();
-		return symphony__CommonConvertersGraphsFacade;
+	public ApogyCommonConvertersGraphsFacade createApogyCommonConvertersGraphsFacade() {
+		ApogyCommonConvertersGraphsFacadeImpl apogy__CommonConvertersGraphsFacade = new ApogyCommonConvertersGraphsFacadeImpl();
+		return apogy__CommonConvertersGraphsFacade;
 	}
 
 	/**
@@ -242,8 +242,8 @@ public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Symphony__CommonConvertersGraphsPackage getSymphony__CommonConvertersGraphsPackage() {
-		return (Symphony__CommonConvertersGraphsPackage)getEPackage();
+	public ApogyCommonConvertersGraphsPackage getApogyCommonConvertersGraphsPackage() {
+		return (ApogyCommonConvertersGraphsPackage)getEPackage();
 	}
 
 	/**
@@ -253,8 +253,8 @@ public class Symphony__CommonConvertersGraphsFactoryImpl extends EFactoryImpl im
 	 * @generated
 	 */
 	@Deprecated
-	public static Symphony__CommonConvertersGraphsPackage getPackage() {
-		return Symphony__CommonConvertersGraphsPackage.eINSTANCE;
+	public static ApogyCommonConvertersGraphsPackage getPackage() {
+		return ApogyCommonConvertersGraphsPackage.eINSTANCE;
 	}
 
-} //Symphony__CommonConvertersGraphsFactoryImpl
+} //ApogyCommonConvertersGraphsFactoryImpl

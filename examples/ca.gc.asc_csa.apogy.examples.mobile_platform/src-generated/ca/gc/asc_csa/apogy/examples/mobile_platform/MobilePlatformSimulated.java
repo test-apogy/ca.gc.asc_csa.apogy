@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.mobile_platform;
+package ca.gc.asc_csa.apogy.examples.mobile_platform;
 
 
 /**
@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.mobile_platform;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatformSimulated()
+ * @see ca.gc.asc_csa.apogy.examples.mobile_platform.ApogyExamplesMobilePlatformPackage#getMobilePlatformSimulated()
  * @model
  * @generated
  */

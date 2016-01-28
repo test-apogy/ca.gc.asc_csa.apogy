@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.controllers.impl;
+package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
 
 import java.util.Collection;
 import java.util.TreeSet;
@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
-import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
-import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.UserDefinedInputConditioning;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,8 +30,8 @@ import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioni
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.UserDefinedInputConditioningImpl#getUnits <em>Units</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.UserDefinedInputConditioningImpl#getTransferFunction <em>Transfer Function</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.UserDefinedInputConditioningImpl#getUnits <em>Units</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.UserDefinedInputConditioningImpl#getTransferFunction <em>Transfer Function</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,7 +90,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CoreProgramsControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING;
+		return ApogyCoreProgramsControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 		String oldUnits = units;
 		units = newUnits;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS, oldUnits, units));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS, oldUnits, units));
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	public EList<CustomInputConditioningPoint> getTransferFunction() 
 	{
 		if (transferFunction == null) {
-			transferFunction = new EObjectContainmentEList<CustomInputConditioningPoint>(CustomInputConditioningPoint.class, this, Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION);
+			transferFunction = new EObjectContainmentEList<CustomInputConditioningPoint>(CustomInputConditioningPoint.class, this, ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION);
 		}
 		return transferFunction;
 	}
@@ -135,7 +135,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				return ((InternalEList<?>)getTransferFunction()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -149,9 +149,9 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				return getUnits();
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				return getTransferFunction();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -166,10 +166,10 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				setUnits((String)newValue);
 				return;
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				getTransferFunction().clear();
 				getTransferFunction().addAll((Collection<? extends CustomInputConditioningPoint>)newValue);
 				return;
@@ -185,10 +185,10 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				setUnits(UNITS_EDEFAULT);
 				return;
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				getTransferFunction().clear();
 				return;
 		}
@@ -203,9 +203,9 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				return UNITS_EDEFAULT == null ? units != null : !UNITS_EDEFAULT.equals(units);
-			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				return transferFunction != null && !transferFunction.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -234,7 +234,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	
 		if(getSortedPoints().size() > 0)
 		{			
-			CustomInputConditioningPoint point = Symphony__CoreProgramsControllersFacade.INSTANCE.createCustomInputConditioningPoint(rawData, 0);
+			CustomInputConditioningPoint point = ApogyCoreProgramsControllersFacade.INSTANCE.createCustomInputConditioningPoint(rawData, 0);
 			
 			TreeSet<CustomInputConditioningPoint> sortedSet = getSortedPoints();
 			
@@ -270,7 +270,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	{		
 		if(sortedPoints == null)
 		{
-			sortedPoints = Symphony__CoreProgramsControllersFacade.INSTANCE.sortCustomInputConditioningPoint(getTransferFunction());
+			sortedPoints = ApogyCoreProgramsControllersFacade.INSTANCE.sortCustomInputConditioningPoint(getTransferFunction());
 		}
 		return sortedPoints;
 	}
@@ -284,7 +284,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 				@Override
 				public void notifyChanged(Notification msg) 
 				{			
-					if(msg.getFeatureID(UserDefinedInputConditioning.class) == Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION)
+					if(msg.getFeatureID(UserDefinedInputConditioning.class) == ApogyCoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION)
 					{
 						sortedPoints = null;
 					}

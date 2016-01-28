@@ -1,14 +1,14 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
  */
-package org.eclipse.symphony.examples.rover.symphony.impl;
+package ca.gc.asc_csa.apogy.examples.rover.apogy.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
-import org.eclipse.symphony.examples.rover.symphony.RoverData;
-import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage;
+import ca.gc.asc_csa.apogy.core.impl.ApogyInitializationDataImpl;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.RoverData;
+import ca.gc.asc_csa.apogy.examples.rover.apogy.ApogyExamplesRoverApogyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,13 +18,13 @@ import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymph
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl#isInitialized <em>Initialized</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl#isDisposed <em>Disposed</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverDataImpl#isInitialized <em>Initialized</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.examples.rover.apogy.impl.RoverDataImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RoverDataImpl extends SymphonyInitializationDataImpl implements RoverData {
+public class RoverDataImpl extends ApogyInitializationDataImpl implements RoverData {
 	/**
 	 * The default value of the '{@link #isInitialized() <em>Initialized</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_DATA;
+		return ApogyExamplesRoverApogyPackage.Literals.ROVER_DATA;
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoverApogyPackage.ROVER_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyExamplesRoverApogyPackage.ROVER_DATA__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -132,9 +132,9 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__INITIALIZED:
 				return isInitialized();
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__DISPOSED:
 				return isDisposed();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -148,10 +148,10 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
 		}
@@ -166,10 +166,10 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
 		}
@@ -184,9 +184,9 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
+			case ApogyExamplesRoverApogyPackage.ROVER_DATA__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -1,7 +1,7 @@
 /**
  * Copyrights Canadian Space Agency 2012. All rights reserved.
  */
-package org.eclipse.symphony.common.io.jinput.provider;
+package ca.gc.asc_csa.apogy.common.io.jinput.provider;
 
 
 import java.util.Collection;
@@ -21,11 +21,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EComponent} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.common.io.jinput.EComponent} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -84,7 +84,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_deadZone_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_deadZone_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__DEAD_ZONE,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__DEAD_ZONE,
 				 false,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_identifier_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_identifier_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__IDENTIFIER,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__IDENTIFIER,
 				 false,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_relative_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_relative_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__RELATIVE,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__RELATIVE,
 				 false,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_analog_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_analog_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__ANALOG,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__ANALOG,
 				 false,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_name_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__NAME,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__NAME,
 				 false,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_pojoComponent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_pojoComponent_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__POJO_COMPONENT,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__POJO_COMPONENT,
 				 true,
 				 false,
 				 false,
@@ -216,7 +216,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_pollData_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_pollData_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__POLL_DATA,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__POLL_DATA,
 				 false,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class EComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponent_eComponents_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_eComponents_feature", "_UI_EComponent_type"),
-				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT__ECOMPONENTS,
+				 ApogyCommonIOJInputPackage.Literals.ECOMPONENT__ECOMPONENTS,
 				 true,
 				 false,
 				 true,
@@ -290,13 +290,13 @@ public class EComponentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EComponent.class)) {
-			case Symphony__CommonIOJInputPackage.ECOMPONENT__DEAD_ZONE:
-			case Symphony__CommonIOJInputPackage.ECOMPONENT__IDENTIFIER:
-			case Symphony__CommonIOJInputPackage.ECOMPONENT__RELATIVE:
-			case Symphony__CommonIOJInputPackage.ECOMPONENT__ANALOG:
-			case Symphony__CommonIOJInputPackage.ECOMPONENT__NAME:
-			case Symphony__CommonIOJInputPackage.ECOMPONENT__POJO_COMPONENT:
-			case Symphony__CommonIOJInputPackage.ECOMPONENT__POLL_DATA:
+			case ApogyCommonIOJInputPackage.ECOMPONENT__DEAD_ZONE:
+			case ApogyCommonIOJInputPackage.ECOMPONENT__IDENTIFIER:
+			case ApogyCommonIOJInputPackage.ECOMPONENT__RELATIVE:
+			case ApogyCommonIOJInputPackage.ECOMPONENT__ANALOG:
+			case ApogyCommonIOJInputPackage.ECOMPONENT__NAME:
+			case ApogyCommonIOJInputPackage.ECOMPONENT__POJO_COMPONENT:
+			case ApogyCommonIOJInputPackage.ECOMPONENT__POLL_DATA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

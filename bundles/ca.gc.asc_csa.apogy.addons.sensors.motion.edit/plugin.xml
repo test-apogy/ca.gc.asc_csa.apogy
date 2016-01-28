@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="org.eclipse.symphony.addons.sensors.motion"
-            class="org.eclipse.symphony.addons.sensors.motion.provider.Symphony__AddonsSensorsMotionItemProviderAdapterFactory"
+            uri="ca.gc.asc_csa.apogy.addons.sensors.motion"
+            class="ca.gc.asc_csa.apogy.addons.sensors.motion.provider.ApogyAddonsSensorsMotionItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,10 +23,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_sensors_motion -->
+      <!-- @generated apogy_addons_sensors_motion -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.motion.provider.Symphony__AddonsSensorsMotionItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.common.topology"
+            class="ca.gc.asc_csa.apogy.addons.sensors.motion.provider.ApogyAddonsSensorsMotionItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

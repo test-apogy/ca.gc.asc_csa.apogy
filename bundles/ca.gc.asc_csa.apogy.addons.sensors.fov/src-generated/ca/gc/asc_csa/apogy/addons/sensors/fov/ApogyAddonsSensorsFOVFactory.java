@@ -1,28 +1,28 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.fov;
+package ca.gc.asc_csa.apogy.addons.sensors.fov;
 
 import org.eclipse.emf.ecore.EFactory;
 
-import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.fov.ApogyAddonsSensorsFOVPackage
  * @generated
  */
-public interface Symphony__AddonsSensorsFOVFactory extends EFactory {
+public interface ApogyAddonsSensorsFOVFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVFactory eINSTANCE = org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFactoryImpl.init();
+	ApogyAddonsSensorsFOVFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.fov.impl.ApogyAddonsSensorsFOVFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Field Of View</em>'.
@@ -94,7 +94,7 @@ public interface Symphony__AddonsSensorsFOVFactory extends EFactory {
 	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVFacade createSymphony__AddonsSensorsFOVFacade();
+	ApogyAddonsSensorsFOVFacade createApogyAddonsSensorsFOVFacade();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -103,6 +103,6 @@ public interface Symphony__AddonsSensorsFOVFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsFOVPackage getSymphony__AddonsSensorsFOVPackage();
+	ApogyAddonsSensorsFOVPackage getApogyAddonsSensorsFOVPackage();
 
-} //Symphony__AddonsSensorsFOVFactory
+} //ApogyAddonsSensorsFOVFactory

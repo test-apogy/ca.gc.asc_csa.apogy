@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging;
+package ca.gc.asc_csa.apogy.addons.sensors.imaging;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage
+ * @see ca.gc.asc_csa.apogy.addons.sensors.imaging.ApogyAddonsSensorsImagingPackage
  * @generated
  */
-public interface Symphony__AddonsSensorsImagingFactory extends EFactory
+public interface ApogyAddonsSensorsImagingFactory extends EFactory
 {
   /**
 	 * The singleton instance of the factory.
@@ -21,7 +21,7 @@ public interface Symphony__AddonsSensorsImagingFactory extends EFactory
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  Symphony__AddonsSensorsImagingFactory eINSTANCE = org.eclipse.symphony.addons.sensors.imaging.impl.Symphony__AddonsSensorsImagingFactoryImpl.init();
+  ApogyAddonsSensorsImagingFactory eINSTANCE = ca.gc.asc_csa.apogy.addons.sensors.imaging.impl.ApogyAddonsSensorsImagingFactoryImpl.init();
 
   /**
 	 * Returns a new object of class '<em>Image Snapshot</em>'.
@@ -57,6 +57,6 @@ public interface Symphony__AddonsSensorsImagingFactory extends EFactory
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	Symphony__AddonsSensorsImagingPackage getSymphony__AddonsSensorsImagingPackage();
+	ApogyAddonsSensorsImagingPackage getApogyAddonsSensorsImagingPackage();
 
-} //Symphony__AddonsSensorsImagingFactory
+} //ApogyAddonsSensorsImagingFactory

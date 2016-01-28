@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.processors.impl;
+package ca.gc.asc_csa.apogy.common.processors.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,8 +12,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import ca.gc.asc_csa.apogy.common.processors.Processor;
+import ca.gc.asc_csa.apogy.common.processors.ApogyCommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -22,9 +22,9 @@ import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl#getInput <em>Input</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl#getInput <em>Input</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.processors.impl.ProcessorImpl#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,7 +84,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonProcessorsPackage.Literals.PROCESSOR;
+		return ApogyCommonProcessorsPackage.Literals.PROCESSOR;
 	}
 
 	/**
@@ -108,7 +108,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 		IProgressMonitor oldProgressMonitor = progressMonitor;
 		progressMonitor = newProgressMonitor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 		I oldInput = input;
 		input = newInput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSOR__INPUT, oldInput, input));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonProcessorsPackage.PROCESSOR__INPUT, oldInput, input));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 		O oldOutput = output;
 		output = newOutput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT, oldOutput, output));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT, oldOutput, output));
 	}
 
 	/**
@@ -166,11 +166,11 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				return getProgressMonitor();
-			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__INPUT:
 				return getInput();
-			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT:
 				return getOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -184,13 +184,13 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				setProgressMonitor((IProgressMonitor)newValue);
 				return;
-			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__INPUT:
 				setInput((I)newValue);
 				return;
-			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT:
 				setOutput((O)newValue);
 				return;
 		}
@@ -204,13 +204,13 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				setProgressMonitor(PROGRESS_MONITOR_EDEFAULT);
 				return;
-			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__INPUT:
 				setInput((I)null);
 				return;
-			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT:
 				setOutput((O)null);
 				return;
 		}
@@ -224,11 +224,11 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case ApogyCommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				return PROGRESS_MONITOR_EDEFAULT == null ? progressMonitor != null : !PROGRESS_MONITOR_EDEFAULT.equals(progressMonitor);
-			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__INPUT:
 				return input != null;
-			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
+			case ApogyCommonProcessorsPackage.PROCESSOR__OUTPUT:
 				return output != null;
 		}
 		return super.eIsSet(featureID);
@@ -245,7 +245,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	{
 		switch (operationID)
 		{
-			case Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT:
+			case ApogyCommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT:
 				try
 				{
 					return process((I)arguments.get(0));

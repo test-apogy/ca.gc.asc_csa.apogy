@@ -1,7 +1,7 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
-package org.eclipse.symphony.addons.geometry.paths.ui.provider;
+package ca.gc.asc_csa.apogy.addons.geometry.paths.ui.provider;
 
 
 import java.util.Collection;
@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
-import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.ApogyAddonsGeometryPathsUIPackage;
+import ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.geometry.paths.ui.WayPointPathPresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -66,7 +66,7 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPresentation_pointSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPresentation_pointSize_feature", "_UI_WayPointPathPresentation_type"),
-				 Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__POINT_SIZE,
+				 ApogyAddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__POINT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPresentation_presentationMode_feature", "_UI_WayPointPathPresentation_type"),
-				 Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE,
+				 ApogyAddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPresentation_endPointsRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPresentation_endPointsRadius_feature", "_UI_WayPointPathPresentation_type"),
-				 Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS,
+				 ApogyAddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -158,9 +158,9 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPointPathPresentation.class)) {
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
-			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case ApogyAddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

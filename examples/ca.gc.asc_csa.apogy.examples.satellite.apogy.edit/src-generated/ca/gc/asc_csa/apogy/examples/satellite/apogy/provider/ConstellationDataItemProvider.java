@@ -1,7 +1,7 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
  */
-package org.eclipse.symphony.examples.satellite.symphony.provider;
+package ca.gc.asc_csa.apogy.examples.satellite.apogy.provider;
 
 
 import java.util.Collection;
@@ -15,21 +15,21 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 
-import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
+import ca.gc.asc_csa.apogy.core.provider.ApogyInitializationDataItemProvider;
 
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.symphony.ConstellationData;
-import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage;
+import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData;
+import ca.gc.asc_csa.apogy.examples.satellite.apogy.ApogyExamplesSatelliteApogyPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.examples.satellite.apogy.ConstellationData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConstellationDataItemProvider extends SymphonyInitializationDataItemProvider {
+public class ConstellationDataItemProvider extends ApogyInitializationDataItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -67,10 +67,10 @@ public class ConstellationDataItemProvider extends SymphonyInitializationDataIte
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__SATELLITES_LIST);
-			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST);
-			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS);
-			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST);
+			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__SATELLITES_LIST);
+			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST);
+			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS);
+			childrenFeatures.add(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -123,10 +123,10 @@ public class ConstellationDataItemProvider extends SymphonyInitializationDataIte
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstellationData.class)) {
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__SATELLITES_LIST:
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
-			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__SATELLITES_LIST:
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
+			case ApogyExamplesSatelliteApogyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -146,23 +146,23 @@ public class ConstellationDataItemProvider extends SymphonyInitializationDataIte
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__SATELLITES_LIST,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
+				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__SATELLITES_LIST,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createSatellitesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST,
-				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
+				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST,
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
+				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
+				(ApogyExamplesSatelliteApogyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST,
+				 ApogyExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
 	}
 
 }

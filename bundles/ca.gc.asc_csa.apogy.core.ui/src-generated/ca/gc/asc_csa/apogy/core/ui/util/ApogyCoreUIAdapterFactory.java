@@ -1,31 +1,31 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
  */
-package org.eclipse.symphony.core.ui.util;
+package ca.gc.asc_csa.apogy.core.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
-import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
-import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
-import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation;
+import ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings;
+import ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings;
+import ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade;
+import ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage;
+import ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage
+ * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIPackage
  * @generated
  */
-public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
+public class ApogyCoreUIAdapterFactory extends AdapterFactoryImpl
 {
   /**
 	 * The cached model package.
@@ -33,7 +33,7 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static Symphony__CoreUIPackage modelPackage;
+  protected static ApogyCoreUIPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -41,10 +41,10 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Symphony__CoreUIAdapterFactory()
+  public ApogyCoreUIAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = Symphony__CoreUIPackage.eINSTANCE;
+			modelPackage = ApogyCoreUIPackage.eINSTANCE;
 		}
 	}
 
@@ -74,27 +74,27 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Symphony__CoreUISwitch<Adapter> modelSwitch =
-    new Symphony__CoreUISwitch<Adapter>() {
+  protected ApogyCoreUISwitch<Adapter> modelSwitch =
+    new ApogyCoreUISwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphony__CoreUIFacade(Symphony__CoreUIFacade object) {
-				return createSymphony__CoreUIFacadeAdapter();
+			public Adapter caseApogyCoreUIFacade(ApogyCoreUIFacade object) {
+				return createApogyCoreUIFacadeAdapter();
 			}
 			@Override
-			public Adapter caseSymphonyResourceSettings(SymphonyResourceSettings object) {
-				return createSymphonyResourceSettingsAdapter();
+			public Adapter caseApogyResourceSettings(ApogyResourceSettings object) {
+				return createApogyResourceSettingsAdapter();
 			}
 			@Override
-			public Adapter caseNewSymphonyProjectSettings(NewSymphonyProjectSettings object) {
-				return createNewSymphonyProjectSettingsAdapter();
+			public Adapter caseNewApogyProjectSettings(NewApogyProjectSettings object) {
+				return createNewApogyProjectSettingsAdapter();
 			}
 			@Override
-			public Adapter caseNewSymphonySessionSettings(NewSymphonySessionSettings object) {
-				return createNewSymphonySessionSettingsAdapter();
+			public Adapter caseNewApogySessionSettings(NewApogySessionSettings object) {
+				return createNewApogySessionSettingsAdapter();
 			}
 			@Override
-			public Adapter caseNewSymphonySystemSettings(NewSymphonySystemSettings object) {
-				return createNewSymphonySystemSettingsAdapter();
+			public Adapter caseNewApogySystemSettings(NewApogySystemSettings object) {
+				return createNewApogySystemSettingsAdapter();
 			}
 			@Override
 			public Adapter caseResultNodePresentation(ResultNodePresentation object) {
@@ -130,84 +130,84 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade <em>Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyCoreUIFacade
 	 * @generated
 	 */
-	public Adapter createSymphony__CoreUIFacadeAdapter() {
+	public Adapter createApogyCoreUIFacadeAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings <em>Symphony Resource Settings</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings <em>Apogy Resource Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.ui.SymphonyResourceSettings
+	 * @see ca.gc.asc_csa.apogy.core.ui.ApogyResourceSettings
 	 * @generated
 	 */
-	public Adapter createSymphonyResourceSettingsAdapter() {
+	public Adapter createApogyResourceSettingsAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings <em>New Symphony Project Settings</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings <em>New Apogy Project Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonyProjectSettings
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogyProjectSettings
 	 * @generated
 	 */
-	public Adapter createNewSymphonyProjectSettingsAdapter() {
+	public Adapter createNewApogyProjectSettingsAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings <em>New Symphony Session Settings</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings <em>New Apogy Session Settings</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySessionSettings
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySessionSettings
 	 * @generated
 	 */
-  public Adapter createNewSymphonySessionSettingsAdapter()
+  public Adapter createNewApogySessionSettingsAdapter()
   {
 		return null;
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings <em>New Symphony System Settings</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings <em>New Apogy System Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.ui.NewSymphonySystemSettings
+	 * @see ca.gc.asc_csa.apogy.core.ui.NewApogySystemSettings
 	 * @generated
 	 */
-	public Adapter createNewSymphonySystemSettingsAdapter() {
+	public Adapter createNewApogySystemSettingsAdapter() {
 		return null;
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.ResultNodePresentation <em>Result Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation <em>Result Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.ui.ResultNodePresentation
+	 * @see ca.gc.asc_csa.apogy.core.ui.ResultNodePresentation
 	 * @generated
 	 */
   public Adapter createResultNodePresentationAdapter()
@@ -216,13 +216,13 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation
 	 * @generated
 	 */
   public Adapter createNodePresentationAdapter()
@@ -231,13 +231,13 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation <em>Transform Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation <em>Transform Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.TransformNodePresentation
+	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TransformNodePresentation
 	 * @generated
 	 */
 	public Adapter createTransformNodePresentationAdapter() {
@@ -257,4 +257,4 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
 		return null;
 	}
 
-} //Symphony__CoreUIAdapterFactory
+} //ApogyCoreUIAdapterFactory

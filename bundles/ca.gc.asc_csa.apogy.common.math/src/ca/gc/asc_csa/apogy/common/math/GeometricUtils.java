@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.math;
+package ca.gc.asc_csa.apogy.common.math;
 
 import static java.lang.Math.asin;
 import static java.lang.Math.atan2;

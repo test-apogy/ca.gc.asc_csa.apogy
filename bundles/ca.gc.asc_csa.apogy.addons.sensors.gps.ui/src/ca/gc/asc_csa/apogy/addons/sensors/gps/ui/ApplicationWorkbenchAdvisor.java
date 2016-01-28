@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.gps.ui;
+package ca.gc.asc_csa.apogy.addons.sensors.gps.ui;
 
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
@@ -6,7 +6,7 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
 public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
-	private static final String PERSPECTIVE_ID = "org.eclipse.symphony.addons.sensors.gps.ui.perspective";
+	private static final String PERSPECTIVE_ID = "ca.gc.asc_csa.apogy.addons.sensors.gps.ui.perspective";
 
     public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
         return new ApplicationWorkbenchWindowAdvisor(configurer);

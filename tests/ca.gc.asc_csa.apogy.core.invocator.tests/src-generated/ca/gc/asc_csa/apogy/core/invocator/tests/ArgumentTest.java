@@ -1,9 +1,9 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
-package org.eclipse.symphony.core.invocator.tests;
+package ca.gc.asc_csa.apogy.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.Argument;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
 
 import junit.framework.TestCase;
 
@@ -14,14 +14,14 @@ import junit.framework.TestCase;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Argument#getOperationCall() <em>Operation Call</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getOperationCall() <em>Operation Call</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.invocator.Argument#getEParameter() <em>Get EParameter</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.Argument#getParameterValue() <em>Get Parameter Value</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getEParameter() <em>Get EParameter</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getParameterValue() <em>Get Parameter Value</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -67,10 +67,10 @@ public abstract class ArgumentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.Argument#getOperationCall() <em>Operation Call</em>}' feature getter.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getOperationCall() <em>Operation Call</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.Argument#getOperationCall()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getOperationCall()
 	 * @generated
 	 */
 	public void testGetOperationCall() {
@@ -80,10 +80,10 @@ public abstract class ArgumentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.Argument#getEParameter() <em>Get EParameter</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getEParameter() <em>Get EParameter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.Argument#getEParameter()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getEParameter()
 	 * @generated
 	 */
 	public void testGetEParameter() {
@@ -93,10 +93,10 @@ public abstract class ArgumentTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.Argument#getParameterValue() <em>Get Parameter Value</em>}' operation.
+	 * Tests the '{@link ca.gc.asc_csa.apogy.core.invocator.Argument#getParameterValue() <em>Get Parameter Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.Argument#getParameterValue()
+	 * @see ca.gc.asc_csa.apogy.core.invocator.Argument#getParameterValue()
 	 * @generated
 	 */
 	public void testGetParameterValue() {
